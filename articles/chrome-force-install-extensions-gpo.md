@@ -133,12 +133,79 @@ $extensionIds -join ';'
 
 This extracts the extension IDs and formats them for direct use in your GPO configuration.
 
+## Blocking Unauthorized Extensions with AllowList Policy
+
+Force-installing approved extensions is only half of an enterprise extension governance strategy. The complementary policy blocks installation of any extension not on your approved list, preventing users from bypassing your security controls by installing unapproved tools.
+
+Configure the allow-list policy in the same Extensions section of the Chrome Administrative Template:
+
+1. Enable "Configure extension installation allow/blocklist"
+2. Set the block rule to `*` (block all)
+3. Enable "Configure the list of allowed extensions" and add your approved extension IDs
+
+The final configuration should look like this in the registry:
+
+```
+HKLM\SOFTWARE\Policies\Google\Chrome\ExtensionInstallBlocklist
+  1 = *
+
+HKLM\SOFTWARE\Policies\Google\Chrome\ExtensionInstallAllowlist
+  1 = cjpalhdlnbpafiamejdnhcphjbkeiagm  (uBlock Origin)
+  2 = hnimpnehipmdihdhkpncijkflmbohkd   (JSON Viewer)
+  3 = [additional approved IDs]
+```
+
+Extensions already installed by users that are not on the allowlist will be automatically disabled when the GPO applies. Users will see a message explaining that their administrator has blocked the extension.
+
+For developer workstations that need more flexibility, create a separate GPO with a more permissive allowlist and apply it to the Developers OU rather than the broader organization. This gives your development team access to debugging tools while keeping tighter controls on standard user machines.
+
+The PowerShell script from earlier can generate the allowlist registry values automatically from a maintained CSV:
+
+```powershell
+# approved-extensions.csv format: name,extensionId
+Import-Csv approved-extensions.csv | ForEach-Object -Begin {$i=1} -Process {
+  $regPath = "HKLM:\SOFTWARE\Policies\Google\Chrome\ExtensionInstallAllowlist"
+  Set-ItemProperty -Path $regPath -Name $i -Value $_.extensionId
+  $i++
+  Write-Output "Added: $($_.name) ($($_.extensionId))"
+}
+```
+
+Keep the CSV in version control alongside your Group Policy documentation. This creates an auditable record of which extensions are approved, who approved them, and when they were added — useful for compliance reviews and security audits.
+
 ## Summary
 
 GPO-based Chrome extension deployment provides a robust, on-premises mechanism for enterprise environments. By configuring the Administrative Template and specifying extension IDs in the force-install policy, you ensure mandatory extensions are present on all managed workstations. The approach requires no user interaction, prevents removal by end users, and handles updates automatically.
 
 For developers managing Windows infrastructure, integrating extension deployment into your existing Group Policy workflows eliminates the need for separate extension management solutions. Test thoroughly, maintain accurate extension IDs, and document your configuration for future maintenance.
 
+
+## Auditing Extension Deployments
+
+After deploying extensions via GPO, maintaining visibility into which extensions are actually installed across your fleet is important for security compliance. Not every machine applies GPOs on schedule, and edge cases — machines offline during policy refresh, manual uninstalls via registry edits — can leave your fleet in an inconsistent state.
+
+Build a simple audit script that runs via Group Policy Preferences or your endpoint management tool:
+
+```powershell
+# Get Chrome extension registry for all users
+$extensionPath = "HKLM:\SOFTWARE\Google\Chrome\Extensions"
+if (Test-Path $extensionPath) {
+    Get-ChildItem $extensionPath | ForEach-Object {
+        $id = $_.PSChildName
+        $version = (Get-ItemProperty $_.PSPath).version
+        [PSCustomObject]@{
+            Computer = $env:COMPUTERNAME
+            ExtensionId = $id
+            Version = $version
+            Timestamp = Get-Date -Format "yyyy-MM-dd HH:mm"
+        }
+    }
+} | Export-Csv "\\fileserver\extensions-audit\$env:COMPUTERNAME.csv" -NoTypeInformation
+```
+
+Schedule this script to run weekly via a logon script GPO and collect the CSVs on your file server. Aggregate them periodically to identify machines that are missing required extensions or running outdated versions.
+
+For organizations with more sophisticated endpoint management, most modern platforms (Intune, SCCM, Jamf) provide native extension inventory reporting. The registry approach above serves as a lightweight alternative when dedicated tooling is not available.
 
 ## Related Reading
 

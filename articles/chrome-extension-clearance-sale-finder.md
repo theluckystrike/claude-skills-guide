@@ -166,6 +166,21 @@ Rather than focusing on specific products, consider these categories where free 
 - **Tab management**: Native browser features increasingly handle basic tab organization
 - **Password management**: Open-source options provide robust functionality without cost
 
+## Evaluating Free Extensions Before Buying Premium
+
+Before committing to a paid extension, most developers have used the free tier — but the evaluation process is often rushed. A structured evaluation gives you confidence the premium purchase will actually change your workflow.
+
+Run the free tier for at least two full work weeks before deciding. During that period, note every time you hit a paywall or limitation. If the free tier satisfies your needs throughout the evaluation, the paid version is probably not worth the cost. If you hit the limitation repeatedly and it disrupts your flow, the paid upgrade is likely worthwhile.
+
+For extensions with time-limited trials (typically 7-14 days), use the trial period deliberately:
+
+1. Create a test list of every feature the paid version advertises
+2. Verify each feature works as described
+3. Time the most common actions to confirm the productivity gain is real
+4. Check the extension's update frequency in the Chrome Web Store (a well-maintained extension updates regularly; one with no updates in a year may be abandoned)
+
+The Chrome Web Store shows update frequency on each extension's detail page. Cross-reference this with the developer's GitHub repository if one exists — a recently-committed repository indicates an active project; a dormant repo with no commits in 12 months is a risk for paid software.
+
 ## Maintaining Extension Hygiene
 
 Regardless of how you acquire extensions, periodically reviewing your installation provides benefits:
@@ -181,6 +196,20 @@ This practice helps ensure you're only paying for tools you actively use.
 
 Finding Chrome extension deals requires a combination of awareness, community engagement, and strategic purchasing. By following the methods outlined in this guide, developers and power users can significantly reduce their extension-related expenses without sacrificing the tools that improve their productivity.
 
+
+## Negotiating Directly with Extension Developers
+
+For extensions with active developer contact (check the support email on the Chrome Web Store listing), direct negotiation sometimes yields better results than waiting for public sales. This approach works because most extension developers are individual contributors or small teams for whom a discounted but certain sale is preferable to a potential no-sale at full price.
+
+Contact the developer with a specific, reasonable request. A message like "I'm interested in purchasing your extension for my 5-person development team. Do you offer team or volume pricing?" often results in a custom discount code. Developers who have already built team-pricing infrastructure will apply it; those who have not may offer a one-time discount to close the sale.
+
+This approach is most effective for:
+- Extensions priced above $50 (where a discount is meaningful to both parties)
+- Team or multi-seat purchases where volume discount logic applies
+- Extensions that have not been updated in 6-12 months (developers more likely to discount inactive revenue)
+- Extensions outside the Chrome Web Store's hosted payment system (direct sales give developers more pricing flexibility)
+
+Avoid this approach for extensions from large companies with formal pricing structures — the person responding to support emails cannot authorize discounts. It works best with solo developers and small teams where the same person built the product and handles pricing decisions.
 
 ## Related Reading
 

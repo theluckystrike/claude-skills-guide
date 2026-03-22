@@ -177,11 +177,42 @@ Based on results:
 
 **Ignoring skill integration:** Subagents work best when combined with specialized skills. Always consider whether a skill like pdf, tdd, or frontend-design could enhance the subagent's output.
 
+## Measuring Subagent Effectiveness
+
+After adopting parallel subagents, measuring whether they are actually saving time prevents over-reliance on patterns that feel fast but do not produce better outcomes. The key metric is not wall-clock time (subagents often feel faster because they produce output simultaneously) but quality and accuracy of results.
+
+Track two things over your first month of subagent use:
+
+1. **Rework rate**: How often do you need to ask a subagent to redo work because the initial output was incorrect or missed requirements? A high rework rate suggests subagent instructions are too vague or tasks are not independent enough.
+
+2. **Synthesis overhead**: How long does it take you to combine subagent outputs into something usable? If merging three subagent analyses takes longer than reading one sequential analysis would have, parallelism is adding friction rather than removing it.
+
+For code review workflows specifically, a useful benchmark is comparing a parallel subagent review against a single-pass sequential review on the same PR. Some developers find that a well-structured single prompt with explicit categories to check produces equivalent quality to three separate subagents with less overhead.
+
+Subagents provide the most unambiguous benefit when tasks genuinely cannot inform each other — analyzing three completely independent modules, for instance. They provide marginal benefit when tasks share context but could theoretically run in parallel. Knowing which category your workflow falls into helps you apply subagents where they add the most value.
+
 ## Conclusion
 
 Parallel subagents represent one of Claude Code's most powerful capabilities for scaling complex workflows. By following these best practices—keeping tasks independent, providing clear instructions, applying specialized skills, and managing context strategically—you can significantly accelerate your development workflows.
 
 The key is starting simple: identify truly parallel work in your current tasks, spawn subagents to handle it, and iteratively refine your approach as you gain experience.
+
+## Debugging Subagent Failures
+
+When a subagent produces unexpected output or fails silently, diagnosing the issue requires a different approach than debugging synchronous code. The subagent ran in its own context window, so you cannot step through its reasoning after the fact.
+
+The most reliable debugging technique is re-running the subagent with an explicit trace request:
+
+```
+/subagent: [your task description]
+Before starting, explain your understanding of the task and list the steps you will take. After completing each step, briefly confirm what you did and what you found.
+```
+
+Adding this "think aloud" instruction produces a reasoning trace alongside the output. If the subagent made a wrong assumption early on, the trace surfaces it before you receive incorrect final output.
+
+For subagents that consistently fail on the same type of task, examine whether the task description has an ambiguity that creates two valid interpretations. Subagents that are operating correctly but misunderstanding your intent will often produce outputs that are internally consistent but wrong for your use case. Resolving the ambiguity in the instruction — adding an example of desired output format, or explicitly ruling out the wrong interpretation — fixes these cases.
+
+File-based communication between subagents reduces debugging complexity. When a parent subagent writes its output to a file and a child subagent reads from that file, you can inspect the intermediate state directly. This makes the subagent pipeline observable in a way that in-memory context passing is not.
 
 ## Related Reading
 

@@ -76,6 +76,26 @@ If you build custom skills, adopt the emerging tool definition pattern. The skil
 
 The `docx` skill for document creation and the `pptx` skill for presentations are also on the roadmap for enhanced capabilities. Expect better formatting control, template management, and cross-referencing between documents.
 
+## New Skill Categories on the Horizon
+
+Beyond upgrades to existing skills, entirely new categories are emerging to address gaps in the current ecosystem. Three categories worth watching in 2026:
+
+**Observability skills**: Real-time integration with monitoring platforms like Datadog, Grafana, and Prometheus. Rather than switching to your monitoring dashboard to investigate an alert, an observability skill would pull metrics, logs, and traces directly into your Claude Code session. You could ask "What happened to API latency between 2 PM and 3 PM yesterday?" and receive a correlated timeline from your metrics data without leaving the terminal.
+
+**Database migration skills**: Generating and reviewing schema migrations has always been a pain point. An upcoming `migration` skill is expected to analyze your current schema alongside your target schema, generate migration SQL with rollback scripts, and estimate downtime impact based on table sizes. This skill will integrate with the `tdd` skill to generate migration-specific test cases that verify data integrity before and after the migration runs.
+
+**Security skills specialized by domain**: Generic security scanning exists today, but specialized skills for cloud-specific issues (IAM misconfiguration, S3 bucket exposure, Kubernetes RBAC gaps) are coming. These skills will understand the security model of specific platforms rather than applying generic OWASP rules, producing more actionable findings with less false-positive noise.
+
+## Preparing Your Workflow Now
+
+Getting ready for 2026's skill capabilities means building good habits with the tools available today. Three practices that will transfer directly to the upgraded ecosystem:
+
+Write explicit skill invocations rather than relying on Claude to infer which skill is relevant. Explicitly typing `/tdd`, `/pdf`, or `/xlsx` produces more consistent results than hoping Claude activates the right skill automatically — and this precision will matter more as skill chaining becomes common.
+
+Maintain a `CLAUDE.md` file in each project repository. This file establishes project context that skills will use to personalize their output. A project with good `CLAUDE.md` documentation will benefit immediately from context-aware tdd tests and architecture-matching documentation skills.
+
+Experiment with writing simple custom skills now. The skill format is stable, and the habit of encoding team knowledge in skill files pays off both immediately and as an investment in the richer skill chaining capabilities arriving later in 2026.
+
 ## What This Means for Developers
 
 The direction of Claude Code skills points toward a future where AI assistance is more contextual, more composable, and more integrated with your existing toolchain. Rather than switching between different tools for different tasks, you will describe outcomes at a higher level and let Claude coordinate the appropriate skills.
@@ -83,6 +103,16 @@ The direction of Claude Code skills points toward a future where AI assistance i
 For power users, this means learning the skill invocation patterns now. Understanding how to invoke the `pdf` skill for document tasks, the `xlsx` skill for data work, and the `tdd` skill for testing will provide a foundation for the more advanced workflows coming in 2026.
 
 The skills ecosystem is moving toward less manual configuration and more automatic capability discovery. Skills will become self-describing, self-chaining, and more intelligent about when to apply themselves. Stay current with the skill repository and experiment with new skills as they become available.
+
+## Skills for Non-Developer Roles
+
+One underappreciated aspect of the 2026 roadmap is the expansion of skills designed for non-developer team members. Product managers, designers, and technical writers increasingly participate in development workflows, and skills tailored to their tasks reduce friction at the handoff points between roles.
+
+Skills targeting product management workflows are already emerging: ticket writing assistants that generate well-structured Jira stories from rough notes, roadmap synthesizers that consolidate feature requests into prioritized backlogs, and user story validators that check acceptance criteria completeness before development begins.
+
+For technical writers, the improved `docx` and `pdf` skills will gain awareness of documentation structure standards like DITA and Diátaxis. Rather than generating prose that a writer must restructure, these skills will produce documentation in the correct topic type (concept, task, reference) from the start, reducing the back-and-forth between engineering and technical writing teams.
+
+These cross-functional skills reduce the translation cost between technical and non-technical team members — a friction point that currently consumes significant time in most product development teams.
 
 ## Related Reading
 

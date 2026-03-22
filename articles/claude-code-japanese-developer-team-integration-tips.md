@@ -206,12 +206,61 @@ for complex concepts."
 
 5. **Maintain Human Oversight**: Claude Code enhances productivity but should augment, not replace, the collaborative decision-making valued in Japanese teams.
 
+## Running Retrospectives and Knowledge Capture
+
+Japanese development teams often conduct structured retrospectives (振り返り) after each sprint. Claude Code can assist with both running and documenting these sessions, producing artifacts in a format suitable for archiving in your team wiki.
+
+A useful pattern for retrospective documentation:
+
+```bash
+/docx
+"Create a sprint retrospective document in Japanese with sections:
+- 良かったこと (What went well)
+- 改善点 (Areas for improvement)
+- 次のアクション (Action items)
+
+Use our company's document template structure.
+Sprint: [Sprint Number]
+Date: [Date]"
+```
+
+For the actual retrospective data, teams can collect responses in a shared document and pass them to Claude for synthesis:
+
+```bash
+/docx
+"Summarize these retrospective responses and create a structured report:
+[paste team responses]
+
+Group similar themes, prioritize action items by impact,
+and format for our Confluence wiki."
+```
+
+The `supermemory` skill helps here by retaining recurring improvement themes across sprints. After several retrospectives, ask it to identify patterns:
+
+```bash
+/supermemory
+"Retrieve recurring themes from the last 4 sprint retrospectives
+and highlight any issues that appeared multiple times"
+```
+
+This longitudinal view — which is difficult to maintain manually — helps teams recognize systemic issues rather than treating each sprint's problems in isolation. The combination of careful documentation culture and AI-assisted pattern recognition gives Japanese teams a structured way to continuously improve over time.
+
 ## Conclusion
 
 Successfully integrating Claude Code into Japanese developer teams requires respecting established workflows while using automation where it adds value. The key is starting with documentation and quality assurance skills, then expanding to other areas as teams become comfortable with the technology. By following these integration tips, your team can achieve the productivity benefits of AI-assisted development while maintaining the quality standards and collaborative culture that define Japanese software development.
 
 {% endraw %}
 
+
+## Measuring Adoption Across the Team
+
+After rolling out Claude Code, tracking adoption helps identify which team members are struggling and which workflows are delivering the most value. Rather than relying on anecdotal feedback, collect structured data during the integration period.
+
+A lightweight measurement approach: create a shared spreadsheet where team members log the Claude Code tasks they completed each day, along with a rough time estimate for how long the same task would have taken manually. After one sprint, aggregate the data to identify the highest-impact use cases for your specific team.
+
+Common patterns in Japanese development teams show that documentation generation and bilingual comment writing tend to show the clearest time savings — tasks that previously required context-switching between Japanese and English now complete in a single session. Code review assistance shows more variable results depending on project complexity, and typically delivers more value on established codebases with complex business logic than on greenfield projects where the team knows the code well.
+
+Use this data to prioritize which skill workflows to document and share in your team wiki. Japanese teams' emphasis on knowledge sharing means documented, reproducible Claude Code workflows spread effectively once the initial adoption friction is overcome. Pairing the measurement data with a short demo session where experienced users show the workflow to the team tends to accelerate adoption significantly in collaborative Japanese team cultures.
 
 ## Related Reading
 

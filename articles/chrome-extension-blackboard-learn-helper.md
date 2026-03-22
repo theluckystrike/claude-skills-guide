@@ -207,12 +207,75 @@ Third, test across multiple Blackboard versions and institutions. Each deploymen
 
 Finally, maintain clear documentation for users. Explain what your extension does, what data it accesses, and how to report issues.
 
+## Adding Calendar Integration
+
+One of the most requested features in Blackboard helper extensions is calendar synchronization. Exporting assignment deadlines to Google Calendar or Outlook eliminates the need to manually enter due dates, which is error-prone and time-consuming.
+
+The extension can generate iCalendar (`.ics`) files from extracted deadline data:
+
+```javascript
+// content.js - Generate iCal data from deadlines
+function generateICalData(deadlines) {
+  const ical = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//BB Helper//EN'];
+
+  deadlines.forEach(deadline => {
+    const dtstart = formatDate(deadline.date);
+    // Set reminder 24 hours before
+    const dtReminder = formatDate(new Date(deadline.date - 86400000));
+
+    ical.push('BEGIN:VEVENT');
+    ical.push(`DTSTART:${dtstart}`);
+    ical.push(`SUMMARY:${deadline.title}`);
+    ical.push(`DESCRIPTION:${deadline.course} - ${deadline.text}`);
+    ical.push('BEGIN:VALARM');
+    ical.push('ACTION:DISPLAY');
+    ical.push('TRIGGER:-PT24H');
+    ical.push('DESCRIPTION:Assignment due tomorrow');
+    ical.push('END:VALARM');
+    ical.push('END:VEVENT');
+  });
+
+  ical.push('END:VCALENDAR');
+  return ical.join('\r\n');
+}
+
+function formatDate(date) {
+  return date.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+}
+
+// Trigger download of the .ics file
+function downloadCalendar(deadlines) {
+  const data = generateICalData(deadlines);
+  const blob = new Blob([data], { type: 'text/calendar' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'blackboard-deadlines.ics';
+  a.click();
+  URL.revokeObjectURL(url);
+}
+```
+
+Trigger this function from your extension popup with a "Export to Calendar" button. Users can import the resulting `.ics` file into any standards-compliant calendar application. For teams building more seamless integrations, the Google Calendar API and Microsoft Graph API both accept iCalendar data directly, enabling one-click sync without the download step.
+
 ## Extending Functionality
 
 Once you have established the core features, consider adding grade tracking dashboards, assignment submission reminders, or integration with calendar applications. The foundation built with deadline extraction and navigation shortcuts provides a solid base for more sophisticated features.
 
 The Blackboard Learn platform will continue evolving, and maintaining a helper extension requires ongoing attention to DOM changes and API updates. Focus on robust, adaptable implementations that can withstand structural modifications to the underlying platform.
 
+
+## Distributing to Your Institution
+
+Unlike public Chrome extensions, Blackboard helpers are often institution-specific tools that would violate the Web Store's guidelines if published publicly (they rely on Blackboard's non-public DOM structure and may scrape session data). Three distribution approaches work for institutional use:
+
+**Unpacked extension installation**: Package the extension as a ZIP and share it with users who install it through `chrome://extensions` with Developer Mode enabled. This requires no store approval but demands manual installation from each user. Suitable for small groups of technical users.
+
+**Enterprise GPO deployment**: For Windows-managed institutional machines, use Group Policy to force-install the extension from an internal update server (see the Chrome GPO guide for setup details). This distributes automatically to all managed machines without user action. The preferred approach for IT-managed environments.
+
+**Chromebook management via Google Admin**: Institutions that manage Chromebooks through Google Admin Console can push extensions to student or faculty devices directly. Navigate to Devices > Chrome > Apps & extensions, add the extension by uploading the CRX file, and configure it as force-installed for the target organizational unit.
+
+For extensions that handle sensitive academic data (grades, student IDs, submission content), document your data handling practices clearly and get review from your institution's IT security team before broad deployment. Most institutions have policies governing what data browser extensions may collect, even for internal tools.
 
 ## Related Reading
 

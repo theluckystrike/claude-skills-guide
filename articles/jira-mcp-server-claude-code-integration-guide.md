@@ -159,8 +159,102 @@ This sequence handles your sprint activation in seconds rather than minutes of m
 
 The Jira MCP server transforms how you interact with project management tooling. By bringing Jira operations directly into your Claude Code workflow, you maintain focus on development while keeping project tracking current and accurate.
 
+## Generating Sprint Reports with Claude Code
+
+Once Jira data flows into Claude Code via the MCP server, generating sprint reports becomes a natural language task rather than a manual export process. This is one of the highest-value uses of the integration for team leads and project managers.
+
+Ask Claude to pull the sprint data and format it as a report:
+
+```
+Fetch all completed stories in Sprint 24 from PROJECT.
+For each story, include the story points, assignee, and resolution date.
+Calculate total velocity and compare it to Sprint 23's velocity.
+Format the results as a markdown table suitable for our Confluence weekly update.
+```
+
+Claude retrieves the JQL results, performs the calculations, and formats the output. The entire report takes seconds instead of the 20-30 minutes typically spent clicking through Jira's built-in reports.
+
+For recurring reports, save effective prompts as custom Claude Code skills. A skill file for weekly sprint reporting keeps the prompt consistent across team members:
+
+```markdown
+# Sprint Report Skill
+
+When invoked, generate a weekly sprint report:
+1. Query current sprint tickets with: project = PROJECT AND sprint in openSprints()
+2. Calculate completion percentage and velocity
+3. Identify any tickets blocked more than 3 days
+4. Format as a Confluence-ready table with emoji status indicators
+5. Include a one-paragraph executive summary
+```
+
+Save this as `~/.claude/skills/sprint-report.md` and any team member can run `/sprint-report` to produce a standardized output each Friday.
+
+## Linking Commits to Jira Tickets Automatically
+
+Developer workflows improve when Git commits reference Jira tickets consistently. Claude Code can assist with enforcing this practice and creating the links retroactively when they are missing.
+
+Configure a Git commit message template that includes the Jira ticket:
+
+```bash
+# .gitmessage template
+# [PROJ-XXX] Brief description of change
+#
+# Why: Explain the business context
+# How: Technical summary of the approach
+#
+# Jira: PROJ-XXX
+```
+
+When you forget to include a ticket reference, Claude can query Jira for tickets matching the commit's work area and suggest the correct link:
+
+```
+Look at my last 5 commits without Jira ticket references and find the
+most likely matching tickets from open tickets in PROJECT.
+Use the commit message content to match against ticket summaries.
+```
+
+This retroactive linking keeps your Jira boards accurate without requiring developers to switch context mid-coding session to find and record ticket numbers.
+
 ---
 
+
+## Managing Multiple Jira Projects
+
+Teams working across multiple Jira projects can configure the MCP server to access all of them simultaneously. The configuration supports multiple project contexts in a single session:
+
+```
+Show all P1 tickets assigned to me across all projects I have access to,
+grouped by project key and sorted by creation date.
+```
+
+For organizations using both Jira Cloud and Jira Server, the MCP server requires separate configuration entries — one per Jira instance. Name them clearly in your `mcp-servers.json`:
+
+```json
+{
+  "mcpServers": {
+    "jira-cloud": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-jira"],
+      "env": {
+        "JIRA_HOST": "yourcompany.atlassian.net",
+        "JIRA_EMAIL": "${JIRA_CLOUD_EMAIL}",
+        "JIRA_API_TOKEN": "${JIRA_CLOUD_TOKEN}"
+      }
+    },
+    "jira-server": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-jira"],
+      "env": {
+        "JIRA_HOST": "jira.internal.yourcompany.com",
+        "JIRA_EMAIL": "${JIRA_SERVER_EMAIL}",
+        "JIRA_API_TOKEN": "${JIRA_SERVER_TOKEN}"
+      }
+    }
+  }
+}
+```
+
+When querying, specify which server to use: "Using jira-cloud, find all tickets..." This distinction matters for teams migrating from Server to Cloud who run both instances during the transition period.
 
 ## Related Reading
 
