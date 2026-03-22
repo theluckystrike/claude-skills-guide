@@ -109,6 +109,52 @@ function extractColors(imageElement, colorCount = 5) {
 
 This function samples an image and returns the most frequent colors. You can enhance this with k-means clustering or integrate with an AI API to name colors semantically ("this is approximately 'steel blue'").
 
+## Exporting Colors to Your Tech Stack
+
+The last step in any color workflow is getting the extracted colors into your project in the right format. AI color pickers typically support multiple export formats, but configuring your preferred format once saves significant time across a project.
+
+For Tailwind CSS projects, export colors directly as Tailwind config entries:
+
+```javascript
+// tailwind.config.js — exported from AI color picker
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        brand: {
+          50:  '#eff6ff',
+          100: '#dbeafe',
+          200: '#bfdbfe',
+          500: '#3b82f6',
+          700: '#1d4ed8',
+          900: '#1e3a8a',
+        },
+        accent: {
+          DEFAULT: '#10b981',
+          light:   '#34d399',
+          dark:    '#059669',
+        }
+      }
+    }
+  }
+}
+```
+
+For CSS custom properties, the export produces a variables block you can paste into your root stylesheet:
+
+```css
+:root {
+  --color-brand-50:  #eff6ff;
+  --color-brand-100: #dbeafe;
+  --color-brand-500: #3b82f6;
+  --color-brand-700: #1d4ed8;
+  --color-brand-900: #1e3a8a;
+  --color-accent:    #10b981;
+}
+```
+
+For design tokens workflows, look for extensions that export to the W3C Design Token Format (`.json`), which tools like Style Dictionary can then transform into platform-specific outputs (iOS, Android, CSS, SCSS, JS). This single-source-of-truth approach prevents palette drift across platforms.
+
 ## Tips for Effective Use
 
 Start each project by defining your core palette with an AI color picker, then stick to those colors throughout. The temptation to add "just one more shade" leads to inconsistent design systems.

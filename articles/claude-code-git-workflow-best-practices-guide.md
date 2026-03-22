@@ -409,16 +409,9 @@ Claude understands the context of both branches, making its suggestions more acc
 When a file has conflicts, Git inserts markers that Claude can parse and explain:
 
 ```javascript
-<<<<<<< HEAD (your branch)
 function getUser(id) {
   return db.users.findOne({ id, deletedAt: null });
 }
-=======
-async function getUser(id) {
-  const user = await User.findById(id);
-  return user?.toJSON() ?? null;
-}
->>>>>>> feat/mongoose-migration (incoming)
 ```
 
 Tell Claude:

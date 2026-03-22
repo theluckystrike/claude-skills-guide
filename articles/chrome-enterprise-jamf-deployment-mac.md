@@ -206,6 +206,31 @@ Chrome Enterprise on Mac integrates with macOS security frameworks. Consider the
 <integer>1</integer>
 ```
 
+## Scoped Deployment for Different User Groups
+
+Enterprise Mac fleets typically include multiple user categories — engineers, sales, executives, and contractors — with different browser requirements. Jamf Smart Groups let you scope Chrome Enterprise policies to match these differences without managing separate profiles for each individual.
+
+Create Smart Groups based on LDAP attributes or device criteria, then scope your Configuration Profiles accordingly:
+
+```bash
+# Jamf Smart Group criteria examples
+# Engineering group: machines in the IT/Engineering department LDAP OU
+# Sales group: machines enrolled with the sales scope tag
+# Default group: all remaining managed Macs
+```
+
+A practical policy split for a mid-sized organization:
+
+| Group | Force-installed extensions | Blocked policies |
+|---|---|---|
+| Engineering | Dev tools, debugging extensions | PasswordManagerEnabled: false |
+| Sales | CRM integration, screen share tools | IncognitoMode: disabled |
+| Default | Security scanner, bookmark sync | (standard restrictions) |
+
+Each group gets its own Configuration Profile scoped exclusively to its Smart Group. When a user moves departments and their LDAP attributes update, Jamf automatically applies the new profile at the next check-in — no manual intervention required.
+
+For contractors who use managed Macs temporarily, create a separate enrollment profile with more restrictive Chrome settings (no password manager, no personal sign-in, enhanced safe browsing). Scoping by enrollment type rather than individual device identity scales better as contractor headcount fluctuates.
+
 ## Conclusion
 
 Deploying Chrome Enterprise through Jamf Pro combines package distribution with macOS Configuration Profiles to achieve enterprise browser management. The key is structuring your Jamf policies, Configuration Profiles, and update mechanisms to work together. Start with basic package deployment, add configuration profiles for your required policies, then refine your update strategy based on organizational needs.
