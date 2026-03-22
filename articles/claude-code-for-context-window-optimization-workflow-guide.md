@@ -5,7 +5,7 @@ description: "A comprehensive guide to optimizing context window usage in Claude
 date: 2026-03-20
 author: Claude Skills Guide
 permalink: /claude-code-for-context-window-optimization-workflow-guide/
-categories: [Development, AI, CLI Tools]
+categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 

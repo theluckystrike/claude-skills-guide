@@ -5,7 +5,7 @@ description: "Learn how to build robust self-consistency prompting workflows usi
 date: 2026-03-20
 author: Claude Skills Guide
 permalink: /claude-code-for-self-consistency-prompting-workflow-tutorial/
-categories: [Tutorial, Claude Code, AI Development]
+categories: [tutorials, guides]
 tags: [claude-code, claude-skills]
 ---
 

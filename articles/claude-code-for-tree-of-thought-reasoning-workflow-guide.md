@@ -5,7 +5,7 @@ description: "Learn how to implement Tree of Thought reasoning with Claude Code 
 date: 2026-03-20
 author: Claude Skills Guide
 permalink: /claude-code-for-tree-of-thought-reasoning-workflow-guide/
-categories: [Development, AI, Workflow]
+categories: [guides, workflows]
 tags: [claude-code, claude-skills]
 ---
 {% raw %}
