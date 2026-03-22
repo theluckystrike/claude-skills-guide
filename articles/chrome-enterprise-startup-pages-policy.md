@@ -12,6 +12,7 @@ score: 8
 categories: [guides]
 tags: [claude-code, claude-skills]
 ---
+{% raw %}
 
 
 # Chrome Enterprise Startup Pages Policy: A Practical Guide
@@ -684,3 +685,4 @@ Document the test results — which policies applied, which URLs loaded, and any
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
