@@ -11,6 +11,7 @@ reviewed: true
 score: 7
 tags: [claude-code, claude-skills]
 ---
+{% raw %}
 
 
 # Claude Code Azure DevOps Pipeline Automation
@@ -506,3 +507,4 @@ For documentation generation within pipelines, the automated-code-documentation-
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

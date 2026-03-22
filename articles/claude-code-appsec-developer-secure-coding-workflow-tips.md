@@ -11,6 +11,7 @@ score: 7
 categories: [workflows]
 tags: [claude-code, claude-skills]
 ---
+{% raw %}
 
 
 # Claude Code AppSec: Developer Secure Coding Workflow Tips
@@ -436,3 +437,4 @@ Start implementing these workflow tips today, and you'll see improvements in you
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
