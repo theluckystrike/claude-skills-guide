@@ -11,6 +11,7 @@ reviewed: true
 score: 7
 tags: [claude-code, claude-skills]
 ---
+{% raw %}
 
 
 # Claude Code Tips from Experienced Users 2026
@@ -397,3 +398,4 @@ The developers who extract the most value from Claude Code are not those who use
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
