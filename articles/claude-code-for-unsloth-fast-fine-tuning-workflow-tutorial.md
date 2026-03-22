@@ -5,7 +5,7 @@ description: "Learn how to leverage Claude Code with Unsloth for blazing-fast LL
 date: 2026-03-20
 author: Claude Skills Guide
 permalink: /claude-code-for-unsloth-fast-fine-tuning-workflow-tutorial/
-categories: [Tutorial, AI, Machine Learning]
+categories: [tutorials, guides]
 tags: [claude-code, claude-skills, unsloth, fine-tuning, LLM]
 ---
 
