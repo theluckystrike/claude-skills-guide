@@ -170,11 +170,9 @@ Claude Code generates Tera templates—the templating language Zola uses—with 
   {% block extra_head %}{% endblock %}
 </head>
 <body>
-  {% include "partials/header.html" %}
   <main>
     {% block content %}{% endblock %}
   </main>
-  {% include "partials/footer.html" %}
 </body>
 </html>
 ```
