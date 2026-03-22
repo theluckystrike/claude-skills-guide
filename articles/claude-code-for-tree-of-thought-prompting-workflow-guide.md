@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Tree of Thought Prompting Workflow Guide"
-description: "Master Tree of Thought prompting with Claude Code. Learn practical workflows, code examples, and strategies for systematic problem-solving using branching reasoning chains."
+description: "Master Tree of Thought prompting with Claude Code. Learn practical workflows, code examples, and strategies for systematic problem-solving using..."
 date: 2026-03-20
 author: Claude Skills Guide
 permalink: /claude-code-for-tree-of-thought-prompting-workflow-guide/

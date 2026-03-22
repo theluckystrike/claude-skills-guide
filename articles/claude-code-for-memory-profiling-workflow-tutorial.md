@@ -76,7 +76,6 @@ Run it with `python -m memory_profiler your_script.py` and you will see output l
 
 ```
 Line #    Mem usage    Increment   Line Contents
-================================================
      5   45.3 MiB   45.3 MiB   def process_records(records):
      6   45.3 MiB    0.0 MiB       results = []
      7   45.3 MiB    0.0 MiB       for record in records:

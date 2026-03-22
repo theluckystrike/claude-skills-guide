@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for OSS Bug Report Workflow Tutorial"
-description: "Learn how to use Claude Code to streamline your open source bug reporting workflow. From reproducing issues to crafting detailed reports, this guide shows practical techniques for developers."
+description: "Learn how to use Claude Code to streamline your open source bug reporting workflow. From reproducing issues to crafting detailed reports, this guide..."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-oss-bug-report-workflow-tutorial/

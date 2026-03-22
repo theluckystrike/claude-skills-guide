@@ -298,7 +298,6 @@ npx tsc --traceResolution 2>&1 | grep "@components"
 The `--traceResolution` flag outputs every resolution decision TypeScript makes. Filter it by your alias prefix to see exactly what's happening. A working resolution looks like:
 
 ```
-======== Resolving module '@components/Button' ========
 Module resolution kind is not specified, using 'Node'.
 baseUrl option is set to '.', using this value to resolve non-relative module name '@components/Button'
 Resolving module name '@components/Button' relative to base url '.' gives 'src/components/Button'.

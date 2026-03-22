@@ -433,7 +433,6 @@ A well-authored perf-audit skill produces structured findings like:
 
 ```
 PERFORMANCE AUDIT: ProductList
-================================
 
 [CRITICAL] Missing memo wrapper
   → ProductList re-renders on every parent update

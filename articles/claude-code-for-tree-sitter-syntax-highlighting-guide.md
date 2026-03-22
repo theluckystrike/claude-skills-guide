@@ -376,9 +376,7 @@ For a rapid debugging loop with Claude Code, paste the raw `tree-sitter parse` o
 Tree-sitter has a built-in test format in `test/corpus/`. These are plain text files that assert what the parse tree should look like for given inputs:
 
 ```
-==================
 Variable Declaration
-==================
 
 const x = 42;
 

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Bruno API Client Workflow Tutorial"
-description: "Learn how to leverage Claude Code to streamline your Bruno API client workflow. This tutorial covers automating request generation, managing collections, and integrating Bruno into your development pipeline."
+description: "Learn how to leverage Claude Code to streamline your Bruno API client workflow. This tutorial covers automating request generation, managing..."
 date: 2026-03-20
 author: Claude Skills Guide
 permalink: /claude-code-for-bruno-api-client-workflow-tutorial/

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Prompt Engineering Techniques: 2026 Workflow Guide"
-description: "Master prompt engineering with Claude Code using structured workflows, chain-of-thought techniques, and iterative refinement strategies for production-grade AI applications."
+description: "Master prompt engineering with Claude Code using structured workflows, chain-of-thought techniques, and iterative refinement strategies for..."
 date: 2026-03-20
 categories: [guides, tutorials]
 tags: [claude-code, claude-skills]

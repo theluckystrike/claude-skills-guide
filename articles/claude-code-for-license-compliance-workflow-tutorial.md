@@ -373,19 +373,15 @@ This project incorporates components from the projects listed below.
 The original copyright notices and the licenses under which they were
 received are set forth below.
 
-=========================================================================
 Package: axios 1.6.0
 License: MIT
 Copyright (c) 2014-present Matt Zabriskie & Collaborators
 Full license text: https://github.com/axios/axios/blob/main/LICENSE
-=========================================================================
 
-=========================================================================
 Package: lodash 4.17.21
 License: MIT
 Copyright OpenJS Foundation and other contributors
 Full license text: https://github.com/lodash/lodash/blob/main/LICENSE
-=========================================================================
 ```
 
 Generate an SPDX document for formal compliance:
