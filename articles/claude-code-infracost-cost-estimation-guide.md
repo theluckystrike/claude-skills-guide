@@ -11,6 +11,7 @@ reviewed: true
 score: 7
 tags: [claude-code, claude-skills]
 ---
+{% raw %}
 
 
 # Claude Code Infracost Cost Estimation Guide
@@ -362,3 +363,4 @@ Finally, remember that Infracost provides estimates, not guarantees. Actual cost
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

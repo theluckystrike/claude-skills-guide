@@ -404,7 +404,7 @@ async function auditPages(urls) {
         const page = await browser.newPage();
 
         // Enable performance tracing
-        await page.tracing.start({ categories: ['devtools.timeline'] });
+        await page.tracing.start({ categories: [guides] });
         await page.goto(url, { waitUntil: 'networkidle0' });
         await page.tracing.stop({ path: `trace-${Date.now()}.json` });
 
