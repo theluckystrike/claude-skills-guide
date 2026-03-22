@@ -185,6 +185,61 @@ Every Chrome extension project has unique needs. Your team size, release cadence
 
 Track which agenda items consistently get cut due to time constraints. This indicates either the meeting is too short or the template includes unnecessary sections. Conversely, topics that frequently overflow their time slots might need their own dedicated meetings.
 
+## Integrating Agendas with Project Management Tools
+
+Storing meeting templates as plain markdown in your repository is a good start, but connecting them to your project management workflow reduces the friction between agenda planning and task tracking. Teams using Jira can link agenda items directly to tickets; teams using GitHub Issues can create issues from action items at the end of each meeting.
+
+A simple shell script that converts the "Action Items" section of a meeting notes file into GitHub Issues:
+
+```bash
+#!/bin/bash
+# extract-action-items.sh — run after a meeting to create GitHub issues
+NOTES_FILE="${1:-meeting-notes.md}"
+REPO="${GITHUB_REPO:-yourorg/yourrepo}"
+
+# Extract lines starting with '- [ ]' from the Action Items section
+awk '/^## Action Items/,/^##/' "$NOTES_FILE" | \
+  grep '^\- \[ \]' | \
+  sed 's/^- \[ \] //' | \
+while IFS= read -r action; do
+  gh issue create \
+    --repo "$REPO" \
+    --title "$action" \
+    --label "meeting-action" \
+    --body "Created from meeting notes: $NOTES_FILE"
+  echo "Created issue: $action"
+done
+```
+
+Run this after any meeting where notes were captured in the standard template format. The `gh` CLI creates an issue for each unchecked action item, automatically labeled `meeting-action` so they are visible in your project board.
+
+For recurring meetings like weekly syncs or release reviews, set up a GitHub Action that automatically creates a new meeting notes file from the template at the start of each cycle:
+
+```yaml
+# .github/workflows/weekly-sync-setup.yml
+name: Prepare Weekly Sync Agenda
+
+on:
+  schedule:
+    - cron: '0 8 * * 1'  # Every Monday at 8 AM
+
+jobs:
+  create-agenda:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create agenda file from template
+        run: |
+          DATE=$(date +%Y-%m-%d)
+          cp templates/meetings/sprint-planning.md "meetings/weekly-sync-${DATE}.md"
+          sed -i "s/\[DATE\]/${DATE}/" "meetings/weekly-sync-${DATE}.md"
+          git add "meetings/weekly-sync-${DATE}.md"
+          git commit -m "Add weekly sync agenda for ${DATE}"
+          git push
+```
+
+The prepared file appears in the repository at the start of each meeting cycle, ready for team members to add pre-meeting context before the call begins.
+
 ## Conclusion
 
 Effective Chrome extension development requires meetings that address the unique aspects of browser extension projects. A well-designed meeting agenda template ensures consistent coverage of manifest versioning, Chrome API usage, permission management, and Web Store compliance.

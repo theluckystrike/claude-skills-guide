@@ -135,6 +135,20 @@ If repository structure seems outdated, right-click the Octotree icon and select
 
 Other extensions modifying GitHub's DOM can sometimes interfere with Octotree. Disable other GitHub-related extensions temporarily to diagnose conflicts.
 
+## Octotree Pro Features for Enterprise Teams
+
+Octotree Pro adds several features that benefit development teams working in private repositories at scale.
+
+**Multiple GitHub accounts**: Enterprise developers often work across a personal GitHub account and one or more organizational accounts. Octotree Pro lets you store separate Personal Access Tokens for each GitHub instance (including GitHub Enterprise Server) and switches contexts automatically based on the domain.
+
+**File bookmarks**: Pro users can bookmark specific files across repositories. For developers who frequently check the same config files, test utilities, or reference implementations across projects, bookmarks provide instant access without navigating the tree each time.
+
+**Pinned repositories**: Pin your most-visited repositories to the top of Octotree's repository picker. This is useful for monorepos where you regularly switch between the main repository and several satellite repos, all in the same browser window.
+
+**Dark mode consistency**: While the free version supports dark mode for the sidebar, the Pro version applies dark theming to inline code previews and the extended file detail panel, maintaining visual consistency across the entire Octotree UI.
+
+For teams evaluating Pro, the multiple-account support alone pays back the subscription cost in time saved per week. Context-switching between accounts through GitHub's native interface involves signing out, signing in, and losing your place — Octotree Pro eliminates this entirely for common multi-account workflows.
+
 ## Conclusion
 
 Octotree transforms GitHub from a flat file list into a navigable directory tree, saving developers countless clicks and maintaining spatial awareness of codebase structure. Whether you're exploring unfamiliar repositories, reviewing pull requests, or traversing your own large projects, the sidebar becomes an essential part of your GitHub workflow.

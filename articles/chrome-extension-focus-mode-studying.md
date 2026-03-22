@@ -187,6 +187,82 @@ Third, build in accountability mechanisms. Some extensions require users to type
 
 Fourth, integrate break reminders. Focus mode works best when paired with structured breaks using the Pomodoro method or similar techniques. Extensions that enforce breaks prevent burnout and maintain long-term productivity.
 
+## Using the Declarative Net Request API
+
+Manifest V3 requires extensions to use the `declarativeNetRequest` API instead of `webRequest` for blocking. This change shifts filtering from runtime JavaScript to static rule sets, which Chrome processes more efficiently. Updating a blocking extension for MV3 compatibility requires restructuring the blocking logic:
+
+```json
+// rules.json — declarative blocking rules
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||twitter.com^",
+      "resourceTypes": ["main_frame", "sub_frame"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||reddit.com^",
+      "resourceTypes": ["main_frame", "sub_frame"]
+    }
+  }
+]
+```
+
+Register these rules in your manifest:
+
+```json
+{
+  "manifest_version": 3,
+  "permissions": ["declarativeNetRequest", "storage"],
+  "declarative_net_request": {
+    "rule_resources": [{
+      "id": "ruleset_1",
+      "enabled": true,
+      "path": "rules.json"
+    }]
+  }
+}
+```
+
+For dynamic blocking (enabling and disabling rules based on focus session state), use the `updateDynamicRules` API from the service worker:
+
+```javascript
+// background.js
+async function setFocusMode(active) {
+  const rules = await chrome.storage.local.get('blockList');
+  const blockList = rules.blockList || [];
+
+  if (active) {
+    const dynamicRules = blockList.map((domain, i) => ({
+      id: 100 + i,
+      priority: 1,
+      action: { type: 'block' },
+      condition: {
+        urlFilter: `||${domain}^`,
+        resourceTypes: ['main_frame']
+      }
+    }));
+    await chrome.declarativeNetRequest.updateDynamicRules({
+      addRules: dynamicRules
+    });
+  } else {
+    const existing = await chrome.declarativeNetRequest.getDynamicRules();
+    await chrome.declarativeNetRequest.updateDynamicRules({
+      removeRuleIds: existing.map(r => r.id)
+    });
+  }
+}
+```
+
+This pattern lets users customize their blocklist in the extension options while still using the efficient declarative blocking mechanism. The `updateDynamicRules` call takes effect immediately without reloading the extension.
+
 ## Conclusion
 
 Chrome extensions transform the browser from a distraction source into a focused study environment. Whether using established tools like LeechBlock NG or building custom solutions with the Chrome Extension API, the key lies in matching features to personal study habits. Start simple—block your most problematic sites, use a timer, and gradually expand your system as focus becomes automatic.

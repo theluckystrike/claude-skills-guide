@@ -130,6 +130,39 @@ Teams implementing AI-assisted development workflows frequently use `disallowedT
 
 The `pdf` skill demonstrates practical skill-level tool configuration. When generating documents, this skill typically needs file write access but benefits from restricted shell access to prevent unintended command execution during document generation.
 
+## Testing Your disallowedTools Configuration
+
+After configuring tool restrictions, verify they actually work before relying on them in security-sensitive workflows. A misconfigured `disallowedTools` entry (typo in a tool name, wrong nesting in the JSON) silently fails — Claude will still have access to the tool you intended to block.
+
+Create a simple test session to verify each blocked tool:
+
+```
+Run the following command and tell me the output: echo "test_confirmation"
+```
+
+If `Bash` is correctly blocked, Claude should respond that it cannot execute that tool rather than running the command. If it runs, your configuration is not applying correctly.
+
+For write tool restrictions, test with:
+
+```
+Create a file called test-disallowed.txt in the current directory with the content "verification"
+```
+
+A correctly blocked Write tool should produce a refusal. If the file appears on disk, the block is not working.
+
+Run these checks after any configuration change and after updating Claude Code to a new version — tool names and configuration schemas can change between releases.
+
+### Auditing Tool Usage in Logs
+
+Claude Code logs tool invocations to `~/.claude/logs/` by default. After a session where you tested restricted tools, examine the log to confirm blocked invocations were recorded:
+
+```bash
+# Check most recent session log for blocked tool attempts
+tail -100 ~/.claude/logs/$(ls -t ~/.claude/logs/ | head -1)
+```
+
+Blocked tool attempts appear as error entries in the log. Regular auditing of these logs — especially in automated agent deployments — reveals whether any session is attempting to use tools outside your approved set, which may indicate a prompt injection attempt or a skills misconfiguration that is trying to invoke unavailable capabilities.
+
 ## Summary
 
 The `disallowedTools` configuration in Claude Code provides essential security control for development teams. By carefully designing your tool access restrictions, you create safe, focused AI assistant environments that enhance productivity without introducing unnecessary risk. Start with restrictive configurations, understand the tool interactions in your workflows, and regularly audit your settings as your usage evolves.

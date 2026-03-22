@@ -211,6 +211,59 @@ For developers building internal tooling, understanding these policies helps you
 
 Start with a small pilot group, verify the behavior works as expected, then roll out organization-wide. Your users will appreciate landing directly on relevant resources rather than an empty new tab.
 
+## Combining Startup Pages with New Tab Page Policy
+
+Startup pages and the New Tab Page policy work independently — configuring startup pages does not affect what users see when they open a new tab mid-session. For a fully controlled experience, set both policies together.
+
+The `NewTabPageLocation` policy redirects the new tab page to a URL of your choice:
+
+```xml
+<!-- macOS plist -->
+<key>NewTabPageLocation</key>
+<string>https://internal.dashboard.company.com</string>
+```
+
+```
+# Windows Group Policy
+Policy: Set New Tab page URL
+Value: https://internal.dashboard.company.com
+```
+
+For organizations that want users to see the standard Chrome new tab (with Speed Dial and recent pages) while still opening specific URLs at startup, leave `NewTabPageLocation` unset and configure only `RestoreOnStartupURLs`. The startup URLs open in separate tabs at launch but new tabs behave normally.
+
+Conversely, some organizations want new tab control without startup behavior — perhaps because users prefer to restore their last session but still want internal tools available from every new tab. Set `NewTabPageLocation` without configuring `RestoreOnStartup`.
+
+A complete policy combination for a development team that wants both behaviors:
+
+```xml
+<!-- Open two tabs at startup -->
+<key>RestoreOnStartup</key>
+<integer>4</integer>
+<key>RestoreOnStartupURLs</key>
+<array>
+    <string>https://dev-dashboard.internal.company.com</string>
+    <string>https://status.internal.company.com</string>
+</array>
+
+<!-- Every new tab also goes to the dashboard -->
+<key>NewTabPageLocation</key>
+<string>https://dev-dashboard.internal.company.com</string>
+
+<!-- Pre-populate managed bookmarks -->
+<key>ManagedBookmarks</key>
+<array>
+    <dict>
+        <key>toplevel_name</key>
+        <string>Company</string>
+    </dict>
+    <dict><key>name</key><string>Jira</string><key>url</key><string>https://jira.company.com</string></dict>
+    <dict><key>name</key><string>Confluence</string><key>url</key><string>https://confluence.company.com</string></dict>
+    <dict><key>name</key><string>Grafana</string><key>url</key><string>https://grafana.company.com</string></dict>
+</array>
+```
+
+Combine these policies with `HomepageLocation` for a completely cohesive experience — every entry point (startup, new tab, home button) routes to company resources.
+
 ---
 
 

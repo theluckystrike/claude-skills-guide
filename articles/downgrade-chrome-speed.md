@@ -128,6 +128,53 @@ For teams that need consistent cross-version testing, consider dedicated tools:
 
 These platforms eliminate the need to manually manage multiple installations and provide isolated environments for each test scenario.
 
+## Integrating Throttling into CI Performance Budgets
+
+Manual throttling testing is useful for investigation, but catching performance regressions before they reach production requires automated checks in your CI pipeline. Playwright and Puppeteer both support network throttling via the Chrome DevTools Protocol, making it straightforward to add speed-aware assertions to your test suite.
+
+A Playwright test that enforces a performance budget under throttled conditions:
+
+```javascript
+// performance.spec.js
+const { test, expect, chromium } = require('@playwright/test');
+
+test('homepage loads within budget on slow 3G', async () => {
+  const browser = await chromium.launch();
+  const context = await browser.newContext();
+  const page = await context.newPage();
+
+  // Apply slow 3G throttling via CDP
+  const cdp = await context.newCDPSession(page);
+  await cdp.send('Network.emulateNetworkConditions', {
+    offline: false,
+    downloadThroughput: 400 * 1024 / 8,  // 400 Kbps
+    uploadThroughput:   150 * 1024 / 8,  // 150 Kbps
+    latency:            400              // 400ms RTT
+  });
+
+  const startTime = Date.now();
+  await page.goto('https://your-app.example.com');
+  await page.waitForLoadState('networkidle');
+  const loadTime = Date.now() - startTime;
+
+  // Assert that the page loads within 8 seconds on slow 3G
+  expect(loadTime).toBeLessThan(8000);
+
+  // Also check Core Web Vitals
+  const fcp = await page.evaluate(() => {
+    const entry = performance.getEntriesByName('first-contentful-paint')[0];
+    return entry ? entry.startTime : null;
+  });
+  expect(fcp).toBeLessThan(4000); // FCP under 4s on slow 3G
+
+  await browser.close();
+});
+```
+
+Run this test in your GitHub Actions workflow with a performance budget threshold. When a commit makes the page significantly heavier (large image added, new blocking scripts, oversized dependencies), the test fails and the pipeline blocks the merge.
+
+Setting separate budgets per route — the marketing homepage can tolerate a higher threshold than your core application UI — keeps the tests useful without false positives from inherently heavier landing pages.
+
 ## Practical Applications
 
 Understanding these techniques opens several testing possibilities. You can identify loading bottlenecks by testing with slow network profiles, discover JavaScript performance issues through CPU throttling, and reproduce browser-specific bugs by running specific Chrome versions.
