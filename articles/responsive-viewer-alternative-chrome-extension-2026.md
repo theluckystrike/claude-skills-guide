@@ -11,6 +11,7 @@ reviewed: true
 score: 8
 permalink: /responsive-viewer-alternative-chrome-extension-2026/
 ---
+{% raw %}
 
 
 # Responsive Viewer Alternative Chrome Extension 2026
@@ -485,3 +486,4 @@ The traditional extension model has largely been superseded by these built-in an
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

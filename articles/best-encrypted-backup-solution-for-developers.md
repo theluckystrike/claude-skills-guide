@@ -13,6 +13,7 @@ tags: [encryption, backup, security, developer-tools, privacy]
 reviewed: true
 score: 8
 ---
+{% raw %}
 
 
 
@@ -396,3 +397,4 @@ Whatever you choose, the critical requirement is genuine client-side encryption.
 - [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

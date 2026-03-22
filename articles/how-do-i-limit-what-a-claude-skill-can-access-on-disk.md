@@ -10,6 +10,7 @@ reviewed: true
 score: 9
 permalink: /how-do-i-limit-what-a-claude-skill-can-access-on-disk/
 ---
+{% raw %}
 
 # How Do I Limit What a Claude Skill Can Access on Disk
 
@@ -387,3 +388,4 @@ These controls give you the flexibility to use skills like pdf, xlsx, tdd, and f
 - [Claude Skills: Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Explore foundational Claude Code security patterns and permission configuration approaches
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
