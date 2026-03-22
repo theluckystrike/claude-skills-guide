@@ -134,6 +134,55 @@ When conflicts persist despite configuration adjustments, isolate problematic co
 
 Resolving Claude Code skill conflicts with MCP servers requires identifying the conflict type—tool name collisions, permission mismatches, or runtime execution issues—and applying the appropriate solution. Use tool prefixes to avoid naming conflicts, configure scoped permissions to prevent access issues, and implement sequential execution for runtime problems. Following naming conventions and documenting your setup prevents future conflicts as your workflow grows. For the broader MCP ecosystem, the [Claude Code MCP server setup guide](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) covers initial MCP configuration in detail.
 
+## Diagnosing Conflicts with Session Logging
+
+When conflicts are intermittent or hard to reproduce, session logs provide the most reliable diagnostic path. Claude Code writes tool invocation records to `~/.claude/logs/`, and each line includes the tool name, invocation timestamp, and outcome. Reviewing these logs after a session where a conflict occurred reveals the exact sequence of tool calls and where failures began.
+
+For MCP server conflicts specifically, look for patterns like a built-in tool call immediately followed by an error response from an MCP server tool with the same name — this is the signature of a tool name collision resolving in an unexpected order.
+
+```bash
+# Review recent session log for tool invocation patterns
+# Filter to lines containing MCP tool calls
+grep -E '"tool":|"error":' ~/.claude/logs/$(ls -t ~/.claude/logs/ | head -1) | head -50
+```
+
+Beyond after-the-fact debugging, you can prevent the most common MCP server conflicts by auditing your configuration before starting a session:
+
+```bash
+# List all registered MCP servers and their configured tools
+claude mcp list
+
+# Check a specific server's tool definitions
+claude mcp get my-custom-server
+```
+
+If two servers expose a tool with the same name, this audit surfaces the conflict before it manifests as a runtime error. Make this check part of your environment setup process when adding new MCP servers to a project.
+
+## Version Pinning for MCP Servers
+
+A category of conflicts that catches developers off guard involves MCP server updates introducing new tools that collide with existing skills or with tools from other servers. An MCP server that worked cleanly at version 1.2 may add a new tool at version 1.3 that conflicts with your existing setup.
+
+Pin MCP server versions in your Claude Code configuration to prevent silent conflicts from upstream updates:
+
+```json
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem@1.2.0", "/your/project"]
+    },
+    "database": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sqlite@0.6.1", "./app.db"]
+    }
+  }
+}
+```
+
+The `@version` pin in the `npx` args ensures `npm` does not silently pull a newer release that changes the tool surface. When you are ready to upgrade, do so intentionally and re-run your conflict audit before committing the version bump.
+
+For teams managing Claude Code configurations in a shared repository, add a `CHANGELOG` entry every time an MCP server version changes. This creates an audit trail for tracking down conflicts that appear after a configuration update, since the change is now visible in git history rather than invisible in a locally-updated `package-lock.json`. Treat MCP server version bumps with the same care as any other dependency upgrade — review the server's changelog for new tools, breaking changes, or renamed methods before merging.
+
 ## Related Reading
 
 - [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) — Set up MCP servers correctly from the start to avoid conflict-prone configurations

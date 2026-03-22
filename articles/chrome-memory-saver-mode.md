@@ -175,6 +175,56 @@ This ensures your web applications handle the suspension gracefully, persisting 
 Chrome's Memory Saver mode is a practical tool for developers juggling numerous browser tabs alongside resource-intensive development environments. By understanding its mechanics and configuration options, you can maintain productivity without sacrificing system performance. The key is identifying which tabs genuinely need to remain active versus which can be suspended until needed.
 
 
+## Profiling Memory Usage Before and After Enabling Memory Saver
+
+Before relying on Memory Saver's automated behavior, establish a baseline to confirm it is actually helping your system. Chrome's built-in Task Manager provides per-tab memory consumption data you can compare directly.
+
+Open Chrome's Task Manager with `Shift + Esc` (Windows/Linux) or through the menu at More Tools > Task Manager. Each open tab appears as a separate row with its current memory footprint. Sort by the Memory column to identify the heaviest consumers.
+
+Record total memory usage across all tabs before enabling Memory Saver. Enable the feature, leave your tabs open and switch away from most of them for 10-15 minutes. Return to Task Manager and compare. Discarded tabs no longer appear in Task Manager — they have been released from memory entirely. The remaining active tab count, multiplied by their average footprint, represents your new working set.
+
+For developers who want programmatic monitoring, Chrome DevTools exposes memory allocation data via the Performance tab's timeline recorder:
+
+```javascript
+// Snapshot heap usage in DevTools console
+const memBefore = performance.memory.usedJSHeapSize;
+// ... trigger some page actions ...
+const memAfter = performance.memory.usedJSHeapSize;
+console.log(`Heap delta: ${((memAfter - memBefore) / 1024 / 1024).toFixed(2)} MB`);
+```
+
+This measures the active tab's heap rather than total process memory, but it confirms that a specific web application is not leaking memory even when it is the active tab that Memory Saver cannot discard.
+
+For automated monitoring across sessions, the Chrome DevTools Protocol exposes `Memory.getBrowserSamplingProfile` which development tools can query programmatically. Combining CDP with your existing observability stack lets you track memory trends over days rather than just spot-checking.
+
+## Memory Saver and Progressive Web Apps
+
+Progressive Web Apps (PWAs) installed in Chrome behave differently with Memory Saver than regular browser tabs. Because PWAs run in their own window context, separate from the main Chrome browser window, Memory Saver treats each installed PWA as a distinct application with its own lifecycle policy.
+
+An installed PWA that your OS considers a "foreground app" will not be discarded by Memory Saver even when idle for extended periods. This distinction matters for developers testing PWA behavior — if your PWA maintains expected state after long idle periods, it may be the PWA's window focus state preventing the discard, not your service worker or cache strategy.
+
+To test your PWA's actual reload behavior, you can manually trigger a discard from `chrome://discards`. This page lists every loaded document (tabs and PWAs) and includes an "Urgent Discard" link that immediately frees the tab's memory without waiting for Memory Saver's heuristics.
+
+After discarding your PWA via this tool, switch back to it and observe whether the service worker restores cached content correctly, background sync requests queued before the discard are replayed, and push notification registration persists across the discard/restore cycle. This manual testing workflow is faster than waiting for Memory Saver to trigger naturally and gives deterministic results for documenting your PWA's offline and resume behavior.
+
+You can also use the Page Lifecycle API to listen for discard events in your PWA's service worker:
+
+```javascript
+// In service worker: detect tab freeze/resume events
+self.addEventListener('freeze', (event) => {
+  // Persist any in-flight state before the process is frozen
+  event.waitUntil(persistPendingData());
+});
+
+self.addEventListener('resume', () => {
+  // Reinitialize connections after Memory Saver restores the tab
+  reconnectWebSocket();
+  refreshAuthToken();
+});
+```
+
+Handling these events makes your PWA resilient to both Memory Saver discards and OS-level tab suspension, which is important for apps that maintain WebSocket connections or long-polling requests.
+
 ## Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)

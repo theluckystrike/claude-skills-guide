@@ -132,6 +132,94 @@ Maintain your skills as living documents. Unreal Engine updates may introduce ne
 
 Avoid over-automation. Some tasks, like debugging complex replication issues or tuning gameplay feel, require human judgment. Use skills as productivity enhancers rather than replacements for thoughtful development.
 
+## Blueprint to C++ Migration with Skill Assistance
+
+One of the most time-consuming tasks in mature Unreal projects is migrating gameplay logic from Blueprint visual scripts to C++ for performance-critical systems. Blueprint is excellent for prototyping but introduces overhead that matters in AI-heavy or physics-intensive scenarios. Claude skills can accelerate this migration significantly.
+
+The core challenge is that Blueprint nodes translate to C++ in non-obvious ways. A simple Blueprint branch node becomes an if/else, but event dispatchers, actor components created at runtime, and multi-cast delegates each have distinct C++ equivalents that don't map directly to Blueprint concepts.
+
+A well-constructed migration skill prompts Claude to produce idiomatic Unreal C++ rather than naive translations. For example, migrating a Blueprint timer to C++:
+
+```cpp
+// Blueprint equivalent: Set Timer by Function Name
+// C++ idiomatic replacement using FTimerHandle
+
+UCLASS()
+class MYGAME_API AMyActor : public AActor
+{
+    GENERATED_BODY()
+
+private:
+    FTimerHandle SpawnTimerHandle;
+
+public:
+    virtual void BeginPlay() override;
+    void SpawnEnemy();
+};
+
+// Implementation
+void AMyActor::BeginPlay()
+{
+    Super::BeginPlay();
+    // Equivalent to Blueprint "Set Timer by Function Name" with looping = true
+    GetWorldTimerManager().SetTimer(
+        SpawnTimerHandle,
+        this,
+        &AMyActor::SpawnEnemy,
+        3.0f,  // interval in seconds
+        true   // loop
+    );
+}
+
+void AMyActor::SpawnEnemy()
+{
+    // Spawn logic here
+}
+```
+
+The skill can be configured to always produce timer handles as class members (allowing cancellation), include `Super::` calls in lifecycle overrides, and use `GetWorldTimerManager()` rather than the deprecated `FTimerManager` global. These conventions are consistent but easy to overlook when manually translating Blueprint logic.
+
+## Optimizing Build Times with Module-Aware Workflows
+
+Unreal's incremental build system is powerful but sensitive to include dependencies. A single change to a widely-included header can trigger recompilation of hundreds of source files. Claude skills can help you maintain a dependency structure that keeps incremental builds fast.
+
+The key principle is forward declaration over inclusion wherever possible. Skills that generate class declarations should default to forward-declaring dependencies in headers and including full headers only in source files:
+
+```cpp
+// Header: prefer forward declarations
+#pragma once
+#include "CoreMinimal.h"
+#include "GameFramework/Actor.h"
+#include "MyActor.generated.h"
+
+// Forward declare rather than include
+class UStaticMeshComponent;
+class UMaterialInterface;
+class APlayerController;
+
+UCLASS()
+class MYGAME_API AMyActor : public AActor
+{
+    GENERATED_BODY()
+
+    UPROPERTY(VisibleAnywhere)
+    UStaticMeshComponent* MeshComponent;  // Forward declared — OK in header
+
+public:
+    void SetMaterial(UMaterialInterface* Material);  // Forward declared — OK
+};
+```
+
+```cpp
+// Source: include the full headers you actually need
+#include "MyActor.h"
+#include "Components/StaticMeshComponent.h"      // Required for method calls
+#include "Materials/MaterialInterface.h"          // Required for method calls
+#include "GameFramework/PlayerController.h"
+```
+
+When a skill generates new classes, it should follow this pattern automatically. Embedding the convention into the skill definition prevents the gradual include sprawl that degrades build times in large projects. A project with 50+ modules that respects forward declaration boundaries can maintain incremental build times under 30 seconds even as the codebase grows past 500k lines of C++.
+
 ## Related Reading
 
 - [Claude Skill .md File Format: Full Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)

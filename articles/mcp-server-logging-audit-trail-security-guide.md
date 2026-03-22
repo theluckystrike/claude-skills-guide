@@ -230,7 +230,103 @@ Implementing logging and audit trails for MCP servers requires upfront design de
 
 Remember: the best logging system is one that gets reviewed. Build dashboards, set up regular log reviews, and treat anomalies as investigation opportunities.
 
----
+## Log Shipping to Centralized Observability Systems
+
+Individual MCP server log files become unwieldy once you run more than two or three servers, or when servers are deployed across multiple machines. Centralizing logs into an observability platform lets you correlate events across servers, set up unified alerting, and retain data beyond what local disk allows.
+
+The simplest centralization approach uses structured JSON logs (already shown above) and ships them to a service like Loki, Elasticsearch, or a managed platform like Datadog. Here is a practical integration using the `python-logging-loki` handler:
+
+```python
+import logging
+import logging_loki
+
+class McpServerLogger:
+    def __init__(self, server_name: str, loki_url: str):
+        self.logger = logging.getLogger(server_name)
+        handler = logging_loki.LokiHandler(
+            url=f"{loki_url}/loki/api/v1/push",
+            tags={"application": "mcp-server", "server": server_name},
+            version="1",
+        )
+        self.logger.addHandler(handler)
+        self.logger.setLevel(logging.INFO)
+
+    def log_tool_call(self, tool: str, user: str, success: bool, duration_ms: float):
+        self.logger.info(
+            "tool_invocation",
+            extra={
+                "tags": {
+                    "tool": tool,
+                    "user": user,
+                    "success": str(success),
+                    "duration_ms": str(round(duration_ms, 2)),
+                }
+            },
+        )
+```
+
+With this setup, every tool invocation from every MCP server lands in a searchable centralized store. You can write a Grafana query to plot error rates by tool name, or alert when a specific user exceeds a request rate threshold across all your servers simultaneously.
+
+For teams running MCP servers inside Docker, add a logging driver to your `docker-compose.yml` to ship stdout directly to Loki without modifying server code:
+
+```yaml
+services:
+  mcp-filesystem:
+    image: your-mcp-server:latest
+    logging:
+      driver: loki
+      options:
+        loki-url: "http://loki:3100/loki/api/v1/push"
+        loki-labels: "job=mcp-server,server=filesystem"
+```
+
+## Retention Policies and Compliance Considerations
+
+Storing every MCP tool invocation indefinitely creates both cost and compliance risk. A thoughtful retention policy balances operational needs against regulatory requirements and storage costs.
+
+A three-tier retention model works well for most deployments:
+
+```python
+import sqlite3
+from datetime import datetime, timedelta
+
+class RetentionManager:
+    """Manages log retention across hot, warm, and cold storage tiers."""
+
+    def __init__(self, db_path: str):
+        self.db_path = db_path
+
+    def archive_old_records(self):
+        """Move records older than 30 days to compressed archive."""
+        conn = sqlite3.connect(self.db_path)
+        cutoff = (datetime.utcnow() - timedelta(days=30)).isoformat()
+
+        # Export to compressed JSONL archive
+        rows = conn.execute(
+            "SELECT * FROM audit_log WHERE timestamp < ?", (cutoff,)
+        ).fetchall()
+
+        if rows:
+            archive_path = f"archive-{cutoff[:7]}.jsonl.gz"
+            import gzip, json
+            with gzip.open(archive_path, "wt") as f:
+                for row in rows:
+                    f.write(json.dumps(row) + "\n")
+
+            # Delete archived records from hot storage
+            conn.execute("DELETE FROM audit_log WHERE timestamp < ?", (cutoff,))
+            conn.commit()
+            print(f"Archived {len(rows)} records to {archive_path}")
+
+        conn.close()
+```
+
+For regulated environments, common requirements are:
+- **HIPAA**: Retain audit logs for 6 years from creation date
+- **SOC 2 Type II**: 1 year minimum for security-relevant events
+- **GDPR**: Right to erasure applies — user activity logs must be deletable by user ID
+
+The `query` method on the `AuditTrail` class shown earlier enables targeted deletion: `DELETE FROM audit_log WHERE user_id = ?` satisfies a GDPR erasure request without touching other users' records. Build this endpoint into your MCP server's admin tooling before you need it — responding to a data subject request under time pressure is significantly harder than having the mechanism already in place.
 
 ## Related Reading
 

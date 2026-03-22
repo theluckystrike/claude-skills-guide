@@ -115,6 +115,50 @@ For active development work where you need the best debugging tools and don't mi
 
 The key insight is that browser privacy is one layer of a larger security strategy. Understanding what each browser does and doesn't protect allows you to make informed decisions about your development environment and personal browsing habits.
 
+## Extension Policies and Third-Party Code Injection
+
+One of the sharpest privacy differences between Mullvad Browser and Chrome involves how each handles browser extensions and third-party script injection.
+
+Chrome's extension ecosystem is vast and generally useful, but every extension you install represents a new trust boundary. Extensions can read page content, intercept network requests, modify the DOM, and access cookies. Chrome's Manifest V3 significantly restricted what extensions can do compared to V2, but the core privilege model remains: you grant extensions broad host permissions and trust that they honor their stated purpose.
+
+Mullvad Browser takes the opposite stance. The browser ships with uBlock Origin pre-installed and configured, and the project actively discourages adding additional extensions. The rationale is fingerprinting: each extension you add modifies your browser's behavior in ways that distinguish you from other Mullvad Browser users. A unique extension combination is itself a tracking vector.
+
+This creates a practical tension for developers. A typical development Chrome profile might include React DevTools, a password manager, ad blockers, accessibility checkers, and GitHub-enhancing tools. Each of these is absent from Mullvad Browser by design. Developers who want both strong privacy and their full toolchain face a genuine tradeoff: use Chrome with extensions for productivity work and Mullvad Browser for privacy-sensitive browsing sessions.
+
+The cleanest approach is profile separation. Keep a hardened Chrome profile with minimal extensions for general development, a full-extension Chrome profile for productivity, and Mullvad Browser for any browsing where you want to minimize tracking — research, competitor analysis, or sessions involving sensitive personal accounts.
+
+## Handling Cookies and Local Storage for Development Testing
+
+Chrome defaults to persistent cookies with no automatic expiration for first-party cookies, and partitioned storage for third-party contexts under its Privacy Sandbox changes. Developers building applications can rely on cookies persisting across browser restarts, localStorage and sessionStorage behaving predictably, and IndexedDB data persisting indefinitely unless explicitly cleared.
+
+Mullvad Browser deletes all cookies and site data when you close the browser. This is not configurable — it is a core privacy guarantee. For developers, this means you cannot use Mullvad Browser as your primary development browser without significant workflow disruption: every browser restart clears your authentication sessions, localStorage test data, and any IndexedDB content your app created.
+
+Where Mullvad Browser's storage behavior becomes useful for developers is testing the "first visit" experience. Because every session starts clean, you can verify your application's onboarding flows without manually clearing storage each time:
+
+```javascript
+// Test what a genuinely new user sees on first visit
+const isFirstVisit = !localStorage.getItem('hasVisitedBefore');
+if (isFirstVisit) {
+  showOnboarding();
+  localStorage.setItem('hasVisitedBefore', 'true');
+}
+
+// Cookie consent flows — confirmed clean on every session open
+function initCookieConsent() {
+  const consent = document.cookie
+    .split('; ')
+    .find(row => row.startsWith('cookie_consent='));
+
+  if (!consent) {
+    showConsentBanner();
+  }
+}
+```
+
+Opening these flows in Mullvad Browser guarantees you are testing the true first-visit path without manually clearing storage each time. For testing cookie consent flows, privacy policy acknowledgments, and onboarding sequences, Mullvad Browser's clean-slate behavior is an asset rather than a limitation.
+
+The practical workflow: use Chrome for active development and state-dependent debugging, then switch to Mullvad Browser to validate the first-visit user experience before shipping. The two tools complement each other rather than compete.
+
 ## Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)

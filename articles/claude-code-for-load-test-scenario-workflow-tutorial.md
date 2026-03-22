@@ -231,6 +231,97 @@ Claude Code transforms load testing from a manual, complex process into an acces
 Start with simple tests, gradually add complexity, and let Claude handle the orchestration overhead. Your applications—and your users—will thank you.
 
 
+## Integrating Load Test Results with Claude Code Analysis
+
+Raw k6 output gives you numbers; Claude Code turns those numbers into actionable diagnosis. After a test run, pipe the results JSON directly to Claude for contextual analysis rather than manually scanning metric output.
+
+A practical integration pattern captures the summary output from k6 into a file, then asks Claude to identify which thresholds failed and suggest probable root causes:
+
+```bash
+#!/bin/bash
+# analyze-results.sh — run after a k6 test
+RESULTS_FILE="${1:-./load-test-results/results.json}"
+
+# Extract key metrics from k6 JSON summary
+jq -r '
+  .metrics |
+  {
+    http_req_duration_p95: .http_req_duration["p(95)"],
+    http_req_failed_rate: .http_req_failed.rate,
+    http_reqs_total: .http_reqs.count,
+    data_received_mb: (.data_received.count / 1048576 | round)
+  }
+' "$RESULTS_FILE" > /tmp/load-summary.json
+
+echo "Load test summary:"
+cat /tmp/load-summary.json
+
+# Flag threshold violations
+P95=$(jq '.http_req_duration_p95' /tmp/load-summary.json)
+ERROR_RATE=$(jq '.http_req_failed_rate' /tmp/load-summary.json)
+
+if (( $(echo "$P95 > 500" | bc -l) )); then
+  echo "WARNING: P95 response time ${P95}ms exceeds 500ms threshold"
+fi
+
+if (( $(echo "$ERROR_RATE > 0.01" | bc -l) )); then
+  echo "WARNING: Error rate ${ERROR_RATE} exceeds 1% threshold"
+fi
+```
+
+Feed this output to Claude with a prompt like "P95 is 850ms against a 500ms threshold — what are the most likely causes and what should I check first?" Claude can suggest database query profiling, connection pool exhaustion, or slow external API dependencies based on the pattern of the metrics, rather than returning a generic list of possibilities.
+
+## Parameterizing Tests for CI/CD Pipelines
+
+Integrating load tests into CI/CD requires making tests environment-aware. A load test that runs against localhost during development should reconfigure automatically for staging and production targets without manual edits to test scripts.
+
+Use environment variables with sensible defaults to make your k6 scripts portable across environments:
+
+```javascript
+// portable-test.js — environment-aware k6 script
+import http from 'k6/http';
+import { check, sleep } from 'k6';
+
+const TARGET = __ENV.LOAD_TEST_TARGET || 'http://localhost:3000';
+const MAX_VUS = parseInt(__ENV.LOAD_TEST_VUS) || 10;
+const DURATION = __ENV.LOAD_TEST_DURATION || '60s';
+
+export const options = {
+  stages: [
+    { duration: '10s', target: Math.floor(MAX_VUS * 0.2) },  // ramp up
+    { duration: DURATION, target: MAX_VUS },                   // sustain
+    { duration: '10s', target: 0 },                            // ramp down
+  ],
+  thresholds: {
+    http_req_duration: ['p(95)<500'],
+    http_req_failed:   ['rate<0.01'],
+  },
+};
+
+export default function() {
+  const res = http.get(`${TARGET}/api/health`);
+  check(res, {
+    'status 200': (r) => r.status === 200,
+    'fast response': (r) => r.timings.duration < 500,
+  });
+  sleep(1);
+}
+```
+
+Your CI pipeline passes the appropriate environment variables:
+
+```yaml
+# .github/workflows/load-test.yml
+- name: Run load tests against staging
+  env:
+    LOAD_TEST_TARGET: https://staging.yourapp.com
+    LOAD_TEST_VUS: "25"
+    LOAD_TEST_DURATION: "120s"
+  run: k6 run --out json=results.json portable-test.js
+```
+
+This pattern means the same test script runs locally with minimal load and in CI with staging-appropriate parameters, with no code changes required between environments. Claude Code can generate these parameterized scripts from your existing endpoint documentation, adapting the check conditions and threshold values to match your SLA requirements.
+
 ## Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
