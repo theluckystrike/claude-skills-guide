@@ -35,6 +35,14 @@ When Claude adds new code, it sometimes fails to include necessary imports or de
 
 Your tests might reference internal implementation details—private methods, specific variable names, or exact output formats. When Claude refactors these internals, the tests break even though the public API still works correctly.
 
+### Why These Failures Happen at the Model Level
+
+Understanding what causes Claude to break tests helps you write better prompts and set more effective constraints. Claude Code operates on the files you provide in context — if you ask it to refactor a function without showing it the entire test suite, it cannot know which callers or test cases will be affected.
+
+The model also has a tendency to optimize toward what the user asked for in the most recent message. If you ask Claude to "clean up this function," it may interpret that as license to rename parameters, change the return type, or consolidate error handling — all things that look like improvements in isolation but silently break callers that weren't in context.
+
+A third factor is that Claude cannot run your test suite. It cannot verify that the code it produces actually passes the tests you have. When it says "this should work," it means "this looks syntactically and logically correct to me given the code I can see," not "I have verified the full test suite passes."
+
 ## Prevention Strategies
 
 The best fix is preventing breaks before they happen. Here are practical approaches.
@@ -58,6 +66,22 @@ Be explicit about not breaking tests:
 
 Claude models respond well to explicit constraints. Adding "preserve all existing tests" to your prompts significantly reduces accidental breakage.
 
+You can make this even more specific by referencing the test files directly:
+
+> "Modify `src/auth/token.js` to add refresh token support. Do not modify `tests/auth/token.test.js`. All existing tests in that file must continue to pass exactly as written."
+
+Naming the test file explicitly signals to Claude that it is off-limits and should serve as a fixed specification, not a malleable artifact.
+
+### Provide Full Context Before Asking for Changes
+
+Claude's changes are only as safe as the context you give it. Before asking for any refactor or feature addition, share:
+
+1. The file being changed
+2. All test files that cover the changed code
+3. Any files that import or call the function being changed
+
+A practical approach is to open a Claude Code session and use `/files` to confirm what files are in context before asking for changes. If your test file is not listed, add it explicitly.
+
 ### Run Tests Immediately After Changes
 
 Make it a habit to run your test suite after any Claude Code operation:
@@ -70,6 +94,23 @@ cargo test # Rust projects
 ```
 
 Catching failures immediately makes debugging easier because the changes are fresh in context.
+
+### Use a Pre-Change Snapshot
+
+Before asking Claude to make any significant change, capture the current state of your test results:
+
+```bash
+# Save baseline test output before changes
+npm test 2>&1 | tee test-baseline.txt
+
+# Ask Claude to make changes...
+
+# Compare after changes
+npm test 2>&1 | tee test-after.txt
+diff test-baseline.txt test-after.txt
+```
+
+This diff gives you an immediate, precise view of what changed in your test results, which is far faster than manually scanning test output.
 
 ## Fixing Broken Tests
 
@@ -84,6 +125,8 @@ Run your test suite and categorize the failures:
 - **Missing symbol errors**: Imports or dependencies missing
 - **Test infrastructure errors**: Test setup or fixtures broke
 
+Group failures by type before attempting fixes. Five tests failing with the same "cannot find module" error have a single root cause; fixing one fixes all. Treating them as five separate problems wastes time.
+
 ### Step 2: Determine If the Change Was Intentional
 
 Ask Claude what changes it made:
@@ -93,6 +136,20 @@ What changes did you make to the codebase?
 ```
 
 If the logic change was intentional (you asked for a behavior modification), your tests may need updating. If the change was accidental, revert it.
+
+To make this diagnosis faster, use git to see exactly what changed:
+
+```bash
+git diff HEAD
+```
+
+If you're using Claude Code with auto-commits disabled, all changes since your last commit will appear here. If you committed before asking Claude to make changes, `git diff HEAD` shows precisely what Claude modified.
+
+For larger changesets, narrow to the files that matter:
+
+```bash
+git diff HEAD -- src/auth/token.js tests/auth/token.test.js
+```
 
 ### Step 3: Apply the Fix
 
@@ -118,6 +175,17 @@ assert result == {"name": "John", "age": 30}
 assert result == {"name": "John", "age": 30, "verified": True}
 ```
 
+For missing import errors, add the dependency:
+
+```javascript
+// Claude added a call to parseISO but didn't import it
+import { parseISO, format } from 'date-fns';  // Added parseISO
+
+function formatDate(dateString) {
+  return format(parseISO(dateString), 'MMM d, yyyy');
+}
+```
+
 ### Step 4: Verify All Tests Pass
 
 Run the full test suite to confirm the fix:
@@ -127,6 +195,17 @@ npm test -- --coverage
 ```
 
 If you're using the **tdd** skill, it will suggest running tests after each significant change.
+
+### When to Revert Entirely
+
+Sometimes the cleanest fix is a full revert. If Claude made sweeping changes that broke a large portion of your test suite, and untangling which changes were intentional versus accidental would take more time than redoing the work, revert and try again with tighter constraints:
+
+```bash
+# Revert to the state before Claude's changes
+git checkout HEAD -- src/auth/
+```
+
+Then re-prompt with more specific instructions, more context files, and explicit test preservation constraints.
 
 ## Advanced Techniques
 
@@ -139,15 +218,81 @@ If your project uses snapshot testing (common with **frontend-design** workflows
 npm test -- -u
 ```
 
-Review snapshot diffs carefully before committing.
+Review snapshot diffs carefully before committing. A snapshot update that looks minor in the diff output may represent a significant visual regression. Always compare before/after screenshots when updating UI component snapshots.
 
 ### Integration Test Isolation
 
 The **supermemory** skill helps maintain context about your project's integration points. When Claude knows about critical integrations, it's less likely to break them.
 
+Beyond skill usage, a structural approach helps: tag your integration tests with a clear marker and run them in a separate step:
+
+```bash
+# Run only unit tests first (faster feedback)
+npm test -- --testPathPattern="unit"
+
+# Then integration tests once unit tests pass
+npm test -- --testPathPattern="integration"
+```
+
+This lets you catch simple breaks quickly without waiting for slower integration test runs.
+
 ### Property-Based Testing
 
 Consider adding property-based tests (using libraries like fast-check or Hypothesis) that verify invariants regardless of implementation details. These catch behavioral changes without coupling to specific code structure.
+
+```javascript
+// Property-based test: this invariant must hold regardless of implementation
+import fc from 'fast-check';
+
+test('serialization roundtrip is lossless', () => {
+  fc.assert(
+    fc.property(fc.record({ id: fc.integer(), name: fc.string() }), (user) => {
+      const serialized = serializeUser(user);
+      const deserialized = deserializeUser(serialized);
+      return deserialized.id === user.id && deserialized.name === user.name;
+    })
+  );
+});
+```
+
+When Claude refactors the serialization implementation, this test continues to verify the fundamental contract without caring how the internals work. Property-based tests are especially valuable for utility functions, data transformers, and any code that Claude is likely to simplify.
+
+### Contract Testing for API Boundaries
+
+If your project has multiple services or modules with defined contracts, add explicit contract tests at the boundary. These tests verify the interface, not the implementation:
+
+```typescript
+// Contract test: defines the shape of what AuthService must return
+describe('AuthService contract', () => {
+  it('login returns a token with required fields', async () => {
+    const result = await authService.login('user@example.com', 'password');
+    expect(result).toHaveProperty('accessToken');
+    expect(result).toHaveProperty('expiresIn');
+    expect(typeof result.accessToken).toBe('string');
+    expect(typeof result.expiresIn).toBe('number');
+  });
+});
+```
+
+When Claude refactors `AuthService`, it can change the internal implementation freely as long as the contract test passes. This reduces the false-positive failure rate — tests that fail because Claude made a correct but unexpected change to internals.
+
+### Using Claude to Fix Its Own Breaks
+
+When tests fail after Claude's changes, one effective workflow is to show Claude the failing test output directly and ask it to fix the problem:
+
+```
+The following tests are failing after your last change. Here is the output:
+
+[paste test output]
+
+Here are the failing test files:
+
+[paste relevant test code]
+
+Please fix the implementation so that all these tests pass without modifying the test files.
+```
+
+This works well when the failure is a signature change or missing import. Claude can usually identify the disconnect quickly when given both the failing test and the code it changed. Be specific about the constraint: "fix the implementation, not the tests."
 
 ## Working With Specific Skills
 
@@ -157,22 +302,46 @@ Certain Claude skills have particular patterns that affect tests:
 - **pptx**: Presentation automation tests often check exact structure—be explicit about preserving output format
 - **canvas-design**: Visual output tests may need baseline image updates after AI changes
 
+### Matching Your Workflow to the Right Skill
+
+For test-heavy workflows, the **tdd** skill is the right entry point. For debugging failing tests specifically, a plain Claude Code session with the failing test output, the changed files, and an explicit "fix the implementation to match the tests" prompt often resolves issues faster than trying to use a specialized skill.
+
+The **supermemory** skill is valuable for long-running projects where Claude needs to understand architectural decisions that aren't visible in any single file. Storing a note like "AuthService.login() must always return accessToken and expiresIn — this is a contract with the mobile client" means Claude will respect that invariant even when you don't include it in every prompt.
+
 ## Recovery Workflow
 
 When you encounter test failures after Claude Code changes:
 
 1. **Don't panic** — Most breaks are simple to fix
 2. **Run tests** to see exact failures
-3. **Ask Claude** what it changed
-4. **Decide** if the change was intended
-5. **Fix intentionally** or **revert** accidental changes
-6. **Verify** tests pass
+3. **Categorize failures** by type (compile error, assertion, missing import)
+4. **Use git diff** to see exactly what Claude changed
+5. **Ask Claude** what it changed and why
+6. **Decide** if the change was intended
+7. **Fix intentionally** or **revert** accidental changes
+8. **Verify** tests pass
+9. **Commit** a clean state before the next Claude operation
+
+Making step 9 a habit is perhaps the most valuable practice of all. If every Claude Code session starts and ends with a clean git state, you always have a safe revert point and clear visibility into what each session changed.
+
+## Common Failure Scenarios and Their Fixes
+
+| Failure Type | Symptom | Root Cause | Fix |
+|---|---|---|---|
+| Signature mismatch | TypeError: expected N arguments | Claude changed function parameters | Update callers or revert signature |
+| Missing import | ReferenceError / ModuleNotFoundError | Claude used a function it didn't import | Add the missing import |
+| Async/await gap | Promise object instead of value | Claude made a function async without updating callers | Add `await` to callers |
+| Renamed export | Cannot find name 'X' | Claude renamed a function or class | Update imports or revert rename |
+| Logic regression | Wrong assertion values | Claude changed edge-case behavior | Decide if new behavior is correct; update test or revert |
+| Mock invalidation | Mock not called / wrong args | Claude changed the call site structure | Update mock expectations |
 
 ## Conclusion
 
 Claude Code breaking existing tests is a common experience, not a failure of the tool. By understanding why it happens—signature changes, logic alterations, missing dependencies, and test coupling—you can both prevent breaks and fix them quickly when they occur.
 
-Use explicit constraints in your prompts, activate the **tdd** skill for test-first workflows, and run tests immediately after changes. With these practices, you'll spend less time debugging AI-generated code and more time building.
+Use explicit constraints in your prompts, activate the **tdd** skill for test-first workflows, and run tests immediately after changes. Provide full context before asking for changes, use git diff to diagnose precisely what changed, and don't hesitate to revert when untangling a messy changeset would take longer than redoing the work cleanly.
+
+With these practices in place, you'll spend less time debugging AI-generated code and more time building.
 
 
 ## Related Reading
