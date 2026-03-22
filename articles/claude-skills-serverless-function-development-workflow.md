@@ -10,6 +10,7 @@ reviewed: true
 score: 8
 permalink: /claude-skills-serverless-function-development-workflow/
 ---
+{% raw %}
 
 # Claude Skills Serverless Function Development Workflow
 
@@ -625,3 +626,4 @@ The key is maintaining a clear structure: separate templates for each runtime, t
 - [Workflows Hub](/claude-skills-guide/workflows-hub/) — explore Claude Code workflows for cloud and serverless development
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
