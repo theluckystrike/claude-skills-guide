@@ -11,6 +11,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
 ---
+{% raw %}
 
 
 # Claude Code for Maven Artifact Publishing Workflow
@@ -551,3 +552,4 @@ Start by ensuring your project configuration is complete, use Claude to guide yo
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
