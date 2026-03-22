@@ -156,6 +156,24 @@ Octotree transforms GitHub from a flat file list into a navigable directory tree
 The extension requires no configuration to get started with public repositories, making it immediately useful. Optional authentication unlocks private repository support for enterprise users.
 
 
+## Using Octotree with GitHub Enterprise Server
+
+Public GitHub users get the full Octotree experience without any configuration — the extension works immediately on github.com. Enterprise teams on self-hosted infrastructure need two additional steps. Organizations running GitHub Enterprise Server (GHES) on-premises can use Octotree with their private instance by providing the domain and an authentication token. The configuration is straightforward but requires two steps that public repository users skip entirely.
+
+First, configure Octotree to recognize your GHES domain. Open Octotree settings and add your instance URL in the "GitHub Enterprise URLs" field:
+
+```
+https://github.yourcompany.com
+```
+
+Octotree then activates its sidebar when you browse repositories on that domain, exactly as it does on github.com.
+
+Second, generate a Personal Access Token on your GHES instance (Settings > Developer Settings > Personal Access Tokens) with `repo` scope. Enter this token in Octotree's "Access Token" field for your enterprise domain. Without the token, Octotree can only display public repositories — private repositories on GHES require authentication.
+
+If your GHES instance uses a self-signed SSL certificate, you may need to configure Chrome to trust the certificate before Octotree can connect. Navigate to your GHES domain in Chrome and accept the certificate warning; Chrome remembers the exception and Octotree can subsequently authenticate.
+
+For organizations managing Chrome through GPO, you can pre-install the trusted certificate via Group Policy, eliminating the manual trust-acceptance step for all managed machines.
+
 ## Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)

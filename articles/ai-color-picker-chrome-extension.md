@@ -172,7 +172,7 @@ The best extension is the one that fits seamlessly into your workflow. Experimen
 
 ## Color Accessibility in Practice
 
-Generating a visually pleasing palette is only half the work. Every color pair that appears together — text on a background, a button on its container, an icon on a card — must meet WCAG 2.1 contrast requirements. The minimum ratios are 4.5:1 for normal text (AA) and 3:1 for large text and UI components (AA). AAA standard requires 7:1 for normal text.
+Color accessibility is not an afterthought — it is a legal requirement in many jurisdictions and directly affects the usability of your application for users with color blindness or low vision. Generating a visually pleasing palette is only half the work. Every color pair that appears together — text on a background, a button on its container, an icon on a card — must meet WCAG 2.1 contrast requirements. The minimum ratios are 4.5:1 for normal text (AA) and 3:1 for large text and UI components (AA). AAA standard requires 7:1 for normal text.
 
 AI color pickers surface these ratios automatically. When you select a foreground and background color, the extension computes the luminance difference and shows a pass/fail badge for each WCAG level. This catches problems like light gray text on a white background — a combination that looks fine on a high-brightness monitor but fails on most displays and for users with low vision.
 

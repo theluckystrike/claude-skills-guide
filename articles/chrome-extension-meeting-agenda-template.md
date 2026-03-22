@@ -247,6 +247,16 @@ Effective Chrome extension development requires meetings that address the unique
 Start with the templates provided, adapt them to your team's workflow, and refine them over time. The goal is meetings that respect everyone's time while ensuring critical extension-specific topics receive proper attention.
 
 
+## Measuring Meeting Effectiveness
+
+Running structured meetings is valuable only if the structure actually improves outcomes. Measure two leading indicators after implementing agenda templates: the percentage of meetings that end with all action items assigned, and the percentage of action items from the previous meeting that were completed before the next meeting.
+
+Track these informally at first — just check your notes at the start of each meeting and record whether previous items were done. After four to six meetings, you have enough data to see whether the templates are creating accountability or just adding paperwork.
+
+If completion rates are low, the templates are not the problem — meeting cadence or action item scope usually is. Action items scoped too broadly ("investigate performance issues") rarely get completed because they do not have a clear definition of done. Rewrite them as concrete deliverables: "Profile the checkout flow with Chrome DevTools and share the screenshots in Slack by Thursday."
+
+If all action items consistently get completed, consider whether the meetings themselves could be shorter or replaced with async updates. A team that reliably completes everything between meetings may only need a synchronous touchpoint for decisions that genuinely require live discussion, not routine status updates that could be a shared document.
+
 ## Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)

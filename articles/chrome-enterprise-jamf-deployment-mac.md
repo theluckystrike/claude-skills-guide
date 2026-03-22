@@ -240,7 +240,7 @@ For teams managing development environments, Chrome Enterprise's extension manag
 
 ## Monitoring Compliance with Jamf Reporting
 
-After deployment, ongoing compliance monitoring ensures managed Macs maintain the intended Chrome configuration. Users occasionally work around managed settings by installing a personal Chrome alongside the managed Enterprise build, or by using private browsing to bypass extension restrictions. Jamf's reporting capabilities help surface these situations.
+A deployment is only as effective as its ongoing compliance posture. Extensions that were force-installed can be overridden by users with local admin rights, and Chrome policies can be cleared if a user reinstalls Chrome from a non-enterprise package. After deployment, ongoing compliance monitoring ensures managed Macs maintain the intended Chrome configuration and surfaces deviations before they become security issues. Users occasionally work around managed settings by installing a personal Chrome alongside the managed Enterprise build, or by using private browsing to bypass extension restrictions. Jamf's reporting capabilities help surface these situations.
 
 Create a Jamf inventory query that checks Chrome Enterprise installation and configuration status:
 
