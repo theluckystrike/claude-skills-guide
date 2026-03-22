@@ -5,7 +5,7 @@ description: "Learn how to integrate Claude Code into your Terraform workflow to
 date: 2026-03-20
 author: Claude Skills Guide
 permalink: /claude-code-for-terraform-workflow-tutorial-guide/
-categories: [DevOps, Infrastructure, Automation]
+categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
