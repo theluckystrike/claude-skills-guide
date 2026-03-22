@@ -260,4 +260,11 @@ Building an image compression Chrome extension requires understanding browser AP
 
 The implementation above provides a foundation that handles standard file inputs, drag-and-drop zones, and provides caching for repeated uploads. Adjust quality settings and maximum dimensions based on your specific use case requirements.
 
+
+## Related Reading
+
+- [Chrome Extension Edit Images: A Practical Guide for Developers](/chrome-extension-edit-images/)
+- [Chrome Extension Resize Images: A Practical Guide for Developers](/chrome-extension-resize-images/)
+- [AI Code Assistant Chrome Extension: Practical Guide for.](/ai-code-assistant-chrome-extension/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

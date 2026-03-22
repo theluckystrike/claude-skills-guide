@@ -74,6 +74,50 @@ Chrome remains the better choice if you need specific extensions only available 
 
 For developers and power users who keep many tabs open simultaneously, Edge's built-in memory management features provide meaningful advantages. The automatic tab sleeping, collections, and Windows integration make it a more refined experience for productivity-focused workflows.
 
+## Measuring Memory Usage Yourself
+
+Rather than relying on published benchmarks, you can measure memory consumption directly on your machine with identical workflows. Both browsers expose memory data through their built-in tools.
+
+In Chrome, open the Task Manager with `Shift + Escape`. The JavaScript Memory column shows heap consumption per tab, while the Memory column shows total process footprint. Edge provides the same view at `Shift + Escape` with an identical interface since both share Chromium's multi-process architecture.
+
+For scripted comparisons, use Puppeteer or Playwright to automate consistent workloads:
+
+```javascript
+const { chromium } = require('playwright');
+
+async function measureMemory(browserType, urls) {
+  const browser = await browserType.launch();
+  const context = await browser.newContext();
+
+  for (const url of urls) {
+    const page = await context.newPage();
+    await page.goto(url);
+    await page.waitForLoadState('networkidle');
+  }
+
+  // Capture heap snapshot via CDP
+  const cdp = await context.newCDPSession(await context.pages()[0]);
+  const metrics = await cdp.send('Performance.getMetrics');
+
+  await browser.close();
+  return metrics;
+}
+```
+
+Run this against both browsers with the same URL list to get consistent, reproducible measurements. The `JSHeapUsedSize` metric from the Performance domain gives you JavaScript heap consumption; the `LayoutCount` and `RecalcStyleCount` metrics reveal rendering overhead.
+
+## Edge-Specific Features That Affect Memory
+
+Beyond raw consumption figures, Edge includes several features that change how memory behaves during a session. Understanding these helps you decide whether the trade-offs match your workflow.
+
+**Sleeping Tabs threshold**: Edge starts sleeping tabs after 5 minutes of inactivity by default. You can adjust this threshold in `edge://settings/system` — pushing it higher preserves tab state longer but increases memory use. Chrome's Memory Saver mode offers similar behavior but with less granular control over timing.
+
+**Startup Boost**: Edge keeps a background process running even when the browser is closed, allowing faster cold starts. This process consumes 50-100MB constantly. If you close Edge to free memory between work sessions, Startup Boost negates part of that benefit. Disable it at `edge://settings/system` if memory between sessions matters more than launch speed.
+
+**Collections memory**: Edge's Collections feature stores snapshots of saved pages. Heavy use of Collections increases Edge's memory footprint beyond what the tab count alone suggests. Monitor it in the Edge Task Manager and clear unused collections periodically.
+
+For developers running Edge alongside memory-intensive tools like Docker, a local database, and an IDE, these defaults are worth reviewing. The net effect is that a freshly configured Edge installation with default settings uses less memory than Chrome, but a heavily used Edge instance with large Collections and Startup Boost enabled can approach Chrome's footprint.
+
 ## Conclusion
 
 In 2026, Edge has established itself as the more memory-efficient option between the two Chromium-based browsers. The 20-30% reduction in memory usage translates to tangible performance benefits, especially on systems with limited RAM. However, both browsers remain viable choices, and the best option depends on your ecosystem preferences and specific use cases.

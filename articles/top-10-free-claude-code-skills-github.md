@@ -201,6 +201,66 @@ Useful for generating social media assets, marketing banners, and UI mockups wit
 
 ---
 
+## Combining Skills for Complex GitHub Workflows
+
+The real power emerges when you chain multiple skills together in a single development session. A common pattern for API-driven projects:
+
+```
+/supermemory
+Load context: this is a Node.js REST API with Express, PostgreSQL, and Jest.
+
+/tdd
+Write tests for the new /users/:id/orders endpoint before I implement it.
+
+/docx
+Generate API reference documentation from the test descriptions I just wrote.
+```
+
+This three-skill chain produces tests, drives implementation through test-first patterns, and generates documentation — all before writing a single line of business logic. The skills share session context automatically, so Claude understands the project structure across all three invocations.
+
+For GitHub Actions integration, skills run effectively in non-interactive mode:
+
+```bash
+# Run webapp testing skill in CI
+claude --print "/webapp-testing
+Navigate to $STAGING_URL
+Run through the checkout flow
+Report any failures as JSON"
+```
+
+The `--print` flag tells Claude Code to output results to stdout, making it easy to capture skill output in CI logs and artifact storage.
+
+## Installing and Managing Skills
+
+Skills live in `~/.claude/skills/` as plain `.md` files. The directory structure is simple:
+
+```
+~/.claude/
+  skills/
+    tdd.md
+    frontend-design.md
+    supermemory.md
+    webapp-testing.md
+```
+
+To install a community skill from GitHub:
+
+```bash
+# Install a skill directly
+curl -o ~/.claude/skills/my-skill.md \
+  https://raw.githubusercontent.com/username/repo/main/my-skill.md
+```
+
+Check what skills are currently installed:
+
+```bash
+ls ~/.claude/skills/
+```
+
+Claude Code reads this directory at session start and makes every `.md` file available as a slash command matching the filename (without the `.md` extension). Naming matters — a file called `api-review.md` becomes `/api-review` in your session.
+
+To update a skill, replace the `.md` file. Changes take effect at the next session start. Skills can also be scoped to a project by placing them in `.claude/skills/` inside the repository root — these override user-level skills with the same name, allowing project-specific behavior.
+
 ## Choosing Skills for Your Workflow
 
 | Project type | Start with |

@@ -193,6 +193,71 @@ func init() {
 
 You can also build a Sentry query tool that lets Claude Code search issues directly via the API, and set up webhook handlers that trigger automated Claude analysis whenever Sentry detects a new critical error.
 
+## Integrating Sentry with GitHub Actions
+
+Automating source map uploads inside your CI/CD pipeline eliminates the risk of deploying without corresponding map files. Here is a complete GitHub Actions workflow that builds, uploads source maps, and creates a Sentry release on every merge to main:
+
+```yaml
+name: Deploy with Sentry
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build with source maps
+        run: npm run build
+        env:
+          GENERATE_SOURCEMAP: true
+
+      - name: Create Sentry release
+        run: |
+          export SENTRY_RELEASE=$(git rev-parse --short HEAD)
+          npx sentry-cli releases new "$SENTRY_RELEASE"
+          npx sentry-cli releases files "$SENTRY_RELEASE" \
+            upload-sourcemaps ./build/static/js \
+            --url-prefix "~/static/js" \
+            --rewrite
+          npx sentry-cli releases finalize "$SENTRY_RELEASE"
+          npx sentry-cli releases deploys "$SENTRY_RELEASE" new -e production
+        env:
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
+          SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
+```
+
+Store your Sentry credentials as GitHub Actions secrets rather than committing them to the repository. The `--rewrite` flag strips source map references from the uploaded files, preventing browsers from accessing your source code while still letting Sentry use the maps server-side.
+
+## Using Claude Code to Write Sentry Alert Rules
+
+Sentry's alert rule DSL is powerful but verbose. Claude Code can generate alert configurations from plain descriptions, saving time when onboarding new error types or microservices.
+
+Open a Claude Code session and describe what you want to monitor:
+
+```
+/tdd
+I need Sentry alert rules for a checkout service. Alerts should:
+1. Page on-call immediately for any P0 error (cart or payment errors affecting > 1% of users)
+2. Send Slack notification for P1 errors (any new issue type occurring > 10 times in 1 hour)
+3. Create a Jira ticket for recurring issues seen more than 3 days in a row
+
+Generate the Sentry alert rule configuration JSON for each.
+```
+
+Claude will produce the full alert configuration objects you can paste directly into the Sentry API or import through the Sentry CLI. This pattern works well when standing up error monitoring for new services — describe the SLOs in plain language and let Claude translate them into Sentry's configuration format.
+
+For teams using Claude Code's file operations, you can maintain alert rules as checked-in JSON files and apply them through a deployment script, keeping your observability configuration in version control alongside your application code.
+
 ## Key Takeaways
 
 - Generate source maps with `--devtool=source-map` in your build process

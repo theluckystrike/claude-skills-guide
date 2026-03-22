@@ -421,5 +421,12 @@ With these core features in place, you have a functional research organizer that
 
 The beauty of building your own organizer is tailoring it exactly to your workflow. Start with the foundation described here, use it daily for a few weeks, and then add features based on where you actually feel friction. Features built in response to real pain points are far more useful than features built speculatively.
 
+
+## Related Reading
+
+- [Chrome Extension Outline Notes Organizer: A Developer Guide](/chrome-extension-outline-notes-organizer/)
+- [Chrome Extension for Amazon Product Research: A Developer Guide](/chrome-extension-product-research-amazon/)
+- [Chrome Extension Shopping List Organizer: A Developer Guide](/chrome-extension-shopping-list-organizer/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

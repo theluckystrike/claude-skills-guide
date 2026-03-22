@@ -174,3 +174,11 @@ Both GitHub Codespaces and Gitpod provide capable platforms for Claude Code-assi
 Start with your chosen platform's free tier to validate the workflow before committing. Remember that Claude Code functions equivalently in both environments, so the decision primarily impacts your development experience rather than AI capabilities.
 
 For teams already invested in GitHub, Codespaces provides the smoothest integration. Developers prioritizing customization and speed should evaluate Gitpod's capabilities. Either choice enables productive AI-assisted development in the cloud.
+
+## Related Reading
+
+- [Claude Code GitHub Codespaces Cloud Development Workflow](/claude-code-github-codespaces-cloud-development-workflow/)
+- [Claude Code for Act Local GitHub Actions Workflow](/claude-code-for-act-local-github-actions-workflow/)
+- [Claude Code for GitHub Actions OIDC Workflow Guide](/claude-code-for-github-actions-oidc-workflow-guide/)
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -204,4 +204,15 @@ jobs:
 Claude Code transforms Pact contract testing from a manual, error-prone process into an efficient, developer-friendly workflow. By leveraging its code generation capabilities, debugging assistance, and documentation support, teams can establish robust contract testing practices that scale with their microservices architecture. Start small with your most critical service integrations, establish patterns that work for your team, and progressively expand coverage as your confidence grows.
 
 The combination of Claude Code's productivity enhancements and Pact's contract testing methodology creates a powerful foundation for building reliable, maintainable distributed systems.
+
+
+## Related Reading
+
+- [Claude Code Contract Testing with Pact Guide](/claude-code-contract-testing-pact-guide/)
+- [Claude Code API Contract Testing Guide](/claude-code-api-contract-testing-guide/)
+- [Claude Code API Regression Testing Workflow Guide](/claude-code-api-regression-testing-workflow/)
+
+
+Built by theluckystrike — More at [zovo.one](https://zovo.one)
+
 {% endraw %}

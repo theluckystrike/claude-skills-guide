@@ -153,6 +153,63 @@ const puppeteer = require('puppeteer');
 
 This approach integrates memory monitoring into automated test suites, catching regressions before they reach production.
 
+## Automating Memory Baselines with Puppeteer
+
+Manual Task Manager inspection works well for one-off debugging, but establishing automated memory baselines catches regressions before they reach users. Puppeteer exposes Chrome's DevTools Protocol, which provides the same metrics visible in Task Manager, but scriptable and runnable in CI pipelines.
+
+Here is a baseline measurement script that flags regressions:
+
+```javascript
+const puppeteer = require('puppeteer');
+
+const MEMORY_BUDGET_MB = 150; // fail if heap exceeds this after GC
+
+async function checkMemoryBudget(url) {
+  const browser = await puppeteer.launch({
+    args: ['--js-flags=--expose-gc']
+  });
+  const page = await browser.newPage();
+
+  await page.goto(url, { waitUntil: 'networkidle2' });
+
+  // Simulate user interactions
+  await page.click('#main-nav');
+  await page.waitForSelector('.content-loaded');
+
+  // Force garbage collection and measure
+  await page.evaluate(() => window.gc?.());
+  const metrics = await page.metrics();
+  const heapMB = metrics.JSHeapUsedSize / 1024 / 1024;
+
+  await browser.close();
+
+  if (heapMB > MEMORY_BUDGET_MB) {
+    console.error(`FAIL: Heap ${heapMB.toFixed(1)}MB exceeds budget of ${MEMORY_BUDGET_MB}MB`);
+    process.exit(1);
+  }
+
+  console.log(`PASS: Heap ${heapMB.toFixed(1)}MB within budget`);
+}
+
+checkMemoryBudget('http://localhost:3000');
+```
+
+Run this script in your GitHub Actions workflow after each build. When the heap exceeds the budget, the pipeline fails and the regression is caught before deployment. Adjust `MEMORY_BUDGET_MB` based on your application's normal operating range plus a reasonable buffer.
+
+## Reading Task Manager Output for Extension Debugging
+
+When an extension causes unexpected memory growth, the Task Manager process list gives you the information needed to isolate the culprit. Each extension appears as a separate row labeled with its name and ID.
+
+To correlate Task Manager process IDs with extension source code, open `chrome://extensions/` while the Task Manager is open. The extension ID shown in the URL bar matches the identifier in the Task Manager row. Click "service worker" in the extensions page to open DevTools for that extension's background process — the same DevTools Memory panel tools available for regular tabs work here.
+
+Common extension memory issues visible in Task Manager:
+
+- **Background script accumulating event listeners**: Memory grows steadily even on tabs the extension is not actively processing. Look for `chrome.tabs.onUpdated` or `chrome.webRequest.onBeforeRequest` listeners that add callbacks without removing them.
+- **Content script leaking DOM references**: Memory spikes when navigating between pages but never drops back to baseline. The content script is holding references to the previous page's DOM nodes.
+- **Storage cache growing unbounded**: Some extensions cache API results in memory without expiry. Task Manager shows consistent growth across days of browser use.
+
+For any of these patterns, the debugging workflow is the same: identify the extension in Task Manager, open DevTools for its process, capture heap snapshots before and after the problematic operation, and compare the two snapshots to find what is accumulating.
+
 ## Conclusion
 
 The Chrome Task Manager serves as your first line of defense against browser memory issues. By understanding its metrics and combining it with DevTools for deep analysis, you can identify leaks, optimize extension usage, and maintain smooth development workflows even with resource-intensive applications.

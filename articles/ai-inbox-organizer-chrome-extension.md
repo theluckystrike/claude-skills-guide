@@ -244,6 +244,72 @@ function storeUserPreference(emailId, correctCategory) {
 
 Never store email credentials in local storage. Use OAuth 2.0 for authentication. Implement content security policy restrictions in your extension. When processing emails through third-party AI services, ensure you disclose this to users and use services with appropriate privacy policies.
 
+## Persisting Categories Across Sessions
+
+A common oversight in inbox organizer extensions is losing categorization state when the browser restarts. Because service workers in Manifest V3 are ephemeral, any in-memory category cache disappears between browser sessions. Use `chrome.storage.local` for persistence and rebuild the cache on startup:
+
+```javascript
+// background.js
+const CATEGORY_CACHE_KEY = 'emailCategories';
+
+async function getCachedCategories() {
+  const result = await chrome.storage.local.get([CATEGORY_CACHE_KEY]);
+  return result[CATEGORY_CACHE_KEY] || {};
+}
+
+async function updateCategoryCache(emailId, category) {
+  const existing = await getCachedCategories();
+  existing[emailId] = { category, timestamp: Date.now() };
+  await chrome.storage.local.set({ [CATEGORY_CACHE_KEY]: existing });
+}
+
+// Purge entries older than 7 days to avoid unbounded storage growth
+async function pruneOldEntries() {
+  const cache = await getCachedCategories();
+  const cutoff = Date.now() - (7 * 24 * 60 * 60 * 1000);
+  const pruned = Object.fromEntries(
+    Object.entries(cache).filter(([, v]) => v.timestamp > cutoff)
+  );
+  await chrome.storage.local.set({ [CATEGORY_CACHE_KEY]: pruned });
+}
+
+// Run pruning once per day
+chrome.alarms.create('pruneCache', { periodInMinutes: 1440 });
+chrome.alarms.onAlarm.addListener((alarm) => {
+  if (alarm.name === 'pruneCache') pruneOldEntries();
+});
+```
+
+This pattern keeps the extension fast on repeat visits — already-categorized emails load from cache instantly, with AI classification only triggered for new messages.
+
+## Publishing to the Chrome Web Store
+
+Once your extension is functional, publishing to the Chrome Web Store makes it available to users without manual installation. The review process takes 1-3 business days for new extensions and typically 1 day for updates.
+
+Prepare your submission package:
+
+```bash
+# Build a production zip (exclude development files)
+zip -r inbox-organizer.zip \
+  manifest.json \
+  background.js \
+  content.js \
+  popup.html \
+  popup.js \
+  icons/ \
+  --exclude "*.test.js" \
+  --exclude "node_modules/*"
+```
+
+The Chrome Web Store requires:
+- At least one 1280x800 or 640x400 screenshot
+- A 128x128 icon in the package
+- A privacy policy URL if your extension collects or transmits user data
+
+For extensions that send email content to external AI APIs, your privacy policy must explicitly disclose this. Google's review team checks that permission usage aligns with your stated functionality — requesting `tabs` permission without a clear explanation of why your inbox organizer needs it will trigger rejection.
+
+After approval, the Store handles distribution and automatic updates. Users who install your extension receive updates silently when you publish a new version, provided the updated manifest does not request new permissions that require user re-approval.
+
 ## Building Your Own Extension
 
 Start with a minimal viable product that handles one email provider and implements basic keyword classification. Test thoroughly with real email data before adding ML capabilities. Iterate based on user feedback about categorization accuracy.

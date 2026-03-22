@@ -333,4 +333,11 @@ For developers building applications that interact with Chrome, understanding th
 
 ---
 
+
+## Related Reading
+
+- [Chrome Safe Browsing Enterprise Settings: A Developer's Guide](/chrome-safe-browsing-enterprise-settings/)
+- [Chrome Browser Audit for Enterprise: A Developer's Guide](/chrome-browser-audit-enterprise/)
+- [Chrome Enterprise Bookmark Bar Settings: A Complete Guide](/chrome-enterprise-bookmark-bar-settings/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

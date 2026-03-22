@@ -494,4 +494,11 @@ This pattern ensures the cleanup runs even if the user leaves the browser idle f
 
 ---
 
+
+## Related Reading
+
+- [AI SEO Writing Chrome Extension: A Developer's Guide](/ai-seo-writing-chrome-extension/)
+- [AI Spreadsheet Helper Chrome Extension: A Developer's Guide](/ai-spreadsheet-helper-chrome-extension/)
+- [AI Study Helper Chrome Extension: A Developer's Guide](/ai-study-helper-chrome-extension/)
+
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
