@@ -11,6 +11,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
 ---
+{% raw %}
 
 
 # Claude Code for Remix Optimistic UI Workflow
@@ -526,3 +527,4 @@ The key points to take forward: derive optimistic values from `fetcher.formData`
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
