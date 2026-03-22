@@ -34,6 +34,55 @@ The LSP specification defines several symbol kinds:
 
 These symbols form the backbone of features like "Go to Definition," "Find All References," and outline views in modern editors.
 
+### How the Protocol Works Under the Hood
+
+When you open a file in VS Code, Neovim, or any LSP-compatible editor, the editor sends a `textDocument/documentSymbol` request to the running language server. The server responds with either a flat list of `SymbolInformation` objects or a nested `DocumentSymbol[]` tree. The hierarchical tree format (available since LSP 3.16) is far more useful because it preserves parent-child relationships between symbols.
+
+Here is a simplified example of what the server actually returns:
+
+```json
+[
+  {
+    "name": "AuthService",
+    "kind": 5,
+    "range": { "start": { "line": 0, "character": 0 }, "end": { "line": 42, "character": 1 } },
+    "children": [
+      {
+        "name": "login",
+        "kind": 6,
+        "range": { "start": { "line": 2, "character": 2 }, "end": { "line": 10, "character": 3 } }
+      },
+      {
+        "name": "logout",
+        "kind": 6,
+        "range": { "start": { "line": 12, "character": 2 }, "end": { "line": 18, "character": 3 } }
+      }
+    ]
+  }
+]
+```
+
+This JSON structure is exactly what Claude Code reads when you ask it to reason about your file's structure. Rather than parsing source text character by character, Claude can use the symbol tree as a semantic map.
+
+### Symbol Kind Reference Table
+
+| Kind | Name | Description | Common Languages |
+|------|------|-------------|-----------------|
+| 1 | File | The file itself | All |
+| 2 | Module | A module or namespace | JS, TS, Python, Rust |
+| 3 | Namespace | An explicit namespace | C++, C#, Java |
+| 4 | Package | A package declaration | Go, Java |
+| 5 | Class | A class definition | OOP languages |
+| 6 | Method | A method on a class | OOP languages |
+| 7 | Property | A property on a class | JS, TS, C# |
+| 9 | Function | A standalone function | All |
+| 11 | Interface | An interface definition | TS, Go, Java |
+| 13 | Enum | An enumeration | TS, C#, Rust |
+| 14 | Constant | A constant value | All |
+| 26 | TypeParameter | A generic type parameter | TS, Java, Rust |
+
+Understanding these kinds matters because Claude Code uses them when responding to queries. When you ask "list all interfaces in this file," Claude maps your request to kind 11 and filters accordingly.
+
 ## Setting Up Claude Code for LSP Integration
 
 Before diving into workflow, ensure your environment is properly configured:
@@ -47,6 +96,59 @@ claude config list
 ```
 
 Your project should have a properly configured LSP client. Most modern editors (VS Code, Neovim, JetBrains) include LSP support out of the box. For Claude Code to interact with LSP symbols, ensure your editor is running and the language server is active.
+
+### Editor Configuration Checklist
+
+Different editors require different setup steps before symbol workflows function reliably with Claude Code.
+
+**VS Code setup:**
+```json
+// .vscode/settings.json
+{
+  "editor.semanticHighlighting.enabled": true,
+  "typescript.preferences.includePackageJsonAutoImports": "on",
+  "editor.inlayHints.enabled": "on"
+}
+```
+
+**Neovim setup (using nvim-lspconfig):**
+```lua
+-- init.lua
+local lspconfig = require('lspconfig')
+
+lspconfig.tsserver.setup({
+  on_attach = function(client, bufnr)
+    -- Enable document symbol support
+    client.server_capabilities.documentSymbolProvider = true
+  end
+})
+
+-- Key binding to list symbols via Telescope
+vim.keymap.set('n', '<leader>ds', '<cmd>Telescope lsp_document_symbols<cr>')
+```
+
+**JetBrains setup:**
+JetBrains IDEs ship with their own LSP-compatible layers. For external language servers, install the "LSP4IJ" plugin, then configure the server binary path in Settings > Languages & Frameworks > Language Servers.
+
+### Verifying Your Language Server Is Active
+
+Before expecting Claude Code to reason about symbols accurately, confirm the language server is healthy:
+
+```bash
+# For TypeScript/JavaScript projects
+npx typescript-language-server --version
+
+# For Python projects using pyright
+pyright --version
+
+# For Go
+gopls version
+
+# For Rust
+rust-analyzer --version
+```
+
+If any of these fail, install the missing server. A language server that is not running means Claude Code will fall back to text-based analysis, which is less precise.
 
 ## Practical Workflow: Symbol-Based Code Navigation
 
@@ -85,6 +187,50 @@ class AuthService {
 
 The symbol hierarchy reveals that `AuthService` contains four methods, each with distinct purposes. This structural understanding allows Claude Code to provide more accurate suggestions.
 
+### Real-World Navigation Example: Exploring an Unfamiliar Codebase
+
+When you join a project mid-stream, the symbol tree is your fastest onboarding tool. Ask Claude Code:
+
+```
+User: "Give me a high-level map of this file. What classes exist and what
+methods does each expose publicly?"
+```
+
+Claude will scan the document symbol tree and return something like:
+
+```
+AuthService (class, lines 1–88)
+  ├── login (method, async, public)
+  ├── logout (method, async, public)
+  ├── refreshToken (method, async, public)
+  └── validateSession (method, sync, public)
+
+UserRepository (class, lines 90–145)
+  ├── findById (method, async, public)
+  ├── findByEmail (method, async, public)
+  ├── create (method, async, public)
+  └── _buildWhereClause (method, sync, private)
+
+TokenStore (interface, lines 147–155)
+  ├── save (signature)
+  ├── get (signature)
+  └── revoke (signature)
+```
+
+This structural overview takes less than a second compared to manually reading hundreds of lines. Once you have the map, follow-up queries like "explain what `_buildWhereClause` does" are scoped precisely.
+
+### Comparing Navigation Approaches
+
+| Method | Speed | Accuracy | Requires LSP | Best For |
+|--------|-------|----------|-------------|----------|
+| Manual file scrolling | Slow | Variable | No | Small files |
+| Text search (grep/ripgrep) | Fast | Literal matches only | No | Finding string occurrences |
+| LSP Go to Definition | Fast | High | Yes | Single symbol jumps |
+| LSP document symbols + Claude | Very fast | High (semantic) | Yes | Structural understanding |
+| Claude text-only analysis | Medium | Medium | No | Files without LSP support |
+
+When LSP is running and symbols are available, the symbol-plus-Claude approach consistently outperforms the alternatives for orientation tasks.
+
 ## Symbol-Driven Refactoring Workflows
 
 Refactoring becomes significantly safer when you understand the complete symbol structure. Claude Code can use document symbols to:
@@ -103,7 +249,7 @@ class PaymentProcessor:
     def process_payment(self, amount: float) -> bool:
         """Process a payment transaction"""
         pass
-    
+
     def refund_payment(self, transaction_id: str) -> bool:
         """Refund a previous payment"""
         pass
@@ -117,6 +263,79 @@ Using symbol information, Claude Code can identify:
 
 This comprehensive understanding ensures renames don't break functionality.
 
+### Step-by-Step Safe Rename Workflow
+
+A structured rename using Claude Code and LSP symbols looks like this:
+
+**Step 1 — Inventory the symbol.**
+Ask Claude Code to find every reference to the target symbol using the LSP `textDocument/references` capability before making any changes. This gives you the full blast radius.
+
+```
+User: "Before I rename process_payment to charge, show me every file and
+line number that references it."
+```
+
+**Step 2 — Check for string references.**
+LSP references catch code references but miss string-based references such as API documentation strings, log messages, or configuration files:
+
+```python
+# LSP won't flag this as a reference, but it will break after rename
+logging.info("Calling process_payment for order %s", order_id)
+```
+
+Ask Claude Code to also grep for the literal string.
+
+**Step 3 — Stage the rename.**
+Use your editor's LSP rename refactor (F2 in VS Code, `<leader>rn` in Neovim), which updates all semantic references atomically.
+
+**Step 4 — Patch string references.**
+Apply the string replacements Claude Code identified in step 2.
+
+**Step 5 — Run tests.**
+Execute your test suite to catch anything the symbol tree missed.
+
+### Example: Extracting a Method from a Large Function
+
+Large functions with high cyclomatic complexity are common refactoring targets. Claude Code uses the symbol tree to identify candidate extraction points:
+
+```typescript
+// Before: Monolithic function (Claude sees this as one symbol, 80 lines deep)
+async function processCheckout(cart: Cart, user: User): Promise<Order> {
+  // Validate cart items (15 lines)
+  for (const item of cart.items) {
+    if (!item.inStock) throw new Error(`${item.name} is out of stock`);
+    if (item.quantity > item.maxOrderQuantity) throw new RangeError(...);
+  }
+
+  // Calculate totals (20 lines)
+  let subtotal = cart.items.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  const taxRate = await getTaxRate(user.address.state);
+  const tax = subtotal * taxRate;
+  const shipping = calculateShipping(cart, user.address);
+
+  // Charge customer (25 lines)
+  const paymentResult = await stripe.charges.create({ ... });
+  if (!paymentResult.success) throw new PaymentError(paymentResult.error);
+
+  // Create order record (20 lines)
+  const order = await db.orders.create({ ... });
+  await sendConfirmationEmail(user.email, order);
+  return order;
+}
+```
+
+Ask Claude Code: "This function is too long. Suggest extractions that align with logical boundaries." Using the symbol tree plus code analysis, Claude recommends:
+
+```typescript
+// After: Four focused symbols instead of one sprawling one
+async function validateCartItems(items: CartItem[]): Promise<void> { ... }
+async function calculateOrderTotals(cart: Cart, address: Address): Promise<Totals> { ... }
+async function chargeCustomer(totals: Totals, paymentMethod: PaymentMethod): Promise<ChargeResult> { ... }
+async function createOrderRecord(cart: Cart, user: User, charge: ChargeResult): Promise<Order> { ... }
+```
+
+The resulting symbol tree is flat, each symbol has a single responsibility, and the symbol names themselves document the checkout flow.
+
 ## Automating Symbol-Based Code Generation
 
 Claude Code can use document symbols to generate contextually appropriate code. When creating new functions or classes, understanding the existing symbol structure helps produce code that follows project conventions.
@@ -129,7 +348,7 @@ class UserService {
   // Existing symbols in the class
   findUserById(id: string): Promise<User>
   findUserByEmail(email: string): Promise<User>
-  
+
   // New method generated with matching patterns
   async createUser(data: CreateUserDto): Promise<User> {
     // Generated following existing method patterns
@@ -138,6 +357,102 @@ class UserService {
 ```
 
 The generated code matches the style, return types, and async patterns of existing symbols.
+
+### Generating Test Stubs from Symbols
+
+One of the highest-leverage automation tasks is generating test stubs that mirror the exact public interface of a class. With symbol information, Claude Code can produce complete, accurate test scaffolding:
+
+```typescript
+// Source class — Claude reads its symbols
+class OrderService {
+  async createOrder(userId: string, cartId: string): Promise<Order> { ... }
+  async cancelOrder(orderId: string, reason: string): Promise<void> { ... }
+  async getOrderHistory(userId: string, page: number): Promise<PaginatedOrders> { ... }
+  async updateShipping(orderId: string, address: Address): Promise<Order> { ... }
+}
+```
+
+Ask Claude Code: "Generate Jest test stubs for every public method in OrderService." The output, grounded in the actual symbol tree:
+
+```typescript
+import { OrderService } from './OrderService';
+import { mockUser, mockCart, mockOrder } from '../__mocks__';
+
+describe('OrderService', () => {
+  let service: OrderService;
+
+  beforeEach(() => {
+    service = new OrderService(/* inject mocks */);
+  });
+
+  describe('createOrder', () => {
+    it('should create an order for a valid user and cart', async () => {
+      const result = await service.createOrder(mockUser.id, mockCart.id);
+      expect(result).toMatchObject({ userId: mockUser.id });
+    });
+
+    it('should throw when cart does not exist', async () => {
+      await expect(service.createOrder(mockUser.id, 'invalid')).rejects.toThrow();
+    });
+  });
+
+  describe('cancelOrder', () => {
+    it('should cancel an existing order with a valid reason', async () => {
+      await expect(
+        service.cancelOrder(mockOrder.id, 'Customer request')
+      ).resolves.not.toThrow();
+    });
+  });
+
+  describe('getOrderHistory', () => {
+    it('should return paginated results for a user', async () => {
+      const result = await service.getOrderHistory(mockUser.id, 1);
+      expect(result).toHaveProperty('items');
+      expect(result).toHaveProperty('total');
+    });
+  });
+
+  describe('updateShipping', () => {
+    it('should update the shipping address on an order', async () => {
+      const result = await service.updateShipping(mockOrder.id, mockAddress);
+      expect(result.shippingAddress).toEqual(mockAddress);
+    });
+  });
+});
+```
+
+No method is missed because the generation is driven by the symbol list, not by the developer's memory.
+
+### Generating Interface Definitions from Implementation Symbols
+
+When you have a concrete class and want to extract a clean interface, Claude Code can derive it directly from the symbol tree:
+
+```go
+// Claude reads this struct and its methods
+type PostgresUserRepository struct {
+    db *sql.DB
+}
+
+func (r *PostgresUserRepository) Create(ctx context.Context, user *User) error { ... }
+func (r *PostgresUserRepository) GetByID(ctx context.Context, id string) (*User, error) { ... }
+func (r *PostgresUserRepository) Update(ctx context.Context, user *User) error { ... }
+func (r *PostgresUserRepository) Delete(ctx context.Context, id string) error { ... }
+func (r *PostgresUserRepository) Search(ctx context.Context, query string) ([]*User, error) { ... }
+```
+
+Ask: "Generate an interface that this struct satisfies." Claude produces:
+
+```go
+// UserRepository defines the persistence contract for User entities.
+// PostgresUserRepository satisfies this interface.
+type UserRepository interface {
+    Create(ctx context.Context, user *User) error
+    GetByID(ctx context.Context, id string) (*User, error)
+    Update(ctx context.Context, user *User) error
+    Delete(ctx context.Context, id string) error
+    Search(ctx context.Context, query string) ([]*User, error)
+}
+```
 
 ## Best Practices for Symbol Workflows
 
@@ -161,7 +476,7 @@ validate()
 gen()
 ```
 
-### 3. use Symbol Hierarchies
+### 3. Use Symbol Hierarchies
 
 Group related symbols under interfaces or classes to improve code organization:
 
@@ -173,8 +488,9 @@ type UserRepository interface {
     GetByID(ctx context.Context, id string) (*User, error)
     Update(ctx context.Context, user *User) error
     Delete(ctx context.Context, id string) error
-    
-    // Separate interface for queries
+}
+
+// Separate interface for queries
 type QueryService interface {
     Search(ctx context.Context, query string) ([]*User, error)
     List(ctx context.Context, filter Filter) ([]*User, error)
@@ -184,6 +500,40 @@ type QueryService interface {
 ### 4. Enable Real-Time Symbol Updates
 
 Configure your editor to sync symbol information in real-time. This ensures Claude Code always works with current information.
+
+### 5. Annotate Symbols with JSDoc or Docstrings
+
+LSP servers expose documentation strings alongside symbol metadata. When Claude Code reads a symbol, the attached docstring provides semantic context that pure symbol names cannot:
+
+```typescript
+/**
+ * Calculates the final price for an order, including applicable taxes,
+ * shipping costs, and promotional discounts.
+ *
+ * @param cart - The shopping cart with items and quantities
+ * @param address - The delivery address used to determine tax jurisdiction
+ * @param promoCode - Optional promotional code for discounts
+ * @returns A breakdown of subtotal, tax, shipping, discount, and total
+ */
+async function calculateOrderPrice(
+  cart: Cart,
+  address: Address,
+  promoCode?: string
+): Promise<PricingBreakdown> { ... }
+```
+
+With this annotation, a Claude Code query like "how is tax calculated?" returns a precise answer without requiring Claude to read the entire function body.
+
+### 6. Use Workspace Symbols for Cross-File Navigation
+
+The `workspace/symbol` request extends document symbols to the entire project. Use it when your question crosses file boundaries:
+
+```
+User: "Find all classes that implement the PaymentProvider interface
+across the whole codebase."
+```
+
+Claude Code can issue a workspace symbol query filtered to kind 5 (Class) and then cross-reference with interface implementations in the type system, giving you a complete list without manual file hunting.
 
 ## Troubleshooting Common Issues
 
@@ -208,9 +558,89 @@ Large files with many symbols can slow down LSP queries. Consider:
 - Limiting symbol search to visible range
 - Using incremental parsing features
 
+### Language Server Crashes
+
+Language servers can crash on malformed code, especially during active editing. Signs that the server has crashed:
+
+- Symbol outlines go blank in your editor sidebar
+- "Go to Definition" stops working
+- Claude Code gives generic answers instead of symbol-specific ones
+
+**Diagnosis steps:**
+
+```bash
+# VS Code: open Output panel, select your language server from dropdown
+# Look for "Error" or "panic" lines
+
+# For tsserver specifically
+# Check ~/.vscode/extensions/... for tsserver.log
+
+# For Neovim, check LSP logs
+:LspLog
+```
+
+**Recovery:**
+
+```bash
+# VS Code
+Ctrl+Shift+P → "Restart Extension Host"
+
+# Neovim
+:LspRestart
+
+# Manual restart of any server
+pkill -f tsserver && pkill -f pyright && pkill -f gopls
+# Reopen your editor
+```
+
+### Symbols Available in Editor But Not in Claude Code
+
+This typically means Claude Code is analyzing the file without accessing live LSP data. Ensure:
+
+1. The file is saved to disk (unsaved buffers may not be indexed)
+2. Your Claude Code session was started from within the project root
+3. The language server has finished its initial indexing pass (can take 30–60 seconds on first open)
+
+## Integrating Symbol Workflows Into Your Daily Routine
+
+### Morning Orientation Pattern
+
+When picking up where you left off, start each session with:
+
+```
+User: "I'm resuming work on the checkout flow. Show me the symbols in
+src/services/CheckoutService.ts and flag any functions that are longer
+than 30 lines."
+```
+
+This gives you an immediate, structured view of the code state without re-reading everything.
+
+### Code Review Pattern
+
+Before submitting a PR, run a symbol audit:
+
+```
+User: "Review the symbols in this file. Are there any methods that seem
+misplaced based on the class responsibility? Are there duplicated names
+that might cause confusion?"
+```
+
+### Documentation Generation Pattern
+
+At release time, use symbols to drive automated docs:
+
+```
+User: "For every public method in UserService.ts, generate a Markdown
+table with columns: method name, parameters, return type, purpose."
+```
+
+The output is grounded in actual symbols, so it stays accurate as the code changes.
+
 ## Conclusion
 
 Mastering LSP document symbol workflows with Claude Code unlocks powerful capabilities for code navigation, refactoring, and generation. By understanding how symbols represent your code's structure, you can work more efficiently and produce better-maintained code. Start incorporating these workflows into your daily development practice and experience the difference firsthand.
+
+The key principle is treating the symbol tree as a first-class source of truth about your codebase. When Claude Code has access to that tree—with accurate kinds, hierarchy, ranges, and docstrings—it operates more like a senior developer who knows the system than a text processor working through raw source. Invest in maintaining clean, well-named, well-documented symbols, and every AI-assisted workflow in your editor will benefit.
 
 Remember: The key to effective symbol-based workflows is maintaining clean, well-organized code structures that your language server can accurately parse and present.
 
