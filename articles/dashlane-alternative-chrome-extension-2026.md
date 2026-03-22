@@ -11,6 +11,7 @@ score: 8
 categories: [comparisons]
 tags: [claude-code, claude-skills]
 ---
+{% raw %}
 
 # Dashlane Alternative Chrome Extension in 2026
 
@@ -350,3 +351,4 @@ Evaluate based on your specific needs: self-hosting preference, budget constrain
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}
