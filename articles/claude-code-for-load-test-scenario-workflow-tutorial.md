@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Load Test Scenario Workflow Tutorial"
-description: "Learn how to build automated load test scenario workflows using Claude Code. This tutorial covers scenario design, execution patterns, and practical implementation with actionable code examples."
+description: "Learn how to build automated load test scenario workflows using Claude Code. This tutorial covers scenario design, execution patterns, and practical."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-load-test-scenario-workflow-tutorial/

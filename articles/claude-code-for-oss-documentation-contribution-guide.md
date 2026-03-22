@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for OSS Documentation Contribution Guide"
-description: "Learn how to use Claude Code effectively to contribute high-quality documentation to open source projects. Practical examples and actionable advice for developers."
+description: "Learn how to use Claude Code effectively to contribute high-quality documentation to open source projects. Practical examples and actionable advice for."
 date: 2026-03-15
 categories: [guides]
 tags: [claude-code, claude-skills]

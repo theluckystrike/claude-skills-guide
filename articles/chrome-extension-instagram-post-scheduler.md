@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Chrome Extension Instagram Post Scheduler: A Developer Guide"
-description: "Learn how to build and use Chrome extensions for scheduling Instagram posts. Technical implementation details, API considerations, and practical examples for developers."
+description: "Learn how to build and use Chrome extensions for scheduling Instagram posts. Technical implementation details, API considerations, and practical examples."
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-instagram-post-scheduler/

@@ -11,6 +11,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
 ---
+{% raw %}
 
 
 # Claude Code for Zola Rust Static Site Workflow
@@ -453,3 +454,4 @@ The key is to maintain clear communication with Claude Code about your project s
 - [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
+{% endraw %}

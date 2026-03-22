@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Incident Communication Workflow Guide"
-description: "Learn how to leverage Claude Code to streamline incident communication workflows, automate status updates, and improve team coordination during critical incidents."
+description: "Learn how to leverage Claude Code to streamline incident communication workflows, automate status updates, and improve team coordination during critical."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-incident-communication-workflow-guide/

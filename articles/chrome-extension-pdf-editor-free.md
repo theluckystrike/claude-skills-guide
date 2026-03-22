@@ -2,7 +2,7 @@
 
 layout: default
 title: "Chrome Extension PDF Editor Free: A Developer's Guide"
-description: "Discover free Chrome extension PDF editors for developers and power users. Learn about key features, practical workflows, and how to integrate PDF editing into your browser-based development environment."
+description: "Discover free Chrome extension PDF editors for developers and power users. Learn about key features, practical workflows, and how to integrate PDF editing."
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-pdf-editor-free/

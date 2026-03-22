@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Review Queue Management Workflow"
-description: "Master the art of building review queue management workflows with Claude Code. Learn practical patterns for prioritizing, assigning, and processing code reviews efficiently."
+description: "Master the art of building review queue management workflows with Claude Code. Learn practical patterns for prioritizing, assigning, and processing code."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-review-queue-management-workflow/

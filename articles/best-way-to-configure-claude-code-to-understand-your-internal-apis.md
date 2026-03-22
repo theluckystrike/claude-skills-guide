@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Best Way to Configure Claude Code to Understand Your Internal APIs"
-description: "A comprehensive guide to configuring Claude Code to understand and work with your internal APIs, including OpenAPI specs, custom prompts, and project-specific context."
+description: "A comprehensive guide to configuring Claude Code to understand and work with your internal APIs, including OpenAPI specs, custom prompts, and."
 date: 2026-03-18
 categories: [guides]
 tags: [claude-code, claude-skills, internal-apis, api-documentation, mcp]

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for k9s Kubernetes Terminal Workflow Guide"
-description: "Master the integration of Claude Code with k9s for streamlined Kubernetes management. Learn practical patterns for debugging, resource inspection, and automated cluster operations."
+description: "Master the integration of Claude Code with k9s for streamlined Kubernetes management. Learn practical patterns for debugging, resource inspection, and."
 date: 2026-03-20
 author: "Claude Skills Guide"
 permalink: /claude-code-for-k9s-kubernetes-terminal-workflow-guide/

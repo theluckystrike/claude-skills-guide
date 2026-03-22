@@ -2,7 +2,7 @@
 
 layout: default
 title: "Picture in Picture Alternative Chrome Extension in 2026"
-description: "Explore the best picture in picture alternatives for Chrome extensions in 2026. Learn implementation methods, custom solutions, and developer-focused approaches for multi-stream video viewing."
+description: "Explore the best picture in picture alternatives for Chrome extensions in 2026. Learn implementation methods, custom solutions, and developer-focused."
 date: 2026-03-15
 author: theluckystrike
 permalink: /picture-in-picture-alternative-chrome-extension-2026/

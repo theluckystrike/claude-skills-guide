@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Chrome Extension Pinterest Pin Scheduler: A Developer's Guide"
-description: "Learn how to build and use Chrome extensions for scheduling Pinterest pins. Includes code examples, API integration patterns, and automation strategies for developers."
+description: "Learn how to build and use Chrome extensions for scheduling Pinterest pins. Includes code examples, API integration patterns, and automation strategies."
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-pinterest-pin-scheduler/

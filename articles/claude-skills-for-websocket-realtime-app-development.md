@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Skills for WebSocket Realtime App Development"
-description: "Build real-time WebSocket applications faster using Claude skills. Practical patterns for connection handling, state management, scaling with Redis, Python asyncio servers, and production-ready implementation."
+description: "Build real-time WebSocket applications faster using Claude skills. Practical patterns for connection handling, state management, scaling with Redis."
 date: 2026-03-14
 author: "Claude Skills Guide"
 categories: [tutorials]

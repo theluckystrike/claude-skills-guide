@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Load Test Results Analysis Workflow"
-description: "Learn how to build a Claude Code skill for analyzing load test results. Automate insights from JMeter, k6, Gatling, and other load testing tools with practical examples."
+description: "Learn how to build a Claude Code skill for analyzing load test results. Automate insights from JMeter, k6, Gatling, and other load testing tools with."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-load-test-results-analysis-workflow/

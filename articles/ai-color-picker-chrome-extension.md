@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "AI Color Picker Chrome Extension: A Developer's Guide"
-description: "Discover how AI-powered color picker Chrome extensions can streamline your design workflow. Learn practical use cases, code integration examples, and tips for developers."
+description: "Discover how AI-powered color picker Chrome extensions can streamline your design workflow. Learn practical use cases, code integration examples, and tips."
 date: 2026-03-15
 author: theluckystrike
 permalink: /ai-color-picker-chrome-extension/

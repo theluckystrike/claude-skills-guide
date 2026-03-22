@@ -2,7 +2,7 @@
 
 layout: default
 title: "Screencastify Alternative Chrome Extension in 2026"
-description: "Discover the best Screencastify alternatives for Chrome in 2026. Free and paid screen recording extensions with features for developers, educators, and content creators."
+description: "Discover the best Screencastify alternatives for Chrome in 2026. Free and paid screen recording extensions with features for developers, educators, and."
 date: 2026-03-15
 author: theluckystrike
 permalink: /screencastify-alternative-chrome-extension-2026/

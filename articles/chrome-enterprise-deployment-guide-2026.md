@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Chrome Enterprise Deployment Guide 2026"
-description: "A practical guide to deploying Chrome in enterprise environments. Covers Group Policy configuration, extension management, kiosk mode, and automated deployment scripts for IT administrators and developers."
+description: "A practical guide to deploying Chrome in enterprise environments. Covers Group Policy configuration, extension management, kiosk mode, and automated."
 date: 2026-03-15
 author: theluckystrike
 categories: [guides]

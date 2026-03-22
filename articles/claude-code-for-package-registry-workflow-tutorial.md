@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Package Registry Workflow Tutorial"
-description: "Learn how to use Claude Code to automate package registry workflows including publishing, version management, and dependency updates across npm, PyPI, and container registries."
+description: "Learn how to use Claude Code to automate package registry workflows including publishing, version management, and dependency updates across npm, PyPI, and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-package-registry-workflow-tutorial/

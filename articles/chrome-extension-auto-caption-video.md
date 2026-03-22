@@ -2,7 +2,7 @@
 
 layout: default
 title: "Chrome Extension Auto Caption Video: A Developer Guide"
-description: "Learn how to build and use Chrome extensions for automatic video captioning. Practical code examples, APIs, and implementation patterns for developers and power users."
+description: "Learn how to build and use Chrome extensions for automatic video captioning. Practical code examples, APIs, and implementation patterns for developers and."
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-auto-caption-video/

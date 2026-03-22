@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Batch Processing Optimization Workflow"
-description: "Learn how to build efficient batch processing workflows with Claude Code. This guide covers parallel execution, error handling, resource management, and practical patterns for processing large datasets."
+description: "Learn how to build efficient batch processing workflows with Claude Code. This guide covers parallel execution, error handling, resource management, and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-batch-processing-optimization-workflow/

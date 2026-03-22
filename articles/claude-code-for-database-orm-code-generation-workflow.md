@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Database ORM Code Generation Workflow"
-description: "Learn how to leverage Claude Code skills to automate database ORM code generation. A practical workflow for generating type-safe models, repositories, and queries."
+description: "Learn how to leverage Claude Code skills to automate database ORM code generation. A practical workflow for generating type-safe models, repositories, and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-database-orm-code-generation-workflow/

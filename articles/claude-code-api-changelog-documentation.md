@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code API Changelog Documentation Guide"
-description: "Learn how to create and maintain professional API changelog documentation using Claude Code. Discover automated workflows, best practices, and practical examples for tracking API changes effectively."
+description: "Learn how to create and maintain professional API changelog documentation using Claude Code. Discover automated workflows, best practices, and practical."
 date: 2026-03-18
 author: "Claude Skills Guide"
 permalink: /claude-code-api-changelog-documentation/

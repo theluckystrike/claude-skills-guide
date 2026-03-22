@@ -2,7 +2,7 @@
 
 layout: default
 title: "Chrome Extension Content Calendar Manager: A Developer's Guide"
-description: "Learn how to build and use a chrome extension content calendar manager for organizing publishing schedules, managing content pipelines, and automating workflow reminders."
+description: "Learn how to build and use a chrome extension content calendar manager for organizing publishing schedules, managing content pipelines, and automating."
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-content-calendar-manager/

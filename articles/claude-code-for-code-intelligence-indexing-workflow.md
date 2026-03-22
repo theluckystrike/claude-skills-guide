@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Code Intelligence Indexing Workflow"
-description: "Learn how to build intelligent code indexing workflows with Claude Code. This guide covers semantic search, code graph analysis, and automated documentation generation."
+description: "Learn how to build intelligent code indexing workflows with Claude Code. This guide covers semantic search, code graph analysis, and automated."
 date: 2026-03-15
 categories: [guides]
 tags: [claude-code, claude-skills]

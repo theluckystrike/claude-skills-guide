@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Database Benchmark Workflow Tutorial"
-description: "Learn how to leverage Claude Code for database benchmark workflows. Practical examples, code snippets, and actionable advice for developers measuring database performance."
+description: "Learn how to leverage Claude Code for database benchmark workflows. Practical examples, code snippets, and actionable advice for developers measuring."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-database-benchmark-workflow-tutorial/

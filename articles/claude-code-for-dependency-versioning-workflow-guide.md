@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Dependency Versioning Workflow Guide"
-description: "Master dependency versioning with Claude Code. Learn practical workflows for semantic versioning, lockfile management, and automated version updates across your projects."
+description: "Master dependency versioning with Claude Code. Learn practical workflows for semantic versioning, lockfile management, and automated version updates."
 date: 2026-03-15
 categories: [guides]
 tags: [claude-code, claude-skills]

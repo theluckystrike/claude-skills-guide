@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Docs as Code Workflow Tutorial Guide"
-description: "Learn how to build a docs-as-code workflow using Claude Code. Automate documentation generation, validation, and deployment with practical examples and actionable advice."
+description: "Learn how to build a docs-as-code workflow using Claude Code. Automate documentation generation, validation, and deployment with practical examples and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-docs-as-code-workflow-tutorial-guide/

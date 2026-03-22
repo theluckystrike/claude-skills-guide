@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Hotfix Release Workflow Tutorial Guide"
-description: "Learn how to use Claude Code to streamline hotfix release workflows. This guide covers creating skills, automating bug fixes, and deploying rapid updates safely."
+description: "Learn how to use Claude Code to streamline hotfix release workflows. This guide covers creating skills, automating bug fixes, and deploying rapid updates."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-hotfix-release-workflow-tutorial-guide/

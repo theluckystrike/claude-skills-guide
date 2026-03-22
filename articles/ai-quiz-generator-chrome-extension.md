@@ -2,7 +2,7 @@
 
 layout: default
 title: "AI Quiz Generator Chrome Extension: Build Your Own Quiz Tool"
-description: "A practical guide to AI-powered quiz generator Chrome extensions for developers. Learn how these tools work, their key features, and how to build custom solutions."
+description: "A practical guide to AI-powered quiz generator Chrome extensions for developers. Learn how these tools work, their key features, and how to build custom."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /ai-quiz-generator-chrome-extension/

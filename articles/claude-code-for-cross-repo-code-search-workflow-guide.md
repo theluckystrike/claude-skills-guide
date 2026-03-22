@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Cross-Repo Code Search Workflow Guide"
-description: "Learn how to build a powerful cross-repository code search workflow with Claude Code. Practical examples, configuration tips, and automation strategies for developers working with multiple codebases."
+description: "Learn how to build a powerful cross-repository code search workflow with Claude Code. Practical examples, configuration tips, and automation strategies."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-cross-repo-code-search-workflow-guide/

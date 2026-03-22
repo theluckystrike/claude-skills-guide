@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Why Is Chrome So Slow in 2026? A Developer's Guide to Fixing It"
-description: "Is Chrome running slow in 2026? This technical guide explains the common causes of Chrome performance issues and provides actionable solutions for developers and power users."
+description: "Is Chrome running slow in 2026? This technical guide explains the common causes of Chrome performance issues and provides actionable solutions for."
 date: 2026-03-15
 author: theluckystrike
 permalink: /why-is-chrome-so-slow-2026/

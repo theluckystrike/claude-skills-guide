@@ -2,7 +2,7 @@
 
 layout: default
 title: "Chrome Extension Text to Speech: A Developer Guide"
-description: "Learn how to build Chrome extensions with text-to-speech capabilities. Practical code examples, Web Speech API integration, and techniques for developers and power users."
+description: "Learn how to build Chrome extensions with text-to-speech capabilities. Practical code examples, Web Speech API integration, and techniques for developers."
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-text-to-speech/

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Wiki Analytics: Workflow Tutorial Guide"
-description: "Learn how to leverage Claude Code to build powerful wiki analytics workflows. This comprehensive guide covers practical examples, automation techniques, and actionable advice for developers."
+description: "Learn how to leverage Claude Code to build powerful wiki analytics workflows. This comprehensive guide covers practical examples, automation techniques."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-wiki-analytics-workflow-tutorial-guide/

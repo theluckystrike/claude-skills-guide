@@ -2,7 +2,7 @@
 
 layout: default
 title: "Chrome Enterprise Stable Channel Management: A Practical Guide"
-description: "Master Chrome Enterprise stable channel management with practical examples, policy configurations, and deployment strategies for IT administrators and developers."
+description: "Master Chrome Enterprise stable channel management with practical examples, policy configurations, and deployment strategies for IT administrators and."
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-enterprise-stable-channel-management/

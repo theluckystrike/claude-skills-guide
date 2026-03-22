@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Chrome Extension Tab Organizer Research: A Developer's Guide"
-description: "Research guide for building Chrome extensions that organize browser tabs. Covers Chrome APIs, tab grouping, session management, and implementation patterns for developers."
+description: "Research guide for building Chrome extensions that organize browser tabs. Covers Chrome APIs, tab grouping, session management, and implementation."
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-tab-organizer-research/

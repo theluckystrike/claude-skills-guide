@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Chrome Extension Sprint Planning Poker"
-description: "A practical guide to using Chrome extensions for sprint planning poker in agile teams. Learn how to run estimation sessions directly in your browser with real-time collaboration features."
+description: "A practical guide to using Chrome extensions for sprint planning poker in agile teams. Learn how to run estimation sessions directly in your browser with."
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-sprint-planning-poker/

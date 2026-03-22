@@ -2,7 +2,7 @@
 
 layout: default
 title: "Chrome Group Policy Templates 2026: Complete Admin Guide"
-description: "A practical guide to Chrome group policy templates in 2026. Learn about ADMX files, registry-based policies, Chrome Enterprise management, and deployment strategies for IT administrators and developers."
+description: "A practical guide to Chrome group policy templates in 2026. Learn about ADMX files, registry-based policies, Chrome Enterprise management, and deployment."
 date: 2026-03-15
 categories: [guides]
 tags: [chrome-browser, group-policy, enterprise-it, chrome-enterprise, windows-administration, chrome-management, claude-skills]

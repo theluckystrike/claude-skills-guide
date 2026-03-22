@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Chrome Extension PubMed Search Helper"
-description: "A practical guide to building and using Chrome extensions for PubMed search. Learn how to create custom search helpers, automate literature reviews, and integrate with your research workflow."
+description: "A practical guide to building and using Chrome extensions for PubMed search. Learn how to create custom search helpers, automate literature reviews, and."
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-pubmed-search-helper/

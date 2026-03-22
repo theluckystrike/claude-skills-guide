@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Template Based Code Generation Guide"
-description: "Learn how to leverage Claude Code for powerful template-based code generation. This guide covers practical patterns, Jinja2 templates, and actionable techniques to automate repetitive coding tasks."
+description: "Learn how to leverage Claude Code for powerful template-based code generation. This guide covers practical patterns, Jinja2 templates, and actionable."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-template-based-code-generation-guide/

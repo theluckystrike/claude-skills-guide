@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Version Matrix Workflow Tutorial Guide"
-description: "Learn how to leverage Claude Code to automate and streamline version matrix testing workflows for your projects. Practical examples and actionable advice for developers."
+description: "Learn how to leverage Claude Code to automate and streamline version matrix testing workflows for your projects. Practical examples and actionable advice."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-version-matrix-workflow-tutorial-guide/

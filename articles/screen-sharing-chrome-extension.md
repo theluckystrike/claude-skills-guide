@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Screen Sharing Chrome Extension: A Developer's Guide"
-description: "Learn how to build and use screen sharing Chrome extensions for developer workflows. Covers the chrome.desktopCapture API, security permissions, and practical implementation examples."
+description: "Learn how to build and use screen sharing Chrome extensions for developer workflows. Covers the chrome.desktopCapture API, security permissions, and."
 date: 2026-03-15
 author: theluckystrike
 permalink: /screen-sharing-chrome-extension/

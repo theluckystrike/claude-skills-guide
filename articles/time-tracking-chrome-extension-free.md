@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Best Free Time Tracking Chrome Extensions for Developers in 2026"
-description: "Discover free time tracking Chrome extensions that help developers and power users track work hours, manage projects, and boost productivity without spending a dime."
+description: "Discover free time tracking Chrome extensions that help developers and power users track work hours, manage projects, and boost productivity without."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /time-tracking-chrome-extension-free/

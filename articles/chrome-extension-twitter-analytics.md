@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Chrome Extension Twitter Analytics: A Developer Guide"
-description: "Learn how to build a Twitter analytics Chrome extension from scratch. Practical code examples, API integration, and implementation patterns for developers and power users."
+description: "Learn how to build a Twitter analytics Chrome extension from scratch. Practical code examples, API integration, and implementation patterns for developers."
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-twitter-analytics/

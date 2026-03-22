@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Notion Workflow Tutorial Guide"
-description: "Learn how to integrate Claude Code with Notion to build powerful automated workflows. This comprehensive guide covers API setup, practical examples, and actionable tips for developers."
+description: "Learn how to integrate Claude Code with Notion to build powerful automated workflows. This comprehensive guide covers API setup, practical examples, and."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-notion-workflow-tutorial-guide/

@@ -2,7 +2,7 @@
 
 layout: default
 title: "Chrome Site Isolation Explained: A Developer Guide"
-description: "Understand Chrome site isolation mechanics, security benefits, and implementation details. Learn how process separation protects your browser from cross-site attacks."
+description: "Understand Chrome site isolation mechanics, security benefits, and implementation details. Learn how process separation protects your browser from."
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-site-isolation-explained/

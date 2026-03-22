@@ -4,7 +4,7 @@
 
 layout: default
 title: "Best Privacy Extensions for Chrome in 2026"
-description: "A comprehensive guide to the best privacy extensions for Chrome in 2026. Discover essential tools for blocking trackers, managing cookies, and protecting your browsing privacy."
+description: "A comprehensive guide to the best privacy extensions for Chrome in 2026. Discover essential tools for blocking trackers, managing cookies, and protecting."
 date: 2026-03-19
 author: "Claude Skills Guide"
 permalink: /best-privacy-extensions-chrome-2026/

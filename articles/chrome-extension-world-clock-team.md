@@ -3,7 +3,7 @@
 
 layout: default
 title: "Building a Chrome Extension for Team World Clock Management"
-description: "A practical guide for developers building Chrome extensions to manage world clocks across distributed teams. Learn architecture patterns, timezone handling, and real-world implementation."
+description: "A practical guide for developers building Chrome extensions to manage world clocks across distributed teams. Learn architecture patterns, timezone."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-world-clock-team/

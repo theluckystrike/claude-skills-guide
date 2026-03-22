@@ -2,7 +2,7 @@
 
 layout: default
 title: "AI Twitter Reply Generator for Chrome: A Developer's Guide"
-description: "Learn how to build and use AI-powered Twitter reply generator Chrome extensions. Practical code examples, architecture patterns, and implementation strategies for developers."
+description: "Learn how to build and use AI-powered Twitter reply generator Chrome extensions. Practical code examples, architecture patterns, and implementation."
 date: 2026-03-15
 author: theluckystrike
 permalink: /ai-twitter-reply-generator-chrome/

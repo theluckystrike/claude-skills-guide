@@ -3,7 +3,7 @@
 
 layout: default
 title: "Noise Cancellation Chrome Extension: A Developer Guide"
-description: "Learn how to build noise cancellation features for Chrome extensions. Practical code examples, Web Audio API techniques, and implementation patterns for developers."
+description: "Learn how to build noise cancellation features for Chrome extensions. Practical code examples, Web Audio API techniques, and implementation patterns for."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /noise-cancellation-chrome-extension/

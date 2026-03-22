@@ -2,7 +2,7 @@
 
 layout: default
 title: "Chrome Browser MSI Deployment with SCCM: A Complete Guide"
-description: "Learn how to deploy Google Chrome via MSI installer using Microsoft SCCM. Practical examples, command-line parameters, and troubleshooting tips for IT administrators."
+description: "Learn how to deploy Google Chrome via MSI installer using Microsoft SCCM. Practical examples, command-line parameters, and troubleshooting tips for IT."
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-browser-msi-deployment-sccm/

@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Database Query Optimization Workflow"
-description: "Learn how to leverage Claude Code and AI-assisted workflows to optimize database queries. Practical examples, code snippets, and actionable advice for developers."
+description: "Learn how to leverage Claude Code and AI-assisted workflows to optimize database queries. Practical examples, code snippets, and actionable advice for."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-database-query-optimization-workflow/

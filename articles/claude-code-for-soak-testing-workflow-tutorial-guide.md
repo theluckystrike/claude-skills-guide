@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Soak Testing Workflow Tutorial Guide"
-description: "Learn how to leverage Claude Code CLI to build, automate, and analyze soak testing workflows for your applications. Practical examples and actionable advice included."
+description: "Learn how to leverage Claude Code CLI to build, automate, and analyze soak testing workflows for your applications. Practical examples and actionable."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-soak-testing-workflow-tutorial-guide/

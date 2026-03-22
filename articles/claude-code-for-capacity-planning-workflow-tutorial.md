@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Capacity Planning Workflow Tutorial"
-description: "Learn how to leverage Claude Code to build intelligent capacity planning workflows that automate resource allocation, forecast demand, and optimize infrastructure scaling."
+description: "Learn how to leverage Claude Code to build intelligent capacity planning workflows that automate resource allocation, forecast demand, and optimize."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-capacity-planning-workflow-tutorial/

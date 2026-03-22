@@ -3,7 +3,7 @@
 
 layout: default
 title: "Claude Code for Code Smell Detection Workflow Guide"
-description: "Learn how to leverage Claude Code for effective code smell detection. This comprehensive guide covers practical workflows, automated analysis techniques, and actionable strategies to improve your codebase quality."
+description: "Learn how to leverage Claude Code for effective code smell detection. This comprehensive guide covers practical workflows, automated analysis techniques."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-code-smell-detection-workflow-guide/

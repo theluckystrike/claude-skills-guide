@@ -2,7 +2,7 @@
 
 layout: default
 title: "Hootsuite Alternative Chrome Extension in 2026"
-description: "Discover the best Hootsuite alternatives with Chrome extensions for developers and power users in 2026. Compare open-source options, API access, and automation capabilities."
+description: "Discover the best Hootsuite alternatives with Chrome extensions for developers and power users in 2026. Compare open-source options, API access, and."
 date: 2026-03-15
 author: theluckystrike
 permalink: /hootsuite-alternative-chrome-extension-2026/

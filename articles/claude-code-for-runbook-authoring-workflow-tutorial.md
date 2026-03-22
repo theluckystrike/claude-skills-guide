@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Runbook Authoring Workflow Tutorial"
-description: "Learn how to use Claude Code to create comprehensive runbooks for DevOps and SRE workflows. This tutorial covers practical techniques for documenting operational procedures."
+description: "Learn how to use Claude Code to create comprehensive runbooks for DevOps and SRE workflows. This tutorial covers practical techniques for documenting."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-runbook-authoring-workflow-tutorial/

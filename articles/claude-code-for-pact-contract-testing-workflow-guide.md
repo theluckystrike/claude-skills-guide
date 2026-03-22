@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Pact Contract Testing Workflow Guide"
-description: "Learn how to integrate Claude Code into your Pact contract testing workflow. This guide covers practical strategies for writing, managing, and maintaining contract tests using Pact with Claude Code."
+description: "Learn how to integrate Claude Code into your Pact contract testing workflow. This guide covers practical strategies for writing, managing, and maintaining."
 date: 2026-03-20
 author: "Claude Skills Guide"
 permalink: /claude-code-for-pact-contract-testing-workflow-guide/

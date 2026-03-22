@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for OSS Maintainer Workflow Tutorial Guide"
-description: "A comprehensive tutorial for open source maintainers on leveraging Claude Code to automate issue triage, review pull requests, manage releases, and build thriving community contributions."
+description: "A comprehensive tutorial for open source maintainers on leveraging Claude Code to automate issue triage, review pull requests, manage releases, and build."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-oss-maintainer-workflow-tutorial-guide/

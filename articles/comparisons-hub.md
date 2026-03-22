@@ -74,6 +74,35 @@ When building custom skills, the path is: understand the [skill.md format](/clau
 
 ---
 
+## How to Evaluate a Comparison Before Committing
+
+Not every comparison on this site — or anywhere else — applies equally to your situation. Before acting on a recommendation, run through this quick filter:
+
+**Team size matters.** A solo freelancer and a 50-person engineering team have different failure modes. Copilot's IDE-centric workflow is fine for individuals but becomes a coordination problem when a team needs consistent skill behavior across branches and environments. Claude Code's project-level `CLAUDE.md` configuration scales better in those situations.
+
+**Task frequency changes the math.** A tool that shaves 10 minutes off a task you do once a month saves 2 hours a year — barely worth the learning curve. The same tool applied to a task you do daily saves 40+ hours a year. Weight your evaluation accordingly.
+
+**Integration surface matters more than feature lists.** The best tool on paper often loses to the second-best tool that fits into your existing stack. If your team already lives in VS Code, a Copilot-native workflow will outperform a better tool that requires context switching.
+
+**Stability vs innovation is a genuine tradeoff.** Official Anthropic skills are stable, predictable, and maintained. Community skills move faster, add niche capabilities sooner, but occasionally break on Claude version updates. Separate your production workflows from your experimental ones.
+
+---
+
+## How Skills and Prompts Interact in Practice
+
+Skills and prompts aren't mutually exclusive — the best Claude Code workflows combine both. Here's a pattern that works at scale:
+
+1. **Start with a prompt** to solve the problem once and understand the edge cases.
+2. **Refine the prompt** over 3–5 real uses, noting what context you always have to re-provide.
+3. **Codify into a skill** by writing a `skill.md` that encodes the system prompt, required context, and any tool restrictions.
+4. **Keep a prompt escape hatch** — skills are defaults, not locks. When a task genuinely falls outside the skill's scope, use a raw prompt.
+
+This cycle produces skills that are grounded in real usage rather than theoretical design. Skills written from scratch often over-specify behavior for cases that never arise, while skills evolved from prompts tend to be tight and practically useful.
+
+The cost of a poorly written skill is subtle: it produces acceptable but not excellent output, which is harder to notice than an outright failure. Reviewing skill output critically for the first month after writing it is worth the effort.
+
+---
+
 ## Full Guide Index: Comparisons Cluster
 
 | Article | What You'll Learn |

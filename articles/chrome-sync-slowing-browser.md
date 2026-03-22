@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Chrome Sync Slowing Browser: Diagnosis and Solutions for."
-description: "Is Chrome Sync slowing your browser? Learn how to diagnose sync-related performance issues, identify problematic data types, and optimize Chrome's sync behavior for faster browsing."
+description: "Is Chrome Sync slowing your browser? Learn how to diagnose sync-related performance issues, identify problematic data types, and optimize Chrome's sync."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-sync-slowing-browser/

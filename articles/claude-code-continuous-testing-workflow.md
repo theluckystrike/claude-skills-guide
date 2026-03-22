@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Continuous Testing Workflow: Complete Guide for 2026"
-description: "Master continuous testing with Claude Code. Learn how to automate testing at every stage of development, integrate with CI/CD pipelines, and build a robust testing strategy that catches bugs early."
+description: "Master continuous testing with Claude Code. Learn how to automate testing at every stage of development, integrate with CI/CD pipelines, and build a."
 date: 2026-03-20
 author: theluckystrike
 permalink: /claude-code-continuous-testing-workflow/

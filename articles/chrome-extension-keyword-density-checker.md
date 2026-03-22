@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Chrome Extension Keyword Density Checker: A Developer's Guide"
-description: "Learn how to build and use a Chrome extension for keyword density analysis. Includes code examples, implementation patterns, and practical usage for SEO-conscious developers."
+description: "Learn how to build and use a Chrome extension for keyword density analysis. Includes code examples, implementation patterns, and practical usage for."
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-keyword-density-checker/

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for PR Status Check Workflow Tutorial"
-description: "Learn how to build automated PR status check workflows using Claude Code. This tutorial covers GitHub integration, status monitoring, and creating custom skills for pull request automation."
+description: "Learn how to build automated PR status check workflows using Claude Code. This tutorial covers GitHub integration, status monitoring, and creating custom."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-pr-status-check-workflow-tutorial/

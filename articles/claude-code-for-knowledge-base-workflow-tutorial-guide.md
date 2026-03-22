@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Knowledge Base Workflow Tutorial Guide"
-description: "Learn how to build automated knowledge base workflows with Claude Code. This tutorial covers file operations, search integration, content generation, and practical automation patterns."
+description: "Learn how to build automated knowledge base workflows with Claude Code. This tutorial covers file operations, search integration, content generation, and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-knowledge-base-workflow-tutorial-guide/

@@ -2,7 +2,7 @@
 
 layout: default
 title: "Chrome Extension Hotel Price Comparison: A Developer Guide"
-description: "Learn how chrome extension hotel price comparison tools work under the hood. Technical breakdown of APIs, scraping methods, and building custom price tracking solutions."
+description: "Learn how chrome extension hotel price comparison tools work under the hood. Technical breakdown of APIs, scraping methods, and building custom price."
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-hotel-price-comparison/

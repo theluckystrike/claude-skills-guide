@@ -2,7 +2,7 @@
 
 layout: default
 title: "Chrome Extension Readability Score Checker: A Developer Guide"
-description: "Learn how to build and use Chrome extensions for checking readability scores. Practical implementation patterns, APIs, and code examples for developers and power users."
+description: "Learn how to build and use Chrome extensions for checking readability scores. Practical implementation patterns, APIs, and code examples for developers."
 date: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-readability-score-checker/

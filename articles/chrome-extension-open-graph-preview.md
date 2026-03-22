@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Chrome Extension Open Graph Preview: Implementation Guide"
-description: "Learn how to build a Chrome extension that previews Open Graph meta tags. Includes code examples, practical implementation steps, and debugging tips for developers."
+description: "Learn how to build a Chrome extension that previews Open Graph meta tags. Includes code examples, practical implementation steps, and debugging tips for."
 date: 2026-03-15
 author: "theluckystrike"
 permalink: /chrome-extension-open-graph-preview/

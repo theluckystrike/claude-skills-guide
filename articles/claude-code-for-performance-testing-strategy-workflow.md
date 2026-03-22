@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Performance Testing Strategy Workflow"
-description: "Learn how to build a performance testing strategy workflow with Claude Code. Includes practical examples, skill configuration, and actionable advice for developers."
+description: "Learn how to build a performance testing strategy workflow with Claude Code. Includes practical examples, skill configuration, and actionable advice for."
 date: 2026-03-15
 categories: [guides]
 tags: [claude-code, claude-skills]

@@ -2,7 +2,7 @@
 
 layout: default
 title: "Lusha Alternative Chrome Extension in 2026"
-description: "Discover the best Lusha alternatives with Chrome extensions for developers in 2026. Compare open-source options, API tools, and self-hosted solutions for contact enrichment."
+description: "Discover the best Lusha alternatives with Chrome extensions for developers in 2026. Compare open-source options, API tools, and self-hosted solutions for."
 date: 2026-03-15
 author: theluckystrike
 permalink: /lusha-alternative-chrome-extension-2026/

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Claude Issue Triage Workflow Tutorial Guide"
-description: "Learn how to build an automated issue triage workflow using Claude Code. This guide covers skill creation, automation patterns, and practical examples for streamlining your issue management process."
+description: "Learn how to build an automated issue triage workflow using Claude Code. This guide covers skill creation, automation patterns, and practical examples for."
 date: 2026-03-20
 author: "Claude Skills Guide"
 permalink: /claude-code-for-claude-issue-triage-workflow-tutorial-guide/
