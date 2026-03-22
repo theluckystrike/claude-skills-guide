@@ -5,7 +5,7 @@ description: "Learn how to leverage Claude Code with Anthropic's Batch API to ef
 date: 2026-03-20
 author: Claude Skills Guide
 permalink: /claude-code-for-claude-batch-api-anthropic-workflow-guide/
-categories: [Development, AI, Anthropic]
+categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
