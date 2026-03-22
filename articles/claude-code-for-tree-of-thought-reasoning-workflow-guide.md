@@ -27,7 +27,7 @@ The core implementation involves three key phases: generation, evaluation, and s
 
 The first step involves prompting Claude to generate several distinct approaches to the problem. Here's how to structure this:
 
-{% raw %}{%{%{%{% endraw %}
+{%{%{%
 ```python
 # tree_of_thought.py
 import json
@@ -57,7 +57,7 @@ This function generates multiple problem-solving strategies, each representing a
 
 Once you have multiple branches, the next phase involves evaluating each path's potential for success. This evaluation can be based on various criteria depending on your use case:
 
-{% raw %}{%{%{%{% endraw %}
+{%{%{%
 ```python
 def evaluate_branch(branch, context):
     """Evaluate the viability of a reasoning branch."""
@@ -81,7 +81,7 @@ The evaluation function uses Claude's contextual understanding to assess each br
 
 The final phase implements the tree's expansion and pruning. Successful branches are explored deeper, while less promising paths are abandoned:
 
-{% raw %}{%{%{%{% endraw %}
+{%{%{%
 ```python
 def expand_tree(initial_branches, max_depth=3):
     """Iteratively expand the reasoning tree."""
