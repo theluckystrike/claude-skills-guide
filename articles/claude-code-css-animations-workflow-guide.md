@@ -32,6 +32,35 @@ Start by creating a dedicated CSS file for animations. This separates your motio
 
 Defining animation tokens upfront ensures consistency across your project. Reference these tokens throughout your CSS to maintain predictable timing across all interactive elements.
 
+### Expanding Your Token System
+
+A minimal token set gets you started, but production applications benefit from a more complete design system for motion. Consider capturing timing, easing curves, and common delays:
+
+```css
+:root {
+  /* Duration tokens */
+  --duration-instant:  100ms;
+  --duration-fast:     150ms;
+  --duration-medium:   300ms;
+  --duration-slow:     500ms;
+  --duration-xslow:    800ms;
+
+  /* Easing tokens */
+  --ease-out:          cubic-bezier(0.0, 0.0, 0.2, 1);
+  --ease-in:           cubic-bezier(0.4, 0.0, 1, 1);
+  --ease-in-out:       cubic-bezier(0.4, 0.0, 0.2, 1);
+  --ease-spring:       cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-linear:       linear;
+
+  /* Compound transition tokens */
+  --transition-fast:   var(--duration-fast)   var(--ease-out);
+  --transition-medium: var(--duration-medium) var(--ease-in-out);
+  --transition-slow:   var(--duration-slow)   var(--ease-out);
+}
+```
+
+The `--ease-spring` value uses an overshoot curve that gives elements a slight bounce at the end of their movement — great for playful UI feedback like button presses and card reveals. Reserve it for interfaces where that energy matches the brand.
+
 ## Understanding Keyframe Animations
 
 Keyframe animations provide precise control over multi-step motion sequences. Unlike simple transitions, keyframes let you define specific states at percentage intervals:
@@ -55,6 +84,54 @@ Keyframe animations provide precise control over multi-step motion sequences. Un
 
 The `forwards` fill mode keeps the element in its final state after the animation completes. Combine this with animation delay for staggered effects across multiple elements.
 
+### Multi-Step Keyframes and Easing Per-Step
+
+Keyframes also let you control timing within each step using the `animation-timing-function` property inside the keyframe block itself:
+
+```css
+@keyframes cardFlip {
+  0% {
+    transform: rotateY(0deg);
+    animation-timing-function: ease-in;
+  }
+  50% {
+    transform: rotateY(90deg);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+
+.card-flip {
+  animation: cardFlip 600ms forwards;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+```
+
+This technique lets the first half of the flip accelerate (ease-in) and the second half decelerate (ease-out), producing a much more natural motion than a uniform curve across the whole animation.
+
+### Staggered Entrance Animations
+
+Staggering is one of the most effective tools for making list-based UI feel polished. Define delays using CSS custom properties so JavaScript can inject them without touching class names:
+
+```css
+.list-item {
+  opacity: 0;
+  animation: slideUp var(--duration-medium) var(--ease-out) forwards;
+  animation-delay: var(--stagger-delay, 0ms);
+}
+```
+
+```javascript
+document.querySelectorAll('.list-item').forEach((el, i) => {
+  el.style.setProperty('--stagger-delay', `${i * 60}ms`);
+});
+```
+
+A delay of 60–80ms per item works well for lists of up to 10 items. For longer lists, cap the maximum delay at around 400ms so late items don't feel abandoned.
+
 ## Building Interactive Transitions
 
 Transitions work best for state changes triggered by user interaction. Common use cases include hover effects, focus states, and modal appearances:
@@ -62,7 +139,7 @@ Transitions work best for state changes triggered by user interaction. Common us
 ```css
 .button {
   background: #2563eb;
-  transition: background var(--transition-fast), 
+  transition: background var(--transition-fast),
               transform var(--transition-fast),
               box-shadow var(--transition-medium);
 }
@@ -80,6 +157,42 @@ Transitions work best for state changes triggered by user interaction. Common us
 
 Chaining multiple properties creates rich interactive feedback. Notice how the transform uses a faster duration than the box-shadow, creating a layered effect that feels natural.
 
+### Transitions vs. Keyframe Animations: Choosing the Right Tool
+
+Both transitions and keyframe animations animate CSS properties, but they serve different purposes:
+
+| Scenario | Use Transition | Use Keyframe |
+|---|---|---|
+| Hover state change | Yes | No |
+| Focus ring appearance | Yes | No |
+| Entrance animation on load | No | Yes |
+| Loading spinner | No | Yes |
+| Modal open/close | Either | Either |
+| Multi-step sequence | No | Yes |
+| Looping animation | No | Yes |
+
+Transitions are reactive — they respond to a property change. Keyframes are declarative — they run on their own schedule. When in doubt, reach for a transition first; only escalate to keyframes when you need explicit intermediate states or looping.
+
+### Focus and Keyboard Navigation
+
+Animating `:focus-visible` states is often overlooked. A smooth focus ring helps keyboard users track where they are without the jarring snap of an instant outline:
+
+```css
+.interactive-element {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  transition: outline-color var(--transition-fast),
+              outline-offset var(--transition-fast);
+}
+
+.interactive-element:focus-visible {
+  outline-color: #2563eb;
+  outline-offset: 4px;
+}
+```
+
+Use `:focus-visible` rather than `:focus` so the ring only appears for keyboard users — mouse users typically do not need the outline.
+
 ## Transform Properties for Performance
 
 The `transform` property animates efficiently because it doesn't trigger layout recalculations. GPU acceleration handles transform changes separately from the main rendering thread. Stick to these transform functions for optimal performance:
@@ -90,6 +203,46 @@ The `transform` property animates efficiently because it doesn't trigger layout 
 - `skew()` — distortion (use sparingly)
 
 Avoid animating properties like `width`, `height`, `margin`, or `padding`. These trigger layout recalculations that cause jank. Instead, use transform and opacity for smooth 60fps animations.
+
+### The Compositor-Only Rule Explained
+
+Modern browsers render pages using multiple threads. The compositor thread handles `transform` and `opacity` without consulting the main thread. Everything else — `width`, `height`, `left`, `top`, `background-color`, `border-radius` — must involve the main thread, which can be blocked by JavaScript execution.
+
+Visualize the rendering pipeline:
+
+```
+JavaScript → Style → Layout → Paint → Composite
+```
+
+Animating `transform` or `opacity` skips directly to the Composite step. Animating `width` forces the browser to run the entire pipeline on every frame, which is the root cause of choppy animations at 30fps or below.
+
+### will-change: When to Use It
+
+`will-change` hints to the browser that a property is about to change, allowing it to promote the element to its own GPU layer in advance:
+
+```css
+/* Good: applied to elements that will animate */
+.modal-overlay {
+  will-change: opacity;
+}
+
+.drawer {
+  will-change: transform;
+}
+
+/* Bad: applied to everything */
+* {
+  will-change: transform; /* never do this */
+}
+```
+
+Overusing `will-change` consumes significant GPU memory. Apply it selectively, and remove it once the animation is complete:
+
+```javascript
+element.addEventListener('animationend', () => {
+  element.style.willChange = 'auto';
+});
+```
 
 ## Creating Reusable Animation Classes
 
@@ -155,6 +308,37 @@ Apply these classes directly to elements in your HTML:
 </div>
 ```
 
+### Extending the Utility System with Modifiers
+
+Combine base animation classes with modifier classes to vary duration and delay without writing new keyframes:
+
+```css
+/* Duration modifiers */
+.anim-fast   { animation-duration: var(--duration-fast); }
+.anim-slow   { animation-duration: var(--duration-slow); }
+.anim-xslow  { animation-duration: var(--duration-xslow); }
+
+/* Delay modifiers */
+.delay-100  { animation-delay: 100ms; }
+.delay-200  { animation-delay: 200ms; }
+.delay-300  { animation-delay: 300ms; }
+.delay-400  { animation-delay: 400ms; }
+
+/* Fill modifiers */
+.anim-both     { animation-fill-mode: both; }
+.anim-forwards { animation-fill-mode: forwards; }
+
+/* Iteration modifiers */
+.anim-loop     { animation-iteration-count: infinite; }
+.anim-twice    { animation-iteration-count: 2; }
+```
+
+This gives you a composable system. A skeleton loading screen shimmer becomes:
+
+```html
+<div class="pulse anim-xslow anim-loop skeleton-block"></div>
+```
+
 ## Managing Animation State with JavaScript
 
 For complex animation sequences, combine CSS with JavaScript. Use CSS custom properties to control animation parameters dynamically:
@@ -192,6 +376,60 @@ function hideModal() {
 }
 ```
 
+### Using the Web Animations API for Programmatic Control
+
+The Web Animations API gives you fine-grained JavaScript control over CSS animations without relying on `setTimeout` hacks:
+
+```javascript
+const overlay = document.querySelector('.modal-overlay');
+
+// Play
+const anim = overlay.animate(
+  [
+    { opacity: 0, transform: 'scale(0.95)' },
+    { opacity: 1, transform: 'scale(1)' }
+  ],
+  {
+    duration: 250,
+    easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
+    fill: 'forwards'
+  }
+);
+
+// Reverse to close
+async function closeModal() {
+  anim.reverse();
+  await anim.finished;
+  overlay.classList.add('hidden');
+}
+```
+
+The `anim.finished` promise resolves when the animation completes, removing the need for `animationend` event listeners or guessing at `setTimeout` values. This is far more reliable when animations have variable durations.
+
+### Intersection Observer for Scroll-Triggered Animations
+
+Scroll-triggered animations that use `IntersectionObserver` are far more performant than `scroll` event listeners:
+
+```javascript
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('slide-up');
+        observer.unobserve(entry.target); // animate once
+      }
+    });
+  },
+  { threshold: 0.15 }
+);
+
+document.querySelectorAll('.animate-on-scroll').forEach((el) => {
+  observer.observe(el);
+});
+```
+
+The threshold of `0.15` triggers the animation when 15% of the element is visible — enough to confirm the user has reached it, but early enough that the animation plays before they fully scroll past it.
+
 ## Testing Animations
 
 The **tdd** skill supports writing tests that verify animation states and timing. Create visual regression tests using Playwright or similar tools to ensure animations render correctly across browsers.
@@ -202,13 +440,31 @@ Test animation completion by checking computed styles:
 async function waitForAnimation(element) {
   const computed = window.getComputedStyle(element);
   const initial = computed.animationName;
-  
+
   await element.evaluate(el => {
     return new Promise(resolve => {
       el.addEventListener('animationend', resolve, { once: true });
     });
   });
 }
+```
+
+### Testing the prefers-reduced-motion Path
+
+Your test suite should verify that the reduced-motion experience is also correct. In Playwright, you can emulate the media feature:
+
+```javascript
+test('shows content without animation when reduced motion is preferred', async ({ browser }) => {
+  const context = await browser.newContext({
+    reducedMotion: 'reduce'
+  });
+  const page = await context.newPage();
+  await page.goto('/dashboard');
+
+  const card = page.locator('.card');
+  // Element should still be visible, just without transition delay
+  await expect(card).toBeVisible();
+});
 ```
 
 The **supermemory** skill helps track animation patterns across projects, building a personal library of proven techniques that work in various contexts.
@@ -236,6 +492,29 @@ Before deploying animations, verify these performance criteria:
 ```
 
 This media query respects user preferences for reduced motion, an important accessibility consideration.
+
+### Profiling in DevTools
+
+Chrome DevTools' Performance tab is your main tool for diagnosing animation jank. Record a session while scrolling or interacting, then look for:
+
+- **Long frames** (red bars above 16ms) — anything above 16ms drops below 60fps
+- **Layout/Reflow events** triggered during animation — means you are animating a layout property
+- **Paint events** — if you see repeated paints on an element, check whether `will-change` or `contain: paint` would help
+
+The Layers panel shows which elements have been promoted to their own compositor layer. Too many layers waste GPU memory; too few cause expensive repaints. Aim for a layer count that covers actively animating elements without promoting static content.
+
+### Quick Reference: CSS Property Animation Cost
+
+| Property | Pipeline Stage | Cost |
+|---|---|---|
+| transform | Composite only | Very low |
+| opacity | Composite only | Very low |
+| filter (blur, brightness) | Paint + Composite | Medium |
+| background-color | Paint + Composite | Medium |
+| border-radius | Paint + Composite | Medium |
+| width / height | Layout + Paint + Composite | High |
+| margin / padding | Layout + Paint + Composite | High |
+| top / left / right / bottom | Layout + Paint + Composite | High |
 
 ## Conclusion
 
