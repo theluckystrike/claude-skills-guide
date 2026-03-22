@@ -21,6 +21,8 @@ Unreal Engine projects follow strict naming conventions and module structures. T
 
 When you invoke a skill like the `tdd` (test-driven development) skill, you can generate test cases for your Actor components before writing implementation code. The [automated testing pipeline guide](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) shows how to extend these individual skill invocations into a full CI/CD loop. This approach reduces debugging time significantly since Unreal's hot-reload system, while powerful, still requires careful module management.
 
+The benefit of encoding Unreal-specific knowledge into skills compounds over time. A junior developer joining a team can invoke a `create-actor` skill and receive production-ready boilerplate that already accounts for garbage collection boundaries, the correct lifecycle overrides, and proper module export macros. Without a skill, that same developer might spend hours hunting through Epic's documentation before producing code that a senior engineer would immediately flag for macro misuse or a missing `GENERATED_BODY()` placement.
+
 ## Core Skills for Unreal C++ Workflows
 
 ### Code Generation with Specialized Prompts
@@ -40,24 +42,94 @@ class YOURMODULE_API UMyComponent : public UActorComponent
 {
     GENERATED_BODY()
 
-public:	
+public:
     UMyComponent();
 
 protected:
     virtual void BeginPlay() override;
 
-public:	
+public:
     virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 };
 ```
 
 Skills that understand Unreal's reflection system will include the correct macro placement and inheritance patterns automatically.
 
+Beyond basic Actor components, you can build skills for common Unreal archetypes. Here is what a complete skill definition might cover for each class type:
+
+**Character subclass skill** — Generates the Character header with movement component bindings, camera spring arm setup, and input action declarations. The source file should include the `SetupPlayerInputComponent` override with placeholder axis and action bindings using the new Enhanced Input system rather than the deprecated `BindAxis`/`BindAction` calls.
+
+**Game Mode skill** — Produces a GameMode subclass that wires the correct `DefaultPawnClass`, `PlayerControllerClass`, and `HUDClass` with `ConstructorHelpers::FClassFinder` patterns. Many developers forget these finder calls must live inside the constructor body and will silently fail if moved to `BeginPlay`.
+
+**Subsystem skill** — Generates either a `UGameInstanceSubsystem` or a `UWorldSubsystem` depending on the requested lifetime scope, complete with the correct `Initialize`/`Deinitialize` overrides.
+
+A practical skill prompt for an Actor subclass might look like this:
+
+```
+You are an Unreal Engine 5 C++ expert. Generate a complete .h and .cpp pair for an Actor
+subclass named [CLASS_NAME] in module [MODULE_NAME].
+
+Requirements:
+- Follow Epic's coding standard (U prefix for UObject subclasses, A prefix for Actor subclasses)
+- Include GENERATED_BODY() in the class body
+- Add UPROPERTY(EditAnywhere, BlueprintReadWrite) for any member variables
+- Override BeginPlay and Tick only if the user explicitly requests them
+- Include the .generated.h include as the last include in the header
+- Add a constructor declaration and definition that calls Super constructor
+- Add the MODULE_API export macro in the class declaration
+```
+
+This level of specificity prevents the most common beginner mistakes and makes the generated output immediately compilable.
+
+### Build.cs Configuration and Module Dependencies
+
+One area where developers consistently lose time is the `Build.cs` file. Unreal's module system requires explicit dependency declarations, and missing a module causes cryptic linker errors. A well-designed skill can generate or update `Build.cs` files when you add new functionality:
+
+```csharp
+// Build.cs for a module that adds Online Subsystem and AI capabilities
+using UnrealBuildTool;
+
+public class MyGame : ModuleRules
+{
+    public MyGame(ReadOnlyTargetRules Target) : base(Target)
+    {
+        PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
+
+        PublicDependencyModuleNames.AddRange(new string[]
+        {
+            "Core",
+            "CoreUObject",
+            "Engine",
+            "InputCore",
+            "EnhancedInput",
+            "OnlineSubsystem",
+            "OnlineSubsystemUtils",
+            "NavigationSystem",
+            "AIModule",
+            "GameplayAbilities",
+            "GameplayTags",
+            "GameplayTasks"
+        });
+
+        PrivateDependencyModuleNames.AddRange(new string[]
+        {
+            "Slate",
+            "SlateCore",
+            "UMG"
+        });
+    }
+}
+```
+
+A `build-cs` skill that accepts a list of desired features (online play, AI, GAS, UMG) and outputs the corresponding `Build.cs` with the correct public vs. private dependency placement saves real debugging time on every new module.
+
 ### Documentation with the pdf Skill
 
 The `pdf` skill becomes valuable when you need to generate API documentation or technical design documents for your Unreal projects. You can extract your C++ class hierarchies and use the skill to format them into professional PDF reports suitable for team reviews or client presentations.
 
 This proves especially useful when documenting complex gameplay systems that involve multiple interacting classes, custom gameplay abilities, or replication components. Clear documentation helps onboard new team members and maintains institutional knowledge across project iterations.
+
+For Unreal specifically, documentation should capture more than just the class API. Good technical design documents for a game module include the replication model (which properties use `Replicated` vs. `ReplicatedUsing`), authority checks (`HasAuthority()` guards), and the Gameplay Tag hierarchy that drives ability activation. When you use a `pdf` skill to generate these documents, prompt it to extract comments from your UPROPERTY and UFUNCTION declarations as the source material — Unreal's reflection system exposes tooltips and category metadata that translate directly into useful documentation fields.
 
 ### Test-Driven Development Using the tdd Skill
 
@@ -69,18 +141,18 @@ Unreal's built-in testing framework, although reliable, requires specific setup 
 
 #if WITH_DEV_AUTOMATION_TESTS
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FDamageCalculationTest, 
-    "MyGame.Damage.Calculation", 
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FDamageCalculationTest,
+    "MyGame.Damage.Calculation",
     EAutomationTestFlags::ApplicationContextMask | EAutomationTestFlags::ProductFilter)
 
 bool FDamageCalculationTest::RunTest(const FString& Parameters)
 {
     UDamageCalculation* DamageCalc = NewObject<UDamageCalculation>();
-    
+
     float Result = DamageCalc->CalculateDamage(100.0f, 50.0f, 0.8f);
-    
+
     TestEqual(TEXT("Damage calculation with armor"), Result, 40.0f);
-    
+
     return true;
 }
 
@@ -89,11 +161,67 @@ bool FDamageCalculationTest::RunTest(const FString& Parameters)
 
 This skill ensures you follow Unreal's testing conventions, including the correct include paths and automation test macros.
 
+Beyond simple unit tests, Unreal supports latent automation tests for asynchronous gameplay scenarios. These are useful when testing AI behavior trees or ability activations that span multiple frames:
+
+```cpp
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FAbilityActivationTest,
+    "MyGame.Ability.Activation",
+    EAutomationTestFlags::ApplicationContextMask | EAutomationTestFlags::ProductFilter)
+
+bool FAbilityActivationTest::RunTest(const FString& Parameters)
+{
+    // Create a minimal world for testing
+    UWorld* TestWorld = UWorld::CreateWorld(EWorldType::Game, false);
+    FWorldContext& WorldContext = GEngine->CreateNewWorldContext(EWorldType::Game);
+    WorldContext.SetCurrentWorld(TestWorld);
+    TestWorld->InitializeActorsForPlay(FURL());
+    TestWorld->BeginPlay();
+
+    // Spawn a test character with an Ability System Component
+    AMyCharacter* TestChar = TestWorld->SpawnActor<AMyCharacter>();
+    UAbilitySystemComponent* ASC = TestChar->GetAbilitySystemComponent();
+
+    // Grant and activate an ability
+    FGameplayAbilitySpecHandle Handle = ASC->GiveAbility(
+        FGameplayAbilitySpec(UMyFireAbility::StaticClass(), 1));
+    bool bActivated = ASC->TryActivateAbility(Handle);
+
+    TestTrue(TEXT("Ability should activate"), bActivated);
+
+    // Cleanup
+    TestWorld->DestroyWorld(false);
+    GEngine->DestroyWorldContext(TestWorld);
+
+    return true;
+}
+```
+
+The `tdd` skill can generate this scaffolding on demand, saving the 30 minutes it typically takes to find and adapt the correct world setup pattern from Epic's documentation.
+
+### Unreal Test Types at a Glance
+
+| Test Type | Macro | Best For | Runs In |
+|---|---|---|---|
+| Simple Automation | `IMPLEMENT_SIMPLE_AUTOMATION_TEST` | Pure logic, math, data parsing | Any context |
+| Complex Automation | `IMPLEMENT_COMPLEX_AUTOMATION_TEST` | Parameterized test cases | Any context |
+| Latent Automation | `ADD_LATENT_AUTOMATION_COMMAND` | Multi-frame, async gameplay | Game world |
+| Gauntlet Test | `UGauntletTestController` | Full game session integration | Dedicated server |
+| Functional Test | `AFunctionalTest` actor | Level-based scenario testing | PIE / game world |
+
+A `tdd` skill that asks for the test type up front will produce the correct macro, inheritance chain, and world setup pattern without requiring the developer to remember which category applies.
+
 ### Project Organization with supermemory
 
 Managing complex Unreal projects requires tracking numerous interdependencies. The `supermemory` skill helps maintain a knowledge base of your project's architecture, module dependencies, and design decisions. For a deeper look at how persistent memory works inside Claude Code, [the SuperMemory skill guide](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) covers storage mechanisms and cross-session recall. You can store references to custom GameplayAbility classes, their interaction patterns, and any custom gameplay tags your team has defined.
 
 When working across multiple Unreal projects or maintaining a plugin ecosystem, this organizational skill prevents the common problem of forgetting why certain architectural choices were made.
+
+The categories of information worth storing for an Unreal project include:
+
+- **Gameplay Tag hierarchy** — The full `GameplayTags.ini` tag tree with notes on which abilities and effects consume each tag. Tag naming is opaque by nature; documenting the intended semantics prevents tag proliferation.
+- **Module dependency graph** — Which modules depend on which, and why a given dependency was added. When a compile time explodes, you can query this context to identify circular or unnecessary dependencies.
+- **Replication contracts** — Which properties are server-authoritative, which are predicted on the client, and which use `ReplicatedUsing` callbacks that must remain side-effect-free.
+- **Asset naming conventions** — The team's agreed prefix scheme for textures (T_), materials (M_), skeletal meshes (SK_), etc. Consistent naming is critical for Cook and Pak file organization.
 
 ### Code Review and Refactoring
 
@@ -105,6 +233,20 @@ Unreal's codebase evolves continuously, and refactoring legacy code requires car
 - Deprecated API usage that will break in future engine versions
 
 These automated checks catch problems before they manifest as runtime crashes or mysterious behavior in packaged builds.
+
+A useful set of Unreal-specific review checks worth encoding in a skill:
+
+| Issue | Symptom | Correct Pattern |
+|---|---|---|
+| Raw pointer to UObject | Crash after GC collection | Use `TWeakObjectPtr` or `UPROPERTY` |
+| `new` without `NewObject` | Invisible to GC, memory leak | `NewObject<T>(Outer)` |
+| Missing `UPROPERTY` on delegate | Delegate not replicated, stale reference | Add `UPROPERTY` annotation |
+| `BlueprintCallable` with out param | BP node wiring confusion | Use `UPARAM(ref)` for in/out params |
+| `Cast<T>` without null check | Crash on failed cast | Check return value before dereferencing |
+| Hard-coded asset paths | Packaged build breaks | Use `TSoftObjectPtr` or data asset |
+| Tick enabled by default | Unnecessary CPU overhead | Call `PrimaryComponentTick.bCanEverTick = false` in constructor |
+
+Embedding this table in a code review skill prompt means every review session checks these patterns automatically.
 
 ## Advanced Workflow Integration
 
@@ -120,17 +262,118 @@ Unreal's build system operates differently from standard C++ projects. The `bash
 
 Embedding these patterns in a skill removes the need to memorize specific command-line arguments.
 
+Beyond the basics, a CI/CD-oriented bash skill should know how to invoke the full build and cook pipeline from the command line:
+
+```bash
+# Full cook for Windows target (headless)
+RunUAT.bat BuildCookRun \
+  -project="$PROJECT_PATH" \
+  -noP4 \
+  -platform=Win64 \
+  -clientconfig=Development \
+  -cook \
+  -allmaps \
+  -build \
+  -stage \
+  -pak \
+  -archive \
+  -archivedirectory="$OUTPUT_DIR"
+
+# Run automation tests headless and output JUnit XML for CI
+UE4Editor.exe "$PROJECT_PATH" \
+  -ExecCmds="Automation RunTests MyGame; Quit" \
+  -TestExit="Automation Test Queue Empty" \
+  -ReportOutputPath="$REPORT_DIR" \
+  -unattended \
+  -nopause \
+  -nullrhi
+```
+
+A bash skill that knows these invocation patterns lets you trigger a full test run from Claude Code without leaving your editor session.
+
+### Blueprint-to-C++ Migration
+
+One common refactoring scenario is moving hot-path Blueprint logic into C++ for performance reasons. A migration skill can help by taking a description of the Blueprint graph and generating equivalent C++ with correct UFUNCTION annotations that re-expose the function to Blueprint:
+
+```cpp
+// Original Blueprint logic: check if character has enough stamina and apply cost
+// Migrated to C++ with Blueprint exposure preserved
+
+UFUNCTION(BlueprintCallable, Category = "Stamina")
+bool TryConsumeStamina(float Cost)
+{
+    if (CurrentStamina < Cost)
+    {
+        return false;
+    }
+
+    CurrentStamina = FMath::Clamp(CurrentStamina - Cost, 0.0f, MaxStamina);
+
+    // Notify Blueprint graph that stamina changed
+    OnStaminaChanged.Broadcast(CurrentStamina, MaxStamina);
+
+    return true;
+}
+```
+
+The skill ensures the migrated function remains callable from Blueprints through the `BlueprintCallable` specifier and fires the appropriate multicast delegate so any Blueprint bindings on `OnStaminaChanged` continue to work.
+
 ### Asset Pipeline Automation
 
 Many Unreal projects involve procedural asset generation or data-driven systems. Skills that understand JSON or CSV parsing can read external data files and generate C++ structures or Blueprint-friendly data tables automatically. This bridges the gap between external tools (like Blender for 3D modeling or Spine for 2D animation) and your Unreal project.
+
+A data table skill is particularly valuable. Unreal's `UDataTable` system requires a `USTRUCT` that inherits from `FTableRowBase`. When your game designer provides a CSV of ability stats, a skill can generate both the struct definition and the corresponding import-ready CSV:
+
+```cpp
+// Auto-generated from ability_stats.csv
+
+USTRUCT(BlueprintType)
+struct FAbilityStatsRow : public FTableRowBase
+{
+    GENERATED_BODY()
+
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Ability")
+    FName AbilityID;
+
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Ability")
+    float BaseDamage = 0.0f;
+
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Ability")
+    float StaminaCost = 0.0f;
+
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Ability")
+    float Cooldown = 0.0f;
+
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Ability")
+    TSoftObjectPtr<UAnimMontage> ActivationMontage;
+};
+```
+
+This pattern eliminates the error-prone manual step of defining the struct and the equally error-prone step of matching the CSV column order to the struct field order.
+
+## Choosing the Right Skill for Each Task
+
+Not every Unreal workflow needs its own dedicated skill. The table below helps identify which tasks yield the most return from skill investment:
+
+| Task | Skill Value | Reason |
+|---|---|---|
+| New Actor/Component boilerplate | High | Repeated constantly, macro-heavy, easy to get wrong |
+| Build.cs module additions | High | Dependency list is hard to memorize |
+| Automation test scaffolding | High | Setup code is verbose and boilerplate-heavy |
+| Blueprint-to-C++ migration | Medium | Context-dependent, but patterns are consistent |
+| Gameplay Tag hierarchy review | Medium | Useful for audits, less frequent |
+| Shader/HLSL code | Low | Highly specialized, less community pattern coverage |
+| Debugging crashes | Low | Requires runtime context that skills cannot access |
 
 ## Practical Tips for Unreal Developers
 
 Start with skills that address your most frequent pain points. If you frequently create new Actor classes, prioritize skills that generate boilerplate with correct macro annotations. If your team struggles with testing, focus on the `tdd` skill integration.
 
-Maintain your skills as living documents. Unreal Engine updates may introduce new coding standards or deprecate existing APIs. Regularly review and update your skill definitions to reflect current best practices.
+Maintain your skills as living documents. Unreal Engine updates may introduce new coding standards or deprecate existing APIs. Regularly review and update your skill definitions to reflect current best practices. The shift from `BindAxis`/`BindAction` to the Enhanced Input system in UE5 is a recent example — skills that still generate the old pattern will produce deprecation warnings on every compile.
 
 Avoid over-automation. Some tasks, like debugging complex replication issues or tuning gameplay feel, require human judgment. Use skills as productivity enhancers rather than replacements for thoughtful development.
+
+Version your skills alongside your game code. Store skill `.md` files in a `/tools/skills/` directory inside your project repository, and treat updates to skill definitions as reviewable code changes. A skill that generates incorrect garbage collection patterns can silently corrupt your project's memory model across dozens of new classes before anyone notices.
 
 ## Related Reading
 
