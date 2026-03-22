@@ -268,6 +268,28 @@ For teams using Claude Code's file operations, you can maintain alert rules as c
 
 This workflow transforms production errors from frustrating debugging sessions into structured, reproducible issues that Claude Code can help resolve quickly.
 
+## Triaging Errors by Severity in Claude Code
+
+Once Sentry is feeding your team real error data, the volume can become overwhelming. Not every error warrants immediate attention. Use Claude Code to build a triage layer that classifies incoming Sentry issues by severity and routes them appropriately.
+
+A straightforward triage prompt pattern:
+
+```
+/tdd
+Here are the last 20 Sentry issues from this week:
+[paste sentry-cli issues list output]
+
+Classify each issue as:
+- P0 (data loss, payment failure, auth broken)
+- P1 (significant feature broken for > 5% of users)
+- P2 (cosmetic or edge-case issue)
+
+For P0 and P1 issues, generate a one-sentence root cause hypothesis based on the stack trace.
+Output as a markdown table sorted by severity.
+```
+
+Claude's output gives your on-call engineer an immediate triage summary without having to open each issue in Sentry. Combine this with a scheduled GitHub Action that runs every morning and posts the triage table to a Slack channel, and your team starts each day with a prioritized error backlog rather than an undifferentiated list.
+
 ## Related Reading
 
 - [Claude Code Container Debugging: Docker Logs Workflow Guide](/claude-skills-guide/claude-code-container-debugging-docker-logs-workflow-guide/) — Debug containerized applications alongside Sentry source map workflows

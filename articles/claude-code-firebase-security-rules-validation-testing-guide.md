@@ -221,6 +221,28 @@ Validating Firebase security rules requires combining static analysis with dynam
 
 Your Firebase data security depends on rules that have been thoroughly tested against realistic scenarios. Invest time in building comprehensive test coverage, and you'll deploy with confidence.
 
+## Using Claude Code to Audit Existing Rules
+
+For teams inheriting a Firebase project with existing security rules, a rules audit is a useful first step before making changes. Claude Code can walk through an existing `firestore.rules` file and flag potential issues without requiring you to write tests first.
+
+Provide the rules file content and ask for a structured review:
+
+```
+/tdd
+Audit this Firestore security rules file for security issues.
+For each rule, identify:
+1. Whether unauthenticated access is possible
+2. Whether cross-user data access is possible
+3. Whether data validation is present on writes
+4. Any conditions that could evaluate to true unexpectedly
+
+[paste firestore.rules content]
+```
+
+Claude will work through each `match` block systematically, flagging patterns like missing `request.auth != null` guards, wildcard matches that are broader than intended, and write rules that omit validation for required fields. The output gives you a prioritized list of rules to tighten before adding new functionality.
+
+This audit workflow pairs naturally with the emulator-based testing described above. Use the audit to identify suspicious rules, then write targeted emulator tests that verify the suspicious behaviors are actually blocked. Fix anything the tests expose before the next production deployment.
+
 ## Related Reading
 
 - [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Master the tdd skill for structured test-first development, including Firebase emulator test suites

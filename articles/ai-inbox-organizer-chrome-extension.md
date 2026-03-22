@@ -316,6 +316,46 @@ Start with a minimal viable product that handles one email provider and implemen
 
 The Chrome extension platform provides powerful APIs for building sophisticated email tools. With careful attention to security, performance, and user experience, you can create an organizer that significantly improves email management workflow.
 
+## Testing Classification Accuracy
+
+Building the extension is only half the work. Validating that the AI classification actually performs well on real email data requires a structured testing approach. Collect a labeled sample of 50-100 emails (with categories you assign manually) and run them through your classification pipeline:
+
+```javascript
+// accuracy-test.js
+const { classifyWithML } = require('./background');
+
+const TEST_EMAILS = [
+  { subject: 'Your invoice #1234 is ready', sender: 'billing@company.com', expected: 'Finance' },
+  { subject: 'Weekly digest: top stories', sender: 'newsletter@medium.com', expected: 'Newsletter' },
+  { subject: 'Lunch tomorrow?', sender: 'friend@gmail.com', expected: 'Personal' },
+  { subject: 'ALERT: Server CPU above 90%', sender: 'monitoring@ops.com', expected: 'Notifications' },
+  // ... more test cases
+];
+
+async function measureAccuracy(apiKey) {
+  let correct = 0;
+  const errors = [];
+
+  for (const email of TEST_EMAILS) {
+    const predicted = await classifyWithML(email, apiKey);
+    if (predicted === email.expected) {
+      correct++;
+    } else {
+      errors.push({ email: email.subject, expected: email.expected, got: predicted });
+    }
+  }
+
+  const accuracy = (correct / TEST_EMAILS.length * 100).toFixed(1);
+  console.log(`Accuracy: ${accuracy}% (${correct}/${TEST_EMAILS.length})`);
+  if (errors.length > 0) {
+    console.log('Misclassifications:');
+    errors.forEach(e => console.log(`  "${e.email}": expected ${e.expected}, got ${e.got}`));
+  }
+}
+```
+
+Run this test after any changes to your classification prompt or model selection. An accuracy below 85% on your test set usually indicates the system prompt needs refinement — add more specific examples for the categories where misclassification is frequent.
+
 ---
 
 

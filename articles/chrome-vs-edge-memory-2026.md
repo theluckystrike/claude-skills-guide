@@ -125,6 +125,18 @@ In 2026, Edge has established itself as the more memory-efficient option between
 Test both browsers with your typical workflow to see the real-world impact on your system. Memory usage patterns vary based on the websites you visit, extensions you run, and how you structure your work. Make your decision based on direct experience rather than benchmarks alone.
 
 
+## Memory Management for Development Machines
+
+Developers running both a browser and a full development stack (IDE, terminal, local database, Docker containers) face more aggressive memory competition than typical users. On a 16GB machine, a browser consuming 2GB leaves considerably less room for JVM-based IDEs or multiple Docker containers.
+
+A practical approach for development machines is to treat browser memory as a configurable resource. Both Chrome and Edge expose flags that adjust how aggressively they reclaim memory from background tabs:
+
+In Chrome, navigate to `chrome://flags/#memory-saver-multi-state-v2` and enable the high savings mode. This suspends inactive tabs more aggressively than the default setting, freeing memory for your other development tools.
+
+In Edge, `edge://settings/system` provides a slider for the tab sleeping timeout. Setting it to 30 seconds instead of the default 5 minutes means inactive tabs free their memory almost immediately when you switch focus to your IDE.
+
+Combining these settings with a habit of closing tabs you won't return to within the hour keeps browser memory under 1GB in most development workflows, leaving the majority of your RAM available for the tools that actually run your code.
+
 ## Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)

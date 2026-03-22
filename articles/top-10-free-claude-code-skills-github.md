@@ -275,6 +275,25 @@ Most developers find three to five skills covers the majority of daily work. Ins
 
 ---
 
+## Building Custom Skills
+
+The ten skills in this list cover common workflows, but the real extensibility comes from writing your own. A custom skill is just a `.md` file that describes a specialized behavior or persona. Because Claude reads the file at session start, the instructions take effect immediately without any configuration overhead.
+
+A minimal custom skill for reviewing pull requests against a team's style guide:
+
+```markdown
+# PR Review Skill
+You are a strict code reviewer for a TypeScript team. When invoked:
+1. Read all changed files listed by the user.
+2. Check for: no `any` types, all async functions awaited, no console.log in production code.
+3. Output findings as a markdown checklist with file and line numbers.
+4. Summarize overall readiness: APPROVED, CHANGES_REQUESTED, or BLOCKED.
+```
+
+Save this as `~/.claude/skills/pr-review.md` and invoke it with `/pr-review` followed by a paste of `git diff --stat` output. Claude treats the file as authoritative instructions for that session, applying the style rules consistently across every PR review.
+
+Custom skills become especially valuable for team standards that differ from Claude's defaults — enforcing internal naming conventions, specific error handling patterns, or company-wide documentation formats that you would otherwise have to re-explain in every session.
+
 ## Related Reading
 
 - [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — An in-depth look at which skills deliver the most value across different development contexts and project types

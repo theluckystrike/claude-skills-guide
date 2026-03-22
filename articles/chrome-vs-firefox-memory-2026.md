@@ -190,6 +190,61 @@ chrome.storage.session.set({windowState: JSON.stringify(windowState)});
 // Firefox: Use about:sessionstore
 ```
 
+## Tracking Memory Over Time
+
+One-off memory snapshots tell you the current state but miss trends. Setting up a lightweight logging script that captures memory data throughout a work session reveals patterns invisible in single measurements.
+
+For Chrome, use the DevTools Protocol via a background script:
+
+```javascript
+// chrome-memory-logger.js — run with: node chrome-memory-logger.js
+const CDP = require('chrome-remote-interface');
+const fs = require('fs');
+
+const LOG_FILE = './memory-log.csv';
+const INTERVAL_MS = 30000; // every 30 seconds
+
+async function logMemory() {
+  const client = await CDP();
+  const { Performance } = client;
+  await Performance.enable();
+
+  if (!fs.existsSync(LOG_FILE)) {
+    fs.writeFileSync(LOG_FILE, 'timestamp,heapUsedMB,heapTotalMB,domNodes\n');
+  }
+
+  setInterval(async () => {
+    const { metrics } = await Performance.getMetrics();
+    const find = (name) => metrics.find(m => m.name === name)?.value ?? 0;
+
+    const row = [
+      new Date().toISOString(),
+      (find('JSHeapUsedSize') / 1024 / 1024).toFixed(2),
+      (find('JSHeapTotalSize') / 1024 / 1024).toFixed(2),
+      find('Nodes')
+    ].join(',') + '\n';
+
+    fs.appendFileSync(LOG_FILE, row);
+  }, INTERVAL_MS);
+}
+
+logMemory().catch(console.error);
+```
+
+Start Chrome with `--remote-debugging-port=9222`, then run this script alongside your normal work. After a few hours, you have a CSV showing exactly how memory grows across your typical session. Import it into any spreadsheet tool to visualize the trend.
+
+For Firefox, the `about:memory` page supports JSON export. Automate polling with a simple shell script that opens the page and saves the output every few minutes. Comparing the two logs gives a genuine apples-to-apples picture of how each browser behaves under your specific workload.
+
+## When to Switch Browsers Mid-Session
+
+Some development workflows benefit from switching browsers mid-session rather than committing to one for the day. A practical pattern for full-stack developers:
+
+- **Start in Firefox** for backend API work and database tooling, where Firefox's lower baseline memory leaves more RAM for Docker and local servers running in the background.
+- **Switch to Chrome** when front-end work requires Lighthouse audits, Chrome-specific DevTools features like Performance Insights, or testing Chrome extensions under development.
+- **Use DuckDuckGo or a dedicated privacy browser** when testing how your application behaves under strict cookie and tracking restrictions.
+
+This multi-browser approach does use slightly more total memory when browsers overlap, but avoids the CPU cost of restarting a single browser with different configurations repeatedly. Profile managers in both Chrome and Firefox allow maintaining separate extension sets per profile, so you can keep a lean "backend work" profile open alongside a fully-loaded "frontend work" profile without interference.
+
 ## Conclusion
 
 Both Chrome and Firefox have matured significantly in their memory management approaches. Firefox maintains a slight edge in raw memory efficiency, while Chrome offers more granular control through its process isolation model. The best choice depends on your specific development requirements and system constraints.
@@ -198,6 +253,26 @@ For developers with 16GB+ RAM, either browser works well with proper configurati
 
 Implement the measurement techniques in this guide to establish your baseline, apply optimization strategies appropriate to your chosen browser, and establish regular profiling habits to maintain optimal performance throughout your development sessions.
 
+
+## Diagnosing Unexpected Memory Growth
+
+When either browser uses significantly more memory than expected, the first step is determining whether the growth is coming from web content, extensions, or the browser's own processes. Both browsers expose this through their task managers.
+
+In Chrome, `Shift + Escape` opens the built-in Task Manager. Sort by the Memory column to see which processes consume the most. If the top entries are tab renderer processes, the problem is page content. If extensions appear high on the list, the problem is your tooling. If the "Browser" process itself is large, Chrome's internal caching or the back-forward cache may be holding stale content.
+
+In Firefox, `about:processes` provides a similar breakdown with process trees showing parent-child relationships. The "Web Content" processes correspond to tabs; "Extension" processes correspond to add-ons. Firefox's `about:memory` page goes deeper — the "GC Heap" section shows which JavaScript objects are consuming heap space across all content processes.
+
+A quick diagnostic workflow when memory seems unexpectedly high:
+
+```bash
+# Check total browser memory from the command line (macOS)
+ps aux | grep -i "chrome\|firefox" | awk '{sum += $6} END {print sum/1024 " MB"}'
+
+# List individual Chrome processes sorted by memory
+ps aux | grep "Google Chrome" | sort -k6 -rn | head -20 | awk '{print $6/1024 " MB\t" $NF}'
+```
+
+If the command-line total matches what you expect from Task Manager, the browser is accurately reporting its consumption. If the command-line figure is significantly higher, background helper processes or crash reporter processes may be holding memory that does not appear in the in-browser views.
 
 ## Related Reading
 
