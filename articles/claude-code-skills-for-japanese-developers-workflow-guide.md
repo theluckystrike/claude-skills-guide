@@ -25,6 +25,28 @@ Skills ship as built-in `.md` files with Claude Code — no installation command
 
 The [**supermemory** skill](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) proves particularly valuable for Japanese developers managing long-term projects. It maintains context across sessions, remembering client preferences, project-specific terminology, and design decisions that recur throughout a project's lifecycle.
 
+### Configuring CLAUDE.md for Japanese Projects
+
+Before using any skill, create a `CLAUDE.md` file at your project root to give Claude Code persistent project context. For Japanese projects, this file is especially important because it eliminates repeated explanations about encoding requirements, locale settings, and client conventions:
+
+```
+This project is a bilingual web application for a Japanese enterprise client.
+
+Technical stack:
+- Next.js 14 (App Router) with TypeScript
+- i18n: next-intl, translation files at /locales/ja and /locales/en
+- Date handling: Always use JST (Asia/Tokyo). Formal documents use 和暦 (wareki).
+- Character encoding: UTF-8 throughout. Verify output files explicitly.
+
+Client conventions:
+- Communication via Slack in Japanese
+- Design reviews require 3 mockup options before approval
+- Weekly demos on Thursday at 14:00 JST
+- All user-facing strings must use i18n keys — no hardcoded Japanese text in components
+```
+
+With this context in place, Claude Code will follow your project's locale, timezone, and naming conventions automatically across every session.
+
 ## Daily Development Workflow with Claude Skills
 
 ### Test-Driven Development with tdd Skill
@@ -39,13 +61,41 @@ The **tdd** skill transforms how you write code by enforcing test-first developm
 
 The skill generates test cases in your preferred framework (Jest, Vitest, or pytest), creating a safety net for refactoring. Japanese developers often appreciate this approach because it produces self-documenting code that future team members can understand without extensive comments.
 
+#### TDD Example: Japanese Form Validation
+
+A practical scenario for Japanese development is form validation that handles full-width characters and Japanese-specific input conventions:
+
+```typescript
+// __tests__/validation/phoneNumber.test.ts
+describe('Japanese phone number validation', () => {
+  it('accepts standard 11-digit mobile format', () => {
+    expect(validateJapanesePhone('09012345678')).toBe(true);
+  });
+
+  it('accepts full-width digits by normalizing them', () => {
+    // Full-width: ０９０１２３４５６７８
+    expect(validateJapanesePhone('０９０１２３４５６７８')).toBe(true);
+  });
+
+  it('accepts hyphenated format', () => {
+    expect(validateJapanesePhone('090-1234-5678')).toBe(true);
+  });
+
+  it('rejects invalid formats', () => {
+    expect(validateJapanesePhone('123')).toBe(false);
+  });
+});
+```
+
+Ask Claude Code with the `/tdd` skill active: "Write tests for a Japanese phone number validator that normalizes full-width digits." It will generate the test suite first, then implement the validator to pass all cases. This workflow is particularly valuable for Japanese input handling, where full-width/half-width normalization is easy to overlook.
+
 ### Frontend Development with frontend-design Skill
 
 The [**frontend-design** skill](/claude-skills-guide/claude-frontend-design-skill-review-and-tutorial/) accelerates UI development by converting design specifications into functional code. When working on projects for Japanese clients, you can specify design requirements in both Japanese and English:
 
 ```bash
 /frontend-design
-"Create a product listing page with Japanese localization. 
+"Create a product listing page with Japanese localization.
 Requirements:
 - Header with ログアウト button
 - Product grid with 購入 button
@@ -53,6 +103,71 @@ Requirements:
 ```
 
 This skill understands component composition and generates accessible, semantic HTML with appropriate class names. It works well with popular frameworks like Next.js, Nuxt, and Remix.
+
+#### Handling Japanese Typography in Components
+
+Japanese web design has specific typographic requirements: line-height, font-size hierarchies, and text-overflow behavior differ from Latin text. Ask Claude Code to generate components with Japanese typography best practices:
+
+```tsx
+// components/ArticleBody.tsx
+export function ArticleBody({ content }: { content: string }) {
+  return (
+    <article
+      className="
+        text-base leading-relaxed
+        [word-break:keep-all]
+        [overflow-wrap:anywhere]
+        [font-feature-settings:'palt']
+      "
+      lang="ja"
+    >
+      {content}
+    </article>
+  );
+}
+```
+
+The `word-break: keep-all` property prevents awkward mid-word breaks in Japanese text, while `font-feature-settings: 'palt'` enables proportional alternates in Japanese fonts for tighter, more natural character spacing. Claude Code will add these details when you specify "Japanese typography" in your prompt.
+
+#### Responsive Japanese UI Patterns
+
+Japanese enterprise UIs often require higher information density than Western counterparts. Prompt Claude Code with the `/frontend-design` skill to generate data-dense table layouts that remain readable on mobile:
+
+```tsx
+// components/DataTable.tsx — mobile-optimized for Japanese enterprise UI
+export function DataTable({ rows }: { rows: Row[] }) {
+  return (
+    <div className="overflow-x-auto -mx-4 px-4">
+      <table className="min-w-full text-sm">
+        <thead>
+          <tr className="border-b border-gray-200">
+            <th className="text-left py-2 pr-4 font-medium text-gray-600 whitespace-nowrap">
+              顧客名
+            </th>
+            <th className="text-left py-2 pr-4 font-medium text-gray-600 whitespace-nowrap">
+              注文日
+            </th>
+            <th className="text-right py-2 font-medium text-gray-600 whitespace-nowrap">
+              金額
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((row) => (
+            <tr key={row.id} className="border-b border-gray-100">
+              <td className="py-2 pr-4">{row.customerName}</td>
+              <td className="py-2 pr-4 whitespace-nowrap">{row.orderDate}</td>
+              <td className="py-2 text-right tabular-nums">
+                ¥{row.amount.toLocaleString('ja-JP')}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+```
 
 ## Documentation Workflow for Japanese Projects
 
@@ -72,6 +187,25 @@ Output: 技術仕様書.pdf"
 
 The skill maintains Japanese character encoding correctly and supports custom styling to match corporate document standards.
 
+#### Structuring Japanese Technical Documents
+
+Japanese technical documents follow specific conventions. When generating PDFs for Japanese clients, include these structural elements in your prompt:
+
+- 表紙 (cover page) with project name, version, and date in 和暦
+- 改訂履歴 (revision history) table at the front
+- 目次 (table of contents) with page numbers
+- 用語集 (glossary) at the back for technical terms
+
+```bash
+/pdf
+"Generate a 技術仕様書 from /docs/api-spec.md with:
+- Cover page: プロジェクト名 = 受発注管理システム, version 1.2, date in 令和形式
+- Revision history table
+- Auto-generated table of contents
+- Glossary section with technical terms in Japanese/English pairs
+- Corporate header/footer with ページ番号"
+```
+
 ### Word Documents with docx Skill
 
 For collaborative documents requiring tracked changes or comments, the **docx** skill handles Microsoft Word file creation and editing:
@@ -87,6 +221,20 @@ Include sections for:
 
 This skill preserves formatting, handles mixed-language content gracefully, and supports the document templates Japanese enterprises commonly use.
 
+#### Mixed-Language Content Handling
+
+Japanese business documents frequently mix Japanese prose with English technical terms, product names, and acronyms. Ask Claude Code to maintain consistent mixed-language formatting:
+
+```bash
+/docx
+"Create meeting minutes (議事録) for a sprint review.
+Rules for mixed language:
+- Japanese body text with English technical terms in parentheses on first use
+  Example: 継続的インテグレーション (CI/CD)
+- Code snippets and file paths remain in English
+- Action items list bilingual: Japanese description + English assignee name"
+```
+
 ## Managing Project Context with supermemory Skill
 
 Long-running Japanese development projects often involve complex stakeholder relationships and evolving requirements. The **supermemory** skill provides persistent context that survives between sessions:
@@ -101,6 +249,40 @@ Long-running Japanese development projects often involve complex stakeholder rel
 ```
 
 When you return to the project in subsequent sessions, Claude Code automatically applies these preferences without requiring repetition.
+
+### What to Store in supermemory for Japanese Projects
+
+The supermemory skill is most powerful when you store context that would otherwise require significant re-explanation at the start of each session. For Japanese projects, high-value items include:
+
+**Client communication preferences:**
+```bash
+/supermemory
+"Store: Client communication notes for 株式会社 Tanaka
+- Primary contact: 田中部長, replies via Slack within 2 hours on weekdays
+- Do not use casual Japanese (タメ口) in any written communication
+- CC 佐藤さん on all emails involving budget or timeline changes
+- Decisions require written confirmation (メール確認) before implementation"
+```
+
+**Project-specific terminology:**
+```bash
+/supermemory
+"Store: Domain terminology for this project
+- 受注 = confirmed order (not 注文 which is a request)
+- 案件 = client project/deal (not プロジェクト which sounds too internal)
+- 納品 = final delivery (use this, not リリース in client-facing docs)
+- SLA target: 99.5% uptime, response time under 2 seconds"
+```
+
+**Recurring technical decisions:**
+```bash
+/supermemory
+"Store: Architecture decisions
+- Timezone: All DB timestamps in UTC, display in JST (Asia/Tokyo)
+- Currency: Store as integer yen (no decimals), display with toLocaleString('ja-JP')
+- Postal codes: 7-digit format with hyphen (123-4567), validate with JP postal API
+- Error messages: Always show Japanese user-facing message + English log message"
+```
 
 ## Advanced Workflow: Combining Skills
 
@@ -125,6 +307,37 @@ The real power emerges when you chain skills together for complex workflows. Her
 
 This workflow ensures consistent test coverage, properly localized UI, and comprehensive documentation—all critical for Japanese enterprise projects.
 
+### End-to-End Sprint Workflow
+
+A complete sprint workflow for a Japanese enterprise team might look like this across a week:
+
+**Monday — Planning:**
+```bash
+/supermemory
+"Recall project context and this sprint's goals"
+
+/tdd
+"Generate test cases for the new 発注管理 (purchase order) feature based on these acceptance criteria: [paste criteria]"
+```
+
+**Tuesday–Thursday — Implementation:**
+```bash
+/frontend-design
+"Implement the 発注書作成 form with these fields: [paste spec]"
+
+/tdd
+"Run through the test cases we defined Monday and flag any not yet passing"
+```
+
+**Friday — Documentation and Delivery:**
+```bash
+/pdf
+"Generate 受入テスト仕様書 from the test cases created this week"
+
+/docx
+"Generate sprint review 議事録 summarizing completed features, blockers, and next sprint goals"
+```
+
 ## Language-Specific Considerations
 
 When using Claude Code skills for Japanese development, keep these points in mind:
@@ -132,6 +345,58 @@ When using Claude Code skills for Japanese development, keep these points in min
 - **Character encoding**: All skills handle UTF-8 natively, but verify output files use the correct encoding for your deployment environment
 - **Localization strings**: Store translations in dedicated i18n files rather than hardcoding Japanese strings in components
 - **Date formatting**: Japanese projects typically use 和暦 (wareki) in formal documents—specify your preference explicitly when generating reports
+
+### i18n File Structure for Japanese Projects
+
+A well-organized i18n setup makes it easy to hand off translation work and maintain consistency:
+
+```
+/locales
+  /ja
+    common.json      # Shared UI strings: buttons, labels, nav
+    errors.json      # Validation and error messages
+    forms.json       # Form labels and placeholders
+    documents.json   # PDF/DOCX template strings
+  /en
+    common.json
+    errors.json
+    forms.json
+    documents.json
+```
+
+Ask Claude Code: "Audit this component for hardcoded Japanese strings and replace them with i18n keys from locales/ja/forms.json." It will scan the component, identify any hardcoded text, and generate both the replacement code and the new i18n key entries.
+
+### Timezone Handling
+
+Timezone bugs are a common source of production incidents in Japanese applications. A consistent approach:
+
+```typescript
+// lib/dates.ts
+import { format, toZonedTime } from 'date-fns-tz';
+
+const JST = 'Asia/Tokyo';
+
+export function formatJST(date: Date | string, pattern: string): string {
+  const zonedDate = toZonedTime(new Date(date), JST);
+  return format(zonedDate, pattern, { timeZone: JST });
+}
+
+export function formatWareki(date: Date | string): string {
+  return new Intl.DateTimeFormat('ja-JP-u-ca-japanese', {
+    era: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    timeZone: JST,
+  }).format(new Date(date));
+}
+
+// Usage
+formatJST(new Date(), 'yyyy年MM月dd日 HH:mm');  // 2026年03月22日 14:30
+formatWareki(new Date());                         // 令和8年3月22日
+```
+
+Store this utility file path in supermemory so Claude Code generates consistent date formatting across all new components without repeated instruction.
 
 ## Automating Repetitive Tasks
 
@@ -151,11 +416,54 @@ When reviewing code for Japanese projects:
 5. Check that Japanese text renders correctly in all components
 ```
 
+### Custom Skill: Japanese PR Review Checklist
+
+Extend the code review skill with a PR checklist tailored for bilingual projects:
+
+```markdown
+---
+name: jp-pr-checklist
+description: Pull request checklist for Japanese enterprise projects
+---
+
+For every PR touching user-facing code, verify:
+
+Localization:
+- [ ] No hardcoded Japanese strings in .tsx/.vue files
+- [ ] New i18n keys added to both /locales/ja/ and /locales/en/
+- [ ] Japanese translation uses appropriate keigo level for context
+
+Data handling:
+- [ ] Dates displayed using formatJST() or formatWareki() as appropriate
+- [ ] Currency values use toLocaleString('ja-JP') for display
+- [ ] Postal codes stored as string, not number (leading zeros matter)
+
+Accessibility:
+- [ ] lang="ja" attribute present on Japanese-language sections
+- [ ] Form inputs have Japanese labels, not just placeholder text
+- [ ] Error messages visible as text (not icon-only) for screen readers
+```
+
+Place this file at `~/.claude/skills/jp-pr-checklist.md` and invoke it with `/jp-pr-checklist` before submitting any PR for review.
+
+### Skill Comparison for Japanese Development
+
+| Skill | Primary Use | Best Invoked When |
+|---|---|---|
+| `/tdd` | Test-first feature development | Starting a new feature or fixing a bug |
+| `/frontend-design` | UI component generation | Building forms, tables, or pages from specs |
+| `/pdf` | Client deliverable documents | Sprint end, regulatory submissions |
+| `/docx` | Collaborative documents | 議事録, proposals needing tracked changes |
+| `/supermemory` | Project context persistence | Session start, storing new decisions |
+| Custom skills | Recurring project-specific tasks | Code review, PR checklists, i18n audits |
+
 ## Conclusion
 
 Claude Code skills significantly enhance productivity for Japanese developers by automating documentation, enforcing test-driven development, and maintaining project context across sessions. The combination of **tdd**, **frontend-design**, **pdf**, **docx**, and **supermemory** skills creates a comprehensive toolkit for enterprise development work.
 
-Start by invoking the skills relevant to your current project, then gradually incorporate them into your daily workflow. The initial setup time pays dividends through consistent code quality, comprehensive documentation, and reduced context-switching overhead. See the [workflows hub](/claude-skills-guide/workflows-hub/) for more developer workflow guides.
+Start by configuring a `CLAUDE.md` file with your project's locale, timezone, and client conventions. Then load supermemory with the context that would otherwise require repetitive explanation. Add the `/tdd` skill to your feature development flow for test-first discipline, use `/frontend-design` for Japanese typography and layout requirements, and reach for `/pdf` and `/docx` at sprint boundaries to generate polished client deliverables without manual formatting work.
+
+Create custom skills for your team's recurring patterns — code review checklists, PR validation, and i18n auditing — so every developer on the team applies the same Japanese-specific standards consistently. The initial setup time pays dividends through consistent code quality, comprehensive documentation, and reduced context-switching overhead. See the [workflows hub](/claude-skills-guide/workflows-hub/) for more developer workflow guides.
 
 ## Related Reading
 
