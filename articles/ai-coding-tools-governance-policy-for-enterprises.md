@@ -189,7 +189,7 @@ Effective AI coding tools governance requires balancing developer productivity w
 The most successful governance policies are those that developers actually follow. Make policies clear, provide tools that enforce them automatically, and ensure the friction is proportional to the actual risks. With the right framework in place, your organization can confidently embrace AI coding tools while maintaining the security and compliance standards your stakeholders expect.
 
 
-**Related guides:** [AI Coding Tools Security Concerns Enterprise Guide](https://theluckystrike.github.io/ai-coding-tools-security-concerns-enterprise-guide/)
+**Related guides:** [AI Coding Tools Security Concerns Enterprise Guide](/ai-coding-tools-security-concerns-enterprise-guide/)
 
 ## Related Reading
 

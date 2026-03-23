@@ -248,6 +248,6 @@ You can also ask Claude directly in the session: "What tool calls did you make i
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — Tool-heavy skills accumulate context quickly from tool outputs; this article explains how to keep that cost manageable
 - [How to Connect Claude Skills to External APIs Guide](/how-to-connect-claude-skills-to-external-apis-guide/) — Extend tool-use skills by connecting them to external APIs and webhooks for real-world integrations.
 
-**Related guides:** [Best Way to Handle Claude Code Mistakes Efficiently](https://theluckystrike.github.io/best-way-to-handle-claude-code-mistakes-efficiently/)
+**Related guides:** [Best Way to Handle Claude Code Mistakes Efficiently](/best-way-to-handle-claude-code-mistakes-efficiently/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

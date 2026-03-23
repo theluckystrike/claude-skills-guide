@@ -1,8 +1,8 @@
 # Claude Skills Guide
 
-700+ free tutorials for Claude Code skills -- comparisons, troubleshooting, integrations, and automation guides.
+2,300+ free tutorials for Claude Code, Claude API, and AI-assisted development.
 
-**Browse:** [theluckystrike.github.io/claude-skills-guide](https://theluckystrike.github.io/)
+**Browse:** [claudecodeguides.com](https://claudecodeguides.com/)
 
 ### What's inside
 
@@ -24,8 +24,8 @@ Found an error? Open an issue or submit a PR.
 
 ### More Free Guides
 
-- [Chrome Tips](https://theluckystrike.github.io/chrome-tips/) — Chrome optimization and performance guides
-- [Chrome Extension Guide](https://theluckystrike.github.io/chrome-extension-guide/) — Chrome extension development tutorials
-- [AI Tools Compared](https://theluckystrike.github.io/ai-tools-compared/) — AI tool comparisons and reviews
-- [Remote Work Tools](https://theluckystrike.github.io/remote-work-tools/) — Remote work software guides
-- [Privacy Tools Guide](https://theluckystrike.github.io/privacy-tools-guide/) — VPN and digital security guides
+- [Chrome Tips](https://chrometipsguide.com) — Chrome optimization and performance guides
+- [Chrome Extension Guide](https://bestchromeextensions.com) — Chrome extension development tutorials
+- [AI Tools Compared](https://bestremotetools.com) — AI tool comparisons and reviews
+- [Remote Work Tools](https://welikeremotestack.com) — Remote work software guides
+- [Privacy Tools Guide](https://securetoolsguide.com) — VPN and digital security guides

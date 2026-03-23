@@ -259,7 +259,7 @@ Remember that AI tools excel at generating starting points and handling repetiti
 Start with thorough assessment, maintain rigorous testing, and use AI assistance to handle the mechanical aspects of translation. Your migrated codebase will benefit from both modern infrastructure and the accumulated wisdom of your existing implementation. The teams that execute migrations most reliably are not those who automate the most — they are those who automate the right things while applying careful human judgment where it matters.
 
 
-**Related guides:** [Best AI Tools for Code Refactoring in 2026](https://theluckystrike.github.io/best-ai-tools-for-code-refactoring-2026/)
+**Related guides:** [Best AI Tools for Code Refactoring in 2026](/best-ai-tools-for-code-refactoring-2026/)
 
 ## Related Reading
 

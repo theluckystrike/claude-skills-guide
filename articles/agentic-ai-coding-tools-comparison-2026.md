@@ -118,7 +118,7 @@ The good news is that all three tools have free tiers suitable for evaluation. I
 The agentic AI coding space continues evolving rapidly. The tools compared here will likely look different by late 2026, with new competitors emerging and existing platforms incorporating lessons from each other. Staying adaptable and understanding the core capabilities—rather than specific syntax—serves developers best as the landscape shifts.
 
 
-**Related guides:** [Best AI Code Review Tools 2026 Guide](https://theluckystrike.github.io/best-ai-code-review-tools-2026-guide/)
+**Related guides:** [Best AI Code Review Tools 2026 Guide](/best-ai-code-review-tools-2026-guide/)
 
 ## Related Reading
 

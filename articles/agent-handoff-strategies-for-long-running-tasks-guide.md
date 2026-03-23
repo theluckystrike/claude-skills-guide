@@ -237,7 +237,7 @@ The key is treating long tasks as series of verified handoffs rather than one co
 
 Start applying these strategies on your next extended workflow, and you'll find that even the most ambitious projects become manageable when broken into proper handoff-enabled phases.
 
-**Related guides:** [Building Supervisor Worker Agent Architecture Tutorial](https://theluckystrike.github.io/building-supervisor-worker-agent-architecture-tutorial/)
+**Related guides:** [Building Supervisor Worker Agent Architecture Tutorial](/building-supervisor-worker-agent-architecture-tutorial/)
 
 ## Related Reading
 

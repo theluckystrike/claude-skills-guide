@@ -525,7 +525,7 @@ Accessibility improvements also tend to benefit all users: clearer labels, bette
 ---
 
 
-**Related guides:** [Claude Code WCAG 2.1 Compliance Checker Workflow Guide](https://theluckystrike.github.io/claude-code-for-wcag-2-2-compliance-workflow-guide/)
+**Related guides:** [Claude Code WCAG 2.1 Compliance Checker Workflow Guide](/claude-code-for-wcag-2-2-compliance-workflow-guide/)
 
 ## Related Reading
 

@@ -17,4 +17,4 @@ Articles are reviewed for accuracy. Outdated information is updated. No sponsore
 
 ## Contact
 
-Report errors via [GitHub Issues](https://github.com/theluckystrike/issues).
+Report errors via [GitHub Issues](https://github.com/theluckystrike/claude-skills-guide/issues).

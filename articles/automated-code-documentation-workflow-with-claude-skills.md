@@ -292,6 +292,6 @@ This workflow turns documentation from a quarterly cleanup task into a continuou
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Full developer skill stack
 
 
-**Related guides:** [Best Way to Use Claude Code for Database Migrations](https://theluckystrike.github.io/best-way-to-use-claude-code-for-database-migrations/)
+**Related guides:** [Best Way to Use Claude Code for Database Migrations](/best-way-to-use-claude-code-for-database-migrations/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

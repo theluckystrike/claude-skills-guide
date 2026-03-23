@@ -290,9 +290,9 @@ Start with a pilot project, measure results against your baseline metrics, and e
 
 Finally, revisit your evaluation annually. The AI coding tool landscape moves quickly. The tool that was the clear choice 18 months ago may have been surpassed, and new entrants with specialized capabilities for your stack may have emerged. A structured re-evaluation every 12-18 months ensures you stay ahead of the curve rather than locked into a legacy choice.
 
-**Related guides:** [Claude Code Total Cost of Ownership for Enterprise Teams](https://theluckystrike.github.io/claude-code-total-cost-of-ownership-enterprise/)
+**Related guides:** [Claude Code Total Cost of Ownership for Enterprise Teams](/claude-code-total-cost-of-ownership-enterprise/)
 
-**Related guides:** [Claude Code Total Cost of Ownership for Enterprise Teams](https://theluckystrike.github.io/claude-code-total-cost-of-ownership-enterprise/)
+**Related guides:** [Claude Code Total Cost of Ownership for Enterprise Teams](/claude-code-total-cost-of-ownership-enterprise/)
 
 ## Related Reading
 

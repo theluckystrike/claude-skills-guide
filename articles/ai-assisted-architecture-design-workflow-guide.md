@@ -146,7 +146,7 @@ The key is maintaining human oversight while using AI for exploration, documenta
 Remember that architecture decisions are rarely final. Build in feedback mechanisms that allow your architecture to evolve as requirements clarify and technology landscapes change.
 
 
-**Related guides:** [Claude Code System Design Documentation](https://theluckystrike.github.io/claude-code-system-design-documentation/)
+**Related guides:** [Claude Code System Design Documentation](/claude-code-system-design-documentation/)
 
 ## Related Reading
 

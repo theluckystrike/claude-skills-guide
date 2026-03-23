@@ -49,7 +49,7 @@ jobs:
     steps:
       - name: Submit to IndexNow
         run: |
-          SITE_URL="https://theluckystrike.github.io/claude-skills-guide"
+          SITE_URL="https://claudecodeguides.com"
           KEY="c4ded4558ba249bbbd828bbfd67ebe80"
           SITEMAP_URL="${SITE_URL}/sitemap.xml"
 
@@ -63,7 +63,7 @@ jobs:
           fi
 
           # Build JSON payload file (avoids argument list too long)
-          jq -R -s --arg host "theluckystrike.github.io" --arg key "$KEY" --arg keyloc "${SITE_URL}/${KEY}.txt" \
+          jq -R -s --arg host "claudecodeguides.com" --arg key "$KEY" --arg keyloc "${SITE_URL}/${KEY}.txt" \
             '{host: $host, key: $key, keyLocation: $keyloc, urlList: (split("\n") | map(select(length > 0)))}' \
             /tmp/urls.txt > /tmp/indexnow-payload.json
 
