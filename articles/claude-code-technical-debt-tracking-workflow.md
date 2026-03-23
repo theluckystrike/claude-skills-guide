@@ -205,9 +205,9 @@ The skills referenced here—supermemory, tdd, linear-mcp-server, jira-mcp-serve
 
 ## Related Reading
 
-- [Claude Code Cyclomatic Complexity Reduction](/claude-skills-guide/claude-code-cyclomatic-complexity-reduction/) — Complexity metrics are a core debt indicator
-- [Claude Code Output Quality How to Improve Results](/claude-skills-guide/claude-code-output-quality-how-to-improve-results/) — Debt tracking leads to quality improvements
-- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — TDD prevents future technical debt accumulation
-- [Advanced Claude Skills Hub](/claude-skills-guide/advanced-hub/) — Advanced code quality strategies
+- [Claude Code Cyclomatic Complexity Reduction](/claude-code-cyclomatic-complexity-reduction/) — Complexity metrics are a core debt indicator
+- [Claude Code Output Quality How to Improve Results](/claude-code-output-quality-how-to-improve-results/) — Debt tracking leads to quality improvements
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/) — TDD prevents future technical debt accumulation
+- [Advanced Claude Skills Hub](/advanced-hub/) — Advanced code quality strategies
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

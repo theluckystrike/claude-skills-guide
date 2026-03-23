@@ -16,7 +16,7 @@ score: 7
 {% raw %}
 # Claude Code Prisma Schema Migrations Advanced Workflow Guide
 
-Database schema migrations are one of the most critical yet error-prone aspects of application development. When working with Prisma in modern TypeScript and Node.js applications, Claude Code can dramatically improve your migration workflows—turning what used to be a stressful, error-heavy process into a streamlined, repeatable system. This guide explores **advanced strategies** for managing Prisma schema migrations with Claude Code, covering production-grade patterns that professional development teams use daily. If you are new to Prisma migrations with Claude Code, start with [Using Claude Code with Prisma ORM Database Migrations](/claude-skills-guide/using-claude-code-with-prisma-orm-database-migrations/) first.
+Database schema migrations are one of the most critical yet error-prone aspects of application development. When working with Prisma in modern TypeScript and Node.js applications, Claude Code can dramatically improve your migration workflows—turning what used to be a stressful, error-heavy process into a streamlined, repeatable system. This guide explores **advanced strategies** for managing Prisma schema migrations with Claude Code, covering production-grade patterns that professional development teams use daily. If you are new to Prisma migrations with Claude Code, start with [Using Claude Code with Prisma ORM Database Migrations](/using-claude-code-with-prisma-orm-database-migrations/) first.
 
 ## Understanding Prisma Migration Fundamentals
 
@@ -256,9 +256,9 @@ By applying these advanced workflows—atomic migrations, zero-downtime patterns
 
 ## Related Reading
 
-- [Using Claude Code with Prisma ORM Database Migrations](/claude-skills-guide/using-claude-code-with-prisma-orm-database-migrations/) — Beginner introduction to Prisma migrations with Claude Code
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Using Claude Code with Prisma ORM Database Migrations](/using-claude-code-with-prisma-orm-database-migrations/) — Beginner introduction to Prisma migrations with Claude Code
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

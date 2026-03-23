@@ -13,13 +13,13 @@ permalink: /how-do-i-know-which-claude-skill-is-currently-active/
 
 # How Do I Know Which Claude Skill Is Currently Active?
 
-When working with Claude Code and its skill system, knowing which skill is [currently active](/claude-skills-guide/claude-skill-metadata-header-vs-full-body-loading/) helps you understand how Claude will interpret your requests. The skill system transforms Claude's behavior based on the loaded instructions, and recognizing the active context prevents miscommunication and improves workflow efficiency.
+When working with Claude Code and its skill system, knowing which skill is [currently active](/claude-skill-metadata-header-vs-full-body-loading/) helps you understand how Claude will interpret your requests. The skill system transforms Claude's behavior based on the loaded instructions, and recognizing the active context prevents miscommunication and improves workflow efficiency.
 
 This guide covers practical methods to identify the active skill during your Claude Code sessions.
 
 ## Understanding Claude Skills Context
 
-[Claude skills are Markdown files stored in ~/.claude/skills/ that contain instructions Claude follows](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) when processing your requests. When you invoke a skill using its slash command (like `/pdf` or `/tdd`), Claude loads those instructions and applies them to your current conversation. Without an active skill, Claude uses its default behavior.
+[Claude skills are Markdown files stored in ~/.claude/skills/ that contain instructions Claude follows](/claude-skill-md-format-complete-specification-guide/) when processing your requests. When you invoke a skill using its slash command (like `/pdf` or `/tdd`), Claude loads those instructions and applies them to your current conversation. Without an active skill, Claude uses its default behavior.
 
 The skill context affects how Claude:
 - Interprets your code and project structure
@@ -189,9 +189,9 @@ Understanding your active skill context transforms Claude Code from a general-pu
 
 ## Related Reading
 
-- [Claude Skill Not Triggering: Troubleshoot Guide (2026)](/claude-skills-guide/claude-skill-not-triggering-automatically-troubleshoot/) — Diagnose why a skill you expected to be active is not behaving as expected.
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Understand how auto-invocation affects which skill becomes active without explicit commands.
-- [Why Is My Claude Skill Not Showing Up? Fix Guide](/claude-skills-guide/claude-code-skill-not-found-in-skills-directory-how-to-fix/) — Fix skill visibility issues that can make it unclear which skills are available.
-- [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — Find more troubleshooting guides for skill activation and session management issues.
+- [Claude Skill Not Triggering: Troubleshoot Guide (2026)](/claude-skill-not-triggering-automatically-troubleshoot/) — Diagnose why a skill you expected to be active is not behaving as expected.
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — Understand how auto-invocation affects which skill becomes active without explicit commands.
+- [Why Is My Claude Skill Not Showing Up? Fix Guide](/claude-code-skill-not-found-in-skills-directory-how-to-fix/) — Fix skill visibility issues that can make it unclear which skills are available.
+- [Claude Skills Troubleshooting Hub](/troubleshooting-hub/) — Find more troubleshooting guides for skill activation and session management issues.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

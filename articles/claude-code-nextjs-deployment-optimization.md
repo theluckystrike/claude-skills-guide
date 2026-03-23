@@ -607,10 +607,10 @@ Start with the build configuration and Docker setup — those changes have the m
 
 ## Related Reading
 
-- [Claude Code Next.js Performance Optimization](/claude-skills-guide/claude-code-nextjs-performance-optimization/) — runtime speed, bundle size, and caching (complements this deployment guide)
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Code Next.js Performance Optimization](/claude-code-nextjs-performance-optimization/) — runtime speed, bundle size, and caching (complements this deployment guide)
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

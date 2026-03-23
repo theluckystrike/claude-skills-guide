@@ -13,13 +13,13 @@ permalink: /claude-skill-md-format-complete-specification-guide/
 
 # Claude Skill .md Format: Complete Specification Guide
 
-[Every Claude skill is a Markdown file](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) The format is straightforward, but getting it wrong means your skill either fails silently or never fires. This guide covers every field and edge case.
+[Every Claude skill is a Markdown file](/best-claude-code-skills-to-install-first-2026/) The format is straightforward, but getting it wrong means your skill either fails silently or never fires. This guide covers every field and edge case.
 
 ## What Is a Skill File?
 
 A skill file is a plain Markdown document placed in `.claude/skills/` in your project (or `~/.claude/skills/` globally). Claude Code scans these directories and registers each `.md` file as a callable skill.
 
-The format has two parts: [YAML front matter](/claude-skills-guide/claude-skill-yaml-front-matter-parsing-error-fix/) between `---` delimiters, and a Markdown body that serves as the system prompt.
+The format has two parts: [YAML front matter](/claude-skill-yaml-front-matter-parsing-error-fix/) between `---` delimiters, and a Markdown body that serves as the system prompt.
 
 ```
 ---
@@ -342,8 +342,8 @@ For teams, document all skill names in a single `SKILLS.md` at the project root.
 
 ## Related Reading
 
-- [Skill .md File Format Explained With Examples](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)
-- [How to Write a Skill .md File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/)
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/)
+- [Skill .md File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/)
+- [How to Write a Skill .md File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/)
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/)
 
 Built by theluckystrike - More at [zovo.one](https://zovo.one)

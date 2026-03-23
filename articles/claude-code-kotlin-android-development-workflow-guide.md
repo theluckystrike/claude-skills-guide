@@ -13,11 +13,11 @@ permalink: /claude-code-kotlin-android-development-workflow-guide/
 
 # Claude Code Kotlin Android Development Workflow Guide
 
-[Developing Android applications with Kotlin becomes significantly more productive when you integrate Claude Code into your workflow](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) This guide covers practical strategies for using Claude and its skill system to accelerate Android development, from project scaffolding to testing and documentation.
+[Developing Android applications with Kotlin becomes significantly more productive when you integrate Claude Code into your workflow](/best-claude-code-skills-to-install-first-2026/) This guide covers practical strategies for using Claude and its skill system to accelerate Android development, from project scaffolding to testing and documentation.
 
 ## Setting Up Claude Code for Android Development
 
-[Before integrating Claude into your Android workflow, ensure you have the necessary tools installed](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) You'll need Android Studio or the command-line SDK tools, along with Claude Code installed on your system. The combination of these tools creates a powerful development environment where Claude handles reasoning and code generation while you maintain full control over your project.
+[Before integrating Claude into your Android workflow, ensure you have the necessary tools installed](/claude-skill-md-format-complete-specification-guide/) You'll need Android Studio or the command-line SDK tools, along with Claude Code installed on your system. The combination of these tools creates a powerful development environment where Claude handles reasoning and code generation while you maintain full control over your project.
 
 ### Prerequisites
 
@@ -64,7 +64,7 @@ Claude's skill system extends its capabilities for specific development scenario
 
 ### The TDD Skill for Android
 
-The [`tdd` skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) transforms how you approach Android development. Activate it in your Claude session:
+The [`tdd` skill](/best-claude-skills-for-developers-2026/) transforms how you approach Android development. Activate it in your Claude session:
 
 ```
 /tdd
@@ -155,7 +155,7 @@ When managing Android build variants, Gradle configurations, or dependency versi
 /xlsx
 ```
 
-[Use this skill to create spreadsheets that track your dependency versions](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), build variant configurations, or API endpoints across environments. This proves valuable when managing multi-module Android projects with complex dependency trees.
+[Use this skill to create spreadsheets that track your dependency versions](/best-claude-code-skills-to-install-first-2026/), build variant configurations, or API endpoints across environments. This proves valuable when managing multi-module Android projects with complex dependency trees.
 
 ## Practical Android Development Workflow
 
@@ -330,7 +330,7 @@ Structure your Claude Code usage throughout the development day:
 
 ## Memory and Knowledge Management
 
-For ongoing Android projects, consider integrating [`supermemory`](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) to maintain project context across sessions:
+For ongoing Android projects, consider integrating [`supermemory`](/claude-skills-token-optimization-reduce-api-costs/) to maintain project context across sessions:
 
 ```
 /supermemory
@@ -358,7 +358,7 @@ Call these scripts directly from Claude sessions for streamlined workflows.
 
 ## Advanced Integration: Custom Skills
 
-For teams working on large Android projects, consider creating custom skills that encode your organization's patterns. See [how to write a skill .md file](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) for the format details. A custom skill might include:
+For teams working on large Android projects, consider creating custom skills that encode your organization's patterns. See [how to write a skill .md file](/how-to-write-a-skill-md-file-for-claude-code/) for the format details. A custom skill might include:
 
 - Company-specific architecture guidelines
 - Standard error handling patterns
@@ -393,10 +393,10 @@ Experiment with different skill combinations to find what works best for your sp
 
 ## Related Reading
 
-- [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — The tdd skill drives the test-first mobile development pattern
-- [Best Claude Skills for Frontend and UI Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) — UI skills for building polished Android interfaces with Claude Code
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Auto-invoke skills for Kotlin testing and UI generation automatically
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Build CI-integrated test pipelines for your Android project
-- [Claude Code Dart Flutter Cross Platform Development Guide](/claude-skills-guide/claude-code-dart-flutter-cross-platform-development-guide/) — Build cross-platform mobile apps as an alternative to native Android
+- [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/) — The tdd skill drives the test-first mobile development pattern
+- [Best Claude Skills for Frontend and UI Development](/best-claude-code-skills-for-frontend-development/) — UI skills for building polished Android interfaces with Claude Code
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — Auto-invoke skills for Kotlin testing and UI generation automatically
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/) — Build CI-integrated test pipelines for your Android project
+- [Claude Code Dart Flutter Cross Platform Development Guide](/claude-code-dart-flutter-cross-platform-development-guide/) — Build cross-platform mobile apps as an alternative to native Android
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

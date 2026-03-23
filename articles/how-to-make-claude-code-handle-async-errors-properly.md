@@ -202,9 +202,9 @@ The investment in teaching Claude Code proper async error handling pays dividend
 
 ## Related Reading
 
-- [Claude Code Skips Error Handling in Generated Code](/claude-skills-guide/claude-code-skips-error-handling-in-generated-code/) — Understanding why Claude skips error handling
-- [How to Make Claude Code Generate Consistent API Responses](/claude-skills-guide/how-to-make-claude-code-generate-consistent-api-responses/) — Async errors often surface in API responses
-- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Write tests for async error paths
-- [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — Error handling and debugging guides
+- [Claude Code Skips Error Handling in Generated Code](/claude-code-skips-error-handling-in-generated-code/) — Understanding why Claude skips error handling
+- [How to Make Claude Code Generate Consistent API Responses](/how-to-make-claude-code-generate-consistent-api-responses/) — Async errors often surface in API responses
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/) — Write tests for async error paths
+- [Claude Skills Troubleshooting Hub](/troubleshooting-hub/) — Error handling and debugging guides
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -123,9 +123,9 @@ Start with simple queries to build trust in the outputs, then gradually tackle m
 
 ## Related Reading
 
-- [Claude Code Django ORM Optimization Guide](/claude-skills-guide/claude-code-django-orm-optimization-guide/) — See also
-- [Claude Code Skills for Creating Database Migration Scripts](/claude-skills-guide/claude-skills-for-creating-database-migration-scripts/) — See also
-- [Claude Code for Polars DataFrame Workflow Guide](/claude-skills-guide/claude-code-for-polars-dataframe-workflow-guide/) — See also
-- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/) — See also
+- [Claude Code Django ORM Optimization Guide](/claude-code-django-orm-optimization-guide/) — See also
+- [Claude Code Skills for Creating Database Migration Scripts](/claude-skills-for-creating-database-migration-scripts/) — See also
+- [Claude Code for Polars DataFrame Workflow Guide](/claude-code-for-polars-dataframe-workflow-guide/) — See also
+- [Claude Code Tutorials Hub](/tutorials-hub/) — See also
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

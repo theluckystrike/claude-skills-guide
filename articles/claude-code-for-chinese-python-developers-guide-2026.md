@@ -13,11 +13,11 @@ permalink: /claude-code-for-chinese-python-developers-guide-2026/
 
 # Claude Code for Chinese Python Developers Guide (2026)
 
-[Chinese Python developers are increasingly adopting Claude Code as their primary AI coding assistant](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) This guide covers practical setup steps, essential Claude skills, and workflow patterns that work well for Python development in 2026.
+[Chinese Python developers are increasingly adopting Claude Code as their primary AI coding assistant](/best-claude-code-skills-to-install-first-2026/) This guide covers practical setup steps, essential Claude skills, and workflow patterns that work well for Python development in 2026.
 
 ## Claude Code Setup for Python Projects
 
-[Claude Code runs locally and integrates with your existing development environment](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) First, install it via the official Anthropic channels, then configure it for Python development.
+[Claude Code runs locally and integrates with your existing development environment](/claude-skill-md-format-complete-specification-guide/) First, install it via the official Anthropic channels, then configure it for Python development.
 
 The configuration lives in `~/.claude/settings.json`. For Python projects, a practical configuration looks like:
 
@@ -78,11 +78,11 @@ Claude will use the correct interpreter when running test commands and generatin
 
 ## Essential Claude Skills for Python Developers
 
-[Claude skills are Markdown files that extend Claude's capabilities](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/). Several skills directly improve Python development workflows.
+[Claude skills are Markdown files that extend Claude's capabilities](/claude-skill-md-format-complete-specification-guide/). Several skills directly improve Python development workflows.
 
 ### The TDD Skill
 
-[The `/tdd` skill transforms how you write Python code](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/). Activate it by typing:
+[The `/tdd` skill transforms how you write Python code](/claude-tdd-skill-test-driven-development-workflow/). Activate it by typing:
 
 ```
 /tdd
@@ -116,7 +116,7 @@ that wraps every documented endpoint with proper type hints and docstrings.
 
 ### The Super Memory Skill
 
-[The `supermemory` skill maintains context across sessions](/claude-skills-guide/building-stateful-agents-with-claude-skills-guide/):
+[The `supermemory` skill maintains context across sessions](/building-stateful-agents-with-claude-skills-guide/):
 
 ```
 /supermemory remember that we use Python 3.12 and prefer pydantic v2
@@ -401,9 +401,9 @@ This level of detail produces code that handles the security requirements correc
 
 ## Related Reading
 
-- [Claude Skill MD Format Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — master the skill file format for Python development workflows
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — apply test-driven development to Python projects
-- [Building Stateful Agents with Claude Skills Guide](/claude-skills-guide/building-stateful-agents-with-claude-skills-guide/) — persist project preferences with supermemory across sessions
-- [Getting Started Hub](/claude-skills-guide/getting-started-hub/) — explore all skills available for Python developers
+- [Claude Skill MD Format Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/) — master the skill file format for Python development workflows
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/) — apply test-driven development to Python projects
+- [Building Stateful Agents with Claude Skills Guide](/building-stateful-agents-with-claude-skills-guide/) — persist project preferences with supermemory across sessions
+- [Getting Started Hub](/getting-started-hub/) — explore all skills available for Python developers
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

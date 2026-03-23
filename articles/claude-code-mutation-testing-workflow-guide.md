@@ -315,8 +315,8 @@ Start with a single module, establish your baseline survival rate, and iterate. 
 
 ## Related Reading
 
-- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — TDD is the foundation that mutation testing builds on
-- [Claude Code Code Coverage Improvement Guide](/claude-skills-guide/claude-code-code-coverage-improvement-guide/) — Code coverage is a prerequisite for meaningful mutation testing
-- [Advanced Claude Skills Hub](/claude-skills-guide/advanced-hub/) — Advanced testing quality strategies
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/) — TDD is the foundation that mutation testing builds on
+- [Claude Code Code Coverage Improvement Guide](/claude-code-code-coverage-improvement-guide/) — Code coverage is a prerequisite for meaningful mutation testing
+- [Advanced Claude Skills Hub](/advanced-hub/) — Advanced testing quality strategies
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

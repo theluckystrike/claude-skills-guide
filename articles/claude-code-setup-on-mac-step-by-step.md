@@ -13,7 +13,7 @@ permalink: /claude-code-setup-on-mac-step-by-step/
 
 # Claude Code Setup on Mac: Step-by-Step Guide for Developers
 
-Getting Claude Code running on your Mac unlocks a powerful AI assistant directly in your terminal. This guide walks you through every step, from installation to your first commands, with practical examples developers can use immediately. For broader onboarding resources, see the [getting started hub](/claude-skills-guide/getting-started-hub/).
+Getting Claude Code running on your Mac unlocks a powerful AI assistant directly in your terminal. This guide walks you through every step, from installation to your first commands, with practical examples developers can use immediately. For broader onboarding resources, see the [getting started hub](/getting-started-hub/).
 
 ## Prerequisites
 
@@ -65,7 +65,7 @@ For better security, consider using a `.env` file with a tool like `direnv`, or 
 
 ## Project-Level Configuration
 
-Claude Code supports project-specific instructions via a `CLAUDE.md` file in your project root. This file describes your project to Claude at the start of each session. You can also load [Claude Code skills](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) to bring in reusable specialized workflows:
+Claude Code supports project-specific instructions via a `CLAUDE.md` file in your project root. This file describes your project to Claude at the start of each session. You can also load [Claude Code skills](/claude-skill-md-format-complete-specification-guide/) to bring in reusable specialized workflows:
 
 ```markdown
 # Project Context
@@ -156,7 +156,7 @@ Haiku responds faster for straightforward tasks.
 
 ## Advanced: Using MCP Servers
 
-For expanded capabilities, [configure Model Context Protocol servers](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/). Create or edit `~/.claude/settings.json`:
+For expanded capabilities, [configure Model Context Protocol servers](/building-your-first-mcp-tool-integration-guide-2026/). Create or edit `~/.claude/settings.json`:
 
 ```json
 {
@@ -255,9 +255,9 @@ cat ~/.claude/prompts/explain-code.txt src/utils.js | claude
 
 ## Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started 2026](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Claude Code Project Initialization Best Practices](/claude-skills-guide/claude-code-project-initialization-best-practices/)
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/)
-- [Getting Started Hub](/claude-skills-guide/getting-started-hub/)
+- [Claude Code for Beginners: Complete Getting Started 2026](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Claude Code Project Initialization Best Practices](/claude-code-project-initialization-best-practices/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)
+- [Getting Started Hub](/getting-started-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

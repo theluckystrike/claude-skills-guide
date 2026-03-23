@@ -181,8 +181,8 @@ When generating or reviewing multi-stage Dockerfiles with Claude Code, remember 
 
 ## Related Reading
 
-- [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Guides Hub](/claude-skills-guide/guides-hub/)
+- [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/)
+- [Guides Hub](/guides-hub/)
 
 ---
 

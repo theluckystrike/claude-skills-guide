@@ -13,9 +13,9 @@ permalink: /claude-code-express-middleware-error-handling-patterns-guide/
 
 # Claude Code Express Middleware Error Handling Patterns Guide
 
-[Building reliable Express applications requires solid error handling strategies](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) Whether you're building APIs or full-stack applications with Claude Code, understanding middleware error handling patterns prevents unexpected crashes and provides meaningful feedback to users.
+[Building reliable Express applications requires solid error handling strategies](/claude-tdd-skill-test-driven-development-workflow/) Whether you're building APIs or full-stack applications with Claude Code, understanding middleware error handling patterns prevents unexpected crashes and provides meaningful feedback to users.
 
-This guide covers practical Express middleware error handling patterns that [work cleanly with Claude Code workflows](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/). You'll find code examples compatible with Express 4.x and 5.x, plus tips on integrating these patterns into your development process.
+This guide covers practical Express middleware error handling patterns that [work cleanly with Claude Code workflows](/best-claude-code-skills-to-install-first-2026/). You'll find code examples compatible with Express 4.x and 5.x, plus tips on integrating these patterns into your development process.
 
 ## The Basics: Express Error Handling Middleware
 
@@ -246,11 +246,11 @@ process.on('uncaughtException', (error) => {
 
 ## Integrating with Claude Code Workflows
 
-When building Express applications with Claude Code, these error handling patterns integrate naturally with your development workflow. The [**tdd skill**](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) helps you write tests for error scenarios before implementing handlers, ensuring your error paths work correctly.
+When building Express applications with Claude Code, these error handling patterns integrate naturally with your development workflow. The [**tdd skill**](/claude-tdd-skill-test-driven-development-workflow/) helps you write tests for error scenarios before implementing handlers, ensuring your error paths work correctly.
 
 For API documentation, the **pdf skill** can generate API reference documents that include error response schemas. This helps teams understand possible error codes and messages.
 
-The [**supermemory skill**](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) preserves context about your error handling decisions across Claude Code sessions, making it easier to maintain consistent patterns across larger projects.
+The [**supermemory skill**](/claude-supermemory-skill-persistent-context-explained/) preserves context about your error handling decisions across Claude Code sessions, making it easier to maintain consistent patterns across larger projects.
 
 If you're building forms that submit to Express backends, combine these patterns with the **frontend-design skill** to create user-friendly error displays that match your validation logic.
 
@@ -268,9 +268,9 @@ These patterns scale from small APIs to enterprise applications. Implement them 
 
 ## Related Reading
 
-- [Claude TDD Skill: Test-Driven Development Guide (2026)](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Write tests for your Express error handlers before implementation to catch edge cases systematically.
-- [Claude Code Input Validation and Sanitization Patterns Guide](/claude-skills-guide/claude-code-input-validation-sanitization-patterns-guide/) — Pair error handling with solid input validation to prevent the errors before they need handling.
-- [Express to Fastify Migration with Claude Code (2026)](/claude-skills-guide/claude-code-express-to-fastify-migration-tutorial-2026/) — When your Express error handling outgrows the framework, migrate to Fastify with Claude Code assistance.
-- [Getting Started with Claude Skills](/claude-skills-guide/getting-started-hub/) — Learn the foundational Claude skills that power Express and Node.js development workflows.
+- [Claude TDD Skill: Test-Driven Development Guide (2026)](/claude-tdd-skill-test-driven-development-workflow/) — Write tests for your Express error handlers before implementation to catch edge cases systematically.
+- [Claude Code Input Validation and Sanitization Patterns Guide](/claude-code-input-validation-sanitization-patterns-guide/) — Pair error handling with solid input validation to prevent the errors before they need handling.
+- [Express to Fastify Migration with Claude Code (2026)](/claude-code-express-to-fastify-migration-tutorial-2026/) — When your Express error handling outgrows the framework, migrate to Fastify with Claude Code assistance.
+- [Getting Started with Claude Skills](/getting-started-hub/) — Learn the foundational Claude skills that power Express and Node.js development workflows.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

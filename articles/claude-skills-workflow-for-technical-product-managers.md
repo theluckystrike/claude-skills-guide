@@ -13,11 +13,11 @@ permalink: /claude-skills-workflow-for-technical-product-managers/
 
 # Claude Skills Workflow for Technical Product Managers
 
-[Technical product managers balance engineering precision with product vision](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Claude Code skills provide a structured way to accelerate requirements gathering, technical specification, and cross-team communication. This guide shows you a practical workflow that integrates Claude skills into your daily product management routine.
+[Technical product managers balance engineering precision with product vision](/best-claude-code-skills-to-install-first-2026/) Claude Code skills provide a structured way to accelerate requirements gathering, technical specification, and cross-team communication. This guide shows you a practical workflow that integrates Claude skills into your daily product management routine.
 
 ## The Role of Skills in Technical Product Management
 
-Claude skills are Markdown files that define reusable workflows. They work as specialized assistants that understand your domain and apply consistent patterns across different projects. For [technical product managers](/claude-skills-guide/build-personal-ai-assistant-with-claude-skills-guide/), skills help maintain quality standards while reducing repetitive work.
+Claude skills are Markdown files that define reusable workflows. They work as specialized assistants that understand your domain and apply consistent patterns across different projects. For [technical product managers](/build-personal-ai-assistant-with-claude-skills-guide/), skills help maintain quality standards while reducing repetitive work.
 
 When you invoke a skill in Claude Code, it loads context-specific instructions. This means you get tailored assistance for writing PRDs, reviewing technical specifications, or managing sprint planning without explaining your requirements each time.
 
@@ -266,9 +266,9 @@ Claude skills transform how technical product managers work by providing consist
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Complementary skills for your engineering team
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Advanced skill activation patterns
-- [Claude Code Skills for QA Engineers](/claude-skills-guide/best-claude-skills-for-code-review-automation/) — Bridge QA with your PM workflow
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Complementary skills for your engineering team
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — Advanced skill activation patterns
+- [Claude Code Skills for QA Engineers](/best-claude-skills-for-code-review-automation/) — Bridge QA with your PM workflow
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

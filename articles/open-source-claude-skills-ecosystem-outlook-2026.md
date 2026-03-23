@@ -13,9 +13,9 @@ permalink: /open-source-claude-skills-ecosystem-outlook-2026/
 
 # Open Source Claude Skills Ecosystem Outlook 2026
 
-[Claude skills are Markdown files stored in ~/.claude/skills/](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) When you type `/skill-name` in a Claude Code session, Claude loads that file's instructions and operates accordingly. The entire skill system is file-based — no npm packages, no Python imports, no CLI subcommands.
+[Claude skills are Markdown files stored in ~/.claude/skills/](/best-claude-code-skills-to-install-first-2026/) When you type `/skill-name` in a Claude Code session, Claude loads that file's instructions and operates accordingly. The entire skill system is file-based — no npm packages, no Python imports, no CLI subcommands.
 
-The open source community [shares skills as GitHub repositories](/claude-skills-guide/how-to-contribute-claude-skills-to-open-source/) containing `.md` files. This article covers how that ecosystem works in 2026.
+The open source community [shares skills as GitHub repositories](/how-to-contribute-claude-skills-to-open-source/) containing `.md` files. This article covers how that ecosystem works in 2026.
 
 ## How Skills Actually Work
 
@@ -166,9 +166,9 @@ Start with the built-in skills to understand the format, then explore community 
 
 ## Related Reading
 
-- [How to Contribute Claude Skills to Open Source](/claude-skills-guide/how-to-contribute-claude-skills-to-open-source/) — Publish your own skill to a GitHub repository and contribute to the community ecosystem.
-- [Claude Skills Directory: Where to Find Skills 2026](/claude-skills-guide/claude-skills-directory-where-to-find-skills/) — Browse community skills and find domain-specific skills to add to your collection.
-- [Official vs Community Claude Skills Guide (2026)](/claude-skills-guide/anthropic-official-skills-vs-community-skills-comparison/) — Understand the difference between built-in Anthropic skills and community-contributed ones.
-- [Getting Started with Claude Skills](/claude-skills-guide/getting-started-hub/) — Start with built-in skills before exploring the open source ecosystem.
+- [How to Contribute Claude Skills to Open Source](/how-to-contribute-claude-skills-to-open-source/) — Publish your own skill to a GitHub repository and contribute to the community ecosystem.
+- [Claude Skills Directory: Where to Find Skills 2026](/claude-skills-directory-where-to-find-skills/) — Browse community skills and find domain-specific skills to add to your collection.
+- [Official vs Community Claude Skills Guide (2026)](/anthropic-official-skills-vs-community-skills-comparison/) — Understand the difference between built-in Anthropic skills and community-contributed ones.
+- [Getting Started with Claude Skills](/getting-started-hub/) — Start with built-in skills before exploring the open source ecosystem.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

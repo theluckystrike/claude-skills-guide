@@ -416,10 +416,10 @@ Automate these tests in your CI pipeline to catch regressions immediately. When 
 
 ## Related Reading
 
-- [Claude Code API Contract Testing Guide](/claude-skills-guide/claude-code-api-contract-testing-guide/) — Contract testing enforces response consistency
-- [How to Make Claude Code Handle Async Errors Properly](/claude-skills-guide/how-to-make-claude-code-handle-async-errors-properly/) — Error handling is part of API consistency
-- [Claude Code API Backward Compatibility Guide](/claude-skills-guide/claude-code-api-backward-compatibility-guide/) — Consistent responses require backward compatibility
-- [Claude Skills Tutorials Hub](/claude-skills-guide/tutorials-hub/) — More Claude Code how-to guides
+- [Claude Code API Contract Testing Guide](/claude-code-api-contract-testing-guide/) — Contract testing enforces response consistency
+- [How to Make Claude Code Handle Async Errors Properly](/how-to-make-claude-code-handle-async-errors-properly/) — Error handling is part of API consistency
+- [Claude Code API Backward Compatibility Guide](/claude-code-api-backward-compatibility-guide/) — Consistent responses require backward compatibility
+- [Claude Skills Tutorials Hub](/tutorials-hub/) — More Claude Code how-to guides
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

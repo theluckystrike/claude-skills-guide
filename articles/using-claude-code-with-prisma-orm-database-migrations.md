@@ -11,7 +11,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-Managing database schemas with Prisma ORM becomes significantly more efficient when paired with Claude Code, an AI assistant that understands your codebase and can generate migrations, explain schema changes, and help troubleshoot issues. This guide covers **practical introductory workflows** for integrating Claude Code into your Prisma development process. Once you are comfortable with the basics here, continue with the [Claude Code Prisma Schema Migrations Advanced Workflow Guide](/claude-skills-guide/claude-code-prisma-schema-migrations-advanced-workflow-guide/) for production-grade patterns including zero-downtime migrations, atomic multi-step changes, and monorepo strategies.
+Managing database schemas with Prisma ORM becomes significantly more efficient when paired with Claude Code, an AI assistant that understands your codebase and can generate migrations, explain schema changes, and help troubleshoot issues. This guide covers **practical introductory workflows** for integrating Claude Code into your Prisma development process. Once you are comfortable with the basics here, continue with the [Claude Code Prisma Schema Migrations Advanced Workflow Guide](/claude-code-prisma-schema-migrations-advanced-workflow-guide/) for production-grade patterns including zero-downtime migrations, atomic multi-step changes, and monorepo strategies.
 
 ## Setting Up Prisma for Claude Code Collaboration
 
@@ -299,10 +299,10 @@ For more development tips and AI-assisted workflows, explore additional resource
 
 ## Related Reading
 
-- [Claude Code Prisma Schema Migrations Advanced Workflow Guide](/claude-skills-guide/claude-code-prisma-schema-migrations-advanced-workflow-guide/) — Next step: production-grade patterns, zero-downtime migrations, and monorepo strategies
-- [Claude Code Django ORM Optimization Guide](/claude-skills-guide/claude-code-django-orm-optimization-guide/) — See also
-- [Claude Code MongoDB to PostgreSQL Migration Workflow](/claude-skills-guide/claude-code-mongodb-to-postgresql-migration-workflow/) — See also
-- [Claude Skills for Creating Database Migration Scripts](/claude-skills-guide/claude-skills-for-creating-database-migration-scripts/) — See also
-- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/) — See also
+- [Claude Code Prisma Schema Migrations Advanced Workflow Guide](/claude-code-prisma-schema-migrations-advanced-workflow-guide/) — Next step: production-grade patterns, zero-downtime migrations, and monorepo strategies
+- [Claude Code Django ORM Optimization Guide](/claude-code-django-orm-optimization-guide/) — See also
+- [Claude Code MongoDB to PostgreSQL Migration Workflow](/claude-code-mongodb-to-postgresql-migration-workflow/) — See also
+- [Claude Skills for Creating Database Migration Scripts](/claude-skills-for-creating-database-migration-scripts/) — See also
+- [Claude Code Tutorials Hub](/tutorials-hub/) — See also
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

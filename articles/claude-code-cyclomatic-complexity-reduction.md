@@ -15,7 +15,7 @@ score: 7
 
 # Claude Code Cyclomatic Complexity Reduction
 
-Cyclomatic complexity measures the number of linearly independent paths through your code's control flow. High complexity makes code harder to test, maintain, and debug. This guide focuses specifically on cyclomatic complexity — the formal, measurable count of branching paths — rather than broader complexity concerns like coupling, structural bloat, or cognitive load. (If you are looking for a wider treatment of all complexity types, see the [Code Complexity Reduction Guide](/claude-skills-guide/claude-code-code-complexity-reduction-guide/).)
+Cyclomatic complexity measures the number of linearly independent paths through your code's control flow. High complexity makes code harder to test, maintain, and debug. This guide focuses specifically on cyclomatic complexity — the formal, measurable count of branching paths — rather than broader complexity concerns like coupling, structural bloat, or cognitive load. (If you are looking for a wider treatment of all complexity types, see the [Code Complexity Reduction Guide](/claude-code-code-complexity-reduction-guide/).)
 
 This guide shows you how to use Claude Code and its ecosystem of skills to systematically reduce cyclomatic complexity in your projects.
 
@@ -207,9 +207,9 @@ Reducing cyclomatic complexity improves code maintainability, testability, and r
 
 ## Related Reading
 
-- [Claude Code Technical Debt Tracking Workflow](/claude-skills-guide/claude-code-technical-debt-tracking-workflow/) — Complexity reduction is part of technical debt management
-- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Tests validate complexity reduction refactors
-- [Claude Code Output Quality How to Improve Results](/claude-skills-guide/claude-code-output-quality-how-to-improve-results/) — Quality improvements include complexity reduction
-- [Advanced Claude Skills Hub](/claude-skills-guide/advanced-hub/) — Advanced code quality and optimization patterns
+- [Claude Code Technical Debt Tracking Workflow](/claude-code-technical-debt-tracking-workflow/) — Complexity reduction is part of technical debt management
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/) — Tests validate complexity reduction refactors
+- [Claude Code Output Quality How to Improve Results](/claude-code-output-quality-how-to-improve-results/) — Quality improvements include complexity reduction
+- [Advanced Claude Skills Hub](/advanced-hub/) — Advanced code quality and optimization patterns
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

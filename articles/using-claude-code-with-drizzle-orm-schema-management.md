@@ -137,7 +137,7 @@ Finally, review generated migrations before applying them. Claude accelerates th
 
 Drizzle makes defining relationships straightforward, and Claude helps you get them right the first time. Use Drizzle's `relations` helper to declare one-to-many and many-to-one associations in your schema files. These relation definitions enable eager loading with the `with` clause, and Claude can construct the appropriate `findFirst` or `findMany` calls for you once the relations are in place.
 
-For a full walkthrough of defining relations alongside CRUD operations and advanced queries, see [Claude Code for Drizzle ORM TypeScript Database Workflow](/claude-skills-guide/claude-code-drizzle-orm-typescript-database-workflow/).
+For a full walkthrough of defining relations alongside CRUD operations and advanced queries, see [Claude Code for Drizzle ORM TypeScript Database Workflow](/claude-code-drizzle-orm-typescript-database-workflow/).
 
 ## Common Pitfalls and How Claude Helps Avoid Them
 
@@ -162,10 +162,10 @@ Claude Code transforms Drizzle ORM schema management from a manual, error-prone 
 
 ## Related Reading
 
-- [Claude Code for Drizzle ORM TypeScript Database Workflow](/claude-skills-guide/claude-code-drizzle-orm-typescript-database-workflow/) — Full CRUD, transactions, advanced queries, testing, and performance optimization
-- [Claude Code Skills for Supabase Full-Stack Apps Guide](/claude-skills-guide/claude-code-skills-for-supabase-full-stack-apps-guide/) — See also
-- [Claude Skills With Supabase Database Integration](/claude-skills-guide/claude-skills-with-supabase-database-integration/) — See also
-- [Claude Code Turso SQLite Edge Database Tutorial](/claude-skills-guide/claude-code-for-turso-sqlite-edge-database-tutorial/) — See also
-- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/) — See also
+- [Claude Code for Drizzle ORM TypeScript Database Workflow](/claude-code-drizzle-orm-typescript-database-workflow/) — Full CRUD, transactions, advanced queries, testing, and performance optimization
+- [Claude Code Skills for Supabase Full-Stack Apps Guide](/claude-code-skills-for-supabase-full-stack-apps-guide/) — See also
+- [Claude Skills With Supabase Database Integration](/claude-skills-with-supabase-database-integration/) — See also
+- [Claude Code Turso SQLite Edge Database Tutorial](/claude-code-for-turso-sqlite-edge-database-tutorial/) — See also
+- [Claude Code Tutorials Hub](/tutorials-hub/) — See also
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

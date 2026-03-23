@@ -13,11 +13,11 @@ permalink: /passing-context-between-claude-code-subagents-guide/
 
 # Passing Context Between Claude Code Subagents Guide
 
-Claude Code enables powerful multi-agent architectures through subagents. For an introduction to subagent coordination, see [multi-agent orchestration with Claude subagents](/claude-skills-guide/multi-agent-orchestration-with-claude-subagents-guide/). When building complex workflows, you need reliable ways to pass context, share state, and coordinate results between subagents. This guide covers practical patterns for context passing that work in real production workflows.
+Claude Code enables powerful multi-agent architectures through subagents. For an introduction to subagent coordination, see [multi-agent orchestration with Claude subagents](/multi-agent-orchestration-with-claude-subagents-guide/). When building complex workflows, you need reliable ways to pass context, share state, and coordinate results between subagents. This guide covers practical patterns for context passing that work in real production workflows.
 
 ## Understanding Subagent Context Architecture
 
-[Claude Code subagents operate as isolated execution units within a parent session](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Each subagent receives its own context window, which means data generated in one subagent does not automatically propagate to another. This isolation provides safety and predictability, but requires explicit patterns for sharing information.
+[Claude Code subagents operate as isolated execution units within a parent session](/best-claude-code-skills-to-install-first-2026/) Each subagent receives its own context window, which means data generated in one subagent does not automatically propagate to another. This isolation provides safety and predictability, but requires explicit patterns for sharing information.
 
 The parent agent serves as the coordinator. It holds the master context and decides which pieces of information to pass to each subagent at invocation time. This design gives you fine-grained control over what each subagent sees and can act upon.
 
@@ -267,10 +267,10 @@ This validation layer prevents the cascading failures that occur when a subagent
 
 ## Related Reading
 
-- [How to Pass State Between AI Agents](/claude-skills-guide/how-to-pass-state-between-ai-agents/) — Framework-agnostic patterns for state sharing applicable to Claude, LangChain, CrewAI, and other agent runtimes.
-- [Multi-Agent Orchestration with Claude Subagents Guide](/claude-skills-guide/multi-agent-orchestration-with-claude-subagents-guide/) — Understand the subagent coordination model before implementing context-passing patterns.
-- [Claude Code Multi-Agent Subagent Communication Guide](/claude-skills-guide/claude-code-multi-agent-subagent-communication-guide/) — Implement clear communication protocols alongside context passing for reliable workflows.
-- [Claude SuperMemory Skill: Persistent Context Guide](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) — Use the supermemory skill to persist and share context across subagent sessions.
-- [Claude Skills Advanced Hub](/claude-skills-guide/advanced-hub/) — Explore advanced context management and subagent coordination patterns.
+- [How to Pass State Between AI Agents](/how-to-pass-state-between-ai-agents/) — Framework-agnostic patterns for state sharing applicable to Claude, LangChain, CrewAI, and other agent runtimes.
+- [Multi-Agent Orchestration with Claude Subagents Guide](/multi-agent-orchestration-with-claude-subagents-guide/) — Understand the subagent coordination model before implementing context-passing patterns.
+- [Claude Code Multi-Agent Subagent Communication Guide](/claude-code-multi-agent-subagent-communication-guide/) — Implement clear communication protocols alongside context passing for reliable workflows.
+- [Claude SuperMemory Skill: Persistent Context Guide](/claude-supermemory-skill-persistent-context-explained/) — Use the supermemory skill to persist and share context across subagent sessions.
+- [Claude Skills Advanced Hub](/advanced-hub/) — Explore advanced context management and subagent coordination patterns.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

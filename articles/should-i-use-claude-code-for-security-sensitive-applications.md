@@ -13,7 +13,7 @@ permalink: /should-i-use-claude-code-for-security-sensitive-applications/
 
 # Should I Use Claude Code for Security-Sensitive Applications?
 
-Security-sensitive applications—financial systems, healthcare platforms, authentication services, and code dealing with cryptographic keys—require extra scrutiny when introducing any new tool into your development workflow. The question of whether Claude Code is appropriate for these contexts deserves a thoughtful answer. For a related look at OpenCLAW, an open-source alternative with explicit security configuration, see the [OpenCLAW security review](/claude-skills-guide/openclaw-security-review-is-it-safe-2026/).
+Security-sensitive applications—financial systems, healthcare platforms, authentication services, and code dealing with cryptographic keys—require extra scrutiny when introducing any new tool into your development workflow. The question of whether Claude Code is appropriate for these contexts deserves a thoughtful answer. For a related look at OpenCLAW, an open-source alternative with explicit security configuration, see the [OpenCLAW security review](/openclaw-security-review-is-it-safe-2026/).
 
 The short answer: Claude Code can be used safely in security-sensitive projects, but only when developers understand the data flow, apply deliberate redaction practices, and establish clear team-wide policies about what stays local. This guide walks through the concrete strategies that make that possible.
 
@@ -49,7 +49,7 @@ Getting this categorization right is the foundation of safe Claude Code usage in
 
 ### Strategy 1: Use Local-Only Processing for Sensitive Code
 
-For truly sensitive code sections, consider using Claude's skills that keep processing local. The [**supermemory** skill](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/), for example, maintains context locally on your machine between sessions without necessarily sending every detail to external servers.
+For truly sensitive code sections, consider using Claude's skills that keep processing local. The [**supermemory** skill](/claude-supermemory-skill-persistent-context-explained/), for example, maintains context locally on your machine between sessions without necessarily sending every detail to external servers.
 
 ```bash
 # Start Claude Code — use CLAUDE.md to restrict scope and tools
@@ -129,7 +129,7 @@ A useful framing: Claude is your expert consultant who you are briefing in a pub
 
 Several Claude skills can actually improve your security posture when used correctly.
 
-The [**tdd** skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) helps you write comprehensive tests before implementing security-sensitive functions. For example, when building an encryption utility:
+The [**tdd** skill](/claude-tdd-skill-test-driven-development-workflow/) helps you write comprehensive tests before implementing security-sensitive functions. For example, when building an encryption utility:
 
 ```
 /tdd
@@ -299,9 +299,9 @@ Evaluate your specific needs, implement the strategies that work for your contex
 
 ## Related Reading
 
-- [Claude Code Permissions Model Security Guide 2026](/claude-skills-guide/claude-code-permissions-model-security-guide-2026/) — See also
-- [Claude Code MCP Server Data Exfiltration Prevention](/claude-skills-guide/claude-code-mcp-server-data-exfiltration-prevention/) — See also
-- [Claude Code Generates Insecure Code Patterns Fix](/claude-skills-guide/claude-code-generates-insecure-code-patterns-fix/) — See also
-- [Securing MCP Servers in Production Environments](/claude-skills-guide/securing-mcp-servers-in-production-environments/) — See also
+- [Claude Code Permissions Model Security Guide 2026](/claude-code-permissions-model-security-guide-2026/) — See also
+- [Claude Code MCP Server Data Exfiltration Prevention](/claude-code-mcp-server-data-exfiltration-prevention/) — See also
+- [Claude Code Generates Insecure Code Patterns Fix](/claude-code-generates-insecure-code-patterns-fix/) — See also
+- [Securing MCP Servers in Production Environments](/securing-mcp-servers-in-production-environments/) — See also
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

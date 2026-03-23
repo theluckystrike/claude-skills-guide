@@ -16,9 +16,9 @@ permalink: /claude-code-generates-insecure-code-patterns-fix/
 
 # Claude Code Generates Insecure Code Patterns Fix
 
-[When working with Claude Code, you might occasionally receive code that contains security vulnerabilities](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) This happens because AI models generate code based on patterns in their training data, which can include legacy or insecure practices. Understanding how to identify and fix these patterns is essential for building secure applications.
+[When working with Claude Code, you might occasionally receive code that contains security vulnerabilities](/best-claude-code-skills-to-install-first-2026/) This happens because AI models generate code based on patterns in their training data, which can include legacy or insecure practices. Understanding how to identify and fix these patterns is essential for building secure applications.
 
-[This guide covers common insecure code patterns that Claude Code might generate, how to recognize them](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/), and practical workflows using Claude skills to improve your code security.
+[This guide covers common insecure code patterns that Claude Code might generate, how to recognize them](/claude-tdd-skill-test-driven-development-workflow/), and practical workflows using Claude skills to improve your code security.
 
 ## Why AI-Generated Code Can Be Insecure
 
@@ -67,7 +67,7 @@ stmt = text("SELECT * FROM users WHERE name = :name")
 result = conn.execute(stmt, {"name": user_input})
 ```
 
-When you encounter this pattern, you can [use the `tdd` skill to write proper test cases](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) that verify your queries are safe.
+When you encounter this pattern, you can [use the `tdd` skill to write proper test cases](/claude-tdd-skill-test-driven-development-workflow/) that verify your queries are safe.
 
 **Prompt Claude securely:** Ask "generate a user lookup function using SQLAlchemy ORM with parameterized queries and error handling for missing users" rather than "generate a SQL query to look up a user by name."
 
@@ -89,7 +89,7 @@ const API_KEY = process.env.API_KEY;
 const dbPassword = process.env.DB_PASSWORD;
 ```
 
-The [supermemory skill](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) can help you maintain a secure checklist of patterns to review in every project.
+The [supermemory skill](/claude-supermemory-skill-persistent-context-explained/) can help you maintain a secure checklist of patterns to review in every project.
 
 But environment variables alone are not enough. You also need to ensure those variables are never logged, never returned in API responses, and never committed to source control. A complete secrets management approach looks like this:
 
@@ -568,8 +568,8 @@ The key is establishing security as a consistent part of your development workfl
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 ## Related Reading
 
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/)
-- [How to Make Claude Code Write Secure Code Always](/claude-skills-guide/how-to-make-claude-code-write-secure-code-always/)
-- [Claude Code GDPR Data Privacy Implementation Checklist](/claude-skills-guide/claude-code-gdpr-data-privacy-implementation-checklist/)
-- [Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/)
+- [How to Make Claude Code Write Secure Code Always](/how-to-make-claude-code-write-secure-code-always/)
+- [Claude Code GDPR Data Privacy Implementation Checklist](/claude-code-gdpr-data-privacy-implementation-checklist/)
+- [Troubleshooting Hub](/troubleshooting-hub/)
 {% endraw %}

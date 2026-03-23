@@ -13,9 +13,9 @@ permalink: /claude-code-for-monolith-to-microservices-refactor-guide/
 
 # Claude Code for Monolith to Microservices Refactor Guide
 
-[Refactoring a monolith into microservices represents one of the most challenging architectural transitions](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) in modern software development. The process demands careful planning, precise execution, and systematic testing. Claude Code transforms this complex migration into a manageable workflow by providing intelligent assistance throughout every phase—from initial analysis to deployment verification.
+[Refactoring a monolith into microservices represents one of the most challenging architectural transitions](/best-claude-code-skills-to-install-first-2026/) in modern software development. The process demands careful planning, precise execution, and systematic testing. Claude Code transforms this complex migration into a manageable workflow by providing intelligent assistance throughout every phase—from initial analysis to deployment verification.
 
-[This guide demonstrates how to use Claude Code and its ecosystem of skills to execute a successful monolith-to-microservices transformation](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)
+[This guide demonstrates how to use Claude Code and its ecosystem of skills to execute a successful monolith-to-microservices transformation](/claude-skill-md-format-complete-specification-guide/)
 
 ## Understanding Your Starting Point
 
@@ -51,7 +51,7 @@ claude "Based on the codebase analysis, identify potential bounded contexts:
 Suggest 4-6 service candidates with their proposed responsibilities."
 ```
 
-For this process, [the **supermemory** skill proves invaluable](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/), keeping track of decisions and architectural patterns you've established.
+For this process, [the **supermemory** skill proves invaluable](/claude-supermemory-skill-persistent-context-explained/), keeping track of decisions and architectural patterns you've established.
 
 ## Extracting Your First Service
 
@@ -117,7 +117,7 @@ claude "Generate OpenAPI 3.0 specifications for the extracted [service-name] ser
 - Example payloads"
 ```
 
-[The **tdd** skill becomes essential here](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/). Write tests before extracting to ensure the new service maintains identical behavior:
+[The **tdd** skill becomes essential here](/claude-tdd-skill-test-driven-development-workflow/). Write tests before extracting to ensure the new service maintains identical behavior:
 
 ```bash
 # Using tdd skill for test-first extraction
@@ -175,7 +175,7 @@ class OrderEventPublisher {
 }
 ```
 
-[The **pdf** skill helps generate architecture documentation](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) and API references automatically.
+[The **pdf** skill helps generate architecture documentation](/best-claude-code-skills-to-install-first-2026/) and API references automatically.
 
 ## Handling Shared Dependencies
 
@@ -283,9 +283,9 @@ The transition from monolith to microservices challenges teams across skill leve
 
 ## Related Reading
 
-- [Why Claude Code Is Recommended for Refactoring Tasks](/claude-skills-guide/why-is-claude-code-recommended-for-refactoring-tasks/)
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/)
-- [Claude SuperMemory Skill: Persistent Context Guide](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/)
-- [Advanced Hub](/claude-skills-guide/advanced-hub/)
+- [Why Claude Code Is Recommended for Refactoring Tasks](/why-is-claude-code-recommended-for-refactoring-tasks/)
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/)
+- [Claude SuperMemory Skill: Persistent Context Guide](/claude-supermemory-skill-persistent-context-explained/)
+- [Advanced Hub](/advanced-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

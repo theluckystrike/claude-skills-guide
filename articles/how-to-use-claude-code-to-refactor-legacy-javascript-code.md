@@ -21,10 +21,10 @@ This guide walks through practical techniques for refactoring legacy JavaScript 
 
 Before diving into refactoring, ensure Claude Code is configured with the right skills. The most useful skills for JavaScript refactoring include:
 
-- **[tdd](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/)** — Helps write tests before making changes, ensuring your refactoring doesn't break functionality
+- **[tdd](/claude-tdd-skill-test-driven-development-workflow/)** — Helps write tests before making changes, ensuring your refactoring doesn't break functionality
 - **frontend-design** — Assists with component-based refactoring and modern UI patterns
 - **xlsx** — Useful when analyzing code metrics or generating refactoring reports
-- **[supermemory](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/)** — Remembers context across sessions, helpful for large refactoring projects
+- **[supermemory](/claude-supermemory-skill-persistent-context-explained/)** — Remembers context across sessions, helpful for large refactoring projects
 
 Initialize your session by activating the TDD skill:
 
@@ -139,7 +139,7 @@ Ask Claude to help with this transformation:
 
 ## Adding Tests with TDD Skill
 
-The [tdd skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) becomes essential when refactoring code that lacks test coverage. Before changing any function, use the skill to generate tests that verify current behavior:
+The [tdd skill](/claude-tdd-skill-test-driven-development-workflow/) becomes essential when refactoring code that lacks test coverage. Before changing any function, use the skill to generate tests that verify current behavior:
 
 ```
 /tdd
@@ -221,8 +221,8 @@ Start small with low-risk functions, build test coverage using the tdd skill, an
 
 ## Related Reading
 
-- [Claude Code Test Driven Refactoring Guide](/claude-skills-guide/claude-code-test-driven-refactoring-guide/) — Master test-driven refactoring workflows for safely improving legacy codebases
-- [Claude Code Jest to Vitest Migration Workflow Tutorial](/claude-skills-guide/claude-code-jest-to-vitest-migration-workflow-tutorial/) — Migrate your legacy test suite from Jest to Vitest
-- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/) — See also
+- [Claude Code Test Driven Refactoring Guide](/claude-code-test-driven-refactoring-guide/) — Master test-driven refactoring workflows for safely improving legacy codebases
+- [Claude Code Jest to Vitest Migration Workflow Tutorial](/claude-code-jest-to-vitest-migration-workflow-tutorial/) — Migrate your legacy test suite from Jest to Vitest
+- [Claude Code Tutorials Hub](/tutorials-hub/) — See also
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

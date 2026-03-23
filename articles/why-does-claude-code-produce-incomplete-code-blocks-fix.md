@@ -93,7 +93,7 @@ Some scenarios require additional attention. When generating code for particular
 
 For database-related code generation using supermemory or similar skills, ensure you request complete transaction handling and connection management explicitly, as these are common areas where truncation occurs.
 
-When generating test code with tdd skills For a comprehensive approach to scoping, see [the tdd skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/)., request test methods individually rather than entire test suites at once. This guarantees each test is complete and functional.
+When generating test code with tdd skills For a comprehensive approach to scoping, see [the tdd skill](/claude-tdd-skill-test-driven-development-workflow/)., request test methods individually rather than entire test suites at once. This guarantees each test is complete and functional.
 
 ## Conclusion
 
@@ -104,9 +104,9 @@ The key is treating code generation as an iterative process rather than expectin
 
 ## Related Reading
 
-- [Claude Code Output Quality: How to Improve Results](/claude-skills-guide/claude-code-output-quality-how-to-improve-results/) — See also
-- [Best Way to Scope Tasks for Claude Code Success](/claude-skills-guide/best-way-to-scope-tasks-for-claude-code-success/) — See also
-- [Claude Code Keeps Making the Same Mistake: Fix Guide](/claude-skills-guide/claude-code-keeps-making-same-mistake-fix-guide/) — See also
-- [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — See also
+- [Claude Code Output Quality: How to Improve Results](/claude-code-output-quality-how-to-improve-results/) — See also
+- [Best Way to Scope Tasks for Claude Code Success](/best-way-to-scope-tasks-for-claude-code-success/) — See also
+- [Claude Code Keeps Making the Same Mistake: Fix Guide](/claude-code-keeps-making-same-mistake-fix-guide/) — See also
+- [Claude Skills Troubleshooting Hub](/troubleshooting-hub/) — See also
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

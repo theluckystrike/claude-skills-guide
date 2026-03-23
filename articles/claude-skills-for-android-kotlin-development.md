@@ -371,8 +371,8 @@ Your skill files should live in `.claude/skills/` and include: the specific file
 
 ## Related Reading
 
-- [Advanced Claude Skills with Tool Use and Function Calling](/claude-skills-guide/advanced-claude-skills-with-tool-use-and-function-calling/)
-- [Full Stack Web App with Claude Skills Step by Step](/claude-skills-guide/full-stack-web-app-with-claude-skills-step-by-step/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/)
+- [Full Stack Web App with Claude Skills Step by Step](/full-stack-web-app-with-claude-skills-step-by-step/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

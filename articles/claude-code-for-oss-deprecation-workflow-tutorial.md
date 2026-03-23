@@ -297,6 +297,6 @@ Managing deprecations doesn't have to be chaotic. Claude Code helps you systemat
 
 - [Claude Code for OSS Community Engagement Workflow](/claude-code-for-oss-community-engagement-workflow/)
 - [Claude Code for License Compliance Workflow Tutorial](/claude-code-for-license-compliance-workflow-tutorial/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

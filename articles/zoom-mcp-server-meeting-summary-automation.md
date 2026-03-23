@@ -13,7 +13,7 @@ permalink: /zoom-mcp-server-meeting-summary-automation/
 
 # Zoom MCP Server Meeting Summary Automation
 
-[Meeting documentation consumes significant developer time](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Recording decisions, tracking action items, and distributing summaries often become manual processes that interrupt deep work. Combining Zoom's meeting capabilities with Claude Code through the Model Context Protocol creates a powerful automation pipeline that transforms raw meeting data into actionable documentation.
+[Meeting documentation consumes significant developer time](/best-claude-code-skills-to-install-first-2026/) Recording decisions, tracking action items, and distributing summaries often become manual processes that interrupt deep work. Combining Zoom's meeting capabilities with Claude Code through the Model Context Protocol creates a powerful automation pipeline that transforms raw meeting data into actionable documentation.
 
 This guide walks through building a complete Zoom meeting summary automation workflow using MCP servers, with practical code examples you can adapt for your team.
 
@@ -29,7 +29,7 @@ The Zoom MCP server integration eliminates most of this. With the right setup, a
 
 ## How Zoom MCP Server Integration Works
 
-[The Zoom MCP server connects Claude Code directly to your Zoom account](/claude-skills-guide/how-do-i-combine-two-claude-skills-in-one-workflow/) through the Zoom API. This connection enables Claude to:
+[The Zoom MCP server connects Claude Code directly to your Zoom account](/how-do-i-combine-two-claude-skills-in-one-workflow/) through the Zoom API. This connection enables Claude to:
 
 - Fetch meeting recordings and transcripts
 - Retrieve meeting participant lists
@@ -418,9 +418,9 @@ The most important thing is to start narrow. Pick one meeting type that runs on 
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/)
-- [Slack MCP Server Team Notification Automation](/claude-skills-guide/slack-mcp-server-team-notification-automation/)
-- [Telegram MCP Server Bot Automation Workflow](/claude-skills-guide/telegram-mcp-server-bot-automation-workflow/)
-- [Integrations Hub](/claude-skills-guide/integrations-hub/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)
+- [Slack MCP Server Team Notification Automation](/slack-mcp-server-team-notification-automation/)
+- [Telegram MCP Server Bot Automation Workflow](/telegram-mcp-server-bot-automation-workflow/)
+- [Integrations Hub](/integrations-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

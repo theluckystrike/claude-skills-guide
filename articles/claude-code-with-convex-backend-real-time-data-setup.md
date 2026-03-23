@@ -492,9 +492,9 @@ Convex simplifies backend development by handling real-time synchronization auto
 
 ## Related Reading
 
-- [Claude Code WebSocket Implementation Real-Time Events Guide](/claude-skills-guide/claude-code-websocket-implementation-real-time-events-guide/) — See also
-- [Claude Skills WebSocket Real-Time App Development](/claude-skills-guide/claude-skills-for-websocket-realtime-app-development/) — See also
-- [Claude Code Skills for Supabase Full-Stack Apps Guide](/claude-skills-guide/claude-code-skills-for-supabase-full-stack-apps-guide/) — See also
-- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/) — See also
+- [Claude Code WebSocket Implementation Real-Time Events Guide](/claude-code-websocket-implementation-real-time-events-guide/) — See also
+- [Claude Skills WebSocket Real-Time App Development](/claude-skills-for-websocket-realtime-app-development/) — See also
+- [Claude Code Skills for Supabase Full-Stack Apps Guide](/claude-code-skills-for-supabase-full-stack-apps-guide/) — See also
+- [Claude Code Tutorials Hub](/tutorials-hub/) — See also
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

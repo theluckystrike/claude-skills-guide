@@ -186,9 +186,9 @@ The key lies in proper skill configuration and consistent project organization. 
 
 - [Claude Code for GraphQL Code Generation Workflow](/claude-code-for-graphql-code-generation-workflow/) — server-side schema and resolver generation from TypeScript models
 - [Claude Code for GraphQL Codegen Workflow Tutorial](/claude-code-for-graphql-codegen-workflow-tutorial/) — automating the graphql-codegen CLI, codegen.yml configuration, and watch mode
-- [What Is the Best Claude Skill for REST API Development?](/claude-skills-guide/what-is-the-best-claude-skill-for-rest-api-development/)
-- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
+- [What Is the Best Claude Skill for REST API Development?](/what-is-the-best-claude-skill-for-rest-api-development/)
+- [Claude Code Tutorials Hub](/tutorials-hub/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Code Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -13,7 +13,7 @@ permalink: /claude-code-skills-for-qa-engineers-automating-test-suites/
 
 # Claude Code Skills for QA Engineers Automating Test Suites
 
-[Quality assurance engineers face increasing pressure to deliver comprehensive test coverage](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) while keeping pace with rapid development cycles. Claude Code skills offer a powerful solution for automating test suite creation, maintenance, and execution. This guide explores practical implementations thatQA engineers can adopt immediately.
+[Quality assurance engineers face increasing pressure to deliver comprehensive test coverage](/claude-tdd-skill-test-driven-development-workflow/) while keeping pace with rapid development cycles. Claude Code skills offer a powerful solution for automating test suite creation, maintenance, and execution. This guide explores practical implementations thatQA engineers can adopt immediately.
 
 ## The QA Automation Challenge
 
@@ -25,7 +25,7 @@ Claude Code skills address these pain points by providing AI-powered assistance 
 
 ### The tdd Skill
 
-The [**tdd** skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) fundamentally changes how you approach test creation. Rather than writing tests after implementation, this skill guides you through test-driven development cycles. It suggests test cases based on function signatures, expected behaviors, and edge cases you might miss.
+The [**tdd** skill](/claude-tdd-skill-test-driven-development-workflow/) fundamentally changes how you approach test creation. Rather than writing tests after implementation, this skill guides you through test-driven development cycles. It suggests test cases based on function signatures, expected behaviors, and edge cases you might miss.
 
 For QA engineers, the tdd skill proves invaluable when:
 
@@ -133,9 +133,9 @@ Start by installing the tdd, xlsx, pdf, and supermemory skills. Experiment with 
 
 ## Related Reading
 
-- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Master the tdd skill that powers the QA automation workflows in this guide
-- [Automated Testing Pipeline with Claude TDD Skill 2026](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Build a complete CI-integrated testing pipeline using the skills covered in this QA guide
-- [Claude Code Firebase Security Rules Validation Testing Guide](/claude-skills-guide/claude-code-firebase-security-rules-validation-testing-guide/) — Apply these QA automation skills to Firebase security rules testing and validation
-- [Claude Skills Use Cases Hub](/claude-skills-guide/use-cases-hub/) — Explore more QA automation, testing, and quality assurance skill workflows
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/) — Master the tdd skill that powers the QA automation workflows in this guide
+- [Automated Testing Pipeline with Claude TDD Skill 2026](/claude-tdd-skill-test-driven-development-workflow/) — Build a complete CI-integrated testing pipeline using the skills covered in this QA guide
+- [Claude Code Firebase Security Rules Validation Testing Guide](/claude-code-firebase-security-rules-validation-testing-guide/) — Apply these QA automation skills to Firebase security rules testing and validation
+- [Claude Skills Use Cases Hub](/use-cases-hub/) — Explore more QA automation, testing, and quality assurance skill workflows
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -13,7 +13,7 @@ permalink: /claude-code-for-beginners-complete-getting-started-2026/
 
 # Claude Code for Beginners: Getting Started in 2026
 
-[Claude Code is Anthropic's command-line tool that brings Claude directly into your development workflow](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Instead of switching to a browser to ask Claude questions, you work with Claude in your terminal, and Claude can read your files, write code, and run commands. This guide walks you through getting started from zero.
+[Claude Code is Anthropic's command-line tool that brings Claude directly into your development workflow](/best-claude-code-skills-to-install-first-2026/) Instead of switching to a browser to ask Claude questions, you work with Claude in your terminal, and Claude can read your files, write code, and run commands. This guide walks you through getting started from zero.
 
 ## What You Need Before Starting
 
@@ -22,7 +22,7 @@ permalink: /claude-code-for-beginners-complete-getting-started-2026/
 - An Anthropic account at console.anthropic.com
 - Basic comfort using a terminal
 
-[You do not need to be a senior developer or understand how AI models work](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) If you can navigate a terminal and open files, you are ready.
+[You do not need to be a senior developer or understand how AI models work](/claude-skill-md-format-complete-specification-guide/) If you can navigate a terminal and open files, you are ready.
 
 ## Step 1: Install Claude Code
 
@@ -176,9 +176,9 @@ Claude will generate a draft. Review it and add:
 
 Once you are comfortable with the basics:
 
-1. **Use [`/supermemory`](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/)** — persistent memory across sessions
-2. **Use [`/tdd`](/claude-skills-guide/best-claude-skills-for-developers-2026/)** — add tests to existing code
-3. **Try [`/frontend-design`](/claude-skills-guide/best-claude-code-skills-for-frontend-development/)** — builds UI components that match your design system
+1. **Use [`/supermemory`](/claude-skills-token-optimization-reduce-api-costs/)** — persistent memory across sessions
+2. **Use [`/tdd`](/best-claude-skills-for-developers-2026/)** — add tests to existing code
+3. **Try [`/frontend-design`](/best-claude-code-skills-for-frontend-development/)** — builds UI components that match your design system
 4. **Read the hooks guide** — learn to control what Claude can do via shell hooks in `.claude/settings.json`
 
 Claude Code's power grows as you learn to structure tasks well and customize it for your workflow. Start simple, then layer in more capabilities.
@@ -187,8 +187,8 @@ Claude Code's power grows as you learn to structure tasks well and customize it 
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — The natural next step: an in-depth look at the most impactful skills to install once you have Claude Code running
-- [Skill .md File Format Explained With Examples](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — When you're ready to write your own skills, this guide explains the exact format and fields
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Understanding when Claude activates skills automatically helps you get more value from your setup as you grow beyond the basics
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — The natural next step: an in-depth look at the most impactful skills to install once you have Claude Code running
+- [Skill .md File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/) — When you're ready to write your own skills, this guide explains the exact format and fields
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — Understanding when Claude activates skills automatically helps you get more value from your setup as you grow beyond the basics
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

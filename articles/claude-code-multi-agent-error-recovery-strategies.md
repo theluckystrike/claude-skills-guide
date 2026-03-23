@@ -13,7 +13,7 @@ permalink: /claude-code-multi-agent-error-recovery-strategies/
 
 # Claude Code Multi-Agent Error Recovery Strategies
 
-[When building complex workflows with Claude Code, multi-agent architectures offer significant power but introduce new failure modes](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) A single agent failing can cascade through dependent tasks, and without proper error recovery, your entire workflow stalls. This guide covers practical strategies for building resilient multi-agent systems using Claude Code skills and patterns.
+[When building complex workflows with Claude Code, multi-agent architectures offer significant power but introduce new failure modes](/best-claude-code-skills-to-install-first-2026/) A single agent failing can cascade through dependent tasks, and without proper error recovery, your entire workflow stalls. This guide covers practical strategies for building resilient multi-agent systems using Claude Code skills and patterns.
 
 ## Understanding Multi-Agent Failure Modes
 
@@ -28,7 +28,7 @@ Each failure mode requires a different recovery approach, and the most reliable 
 
 ## Pattern 1: Explicit Error Handling with Try-Catch Blocks
 
-[The foundation of error recovery is wrapping risky operations in explicit error handlers](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) When using skills that perform file operations or external API calls, structure your prompts to include error handling instructions:
+[The foundation of error recovery is wrapping risky operations in explicit error handlers](/claude-skill-md-format-complete-specification-guide/) When using skills that perform file operations or external API calls, structure your prompts to include error handling instructions:
 
 ```
 /pdf extract tables from report.pdf and save results to extracted-data.json
@@ -100,7 +100,7 @@ Use the xlsx skill to analyze sales-data.xlsx and generate summary statistics
 —if that also fails, output a plain text summary of what data was found
 ```
 
-This pattern ensures the workflow always produces *some* output rather than failing entirely. The [supermemory](/claude-skills-guide/building-stateful-agents-with-claude-skills-guide/) skill can track which fallback strategies succeeded in previous runs:
+This pattern ensures the workflow always produces *some* output rather than failing entirely. The [supermemory](/building-stateful-agents-with-claude-skills-guide/) skill can track which fallback strategies succeeded in previous runs:
 
 ```
 /supermemory remember: when xlsx fails on large files (>100MB), 
@@ -329,7 +329,7 @@ async def log_error(context, error, recovery_action=None):
     })
 ```
 
-This complements external monitoring — see [Monitoring and Logging Claude Code Multi-Agent Systems](/claude-skills-guide/monitoring-and-logging-claude-code-multi-agent-systems/) — and gives agents the ability to reason about their own error history within a session.
+This complements external monitoring — see [Monitoring and Logging Claude Code Multi-Agent Systems](/monitoring-and-logging-claude-code-multi-agent-systems/) — and gives agents the ability to reason about their own error history within a session.
 
 ### Test Your Error Paths
 
@@ -345,9 +345,9 @@ Start with simple retry logic, add checkpointing for longer workflows, and progr
 
 ## Related Reading
 
-- [Claude Opus Orchestrator-Sonnet-Worker Architecture](/claude-skills-guide/claude-opus-orchestrator-sonnet-worker-architecture/) — Design fault-tolerant architectures with orchestrators that handle worker failures
-- [Claude Code Agent Pipeline: Sequential vs Parallel Execution](/claude-skills-guide/claude-code-agent-pipeline-sequential-vs-parallel/) — Choose pipeline execution models that minimize cascading errors
-- [Monitoring and Logging Claude Code Multi-Agent Systems](/claude-skills-guide/monitoring-and-logging-claude-code-multi-agent-systems/) — Detect and diagnose errors before they require manual recovery
-- [Claude Skills Hub](/claude-skills-guide/advanced-hub/) — Explore advanced multi-agent reliability and error handling patterns
+- [Claude Opus Orchestrator-Sonnet-Worker Architecture](/claude-opus-orchestrator-sonnet-worker-architecture/) — Design fault-tolerant architectures with orchestrators that handle worker failures
+- [Claude Code Agent Pipeline: Sequential vs Parallel Execution](/claude-code-agent-pipeline-sequential-vs-parallel/) — Choose pipeline execution models that minimize cascading errors
+- [Monitoring and Logging Claude Code Multi-Agent Systems](/monitoring-and-logging-claude-code-multi-agent-systems/) — Detect and diagnose errors before they require manual recovery
+- [Claude Skills Hub](/advanced-hub/) — Explore advanced multi-agent reliability and error handling patterns
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

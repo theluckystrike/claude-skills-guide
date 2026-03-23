@@ -16,11 +16,11 @@ permalink: /claude-code-i18n-workflow-for-react-applications-guide/
 
 # Claude Code i18n Workflow for React Applications Guide
 
-[Internationalization (i18n) remains one of the most challenging aspects of building React applications that serve global audiences](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Managing translation keys, coordinating with localization teams, and maintaining consistency across locales can quickly become overwhelming. This guide shows you how to use Claude Code to streamline your i18n workflow, reducing manual effort and preventing common mistakes.
+[Internationalization (i18n) remains one of the most challenging aspects of building React applications that serve global audiences](/best-claude-code-skills-to-install-first-2026/) Managing translation keys, coordinating with localization teams, and maintaining consistency across locales can quickly become overwhelming. This guide shows you how to use Claude Code to streamline your i18n workflow, reducing manual effort and preventing common mistakes.
 
 ## Setting Up Your React i18n Foundation
 
-[Before integrating Claude Code into your workflow, establish a solid i18n foundation in your React project](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) The most popular solutions include react-i18next for projects using React Router, or i18next for more comprehensive needs. Install your chosen library and configure the basic setup:
+[Before integrating Claude Code into your workflow, establish a solid i18n foundation in your React project](/claude-skill-md-format-complete-specification-guide/) The most popular solutions include react-i18next for projects using React Router, or i18next for more comprehensive needs. Install your chosen library and configure the basic setup:
 
 ```bash
 npm install i18next react-i18next i18next-http-backend
@@ -55,7 +55,7 @@ Claude maintains consistency in how it approaches translation keys because it ca
 
 ## Automating Key Extraction and Management
 
-One of the most valuable Claude Code skills for i18n work involves extracting translation keys from your React components. [The frontend-design skill provides patterns for analyzing component code](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) and identifying strings that require translation. Use this capability during code reviews to catch missing i18n keys before they reach production.
+One of the most valuable Claude Code skills for i18n work involves extracting translation keys from your React components. [The frontend-design skill provides patterns for analyzing component code](/best-claude-code-skills-to-install-first-2026/) and identifying strings that require translation. Use this capability during code reviews to catch missing i18n keys before they reach production.
 
 Create a Claude Code hook that runs during your development process. Configure it to scan modified components and report any hardcoded strings that should use translation keys instead. This proactive approach significantly reduces the "translation debt" that accumulates in larger projects.
 
@@ -92,7 +92,7 @@ When prompting Claude for translations, specify the plural forms you need:
 }
 ```
 
-This explicit approach ensures Claude generates translations that match your i18n library's expected format. [The tdd skill can help you write tests that verify pluralization works correctly](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) for each locale, catching edge cases before they affect users.
+This explicit approach ensures Claude generates translations that match your i18n library's expected format. [The tdd skill can help you write tests that verify pluralization works correctly](/claude-tdd-skill-test-driven-development-workflow/) for each locale, catching edge cases before they affect users.
 
 ## Building Locale Switching into Your Application
 
@@ -132,7 +132,7 @@ function LanguageSwitcher() {
 
 When your React application includes user-facing documentation or help content, you need to maintain translations for those materials as well. The pdf skill enables you to extract text from existing documentation files and feed them into your translation workflow. This proves particularly valuable when localizing user guides, legal disclaimers, or marketing materials that accompany your application.
 
-[The supermemory skill helps maintain institutional knowledge about your i18n decisions](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/). Store conventions for translation key naming, pluralization patterns, and locale-specific formatting rules so future development work maintains consistency.
+[The supermemory skill helps maintain institutional knowledge about your i18n decisions](/claude-supermemory-skill-persistent-context-explained/). Store conventions for translation key naming, pluralization patterns, and locale-specific formatting rules so future development work maintains consistency.
 
 ## Testing Your i18n Implementation
 
@@ -165,8 +165,8 @@ The investment in establishing this workflow pays dividends as your application 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 ## Related Reading
 
-- [Claude Code Multilingual Codebase Management Guide](/claude-skills-guide/claude-code-multilingual-codebase-management-guide/)
-- [Claude Code International Date Format Handling Workflow](/claude-skills-guide/claude-code-international-date-format-handling-workflow/)
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/)
-- [Workflows Hub](/claude-skills-guide/workflows-hub/)
+- [Claude Code Multilingual Codebase Management Guide](/claude-code-multilingual-codebase-management-guide/)
+- [Claude Code International Date Format Handling Workflow](/claude-code-international-date-format-handling-workflow/)
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/)
+- [Workflows Hub](/workflows-hub/)
 {% endraw %}

@@ -14,7 +14,7 @@ tags: [claude-code, claude-skills]
 
 
 {% raw %}
-Building a backend with Supabase and Claude Code together creates a powerful development workflow. This guide covers practical strategies to accelerate your backend development, from database schema design to implementing Row Level Security policies. For client-side integration patterns covering CRUD operations, authentication flows, real-time subscriptions, and file storage, see the [Claude Code with Supabase Backend Integration Guide](/claude-skills-guide/claude-code-with-supabase-backend-integration-guide/).
+Building a backend with Supabase and Claude Code together creates a powerful development workflow. This guide covers practical strategies to accelerate your backend development, from database schema design to implementing Row Level Security policies. For client-side integration patterns covering CRUD operations, authentication flows, real-time subscriptions, and file storage, see the [Claude Code with Supabase Backend Integration Guide](/claude-code-with-supabase-backend-integration-guide/).
 
 ## Why Supabase Works Well with Claude Code
 
@@ -374,9 +374,9 @@ Building efficient Supabase backends with Claude Code comes down to organized pr
 
 ## Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

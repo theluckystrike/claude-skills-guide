@@ -101,9 +101,9 @@ If you are calling the Claude API directly, Anthropic's prompt caching feature s
 
 For CI/CD integrations, filter what Claude sees. A PR with 50 changed files doesn't require Claude to review all of them. Pre-filter to changed files that touch application logic and skip generated files, lock files, and assets. This single change often halves the token cost of an automated PR review job.
 
-- [Claude Skills Token Optimization: Reduce API Costs Guide](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/)
-- [Claude Skills Context Window Management Best Practices](/claude-skills-guide/claude-md-too-long-context-window-optimization/)
-- [Claude Code Skills Context Window Exceeded Error Fix](/claude-skills-guide/claude-code-skills-context-window-exceeded-error-fix/)
+- [Claude Skills Token Optimization: Reduce API Costs Guide](/claude-skills-token-optimization-reduce-api-costs/)
+- [Claude Skills Context Window Management Best Practices](/claude-md-too-long-context-window-optimization/)
+- [Claude Code Skills Context Window Exceeded Error Fix](/claude-code-skills-context-window-exceeded-error-fix/)
 
 ---
 
@@ -182,36 +182,36 @@ For individual developers, Claude Code becomes cost-neutral compared to GitHub C
 
 | Article | What You'll Learn |
 |---------|-------------------|
-| [Claude Skills Token Optimization: Reduce API Costs Guide](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) | Concrete techniques for reducing token consumption |
-| [Claude Skills Context Window Management Best Practices](/claude-skills-guide/claude-md-too-long-context-window-optimization/) | Managing context budget across long sessions |
-| [Claude Code Skills Context Window Exceeded Error Fix](/claude-skills-guide/claude-code-skills-context-window-exceeded-error-fix/) | Fixing and preventing context overflow errors |
-| [Is Claude Code Worth It? An Honest Beginner Review 2026](/claude-skills-guide/is-claude-code-worth-it-honest-beginner-review-2026/) | Honest assessment of Claude Code's value |
-| [Claude Code vs GitHub Copilot Workspace 2026](/claude-skills-guide/claude-code-vs-github-copilot-workspace-2026/) | Full comparison: Claude Code vs GitHub Copilot |
-| [Claude Code vs Cursor 2026 Detailed Comparison](/claude-skills-guide/claude-code-vs-cursor-2026-detailed-comparison/) | Full comparison: Claude Code vs Cursor |
-| [Claude Code vs Replit Agent: Which Is Better in 2026?](/claude-skills-guide/claude-code-vs-replit-agent-which-is-better-2026/) | Full comparison: Claude Code vs Replit AI |
-| [Claude Code vs Amazon Q Developer Comparison 2026](/claude-skills-guide/claude-code-vs-amazon-q-developer-comparison-2026/) | Full comparison: Claude Code vs Amazon Q |
-| [Claude Code vs OpenAI Codex CLI: 2026 Comparison](/claude-skills-guide/claude-code-vs-openai-codex-cli-comparison-2026/) | Full comparison: Claude Code vs OpenAI Codex CLI |
-| [Claude Code vs Devin AI Agent: 2026 Comparison](/claude-skills-guide/claude-code-vs-devin-ai-agent-comparison-2026/) | Full comparison: Claude Code vs Devin |
-| [Claude Code vs Windsurf for AI Development](/claude-skills-guide/claude-code-vs-windsurf-for-ai-development/) | Full comparison: Claude Code vs Windsurf |
-| [Claude Code vs Gemini CLI for Developers 2026](/claude-skills-guide/claude-code-vs-gemini-cli-for-developers-2026/) | Full comparison: Claude Code vs Gemini CLI |
-| [Claude Skills vs Custom GPTs: 2026 Comparison](/claude-skills-guide/claude-skills-vs-custom-gpts-comparison-2026/) | How Claude skills compare to OpenAI Custom GPTs |
-| [Claude Skills vs OpenAI Assistants API Comparison](/claude-skills-guide/claude-skills-vs-openai-assistants-api-comparison/) | Claude skills vs the OpenAI Assistants API |
-| [Claude Opus 4.6 vs GPT-4o for Coding Tasks: 2026 Comparison](/claude-skills-guide/claude-opus-46-vs-gpt-4o-for-coding-tasks-comparison/) | Model-level comparison for coding performance |
-| [Official vs Community Claude Skills Guide (2026)](/claude-skills-guide/anthropic-official-skills-vs-community-skills-comparison/) | Comparing official Anthropic skills vs community-built skills |
-| [Claude Code Skills vs Bolt.new: 2026 Comparison Guide](/claude-skills-guide/claude-code-skills-vs-bolt-new-for-web-development/) | Claude Code vs Bolt.new for web development |
-| [MCP Servers vs Claude Skills: What Is the Difference?](/claude-skills-guide/mcp-servers-vs-claude-skills-what-is-the-difference/) | Understanding MCP vs skills for cost and capability planning |
-| [Claude 4 Skills: New Features and Improvements Guide](/claude-skills-guide/claude-4-skills-improvements-and-new-features/) | What changed in Claude 4 that affects cost and capability |
+| [Claude Skills Token Optimization: Reduce API Costs Guide](/claude-skills-token-optimization-reduce-api-costs/) | Concrete techniques for reducing token consumption |
+| [Claude Skills Context Window Management Best Practices](/claude-md-too-long-context-window-optimization/) | Managing context budget across long sessions |
+| [Claude Code Skills Context Window Exceeded Error Fix](/claude-code-skills-context-window-exceeded-error-fix/) | Fixing and preventing context overflow errors |
+| [Is Claude Code Worth It? An Honest Beginner Review 2026](/is-claude-code-worth-it-honest-beginner-review-2026/) | Honest assessment of Claude Code's value |
+| [Claude Code vs GitHub Copilot Workspace 2026](/claude-code-vs-github-copilot-workspace-2026/) | Full comparison: Claude Code vs GitHub Copilot |
+| [Claude Code vs Cursor 2026 Detailed Comparison](/claude-code-vs-cursor-2026-detailed-comparison/) | Full comparison: Claude Code vs Cursor |
+| [Claude Code vs Replit Agent: Which Is Better in 2026?](/claude-code-vs-replit-agent-which-is-better-2026/) | Full comparison: Claude Code vs Replit AI |
+| [Claude Code vs Amazon Q Developer Comparison 2026](/claude-code-vs-amazon-q-developer-comparison-2026/) | Full comparison: Claude Code vs Amazon Q |
+| [Claude Code vs OpenAI Codex CLI: 2026 Comparison](/claude-code-vs-openai-codex-cli-comparison-2026/) | Full comparison: Claude Code vs OpenAI Codex CLI |
+| [Claude Code vs Devin AI Agent: 2026 Comparison](/claude-code-vs-devin-ai-agent-comparison-2026/) | Full comparison: Claude Code vs Devin |
+| [Claude Code vs Windsurf for AI Development](/claude-code-vs-windsurf-for-ai-development/) | Full comparison: Claude Code vs Windsurf |
+| [Claude Code vs Gemini CLI for Developers 2026](/claude-code-vs-gemini-cli-for-developers-2026/) | Full comparison: Claude Code vs Gemini CLI |
+| [Claude Skills vs Custom GPTs: 2026 Comparison](/claude-skills-vs-custom-gpts-comparison-2026/) | How Claude skills compare to OpenAI Custom GPTs |
+| [Claude Skills vs OpenAI Assistants API Comparison](/claude-skills-vs-openai-assistants-api-comparison/) | Claude skills vs the OpenAI Assistants API |
+| [Claude Opus 4.6 vs GPT-4o for Coding Tasks: 2026 Comparison](/claude-opus-46-vs-gpt-4o-for-coding-tasks-comparison/) | Model-level comparison for coding performance |
+| [Official vs Community Claude Skills Guide (2026)](/anthropic-official-skills-vs-community-skills-comparison/) | Comparing official Anthropic skills vs community-built skills |
+| [Claude Code Skills vs Bolt.new: 2026 Comparison Guide](/claude-code-skills-vs-bolt-new-for-web-development/) | Claude Code vs Bolt.new for web development |
+| [MCP Servers vs Claude Skills: What Is the Difference?](/mcp-servers-vs-claude-skills-what-is-the-difference/) | Understanding MCP vs skills for cost and capability planning |
+| [Claude 4 Skills: New Features and Improvements Guide](/claude-4-skills-improvements-and-new-features/) | What changed in Claude 4 that affects cost and capability |
 
 ---
 
 ## Related Reading
 
-- [Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Foundations: what skills are, the .md format, and writing your first skill
-- [Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — Fix every common skill error: permissions, YAML, context overflow, and more
-- [Integrations Hub](/claude-skills-guide/integrations-hub/) — Connect skills to GitHub Actions, n8n, Supabase, Slack, and more
-- [Comparisons Hub](/claude-skills-guide/comparisons-hub/) — How Claude Code stacks up against Copilot, Cursor, and other tools
-- [Workflows Hub](/claude-skills-guide/workflows-hub/) — Practical skill workflows for code review, documentation, and CI/CD
-- [Projects Hub](/claude-skills-guide/projects-hub/) — Build real SaaS apps, CLI tools, and APIs using Claude skills
+- [Getting Started Hub](/getting-started-hub/) — Foundations: what skills are, the .md format, and writing your first skill
+- [Troubleshooting Hub](/troubleshooting-hub/) — Fix every common skill error: permissions, YAML, context overflow, and more
+- [Integrations Hub](/integrations-hub/) — Connect skills to GitHub Actions, n8n, Supabase, Slack, and more
+- [Comparisons Hub](/comparisons-hub/) — How Claude Code stacks up against Copilot, Cursor, and other tools
+- [Workflows Hub](/workflows-hub/) — Practical skill workflows for code review, documentation, and CI/CD
+- [Projects Hub](/projects-hub/) — Build real SaaS apps, CLI tools, and APIs using Claude skills
 
 ---
 

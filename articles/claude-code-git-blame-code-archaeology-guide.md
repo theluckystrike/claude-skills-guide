@@ -168,9 +168,9 @@ Git blame transforms code files from static text into historical documents. Comb
 
 ## Related Reading
 
-- [Claude Code Git Workflow Best Practices Guide](/claude-skills-guide/claude-code-git-workflow-best-practices-guide/) — Good practices make blame archaeology easier
-- [How to Make Claude Code Understand Domain Business Logic](/claude-skills-guide/how-to-make-claude-code-understand-domain-business-logic/) — Understanding history is key to domain knowledge
-- [Why Is Claude Code Good at Understanding Legacy Code](/claude-skills-guide/why-is-claude-code-good-at-understanding-legacy-code/) — Legacy code analysis complements git blame
-- [Claude Skills Tutorials Hub](/claude-skills-guide/tutorials-hub/) — More Claude Code how-to guides
+- [Claude Code Git Workflow Best Practices Guide](/claude-code-git-workflow-best-practices-guide/) — Good practices make blame archaeology easier
+- [How to Make Claude Code Understand Domain Business Logic](/how-to-make-claude-code-understand-domain-business-logic/) — Understanding history is key to domain knowledge
+- [Why Is Claude Code Good at Understanding Legacy Code](/why-is-claude-code-good-at-understanding-legacy-code/) — Legacy code analysis complements git blame
+- [Claude Skills Tutorials Hub](/tutorials-hub/) — More Claude Code how-to guides
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

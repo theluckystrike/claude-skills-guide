@@ -14,9 +14,9 @@ permalink: /claude-code-dart-flutter-cross-platform-development-guide/
 {% raw %}
 # Claude Code Dart Flutter Cross Platform Development Guide
 
-[Cross-platform development has become essential for developers](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) who want to reach users across iOS, Android, web, and desktop from a single codebase. Dart and Flutter provide a mature framework for this goal, and Claude Code accelerates your workflow by handling repetitive tasks, generating boilerplate, and assisting with debugging.
+[Cross-platform development has become essential for developers](/best-claude-code-skills-to-install-first-2026/) who want to reach users across iOS, Android, web, and desktop from a single codebase. Dart and Flutter provide a mature framework for this goal, and Claude Code accelerates your workflow by handling repetitive tasks, generating boilerplate, and assisting with debugging.
 
-[This guide covers practical strategies for building Flutter applications with Claude Code](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/), focusing on workflow automation, testing, and state management.
+[This guide covers practical strategies for building Flutter applications with Claude Code](/claude-tdd-skill-test-driven-development-workflow/), focusing on workflow automation, testing, and state management.
 
 ## Setting Up Your Flutter Workflow with Claude
 
@@ -131,7 +131,7 @@ class AppState extends ChangeNotifier {
 
 Claude can also generate the corresponding widget bindings, making it easy to connect your UI to state providers across your entire app.
 
-The [**tdd** skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) proves invaluable here. It guides you through test-driven development, ensuring your state management logic works correctly before building UI components. When implementing complex state flows, write tests first using the tdd workflow, then implement the code to pass those tests.
+The [**tdd** skill](/best-claude-skills-for-developers-2026/) proves invaluable here. It guides you through test-driven development, ensuring your state management logic works correctly before building UI components. When implementing complex state flows, write tests first using the tdd workflow, then implement the code to pass those tests.
 
 ## Building UI Components with Claude
 
@@ -417,7 +417,7 @@ Flutter performance tuning involves several areas where Claude provides guidance
 - **ListView.builder**: For long lists, always use lazy loading
 - **Image caching**: Use `cached_network_image` for remote images
 
-Claude analyzes your code and suggests specific optimizations. The [**supermemory** skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) helps track performance metrics across builds, creating a historical record of app size, startup time, and frame rates.
+Claude analyzes your code and suggests specific optimizations. The [**supermemory** skill](/claude-skills-token-optimization-reduce-api-costs/) helps track performance metrics across builds, creating a historical record of app size, startup time, and frame rates.
 
 Use Claude to analyze and optimize your build times:
 
@@ -590,10 +590,10 @@ Start with a clean architecture, write tests first using the tdd workflow, and l
 
 ## Related Reading
 
-- [Best Claude Skills for Frontend and UI Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) — Frontend-focused skills for building polished interfaces
-- [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Core developer skills for any stack including Flutter
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Automatically trigger the right skill for frontend or test tasks
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Best Claude Skills for Frontend and UI Development](/best-claude-code-skills-for-frontend-development/) — Frontend-focused skills for building polished interfaces
+- [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/) — Core developer skills for any stack including Flutter
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — Automatically trigger the right skill for frontend or test tasks
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -281,10 +281,10 @@ The key patterns are: isolate each test run with fresh volumes, mock external de
 
 ## Related Reading
 
-- [Claude Code Test Environment Management Guide](/claude-skills-guide/claude-code-test-environment-management-guide/)
-- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/)
-- [Claude Code Mutation Testing Workflow Guide](/claude-skills-guide/claude-code-mutation-testing-workflow-guide/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Code Test Environment Management Guide](/claude-code-test-environment-management-guide/)
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/)
+- [Claude Code Mutation Testing Workflow Guide](/claude-code-mutation-testing-workflow-guide/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 

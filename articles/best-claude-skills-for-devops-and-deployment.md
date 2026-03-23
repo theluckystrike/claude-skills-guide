@@ -16,11 +16,11 @@ permalink: /best-claude-skills-for-devops-and-deployment/
 
 # Best Claude Skills for DevOps and Deployment
 
-[Claude Code has skills that accelerate DevOps work](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/): shell scripting, infrastructure-as-code, container management, CI/CD pipelines, and database migrations. Here are the most useful ones.
+[Claude Code has skills that accelerate DevOps work](/best-claude-code-skills-to-install-first-2026/): shell scripting, infrastructure-as-code, container management, CI/CD pipelines, and database migrations. Here are the most useful ones.
 
 ## Infrastructure Automation
 
-[For DevOps shell scripting tasks, describe your goal directly to Claude Code](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) Claude helps you craft reliable bash scripts, deployment scripts, and pipeline automation.
+[For DevOps shell scripting tasks, describe your goal directly to Claude Code](/claude-tdd-skill-test-driven-development-workflow/) Claude helps you craft reliable bash scripts, deployment scripts, and pipeline automation.
 
 For example, when deploying a Docker container and checking its status, Claude can help you create reliable scripts:
 
@@ -57,7 +57,7 @@ COPY --from=builder /app/main /app/
 ENTRYPOINT ["/app/main"]
 ```
 
-Claude skills help you understand multi-stage builds, security best practices, and optimization techniques that directly impact your deployment speed and security posture. For a broader picture of how official and community security skills stack up, see [Official vs Community Claude Skills: Which Should You Use?](/claude-skills-guide/anthropic-official-skills-vs-community-skills-comparison/).
+Claude skills help you understand multi-stage builds, security best practices, and optimization techniques that directly impact your deployment speed and security posture. For a broader picture of how official and community security skills stack up, see [Official vs Community Claude Skills: Which Should You Use?](/anthropic-official-skills-vs-community-skills-comparison/).
 
 ## Configuration Management and Infrastructure as Code
 
@@ -136,7 +136,7 @@ kubectl logs -l app=myapp --tail=100 --timestamps=true
 kubectl logs -f deployment/myapp --tail=50
 ```
 
-These capabilities accelerate incident response and help you identify root causes faster. If your monitoring pipelines generate data reports, combine this with the skills in [Best Claude Skills for Data Analysis](/claude-skills-guide/best-claude-skills-for-data-analysis/) for automated log summarization.
+These capabilities accelerate incident response and help you identify root causes faster. If your monitoring pipelines generate data reports, combine this with the skills in [Best Claude Skills for Data Analysis](/best-claude-skills-for-data-analysis/) for automated log summarization.
 
 ## Security Hardening for Deployments
 
@@ -350,9 +350,9 @@ Start with the skills that address your most frequent pain points — shell scri
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Core developer skills that complement DevOps workflows
-- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) — Frontend skills for full-stack deployment pipelines
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep automation costs low as pipelines scale
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Core developer skills that complement DevOps workflows
+- [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/) — Frontend skills for full-stack deployment pipelines
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — Keep automation costs low as pipelines scale
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

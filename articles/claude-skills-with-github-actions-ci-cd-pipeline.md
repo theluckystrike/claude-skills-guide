@@ -16,7 +16,7 @@ permalink: /claude-skills-with-github-actions-ci-cd-pipeline/
 
 # Claude Skills with GitHub Actions CI/CD Pipeline
 
-[Integrating Claude Code with a GitHub Actions CI/CD pipeline](/claude-skills-guide/claude-code-github-actions-workflow-matrix-strategy-guide/) gives development teams an automated assistant that participates directly in their build, test, and deployment workflows. This guide covers practical patterns for wiring Claude intelligence into your existing pipelines — from triggering AI-powered code review on pull requests to generating PDF reports from test results.
+[Integrating Claude Code with a GitHub Actions CI/CD pipeline](/claude-code-github-actions-workflow-matrix-strategy-guide/) gives development teams an automated assistant that participates directly in their build, test, and deployment workflows. This guide covers practical patterns for wiring Claude intelligence into your existing pipelines — from triggering AI-powered code review on pull requests to generating PDF reports from test results.
 
 ## Why Combine Claude with GitHub Actions
 
@@ -24,7 +24,7 @@ GitHub Actions handles orchestration. Claude handles intelligence. Together they
 
 Common use cases include:
 
-- [Automated code review comments on PRs](/claude-skills-guide/best-claude-skills-for-code-review-automation/) analyzing test coverage
+- [Automated code review comments on PRs](/best-claude-skills-for-code-review-automation/) analyzing test coverage
 - PDF report generation from test results
 - Accessibility and design checks on front-end PRs
 - Security analysis of infrastructure diffs before deployment
@@ -43,7 +43,7 @@ In your GitHub repository, go to **Settings > Secrets and variables > Actions** 
 ANTHROPIC_API_KEY=your_api_key_here
 ```
 
-[Never hardcode credentials in your workflow files](/claude-skills-guide/claude-code-permissions-model-security-guide-2026/).
+[Never hardcode credentials in your workflow files](/claude-code-permissions-model-security-guide-2026/).
 
 ## Step 2: Call Claude via the Anthropic API
 
@@ -235,7 +235,7 @@ Cache the Anthropic SDK installation to reduce workflow time:
 
 ## Handling Rate Limits
 
-[Claude API calls in CI can hit rate limits](/claude-skills-guide/claude-code-skill-timeout-error-how-to-increase-the-limit/) if many PRs open simultaneously. Implement retry logic in your Node.js scripts:
+[Claude API calls in CI can hit rate limits](/claude-code-skill-timeout-error-how-to-increase-the-limit/) if many PRs open simultaneously. Implement retry logic in your Node.js scripts:
 
 ```javascript
 async function callClaudeWithRetry(params, maxRetries = 3) {
@@ -264,15 +264,15 @@ async function callClaudeWithRetry(params, maxRetries = 3) {
 
 ## Conclusion
 
-Wiring Claude intelligence into GitHub Actions CI/CD [bridges the gap between automated testing](/claude-skills-guide/integrations-hub/). The key is calling the Anthropic API directly via the SDK in Node.js scripts rather than attempting to use Claude Code's interactive CLI in headless environments. Start with the PR review workflow and expand to deployment gates once you trust the output quality.
+Wiring Claude intelligence into GitHub Actions CI/CD [bridges the gap between automated testing](/integrations-hub/). The key is calling the Anthropic API directly via the SDK in Node.js scripts rather than attempting to use Claude Code's interactive CLI in headless environments. Start with the PR review workflow and expand to deployment gates once you trust the output quality.
 
 ---
 
 ## Related Reading
 
-- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — Skills that integrate with CI/CD workflows
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Full developer skill stack
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep CI/CD API costs under control
+- [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/) — Skills that integrate with CI/CD workflows
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Full developer skill stack
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — Keep CI/CD API costs under control
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 

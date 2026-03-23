@@ -96,9 +96,9 @@ For teams maintaining large codebases—whether monorepos, legacy systems, or so
 
 ## Related Reading
 
-- [Why Is Claude Code Good at Understanding Legacy Code](/claude-skills-guide/why-is-claude-code-good-at-understanding-legacy-code/) — Complex codebases often include legacy code
-- [Why Does Claude Code Need So Much Context Window](/claude-skills-guide/why-does-claude-code-need-so-much-context-window/) — Context window is key for complex codebase work
-- [Why Do Teams Switch from Copilot to Claude Code](/claude-skills-guide/why-do-teams-switch-from-copilot-to-claude-code/) — Teams with complex codebases often make this switch
-- [Advanced Claude Skills Hub](/claude-skills-guide/advanced-hub/) — Advanced patterns for complex codebases
+- [Why Is Claude Code Good at Understanding Legacy Code](/why-is-claude-code-good-at-understanding-legacy-code/) — Complex codebases often include legacy code
+- [Why Does Claude Code Need So Much Context Window](/why-does-claude-code-need-so-much-context-window/) — Context window is key for complex codebase work
+- [Why Do Teams Switch from Copilot to Claude Code](/why-do-teams-switch-from-copilot-to-claude-code/) — Teams with complex codebases often make this switch
+- [Advanced Claude Skills Hub](/advanced-hub/) — Advanced patterns for complex codebases
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

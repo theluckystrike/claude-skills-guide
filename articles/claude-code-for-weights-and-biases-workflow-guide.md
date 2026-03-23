@@ -285,12 +285,12 @@ The key is to establish good logging practices early and use Claude's understand
 
 ## Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
-- [Claude Skills for Data Science and Jupyter: 2026 Guide](/claude-skills-guide/claude-skills-for-data-science-and-jupyter-notebooks/) — combine Jupyter notebooks with Claude skills for end-to-end ML workflows
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — apply TDD to ML training pipelines and evaluation scripts
-- [Claude Code LLM Evaluation and Benchmarking Workflow](/claude-skills-guide/claude-code-for-llm-evaluation-workflow-guide/) — systematically evaluate and compare model performance
-- [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/) — automate experiment tracking as part of your CI/CD pipeline
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Skills for Data Science and Jupyter: 2026 Guide](/claude-skills-for-data-science-and-jupyter-notebooks/) — combine Jupyter notebooks with Claude skills for end-to-end ML workflows
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/) — apply TDD to ML training pipelines and evaluation scripts
+- [Claude Code LLM Evaluation and Benchmarking Workflow](/claude-code-for-llm-evaluation-workflow-guide/) — systematically evaluate and compare model performance
+- [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-with-github-actions-ci-cd-pipeline/) — automate experiment tracking as part of your CI/CD pipeline
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

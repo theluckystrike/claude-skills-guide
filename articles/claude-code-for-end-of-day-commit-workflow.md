@@ -245,9 +245,9 @@ The key is customizing the workflow to match how you actually work. Every team h
 
 ## Related Reading
 
-- [Claude Code Gitignore Best Practices](/claude-skills-guide/claude-code-gitignore-best-practices/) — Keep your end-of-day commits clean by excluding the right file patterns before staging
-- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Add automated test validation as a pre-commit gate in your daily workflow
-- [Claude SuperMemory Skill: Persistent Context Explained](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) — Maintain daily progress context so commit messages stay meaningful and traceable
-- [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — Explore more Claude Code automation workflows for daily development tasks
+- [Claude Code Gitignore Best Practices](/claude-code-gitignore-best-practices/) — Keep your end-of-day commits clean by excluding the right file patterns before staging
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/) — Add automated test validation as a pre-commit gate in your daily workflow
+- [Claude SuperMemory Skill: Persistent Context Explained](/claude-supermemory-skill-persistent-context-explained/) — Maintain daily progress context so commit messages stay meaningful and traceable
+- [Claude Skills Workflows Hub](/workflows-hub/) — Explore more Claude Code automation workflows for daily development tasks
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

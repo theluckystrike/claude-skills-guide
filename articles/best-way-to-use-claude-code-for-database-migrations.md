@@ -99,7 +99,7 @@ Several Claude skills enhance the migration workflow when used together with Cla
 
 For teams using Prisma, the workflow becomes even tighter. Describe your schema changes, let Claude Code generate the Prisma schema updates, then use `npx prisma migrate dev` to create the actual migration files.
 
-If you find yourself running the same type of migrations repeatedly—adding audit columns, splitting contact fields, standardising index naming—consider encoding those patterns as a reusable Claude skill rather than re-prompting each time. See [Claude Skills for Creating Database Migration Scripts](/claude-skills-guide/claude-skills-for-creating-database-migration-scripts/) for how to build a dedicated `db-migration` skill that captures your project's conventions and generates production-ready scripts automatically.
+If you find yourself running the same type of migrations repeatedly—adding audit columns, splitting contact fields, standardising index naming—consider encoding those patterns as a reusable Claude skill rather than re-prompting each time. See [Claude Skills for Creating Database Migration Scripts](/claude-skills-for-creating-database-migration-scripts/) for how to build a dedicated `db-migration` skill that captures your project's conventions and generates production-ready scripts automatically.
 
 ## Handling Complex Scenarios
 
@@ -205,9 +205,9 @@ By pairing Claude Code with skills like tdd for testing, pdf for documentation, 
 
 ## Related Reading
 
-- [Claude Skills for Creating Database Migration Scripts](/claude-skills-guide/claude-skills-for-creating-database-migration-scripts/) — Once you know your patterns from interactive use, encode them as a reusable `db-migration` skill
-- [Using Claude Code with Prisma ORM Database Migrations](/claude-skills-guide/using-claude-code-with-prisma-orm-database-migrations/) — See also
-- [Should I Use Claude Code for Production Database Migrations](/claude-skills-guide/should-i-use-claude-code-for-production-database-migrations/) — See also
-- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/) — See also
+- [Claude Skills for Creating Database Migration Scripts](/claude-skills-for-creating-database-migration-scripts/) — Once you know your patterns from interactive use, encode them as a reusable `db-migration` skill
+- [Using Claude Code with Prisma ORM Database Migrations](/using-claude-code-with-prisma-orm-database-migrations/) — See also
+- [Should I Use Claude Code for Production Database Migrations](/should-i-use-claude-code-for-production-database-migrations/) — See also
+- [Claude Code Tutorials Hub](/tutorials-hub/) — See also
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

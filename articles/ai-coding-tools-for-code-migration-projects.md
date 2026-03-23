@@ -259,13 +259,13 @@ Remember that AI tools excel at generating starting points and handling repetiti
 Start with thorough assessment, maintain rigorous testing, and use AI assistance to handle the mechanical aspects of translation. Your migrated codebase will benefit from both modern infrastructure and the accumulated wisdom of your existing implementation. The teams that execute migrations most reliably are not those who automate the most — they are those who automate the right things while applying careful human judgment where it matters.
 
 
-**Related guides:** [Best AI Tools for Code Refactoring in 2026](https://theluckystrike.github.io/claude-skills-guide/best-ai-tools-for-code-refactoring-2026/)
+**Related guides:** [Best AI Tools for Code Refactoring in 2026](https://theluckystrike.github.io/best-ai-tools-for-code-refactoring-2026/)
 
 ## Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
 - [Claude Code for jQuery to React Migration Workflow](/claude-code-for-jquery-to-react-migration-workflow/) — A concrete migration example: how Claude Code automates the jQuery-to-React rewrite pattern step by step.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

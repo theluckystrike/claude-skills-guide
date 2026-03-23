@@ -13,7 +13,7 @@ permalink: /claude-code-tmux-session-management-multi-agent-workflow/
 
 # Claude Code Tmux Session Management Multi Agent Workflow
 
-When building [sophisticated AI-powered development workflows](/claude-skills-guide/advanced-hub/) with Claude Code, managing multiple concurrent agent sessions becomes essential. Tmux (terminal multiplexer) provides the infrastructure needed to spawn, monitor, and coordinate multiple Claude Code instances running in parallel. This approach transforms Claude Code from a single interactive assistant into a capable multi-agent orchestration system.
+When building [sophisticated AI-powered development workflows](/advanced-hub/) with Claude Code, managing multiple concurrent agent sessions becomes essential. Tmux (terminal multiplexer) provides the infrastructure needed to spawn, monitor, and coordinate multiple Claude Code instances running in parallel. This approach transforms Claude Code from a single interactive assistant into a capable multi-agent orchestration system.
 
 ## Why Tmux for Claude Code Multi Agent Workflows
 
@@ -107,7 +107,7 @@ These functions form the building blocks for sophisticated orchestration logic. 
 
 ## Implementing Coordination Patterns
 
-With the foundation in place, implement coordination patterns that determine how agents interact. The [fan-out-fan-in pattern](/claude-skills-guide/claude-code-agent-pipeline-sequential-vs-parallel/) with tmux-managed Claude Code agents:
+With the foundation in place, implement coordination patterns that determine how agents interact. The [fan-out-fan-in pattern](/claude-code-agent-pipeline-sequential-vs-parallel/) with tmux-managed Claude Code agents:
 
 ```bash
 #!/bin/bash
@@ -220,7 +220,7 @@ For session persistence and recovery, consider the **tmux-resurrect** plugin, wh
 
 ## Best Practices and Common Pitfalls
 
-When building tmux-based multi-agent systems, avoid [spawning unlimited sessions](/claude-skills-guide/parallel-subagents-claude-code-best-practices-2026/). Monitor system resources and cap concurrent agents based on available CPU and memory. Each Claude Code instance consumes resources even in print mode.
+When building tmux-based multi-agent systems, avoid [spawning unlimited sessions](/parallel-subagents-claude-code-best-practices-2026/). Monitor system resources and cap concurrent agents based on available CPU and memory. Each Claude Code instance consumes resources even in print mode.
 
 Implement proper error handling for agent failures. Network interruptions or API timeouts can cause agents to exit unexpectedly. Your orchestration should detect these conditions and either retry or escalate:
 
@@ -259,9 +259,9 @@ Building multi-agent workflows with Claude Code and tmux transforms your termina
 
 ## Related Reading
 
-- [Claude Code Agent Pipeline: Sequential vs Parallel Execution](/claude-skills-guide/claude-code-agent-pipeline-sequential-vs-parallel/) — Design the execution model for agents you manage across tmux sessions
-- [Claude Opus Orchestrator-Sonnet-Worker Architecture](/claude-skills-guide/claude-opus-orchestrator-sonnet-worker-architecture/) — Implement orchestrator-worker patterns inside tmux-managed agent sessions
-- [Multi-Agent Orchestration with Claude Subagents Guide](/claude-skills-guide/multi-agent-orchestration-with-claude-subagents-guide/) — Coordinate Claude subagents in persistent multi-window workflows
-- [Claude Skills Hub](/claude-skills-guide/advanced-hub/) — Explore advanced multi-agent orchestration and terminal management patterns
+- [Claude Code Agent Pipeline: Sequential vs Parallel Execution](/claude-code-agent-pipeline-sequential-vs-parallel/) — Design the execution model for agents you manage across tmux sessions
+- [Claude Opus Orchestrator-Sonnet-Worker Architecture](/claude-opus-orchestrator-sonnet-worker-architecture/) — Implement orchestrator-worker patterns inside tmux-managed agent sessions
+- [Multi-Agent Orchestration with Claude Subagents Guide](/multi-agent-orchestration-with-claude-subagents-guide/) — Coordinate Claude subagents in persistent multi-window workflows
+- [Claude Skills Hub](/advanced-hub/) — Explore advanced multi-agent orchestration and terminal management patterns
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

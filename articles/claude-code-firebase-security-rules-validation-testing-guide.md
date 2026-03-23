@@ -13,17 +13,17 @@ permalink: /claude-code-firebase-security-rules-validation-testing-guide/
 
 # Claude Code Firebase Security Rules Validation Testing Guide
 
-Firebase security rules are the gatekeepers of your backend data. Writing rules that are both secure and functional requires rigorous testing, yet many developers struggle with validating their rules effectively. This guide shows you how to use Claude Code to validate, test, and debug Firebase security rules efficiently. For broader security scanning across your codebase, the [OWASP Top 10 security scanning workflow](/claude-skills-guide/claude-code-owasp-top-10-security-scanning-workflow/) covers common vulnerability patterns.
+Firebase security rules are the gatekeepers of your backend data. Writing rules that are both secure and functional requires rigorous testing, yet many developers struggle with validating their rules effectively. This guide shows you how to use Claude Code to validate, test, and debug Firebase security rules efficiently. For broader security scanning across your codebase, the [OWASP Top 10 security scanning workflow](/claude-code-owasp-top-10-security-scanning-workflow/) covers common vulnerability patterns.
 
 ## Understanding Firebase Rules Validation
 
-[Firebase security rules operate on a declarative language specific to each product](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)—Firestore, Realtime Database, and Storage each have their own syntax. A single misconfiguration can expose user data or lock legitimate users out entirely. Validation isn't optional; it's essential.
+[Firebase security rules operate on a declarative language specific to each product](/best-claude-code-skills-to-install-first-2026/)—Firestore, Realtime Database, and Storage each have their own syntax. A single misconfiguration can expose user data or lock legitimate users out entirely. Validation isn't optional; it's essential.
 
 When you write Firebase rules, you need to verify that they allow intended operations while blocking unauthorized access. This requires testing against various scenarios: authenticated vs. anonymous users, different document paths, varied data structures, and edge cases that might slip through initial reviews.
 
 ## Setting Up Claude Code for Firebase Rules Testing
 
-[Claude Code can assist with Firebase rules validation through its file operations and bash execution capabilities](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) The key is structuring your workflow so Claude can analyze your rules and suggest improvements based on Firebase's validation logic.
+[Claude Code can assist with Firebase rules validation through its file operations and bash execution capabilities](/claude-tdd-skill-test-driven-development-workflow/) The key is structuring your workflow so Claude can analyze your rules and suggest improvements based on Firebase's validation logic.
 
 First, ensure your Firebase project has the CLI installed:
 
@@ -94,7 +94,7 @@ async function testUserRules() {
 }
 ```
 
-The [**tdd** skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) can help you structure these tests following test-driven development principles. Write your tests first, watch them fail with current rules, then refine rules until tests pass.
+The [**tdd** skill](/claude-tdd-skill-test-driven-development-workflow/) can help you structure these tests following test-driven development principles. Write your tests first, watch them fail with current rules, then refine rules until tests pass.
 
 ## Debugging Rules with Claude Code
 
@@ -245,9 +245,9 @@ This audit workflow pairs naturally with the emulator-based testing described ab
 
 ## Related Reading
 
-- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Master the tdd skill for structured test-first development, including Firebase emulator test suites
-- [Claude Code OWASP Top 10 Security Scanning Workflow](/claude-skills-guide/claude-code-owasp-top-10-security-scanning-workflow/) — Extend Firebase security rule validation with broader OWASP security scanning for your application
-- [Claude Code SOC 2 Compliance Audit Preparation Guide 2026](/claude-skills-guide/claude-code-soc2-compliance-audit-preparation-guide-2026/) — Use security validation workflows as evidence for SOC 2 compliance audits
-- [Claude Skills Use Cases Hub](/claude-skills-guide/use-cases-hub/) — Explore more security and compliance-focused skill workflows for real-world applications
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/) — Master the tdd skill for structured test-first development, including Firebase emulator test suites
+- [Claude Code OWASP Top 10 Security Scanning Workflow](/claude-code-owasp-top-10-security-scanning-workflow/) — Extend Firebase security rule validation with broader OWASP security scanning for your application
+- [Claude Code SOC 2 Compliance Audit Preparation Guide 2026](/claude-code-soc2-compliance-audit-preparation-guide-2026/) — Use security validation workflows as evidence for SOC 2 compliance audits
+- [Claude Skills Use Cases Hub](/use-cases-hub/) — Explore more security and compliance-focused skill workflows for real-world applications
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

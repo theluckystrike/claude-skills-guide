@@ -155,9 +155,9 @@ For teams already working in terminal environments, value transparency in AI rea
 
 ## Related Reading
 
-- [Claude Code vs GitHub Copilot Workspace 2026](/claude-skills-guide/claude-code-vs-github-copilot-workspace-2026/) — Direct feature-by-feature comparison
-- [Why Is Claude Code Popular for Complex Codebases](/claude-skills-guide/why-is-claude-code-popular-for-complex-codebases/) — What drives teams to choose Claude Code
-- [Is Claude Code Worth It for Solo Developers and Freelancers](/claude-skills-guide/is-claude-code-worth-it-for-solo-developers-freelancers/) — ROI analysis for individual developers
-- [Claude Code Free Tier vs Pro Plan Feature Comparison 2026](/claude-skills-guide/claude-code-free-tier-vs-pro-plan-feature-comparison-2026/) — What you get for the price
+- [Claude Code vs GitHub Copilot Workspace 2026](/claude-code-vs-github-copilot-workspace-2026/) — Direct feature-by-feature comparison
+- [Why Is Claude Code Popular for Complex Codebases](/why-is-claude-code-popular-for-complex-codebases/) — What drives teams to choose Claude Code
+- [Is Claude Code Worth It for Solo Developers and Freelancers](/is-claude-code-worth-it-for-solo-developers-freelancers/) — ROI analysis for individual developers
+- [Claude Code Free Tier vs Pro Plan Feature Comparison 2026](/claude-code-free-tier-vs-pro-plan-feature-comparison-2026/) — What you get for the price
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

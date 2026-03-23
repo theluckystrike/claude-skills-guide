@@ -118,13 +118,13 @@ The good news is that all three tools have free tiers suitable for evaluation. I
 The agentic AI coding space continues evolving rapidly. The tools compared here will likely look different by late 2026, with new competitors emerging and existing platforms incorporating lessons from each other. Staying adaptable and understanding the core capabilities—rather than specific syntax—serves developers best as the landscape shifts.
 
 
-**Related guides:** [Best AI Code Review Tools 2026 Guide](https://theluckystrike.github.io/claude-skills-guide/best-ai-code-review-tools-2026-guide/)
+**Related guides:** [Best AI Code Review Tools 2026 Guide](https://theluckystrike.github.io/best-ai-code-review-tools-2026-guide/)
 
 ## Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
 - [Cursor vs GitHub Copilot vs Claude Code 2026: Which AI Coding Tool Wins](/cursor-vs-github-copilot-vs-claude-code-2026/) — Side-by-side comparison of the three leading agentic coding tools across real developer workflows.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

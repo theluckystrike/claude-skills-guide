@@ -18,7 +18,7 @@ permalink: /claude-code-github-actions-secrets-management/
 
 Secure secrets management stands as one of the most critical aspects of any CI/CD pipeline. When you automate workflows with Claude Code and GitHub Actions, understanding how to properly handle API keys, tokens, passwords, and other sensitive credentials prevents security breaches and keeps your automated pipelines running smoothly. This guide covers practical approaches to managing secrets in your GitHub Actions workflows.
 
-**Scope of this article:** This article focuses on the secrets lifecycle — creating secrets, scoping them at the repository and organization level, rotating credentials, using secrets in composite actions, and integrating with external secret managers like HashiCorp Vault. If you are looking for deployment gates, required reviewers, wait timers, and environment protection rules, see [Claude Code GitHub Actions Environment Protection](/claude-skills-guide/claude-code-github-actions-environment-protection/).
+**Scope of this article:** This article focuses on the secrets lifecycle — creating secrets, scoping them at the repository and organization level, rotating credentials, using secrets in composite actions, and integrating with external secret managers like HashiCorp Vault. If you are looking for deployment gates, required reviewers, wait timers, and environment protection rules, see [Claude Code GitHub Actions Environment Protection](/claude-code-github-actions-environment-protection/).
 
 ## Understanding GitHub Secrets Architecture
 
@@ -172,10 +172,10 @@ Proper secrets management in GitHub Actions workflows enables secure automation 
 
 ## Related Reading
 
-- [Claude Code GitHub Actions Environment Protection](/claude-skills-guide/claude-code-github-actions-environment-protection/) — Protection rules, required reviewers, wait timers, and deployment gates
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Code GitHub Actions Environment Protection](/claude-code-github-actions-environment-protection/) — Protection rules, required reviewers, wait timers, and deployment gates
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 

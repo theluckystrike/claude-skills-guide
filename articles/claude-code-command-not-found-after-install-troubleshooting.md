@@ -379,7 +379,7 @@ Does `which claude` return a path?
 
 ## Using Claude Skills Once Working
 
-Once you resolve the command not found error, you'll have access to Claude's full ecosystem. [Best Claude Code skills to install first](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) covers which skills are worth adding immediately. Skills extend Claude's capabilities for specialized tasks. The `frontend-design` skill helps generate UI components and layouts. The `pdf` skill enables document manipulation and extraction. The `tdd` skill assists with test-driven development workflows.
+Once you resolve the command not found error, you'll have access to Claude's full ecosystem. [Best Claude Code skills to install first](/best-claude-code-skills-to-install-first-2026/) covers which skills are worth adding immediately. Skills extend Claude's capabilities for specialized tasks. The `frontend-design` skill helps generate UI components and layouts. The `pdf` skill enables document manipulation and extraction. The `tdd` skill assists with test-driven development workflows.
 
 Other valuable skills include `supermemory` for managing project context across sessions, `docx` for Word document automation, and `xlsx` for spreadsheet operations. Skills are `.md` files stored in `~/.claude/skills/` — place the skill file there to activate it.
 
@@ -404,9 +404,9 @@ If you continue experiencing issues after trying these solutions, check the offi
 
 ## Related Reading
 
-- [Claude Code Setup on Mac: Step-by-Step Guide](/claude-skills-guide/claude-code-setup-on-mac-step-by-step/) — Full installation walkthrough for macOS
-- [Best Claude Code Skills to Install First in 2026](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) — First skills to add once Claude is running
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/) — Full orientation for new users
-- [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — More installation and setup troubleshooting guides
+- [Claude Code Setup on Mac: Step-by-Step Guide](/claude-code-setup-on-mac-step-by-step/) — Full installation walkthrough for macOS
+- [Best Claude Code Skills to Install First in 2026](/best-claude-code-skills-to-install-first-2026/) — First skills to add once Claude is running
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/) — Full orientation for new users
+- [Claude Skills Troubleshooting Hub](/troubleshooting-hub/) — More installation and setup troubleshooting guides
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

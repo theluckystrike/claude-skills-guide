@@ -195,8 +195,8 @@ Start with annotated tags for releases, establish clear naming conventions, and 
 
 ## Related Reading
 
-- [Claude Code Changelog Generation Workflow](/claude-skills-guide/claude-code-changelogs-and-release-notes-automation/) — Tags trigger changelog generation
-- [Claude Code Git Workflow Best Practices Guide](/claude-skills-guide/claude-code-git-workflow-best-practices-guide/) — Tags are part of git best practices
-- [Best Way to Use Claude Code with Existing CI/CD Pipelines](/claude-skills-guide/best-way-to-use-claude-code-with-existing-ci-cd/) — Tags trigger CI/CD release pipelines
+- [Claude Code Changelog Generation Workflow](/claude-code-changelogs-and-release-notes-automation/) — Tags trigger changelog generation
+- [Claude Code Git Workflow Best Practices Guide](/claude-code-git-workflow-best-practices-guide/) — Tags are part of git best practices
+- [Best Way to Use Claude Code with Existing CI/CD Pipelines](/best-way-to-use-claude-code-with-existing-ci-cd/) — Tags trigger CI/CD release pipelines
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

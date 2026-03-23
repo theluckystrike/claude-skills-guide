@@ -13,17 +13,17 @@ permalink: /claude-code-first-project-tutorial-hello-world/
 
 # Claude Code First Project Tutorial — Hello World
 
-Getting started with Claude Code takes less than ten minutes. This tutorial walks you through creating your first project from scratch, configuring Claude Code for your development environment, and running a simple hello world task to verify everything works. See the [getting started hub](/claude-skills-guide/getting-started-hub/) for more beginner resources.
+Getting started with Claude Code takes less than ten minutes. This tutorial walks you through creating your first project from scratch, configuring Claude Code for your development environment, and running a simple hello world task to verify everything works. See the [getting started hub](/getting-started-hub/) for more beginner resources.
 
 ## Prerequisites
 
-[Before you begin, ensure you have the prerequisites installed](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
+[Before you begin, ensure you have the prerequisites installed](/best-claude-code-skills-to-install-first-2026/)
 
 - **Node.js 18+** installed on your machine
 - **A Claude Code account** with API access
 - **Terminal access** with your preferred shell
 
-[Check your Node.js version before starting](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)
+[Check your Node.js version before starting](/claude-skill-md-format-complete-specification-guide/)
 
 ```bash
 node --version
@@ -107,7 +107,7 @@ Claude Code also supports the key being set via a `claude auth` command if you p
 
 ## Creating Your First Project
 
-[Create a new directory for your hello world project](/claude-skills-guide/claude-code-project-initialization-best-practices/):
+[Create a new directory for your hello world project](/claude-code-project-initialization-best-practices/):
 
 ```bash
 mkdir claude-hello-world && cd claude-hello-world
@@ -163,7 +163,7 @@ Claude Code operates within interactive sessions. Each session maintains context
 claude
 ```
 
-[Within a session, you can issue follow-up requests](/claude-skills-guide/how-to-write-effective-prompts-for-claude-code/):
+[Within a session, you can issue follow-up requests](/how-to-write-effective-prompts-for-claude-code/):
 
 ```
 Add a function that takes a name parameter and returns a personalized greeting
@@ -283,7 +283,7 @@ Think of this as a lightweight code review from a collaborator who has read ever
 
 ## Scripting and Automation
 
-For repetitive tasks, create Claude Code scripts that automate common workflows. You can pair this with [Claude Code skills](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) to make recurring automations repeatable. A simple script might look like:
+For repetitive tasks, create Claude Code scripts that automate common workflows. You can pair this with [Claude Code skills](/claude-skill-md-format-complete-specification-guide/) to make recurring automations repeatable. A simple script might look like:
 
 ```bash
 #!/bin/bash
@@ -339,9 +339,9 @@ The developers who get the most out of Claude Code treat it as a collaborative p
 
 ## Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started 2026](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Way to Scope Tasks for Claude Code Success](/claude-skills-guide/best-way-to-scope-tasks-for-claude-code-success/)
-- [How to Write Effective Prompts for Claude Code](/claude-skills-guide/how-to-write-effective-prompts-for-claude-code/)
-- [Getting Started Hub](/claude-skills-guide/getting-started-hub/)
+- [Claude Code for Beginners: Complete Getting Started 2026](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Way to Scope Tasks for Claude Code Success](/best-way-to-scope-tasks-for-claude-code-success/)
+- [How to Write Effective Prompts for Claude Code](/how-to-write-effective-prompts-for-claude-code/)
+- [Getting Started Hub](/getting-started-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -13,15 +13,15 @@ permalink: /can-you-use-claude-skills-inside-vs-code-extensions/
 
 # Can You Use Claude Skills Inside VS Code Extensions?
 
-If you build [VS Code extensions](/claude-skills-guide/claude-code-vs-github-copilot-workspace-2026/) and want to use Claude Code skills within them, you're looking at a technical challenge that requires understanding how both systems operate. The short answer is yes, you can integrate Claude skills into VS Code extensions, but the implementation path depends on your specific use case and how much control you need over the skill's execution environment.
+If you build [VS Code extensions](/claude-code-vs-github-copilot-workspace-2026/) and want to use Claude Code skills within them, you're looking at a technical challenge that requires understanding how both systems operate. The short answer is yes, you can integrate Claude skills into VS Code extensions, but the implementation path depends on your specific use case and how much control you need over the skill's execution environment.
 
 ## Understanding the Architecture
 
-[Claude Code skills are fundamentally different from VS Code extensions](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) in their execution model. Skills are Markdown files that get loaded into Claude's context when invoked through `/skill-name` commands. They're designed to work within Claude Code's chat interface, not as standalone programmatic APIs.
+[Claude Code skills are fundamentally different from VS Code extensions](/claude-skill-md-format-complete-specification-guide/) in their execution model. Skills are Markdown files that get loaded into Claude's context when invoked through `/skill-name` commands. They're designed to work within Claude Code's chat interface, not as standalone programmatic APIs.
 
-[VS Code extensions run in the extension host process and communicate through the VS Code Extension API](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) and communicate with the editor through the VS Code Extension API. There's no native bridge that automatically loads Claude skills into your extension.
+[VS Code extensions run in the extension host process and communicate through the VS Code Extension API](/claude-skill-md-format-complete-specification-guide/) and communicate with the editor through the VS Code Extension API. There's no native bridge that automatically loads Claude skills into your extension.
 
-However, [you have several practical approaches to achieve integration](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
+However, [you have several practical approaches to achieve integration](/best-claude-code-skills-to-install-first-2026/)
 
 ## Approach 1: Using Claude Code as a Backend
 
@@ -55,7 +55,7 @@ function invokeClaudeWithSkill(skillName: string, userPrompt: string): Promise<s
 }
 ```
 
-This approach lets you use any skill from your `~/.claude/skills/` directory. For example, [you could invoke the **tdd** skill to generate tests](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) in the editor:
+This approach lets you use any skill from your `~/.claude/skills/` directory. For example, [you could invoke the **tdd** skill to generate tests](/claude-tdd-skill-test-driven-development-workflow/) in the editor:
 
 ```typescript
 vscode.commands.registerCommand('extension.generateTests', async () => {
@@ -168,9 +168,9 @@ The key insight is that Claude skills and VS Code extensions solve similar probl
 
 ## Related Reading
 
-- [Claude Code GitPod Cloud IDE Integration Tutorial 2026](/claude-skills-guide/claude-code-gitpod-cloud-ide-integration-tutorial-2026/) — Integrate Claude Code in cloud IDEs for team-wide development environments
-- [Claude Code Dev Containers: devcontainer.json Setup Guide](/claude-skills-guide/claude-code-dev-containers-devcontainer-json-setup-guide/) — Configure repeatable environments that package Claude Code alongside your editor tooling
-- [Claude Code Skills Zapier Integration Step-by-Step](/claude-skills-guide/claude-code-skills-zapier-integration-step-by-step/) — Trigger Claude skills from external tools and services with minimal code
-- [Claude Skills Hub](/claude-skills-guide/integrations-hub/) — Explore all Claude skill integration patterns across editors and tools
+- [Claude Code GitPod Cloud IDE Integration Tutorial 2026](/claude-code-gitpod-cloud-ide-integration-tutorial-2026/) — Integrate Claude Code in cloud IDEs for team-wide development environments
+- [Claude Code Dev Containers: devcontainer.json Setup Guide](/claude-code-dev-containers-devcontainer-json-setup-guide/) — Configure repeatable environments that package Claude Code alongside your editor tooling
+- [Claude Code Skills Zapier Integration Step-by-Step](/claude-code-skills-zapier-integration-step-by-step/) — Trigger Claude skills from external tools and services with minimal code
+- [Claude Skills Hub](/integrations-hub/) — Explore all Claude skill integration patterns across editors and tools
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

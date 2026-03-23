@@ -216,9 +216,9 @@ This approach scales from small personal projects to larger team documentation. 
 
 ## Related Reading
 
-- [What Is the Best Claude Skill for Generating Documentation?](/claude-skills-guide/what-is-the-best-claude-skill-for-generating-documentation/)
-- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [How to Write Effective CLAUDE.md for Your Project](/claude-skills-guide/how-to-write-effective-claude-md-for-your-project/)
+- [What Is the Best Claude Skill for Generating Documentation?](/what-is-the-best-claude-skill-for-generating-documentation/)
+- [Claude Code Guides Hub](/guides-hub/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [How to Write Effective CLAUDE.md for Your Project](/how-to-write-effective-claude-md-for-your-project/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -13,7 +13,7 @@ permalink: /claude-md-example-for-elixir-phoenix-application/
 
 # Claude MD Example for Elixir Phoenix Application
 
-Elixir Phoenix applications benefit significantly from Claude Code's skill system. By creating custom `.md` files in your skills directory, you can teach Claude about Phoenix conventions, Ecto patterns, and LiveView components. This guide provides practical examples and real code snippets for integrating Claude into your Phoenix development workflow. For the complete skill file specification, see the [Claude skill .md format guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/).
+Elixir Phoenix applications benefit significantly from Claude Code's skill system. By creating custom `.md` files in your skills directory, you can teach Claude about Phoenix conventions, Ecto patterns, and LiveView components. This guide provides practical examples and real code snippets for integrating Claude into your Phoenix development workflow. For the complete skill file specification, see the [Claude skill .md format guide](/claude-skill-md-format-complete-specification-guide/).
 
 ## Setting Up Claude Skills for Phoenix
 
@@ -200,7 +200,7 @@ The `redact: true` field option is a Phoenix 1.7+ convention that prevents passw
 
 ## Combining Skills for Better Results
 
-You can activate multiple skills for complex tasks. For a Phoenix application with comprehensive testing, activate both the phoenix and [tdd skills](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/):
+You can activate multiple skills for complex tasks. For a Phoenix application with comprehensive testing, activate both the phoenix and [tdd skills](/claude-tdd-skill-test-driven-development-workflow/):
 
 ```
 /phoenix
@@ -262,7 +262,7 @@ This combination is useful for creating API documentation that you can share wit
 
 ## Managing Project Context with Super Memory
 
-For ongoing Phoenix projects, the [supermemory skill helps Claude remember your project structure](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) and conventions across sessions:
+For ongoing Phoenix projects, the [supermemory skill helps Claude remember your project structure](/claude-supermemory-skill-persistent-context-explained/) and conventions across sessions:
 
 ```
 /phoenix
@@ -417,9 +417,9 @@ By investing time in creating a well-crafted Phoenix skill, you accelerate devel
 
 ## Related Reading
 
-- [Claude Skill .md Format: Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — Reference the full skill file specification when authoring your Phoenix-specific skill
-- [How to Write a Skill .md File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) — Step-by-step guidance for writing skill bodies that teach Claude framework conventions
-- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Combine the tdd skill with your Phoenix skill for ExUnit test-first development
-- [Claude Skills Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Learn skill loading and invocation patterns before building your custom Phoenix skill
+- [Claude Skill .md Format: Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/) — Reference the full skill file specification when authoring your Phoenix-specific skill
+- [How to Write a Skill .md File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/) — Step-by-step guidance for writing skill bodies that teach Claude framework conventions
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/) — Combine the tdd skill with your Phoenix skill for ExUnit test-first development
+- [Claude Skills Getting Started Hub](/getting-started-hub/) — Learn skill loading and invocation patterns before building your custom Phoenix skill
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

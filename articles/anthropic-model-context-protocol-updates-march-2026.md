@@ -13,11 +13,11 @@ permalink: /anthropic-model-context-protocol-updates-march-2026/
 
 # MCP Updates March 2026: What Developers Need to Know
 
-[The Model Context Protocol (MCP) March 2026 release brings meaningful improvements](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) for developers building Claude Code workflows. This article covers the key changes, what they mean in practice, and how to migrate existing configurations.
+[The Model Context Protocol (MCP) March 2026 release brings meaningful improvements](/building-your-first-mcp-tool-integration-guide-2026/) for developers building Claude Code workflows. This article covers the key changes, what they mean in practice, and how to migrate existing configurations.
 
 ## What Changed in March 2026
 
-The update focuses on three areas: [enhanced tool discovery, improved state management, and streamlined authentication](/claude-skills-guide/mcp-oauth-21-authentication-implementation-guide/) for enterprise deployments.
+The update focuses on three areas: [enhanced tool discovery, improved state management, and streamlined authentication](/mcp-oauth-21-authentication-implementation-guide/) for enterprise deployments.
 
 ### Enhanced Tool Discovery
 
@@ -57,7 +57,7 @@ Claude Code picks up newly registered tools on the next tool-discovery pass with
 
 The update introduces a standardized checkpoint format for tool state. This allows MCP servers to serialize and restore internal state across sessions, so workflows don't lose progress when you switch between projects.
 
-Practically, this means skills like the [tdd skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) can maintain test context between Claude Code sessions without requiring you to re-explain the project structure each time.
+Practically, this means skills like the [tdd skill](/best-claude-skills-for-developers-2026/) can maintain test context between Claude Code sessions without requiring you to re-explain the project structure each time.
 
 The checkpoint format is a JSON document stored by default at `~/.claude/mcp-state/<server-name>.json`. Your MCP server opts in by implementing two lifecycle hooks:
 
@@ -147,7 +147,7 @@ The updated MCP makes multi-database configurations simpler. Here is an example 
 }
 ```
 
-With both servers active, Claude Code can query either database in the same session. This pairs well with the [pdf skill](/claude-skills-guide/best-claude-skills-for-data-analysis/) when generating reports that pull from multiple sources.
+With both servers active, Claude Code can query either database in the same session. This pairs well with the [pdf skill](/best-claude-skills-for-data-analysis/) when generating reports that pull from multiple sources.
 
 The updated connection pooling in this release means both servers can hold persistent connections without each request incurring a fresh TCP handshake. For databases on the same host, this is a minor convenience. For remote databases or those behind a VPN, the latency savings are noticeable—queries that previously took 200–400ms due to connection setup now return results in closer to 20–30ms.
 
@@ -232,9 +232,9 @@ The March 2026 MCP update improves tool discovery, state persistence, and authen
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Where MCP fits in the developer stack
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How Claude decides when to load skills
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep API costs down as you scale
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Where MCP fits in the developer stack
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — How Claude decides when to load skills
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — Keep API costs down as you scale
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

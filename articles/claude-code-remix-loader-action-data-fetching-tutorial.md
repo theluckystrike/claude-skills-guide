@@ -17,7 +17,7 @@ Remix changes how developers approach data fetching in React applications. Using
 
 ## Understanding Remix Data Flow
 
-Remix introduces a mental model where the server and client work together cleanly. The framework handles the bridge between your backend logic and frontend components, eliminating the need for manual API endpoints in many scenarios. If you're comparing with [React Router v7's approach to loaders and actions](/claude-skills-guide/claude-code-react-router-v7-navigation-guide/), the API is nearly identical since v7 merged Remix concepts.
+Remix introduces a mental model where the server and client work together cleanly. The framework handles the bridge between your backend logic and frontend components, eliminating the need for manual API endpoints in many scenarios. If you're comparing with [React Router v7's approach to loaders and actions](/claude-code-react-router-v7-navigation-guide/), the API is nearly identical since v7 merged Remix concepts.
 
 **Loaders** run on the server before your component renders. They fetch data needed for the page and pass it directly to your component as props. This approach eliminates loading states, race conditions, and the complexity of client-side data fetching.
 
@@ -100,7 +100,7 @@ export async function loader({ params }: LoaderFunctionArgs) {
 }
 ```
 
-The [**tdd** skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) complements this workflow by helping you write tests for your loader functions, ensuring your data fetching logic behaves correctly across different scenarios.
+The [**tdd** skill](/claude-tdd-skill-test-driven-development-workflow/) complements this workflow by helping you write tests for your loader functions, ensuring your data fetching logic behaves correctly across different scenarios.
 
 ### Parallel Data Loading
 
@@ -231,7 +231,7 @@ function LikeButton({ post }) {
 
 ## Integrating Claude Code for Enhanced Development
 
-Claude Code accelerates Remix development in several ways. The [**supermemory** skill](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) helps you maintain context across complex Remix applications, remembering routing conventions and component patterns you've established.
+Claude Code accelerates Remix development in several ways. The [**supermemory** skill](/claude-supermemory-skill-persistent-context-explained/) helps you maintain context across complex Remix applications, remembering routing conventions and component patterns you've established.
 
 When building Remix applications that interact with databases, the **xlsx** skill enables generating spreadsheet exports of your data—a common requirement for admin dashboards and reporting features.
 
@@ -264,7 +264,7 @@ export async function action({ request }: ActionFunctionArgs) {
 
 ## Best Practices for Remix Data Fetching
 
-Keep your loaders focused on returning data, not rendering UI. Move complex data transformation to utility functions that both loaders and components can import. This separation keeps your code testable and maintainable. For production deployment, follow the [Vercel deployment workflow for Next.js/Remix projects](/claude-skills-guide/claude-code-vercel-deployment-nextjs-workflow-guide/).
+Keep your loaders focused on returning data, not rendering UI. Move complex data transformation to utility functions that both loaders and components can import. This separation keeps your code testable and maintainable. For production deployment, follow the [Vercel deployment workflow for Next.js/Remix projects](/claude-code-vercel-deployment-nextjs-workflow-guide/).
 
 Use TypeScript generics with useLoaderData and useActionData to maintain type safety throughout your application. Claude Code helps generate these types automatically when you describe your data structures.
 
@@ -278,9 +278,9 @@ Claude Code enhances this workflow by assisting with code generation, type defin
 
 ## Related Reading
 
-- [Full Stack Web App with Claude Skills Step-by-Step](/claude-skills-guide/full-stack-web-app-with-claude-skills-step-by-step/) — See how Remix-style loaders and actions fit into a complete full-stack application built with Claude skills.
-- [Claude Code Vercel Deployment Next.js Workflow Guide](/claude-skills-guide/claude-code-vercel-deployment-nextjs-workflow-guide/) — Deploy your Remix application to production using Vercel with a Claude Code-assisted workflow.
-- [How to Automate Code Reviews with Claude Skills](/claude-skills-guide/best-claude-skills-for-code-review-automation/) — Add automated code review to your Remix development workflow to catch loader and action bugs early.
-- [Claude Skills Workflow Guide](/claude-skills-guide/workflows-hub/) — Chain Remix development skills into automated multi-step pipelines for production-ready apps.
+- [Full Stack Web App with Claude Skills Step-by-Step](/full-stack-web-app-with-claude-skills-step-by-step/) — See how Remix-style loaders and actions fit into a complete full-stack application built with Claude skills.
+- [Claude Code Vercel Deployment Next.js Workflow Guide](/claude-code-vercel-deployment-nextjs-workflow-guide/) — Deploy your Remix application to production using Vercel with a Claude Code-assisted workflow.
+- [How to Automate Code Reviews with Claude Skills](/best-claude-skills-for-code-review-automation/) — Add automated code review to your Remix development workflow to catch loader and action bugs early.
+- [Claude Skills Workflow Guide](/workflows-hub/) — Chain Remix development skills into automated multi-step pipelines for production-ready apps.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

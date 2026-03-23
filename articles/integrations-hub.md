@@ -48,10 +48,10 @@ The key constraint is token budget. Long diffs consume context fast. Skills desi
 
 **GitLab CI** follows the same pattern. Claude Code can run as a CI job, with the skill invoked via CLI. The integration is slightly less turnkey than GitHub Actions but fully supported.
 
-- [Claude Skills with GitHub Actions CI/CD Pipeline 2026](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/)
-- [How to Automate Pull Request Review with Claude Skills](/claude-skills-guide/best-claude-skills-for-code-review-automation/)
-- [Automated GitHub Issue Triage with Claude Skills Guide](/claude-skills-guide/claude-skills-for-automated-github-issue-triage/)
-- [Claude Code Azure DevOps Integration Workflow Tutorial](/claude-skills-guide/claude-code-azure-devops-integration-workflow-tutorial/)
+- [Claude Skills with GitHub Actions CI/CD Pipeline 2026](/claude-skills-with-github-actions-ci-cd-pipeline/)
+- [How to Automate Pull Request Review with Claude Skills](/best-claude-skills-for-code-review-automation/)
+- [Automated GitHub Issue Triage with Claude Skills Guide](/claude-skills-for-automated-github-issue-triage/)
+- [Claude Code Azure DevOps Integration Workflow Tutorial](/claude-code-azure-devops-integration-workflow-tutorial/)
 
 ---
 
@@ -69,10 +69,10 @@ Because n8n is self-hosted, you can inject full skill context without worrying a
 
 **Zapier** is the faster path for non-developers and for prototyping. The Claude integration in Zapier supports custom prompts, which means you can effectively embed a simplified skill inline. For production automation with complex skill logic, n8n gives more flexibility. Zapier works best for simpler, high-volume routing tasks where Claude adds a classification or summarization step.
 
-- [How to Use Claude Skills with n8n Automation Workflows](/claude-skills-guide/how-to-use-claude-skills-with-n8n-automation-workflows/)
-- [Claude Code Skills + Zapier: Step-by-Step](/claude-skills-guide/claude-code-skills-zapier-integration-step-by-step/)
-- [Automated Blog Workflow with Claude Skills](/claude-skills-guide/claude-skills-automated-blog-post-workflow-tutorial/)
-- [Claude Skills Automated Social Media Content Workflow](/claude-skills-guide/claude-skills-automated-social-media-content-workflow/)
+- [How to Use Claude Skills with n8n Automation Workflows](/how-to-use-claude-skills-with-n8n-automation-workflows/)
+- [Claude Code Skills + Zapier: Step-by-Step](/claude-code-skills-zapier-integration-step-by-step/)
+- [Automated Blog Workflow with Claude Skills](/claude-skills-automated-blog-post-workflow-tutorial/)
+- [Claude Skills Automated Social Media Content Workflow](/claude-skills-automated-social-media-content-workflow/)
 
 ---
 
@@ -92,12 +92,12 @@ Connecting Claude skills to project management and CRM tools closes the loop bet
 
 **ClickUp** offers a flexible project management API. Claude skills can create tasks, update statuses, generate summaries of in-progress work, and connect sprint data to code activity through the ClickUp MCP server.
 
-- [How to Integrate Claude Skills with Notion API Guide](/claude-skills-guide/how-to-integrate-claude-skills-with-notion-api-guide/)
-- [Claude Skills with Linear Project Management Tutorial](/claude-skills-guide/claude-skills-with-linear-project-management-tutorial/)
-- [Jira MCP Server Claude Code Integration Guide](/claude-skills-guide/jira-mcp-server-claude-code-integration-guide/)
-- [ClickUp MCP Server: Workflow Automation Guide](/claude-skills-guide/clickup-mcp-server-workflow-automation-guide/)
-- [Claude Skills Daily Standup Automation Workflow](/claude-skills-guide/claude-skills-daily-standup-automation-workflow/)
-- [How to Automate Client Reports with Claude Skills](/claude-skills-guide/how-to-automate-client-reports-with-claude-skills/)
+- [How to Integrate Claude Skills with Notion API Guide](/how-to-integrate-claude-skills-with-notion-api-guide/)
+- [Claude Skills with Linear Project Management Tutorial](/claude-skills-with-linear-project-management-tutorial/)
+- [Jira MCP Server Claude Code Integration Guide](/jira-mcp-server-claude-code-integration-guide/)
+- [ClickUp MCP Server: Workflow Automation Guide](/clickup-mcp-server-workflow-automation-guide/)
+- [Claude Skills Daily Standup Automation Workflow](/claude-skills-daily-standup-automation-workflow/)
+- [How to Automate Client Reports with Claude Skills](/how-to-automate-client-reports-with-claude-skills/)
 
 ---
 
@@ -111,10 +111,10 @@ Claude skills become significantly more powerful when they can read from and wri
 
 **AWS Lambda** and serverless functions are another integration layer. Claude skills can invoke Lambda functions via API calls to trigger compute-heavy operations, process results, and incorporate them into the ongoing conversation.
 
-- [Claude Skills with Supabase: Practical Workflows](/claude-skills-guide/claude-skills-with-supabase-database-integration/)
-- [Claude Skills + AWS Lambda: Serverless Guide](/claude-skills-guide/claude-skills-aws-lambda-serverless-integration/)
-- [Claude Code MongoDB to PostgreSQL Migration Workflow](/claude-skills-guide/claude-code-mongodb-to-postgresql-migration-workflow/)
-- [How to Connect Claude Skills to External APIs Guide](/claude-skills-guide/how-to-connect-claude-skills-to-external-apis-guide/)
+- [Claude Skills with Supabase: Practical Workflows](/claude-skills-with-supabase-database-integration/)
+- [Claude Skills + AWS Lambda: Serverless Guide](/claude-skills-aws-lambda-serverless-integration/)
+- [Claude Code MongoDB to PostgreSQL Migration Workflow](/claude-code-mongodb-to-postgresql-migration-workflow/)
+- [How to Connect Claude Skills to External APIs Guide](/how-to-connect-claude-skills-to-external-apis-guide/)
 
 ---
 
@@ -137,12 +137,12 @@ The Slack integration requires a Slack app with the appropriate OAuth scopes. Cl
 
 **Video conferencing** integration via Zoom MCP server allows Claude to process meeting data: summarizing transcripts, extracting action items, and distributing meeting notes automatically after calls conclude.
 
-- [Claude Skills with Slack Bot Integration Tutorial](/claude-skills-guide/claude-skills-with-slack-bot-integration-tutorial/)
-- [Claude Code Skills SendGrid Email Automation Setup](/claude-skills-guide/claude-code-skills-sendgrid-email-automation-setup/)
-- [Intercom MCP Server: Automating Customer Data Workflows](/claude-skills-guide/intercom-mcp-server-customer-data-automation/)
-- [Zoom MCP Server Meeting Summary Automation](/claude-skills-guide/zoom-mcp-server-meeting-summary-automation/)
-- [Claude Skills Email Drafting Automation Workflow](/claude-skills-guide/claude-skills-email-drafting-automation-workflow/)
-- [Claude Skills Competitive Analysis Automation Guide](/claude-skills-guide/claude-skills-competitive-analysis-automation-workflow/)
+- [Claude Skills with Slack Bot Integration Tutorial](/claude-skills-with-slack-bot-integration-tutorial/)
+- [Claude Code Skills SendGrid Email Automation Setup](/claude-code-skills-sendgrid-email-automation-setup/)
+- [Intercom MCP Server: Automating Customer Data Workflows](/intercom-mcp-server-customer-data-automation/)
+- [Zoom MCP Server Meeting Summary Automation](/zoom-mcp-server-meeting-summary-automation/)
+- [Claude Skills Email Drafting Automation Workflow](/claude-skills-email-drafting-automation-workflow/)
+- [Claude Skills Competitive Analysis Automation Guide](/claude-skills-competitive-analysis-automation-workflow/)
 
 ---
 
@@ -156,11 +156,11 @@ Major cloud platforms are integration targets for skills that manage infrastruct
 
 **Vercel** is the standard deployment target for Next.js applications. Claude skills can read Vercel deployment logs, diagnose build failures, and trigger redeployments as part of a CI/CD workflow. The combination of GitHub Actions + Claude + Vercel creates a nearly automated deployment pipeline with AI-assisted validation at each step.
 
-- [Claude Skills + Vercel Deployment Automation Guide](/claude-skills-guide/claude-code-vercel-deployment-nextjs-workflow-guide/)
-- [Claude Code Vercel Deployment Next.js Workflow Guide](/claude-skills-guide/claude-code-vercel-deployment-nextjs-workflow-guide/)
-- [Claude Code GCP Google Cloud Setup and Deployment Guide](/claude-skills-guide/claude-code-gcp-google-cloud-setup-and-deployment-guide/)
-- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/)
-- [Claude Code with Docker: Container Setup Guide](/claude-skills-guide/using-claude-code-inside-docker-container-tutorial/)
+- [Claude Skills + Vercel Deployment Automation Guide](/claude-code-vercel-deployment-nextjs-workflow-guide/)
+- [Claude Code Vercel Deployment Next.js Workflow Guide](/claude-code-vercel-deployment-nextjs-workflow-guide/)
+- [Claude Code GCP Google Cloud Setup and Deployment Guide](/claude-code-gcp-google-cloud-setup-and-deployment-guide/)
+- [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/)
+- [Claude Code with Docker: Container Setup Guide](/using-claude-code-inside-docker-container-tutorial/)
 
 ---
 
@@ -176,8 +176,8 @@ Monitoring integrations give Claude real-time visibility into production system 
 
 **Trigger.dev** is a developer-first workflow automation platform that runs background jobs and event-driven workflows. Claude Code integrates with Trigger.dev to orchestrate multi-step automation pipelines that can spawn Claude skill invocations as job steps.
 
-- [Datadog MCP Server Monitoring Automation with Claude](/claude-skills-guide/datadog-mcp-server-monitoring-automation-claude/)
-- [Claude Code for Trigger.dev Workflow Automation Tutorial](/claude-skills-guide/claude-code-for-trigger-dev-workflow-automation-tutorial/)
+- [Datadog MCP Server Monitoring Automation with Claude](/datadog-mcp-server-monitoring-automation-claude/)
+- [Claude Code for Trigger.dev Workflow Automation Tutorial](/claude-code-for-trigger-dev-workflow-automation-tutorial/)
 
 ---
 
@@ -189,8 +189,8 @@ Web automation integrations give Claude the ability to browse, extract, and proc
 
 **Tavily** provides a research-grade search API optimized for AI applications. Claude skills connected to Tavily can perform factual research, gather competitive intelligence, and retrieve up-to-date information without the hallucination risk of relying on training data alone.
 
-- [Firecrawl MCP Server: Web Scraping Automation with Claude](/claude-skills-guide/firecrawl-mcp-server-web-scraping-automation/)
-- [Tavily MCP Server: Research Automation Guide](/claude-skills-guide/tavily-mcp-server-research-automation-guide/)
+- [Firecrawl MCP Server: Web Scraping Automation with Claude](/firecrawl-mcp-server-web-scraping-automation/)
+- [Tavily MCP Server: Research Automation Guide](/tavily-mcp-server-research-automation-guide/)
 
 ---
 
@@ -200,9 +200,9 @@ Publishing platform integrations let Claude participate directly in the content 
 
 **Ghost** is a popular open-source publishing platform with a well-documented API. The Ghost MCP server allows Claude to create posts, update content, manage tags, and trigger publish actions from within Claude Code workflows. Combined with a content generation skill, this creates an end-to-end automated blog pipeline: Claude generates the post, formats it for Ghost, and publishes it on a schedule.
 
-- [Ghost MCP Server: Blogging Automation Workflow](/claude-skills-guide/ghost-mcp-server-blogging-automation-workflow/)
-- [Automated Blog Workflow with Claude Skills](/claude-skills-guide/claude-skills-automated-blog-post-workflow-tutorial/)
-- [Claude Skills for SEO Content Generation: 2026 Guide](/claude-skills-guide/claude-skills-for-seo-content-generation-workflow/)
+- [Ghost MCP Server: Blogging Automation Workflow](/ghost-mcp-server-blogging-automation-workflow/)
+- [Automated Blog Workflow with Claude Skills](/claude-skills-automated-blog-post-workflow-tutorial/)
+- [Claude Skills for SEO Content Generation: 2026 Guide](/claude-skills-for-seo-content-generation-workflow/)
 
 ---
 
@@ -210,28 +210,28 @@ Publishing platform integrations let Claude participate directly in the content 
 
 | Platform | What Claude Skills Can Do | Guide |
 |----------|--------------------------|-------|
-| GitHub Actions | PR review, issue triage, doc generation, test analysis | [Guide](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/) |
-| GitLab CI | Code review jobs, pipeline analysis, deployment validation | [Guide](/claude-skills-guide/claude-code-gitlab-ci-pipeline-docker-registry-tutorial/) |
-| n8n | Multi-step automations with AI classification and generation | [Guide](/claude-skills-guide/how-to-use-claude-skills-with-n8n-automation-workflows/) |
-| Zapier | High-volume routing with AI summarization and classification | [Guide](/claude-skills-guide/claude-code-skills-zapier-integration-step-by-step/) |
-| Notion | Page generation, database updates, documentation automation | [Guide](/claude-skills-guide/how-to-integrate-claude-skills-with-notion-api-guide/) |
-| Linear | Issue triage, sprint planning, ticket generation | [Guide](/claude-skills-guide/claude-skills-with-linear-project-management-tutorial/) |
-| Jira | Ticket creation, status updates, sprint management | [Guide](/claude-skills-guide/jira-mcp-server-claude-code-integration-guide/) |
-| ClickUp | Task automation, sprint summaries, workflow management | [Guide](/claude-skills-guide/clickup-mcp-server-workflow-automation-guide/) |
-| Supabase | Read/write database records, trigger edge functions | [Guide](/claude-skills-guide/claude-skills-with-supabase-database-integration/) |
-| AWS Lambda | Invoke serverless compute, process results in context | [Guide](/claude-skills-guide/claude-skills-aws-lambda-serverless-integration/) |
-| Slack | Standup bots, PR summaries, support triage, alert summaries | [Guide](/claude-skills-guide/claude-skills-with-slack-bot-integration-tutorial/) |
-| SendGrid | Email generation, sequence automation, transactional sends | [Guide](/claude-skills-guide/claude-code-skills-sendgrid-email-automation-setup/) |
-| Intercom | Customer message classification, response drafting, escalation | [Guide](/claude-skills-guide/intercom-mcp-server-customer-data-automation/) |
-| Zoom | Meeting transcript summarization, action item extraction | [Guide](/claude-skills-guide/zoom-mcp-server-meeting-summary-automation/) |
-| Vercel | Deployment monitoring, build failure diagnosis, redeployments | [Guide](/claude-skills-guide/claude-code-vercel-deployment-nextjs-workflow-guide/) |
-| GCP | Log analysis, Cloud Run config, IAM policy review | [Guide](/claude-skills-guide/claude-code-gcp-google-cloud-setup-and-deployment-guide/) |
-| Docker | Container setup, Dockerfile generation, image optimization | [Guide](/claude-skills-guide/using-claude-code-inside-docker-container-tutorial/) |
-| Datadog | Metrics queries, alert correlation, incident summaries | [Guide](/claude-skills-guide/datadog-mcp-server-monitoring-automation-claude/) |
-| Trigger.dev | Background job orchestration, event-driven Claude workflows | [Guide](/claude-skills-guide/claude-code-for-trigger-dev-workflow-automation-tutorial/) |
-| Firecrawl | Web scraping, content extraction, research automation | [Guide](/claude-skills-guide/firecrawl-mcp-server-web-scraping-automation/) |
-| Tavily | Research-grade search, competitive intelligence, fact retrieval | [Guide](/claude-skills-guide/tavily-mcp-server-research-automation-guide/) |
-| Ghost | Blog post creation, content management, publish automation | [Guide](/claude-skills-guide/ghost-mcp-server-blogging-automation-workflow/) |
+| GitHub Actions | PR review, issue triage, doc generation, test analysis | [Guide](/claude-skills-with-github-actions-ci-cd-pipeline/) |
+| GitLab CI | Code review jobs, pipeline analysis, deployment validation | [Guide](/claude-code-gitlab-ci-pipeline-docker-registry-tutorial/) |
+| n8n | Multi-step automations with AI classification and generation | [Guide](/how-to-use-claude-skills-with-n8n-automation-workflows/) |
+| Zapier | High-volume routing with AI summarization and classification | [Guide](/claude-code-skills-zapier-integration-step-by-step/) |
+| Notion | Page generation, database updates, documentation automation | [Guide](/how-to-integrate-claude-skills-with-notion-api-guide/) |
+| Linear | Issue triage, sprint planning, ticket generation | [Guide](/claude-skills-with-linear-project-management-tutorial/) |
+| Jira | Ticket creation, status updates, sprint management | [Guide](/jira-mcp-server-claude-code-integration-guide/) |
+| ClickUp | Task automation, sprint summaries, workflow management | [Guide](/clickup-mcp-server-workflow-automation-guide/) |
+| Supabase | Read/write database records, trigger edge functions | [Guide](/claude-skills-with-supabase-database-integration/) |
+| AWS Lambda | Invoke serverless compute, process results in context | [Guide](/claude-skills-aws-lambda-serverless-integration/) |
+| Slack | Standup bots, PR summaries, support triage, alert summaries | [Guide](/claude-skills-with-slack-bot-integration-tutorial/) |
+| SendGrid | Email generation, sequence automation, transactional sends | [Guide](/claude-code-skills-sendgrid-email-automation-setup/) |
+| Intercom | Customer message classification, response drafting, escalation | [Guide](/intercom-mcp-server-customer-data-automation/) |
+| Zoom | Meeting transcript summarization, action item extraction | [Guide](/zoom-mcp-server-meeting-summary-automation/) |
+| Vercel | Deployment monitoring, build failure diagnosis, redeployments | [Guide](/claude-code-vercel-deployment-nextjs-workflow-guide/) |
+| GCP | Log analysis, Cloud Run config, IAM policy review | [Guide](/claude-code-gcp-google-cloud-setup-and-deployment-guide/) |
+| Docker | Container setup, Dockerfile generation, image optimization | [Guide](/using-claude-code-inside-docker-container-tutorial/) |
+| Datadog | Metrics queries, alert correlation, incident summaries | [Guide](/datadog-mcp-server-monitoring-automation-claude/) |
+| Trigger.dev | Background job orchestration, event-driven Claude workflows | [Guide](/claude-code-for-trigger-dev-workflow-automation-tutorial/) |
+| Firecrawl | Web scraping, content extraction, research automation | [Guide](/firecrawl-mcp-server-web-scraping-automation/) |
+| Tavily | Research-grade search, competitive intelligence, fact retrieval | [Guide](/tavily-mcp-server-research-automation-guide/) |
+| Ghost | Blog post creation, content management, publish automation | [Guide](/ghost-mcp-server-blogging-automation-workflow/) |
 
 ---
 
@@ -239,50 +239,50 @@ Publishing platform integrations let Claude participate directly in the content 
 
 | Article | What You'll Learn |
 |---------|-------------------|
-| [Claude Skills with GitHub Actions CI/CD Pipeline 2026](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/) | Wiring Claude skills into GitHub Actions workflows |
-| [How to Use Claude Skills with n8n Automation Workflows](/claude-skills-guide/how-to-use-claude-skills-with-n8n-automation-workflows/) | Building n8n flows with Claude as the AI layer |
-| [Claude Code Skills + Zapier: Step-by-Step](/claude-skills-guide/claude-code-skills-zapier-integration-step-by-step/) | Zapier integration for non-developer automation |
-| [How to Integrate Claude Skills with Notion API Guide](/claude-skills-guide/how-to-integrate-claude-skills-with-notion-api-guide/) | Connecting skills to Notion pages and databases |
-| [Claude Skills with Linear Project Management Tutorial](/claude-skills-guide/claude-skills-with-linear-project-management-tutorial/) | Automating issue management with Linear and Claude |
-| [Claude Skills with Supabase: Practical Workflows](/claude-skills-guide/claude-skills-with-supabase-database-integration/) | Database read/write patterns for Claude skills |
-| [Claude Skills + AWS Lambda: Serverless Guide](/claude-skills-guide/claude-skills-aws-lambda-serverless-integration/) | Invoking Lambda functions from within Claude skill workflows |
-| [Claude Skills with Slack Bot Integration Tutorial](/claude-skills-guide/claude-skills-with-slack-bot-integration-tutorial/) | Building Slack bots powered by Claude skills |
-| [Claude Skills + Vercel Deployment Automation Guide](/claude-skills-guide/claude-code-vercel-deployment-nextjs-workflow-guide/) | Automating Vercel deployments with Claude |
-| [Claude Code Vercel Deployment Next.js Workflow Guide](/claude-skills-guide/claude-code-vercel-deployment-nextjs-workflow-guide/) | Next.js-specific Vercel deployment workflows |
-| [Claude Code GCP Google Cloud Setup and Deployment Guide](/claude-skills-guide/claude-code-gcp-google-cloud-setup-and-deployment-guide/) | GCP integration and deployment setup |
-| [Claude Code with Docker: Container Setup Guide](/claude-skills-guide/using-claude-code-inside-docker-container-tutorial/) | Running Claude skills in Docker containers |
-| [Claude Code Azure DevOps Integration Workflow Tutorial](/claude-skills-guide/claude-code-azure-devops-integration-workflow-tutorial/) | Azure DevOps pipeline integration |
-| [How to Automate Pull Request Review with Claude Skills](/claude-skills-guide/best-claude-skills-for-code-review-automation/) | Automated PR review workflows |
-| [Automated GitHub Issue Triage with Claude Skills Guide](/claude-skills-guide/claude-skills-for-automated-github-issue-triage/) | Classifying and routing GitHub issues automatically |
-| [How to Connect Claude Skills to External APIs Guide](/claude-skills-guide/how-to-connect-claude-skills-to-external-apis-guide/) | General patterns for external API connections |
-| [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) | Top skills for infrastructure and deployment work |
-| [Building Your First MCP Tool Integration Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) | Setting up MCP servers to extend skill capabilities |
-| [MCP Servers vs Claude Skills: What Is the Difference?](/claude-skills-guide/mcp-servers-vs-claude-skills-what-is-the-difference/) | When to use MCP vs a skill for integrations |
-| [How to Share Claude Skills with Your Team](/claude-skills-guide/how-to-share-claude-skills-with-your-team/) | Distributing skills across a team or organization |
-| [Claude Code GitHub Actions Workflow Matrix Strategy Guide](/claude-skills-guide/claude-code-github-actions-workflow-matrix-strategy-guide/) | Build matrix strategies in GitHub Actions workflows with Claude |
-| [Claude Code GitHub Codespaces Cloud Development Workflow](/claude-skills-guide/claude-code-github-codespaces-cloud-development-workflow/) | Running Claude Code skills inside GitHub Codespaces environments |
-| [Claude Code GitLab CI Pipeline Docker Registry Tutorial](/claude-skills-guide/claude-code-gitlab-ci-pipeline-docker-registry-tutorial/) | Set up GitLab CI pipelines with Docker registry using Claude Code |
-| [Jira MCP Server Claude Code Integration Guide](/claude-skills-guide/jira-mcp-server-claude-code-integration-guide/) | Connecting Claude Code to Jira for issue creation and sprint management |
-| [ClickUp MCP Server: Workflow Automation Guide](/claude-skills-guide/clickup-mcp-server-workflow-automation-guide/) | ClickUp project management automation with Claude via MCP |
-| [Claude Code Skills SendGrid Email Automation Setup](/claude-skills-guide/claude-code-skills-sendgrid-email-automation-setup/) | Transactional email automation using SendGrid and Claude Code |
-| [Intercom MCP Server: Automating Customer Data Workflows](/claude-skills-guide/intercom-mcp-server-customer-data-automation/) | Automating customer support and data workflows via Intercom MCP |
-| [Zoom MCP Server Meeting Summary Automation](/claude-skills-guide/zoom-mcp-server-meeting-summary-automation/) | Meeting transcript summarization and action item extraction via Zoom |
-| [Datadog MCP Server Monitoring Automation with Claude](/claude-skills-guide/datadog-mcp-server-monitoring-automation-claude/) | Production monitoring queries and incident correlation with Datadog MCP |
-| [Claude Code for Trigger.dev Workflow Automation Tutorial](/claude-skills-guide/claude-code-for-trigger-dev-workflow-automation-tutorial/) | Orchestrating background job workflows with Trigger.dev and Claude Code |
-| [Firecrawl MCP Server: Web Scraping Automation with Claude](/claude-skills-guide/firecrawl-mcp-server-web-scraping-automation/) | Web scraping and content extraction at scale using Firecrawl MCP |
-| [Tavily MCP Server: Research Automation Guide](/claude-skills-guide/tavily-mcp-server-research-automation-guide/) | AI-optimized research and search automation via Tavily MCP server |
-| [Ghost MCP Server: Blogging Automation Workflow](/claude-skills-guide/ghost-mcp-server-blogging-automation-workflow/) | End-to-end blog content creation and publishing automation with Ghost |
+| [Claude Skills with GitHub Actions CI/CD Pipeline 2026](/claude-skills-with-github-actions-ci-cd-pipeline/) | Wiring Claude skills into GitHub Actions workflows |
+| [How to Use Claude Skills with n8n Automation Workflows](/how-to-use-claude-skills-with-n8n-automation-workflows/) | Building n8n flows with Claude as the AI layer |
+| [Claude Code Skills + Zapier: Step-by-Step](/claude-code-skills-zapier-integration-step-by-step/) | Zapier integration for non-developer automation |
+| [How to Integrate Claude Skills with Notion API Guide](/how-to-integrate-claude-skills-with-notion-api-guide/) | Connecting skills to Notion pages and databases |
+| [Claude Skills with Linear Project Management Tutorial](/claude-skills-with-linear-project-management-tutorial/) | Automating issue management with Linear and Claude |
+| [Claude Skills with Supabase: Practical Workflows](/claude-skills-with-supabase-database-integration/) | Database read/write patterns for Claude skills |
+| [Claude Skills + AWS Lambda: Serverless Guide](/claude-skills-aws-lambda-serverless-integration/) | Invoking Lambda functions from within Claude skill workflows |
+| [Claude Skills with Slack Bot Integration Tutorial](/claude-skills-with-slack-bot-integration-tutorial/) | Building Slack bots powered by Claude skills |
+| [Claude Skills + Vercel Deployment Automation Guide](/claude-code-vercel-deployment-nextjs-workflow-guide/) | Automating Vercel deployments with Claude |
+| [Claude Code Vercel Deployment Next.js Workflow Guide](/claude-code-vercel-deployment-nextjs-workflow-guide/) | Next.js-specific Vercel deployment workflows |
+| [Claude Code GCP Google Cloud Setup and Deployment Guide](/claude-code-gcp-google-cloud-setup-and-deployment-guide/) | GCP integration and deployment setup |
+| [Claude Code with Docker: Container Setup Guide](/using-claude-code-inside-docker-container-tutorial/) | Running Claude skills in Docker containers |
+| [Claude Code Azure DevOps Integration Workflow Tutorial](/claude-code-azure-devops-integration-workflow-tutorial/) | Azure DevOps pipeline integration |
+| [How to Automate Pull Request Review with Claude Skills](/best-claude-skills-for-code-review-automation/) | Automated PR review workflows |
+| [Automated GitHub Issue Triage with Claude Skills Guide](/claude-skills-for-automated-github-issue-triage/) | Classifying and routing GitHub issues automatically |
+| [How to Connect Claude Skills to External APIs Guide](/how-to-connect-claude-skills-to-external-apis-guide/) | General patterns for external API connections |
+| [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/) | Top skills for infrastructure and deployment work |
+| [Building Your First MCP Tool Integration Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/) | Setting up MCP servers to extend skill capabilities |
+| [MCP Servers vs Claude Skills: What Is the Difference?](/mcp-servers-vs-claude-skills-what-is-the-difference/) | When to use MCP vs a skill for integrations |
+| [How to Share Claude Skills with Your Team](/how-to-share-claude-skills-with-your-team/) | Distributing skills across a team or organization |
+| [Claude Code GitHub Actions Workflow Matrix Strategy Guide](/claude-code-github-actions-workflow-matrix-strategy-guide/) | Build matrix strategies in GitHub Actions workflows with Claude |
+| [Claude Code GitHub Codespaces Cloud Development Workflow](/claude-code-github-codespaces-cloud-development-workflow/) | Running Claude Code skills inside GitHub Codespaces environments |
+| [Claude Code GitLab CI Pipeline Docker Registry Tutorial](/claude-code-gitlab-ci-pipeline-docker-registry-tutorial/) | Set up GitLab CI pipelines with Docker registry using Claude Code |
+| [Jira MCP Server Claude Code Integration Guide](/jira-mcp-server-claude-code-integration-guide/) | Connecting Claude Code to Jira for issue creation and sprint management |
+| [ClickUp MCP Server: Workflow Automation Guide](/clickup-mcp-server-workflow-automation-guide/) | ClickUp project management automation with Claude via MCP |
+| [Claude Code Skills SendGrid Email Automation Setup](/claude-code-skills-sendgrid-email-automation-setup/) | Transactional email automation using SendGrid and Claude Code |
+| [Intercom MCP Server: Automating Customer Data Workflows](/intercom-mcp-server-customer-data-automation/) | Automating customer support and data workflows via Intercom MCP |
+| [Zoom MCP Server Meeting Summary Automation](/zoom-mcp-server-meeting-summary-automation/) | Meeting transcript summarization and action item extraction via Zoom |
+| [Datadog MCP Server Monitoring Automation with Claude](/datadog-mcp-server-monitoring-automation-claude/) | Production monitoring queries and incident correlation with Datadog MCP |
+| [Claude Code for Trigger.dev Workflow Automation Tutorial](/claude-code-for-trigger-dev-workflow-automation-tutorial/) | Orchestrating background job workflows with Trigger.dev and Claude Code |
+| [Firecrawl MCP Server: Web Scraping Automation with Claude](/firecrawl-mcp-server-web-scraping-automation/) | Web scraping and content extraction at scale using Firecrawl MCP |
+| [Tavily MCP Server: Research Automation Guide](/tavily-mcp-server-research-automation-guide/) | AI-optimized research and search automation via Tavily MCP server |
+| [Ghost MCP Server: Blogging Automation Workflow](/ghost-mcp-server-blogging-automation-workflow/) | End-to-end blog content creation and publishing automation with Ghost |
 
 ---
 
 ## Related Reading
 
-- [Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Foundations: what skills are, the .md format, and writing your first skill
-- [Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — Fix every common skill error: permissions, YAML, context overflow, and more
-- [Comparisons Hub](/claude-skills-guide/comparisons-hub/) — How Claude Code stacks up against Copilot, Cursor, and other tools
-- [Workflows Hub](/claude-skills-guide/workflows-hub/) — Practical skill workflows for code review, documentation, and CI/CD
-- [Projects Hub](/claude-skills-guide/projects-hub/) — Build real SaaS apps, CLI tools, and APIs using Claude skills
-- [Pricing Hub](/claude-skills-guide/pricing-hub/) — Cost optimization and Claude Code pricing breakdown
+- [Getting Started Hub](/getting-started-hub/) — Foundations: what skills are, the .md format, and writing your first skill
+- [Troubleshooting Hub](/troubleshooting-hub/) — Fix every common skill error: permissions, YAML, context overflow, and more
+- [Comparisons Hub](/comparisons-hub/) — How Claude Code stacks up against Copilot, Cursor, and other tools
+- [Workflows Hub](/workflows-hub/) — Practical skill workflows for code review, documentation, and CI/CD
+- [Projects Hub](/projects-hub/) — Build real SaaS apps, CLI tools, and APIs using Claude skills
+- [Pricing Hub](/pricing-hub/) — Cost optimization and Claude Code pricing breakdown
 
 ---
 

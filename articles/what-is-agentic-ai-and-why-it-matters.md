@@ -177,12 +177,12 @@ As you explore Claude Code skills, focus on workflows that benefit from autonomo
 Start with one repetitive task in your workflow, create a skill to handle it, and experience firsthand how agentic AI transforms development productivity.
 
 ---
-*Related Topics: [Claude Skills Guide](/claude-skills-guide/guides-hub/), [Best Claude Skills for Developers](/claude-skills-guide/best-claude-skills-for-developers-2026/), [Getting Started with Claude Code](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)*
+*Related Topics: [Claude Skills Guide](/guides-hub/), [Best Claude Skills for Developers](/best-claude-skills-for-developers-2026/), [Getting Started with Claude Code](/claude-code-for-beginners-complete-getting-started-2026/)*
 
 ## Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

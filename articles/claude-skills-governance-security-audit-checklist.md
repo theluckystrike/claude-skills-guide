@@ -13,7 +13,7 @@ permalink: /claude-skills-governance-security-audit-checklist/
 
 # Claude Skills Governance Security Audit Checklist
 
-[As Claude Code adoption grows across development teams, establishing a security audit process for skills becomes essential](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Whether you are deploying community skills like `pdf` or `tdd` for document processing and test-driven development, or building internal skills that access sensitive APIs, governance gaps can expose your organization to risk. This checklist provides a systematic approach to auditing Claude skills before production deployment.
+[As Claude Code adoption grows across development teams, establishing a security audit process for skills becomes essential](/best-claude-code-skills-to-install-first-2026/) Whether you are deploying community skills like `pdf` or `tdd` for document processing and test-driven development, or building internal skills that access sensitive APIs, governance gaps can expose your organization to risk. This checklist provides a systematic approach to auditing Claude skills before production deployment.
 
 ## Understanding the Security Surface
 
@@ -68,7 +68,7 @@ Trace what happens to data processed by the skill. For skills like `xlsx` that h
 - No data persists in logs beyond the session
 - Sensitive data in context windows is handled appropriately
 
-The [`supermemory` skill](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) warrants special attention here since it is designed to persist context. Audit what gets stored and ensure no sensitive information is retained unintentionally.
+The [`supermemory` skill](/claude-supermemory-skill-persistent-context-explained/) warrants special attention here since it is designed to persist context. Audit what gets stored and ensure no sensitive information is retained unintentionally.
 
 ### 6. Cross-Skill Interaction Review
 
@@ -128,9 +128,9 @@ Regular review keeps your governance effective as the Claude skills ecosystem ev
 
 ## Related Reading
 
-- [How Do I Limit What a Claude Skill Can Access on Disk](/claude-skills-guide/how-do-i-limit-what-a-claude-skill-can-access-on-disk/) — Implement the disk access controls this audit checklist requires before deploying skills to production
-- [Claude Code Permissions Model and Security Guide 2026](/claude-skills-guide/claude-code-permissions-model-security-guide-2026/) — Understand the permissions model that governs what each skill can access and execute
-- [Claude Skills for Regulated Industries: Fintech and Healthcare](/claude-skills-guide/claude-skills-for-regulated-industries-fintech-healthcare/) — Apply skill governance in high-compliance contexts where security audits are mandatory
-- [Claude Skills: Advanced Hub](/claude-skills-guide/advanced-hub/) — Explore advanced security, compliance, and governance patterns for enterprise Claude deployments
+- [How Do I Limit What a Claude Skill Can Access on Disk](/how-do-i-limit-what-a-claude-skill-can-access-on-disk/) — Implement the disk access controls this audit checklist requires before deploying skills to production
+- [Claude Code Permissions Model and Security Guide 2026](/claude-code-permissions-model-security-guide-2026/) — Understand the permissions model that governs what each skill can access and execute
+- [Claude Skills for Regulated Industries: Fintech and Healthcare](/claude-skills-for-regulated-industries-fintech-healthcare/) — Apply skill governance in high-compliance contexts where security audits are mandatory
+- [Claude Skills: Advanced Hub](/advanced-hub/) — Explore advanced security, compliance, and governance patterns for enterprise Claude deployments
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

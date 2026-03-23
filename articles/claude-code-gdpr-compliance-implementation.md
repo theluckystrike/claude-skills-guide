@@ -363,9 +363,9 @@ The highest-leverage investments are: a thorough data inventory, automated reten
 
 ## Related Reading
 
-- [Claude Code CCPA Privacy Compliance Guide](/claude-skills-guide/claude-code-ccpa-privacy-compliance-guide/)
-- [Claude Code PII Detection and Masking Guide](/claude-skills-guide/claude-code-pii-detection-and-masking-guide/)
-- [Claude Code Cookie Consent Implementation](/claude-skills-guide/claude-code-cookie-consent-implementation/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Code CCPA Privacy Compliance Guide](/claude-code-ccpa-privacy-compliance-guide/)
+- [Claude Code PII Detection and Masking Guide](/claude-code-pii-detection-and-masking-guide/)
+- [Claude Code Cookie Consent Implementation](/claude-code-cookie-consent-implementation/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

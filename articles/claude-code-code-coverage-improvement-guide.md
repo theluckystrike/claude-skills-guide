@@ -193,8 +193,8 @@ Coverage metrics serve as a guide, not a scorecard. The real goal is confidence 
 
 ## Related Reading
 
-- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — TDD naturally drives higher coverage
-- [Automated Testing Pipeline with Claude TDD Skill 2026](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Automate coverage reporting in CI
-- [Claude Code Technical Debt Tracking Workflow](/claude-skills-guide/claude-code-technical-debt-tracking-workflow/) — Low coverage is a technical debt indicator
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/) — TDD naturally drives higher coverage
+- [Automated Testing Pipeline with Claude TDD Skill 2026](/claude-tdd-skill-test-driven-development-workflow/) — Automate coverage reporting in CI
+- [Claude Code Technical Debt Tracking Workflow](/claude-code-technical-debt-tracking-workflow/) — Low coverage is a technical debt indicator
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

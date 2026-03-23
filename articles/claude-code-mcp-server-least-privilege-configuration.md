@@ -340,11 +340,11 @@ Least privilege configuration for MCP servers requires initial effort but delive
 
 ## Related Reading
 
-- [MCP Server Permission Auditing Best Practices](/claude-skills-guide/mcp-server-permission-auditing-best-practices/)
-- [Building Your First MCP Tool Integration Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/)
-- [MCP Servers vs Claude Skills: What's the Difference?](/claude-skills-guide/mcp-servers-vs-claude-skills-what-is-the-difference/)
-- [Claude Code Permissions Model Security Guide 2026](/claude-skills-guide/claude-code-permissions-model-security-guide-2026/)
-- [Claude SuperMemory Skill: Persistent Context Explained](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/)
-- [Advanced Claude Skills Hub](/claude-skills-guide/advanced-hub/)
+- [MCP Server Permission Auditing Best Practices](/mcp-server-permission-auditing-best-practices/)
+- [Building Your First MCP Tool Integration Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)
+- [MCP Servers vs Claude Skills: What's the Difference?](/mcp-servers-vs-claude-skills-what-is-the-difference/)
+- [Claude Code Permissions Model Security Guide 2026](/claude-code-permissions-model-security-guide-2026/)
+- [Claude SuperMemory Skill: Persistent Context Explained](/claude-supermemory-skill-persistent-context-explained/)
+- [Advanced Claude Skills Hub](/advanced-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -17,9 +17,9 @@ Database consistency remains one of the most challenging aspects of software dev
 
 ## How Claude Skills Work with Database Conventions
 
-[Claude Code loads skills from `~/.claude/skills/` as plain Markdown files](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) Each skill contains instructions that guide Claude's behavior when you activate it. For database conventions, you can create a custom skill that defines your team's standards for naming tables, columns, relationships, and indexes.
+[Claude Code loads skills from `~/.claude/skills/` as plain Markdown files](/claude-skill-md-format-complete-specification-guide/) Each skill contains instructions that guide Claude's behavior when you activate it. For database conventions, you can create a custom skill that defines your team's standards for naming tables, columns, relationships, and indexes.
 
-[The power of using Claude skills for database work lies in their ability to apply consistent rules](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) across every interaction. Whether you're generating new schemas, reviewing existing code, or refactoring legacy tables, the skill ensures your conventions stay intact throughout the development lifecycle.
+[The power of using Claude skills for database work lies in their ability to apply consistent rules](/best-claude-code-skills-to-install-first-2026/) across every interaction. Whether you're generating new schemas, reviewing existing code, or refactoring legacy tables, the skill ensures your conventions stay intact throughout the development lifecycle.
 
 ## Creating a Database Conventions Skill
 
@@ -66,9 +66,9 @@ Claude will generate tables following your conventions—singular table names, s
 
 ## Integration with Other Skills
 
-Database conventions work well alongside other Claude skills. The [tdd skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) helps you write migration tests alongside your schema changes. The [pdf skill](/claude-skills-guide/best-claude-skills-for-data-analysis/) lets you generate database documentation in PDF format for stakeholders. Combined with the [supermemory skill](/claude-skills-guide/best-claude-skills-for-developers-2026/), you can maintain a searchable history of schema decisions and migrations.
+Database conventions work well alongside other Claude skills. The [tdd skill](/claude-tdd-skill-test-driven-development-workflow/) helps you write migration tests alongside your schema changes. The [pdf skill](/best-claude-skills-for-data-analysis/) lets you generate database documentation in PDF format for stakeholders. Combined with the [supermemory skill](/best-claude-skills-for-developers-2026/), you can maintain a searchable history of schema decisions and migrations.
 
-For frontend developers working with ORMs, the [frontend-design skill](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) pairs with database conventions to ensure your API responses match your schema structure consistently.
+For frontend developers working with ORMs, the [frontend-design skill](/best-claude-code-skills-for-frontend-development/) pairs with database conventions to ensure your API responses match your schema structure consistently.
 
 ## Pattern Enforcement Beyond Naming
 
@@ -133,9 +133,9 @@ Claude's markdown skills provide an effective framework for enforcing database c
 
 ## Related Reading
 
-- [Claude Skill .md Format: Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)
-- [Claude MD for Backend Projects Best Practices](/claude-skills-guide/claude-md-for-backend-projects-best-practices/)
-- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
-- [Workflows Hub](/claude-skills-guide/workflows-hub/)
+- [Claude Skill .md Format: Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/)
+- [Claude MD for Backend Projects Best Practices](/claude-md-for-backend-projects-best-practices/)
+- [Best Claude Code Skills to Install First (2026)](/best-claude-code-skills-to-install-first-2026/)
+- [Workflows Hub](/workflows-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -13,7 +13,7 @@ permalink: /claude-skills-for-websocket-realtime-app-development/
 
 # Claude Skills for WebSocket Realtime App Development
 
-[Real-time communication has become essential for modern web applications](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Chat systems, live dashboards, collaborative tools, and gaming platforms all rely on WebSocket connections to deliver instant data updates. Building these features from scratch presents unique challenges that Claude skills can help you overcome.
+[Real-time communication has become essential for modern web applications](/best-claude-code-skills-to-install-first-2026/) Chat systems, live dashboards, collaborative tools, and gaming platforms all rely on WebSocket connections to deliver instant data updates. Building these features from scratch presents unique challenges that Claude skills can help you overcome.
 
 This guide shows you how to use specific Claude skills to accelerate WebSocket development, from initial architecture to production deployment.
 
@@ -25,7 +25,7 @@ Claude skills encapsulate best practices for these patterns. Rather than researc
 
 ## Essential Skills for WebSocket Projects
 
-Several Claude skills prove particularly valuable when building [real-time app](/claude-skills-guide/claude-code-skills-for-backend-developers-node-and-python/)lications. Each addresses a specific aspect of the development workflow.
+Several Claude skills prove particularly valuable when building [real-time app](/claude-code-skills-for-backend-developers-node-and-python/)lications. Each addresses a specific aspect of the development workflow.
 
 ### frontend-design for UI Components
 
@@ -687,13 +687,13 @@ The combination of test-driven development, thoughtful UI implementation, and li
 
 ## Related Reading
 
-- [Claude Skills for GraphQL Schema Design and Testing](/claude-skills-guide/claude-skills-for-graphql-schema-design-and-testing/) — Combine WebSocket real-time subscriptions with GraphQL schema design for full-stack real-time APIs.
-- [Claude Code Skills for Kubernetes Operator Development](/claude-skills-guide/claude-code-skills-for-kubernetes-operator-development/) — Scale your WebSocket application infrastructure using Kubernetes operator patterns.
-- [Rate Limit Management for Claude Code Skill Intensive Workflows](/claude-skills-guide/rate-limit-management-claude-code-skill-intensive-workflows/) — Manage API rate limits when skill-generating high-frequency WebSocket message handlers.
-- [Can Claude Code Skills Call External APIs Automatically](/claude-skills-guide/can-claude-code-skills-call-external-apis-automatically/) — Extend WebSocket patterns to REST and streaming API integrations.
-- [Claude Skills Use Cases](/claude-skills-guide/use-cases-hub/) — Explore more specialized use cases for Claude skills in real-time and event-driven architectures.
-- [Claude Code Server Sent Events API Guide](/claude-skills-guide/claude-code-server-sent-events-api-guide/) — Compare WebSocket bidirectional messaging with SSE for one-way streaming use cases.
-- [Claude Code gRPC API Development Guide](/claude-skills-guide/claude-code-grpc-api-development-guide/) — Use gRPC streaming as an alternative transport for high-performance real-time services.
-- [Claude Code REST API Design Best Practices](/claude-skills-guide/claude-code-rest-api-design-best-practices/) — Design the complementary REST endpoints that pair with your WebSocket event stream.
+- [Claude Skills for GraphQL Schema Design and Testing](/claude-skills-for-graphql-schema-design-and-testing/) — Combine WebSocket real-time subscriptions with GraphQL schema design for full-stack real-time APIs.
+- [Claude Code Skills for Kubernetes Operator Development](/claude-code-skills-for-kubernetes-operator-development/) — Scale your WebSocket application infrastructure using Kubernetes operator patterns.
+- [Rate Limit Management for Claude Code Skill Intensive Workflows](/rate-limit-management-claude-code-skill-intensive-workflows/) — Manage API rate limits when skill-generating high-frequency WebSocket message handlers.
+- [Can Claude Code Skills Call External APIs Automatically](/can-claude-code-skills-call-external-apis-automatically/) — Extend WebSocket patterns to REST and streaming API integrations.
+- [Claude Skills Use Cases](/use-cases-hub/) — Explore more specialized use cases for Claude skills in real-time and event-driven architectures.
+- [Claude Code Server Sent Events API Guide](/claude-code-server-sent-events-api-guide/) — Compare WebSocket bidirectional messaging with SSE for one-way streaming use cases.
+- [Claude Code gRPC API Development Guide](/claude-code-grpc-api-development-guide/) — Use gRPC streaming as an alternative transport for high-performance real-time services.
+- [Claude Code REST API Design Best Practices](/claude-code-rest-api-design-best-practices/) — Design the complementary REST endpoints that pair with your WebSocket event stream.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

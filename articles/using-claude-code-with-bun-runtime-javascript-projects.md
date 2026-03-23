@@ -90,7 +90,7 @@ const server = Bun.serve({
 console.log(`Server running at http://localhost:${server.port}`);
 ```
 
-When working on API projects, pairing Claude Code with the [**tdd** skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) enhances test-driven development. The tdd skill guides Claude to write tests before implementation, and Bun's fast test runner (powered by Jest-compatible APIs) executes those tests quickly.
+When working on API projects, pairing Claude Code with the [**tdd** skill](/claude-tdd-skill-test-driven-development-workflow/) enhances test-driven development. The tdd skill guides Claude to write tests before implementation, and Bun's fast test runner (powered by Jest-compatible APIs) executes those tests quickly.
 
 ### Working with Databases
 
@@ -115,7 +115,7 @@ const insert = db.prepare(
 );
 ```
 
-For more complex data workflows, the [**supermemory** skill](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) helps Claude maintain context across sessions, useful when working with evolving database schemas.
+For more complex data workflows, the [**supermemory** skill](/claude-supermemory-skill-persistent-context-explained/) helps Claude maintain context across sessions, useful when working with evolving database schemas.
 
 ### Frontend Development
 
@@ -177,9 +177,9 @@ Experiment with this combination in your next project. The tight feedback loop b
 
 ## Related Reading
 
-- [Claude Code for Deno Deploy Serverless Runtime Guide](/claude-skills-guide/claude-code-for-deno-deploy-serverless-runtime-guide/) — See also
-- [Claude Code Nix Flake Reproducible Development Environment](/claude-skills-guide/claude-code-nix-flake-reproducible-development-environment/) — See also
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — See also
-- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/) — See also
+- [Claude Code for Deno Deploy Serverless Runtime Guide](/claude-code-for-deno-deploy-serverless-runtime-guide/) — See also
+- [Claude Code Nix Flake Reproducible Development Environment](/claude-code-nix-flake-reproducible-development-environment/) — See also
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — See also
+- [Claude Code Tutorials Hub](/tutorials-hub/) — See also
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -13,11 +13,11 @@ permalink: /claude-code-git-bisect-automated-bug-finding-workflow/
 
 # Claude Code Git Bisect: Automated Bug Finding Workflow
 
-[When you discover a regression in your codebase but have no idea which commit introduced it](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), manually checking each historical commit can feel like searching for a needle in a haystack. This is where git bisect becomes invaluable—and when combined with Claude Code, it transforms into a powerful automated bug-finding workflow that saves hours of frustration.
+[When you discover a regression in your codebase but have no idea which commit introduced it](/best-claude-code-skills-to-install-first-2026/), manually checking each historical commit can feel like searching for a needle in a haystack. This is where git bisect becomes invaluable—and when combined with Claude Code, it transforms into a powerful automated bug-finding workflow that saves hours of frustration.
 
 ## What is Git Bisect?
 
-[Git bisect is a built-in Git command that uses binary search to find which specific commit introduced a bug](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) Instead of checking hundreds of commits manually, bisect narrows it down in logarithmic time—typically finding the culprit in just 7-10 steps regardless of how many commits separate you from the problem.
+[Git bisect is a built-in Git command that uses binary search to find which specific commit introduced a bug](/claude-tdd-skill-test-driven-development-workflow/) Instead of checking hundreds of commits manually, bisect narrows it down in logarithmic time—typically finding the culprit in just 7-10 steps regardless of how many commits separate you from the problem.
 
 The workflow works by marking known-good and known-bad commits, then letting Git systematically test commits in between. Each test tells bisect which half of the remaining range contains the bug, until it pinpoints the exact problematic commit.
 
@@ -130,13 +130,13 @@ This prevents bisect from incorrectly classifying a broken-build commit as "bad"
 
 Several Claude skills complement the git bisect workflow beautifully:
 
-The [**tdd skill**](/claude-skills-guide/best-claude-skills-for-developers-2026/) helps you write regression tests that catch the bug, which you can then use with bisect run. When you load the skill with `/tdd`, Claude helps structure comprehensive tests that verify specific behaviors—these tests become your automated bug detectors. More importantly, after bisect finds the culprit commit, you keep the test as a permanent regression guard.
+The [**tdd skill**](/best-claude-skills-for-developers-2026/) helps you write regression tests that catch the bug, which you can then use with bisect run. When you load the skill with `/tdd`, Claude helps structure comprehensive tests that verify specific behaviors—these tests become your automated bug detectors. More importantly, after bisect finds the culprit commit, you keep the test as a permanent regression guard.
 
 The **pdf skill** proves useful when the bug involves documentation or report generation. You can script validation checks that verify PDF output matches expected content, then feed those checks into bisect.
 
 For projects involving visual output, the **frontend-design skill** helps validate UI components programmatically, ensuring your automated bisect tests catch visual regressions.
 
-The [**supermemory skill**](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) can track your bisect sessions across projects, remembering which commits were problematic and what fixes resolved them—building institutional knowledge about recurring issues.
+The [**supermemory skill**](/claude-skills-token-optimization-reduce-api-costs/) can track your bisect sessions across projects, remembering which commits were problematic and what fixes resolved them—building institutional knowledge about recurring issues.
 
 ## Practical Example: Finding a Login Bug
 
@@ -322,9 +322,9 @@ Next time you encounter a mysterious bug, remember: git bisect with Claude Code 
 
 ## Related Reading
 
-- [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Core developer skills for debugging and test-driven bug isolation
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Understand how skills activate automatically during debug sessions
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Optimize multi-step bisect sessions to keep costs under control
-- [Open Source Contribution Workflow with Claude Code 2026](/claude-skills-guide/claude-code-open-source-contribution-workflow-guide-2026/) — Use git bisect skills to find and fix bugs before submitting open source PRs
+- [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/) — Core developer skills for debugging and test-driven bug isolation
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — Understand how skills activate automatically during debug sessions
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — Optimize multi-step bisect sessions to keep costs under control
+- [Open Source Contribution Workflow with Claude Code 2026](/claude-code-open-source-contribution-workflow-guide-2026/) — Use git bisect skills to find and fix bugs before submitting open source PRs
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -19,7 +19,7 @@ You've created a skill file, placed it in the correct directory, but Claude Code
 
 Unlike other errors that produce visible feedback, a completely ignored skill file provides no indication something is wrong. Claude Code processes skill files during startup and when refreshing skills, but it skips files that fail to meet certain requirements without notifying you. This design choice keeps the loading process clean but creates a debugging challenge.
 
-Several factors can cause this silent failure. The issue typically stems from file location, naming conventions, front matter problems, or syntax errors in your skill definition. Each cause requires a different [troubleshooting](/claude-skills-guide/troubleshooting-hub/) approach.
+Several factors can cause this silent failure. The issue typically stems from file location, naming conventions, front matter problems, or syntax errors in your skill definition. Each cause requires a different [troubleshooting](/troubleshooting-hub/) approach.
 
 ## File Location and Directory Structure
 
@@ -39,7 +39,7 @@ The filename also determines how you invoke the skill. If you name your file `su
 
 ## Front Matter Parsing Issues
 
-The [YAML front matter](/claude-skills-guide/claude-skill-yaml-front-matter-parsing-error-fix/) at the top of your skill file must be valid YAML. Even minor formatting errors cause Claude Code to skip the entire file. Common front matter problems include incorrect indentation, missing colons after keys, or invalid characters in values.
+The [YAML front matter](/claude-skill-yaml-front-matter-parsing-error-fix/) at the top of your skill file must be valid YAML. Even minor formatting errors cause Claude Code to skip the entire file. Common front matter problems include incorrect indentation, missing colons after keys, or invalid characters in values.
 
 A proper front matter block looks like this:
 
@@ -118,9 +118,9 @@ Building reliable skills takes iteration. Start with a minimal working skill, ve
 
 ## Related Reading
 
-- [How Do I Debug a Claude Skill That Silently Fails](/claude-skills-guide/how-do-i-debug-a-claude-skill-that-silently-fails/) — Go deeper on diagnosing skills that load but produce no output
-- [Claude Skill YAML Front Matter Parsing Error Fix](/claude-skills-guide/claude-skill-yaml-front-matter-parsing-error-fix/) — Fix malformed YAML that causes Claude Code to skip your skill entirely
-- [Why Is My Claude Skill Not Showing Up: Fix Guide](/claude-skills-guide/claude-code-skill-not-found-in-skills-directory-how-to-fix/) — Systematic checklist for skill visibility and discovery issues
-- [Claude Skills Hub](/claude-skills-guide/troubleshooting-hub/) — Find solutions to common skill loading and configuration problems
+- [How Do I Debug a Claude Skill That Silently Fails](/how-do-i-debug-a-claude-skill-that-silently-fails/) — Go deeper on diagnosing skills that load but produce no output
+- [Claude Skill YAML Front Matter Parsing Error Fix](/claude-skill-yaml-front-matter-parsing-error-fix/) — Fix malformed YAML that causes Claude Code to skip your skill entirely
+- [Why Is My Claude Skill Not Showing Up: Fix Guide](/claude-code-skill-not-found-in-skills-directory-how-to-fix/) — Systematic checklist for skill visibility and discovery issues
+- [Claude Skills Hub](/troubleshooting-hub/) — Find solutions to common skill loading and configuration problems
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

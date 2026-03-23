@@ -602,8 +602,8 @@ Start with these practices: write descriptive commits, use branches intentionall
 
 ## Related Reading
 
-- [Claude Code Merge Conflict Resolution Guide](/claude-skills-guide/claude-code-merge-conflict-resolution-guide/) — Conflict resolution is a core git workflow skill
-- [Claude Code Trunk Based Development Guide](/claude-skills-guide/claude-code-trunk-based-development-guide/) — Trunk-based development is a key workflow pattern
-- [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — All git and development workflow automation
+- [Claude Code Merge Conflict Resolution Guide](/claude-code-merge-conflict-resolution-guide/) — Conflict resolution is a core git workflow skill
+- [Claude Code Trunk Based Development Guide](/claude-code-trunk-based-development-guide/) — Trunk-based development is a key workflow pattern
+- [Claude Skills Workflows Hub](/workflows-hub/) — All git and development workflow automation
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

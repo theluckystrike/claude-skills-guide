@@ -15,7 +15,7 @@ permalink: /claude-md-conflicting-instructions-resolution-guide/
 
 When working with Claude Code or Claude desktop skills, you will inevitably encounter situations where multiple instructions conflict. This happens when different skills, system prompts, or user requests send mixed signals about what action to take. Understanding how to resolve these conflicts is essential for building reliable AI-assisted workflows.
 
-This guide provides practical patterns for developers and power users dealing with conflicting instructions in Claude MD environments. For a deeper look at the skill format itself, see the [Claude skill .md format complete specification guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/).
+This guide provides practical patterns for developers and power users dealing with conflicting instructions in Claude MD environments. For a deeper look at the skill format itself, see the [Claude skill .md format complete specification guide](/claude-skill-md-format-complete-specification-guide/).
 
 ## Understanding Instruction Conflicts
 
@@ -42,7 +42,7 @@ The cost of leaving conflicts unresolved is not just wrong output on a single ru
 
 ### 1. Explicit Priority Declaration
 
-The most reliable approach is declaring instruction priority directly in your skill definition. [How to write a skill .md file for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) covers the front matter fields available for precedence control. Front matter allows you to specify precedence:
+The most reliable approach is declaring instruction priority directly in your skill definition. [How to write a skill .md file for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/) covers the front matter fields available for precedence control. Front matter allows you to specify precedence:
 
 ```yaml
 ---
@@ -273,7 +273,7 @@ The key is separating code output (where verbosity has audit value) from convers
 
 **Prefer explicit over implicit resolution.** When conflicts arise, add front matter declarations rather than relying on Claude's default resolution. Implicit resolution produces different results across model versions and sessions.
 
-**Test conflict scenarios during skill development.** Load multiple skills together and verify the resolution matches your expectations. The [Claude MD changes not taking effect fix guide](/claude-skills-guide/claude-md-changes-not-taking-effect-fix-guide/) can help when resolution rules are not applying as expected.
+**Test conflict scenarios during skill development.** Load multiple skills together and verify the resolution matches your expectations. The [Claude MD changes not taking effect fix guide](/claude-md-changes-not-taking-effect-fix-guide/) can help when resolution rules are not applying as expected.
 
 **Keep skill instruction scope narrow.** Skills that define behavior for a broad surface area are more likely to conflict with everything. Skills that define behavior only within their specific domain compose cleanly.
 
@@ -303,9 +303,9 @@ Whether you're combining `pdf` extraction with `tdd` validation, integrating `fr
 
 ## Related Reading
 
-- [Claude Skill .md Format: Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — Reference the full front matter schema including priority and conflict-related fields
-- [How to Write a Skill .md File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) — Build skills from scratch with clear instruction boundaries that reduce conflict likelihood
-- [Claude MD Changes Not Taking Effect: Fix Guide](/claude-skills-guide/claude-md-changes-not-taking-effect-fix-guide/) — Troubleshoot why conflict resolution rules may not be applying as expected
-- [Claude Skills Advanced Hub](/claude-skills-guide/advanced-hub/) — Explore advanced skill orchestration patterns beyond basic conflict resolution
+- [Claude Skill .md Format: Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/) — Reference the full front matter schema including priority and conflict-related fields
+- [How to Write a Skill .md File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/) — Build skills from scratch with clear instruction boundaries that reduce conflict likelihood
+- [Claude MD Changes Not Taking Effect: Fix Guide](/claude-md-changes-not-taking-effect-fix-guide/) — Troubleshoot why conflict resolution rules may not be applying as expected
+- [Claude Skills Advanced Hub](/advanced-hub/) — Explore advanced skill orchestration patterns beyond basic conflict resolution
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

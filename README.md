@@ -2,7 +2,7 @@
 
 700+ free tutorials for Claude Code skills -- comparisons, troubleshooting, integrations, and automation guides.
 
-**Browse:** [theluckystrike.github.io/claude-skills-guide](https://theluckystrike.github.io/claude-skills-guide/)
+**Browse:** [theluckystrike.github.io/claude-skills-guide](https://theluckystrike.github.io/)
 
 ### What's inside
 

@@ -18,7 +18,7 @@ score: 7
 
 Converting Figma designs to Tailwind CSS components is a common but time-consuming task in modern web development. With Claude Code and the right MCP (Model Context Protocol) tools, you can automate much of this workflow and generate production-ready components from your design files.
 
-**Scope:** This guide focuses on generating components that use Tailwind CSS utility classes — inline class names composed directly in JSX, with design tokens defined in `tailwind.config.js`. If your project uses CSS Modules or vanilla CSS for scoped styling instead, see the companion guide: [Claude Code Figma to Code Component Workflow](/claude-skills-guide/claude-code-figma-to-code-component-workflow/).
+**Scope:** This guide focuses on generating components that use Tailwind CSS utility classes — inline class names composed directly in JSX, with design tokens defined in `tailwind.config.js`. If your project uses CSS Modules or vanilla CSS for scoped styling instead, see the companion guide: [Claude Code Figma to Code Component Workflow](/claude-code-figma-to-code-component-workflow/).
 
 ## Prerequisites
 
@@ -404,9 +404,9 @@ The combination of Claude's understanding of both design principles and Tailwind
 
 ## Related Reading
 
-- [Claude Code Figma to Code Component Workflow](/claude-skills-guide/claude-code-figma-to-code-component-workflow/) — same workflow using CSS Modules / vanilla CSS
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Code Figma to Code Component Workflow](/claude-code-figma-to-code-component-workflow/) — same workflow using CSS Modules / vanilla CSS
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

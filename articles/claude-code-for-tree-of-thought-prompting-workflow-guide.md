@@ -12,7 +12,7 @@ tags: [claude-code, claude-skills]
 {% raw %}
 # Claude Code for Tree of Thought Prompting Workflow Guide
 
-[Tree of Thought (ToT) prompting](/claude-skills-guide/what-is-claude-code-and-how-to-get-started/) transforms how you interact with Claude Code by enabling systematic exploration of multiple solution paths simultaneously. Rather than following a single linear reasoning chain, ToT encourages Claude to branch into different approaches, evaluate each path, and converge on the optimal solution. This guide shows you how to implement effective Tree of Thought workflows that dramatically improve problem-solving quality.
+[Tree of Thought (ToT) prompting](/what-is-claude-code-and-how-to-get-started/) transforms how you interact with Claude Code by enabling systematic exploration of multiple solution paths simultaneously. Rather than following a single linear reasoning chain, ToT encourages Claude to branch into different approaches, evaluate each path, and converge on the optimal solution. This guide shows you how to implement effective Tree of Thought workflows that dramatically improve problem-solving quality.
 
 ## Understanding Tree of Thought Prompting
 

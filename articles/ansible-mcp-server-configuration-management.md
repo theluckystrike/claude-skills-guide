@@ -20,7 +20,7 @@ Managing infrastructure configuration across multiple environments demands preci
 
 ## Understanding the Ansible MCP Server Architecture
 
-[The Ansible MCP server acts as a bridge between Claude Code and your Ansible infrastructure](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) It exposes Ansible's powerful configuration management capabilities through MCP tools, allowing you to execute playbooks, manage variables, and query inventory data without leaving your conversational context.
+[The Ansible MCP server acts as a bridge between Claude Code and your Ansible infrastructure](/building-your-first-mcp-tool-integration-guide-2026/) It exposes Ansible's powerful configuration management capabilities through MCP tools, allowing you to execute playbooks, manage variables, and query inventory data without leaving your conversational context.
 
 When you configure the Ansible MCP server, it runs as a separate process that communicates with Claude Code via stdio or HTTP transport. This architecture keeps your Ansible execution environment isolated while integrating with Claude's reasoning capabilities.
 
@@ -38,7 +38,7 @@ This design means the MCP server never bypasses your existing Ansible access con
 
 ## Setting Up the Ansible MCP Server
 
-[Installation requires Node.js and the MCP server package](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Use npm to install the server globally:
+[Installation requires Node.js and the MCP server package](/best-claude-code-skills-to-install-first-2026/) Use npm to install the server globally:
 
 ```bash
 npm install -g @modelcontextprotocol/server-ansible
@@ -534,10 +534,10 @@ The Ansible MCP server transforms how you manage infrastructure configuration. B
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/)
-- [MCP Server Permission Auditing Best Practices](/claude-skills-guide/mcp-server-permission-auditing-best-practices/)
-- [AWS MCP Server Cloud Automation with Claude Code](/claude-skills-guide/aws-mcp-server-cloud-automation-with-claude-code/)
-- [Integrations Hub](/claude-skills-guide/integrations-hub/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)
+- [MCP Server Permission Auditing Best Practices](/mcp-server-permission-auditing-best-practices/)
+- [AWS MCP Server Cloud Automation with Claude Code](/aws-mcp-server-cloud-automation-with-claude-code/)
+- [Integrations Hub](/integrations-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

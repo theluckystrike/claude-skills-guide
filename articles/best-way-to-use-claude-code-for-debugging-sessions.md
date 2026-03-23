@@ -13,7 +13,7 @@ permalink: /best-way-to-use-claude-code-for-debugging-sessions/
 
 # Best Way to Use Claude Code for Debugging Sessions
 
-[Debugging remains one of the most time-intensive tasks in software development](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Claude Code offers a powerful alternative to traditional debugging workflows—providing an intelligent partner that can analyze error messages, trace through code paths, and suggest fixes in real time. The difference between a frustrating hour-long debugging session and a focused 15-minute one often comes down to how you structure your interaction. Here is how to get the most out of Claude Code during debugging sessions.
+[Debugging remains one of the most time-intensive tasks in software development](/best-claude-code-skills-to-install-first-2026/) Claude Code offers a powerful alternative to traditional debugging workflows—providing an intelligent partner that can analyze error messages, trace through code paths, and suggest fixes in real time. The difference between a frustrating hour-long debugging session and a focused 15-minute one often comes down to how you structure your interaction. Here is how to get the most out of Claude Code during debugging sessions.
 
 ## Why Prompt Structure Matters for Debugging
 
@@ -25,7 +25,7 @@ The debugging conversation also accumulates context. Your second and third promp
 
 ## Setting Up Debugging Sessions Effectively
 
-[The key to effective debugging with Claude Code lies in how you structure your initial request](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) Rather than pasting a massive error dump, provide context that helps Claude understand your codebase and environment.
+[The key to effective debugging with Claude Code lies in how you structure your initial request](/claude-tdd-skill-test-driven-development-workflow/) Rather than pasting a massive error dump, provide context that helps Claude understand your codebase and environment.
 
 Start with a structured prompt that includes three components: what you expected to happen, what actually happened, and the relevant code or error context. For example:
 
@@ -41,7 +41,7 @@ Getting this error: jwt expired. Help.
 
 The first prompt gives Claude the expected behavior (30 minutes), the actual behavior (10 minutes), the specific file and line range, and the error. Claude can form a hypothesis about token refresh timing or clock skew immediately rather than asking clarifying questions.
 
-For larger codebases, [using the supermemory skill to maintain context across multiple debugging sessions](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) prevents you from re-explaining your codebase structure at the start of every new session. Save key architecture decisions and recurring patterns once, and they persist automatically.
+For larger codebases, [using the supermemory skill to maintain context across multiple debugging sessions](/claude-supermemory-skill-persistent-context-explained/) prevents you from re-explaining your codebase structure at the start of every new session. Save key architecture decisions and recurring patterns once, and they persist automatically.
 
 ### The Debugging Context Template
 
@@ -64,7 +64,7 @@ Not every field applies to every bug, but filling in what you know eliminates th
 
 Several Claude skills significantly improve debugging productivity when combined with the base debugging workflow.
 
-[The **tdd** skill helps by writing regression tests](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) once you identify the root cause, ensuring the bug stays fixed. After debugging a tricky race condition, you can invoke:
+[The **tdd** skill helps by writing regression tests](/claude-tdd-skill-test-driven-development-workflow/) once you identify the root cause, ensuring the bug stays fixed. After debugging a tricky race condition, you can invoke:
 
 ```
 /tdd write concurrent tests for this authentication flow to catch the race condition we just fixed
@@ -109,7 +109,7 @@ Claude will identify the likely cause (the users prop is undefined while the API
 
 ### Pattern 2: Bisect and Isolate
 
-[Claude Code can assist with git bisect workflows](/claude-skills-guide/claude-code-git-bisect-automated-bug-finding-workflow/) when you have a regression with an unknown origin. Rather than manually narrowing down commits, describe the regression boundary:
+[Claude Code can assist with git bisect workflows](/claude-code-git-bisect-automated-bug-finding-workflow/) when you have a regression with an unknown origin. Rather than manually narrowing down commits, describe the regression boundary:
 
 ```
 Help me find which commit introduced this bug. The error appeared between version 2.1 and 2.2.
@@ -280,9 +280,9 @@ For best results, match the debugging approach to the problem type. Use Claude C
 
 ## Related Reading
 
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/)
-- [Claude Code Git Bisect Automated Bug Finding Workflow](/claude-skills-guide/claude-code-git-bisect-automated-bug-finding-workflow/)
-- [How to Debug a Claude Skill That Silently Fails](/claude-skills-guide/how-do-i-debug-a-claude-skill-that-silently-fails/)
-- [Workflows Hub](/claude-skills-guide/workflows-hub/)
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/)
+- [Claude Code Git Bisect Automated Bug Finding Workflow](/claude-code-git-bisect-automated-bug-finding-workflow/)
+- [How to Debug a Claude Skill That Silently Fails](/how-do-i-debug-a-claude-skill-that-silently-fails/)
+- [Workflows Hub](/workflows-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -13,7 +13,7 @@ permalink: /claude-code-for-students-homework-and-projects/
 
 # Claude Code for Students: Homework and Projects
 
-[Students face unique challenges when balancing coursework, projects, and deadlines](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Claude Code offers a powerful command-line interface that transforms how you approach programming assignments, research projects, and academic work. This guide shows you practical ways to integrate Claude Code into your student workflow.
+[Students face unique challenges when balancing coursework, projects, and deadlines](/best-claude-code-skills-to-install-first-2026/) Claude Code offers a powerful command-line interface that transforms how you approach programming assignments, research projects, and academic work. This guide shows you practical ways to integrate Claude Code into your student workflow.
 
 ## Getting Started with Claude Code
 
@@ -41,7 +41,7 @@ This catches syntax errors, logical mistakes, and style issues before your TA se
 
 ### Generating Test Cases
 
-[Assignment requirements often include test cases](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) Use Claude Code to generate comprehensive tests:
+[Assignment requirements often include test cases](/claude-tdd-skill-test-driven-development-workflow/) Use Claude Code to generate comprehensive tests:
 
 Start Claude Code and ask: "Generate unit tests for this sorting algorithm implementation"
 
@@ -255,9 +255,9 @@ Start with simple tasks like code review and test generation. As you grow comfor
 
 ## Related Reading
 
-- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
-- [Automated Testing Pipeline with Claude TDD Skill 2026](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/)
-- [Claude Code Setup on Mac: Step by Step](/claude-skills-guide/claude-code-setup-on-mac-step-by-step/)
-- [Getting Started Hub](/claude-skills-guide/getting-started-hub/)
+- [Best Claude Code Skills to Install First (2026)](/best-claude-code-skills-to-install-first-2026/)
+- [Automated Testing Pipeline with Claude TDD Skill 2026](/claude-tdd-skill-test-driven-development-workflow/)
+- [Claude Code Setup on Mac: Step by Step](/claude-code-setup-on-mac-step-by-step/)
+- [Getting Started Hub](/getting-started-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

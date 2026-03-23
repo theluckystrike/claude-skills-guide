@@ -11,11 +11,11 @@ score: 7
 permalink: /claude-skills-for-data-science-and-jupyter-notebooks/
 ---
 
-[Data science workflows involve repetitive tasks that drain productivity](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/): cleaning messy datasets, generating visualizations, building machine learning pipelines, and documenting findings. Claude Code skills transform these workflows by automating common operations and enabling AI-assisted development directly within Jupyter notebooks and Python environments.
+[Data science workflows involve repetitive tasks that drain productivity](/best-claude-code-skills-to-install-first-2026/): cleaning messy datasets, generating visualizations, building machine learning pipelines, and documenting findings. Claude Code skills transform these workflows by automating common operations and enabling AI-assisted development directly within Jupyter notebooks and Python environments.
 
 Claude skills are Markdown files stored in `~/.claude/skills/` and invoked with `/skill-name` inside a Claude Code session. They give Claude standing instructions for specialized tasks. There are no `from canvas_design import` or `from supermemory import` Python packages—skills are invoked conversationally, not imported.
 
-[This guide covers practical Claude skills that data scientists and developers use daily](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)
+[This guide covers practical Claude skills that data scientists and developers use daily](/claude-skill-md-format-complete-specification-guide/)
 
 ## Foundation Skills for Data Science
 
@@ -239,9 +239,9 @@ Claude skills for data science and Jupyter notebooks eliminate friction between 
 
 ## Related Reading
 
-- [Best Claude Skills for Data Analysis](/claude-skills-guide/best-claude-skills-for-data-analysis/) — Complete data analysis skill guide
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep data workflows cost-efficient
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [Best Claude Skills for Data Analysis](/best-claude-skills-for-data-analysis/) — Complete data analysis skill guide
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — Keep data workflows cost-efficient
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -420,10 +420,10 @@ The deeper benefit is consistency. Every developer on your team works from the s
 
 ## Related Reading
 
-- [Claude Code OpenAPI Spec Generation Guide](/claude-skills-guide/claude-code-openapi-spec-generation-guide/)
-- [Claude Code API Backward Compatibility Guide](/claude-skills-guide/claude-code-api-backward-compatibility-guide/)
-- [Claude Code REST API Design Best Practices](/claude-skills-guide/claude-code-rest-api-design-best-practices/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Code OpenAPI Spec Generation Guide](/claude-code-openapi-spec-generation-guide/)
+- [Claude Code API Backward Compatibility Guide](/claude-code-api-backward-compatibility-guide/)
+- [Claude Code REST API Design Best Practices](/claude-code-rest-api-design-best-practices/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

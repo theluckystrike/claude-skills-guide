@@ -13,16 +13,16 @@ permalink: /automated-code-documentation-workflow-with-claude-skills/
 
 # Automated Code Documentation Workflow with Claude Skills
 
-[Documentation is the part of software development most developers neglect](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) not because they do not care, but because it is tedious and time-consuming to write by hand. Keeping docs in sync with rapidly changing code makes it worse. Claude skills offer a practical solution: an automated code documentation workflow that generates accurate, developer-friendly documentation directly from your codebase.
+[Documentation is the part of software development most developers neglect](/best-claude-code-skills-to-install-first-2026/) not because they do not care, but because it is tedious and time-consuming to write by hand. Keeping docs in sync with rapidly changing code makes it worse. Claude skills offer a practical solution: an automated code documentation workflow that generates accurate, developer-friendly documentation directly from your codebase.
 
-[This guide walks through building that workflow from scratch](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/), README files, API references, and change-log summaries.
+[This guide walks through building that workflow from scratch](/claude-skill-md-format-complete-specification-guide/), README files, API references, and change-log summaries.
 
 ## What You Need
 
 - Claude Code installed and running
 - A project with source code (JavaScript, TypeScript, Python, or similar)
-- The [`pdf` skill](/claude-skills-guide/best-claude-skills-for-data-analysis/) for generating formatted documentation outputs
-- The [`supermemory` skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) for storing documentation decisions across sessions
+- The [`pdf` skill](/best-claude-skills-for-data-analysis/) for generating formatted documentation outputs
+- The [`supermemory` skill](/claude-skills-token-optimization-reduce-api-costs/) for storing documentation decisions across sessions
 - Git access to your repo (for commit-based change detection)
 
 No additional packages or CI setup required to start. You can layer in CI automation once the local workflow is solid.
@@ -287,11 +287,11 @@ This workflow turns documentation from a quarterly cleanup task into a continuou
 
 ## Related Reading
 
-- [Full Stack Web App with Claude Skills Step by Step](/claude-skills-guide/full-stack-web-app-with-claude-skills-step-by-step/) — Skills applied across the full development lifecycle
-- [Claude Skills Automated Blog Post Workflow Tutorial](/claude-skills-guide/claude-skills-automated-blog-post-workflow-tutorial/) — Automate content creation with Claude skills
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Full developer skill stack
+- [Full Stack Web App with Claude Skills Step by Step](/full-stack-web-app-with-claude-skills-step-by-step/) — Skills applied across the full development lifecycle
+- [Claude Skills Automated Blog Post Workflow Tutorial](/claude-skills-automated-blog-post-workflow-tutorial/) — Automate content creation with Claude skills
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Full developer skill stack
 
 
-**Related guides:** [Best Way to Use Claude Code for Database Migrations](https://theluckystrike.github.io/claude-skills-guide/best-way-to-use-claude-code-for-database-migrations/)
+**Related guides:** [Best Way to Use Claude Code for Database Migrations](https://theluckystrike.github.io/best-way-to-use-claude-code-for-database-migrations/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

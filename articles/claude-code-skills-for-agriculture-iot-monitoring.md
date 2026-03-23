@@ -13,7 +13,7 @@ permalink: /claude-code-skills-for-agriculture-iot-monitoring/
 
 # Claude Code Skills for Agriculture IoT Monitoring
 
-[Agricultural operations generate massive amounts of sensor data](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)—from soil moisture readings to temperature fluctuations, from pH levels to equipment status updates. Building Claude Code skills to monitor and respond to this data transforms raw measurements into actionable insights. This guide shows you how to create skills that process agricultural IoT data, trigger automated responses, and help manage precision farming operations.
+[Agricultural operations generate massive amounts of sensor data](/best-claude-code-skills-to-install-first-2026/)—from soil moisture readings to temperature fluctuations, from pH levels to equipment status updates. Building Claude Code skills to monitor and respond to this data transforms raw measurements into actionable insights. This guide shows you how to create skills that process agricultural IoT data, trigger automated responses, and help manage precision farming operations.
 
 ## The Agricultural IoT Data Challenge
 
@@ -26,7 +26,7 @@ Modern farms deploy dozens or hundreds of sensors across fields, greenhouses, an
 - Tank level monitors for irrigation systems
 - Equipment status sensors
 
-Manually monitoring this data is impractical. [Claude Code skills can process this data automatically](/claude-skills-guide/claude-skills-for-embedded-systems-iot-firmware/), detecting anomalies, triggering alerts, and even controlling connected systems.
+Manually monitoring this data is impractical. [Claude Code skills can process this data automatically](/claude-skills-for-embedded-systems-iot-firmware/), detecting anomalies, triggering alerts, and even controlling connected systems.
 
 ## Building a Sensor Data Processing Skill
 
@@ -225,9 +225,9 @@ The key is defining clear thresholds, providing structured input formats, and sp
 
 ## Related Reading
 
-- [Claude Code Skills for IoT and Embedded Systems](/claude-skills-guide/claude-skills-for-embedded-systems-iot-firmware/) — related patterns for sensor data processing and device management
-- [Claude Skills for Energy Smart Grid Applications](/claude-skills-guide/claude-skills-for-energy-smart-grid-applications/) — apply similar IoT monitoring patterns to energy infrastructure
-- [Claude Code SendGrid Email Automation Setup](/claude-skills-guide/claude-code-skills-sendgrid-email-automation-setup/) — set up alert notifications for critical sensor threshold breaches
-- [Use Cases Hub](/claude-skills-guide/use-cases-hub/) — discover Claude Code applications across specialized industries
+- [Claude Code Skills for IoT and Embedded Systems](/claude-skills-for-embedded-systems-iot-firmware/) — related patterns for sensor data processing and device management
+- [Claude Skills for Energy Smart Grid Applications](/claude-skills-for-energy-smart-grid-applications/) — apply similar IoT monitoring patterns to energy infrastructure
+- [Claude Code SendGrid Email Automation Setup](/claude-code-skills-sendgrid-email-automation-setup/) — set up alert notifications for critical sensor threshold breaches
+- [Use Cases Hub](/use-cases-hub/) — discover Claude Code applications across specialized industries
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

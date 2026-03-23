@@ -398,9 +398,9 @@ As your testing matures, extend your axe setup to cover authenticated pages, dyn
 
 ## Related Reading
 
-- [Claude Code WCAG Accessibility Audit Workflow](/claude-skills-guide/claude-code-wcag-accessibility-audit-workflow/) — WCAG is the standard axe tests against
-- [Claude Code Aria Labels Implementation Guide](/claude-skills-guide/claude-code-aria-labels-implementation-guide/) — Fix the ARIA issues axe discovers
-- [Claude Code Keyboard Navigation Testing Guide](/claude-skills-guide/claude-code-keyboard-navigation-testing-guide/) — Combine axe with keyboard nav testing
-- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Run axe tests in your TDD workflow
+- [Claude Code WCAG Accessibility Audit Workflow](/claude-code-wcag-accessibility-audit-workflow/) — WCAG is the standard axe tests against
+- [Claude Code Aria Labels Implementation Guide](/claude-code-aria-labels-implementation-guide/) — Fix the ARIA issues axe discovers
+- [Claude Code Keyboard Navigation Testing Guide](/claude-code-keyboard-navigation-testing-guide/) — Combine axe with keyboard nav testing
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/) — Run axe tests in your TDD workflow
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

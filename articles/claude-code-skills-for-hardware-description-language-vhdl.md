@@ -13,7 +13,7 @@ permalink: /claude-code-skills-for-hardware-description-language-vhdl/
 
 # Claude Code Skills for Hardware Description Language VHDL
 
-Hardware Description Languages like VHDL require precise syntax, rigorous testing, and careful documentation. Unlike software programming, a single missing signal in a sensitivity list can produce a latch that passes simulation but fails after synthesis. Claude Code skills enhance your development workflow by providing specialized assistance for these failure-prone aspects of VHDL projects—from entity creation through simulation testbenches and datasheet generation. This guide covers practical applications of Claude skills for VHDL development. For an overview of how [Claude skills work with advanced use cases](/claude-skills-guide/advanced-hub/), the advanced hub covers multi-agent orchestration and specialized tooling.
+Hardware Description Languages like VHDL require precise syntax, rigorous testing, and careful documentation. Unlike software programming, a single missing signal in a sensitivity list can produce a latch that passes simulation but fails after synthesis. Claude Code skills enhance your development workflow by providing specialized assistance for these failure-prone aspects of VHDL projects—from entity creation through simulation testbenches and datasheet generation. This guide covers practical applications of Claude skills for VHDL development. For an overview of how [Claude skills work with advanced use cases](/advanced-hub/), the advanced hub covers multi-agent orchestration and specialized tooling.
 
 ## Setting Up VHDL Projects with Claude
 
@@ -369,7 +369,7 @@ If you inherit a Verilog module that needs to connect to your VHDL top level, Cl
 
 ## Memory Exploration with Supermemory
 
-The [supermemory skill maintains context](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) across your VHDL project. It remembers:
+The [supermemory skill maintains context](/claude-supermemory-skill-persistent-context-explained/) across your VHDL project. It remembers:
 
 - Previous design decisions (why you chose synchronous versus asynchronous reset)
 - Signal naming conventions (`_n` suffix for active-low, `s_` prefix for internal signals)
@@ -417,15 +417,15 @@ Each skill focuses on a specific aspect of development, allowing you to chain th
 
 ## Key Takeaways
 
-Claude Code transforms VHDL development by providing structured assistance for testing, documentation, and code quality. The TDD skill encourages test-first thinking for testbenches. Direct code review prompts catch synthesis issues—latches, sensitivity list gaps, incomplete case statements—early in the cycle before they reach a multi-hour synthesis run. Documentation skills automate datasheet generation from entity definitions. For teams looking to apply [skill inheritance and composition patterns](/claude-skills-guide/claude-skill-inheritance-and-composition-patterns/), modular skill design scales well across large hardware projects with dozens of IP blocks.
+Claude Code transforms VHDL development by providing structured assistance for testing, documentation, and code quality. The TDD skill encourages test-first thinking for testbenches. Direct code review prompts catch synthesis issues—latches, sensitivity list gaps, incomplete case statements—early in the cycle before they reach a multi-hour synthesis run. Documentation skills automate datasheet generation from entity definitions. For teams looking to apply [skill inheritance and composition patterns](/claude-skill-inheritance-and-composition-patterns/), modular skill design scales well across large hardware projects with dozens of IP blocks.
 
 Start with the skills that match your biggest pain point—testbench creation, documentation, or code review—and expand from there. For most VHDL developers, testbench generation with the TDD skill delivers the most immediate time savings, since comprehensive stimulus sequences are time-consuming to write manually and easy for Claude to produce from a plain-English description of your circuit's behavior.
 
 ## Related Reading
 
-- [Claude Skill Inheritance and Composition Patterns](/claude-skills-guide/claude-skill-inheritance-and-composition-patterns/) — Build modular, reusable skills that chain together for complex hardware workflows
-- [Claude SuperMemory Skill: Persistent Context Guide](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) — Persist design decisions and naming conventions across VHDL project sessions
-- [Claude Skills for Kubernetes Operator Development](/claude-skills-guide/claude-code-skills-for-kubernetes-operator-development/) — Another specialized domain guide showing how Claude skills handle complex technical workflows
-- [Claude TDD Skill: Test-Driven Development Guide](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Complete guide to the TDD skill used for testbench generation
+- [Claude Skill Inheritance and Composition Patterns](/claude-skill-inheritance-and-composition-patterns/) — Build modular, reusable skills that chain together for complex hardware workflows
+- [Claude SuperMemory Skill: Persistent Context Guide](/claude-supermemory-skill-persistent-context-explained/) — Persist design decisions and naming conventions across VHDL project sessions
+- [Claude Skills for Kubernetes Operator Development](/claude-code-skills-for-kubernetes-operator-development/) — Another specialized domain guide showing how Claude skills handle complex technical workflows
+- [Claude TDD Skill: Test-Driven Development Guide](/claude-tdd-skill-test-driven-development-workflow/) — Complete guide to the TDD skill used for testbench generation
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

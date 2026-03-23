@@ -19,7 +19,7 @@ Game development in Unity involves repetitive tasks that drain productivity—ma
 
 Unity projects follow predictable patterns: scene setup, component creation, build configuration, and deployment. Claude skills excel here because they can execute bash commands, read and write files, and chain multiple operations together—all essential for interacting with Unity's command-line tools and file structure.
 
-A well-crafted Claude skill for Unity acts as your build engineer, documentation generator, and code scaffolding tool combined. You invoke it with `/skill-name`, and Claude executes the entire workflow without further prompts. Understanding [how to write a skill .md file for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) is the essential prerequisite before building any of the skills described here.
+A well-crafted Claude skill for Unity acts as your build engineer, documentation generator, and code scaffolding tool combined. You invoke it with `/skill-name`, and Claude executes the entire workflow without further prompts. Understanding [how to write a skill .md file for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/) is the essential prerequisite before building any of the skills described here.
 
 ## Core Skills Every Unity Developer Needs
 
@@ -47,7 +47,7 @@ then perform these steps:
 5. Report success with build size and time
 ```
 
-This skill works alongside the `tdd` skill to run tests after each build, ensuring your game logic remains stable across deployments. The [Claude TDD skill guide](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) covers how to configure test-driven workflows that pair naturally with Unity's command-line tooling.
+This skill works alongside the `tdd` skill to run tests after each build, ensuring your game logic remains stable across deployments. The [Claude TDD skill guide](/claude-tdd-skill-test-driven-development-workflow/) covers how to configure test-driven workflows that pair naturally with Unity's command-line tooling.
 
 ### 2. Script Generation Skill
 
@@ -112,7 +112,7 @@ This workflow transforms a multi-hour task into a sequence of three commands. Th
 
 ## Advanced Integration: CI/CD Pipelines
 
-Combine Claude skills with GitHub Actions for fully automated pipelines. The [Claude skills with GitHub Actions CI/CD guide](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/) covers the general pattern in depth, and Unity projects follow the same conventions:
+Combine Claude skills with GitHub Actions for fully automated pipelines. The [Claude skills with GitHub Actions CI/CD guide](/claude-skills-with-github-actions-ci-cd-pipeline/) covers the general pattern in depth, and Unity projects follow the same conventions:
 
 ```yaml
 name: Unity Build
@@ -146,7 +146,7 @@ The skill integrates with the `mcp-builder` skill if you need custom MCP servers
 
 ## Extending Your Workflow
 
-The Unity development ecosystem benefits from Claude's skill system in several additional ways. Developers building cross-platform games may also find [Claude Code's Dart/Flutter guide](/claude-skills-guide/claude-code-dart-flutter-cross-platform-development-guide/) useful for mobile-targeting workflows that share similar asset pipeline concerns:
+The Unity development ecosystem benefits from Claude's skill system in several additional ways. Developers building cross-platform games may also find [Claude Code's Dart/Flutter guide](/claude-code-dart-flutter-cross-platform-development-guide/) useful for mobile-targeting workflows that share similar asset pipeline concerns:
 
 - Use `pptx` to generate progress reports and feature presentations for stakeholders
 - Apply `docx` skills to maintain design documents in Microsoft Word format
@@ -161,9 +161,9 @@ The investment in creating these skills pays dividends across every future proje
 
 ## Related Reading
 
-- [How to Write a Skill MD File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/)
-- [Claude TDD Skill: Test-Driven Development Guide](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/)
-- [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/)
-- [Claude Code Dart Flutter Cross Platform Development Guide](/claude-skills-guide/claude-code-dart-flutter-cross-platform-development-guide/)
+- [How to Write a Skill MD File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/)
+- [Claude TDD Skill: Test-Driven Development Guide](/claude-tdd-skill-test-driven-development-workflow/)
+- [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-with-github-actions-ci-cd-pipeline/)
+- [Claude Code Dart Flutter Cross Platform Development Guide](/claude-code-dart-flutter-cross-platform-development-guide/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

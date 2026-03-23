@@ -320,8 +320,8 @@ Remember to always follow security best practices: use separate keys for differe
 
 ## Related Reading
 
-- [Claude Code for Vault Secrets Management Workflow](/claude-skills-guide/claude-code-for-vault-secrets-management-workflow/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Code for Vault Secrets Management Workflow](/claude-code-for-vault-secrets-management-workflow/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

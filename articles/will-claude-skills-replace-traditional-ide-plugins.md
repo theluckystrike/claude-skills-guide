@@ -13,11 +13,11 @@ permalink: /will-claude-skills-replace-traditional-ide-plugins/
 
 # Will Claude Skills Replace Traditional IDE Plugins?
 
-[The question on every developer's mind is straightforward: can Claude Code skills actually replace the plugins I've installed](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) in VS Code, JetBrains, and Neovim? After months of using skills across different workflows, the answer is nuanced but compelling.
+[The question on every developer's mind is straightforward: can Claude Code skills actually replace the plugins I've installed](/best-claude-code-skills-to-install-first-2026/) in VS Code, JetBrains, and Neovim? After months of using skills across different workflows, the answer is nuanced but compelling.
 
 ## Understanding the Fundamental Difference
 
-Traditional [IDE plugins](/claude-skills-guide/can-you-use-claude-skills-inside-vs-code-extensions/) operate as standalone extensions that modify your editor's behavior through compiled code, language servers, and LSP implementations. You install them once, configure them in settings.json, and they run continuously in the background. They own their state, their rendering, and their interactions with your codebase.
+Traditional [IDE plugins](/can-you-use-claude-skills-inside-vs-code-extensions/) operate as standalone extensions that modify your editor's behavior through compiled code, language servers, and LSP implementations. You install them once, configure them in settings.json, and they run continuously in the background. They own their state, their rendering, and their interactions with your codebase.
 
 Claude skills work differently. They're instruction sets—not compiled binaries—that transform how Claude Code behaves within a conversation. When you invoke `/pdf` or `/tdd`, you're not loading a plugin that runs independently. You're providing Claude with specialized context, examples, and procedural guidance that shapes its responses.
 
@@ -135,9 +135,9 @@ Rather than asking whether skills will replace plugins, ask which specific workf
 
 ## Related Reading
 
-- [Can You Use Claude Skills Inside VS Code Extensions](/claude-skills-guide/can-you-use-claude-skills-inside-vs-code-extensions/) — Explore how skills and VS Code extensions can work together rather than compete
-- [Claude Code vs GitHub Copilot Workspace 2026](/claude-skills-guide/claude-code-vs-github-copilot-workspace-2026/) — Compare Claude Code's skill ecosystem against Copilot's plugin-based approach
-- [Claude Skills Ecosystem: Predictions for the Next 12 Months](/claude-skills-guide/claude-skills-ecosystem-predictions-next-12-months/) — See how the skills ecosystem is positioned to evolve alongside IDE tooling
-- [Claude Skills Hub](/claude-skills-guide/comparisons-hub/) — Compare Claude skills against traditional development tools and IDE plugins
+- [Can You Use Claude Skills Inside VS Code Extensions](/can-you-use-claude-skills-inside-vs-code-extensions/) — Explore how skills and VS Code extensions can work together rather than compete
+- [Claude Code vs GitHub Copilot Workspace 2026](/claude-code-vs-github-copilot-workspace-2026/) — Compare Claude Code's skill ecosystem against Copilot's plugin-based approach
+- [Claude Skills Ecosystem: Predictions for the Next 12 Months](/claude-skills-ecosystem-predictions-next-12-months/) — See how the skills ecosystem is positioned to evolve alongside IDE tooling
+- [Claude Skills Hub](/comparisons-hub/) — Compare Claude skills against traditional development tools and IDE plugins
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

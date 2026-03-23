@@ -91,7 +91,7 @@ describe('Button Component', () => {
 })
 ```
 
-Claude can help generate these tests by analyzing your component's props and behavior. Use the [tdd skill when you want Claude to follow test-driven development principles](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/), writing tests before implementation code.
+Claude can help generate these tests by analyzing your component's props and behavior. Use the [tdd skill when you want Claude to follow test-driven development principles](/claude-tdd-skill-test-driven-development-workflow/), writing tests before implementation code.
 
 ## Testing Complex Component Interactions
 
@@ -162,14 +162,14 @@ describe('UserProfile Component', () => {
 
 ## Integrating Claude Code into Your Testing Workflow
 
-The **tdd** skill provides structured guidance for maintaining test-driven development practices while working with Claude. For a broader look at how testing fits into Claude Code projects, see [Claude Code for beginners: getting started 2026](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/). Here is a practical workflow:
+The **tdd** skill provides structured guidance for maintaining test-driven development practices while working with Claude. For a broader look at how testing fits into Claude Code projects, see [Claude Code for beginners: getting started 2026](/claude-code-for-beginners-complete-getting-started-2026/). Here is a practical workflow:
 
 1. **Describe the component behavior** to Claude, including prop types and expected interactions
 2. **Request test generation** for edge cases and error states you might overlook
 3. **Review and refine** the generated tests to match your project's conventions
 4. **Run tests** to verify they pass and provide meaningful coverage
 
-For projects using component libraries, combine Claude's assistance with the **frontend-design** skill to ensure your tests validate accessibility requirements and design system compliance. The [Claude Code Jest unit testing guide](/claude-skills-guide/claude-code-jest-unit-testing-workflow-guide/) covers complementary patterns for unit-level coverage alongside Cypress component tests.
+For projects using component libraries, combine Claude's assistance with the **frontend-design** skill to ensure your tests validate accessibility requirements and design system compliance. The [Claude Code Jest unit testing guide](/claude-code-jest-unit-testing-workflow-guide/) covers complementary patterns for unit-level coverage alongside Cypress component tests.
 
 ## Best Practices for Component Testing
 
@@ -253,10 +253,10 @@ For persistent flakiness, consider increasing timeouts for slow renders or using
 
 ## Related Reading
 
-- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Use the tdd skill to drive component design from tests first, before writing implementation code
-- [Claude Code Jest Unit Testing Workflow Guide](/claude-skills-guide/claude-code-jest-unit-testing-workflow-guide/) — Pair Cypress component tests with Jest unit tests for full coverage across your frontend
-- [Claude Code Hypothesis Property Testing Guide](/claude-skills-guide/claude-code-hypothesis-property-testing-guide/) — Extend your testing strategy with property-based testing for edge case discovery
-- [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — Explore more Claude Code skill workflows for testing and frontend development
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/) — Use the tdd skill to drive component design from tests first, before writing implementation code
+- [Claude Code Jest Unit Testing Workflow Guide](/claude-code-jest-unit-testing-workflow-guide/) — Pair Cypress component tests with Jest unit tests for full coverage across your frontend
+- [Claude Code Hypothesis Property Testing Guide](/claude-code-hypothesis-property-testing-guide/) — Extend your testing strategy with property-based testing for edge case discovery
+- [Claude Skills Workflows Hub](/workflows-hub/) — Explore more Claude Code skill workflows for testing and frontend development
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

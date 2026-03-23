@@ -13,21 +13,21 @@ permalink: /can-claude-skills-generate-images-or-handle-multimedia-files/
 
 # Can Claude Skills Generate Images or Handle Multimedia Files?
 
-Claude skills are fundamentally text-based prompt systems, but they become powerful multimedia workstations when combined with the right tools and skills. The answer is a qualified yes — skills themselves don't [generate images](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) or process media directly, but they orchestrate tools that do.
+Claude skills are fundamentally text-based prompt systems, but they become powerful multimedia workstations when combined with the right tools and skills. The answer is a qualified yes — skills themselves don't [generate images](/best-claude-code-skills-for-frontend-development/) or process media directly, but they orchestrate tools that do.
 
 ## How Multimedia Handling Works in Claude Skills
 
-[When you invoke a skill, Claude gains access to a standard set of tools](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/): `Read`, `Write`, `Bash`, and potentially MCP tools or custom functions. Multimedia processing happens through these tools calling external programs, APIs, or specialized skills.
+[When you invoke a skill, Claude gains access to a standard set of tools](/claude-skill-md-format-complete-specification-guide/): `Read`, `Write`, `Bash`, and potentially MCP tools or custom functions. Multimedia processing happens through these tools calling external programs, APIs, or specialized skills.
 
-[The skill author designs the prompts to guide Claude toward appropriate tool usage](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) For example, a skill might instruct Claude to "use ImageMagick via bash to convert between formats" or "call the canvas-design skill for generating visual output."
+[The skill author designs the prompts to guide Claude toward appropriate tool usage](/best-claude-code-skills-to-install-first-2026/) For example, a skill might instruct Claude to "use ImageMagick via bash to convert between formats" or "call the canvas-design skill for generating visual output."
 
 ## Specialized Skills for Visual Output
 
 Several community skills extend Claude's multimedia capabilities:
 
-[**canvas-design** creates static visual art in PNG and PDF formats](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/). This skill generates posters, artwork, and visual designs programmatically. It operates through seeded randomness, ensuring reproducible results.
+[**canvas-design** creates static visual art in PNG and PDF formats](/best-claude-code-skills-to-install-first-2026/). This skill generates posters, artwork, and visual designs programmatically. It operates through seeded randomness, ensuring reproducible results.
 
-[**frontend-design** can generate CSS and HTML for visual layouts](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/), though it produces code rather than rendered images.
+[**frontend-design** can generate CSS and HTML for visual layouts](/claude-skill-md-format-complete-specification-guide/), though it produces code rather than rendered images.
 
 ### Example: Generating an Image with canvas-design
 
@@ -301,7 +301,7 @@ Built by theluckystrike — More at [zovo.one](https://zovo.one)
 
 ## Related Reading
 
-- [Claude Code Batch Processing with Skills Guide](/claude-skills-guide/claude-code-batch-processing-with-skills-guide/) — Apply batch processing patterns to multimedia workflows: process many images or documents in one automated run
-- [Claude Frontend Design Skill: Review and Tutorial](/claude-skills-guide/claude-frontend-design-skill-review-and-tutorial/) — Go deeper on the frontend-design skill's code generation capabilities for visual layouts and components
-- [Best Claude Skills for Data Analysis](/claude-skills-guide/best-claude-skills-for-data-analysis/) — Discover how document and spreadsheet skills complement multimedia processing in data-heavy workflows
-- [Claude Skills: Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Explore the full ecosystem of Claude skills and how they extend Claude's native capabilities
+- [Claude Code Batch Processing with Skills Guide](/claude-code-batch-processing-with-skills-guide/) — Apply batch processing patterns to multimedia workflows: process many images or documents in one automated run
+- [Claude Frontend Design Skill: Review and Tutorial](/claude-frontend-design-skill-review-and-tutorial/) — Go deeper on the frontend-design skill's code generation capabilities for visual layouts and components
+- [Best Claude Skills for Data Analysis](/best-claude-skills-for-data-analysis/) — Discover how document and spreadsheet skills complement multimedia processing in data-heavy workflows
+- [Claude Skills: Getting Started Hub](/getting-started-hub/) — Explore the full ecosystem of Claude skills and how they extend Claude's native capabilities

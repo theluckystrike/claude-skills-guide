@@ -19,7 +19,7 @@ Development teams constantly search for ways to ship faster without sacrificing 
 
 Every development task involves context switching. When you switch from implementing a feature to writing documentation, or from coding to running tests, you lose momentum. The mental overhead of recalling what you were working on, what the coding standards are, and what files need attention adds up across a project.
 
-Claude Code skills solve this by encapsulating workflows into reusable units. A skill contains instructions, tool permissions, and execution patterns that Claude follows consistently. Instead of explaining the same requirements every time, you invoke a skill and let Claude handle the rest. For a complete list of high-impact skills, see [best Claude Code skills to install first in 2026](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/).
+Claude Code skills solve this by encapsulating workflows into reusable units. A skill contains instructions, tool permissions, and execution patterns that Claude follows consistently. Instead of explaining the same requirements every time, you invoke a skill and let Claude handle the rest. For a complete list of high-impact skills, see [best Claude Code skills to install first in 2026](/best-claude-code-skills-to-install-first-2026/).
 
 ## Frontend Component Creation with frontend-design
 
@@ -48,7 +48,7 @@ The skill reads your existing design tokens, checks for naming conflicts, genera
 
 ## Test-Driven Development with tdd
 
-Writing tests after implementation is a discipline many developers skip under time pressure. The [tdd skill enforces test-first development](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) by making it the natural path.
+Writing tests after implementation is a discipline many developers skip under time pressure. The [tdd skill enforces test-first development](/claude-tdd-skill-test-driven-development-workflow/) by making it the natural path.
 
 When you invoke the tdd skill with a requirement like "add user authentication flow", it:
 
@@ -96,7 +96,7 @@ This automation matters because documentation is often the bottleneck in shippin
 
 Projects accumulate knowledge over time—architecture decisions, debugging discoveries, API quirks. The `supermemory` skill helps capture and retrieve this context.
 
-When debugging an issue, you can [invoke supermemory to search past conversations](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/):
+When debugging an issue, you can [invoke supermemory to search past conversations](/claude-supermemory-skill-persistent-context-explained/):
 
 ```
 /supermemory What do you know about the payment gateway integration and any workarounds we discovered?
@@ -146,9 +146,9 @@ The 3x improvement comes not from any single feature but from compounding small 
 
 ## Related Reading
 
-- [Best Claude Code Skills to Install First in 2026](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) — Identify the highest-impact skills to start with when building your productivity stack
-- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Implement the tdd workflow that eliminates the friction of maintaining test files manually
-- [Claude SuperMemory Skill: Persistent Context Explained](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) — Build the institutional knowledge retention that prevents debugging regressions
-- [Claude Skills Use Cases Hub](/claude-skills-guide/use-cases-hub/) — Explore more real-world use cases where Claude Code skills compress development timelines
+- [Best Claude Code Skills to Install First in 2026](/best-claude-code-skills-to-install-first-2026/) — Identify the highest-impact skills to start with when building your productivity stack
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/) — Implement the tdd workflow that eliminates the friction of maintaining test files manually
+- [Claude SuperMemory Skill: Persistent Context Explained](/claude-supermemory-skill-persistent-context-explained/) — Build the institutional knowledge retention that prevents debugging regressions
+- [Claude Skills Use Cases Hub](/use-cases-hub/) — Explore more real-world use cases where Claude Code skills compress development timelines
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

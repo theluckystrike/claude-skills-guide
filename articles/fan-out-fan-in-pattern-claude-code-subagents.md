@@ -13,7 +13,7 @@ permalink: /fan-out-fan-in-pattern-claude-code-subagents/
 
 # Fan-Out Fan-In Pattern with Claude Code Subagents
 
-[The fan-out fan-in pattern is a powerful concurrency strategy that enables parallel processing of multiple independent tasks](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), then aggregates their results into a unified output. When implemented with Claude Code subagents, this pattern becomes exceptionally useful for developers building complex automation workflows, handling bulk operations, or processing multiple data sources simultaneously.
+[The fan-out fan-in pattern is a powerful concurrency strategy that enables parallel processing of multiple independent tasks](/best-claude-code-skills-to-install-first-2026/), then aggregates their results into a unified output. When implemented with Claude Code subagents, this pattern becomes exceptionally useful for developers building complex automation workflows, handling bulk operations, or processing multiple data sources simultaneously.
 
 ## Understanding the Pattern
 
@@ -210,15 +210,15 @@ When implementing this pattern, consider these factors:
 
 ## Conclusion
 
-The fan-out fan-in pattern with Claude Code subagents enables scalable, efficient processing of parallel workloads. For managing resource consumption in these workflows, apply the [rate limit management strategies](/claude-skills-guide/rate-limit-management-claude-code-skill-intensive-workflows/) designed for high-intensity skill pipelines. Whether you're automating document processing with the **pdf** skill, generating comprehensive tests with **tdd**, or building complex multi-agent systems, this pattern provides a solid foundation for concurrent AI-driven workflows.
+The fan-out fan-in pattern with Claude Code subagents enables scalable, efficient processing of parallel workloads. For managing resource consumption in these workflows, apply the [rate limit management strategies](/rate-limit-management-claude-code-skill-intensive-workflows/) designed for high-intensity skill pipelines. Whether you're automating document processing with the **pdf** skill, generating comprehensive tests with **tdd**, or building complex multi-agent systems, this pattern provides a solid foundation for concurrent AI-driven workflows.
 
 Start with simple two-agent implementations and progressively add complexity as your requirements grow. The pattern's flexibility allows it to adapt to virtually any parallel processing need in your Claude Code projects.
 
 ## Related Reading
 
-- [Claude Code Agent Swarm Coordination Strategies](/claude-skills-guide/claude-code-agent-swarm-coordination-strategies/) — Complement fan-out/fan-in with shared state coordination patterns for managing swarms of parallel agents
-- [Multi-Agent Orchestration with Claude Subagents Guide](/claude-skills-guide/multi-agent-orchestration-with-claude-subagents-guide/) — Broader orchestration patterns that build on the fan-out/fan-in foundation for complex workflows
-- [Claude Code Multi-Agent Subagent Communication Guide](/claude-skills-guide/claude-code-multi-agent-subagent-communication-guide/) — How subagents communicate results during the fan-in aggregation phase
-- [Claude Skills: Advanced Hub](/claude-skills-guide/advanced-hub/) — Explore advanced parallel processing and agent architecture patterns for production use cases
+- [Claude Code Agent Swarm Coordination Strategies](/claude-code-agent-swarm-coordination-strategies/) — Complement fan-out/fan-in with shared state coordination patterns for managing swarms of parallel agents
+- [Multi-Agent Orchestration with Claude Subagents Guide](/multi-agent-orchestration-with-claude-subagents-guide/) — Broader orchestration patterns that build on the fan-out/fan-in foundation for complex workflows
+- [Claude Code Multi-Agent Subagent Communication Guide](/claude-code-multi-agent-subagent-communication-guide/) — How subagents communicate results during the fan-in aggregation phase
+- [Claude Skills: Advanced Hub](/advanced-hub/) — Explore advanced parallel processing and agent architecture patterns for production use cases
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

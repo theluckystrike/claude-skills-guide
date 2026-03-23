@@ -155,8 +155,8 @@ Ask Claude at the start of every session: "Does this project require a DCO sign-
 
 ## Related Reading
 
-- [Chrome Extension Development in 2026](/claude-skills-guide/chrome-extension-development-2026/)
-- [Claude Code for gRPC API Development](/claude-skills-guide/claude-code-grpc-api-development-guide/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Chrome Extension Development in 2026](/chrome-extension-development-2026/)
+- [Claude Code for gRPC API Development](/claude-code-grpc-api-development-guide/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

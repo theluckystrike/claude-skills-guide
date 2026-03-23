@@ -13,7 +13,7 @@ permalink: /claude-code-output-quality-how-to-improve-results/
 
 # Claude Code Output Quality: How to Improve Results
 
-[Getting high-quality output from Claude Code requires understanding how the model processes context](/claude-skills-guide/claude-md-too-long-context-window-optimization/), interprets instructions, and generates responses. This guide provides actionable techniques that developers and power users can apply immediately to improve their results.
+[Getting high-quality output from Claude Code requires understanding how the model processes context](/claude-md-too-long-context-window-optimization/), interprets instructions, and generates responses. This guide provides actionable techniques that developers and power users can apply immediately to improve their results.
 
 ## Crafting Effective Prompts
 
@@ -33,7 +33,7 @@ The second prompt includes the specific file, line number, error type, context, 
 
 ## Using System Context Effectively
 
-[Claude Code responds better when you provide clear context about your project environment](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Before starting complex tasks, establish the workspace context:
+[Claude Code responds better when you provide clear context about your project environment](/best-claude-code-skills-to-install-first-2026/) Before starting complex tasks, establish the workspace context:
 
 ```bash
 # Set project context first
@@ -124,7 +124,7 @@ claude "Create the database schema and migration files based on the design above
 claude "Write the service layer functions for creating, updating, and deleting tasks. Include validation."
 ```
 
-This phased approach gives Claude clear milestones and allows you to course-correct at each step. For token-efficient multi-step tasks, see the guide on [reducing API costs while maintaining output quality](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/).
+This phased approach gives Claude clear milestones and allows you to course-correct at each step. For token-efficient multi-step tasks, see the guide on [reducing API costs while maintaining output quality](/claude-skills-token-optimization-reduce-api-costs/).
 
 ## Working with Codebase Context
 
@@ -169,7 +169,7 @@ Use only the following Node.js modules: fs, path, crypto. Do not use external pa
 
 ## Measuring and Validating Output Quality
 
-Develop systematic approaches to verify Claude's output. You can also use [benchmarking techniques to compare output quality across different prompting strategies](/claude-skills-guide/benchmarking-claude-code-skills-performance-guide/):
+Develop systematic approaches to verify Claude's output. You can also use [benchmarking techniques to compare output quality across different prompting strategies](/benchmarking-claude-code-skills-performance-guide/):
 
 - **Compile and test**: Always run generated code to verify correctness
 - **Check against requirements**: Compare output against your explicit specifications
@@ -188,9 +188,9 @@ These techniques transform generic interactions into productive partnerships. Th
 
 ## Related Reading
 
-- [Claude Skills Context Window Management Best Practices](/claude-skills-guide/claude-md-too-long-context-window-optimization/)
-- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
-- [Claude Code First Project Tutorial: Hello World](/claude-skills-guide/claude-code-first-project-tutorial-hello-world/)
-- [Getting Started Hub](/claude-skills-guide/getting-started-hub/)
+- [Claude Skills Context Window Management Best Practices](/claude-md-too-long-context-window-optimization/)
+- [Best Claude Code Skills to Install First (2026)](/best-claude-code-skills-to-install-first-2026/)
+- [Claude Code First Project Tutorial: Hello World](/claude-code-first-project-tutorial-hello-world/)
+- [Getting Started Hub](/getting-started-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

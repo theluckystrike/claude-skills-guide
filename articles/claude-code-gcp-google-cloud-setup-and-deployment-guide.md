@@ -16,7 +16,7 @@ permalink: /claude-code-gcp-google-cloud-setup-and-deployment-guide/
 
 # Claude Code GCP Google Cloud Setup and Deployment Guide
 
-[Google Cloud Platform provides reliable, scalable infrastructure for deploying applications](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Integrating Claude Code into your GCP workflow enables intelligent automation, from generating deployment configurations to managing multi-service architectures. This guide walks through practical setups for deploying to Cloud Run, Cloud Functions, and using GCP services alongside Claude Code skills.
+[Google Cloud Platform provides reliable, scalable infrastructure for deploying applications](/best-claude-code-skills-to-install-first-2026/) Integrating Claude Code into your GCP workflow enables intelligent automation, from generating deployment configurations to managing multi-service architectures. This guide walks through practical setups for deploying to Cloud Run, Cloud Functions, and using GCP services alongside Claude Code skills.
 
 ## Prerequisites and Environment Setup
 
@@ -39,11 +39,11 @@ Claude Code should be installed locally. Verify the installation:
 claude --version
 ```
 
-[The integration relies on Claude Code's ability to execute shell commands](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), which means your local environment communicates with GCP through the `gcloud` CLI. This approach keeps sensitive credentials on your local machine while enabling powerful cloud automation.
+[The integration relies on Claude Code's ability to execute shell commands](/best-claude-code-skills-to-install-first-2026/), which means your local environment communicates with GCP through the `gcloud` CLI. This approach keeps sensitive credentials on your local machine while enabling powerful cloud automation.
 
 ## Deploying to Cloud Run with Claude Code
 
-Cloud Run is GCP's serverless container platform. Claude Code can generate Dockerfiles, build container images, and deploy directly to Cloud Run. Use the [`/tdd` skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) for testing your containerized application before deployment.
+Cloud Run is GCP's serverless container platform. Claude Code can generate Dockerfiles, build container images, and deploy directly to Cloud Run. Use the [`/tdd` skill](/best-claude-skills-for-developers-2026/) for testing your containerized application before deployment.
 
 ### Automated Dockerfile Generation
 
@@ -114,7 +114,7 @@ gcloud functions deploy my-function \
   --entry-point handle_upload
 ```
 
-Pair this with the [`/pdf` skill](/claude-skills-guide/best-claude-skills-for-data-analysis/) if your function processes PDF documents, or use the `/frontend-design` skill for generating static site deployment functions to Cloud Storage.
+Pair this with the [`/pdf` skill](/best-claude-skills-for-data-analysis/) if your function processes PDF documents, or use the `/frontend-design` skill for generating static site deployment functions to Cloud Storage.
 
 ## Using GCP Services with Claude Code Skills
 
@@ -189,7 +189,7 @@ jobs:
 
 ## State Management with Cloud SQL
 
-For applications requiring persistent state, integrate Cloud SQL with your deployed services. Use [`/supermemory`](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) to track deployment context across sessions:
+For applications requiring persistent state, integrate Cloud SQL with your deployed services. Use [`/supermemory`](/claude-skills-token-optimization-reduce-api-costs/) to track deployment context across sessions:
 
 ```
 /supermemory
@@ -221,9 +221,9 @@ The key is treating Claude Code as a local development tool that interfaces with
 
 ## Related Reading
 
-- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — Skills tailored for cloud deployments and infrastructure automation
-- [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Start with the foundational developer skills before adding cloud-specific ones
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep cloud automation sessions cost-effective
+- [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/) — Skills tailored for cloud deployments and infrastructure automation
+- [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/) — Start with the foundational developer skills before adding cloud-specific ones
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — Keep cloud automation sessions cost-effective
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

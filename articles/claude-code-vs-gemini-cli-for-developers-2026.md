@@ -13,7 +13,7 @@ permalink: /claude-code-vs-gemini-cli-for-developers-2026/
 
 # Claude Code vs Gemini CLI for Developers 2026
 
-[Both Claude Code and Google Gemini CLI have matured into serious contenders for the AI-assisted development workflow](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) If you are deciding where to invest your time and tooling budget in 2026, this comparison lays out the practical differences without the hype.
+[Both Claude Code and Google Gemini CLI have matured into serious contenders for the AI-assisted development workflow](/best-claude-code-skills-to-install-first-2026/) If you are deciding where to invest your time and tooling budget in 2026, this comparison lays out the practical differences without the hype.
 
 ## What Each Tool Is
 
@@ -34,7 +34,7 @@ permalink: /claude-code-vs-gemini-cli-for-developers-2026/
 | Skills / plugins | Claude skills ecosystem | Google Cloud integrations |
 | Offline / local models | No | No |
 | Pricing (as of 2026) | Usage-based via Anthropic API | Usage-based via Google AI / Vertex |
-| IDE integration | Via [MCP server](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/)s | Cloud Code plugin ecosystem |
+| IDE integration | Via [MCP server](/building-your-first-mcp-tool-integration-guide-2026/)s | Cloud Code plugin ecosystem |
 | GitHub integration | Native via MCP | Via Cloud Build / GitHub Actions |
 | Primary language support | All major languages | All major languages |
 
@@ -285,8 +285,8 @@ The decision simplifies to this: if you spend most of your day writing and modif
 
 ## Related Reading
 
-- [Anthropic Official Skills vs Community Skills: Which Should You Use?](/claude-skills-guide/anthropic-official-skills-vs-community-skills-comparison/) — Understanding what the skills ecosystem offers helps you evaluate Claude Code's extensibility advantage over Gemini CLI
-- [Claude Skills vs Prompts: Which Is Better for Your Workflow?](/claude-skills-guide/claude-skills-vs-prompts-which-is-better/) — Explores how reusable skill invocations differ from raw prompting, relevant to comparing Claude Code with simpler CLI tools
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How Claude Code's automatic skill matching works and why it matters when choosing between agentic coding tools
+- [Anthropic Official Skills vs Community Skills: Which Should You Use?](/anthropic-official-skills-vs-community-skills-comparison/) — Understanding what the skills ecosystem offers helps you evaluate Claude Code's extensibility advantage over Gemini CLI
+- [Claude Skills vs Prompts: Which Is Better for Your Workflow?](/claude-skills-vs-prompts-which-is-better/) — Explores how reusable skill invocations differ from raw prompting, relevant to comparing Claude Code with simpler CLI tools
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — How Claude Code's automatic skill matching works and why it matters when choosing between agentic coding tools
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

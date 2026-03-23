@@ -21,7 +21,7 @@ This guide breaks down the practical differences, gives you a direct comparison 
 
 Claude skills are predefined capabilities that extend Claude's functionality for specific tasks. Think of them as specialized toolkits that give Claude context-aware abilities without requiring you to explain the domain every time. The **pdf** skill lets Claude extract text and tables from PDFs programmatically. The **pptx** skill enables creating and editing presentations. The **xlsx** skill handles spreadsheet operations with formulas, formatting, and data analysis.
 
-These skills load automatically when you need them, bringing specialized knowledge and tool access to your conversations. To understand exactly how that loading works, see [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/).
+These skills load automatically when you need them, bringing specialized knowledge and tool access to your conversations. To understand exactly how that loading works, see [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/).
 
 Skills are defined in YAML or markdown configuration files and live in a `.claude/skills/` directory in your project or globally in your home directory. A minimal skill definition looks like this:
 
@@ -73,11 +73,11 @@ Here's a useful mental test: if you would not bother creating a shell alias for 
 
 ## The Case for Claude Skills
 
-Skills become valuable when you perform tasks repeatedly with consistent requirements. Consider the **tdd** skill—if you practice test-driven development regularly, the skill encapsulates your preferred patterns, testing frameworks, and workflows. Instead of explaining your TDD process each time, you simply invoke the skill and start coding. For the full developer skill stack built around tdd, see [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/).
+Skills become valuable when you perform tasks repeatedly with consistent requirements. Consider the **tdd** skill—if you practice test-driven development regularly, the skill encapsulates your preferred patterns, testing frameworks, and workflows. Instead of explaining your TDD process each time, you simply invoke the skill and start coding. For the full developer skill stack built around tdd, see [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/).
 
 The **frontend-design** skill demonstrates similar benefits. Rather than describing your design preferences, component library choices, and styling conventions in every prompt, the skill understands your standards upfront.
 
-**Supermemory** represents another category—skills that connect Claude to external systems and data. When your workflow involves retrieving information from your personal knowledge base, a skill handles the integration transparently. Supermemory also plays a key role in keeping token costs manageable; see [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) for strategies.
+**Supermemory** represents another category—skills that connect Claude to external systems and data. When your workflow involves retrieving information from your personal knowledge base, a skill handles the integration transparently. Supermemory also plays a key role in keeping token costs manageable; see [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) for strategies.
 
 Skills also enforce consistency across a team. When every developer on a project uses the same **api-docs** or **tdd** skill, the output follows the same conventions without anyone having to coordinate. That's a significant advantage in collaborative environments.
 
@@ -195,7 +195,7 @@ The reality is that prompts remain essential for flexibility and quick interacti
 
 ## Getting Started with Your First Skill
 
-If you're ready to try skills, start with one that matches a frequent workflow. The **pdf** skill is straightforward for document processing tasks—see how it fits into full data pipelines in [Best Claude Skills for Data Analysis](/claude-skills-guide/best-claude-skills-for-data-analysis/). The **xlsx** skill handles common spreadsheet operations. The **canvas-design** skill creates visual assets without design tools.
+If you're ready to try skills, start with one that matches a frequent workflow. The **pdf** skill is straightforward for document processing tasks—see how it fits into full data pipelines in [Best Claude Skills for Data Analysis](/best-claude-skills-for-data-analysis/). The **xlsx** skill handles common spreadsheet operations. The **canvas-design** skill creates visual assets without design tools.
 
 To identify your first candidate, spend a week noting every time you paste the same context block into a Claude prompt. Any block you use three or more times is a skill waiting to be written. The skill definition itself usually takes five to fifteen minutes to draft.
 
@@ -207,9 +207,9 @@ The best approach depends entirely on your specific needs. Most developers find 
 
 ## Related Reading
 
-- [Official vs Community Claude Skills: Which Should You Use?](/claude-skills-guide/anthropic-official-skills-vs-community-skills-comparison/) — Not all skills are equal—know the difference
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate without explicit prompting
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — The skills worth replacing prompts with
+- [Official vs Community Claude Skills: Which Should You Use?](/anthropic-official-skills-vs-community-skills-comparison/) — Not all skills are equal—know the difference
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — How skills activate without explicit prompting
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — The skills worth replacing prompts with
 
 ---
 

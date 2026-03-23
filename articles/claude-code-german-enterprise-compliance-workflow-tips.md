@@ -13,9 +13,9 @@ permalink: /claude-code-german-enterprise-compliance-workflow-tips/
 
 # Claude Code German Enterprise Compliance Workflow Tips
 
-[German enterprises face unique compliance challenges](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Between DSGVO requirements, industry-specific regulations like BaFin for financial services, and ISO 27001 certification demands, development teams need tools that accelerate compliance without compromising security. Claude Code offers a practical approach to building compliant workflows, but German enterprises must configure it thoughtfully.
+[German enterprises face unique compliance challenges](/best-claude-code-skills-to-install-first-2026/) Between DSGVO requirements, industry-specific regulations like BaFin for financial services, and ISO 27001 certification demands, development teams need tools that accelerate compliance without compromising security. Claude Code offers a practical approach to building compliant workflows, but German enterprises must configure it thoughtfully.
 
-[This guide covers actionable strategies for integrating Claude Code into enterprise compliance processes](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) while respecting German regulatory requirements.
+[This guide covers actionable strategies for integrating Claude Code into enterprise compliance processes](/claude-skill-md-format-complete-specification-guide/) while respecting German regulatory requirements.
 
 ## Understanding the German Compliance Context
 
@@ -55,7 +55,7 @@ Several Claude skills enhance compliance productivity without introducing unnece
 
 ### The tdd Skill for Test-Driven Compliance
 
-[The **tdd** skill helps generate compliant test cases automatically](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/). When building features that must meet specific regulatory requirements, express those requirements as test cases:
+[The **tdd** skill helps generate compliant test cases automatically](/claude-tdd-skill-test-driven-development-workflow/). When building features that must meet specific regulatory requirements, express those requirements as test cases:
 
 ```
 /tdd generate test cases for user data retention policy that deletes records after 90 days of inactivity, ensuring DSGVO right to erasure is honored
@@ -85,7 +85,7 @@ This produces exportable documentation for external auditors.
 
 ### The supermemory Skill for Knowledge Management
 
-[The **supermemory** skill stores compliance knowledge persistently](/claude-skills-guide/building-stateful-agents-with-claude-skills-guide/):
+[The **supermemory** skill stores compliance knowledge persistently](/building-stateful-agents-with-claude-skills-guide/):
 
 ```
 /supermemory store DSGVO article 17 requirements for right to erasure and link to our implementation guide
@@ -133,7 +133,7 @@ German compliance audits often require detailed documentation. Structure your Cl
 - **Log AI assistance**: Maintain records of which files Claude Code modified
 - **Review AI-generated code**: Establish manual review processes for compliance-critical sections
 
-[Create a `CLAUDE.md` file in each project](/claude-skills-guide/how-to-fix-claude-code-ignoring-my-claude-md-file/) explaining how AI assistance was used:
+[Create a `CLAUDE.md` file in each project](/how-to-fix-claude-code-ignoring-my-claude-md-file/) explaining how AI assistance was used:
 
 ```markdown
 # AI Assistance Documentation
@@ -205,9 +205,9 @@ Claude Code fits well into German enterprise compliance workflows when configure
 
 ## Related Reading
 
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — generate compliance test cases with the TDD skill
-- [Building Stateful Agents with Claude Skills Guide](/claude-skills-guide/building-stateful-agents-with-claude-skills-guide/) — build a persistent compliance knowledge base with supermemory
-- [Claude Code GDPR Data Privacy Implementation Checklist](/claude-skills-guide/claude-code-gdpr-data-privacy-implementation-checklist/) — implement DSGVO-compliant data handling in your workflows
-- [Use Cases Hub](/claude-skills-guide/use-cases-hub/) — explore Claude Code use cases for enterprise and regulated environments
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/) — generate compliance test cases with the TDD skill
+- [Building Stateful Agents with Claude Skills Guide](/building-stateful-agents-with-claude-skills-guide/) — build a persistent compliance knowledge base with supermemory
+- [Claude Code GDPR Data Privacy Implementation Checklist](/claude-code-gdpr-data-privacy-implementation-checklist/) — implement DSGVO-compliant data handling in your workflows
+- [Use Cases Hub](/use-cases-hub/) — explore Claude Code use cases for enterprise and regulated environments
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

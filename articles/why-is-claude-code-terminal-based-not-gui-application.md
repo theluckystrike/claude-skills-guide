@@ -103,9 +103,9 @@ The terminal is not a throwback to a simpler era—it is a highly efficient, scr
 
 ## Related Reading
 
-- [What Is Claude Code and Why Developers Love It in 2026](/claude-skills-guide/what-is-claude-code-and-why-developers-love-it-2026/) — Understand what Claude Code actually is
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/) — Start using Claude Code in your terminal
-- [Claude Code vs Cursor 2026 Detailed Comparison](/claude-skills-guide/claude-code-vs-cursor-2026-detailed-comparison/) — See how Claude Code compares to GUI-based alternatives
-- [Claude Code Free Tier vs Pro Plan Feature Comparison 2026](/claude-skills-guide/claude-code-free-tier-vs-pro-plan-feature-comparison-2026/) — What you get with each plan
+- [What Is Claude Code and Why Developers Love It in 2026](/what-is-claude-code-and-why-developers-love-it-2026/) — Understand what Claude Code actually is
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/) — Start using Claude Code in your terminal
+- [Claude Code vs Cursor 2026 Detailed Comparison](/claude-code-vs-cursor-2026-detailed-comparison/) — See how Claude Code compares to GUI-based alternatives
+- [Claude Code Free Tier vs Pro Plan Feature Comparison 2026](/claude-code-free-tier-vs-pro-plan-feature-comparison-2026/) — What you get with each plan
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

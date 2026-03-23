@@ -203,9 +203,9 @@ If you struggle to answer these questions, your task likely needs refinement bef
 
 ## Related Reading
 
-- [Skill .md File Format Explained With Examples](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — Understanding how to write effective skill definitions that guide Claude's behavior
-- [How to Write a Skill .md File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) — Creating reusable skills that encode your best practices and scoping patterns
-- [Claude Code Installation and First Steps](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/) — Getting started with Claude Code and understanding its capabilities
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-code-token-usage-optimization-best-practices-guide/) — Managing token usage as your tasks become more detailed
+- [Skill .md File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/) — Understanding how to write effective skill definitions that guide Claude's behavior
+- [How to Write a Skill .md File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/) — Creating reusable skills that encode your best practices and scoping patterns
+- [Claude Code Installation and First Steps](/claude-code-for-beginners-complete-getting-started-2026/) — Getting started with Claude Code and understanding its capabilities
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-code-token-usage-optimization-best-practices-guide/) — Managing token usage as your tasks become more detailed
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

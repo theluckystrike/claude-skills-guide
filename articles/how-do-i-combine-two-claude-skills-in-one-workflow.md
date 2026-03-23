@@ -19,7 +19,7 @@ This guide shows you practical patterns for combining Claude skills, with real e
 
 ## Understanding Skill Composition
 
-[Each Claude skill operates as a self-contained prompt](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) that defines behavior, examples, and tool usage guidelines. When you combine skills, you're essentially creating a pipeline where the output of one skill feeds into the next. This works because Claude maintains conversation context across skill invocations.
+[Each Claude skill operates as a self-contained prompt](/claude-skill-md-format-complete-specification-guide/) that defines behavior, examples, and tool usage guidelines. When you combine skills, you're essentially creating a pipeline where the output of one skill feeds into the next. This works because Claude maintains conversation context across skill invocations.
 
 The key insight is that skills aren't limited to isolated use. You can invoke one skill, complete its task, then invoke another skill that builds on the results. This composition model mirrors how you might chain CLI tools in a bash pipeline.
 
@@ -27,7 +27,7 @@ The key insight is that skills aren't limited to isolated use. You can invoke on
 
 The simplest approach involves invoking skills one after another, with each skill receiving context from the previous operation. Here's a practical scenario:
 
-Suppose you need to generate API documentation from code. You could [combine the **tdd** skill with the **pdf** skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/):
+Suppose you need to generate API documentation from code. You could [combine the **tdd** skill with the **pdf** skill](/claude-tdd-skill-test-driven-development-workflow/):
 
 1. Use **tdd** to analyze your codebase and extract function signatures, parameters, and return types
 2. Pass the extracted API information to **pdf** to generate formatted documentation
@@ -86,7 +86,7 @@ Combine **pdf**, **docx**, and **supermemory** for comprehensive documentation:
 
 1. **pdf** skill generates technical reference documentation
 2. **docx** skill creates user-facing guides with formatted text
-3. **[supermemory** skill saves key decisions](/claude-skills-guide/building-stateful-agents-with-claude-skills-guide/)
+3. **[supermemory** skill saves key decisions](/building-stateful-agents-with-claude-skills-guide/)
 
 This three-skill pipeline produces both technical and user documentation while maintaining institutional knowledge.
 
@@ -168,7 +168,7 @@ Start by identifying tasks you repeat frequently. Look for patterns where you pe
 
 Document your successful chains as standard procedures. A three-skill pipeline you use weekly becomes a valuable productivity multiplier when formalized.
 
-The [combination possibilities are nearly endless](/claude-skills-guide/workflows-hub/)—**pdf** for document generation, **docx** for formatted writing, **pptx** for presentations, **canvas-design** for visuals, **supermemory** for knowledge management. Each skill brings unique capabilities that multiply when composed effectively.
+The [combination possibilities are nearly endless](/workflows-hub/)—**pdf** for document generation, **docx** for formatted writing, **pptx** for presentations, **canvas-design** for visuals, **supermemory** for knowledge management. Each skill brings unique capabilities that multiply when composed effectively.
 
 Experiment with different combinations. The workflow that solves your specific challenges often emerges from trying unexpected skill pairings.
 
@@ -177,9 +177,9 @@ Experiment with different combinations. The workflow that solves your specific c
 
 ## Related Reading
 
-- [Claude Skill Inheritance and Composition Patterns](/claude-skills-guide/claude-skill-inheritance-and-composition-patterns/) — Learn the formal patterns behind skill composition that power the workflow chaining described here.
-- [Claude Code Multi Agent Orchestration Patterns Guide](/claude-skills-guide/claude-code-multi-agent-orchestration-patterns-guide/) — Scale from combining two skills to orchestrating entire multi-agent pipelines.
-- [Fan Out Fan In Pattern with Claude Code Subagents](/claude-skills-guide/fan-out-fan-in-pattern-claude-code-subagents/) — Apply parallel skill execution patterns using the fan out fan in architecture with subagents.
-- [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — Explore more workflow patterns that combine multiple skills for complex development tasks.
+- [Claude Skill Inheritance and Composition Patterns](/claude-skill-inheritance-and-composition-patterns/) — Learn the formal patterns behind skill composition that power the workflow chaining described here.
+- [Claude Code Multi Agent Orchestration Patterns Guide](/claude-code-multi-agent-orchestration-patterns-guide/) — Scale from combining two skills to orchestrating entire multi-agent pipelines.
+- [Fan Out Fan In Pattern with Claude Code Subagents](/fan-out-fan-in-pattern-claude-code-subagents/) — Apply parallel skill execution patterns using the fan out fan in architecture with subagents.
+- [Claude Skills Workflows Hub](/workflows-hub/) — Explore more workflow patterns that combine multiple skills for complex development tasks.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -13,9 +13,9 @@ permalink: /claude-code-cloudformation-template-generation-workflow-guid/
 
 # Claude Code CloudFormation Template Generation Workflow Guide
 
-[Generating AWS CloudFormation templates with Claude Code](/claude-skills-guide/aws-mcp-server-cloud-automation-with-claude-code/) transforms infrastructure-as-code from a manual typing exercise into a collaborative conversation. Instead of memorizing every resource property, you describe what you need in plain language and let Claude translate intent into valid YAML or JSON templates.
+[Generating AWS CloudFormation templates with Claude Code](/aws-mcp-server-cloud-automation-with-claude-code/) transforms infrastructure-as-code from a manual typing exercise into a collaborative conversation. Instead of memorizing every resource property, you describe what you need in plain language and let Claude translate intent into valid YAML or JSON templates.
 
-[This guide walks through practical workflows for generating CloudFormation templates](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), integrating with Claude skills, and building reusable patterns for your team.
+[This guide walks through practical workflows for generating CloudFormation templates](/best-claude-code-skills-to-install-first-2026/), integrating with Claude skills, and building reusable patterns for your team.
 
 ## Starting a CloudFormation Generation Session
 
@@ -79,9 +79,9 @@ Use the pdf skill to read architecture-diagram.pdf and generate the
 corresponding VPC and subnet resources for our CloudFormation template.
 ```
 
-The **tdd** skill applies [test-driven development principles](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) to infrastructure. Define the expected behavior of your stack—health checks passing, scaling triggers firing, failover working—then generate templates that satisfy those test conditions.
+The **tdd** skill applies [test-driven development principles](/claude-tdd-skill-test-driven-development-workflow/) to infrastructure. Define the expected behavior of your stack—health checks passing, scaling triggers firing, failover working—then generate templates that satisfy those test conditions.
 
-The [**supermemory** skill](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) maintains context across sessions. Store your organization's standard VPC patterns, approved instance types, and common resource configurations. When generating new templates, reference these stored patterns to ensure consistency across projects.
+The [**supermemory** skill](/claude-supermemory-skill-persistent-context-explained/) maintains context across sessions. Store your organization's standard VPC patterns, approved instance types, and common resource configurations. When generating new templates, reference these stored patterns to ensure consistency across projects.
 
 ## Practical Code Examples
 
@@ -229,7 +229,7 @@ Run periodic template audits by asking Claude to review all CloudFormation templ
 
 ## Building Reusable Patterns
 
-As you develop CloudFormation expertise, create prompt templates for common patterns. Store these in a [skills directory](/claude-skills-guide/claude-skills-directory-where-to-find-skills/) or documentation system:
+As you develop CloudFormation expertise, create prompt templates for common patterns. Store these in a [skills directory](/claude-skills-directory-where-to-find-skills/) or documentation system:
 
 - Multi-region failover architectures
 - Serverless applications with API Gateway and Lambda
@@ -246,9 +246,9 @@ Start with simple templates and progressively tackle more complex architectures.
 
 ## Related Reading
 
-- [Claude Code Skills for Terraform IaC: Complete Guide](/claude-skills-guide/claude-code-skills-for-infrastructure-as-code-terraform/) — Apply the same iterative generation approach to Terraform modules and provider configurations.
-- [Claude Skills with GitHub Actions CI/CD Pipeline 2026](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/) — Automate CloudFormation deployments by integrating Claude skills into your GitHub Actions pipeline.
-- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — The full toolkit of DevOps skills for infrastructure work.
-- [Claude Skills Workflow Guide](/claude-skills-guide/workflows-hub/) — See how CloudFormation generation fits into broader multi-skill automation pipelines.
+- [Claude Code Skills for Terraform IaC: Complete Guide](/claude-code-skills-for-infrastructure-as-code-terraform/) — Apply the same iterative generation approach to Terraform modules and provider configurations.
+- [Claude Skills with GitHub Actions CI/CD Pipeline 2026](/claude-skills-with-github-actions-ci-cd-pipeline/) — Automate CloudFormation deployments by integrating Claude skills into your GitHub Actions pipeline.
+- [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/) — The full toolkit of DevOps skills for infrastructure work.
+- [Claude Skills Workflow Guide](/workflows-hub/) — See how CloudFormation generation fits into broader multi-skill automation pipelines.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

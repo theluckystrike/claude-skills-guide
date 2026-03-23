@@ -452,8 +452,8 @@ Start with simple patterns to validate your detection logic, then progressively 
 
 ## Related Reading
 
-- [Claude Code for Apache Flink Workflow Tutorial](/claude-skills-guide/claude-code-for-apache-flink-workflow-tutorial/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Code for Apache Flink Workflow Tutorial](/claude-code-for-apache-flink-workflow-tutorial/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

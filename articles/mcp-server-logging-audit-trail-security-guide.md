@@ -17,14 +17,14 @@ When building Model Context Protocol (MCP) servers, logging and audit trails are
 
 ## Why Logging Matters for MCP Servers
 
-[MCP servers act as bridges between Claude and external services](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) Each request passing through your server represents a potential security boundary crossing. Without proper logging, you lose visibility into:
+[MCP servers act as bridges between Claude and external services](/building-your-first-mcp-tool-integration-guide-2026/) Each request passing through your server represents a potential security boundary crossing. Without proper logging, you lose visibility into:
 
 - Who accessed what resources and when
 - Which tools were invoked and with what parameters
 - Failed authentication attempts or permission violations
 - Performance bottlenecks and error patterns
 
-Whether you're building a simple MCP server for personal use or deploying one across an organization, [implementing structured logging from day one saves significant debugging time](/claude-skills-guide/mcp-server-permission-auditing-best-practices/)
+Whether you're building a simple MCP server for personal use or deploying one across an organization, [implementing structured logging from day one saves significant debugging time](/mcp-server-permission-auditing-best-practices/)
 
 ## Structured Logging Implementation
 
@@ -192,7 +192,7 @@ class SignedLogger:
 
 ## Integrating with Claude Skills
 
-When developing MCP servers, pair your logging implementation with Claude's diagnostic skills. The [superpower skill](/claude-skills-guide/) provides general debugging guidance, while specific skills like [pdf](/claude-skills-guide/) for document processing or [frontend-design](/claude-skills-guide/) for UI components can help you build better server interfaces.
+When developing MCP servers, pair your logging implementation with Claude's diagnostic skills. The [superpower skill](/) provides general debugging guidance, while specific skills like [pdf](/) for document processing or [frontend-design](/) for UI components can help you build better server interfaces.
 
 For test-driven development of your logging systems, the **tdd** skill helps you write tests before implementing log handlers. Claude Code can audit your logging code for security issues before deployment.
 
@@ -330,9 +330,9 @@ The `query` method on the `AuditTrail` class shown earlier enables targeted dele
 
 ## Related Reading
 
-- [MCP Server Permission Auditing Best Practices](/claude-skills-guide/mcp-server-permission-auditing-best-practices/)
-- [Securing MCP Servers in Production Environments](/claude-skills-guide/securing-mcp-servers-in-production-environments/)
-- [MCP OAuth 2.1 Authentication Implementation Guide](/claude-skills-guide/mcp-oauth-21-authentication-implementation-guide/)
-- [Advanced Hub](/claude-skills-guide/advanced-hub/)
+- [MCP Server Permission Auditing Best Practices](/mcp-server-permission-auditing-best-practices/)
+- [Securing MCP Servers in Production Environments](/securing-mcp-servers-in-production-environments/)
+- [MCP OAuth 2.1 Authentication Implementation Guide](/mcp-oauth-21-authentication-implementation-guide/)
+- [Advanced Hub](/advanced-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

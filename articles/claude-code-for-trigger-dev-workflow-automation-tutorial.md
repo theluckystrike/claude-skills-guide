@@ -13,7 +13,7 @@ permalink: /claude-code-for-trigger-dev-workflow-automation-tutorial/
 
 # Claude Code for Trigger.dev Workflow Automation Tutorial
 
-Trigger.dev has become a powerful platform for building event-driven workflows, and Claude Code skills can dramatically accelerate your development process. This guide walks through practical patterns for automating Trigger.dev workflow creation, testing, and documentation using Claude Code skills. For more event-driven automation patterns, see the [integrations hub](/claude-skills-guide/integrations-hub/).
+Trigger.dev has become a powerful platform for building event-driven workflows, and Claude Code skills can dramatically accelerate your development process. This guide walks through practical patterns for automating Trigger.dev workflow creation, testing, and documentation using Claude Code skills. For more event-driven automation patterns, see the [integrations hub](/integrations-hub/).
 
 ## Setting Up Your Trigger.dev Project with Claude Code
 
@@ -25,11 +25,11 @@ cd my-workflow-project
 npm install @trigger.dev/core @trigger.dev/github
 ```
 
-With your project ready, invoke Claude Code and load relevant skills for this workflow-heavy development environment. The [tdd skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) proves invaluable for writing tests alongside your workflow definitions.
+With your project ready, invoke Claude Code and load relevant skills for this workflow-heavy development environment. The [tdd skill](/claude-tdd-skill-test-driven-development-workflow/) proves invaluable for writing tests alongside your workflow definitions.
 
 ## Automating Workflow Creation
 
-[When building Trigger.dev workflows, you'll often create similar patterns: triggers, jobs, and error handlers](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Claude Code can generate boilerplate faster than manually typing each file.
+[When building Trigger.dev workflows, you'll often create similar patterns: triggers, jobs, and error handlers](/best-claude-code-skills-to-install-first-2026/) Claude Code can generate boilerplate faster than manually typing each file.
 
 ### Example: Generating a GitHub Webhook Workflow
 
@@ -74,7 +74,7 @@ export const issueCreated = createTrigger({
 });
 ```
 
-To generate similar workflows faster, [create a custom Claude Code skill that understands Trigger.dev](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)'s API patterns. Place this skill in your `~/.claude/skills` directory:
+To generate similar workflows faster, [create a custom Claude Code skill that understands Trigger.dev](/claude-skill-md-format-complete-specification-guide/)'s API patterns. Place this skill in your `~/.claude/skills` directory:
 
 ```markdown
 ---
@@ -84,7 +84,7 @@ description: Generates Trigger.dev workflow boilerplate
 
 # Trigger.dev Workflow Generator
 
-[You help developers create Trigger.dev workflows quickly](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/). When asked to generate a workflow, produce complete, type-safe code that follows these patterns:
+[You help developers create Trigger.dev workflows quickly](/claude-skill-md-format-complete-specification-guide/). When asked to generate a workflow, produce complete, type-safe code that follows these patterns:
 
 1. Import from @trigger.dev/react or @trigger.dev/github
 2. Use eventTrigger or webhookTrigger appropriately
@@ -167,7 +167,7 @@ The **docx** skill works similarly for Word documents, useful when sharing workf
 
 ## Maintaining Context with supermemory
 
-Complex Trigger.dev projects involve numerous workflows, secrets, and configurations. [The **supermemory** skill provides persistent context across sessions](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/):
+Complex Trigger.dev projects involve numerous workflows, secrets, and configurations. [The **supermemory** skill provides persistent context across sessions](/claude-supermemory-skill-persistent-context-explained/):
 
 ```bash
 /supermemory
@@ -273,9 +273,9 @@ Claude Code skills significantly enhance Trigger.dev development through automat
 
 ## Related Reading
 
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/)
-- [Claude Skill MD Format: Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)
-- [Claude Skills Serverless Function Development Workflow](/claude-skills-guide/claude-skills-serverless-function-development-workflow/)
-- [Integrations Hub](/claude-skills-guide/integrations-hub/)
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/)
+- [Claude Skill MD Format: Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/)
+- [Claude Skills Serverless Function Development Workflow](/claude-skills-serverless-function-development-workflow/)
+- [Integrations Hub](/integrations-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

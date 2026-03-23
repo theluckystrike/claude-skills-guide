@@ -412,12 +412,12 @@ Now that you understand the workflow, try these exercises:
 
 Claude Code makes this iterative process natural — describe what you want to change, and let Claude handle the syntax updates. Over time, the habit of diagramming-as-code changes how you think about documentation: it becomes something you maintain alongside code rather than a separate artifact that quickly becomes outdated.
 
-For more guidance on creating effective Claude Skills that incorporate diagramming workflows, explore the [Claude Skills Guide](/claude-skills-guide/) collection.
+For more guidance on creating effective Claude Skills that incorporate diagramming workflows, explore the [Claude Skills Guide](/) collection.
 
 ## Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

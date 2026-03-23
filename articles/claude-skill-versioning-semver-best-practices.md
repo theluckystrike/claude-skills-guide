@@ -13,7 +13,7 @@ permalink: /claude-skill-versioning-semver-best-practices/
 
 # Claude Skill Versioning: Semver Best Practices
 
-[Semantic Versioning provides a predictable framework for managing Claude skill releases](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) When you publish skills for others to use—whether through GitHub or direct distribution—version numbers communicate what changed and help users make informed update decisions.
+[Semantic Versioning provides a predictable framework for managing Claude skill releases](/claude-skill-md-format-complete-specification-guide/) When you publish skills for others to use—whether through GitHub or direct distribution—version numbers communicate what changed and help users make informed update decisions.
 
 Versioning might feel like overhead when you're the only person using a skill. But the moment a second person—or an automated pipeline—depends on your skill, a breaking change with no version signal causes breakage without warning. Semver is the contract you make with your users: "If the major number didn't change, your existing workflow still works."
 
@@ -201,7 +201,7 @@ git tag -a v1.2.0 -m "Release version 1.2.0"
 git push origin v1.2.0
 ```
 
-Users can then reference specific versions or pin to stable releases. The [**tdd** skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/), for example, benefits from pinned versions—users building CI/CD pipelines need predictable behavior.
+Users can then reference specific versions or pin to stable releases. The [**tdd** skill](/claude-tdd-skill-test-driven-development-workflow/), for example, benefits from pinned versions—users building CI/CD pipelines need predictable behavior.
 
 For teams using submodules or directory-based skill distribution, a tag-based release flow might look like this:
 
@@ -316,9 +316,9 @@ The overhead of good versioning practices pays back every time a user updates wi
 
 ## Related Reading
 
-- [How to Share Claude Skills with Your Team](/claude-skills-guide/how-to-share-claude-skills-with-your-team/) — Distribute versioned skills consistently so all team members run the same skill release
-- [How Do I Test a Claude Skill Before Deploying to Team](/claude-skills-guide/how-do-i-test-a-claude-skill-before-deploying-to-team/) — Validate each version before bumping to the next release with a structured pre-deployment test workflow
-- [Claude Skill MD Format: Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — Understand the full skill.md format including version metadata fields used in semver workflows
-- [Claude Skills: Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Explore skill authoring, distribution, and maintenance patterns across the skill lifecycle
+- [How to Share Claude Skills with Your Team](/how-to-share-claude-skills-with-your-team/) — Distribute versioned skills consistently so all team members run the same skill release
+- [How Do I Test a Claude Skill Before Deploying to Team](/how-do-i-test-a-claude-skill-before-deploying-to-team/) — Validate each version before bumping to the next release with a structured pre-deployment test workflow
+- [Claude Skill MD Format: Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/) — Understand the full skill.md format including version metadata fields used in semver workflows
+- [Claude Skills: Getting Started Hub](/getting-started-hub/) — Explore skill authoring, distribution, and maintenance patterns across the skill lifecycle
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

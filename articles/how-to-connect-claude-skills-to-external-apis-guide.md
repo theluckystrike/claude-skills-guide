@@ -13,11 +13,11 @@ permalink: /how-to-connect-claude-skills-to-external-apis-guide/
 
 # How to Connect Claude Skills to External APIs Guide
 
-[Claude Code skills become significantly more powerful when they can call external APIs](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) to fetch real data, trigger actions, or store results. Whether you are extending the `tdd` skill to pull test results from a CI API, using `supermemory` to store context in an external memory service, or having `pdf` push extracted data to a CRM — the pattern for connecting Claude skills to external APIs follows consistent principles. This guide covers how to connect Claude skills to external APIs with practical code and production-ready patterns.
+[Claude Code skills become significantly more powerful when they can call external APIs](/best-claude-code-skills-to-install-first-2026/) to fetch real data, trigger actions, or store results. Whether you are extending the `tdd` skill to pull test results from a CI API, using `supermemory` to store context in an external memory service, or having `pdf` push extracted data to a CRM — the pattern for connecting Claude skills to external APIs follows consistent principles. This guide covers how to connect Claude skills to external APIs with practical code and production-ready patterns.
 
 ## The Core Pattern: Tool Use
 
-[Claude communicates with external APIs through tool use (also called function calling)](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) You define tools with JSON Schema, Claude decides when to call them based on context, the results come back to Claude, and it continues reasoning. This loop is the foundation of all external API integration.
+[Claude communicates with external APIs through tool use (also called function calling)](/claude-skill-md-format-complete-specification-guide/) You define tools with JSON Schema, Claude decides when to call them based on context, the results come back to Claude, and it continues reasoning. This loop is the foundation of all external API integration.
 
 ```
 User → Claude (with skill system prompt)
@@ -446,8 +446,8 @@ For skills deployed as long-running servers, replace the in-memory Map with Redi
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Profiles the skills most commonly wired to external APIs (tdd, pdf, supermemory) with practical invocation patterns
-- [Skill .md File Format Explained With Examples](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — Understanding the `tools` field in skill YAML is essential for giving skills access to the custom API tools you define
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — API response caching and sanitization (covered in this guide) are also key token cost reduction strategies worth pairing
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Profiles the skills most commonly wired to external APIs (tdd, pdf, supermemory) with practical invocation patterns
+- [Skill .md File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/) — Understanding the `tools` field in skill YAML is essential for giving skills access to the custom API tools you define
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — API response caching and sanitization (covered in this guide) are also key token cost reduction strategies worth pairing
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

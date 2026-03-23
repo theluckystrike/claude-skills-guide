@@ -13,7 +13,7 @@ permalink: /claude-code-for-turso-sqlite-edge-database-tutorial/
 
 # Claude Code for Turso SQLite Edge Database Tutorial
 
-[Turso provides a distributed SQLite database optimized for edge computing](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) When combined with Claude Code, you get an AI-assisted workflow for building applications that need low-latency data access worldwide. This tutorial covers setting up Turso, connecting it to your project, and using Claude's capabilities to accelerate development.
+[Turso provides a distributed SQLite database optimized for edge computing](/best-claude-code-skills-to-install-first-2026/) When combined with Claude Code, you get an AI-assisted workflow for building applications that need low-latency data access worldwide. This tutorial covers setting up Turso, connecting it to your project, and using Claude's capabilities to accelerate development.
 
 ## Why Turso for Edge Computing?
 
@@ -42,7 +42,7 @@ turso db create my-edge-app
 turso db show my-edge-app --url
 ```
 
-[The connection string follows the libSQL format](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/): `libsql://your-database.turso.io`. Turso offers both HTTP and WebSocket connections, with the latter providing better performance for interactive applications.
+[The connection string follows the libSQL format](/claude-skill-md-format-complete-specification-guide/): `libsql://your-database.turso.io`. Turso offers both HTTP and WebSocket connections, with the latter providing better performance for interactive applications.
 
 ## Connecting to Your Project
 
@@ -71,7 +71,7 @@ Claude Code can help you generate proper type definitions for your tables. Descr
 
 ## Schema Design with Claude
 
-When designing your database schema, use Claude's skills for structured thinking. [The `/tdd` skill proves particularly useful here](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/)—you can define your data requirements first, then generate migrations that satisfy those requirements.
+When designing your database schema, use Claude's skills for structured thinking. [The `/tdd` skill proves particularly useful here](/claude-tdd-skill-test-driven-development-workflow/)—you can define your data requirements first, then generate migrations that satisfy those requirements.
 
 Suppose you need a user authentication system:
 
@@ -315,7 +315,7 @@ Several Claude skills enhance database development workflows:
 - **code-review**: Review migrations and query performance
 - **devops**: Configure deployment pipelines with database migrations
 
-[The supermemory skill stores schema documentation and business rules](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/), making it easier to maintain consistency as your application evolves.
+[The supermemory skill stores schema documentation and business rules](/claude-supermemory-skill-persistent-context-explained/), making it easier to maintain consistency as your application evolves.
 
 ## Performance Considerations
 
@@ -354,13 +354,13 @@ When working with Turso and Claude Code, keep these practices in mind:
 
 With your Turso database connected to Claude Code, you have a powerful setup for building edge applications. The AI-assisted workflow handles everything from schema design to migration management, letting you focus on application logic.
 
-Explore embedding Turso in serverless functions, implementing real-time subscriptions with WebSockets, or adding row-level security for multi-tenant applications. Claude Code's skills like [pdf can help generate documentation for your data layer](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), while frontend-design skills ensure your application UI properly integrates with your backend.
+Explore embedding Turso in serverless functions, implementing real-time subscriptions with WebSockets, or adding row-level security for multi-tenant applications. Claude Code's skills like [pdf can help generate documentation for your data layer](/best-claude-code-skills-to-install-first-2026/), while frontend-design skills ensure your application UI properly integrates with your backend.
 
 ## Related Reading
 
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/)
-- [Claude SuperMemory Skill: Persistent Context Guide](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/)
-- [Claude Code Skills for Supabase Full Stack Apps](/claude-skills-guide/claude-code-skills-for-supabase-full-stack-apps-guide/)
-- [Integrations Hub](/claude-skills-guide/integrations-hub/)
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/)
+- [Claude SuperMemory Skill: Persistent Context Guide](/claude-supermemory-skill-persistent-context-explained/)
+- [Claude Code Skills for Supabase Full Stack Apps](/claude-code-skills-for-supabase-full-stack-apps-guide/)
+- [Integrations Hub](/integrations-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -13,13 +13,13 @@ permalink: /claude-code-creates-files-in-wrong-directory-fix/
 
 # Claude Code Creates Files in Wrong Directory Fix
 
-One of the most frustrating issues developers encounter when working with Claude Code skills is the dreaded [file path confusion when using Claude Code skills](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/). You ask the AI to create a new component in your src/components directory, and somehow it ends up in the root or an entirely different location. This issue stems from Claude Code's working directory management and how skills handle relative paths. In this guide, we'll examine the root causes and provide concrete solutions.
+One of the most frustrating issues developers encounter when working with Claude Code skills is the dreaded [file path confusion when using Claude Code skills](/claude-skill-md-format-complete-specification-guide/). You ask the AI to create a new component in your src/components directory, and somehow it ends up in the root or an entirely different location. This issue stems from Claude Code's working directory management and how skills handle relative paths. In this guide, we'll examine the root causes and provide concrete solutions.
 
 ## Understanding the Working Directory Problem
 
-When Claude Code executes a skill that writes files, it uses the current [working directory as the baseline](/claude-skills-guide/how-to-fix-claude-code-ignoring-my-claude-md-file/). However, this working directory can shift depending on how you invoke the skill and what context is active. If you're working within a nested project structure or have multiple terminal sessions, the AI may resolve relative paths differently than expected.
+When Claude Code executes a skill that writes files, it uses the current [working directory as the baseline](/how-to-fix-claude-code-ignoring-my-claude-md-file/). However, this working directory can shift depending on how you invoke the skill and what context is active. If you're working within a nested project structure or have multiple terminal sessions, the AI may resolve relative paths differently than expected.
 
-The issue becomes more pronounced when using [community skills like **frontend-design** or **pdf** that generate multiple files](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) across different directories. These skills often assume a specific project structure, and when that assumption doesn't match your actual setup, files get created in the wrong location.
+The issue becomes more pronounced when using [community skills like **frontend-design** or **pdf** that generate multiple files](/best-claude-code-skills-to-install-first-2026/) across different directories. These skills often assume a specific project structure, and when that assumption doesn't match your actual setup, files get created in the wrong location.
 
 Claude Code's working directory is determined at startup time — it reads the shell's current directory when you invoke the `claude` command. If that directory is not your project root, every relative path operation is off by however many levels separate the launch point from your actual root. Many developers discover this the hard way after generating a dozen files they then have to hunt down and move.
 
@@ -198,7 +198,7 @@ Place this file in version control so every team member and every Claude session
 
 ### Fix 5: Modify Skill Instructions
 
-If you frequently use a specific skill that has hardcoded path assumptions, you can modify its instructions. [Skills are just markdown files with the .md extension](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/). Locate the skill file (typically in ~/.claude/skills/ or your project's .claude/skills/ directory) and update the path assumptions.
+If you frequently use a specific skill that has hardcoded path assumptions, you can modify its instructions. [Skills are just markdown files with the .md extension](/claude-skill-md-format-complete-specification-guide/). Locate the skill file (typically in ~/.claude/skills/ or your project's .claude/skills/ directory) and update the path assumptions.
 
 For example, if a skill always looks for components in ./lib/components but your project uses src/components:
 
@@ -373,9 +373,9 @@ The most durable solution is a combination of a correct launch directory, a .cla
 
 ## Related Reading
 
-- [Claude Skill MD Format Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — understand skill file structure to prevent path configuration issues
-- [Claude Code Ignores CLAUDE.md Instructions Fix](/claude-skills-guide/how-to-fix-claude-code-ignoring-my-claude-md-file/) — ensure your project configuration is read correctly
-- [Best Claude Code Skills to Install First in 2026](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) — overview of popular skills and their directory assumptions
-- [Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — solutions to common Claude Code file and path errors
+- [Claude Skill MD Format Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/) — understand skill file structure to prevent path configuration issues
+- [Claude Code Ignores CLAUDE.md Instructions Fix](/how-to-fix-claude-code-ignoring-my-claude-md-file/) — ensure your project configuration is read correctly
+- [Best Claude Code Skills to Install First in 2026](/best-claude-code-skills-to-install-first-2026/) — overview of popular skills and their directory assumptions
+- [Troubleshooting Hub](/troubleshooting-hub/) — solutions to common Claude Code file and path errors
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -13,7 +13,7 @@ permalink: /what-is-the-best-claude-skill-for-generating-documentation/
 
 # What Is the Best Claude Skill for Generating Documentation
 
-[Documentation remains one of the most time-consuming aspects of software development](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Whether you are maintaining API reference docs, writing README files, or creating internal knowledge bases, the repetitive nature of documentation work makes it an ideal candidate for automation. Claude Code offers several skills designed specifically for this purpose, each with distinct strengths depending on your workflow.
+[Documentation remains one of the most time-consuming aspects of software development](/best-claude-code-skills-to-install-first-2026/) Whether you are maintaining API reference docs, writing README files, or creating internal knowledge bases, the repetitive nature of documentation work makes it an ideal candidate for automation. Claude Code offers several skills designed specifically for this purpose, each with distinct strengths depending on your workflow.
 
 This guide compares the major documentation skills, explains when to use each one, and shows you concrete examples of how to combine them into a complete documentation workflow.
 
@@ -103,7 +103,7 @@ A typical combined workflow for documenting a new service looks like this:
 
 Each skill produces output in a format suited to a different audience: engineers work from the docx, operations teams use the runbook, management reviews the pptx, and compliance teams file the pdf.
 
-The [**supermemory** skill](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) proves invaluable for maintaining documentation context across sessions. Invoke it with `/supermemory` and ask Claude to remember previous documentation decisions, ensuring consistency across large documentation projects:
+The [**supermemory** skill](/claude-supermemory-skill-persistent-context-explained/) proves invaluable for maintaining documentation context across sessions. Invoke it with `/supermemory` and ask Claude to remember previous documentation decisions, ensuring consistency across large documentation projects:
 
 ```
 /supermemory
@@ -240,9 +240,9 @@ Documentation generation does not need to be a manual chore. By using Claude ski
 
 ## Related Reading
 
-- [Automated Code Documentation Workflow with Claude Skills](/claude-skills-guide/automated-code-documentation-workflow-with-claude-skills/) — Build a complete automated documentation pipeline that integrates the docx, pdf, and tdd skills
-- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Use the tdd skill to generate living code documentation that stays in sync with your implementation
-- [Claude Code Skills for Backend Developers: Node.js and Python](/claude-skills-guide/claude-code-skills-for-backend-developers-node-and-python/) — See how documentation skills combine with backend development workflows for Python and Node.js projects
-- [Claude Skills Use Cases Hub](/claude-skills-guide/use-cases-hub/) — Explore more documentation and content automation use cases across the full skills ecosystem
+- [Automated Code Documentation Workflow with Claude Skills](/automated-code-documentation-workflow-with-claude-skills/) — Build a complete automated documentation pipeline that integrates the docx, pdf, and tdd skills
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/) — Use the tdd skill to generate living code documentation that stays in sync with your implementation
+- [Claude Code Skills for Backend Developers: Node.js and Python](/claude-code-skills-for-backend-developers-node-and-python/) — See how documentation skills combine with backend development workflows for Python and Node.js projects
+- [Claude Skills Use Cases Hub](/use-cases-hub/) — Explore more documentation and content automation use cases across the full skills ecosystem
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

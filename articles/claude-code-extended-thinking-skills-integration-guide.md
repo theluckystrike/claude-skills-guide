@@ -13,17 +13,17 @@ permalink: /claude-code-extended-thinking-skills-integration-guide/
 
 # Extended Thinking + Claude Skills: Integration Guide
 
-Claude Code's [extended thinking](/claude-skills-guide/claude-opus-orchestrator-sonnet-worker-architecture/) mode lets the model reason through complex, multi-step problems using a longer internal chain of thought. Skills extend that capability by providing domain-specific context and workflows. This guide shows how to combine skills effectively for complex problem-solving.
+Claude Code's [extended thinking](/claude-opus-orchestrator-sonnet-worker-architecture/) mode lets the model reason through complex, multi-step problems using a longer internal chain of thought. Skills extend that capability by providing domain-specific context and workflows. This guide shows how to combine skills effectively for complex problem-solving.
 
 ## What Extended Thinking Adds
 
-[When you enable extended thinking in Claude Code, Claude spends more tokens reasoning before responding](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) This is most useful for:
+[When you enable extended thinking in Claude Code, Claude spends more tokens reasoning before responding](/best-claude-code-skills-to-install-first-2026/) This is most useful for:
 
 - Architectural decisions with many trade-offs
 - Debugging complex multi-service issues
 - Analyzing large specifications for inconsistencies
 
-[Skills complement extended thinking by providing the domain context Claude needs to reason well](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)—persistent memory, structured document data, and systematic workflows.
+[Skills complement extended thinking by providing the domain context Claude needs to reason well](/claude-skill-md-format-complete-specification-guide/)—persistent memory, structured document data, and systematic workflows.
 
 ## Using /supermemory for Persistent Context
 
@@ -191,9 +191,9 @@ Extended thinking and Claude skills work best together when skills provide the c
 
 ## Related Reading
 
-- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) — Top frontend skills with examples
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Broader developer skill overview
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/) — Top frontend skills with examples
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Broader developer skill overview
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

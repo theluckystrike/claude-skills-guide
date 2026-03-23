@@ -355,8 +355,8 @@ Return a list of specific inconsistencies to fix.
 
 ## Related Reading
 
-- [Automated Code Documentation Workflow with Claude Skills](/claude-skills-guide/automated-code-documentation-workflow-with-claude-skills/) — Documentation automation paired with tutorial writing
-- [Claude Skills Automated Blog Post Workflow](/claude-skills-guide/claude-skills-automated-blog-post-workflow-tutorial/) — Content creation beyond tutorials
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Full developer skill stack
+- [Automated Code Documentation Workflow with Claude Skills](/automated-code-documentation-workflow-with-claude-skills/) — Documentation automation paired with tutorial writing
+- [Claude Skills Automated Blog Post Workflow](/claude-skills-automated-blog-post-workflow-tutorial/) — Content creation beyond tutorials
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Full developer skill stack
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

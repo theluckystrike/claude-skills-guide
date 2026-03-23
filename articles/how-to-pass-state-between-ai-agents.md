@@ -19,7 +19,7 @@ score: 7
 
 As AI agent systems grow more sophisticated, the need for multiple agents to collaborate and share information becomes essential. Whether you're building a code review pipeline, a data processing workflow, or a complex autonomous system, understanding how to pass state between AI agents is crucial for creating robust, interconnected applications.
 
-This guide covers framework-agnostic patterns for state sharing between AI agents — applicable to Claude, OpenAI, LangChain, CrewAI, and custom agent systems. The techniques here work regardless of which AI provider or orchestration library you use. If you are specifically working with Claude Code subagents, see the companion guide [Passing Context Between Claude Code Subagents](/claude-skills-guide/passing-context-between-claude-code-subagents-guide/) for Claude-specific invocation patterns and skill integration.
+This guide covers framework-agnostic patterns for state sharing between AI agents — applicable to Claude, OpenAI, LangChain, CrewAI, and custom agent systems. The techniques here work regardless of which AI provider or orchestration library you use. If you are specifically working with Claude Code subagents, see the companion guide [Passing Context Between Claude Code Subagents](/passing-context-between-claude-code-subagents-guide/) for Claude-specific invocation patterns and skill integration.
 
 ## Understanding State in Multi-Agent Systems
 
@@ -216,13 +216,13 @@ Passing state between AI agents is a fundamental capability for building sophist
 
 Whether you're building a simple two-agent pipeline or a complex autonomous workflow, the key lies in choosing the right state passing mechanism for your specific requirements. Start with simpler approaches like file sharing, and evolve toward database-backed solutions as your needs grow more complex.
 
-If you are working specifically with Claude Code, the companion guide [Passing Context Between Claude Code Subagents](/claude-skills-guide/passing-context-between-claude-code-subagents-guide/) covers the `/subagent:` invocation syntax, the `.claude/context/` file convention, and integration with Claude skills like tdd, pdf, and xlsx.
+If you are working specifically with Claude Code, the companion guide [Passing Context Between Claude Code Subagents](/passing-context-between-claude-code-subagents-guide/) covers the `/subagent:` invocation syntax, the `.claude/context/` file convention, and integration with Claude skills like tdd, pdf, and xlsx.
 {% endraw %}
 
 ## Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

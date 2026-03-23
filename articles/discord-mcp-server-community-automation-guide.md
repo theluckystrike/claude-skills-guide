@@ -13,11 +13,11 @@ permalink: /discord-mcp-server-community-automation-guide/
 
 # Discord MCP Server Community Automation Guide
 
-[Building community automation for Discord with the Model Context Protocol (MCP) opens up powerful workflows](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) for developers managing online communities. This guide covers practical implementation patterns, configuration examples, and real-world automation scenarios using MCP servers with Discord bots.
+[Building community automation for Discord with the Model Context Protocol (MCP) opens up powerful workflows](/building-your-first-mcp-tool-integration-guide-2026/) for developers managing online communities. This guide covers practical implementation patterns, configuration examples, and real-world automation scenarios using MCP servers with Discord bots.
 
 ## Understanding the MCP-Discord Connection
 
-[MCP servers extend Claude Code](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/)'s capabilities by exposing tools that interact with external services. When you combine MCP with Discord's API, you create a bridge between Claude's reasoning capabilities and your community management tasks. This means Claude can read messages, manage roles, moderate content, and respond to community events without manual intervention.
+[MCP servers extend Claude Code](/building-your-first-mcp-tool-integration-guide-2026/)'s capabilities by exposing tools that interact with external services. When you combine MCP with Discord's API, you create a bridge between Claude's reasoning capabilities and your community management tasks. This means Claude can read messages, manage roles, moderate content, and respond to community events without manual intervention.
 
 The key components involve setting up a Discord bot, configuring an MCP server to communicate with Discord's API, and defining the automation rules that Claude follows.
 
@@ -245,9 +245,9 @@ The combination of MCP's tool framework with Discord's API creates endless possi
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/)
-- [AWS MCP Server Cloud Automation with Claude Code](/claude-skills-guide/aws-mcp-server-cloud-automation-with-claude-code/)
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/)
-- [Integrations Hub](/claude-skills-guide/integrations-hub/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)
+- [AWS MCP Server Cloud Automation with Claude Code](/aws-mcp-server-cloud-automation-with-claude-code/)
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/)
+- [Integrations Hub](/integrations-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

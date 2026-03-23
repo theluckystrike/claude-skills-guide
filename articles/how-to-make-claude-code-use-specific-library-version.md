@@ -21,7 +21,7 @@ When Claude Code generates code for your project, it sometimes selects library v
 
 Mismatched library versions cause deployment failures, runtime errors, and hours of debugging. A common scenario: Claude generates code using the latest `pandas 2.2.0` features, but your production environment runs `pandas 1.5.3`. The code works perfectly on Claude's suggested setup and fails completely in production.
 
-Controlling library versions becomes especially important when working with specialized skills. The [frontend-design skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) might suggest React 19, but your codebase requires React 18. Similarly, the [pdf skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) could reference a newer version of a PDF library than what your project supports. Version control prevents these mismatches.
+Controlling library versions becomes especially important when working with specialized skills. The [frontend-design skill](/best-claude-skills-for-developers-2026/) might suggest React 19, but your codebase requires React 18. Similarly, the [pdf skill](/best-claude-skills-for-developers-2026/) could reference a newer version of a PDF library than what your project supports. Version control prevents these mismatches.
 
 The problem is structural, not a bug in Claude. Claude's training data includes documentation, tutorials, and code samples from across the web, skewed toward recent and widely-cited content. When you ask it to write a data processing script without context, it defaults to patterns from recent library versions because that's what most of the training examples use. It doesn't know your production environment has a two-year-old pandas installation unless you tell it.
 
@@ -62,7 +62,7 @@ dependencies = [
 ]
 ```
 
-The [tdd skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) often generates test code that imports your existing dependencies—version pinning ensures compatibility.
+The [tdd skill](/claude-tdd-skill-test-driven-development-workflow/) often generates test code that imports your existing dependencies—version pinning ensures compatibility.
 
 #### Locking Dependencies with pip-tools
 
@@ -147,7 +147,7 @@ When generating code, use only the library versions specified in requirements.tx
 Do not suggest upgrading library versions without explicit approval.
 ```
 
-The [supermemory skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) can help you track which versions work across different projects.
+The [supermemory skill](/best-claude-skills-for-developers-2026/) can help you track which versions work across different projects.
 
 A well-maintained `CLAUDE.md` is the single highest-leverage thing you can do for version control. Because it loads automatically, you don't have to remember to state your constraints at the start of every session. Consider adding your full dependency list as a reference section, not just the high-level constraints. Claude Code reads this file before responding to any request, so making it comprehensive reduces the chance of version drift in any generated code.
 
@@ -183,7 +183,7 @@ Beyond configuration files, verbal communication works. When starting a session,
 
 > "Our Node.js project runs on Express 4.18 and Node 18. Use only those versions when suggesting dependencies."
 
-This approach works well when combined with the [webapp-testing skill](/claude-skills-guide/best-claude-skills-for-developers-2026/), which validates generated code against your specific environment.
+This approach works well when combined with the [webapp-testing skill](/best-claude-skills-for-developers-2026/), which validates generated code against your specific environment.
 
 If you're in the middle of a session and Claude has already generated version-mismatched code, correct it explicitly rather than hoping the next suggestion will match. Something like: "That code uses the pandas 2.0 `.convert_dtypes()` behavior. We're on pandas 1.5.3. Please rewrite it to be compatible." Claude Code responds well to specific correction — naming the library, the version mismatch, and the target version gives it enough context to fix the code precisely.
 
@@ -321,7 +321,7 @@ When you tell Claude Code you're using a specific Node version, it avoids sugges
 ## Pro Tips for Version Control
 
 - **Lock files matter**: Python projects benefit from `pip-tools` or `poetry.lock`. Node projects should have `package-lock.json` committed.
-- **Check skill-specific requirements**: Skills like [mcp-builder](/claude-skills-guide/best-claude-skills-for-developers-2026/) might require specific Node versions or package versions.
+- **Check skill-specific requirements**: Skills like [mcp-builder](/best-claude-skills-for-developers-2026/) might require specific Node versions or package versions.
 - **Test generated code locally**: Always run `pip install -r requirements.txt` or `npm install` after Claude generates significant code.
 - **Version pins in code comments**: When showing Claude code snippets from your project, include version comments:
 
@@ -360,9 +360,9 @@ The most durable setup combines all four: pinned `requirements.txt` or `package.
 
 ## Related Reading
 
-- [How to Make Claude Code Respect Module Boundaries](/claude-skills-guide/how-to-make-claude-code-respect-module-boundaries/)
-- [Claude Code Gives Incorrect Imports How to Fix](/claude-skills-guide/claude-code-gives-incorrect-imports-how-to-fix/)
-- [How to Write Effective CLAUDE.md for Your Project](/claude-skills-guide/how-to-write-effective-claude-md-for-your-project/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [How to Make Claude Code Respect Module Boundaries](/how-to-make-claude-code-respect-module-boundaries/)
+- [Claude Code Gives Incorrect Imports How to Fix](/claude-code-gives-incorrect-imports-how-to-fix/)
+- [How to Write Effective CLAUDE.md for Your Project](/how-to-write-effective-claude-md-for-your-project/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

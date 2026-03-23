@@ -168,9 +168,9 @@ For developers building production applications, combining Claude Code with skil
 
 ## Related Reading
 
-- [Claude Code Keeps Making Same Mistake Fix Guide](/claude-skills-guide/claude-code-keeps-making-same-mistake-fix-guide/) — Systematic fix for recurring errors
-- [Why Does Claude Code Hallucinate Code Sometimes](/claude-skills-guide/why-does-claude-code-hallucinate-code-sometimes/) — Repeated errors often stem from hallucination
-- [Best Way to Scope Tasks for Claude Code Success](/claude-skills-guide/best-way-to-scope-tasks-for-claude-code-success/) — Clear scope reduces error repetition
-- [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — Claude Code behavioral issue guides
+- [Claude Code Keeps Making Same Mistake Fix Guide](/claude-code-keeps-making-same-mistake-fix-guide/) — Systematic fix for recurring errors
+- [Why Does Claude Code Hallucinate Code Sometimes](/why-does-claude-code-hallucinate-code-sometimes/) — Repeated errors often stem from hallucination
+- [Best Way to Scope Tasks for Claude Code Success](/best-way-to-scope-tasks-for-claude-code-success/) — Clear scope reduces error repetition
+- [Claude Skills Troubleshooting Hub](/troubleshooting-hub/) — Claude Code behavioral issue guides
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

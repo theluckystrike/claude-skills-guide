@@ -13,7 +13,7 @@ tags: [claude-code, claude-skills, security, openclaw, code-review, safety]
 
 # OpenCLAW Security Review — Is It Safe in 2026?
 
-Developers exploring AI-assisted coding tools often ask: **Is OpenCLAW safe to use?** This question deserves a thorough technical answer. OpenCLAW is an open-source implementation that brings Claude Code capabilities to local development environments. This security review examines the architecture, potential risks, and hardening strategies for 2026. For a comparison of Claude Code against other AI coding tools, see [Cline AI code assistant review 2026](/claude-skills-guide/cline-ai-code-assistant-review-2026/).
+Developers exploring AI-assisted coding tools often ask: **Is OpenCLAW safe to use?** This question deserves a thorough technical answer. OpenCLAW is an open-source implementation that brings Claude Code capabilities to local development environments. This security review examines the architecture, potential risks, and hardening strategies for 2026. For a comparison of Claude Code against other AI coding tools, see [Cline AI code assistant review 2026](/cline-ai-code-assistant-review-2026/).
 
 ## Understanding the OpenCLAW Architecture
 
@@ -95,7 +95,7 @@ permissions:
     - pytest
 ```
 
-**Use read-only mode** for code review tasks. The `--readonly` flag prevents any file modifications or command execution, ideal for analysis workflows using the pdf skill for documentation review or the [tdd skill for test generation](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/).
+**Use read-only mode** for code review tasks. The `--readonly` flag prevents any file modifications or command execution, ideal for analysis workflows using the pdf skill for documentation review or the [tdd skill for test generation](/claude-tdd-skill-test-driven-development-workflow/).
 
 **Implement command timeout limits** to prevent runaway processes:
 
@@ -389,9 +389,9 @@ Stay vigilant, configure explicitly, and treat AI-generated commands with the sa
 
 ## Related Reading
 
-- [Claude Code MCP Server Penetration Testing Guide](/claude-skills-guide/claude-code-mcp-server-penetration-testing-guide/) — Apply similar penetration testing methodology to Claude Code's MCP server layer
-- [Cline AI Code Assistant Review 2026](/claude-skills-guide/cline-ai-code-assistant-review-2026/) — Compare OpenCLAW with another autonomous AI coding agent in the same security context
-- [Claude Code for Dependency Audit Automation](/claude-skills-guide/claude-code-for-dependency-vulnerability-scanning/) — Automate supply chain security audits to complement your OpenCLAW hardening
-- [Claude Skills Comparisons Hub](/claude-skills-guide/comparisons-hub/) — Read more comparisons of AI coding tools to inform your security evaluation
+- [Claude Code MCP Server Penetration Testing Guide](/claude-code-mcp-server-penetration-testing-guide/) — Apply similar penetration testing methodology to Claude Code's MCP server layer
+- [Cline AI Code Assistant Review 2026](/cline-ai-code-assistant-review-2026/) — Compare OpenCLAW with another autonomous AI coding agent in the same security context
+- [Claude Code for Dependency Audit Automation](/claude-code-for-dependency-vulnerability-scanning/) — Automate supply chain security audits to complement your OpenCLAW hardening
+- [Claude Skills Comparisons Hub](/comparisons-hub/) — Read more comparisons of AI coding tools to inform your security evaluation
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

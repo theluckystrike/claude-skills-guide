@@ -16,11 +16,11 @@ permalink: /claude-code-github-actions-workflow-matrix-strategy-guide/
 
 # Claude Code GitHub Actions Workflow Matrix Strategy Guide
 
-[GitHub Actions matrix strategies let you run the same job across multiple combinations of variables in parallel](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) When combined with Claude Code, you can build intelligent CI/CD pipelines that adapt to different environments, run tests across platform combinations, and generate contextual reports. This guide shows you practical patterns for using matrix workflows effectively.
+[GitHub Actions matrix strategies let you run the same job across multiple combinations of variables in parallel](/best-claude-code-skills-to-install-first-2026/) When combined with Claude Code, you can build intelligent CI/CD pipelines that adapt to different environments, run tests across platform combinations, and generate contextual reports. This guide shows you practical patterns for using matrix workflows effectively.
 
 ## Understanding Matrix Strategy Fundamentals
 
-[The matrix strategy in GitHub Actions uses the matrix keyword to define dimensions you want to test against](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) Each combination creates a separate job that runs in parallel, dramatically reducing total pipeline execution time.
+[The matrix strategy in GitHub Actions uses the matrix keyword to define dimensions you want to test against](/claude-tdd-skill-test-driven-development-workflow/) Each combination creates a separate job that runs in parallel, dramatically reducing total pipeline execution time.
 
 ```yaml
 jobs:
@@ -142,7 +142,7 @@ Claude can help generate matrix configurations for complex scenarios. For instan
 claude --print -p "Analyze this package.json and suggest test matrix combinations for Node versions and major dependency versions. Output as YAML."
 ```
 
-The [tdd skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) proves particularly useful here—it can analyze test failures across matrix runs and suggest which combinations need attention. Similarly, the `pdf` skill can generate consolidated test reports from individual job results.
+The [tdd skill](/claude-tdd-skill-test-driven-development-workflow/) proves particularly useful here—it can analyze test failures across matrix runs and suggest which combinations need attention. Similarly, the `pdf` skill can generate consolidated test reports from individual job results.
 
 ## Matrix Strategies for Multi-Platform Projects
 
@@ -318,10 +318,10 @@ For more advanced patterns, explore the `supermemory` skill for tracking matrix 
 
 ## Related Reading
 
-- [Claude Skills with GitHub Actions CI/CD Pipeline 2026](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/) — Integrate Claude skills directly into GitHub Actions workflows beyond matrix strategy patterns.
-- [Automated Testing Pipeline with Claude TDD Skill (2026)](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Build continuous testing pipelines that feed results back into your matrix analysis workflows.
-- [How to Automate Pull Request Review with Claude Skills](/claude-skills-guide/best-claude-skills-for-code-review-automation/) — Extend your matrix CI pipeline with automated pull request review for every combination.
-- [Claude Skills Workflow Guide](/claude-skills-guide/workflows-hub/) — See how matrix workflows fit into larger multi-skill automation patterns.
+- [Claude Skills with GitHub Actions CI/CD Pipeline 2026](/claude-skills-with-github-actions-ci-cd-pipeline/) — Integrate Claude skills directly into GitHub Actions workflows beyond matrix strategy patterns.
+- [Automated Testing Pipeline with Claude TDD Skill (2026)](/claude-tdd-skill-test-driven-development-workflow/) — Build continuous testing pipelines that feed results back into your matrix analysis workflows.
+- [How to Automate Pull Request Review with Claude Skills](/best-claude-skills-for-code-review-automation/) — Extend your matrix CI pipeline with automated pull request review for every combination.
+- [Claude Skills Workflow Guide](/workflows-hub/) — See how matrix workflows fit into larger multi-skill automation patterns.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

@@ -17,7 +17,7 @@ Understanding when to use Claude Code versus writing code manually helps you mak
 
 ## What Claude Code Brings to Your Workflow
 
-Claude Code acts as an intelligent coding partner that can handle repetitive tasks, generate boilerplate code, debug issues, and explain complex systems. When you load specific skills like the [tdd skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) or [frontend-design skill](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), Claude applies specialized knowledge to your problem domain.
+Claude Code acts as an intelligent coding partner that can handle repetitive tasks, generate boilerplate code, debug issues, and explain complex systems. When you load specific skills like the [tdd skill](/best-claude-skills-for-developers-2026/) or [frontend-design skill](/best-claude-code-skills-to-install-first-2026/), Claude applies specialized knowledge to your problem domain.
 
 The key advantage is speed for well-defined, repetitive, or documentation-heavy tasks. If you need to generate API documentation, refactor legacy code, write unit tests, or create project scaffolds, Claude Code often completes these in minutes rather than hours.
 
@@ -68,7 +68,7 @@ Getting this output manually — including the try/catch pattern, status codes, 
 
 ### Learning New Technologies
 
-When exploring unfamiliar frameworks or libraries, Claude Code serves as an interactive tutor. The [supermemory skill](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) helps organize and recall information from your learning sessions. Instead of reading extensive documentation, you can ask specific questions and get contextual answers:
+When exploring unfamiliar frameworks or libraries, Claude Code serves as an interactive tutor. The [supermemory skill](/best-claude-code-skills-to-install-first-2026/) helps organize and recall information from your learning sessions. Instead of reading extensive documentation, you can ask specific questions and get contextual answers:
 
 ```
 How do I implement authentication with NextAuth.js in Next.js 14?
@@ -105,7 +105,7 @@ It also often notes whether returning `0` or `None` is the right default for you
 
 ### Documentation Generation
 
-The [pdf skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) and [docx skill](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) enable creating professional documentation from your code. Generate API docs, technical specifications, or user guides directly from your codebase without manual formatting.
+The [pdf skill](/best-claude-skills-for-developers-2026/) and [docx skill](/best-claude-code-skills-to-install-first-2026/) enable creating professional documentation from your code. Generate API docs, technical specifications, or user guides directly from your codebase without manual formatting.
 
 For example, give Claude an Express route file and ask it to produce API documentation in OpenAPI format. It identifies each endpoint, the expected request body shape, response codes, and error cases — all from reading the code itself. This task, done manually, involves tedious cross-referencing that Claude handles in one pass.
 
@@ -286,7 +286,7 @@ Where they meet: use Claude to generate the initial version above, then manually
 
 Most effective developers combine both approaches strategically. Use Claude Code for initial scaffolding, boilerplate, and routine tasks. Then manually refine, optimize, and extend the code where it matters most.
 
-This hybrid model captures the speed advantages of AI assistance while preserving human judgment for critical implementation details. The [tdd skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) pairs well with this approach — let Claude generate tests, then manually enhance edge cases and performance-critical assertions.
+This hybrid model captures the speed advantages of AI assistance while preserving human judgment for critical implementation details. The [tdd skill](/claude-tdd-skill-test-driven-development-workflow/) pairs well with this approach — let Claude generate tests, then manually enhance edge cases and performance-critical assertions.
 
 A common workflow that many senior developers have settled on:
 
@@ -326,9 +326,9 @@ The developers who get the most value from Claude Code are those who treat it as
 
 ## Related Reading
 
-- [Is Claude Code Worth It for Solo Developers and Freelancers](/claude-skills-guide/is-claude-code-worth-it-for-solo-developers-freelancers/)
-- [Claude Code vs GitHub Copilot Workspace 2026](/claude-skills-guide/claude-code-vs-github-copilot-workspace-2026/)
-- [Why Is Claude Code Recommended for Refactoring Tasks](/claude-skills-guide/why-is-claude-code-recommended-for-refactoring-tasks/)
-- [Claude Skills Comparisons Hub](/claude-skills-guide/comparisons-hub/)
+- [Is Claude Code Worth It for Solo Developers and Freelancers](/is-claude-code-worth-it-for-solo-developers-freelancers/)
+- [Claude Code vs GitHub Copilot Workspace 2026](/claude-code-vs-github-copilot-workspace-2026/)
+- [Why Is Claude Code Recommended for Refactoring Tasks](/why-is-claude-code-recommended-for-refactoring-tasks/)
+- [Claude Skills Comparisons Hub](/comparisons-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -13,15 +13,15 @@ permalink: /best-claude-skills-for-solo-developers-and-freelancers/
 
 # Best Claude Skills for Solo Developers and Freelancers
 
-[Solo developers and freelancers wear every hat](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Claude Code skills let you punch above your weight on documentation, testing, design, and client deliverables without switching tools constantly. These are the most useful ones.
+[Solo developers and freelancers wear every hat](/best-claude-code-skills-to-install-first-2026/) Claude Code skills let you punch above your weight on documentation, testing, design, and client deliverables without switching tools constantly. These are the most useful ones.
 
 The core challenge for solo developers is context switching cost. Every time you move from writing code to drafting a proposal, generating a status report, or re-reading old notes to remember what a client prefers, you lose momentum. Claude Code skills compress that overhead dramatically — you stay in one environment and describe what you need rather than navigating different tools. This guide covers the skills that pay off fastest, with realistic examples drawn from typical freelance workflows.
 
 ## Streamlined Documentation with the PDF Skill
 
-Handling client deliverables, invoices, and technical documentation is part of every freelance project. The [**pdf** skill](/claude-skills-guide/best-claude-skills-for-data-analysis/) transforms how you process these documents programmatically.
+Handling client deliverables, invoices, and technical documentation is part of every freelance project. The [**pdf** skill](/best-claude-skills-for-data-analysis/) transforms how you process these documents programmatically.
 
-Consider a scenario where [you need to extract data from client-provided specifications](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/):
+Consider a scenario where [you need to extract data from client-provided specifications](/claude-supermemory-skill-persistent-context-explained/):
 
 ```python
 # Automating specification extraction with the pdf skill
@@ -110,7 +110,7 @@ For quick client presentations and proposal mockups, canvas-design wins on every
 
 ## Test-Driven Workflows with the TDD Skill
 
-Quality assurance often gets neglected when you're juggling multiple projects. The [**tdd** skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) enforces testing discipline by guiding you through red-green-refactor cycles and generating meaningful test cases from your existing code.
+Quality assurance often gets neglected when you're juggling multiple projects. The [**tdd** skill](/best-claude-skills-for-developers-2026/) enforces testing discipline by guiding you through red-green-refactor cycles and generating meaningful test cases from your existing code.
 
 ```javascript
 // The tdd skill helps structure your tests
@@ -172,7 +172,7 @@ That last test — checking symmetry — is the kind of thing the tdd skill surf
 
 ## Knowledge Management with the Supermemory Skill
 
-Client projects involve context spread across documentation, code, and previous conversations. The [**supermemory** skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) gives Claude persistent memory across sessions — store key facts once, retrieve them in any future session.
+Client projects involve context spread across documentation, code, and previous conversations. The [**supermemory** skill](/claude-skills-token-optimization-reduce-api-costs/) gives Claude persistent memory across sessions — store key facts once, retrieve them in any future session.
 
 ```
 /supermemory store: Project Alpha uses JWT auth, Postgres 15, deployed on Fly.io. Client prefers Tailwind over CSS modules. Contact: sarah@client.com
@@ -335,9 +335,9 @@ For new freelancers, start with `/supermemory` and `/pdf`. The context problem i
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — The essential developer skill stack
-- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — DevOps-specific skill recommendations
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — The essential developer skill stack
+- [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/) — DevOps-specific skill recommendations
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

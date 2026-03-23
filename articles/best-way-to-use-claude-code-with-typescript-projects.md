@@ -170,9 +170,9 @@ The best way to use Claude Code with TypeScript projects is treating types as a 
 
 ## Related Reading
 
-- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) — Frontend skills work great with TypeScript
-- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — TypeScript TDD patterns with Claude
-- [How to Make Claude Code Generate Consistent API Responses](/claude-skills-guide/how-to-make-claude-code-generate-consistent-api-responses/) — TypeScript APIs need consistent response types
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/) — TypeScript setup and getting started
+- [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/) — Frontend skills work great with TypeScript
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/) — TypeScript TDD patterns with Claude
+- [How to Make Claude Code Generate Consistent API Responses](/how-to-make-claude-code-generate-consistent-api-responses/) — TypeScript APIs need consistent response types
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/) — TypeScript setup and getting started
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

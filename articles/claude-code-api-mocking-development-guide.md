@@ -233,9 +233,9 @@ Combine mocking with Claude skills like **tdd** for test-driven workflows, **sup
 
 ## Related Reading
 
-- [Claude Code API Contract Testing Guide](/claude-skills-guide/claude-code-api-contract-testing-guide/) — Contract testing and mocking work together
-- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Mocking enables TDD for external dependencies
-- [Claude Code API Backward Compatibility Guide](/claude-skills-guide/claude-code-api-backward-compatibility-guide/) — Mocks help test backward compatibility
-- [Claude Skills Tutorials Hub](/claude-skills-guide/tutorials-hub/) — More testing workflow guides
+- [Claude Code API Contract Testing Guide](/claude-code-api-contract-testing-guide/) — Contract testing and mocking work together
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/) — Mocking enables TDD for external dependencies
+- [Claude Code API Backward Compatibility Guide](/claude-code-api-backward-compatibility-guide/) — Mocks help test backward compatibility
+- [Claude Skills Tutorials Hub](/tutorials-hub/) — More testing workflow guides
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

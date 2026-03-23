@@ -13,7 +13,7 @@ permalink: /claude-skill-lazy-loading-token-savings-explained-deep-dive/
 
 # Claude Skill Lazy Loading: Token Savings Explained
 
-When working with Claude Code and its extensible skill system, understanding lazy loading can significantly impact your token budget and response quality. This guide explains how skill lazy loading works, why it matters, and how you can apply it effectively in day-to-day development sessions. If you are already looking to cut costs more broadly, the [token optimization guide](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) covers complementary strategies worth pairing with lazy loading.
+When working with Claude Code and its extensible skill system, understanding lazy loading can significantly impact your token budget and response quality. This guide explains how skill lazy loading works, why it matters, and how you can apply it effectively in day-to-day development sessions. If you are already looking to cut costs more broadly, the [token optimization guide](/claude-skills-token-optimization-reduce-api-costs/) covers complementary strategies worth pairing with lazy loading.
 
 ## What Is Lazy Loading in Claude Skills?
 
@@ -39,7 +39,7 @@ A single well-documented skill can contribute several hundred to over a thousand
 
 Lazy loading reduces this initial processing burden. Instead of loading all skill information upfront, Claude loads only what's necessary for your immediate request. If you invoke the `pdf` skill for text extraction, only the PDF-related capabilities load into context. The `frontend-design`, `tdd`, `pptx`, and other skills contribute nothing until you need them.
 
-This creates measurable token savings especially in sessions where you use multiple skills sequentially rather than simultaneously. For a deeper look at how context is structured and managed across skills, see the [skills memory and context architecture guide](/claude-skills-guide/claude-skills-memory-and-context-architecture-explained/).
+This creates measurable token savings especially in sessions where you use multiple skills sequentially rather than simultaneously. For a deeper look at how context is structured and managed across skills, see the [skills memory and context architecture guide](/claude-skills-memory-and-context-architecture-explained/).
 
 ### Token Overhead Comparison
 
@@ -108,7 +108,7 @@ Different skills demonstrate lazy loading benefits across various use cases. Und
 
 For developers running extended Claude Code sessions, lazy loading provides several compounding advantages.
 
-**Reduced Context Overflow**: Large skill sets previously risked hitting context limits in long sessions. When eight skills are fully loaded plus your conversation history plus file contents, you can exhaust your context window before completing complex tasks. Lazy loading keeps active context manageable, extending how long a single session can run productively. The [context window management best practices guide](/claude-skills-guide/claude-md-too-long-context-window-optimization/) explains how to structure your sessions to avoid overflow even when lazy loading is not an option.
+**Reduced Context Overflow**: Large skill sets previously risked hitting context limits in long sessions. When eight skills are fully loaded plus your conversation history plus file contents, you can exhaust your context window before completing complex tasks. Lazy loading keeps active context manageable, extending how long a single session can run productively. The [context window management best practices guide](/claude-md-too-long-context-window-optimization/) explains how to structure your sessions to avoid overflow even when lazy loading is not an option.
 
 **Faster Initial Responses**: Less initialization processing means quicker first responses in each skill invocation. The first time you invoke a skill there is a brief loading moment, but subsequent invocations within the same session skip this entirely. For skills you use frequently, the amortized cost approaches zero.
 
@@ -150,7 +150,7 @@ This means repeated invocations of the same skill within a session incur no addi
 
 The caching behavior has an important implication: the benefits of lazy loading are greatest in sessions with many distinct skill switches, not in sessions that use one skill intensively. If you spend an entire session doing PDF work, lazy loading saves you the overhead of the seven other skills but the `pdf` skill itself remains fully loaded throughout. If you split time equally across four skills in sequence, lazy loading saves you four-skill overhead at any given moment.
 
-Context eviction adds another layer of nuance. As your conversation grows longer, Claude's context management may evict earlier content including loaded skill definitions to make room for recent content. If a skill definition gets evicted and you subsequently invoke that skill again, it reloads. You may notice a brief pause when this happens. This is normal behavior, not a bug. The [skill slow performance speed-up guide](/claude-skills-guide/claude-skills-slow-performance-speed-up-guide/) offers targeted diagnostics if you notice frequent reload pauses.
+Context eviction adds another layer of nuance. As your conversation grows longer, Claude's context management may evict earlier content including loaded skill definitions to make room for recent content. If a skill definition gets evicted and you subsequently invoke that skill again, it reloads. You may notice a brief pause when this happens. This is normal behavior, not a bug. The [skill slow performance speed-up guide](/claude-skills-slow-performance-speed-up-guide/) offers targeted diagnostics if you notice frequent reload pauses.
 
 ### Session Architecture for Lazy Loading
 
@@ -202,9 +202,9 @@ Understanding and applying lazy loading patterns—batching related tasks, seque
 
 ## Related Reading
 
-- [Claude Skills Token Optimization: Reduce API Costs Guide](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/)
-- [Claude Skills Context Window Management Best Practices](/claude-skills-guide/claude-md-too-long-context-window-optimization/)
-- [Claude Skills Memory and Context Architecture Guide](/claude-skills-guide/claude-skills-memory-and-context-architecture-explained/)
-- [Claude Skills Slow Performance: Speed Up Guide](/claude-skills-guide/claude-skills-slow-performance-speed-up-guide/)
+- [Claude Skills Token Optimization: Reduce API Costs Guide](/claude-skills-token-optimization-reduce-api-costs/)
+- [Claude Skills Context Window Management Best Practices](/claude-md-too-long-context-window-optimization/)
+- [Claude Skills Memory and Context Architecture Guide](/claude-skills-memory-and-context-architecture-explained/)
+- [Claude Skills Slow Performance: Speed Up Guide](/claude-skills-slow-performance-speed-up-guide/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

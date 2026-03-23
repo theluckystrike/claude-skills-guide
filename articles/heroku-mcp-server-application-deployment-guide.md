@@ -13,11 +13,11 @@ permalink: /heroku-mcp-server-application-deployment-guide/
 
 # Heroku MCP Server Application Deployment Guide
 
-[Deploying a Model Context Protocol (MCP) server on Heroku provides a reliable, scalable way](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) to expose AI capabilities to your applications. This guide walks through the complete deployment process, from local development to production-ready infrastructure.
+[Deploying a Model Context Protocol (MCP) server on Heroku provides a reliable, scalable way](/building-your-first-mcp-tool-integration-guide-2026/) to expose AI capabilities to your applications. This guide walks through the complete deployment process, from local development to production-ready infrastructure.
 
 ## Understanding MCP Servers
 
-[MCP servers act as intermediaries between Claude and external tools or data sources](/claude-skills-guide/how-do-i-combine-two-claude-skills-in-one-workflow/) They enable Claude to interact with APIs, databases, and services that aren't natively integrated. Whether you're building a custom integration with your internal systems or exposing specialized AI capabilities, hosting your MCP server on Heroku simplifies deployment and maintenance.
+[MCP servers act as intermediaries between Claude and external tools or data sources](/how-do-i-combine-two-claude-skills-in-one-workflow/) They enable Claude to interact with APIs, databases, and services that aren't natively integrated. Whether you're building a custom integration with your internal systems or exposing specialized AI capabilities, hosting your MCP server on Heroku simplifies deployment and maintenance.
 
 When you run an MCP server locally, it communicates with Claude over stdio on the same machine. Heroku deployment changes that model: your server becomes a persistent HTTP endpoint reachable over the network, which means Claude Desktop — or any other MCP client — can connect from anywhere without requiring a local process. This is the key architectural shift this guide addresses.
 
@@ -347,9 +347,9 @@ Deploying an MCP server on Heroku bridges the gap between Claude's capabilities 
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/)
-- [Railway MCP Server Deployment Automation Guide](/claude-skills-guide/railway-mcp-server-deployment-automation-guide/)
-- [Render MCP Server Web Service Automation](/claude-skills-guide/render-mcp-server-web-service-automation/)
-- [Integrations Hub](/claude-skills-guide/integrations-hub/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)
+- [Railway MCP Server Deployment Automation Guide](/railway-mcp-server-deployment-automation-guide/)
+- [Render MCP Server Web Service Automation](/render-mcp-server-web-service-automation/)
+- [Integrations Hub](/integrations-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

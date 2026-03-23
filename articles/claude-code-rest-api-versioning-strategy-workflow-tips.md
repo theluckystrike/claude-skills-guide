@@ -15,7 +15,7 @@ tags: [claude-code, claude-skills]
 
 # Claude Code REST API Versioning Strategy Workflow Tips
 
-REST API versioning is one of the most critical decisions you'll make when designing or evolving a web service. Choose wisely, and your API remains flexible and maintainable for years. Choose poorly, and you face breaking changes, confused consumers, and maintenance nightmares. This guide focuses on *building* versioned REST APIs—covering project structure, Express.js implementation, contract testing, and deployment—using Claude Code workflows. If you are instead consuming an external versioned API from within a Claude Skill (Python SDK calls, version negotiation, fallback logic), see [Claude Code API Versioning Strategies Guide](/claude-skills-guide/claude-code-api-versioning-strategies-guide/).
+REST API versioning is one of the most critical decisions you'll make when designing or evolving a web service. Choose wisely, and your API remains flexible and maintainable for years. Choose poorly, and you face breaking changes, confused consumers, and maintenance nightmares. This guide focuses on *building* versioned REST APIs—covering project structure, Express.js implementation, contract testing, and deployment—using Claude Code workflows. If you are instead consuming an external versioned API from within a Claude Skill (Python SDK calls, version negotiation, fallback logic), see [Claude Code API Versioning Strategies Guide](/claude-code-api-versioning-strategies-guide/).
 
 ## Why API Versioning Matters
 
@@ -295,9 +295,9 @@ By following these practices, you'll build APIs that evolve gracefully while mai
 
 ## Related Reading
 
-- [Claude Code API Versioning Strategies Guide](/claude-skills-guide/claude-code-api-versioning-strategies-guide/) — consuming external versioned APIs from within Claude Skills (Python, version negotiation, fallback logic)
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Code API Versioning Strategies Guide](/claude-code-api-versioning-strategies-guide/) — consuming external versioned APIs from within Claude Skills (Python, version negotiation, fallback logic)
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

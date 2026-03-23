@@ -13,11 +13,11 @@ permalink: /claude-4-skills-improvements-and-new-features/
 
 # Claude 4 Skills Improvements and New Features
 
-[Claude 4 brought meaningful improvements to the existing skills system](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) If you've been using Claude Code skills for development workflows, here's what changed and how to take advantage of it.
+[Claude 4 brought meaningful improvements to the existing skills system](/best-claude-code-skills-to-install-first-2026/) If you've been using Claude Code skills for development workflows, here's what changed and how to take advantage of it.
 
 ## Enhanced PDF Processing
 
-The [`pdf` skill's](/claude-skills-guide/best-claude-skills-for-data-analysis/) extraction engine improved significantly in Claude 4, particularly for multi-column layouts and scanned documents. Table detection is more reliable, which matters when pulling structured data from technical specifications and financial reports.
+The [`pdf` skill's](/best-claude-skills-for-data-analysis/) extraction engine improved significantly in Claude 4, particularly for multi-column layouts and scanned documents. Table detection is more reliable, which matters when pulling structured data from technical specifications and financial reports.
 
 Batch processing capability was added in this version:
 
@@ -25,7 +25,7 @@ Batch processing capability was added in this version:
 /pdf process all PDFs in invoices/ and extract the total, vendor name, and invoice date from each. Output as a CSV table.
 ```
 
-Previously, you'd handle each document individually. [The skill now handles the iteration internally](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/), which reduces session length and token cost for document-heavy workflows.
+Previously, you'd handle each document individually. [The skill now handles the iteration internally](/claude-skill-md-format-complete-specification-guide/), which reduces session length and token cost for document-heavy workflows.
 
 For complex layouts that previously produced garbled extraction:
 
@@ -37,7 +37,7 @@ Being explicit about table structure still improves accuracy, but the skill's ba
 
 ## Smarter TDD Edge Case Detection
 
-The [`tdd` skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) now identifies edge cases more proactively based on code patterns rather than requiring you to specify them.
+The [`tdd` skill](/best-claude-skills-for-developers-2026/) now identifies edge cases more proactively based on code patterns rather than requiring you to specify them.
 
 ```
 /tdd write tests for this function and flag any edge cases I should handle: [paste function]
@@ -59,7 +59,7 @@ Fixture cleanup also improved. The skill now includes teardown logic in generate
 
 ## Supermemory Semantic Search
 
-The most significant [`supermemory` skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) improvement in Claude 4 is natural language retrieval. Previously, retrieval required exact key names. Now you can query by description:
+The most significant [`supermemory` skill](/claude-skills-token-optimization-reduce-api-costs/) improvement in Claude 4 is natural language retrieval. Previously, retrieval required exact key names. Now you can query by description:
 
 ```
 /supermemory Why did we choose Redis over Memcached?
@@ -189,9 +189,9 @@ Then verify you have Claude 4 by checking the model in your settings or running 
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Top skills every developer should know
-- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/claude-skills-vs-prompts-which-is-better/) — Decide when skills beat plain prompts
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Top skills every developer should know
+- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-vs-prompts-which-is-better/) — Decide when skills beat plain prompts
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
 
 
 ---

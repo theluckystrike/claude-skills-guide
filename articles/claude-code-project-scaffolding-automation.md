@@ -226,9 +226,9 @@ Start with simple projects and gradually incorporate more sophisticated automati
 
 ## Related Reading
 
-- [Claude Code Environment Setup Automation](/claude-skills-guide/claude-code-environment-setup-automation/) — Environment setup follows project scaffolding
-- [Best Way to Write CLAUDE.md File for Your Project](/claude-skills-guide/how-to-write-effective-claude-md-for-your-project/) — Add CLAUDE.md as part of your scaffold
-- [Is Claude Code Worth It for Solo Developers and Freelancers](/claude-skills-guide/is-claude-code-worth-it-for-solo-developers-freelancers/) — Scaffolding is where solo developers see the most value
-- [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — More project initialization workflow guides
+- [Claude Code Environment Setup Automation](/claude-code-environment-setup-automation/) — Environment setup follows project scaffolding
+- [Best Way to Write CLAUDE.md File for Your Project](/how-to-write-effective-claude-md-for-your-project/) — Add CLAUDE.md as part of your scaffold
+- [Is Claude Code Worth It for Solo Developers and Freelancers](/is-claude-code-worth-it-for-solo-developers-freelancers/) — Scaffolding is where solo developers see the most value
+- [Claude Skills Workflows Hub](/workflows-hub/) — More project initialization workflow guides
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

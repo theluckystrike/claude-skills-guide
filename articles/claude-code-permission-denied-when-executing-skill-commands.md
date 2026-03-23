@@ -15,7 +15,7 @@ permalink: /claude-code-permission-denied-when-executing-skill-commands/
 
 Permission denied errors when executing skill commands in Claude Code can stop your workflow dead in its tracks. Whether you're running the tdd skill for test-driven development, using pdf to manipulate documents, or executing any custom skill you've installed, understanding why these errors occur and how to fix them is essential for maintaining productivity.
 
-[This guide covers the most common causes of permission denied errors when executing skill commands](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) and provides actionable solutions you can implement immediately.
+[This guide covers the most common causes of permission denied errors when executing skill commands](/claude-skill-md-format-complete-specification-guide/) and provides actionable solutions you can implement immediately.
 
 ## Understanding the Error Messages
 
@@ -93,7 +93,7 @@ Ask for confirmation before running shell commands that modify files.
 
 Skills do not have `execution:`, `allowed_commands:`, or `require_approval:` fields. These controls are not part of the skill file format. Instead, write your permission requirements as natural language instructions in the skill's Markdown body.
 
-For the [supermemory skill](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) or other skills that manage external resources, you may need to explicitly grant file system access:
+For the [supermemory skill](/claude-supermemory-skill-persistent-context-explained/) or other skills that manage external resources, you may need to explicitly grant file system access:
 
 ```markdown
 Only read files from ~/projects/ and ~/documents/.
@@ -157,7 +157,7 @@ docker run --cap-add=SYS_ADMIN --security-opt seccomp=unconfined \
 
 ### 5. Skill Installation Directory Issues
 
-Installing skills in non-standard locations can lead to permission problems, especially on systems with multiple users or strict directory permissions. Understanding [what skills can and cannot access on disk](/claude-skills-guide/claude-skill-permissions-what-can-skills-access/) helps you configure installation paths correctly from the start.
+Installing skills in non-standard locations can lead to permission problems, especially on systems with multiple users or strict directory permissions. Understanding [what skills can and cannot access on disk](/claude-skill-permissions-what-can-skills-access/) helps you configure installation paths correctly from the start.
 
 **Diagnosis:**
 Verify the skill installation directory exists and is accessible:
@@ -243,9 +243,9 @@ For persistent issues, checking the skill's documentation and ensuring it was bu
 
 ## Related Reading
 
-- [Claude Code Permissions Model and Security Guide 2026](/claude-skills-guide/claude-code-permissions-model-security-guide-2026/) — Understand the full permissions model that governs what skill commands can execute in your environment
-- [How Do I Limit What a Claude Skill Can Access on Disk](/claude-skills-guide/how-do-i-limit-what-a-claude-skill-can-access-on-disk/) — Pair permission denied fixes with proactive disk access restrictions to prevent future errors
-- [Claude Code Skill Permission Scope Error Explained](/claude-skills-guide/claude-code-skill-permission-denied-error-fix-2026/) — Understand the specific permission scope errors that relate to command execution failures
-- [Claude Skills: Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Explore foundational Claude Code permission and security configuration patterns
+- [Claude Code Permissions Model and Security Guide 2026](/claude-code-permissions-model-security-guide-2026/) — Understand the full permissions model that governs what skill commands can execute in your environment
+- [How Do I Limit What a Claude Skill Can Access on Disk](/how-do-i-limit-what-a-claude-skill-can-access-on-disk/) — Pair permission denied fixes with proactive disk access restrictions to prevent future errors
+- [Claude Code Skill Permission Scope Error Explained](/claude-code-skill-permission-denied-error-fix-2026/) — Understand the specific permission scope errors that relate to command execution failures
+- [Claude Skills: Getting Started Hub](/getting-started-hub/) — Explore foundational Claude Code permission and security configuration patterns
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

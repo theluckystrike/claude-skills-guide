@@ -437,9 +437,9 @@ Building Go modules with Claude Code combines Go's simplicity and performance wi
 
 ## Related Reading
 
-- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Skill MD File Format Explained With Examples](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)
-- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Code Tutorials Hub](/tutorials-hub/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Skill MD File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/)
+- [Claude Code Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

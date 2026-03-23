@@ -14,7 +14,7 @@ tags: [claude-code, claude-skills, supabase, security]
 
 # Claude Code Supabase Auth Row Level Security Guide
 
-Supabase's Row Level Security (RLS) combined with their authentication system provides a powerful, declarative way to secure your database at the row level. When paired with Claude Code, you can rapidly implement robust security policies that protect user data while maintaining flexibility. This guide focuses specifically on RLS policy design — team-based access, role-based access, and Edge Function integration. For a broader overview of Supabase backend integration with database operations, authentication, and Edge Functions, see the [Supabase Backend Integration Guide](/claude-skills-guide/claude-code-with-supabase-backend-integration-guide/).
+Supabase's Row Level Security (RLS) combined with their authentication system provides a powerful, declarative way to secure your database at the row level. When paired with Claude Code, you can rapidly implement robust security policies that protect user data while maintaining flexibility. This guide focuses specifically on RLS policy design — team-based access, role-based access, and Edge Function integration. For a broader overview of Supabase backend integration with database operations, authentication, and Edge Functions, see the [Supabase Backend Integration Guide](/claude-code-with-supabase-backend-integration-guide/).
 
 ## Understanding Supabase Auth and RLS
 
@@ -396,8 +396,8 @@ Supabase Auth combined with Row Level Security provides a robust, scalable appro
 
 ## Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

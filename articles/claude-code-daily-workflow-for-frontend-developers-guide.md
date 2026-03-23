@@ -288,8 +288,8 @@ The developers who get the most out of Claude Code treat it like a senior pair p
 
 ## Related Reading
 
-- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) — Essential skills every frontend developer needs
-- [Best Way to Use Claude Code for Frontend Styling](/claude-skills-guide/best-way-to-use-claude-code-for-frontend-styling/) — Master CSS and styling workflows
-- [Claude Code for Rapid Prototyping](/claude-skills-guide/best-way-to-use-claude-code-for-rapid-prototyping/) — Build features faster
+- [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/) — Essential skills every frontend developer needs
+- [Best Way to Use Claude Code for Frontend Styling](/best-way-to-use-claude-code-for-frontend-styling/) — Master CSS and styling workflows
+- [Claude Code for Rapid Prototyping](/best-way-to-use-claude-code-for-rapid-prototyping/) — Build features faster
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

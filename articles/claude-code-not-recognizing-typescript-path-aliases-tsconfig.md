@@ -431,9 +431,9 @@ By ensuring consistency across your TypeScript and build configurations, Claude 
 
 ## Related Reading
 
-- [Claude Code Gives Incorrect Imports: How to Fix](/claude-skills-guide/claude-code-gives-incorrect-imports-how-to-fix/) — See also
-- [How to Write Effective CLAUDE.md for Your Project](/claude-skills-guide/how-to-write-effective-claude-md-for-your-project/) — See also
-- [Claude Code Jest to Vitest Migration Workflow Tutorial](/claude-skills-guide/claude-code-jest-to-vitest-migration-workflow-tutorial/) — See also
-- [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — See also
+- [Claude Code Gives Incorrect Imports: How to Fix](/claude-code-gives-incorrect-imports-how-to-fix/) — See also
+- [How to Write Effective CLAUDE.md for Your Project](/how-to-write-effective-claude-md-for-your-project/) — See also
+- [Claude Code Jest to Vitest Migration Workflow Tutorial](/claude-code-jest-to-vitest-migration-workflow-tutorial/) — See also
+- [Claude Skills Troubleshooting Hub](/troubleshooting-hub/) — See also
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

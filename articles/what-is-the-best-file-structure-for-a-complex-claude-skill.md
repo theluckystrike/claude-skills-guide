@@ -13,7 +13,7 @@ permalink: /what-is-the-best-file-structure-for-a-complex-claude-skill/
 
 # What Is the Best File Structure for a Complex Claude Skill
 
-[As Claude Code skills grow in sophistication, developers quickly discover that a single Markdown file no longer suffices](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) Complex skills handling multi-step workflows, multiple tools, or extensive state management benefit from a well-organized file structure. This guide examines proven patterns for structuring complex Claude skills that scale.
+[As Claude Code skills grow in sophistication, developers quickly discover that a single Markdown file no longer suffices](/claude-skill-md-format-complete-specification-guide/) Complex skills handling multi-step workflows, multiple tools, or extensive state management benefit from a well-organized file structure. This guide examines proven patterns for structuring complex Claude skills that scale.
 
 ## The Baseline: Single File Structure
 
@@ -139,7 +139,7 @@ Skills that maintain context across sessions should use a dedicated state file:
 }
 ```
 
-The [**supermemory** skill](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) exemplifies this pattern, maintaining persistent context across Claude sessions.
+The [**supermemory** skill](/claude-supermemory-skill-persistent-context-explained/) exemplifies this pattern, maintaining persistent context across Claude sessions.
 
 ## Practical Example: A Multi-Tool Data Analysis Skill
 
@@ -243,9 +243,9 @@ Skills like **frontend-design**, **pdf**, **tdd**, **xlsx**, and **supermemory**
 
 ## Related Reading
 
-- [Claude Skill MD Format: Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — Master the complete skill.md format specification before organizing your files into complex multi-directory structures
-- [Claude Skill Inheritance and Composition Patterns](/claude-skills-guide/claude-skill-inheritance-and-composition-patterns/) — Build on the file structure foundation with composition patterns that let skills share components and extend each other
-- [How to Write a Skill MD File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) — Start with the basics of authoring skill.md files before scaling up to complex multi-file skill architectures
-- [Claude Skills: Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Explore the full skill ecosystem and proven patterns for organizing skills at any scale
+- [Claude Skill MD Format: Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/) — Master the complete skill.md format specification before organizing your files into complex multi-directory structures
+- [Claude Skill Inheritance and Composition Patterns](/claude-skill-inheritance-and-composition-patterns/) — Build on the file structure foundation with composition patterns that let skills share components and extend each other
+- [How to Write a Skill MD File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/) — Start with the basics of authoring skill.md files before scaling up to complex multi-file skill architectures
+- [Claude Skills: Getting Started Hub](/getting-started-hub/) — Explore the full skill ecosystem and proven patterns for organizing skills at any scale
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

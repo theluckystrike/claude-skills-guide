@@ -27,7 +27,7 @@ Before diving into solutions, it helps to understand what makes code complex. Co
 
 **Coupling complexity** emerges when modules depend heavily on one another's internals. Tightly coupled code makes isolated testing difficult and turns small changes into cascading refactors across unrelated files.
 
-**Control flow complexity** — measured formally by cyclomatic complexity — counts the independent paths through a function. Each if statement, loop, and catch block adds a branch. (For a dedicated treatment of cyclomatic complexity specifically, see the [Cyclomatic Complexity Reduction guide](/claude-skills-guide/claude-code-cyclomatic-complexity-reduction/).)
+**Control flow complexity** — measured formally by cyclomatic complexity — counts the independent paths through a function. Each if statement, loop, and catch block adds a branch. (For a dedicated treatment of cyclomatic complexity specifically, see the [Cyclomatic Complexity Reduction guide](/claude-code-cyclomatic-complexity-reduction/).)
 
 The goal is not arbitrary simplification but intentional reduction of accidental complexity while preserving the essential complexity your problem demands. This guide focuses on all four dimensions, not just control flow.
 
@@ -225,9 +225,9 @@ Start small: pick one overgrown class or deeply nested function this week and ap
 
 ## Related Reading
 
-- [Claude Code Cyclomatic Complexity Reduction](/claude-skills-guide/claude-code-cyclomatic-complexity-reduction/) — Cyclomatic complexity is a key complexity metric
-- [Claude Code Coupling and Cohesion Improvement](/claude-skills-guide/claude-code-coupling-and-cohesion-improvement/) — Coupling and cohesion metrics indicate complexity
-- [How to Make Claude Code Follow DRY and SOLID Principles](/claude-skills-guide/how-to-make-claude-code-follow-dry-solid-principles/) — DRY/SOLID principles reduce complexity
-- [Advanced Claude Skills Hub](/claude-skills-guide/advanced-hub/) — Advanced code quality strategies
+- [Claude Code Cyclomatic Complexity Reduction](/claude-code-cyclomatic-complexity-reduction/) — Cyclomatic complexity is a key complexity metric
+- [Claude Code Coupling and Cohesion Improvement](/claude-code-coupling-and-cohesion-improvement/) — Coupling and cohesion metrics indicate complexity
+- [How to Make Claude Code Follow DRY and SOLID Principles](/how-to-make-claude-code-follow-dry-solid-principles/) — DRY/SOLID principles reduce complexity
+- [Advanced Claude Skills Hub](/advanced-hub/) — Advanced code quality strategies
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

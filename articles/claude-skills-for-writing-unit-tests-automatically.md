@@ -13,11 +13,11 @@ permalink: /claude-skills-for-writing-unit-tests-automatically/
 
 # Claude Skills for Writing Unit Tests Automatically
 
-Writing unit tests is one of those tasks every developer knows matters, yet finding time to write comprehensive test coverage feels like a luxury. [Claude Code offers several approaches](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) to automate test generation, ranging from built-in skills to custom configurations. This guide covers the practical methods for getting Claude to write unit tests automatically.
+Writing unit tests is one of those tasks every developer knows matters, yet finding time to write comprehensive test coverage feels like a luxury. [Claude Code offers several approaches](/best-claude-code-skills-to-install-first-2026/) to automate test generation, ranging from built-in skills to custom configurations. This guide covers the practical methods for getting Claude to write unit tests automatically.
 
 ## The TDD Skill: Your Primary Test Generator
 
-The [`/tdd` skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) is the most direct way to generate unit tests in Claude Code. This skill doesn't require installation—it activates through a simple command and transforms Claude's behavior toward test-first development.
+The [`/tdd` skill](/claude-tdd-skill-test-driven-development-workflow/) is the most direct way to generate unit tests in Claude Code. This skill doesn't require installation—it activates through a simple command and transforms Claude's behavior toward test-first development.
 
 To use the TDD skill effectively, activate it in your session:
 
@@ -81,7 +81,7 @@ Beyond the `/tdd` skill, several other Claude skills enhance test generation for
 
 ## Custom Skills for Test Automation
 
-For teams requiring consistent test patterns across projects, [creating a custom test-generation skill](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) makes sense. Store your skill definition in `~/.claude/skills/test-gen.md`:
+For teams requiring consistent test patterns across projects, [creating a custom test-generation skill](/claude-skill-md-format-complete-specification-guide/) makes sense. Store your skill definition in `~/.claude/skills/test-gen.md`:
 
 ```markdown
 # Test Generation Skill
@@ -209,7 +209,7 @@ This test suite covers the primary behaviors without requiring manual input. Run
 
 Beyond ad-hoc test generation, consider these workflow integrations:
 
-**[Pre-commit hooks](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/)**: Generate baseline tests before committing new code. This catches missing coverage early.
+**[Pre-commit hooks](/claude-skills-with-github-actions-ci-cd-pipeline/)**: Generate baseline tests before committing new code. This catches missing coverage early.
 
 **Code review assistance**: During reviews, ask Claude to verify test coverage for new functions:
 
@@ -239,9 +239,9 @@ Claude skills for writing unit tests automatically handle the mechanical parts o
 
 ## Related Reading
 
-- [Automated Testing Pipeline with Claude TDD Skill (2026)](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Build a complete CI/CD testing pipeline around the /tdd skill
-- [What Is the Best Claude Skill for Automated Code Review](/claude-skills-guide/best-claude-skills-for-code-review-automation/) — Combine test generation with automated code review for complete coverage
-- [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/) — Automate test generation and review as part of your CI/CD workflow
-- [Claude Skills Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Explore the full range of skills available for developer workflows
+- [Automated Testing Pipeline with Claude TDD Skill (2026)](/claude-tdd-skill-test-driven-development-workflow/) — Build a complete CI/CD testing pipeline around the /tdd skill
+- [What Is the Best Claude Skill for Automated Code Review](/best-claude-skills-for-code-review-automation/) — Combine test generation with automated code review for complete coverage
+- [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-with-github-actions-ci-cd-pipeline/) — Automate test generation and review as part of your CI/CD workflow
+- [Claude Skills Getting Started Hub](/getting-started-hub/) — Explore the full range of skills available for developer workflows
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

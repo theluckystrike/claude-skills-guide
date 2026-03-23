@@ -13,13 +13,13 @@ permalink: /claude-skills-vs-emerging-agentic-frameworks-2026/
 
 # Claude Skills vs Emerging Agentic Frameworks 2026
 
-[Developers in 2026 have more options than ever for AI-assisted workflows](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/). Claude Code's skill system provides a lightweight, integrated approach, while emerging agentic frameworks like LangChain Agents, CrewAI, and specialized autonomous agents have evolved significantly. This comparison examines practical differences to help you choose the right tool for your workflow.
+[Developers in 2026 have more options than ever for AI-assisted workflows](/best-claude-code-skills-to-install-first-2026/). Claude Code's skill system provides a lightweight, integrated approach, while emerging agentic frameworks like LangChain Agents, CrewAI, and specialized autonomous agents have evolved significantly. This comparison examines practical differences to help you choose the right tool for your workflow.
 
 ## Understanding Claude Skills
 
 Claude skills are file-based agent definitions that integrate directly into Claude Code. They consist of markdown files containing instructions, tool definitions, and behavioral guidelines that the model uses when processing specific task types.
 
-The **tdd** skill demonstrates this well—it understands test-driven development workflows and can create test files, run assertions, and validate code against requirements without external infrastructure. Similarly, the **frontend-design** skill can generate UI components from descriptions, while [**supermemory**](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) provides persistent context across sessions.
+The **tdd** skill demonstrates this well—it understands test-driven development workflows and can create test files, run assertions, and validate code against requirements without external infrastructure. Similarly, the **frontend-design** skill can generate UI components from descriptions, while [**supermemory**](/claude-supermemory-skill-persistent-context-explained/) provides persistent context across sessions.
 
 Skills live in your project directory, making them version-controllable and portable:
 
@@ -224,9 +224,9 @@ The key insight: start with skills for immediate productivity, then layer in fra
 
 ## Related Reading
 
-- [Future of AI Agent Skills Beyond Claude Code in 2026](/claude-skills-guide/future-of-ai-agent-skills-beyond-claude-code-2026/) — Explore how the AI agent skill ecosystem is evolving beyond the frameworks compared in this article
-- [AI Agent Skills Standardization Efforts 2026](/claude-skills-guide/ai-agent-skills-standardization-efforts-2026/) — The standardization efforts that may bridge Claude skills with emerging agentic frameworks
-- [Building Production AI Agents with Claude Skills 2026](/claude-skills-guide/building-production-ai-agents-with-claude-skills-2026/) — Practical production architecture using Claude skills as an alternative to heavier agent frameworks
-- [Claude Skills: Advanced Hub](/claude-skills-guide/advanced-hub/) — Explore advanced Claude skill patterns, agent orchestration, and framework integration capabilities
+- [Future of AI Agent Skills Beyond Claude Code in 2026](/future-of-ai-agent-skills-beyond-claude-code-2026/) — Explore how the AI agent skill ecosystem is evolving beyond the frameworks compared in this article
+- [AI Agent Skills Standardization Efforts 2026](/ai-agent-skills-standardization-efforts-2026/) — The standardization efforts that may bridge Claude skills with emerging agentic frameworks
+- [Building Production AI Agents with Claude Skills 2026](/building-production-ai-agents-with-claude-skills-2026/) — Practical production architecture using Claude skills as an alternative to heavier agent frameworks
+- [Claude Skills: Advanced Hub](/advanced-hub/) — Explore advanced Claude skill patterns, agent orchestration, and framework integration capabilities
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

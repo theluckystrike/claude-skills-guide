@@ -123,7 +123,7 @@ uv venv
 uv pip install requests fastapi
 ```
 
-The [supermemory skill](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) works well with uv-based projects because the tool maintains consistent state between sessions. When your project uses uv, Claude Code automatically recognizes the lockfile and knows to use uv for package management rather than pip directly.
+The [supermemory skill](/claude-supermemory-skill-persistent-context-explained/) works well with uv-based projects because the tool maintains consistent state between sessions. When your project uses uv, Claude Code automatically recognizes the lockfile and knows to use uv for package management rather than pip directly.
 
 ## Solution 6: Verify Shell Initialization
 
@@ -168,9 +168,9 @@ With your virtual environment properly detected, Claude Code can help you build,
 
 ## Related Reading
 
-- [How to Write Effective CLAUDE.md for Your Project](/claude-skills-guide/how-to-write-effective-claude-md-for-your-project/) — Document environment setup so Claude always uses the right interpreter
-- [Claude MD File: Complete Guide to What It Does](/claude-skills-guide/claude-md-file-complete-guide-what-it-does/) — Full reference for all CLAUDE.md configuration options
-- [Claude Code Skills for Scientific Python: NumPy and SciPy](/claude-skills-guide/claude-code-skills-for-scientific-python-numpy-scipy/) — Python-specific workflows with virtual environment best practices
-- [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — More Python and environment troubleshooting guides
+- [How to Write Effective CLAUDE.md for Your Project](/how-to-write-effective-claude-md-for-your-project/) — Document environment setup so Claude always uses the right interpreter
+- [Claude MD File: Complete Guide to What It Does](/claude-md-file-complete-guide-what-it-does/) — Full reference for all CLAUDE.md configuration options
+- [Claude Code Skills for Scientific Python: NumPy and SciPy](/claude-code-skills-for-scientific-python-numpy-scipy/) — Python-specific workflows with virtual environment best practices
+- [Claude Skills Troubleshooting Hub](/troubleshooting-hub/) — More Python and environment troubleshooting guides
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

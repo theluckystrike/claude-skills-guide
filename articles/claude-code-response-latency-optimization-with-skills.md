@@ -13,7 +13,7 @@ permalink: /claude-code-response-latency-optimization-with-skills/
 
 # Claude Code Response Latency Optimization with Skills
 
-When you invoke a skill in Claude Code, every millisecond counts. The time between typing `/skill-name` and receiving the first useful response depends on several factors you can control. This guide covers practical techniques for building skills that respond faster while maintaining quality output. Pair these techniques with [token optimization strategies to reduce API costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) simultaneously.
+When you invoke a skill in Claude Code, every millisecond counts. The time between typing `/skill-name` and receiving the first useful response depends on several factors you can control. This guide covers practical techniques for building skills that respond faster while maintaining quality output. Pair these techniques with [token optimization strategies to reduce API costs](/claude-skills-token-optimization-reduce-api-costs/) simultaneously.
 
 ## Understanding Skill Invocation Latency
 
@@ -50,7 +50,7 @@ Rather than building comprehensive skills that handle everything, create smaller
 /impl-scaffold   # Generate code from plan
 ```
 
-Each skill in the chain remains lightweight, and users pay only for the steps they need. The [**supermemory** skill](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) exemplifies this pattern by maintaining lightweight index files rather than loading entire knowledge bases at invocation.
+Each skill in the chain remains lightweight, and users pay only for the steps they need. The [**supermemory** skill](/claude-supermemory-skill-persistent-context-explained/) exemplifies this pattern by maintaining lightweight index files rather than loading entire knowledge bases at invocation.
 
 ## Minimizing Tool Request Overhead
 
@@ -152,7 +152,7 @@ The **xlsx** skill benefits from this approach when working with spreadsheet pro
 
 ## Measuring and Iterating
 
-Latency optimization requires measurement. [Use benchmarking techniques to track skill response times](/claude-skills-guide/benchmarking-claude-code-skills-performance-guide/) and identify bottlenecks.
+Latency optimization requires measurement. [Use benchmarking techniques to track skill response times](/benchmarking-claude-code-skills-performance-guide/) and identify bottlenecks.
 
 ### Add Timestamps to Skill Output
 
@@ -209,9 +209,9 @@ For skills like **pdf**, **frontend-design**, **tdd**, **supermemory**, **webapp
 
 ## Related Reading
 
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Combine latency optimization with token reduction to maximize both speed and cost efficiency
-- [Claude Skills Slow Performance: Speed Up Guide](/claude-skills-guide/claude-skills-slow-performance-speed-up-guide/) — Diagnose and fix slow skill performance with complementary speed optimization strategies
-- [Caching Strategies for Claude Code Skill Outputs](/claude-skills-guide/caching-strategies-for-claude-code-skill-outputs/) — Cache skill outputs to eliminate repeat latency on identical operations
-- [Claude Skills: Advanced Hub](/claude-skills-guide/advanced-hub/) — Explore advanced performance optimization and skill architecture patterns for production workflows
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — Combine latency optimization with token reduction to maximize both speed and cost efficiency
+- [Claude Skills Slow Performance: Speed Up Guide](/claude-skills-slow-performance-speed-up-guide/) — Diagnose and fix slow skill performance with complementary speed optimization strategies
+- [Caching Strategies for Claude Code Skill Outputs](/caching-strategies-for-claude-code-skill-outputs/) — Cache skill outputs to eliminate repeat latency on identical operations
+- [Claude Skills: Advanced Hub](/advanced-hub/) — Explore advanced performance optimization and skill architecture patterns for production workflows
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

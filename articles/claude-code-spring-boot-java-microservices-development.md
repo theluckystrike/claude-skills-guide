@@ -347,8 +347,8 @@ You can create a set of reusable prompts for your organization, ensuring every n
 
 ## Related Reading
 
-- [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Tutorials Hub](/claude-skills-guide/tutorials-hub/)
+- [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/)
+- [Tutorials Hub](/tutorials-hub/)
 
 ---
 

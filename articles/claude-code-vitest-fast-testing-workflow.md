@@ -25,7 +25,7 @@ The real power comes from how Claude Code can understand your project structure 
 
 Vitest is purpose-built for projects that use Vite, giving it native ESM support and sub-second startup times that Jest cannot match in those environments. Its watch mode is powered by Vite's HMR pipeline, so only the tests affected by a file change re-run—making the feedback loop feel nearly instantaneous on large codebases. The API is intentionally Jest-compatible (`describe`, `it`, `expect`, `vi.fn()`), which means migrating existing tests is usually a find-and-replace away. If you are working on a Vite-based project, a modern framework like Nuxt 3 or SvelteKit, or any stack where native ESM is a first-class concern, Vitest is the natural choice.
 
-For teams using Jest, see [Jest Unit Testing Workflow](/claude-skills-guide/claude-code-jest-unit-testing-workflow-guide/)
+For teams using Jest, see [Jest Unit Testing Workflow](/claude-code-jest-unit-testing-workflow-guide/)
 
 ## Setting Up Vitest with Claude Code
 
@@ -202,9 +202,9 @@ By establishing good habits—writing tests first, using watch mode, and using C
 
 ## Related Reading
 
-- [Jest Unit Testing Workflow](/claude-skills-guide/claude-code-jest-unit-testing-workflow-guide/)
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Jest Unit Testing Workflow](/claude-code-jest-unit-testing-workflow-guide/)
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

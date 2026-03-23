@@ -149,9 +149,9 @@ Start by implementing one or two of these solutions. The skill-based approach wo
 
 ## Related Reading
 
-- [Claude Code Output Quality How to Improve Results](/claude-skills-guide/claude-code-output-quality-how-to-improve-results/) — Broader guide on improving Claude Code output
-- [Best Way to Scope Tasks for Claude Code Success](/claude-skills-guide/best-way-to-scope-tasks-for-claude-code-success/) — Scoping prevents recurring mistakes
-- [Claude Code Gives Incorrect Imports How to Fix](/claude-skills-guide/claude-code-gives-incorrect-imports-how-to-fix/) — A specific recurring mistake and its fix
-- [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — More behavioral issue fixes
+- [Claude Code Output Quality How to Improve Results](/claude-code-output-quality-how-to-improve-results/) — Broader guide on improving Claude Code output
+- [Best Way to Scope Tasks for Claude Code Success](/best-way-to-scope-tasks-for-claude-code-success/) — Scoping prevents recurring mistakes
+- [Claude Code Gives Incorrect Imports How to Fix](/claude-code-gives-incorrect-imports-how-to-fix/) — A specific recurring mistake and its fix
+- [Claude Skills Troubleshooting Hub](/troubleshooting-hub/) — More behavioral issue fixes
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

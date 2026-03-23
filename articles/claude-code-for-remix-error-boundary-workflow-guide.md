@@ -18,7 +18,7 @@ score: 7
 
 Implementing consistent error boundaries across a Remix application is tedious work: every route needs a boundary, patterns vary by context, and it's easy to forget edge cases like network failures or authentication errors. Claude Code eliminates that friction by generating contextually appropriate error boundaries on demand, enforcing consistency, and helping you catalog the failure modes specific to your application.
 
-This guide focuses on the practical Claude Code workflow — the prompts, patterns, and integration strategies that let you build robust Remix error handling faster and with less manual overhead. For a deep dive into the nested route architecture that underpins Remix error isolation, see [Remix Error Boundaries and Nested Routes](/claude-skills-guide/claude-code-remix-error-boundaries-nested-routes-guide/).
+This guide focuses on the practical Claude Code workflow — the prompts, patterns, and integration strategies that let you build robust Remix error handling faster and with less manual overhead. For a deep dive into the nested route architecture that underpins Remix error isolation, see [Remix Error Boundaries and Nested Routes](/claude-code-remix-error-boundaries-nested-routes-guide/).
 
 ## How Claude Code Enhances Error Boundary Development
 
@@ -256,8 +256,8 @@ The key is to treat error boundaries as a first-class concern in your applicatio
 
 ## Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -164,7 +164,7 @@ Focus your session-level monitoring on workflow patterns rather than individual 
 - Overly broad prompts generate verbose, unnecessary responses
 - Switching tasks within a long session carries irrelevant history forward
 
-If you find that token costs are coming from the skill files themselves rather than your prompts and context, that's a skill authoring problem covered separately in [Claude Skill Token Usage Profiling and Optimization](/claude-skills-guide/claude-skill-token-usage-profiling-and-optimization/).
+If you find that token costs are coming from the skill files themselves rather than your prompts and context, that's a skill authoring problem covered separately in [Claude Skill Token Usage Profiling and Optimization](/claude-skill-token-usage-profiling-and-optimization/).
 
 ## Rate Limiting in Automated Workflows
 
@@ -212,10 +212,10 @@ These practices reduce costs and often improve response quality—focused prompt
 
 ## Related Reading
 
-- [Claude Skill Token Usage Profiling and Optimization](/claude-skills-guide/claude-skill-token-usage-profiling-and-optimization/) — If you're building or maintaining skills, this covers how to measure and trim the skill body tokens themselves.
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/)
-- [Claude MD Too Long: Context Window Optimization](/claude-skills-guide/claude-md-too-long-context-window-optimization/)
-- [Claude Code Slow Response: How to Fix Latency Issues](/claude-skills-guide/claude-code-slow-response-how-to-fix-latency-issues/)
-- [Claude Skill Lazy Loading: Token Savings Explained](/claude-skills-guide/claude-skill-lazy-loading-token-savings-explained-deep-dive/)
+- [Claude Skill Token Usage Profiling and Optimization](/claude-skill-token-usage-profiling-and-optimization/) — If you're building or maintaining skills, this covers how to measure and trim the skill body tokens themselves.
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/)
+- [Claude MD Too Long: Context Window Optimization](/claude-md-too-long-context-window-optimization/)
+- [Claude Code Slow Response: How to Fix Latency Issues](/claude-code-slow-response-how-to-fix-latency-issues/)
+- [Claude Skill Lazy Loading: Token Savings Explained](/claude-skill-lazy-loading-token-savings-explained-deep-dive/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -589,9 +589,9 @@ The key habit is extraction. After every project, spend twenty minutes identifyi
 
 ## Related Reading
 
-- [Claude Code Code Generation Templates Guide](/claude-skills-guide/claude-code-for-template-based-code-generation-guide/) — Templates and snippets are closely related
-- [Claude Code Boilerplate Generation Workflow](/claude-skills-guide/claude-code-project-scaffolding-automation/) — Snippets are reusable boilerplate components
-- [How to Write Your First Custom Prompt with Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) — Custom prompts can reference snippet libraries
-- [Claude SuperMemory Skill: Persistent Context Explained](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) — Supermemory can store and retrieve code snippets
+- [Claude Code Code Generation Templates Guide](/claude-code-for-template-based-code-generation-guide/) — Templates and snippets are closely related
+- [Claude Code Boilerplate Generation Workflow](/claude-code-project-scaffolding-automation/) — Snippets are reusable boilerplate components
+- [How to Write Your First Custom Prompt with Claude Code](/how-to-write-a-skill-md-file-for-claude-code/) — Custom prompts can reference snippet libraries
+- [Claude SuperMemory Skill: Persistent Context Explained](/claude-supermemory-skill-persistent-context-explained/) — Supermemory can store and retrieve code snippets
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

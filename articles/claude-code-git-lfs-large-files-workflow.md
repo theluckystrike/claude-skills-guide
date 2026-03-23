@@ -458,10 +458,10 @@ Investing time in a solid CLAUDE.md that documents your LFS setup pays dividends
 
 ## Related Reading
 
-- [Claude Code Git Workflow Best Practices Guide](/claude-skills-guide/claude-code-git-workflow-best-practices-guide/) — LFS is part of git best practices for large repos
-- [Claude Code Git Submodules Management Guide](/claude-skills-guide/claude-code-git-submodules-management-guide/) — Another large-repo management technique
-- [Claude Code Error Out of Memory Large Codebase Fix](/claude-skills-guide/claude-code-error-out-of-memory-large-codebase-fix/) — Large files often cause OOM issues
-- [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — Git workflow automation guides
+- [Claude Code Git Workflow Best Practices Guide](/claude-code-git-workflow-best-practices-guide/) — LFS is part of git best practices for large repos
+- [Claude Code Git Submodules Management Guide](/claude-code-git-submodules-management-guide/) — Another large-repo management technique
+- [Claude Code Error Out of Memory Large Codebase Fix](/claude-code-error-out-of-memory-large-codebase-fix/) — Large files often cause OOM issues
+- [Claude Skills Workflows Hub](/workflows-hub/) — Git workflow automation guides
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

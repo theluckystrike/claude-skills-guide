@@ -287,8 +287,8 @@ Merge conflicts are a normal part of development. With Claude Code and the strat
 
 ## Related Reading
 
-- [Claude Code for End of Day Commit Workflow](/claude-skills-guide/claude-code-for-end-of-day-commit-workflow/) — Clean commit habits reduce merge conflicts
-- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Tests validate that conflict resolutions are correct
-- [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — More git and development workflow guides
+- [Claude Code for End of Day Commit Workflow](/claude-code-for-end-of-day-commit-workflow/) — Clean commit habits reduce merge conflicts
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/) — Tests validate that conflict resolutions are correct
+- [Claude Skills Workflows Hub](/workflows-hub/) — More git and development workflow guides
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

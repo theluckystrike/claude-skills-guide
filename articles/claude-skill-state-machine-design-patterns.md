@@ -13,9 +13,9 @@ permalink: /claude-skill-state-machine-design-patterns/
 
 # Claude Skill State Machine Design Patterns
 
-State machine design patterns provide a powerful way to structure Claude skills that need to handle complex, multi-step workflows. Instead of writing linear instruction sets, you can model your skill as a [state machine](/claude-skills-guide/claude-code-agent-pipeline-sequential-vs-parallel/) where each state represents a distinct phase of operation, and transitions define how the skill moves between phases based on user input or completion criteria.
+State machine design patterns provide a powerful way to structure Claude skills that need to handle complex, multi-step workflows. Instead of writing linear instruction sets, you can model your skill as a [state machine](/claude-code-agent-pipeline-sequential-vs-parallel/) where each state represents a distinct phase of operation, and transitions define how the skill moves between phases based on user input or completion criteria.
 
-[This approach is particularly valuable when building skills that must maintain context across multiple interactions](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/), validate input at different stages, or provide structured guidance through sequential processes.
+[This approach is particularly valuable when building skills that must maintain context across multiple interactions](/claude-skill-md-format-complete-specification-guide/), validate input at different stages, or provide structured guidance through sequential processes.
 
 ## Why State Machines Work Well in Claude Skills
 
@@ -176,9 +176,9 @@ The key is starting simple—model your skill's flow on paper first, then transl
 
 ## Related Reading
 
-- [Claude Skill Inheritance and Composition Patterns](/claude-skills-guide/claude-skill-inheritance-and-composition-patterns/) — Combine state machines with modular skill composition for scalable workflows
-- [How Do I Combine Two Claude Skills in One Workflow](/claude-skills-guide/how-do-i-combine-two-claude-skills-in-one-workflow/) — Chain skills together across workflow stages
-- [Claude Code Agent Pipeline: Sequential vs Parallel Execution](/claude-skills-guide/claude-code-agent-pipeline-sequential-vs-parallel/) — Apply state machine thinking to sequential and parallel pipeline design
-- [Claude Skills Hub](/claude-skills-guide/advanced-hub/) — Explore advanced skill design patterns for complex AI workflows
+- [Claude Skill Inheritance and Composition Patterns](/claude-skill-inheritance-and-composition-patterns/) — Combine state machines with modular skill composition for scalable workflows
+- [How Do I Combine Two Claude Skills in One Workflow](/how-do-i-combine-two-claude-skills-in-one-workflow/) — Chain skills together across workflow stages
+- [Claude Code Agent Pipeline: Sequential vs Parallel Execution](/claude-code-agent-pipeline-sequential-vs-parallel/) — Apply state machine thinking to sequential and parallel pipeline design
+- [Claude Skills Hub](/advanced-hub/) — Explore advanced skill design patterns for complex AI workflows
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

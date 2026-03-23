@@ -15,7 +15,7 @@ score: 8
 {% raw %}
 # Claude Code for Workbox Service Worker Workflow Guide
 
-Workbox has become the go-to solution for implementing service workers in modern web applications. When paired with Claude Code, you can dramatically accelerate the development of robust offline-capable PWAs while maintaining code quality and following best practices. This guide shows you how to leverage Claude Code effectively within your Workbox service worker workflow. For a zero-dependency approach using the raw Cache API directly, see the [Service Worker Caching Workflow](/claude-skills-guide/claude-code-for-service-worker-caching-workflow/).
+Workbox has become the go-to solution for implementing service workers in modern web applications. When paired with Claude Code, you can dramatically accelerate the development of robust offline-capable PWAs while maintaining code quality and following best practices. This guide shows you how to leverage Claude Code effectively within your Workbox service worker workflow. For a zero-dependency approach using the raw Cache API directly, see the [Service Worker Caching Workflow](/claude-code-for-service-worker-caching-workflow/).
 
 ## Why Workbox Matters for Modern Web Development
 
@@ -279,8 +279,8 @@ The key to success is starting simple, understanding the caching strategies avai
 
 ## Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

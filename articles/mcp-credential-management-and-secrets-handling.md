@@ -13,7 +13,7 @@ permalink: /mcp-credential-management-and-secrets-handling/
 
 # MCP Credential Management and Secrets Handling
 
-[Building MCP servers that interact with databases, cloud services, and third-party APIs](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) requires careful handling of credentials and secrets. Whether you're building a custom MCP server for AWS, connecting the `pdf` skill to process documents from a secure bucket, or wiring the `tdd` skill to your CI/CD pipeline — the way you manage secrets directly impacts security and reliability. This guide covers practical approaches to credential management for MCP servers, with code examples you can adapt immediately.
+[Building MCP servers that interact with databases, cloud services, and third-party APIs](/building-your-first-mcp-tool-integration-guide-2026/) requires careful handling of credentials and secrets. Whether you're building a custom MCP server for AWS, connecting the `pdf` skill to process documents from a secure bucket, or wiring the `tdd` skill to your CI/CD pipeline — the way you manage secrets directly impacts security and reliability. This guide covers practical approaches to credential management for MCP servers, with code examples you can adapt immediately.
 
 ## Understanding the Threat Landscape
 
@@ -173,7 +173,7 @@ When running tests:
 - Report pass/fail status and any authentication errors clearly
 ```
 
-The `frontend-design` skill can integrate with design APIs that require authentication, while `xlsx` might connect to spreadsheets containing sensitive data. In each case, ensure credentials flow through environment variables rather than appearing in skill prompts or tool arguments. The [MCP server input validation security patterns guide](/claude-skills-guide/mcp-server-input-validation-security-patterns/) shows how to reinforce this boundary at the server layer.
+The `frontend-design` skill can integrate with design APIs that require authentication, while `xlsx` might connect to spreadsheets containing sensitive data. In each case, ensure credentials flow through environment variables rather than appearing in skill prompts or tool arguments. The [MCP server input validation security patterns guide](/mcp-server-input-validation-security-patterns/) shows how to reinforce this boundary at the server layer.
 
 ## Production Deployment Patterns
 
@@ -219,13 +219,13 @@ class RotatingCredential:
 
 ## Conclusion
 
-Secure credential management in MCP servers requires layering environment variables for configuration, OAuth flows for user-authenticated requests, secret scanning for prevention, and production-grade patterns like external secrets services and automated rotation. Start with environment variables for simplicity, implement OAuth when user delegation is needed, and add secret scanning and rotation as your deployments scale. The `tdd` skill can validate your credential handling implementation through integration tests, while `supermemory` can help you document your security architecture. Pair this foundation with the [MCP server vulnerability scanning and testing guide](/claude-skills-guide/mcp-server-vulnerability-scanning-and-testing/) to catch weaknesses in your overall security posture.
+Secure credential management in MCP servers requires layering environment variables for configuration, OAuth flows for user-authenticated requests, secret scanning for prevention, and production-grade patterns like external secrets services and automated rotation. Start with environment variables for simplicity, implement OAuth when user delegation is needed, and add secret scanning and rotation as your deployments scale. The `tdd` skill can validate your credential handling implementation through integration tests, while `supermemory` can help you document your security architecture. Pair this foundation with the [MCP server vulnerability scanning and testing guide](/mcp-server-vulnerability-scanning-and-testing/) to catch weaknesses in your overall security posture.
 
 ## Related Reading
 
-- [MCP Server Permission Auditing Best Practices](/claude-skills-guide/mcp-server-permission-auditing-best-practices/)
-- [MCP OAuth 2.1 Authentication Implementation Guide](/claude-skills-guide/mcp-oauth-21-authentication-implementation-guide/)
-- [Securing MCP Servers in Production Environments](/claude-skills-guide/securing-mcp-servers-in-production-environments/)
-- [Advanced Hub](/claude-skills-guide/advanced-hub/)
+- [MCP Server Permission Auditing Best Practices](/mcp-server-permission-auditing-best-practices/)
+- [MCP OAuth 2.1 Authentication Implementation Guide](/mcp-oauth-21-authentication-implementation-guide/)
+- [Securing MCP Servers in Production Environments](/securing-mcp-servers-in-production-environments/)
+- [Advanced Hub](/advanced-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

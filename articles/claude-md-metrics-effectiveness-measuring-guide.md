@@ -13,11 +13,11 @@ permalink: /claude-md-metrics-effectiveness-measuring-guide/
 
 # Claude MD Metrics Effectiveness: Measuring Guide
 
-[Measuring the effectiveness of your Claude Code skills requires a structured approach](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) to track performance, identify bottlenecks, and optimize workflows. This guide provides developers and power users with practical metrics and evaluation frameworks for assessing skill effectiveness.
+[Measuring the effectiveness of your Claude Code skills requires a structured approach](/claude-skill-md-format-complete-specification-guide/) to track performance, identify bottlenecks, and optimize workflows. This guide provides developers and power users with practical metrics and evaluation frameworks for assessing skill effectiveness.
 
 ## Why Metrics Matter for Claude Skills
 
-When [building custom Claude skills—whether it's a pdf skill for document processing](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), a tdd skill for test-driven development, or a frontend-design skill for UI generation—you need evidence that these skills actually improve your productivity. Raw intuition isn't enough. Quantitative metrics help you compare different approaches, justify time investments, and continuously improve your skill library.
+When [building custom Claude skills—whether it's a pdf skill for document processing](/best-claude-code-skills-to-install-first-2026/), a tdd skill for test-driven development, or a frontend-design skill for UI generation—you need evidence that these skills actually improve your productivity. Raw intuition isn't enough. Quantitative metrics help you compare different approaches, justify time investments, and continuously improve your skill library.
 
 Without measurement, skill development becomes a cycle of guessing and hoping. You might spend three hours refining a skill prompt, ship it, and assume it's better — only to find out weeks later that token consumption doubled and the output quality barely moved. A lightweight metrics habit, even just timing invocations and logging pass/fail outcomes, breaks that cycle quickly.
 
@@ -282,9 +282,9 @@ Remember: metrics are a tool, not the objective. Use them to make informed decis
 
 ## Related Reading
 
-- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
-- [Claude Code Output Quality: How to Improve Results](/claude-skills-guide/claude-code-output-quality-how-to-improve-results/)
-- [Claude Code Workflow Optimization Tips 2026](/claude-skills-guide/claude-code-workflow-optimization-tips-2026/)
-- [Advanced Hub](/claude-skills-guide/advanced-hub/)
+- [Best Claude Code Skills to Install First (2026)](/best-claude-code-skills-to-install-first-2026/)
+- [Claude Code Output Quality: How to Improve Results](/claude-code-output-quality-how-to-improve-results/)
+- [Claude Code Workflow Optimization Tips 2026](/claude-code-workflow-optimization-tips-2026/)
+- [Advanced Hub](/advanced-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

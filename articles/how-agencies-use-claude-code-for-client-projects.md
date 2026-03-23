@@ -83,7 +83,7 @@ The right stack depends on your service mix. Start with the core four and add sp
 
 ### Proposal and Specification Generation
 
-Agencies report significant time savings when using Claude Code to draft project proposals and technical specifications. [The **pdf** skill transforms markdown specifications into professionally formatted documents](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) ready for client review:
+Agencies report significant time savings when using Claude Code to draft project proposals and technical specifications. [The **pdf** skill transforms markdown specifications into professionally formatted documents](/best-claude-code-skills-to-install-first-2026/) ready for client review:
 
 ```markdown
 # Project Specification: Client Dashboard
@@ -112,7 +112,7 @@ For agencies doing recurring proposal work, build a proposal template as a custo
 
 ### Development Sprints
 
-During active development, [the **tdd** skill helps maintain rigorous testing standards](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/). This becomes particularly valuable when onboarding junior developers or working with offshore teams:
+During active development, [the **tdd** skill helps maintain rigorous testing standards](/claude-tdd-skill-test-driven-development-workflow/). This becomes particularly valuable when onboarding junior developers or working with offshore teams:
 
 ```
 /tdd
@@ -143,7 +143,7 @@ This approach compresses what would typically be a two-week design iteration cyc
 
 ## Knowledge Management Across Projects
 
-Agency teams struggle with knowledge retention as developers move between projects. [The **supermemory** skill solves this by creating searchable project histories](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/):
+Agency teams struggle with knowledge retention as developers move between projects. [The **supermemory** skill solves this by creating searchable project histories](/claude-supermemory-skill-persistent-context-explained/):
 
 ```
 /supermemory
@@ -297,9 +297,9 @@ Review the skill library quarterly. Skills that no developer uses are candidates
 
 ## Related Reading
 
-- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
-- [Is Claude Code Worth the Cost for Small Startups in 2026?](/claude-skills-guide/is-claude-code-worth-the-cost-for-small-startups-2026/)
-- [Claude Supermemory Skill: Persistent Context Explained](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/)
-- [Use Cases Hub](/claude-skills-guide/use-cases-hub/)
+- [Best Claude Code Skills to Install First (2026)](/best-claude-code-skills-to-install-first-2026/)
+- [Is Claude Code Worth the Cost for Small Startups in 2026?](/is-claude-code-worth-the-cost-for-small-startups-2026/)
+- [Claude Supermemory Skill: Persistent Context Explained](/claude-supermemory-skill-persistent-context-explained/)
+- [Use Cases Hub](/use-cases-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

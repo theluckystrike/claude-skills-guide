@@ -231,8 +231,8 @@ If errors persist, systematically check each credential location again—it's ea
 
 ## Related Reading
 
-- [How Do I Set Environment Variables for a Claude Skill?](/claude-skills-guide/how-do-i-set-environment-variables-for-a-claude-skill/) — See also
-- [Claude Code Secret Scanning: Prevent Credential Leaks Guide](/claude-skills-guide/claude-code-secret-scanning-prevent-credential-leaks-guide/) — See also
-- [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — See also
+- [How Do I Set Environment Variables for a Claude Skill?](/how-do-i-set-environment-variables-for-a-claude-skill/) — See also
+- [Claude Code Secret Scanning: Prevent Credential Leaks Guide](/claude-code-secret-scanning-prevent-credential-leaks-guide/) — See also
+- [Claude Skills Troubleshooting Hub](/troubleshooting-hub/) — See also
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

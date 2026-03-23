@@ -13,13 +13,13 @@ permalink: /why-does-claude-skill-auto-invocation-fail-intermittently/
 
 # Why Does Claude Skill Auto Invocation Fail Intermittently?
 
-If you've ever watched Claude fail to invoke a skill you expected it to use—despite having the perfect context for the `pdf` skill to kick in, or the `frontend-design` skill to handle your UI work—you're not alone. Auto invocation, the mechanism where Claude automatically selects and activates a skill based on your conversation context (explained in depth in [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/)), can fail without warning. Understanding why this happens and how to work around it will make you significantly more productive.
+If you've ever watched Claude fail to invoke a skill you expected it to use—despite having the perfect context for the `pdf` skill to kick in, or the `frontend-design` skill to handle your UI work—you're not alone. Auto invocation, the mechanism where Claude automatically selects and activates a skill based on your conversation context (explained in depth in [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/)), can fail without warning. Understanding why this happens and how to work around it will make you significantly more productive.
 
 ## How Auto Invocation Works
 
 Claude determines whether to auto-invoke a skill by analyzing your conversation context against the skill's trigger conditions. When you mention terms like "extract the text from this PDF" or start describing a component layout, Claude's underlying model evaluates whether a registered skill matches the intent. The skill registry, populated through your skill configuration files, provides the matching logic.
 
-The system relies on several signals: your explicit language, implicit task patterns, and the skill's defined triggers. For a technical breakdown, see [how Claude skills auto-invocation works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/). When any of these signals weaken or conflict, auto invocation fails.
+The system relies on several signals: your explicit language, implicit task patterns, and the skill's defined triggers. For a technical breakdown, see [how Claude skills auto-invocation works](/claude-skills-auto-invocation-how-it-works/). When any of these signals weaken or conflict, auto invocation fails.
 
 ## Common Causes of Intermittent Failure
 
@@ -138,9 +138,9 @@ As you develop more skills and understand your patterns, you'll naturally gravit
 
 ## Related Reading
 
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Understand the auto invocation system deeply before troubleshooting intermittent failures.
-- [Claude Skill Not Triggering: Troubleshoot Guide (2026)](/claude-skills-guide/claude-skill-not-triggering-automatically-troubleshoot/) — Diagnose and fix skills that never auto-invoke, not just intermittently.
-- [Why Is My Claude Skill Not Showing Up? Fix Guide](/claude-skills-guide/claude-code-skill-not-found-in-skills-directory-how-to-fix/) — Resolve visibility issues that prevent skills from being available for auto invocation.
-- [Getting Started with Claude Skills](/claude-skills-guide/getting-started-hub/) — Learn correct skill setup to avoid common auto invocation configuration mistakes.
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — Understand the auto invocation system deeply before troubleshooting intermittent failures.
+- [Claude Skill Not Triggering: Troubleshoot Guide (2026)](/claude-skill-not-triggering-automatically-troubleshoot/) — Diagnose and fix skills that never auto-invoke, not just intermittently.
+- [Why Is My Claude Skill Not Showing Up? Fix Guide](/claude-code-skill-not-found-in-skills-directory-how-to-fix/) — Resolve visibility issues that prevent skills from being available for auto invocation.
+- [Getting Started with Claude Skills](/getting-started-hub/) — Learn correct skill setup to avoid common auto invocation configuration mistakes.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

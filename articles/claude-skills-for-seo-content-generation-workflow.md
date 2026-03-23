@@ -13,7 +13,7 @@ permalink: /claude-skills-for-seo-content-generation-workflow/
 
 # Claude Skills for SEO Content Generation Workflow
 
-[Creating SEO-optimized content at scale requires a systematic approach](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Developers and power users can use Claude skills to automate research, generate outlines, optimize content, and track performance. This guide walks through a practical workflow using Claude Code skills for each stage of the content generation pipeline—from raw keyword data to published, tracked articles.
+[Creating SEO-optimized content at scale requires a systematic approach](/best-claude-code-skills-to-install-first-2026/) Developers and power users can use Claude skills to automate research, generate outlines, optimize content, and track performance. This guide walks through a practical workflow using Claude Code skills for each stage of the content generation pipeline—from raw keyword data to published, tracked articles.
 
 Claude skills are Markdown files stored in `~/.claude/skills/` and invoked with `/skill-name` inside a Claude Code session. Each skill loads a set of instructions into Claude's context, turning a general-purpose AI into a specialized tool tuned for a specific task.
 
@@ -33,7 +33,7 @@ For an SEO operation producing more than a handful of articles per week, the con
 
 ## The SEO Content Pipeline
 
-[A modern SEO content workflow involves multiple stages: keyword research, content brief creation, drafting, optimization, and performance tracking](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) Claude skills assist with each phase, reducing manual effort while maintaining quality standards.
+[A modern SEO content workflow involves multiple stages: keyword research, content brief creation, drafting, optimization, and performance tracking](/claude-skill-md-format-complete-specification-guide/) Claude skills assist with each phase, reducing manual effort while maintaining quality standards.
 
 The pipeline looks like this end to end:
 
@@ -317,9 +317,9 @@ From there, add skills one at a time as you identify the next bottleneck in your
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Top skills every developer should know
-- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/claude-skills-vs-prompts-which-is-better/) — Decide when skills beat plain prompts
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Top skills every developer should know
+- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-vs-prompts-which-is-better/) — Decide when skills beat plain prompts
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

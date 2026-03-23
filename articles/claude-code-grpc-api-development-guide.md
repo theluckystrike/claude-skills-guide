@@ -315,8 +315,8 @@ For streaming errors, Claude is especially useful for diagnosing back-pressure i
 
 ## Related Reading
 
-- [Chrome Extension Development in 2026](/claude-skills-guide/chrome-extension-development-2026/)
-- [Open Source Contribution Workflow with Claude Code](/claude-skills-guide/claude-code-open-source-contribution-workflow-guide-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Chrome Extension Development in 2026](/chrome-extension-development-2026/)
+- [Open Source Contribution Workflow with Claude Code](/claude-code-open-source-contribution-workflow-guide-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

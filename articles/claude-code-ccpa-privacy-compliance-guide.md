@@ -230,9 +230,9 @@ Building CCPA compliance into your development workflow from the start is far mo
 
 ## Related Reading
 
-- [Claude Code GDPR Compliance Implementation](/claude-skills-guide/claude-code-gdpr-compliance-implementation/)
-- [Claude Code PII Detection and Masking Guide](/claude-skills-guide/claude-code-pii-detection-and-masking-guide/)
-- [Claude Code Cookie Consent Implementation](/claude-skills-guide/claude-code-cookie-consent-implementation/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Code GDPR Compliance Implementation](/claude-code-gdpr-compliance-implementation/)
+- [Claude Code PII Detection and Masking Guide](/claude-code-pii-detection-and-masking-guide/)
+- [Claude Code Cookie Consent Implementation](/claude-code-cookie-consent-implementation/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

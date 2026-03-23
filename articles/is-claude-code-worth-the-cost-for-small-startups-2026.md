@@ -173,10 +173,10 @@ Start small, measure results, and scale usage as your team sees value. That's ho
 
 ## Related Reading
 
-- [Why Is Claude Code Expensive: Large Context Tokens](/claude-skills-guide/why-is-claude-code-expensive-large-context-tokens/)
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/)
-- [Claude Code Free Tier vs Pro Plan: Feature Comparison 2026](/claude-skills-guide/claude-code-free-tier-vs-pro-plan-feature-comparison-2026/)
-- [Is Claude Code Worth It for Solo Developers?](/claude-skills-guide/is-claude-code-worth-it-for-solo-developers-freelancers/)
-- [Claude Code Cost Per Project Estimation Calculator Guide](/claude-skills-guide/claude-code-cost-per-project-estimation-calculator-guide/) — Estimate exactly what Claude Code will cost for your next startup project
+- [Why Is Claude Code Expensive: Large Context Tokens](/why-is-claude-code-expensive-large-context-tokens/)
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/)
+- [Claude Code Free Tier vs Pro Plan: Feature Comparison 2026](/claude-code-free-tier-vs-pro-plan-feature-comparison-2026/)
+- [Is Claude Code Worth It for Solo Developers?](/is-claude-code-worth-it-for-solo-developers-freelancers/)
+- [Claude Code Cost Per Project Estimation Calculator Guide](/claude-code-cost-per-project-estimation-calculator-guide/) — Estimate exactly what Claude Code will cost for your next startup project
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

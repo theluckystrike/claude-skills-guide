@@ -11,7 +11,7 @@ score: 7
 permalink: /how-product-managers-use-claude-code-for-specs/
 ---
 
-[Product managers face a constant challenge: translating ambiguous requirements into clear, actionable specifications](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) that developers can execute. Claude Code accelerates this workflow significantly by combining AI assistance with specialized skills tailored for documentation, technical writing, and design collaboration.
+[Product managers face a constant challenge: translating ambiguous requirements into clear, actionable specifications](/best-claude-code-skills-to-install-first-2026/) that developers can execute. Claude Code accelerates this workflow significantly by combining AI assistance with specialized skills tailored for documentation, technical writing, and design collaboration.
 
 This guide shows practical ways product managers integrate Claude Code into their specification workflow, with real examples and code snippets you can apply immediately.
 
@@ -28,7 +28,7 @@ Claude Code addresses all four problems directly. It does not replace your judgm
 
 ## Starting a Spec from Conversation Notes
 
-Product managers often begin with messy inputs—Slack threads, meeting transcripts, or scattered notes. [The supermemory skill proves invaluable here](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/). It retrieves context from your stored conversations and documents, helping you reconstruct the reasoning behind feature requests.
+Product managers often begin with messy inputs—Slack threads, meeting transcripts, or scattered notes. [The supermemory skill proves invaluable here](/claude-supermemory-skill-persistent-context-explained/). It retrieves context from your stored conversations and documents, helping you reconstruct the reasoning behind feature requests.
 
 ```bash
 # Using supermemory to find context about a feature
@@ -249,9 +249,9 @@ The key is consistency. Using Claude Code for spec development becomes powerful 
 
 ## Related Reading
 
-- [Claude Supermemory Skill: Persistent Context Explained](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/)
-- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
-- [How Enterprise Teams Adopt Claude Code Workflow](/claude-skills-guide/how-enterprise-teams-adopt-claude-code-workflow/)
-- [Use Cases Hub](/claude-skills-guide/use-cases-hub/)
+- [Claude Supermemory Skill: Persistent Context Explained](/claude-supermemory-skill-persistent-context-explained/)
+- [Best Claude Code Skills to Install First (2026)](/best-claude-code-skills-to-install-first-2026/)
+- [How Enterprise Teams Adopt Claude Code Workflow](/how-enterprise-teams-adopt-claude-code-workflow/)
+- [Use Cases Hub](/use-cases-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

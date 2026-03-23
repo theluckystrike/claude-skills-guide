@@ -213,9 +213,9 @@ With these patterns, you can confidently delegate SQL writing to Claude while ma
 
 ## Related Reading
 
-- [Claude Code Profiler Integration Guide](/claude-skills-guide/claude-code-profiler-integration-guide/) — Profile SQL queries to identify bottlenecks
-- [Claude Code Memory Leak Detection Workflow](/claude-skills-guide/claude-code-memory-leak-detection-workflow/) — Database connections can cause memory leaks
-- [Claude Code Technical Debt Tracking Workflow](/claude-skills-guide/claude-code-technical-debt-tracking-workflow/) — Slow queries are a form of technical debt
-- [Advanced Claude Skills Hub](/claude-skills-guide/advanced-hub/) — Advanced database and performance patterns
+- [Claude Code Profiler Integration Guide](/claude-code-profiler-integration-guide/) — Profile SQL queries to identify bottlenecks
+- [Claude Code Memory Leak Detection Workflow](/claude-code-memory-leak-detection-workflow/) — Database connections can cause memory leaks
+- [Claude Code Technical Debt Tracking Workflow](/claude-code-technical-debt-tracking-workflow/) — Slow queries are a form of technical debt
+- [Advanced Claude Skills Hub](/advanced-hub/) — Advanced database and performance patterns
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

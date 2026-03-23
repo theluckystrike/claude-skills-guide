@@ -296,11 +296,11 @@ The key is starting simple—two-agent handoffs or parallel specialists—and pr
 
 ## Related Reading
 
-- [Multi-Agent Orchestration with Claude Subagents Guide](/claude-skills-guide/multi-agent-orchestration-with-claude-subagents-guide/) — Technical deep dive on the Task tool, context management, and error recovery for subagent workflows
-- [Supervisor Agent and Worker Agent Pattern with Claude Code](/claude-skills-guide/supervisor-agent-worker-agent-pattern-claude-code/) — Focused guide on the supervisor/worker topology
-- [Claude Code Multi-Agent Subagent Communication Guide](/claude-skills-guide/claude-code-multi-agent-subagent-communication-guide/) — How results pass between agents in these patterns
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Multi-Agent Orchestration with Claude Subagents Guide](/multi-agent-orchestration-with-claude-subagents-guide/) — Technical deep dive on the Task tool, context management, and error recovery for subagent workflows
+- [Supervisor Agent and Worker Agent Pattern with Claude Code](/supervisor-agent-worker-agent-pattern-claude-code/) — Focused guide on the supervisor/worker topology
+- [Claude Code Multi-Agent Subagent Communication Guide](/claude-code-multi-agent-subagent-communication-guide/) — How results pass between agents in these patterns
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

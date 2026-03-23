@@ -13,11 +13,11 @@ permalink: /best-claude-skills-for-writing-and-content-creation/
 
 # Best Claude Skills for Writing and Content Creation
 
-[Claude Code's skills system extends beyond software development](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Writers, technical communicators, and content teams use skills to automate document creation, maintain consistency across projects, and produce multiple output formats from a single session. Skills are `.md` files in `~/.claude/skills/`, invoked with `/skill-name`.
+[Claude Code's skills system extends beyond software development](/best-claude-code-skills-to-install-first-2026/) Writers, technical communicators, and content teams use skills to automate document creation, maintain consistency across projects, and produce multiple output formats from a single session. Skills are `.md` files in `~/.claude/skills/`, invoked with `/skill-name`.
 
 ## Document Creation and Editing with the docx Skill
 
-[The `docx` skill creates and edits Word documents](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/), including tracked changes, comments, and structured formatting.
+[The `docx` skill creates and edits Word documents](/claude-skill-md-format-complete-specification-guide/), including tracked changes, comments, and structured formatting.
 
 ```
 /docx create a project proposal document with these sections: Executive Summary, Problem Statement, Proposed Solution, Timeline, Budget. Use H1 for the title, H2 for sections.
@@ -35,7 +35,7 @@ Writers working on collaborative documents use this skill to produce clean draft
 
 ## PDF Generation with the pdf Skill
 
-The [`pdf` skill](/claude-skills-guide/best-claude-skills-for-data-analysis/) creates and processes PDFs — both generating new documents and extracting content from existing ones.
+The [`pdf` skill](/best-claude-skills-for-data-analysis/) creates and processes PDFs — both generating new documents and extracting content from existing ones.
 
 ```
 /pdf create a PDF from this content with a title page, page numbers, and a header showing "Confidential": [paste content]
@@ -89,7 +89,7 @@ Content teams tracking editorial calendars, performance metrics, or campaign bud
 
 ## Persistent Style Guides with the supermemory Skill
 
-The [`supermemory` skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) stores and recalls style guidelines, brand voice, and project-specific rules across sessions.
+The [`supermemory` skill](/claude-skills-token-optimization-reduce-api-costs/) stores and recalls style guidelines, brand voice, and project-specific rules across sessions.
 
 ```
 /supermemory store: acme-brand-voice = conversational, direct, no jargon, second person ("you"), Oxford comma, active voice, max sentence length 25 words
@@ -116,7 +116,7 @@ Writers managing multiple clients use this to switch between brand voices withou
 
 ## Design Documentation with the frontend-design Skill
 
-Technical writers documenting design systems use the [`frontend-design` skill](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) to verify accuracy between component specs and written documentation.
+Technical writers documenting design systems use the [`frontend-design` skill](/best-claude-code-skills-for-frontend-development/) to verify accuracy between component specs and written documentation.
 
 ```
 /frontend-design review this component documentation for accuracy — does the prop table match the implementation?: [paste docs, paste component code]
@@ -259,9 +259,9 @@ The batch approach keeps session context stable and produces a consistent output
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Top skills every developer should know
-- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/claude-skills-vs-prompts-which-is-better/) — Decide when skills beat plain prompts
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Top skills every developer should know
+- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-vs-prompts-which-is-better/) — Decide when skills beat plain prompts
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
 
 
 ---

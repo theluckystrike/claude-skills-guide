@@ -13,7 +13,7 @@ permalink: /claude-code-permissions-model-security-guide-2026/
 
 # Claude Code Permissions Model and Security Guide 2026
 
-Claude Code is a powerful agentic tool. With agentic tools come real [security scanning](/claude-skills-guide/claude-code-secret-scanning-prevent-credential-leaks-guide/) considerations: Claude can read files, execute shell commands, write code, and call external APIs. Understanding the [permissions model](/claude-skills-guide/how-do-i-set-environment-variables-for-a-claude-skill/) is not optional if you're using Claude Code on anything beyond a toy project.
+Claude Code is a powerful agentic tool. With agentic tools come real [security scanning](/claude-code-secret-scanning-prevent-credential-leaks-guide/) considerations: Claude can read files, execute shell commands, write code, and call external APIs. Understanding the [permissions model](/how-do-i-set-environment-variables-for-a-claude-skill/) is not optional if you're using Claude Code on anything beyond a toy project.
 
 This guide covers how permissions are scoped, what the defaults are, how to tighten them, and where the current model's limitations are.
 
@@ -86,7 +86,7 @@ When this skill is active, Claude can only use `Read`, `Write`, and `Bash` — e
 
 By default, Claude Code enforces a **project root boundary**. The `Read` and `Write` tools resolve paths relative to the project root, and path traversal outside it (`../../../etc/passwd`) is blocked at the tool level.
 
-The `Bash` tool has no such restriction by default — a bash command can access any file the current user can access. This is the most common source of unintended data access. For a practical guide to [limiting what a skill can access on disk](/claude-skills-guide/how-do-i-limit-what-a-claude-skill-can-access-on-disk/), see the dedicated article.
+The `Bash` tool has no such restriction by default — a bash command can access any file the current user can access. This is the most common source of unintended data access. For a practical guide to [limiting what a skill can access on disk](/how-do-i-limit-what-a-claude-skill-can-access-on-disk/), see the dedicated article.
 
 ### Hardening Bash Tool Access
 
@@ -156,7 +156,7 @@ Best practices:
 - Never set production API keys in your development shell; use short-lived credential providers
 - Add `.env` files to your project's `.gitignore` — Claude's `Write` tool will not exclude them by default
 
-You can also configure [disallowed tools to block entire categories of risky operations](/claude-skills-guide/claude-code-disallowedtools-security-configuration/) at the session level.
+You can also configure [disallowed tools to block entire categories of risky operations](/claude-code-disallowedtools-security-configuration/) at the session level.
 
 ## Skill-Based Access Control
 
@@ -250,8 +250,8 @@ The permissions model in 2026 still has gaps that teams should be aware of:
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Understanding which skills are most powerful helps you prioritize which ones need tightest permission controls
-- [Skill .md File Format Explained With Examples](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — The `tools` field in skill YAML directly controls the permission surface; this guide explains every available option
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Auto-invocation can trigger skills with broad tool access unexpectedly; understanding the mechanism is part of a sound security posture
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Understanding which skills are most powerful helps you prioritize which ones need tightest permission controls
+- [Skill .md File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/) — The `tools` field in skill YAML directly controls the permission surface; this guide explains every available option
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — Auto-invocation can trigger skills with broad tool access unexpectedly; understanding the mechanism is part of a sound security posture
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

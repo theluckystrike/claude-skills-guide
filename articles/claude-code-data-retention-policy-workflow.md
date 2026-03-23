@@ -323,9 +323,9 @@ The key is automation—set up scheduled runs and let the system manage itself. 
 
 ## Related Reading
 
-- [Claude Code Cookie Consent Implementation](/claude-skills-guide/claude-code-cookie-consent-implementation/) — Cookie consent and data retention work together
-- [Claude Skills Compliance SOC2 ISO27001 Guide](/claude-skills-guide/claude-skills-compliance-soc2-iso27001-guide/) — Compliance frameworks require data retention policies
-- [Claude Code Permissions Model Security Guide 2026](/claude-skills-guide/claude-code-permissions-model-security-guide-2026/) — Security and data retention are linked
-- [Claude Skills for Enterprise Security and Compliance](/claude-skills-guide/claude-skills-for-enterprise-security-compliance-guide/) — Enterprise compliance includes data retention
+- [Claude Code Cookie Consent Implementation](/claude-code-cookie-consent-implementation/) — Cookie consent and data retention work together
+- [Claude Skills Compliance SOC2 ISO27001 Guide](/claude-skills-compliance-soc2-iso27001-guide/) — Compliance frameworks require data retention policies
+- [Claude Code Permissions Model Security Guide 2026](/claude-code-permissions-model-security-guide-2026/) — Security and data retention are linked
+- [Claude Skills for Enterprise Security and Compliance](/claude-skills-for-enterprise-security-compliance-guide/) — Enterprise compliance includes data retention
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -188,8 +188,8 @@ Most alternatives support import from various formats, though you may need to ma
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Chrome Extension Development Guide](/claude-skills-guide/chrome-extension-development-2026/)
-- [Claude Code Comparisons Hub](/claude-skills-guide/comparisons-hub/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Chrome Extension Development Guide](/chrome-extension-development-2026/)
+- [Claude Code Comparisons Hub](/comparisons-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

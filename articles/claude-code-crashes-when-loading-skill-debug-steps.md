@@ -13,11 +13,11 @@ permalink: /claude-code-crashes-when-loading-skill-debug-steps/
 
 # Claude Code Crashes When Loading Skill: Debug Steps
 
-[When Claude Code fails loading a skill, it usually comes down to one of three things](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/): invalid YAML in the skill file, a missing file, or a naming mismatch. Here's a systematic approach to find and fix the problem.
+[When Claude Code fails loading a skill, it usually comes down to one of three things](/claude-skill-md-format-complete-specification-guide/): invalid YAML in the skill file, a missing file, or a naming mismatch. Here's a systematic approach to find and fix the problem.
 
 ## What a Skill File Actually Is
 
-Claude Code skills are single [skill.md files](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — plain Markdown with YAML front matter. There are no companion `.js` files, no compiled assets, no build steps. The entire skill lives in one file:
+Claude Code skills are single [skill.md files](/claude-skill-md-format-complete-specification-guide/) — plain Markdown with YAML front matter. There are no companion `.js` files, no compiled assets, no build steps. The entire skill lives in one file:
 
 ```
 ~/.claude/skills/
@@ -34,11 +34,11 @@ Verify the skill file is where Claude Code expects it:
 ls -la ~/.claude/skills/
 ```
 
-If the file is missing or misnamed, Claude can't load it. [Skill names are case-sensitive — `TDD.md` and `tdd.md` are different](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/).
+If the file is missing or misnamed, Claude can't load it. [Skill names are case-sensitive — `TDD.md` and `tdd.md` are different](/claude-skill-md-format-complete-specification-guide/).
 
 ## Step 2: Validate YAML Front Matter
 
-[The most common crash cause is malformed YAML at the top of the skill file](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/). The front matter must be valid YAML between `---` delimiters:
+[The most common crash cause is malformed YAML at the top of the skill file](/claude-skill-md-format-complete-specification-guide/). The front matter must be valid YAML between `---` delimiters:
 
 ```yaml
 ---
@@ -285,9 +285,9 @@ If you only see one `---`, the closing delimiter is absent. Add it as a standalo
 
 ## Related Reading
 
-- [Skill MD File Format Explained With Examples](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — Complete skill.md format reference
-- [How to Write a Skill MD File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) — Step-by-step skill creation guide
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [Skill MD File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/) — Complete skill.md format reference
+- [How to Write a Skill MD File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/) — Step-by-step skill creation guide
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
 
 
 ---

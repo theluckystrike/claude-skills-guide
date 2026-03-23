@@ -140,9 +140,9 @@ By setting up proper configuration files and using Claude skills appropriately, 
 
 ## Related Reading
 
-- [Claude Code Skills Monorepo Management Workflow](/claude-skills-guide/claude-code-skills-monorepo-management-workflow/) — See also
-- [Shared Claude Skills Across Monorepo Multiple Packages](/claude-skills-guide/shared-claude-skills-across-monorepo-multiple-packages/) — See also
-- [What Is the Best Way to Organize Claude Skills in a Monorepo?](/claude-skills-guide/what-is-the-best-way-to-organize-claude-skills-in-a-monorepo/) — See also
-- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/) — See also
+- [Claude Code Skills Monorepo Management Workflow](/claude-code-skills-monorepo-management-workflow/) — See also
+- [Shared Claude Skills Across Monorepo Multiple Packages](/shared-claude-skills-across-monorepo-multiple-packages/) — See also
+- [What Is the Best Way to Organize Claude Skills in a Monorepo?](/what-is-the-best-way-to-organize-claude-skills-in-a-monorepo/) — See also
+- [Claude Code Tutorials Hub](/tutorials-hub/) — See also
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

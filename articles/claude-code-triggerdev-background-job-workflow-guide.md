@@ -37,7 +37,7 @@ cd my-background-jobs
 npm install @trigger.dev/core @trigger.dev/database
 ```
 
-Once your project is ready, invoke Claude Code and load skills that complement background job development. The [TDD skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) helps write comprehensive tests for your jobs, while the [batch processing skill](/claude-skills-guide/claude-code-batch-processing-with-skills-guide/) assists with handling large volumes of tasks efficiently.
+Once your project is ready, invoke Claude Code and load skills that complement background job development. The [TDD skill](/claude-tdd-skill-test-driven-development-workflow/) helps write comprehensive tests for your jobs, while the [batch processing skill](/claude-code-batch-processing-with-skills-guide/) assists with handling large volumes of tasks efficiently.
 
 ## Creating Your First Background Job
 
@@ -64,7 +64,7 @@ export const processEmailJob = new Job({
 });
 ```
 
-Claude Code can help you expand this foundation into more sophisticated patterns, including retry logic, error handling, and parallel execution strategies. When working with Claude Code, provide context about your specific use case, and it can suggest appropriate patterns for your industry—whether you're building [financial processing systems](/claude-skills-guide/claude-skills-for-regulated-industries-fintech-healthcare/) or [e-commerce order fulfillment](/claude-skills-guide/claude-skills-for-logistics-supply-chain-software/).
+Claude Code can help you expand this foundation into more sophisticated patterns, including retry logic, error handling, and parallel execution strategies. When working with Claude Code, provide context about your specific use case, and it can suggest appropriate patterns for your industry—whether you're building [financial processing systems](/claude-skills-for-regulated-industries-fintech-healthcare/) or [e-commerce order fulfillment](/claude-skills-for-logistics-supply-chain-software/).
 
 ## Implementing Retry and Error Handling
 
@@ -98,7 +98,7 @@ export const robustProcessJob = new Job({
 });
 ```
 
-Claude Code skills can help you implement more advanced error handling patterns, including circuit breakers, dead letter queues, and alerting integrations. If you're working on complex integrations, consider combining Trigger.dev with MCP servers for additional capabilities like [Slack notifications](/claude-skills-guide/slack-mcp-server-team-notification-automation/) or [monitoring dashboards](/claude-skills-guide/claude-code-plus-grafana-dashboard-configuration-automation/).
+Claude Code skills can help you implement more advanced error handling patterns, including circuit breakers, dead letter queues, and alerting integrations. If you're working on complex integrations, consider combining Trigger.dev with MCP servers for additional capabilities like [Slack notifications](/slack-mcp-server-team-notification-automation/) or [monitoring dashboards](/claude-code-plus-grafana-dashboard-configuration-automation/).
 
 ## Scheduling Recurring Background Jobs
 
@@ -120,7 +120,7 @@ export const dailyReportJob = scheduledJob(
 );
 ```
 
-For more complex scheduling patterns, Claude Code can help you build dynamic schedules based on business rules or external data. The [API design skills](/claude-skills-guide/claude-code-rest-api-design-best-practices/) can also assist if you need to expose endpoints for managing job schedules programmatically.
+For more complex scheduling patterns, Claude Code can help you build dynamic schedules based on business rules or external data. The [API design skills](/claude-code-rest-api-design-best-practices/) can also assist if you need to expose endpoints for managing job schedules programmatically.
 
 ## Parallel Processing for High Throughput
 
@@ -144,7 +144,7 @@ export const batchProcessJob = new Job({
 });
 ```
 
-For optimal performance, consider the batch size and concurrency limits based on your downstream service capabilities. Claude Code can help you analyze performance bottlenecks and optimize throughput using techniques from the [performance optimization guides](/claude-skills-guide/claude-code-performance-bottleneck-finding/).
+For optimal performance, consider the batch size and concurrency limits based on your downstream service capabilities. Claude Code can help you analyze performance bottlenecks and optimize throughput using techniques from the [performance optimization guides](/claude-code-performance-bottleneck-finding/).
 
 ## Monitoring and Observability
 
@@ -171,7 +171,7 @@ export const monitoredJob = new Job({
 });
 ```
 
-For enterprise deployments, integrating with monitoring platforms like Datadog or Prometheus provides comprehensive visibility. Check the [MCP server integrations](/claude-skills-guide/top-mcp-servers-for-claude-code-developers-2026/) for available observability connections.
+For enterprise deployments, integrating with monitoring platforms like Datadog or Prometheus provides comprehensive visibility. Check the [MCP server integrations](/top-mcp-servers-for-claude-code-developers-2026/) for available observability connections.
 
 ## Best Practices for Production Deployments
 
@@ -183,18 +183,18 @@ When deploying Trigger.dev background jobs to production, follow these key princ
 4. **Error Alerts**: Implement notifications for job failures that require immediate attention
 5. **Testing**: Write comprehensive tests covering happy paths and failure scenarios
 
-Claude Code can assist with implementing these best practices and help you generate appropriate tests using the [automated testing workflows](/claude-skills-guide/claude-code-jest-unit-testing-workflow-guide/). For team deployments, consider using the [GitHub Actions integration](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/) to automate deployments.
+Claude Code can assist with implementing these best practices and help you generate appropriate tests using the [automated testing workflows](/claude-code-jest-unit-testing-workflow-guide/). For team deployments, consider using the [GitHub Actions integration](/claude-skills-with-github-actions-ci-cd-pipeline/) to automate deployments.
 
 ## Conclusion
 
 Building background job workflows with Trigger.dev becomes significantly more productive when combined with Claude Code's assistance. From initial scaffolding to production monitoring, Claude Code skills help you write better code faster while maintaining quality standards. Start with simple jobs, iterate on error handling, and progressively add complexity as your background processing needs grow.
 
-For more information on related topics, explore the [workflow automation hub](/claude-skills-guide/workflows-hub/) or learn about [event-driven architectures](/claude-skills-guide/claude-skills-event-driven-architecture-setup/) that complement background job patterns.
+For more information on related topics, explore the [workflow automation hub](/workflows-hub/) or learn about [event-driven architectures](/claude-skills-event-driven-architecture-setup/) that complement background job patterns.
 
 ## Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

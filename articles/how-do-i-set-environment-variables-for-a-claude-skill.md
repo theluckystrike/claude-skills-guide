@@ -16,7 +16,7 @@ permalink: /how-do-i-set-environment-variables-for-a-claude-skill/
 
 # How Do I Set Environment Variables for a Claude Skill
 
-[Claude Code skills are powerful extensions](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) in your AI sessions. Whether you're using the pdf skill for document processing, the tdd skill for test-driven development, or the supermemory skill for knowledge management, understanding how to configure environment variables is essential for getting the most out of these tools.
+[Claude Code skills are powerful extensions](/best-claude-code-skills-to-install-first-2026/) in your AI sessions. Whether you're using the pdf skill for document processing, the tdd skill for test-driven development, or the supermemory skill for knowledge management, understanding how to configure environment variables is essential for getting the most out of these tools.
 
 This guide walks you through every method of setting environment variables for Claude skills, from basic shell exports to project-scoped overrides. You'll find practical examples for the most commonly used skills, a comparison table of configuration approaches, and actionable security recommendations.
 
@@ -26,7 +26,7 @@ Before diving into configuration, it's worth understanding the mechanism. Claude
 
 This means that anything exported in your shell before you start Claude Code is visible inside any skill invocation. Skills themselves are Markdown files—they contain instructions to Claude, not executable scripts. The environment variable access happens when Claude executes a bash command as part of following those skill instructions.
 
-[Claude skills are stored as Markdown files](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) in `~/.claude/skills/`. Each skill lives in its own subdirectory or as a standalone `.md` file. When you invoke a skill using its slash command, Claude reads the file and applies the instructions to your session.
+[Claude skills are stored as Markdown files](/claude-skill-md-format-complete-specification-guide/) in `~/.claude/skills/`. Each skill lives in its own subdirectory or as a standalone `.md` file. When you invoke a skill using its slash command, Claude reads the file and applies the instructions to your session.
 
 Environment variables for skills can be set in several ways:
 
@@ -105,7 +105,7 @@ set -Ux ANTHROPIC_API_KEY "sk-ant-your-key-here"
 
 ## Skill-Specific Configuration Files
 
-Many skills come with their own configuration mechanism. The [supermemory skill, for instance, often requires a configuration file](/claude-skills-guide/building-stateful-agents-with-claude-skills-guide/) to connect to your personal knowledge base. Skill-specific config files offer more granular control and avoid polluting your global shell environment with skill-only settings.
+Many skills come with their own configuration mechanism. The [supermemory skill, for instance, often requires a configuration file](/building-stateful-agents-with-claude-skills-guide/) to connect to your personal knowledge base. Skill-specific config files offer more granular control and avoid polluting your global shell environment with skill-only settings.
 
 ### Example: Configuring the Supermemory Skill
 
@@ -146,7 +146,7 @@ Skill-specific files give you the ability to maintain different configurations f
 
 ## Using Claude Code Settings for Skill Configuration
 
-[Claude Code allows you to set environment variables through its settings system](/claude-skills-guide/claude-code-permissions-model-security-guide-2026/). Edit `~/.claude/settings.json` to make variables available specifically to Claude without exporting them to your entire shell session:
+[Claude Code allows you to set environment variables through its settings system](/claude-code-permissions-model-security-guide-2026/). Edit `~/.claude/settings.json` to make variables available specifically to Claude without exporting them to your entire shell session:
 
 ```json
 {
@@ -461,14 +461,14 @@ Setting environment variables for Claude skills involves five main approaches: s
 | Auto-load per directory on `cd` | direnv `.envrc` |
 | Team-shared non-secret settings | Committed `.envrc` (no secrets) |
 
-For most skills like pdf, tdd, frontend-design, and supermemory, you'll set variables in your shell profile for credentials and optionally create skill-specific configuration files for more granular control. Remember to keep [sensitive keys secure](/claude-skills-guide/getting-started-hub/) and review them periodically. With proper configuration, your Claude skills will have access to the APIs, paths, and settings they need to function effectively across every project in your development workflow.
+For most skills like pdf, tdd, frontend-design, and supermemory, you'll set variables in your shell profile for credentials and optionally create skill-specific configuration files for more granular control. Remember to keep [sensitive keys secure](/getting-started-hub/) and review them periodically. With proper configuration, your Claude skills will have access to the APIs, paths, and settings they need to function effectively across every project in your development workflow.
 
 ## Related Reading
 
-- [How to Create a Private Claude Skill Not on GitHub](/claude-skills-guide/how-do-i-create-a-private-claude-skill-not-on-github/) — Keep skills and their credentials local without GitHub exposure
-- [Claude Code Permissions Model and Security Guide 2026](/claude-skills-guide/claude-code-permissions-model-security-guide-2026/) — Understand security boundaries when exposing environment variables to skills
-- [Claude Code Secret Scanning: Prevent Credential Leaks Guide](/claude-skills-guide/claude-code-secret-scanning-prevent-credential-leaks-guide/) — Ensure API keys and secrets in skills don't leak accidentally
-- [Claude Skills Hub](/claude-skills-guide/getting-started-hub/) — Explore essential skill configuration and setup patterns
+- [How to Create a Private Claude Skill Not on GitHub](/how-do-i-create-a-private-claude-skill-not-on-github/) — Keep skills and their credentials local without GitHub exposure
+- [Claude Code Permissions Model and Security Guide 2026](/claude-code-permissions-model-security-guide-2026/) — Understand security boundaries when exposing environment variables to skills
+- [Claude Code Secret Scanning: Prevent Credential Leaks Guide](/claude-code-secret-scanning-prevent-credential-leaks-guide/) — Ensure API keys and secrets in skills don't leak accidentally
+- [Claude Skills Hub](/getting-started-hub/) — Explore essential skill configuration and setup patterns
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

@@ -14,7 +14,7 @@ permalink: /claude-code-skill-conflicts-with-mcp-server-resolution-guide/
 
 # Claude Code Skill Conflicts with MCP Server Resolution Guide
 
-[When building complex Claude Code workflows that combine skills with MCP servers, developers frequently encounter conflicts](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) that break automation pipelines. These conflicts arise from overlapping tool names, competing permission scopes, and incompatible configuration settings. This guide provides practical solutions for resolving these issues.
+[When building complex Claude Code workflows that combine skills with MCP servers, developers frequently encounter conflicts](/building-your-first-mcp-tool-integration-guide-2026/) that break automation pipelines. These conflicts arise from overlapping tool names, competing permission scopes, and incompatible configuration settings. This guide provides practical solutions for resolving these issues.
 
 ## Identifying the Conflict Type
 
@@ -132,7 +132,7 @@ When conflicts persist despite configuration adjustments, isolate problematic co
 
 ## Summary
 
-Resolving Claude Code skill conflicts with MCP servers requires identifying the conflict type—tool name collisions, permission mismatches, or runtime execution issues—and applying the appropriate solution. Use tool prefixes to avoid naming conflicts, configure scoped permissions to prevent access issues, and implement sequential execution for runtime problems. Following naming conventions and documenting your setup prevents future conflicts as your workflow grows. For the broader MCP ecosystem, the [Claude Code MCP server setup guide](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) covers initial MCP configuration in detail.
+Resolving Claude Code skill conflicts with MCP servers requires identifying the conflict type—tool name collisions, permission mismatches, or runtime execution issues—and applying the appropriate solution. Use tool prefixes to avoid naming conflicts, configure scoped permissions to prevent access issues, and implement sequential execution for runtime problems. Following naming conventions and documenting your setup prevents future conflicts as your workflow grows. For the broader MCP ecosystem, the [Claude Code MCP server setup guide](/building-your-first-mcp-tool-integration-guide-2026/) covers initial MCP configuration in detail.
 
 ## Diagnosing Conflicts with Session Logging
 
@@ -185,9 +185,9 @@ For teams managing Claude Code configurations in a shared repository, add a `CHA
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) — Set up MCP servers correctly from the start to avoid conflict-prone configurations
-- [MCP Servers vs Claude Skills: What Is the Difference?](/claude-skills-guide/mcp-servers-vs-claude-skills-what-is-the-difference/) — Understand when to use skills vs MCP servers to avoid architectural conflicts
-- [Claude Code Skill Circular Dependency Detected Error Fix](/claude-skills-guide/claude-code-skill-circular-dependency-detected-error-fix/) — Fix circular dependency errors that compound with MCP server conflicts
-- [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — More guides for resolving Claude skill configuration and runtime issues
+- [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/) — Set up MCP servers correctly from the start to avoid conflict-prone configurations
+- [MCP Servers vs Claude Skills: What Is the Difference?](/mcp-servers-vs-claude-skills-what-is-the-difference/) — Understand when to use skills vs MCP servers to avoid architectural conflicts
+- [Claude Code Skill Circular Dependency Detected Error Fix](/claude-code-skill-circular-dependency-detected-error-fix/) — Fix circular dependency errors that compound with MCP server conflicts
+- [Claude Skills Troubleshooting Hub](/troubleshooting-hub/) — More guides for resolving Claude skill configuration and runtime issues
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

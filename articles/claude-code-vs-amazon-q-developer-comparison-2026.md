@@ -44,15 +44,15 @@ Amazon Q Developer and Claude Code both target professional software developers,
 
 ## Where Claude Code Excels
 
-**Agentic depth.** Claude Code's agentic loop is more capable than Amazon Q Developer's current agentic features. For [complex, multi-file tasks](/claude-skills-guide/claude-code-vs-github-copilot-workspace-2026/), adding a feature that touches five files, upgrading a dependency and fixing the resulting test failures — Claude Code's ability to plan, execute, and adapt across steps is significantly more powerful.
+**Agentic depth.** Claude Code's agentic loop is more capable than Amazon Q Developer's current agentic features. For [complex, multi-file tasks](/claude-code-vs-github-copilot-workspace-2026/), adding a feature that touches five files, upgrading a dependency and fixing the resulting test failures — Claude Code's ability to plan, execute, and adapt across steps is significantly more powerful.
 
-**Skills ecosystem.** The [Claude skills framework allows your team to define and share reusable](/claude-skills-guide/how-do-i-share-claude-skills-across-multiple-projects/), version-controlled agent workflows. This is absent from Amazon Q Developer. You cannot encode "how our team runs security reviews" or "how we generate changelogs" as a reusable behavior in Q.
+**Skills ecosystem.** The [Claude skills framework allows your team to define and share reusable](/how-do-i-share-claude-skills-across-multiple-projects/), version-controlled agent workflows. This is absent from Amazon Q Developer. You cannot encode "how our team runs security reviews" or "how we generate changelogs" as a reusable behavior in Q.
 
 **Cross-stack reasoning.** Claude Code does not privilege any particular cloud or framework. It reasons equally well about TypeScript frontends, Go microservices, PostgreSQL schemas, and Terraform configs. Amazon Q Developer is optimized for AWS and may underperform on non-AWS infrastructure.
 
 **Instruction following on complex tasks.** Claude Opus 4.6's ability to hold multiple constraints through a long task execution is a consistent advantage on nuanced coding work.
 
-**MCP ecosystem.** [connect to your internal tools](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/), observability systems, databases, and APIs via MCP servers. Amazon Q Developer's integrations are largely limited to the AWS ecosystem.
+**MCP ecosystem.** [connect to your internal tools](/building-your-first-mcp-tool-integration-guide-2026/), observability systems, databases, and APIs via MCP servers. Amazon Q Developer's integrations are largely limited to the AWS ecosystem.
 
 ---
 
@@ -110,7 +110,7 @@ For AWS-native teams, the practical approach is often: Amazon Q Developer for AW
 
 ## Verdict
 
-For [pure agentic coding capability and reusable team workflows](/claude-skills-guide/comparisons-hub/), **Claude Code** is the stronger tool. For AWS-native development, especially when AWS service knowledge, inline completion, and built-in security scanning matter, **Amazon Q Developer** is genuinely competitive and often free to start.
+For [pure agentic coding capability and reusable team workflows](/comparisons-hub/), **Claude Code** is the stronger tool. For AWS-native development, especially when AWS service knowledge, inline completion, and built-in security scanning matter, **Amazon Q Developer** is genuinely competitive and often free to start.
 
 Teams building on AWS will benefit from both: Q Developer for AWS-specific work and inline coding assistance; Claude Code for the complex reasoning tasks where agentic quality and the skills ecosystem create real use.
 
@@ -126,8 +126,8 @@ Claude Code with skills like `/tdd` excels at application-level development wher
 
 ## Related Reading
 
-- [Anthropic Official Skills vs Community Skills: Which Should You Use?](/claude-skills-guide/anthropic-official-skills-vs-community-skills-comparison/) — Claude Code's skills ecosystem is a key differentiator from Amazon Q Developer; this guide maps out what is available
-- [Claude Skills vs Prompts: Which Is Better for Your Workflow?](/claude-skills-guide/claude-skills-vs-prompts-which-is-better/) — Understanding reusable skills vs raw prompting helps clarify Claude Code's structural advantage over Q Developer's prompt-based approach
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Cost comparison between Claude Code and Amazon Q Developer depends partly on how efficiently you use tokens; these techniques help
+- [Anthropic Official Skills vs Community Skills: Which Should You Use?](/anthropic-official-skills-vs-community-skills-comparison/) — Claude Code's skills ecosystem is a key differentiator from Amazon Q Developer; this guide maps out what is available
+- [Claude Skills vs Prompts: Which Is Better for Your Workflow?](/claude-skills-vs-prompts-which-is-better/) — Understanding reusable skills vs raw prompting helps clarify Claude Code's structural advantage over Q Developer's prompt-based approach
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — Cost comparison between Claude Code and Amazon Q Developer depends partly on how efficiently you use tokens; these techniques help
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

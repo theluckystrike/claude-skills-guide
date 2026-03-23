@@ -13,7 +13,7 @@ tags: [claude-code, claude-skills]
 
 # Claude Code API Versioning Strategies Guide
 
-API versioning stands as one of the most critical decisions when building extensible Claude Skills that interact with external services. This guide focuses specifically on the *consumer* side: how your skill code calls external REST APIs, handles version detection, and degrades gracefully when a preferred version is unavailable. If you are instead looking to build your own versioned REST API from scratch, see [Claude Code REST API Versioning Strategy Workflow Tips](/claude-skills-guide/claude-code-rest-api-versioning-strategy-workflow-tips/) for Express.js project structure, contract testing, and deployment patterns.
+API versioning stands as one of the most critical decisions when building extensible Claude Skills that interact with external services. This guide focuses specifically on the *consumer* side: how your skill code calls external REST APIs, handles version detection, and degrades gracefully when a preferred version is unavailable. If you are instead looking to build your own versioned REST API from scratch, see [Claude Code REST API Versioning Strategy Workflow Tips](/claude-code-rest-api-versioning-strategy-workflow-tips/) for Express.js project structure, contract testing, and deployment patterns.
 
 Choosing the right versioning strategy impacts maintainability, backward compatibility, and developer experience. This guide examines practical versioning approaches with concrete Python examples you can apply directly to your Claude Skills projects.
 
@@ -445,10 +445,10 @@ Choose based on your specific use case: external APIs you consume may mandate ce
 
 ## Related Reading
 
-- [Claude Code REST API Versioning Strategy Workflow Tips](/claude-skills-guide/claude-code-rest-api-versioning-strategy-workflow-tips/) — building your own versioned REST API with Express.js, contract testing, and deployment
-- [What Is the Best Claude Skill for REST API Development?](/claude-skills-guide/what-is-the-best-claude-skill-for-rest-api-development/)
-- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Code REST API Versioning Strategy Workflow Tips](/claude-code-rest-api-versioning-strategy-workflow-tips/) — building your own versioned REST API with Express.js, contract testing, and deployment
+- [What Is the Best Claude Skill for REST API Development?](/what-is-the-best-claude-skill-for-rest-api-development/)
+- [Claude Code Tutorials Hub](/tutorials-hub/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Code Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

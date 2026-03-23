@@ -243,8 +243,8 @@ Start with one or two skills for your most common tasks, refine them based on re
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Explained Simply for Non-Programmers](/claude-skills-guide/claude-skills-explained-simply-for-non-programmers/)
-- [How to Share Claude Skills with Your Team](/claude-skills-guide/how-to-share-claude-skills-with-your-team/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Explained Simply for Non-Programmers](/claude-skills-explained-simply-for-non-programmers/)
+- [How to Share Claude Skills with Your Team](/how-to-share-claude-skills-with-your-team/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

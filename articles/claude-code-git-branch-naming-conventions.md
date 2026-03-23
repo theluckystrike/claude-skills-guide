@@ -344,8 +344,8 @@ Consistent branch naming is one of the simplest ways to improve your development
 
 ## Related Reading
 
-- [Claude Code Git Workflow Best Practices Guide](/claude-skills-guide/claude-code-git-workflow-best-practices-guide/) — Branch naming is a core git best practice
-- [Claude Code Gitflow Workflow Automation Guide](/claude-skills-guide/claude-code-gitflow-workflow-automation-guide/) — Gitflow defines specific branch naming rules
-- [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — Git and workflow automation guides
+- [Claude Code Git Workflow Best Practices Guide](/claude-code-git-workflow-best-practices-guide/) — Branch naming is a core git best practice
+- [Claude Code Gitflow Workflow Automation Guide](/claude-code-gitflow-workflow-automation-guide/) — Gitflow defines specific branch naming rules
+- [Claude Skills Workflows Hub](/workflows-hub/) — Git and workflow automation guides
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

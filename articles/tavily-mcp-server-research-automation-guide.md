@@ -13,13 +13,13 @@ permalink: /tavily-mcp-server-research-automation-guide/
 
 # Tavily MCP Server: Research Automation Guide
 
-[Building research automation into your Claude Code workflow](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) opens up powerful possibilities for gathering, processing, and synthesizing information from across the web. The Tavily MCP Server provides a direct integration between Tavily's search capabilities and Claude's contextual understanding, enabling you to automate research tasks that previously required manual effort.
+[Building research automation into your Claude Code workflow](/building-your-first-mcp-tool-integration-guide-2026/) opens up powerful possibilities for gathering, processing, and synthesizing information from across the web. The Tavily MCP Server provides a direct integration between Tavily's search capabilities and Claude's contextual understanding, enabling you to automate research tasks that previously required manual effort.
 
 This guide covers practical implementation patterns for developers and power users looking to incorporate Tavily into their Claude skills workflow.
 
 ## What Is the Tavily MCP Server?
 
-[The Tavily MCP Server exposes Tavily's search and content extraction APIs through the Model Context Protocol](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/), making them available as tools within Claude Code. Unlike basic web search, Tavily specializes in AI-optimized search results with semantic understanding, making it particularly effective for research tasks that require nuanced information retrieval.
+[The Tavily MCP Server exposes Tavily's search and content extraction APIs through the Model Context Protocol](/building-your-first-mcp-tool-integration-guide-2026/), making them available as tools within Claude Code. Unlike basic web search, Tavily specializes in AI-optimized search results with semantic understanding, making it particularly effective for research tasks that require nuanced information retrieval.
 
 The MCP server architecture allows you to maintain persistent connections and use Claude's native tool-calling capabilities, which means you can build multi-step research workflows that combine search results with other skills like PDF processing, document generation, and memory management.
 
@@ -140,9 +140,9 @@ For teams, consider documenting your research automation patterns as reusable sk
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/)
-- [Claude Skills for SEO Content Generation Workflow](/claude-skills-guide/claude-skills-for-seo-content-generation-workflow/)
-- [Claude Supermemory Skill: Persistent Context Explained](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/)
-- [Integrations Hub](/claude-skills-guide/integrations-hub/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)
+- [Claude Skills for SEO Content Generation Workflow](/claude-skills-for-seo-content-generation-workflow/)
+- [Claude Supermemory Skill: Persistent Context Explained](/claude-supermemory-skill-persistent-context-explained/)
+- [Integrations Hub](/integrations-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -13,7 +13,7 @@ permalink: /understanding-claude-code-hooks-system-complete-guide/
 
 # Claude Code Hooks System: Complete Guide
 
-[Claude Code's hooks system gives you programmatic control over Claude's behavior at defined points in its execution lifecycle](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Hooks let you log tool calls for auditing, block dangerous commands, inject context at session start, and enforce project rules without modifying skill files or prompts.
+[Claude Code's hooks system gives you programmatic control over Claude's behavior at defined points in its execution lifecycle](/best-claude-code-skills-to-install-first-2026/) Hooks let you log tool calls for auditing, block dangerous commands, inject context at session start, and enforce project rules without modifying skill files or prompts.
 
 ## What Are Hooks?
 
@@ -258,7 +258,7 @@ A separate process (cron job, background daemon, or post-session script) can the
 
 ## Global vs Project Hooks
 
-Like skills, hooks can be configured globally (`~/.claude/settings.json`) or per project (`.claude/settings.json`). Both sets are loaded. Global hooks run first, then project hooks. This is different from [auto-invocation](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/), which is skill-level behavior. They stack — there is no override mechanism that prevents a global hook from running.
+Like skills, hooks can be configured globally (`~/.claude/settings.json`) or per project (`.claude/settings.json`). Both sets are loaded. Global hooks run first, then project hooks. This is different from [auto-invocation](/claude-skills-auto-invocation-how-it-works/), which is skill-level behavior. They stack — there is no override mechanism that prevents a global hook from running.
 
 This lets you have a global audit hook that logs all tool calls, plus project-specific hooks that enforce project-specific rules, without conflict.
 
@@ -357,9 +357,9 @@ The hooks system rewards incremental adoption. Start with a simple `post-tool` l
 
 ## Related Reading
 
-- [Building Stateful Agents with Claude Skills](/claude-skills-guide/building-stateful-agents-with-claude-skills-guide/) — Hooks are core to stateful agent design
-- [Claude Skill .md File Format: Full Specification](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — Skill file format reference
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Top developer skills that work well with hooks
+- [Building Stateful Agents with Claude Skills](/building-stateful-agents-with-claude-skills-guide/) — Hooks are core to stateful agent design
+- [Claude Skill .md File Format: Full Specification](/claude-skill-md-format-complete-specification-guide/) — Skill file format reference
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Top developer skills that work well with hooks
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

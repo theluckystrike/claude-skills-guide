@@ -261,9 +261,9 @@ Understanding that hallucinations are an inherent characteristic of current AI m
 
 ## Related Reading
 
-- [Claude Code Keeps Making Same Mistake Fix Guide](/claude-skills-guide/claude-code-keeps-making-same-mistake-fix-guide/) — Hallucinations can become recurring mistakes
-- [Claude Code Output Quality How to Improve Results](/claude-skills-guide/claude-code-output-quality-how-to-improve-results/) — Reduce hallucinations with better prompting
-- [Best Way to Scope Tasks for Claude Code Success](/claude-skills-guide/best-way-to-scope-tasks-for-claude-code-success/) — Clear scope reduces hallucination frequency
-- [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — More guides on Claude Code behavior issues
+- [Claude Code Keeps Making Same Mistake Fix Guide](/claude-code-keeps-making-same-mistake-fix-guide/) — Hallucinations can become recurring mistakes
+- [Claude Code Output Quality How to Improve Results](/claude-code-output-quality-how-to-improve-results/) — Reduce hallucinations with better prompting
+- [Best Way to Scope Tasks for Claude Code Success](/best-way-to-scope-tasks-for-claude-code-success/) — Clear scope reduces hallucination frequency
+- [Claude Skills Troubleshooting Hub](/troubleshooting-hub/) — More guides on Claude Code behavior issues
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

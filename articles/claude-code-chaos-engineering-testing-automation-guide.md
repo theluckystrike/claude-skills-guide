@@ -13,7 +13,7 @@ permalink: /claude-code-chaos-engineering-testing-automation-guide/
 
 # Claude Code Chaos Engineering Testing Automation Guide
 
-[Chaos engineering pushes systems to their breaking points deliberately](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) When you combine it with Claude Code's automation capabilities, you get a powerful approach to building resilient software. This guide covers practical strategies for implementing chaos engineering testing automation using Claude Code and its skill ecosystem.
+[Chaos engineering pushes systems to their breaking points deliberately](/claude-tdd-skill-test-driven-development-workflow/) When you combine it with Claude Code's automation capabilities, you get a powerful approach to building resilient software. This guide covers practical strategies for implementing chaos engineering testing automation using Claude Code and its skill ecosystem.
 
 ## Why Automate Chaos Testing with Claude Code
 
@@ -51,7 +51,7 @@ When asked about chaos engineering:
 5. Follow safety rules: never run chaos in production without approval
 ```
 
-[Activate this skill in your Claude Code session](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) if you've named the file appropriately, or simply reference it when describing your chaos testing needs.
+[Activate this skill in your Claude Code session](/claude-skill-md-format-complete-specification-guide/) if you've named the file appropriately, or simply reference it when describing your chaos testing needs.
 
 ## Automating Test Execution with Claude Skills
 
@@ -73,7 +73,7 @@ def test_payment_service_timeout_handling():
         assert response.order_placed is True
 ```
 
-[The `tdd` skill helps you think through these scenarios systematically](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/), ensuring your tests cover the right failure modes.
+[The `tdd` skill helps you think through these scenarios systematically](/claude-tdd-skill-test-driven-development-workflow/), ensuring your tests cover the right failure modes.
 
 ## Integrating with Popular Chaos Frameworks
 
@@ -170,7 +170,7 @@ Integrate this with your CI/CD system to run experiments automatically. The `pdf
 
 ## Using Claude Skills for Experiment Design
 
-When designing chaos experiments, use multiple Claude skills together. The `frontend-design` skill helps you visualize dashboard metrics during experiments. [The `supermemory` skill tracks experiment results over time](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/), building institutional knowledge about your system's failure modes.
+When designing chaos experiments, use multiple Claude skills together. The `frontend-design` skill helps you visualize dashboard metrics during experiments. [The `supermemory` skill tracks experiment results over time](/claude-supermemory-skill-persistent-context-explained/), building institutional knowledge about your system's failure modes.
 
 A practical experiment design process:
 
@@ -336,11 +336,11 @@ The key is starting simple—run one small experiment, learn from the results, a
 
 ## Related Reading
 
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/)
-- [Claude Skills Event Driven Architecture Setup](/claude-skills-guide/claude-skills-event-driven-architecture-setup/)
-- [Claude Skill MD Format: Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Workflows Hub](/claude-skills-guide/workflows-hub/)
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/)
+- [Claude Skills Event Driven Architecture Setup](/claude-skills-event-driven-architecture-setup/)
+- [Claude Skill MD Format: Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/)
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Workflows Hub](/workflows-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

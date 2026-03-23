@@ -12,11 +12,11 @@ permalink: /monitoring-and-logging-claude-code-multi-agent-systems/
 ---
 # Monitoring and Logging in Claude Code Multi-Agent Systems
 
-Building multi-agent systems with Claude Code requires visibility into agent behavior, message flows, and error conditions. Without proper monitoring, debugging distributed agent workflows becomes nearly impossible. This guide covers practical patterns for observability in Claude Code-based multi-agent architectures. For coordinating the agents you will monitor, see [Claude Code agent swarm coordination strategies](/claude-skills-guide/claude-code-agent-swarm-coordination-strategies/).
+Building multi-agent systems with Claude Code requires visibility into agent behavior, message flows, and error conditions. Without proper monitoring, debugging distributed agent workflows becomes nearly impossible. This guide covers practical patterns for observability in Claude Code-based multi-agent architectures. For coordinating the agents you will monitor, see [Claude Code agent swarm coordination strategies](/claude-code-agent-swarm-coordination-strategies/).
 
 ## Why Multi-Agent Monitoring Matters
 
-[When you orchestrate multiple Claude agents to handle different aspects of a task](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)—such as one agent for code review, another for testing, and a third for deployment—each agent generates logs, state changes, and potential errors. A production-grade system needs centralized logging to trace requests across agents, measure latency, and detect failures early.
+[When you orchestrate multiple Claude agents to handle different aspects of a task](/best-claude-code-skills-to-install-first-2026/)—such as one agent for code review, another for testing, and a third for deployment—each agent generates logs, state changes, and potential errors. A production-grade system needs centralized logging to trace requests across agents, measure latency, and detect failures early.
 
 The challenge: Claude Code doesn't provide built-in observability for multi-agent orchestration. You need to implement it yourself using available tools like bash commands, file operations, and external logging services.
 
@@ -211,9 +211,9 @@ Monitoring multi-agent Claude Code systems requires deliberate architecture. Sta
 
 ## Related Reading
 
-- [Multi-Agent Orchestration with Claude Subagents Guide](/claude-skills-guide/multi-agent-orchestration-with-claude-subagents-guide/) — Build the multi-agent architecture you will monitor and instrument for observability.
-- [Claude Code Multi-Agent Subagent Communication Guide](/claude-skills-guide/claude-code-multi-agent-subagent-communication-guide/) — Instrument inter-agent communication channels for comprehensive observability.
-- [Claude Code Agent Swarm Coordination Strategies](/claude-skills-guide/claude-code-agent-swarm-coordination-strategies/) — Apply monitoring patterns to distributed agent swarm coordination workflows.
-- [Claude Skills Advanced Hub](/claude-skills-guide/advanced-hub/) — Explore advanced observability and coordination patterns for Claude Code agents.
+- [Multi-Agent Orchestration with Claude Subagents Guide](/multi-agent-orchestration-with-claude-subagents-guide/) — Build the multi-agent architecture you will monitor and instrument for observability.
+- [Claude Code Multi-Agent Subagent Communication Guide](/claude-code-multi-agent-subagent-communication-guide/) — Instrument inter-agent communication channels for comprehensive observability.
+- [Claude Code Agent Swarm Coordination Strategies](/claude-code-agent-swarm-coordination-strategies/) — Apply monitoring patterns to distributed agent swarm coordination workflows.
+- [Claude Skills Advanced Hub](/advanced-hub/) — Explore advanced observability and coordination patterns for Claude Code agents.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

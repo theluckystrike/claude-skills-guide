@@ -13,7 +13,7 @@ permalink: /claude-code-skills-for-writing-integration-tests/
 
 # Claude Code Skills for Writing Integration Tests
 
-Integration tests verify that different components of your application work together correctly. Unlike unit tests that isolate individual functions, integration tests exercise real workflows across modules, databases, APIs, and external services. Claude Code offers several skills that accelerate writing and maintaining integration tests, making your test suite more reliable and easier to maintain. For an overview of the testing ecosystem, visit the [tutorials hub](/claude-skills-guide/getting-started-hub/).
+Integration tests verify that different components of your application work together correctly. Unlike unit tests that isolate individual functions, integration tests exercise real workflows across modules, databases, APIs, and external services. Claude Code offers several skills that accelerate writing and maintaining integration tests, making your test suite more reliable and easier to maintain. For an overview of the testing ecosystem, visit the [tutorials hub](/getting-started-hub/).
 
 ## Why Integration Tests Matter
 
@@ -25,7 +25,7 @@ However, integration tests present unique challenges. They require realistic tes
 
 ### The TDD Skill
 
-The [TDD skill provides a test-driven development workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) that works well for integration tests. When you activate this skill, Claude guides you through writing tests before implementation, ensuring your code meets requirements from the start.
+The [TDD skill provides a test-driven development workflow](/claude-tdd-skill-test-driven-development-workflow/) that works well for integration tests. When you activate this skill, Claude guides you through writing tests before implementation, ensuring your code meets requirements from the start.
 
 Activate the skill in your Claude Code session:
 
@@ -154,7 +154,7 @@ class TestCreateUser:
 
 ## Managing Test Data Effectively
 
-One of the biggest challenges in integration testing is managing test data. Claude Code skills provide strategies for creating realistic, isolated test data. For a complete automated testing pipeline, see the [automated testing pipeline guide](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/).
+One of the biggest challenges in integration testing is managing test data. Claude Code skills provide strategies for creating realistic, isolated test data. For a complete automated testing pipeline, see the [automated testing pipeline guide](/claude-tdd-skill-test-driven-development-workflow/).
 
 ### Use Factories Instead of Fixtures
 
@@ -233,10 +233,10 @@ Claude Code skills provide structured workflows for applying these practices. Th
 
 ## Related Reading
 
-- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — use test-first techniques to write integration tests that stay reliable
-- [Automated Testing Pipeline with Claude TDD Skill (2026)](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — wire integration tests into a full CI pipeline
-- [Best Claude Skills for Code Review Automation](/claude-skills-guide/best-claude-skills-for-code-review-automation/) — review integration test quality and coverage gaps automatically
-- [Claude Code Skills for QA Engineers: Automating Test Suites](/claude-skills-guide/claude-code-skills-for-qa-engineers-automating-test-suites/) — broader test suite automation patterns for QA workflows
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/) — use test-first techniques to write integration tests that stay reliable
+- [Automated Testing Pipeline with Claude TDD Skill (2026)](/claude-tdd-skill-test-driven-development-workflow/) — wire integration tests into a full CI pipeline
+- [Best Claude Skills for Code Review Automation](/best-claude-skills-for-code-review-automation/) — review integration test quality and coverage gaps automatically
+- [Claude Code Skills for QA Engineers: Automating Test Suites](/claude-code-skills-for-qa-engineers-automating-test-suites/) — broader test suite automation patterns for QA workflows
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 ```

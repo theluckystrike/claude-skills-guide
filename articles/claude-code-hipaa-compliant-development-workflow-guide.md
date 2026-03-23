@@ -13,17 +13,17 @@ permalink: /claude-code-hipaa-compliant-development-workflow-guide/
 
 # Claude Code HIPAA Compliant Development Workflow Guide
 
-[Healthcare software developers face unique challenges when building applications that must comply with HIPAA](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) (HIPAA). This guide shows you how to use Claude Code to streamline HIPAA-compliant development while maintaining security and privacy standards throughout your workflow.
+[Healthcare software developers face unique challenges when building applications that must comply with HIPAA](/best-claude-code-skills-to-install-first-2026/) (HIPAA). This guide shows you how to use Claude Code to streamline HIPAA-compliant development while maintaining security and privacy standards throughout your workflow.
 
 ## Understanding HIPAA Requirements for Developers
 
-[HIPAA sets strict requirements for handling protected health information](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) (PHI). As a developer, you need to ensure your applications implement administrative safeguards, physical safeguards, and technical safeguards. Claude Code can help you implement these requirements efficiently while following security best practices.
+[HIPAA sets strict requirements for handling protected health information](/claude-skill-md-format-complete-specification-guide/) (PHI). As a developer, you need to ensure your applications implement administrative safeguards, physical safeguards, and technical safeguards. Claude Code can help you implement these requirements efficiently while following security best practices.
 
 The technical safeguards include access controls, audit controls, integrity controls, and transmission security. When building healthcare applications, every line of code that handles patient data must be carefully scrutinized for potential security vulnerabilities.
 
 ## Setting Up a Secure Development Environment
 
-Before writing any HIPAA-compliant code, establish a secure development environment. Use isolated project directories and avoid storing PHI in logs or temporary files. The [supermemory skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) helps maintain clean context by organizing your development sessions without accidentally exposing sensitive data.
+Before writing any HIPAA-compliant code, establish a secure development environment. Use isolated project directories and avoid storing PHI in logs or temporary files. The [supermemory skill](/claude-skills-token-optimization-reduce-api-costs/) helps maintain clean context by organizing your development sessions without accidentally exposing sensitive data.
 
 ```bash
 # Create isolated project structure
@@ -67,7 +67,7 @@ function requirePermission(action) {
 }
 ```
 
-Claude Code's [tdd skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) helps you write comprehensive tests for these access control mechanisms before implementing the full feature set.
+Claude Code's [tdd skill](/best-claude-skills-for-developers-2026/) helps you write comprehensive tests for these access control mechanisms before implementing the full feature set.
 
 ## Audit Logging with Claude Code
 
@@ -323,8 +323,8 @@ Remember that HIPAA compliance is an ongoing process, not a one-time achievement
 
 ## Related Reading
 
-- [Claude Skills for Enterprise Security and Compliance](/claude-skills-guide/claude-skills-for-enterprise-security-compliance-guide/) — Audit logging, access controls, and compliance frameworks for regulated environments
-- [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Developer skills that support compliance-driven test-first development
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep compliance audit and documentation sessions cost-efficient
+- [Claude Skills for Enterprise Security and Compliance](/claude-skills-for-enterprise-security-compliance-guide/) — Audit logging, access controls, and compliance frameworks for regulated environments
+- [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/) — Developer skills that support compliance-driven test-first development
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — Keep compliance audit and documentation sessions cost-efficient
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

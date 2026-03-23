@@ -245,8 +245,8 @@ The key is establishing clear patterns early: consistent flag naming, centralize
 
 ## Related Reading
 
-- [Claude Code Feature Flags Workflow Git Guide](/claude-skills-guide/claude-code-feature-flags-workflow-git-guide/)
-- [Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/)
-- [Tutorials Hub](/claude-skills-guide/tutorials-hub/)
+- [Claude Code Feature Flags Workflow Git Guide](/claude-code-feature-flags-workflow-git-guide/)
+- [Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/)
+- [Tutorials Hub](/tutorials-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

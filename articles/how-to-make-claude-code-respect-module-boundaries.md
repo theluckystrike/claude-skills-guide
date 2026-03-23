@@ -341,9 +341,9 @@ These approaches work together to give you precise control over Claude's context
 
 ## Related Reading
 
-- [Claude Skills Context Window Management Best Practices](/claude-skills-guide/claude-md-too-long-context-window-optimization/) — Context management across module boundaries
-- [How to Write Effective CLAUDE.md for Your Project](/claude-skills-guide/how-to-write-effective-claude-md-for-your-project/) — CLAUDE.md is the primary tool for constraining Claude's scope
-- [Claude Code Multi-Agent Subagent Communication Guide](/claude-skills-guide/claude-code-multi-agent-subagent-communication-guide/) — Module isolation patterns in multi-agent setups
-- [Advanced Claude Skills Hub](/claude-skills-guide/advanced-hub/) — Advanced patterns for controlling Claude's behavior
+- [Claude Skills Context Window Management Best Practices](/claude-md-too-long-context-window-optimization/) — Context management across module boundaries
+- [How to Write Effective CLAUDE.md for Your Project](/how-to-write-effective-claude-md-for-your-project/) — CLAUDE.md is the primary tool for constraining Claude's scope
+- [Claude Code Multi-Agent Subagent Communication Guide](/claude-code-multi-agent-subagent-communication-guide/) — Module isolation patterns in multi-agent setups
+- [Advanced Claude Skills Hub](/advanced-hub/) — Advanced patterns for controlling Claude's behavior
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

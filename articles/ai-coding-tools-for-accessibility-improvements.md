@@ -525,13 +525,13 @@ Accessibility improvements also tend to benefit all users: clearer labels, bette
 ---
 
 
-**Related guides:** [Claude Code WCAG 2.1 Compliance Checker Workflow Guide](https://theluckystrike.github.io/claude-skills-guide/claude-code-for-wcag-2-2-compliance-workflow-guide/)
+**Related guides:** [Claude Code WCAG 2.1 Compliance Checker Workflow Guide](https://theluckystrike.github.io/claude-code-for-wcag-2-2-compliance-workflow-guide/)
 
 ## Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
 - [Claude Skills for Accessibility Testing WCAG A11y](/claude-skills-for-accessibility-testing-wcag-a11y/) — Automate WCAG compliance checks and accessibility audits using purpose-built Claude Code skills.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

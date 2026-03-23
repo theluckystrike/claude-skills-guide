@@ -13,13 +13,13 @@ permalink: /how-do-i-migrate-from-cursor-rules-to-claude-skills/
 
 # How Do I Migrate from Cursor Rules to Claude Skills
 
-If you have invested time building custom rules in Cursor, you might wonder whether those configurations translate to Claude Code. The good news: both systems use similar concepts—custom instructions that shape AI behavior—but they organize and invoke them differently. For a broader comparison, see [Claude Code vs Cursor AI Editor Comparison](/claude-skills-guide/claude-code-vs-cursor-2026-detailed-comparison/). This guide walks you through migrating your Cursor rules to Claude Code skills with practical examples.
+If you have invested time building custom rules in Cursor, you might wonder whether those configurations translate to Claude Code. The good news: both systems use similar concepts—custom instructions that shape AI behavior—but they organize and invoke them differently. For a broader comparison, see [Claude Code vs Cursor AI Editor Comparison](/claude-code-vs-cursor-2026-detailed-comparison/). This guide walks you through migrating your Cursor rules to Claude Code skills with practical examples.
 
 ## Understanding the Difference
 
 Cursor rules live in `.cursorrules` files placed at your project root or in a dedicated rules directory. These files contain instructions that shape how Cursor's AI assistant behaves within your codebase. Claude Code takes a different approach: skills are Markdown files stored in `~/.claude/skills/` that you invoke with a slash command during conversations.
 
-[The key distinction is invocation method](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) In Cursor, your rules apply globally to every conversation in that project. In Claude Code, you activate a skill when needed using `/skill-name`, then describe your task. This gives you finer control—you load only the expertise you need for a specific task.
+[The key distinction is invocation method](/claude-skill-md-format-complete-specification-guide/) In Cursor, your rules apply globally to every conversation in that project. In Claude Code, you activate a skill when needed using `/skill-name`, then describe your task. This gives you finer control—you load only the expertise you need for a specific task.
 
 ## Step 1: Export Your Cursor Rules
 
@@ -205,9 +205,9 @@ Start by migrating your most-used rules first. Test each skill thoroughly. Over 
 
 ## Related Reading
 
-- [Claude Code vs Cursor 2026 Detailed Comparison](/claude-skills-guide/claude-code-vs-cursor-2026-detailed-comparison/) — Compare Claude Code and Cursor fully before deciding on your migration strategy.
-- [How to Write a Skill MD File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) — Learn the skill MD format to correctly translate Cursor rules into Claude skills.
-- [Claude Skill .md File Format: Full Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — Understand the complete specification for Claude skill files during migration.
-- [Claude Skills Comparisons Hub](/claude-skills-guide/comparisons-hub/) — Compare Claude skills against other AI tools and development environments.
+- [Claude Code vs Cursor 2026 Detailed Comparison](/claude-code-vs-cursor-2026-detailed-comparison/) — Compare Claude Code and Cursor fully before deciding on your migration strategy.
+- [How to Write a Skill MD File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/) — Learn the skill MD format to correctly translate Cursor rules into Claude skills.
+- [Claude Skill .md File Format: Full Specification Guide](/claude-skill-md-format-complete-specification-guide/) — Understand the complete specification for Claude skill files during migration.
+- [Claude Skills Comparisons Hub](/comparisons-hub/) — Compare Claude skills against other AI tools and development environments.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

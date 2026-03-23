@@ -13,17 +13,17 @@ permalink: /building-stateful-agents-with-claude-skills-guide/
 
 # Building Stateful Agents with Claude Skills
 
-[Claude Code is stateless by default. Each session starts fresh](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/), and within a session, each tool call is independent. But real-world agents need to track progress, remember past decisions, and resume interrupted work. This guide shows you how to build genuinely stateful agents using Claude skills.
+[Claude Code is stateless by default. Each session starts fresh](/claude-supermemory-skill-persistent-context-explained/), and within a session, each tool call is independent. But real-world agents need to track progress, remember past decisions, and resume interrupted work. This guide shows you how to build genuinely stateful agents using Claude skills.
 
 ## What Stateful Means for AI Agents
 
-[A stateful agent can answer these questions reliably](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/):
+[A stateful agent can answer these questions reliably](/best-claude-code-skills-to-install-first-2026/):
 - What have I done so far in this task?
 - What do I need to do next?
 - What decisions did I make and why?
 - Where should I resume if interrupted?
 
-Statefulness in Claude Code is achieved by writing state to durable storage — files, databases, or the [`/supermemory` skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — and reading it back at the start of each invocation.
+Statefulness in Claude Code is achieved by writing state to durable storage — files, databases, or the [`/supermemory` skill](/claude-skills-token-optimization-reduce-api-costs/) — and reading it back at the start of each invocation.
 
 ## The State File Pattern
 
@@ -122,7 +122,7 @@ Idempotency rules:
 - Never write over a completed test file without explicit user confirmation
 ```
 
-This means you can interrupt the agent, close Claude Code, reopen it, invoke the same skill again, and it picks up where it left off. This pattern is especially useful with skills like the [**tdd** skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) where test generation tasks may span multiple sessions.
+This means you can interrupt the agent, close Claude Code, reopen it, invoke the same skill again, and it picks up where it left off. This pattern is especially useful with skills like the [**tdd** skill](/best-claude-skills-for-developers-2026/) where test generation tasks may span multiple sessions.
 
 ## Long-Running Task Patterns
 
@@ -288,9 +288,9 @@ Similarly, agents that call external tools benefit from a tool state tracker tha
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Top skills every developer should know
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep long-running agents cost-efficient
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Top skills every developer should know
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — Keep long-running agents cost-efficient
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -13,7 +13,7 @@ permalink: /claude-skill-not-saving-state-between-sessions-fix/
 
 # Claude Skill Not Saving State Between Sessions Fix
 
-Every Claude Code session starts fresh. When you close a session — or it times out — everything Claude knew from that conversation is gone. Skills like [`tdd` skill](/claude-skills-guide/best-claude-skills-for-developers-2026/), `pdf`, `frontend-design`, and even `supermemory` do not automatically remember what happened in the previous session unless you have explicitly configured persistence. This guide explains the mechanics and gives you practical fixes.
+Every Claude Code session starts fresh. When you close a session — or it times out — everything Claude knew from that conversation is gone. Skills like [`tdd` skill](/best-claude-skills-for-developers-2026/), `pdf`, `frontend-design`, and even `supermemory` do not automatically remember what happened in the previous session unless you have explicitly configured persistence. This guide explains the mechanics and gives you practical fixes.
 
 ## Why Claude Skills Are Stateless
 
@@ -29,7 +29,7 @@ This is by design. Skills are instruction templates, not running services. They 
 
 ## Fix 1: Use `supermemory` for Cross-Session Notes
 
-The [`supermemory` skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) is the primary tool for cross-session persistence. It reads from and writes to files on your local machine.
+The [`supermemory` skill](/claude-skills-token-optimization-reduce-api-costs/) is the primary tool for cross-session persistence. It reads from and writes to files on your local machine.
 
 **Saving state at end of session:**
 ```
@@ -195,8 +195,8 @@ This is a reminder, not an automated save — Claude still needs to be given a s
 
 ## Related Reading
 
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Persistent state in `supermemory` and `CLAUDE.md` reduces repeated context re-loading, directly lowering token costs across sessions
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Covers the supermemory skill in depth, including how it integrates with CLAUDE.md and project-scoped state management
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Understanding how skills load context at invocation time clarifies why manual state persistence is necessary between sessions
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — Persistent state in `supermemory` and `CLAUDE.md` reduces repeated context re-loading, directly lowering token costs across sessions
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Covers the supermemory skill in depth, including how it integrates with CLAUDE.md and project-scoped state management
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — Understanding how skills load context at invocation time clarifies why manual state persistence is necessary between sessions
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

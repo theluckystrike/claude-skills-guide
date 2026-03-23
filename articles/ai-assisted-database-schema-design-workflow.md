@@ -181,13 +181,13 @@ AI-assisted schema design workflow transforms database development from a solita
 Start small: use AI to generate your first schema draft, then iterate. You'll find the learning curve is gentle, and the productivity gains are immediate. As your comfort grows, layer in more skills and automation.
 
 
-**Related guides:** [Best Way to Use Claude Code for Database Migrations](https://theluckystrike.github.io/claude-skills-guide/best-way-to-use-claude-code-for-database-migrations/)
+**Related guides:** [Best Way to Use Claude Code for Database Migrations](https://theluckystrike.github.io/best-way-to-use-claude-code-for-database-migrations/)
 
 ## Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
 - [Using Claude Code with Prisma ORM Database Migrations](/using-claude-code-with-prisma-orm-database-migrations/) — Put your AI-designed schema into practice with automated Prisma migration workflows in Claude Code.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

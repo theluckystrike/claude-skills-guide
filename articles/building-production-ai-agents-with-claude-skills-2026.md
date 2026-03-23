@@ -13,24 +13,24 @@ permalink: /building-production-ai-agents-with-claude-skills-2026/
 
 # Building Production AI Agents with Claude Skills in 2026
 
-[Claude Code skills are `.md` files that extend Claude's behavior for specific tasks](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) When building production AI agents that run autonomously, these skills provide specialized context — for document processing, TDD workflows, memory management, and more. This guide covers practical patterns for composing them into agents that handle real workloads.
+[Claude Code skills are `.md` files that extend Claude's behavior for specific tasks](/claude-skill-md-format-complete-specification-guide/) When building production AI agents that run autonomously, these skills provide specialized context — for document processing, TDD workflows, memory management, and more. This guide covers practical patterns for composing them into agents that handle real workloads.
 
 ## Core Skills for Agent Development
 
 ### TDD Skill for Quality Assurance
 
-The [**tdd** skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) guides Claude through red-green-refactor cycles. In an agent pipeline, invoke it on your agent's own test suite before deployment:
+The [**tdd** skill](/best-claude-skills-for-developers-2026/) guides Claude through red-green-refactor cycles. In an agent pipeline, invoke it on your agent's own test suite before deployment:
 
 ```bash
 # Run TDD skill analysis on agent modules
 claude -p "/tdd analyze the agent modules in ./src and generate missing test cases"
 ```
 
-[This generates test cases based on your agent's actual implementation](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — state management, tool invocation sequences, and response validation.
+[This generates test cases based on your agent's actual implementation](/claude-tdd-skill-test-driven-development-workflow/) — state management, tool invocation sequences, and response validation.
 
 ### PDF Skill for Document Processing
 
-Production agents frequently process PDF documents. Invoke the [**pdf** skill](/claude-skills-guide/best-claude-skills-for-data-analysis/) when the agent receives a document:
+Production agents frequently process PDF documents. Invoke the [**pdf** skill](/best-claude-skills-for-data-analysis/) when the agent receives a document:
 
 ```bash
 claude -p "/pdf Extract all tables and section headings from /tmp/incoming-contract.pdf"
@@ -40,7 +40,7 @@ The skill handles complex layouts, form fields, and multi-column documents.
 
 ### Supermemory Skill for Context Management
 
-Long-running agents need persistent context between sessions. The [**supermemory** skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) provides retrieval of previously stored knowledge:
+Long-running agents need persistent context between sessions. The [**supermemory** skill](/claude-skills-token-optimization-reduce-api-costs/) provides retrieval of previously stored knowledge:
 
 ```
 /supermemory store: Order #12345 processed for customer acme-corp, result: approved
@@ -286,9 +286,9 @@ Each worker claims jobs atomically by moving the file before processing. Multipl
 
 ## Related Reading
 
-- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) — Top frontend skills with examples
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Broader developer skill overview
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/) — Top frontend skills with examples
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Broader developer skill overview
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
 
 
 ---

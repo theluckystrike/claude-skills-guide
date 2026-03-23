@@ -13,7 +13,7 @@ permalink: /claude-opus-46-vs-gpt-4o-for-coding-tasks-comparison/
 
 # Claude Opus 4.6 vs GPT-4o for Coding Tasks: 2026 Comparison
 
-[Choosing between Claude Opus 4.6 and GPT-4o for coding work is a real decision with real trade-offs](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Both are frontier-class models with strong coding capabilities. This comparison focuses on what matters to developers: code quality, reasoning on complex problems, context handling, agentic use, and cost.
+[Choosing between Claude Opus 4.6 and GPT-4o for coding work is a real decision with real trade-offs](/best-claude-code-skills-to-install-first-2026/) Both are frontier-class models with strong coding capabilities. This comparison focuses on what matters to developers: code quality, reasoning on complex problems, context handling, agentic use, and cost.
 
 ## The Models
 
@@ -80,7 +80,7 @@ permalink: /claude-opus-46-vs-gpt-4o-for-coding-tasks-comparison/
 
 **Generating code for a niche Python library:** GPT-4o may have better coverage; worth testing both.
 
-**Agentic multi-step development workflow:** Claude Opus 4.6 via Claude Code with [skills](/claude-skills-guide/best-claude-skills-for-developers-2026/) is the clear choice.
+**Agentic multi-step development workflow:** Claude Opus 4.6 via Claude Code with [skills](/best-claude-skills-for-developers-2026/) is the clear choice.
 
 ---
 
@@ -110,8 +110,8 @@ For pure coding quality on complex, multi-constraint tasks, **Claude Opus 4.6** 
 
 ## Related Reading
 
-- [Anthropic Official Skills vs Community Skills: Which Should You Use?](/claude-skills-guide/anthropic-official-skills-vs-community-skills-comparison/) — The skills ecosystem is one of Claude Opus 4.6's key advantages over GPT-4o for developer workflows; this guide explains what's available
-- [Claude Skills vs Prompts: Which Is Better for Your Workflow?](/claude-skills-guide/claude-skills-vs-prompts-which-is-better/) — Understanding when skills outperform raw prompting helps you get the most from Claude Opus 4.6's superior instruction-following
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Claude Opus 4.6's larger context window is powerful but more expensive — these optimization techniques help you use it efficiently
+- [Anthropic Official Skills vs Community Skills: Which Should You Use?](/anthropic-official-skills-vs-community-skills-comparison/) — The skills ecosystem is one of Claude Opus 4.6's key advantages over GPT-4o for developer workflows; this guide explains what's available
+- [Claude Skills vs Prompts: Which Is Better for Your Workflow?](/claude-skills-vs-prompts-which-is-better/) — Understanding when skills outperform raw prompting helps you get the most from Claude Opus 4.6's superior instruction-following
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — Claude Opus 4.6's larger context window is powerful but more expensive — these optimization techniques help you use it efficiently
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

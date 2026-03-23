@@ -15,7 +15,7 @@ score: 7
 
 # Claude Code Keeps Using Deprecated API Methods
 
-> **Note:** This article addresses Claude Code *generating* deprecated third-party library methods in the code it writes for you (urllib, numpy, old JavaScript patterns, etc.). If you are looking to fix deprecated Anthropic API calls in your own integration code — such as migrating from `/v1/completions` to `/v1/messages` — see [Fixing Claude Code Deprecated API Methods](/claude-skills-guide/claude-code-uses-deprecated-api-methods-fix/) instead.
+> **Note:** This article addresses Claude Code *generating* deprecated third-party library methods in the code it writes for you (urllib, numpy, old JavaScript patterns, etc.). If you are looking to fix deprecated Anthropic API calls in your own integration code — such as migrating from `/v1/completions` to `/v1/messages` — see [Fixing Claude Code Deprecated API Methods](/claude-code-uses-deprecated-api-methods-fix/) instead.
 
 One of the most common frustrations developers encounter when working with Claude Code is that it consistently generates code using deprecated API methods. Whether it's an outdated JavaScript method, a legacy Python function, or an old library version, Claude Code sometimes gravitates toward patterns it's seen more frequently in its training data—often older ones. This guide explains why this happens and provides concrete strategies to get Claude Code to use modern, non-deprecated APIs.
 
@@ -217,10 +217,10 @@ The most important takeaway: Claude Code needs explicit context about your proje
 
 ## Related Reading
 
-- [Fixing Claude Code Deprecated API Methods](/claude-skills-guide/claude-code-uses-deprecated-api-methods-fix/) — Migrate your own Anthropic API integrations away from deprecated endpoints and parameters
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Claude Code Not Working After Update: How to Fix](/claude-skills-guide/claude-code-not-working-after-update-how-to-fix/)
-- [Claude Code Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
+- [Fixing Claude Code Deprecated API Methods](/claude-code-uses-deprecated-api-methods-fix/) — Migrate your own Anthropic API integrations away from deprecated endpoints and parameters
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Claude Code Not Working After Update: How to Fix](/claude-code-not-working-after-update-how-to-fix/)
+- [Claude Code Troubleshooting Hub](/troubleshooting-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 ```

@@ -13,7 +13,7 @@ permalink: /claude-skills-for-rust-systems-programming/
 
 # Claude Skills for Rust Systems Programming
 
-[Rust systems programming demands precision with memory safety](/claude-skills-guide/claude-code-skills-for-c-sharp-dotnet-developers/), zero-cost abstractions, and fearless concurrency. Claude Code skills can accelerate your development workflow by providing specialized guidance for Rust-specific challenges. This guide covers practical applications of Claude skills for systems programming tasks.
+[Rust systems programming demands precision with memory safety](/claude-code-skills-for-c-sharp-dotnet-developers/), zero-cost abstractions, and fearless concurrency. Claude Code skills can accelerate your development workflow by providing specialized guidance for Rust-specific challenges. This guide covers practical applications of Claude skills for systems programming tasks.
 
 ## Setting Up Rust-Focused Skills
 
@@ -347,7 +347,7 @@ Claude generates this pattern and adapts the assertion to your specific function
 
 ## Building Custom Rust Skills
 
-[Create a custom skill file](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/):
+[Create a custom skill file](/claude-skill-md-format-complete-specification-guide/):
 
 ```markdown
 # Rust Systems Programming Skill
@@ -393,7 +393,7 @@ When tackling a new systems programming task with Claude, start by describing th
 2. Identify unsafe boundaries and document invariants
 3. Implement FFI bindings with correct memory management
 4. Add appropriate benchmarks for hot paths
-5. [Run miri to catch undefined behavior in unsafe code](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/)
+5. [Run miri to catch undefined behavior in unsafe code](/claude-tdd-skill-test-driven-development-workflow/)
 6. Run `cargo clippy -- -D warnings` to catch idiom violations before review
 7. Profile with `criterion` and the counting allocator pattern to verify memory budgets
 
@@ -418,9 +418,9 @@ Rust systems programming rewards precision. Claude skills enhance your workflow 
 
 ## Related Reading
 
-- [Claude Skill MD Format Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — build custom Rust-focused skills for systems programming
-- [Claude Code Skills for C# .NET Developers](/claude-skills-guide/claude-code-skills-for-c-sharp-dotnet-developers/) — compare systems programming skill patterns across languages
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — apply TDD to Rust systems code with cargo test
-- [Use Cases Hub](/claude-skills-guide/use-cases-hub/) — explore Claude Code skills for systems and low-level programming
+- [Claude Skill MD Format Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/) — build custom Rust-focused skills for systems programming
+- [Claude Code Skills for C# .NET Developers](/claude-code-skills-for-c-sharp-dotnet-developers/) — compare systems programming skill patterns across languages
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/) — apply TDD to Rust systems code with cargo test
+- [Use Cases Hub](/use-cases-hub/) — explore Claude Code skills for systems and low-level programming
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

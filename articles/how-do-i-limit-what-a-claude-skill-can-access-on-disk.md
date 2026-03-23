@@ -14,7 +14,7 @@ permalink: /how-do-i-limit-what-a-claude-skill-can-access-on-disk/
 
 # How Do I Limit What a Claude Skill Can Access on Disk
 
-[Claude Code skills extend the AI assistant's capabilities by loading custom instructions from Markdown files](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) While these skills provide powerful automation for tasks like PDF processing with the pdf skill, spreadsheet automation with xlsx, or test-driven development with tdd, understanding how to control their file system access becomes essential when working with sensitive projects or shared environments.
+[Claude Code skills extend the AI assistant's capabilities by loading custom instructions from Markdown files](/claude-skill-md-format-complete-specification-guide/) While these skills provide powerful automation for tasks like PDF processing with the pdf skill, spreadsheet automation with xlsx, or test-driven development with tdd, understanding how to control their file system access becomes essential when working with sensitive projects or shared environments.
 
 Disk access control is not just a security nicety — it is a practical requirement for any team that shares codebases, runs automated pipelines, or works on projects that contain credentials, production configurations, or client data. Getting this wrong can mean a skill that helpfully "cleans up" your project directory ends up deleting a `.env` file, touching a migration script you were not ready to run, or reading a secrets vault your CI pipeline expected to stay private. This guide covers the full spectrum of control mechanisms available, from quick shell-level isolation to per-skill path allowlists.
 
@@ -317,7 +317,7 @@ export CLAUDE_LOG_LEVEL=debug
 export CLAUDE_LOG_FILE=/var/log/claude/audit.log
 ```
 
-Review these logs periodically to identify any skill behavior that exceeds intended boundaries. The [supermemory skill](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/), which persists conversation context, particularly benefits from audit logging since it writes to hidden directories that aren't immediately visible during normal development.
+Review these logs periodically to identify any skill behavior that exceeds intended boundaries. The [supermemory skill](/claude-supermemory-skill-persistent-context-explained/), which persists conversation context, particularly benefits from audit logging since it writes to hidden directories that aren't immediately visible during normal development.
 
 ### Parsing Audit Logs for Anomalies
 
@@ -382,10 +382,10 @@ These controls give you the flexibility to use skills like pdf, xlsx, tdd, and f
 
 ## Related Reading
 
-- [Claude Code Permissions Model and Security Guide 2026](/claude-skills-guide/claude-code-permissions-model-security-guide-2026/) — Understand the full Claude Code permissions system that governs what skills can access by default
-- [Claude Code Secret Scanning: Prevent Credential Leaks Guide](/claude-skills-guide/claude-code-secret-scanning-prevent-credential-leaks-guide/) — Complement disk access controls with scanning to prevent sensitive credentials from leaking through skills
-- [How Do I Set Environment Variables for a Claude Skill](/claude-skills-guide/how-do-i-set-environment-variables-for-a-claude-skill/) — Configure skill-specific environment variables to further isolate API keys and paths from disk access
-- [Claude Skills: Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Explore foundational Claude Code security patterns and permission configuration approaches
+- [Claude Code Permissions Model and Security Guide 2026](/claude-code-permissions-model-security-guide-2026/) — Understand the full Claude Code permissions system that governs what skills can access by default
+- [Claude Code Secret Scanning: Prevent Credential Leaks Guide](/claude-code-secret-scanning-prevent-credential-leaks-guide/) — Complement disk access controls with scanning to prevent sensitive credentials from leaking through skills
+- [How Do I Set Environment Variables for a Claude Skill](/how-do-i-set-environment-variables-for-a-claude-skill/) — Configure skill-specific environment variables to further isolate API keys and paths from disk access
+- [Claude Skills: Getting Started Hub](/getting-started-hub/) — Explore foundational Claude Code security patterns and permission configuration approaches
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

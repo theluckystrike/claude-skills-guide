@@ -16,13 +16,13 @@ permalink: /claude-code-for-fly-io-deployment-automation-workflow/
 
 # Claude Code for Fly.io Deployment Automation Workflow
 
-Fly.io offers an elegant platform for deploying applications close to your users with automatic scaling and global distribution. When you combine Fly.io's infrastructure with Claude Code's automation capabilities, you create a deployment pipeline that handles build verification, health validation, and multi-region management without manual intervention. For an overview of deployment automation, visit the [workflows hub](/claude-skills-guide/workflows-hub/). This guide shows you how to build a complete deployment automation workflow using Claude skills like `/tdd`, `/supermemory`, `/pdf`, and `/webapp-testing`.
+Fly.io offers an elegant platform for deploying applications close to your users with automatic scaling and global distribution. When you combine Fly.io's infrastructure with Claude Code's automation capabilities, you create a deployment pipeline that handles build verification, health validation, and multi-region management without manual intervention. For an overview of deployment automation, visit the [workflows hub](/workflows-hub/). This guide shows you how to build a complete deployment automation workflow using Claude skills like `/tdd`, `/supermemory`, `/pdf`, and `/webapp-testing`.
 
 ## Why Fly.io Works Well with Claude Code Automation
 
-[Fly.io's container-based deployment model pairs naturally with Claude Code's ability to execute shell commands](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), analyze outputs, and make decisions based on results. The platform's CLI-first approach means every deployment step can be scripted and automated. Unlike complex Kubernetes setups, Fly.io provides a simpler abstraction that Claude Code can interact with directly, making it ideal for developers who want production-grade deployment without operational overhead.
+[Fly.io's container-based deployment model pairs naturally with Claude Code's ability to execute shell commands](/best-claude-code-skills-to-install-first-2026/), analyze outputs, and make decisions based on results. The platform's CLI-first approach means every deployment step can be scripted and automated. Unlike complex Kubernetes setups, Fly.io provides a simpler abstraction that Claude Code can interact with directly, making it ideal for developers who want production-grade deployment without operational overhead.
 
-The key advantage is that [Claude Code can monitor deployment status, automatically rollback failed deployments, and maintain deployment history using skills](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) like `/supermemory` for context retention across sessions.
+The key advantage is that [Claude Code can monitor deployment status, automatically rollback failed deployments, and maintain deployment history using skills](/claude-supermemory-skill-persistent-context-explained/) like `/supermemory` for context retention across sessions.
 
 ## Prerequisites and Project Setup
 
@@ -111,7 +111,7 @@ fi
 
 ## Using Claude Skills for Enhanced Deployment Validation
 
-The `/tdd` skill becomes invaluable when integrated into your deployment pipeline. It ensures code quality before any deployment proceeds — a workflow covered in detail in the [automated testing pipeline guide](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/):
+The `/tdd` skill becomes invaluable when integrated into your deployment pipeline. It ensures code quality before any deployment proceeds — a workflow covered in detail in the [automated testing pipeline guide](/claude-tdd-skill-test-driven-development-workflow/):
 
 ```
 Invoke the /tdd skill in your Claude Code session, then describe the changed files.
@@ -235,7 +235,7 @@ deploy_with_retry
 
 ## Continuous Deployment with GitHub Actions
 
-Integrate your Fly.io deployment with GitHub Actions for automated CI/CD — see the [Claude Code GitHub Actions workflow guide](/claude-skills-guide/claude-code-github-actions-workflow-matrix-strategy-guide/) for advanced pipeline patterns:
+Integrate your Fly.io deployment with GitHub Actions for automated CI/CD — see the [Claude Code GitHub Actions workflow guide](/claude-code-github-actions-workflow-matrix-strategy-guide/) for advanced pipeline patterns:
 
 ```yaml
 name: Deploy to Fly.io
@@ -269,10 +269,10 @@ The scripts and strategies in this guide provide a foundation you can customize 
 
 ## Related Reading
 
-- [Claude Code GitHub Actions Workflow Matrix Strategy Guide](/claude-skills-guide/claude-code-github-actions-workflow-matrix-strategy-guide/) — extend your Fly.io CI with matrix testing strategies
-- [Claude Code AWS ECS Fargate Setup and Deployment Tutorial](/claude-skills-guide/claude-code-aws-ecs-fargate-setup-deployment-tutorial/) — compare container deployment approaches across cloud providers
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — integrate test-driven quality gates into your deployment pipeline
-- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — the essential skill stack for deployment automation
+- [Claude Code GitHub Actions Workflow Matrix Strategy Guide](/claude-code-github-actions-workflow-matrix-strategy-guide/) — extend your Fly.io CI with matrix testing strategies
+- [Claude Code AWS ECS Fargate Setup and Deployment Tutorial](/claude-code-aws-ecs-fargate-setup-deployment-tutorial/) — compare container deployment approaches across cloud providers
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/) — integrate test-driven quality gates into your deployment pipeline
+- [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/) — the essential skill stack for deployment automation
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

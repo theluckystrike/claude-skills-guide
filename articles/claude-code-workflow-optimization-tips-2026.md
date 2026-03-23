@@ -13,11 +13,11 @@ permalink: /claude-code-workflow-optimization-tips-2026/
 
 # Claude Code Workflow Optimization Tips for 2026
 
-Claude Code continues to evolve, and [developers who master workflow optimization gain significant productivity advantages](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) This guide covers practical strategies to streamline your Claude Code experience, from skill composition to context management techniques that work in 2026. Whether you are just past the beginner stage or have been using Claude Code for months, there are almost certainly habits and patterns here that will cut your iteration time meaningfully.
+Claude Code continues to evolve, and [developers who master workflow optimization gain significant productivity advantages](/best-claude-code-skills-to-install-first-2026/) This guide covers practical strategies to streamline your Claude Code experience, from skill composition to context management techniques that work in 2026. Whether you are just past the beginner stage or have been using Claude Code for months, there are almost certainly habits and patterns here that will cut your iteration time meaningfully.
 
 ## Strategic Skill Loading
 
-One of the most effective optimization strategies involves loading only the skills you need for specific tasks. [each skill adds tokens to your context window](/claude-skills-guide/claude-md-too-long-context-window-optimization/) For complex projects, this impacts response quality and speed.
+One of the most effective optimization strategies involves loading only the skills you need for specific tasks. [each skill adds tokens to your context window](/claude-md-too-long-context-window-optimization/) For complex projects, this impacts response quality and speed.
 
 Instead of loading all your installed skills, invoke only what you need:
 
@@ -307,9 +307,9 @@ Experiment with these techniques incrementally. Track what improves your product
 
 ## Related Reading
 
-- [Claude Skills Context Window Management Best Practices](/claude-skills-guide/claude-md-too-long-context-window-optimization/)
-- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
-- [Claude Code Output Quality: How to Improve Results](/claude-skills-guide/claude-code-output-quality-how-to-improve-results/)
-- [Getting Started Hub](/claude-skills-guide/getting-started-hub/)
+- [Claude Skills Context Window Management Best Practices](/claude-md-too-long-context-window-optimization/)
+- [Best Claude Code Skills to Install First (2026)](/best-claude-code-skills-to-install-first-2026/)
+- [Claude Code Output Quality: How to Improve Results](/claude-code-output-quality-how-to-improve-results/)
+- [Getting Started Hub](/getting-started-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

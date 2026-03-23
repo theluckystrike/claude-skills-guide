@@ -13,7 +13,7 @@ permalink: /measuring-claude-code-skill-efficiency-metrics/
 
 # Measuring Claude Code Skill Efficiency Metrics
 
-[Understanding how efficiently your Claude Code skills perform helps you make smarter decisions](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) about which skills to keep, optimize, or replace. Rather than guessing which tools deliver value, tracking concrete metrics reveals the actual impact on your development workflow.
+[Understanding how efficiently your Claude Code skills perform helps you make smarter decisions](/best-claude-code-skills-to-install-first-2026/) about which skills to keep, optimize, or replace. Rather than guessing which tools deliver value, tracking concrete metrics reveals the actual impact on your development workflow.
 
 This guide covers practical approaches to measuring skill efficiency, relevant metrics to track, and actionable patterns for improving performance across your skill stack.
 
@@ -74,7 +74,7 @@ After completing projects where you heavily used skills, rate your satisfaction 
 
 Based on typical usage patterns, certain skills demonstrate consistently high efficiency:
 
-The [**supermemory** skill](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) excels at retrieval tasks. It quickly surfaces relevant context from your previous conversations, reducing time spent re-explaining requirements. Most users report retrieval times under five seconds for queries spanning months of history.
+The [**supermemory** skill](/claude-supermemory-skill-persistent-context-explained/) excels at retrieval tasks. It quickly surfaces relevant context from your previous conversations, reducing time spent re-explaining requirements. Most users report retrieval times under five seconds for queries spanning months of history.
 
 The **pdf** skill handles document processing with high accuracy. It extracts text, tables, and metadata without requiring you to open documents manually. For workflows involving contracts, reports, or technical documentation, this skill typically reduces task time by 80%.
 
@@ -120,7 +120,7 @@ Built by theluckystrike — More at [zovo.one](https://zovo.one)
 
 ## Related Reading
 
-- [Claude Skills Token Optimization: Reduce API Costs Guide](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Optimize the token consumption metrics that most affect your skill efficiency calculations.
-- [Caching Strategies for Claude Code Skill Outputs](/claude-skills-guide/caching-strategies-for-claude-code-skill-outputs/) — Improve task completion rate and time-to-output metrics by caching frequently used skill results.
-- [Claude Skills Slow Performance: Speed Up Guide](/claude-skills-guide/claude-skills-slow-performance-speed-up-guide/) — When your metrics reveal slow skills, use this guide to diagnose and fix the root cause.
-- [Advanced Claude Skills](/claude-skills-guide/advanced-hub/) — Advanced optimization patterns for engineers who take skill efficiency measurement seriously.
+- [Claude Skills Token Optimization: Reduce API Costs Guide](/claude-skills-token-optimization-reduce-api-costs/) — Optimize the token consumption metrics that most affect your skill efficiency calculations.
+- [Caching Strategies for Claude Code Skill Outputs](/caching-strategies-for-claude-code-skill-outputs/) — Improve task completion rate and time-to-output metrics by caching frequently used skill results.
+- [Claude Skills Slow Performance: Speed Up Guide](/claude-skills-slow-performance-speed-up-guide/) — When your metrics reveal slow skills, use this guide to diagnose and fix the root cause.
+- [Advanced Claude Skills](/advanced-hub/) — Advanced optimization patterns for engineers who take skill efficiency measurement seriously.

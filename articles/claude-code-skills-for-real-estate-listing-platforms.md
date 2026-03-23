@@ -18,7 +18,7 @@ Building a real estate listing platform involves managing property data, integra
 
 ## xlsx: Property Data Management
 
-[Real estate platforms rely heavily on structured data](/claude-skills-guide/claude-code-skills-for-travel-booking-platforms/) — property listings, agent information, pricing history, and neighborhood statistics. The **xlsx** skill handles spreadsheet operations that power your backend data pipeline.
+[Real estate platforms rely heavily on structured data](/claude-code-skills-for-travel-booking-platforms/) — property listings, agent information, pricing history, and neighborhood statistics. The **xlsx** skill handles spreadsheet operations that power your backend data pipeline.
 
 ```python
 # Generate property listings from spreadsheet data
@@ -95,7 +95,7 @@ This pattern handles the common MLS workflow: new listings get inserted, price r
 
 ## pdf: Property Document Generation
 
-Real estate transactions require documents — listing agreements, disclosure forms, and marketing flyers. [The **pdf** skill automates PDF creation from property data](/claude-skills-guide/what-is-the-best-claude-skill-for-generating-documentation/).
+Real estate transactions require documents — listing agreements, disclosure forms, and marketing flyers. [The **pdf** skill automates PDF creation from property data](/what-is-the-best-claude-skill-for-generating-documentation/).
 
 ```python
 from reportlab.lib.pagesizes import letter
@@ -472,7 +472,7 @@ A well-designed search API also surfaces saved searches and email alerts. When a
 
 ## Automated Testing with TDD
 
-Quality real estate platforms require rigorous testing. [Use the TDD skill to write tests first](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/):
+Quality real estate platforms require rigorous testing. [Use the TDD skill to write tests first](/claude-tdd-skill-test-driven-development-workflow/):
 
 ```
 "Write tests for property search filtering function covering
@@ -613,10 +613,10 @@ The xlsx and pdf skills reduce the engineering burden on the data pipeline and d
 
 ## Related Reading
 
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — write tests for property search filtering and pricing logic
-- [Automated Code Documentation Workflow with Claude Skills](/claude-skills-guide/automated-code-documentation-workflow-with-claude-skills/) — generate property listing documentation automatically
-- [Claude Code Skills for Travel Booking Platforms](/claude-skills-guide/claude-code-skills-for-travel-booking-platforms/) — similar patterns for booking and availability management
-- [Use Cases Hub](/claude-skills-guide/use-cases-hub/) — explore Claude Code skills for property and booking platforms
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/) — write tests for property search filtering and pricing logic
+- [Automated Code Documentation Workflow with Claude Skills](/automated-code-documentation-workflow-with-claude-skills/) — generate property listing documentation automatically
+- [Claude Code Skills for Travel Booking Platforms](/claude-code-skills-for-travel-booking-platforms/) — similar patterns for booking and availability management
+- [Use Cases Hub](/use-cases-hub/) — explore Claude Code skills for property and booking platforms
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

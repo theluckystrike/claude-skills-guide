@@ -104,9 +104,9 @@ The combination of agentic execution, native tool use, extensible skills, and pr
 
 ## Related Reading
 
-- [Claude Code vs GitHub Copilot Workspace 2026](/claude-skills-guide/claude-code-vs-github-copilot-workspace-2026/) — More AI coding tool comparisons
-- [Why Do Teams Switch from Copilot to Claude Code](/claude-skills-guide/why-do-teams-switch-from-copilot-to-claude-code/) — Real reasons teams switch
-- [What Is Claude Code and Why Developers Love It in 2026](/claude-skills-guide/what-is-claude-code-and-why-developers-love-it-2026/) — Claude Code fundamentals
-- [Claude Code Free Tier vs Pro Plan Feature Comparison 2026](/claude-skills-guide/claude-code-free-tier-vs-pro-plan-feature-comparison-2026/) — Value comparison
+- [Claude Code vs GitHub Copilot Workspace 2026](/claude-code-vs-github-copilot-workspace-2026/) — More AI coding tool comparisons
+- [Why Do Teams Switch from Copilot to Claude Code](/why-do-teams-switch-from-copilot-to-claude-code/) — Real reasons teams switch
+- [What Is Claude Code and Why Developers Love It in 2026](/what-is-claude-code-and-why-developers-love-it-2026/) — Claude Code fundamentals
+- [Claude Code Free Tier vs Pro Plan Feature Comparison 2026](/claude-code-free-tier-vs-pro-plan-feature-comparison-2026/) — Value comparison
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

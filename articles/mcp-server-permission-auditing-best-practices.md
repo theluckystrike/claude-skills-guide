@@ -71,7 +71,7 @@ If you discover unexpected servers or overly broad permissions, take immediate a
 
 Every MCP server should have the minimum access required for its function. If a server only needs to read files, it should not have write permissions. Review each server's documented capabilities and disable unnecessary ones.
 
-For example, [when using the `pdf` skill to process documents](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), you only need read access to input files and write access to output directories. Restrict the server to those specific paths rather than granting broad filesystem access.
+For example, [when using the `pdf` skill to process documents](/best-claude-code-skills-to-install-first-2026/), you only need read access to input files and write access to output directories. Restrict the server to those specific paths rather than granting broad filesystem access.
 
 ### 2. Credential Management
 
@@ -100,7 +100,7 @@ Some MCP servers run as local processes, while others connect to remote services
 - Remote servers should use TLS encryption and valid certificates
 - Consider whether a server needs to be accessible from network contexts at all
 
-If you're running local development with the [`tdd` skill for test-driven development](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/), ensure your test databases aren't exposed to network interfaces unnecessarily.
+If you're running local development with the [`tdd` skill for test-driven development](/claude-tdd-skill-test-driven-development-workflow/), ensure your test databases aren't exposed to network interfaces unnecessarily.
 
 ### 4. Audit Logging
 
@@ -159,7 +159,7 @@ Run this script as part of your deployment pipeline or CI/CD process to catch co
 
 ## Real-World Scenario: Multi-User Environment
 
-In shared environments where multiple developers use Claude, permission boundaries become critical. Suppose your team uses the [`supermemory` skill for knowledge management](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/). The skill needs write access to the memory database but should never modify system files or execute shell commands.
+In shared environments where multiple developers use Claude, permission boundaries become critical. Suppose your team uses the [`supermemory` skill for knowledge management](/claude-supermemory-skill-persistent-context-explained/). The skill needs write access to the memory database but should never modify system files or execute shell commands.
 
 Configure the server with explicit path restrictions:
 
@@ -197,11 +197,11 @@ Build audit frequency into your workflow—weekly checks take minutes but preven
 
 ## Related Reading
 
-- [Claude Code MCP Server Least Privilege Configuration](/claude-skills-guide/claude-code-mcp-server-least-privilege-configuration/)
-- [MCP Prompt Injection Attack Prevention Guide](/claude-skills-guide/mcp-prompt-injection-attack-prevention-guide/)
-- [MCP OAuth 2.1 Authentication Implementation Guide](/claude-skills-guide/mcp-oauth-21-authentication-implementation-guide/)
-- [Building Your First MCP Tool Integration Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/)
-- [Advanced Hub](/claude-skills-guide/advanced-hub/)
+- [Claude Code MCP Server Least Privilege Configuration](/claude-code-mcp-server-least-privilege-configuration/)
+- [MCP Prompt Injection Attack Prevention Guide](/mcp-prompt-injection-attack-prevention-guide/)
+- [MCP OAuth 2.1 Authentication Implementation Guide](/mcp-oauth-21-authentication-implementation-guide/)
+- [Building Your First MCP Tool Integration Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)
+- [Advanced Hub](/advanced-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 ```

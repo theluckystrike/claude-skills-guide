@@ -434,8 +434,8 @@ Here is a concrete approach to building a production-ready real-time event syste
 
 ## Related Reading
 
-- [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Guides Hub](/claude-skills-guide/guides-hub/)
+- [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/)
+- [Guides Hub](/guides-hub/)
 
 ---
 

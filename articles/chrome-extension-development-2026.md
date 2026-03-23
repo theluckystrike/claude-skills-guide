@@ -251,8 +251,8 @@ Claude Code is genuinely useful for Chrome extension work because the surface ar
 
 ## Related Reading
 
-- [Claude Code for gRPC API Development](/claude-skills-guide/claude-code-grpc-api-development-guide/)
-- [Open Source Contribution Workflow with Claude Code](/claude-skills-guide/claude-code-open-source-contribution-workflow-guide-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Code for gRPC API Development](/claude-code-grpc-api-development-guide/)
+- [Open Source Contribution Workflow with Claude Code](/claude-code-open-source-contribution-workflow-guide-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

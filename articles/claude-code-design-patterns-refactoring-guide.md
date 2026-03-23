@@ -193,10 +193,10 @@ The result is skills that are easier to understand, test, and extend. Your futur
 
 ## Related Reading
 
-- [How to Make Claude Code Follow DRY and SOLID Principles](/claude-skills-guide/how-to-make-claude-code-follow-dry-solid-principles/) — Design patterns implement DRY and SOLID principles
-- [Claude Code Dependency Injection Refactoring](/claude-skills-guide/claude-code-dependency-injection-refactoring/) — DI is a key design pattern for refactoring
-- [Claude Code Test Driven Refactoring Guide](/claude-skills-guide/claude-code-test-driven-refactoring-guide/) — Safe pattern-based refactoring
-- [Claude Code Coupling and Cohesion Improvement](/claude-skills-guide/claude-code-coupling-and-cohesion-improvement/) — Design patterns improve coupling/cohesion
+- [How to Make Claude Code Follow DRY and SOLID Principles](/how-to-make-claude-code-follow-dry-solid-principles/) — Design patterns implement DRY and SOLID principles
+- [Claude Code Dependency Injection Refactoring](/claude-code-dependency-injection-refactoring/) — DI is a key design pattern for refactoring
+- [Claude Code Test Driven Refactoring Guide](/claude-code-test-driven-refactoring-guide/) — Safe pattern-based refactoring
+- [Claude Code Coupling and Cohesion Improvement](/claude-code-coupling-and-cohesion-improvement/) — Design patterns improve coupling/cohesion
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

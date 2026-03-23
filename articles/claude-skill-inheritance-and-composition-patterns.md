@@ -13,7 +13,7 @@ permalink: /claude-skill-inheritance-and-composition-patterns/
 
 # Claude Skill Inheritance and Composition Patterns
 
-Claude skills are Markdown files that enhance Claude Code's capabilities. By understanding how to structure skills with inheritance and composition patterns, you can build modular, reusable skill sets that scale across projects and teams. Before diving into advanced patterns, read [how to write a skill .md file](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) to understand the foundational format.
+Claude skills are Markdown files that enhance Claude Code's capabilities. By understanding how to structure skills with inheritance and composition patterns, you can build modular, reusable skill sets that scale across projects and teams. Before diving into advanced patterns, read [how to write a skill .md file](/how-to-write-a-skill-md-file-for-claude-code/) to understand the foundational format.
 
 ## How Claude Skills Work
 
@@ -215,7 +215,7 @@ Invoke this skill when you need to generate tests for PDF processing logic.
 
 ### Version Control Your Skills
 
-Store skills in git repositories to track changes and collaborate with team members. This enables review workflows, rollback capabilities, and shared skill libraries. If you need to undo a bad update, the guide on [how to rollback a bad Claude skill update safely](/claude-skills-guide/how-do-i-rollback-a-bad-claude-skill-update-safely/) walks through the process step by step.
+Store skills in git repositories to track changes and collaborate with team members. This enables review workflows, rollback capabilities, and shared skill libraries. If you need to undo a bad update, the guide on [how to rollback a bad Claude skill update safely](/how-do-i-rollback-a-bad-claude-skill-update-safely/) walks through the process step by step.
 
 ## Advanced Composition: Skill Chaining
 
@@ -248,9 +248,9 @@ Whether you're combining the pdf skill with tdd for documentation workflows, or 
 
 ## Related Reading
 
-- [Claude Skill Dependency Injection Patterns](/claude-skills-guide/claude-skill-dependency-injection-patterns/) — Complement inheritance and composition patterns with dependency injection for more testable skill architectures.
-- [Claude Code Multi Agent Orchestration Patterns Guide](/claude-skills-guide/claude-code-multi-agent-orchestration-patterns-guide/) — Apply composition patterns to orchestrate multiple specialized agents in complex workflows.
-- [How Do I Combine Two Claude Skills in One Workflow](/claude-skills-guide/how-do-i-combine-two-claude-skills-in-one-workflow/) — Practical guide to chaining and composing skills in real development scenarios.
-- [Advanced Claude Skills](/claude-skills-guide/advanced-hub/) — Discover more advanced patterns for building modular, reusable skill architectures.
+- [Claude Skill Dependency Injection Patterns](/claude-skill-dependency-injection-patterns/) — Complement inheritance and composition patterns with dependency injection for more testable skill architectures.
+- [Claude Code Multi Agent Orchestration Patterns Guide](/claude-code-multi-agent-orchestration-patterns-guide/) — Apply composition patterns to orchestrate multiple specialized agents in complex workflows.
+- [How Do I Combine Two Claude Skills in One Workflow](/how-do-i-combine-two-claude-skills-in-one-workflow/) — Practical guide to chaining and composing skills in real development scenarios.
+- [Advanced Claude Skills](/advanced-hub/) — Discover more advanced patterns for building modular, reusable skill architectures.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

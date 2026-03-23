@@ -13,13 +13,13 @@ permalink: /claude-code-verbose-mode-debugging-tips/
 
 # Claude Code Verbose Mode Debugging Tips
 
-[When you're building custom Claude skills or integrating AI assistance](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/), understanding how to debug effectively is essential. Claude Code provides verbose mode options that expose the internal decision-making process, tool invocations, and intermediate reasoning steps that help you identify why a skill behaves unexpectedly.
+[When you're building custom Claude skills or integrating AI assistance](/claude-skill-md-format-complete-specification-guide/), understanding how to debug effectively is essential. Claude Code provides verbose mode options that expose the internal decision-making process, tool invocations, and intermediate reasoning steps that help you identify why a skill behaves unexpectedly.
 
 This guide covers practical techniques for using Claude Code's verbose mode to troubleshoot skill issues, trace execution flow, and optimize your AI-assisted development process.
 
 ## Enabling Verbose Mode in Claude Code
 
-[Claude Code offers multiple levels of verbosity that reveal different amounts of internal information](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) The primary flags you can use are `--verbose` and `--debug`, which control the detail level of output.
+[Claude Code offers multiple levels of verbosity that reveal different amounts of internal information](/best-claude-code-skills-to-install-first-2026/) The primary flags you can use are `--verbose` and `--debug`, which control the detail level of output.
 
 ```bash
 # Basic verbose output
@@ -344,9 +344,9 @@ Mastering Claude Code's verbose mode transforms debugging from guesswork into sy
 
 ## Related Reading
 
-- [Claude Skill .md Format: Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)
-- [Claude Code Crashes When Loading Skill: Debug Steps](/claude-skills-guide/claude-code-crashes-when-loading-skill-debug-steps/)
-- [Claude Code Output Quality: How to Improve Results](/claude-skills-guide/claude-code-output-quality-how-to-improve-results/)
-- [Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
+- [Claude Skill .md Format: Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/)
+- [Claude Code Crashes When Loading Skill: Debug Steps](/claude-code-crashes-when-loading-skill-debug-steps/)
+- [Claude Code Output Quality: How to Improve Results](/claude-code-output-quality-how-to-improve-results/)
+- [Troubleshooting Hub](/troubleshooting-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

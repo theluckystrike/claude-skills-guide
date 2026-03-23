@@ -13,7 +13,7 @@ permalink: /claude-code-skills-for-golang-microservices/
 
 # Claude Code Skills for Golang Microservices
 
-Building Golang microservices requires handling repetitive patterns, from setting up HTTP handlers to configuring Dockerfiles. Claude Code accelerates these workflows through [built-in skills](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) that understand Go's idioms and microservice architecture patterns.
+Building Golang microservices requires handling repetitive patterns, from setting up HTTP handlers to configuring Dockerfiles. Claude Code accelerates these workflows through [built-in skills](/claude-skill-md-format-complete-specification-guide/) that understand Go's idioms and microservice architecture patterns.
 
 ## Available Skills for Go Development
 
@@ -109,7 +109,7 @@ The generated code follows standard Go patterns: context propagation, error hand
 
 ## Writing Unit Tests with /tdd Skill
 
-The [/tdd skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) helps generate comprehensive tests for your Go code. Activate it and describe your test requirements:
+The [/tdd skill](/claude-tdd-skill-test-driven-development-workflow/) helps generate comprehensive tests for your Go code. Activate it and describe your test requirements:
 
 ```
 /tdd Generate unit tests for the user service with mock repository. Test CreateUser validates input, GetUser returns correct data, and errors are handled properly.
@@ -349,7 +349,7 @@ message User {
 }
 ```
 
-Claude Code generates the Go code from your proto files and creates the gRPC server implementation. For broader inter-service communication patterns, see [Claude Code Skills Microservices Communication Patterns](/claude-skills-guide/claude-code-skills-microservices-communication-patterns/).
+Claude Code generates the Go code from your proto files and creates the gRPC server implementation. For broader inter-service communication patterns, see [Claude Code Skills Microservices Communication Patterns](/claude-code-skills-microservices-communication-patterns/).
 
 ## Docker Compose for Local Development
 
@@ -447,13 +447,13 @@ This pattern ensures your microservice handles errors consistently and validates
 
 ## Summary
 
-Claude Code skills enhance Golang microservices development by automating handler generation, test creation, Docker configuration, and API testing. The `/tdd` and `/webapp-testing` skills, combined with direct prompting for Docker configuration, cover the full development lifecycle. For Go-specific patterns, describing your requirements directly to Claude Code produces idiomatic code that follows established conventions. Explore more backend patterns in the [use cases hub](/claude-skills-guide/use-cases-hub/).
+Claude Code skills enhance Golang microservices development by automating handler generation, test creation, Docker configuration, and API testing. The `/tdd` and `/webapp-testing` skills, combined with direct prompting for Docker configuration, cover the full development lifecycle. For Go-specific patterns, describing your requirements directly to Claude Code produces idiomatic code that follows established conventions. Explore more backend patterns in the [use cases hub](/use-cases-hub/).
 
 ## Related Reading
 
-- [Claude Code Dockerfile Generation: Multi-Stage Build Guide](/claude-skills-guide/claude-code-dockerfile-generation-multi-stage-build-guide/) — containerize Go services with production-ready Docker configurations
-- [Claude TDD Skill: Test-Driven Development Guide](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — apply TDD patterns to Go service testing
-- [Claude Code Skills Microservices Communication Patterns](/claude-skills-guide/claude-code-skills-microservices-communication-patterns/) — inter-service communication patterns for microservices
-- [Building Production AI Agents with Claude Skills in 2026](/claude-skills-guide/building-production-ai-agents-with-claude-skills-2026/) — production architecture with Claude Code skills
+- [Claude Code Dockerfile Generation: Multi-Stage Build Guide](/claude-code-dockerfile-generation-multi-stage-build-guide/) — containerize Go services with production-ready Docker configurations
+- [Claude TDD Skill: Test-Driven Development Guide](/claude-tdd-skill-test-driven-development-workflow/) — apply TDD patterns to Go service testing
+- [Claude Code Skills Microservices Communication Patterns](/claude-code-skills-microservices-communication-patterns/) — inter-service communication patterns for microservices
+- [Building Production AI Agents with Claude Skills in 2026](/building-production-ai-agents-with-claude-skills-2026/) — production architecture with Claude Code skills
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

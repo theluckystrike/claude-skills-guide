@@ -68,7 +68,7 @@ Skills that loop ("fix errors until tests pass") can run indefinitely if a test 
 - Never re-run the full test suite more than 5 times per task
 ```
 
-This prevents runaway token consumption from infinite retry loops. See the [guide on fixing skill infinite loops](/claude-skills-guide/how-to-fix-claude-skill-infinite-loop-issue/) for detailed patterns.
+This prevents runaway token consumption from infinite retry loops. See the [guide on fixing skill infinite loops](/how-to-fix-claude-skill-infinite-loop-issue/) for detailed patterns.
 
 ## Strategy 4: Use Targeted Tool Calls
 
@@ -88,7 +88,7 @@ An `Edit` call that changes 3 lines transfers only those lines. A `Write` call t
 Long conversations accumulate context that inflates every subsequent API call. For token-sensitive workflows:
 
 - Start fresh sessions for unrelated tasks instead of continuing one long conversation
-- Use the [`supermemory` skill](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) to persist key decisions across sessions without carrying full conversation history
+- Use the [`supermemory` skill](/claude-supermemory-skill-persistent-context-explained/) to persist key decisions across sessions without carrying full conversation history
 - Break large tasks into smaller, focused prompts rather than one mega-prompt
 
 ## Strategy 6: Avoid Redundant Skill Instructions
@@ -220,9 +220,9 @@ Applying this checklist to a mature but unoptimized skill typically reduces its 
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [How to Write a Skill .md File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/)
-- [How to Fix Claude Skill Infinite Loop Issues](/claude-skills-guide/how-to-fix-claude-skill-infinite-loop-issue/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [How to Write a Skill .md File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/)
+- [How to Fix Claude Skill Infinite Loop Issues](/how-to-fix-claude-skill-infinite-loop-issue/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

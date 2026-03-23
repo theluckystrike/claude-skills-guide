@@ -16,11 +16,11 @@ permalink: /mcp-prompt-injection-attack-prevention-guide/
 
 # MCP Prompt Injection Attack Prevention Guide
 
-[The Model Context Protocol (MCP) enables powerful integrations between Claude and external services](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/), but these connections create potential attack surfaces for prompt injection. Understanding how to prevent these attacks is essential for developers building secure MCP-powered applications.
+[The Model Context Protocol (MCP) enables powerful integrations between Claude and external services](/building-your-first-mcp-tool-integration-guide-2026/), but these connections create potential attack surfaces for prompt injection. Understanding how to prevent these attacks is essential for developers building secure MCP-powered applications.
 
 ## What Is Prompt Injection in MCP?
 
-[Prompt injection occurs when malicious input manipulates an AI system's behavior through carefully crafted prompts](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) In MCP contexts, this becomes particularly dangerous because external data sources—databases, APIs, file systems—can deliver untrusted content directly into your prompt context.
+[Prompt injection occurs when malicious input manipulates an AI system's behavior through carefully crafted prompts](/building-your-first-mcp-tool-integration-guide-2026/) In MCP contexts, this becomes particularly dangerous because external data sources—databases, APIs, file systems—can deliver untrusted content directly into your prompt context.
 
 Consider a scenario where your MCP server fetches user-generated content:
 
@@ -312,10 +312,10 @@ Prompt injection prevention requires defense in depth. No single technique elimi
 
 ## Related Reading
 
-- [MCP Tool Description Injection Attack Explained](/claude-skills-guide/mcp-tool-description-injection-attack-explained/)
-- [MCP OAuth 2.1 Authentication Implementation Guide](/claude-skills-guide/mcp-oauth-21-authentication-implementation-guide/)
-- [How to Make Claude Code Write Secure Code Always](/claude-skills-guide/how-to-make-claude-code-write-secure-code-always/)
-- [Advanced Hub](/claude-skills-guide/advanced-hub/)
+- [MCP Tool Description Injection Attack Explained](/mcp-tool-description-injection-attack-explained/)
+- [MCP OAuth 2.1 Authentication Implementation Guide](/mcp-oauth-21-authentication-implementation-guide/)
+- [How to Make Claude Code Write Secure Code Always](/how-to-make-claude-code-write-secure-code-always/)
+- [Advanced Hub](/advanced-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

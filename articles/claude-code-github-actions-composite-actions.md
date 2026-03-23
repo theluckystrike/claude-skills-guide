@@ -16,11 +16,11 @@ permalink: /claude-code-github-actions-composite-actions/
 
 # Claude Code GitHub Actions Composite Actions
 
-[GitHub Actions composite actions let you package multiple workflow steps into a single, reusable action](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) When you combine composite actions with Claude Code, you create reusable automation building blocks that can run AI-powered tasks across different repositories. This guide shows you how to build composite actions that invoke Claude skills for code review, documentation generation, and test automation.
+[GitHub Actions composite actions let you package multiple workflow steps into a single, reusable action](/best-claude-code-skills-to-install-first-2026/) When you combine composite actions with Claude Code, you create reusable automation building blocks that can run AI-powered tasks across different repositories. This guide shows you how to build composite actions that invoke Claude skills for code review, documentation generation, and test automation.
 
 ## Why Composite Actions Matter for Claude Integration
 
-Standard GitHub Actions workflows often repeat the same Claude invocation steps across multiple repositories. You might need to run a `tdd` skill to analyze test coverage on every pull request, [use `pdf` skill to generate formatted reports](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)e reports, or invoke `frontend-design` skill to check accessibility. Composite actions eliminate this duplication by letting you define the Claude invocation once and reuse it anywhere.
+Standard GitHub Actions workflows often repeat the same Claude invocation steps across multiple repositories. You might need to run a `tdd` skill to analyze test coverage on every pull request, [use `pdf` skill to generate formatted reports](/best-claude-code-skills-to-install-first-2026/)e reports, or invoke `frontend-design` skill to check accessibility. Composite actions eliminate this duplication by letting you define the Claude invocation once and reuse it anywhere.
 
 Composite actions also solve the parameterization challenge. Different projects may need different Claude models, different skill configurations, or different file filters. A well-designed composite action accepts these as inputs, making your automation portable across teams and repositories.
 
@@ -402,10 +402,10 @@ The key principle is to invest in the composite action once and reuse it everywh
 
 ## Related Reading
 
-- [Claude Code GitHub Actions Approval Workflows](/claude-skills-guide/claude-code-github-actions-approval-workflows/)
-- [Claude Code GitHub Actions Matrix Builds Guide](/claude-skills-guide/claude-code-github-actions-matrix-builds-guide/)
-- [Automated Testing Pipeline with Claude TDD Skill 2026](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/)
-- [Workflows Hub](/claude-skills-guide/workflows-hub/)
+- [Claude Code GitHub Actions Approval Workflows](/claude-code-github-actions-approval-workflows/)
+- [Claude Code GitHub Actions Matrix Builds Guide](/claude-code-github-actions-matrix-builds-guide/)
+- [Automated Testing Pipeline with Claude TDD Skill 2026](/claude-tdd-skill-test-driven-development-workflow/)
+- [Workflows Hub](/workflows-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

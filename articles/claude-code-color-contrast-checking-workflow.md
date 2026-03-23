@@ -371,9 +371,9 @@ Teams that treat color contrast as a first-class quality metric — tracked in d
 
 ## Related Reading
 
-- [Claude Code WCAG Accessibility Audit Workflow](/claude-skills-guide/claude-code-wcag-accessibility-audit-workflow/)
-- [Claude Code Axe Accessibility Testing Guide](/claude-skills-guide/claude-code-axe-accessibility-testing-guide/)
-- [Claude Code Screen Reader Testing Workflow](/claude-skills-guide/claude-code-screen-reader-testing-workflow/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Code WCAG Accessibility Audit Workflow](/claude-code-wcag-accessibility-audit-workflow/)
+- [Claude Code Axe Accessibility Testing Guide](/claude-code-axe-accessibility-testing-guide/)
+- [Claude Code Screen Reader Testing Workflow](/claude-code-screen-reader-testing-workflow/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

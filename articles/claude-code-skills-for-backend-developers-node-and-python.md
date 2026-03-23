@@ -13,13 +13,13 @@ permalink: /claude-code-skills-for-backend-developers-node-and-python/
 
 # Claude Code Skills for Backend Developers: Node.js and Python
 
-[Backend development involves repetitive tasks that consume development time](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Claude Code and its built-in skills help automate these workflows. This guide covers practical applications of the real skills for Node.js and Python backend work.
+[Backend development involves repetitive tasks that consume development time](/best-claude-code-skills-to-install-first-2026/) Claude Code and its built-in skills help automate these workflows. This guide covers practical applications of the real skills for Node.js and Python backend work.
 
 ## What Skills Are Available
 
 Claude Code ships with these built-in skills:
 
-- `/[tdd skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/)` — test-driven development guidance
+- `/[tdd skill](/claude-tdd-skill-test-driven-development-workflow/)` — test-driven development guidance
 - `/pdf` — document processing
 - `/docx` — Word document generation
 - `/xlsx` — spreadsheet operations
@@ -327,9 +327,9 @@ Custom skills are just `.md` files in `~/.claude/skills/` with a short YAML fron
 
 ## Related Reading
 
-- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Full guide to the tdd skill used for Node.js and Python test generation in this guide
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — See the broader ecosystem of developer skills that complement backend workflows
-- [Automated Testing Pipeline with Claude TDD Skill 2026](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Build a complete automated testing pipeline for your Node.js or Python backend project
-- [Claude Skills Use Cases Hub](/claude-skills-guide/use-cases-hub/) — Explore more backend development, API, and infrastructure use case guides
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/) — Full guide to the tdd skill used for Node.js and Python test generation in this guide
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — See the broader ecosystem of developer skills that complement backend workflows
+- [Automated Testing Pipeline with Claude TDD Skill 2026](/claude-tdd-skill-test-driven-development-workflow/) — Build a complete automated testing pipeline for your Node.js or Python backend project
+- [Claude Skills Use Cases Hub](/use-cases-hub/) — Explore more backend development, API, and infrastructure use case guides
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

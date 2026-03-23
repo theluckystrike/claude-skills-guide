@@ -13,11 +13,11 @@ permalink: /claude-code-nix-flake-reproducible-development-environment/
 
 # Claude Code with Nix Flakes for Reproducible Development Environments
 
-Development environment reproducibility remains one of the hardest problems in software engineering. You ship code that works on your machine, only to watch it fail on a colleague's workstation or in CI. The traditional solutions—Docker containers, virtual machines, or extensive README instructions—each bring tradeoffs around weight, speed, and flexibility. Nix Flakes offer a compelling alternative, and when combined with Claude Code, they create a powerful workflow for declarative, [reproducible environment](/claude-skills-guide/claude-code-dockerfile-generation-multi-stage-build-guide/) environments.
+Development environment reproducibility remains one of the hardest problems in software engineering. You ship code that works on your machine, only to watch it fail on a colleague's workstation or in CI. The traditional solutions—Docker containers, virtual machines, or extensive README instructions—each bring tradeoffs around weight, speed, and flexibility. Nix Flakes offer a compelling alternative, and when combined with Claude Code, they create a powerful workflow for declarative, [reproducible environment](/claude-code-dockerfile-generation-multi-stage-build-guide/) environments.
 
 ## What Nix Flakes Bring to Development
 
-[Nix Flakes provide a purely functional approach to package management and system configuration](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Unlike traditional package managers that install packages into a global namespace, Nix stores each package in its own isolated directory with all dependencies. This isolation eliminates the "works on my machine" problem entirely.
+[Nix Flakes provide a purely functional approach to package management and system configuration](/best-claude-code-skills-to-install-first-2026/) Unlike traditional package managers that install packages into a global namespace, Nix stores each package in its own isolated directory with all dependencies. This isolation eliminates the "works on my machine" problem entirely.
 
 A Nix Flake is a declarative specification for a development environment. You define what you need—Node.js version, Python packages, system tools, environment variables—and Nix builds an environment that matches your specification exactly. The key advantage is reproducibility: given the same flake definition, any machine running Nix will produce an identical environment.
 
@@ -50,7 +50,7 @@ Here's a basic flake for a Python project:
 }
 ```
 
-This single file replaces environment-specific setup scripts, Dockerfiles, and "install these packages" README sections. Unlike [dev container setups](/claude-skills-guide/claude-code-dev-containers-devcontainer-json-setup-guide/), Nix runs directly on the host without a container runtime.
+This single file replaces environment-specific setup scripts, Dockerfiles, and "install these packages" README sections. Unlike [dev container setups](/claude-code-dev-containers-devcontainer-json-setup-guide/), Nix runs directly on the host without a container runtime.
 
 ## Combining Claude Code with Nix Flakes
 
@@ -274,7 +274,7 @@ This ensures Claude Code reads project-specific configuration when you enter the
 
 ## When to Choose Nix Flakes Over Docker
 
-Docker containers excel at full-system isolation and deployment. Nix Flakes excel at development environment consistency without container overhead. For local development, Nix typically provides faster iteration—changes to your environment apply instantly without container rebuilds. See the [full Docker vs Nix comparison for Claude Code projects](/claude-skills-guide/using-claude-code-inside-docker-container-tutorial/) for a detailed breakdown.
+Docker containers excel at full-system isolation and deployment. Nix Flakes excel at development environment consistency without container overhead. For local development, Nix typically provides faster iteration—changes to your environment apply instantly without container rebuilds. See the [full Docker vs Nix comparison for Claude Code projects](/using-claude-code-inside-docker-container-tutorial/) for a detailed breakdown.
 
 A practical approach uses both: Nix Flakes for development, Docker for production deployment. Your `flake.nix` can even specify a Docker image as an output:
 
@@ -311,9 +311,9 @@ The goal isn't perfection—it's consistency. A flake that covers 80% of your en
 
 ## Related Reading
 
-- [Claude Code Dev Containers: devcontainer.json Setup Guide](/claude-skills-guide/claude-code-dev-containers-devcontainer-json-setup-guide/) — Use dev containers as an alternative approach for reproducible environments
-- [Claude Code GitPod Cloud IDE Integration Tutorial 2026](/claude-skills-guide/claude-code-gitpod-cloud-ide-integration-tutorial-2026/) — Run Claude Code in ephemeral cloud environments without local Nix setup
-- [Claude Code with Docker: Container Setup Guide](/claude-skills-guide/using-claude-code-inside-docker-container-tutorial/) — Compare Docker-based isolation against Nix flake reproducibility
-- [Claude Skills Hub](/claude-skills-guide/integrations-hub/) — Explore all environment setup and toolchain integration patterns
+- [Claude Code Dev Containers: devcontainer.json Setup Guide](/claude-code-dev-containers-devcontainer-json-setup-guide/) — Use dev containers as an alternative approach for reproducible environments
+- [Claude Code GitPod Cloud IDE Integration Tutorial 2026](/claude-code-gitpod-cloud-ide-integration-tutorial-2026/) — Run Claude Code in ephemeral cloud environments without local Nix setup
+- [Claude Code with Docker: Container Setup Guide](/using-claude-code-inside-docker-container-tutorial/) — Compare Docker-based isolation against Nix flake reproducibility
+- [Claude Skills Hub](/integrations-hub/) — Explore all environment setup and toolchain integration patterns
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

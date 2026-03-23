@@ -391,9 +391,9 @@ Verify that text extraction handles various page structures correctly, and test 
 
 ## Related Reading
 
-- [Chrome Extension Development: Getting Started Guide](/claude-skills-guide/chrome-extension-development-getting-started/)
+- [Chrome Extension Development: Getting Started Guide](/chrome-extension-development-getting-started/)
 - [Web Speech API Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

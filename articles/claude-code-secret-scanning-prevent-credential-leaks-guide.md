@@ -19,9 +19,9 @@ Credential leaks represent one of the most dangerous security vulnerabilities in
 
 Developers frequently work with multiple API keys, database credentials, and authentication tokens across projects. When using AI-assisted development tools like Claude Code, there's an additional attack surface: your prompts might inadvertently include sensitive values, or generated code might hardcode credentials that should remain externalized.
 
-The [tdd skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) and other automation skills often generate code templates that could accidentally contain placeholder patterns resembling real credentials. Without proper scanning, these secrets can slip into version control, CI/CD pipelines, or deployed applications.
+The [tdd skill](/best-claude-skills-for-developers-2026/) and other automation skills often generate code templates that could accidentally contain placeholder patterns resembling real credentials. Without proper scanning, these secrets can slip into version control, CI/CD pipelines, or deployed applications.
 
-A solid secret scanning strategy addresses three distinct scenarios: scanning your codebase for existing leaked secrets, preventing new secrets from being committed, and ensuring Claude Code interactions don't expose sensitive information. This complements the [Claude Code permissions model](/claude-skills-guide/claude-code-permissions-model-security-guide-2026/) which controls what the AI itself can access.
+A solid secret scanning strategy addresses three distinct scenarios: scanning your codebase for existing leaked secrets, preventing new secrets from being committed, and ensuring Claude Code interactions don't expose sensitive information. This complements the [Claude Code permissions model](/claude-code-permissions-model-security-guide-2026/) which controls what the AI itself can access.
 
 ## Implementing Secret Scanning in Your Workflow
 
@@ -120,7 +120,7 @@ function validateEnvironment() {
 
 You can create a dedicated Claude Code skill that orchestrates all scanning activities. This skill should coordinate between different tools and provide unified reporting.
 
-The skill definition would include tools for file scanning, git history analysis, and environment validation. It can integrate with the [supermemory skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) to track historical findings and track remediation progress across your codebase.
+The skill definition would include tools for file scanning, git history analysis, and environment validation. It can integrate with the [supermemory skill](/claude-skills-token-optimization-reduce-api-costs/) to track historical findings and track remediation progress across your codebase.
 
 When scanning large repositories, performance matters. Implement parallel scanning using worker threads or child processes to scan multiple files simultaneously. The tdd skill can generate tests for your scanner itself, ensuring pattern accuracy and handling edge cases.
 
@@ -166,7 +166,7 @@ Static scanning catches issues at commit time, but active monitoring provides de
 
 The supermemory skill can maintain a database of known secrets (encrypted, of course) to detect reintroduction of previously fixed leaks. When combined with CI/CD integration, you create a comprehensive security posture that evolves with your project.
 
-For teams using [GitHub Actions with approval workflows](/claude-skills-guide/claude-code-github-actions-approval-workflows/), integrating secret scanning ensures every pull request passes security checks before merging. The claude-xlsx-skill can generate compliance reports documenting your scanning coverage.
+For teams using [GitHub Actions with approval workflows](/claude-code-github-actions-approval-workflows/), integrating secret scanning ensures every pull request passes security checks before merging. The claude-xlsx-skill can generate compliance reports documenting your scanning coverage.
 
 ## Conclusion
 
@@ -177,8 +177,8 @@ The investment in proper secret scanning pays dividends in reduced incident resp
 
 ## Related Reading
 
-- [Claude Skills for Enterprise Security and Compliance](/claude-skills-guide/claude-skills-for-enterprise-security-compliance-guide/) — Enterprise secret management, vault integration, and compliance audit patterns
-- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — DevOps skills that include pre-push secret scanning hooks
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Automate secret scanning efficiently without excessive API usage
+- [Claude Skills for Enterprise Security and Compliance](/claude-skills-for-enterprise-security-compliance-guide/) — Enterprise secret management, vault integration, and compliance audit patterns
+- [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/) — DevOps skills that include pre-push secret scanning hooks
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — Automate secret scanning efficiently without excessive API usage
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

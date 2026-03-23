@@ -17,7 +17,7 @@ Claude Code skills are `.md` files — plain Markdown with YAML front matter. Th
 
 ## Understanding Claude Skills Architecture
 
-A Claude skill is a single Markdown file. Claude reads it when you invoke `/skill-name` and follows the instructions inside. There's no build step, no compiled code, and no special runtime — just the `.md` file. The skill.md format is central to this—for a complete walkthrough of how it works, see [Skill MD File Format Explained With Examples](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/).
+A Claude skill is a single Markdown file. Claude reads it when you invoke `/skill-name` and follows the instructions inside. There's no build step, no compiled code, and no special runtime — just the `.md` file. The skill.md format is central to this—for a complete walkthrough of how it works, see [Skill MD File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/).
 
 ```markdown
 ---
@@ -102,7 +102,7 @@ Include a `LICENSE` file in the repository root. If you are submitting a PR to a
 
 For skills that operate on specific file types (PDFs, spreadsheets, CSVs), include a small sample input file in an `examples/` directory. This serves two purposes: maintainers can reproduce your tests quickly, and new users have a file to practice with immediately. Keep example files small — a one-page PDF or a ten-row CSV is enough.
 
-For guidance on writing the actual skill.md file, see [How to Write a Skill MD File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/).
+For guidance on writing the actual skill.md file, see [How to Write a Skill MD File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/).
 
 ## GitHub Repository Structure for Shared Skills
 
@@ -184,7 +184,7 @@ Good skill documentation is the difference between a skill that gets adopted and
 
 **Version your examples to your dependencies.** If your skill generates code that uses a third-party library, note the version the examples were tested against. APIs change, and a skill tested against `pandas 1.5` may silently produce wrong output on `pandas 2.x`.
 
-For a practical look at what the pdf skill can do that your contribution might build on, see [Best Claude Skills for Data Analysis](/claude-skills-guide/best-claude-skills-for-data-analysis/).
+For a practical look at what the pdf skill can do that your contribution might build on, see [Best Claude Skills for Data Analysis](/best-claude-skills-for-data-analysis/).
 
 ## Submitting Your Contribution
 
@@ -228,7 +228,7 @@ Not tested: encrypted PDFs, PDFs larger than 100MB, scanned/image-only PDFs.
 
 Respond to reviewer feedback promptly. Maintainers may ask for clearer wording, different examples, or adjustments to the front matter format. A PR that sits unresponded for two weeks often gets closed as stale, even if the skill is good.
 
-It also helps to understand the difference between official and community skill expectations before you submit — see [Official vs Community Claude Skills: Which Should You Use?](/claude-skills-guide/anthropic-official-skills-vs-community-skills-comparison/) to calibrate the quality bar appropriately.
+It also helps to understand the difference between official and community skill expectations before you submit — see [Official vs Community Claude Skills: Which Should You Use?](/anthropic-official-skills-vs-community-skills-comparison/) to calibrate the quality bar appropriately.
 
 ## Maintaining Your Contribution
 
@@ -240,9 +240,9 @@ List your skill in community directories or forums. Skills gain adoption when pe
 
 ## Related Reading
 
-- [How to Write a Skill MD File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) — The technical foundation for building any skill
-- [Skill MD File Format Explained With Examples](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — Technical guide to the format your contribution must follow
-- [Official vs Community Claude Skills: Which Should You Use?](/claude-skills-guide/anthropic-official-skills-vs-community-skills-comparison/) — Understand the ecosystem you're contributing to
+- [How to Write a Skill MD File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/) — The technical foundation for building any skill
+- [Skill MD File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/) — Technical guide to the format your contribution must follow
+- [Official vs Community Claude Skills: Which Should You Use?](/anthropic-official-skills-vs-community-skills-comparison/) — Understand the ecosystem you're contributing to
 
 *Built by theluckystrike — More at [zovo.one](https://zovo.one)
 *

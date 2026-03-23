@@ -183,8 +183,8 @@ To leverage Claude Code for matrix builds, use prompts like:
 
 ## Related Reading
 
-- [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Discover how Claude Code fits into your complete development toolkit
-- [Guides Hub](/claude-skills-guide/guides-hub/) — Browse all practical developer guides
+- [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/) — Discover how Claude Code fits into your complete development toolkit
+- [Guides Hub](/guides-hub/) — Browse all practical developer guides
 
 ---
 

@@ -13,7 +13,7 @@ tags: [claude-code, claude-skills]
 
 # Claude Code with Supabase Backend Integration Guide
 
-Integrating Claude Code with Supabase provides a powerful workflow for building backend services. This guide walks through connecting Claude Code to your Supabase project, executing database operations, and deploying serverless functions. For project structure, migration strategies, RLS policy patterns, and CI/CD pipelines, see the [Claude Code Supabase Backend Development Workflow Tips](/claude-skills-guide/claude-code-supabase-backend-development-workflow-tips/) guide.
+Integrating Claude Code with Supabase provides a powerful workflow for building backend services. This guide walks through connecting Claude Code to your Supabase project, executing database operations, and deploying serverless functions. For project structure, migration strategies, RLS policy patterns, and CI/CD pipelines, see the [Claude Code Supabase Backend Development Workflow Tips](/claude-code-supabase-backend-development-workflow-tips/) guide.
 
 ## Prerequisites
 
@@ -268,7 +268,7 @@ CREATE POLICY "Public documents are readable" ON documents
 
 When Claude Code writes migration scripts for you, describe access patterns this clearly. The model generates accurate policies when given concrete business rules rather than abstract descriptions.
 
-For advanced RLS patterns and fine-grained access control, see the [Supabase Auth RLS Guide](/claude-skills-guide/claude-code-supabase-auth-row-level-security-guide/).
+For advanced RLS patterns and fine-grained access control, see the [Supabase Auth RLS Guide](/claude-code-supabase-auth-row-level-security-guide/).
 
 ## Authentication Integration
 
@@ -354,7 +354,7 @@ The **tdd** skill pairs well here — write tests for your authentication flow b
 
 ## Edge Functions
 
-Supabase Edge Functions run Deno at the edge and integrate tightly with your database. For detailed examples of writing Edge Functions with full error handling, authentication checks, and deployment patterns, see the [Claude Code Supabase Backend Development Workflow Tips](/claude-skills-guide/claude-code-supabase-backend-development-workflow-tips/) guide.
+Supabase Edge Functions run Deno at the edge and integrate tightly with your database. For detailed examples of writing Edge Functions with full error handling, authentication checks, and deployment patterns, see the [Claude Code Supabase Backend Development Workflow Tips](/claude-code-supabase-backend-development-workflow-tips/) guide.
 
 The short form: create a function file in `supabase/functions/<name>/index.ts`, implement your handler, then deploy:
 
@@ -550,9 +550,9 @@ For greenfield projects, a productive sequence is: define your schema and RLS po
 
 ## Related Reading
 
-- [Claude Code Skills for Supabase Full-Stack Apps Guide](/claude-skills-guide/claude-code-skills-for-supabase-full-stack-apps-guide/) — See also
-- [Claude Skills With Supabase Database Integration](/claude-skills-guide/claude-skills-with-supabase-database-integration/) — See also
-- [Full Stack Web App with Claude Skills: Step by Step](/claude-skills-guide/full-stack-web-app-with-claude-skills-step-by-step/) — See also
-- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/) — See also
+- [Claude Code Skills for Supabase Full-Stack Apps Guide](/claude-code-skills-for-supabase-full-stack-apps-guide/) — See also
+- [Claude Skills With Supabase Database Integration](/claude-skills-with-supabase-database-integration/) — See also
+- [Full Stack Web App with Claude Skills: Step by Step](/full-stack-web-app-with-claude-skills-step-by-step/) — See also
+- [Claude Code Tutorials Hub](/tutorials-hub/) — See also
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

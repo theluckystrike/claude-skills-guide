@@ -14,11 +14,11 @@ permalink: /claude-code-csp-content-security-policy-generation-guide/
 
 # Claude Code CSP Content Security Policy Generation Guide
 
-[Content Security Policy (CSP) is one of the most effective defenses](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) against cross-site scripting (XSS) attacks and data injection vulnerabilities. When properly implemented, CSP tells browsers exactly which resources are allowed to load on your page, blocking malicious scripts from executing. This guide shows you how to use Claude Code to generate, validate, and maintain CSP headers for your projects.
+[Content Security Policy (CSP) is one of the most effective defenses](/best-claude-code-skills-to-install-first-2026/) against cross-site scripting (XSS) attacks and data injection vulnerabilities. When properly implemented, CSP tells browsers exactly which resources are allowed to load on your page, blocking malicious scripts from executing. This guide shows you how to use Claude Code to generate, validate, and maintain CSP headers for your projects.
 
 ## Why Content Security Policy Matters
 
-[Modern web applications load resources from multiple sources](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/): your own servers, third-party APIs, content delivery networks, analytics tools, and embedded widgets. Each of these represents a potential attack vector. Without a CSP, browsers execute any script that arrives alongside your HTML, leaving users vulnerable to credential theft, session hijacking, and malware distribution.
+[Modern web applications load resources from multiple sources](/claude-skill-md-format-complete-specification-guide/): your own servers, third-party APIs, content delivery networks, analytics tools, and embedded widgets. Each of these represents a potential attack vector. Without a CSP, browsers execute any script that arrives alongside your HTML, leaving users vulnerable to credential theft, session hijacking, and malware distribution.
 
 A well-configured CSP reduces your attack surface significantly. According to the OWASP Foundation, proper CSP implementation can prevent up to 90% of cross-site scripting attacks. The challenge is that CSP can be complex to configure correctly—too restrictive and your application breaks, too permissive and you gain little security benefit.
 
@@ -306,9 +306,9 @@ Review my webpack config and styled-components setup for CSP compatibility issue
 
 Several Claude skills can assist with CSP management:
 
-- The [**tdd** skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) helps you write tests that verify CSP headers are correctly applied
+- The [**tdd** skill](/best-claude-skills-for-developers-2026/) helps you write tests that verify CSP headers are correctly applied
 - The **frontend-design** skill can audit your frontend code for CSP compliance
-- Use [**supermemory**](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) to maintain a record of approved domains and their purposes
+- Use [**supermemory**](/claude-skills-token-optimization-reduce-api-costs/) to maintain a record of approved domains and their purposes
 - The **xlsx** skill helps you track CSP violations across different environments
 
 Automated testing for CSP is underused. With the tdd skill, you can write integration tests that verify headers on real responses:
@@ -355,9 +355,9 @@ Remember that CSP is not a one-time configuration—it requires ongoing maintena
 
 ## Related Reading
 
-- [Claude Skills for Enterprise Security and Compliance](/claude-skills-guide/claude-skills-for-enterprise-security-compliance-guide/) — Enterprise security framework patterns that complement CSP implementation
-- [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Developer skills for building and testing security configurations
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Efficiently generate and iterate on security policy configurations
+- [Claude Skills for Enterprise Security and Compliance](/claude-skills-for-enterprise-security-compliance-guide/) — Enterprise security framework patterns that complement CSP implementation
+- [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/) — Developer skills for building and testing security configurations
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — Efficiently generate and iterate on security policy configurations
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

@@ -450,8 +450,8 @@ With these debugging techniques and Claude Code's assistance, you'll spend less 
 
 ## Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Claude Code Not Working After Update: How to Fix](/claude-skills-guide/claude-code-not-working-after-update-how-to-fix/)
-- [Claude Code Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/)
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Claude Code Not Working After Update: How to Fix](/claude-code-not-working-after-update-how-to-fix/)
+- [Claude Code Troubleshooting Hub](/troubleshooting-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

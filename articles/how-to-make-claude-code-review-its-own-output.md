@@ -59,7 +59,7 @@ After creating this skill, invoke it with `/review` whenever you want Claude to 
 
 ## Method 2: Using Claude Skills for Automated Review
 
-Several community skills include review components. The [tdd skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) enforces test-driven development, which naturally creates a review cycle—you write tests, then implementation, then verify the tests pass. This catches issues early.
+Several community skills include review components. The [tdd skill](/claude-tdd-skill-test-driven-development-workflow/) enforces test-driven development, which naturally creates a review cycle—you write tests, then implementation, then verify the tests pass. This catches issues early.
 
 The [frontend-design skill](https://claude.ai/skills/frontend-design) includes accessibility and performance checks that review generated UI code against web standards. When you generate a component using this skill, it will flag accessibility violations like missing ARIA labels or improper heading hierarchy.
 
@@ -188,9 +188,9 @@ Building self-review into your Claude Code workflow takes minimal setup but deli
 
 ## Related Reading
 
-- [Claude Code Output Quality How to Improve Results](/claude-skills-guide/claude-code-output-quality-how-to-improve-results/)
-- [Claude Code Keeps Making Same Mistake Fix Guide](/claude-skills-guide/claude-code-keeps-making-same-mistake-fix-guide/)
-- [Best Way to Scope Tasks for Claude Code Success](/claude-skills-guide/best-way-to-scope-tasks-for-claude-code-success/)
-- [Claude Skills Tutorials Hub](/claude-skills-guide/tutorials-hub/)
+- [Claude Code Output Quality How to Improve Results](/claude-code-output-quality-how-to-improve-results/)
+- [Claude Code Keeps Making Same Mistake Fix Guide](/claude-code-keeps-making-same-mistake-fix-guide/)
+- [Best Way to Scope Tasks for Claude Code Success](/best-way-to-scope-tasks-for-claude-code-success/)
+- [Claude Skills Tutorials Hub](/tutorials-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

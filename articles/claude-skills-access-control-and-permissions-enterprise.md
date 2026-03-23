@@ -13,7 +13,7 @@ permalink: /claude-skills-access-control-and-permissions-enterprise/
 
 # Claude Skills Access Control and Permissions Enterprise Guide
 
-Enterprise deployments of Claude Code require careful attention to access control and permissions. When multiple teams share AI capabilities, you need granular control over which skills each user or group can access, what those skills can do, and how permissions are enforced across your infrastructure. Before building a custom permission model, it is worth reviewing how Claude Code's built-in runtime enforces boundaries—the [Claude Code permissions model and security guide](/claude-skills-guide/claude-code-permissions-model-security-guide-2026/) covers those defaults in depth.
+Enterprise deployments of Claude Code require careful attention to access control and permissions. When multiple teams share AI capabilities, you need granular control over which skills each user or group can access, what those skills can do, and how permissions are enforced across your infrastructure. Before building a custom permission model, it is worth reviewing how Claude Code's built-in runtime enforces boundaries—the [Claude Code permissions model and security guide](/claude-code-permissions-model-security-guide-2026/) covers those defaults in depth.
 
 ## Understanding Claude Skills Permission Architecture
 
@@ -171,7 +171,7 @@ resource_limits:
   max_network_calls: 50
 ```
 
-The `xlsx` skill, for instance, would declare spreadsheet file access, while the `docker` skill would require container runtime permissions. Skills like `supermemory` that handle persistent context should declare appropriate data access permissions. For developers troubleshooting a specific denied invocation, the [skill permission scope error guide](/claude-skills-guide/claude-code-skill-permission-denied-error-fix-2026/) explains what each error message means and how to resolve it.
+The `xlsx` skill, for instance, would declare spreadsheet file access, while the `docker` skill would require container runtime permissions. Skills like `supermemory` that handle persistent context should declare appropriate data access permissions. For developers troubleshooting a specific denied invocation, the [skill permission scope error guide](/claude-code-skill-permission-denied-error-fix-2026/) explains what each error message means and how to resolve it.
 
 ## Practical Examples: Enterprise Skill Deployment
 
@@ -224,7 +224,7 @@ Enterprise permission systems require comprehensive monitoring. Track not just w
 - Failed permission attempts (potential security incidents)
 - Pattern anomalies indicating privilege escalation
 
-Skills like the security and audit skills can process these logs automatically, generating compliance reports for SOC 2, HIPAA, or GDPR requirements. For a broader governance framework that includes audit checklists, see the [Claude skills for enterprise security and compliance guide](/claude-skills-guide/claude-skills-for-enterprise-security-compliance-guide/).
+Skills like the security and audit skills can process these logs automatically, generating compliance reports for SOC 2, HIPAA, or GDPR requirements. For a broader governance framework that includes audit checklists, see the [Claude skills for enterprise security and compliance guide](/claude-skills-for-enterprise-security-compliance-guide/).
 
 ## Conclusion
 
@@ -234,9 +234,9 @@ The key is treating permissions as a first-class concern in your Claude Code dep
 
 ## Related Reading
 
-- [Claude Code Permissions Model and Security Guide](/claude-skills-guide/claude-code-permissions-model-security-guide-2026/)
-- [Claude Skills for Enterprise Security & Compliance Guide](/claude-skills-guide/claude-skills-for-enterprise-security-compliance-guide/)
-- [Claude Code Skill Permission Scope Error: Fix Guide](/claude-skills-guide/claude-code-skill-permission-denied-error-fix-2026/)
-- [Structuring Claude Skills for Large Enterprise Codebases](/claude-skills-guide/structuring-claude-skills-for-large-enterprise-codebases/)
+- [Claude Code Permissions Model and Security Guide](/claude-code-permissions-model-security-guide-2026/)
+- [Claude Skills for Enterprise Security & Compliance Guide](/claude-skills-for-enterprise-security-compliance-guide/)
+- [Claude Code Skill Permission Scope Error: Fix Guide](/claude-code-skill-permission-denied-error-fix-2026/)
+- [Structuring Claude Skills for Large Enterprise Codebases](/structuring-claude-skills-for-large-enterprise-codebases/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

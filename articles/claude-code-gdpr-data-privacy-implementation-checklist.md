@@ -13,11 +13,11 @@ permalink: /claude-code-gdpr-data-privacy-implementation-checklist/
 
 # GDPR Data Privacy Implementation Checklist for Claude Code
 
-[Implementing GDPR compliance in software projects requires systematic attention to data handling](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), user consent, and privacy controls. Claude Code provides capabilities that help developers build privacy-conscious applications, though ultimate compliance responsibility rests with the development team. This checklist covers practical steps for integrating data privacy protections into your workflow using Claude Code and its ecosystem of skills.
+[Implementing GDPR compliance in software projects requires systematic attention to data handling](/best-claude-code-skills-to-install-first-2026/), user consent, and privacy controls. Claude Code provides capabilities that help developers build privacy-conscious applications, though ultimate compliance responsibility rests with the development team. This checklist covers practical steps for integrating data privacy protections into your workflow using Claude Code and its ecosystem of skills.
 
 ## Foundation: Understand Data Flow Before Coding
 
-Before writing any code, map how personal data moves through your system. Document what data you collect, where it travels, who accesses it, and how long you retain it. The [supermemory skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) helps maintain persistent context across sessions, allowing you to build a comprehensive data inventory that persists throughout the project lifecycle.
+Before writing any code, map how personal data moves through your system. Document what data you collect, where it travels, who accesses it, and how long you retain it. The [supermemory skill](/claude-skills-token-optimization-reduce-api-costs/) helps maintain persistent context across sessions, allowing you to build a comprehensive data inventory that persists throughout the project lifecycle.
 
 Create a simple data flow document:
 
@@ -34,7 +34,7 @@ Create a simple data flow document:
 
 This inventory becomes your reference point for implementing specific privacy controls. Share it with your entire team — developers, product managers, and legal counsel should all sign off on what is collected and why. If you cannot write a clear business justification for a data type, that is a strong signal you should not collect it.
 
-[This inventory becomes your reference point for implementing specific privacy controls](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)
+[This inventory becomes your reference point for implementing specific privacy controls](/claude-skill-md-format-complete-specification-guide/)
 
 ### Conducting a Data Protection Impact Assessment
 
@@ -53,7 +53,7 @@ Certain Claude skills directly support GDPR implementation. The pdf skill enable
 
 For frontend implementations, the frontend-design skill incorporates accessibility considerations that intersect with privacy requirements — ensuring users can understand and control their data through properly labeled forms and clear consent mechanisms.
 
-The [tdd skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) supports test-driven development of privacy features, allowing you to write acceptance tests for consent flows, data deletion routines, and access control before implementation begins.
+The [tdd skill](/best-claude-skills-for-developers-2026/) supports test-driven development of privacy features, allowing you to write acceptance tests for consent flows, data deletion routines, and access control before implementation begins.
 
 ### Mapping Skills to GDPR Articles
 
@@ -349,8 +349,8 @@ Building privacy into your development process from the start costs less than re
 
 ## Related Reading
 
-- [Claude Skills for Enterprise Security and Compliance](/claude-skills-guide/claude-skills-for-enterprise-security-compliance-guide/) — Enterprise-grade access controls, audit logging, and compliance framework patterns
-- [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — The tdd, pdf, and xlsx skills referenced throughout GDPR implementation workflows
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep compliance audit automation sessions cost-efficient
+- [Claude Skills for Enterprise Security and Compliance](/claude-skills-for-enterprise-security-compliance-guide/) — Enterprise-grade access controls, audit logging, and compliance framework patterns
+- [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/) — The tdd, pdf, and xlsx skills referenced throughout GDPR implementation workflows
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — Keep compliance audit automation sessions cost-efficient
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

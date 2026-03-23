@@ -393,9 +393,9 @@ The combination of skills like frontend-design for component patterns, tdd for v
 
 ## Related Reading
 
-- [Claude Code WCAG Accessibility Audit Workflow](/claude-skills-guide/claude-code-wcag-accessibility-audit-workflow/) — WCAG audits identify missing ARIA labels
-- [Claude Code Keyboard Navigation Testing Guide](/claude-skills-guide/claude-code-keyboard-navigation-testing-guide/) — Keyboard nav and ARIA labels work together
-- [Claude Code Axe Accessibility Testing Guide](/claude-skills-guide/claude-code-axe-accessibility-testing-guide/) — Axe catches ARIA label violations automatically
-- [Best Way to Use Claude Code for Frontend Styling](/claude-skills-guide/best-way-to-use-claude-code-for-frontend-styling/) — Styling and accessibility go together in frontend work
+- [Claude Code WCAG Accessibility Audit Workflow](/claude-code-wcag-accessibility-audit-workflow/) — WCAG audits identify missing ARIA labels
+- [Claude Code Keyboard Navigation Testing Guide](/claude-code-keyboard-navigation-testing-guide/) — Keyboard nav and ARIA labels work together
+- [Claude Code Axe Accessibility Testing Guide](/claude-code-axe-accessibility-testing-guide/) — Axe catches ARIA label violations automatically
+- [Best Way to Use Claude Code for Frontend Styling](/best-way-to-use-claude-code-for-frontend-styling/) — Styling and accessibility go together in frontend work
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

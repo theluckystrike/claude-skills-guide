@@ -192,9 +192,9 @@ Incorrect imports from Claude Code usually stem from missing context about your 
 
 ## Related Reading
 
-- [Claude Code Keeps Making the Same Mistake Fix Guide](/claude-skills-guide/claude-code-keeps-making-same-mistake-fix-guide/) — Systematic approach to fixing repeated generation errors
-- [Claude Code Output Quality How to Improve Results](/claude-skills-guide/claude-code-output-quality-how-to-improve-results/) — Improving accuracy of generated code broadly
-- [How to Write Effective CLAUDE.md for Your Project](/claude-skills-guide/how-to-write-effective-claude-md-for-your-project/) — CLAUDE.md can specify import style and module conventions
-- [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — Related code generation issue fixes
+- [Claude Code Keeps Making the Same Mistake Fix Guide](/claude-code-keeps-making-same-mistake-fix-guide/) — Systematic approach to fixing repeated generation errors
+- [Claude Code Output Quality How to Improve Results](/claude-code-output-quality-how-to-improve-results/) — Improving accuracy of generated code broadly
+- [How to Write Effective CLAUDE.md for Your Project](/how-to-write-effective-claude-md-for-your-project/) — CLAUDE.md can specify import style and module conventions
+- [Claude Skills Troubleshooting Hub](/troubleshooting-hub/) — Related code generation issue fixes
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

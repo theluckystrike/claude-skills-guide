@@ -13,11 +13,11 @@ permalink: /slack-mcp-server-team-notification-automation/
 
 # Slack MCP Server Team Notification Automation
 
-[The Slack MCP server bridges Claude Code with your team's communication hub](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/), enabling automated notifications triggered by code changes, deployment events, or system alerts. When combined with other Claude skills like `tdd` for test results or `pdf` for automated reports, you can build powerful notification workflows that keep everyone informed without manual updates.
+[The Slack MCP server bridges Claude Code with your team's communication hub](/building-your-first-mcp-tool-integration-guide-2026/), enabling automated notifications triggered by code changes, deployment events, or system alerts. When combined with other Claude skills like `tdd` for test results or `pdf` for automated reports, you can build powerful notification workflows that keep everyone informed without manual updates.
 
 ## What is Slack MCP Server?
 
-The Slack MCP (Model Context Protocol) server exposes Slack's API to Claude Code as a native tool. [Unlike traditional Slack bots that require separate code and configuration, the MCP approach lets you](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) invoke Slack operations directly from your skill definitions. This means notifications become part of your existing Claude workflows rather than a separate system to maintain.
+The Slack MCP (Model Context Protocol) server exposes Slack's API to Claude Code as a native tool. [Unlike traditional Slack bots that require separate code and configuration, the MCP approach lets you](/best-claude-code-skills-to-install-first-2026/) invoke Slack operations directly from your skill definitions. This means notifications become part of your existing Claude workflows rather than a separate system to maintain.
 
 Traditional Slack bot architectures require you to run a persistent server, handle Slack's event subscriptions, manage OAuth flows, and keep a separate codebase alive. The MCP server eliminates all of that. Claude drives the Slack API on demand — no webhook listeners, no polling, no extra infrastructure.
 
@@ -384,8 +384,8 @@ Combined with other skills like `tdd` for test reporting or `pdf` for document g
 
 ## Related Reading
 
-- [Building Your First MCP Tool Integration Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) — Foundation setup for all MCP servers including Slack
-- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — Skills that complement Slack notifications for infrastructure workflows
-- [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/) — Building the CI/CD foundation that triggers Slack notifications
+- [Building Your First MCP Tool Integration Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/) — Foundation setup for all MCP servers including Slack
+- [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/) — Skills that complement Slack notifications for infrastructure workflows
+- [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-with-github-actions-ci-cd-pipeline/) — Building the CI/CD foundation that triggers Slack notifications
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

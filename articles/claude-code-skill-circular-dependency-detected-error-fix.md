@@ -13,7 +13,7 @@ permalink: /claude-code-skill-circular-dependency-detected-error-fix/
 
 # Claude Code Skill Circular Dependency Detected Error Fix
 
-The **circular dependency detected** error in Claude Code skills halts execution abruptly, leaving developers frustrated and workflows broken. [This error occurs when skills form an interdependent loop](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) import loop — skill A loads skill B, which loads skill A again, creating an infinite recursion that Claude's runtime terminates. Understanding the root causes and applying the right fixes restores your workflow within minutes.
+The **circular dependency detected** error in Claude Code skills halts execution abruptly, leaving developers frustrated and workflows broken. [This error occurs when skills form an interdependent loop](/claude-skill-md-format-complete-specification-guide/) import loop — skill A loads skill B, which loads skill A again, creating an infinite recursion that Claude's runtime terminates. Understanding the root causes and applying the right fixes restores your workflow within minutes.
 
 ## Recognizing the Circular Dependency Error
 
@@ -292,13 +292,13 @@ For most cases, extracting a neutral shared module is the cleanest solution and 
 
 ## Conclusion
 
-The circular dependency detected error in Claude Code skills stems from import loops that break the skill loading process. By identifying the skills involved, breaking the import chain through refactoring or lazy loading, and removing circular metadata declarations, you restore full functionality. Prevent future occurrences by maintaining clear dependency boundaries and testing skill loading after any configuration changes. With these strategies, skills like **pdf**, **tdd**, **frontend-design**, **supermemory**, and any other skill combination work without conflicts. For broader skill composition patterns that avoid these issues by design, see [Claude skill inheritance and composition patterns](/claude-skills-guide/claude-skill-inheritance-and-composition-patterns/).
+The circular dependency detected error in Claude Code skills stems from import loops that break the skill loading process. By identifying the skills involved, breaking the import chain through refactoring or lazy loading, and removing circular metadata declarations, you restore full functionality. Prevent future occurrences by maintaining clear dependency boundaries and testing skill loading after any configuration changes. With these strategies, skills like **pdf**, **tdd**, **frontend-design**, **supermemory**, and any other skill combination work without conflicts. For broader skill composition patterns that avoid these issues by design, see [Claude skill inheritance and composition patterns](/claude-skill-inheritance-and-composition-patterns/).
 
 ## Related Reading
 
-- [Claude Skill Inheritance and Composition Patterns](/claude-skills-guide/claude-skill-inheritance-and-composition-patterns/) — Design skills with clean dependency boundaries to prevent circular imports
-- [Claude Code Skill Conflicts with MCP Server Resolution Guide](/claude-skills-guide/claude-code-skill-conflicts-with-mcp-server-resolution-guide/) — Resolve conflicts when skills and MCP servers share overlapping tool names
-- [How Do I Debug a Claude Skill That Silently Fails](/claude-skills-guide/how-do-i-debug-a-claude-skill-that-silently-fails/) — Diagnose other types of skill failures alongside circular dependency errors
-- [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — More troubleshooting guides for common Claude skill errors
+- [Claude Skill Inheritance and Composition Patterns](/claude-skill-inheritance-and-composition-patterns/) — Design skills with clean dependency boundaries to prevent circular imports
+- [Claude Code Skill Conflicts with MCP Server Resolution Guide](/claude-code-skill-conflicts-with-mcp-server-resolution-guide/) — Resolve conflicts when skills and MCP servers share overlapping tool names
+- [How Do I Debug a Claude Skill That Silently Fails](/how-do-i-debug-a-claude-skill-that-silently-fails/) — Diagnose other types of skill failures alongside circular dependency errors
+- [Claude Skills Troubleshooting Hub](/troubleshooting-hub/) — More troubleshooting guides for common Claude skill errors
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

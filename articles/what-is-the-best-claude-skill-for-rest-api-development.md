@@ -13,7 +13,7 @@ permalink: /what-is-the-best-claude-skill-for-rest-api-development/
 
 # What Is the Best Claude Skill for REST API Development
 
-[Building REST APIs requires a different skill set than traditional frontend or backend development](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) You need to think about endpoint design, data validation, authentication patterns, and error handling from the start. Claude Code offers several skills that can dramatically improve your API development workflow, but choosing the right one depends on your specific needs.
+[Building REST APIs requires a different skill set than traditional frontend or backend development](/best-claude-code-skills-to-install-first-2026/) You need to think about endpoint design, data validation, authentication patterns, and error handling from the start. Claude Code offers several skills that can dramatically improve your API development workflow, but choosing the right one depends on your specific needs.
 
 ## Understanding Claude Skills for API Development
 
@@ -93,7 +93,7 @@ The real power of Claude Code comes from combining multiple skills. For a comple
 
 - **tdd** for test-driven endpoint development
 - **code-generation** for scaffolding new routes and controllers
-- **[supermemory](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/)** for tracking API design decisions across sessions
+- **[supermemory](/claude-supermemory-skill-persistent-context-explained/)** for tracking API design decisions across sessions
 - **pdf** for generating API documentation
 
 The **supermemory** skill proves particularly valuable for larger API projects where you need to remember why certain design decisions were made. It maintains context across Claude sessions, helping you maintain consistency as your API evolves.
@@ -135,9 +135,9 @@ Remember that these skills work well together. You don't have to choose just one
 
 ## Related Reading
 
-- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Master the tdd skill identified as the top choice for REST API development in this guide
-- [Claude Code Skills for Backend Developers: Node.js and Python](/claude-skills-guide/claude-code-skills-for-backend-developers-node-and-python/) — See how the REST API skills in this guide fit into the broader Node.js and Python backend workflow
-- [Automated Testing Pipeline with Claude TDD Skill 2026](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Build a complete CI/CD testing pipeline for your REST API using the tdd and related skills
-- [Claude Skills Use Cases Hub](/claude-skills-guide/use-cases-hub/) — Explore more API development and backend automation use case skill guides
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/) — Master the tdd skill identified as the top choice for REST API development in this guide
+- [Claude Code Skills for Backend Developers: Node.js and Python](/claude-code-skills-for-backend-developers-node-and-python/) — See how the REST API skills in this guide fit into the broader Node.js and Python backend workflow
+- [Automated Testing Pipeline with Claude TDD Skill 2026](/claude-tdd-skill-test-driven-development-workflow/) — Build a complete CI/CD testing pipeline for your REST API using the tdd and related skills
+- [Claude Skills Use Cases Hub](/use-cases-hub/) — Explore more API development and backend automation use case skill guides
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

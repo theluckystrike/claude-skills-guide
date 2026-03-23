@@ -346,9 +346,9 @@ With these practices in place, you'll spend less time debugging AI-generated cod
 
 ## Related Reading
 
-- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/)
-- [Claude Code Skills for Writing Unit Tests Automatically](/claude-skills-guide/claude-skills-for-writing-unit-tests-automatically/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/)
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/)
+- [Claude Code Skills for Writing Unit Tests Automatically](/claude-skills-for-writing-unit-tests-automatically/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Code Tutorials Hub](/tutorials-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

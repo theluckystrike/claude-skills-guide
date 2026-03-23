@@ -13,7 +13,7 @@ permalink: /claude-code-skill-not-found-in-skills-directory-how-to-fix/
 
 # Claude Code Skill Not Found in Skills Directory — How to Fix
 
-You've just installed a new Claude Code skill—perhaps the **pdf** skill for document processing, the **tdd** skill for test-driven development, or the **frontend-design** skill for UI prototyping. You type `/skill-name` expecting it to work, but instead you see an error message indicating the skill wasn't found in the [skills directory](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/). This happens more often than you'd think, and the fix is usually straightforward.
+You've just installed a new Claude Code skill—perhaps the **pdf** skill for document processing, the **tdd** skill for test-driven development, or the **frontend-design** skill for UI prototyping. You type `/skill-name` expecting it to work, but instead you see an error message indicating the skill wasn't found in the [skills directory](/claude-skill-md-format-complete-specification-guide/). This happens more often than you'd think, and the fix is usually straightforward.
 
 ## Understanding the "Skill Not Found" Error
 
@@ -25,7 +25,7 @@ Before diving into fixes, verify what directory Claude Code is actually using fo
 
 ### Cause 1: Skills Installed in the Wrong Location
 
-The most frequent reason for the "skill not found" error is simple: the [skill file](/claude-skills-guide/claude-skill-metadata-header-vs-full-body-loading/) ended up in the wrong directory. Claude Code expects skills to be in `~/.claude/skills/` as individual Markdown files with the `.md` extension.
+The most frequent reason for the "skill not found" error is simple: the [skill file](/claude-skill-metadata-header-vs-full-body-loading/) ended up in the wrong directory. Claude Code expects skills to be in `~/.claude/skills/` as individual Markdown files with the `.md` extension.
 
 **How to check and fix:**
 
@@ -186,8 +186,8 @@ The "skill not found" error is almost always a path or naming issue that takes m
 
 ## Related Reading
 
-- [Why Does Claude Code Ignore My Skill MD File Entirely](/claude-skills-guide/why-does-claude-code-ignore-my-skill-md-file-entirely/) — Diagnose cases where skills are found but silently ignored by Claude Code
-- [Claude Code Skill Permission Denied Error Fix 2026](/claude-skills-guide/claude-code-skill-permission-denied-error-fix-2026/) — Resolve file permission issues that prevent skill files from loading
-- [Claude Skills Hub](/claude-skills-guide/troubleshooting-hub/) — Find solutions for common Claude skill setup and discovery problems
+- [Why Does Claude Code Ignore My Skill MD File Entirely](/why-does-claude-code-ignore-my-skill-md-file-entirely/) — Diagnose cases where skills are found but silently ignored by Claude Code
+- [Claude Code Skill Permission Denied Error Fix 2026](/claude-code-skill-permission-denied-error-fix-2026/) — Resolve file permission issues that prevent skill files from loading
+- [Claude Skills Hub](/troubleshooting-hub/) — Find solutions for common Claude skill setup and discovery problems
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

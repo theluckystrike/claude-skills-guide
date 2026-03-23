@@ -13,13 +13,13 @@ permalink: /shared-claude-skills-across-monorepo-multiple-packages/
 
 # Shared Claude Skills Across Monorepo Multiple Packages
 
-This guide addresses a specific scenario: **your software project is already structured as a monorepo** — with packages like `api/`, `web/`, `shared/`, or Python data modules — and you need Claude skills to be consistently available across all of those packages without duplicating skill files in every directory. If instead you are looking to build a *dedicated repository whose sole purpose is storing and organizing Claude skills themselves*, see [What Is the Best Way to Organize Claude Skills in a Monorepo](/claude-skills-guide/what-is-the-best-way-to-organize-claude-skills-in-a-monorepo/).
+This guide addresses a specific scenario: **your software project is already structured as a monorepo** — with packages like `api/`, `web/`, `shared/`, or Python data modules — and you need Claude skills to be consistently available across all of those packages without duplicating skill files in every directory. If instead you are looking to build a *dedicated repository whose sole purpose is storing and organizing Claude skills themselves*, see [What Is the Best Way to Organize Claude Skills in a Monorepo](/what-is-the-best-way-to-organize-claude-skills-in-a-monorepo/).
 
-Managing Claude skills across a [monorepo](/claude-skills-guide/how-do-i-share-claude-skills-across-multiple-projects/) with multiple packages presents unique challenges. When your project spans dozens of packages—whether TypeScript workspaces, Python modules, or mixed-language environments—you need a strategy that avoids duplication while keeping skills accessible to every package that needs them. This guide covers practical approaches for sharing Claude skills across your entire monorepo.
+Managing Claude skills across a [monorepo](/how-do-i-share-claude-skills-across-multiple-projects/) with multiple packages presents unique challenges. When your project spans dozens of packages—whether TypeScript workspaces, Python modules, or mixed-language environments—you need a strategy that avoids duplication while keeping skills accessible to every package that needs them. This guide covers practical approaches for sharing Claude skills across your entire monorepo.
 
 ## Understanding the Monorepo Challenge
 
-[Monorepos offer undeniable benefits: unified dependency management, shared tooling, and atomic commits across packages](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) However, they also create specific challenges for Claude skills. Each package may require different skill sets—a backend API package needs different workflows than a frontend UI package. Yet certain skills should be universal: code quality checks, testing patterns, and documentation generation should work consistently everywhere.
+[Monorepos offer undeniable benefits: unified dependency management, shared tooling, and atomic commits across packages](/best-claude-code-skills-to-install-first-2026/) However, they also create specific challenges for Claude skills. Each package may require different skill sets—a backend API package needs different workflows than a frontend UI package. Yet certain skills should be universal: code quality checks, testing patterns, and documentation generation should work consistently everywhere.
 
 The key is separating package-specific skills from shared skills, then making both accessible through a clear hierarchy.
 
@@ -229,9 +229,9 @@ By configuring Claude with multiple skill paths, using composition to build high
 
 ## Related Reading
 
-- [What Is the Best Way to Organize Claude Skills in a Monorepo](/claude-skills-guide/what-is-the-best-way-to-organize-claude-skills-in-a-monorepo/) — The foundational monorepo organization guide that this shared-skills article builds upon for multi-package setups
-- [How to Share Claude Skills with Your Team](/claude-skills-guide/how-to-share-claude-skills-with-your-team/) — Distribution patterns for sharing the skills you've organized across your monorepo with all team members
-- [Claude Skills Change Management: Rolling Out to Teams](/claude-skills-guide/claude-skills-change-management-rolling-out-to-teams/) — Govern skill updates across packages with version control and rollout policies for monorepo environments
-- [Claude Skills: Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Explore foundational skill organization and team distribution patterns across the full Claude ecosystem
+- [What Is the Best Way to Organize Claude Skills in a Monorepo](/what-is-the-best-way-to-organize-claude-skills-in-a-monorepo/) — The foundational monorepo organization guide that this shared-skills article builds upon for multi-package setups
+- [How to Share Claude Skills with Your Team](/how-to-share-claude-skills-with-your-team/) — Distribution patterns for sharing the skills you've organized across your monorepo with all team members
+- [Claude Skills Change Management: Rolling Out to Teams](/claude-skills-change-management-rolling-out-to-teams/) — Govern skill updates across packages with version control and rollout policies for monorepo environments
+- [Claude Skills: Getting Started Hub](/getting-started-hub/) — Explore foundational skill organization and team distribution patterns across the full Claude ecosystem
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

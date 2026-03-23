@@ -301,10 +301,10 @@ Over weeks and months, you will see measurable improvements in code quality metr
 
 ## Related Reading
 
-- [Claude Code Static Analysis Automation Guide](/claude-skills-guide/claude-code-static-analysis-automation-guide/) — SonarQube is a static analysis platform
-- [Claude Code Dead Code Detection Workflow](/claude-skills-guide/claude-code-for-dead-code-elimination-workflow-guide/) — SonarQube detects dead code among other issues
-- [Claude Code Technical Debt Tracking Workflow](/claude-skills-guide/claude-code-technical-debt-tracking-workflow/) — SonarQube quantifies technical debt
-- [Best Way to Use Claude Code with Existing CI/CD Pipelines](/claude-skills-guide/best-way-to-use-claude-code-with-existing-ci-cd/) — Integrate SonarQube into CI/CD pipelines
+- [Claude Code Static Analysis Automation Guide](/claude-code-static-analysis-automation-guide/) — SonarQube is a static analysis platform
+- [Claude Code Dead Code Detection Workflow](/claude-code-for-dead-code-elimination-workflow-guide/) — SonarQube detects dead code among other issues
+- [Claude Code Technical Debt Tracking Workflow](/claude-code-technical-debt-tracking-workflow/) — SonarQube quantifies technical debt
+- [Best Way to Use Claude Code with Existing CI/CD Pipelines](/best-way-to-use-claude-code-with-existing-ci-cd/) — Integrate SonarQube into CI/CD pipelines
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

@@ -13,7 +13,7 @@ permalink: /claude-code-skills-roadmap-2026-what-is-coming/
 
 # Claude Code Skills Roadmap 2026: What Is Coming
 
-[The Claude Code ecosystem is evolving rapidly](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) If you have been using skills like `pdf` for document automation, `xlsx` for spreadsheet manipulation, or `tdd` for test-driven development, you have seen how much power these extensions provide. The roadmap for 2026 shows significant expansion in skill capabilities, cross-tool integration, and new categories that will reshape how developers work with AI assistants.
+[The Claude Code ecosystem is evolving rapidly](/best-claude-code-skills-to-install-first-2026/) If you have been using skills like `pdf` for document automation, `xlsx` for spreadsheet manipulation, or `tdd` for test-driven development, you have seen how much power these extensions provide. The roadmap for 2026 shows significant expansion in skill capabilities, cross-tool integration, and new categories that will reshape how developers work with AI assistants.
 
 ## Native Skills Are Getting Deeper
 
@@ -25,7 +25,7 @@ The `pdf` skill is expanding beyond extraction and form filling. By mid-2026, ex
 /pdf generate 50 invoices from template.yaml data.csv --output-dir ./generated
 ```
 
-The [tdd skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) is becoming context-aware. Instead of generating tests in isolation, it will analyze your entire codebase structure, understand module dependencies, and create test suites that match your architectural patterns. This reduces the friction of adopting test-driven development on existing projects.
+The [tdd skill](/claude-tdd-skill-test-driven-development-workflow/) is becoming context-aware. Instead of generating tests in isolation, it will analyze your entire codebase structure, understand module dependencies, and create test suites that match your architectural patterns. This reduces the friction of adopting test-driven development on existing projects.
 
 ## Community Skills Expanding into New Domains
 
@@ -116,9 +116,9 @@ These cross-functional skills reduce the translation cost between technical and 
 
 ## Related Reading
 
-- [Claude 4 Skills: New Features and Improvements Guide](/claude-skills-guide/claude-4-skills-improvements-and-new-features/) — What's already landed in Claude 4 to set the stage for the 2026 roadmap.
-- [AI Agent Skills Standardization Efforts 2026](/claude-skills-guide/ai-agent-skills-standardization-efforts-2026/) — How broader industry standardization efforts will shape the direction of the Claude skills roadmap.
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — The skills worth mastering now as a foundation for upcoming roadmap capabilities.
-- [MCP Updates March 2026: What Developers Need to Know](/claude-skills-guide/anthropic-model-context-protocol-updates-march-2026/) — The MCP developments that directly feed into the skills roadmap for deeper integration.
+- [Claude 4 Skills: New Features and Improvements Guide](/claude-4-skills-improvements-and-new-features/) — What's already landed in Claude 4 to set the stage for the 2026 roadmap.
+- [AI Agent Skills Standardization Efforts 2026](/ai-agent-skills-standardization-efforts-2026/) — How broader industry standardization efforts will shape the direction of the Claude skills roadmap.
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — The skills worth mastering now as a foundation for upcoming roadmap capabilities.
+- [MCP Updates March 2026: What Developers Need to Know](/anthropic-model-context-protocol-updates-march-2026/) — The MCP developments that directly feed into the skills roadmap for deeper integration.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

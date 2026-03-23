@@ -16,11 +16,11 @@ permalink: /claude-code-skills-for-ansible-automation/
 
 # Claude Code Skills for Ansible Automation
 
-[Ansible remains one of the most popular tools for configuration management](/claude-skills-guide/claude-code-skills-for-infrastructure-as-code-terraform/) and infrastructure automation. Combining Claude Code with Ansible through custom skills unlocks powerful possibilities for developers who want natural language interfaces to manage their infrastructure code. This guide shows you how to build Claude Code skills specifically designed for Ansible automation workflows.
+[Ansible remains one of the most popular tools for configuration management](/claude-code-skills-for-infrastructure-as-code-terraform/) and infrastructure automation. Combining Claude Code with Ansible through custom skills unlocks powerful possibilities for developers who want natural language interfaces to manage their infrastructure code. This guide shows you how to build Claude Code skills specifically designed for Ansible automation workflows.
 
 ## Why Combine Claude Code with Ansible
 
-[Ansible playbooks are declarative YAML files that describe desired state](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Writing and maintaining these files requires understanding Ansible's module ecosystem, inventory management, and variable precedence. Claude Code skills can bridge this gap by generating playbook templates, validating existing configurations, explaining complex Ansible concepts, and automating routine maintenance tasks.
+[Ansible playbooks are declarative YAML files that describe desired state](/best-claude-code-skills-to-install-first-2026/) Writing and maintaining these files requires understanding Ansible's module ecosystem, inventory management, and variable precedence. Claude Code skills can bridge this gap by generating playbook templates, validating existing configurations, explaining complex Ansible concepts, and automating routine maintenance tasks.
 
 The combination works well because Ansible operations are text-based and follow predictable patterns. Claude can read your existing playbooks, suggest improvements, generate new roles, and help debug execution failures. A well-crafted skill acts as an intelligent assistant that understands both natural language requests and Ansible's domain-specific syntax.
 
@@ -190,8 +190,8 @@ Built by theluckystrike — More at [zovo.one](https://zovo.one)
 
 ## Related Reading
 
-- [Claude Code Skills for Infrastructure as Code (Terraform)](/claude-skills-guide/claude-code-skills-for-infrastructure-as-code-terraform/) — compare Ansible skill patterns with Terraform IaC approaches
-- [Claude Skill MD Format Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — design Ansible-focused skills with proper structure
-- [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/) — integrate Ansible validation into automated CI/CD workflows
-- [Use Cases Hub](/claude-skills-guide/use-cases-hub/) — explore Claude Code skills for DevOps and infrastructure automation
+- [Claude Code Skills for Infrastructure as Code (Terraform)](/claude-code-skills-for-infrastructure-as-code-terraform/) — compare Ansible skill patterns with Terraform IaC approaches
+- [Claude Skill MD Format Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/) — design Ansible-focused skills with proper structure
+- [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-with-github-actions-ci-cd-pipeline/) — integrate Ansible validation into automated CI/CD workflows
+- [Use Cases Hub](/use-cases-hub/) — explore Claude Code skills for DevOps and infrastructure automation
 {% endraw %}

@@ -390,9 +390,9 @@ Start with simple file watching using `chokidar` or `fswatch`, then layer on opt
 
 ## Related Reading
 
-- [Claude Code Local Development Setup Guide](/claude-skills-guide/claude-code-local-development-setup-guide/) — Local dev setup includes hot reload configuration
-- [Claude Code Environment Setup Automation](/claude-skills-guide/claude-code-environment-setup-automation/) — Environment setup with hot reload enabled
-- [Best Way to Use Claude Code for Rapid Prototyping](/claude-skills-guide/best-way-to-use-claude-code-for-rapid-prototyping/) — Hot reload accelerates prototyping
-- [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — Development environment workflow guides
+- [Claude Code Local Development Setup Guide](/claude-code-local-development-setup-guide/) — Local dev setup includes hot reload configuration
+- [Claude Code Environment Setup Automation](/claude-code-environment-setup-automation/) — Environment setup with hot reload enabled
+- [Best Way to Use Claude Code for Rapid Prototyping](/best-way-to-use-claude-code-for-rapid-prototyping/) — Hot reload accelerates prototyping
+- [Claude Skills Workflows Hub](/workflows-hub/) — Development environment workflow guides
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

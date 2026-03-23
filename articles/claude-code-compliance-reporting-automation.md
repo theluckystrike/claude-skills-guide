@@ -343,8 +343,8 @@ Start with one automation use case — dependency auditing is a strong choice be
 ## Related Reading
 
 
-- [Claude Code GDPR Compliance Implementation](/claude-skills-guide/claude-code-gdpr-compliance-implementation/)
-- [Claude Code Data Retention Policy Workflow](/claude-skills-guide/claude-code-data-retention-policy-workflow/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Code GDPR Compliance Implementation](/claude-code-gdpr-compliance-implementation/)
+- [Claude Code Data Retention Policy Workflow](/claude-code-data-retention-policy-workflow/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

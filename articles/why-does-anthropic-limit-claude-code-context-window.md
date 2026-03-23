@@ -114,9 +114,9 @@ By understanding why the limits exist and learning strategies to work within the
 
 ## Related Reading
 
-- [Claude Skills Context Window Management Best Practices](/claude-skills-guide/claude-md-too-long-context-window-optimization/) — Practical techniques to work within context limits
-- [Claude Code Skills: Context Window Exceeded Error Fix](/claude-skills-guide/claude-code-skills-context-window-exceeded-error-fix/) — Fix the error when you hit the limit
-- [Claude SuperMemory Skill: Persistent Context Explained](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) — Supermemory is the best tool for context management
-- [Advanced Claude Skills Hub](/claude-skills-guide/advanced-hub/) — Token optimization and context strategies for power users
+- [Claude Skills Context Window Management Best Practices](/claude-md-too-long-context-window-optimization/) — Practical techniques to work within context limits
+- [Claude Code Skills: Context Window Exceeded Error Fix](/claude-code-skills-context-window-exceeded-error-fix/) — Fix the error when you hit the limit
+- [Claude SuperMemory Skill: Persistent Context Explained](/claude-supermemory-skill-persistent-context-explained/) — Supermemory is the best tool for context management
+- [Advanced Claude Skills Hub](/advanced-hub/) — Token optimization and context strategies for power users
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -16,13 +16,13 @@ permalink: /claude-code-l10n-testing-automation-workflow-tutorial/
 
 # Claude Code L10n Testing Automation Workflow Tutorial
 
-[Localization (L10n) testing remains one of the most time-consuming aspects of software development](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Teams often struggle with maintaining string consistency across languages, validating translated content, and catching encoding issues before deployment. Claude Code skills offer a practical solution by automating repetitive localization testing tasks and creating reproducible workflows.
+[Localization (L10n) testing remains one of the most time-consuming aspects of software development](/best-claude-code-skills-to-install-first-2026/) Teams often struggle with maintaining string consistency across languages, validating translated content, and catching encoding issues before deployment. Claude Code skills offer a practical solution by automating repetitive localization testing tasks and creating reproducible workflows.
 
-[This tutorial shows you how to build a complete L10n testing automation pipeline using Claude Code skills](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/), focusing on practical implementation rather than theory.
+[This tutorial shows you how to build a complete L10n testing automation pipeline using Claude Code skills](/claude-tdd-skill-test-driven-development-workflow/), focusing on practical implementation rather than theory.
 
 ## Prerequisites
 
-Before starting, ensure you have Claude Code installed and access to the skills directory. You'll need basic familiarity with YAML configuration files and command-line tools. [The workflow uses three primary skills: **tdd** for generating test cases](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/), **pdf** for validating document localization, and **supermemory** for persisting translation context across sessions.
+Before starting, ensure you have Claude Code installed and access to the skills directory. You'll need basic familiarity with YAML configuration files and command-line tools. [The workflow uses three primary skills: **tdd** for generating test cases](/claude-tdd-skill-test-driven-development-workflow/), **pdf** for validating document localization, and **supermemory** for persisting translation context across sessions.
 
 ## Setting Up Your Localization Testing Directory
 
@@ -194,7 +194,7 @@ Run this validation as part of your pre-commit checks to catch encoding issues b
 
 ## Step 5: Persisting Context with supermemory
 
-[The **supermemory** skill maintains translation memory across Claude Code sessions](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/). This proves valuable when you need to reference previous translation decisions or maintain glossaries.
+[The **supermemory** skill maintains translation memory across Claude Code sessions](/claude-supermemory-skill-persistent-context-explained/). This proves valuable when you need to reference previous translation decisions or maintain glossaries.
 
 Configure supermemory for your L10n workflow by invoking the skill with natural language:
 
@@ -264,8 +264,8 @@ Start with the string consistency checks, add placeholder validation, then layer
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 ## Related Reading
 
-- [Claude Code i18n Workflow for React Applications](/claude-skills-guide/claude-code-i18n-workflow-for-react-applications-guide/)
-- [Claude Code International Date Format Handling Workflow](/claude-skills-guide/claude-code-international-date-format-handling-workflow/)
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/)
-- [Workflows Hub](/claude-skills-guide/workflows-hub/)
+- [Claude Code i18n Workflow for React Applications](/claude-code-i18n-workflow-for-react-applications-guide/)
+- [Claude Code International Date Format Handling Workflow](/claude-code-international-date-format-handling-workflow/)
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/)
+- [Workflows Hub](/workflows-hub/)
 {% endraw %}

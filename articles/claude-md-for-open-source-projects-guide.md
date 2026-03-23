@@ -13,7 +13,7 @@ permalink: /claude-md-for-open-source-projects-guide/
 
 # Claude MD for Open Source Projects Guide
 
-Open source projects thrive on contributions from diverse developers with varying levels of experience and preferred tools. [Claude Code's skill system via `.md` files](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) offers a powerful way to standardize how AI assistants like Claude Code interact with your repository, ensuring consistent behavior across all contributors regardless of their background.
+Open source projects thrive on contributions from diverse developers with varying levels of experience and preferred tools. [Claude Code's skill system via `.md` files](/claude-skill-md-format-complete-specification-guide/) offers a powerful way to standardize how AI assistants like Claude Code interact with your repository, ensuring consistent behavior across all contributors regardless of their background.
 
 This guide explains how to create effective Claude MD files for open source projects that enhance developer experience, reduce friction for new contributors, and maintain quality standards across all contributions.
 
@@ -26,7 +26,7 @@ Open source projects face unique challenges that Claude MD files can address:
 - **Quality maintenance**: As projects scale, maintaining consistent code quality becomes challenging
 - **Tooling diversity**: Contributors use various editors, IDEs, and AI tools with different capabilities
 
-[Claude Code loads skill files from `~/.claude/skills/`](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) when invoked, making it an ideal tool to enforce project-specific behaviors without requiring contributors to install complex tooling or remember extensive contribution guidelines.
+[Claude Code loads skill files from `~/.claude/skills/`](/best-claude-code-skills-to-install-first-2026/) when invoked, making it an ideal tool to enforce project-specific behaviors without requiring contributors to install complex tooling or remember extensive contribution guidelines.
 
 ## Essential Claude MD Files for Open Source Projects
 
@@ -213,7 +213,7 @@ Abstract guidelines are harder to follow than concrete examples. Include actual 
 
 ### 3. Automate Where Possible
 
-[Combine Claude MD files with automated tooling](/claude-skills-guide/best-claude-code-skills-for-automation/) like pre-commit hooks, linters, and CI/CD pipelines. Claude MD should guide the human aspects while automation handles mechanical checks.
+[Combine Claude MD files with automated tooling](/best-claude-code-skills-for-automation/) like pre-commit hooks, linters, and CI/CD pipelines. Claude MD should guide the human aspects while automation handles mechanical checks.
 
 ### 4. Version Control Your Skills
 
@@ -265,14 +265,14 @@ Remember: the goal isn't to replace human judgment but to augment it, helping bo
 ---
 
 **Related Reading:**
-- [Claude MD Format Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)
-- [Best Claude Code Skills to Install First 2026](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
-- [Claude MD Best Practices for Large Codebases](/claude-skills-guide/claude-md-best-practices-for-large-codebases/)
+- [Claude MD Format Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/)
+- [Best Claude Code Skills to Install First 2026](/best-claude-code-skills-to-install-first-2026/)
+- [Claude MD Best Practices for Large Codebases](/claude-md-best-practices-for-large-codebases/)
 
 ## Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

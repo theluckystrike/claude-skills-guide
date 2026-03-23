@@ -206,9 +206,9 @@ The key is treating Claude as a junior developer: provide clear requirements, es
 
 ## Related Reading
 
-- [Claude Code Cyclomatic Complexity Reduction](/claude-skills-guide/claude-code-cyclomatic-complexity-reduction/) — DRY and SOLID reduce complexity
-- [How to Make Claude Code Match Existing Code Patterns](/claude-skills-guide/how-to-make-claude-code-follow-team-style-guide/) — SOLID patterns should match existing codebase conventions
-- [Claude Code Technical Debt Tracking Workflow](/claude-skills-guide/claude-code-technical-debt-tracking-workflow/) — DRY violations are a common debt source
-- [Advanced Claude Skills Hub](/claude-skills-guide/advanced-hub/) — Advanced code quality patterns
+- [Claude Code Cyclomatic Complexity Reduction](/claude-code-cyclomatic-complexity-reduction/) — DRY and SOLID reduce complexity
+- [How to Make Claude Code Match Existing Code Patterns](/how-to-make-claude-code-follow-team-style-guide/) — SOLID patterns should match existing codebase conventions
+- [Claude Code Technical Debt Tracking Workflow](/claude-code-technical-debt-tracking-workflow/) — DRY violations are a common debt source
+- [Advanced Claude Skills Hub](/advanced-hub/) — Advanced code quality patterns
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

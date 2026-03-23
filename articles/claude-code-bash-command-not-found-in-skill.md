@@ -191,9 +191,9 @@ Remember: skills run in a constrained environment that doesn't automatically inh
 
 ## Related Reading
 
-- [Advanced Claude Skills with Tool Use and Function Calling](/claude-skills-guide/advanced-claude-skills-with-tool-use-and-function-calling/) — Master tool configuration in skills
-- [Best Claude Code Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Essential skills for development workflows
-- [Claude Skill MD Format Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — Complete skill authoring reference
+- [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/) — Master tool configuration in skills
+- [Best Claude Code Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Essential skills for development workflows
+- [Claude Skill MD Format Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/) — Complete skill authoring reference
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

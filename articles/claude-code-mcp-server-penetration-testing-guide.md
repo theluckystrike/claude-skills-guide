@@ -284,9 +284,9 @@ Penetration testing your MCP servers protects both your application and your use
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Build a complete developer skill stack
-- [Claude Code Integration Testing Strategy Guide](/claude-skills-guide/claude-code-integration-testing-strategy-guide/) — Comprehensive testing approaches
-- [Claude Skills Token Optimization](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Optimize skill usage in your workflows
-- [MCP Server Configuration Management](/claude-skills-guide/ansible-mcp-server-configuration-management/) — Secure deployment practices
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Build a complete developer skill stack
+- [Claude Code Integration Testing Strategy Guide](/claude-code-integration-testing-strategy-guide/) — Comprehensive testing approaches
+- [Claude Skills Token Optimization](/claude-skills-token-optimization-reduce-api-costs/) — Optimize skill usage in your workflows
+- [MCP Server Configuration Management](/ansible-mcp-server-configuration-management/) — Secure deployment practices
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

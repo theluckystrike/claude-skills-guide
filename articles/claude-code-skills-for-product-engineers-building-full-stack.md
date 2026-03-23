@@ -13,7 +13,7 @@ permalink: /claude-code-skills-for-product-engineers-building-full-stack/
 
 # Claude Code Skills for Product Engineers Building Full Stack
 
-Product engineers who build full-stack applications face a unique challenge: they need competence across the entire technology stack while maintaining speed and quality. [Claude Code skills provide specialized capabilities](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) that transform how you approach frontend UI, backend APIs, database schemas, testing, and deployment. This guide covers the skills that deliver the most value for product engineers shipping features end-to-end.
+Product engineers who build full-stack applications face a unique challenge: they need competence across the entire technology stack while maintaining speed and quality. [Claude Code skills provide specialized capabilities](/best-claude-code-skills-to-install-first-2026/) that transform how you approach frontend UI, backend APIs, database schemas, testing, and deployment. This guide covers the skills that deliver the most value for product engineers shipping features end-to-end.
 
 ## The Full-Stack Challenge
 
@@ -136,7 +136,7 @@ Start with skills that address your most frequent bottlenecks. As your workflow 
 
 ## Summary
 
-Claude Code skills [transform full-stack development](/claude-skills-guide/use-cases-hub/) into focused, tool-assisted work. The **frontend-design** skill builds UI components quickly, **backend-api** constructs APIs without boilerplate, **tdd** ensures test coverage from the start, **pdf** generates documentation on demand, **xlsx** handles data and reporting needs, and **supermemory** keeps project knowledge accessible. The **skill-creator** skill lets you extend this toolkit with custom workflows.
+Claude Code skills [transform full-stack development](/use-cases-hub/) into focused, tool-assisted work. The **frontend-design** skill builds UI components quickly, **backend-api** constructs APIs without boilerplate, **tdd** ensures test coverage from the start, **pdf** generates documentation on demand, **xlsx** handles data and reporting needs, and **supermemory** keeps project knowledge accessible. The **skill-creator** skill lets you extend this toolkit with custom workflows.
 
 Invoke these skills directly in Claude Code with `/skill-name` to integrate specialized capabilities into your development process. Start with the skill matching your current pain point, then expand as your workflow matures.
 
@@ -144,9 +144,9 @@ Invoke these skills directly in Claude Code with `/skill-name` to integrate spec
 
 ## Related Reading
 
-- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) — UI generation, design, and component workflows
-- [Claude Code Skills for Backend Developers](/claude-skills-guide/claude-code-skills-for-backend-developers-node-and-python/) — API development and server-side patterns
-- [Claude Code TDD Workflow Guide](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Test-driven development with Claude
+- [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/) — UI generation, design, and component workflows
+- [Claude Code Skills for Backend Developers](/claude-code-skills-for-backend-developers-node-and-python/) — API development and server-side patterns
+- [Claude Code TDD Workflow Guide](/claude-tdd-skill-test-driven-development-workflow/) — Test-driven development with Claude
 
 *Built by theluckystrike — More at [zovo.one](https://zovo.one)
 *

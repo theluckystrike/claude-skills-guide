@@ -270,9 +270,9 @@ This is project-scale accessibility work. For hands-on analysis of specific code
 
 ## Related Reading
 
-- [Best Claude Skills for Frontend Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) — Build accessible components from the start
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Extend your test coverage
-- [Claude Skills Token Optimization](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Manage costs on large audits
-- [Frontend Design Skill Complete Guide](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Master accessibility-first component creation
+- [Best Claude Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/) — Build accessible components from the start
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/) — Extend your test coverage
+- [Claude Skills Token Optimization](/claude-skills-token-optimization-reduce-api-costs/) — Manage costs on large audits
+- [Frontend Design Skill Complete Guide](/best-claude-skills-for-developers-2026/) — Master accessibility-first component creation
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

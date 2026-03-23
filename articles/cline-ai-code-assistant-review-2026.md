@@ -120,8 +120,8 @@ Both tools are mature enough to use in production. The choice between them is la
 
 ## Related Reading
 
-- [Agentic AI Coding Tools Comparison 2026](/claude-skills-guide/agentic-ai-coding-tools-comparison-2026/)
-- [Neovim AI Coding Setup with Claude 2026](/claude-skills-guide/neovim-ai-coding-setup-with-claude-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Agentic AI Coding Tools Comparison 2026](/agentic-ai-coding-tools-comparison-2026/)
+- [Neovim AI Coding Setup with Claude 2026](/neovim-ai-coding-setup-with-claude-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -302,8 +302,8 @@ The web clipping ecosystem continues evolving. New tools emerge monthly, and exi
 
 ## Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Code Comparisons Hub](/claude-skills-guide/comparisons-hub/)
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Code Comparisons Hub](/comparisons-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

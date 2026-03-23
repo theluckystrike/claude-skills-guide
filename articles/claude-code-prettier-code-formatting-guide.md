@@ -202,9 +202,9 @@ Prettier integration with Claude Code simplifies code formatting significantly. 
 
 ## Related Reading
 
-- [Claude Code Git Hooks Pre-Commit Automation](/claude-skills-guide/claude-code-git-hooks-pre-commit-automation/) — Pre-commit hooks run Prettier automatically
-- [Claude Code Static Analysis Automation Guide](/claude-skills-guide/claude-code-static-analysis-automation-guide/) — Formatting is part of static analysis workflow
-- [How to Make Claude Code Match Existing Code Patterns](/claude-skills-guide/how-to-make-claude-code-follow-team-style-guide/) — Prettier ensures consistent code formatting
-- [Best Way to Use Claude Code with Existing CI/CD Pipelines](/claude-skills-guide/best-way-to-use-claude-code-with-existing-ci-cd/) — Prettier format checks run in CI
+- [Claude Code Git Hooks Pre-Commit Automation](/claude-code-git-hooks-pre-commit-automation/) — Pre-commit hooks run Prettier automatically
+- [Claude Code Static Analysis Automation Guide](/claude-code-static-analysis-automation-guide/) — Formatting is part of static analysis workflow
+- [How to Make Claude Code Match Existing Code Patterns](/how-to-make-claude-code-follow-team-style-guide/) — Prettier ensures consistent code formatting
+- [Best Way to Use Claude Code with Existing CI/CD Pipelines](/best-way-to-use-claude-code-with-existing-ci-cd/) — Prettier format checks run in CI
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

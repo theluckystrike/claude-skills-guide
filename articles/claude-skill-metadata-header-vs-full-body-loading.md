@@ -13,11 +13,11 @@ permalink: /claude-skill-metadata-header-vs-full-body-loading/
 
 # Claude Skill Metadata Header vs Full Body Loading
 
-[invoke a Claude skill with `/skill-name`](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/), Claude reads the entire `.md` file from `~/.claude/skills/`. There is no separate metadata-only loading phase — the front matter and the skill body load together. This guide explains what belongs in each section and how to structure skills for clarity.
+[invoke a Claude skill with `/skill-name`](/claude-skills-auto-invocation-how-it-works/), Claude reads the entire `.md` file from `~/.claude/skills/`. There is no separate metadata-only loading phase — the front matter and the skill body load together. This guide explains what belongs in each section and how to structure skills for clarity.
 
 ## What Is Skill Metadata?
 
-Skill metadata lives in the YAML front matter at the top of your skill file. [only recognized front matter fields](/claude-skills-guide/claude-skill-yaml-front-matter-parsing-error-fix/):
+Skill metadata lives in the YAML front matter at the top of your skill file. [only recognized front matter fields](/claude-skill-yaml-front-matter-parsing-error-fix/):
 
 ```yaml
 ---
@@ -63,7 +63,7 @@ The body can include Markdown structure: headings, bullet lists, numbered steps,
 
 When you type `/skill-name` in a Claude Code session, Claude reads the complete file — front matter and body together. There is no separate initialization phase that parses metadata before the body.
 
-[Skills are discovered by filename](/claude-skills-guide/how-do-i-know-which-claude-skill-is-currently-active/). Typing `/my-skill` looks for `~/.claude/skills/my-skill.md`. There is no search registry and no CLI command to list or filter skills. To see what skills are available, list the files in your skills directory:
+[Skills are discovered by filename](/how-do-i-know-which-claude-skill-is-currently-active/). Typing `/my-skill` looks for `~/.claude/skills/my-skill.md`. There is no search registry and no CLI command to list or filter skills. To see what skills are available, list the files in your skills directory:
 
 ```bash
 ls ~/.claude/skills/
@@ -79,7 +79,7 @@ This has an important implication: skills are not modules you can compose at run
 
 The front matter should be minimal — just `name` and `description`. The body should contain everything Claude needs to perform the task. A common mistake is trying to configure behavior through front matter fields that Claude Code does not recognize.
 
-For example, a skill like `/[maintains project context](/claude-skills-guide/building-stateful-agents-with-claude-skills-guide/) about how to store and retrieve memories in the body:
+For example, a skill like `/[maintains project context](/building-stateful-agents-with-claude-skills-guide/) about how to store and retrieve memories in the body:
 
 ```markdown
 ---
@@ -102,7 +102,7 @@ This works because the behavior is entirely defined in the body. Adding `auto_in
 
 ### Body Length and Performance
 
-[Large skill bodies consume more context tokens](/claude-skills-guide/claude-md-too-long-context-window-optimization/) at each turn. To keep skills manageable:
+[Large skill bodies consume more context tokens](/claude-md-too-long-context-window-optimization/) at each turn. To keep skills manageable:
 
 - Put only the instructions Claude needs in the skill body
 - Move reference material to separate files and instruct Claude to read them when needed using the `Read` tool
@@ -251,8 +251,8 @@ The front matter identifies the skill. The body defines its behavior. Everything
 
 ## Related Reading
 
-- [How Do I Test a Claude Skill Before Deploying to Team](/claude-skills-guide/how-do-i-test-a-claude-skill-before-deploying-to-team/) — Validate skill structure and behavior before sharing with teammates
-- [Open Source Claude Skills Ecosystem Outlook 2026](/claude-skills-guide/open-source-claude-skills-ecosystem-outlook-2026/) — How community skills are structured and shared
-- [Claude Skills Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Start with the basics of skill authoring and invocation
+- [How Do I Test a Claude Skill Before Deploying to Team](/how-do-i-test-a-claude-skill-before-deploying-to-team/) — Validate skill structure and behavior before sharing with teammates
+- [Open Source Claude Skills Ecosystem Outlook 2026](/open-source-claude-skills-ecosystem-outlook-2026/) — How community skills are structured and shared
+- [Claude Skills Getting Started Hub](/getting-started-hub/) — Start with the basics of skill authoring and invocation
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -31,7 +31,7 @@ This uniform interface means you can chain skills together in a single session. 
 
 Several community-maintained collections track the best new skills, prompts, and workflows. These digests typically surface new skills, highlight underutilized features, and provide real-world usage examples that documentation alone cannot offer.
 
-The [supermemory skill deserves special attention](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) for developers who want to build personal knowledge bases from their Claude interactions. When you invoke `/supermemory Remember: this React useEffect cleanup pattern`, it indexes the context and makes it retrievable later. This creates a growing library of solutions you've discovered through Claude sessions.
+The [supermemory skill deserves special attention](/claude-supermemory-skill-persistent-context-explained/) for developers who want to build personal knowledge bases from their Claude interactions. When you invoke `/supermemory Remember: this React useEffect cleanup pattern`, it indexes the context and makes it retrievable later. This creates a growing library of solutions you've discovered through Claude sessions.
 
 For frontend developers, the **frontend-design** skill provides a bridge between design systems and code. Weekly digests covering this skill often include new component patterns, accessibility improvements, and responsive layout techniques that work across frameworks.
 
@@ -95,7 +95,7 @@ These visuals integrate directly into documentation or presentation materials.
 
 ## Building Your Personal Resource Collection
 
-Rather than relying solely on weekly digests, consider building a personal collection using the **supermemory** skill. The [best Claude Code skills to install first in 2026](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) covers the highest-value starting skills. The supermemory workflow involves:
+Rather than relying solely on weekly digests, consider building a personal collection using the **supermemory** skill. The [best Claude Code skills to install first in 2026](/best-claude-code-skills-to-install-first-2026/) covers the highest-value starting skills. The supermemory workflow involves:
 
 1. When Claude solves a problem especially well, invoke `/supermemory Remember: this pattern for [problem type]`
 2. Tag solutions by language, framework, or problem type in the description
@@ -142,9 +142,9 @@ Pick one new skill each week, integrate it into your workflow, and track the tim
 
 ## Related Reading
 
-- [Best Claude Code Skills to Install First in 2026](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) — Start your weekly skill exploration with the highest-impact skills proven to save the most time
-- [Claude SuperMemory Skill: Persistent Context Explained](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) — Build a personal knowledge base from your weekly Claude Code discoveries
-- [Claude Skills Directory: Where to Find Skills](/claude-skills-guide/claude-skills-directory-where-to-find-skills/) — Browse the full catalog of community skills to track for weekly digest coverage
-- [Claude Skills Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Foundation for getting the most out of Claude Code's evolving skill ecosystem
+- [Best Claude Code Skills to Install First in 2026](/best-claude-code-skills-to-install-first-2026/) — Start your weekly skill exploration with the highest-impact skills proven to save the most time
+- [Claude SuperMemory Skill: Persistent Context Explained](/claude-supermemory-skill-persistent-context-explained/) — Build a personal knowledge base from your weekly Claude Code discoveries
+- [Claude Skills Directory: Where to Find Skills](/claude-skills-directory-where-to-find-skills/) — Browse the full catalog of community skills to track for weekly digest coverage
+- [Claude Skills Getting Started Hub](/getting-started-hub/) — Foundation for getting the most out of Claude Code's evolving skill ecosystem
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

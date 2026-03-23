@@ -13,11 +13,11 @@ permalink: /how-to-optimize-claude-skill-prompts-for-accuracy/
 
 # How to Optimize Claude Skill Prompts for Accuracy
 
-[A Claude skill is only as good as its body](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) The Markdown content after the front matter in your skill file becomes the system prompt Claude operates under when the skill is invoked. A vague skill body produces vague output. A well-structured one produces reliable results.
+[A Claude skill is only as good as its body](/claude-skill-md-format-complete-specification-guide/) The Markdown content after the front matter in your skill file becomes the system prompt Claude operates under when the skill is invoked. A vague skill body produces vague output. A well-structured one produces reliable results.
 
 This guide covers the techniques that make the difference.
 
-**Scope note:** This article focuses specifically on output accuracy and quality — how to write skill bodies that produce correct, consistent, and well-formed results. If you are looking to reduce response latency or token usage rather than improve correctness, see [Speed Up Claude Code Responses with Better Prompt Structure](/claude-skills-guide/speed-up-claude-code-responses-with-better-prompt-structure/).
+**Scope note:** This article focuses specifically on output accuracy and quality — how to write skill bodies that produce correct, consistent, and well-formed results. If you are looking to reduce response latency or token usage rather than improve correctness, see [Speed Up Claude Code Responses with Better Prompt Structure](/speed-up-claude-code-responses-with-better-prompt-structure/).
 
 ## Start with a Clear Role Statement
 
@@ -68,7 +68,7 @@ that other engineers will maintain.
 
 Tell the skill what input it should expect. Claude will then interpret ambiguous user messages through this lens.
 
-For a [`tdd` skill](/claude-skills-guide/best-claude-skills-for-developers-2026/):
+For a [`tdd` skill](/best-claude-skills-for-developers-2026/):
 ```
 Input: You will receive either (a) a description of a feature to test, (b) an existing
 function signature, or (c) a failing test to make pass. Identify which type of input
@@ -405,10 +405,10 @@ The before version would produce anything from a one-liner to a multi-paragraph 
 
 ## Related Reading
 
-- [Speed Up Claude Code Responses with Better Prompt Structure](/claude-skills-guide/speed-up-claude-code-responses-with-better-prompt-structure/) — Companion guide: reducing response latency and token usage rather than improving accuracy
-- [Claude Skill .md File Format: Full Specification](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — Format reference for skill files
-- [How to Write a Skill .md File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) — Step-by-step skill creation
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How trigger phrases interact with skill bodies
+- [Speed Up Claude Code Responses with Better Prompt Structure](/speed-up-claude-code-responses-with-better-prompt-structure/) — Companion guide: reducing response latency and token usage rather than improving accuracy
+- [Claude Skill .md File Format: Full Specification](/claude-skill-md-format-complete-specification-guide/) — Format reference for skill files
+- [How to Write a Skill .md File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/) — Step-by-step skill creation
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — How trigger phrases interact with skill bodies
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

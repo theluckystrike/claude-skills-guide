@@ -13,7 +13,7 @@ permalink: /claude-code-semantic-html-accessibility-improvement-guide/
 
 # Claude Code Semantic HTML Accessibility Improvement Guide
 
-Semantic HTML is the foundation of accessible web development. When you use the right elements — `<nav>`, `<main>`, `<button>`, `<label>` — you give screen readers and other assistive technologies the signals they need to navigate your pages correctly. Claude Code, combined with the [`frontend-design` skill](/claude-skills-guide/best-claude-code-skills-for-frontend-development/), helps you audit existing markup and enforce accessibility-focused patterns consistently across your project.
+Semantic HTML is the foundation of accessible web development. When you use the right elements — `<nav>`, `<main>`, `<button>`, `<label>` — you give screen readers and other assistive technologies the signals they need to navigate your pages correctly. Claude Code, combined with the [`frontend-design` skill](/best-claude-code-skills-for-frontend-development/), helps you audit existing markup and enforce accessibility-focused patterns consistently across your project.
 
 This guide focuses specifically on the accessibility dimension of semantic HTML: WCAG compliance, assistive technology compatibility, and testable accessibility requirements. For broader structural refactoring (replacing divs, advanced HTML elements), see the [Semantic HTML Improvement Guide](/claude-code-semantic-html-improvement-guide/).
 
@@ -211,7 +211,7 @@ The common mistake is writing alt text like a filename description ("image of a 
 
 ## Integrating Accessibility into Your Workflow
 
-The [`tdd` skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) pairs well with accessibility testing. Write tests that verify:
+The [`tdd` skill](/best-claude-skills-for-developers-2026/) pairs well with accessibility testing. Write tests that verify:
 
 - All images have alt attributes
 - Form inputs have associated labels
@@ -352,8 +352,8 @@ Accessibility isn't a destination but an ongoing commitment. With Claude Code as
 ## Related Reading
 
 - [Claude Code Semantic HTML Improvement Guide](/claude-code-semantic-html-improvement-guide/) — Structural refactoring: replacing generic containers, advanced HTML elements, and pre-commit audits
-- [Best Claude Skills for Frontend and UI Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) — Frontend skills for building accessible, semantic HTML structures
-- [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Developer skills including tdd for writing accessibility tests
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Auto-trigger frontend and accessibility skills when working on HTML files
+- [Best Claude Skills for Frontend and UI Development](/best-claude-code-skills-for-frontend-development/) — Frontend skills for building accessible, semantic HTML structures
+- [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/) — Developer skills including tdd for writing accessibility tests
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — Auto-trigger frontend and accessibility skills when working on HTML files
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

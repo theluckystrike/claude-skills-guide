@@ -14,7 +14,7 @@ permalink: /claude-code-skills-for-supabase-full-stack-apps-guide/
 
 # Claude Code Skills for Supabase Full Stack Apps Guide
 
-Building a Supabase-powered full-stack application involves multiple layers: database schema, authentication, backend logic, API endpoints, and frontend interfaces. [Claude Code skills](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) streamline each phase of this workflow. This guide covers the most useful skills for Supabase development and shows how to invoke them effectively.
+Building a Supabase-powered full-stack application involves multiple layers: database schema, authentication, backend logic, API endpoints, and frontend interfaces. [Claude Code skills](/claude-skill-md-format-complete-specification-guide/) streamline each phase of this workflow. This guide covers the most useful skills for Supabase development and shows how to invoke them effectively.
 
 ## Setting Up Your Supabase Project
 
@@ -49,7 +49,7 @@ export const supabaseAdmin = createClient<Database>(
 );
 ```
 
-Using the generated `Database` type from `supabase gen types typescript` gives you end-to-end type safety from database to frontend, catching schema mismatches at compile time rather than at runtime. The [supermemory skill](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) helps maintain organized documentation of your project configuration across different environments.
+Using the generated `Database` type from `supabase gen types typescript` gives you end-to-end type safety from database to frontend, catching schema mismatches at compile time rather than at runtime. The [supermemory skill](/claude-supermemory-skill-persistent-context-explained/) helps maintain organized documentation of your project configuration across different environments.
 
 ## Database Design and Schema Management
 
@@ -147,7 +147,7 @@ npx supabase gen types typescript --project-id your-project-id > lib/database.ty
 
 ## Backend Development with Edge Functions
 
-Supabase Edge Functions run Deno at the edge, handling serverless backend logic. They are ideal for webhooks, background processing, and any backend operation that needs to happen outside the client. The [tdd skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) proves invaluable here. Write your tests first, then implement the function logic.
+Supabase Edge Functions run Deno at the edge, handling serverless backend logic. They are ideal for webhooks, background processing, and any backend operation that needs to happen outside the client. The [tdd skill](/claude-tdd-skill-test-driven-development-workflow/) proves invaluable here. Write your tests first, then implement the function logic.
 
 ```typescript
 // supabase/functions/process-payment/index.ts
@@ -215,7 +215,7 @@ The **pptx** skill helps create technical presentations for architecture reviews
 
 ## Frontend Integration
 
-Connecting your frontend to Supabase involves handling authentication state, real-time subscriptions, and data fetching. The [frontend-design skill](/claude-skills-guide/claude-frontend-design-skill-review-and-tutorial/) generates component structures that follow best practices for Supabase integration.
+Connecting your frontend to Supabase involves handling authentication state, real-time subscriptions, and data fetching. The [frontend-design skill](/claude-frontend-design-skill-review-and-tutorial/) generates component structures that follow best practices for Supabase integration.
 
 Authentication state management is often the trickiest part. The Supabase auth client persists sessions in localStorage by default, but you need to listen for changes and propagate them through your React tree:
 
@@ -481,10 +481,10 @@ Start with the skills matching your current bottleneck. As your project matures,
 
 ## Related Reading
 
-- [Claude Supermemory Skill: Persistent Context Explained](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) — persist Supabase project decisions and configuration across sessions
-- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — write tests for Edge Functions and RLS policies before implementing them
-- [Claude Frontend Design Skill Review and Tutorial](/claude-skills-guide/claude-frontend-design-skill-review-and-tutorial/) — generate Supabase-connected React and Svelte component structures
-- [Claude Skills with Supabase Database Integration](/claude-skills-guide/claude-skills-with-supabase-database-integration/) — connect Claude skills directly to your Supabase database for live queries
+- [Claude Supermemory Skill: Persistent Context Explained](/claude-supermemory-skill-persistent-context-explained/) — persist Supabase project decisions and configuration across sessions
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/) — write tests for Edge Functions and RLS policies before implementing them
+- [Claude Frontend Design Skill Review and Tutorial](/claude-frontend-design-skill-review-and-tutorial/) — generate Supabase-connected React and Svelte component structures
+- [Claude Skills with Supabase Database Integration](/claude-skills-with-supabase-database-integration/) — connect Claude skills directly to your Supabase database for live queries
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

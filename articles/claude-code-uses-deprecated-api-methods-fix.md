@@ -13,7 +13,7 @@ tags: [claude-code, claude-skills]
 
 # Fixing Claude Code Deprecated API Methods
 
-> **Note:** This article covers fixing deprecated *Anthropic API* calls in your own integration code — such as migrating from the `/v1/completions` endpoint to `/v1/messages`, or updating parameter names like `max_tokens_to_sample`. If you are looking to stop Claude Code from *generating* deprecated third-party library methods (urllib, old numpy types, legacy JavaScript patterns) in the code it writes for you, see [Claude Code Keeps Using Deprecated API Methods](/claude-skills-guide/claude-code-keeps-using-deprecated-api-methods/) instead.
+> **Note:** This article covers fixing deprecated *Anthropic API* calls in your own integration code — such as migrating from the `/v1/completions` endpoint to `/v1/messages`, or updating parameter names like `max_tokens_to_sample`. If you are looking to stop Claude Code from *generating* deprecated third-party library methods (urllib, old numpy types, legacy JavaScript patterns) in the code it writes for you, see [Claude Code Keeps Using Deprecated API Methods](/claude-code-keeps-using-deprecated-api-methods/) instead.
 
 When working with Claude Code and the Anthropic API, you may encounter warnings or errors related to deprecated API methods. These deprecations typically occur when Anthropic updates their API to a newer version, retire old endpoints, or change parameter requirements. Understanding how to identify and fix these issues keeps your integrations stable and ensures you receive the latest API features and security improvements.
 
@@ -212,10 +212,10 @@ By keeping your SDK updated, using environment variables for configuration, and 
 
 ## Related Reading
 
-- [Claude Code Keeps Using Deprecated API Methods](/claude-skills-guide/claude-code-keeps-using-deprecated-api-methods/) — Stop Claude from generating deprecated third-party library patterns in the code it writes for you
-- [Claude Code API Changelog Documentation](/claude-skills-guide/claude-code-api-changelog-documentation/) — Track API changes and deprecation timelines
-- [Claude Code API Backward Compatibility Guide](/claude-skills-guide/claude-code-api-backward-compatibility-guide/) — How to write code that survives API updates
-- [Claude Code Error Rate Limit 429 How to Handle](/claude-skills-guide/claude-code-error-rate-limit-429-how-to-handle/) — Another common API error fix guide
-- [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — Central hub for Claude Code error fixes
+- [Claude Code Keeps Using Deprecated API Methods](/claude-code-keeps-using-deprecated-api-methods/) — Stop Claude from generating deprecated third-party library patterns in the code it writes for you
+- [Claude Code API Changelog Documentation](/claude-code-api-changelog-documentation/) — Track API changes and deprecation timelines
+- [Claude Code API Backward Compatibility Guide](/claude-code-api-backward-compatibility-guide/) — How to write code that survives API updates
+- [Claude Code Error Rate Limit 429 How to Handle](/claude-code-error-rate-limit-429-how-to-handle/) — Another common API error fix guide
+- [Claude Skills Troubleshooting Hub](/troubleshooting-hub/) — Central hub for Claude Code error fixes
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

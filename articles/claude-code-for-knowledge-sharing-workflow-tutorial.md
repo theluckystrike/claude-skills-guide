@@ -194,9 +194,9 @@ The power of Claude Code for knowledge sharing lies in making these workflows ex
 
 ## Related Reading
 
-- [Claude Code for Knowledge Base Workflow Tutorial Guide](/claude-skills-guide/claude-code-for-knowledge-base-workflow-tutorial-guide/) — Building knowledge bases from scratch with Claude Code
-- [How to Write a Skill .md File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) — Fundamental skill writing patterns
-- [Advanced Claude Skills with Tool Use and Function Calling](/claude-skills-guide/advanced-claude-skills-with-tool-use-and-function-calling/) — using tools for complex workflows
+- [Claude Code for Knowledge Base Workflow Tutorial Guide](/claude-code-for-knowledge-base-workflow-tutorial-guide/) — Building knowledge bases from scratch with Claude Code
+- [How to Write a Skill .md File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/) — Fundamental skill writing patterns
+- [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/) — using tools for complex workflows
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

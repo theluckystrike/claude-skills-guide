@@ -13,9 +13,9 @@ permalink: /claude-code-international-date-format-handling-workflow/
 
 # Claude Code International Date Format Handling Workflow
 
-[Building applications that work across multiple regions requires careful handling of date formats](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Different locales represent dates in varying orders, separators, and conventions. A date displayed as "03/14/2026" in the United States means March 14th, while the same string in many European countries represents December 3rd, 2026. This ambiguity creates real bugs in production systems, and Claude Code provides effective workflows to address these challenges.
+[Building applications that work across multiple regions requires careful handling of date formats](/best-claude-code-skills-to-install-first-2026/) Different locales represent dates in varying orders, separators, and conventions. A date displayed as "03/14/2026" in the United States means March 14th, while the same string in many European countries represents December 3rd, 2026. This ambiguity creates real bugs in production systems, and Claude Code provides effective workflows to address these challenges.
 
-[This guide shows you how to handle international date formats systematically using Claude Code skills](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) and practical patterns you can implement immediately.
+[This guide shows you how to handle international date formats systematically using Claude Code skills](/claude-skill-md-format-complete-specification-guide/) and practical patterns you can implement immediately.
 
 ## The Core Challenge
 
@@ -74,7 +74,7 @@ The skill also serves as living documentation. New team members reading the skil
 
 ### Pattern 1: Locale-Aware Input Parsing
 
-When handling user input, always establish the locale before parsing dates. [The supermemory skill can store user preferences](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/), but you can also use explicit context passing:
+When handling user input, always establish the locale before parsing dates. [The supermemory skill can store user preferences](/claude-supermemory-skill-persistent-context-explained/), but you can also use explicit context passing:
 
 ```javascript
 // date-parser.js
@@ -164,7 +164,7 @@ function parseUserDate(dateString, locale = 'en-US') {
 
 This version handles the JavaScript date rollover trap. `new Date(2026, 1, 30)` silently returns March 2nd because February has no 30th day. The validation step catches this and throws an informative error instead of storing a wrong date.
 
-[The frontend-design skill includes built-in date picker components](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) that automatically handle locale-specific display, reducing the burden on your validation logic.
+[The frontend-design skill includes built-in date picker components](/best-claude-code-skills-to-install-first-2026/) that automatically handle locale-specific display, reducing the burden on your validation logic.
 
 ### Pattern 2: Standardized Storage and Display
 
@@ -271,7 +271,7 @@ The critical detail is appending `T00:00:00Z` before constructing the Date objec
 
 ### Pattern 4: Testing Date Handling with TDD
 
-[The tdd skill provides excellent patterns for testing date handling](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/). Create comprehensive test coverage for your date utilities:
+[The tdd skill provides excellent patterns for testing date handling](/claude-tdd-skill-test-driven-development-workflow/). Create comprehensive test coverage for your date utilities:
 
 ```javascript
 // date-handler.test.js
@@ -557,9 +557,9 @@ The key principles remain straightforward: store in ISO 8601, parse with explici
 
 ## Related Reading
 
-- [Claude Code i18n Workflow for React Applications](/claude-skills-guide/claude-code-i18n-workflow-for-react-applications-guide/)
-- [Claude Code L10n Testing Automation Workflow Tutorial](/claude-skills-guide/claude-code-l10n-testing-automation-workflow-tutorial/)
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/)
-- [Workflows Hub](/claude-skills-guide/workflows-hub/)
+- [Claude Code i18n Workflow for React Applications](/claude-code-i18n-workflow-for-react-applications-guide/)
+- [Claude Code L10n Testing Automation Workflow Tutorial](/claude-code-l10n-testing-automation-workflow-tutorial/)
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/)
+- [Workflows Hub](/workflows-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

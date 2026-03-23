@@ -13,11 +13,11 @@ permalink: /best-claude-code-skills-for-frontend-development/
 
 # Best Claude Code Skills for Frontend Development
 
-[Claude Code has several skills that cut time on repetitive frontend tasks](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/): generating components, writing tests first, producing documentation, and visualizing data. Invoke each with `/skill-name` directly in Claude Code. Here are the ones worth using.
+[Claude Code has several skills that cut time on repetitive frontend tasks](/best-claude-code-skills-to-install-first-2026/): generating components, writing tests first, producing documentation, and visualizing data. Invoke each with `/skill-name` directly in Claude Code. Here are the ones worth using.
 
 ## frontend-design: Rapid UI Implementation
 
-[The **frontend-design** skill helps you translate design concepts into functional code](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) When you have a mockup or a clear visual description, this skill generates component structures, suggests styling approaches, and creates responsive layouts.
+[The **frontend-design** skill helps you translate design concepts into functional code](/claude-skill-md-format-complete-specification-guide/) When you have a mockup or a clear visual description, this skill generates component structures, suggests styling approaches, and creates responsive layouts.
 
 ```bash
 # Example: Generate a card component from a description
@@ -128,7 +128,7 @@ This outputs as a file you can drop directly into your component tree, avoiding 
 
 ## pdf: Documentation Generation
 
-Frontend projects require documentation. The **pdf** skill generates professional PDFs from markdown, HTML, or structured data. Use it for API documentation, style guides, and user manuals. For a broader look at what the pdf skill can do across data workflows, see [Best Claude Skills for Data Analysis](/claude-skills-guide/best-claude-skills-for-data-analysis/).
+Frontend projects require documentation. The **pdf** skill generates professional PDFs from markdown, HTML, or structured data. Use it for API documentation, style guides, and user manuals. For a broader look at what the pdf skill can do across data workflows, see [Best Claude Skills for Data Analysis](/best-claude-skills-for-data-analysis/).
 
 ```bash
 # Generate API documentation from JSDoc comments
@@ -161,7 +161,7 @@ The **tdd** skill enforces test-first development. It writes unit tests before i
 "Write tests for a pagination component that handles edge cases"
 ```
 
-Pair this skill with Vitest for JavaScript projects or Jest for React applications. The skill understands testing patterns specific to frontend development, including mocking DOM APIs and handling asynchronous operations. For a full breakdown of tdd alongside other developer-focused skills, see [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/).
+Pair this skill with Vitest for JavaScript projects or Jest for React applications. The skill understands testing patterns specific to frontend development, including mocking DOM APIs and handling asynchronous operations. For a full breakdown of tdd alongside other developer-focused skills, see [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/).
 
 ### What good TDD output looks like
 
@@ -219,7 +219,7 @@ Writing these cases manually takes 20-30 minutes. The tdd skill generates them i
 "Where did we decide to use CSS modules over styled-components?"
 ```
 
-This skill connects with tools like Obsidian and Notion, creating a unified knowledge management system. For large projects with multiple contributors, supermemory becomes essential for maintaining institutional knowledge. To make the most of supermemory without burning tokens, check out [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/).
+This skill connects with tools like Obsidian and Notion, creating a unified knowledge management system. For large projects with multiple contributors, supermemory becomes essential for maintaining institutional knowledge. To make the most of supermemory without burning tokens, check out [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/).
 
 ### Practical supermemory queries for frontend teams
 
@@ -336,11 +336,11 @@ Invoke `/frontend-design` to scaffold components, `/tdd` to write tests before i
 
 ## Related Reading
 
-- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — Extend your stack into CI/CD and infrastructure
-- [Best Claude Skills for Data Analysis](/claude-skills-guide/best-claude-skills-for-data-analysis/) — Data processing and reporting workflows
-- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/claude-skills-vs-prompts-which-is-better/) — Decide when skills beat plain prompts
+- [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/) — Extend your stack into CI/CD and infrastructure
+- [Best Claude Skills for Data Analysis](/best-claude-skills-for-data-analysis/) — Data processing and reporting workflows
+- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-vs-prompts-which-is-better/) — Decide when skills beat plain prompts
 
-**Related guides:** [Claude Code Accessibility Regression Testing Guide](https://theluckystrike.github.io/claude-skills-guide/claude-code-accessibility-regression-testing/)
+**Related guides:** [Claude Code Accessibility Regression Testing Guide](https://theluckystrike.github.io/claude-code-accessibility-regression-testing/)
 
 *Built by theluckystrike — More at [zovo.one](https://zovo.one)
 *

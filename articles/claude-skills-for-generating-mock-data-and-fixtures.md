@@ -13,11 +13,11 @@ permalink: /claude-skills-for-generating-mock-data-and-fixtures/
 
 # Claude Skills for Generating Mock Data and Fixtures
 
-Generating realistic [mock data](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) and test fixtures is a common pain point in software development. Whether you are building a new application, writing automated tests, or prototyping features, having access to well-structured fake data accelerates your workflow significantly. Claude Code skills offer a powerful approach to generating this data without external libraries or manual data entry.
+Generating realistic [mock data](/claude-tdd-skill-test-driven-development-workflow/) and test fixtures is a common pain point in software development. Whether you are building a new application, writing automated tests, or prototyping features, having access to well-structured fake data accelerates your workflow significantly. Claude Code skills offer a powerful approach to generating this data without external libraries or manual data entry.
 
 ## Understanding Mock Data Generation in Claude
 
-[Claude Code handles mock data generation through its skill system](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) When you invoke a skill focused on data generation, Claude uses its understanding of data structures, programming patterns, and domain-specific requirements to produce realistic test data. The key advantage is that Claude generates data that matches your specific data models rather than generic random values.
+[Claude Code handles mock data generation through its skill system](/best-claude-code-skills-to-install-first-2026/) When you invoke a skill focused on data generation, Claude uses its understanding of data structures, programming patterns, and domain-specific requirements to produce realistic test data. The key advantage is that Claude generates data that matches your specific data models rather than generic random values.
 
 The primary approach for mock data generation is through custom skills you build for your domain-specific needs, or by describing your requirements directly to Claude Code without a skill. Each skill loads instructions that guide Claude's output to produce structured, type-safe data matching your project requirements.
 
@@ -261,9 +261,9 @@ Follow these practices when generating test fixtures with Claude skills:
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Full developer skill stack including data handling
-- [Claude Code Pytest Fixtures and Parametrize Workflow](/claude-skills-guide/claude-code-pytest-fixtures-parametrize-workflow-tutorial-20/) — Advanced pytest patterns
-- [Claude Skills for Data Analysis](/claude-skills-guide/best-claude-skills-for-data-analysis/) — Data handling with Claude
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Full developer skill stack including data handling
+- [Claude Code Pytest Fixtures and Parametrize Workflow](/claude-code-pytest-fixtures-parametrize-workflow-tutorial-20/) — Advanced pytest patterns
+- [Claude Skills for Data Analysis](/best-claude-skills-for-data-analysis/) — Data handling with Claude
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

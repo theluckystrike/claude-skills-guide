@@ -13,7 +13,7 @@ permalink: /claude-code-express-to-fastify-migration-tutorial-2026/
 
 # Claude Code Express to Fastify Migration Tutorial 2026
 
-[Fastify has become the preferred choice for Node.js developers seeking better performance](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), built-in TypeScript support, and a more modern API. If you're maintaining an Express.js application in 2026, migrating to Fastify can reduce response times by up to 40% while providing better schema validation and plugin architecture. This tutorial shows you how to use Claude Code and its ecosystem of skills to streamline the migration process.
+[Fastify has become the preferred choice for Node.js developers seeking better performance](/best-claude-code-skills-to-install-first-2026/), built-in TypeScript support, and a more modern API. If you're maintaining an Express.js application in 2026, migrating to Fastify can reduce response times by up to 40% while providing better schema validation and plugin architecture. This tutorial shows you how to use Claude Code and its ecosystem of skills to streamline the migration process.
 
 ## Why Migrate from Express to Fastify
 
@@ -44,11 +44,11 @@ These figures are from a single-core `autocannon` benchmark against a simple JSO
 | Built-in logging | No | Yes (pino) |
 | Hook system | Middleware chain | Named lifecycle hooks |
 
-Before starting your migration, ensure your current Express application has adequate test coverage. The [**tdd** skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) from Claude Code can help you establish test patterns if your project lacks them. Run your existing test suite to establish a baseline, then begin the incremental migration.
+Before starting your migration, ensure your current Express application has adequate test coverage. The [**tdd** skill](/best-claude-skills-for-developers-2026/) from Claude Code can help you establish test patterns if your project lacks them. Run your existing test suite to establish a baseline, then begin the incremental migration.
 
 ## Setting Up Your Migration Environment
 
-[Create a parallel Fastify project alongside your existing Express application](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) This approach lets you migrate route by route without disrupting production traffic.
+[Create a parallel Fastify project alongside your existing Express application](/claude-tdd-skill-test-driven-development-workflow/) This approach lets you migrate route by route without disrupting production traffic.
 
 ```bash
 # Initialize new Fastify project
@@ -96,7 +96,7 @@ curl http://localhost:3001/health
 # {"status":"ok","timestamp":"2026-03-13T10:00:00.000Z"}
 ```
 
-The migration works best when you copy your existing Express route handlers and adapt them to Fastify's interface. The [**supermemory** skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) helps maintain context across your migration sessions, remembering which routes you've converted and any issues encountered.
+The migration works best when you copy your existing Express route handlers and adapt them to Fastify's interface. The [**supermemory** skill](/claude-skills-token-optimization-reduce-api-costs/) helps maintain context across your migration sessions, remembering which routes you've converted and any issues encountered.
 
 ## Converting Route Handlers
 
@@ -704,8 +704,8 @@ The incremental approach is the key to a low-risk migration. Migrate one route g
 
 ## Related Reading
 
-- [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — The tdd and supermemory skills power migration workflows
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Trigger skills automatically during migration and refactoring tasks
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Manage token usage during long migration sessions
+- [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/) — The tdd and supermemory skills power migration workflows
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — Trigger skills automatically during migration and refactoring tasks
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — Manage token usage during long migration sessions
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

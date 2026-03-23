@@ -13,11 +13,11 @@ permalink: /claude-code-dotfiles-management-and-skill-sync-workflow/
 
 # Claude Code Dotfiles Management and Skill Sync Workflow
 
-[Managing Claude Code configuration across multiple machines](/claude-skills-guide/shared-claude-skills-across-monorepo-multiple-packages/) requires a deliberate approach to dotfiles and skill synchronization. This guide presents a practical workflow for tracking your Claude settings in git, organizing skills for portability, and keeping everything synchronized between workstations.
+[Managing Claude Code configuration across multiple machines](/shared-claude-skills-across-monorepo-multiple-packages/) requires a deliberate approach to dotfiles and skill synchronization. This guide presents a practical workflow for tracking your Claude settings in git, organizing skills for portability, and keeping everything synchronized between workstations.
 
 ## Why Track Claude Config in Dotfiles
 
-[Your Claude Code setup includes several directories that benefit from version control](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/): skill definitions, custom prompts, configuration files, and agent instructions. When you work across multiple machines—perhaps a desktop at home and a laptop on the go—having these tracked in git eliminates the friction of manual replication.
+[Your Claude Code setup includes several directories that benefit from version control](/claude-skill-md-format-complete-specification-guide/): skill definitions, custom prompts, configuration files, and agent instructions. When you work across multiple machines—perhaps a desktop at home and a laptop on the go—having these tracked in git eliminates the friction of manual replication.
 
 The standard Claude Code directories worth tracking include `~/.claude/skills/` for skill definitions, `~/.claude/agents/` for custom agent configurations, and `~/.claude/settings.json` for user preferences. Each of these can become part of a dotfiles repository with appropriate `.gitignore` rules.
 
@@ -44,7 +44,7 @@ skills/
 !.claude/
 ```
 
-The key insight is treating `skills/` as [source-controlled content](/claude-skills-guide/how-to-share-claude-skills-with-your-team/) while acknowledging that some files—like runtime cache or local overrides—should remain machine-specific.
+The key insight is treating `skills/` as [source-controlled content](/how-to-share-claude-skills-with-your-team/) while acknowledging that some files—like runtime cache or local overrides—should remain machine-specific.
 
 ## Skill Organization Patterns
 
@@ -60,7 +60,7 @@ Organizing skills effectively improves discoverability and reduces duplication. 
 └── docx-export.md
 ```
 
-[Each skill file should be self-contained](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/). If you find yourself referencing the same prompts across multiple skills, extract common instructions into a shared file and reference it using relative includes where supported.
+[Each skill file should be self-contained](/claude-skill-md-format-complete-specification-guide/). If you find yourself referencing the same prompts across multiple skills, extract common instructions into a shared file and reference it using relative includes where supported.
 
 For skills you use frequently, create symlinks to shorter aliases:
 
@@ -107,7 +107,7 @@ Run this manually after establishing new skills, or schedule it daily with cron.
 
 Within an active Claude session, you can refresh skills without restarting. The exact mechanism depends on your Claude Code version, but typically creating or modifying a skill file triggers automatic reloading.
 
-For manual refresh, you can invoke a built-in command if available, or simply start a new session. [When you modify a skill like `tdd-workflow.md`](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/)iately:
+For manual refresh, you can invoke a built-in command if available, or simply start a new session. [When you modify a skill like `tdd-workflow.md`](/claude-tdd-skill-test-driven-development-workflow/)iately:
 
 ```
 /tdd create user service
@@ -187,9 +187,9 @@ The initial setup takes maybe thirty minutes, but the time saved over months of 
 
 ## Related Reading
 
-- [How to Share Claude Skills with Your Team](/claude-skills-guide/how-to-share-claude-skills-with-your-team/) — Distribute your synced skill files across engineering teams with consistent naming and versioning.
-- [Claude Skills Directory: Where to Find Skills 2026](/claude-skills-guide/claude-skills-directory-where-to-find-skills/) — Discover which skills are worth adding to your dotfiles repository in the first place.
-- [Skill MD File Format Explained With Examples Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — Understand the format of the skill files you are managing in your dotfiles.
-- [Getting Started with Claude Skills](/claude-skills-guide/getting-started-hub/) — The foundational guide before you start syncing and managing skill files across machines.
+- [How to Share Claude Skills with Your Team](/how-to-share-claude-skills-with-your-team/) — Distribute your synced skill files across engineering teams with consistent naming and versioning.
+- [Claude Skills Directory: Where to Find Skills 2026](/claude-skills-directory-where-to-find-skills/) — Discover which skills are worth adding to your dotfiles repository in the first place.
+- [Skill MD File Format Explained With Examples Guide](/claude-skill-md-format-complete-specification-guide/) — Understand the format of the skill files you are managing in your dotfiles.
+- [Getting Started with Claude Skills](/getting-started-hub/) — The foundational guide before you start syncing and managing skill files across machines.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

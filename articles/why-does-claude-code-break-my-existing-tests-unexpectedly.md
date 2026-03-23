@@ -177,9 +177,9 @@ The key is treating Claude as a collaborator that needs clear, specific guidance
 
 ## Related Reading
 
-- [Claude Code Breaks Existing Tests After Changes Fix](/claude-skills-guide/claude-code-breaks-existing-tests-after-changes-fix/) — See also
-- [Claude Code Test Driven Refactoring Guide](/claude-skills-guide/claude-code-test-driven-refactoring-guide/) — See also
-- [How to Make Claude Code Test Before Implementing Feature](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — See also
-- [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — See also
+- [Claude Code Breaks Existing Tests After Changes Fix](/claude-code-breaks-existing-tests-after-changes-fix/) — See also
+- [Claude Code Test Driven Refactoring Guide](/claude-code-test-driven-refactoring-guide/) — See also
+- [How to Make Claude Code Test Before Implementing Feature](/claude-tdd-skill-test-driven-development-workflow/) — See also
+- [Claude Skills Troubleshooting Hub](/troubleshooting-hub/) — See also
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

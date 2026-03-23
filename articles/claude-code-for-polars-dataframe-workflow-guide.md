@@ -313,9 +313,9 @@ By integrating Claude Code into your Polars workflows, you gain a collaborative 
 
 ## Related Reading
 
-- [Claude Skills for Data Science and Jupyter Notebooks](/claude-skills-guide/claude-skills-for-data-science-and-jupyter-notebooks/)
-- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
-- [How Data Scientists Use Claude Code for Analysis](/claude-skills-guide/how-data-scientists-use-claude-code-for-analysis/)
-- [Use Cases Hub](/claude-skills-guide/use-cases-hub/)
+- [Claude Skills for Data Science and Jupyter Notebooks](/claude-skills-for-data-science-and-jupyter-notebooks/)
+- [Best Claude Code Skills to Install First (2026)](/best-claude-code-skills-to-install-first-2026/)
+- [How Data Scientists Use Claude Code for Analysis](/how-data-scientists-use-claude-code-for-analysis/)
+- [Use Cases Hub](/use-cases-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

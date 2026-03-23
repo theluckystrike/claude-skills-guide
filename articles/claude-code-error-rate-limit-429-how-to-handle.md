@@ -225,9 +225,9 @@ For teams using Claude Code at scale, implementing request queuing with a dedica
 
 ## Related Reading
 
-- [Claude Code API Backward Compatibility Guide](/claude-skills-guide/claude-code-api-backward-compatibility-guide/) — Write resilient code that handles API changes gracefully
-- [Claude Code Uses Deprecated API Methods Fix](/claude-skills-guide/claude-code-uses-deprecated-api-methods-fix/) — Related API error: deprecated methods causing failures
-- [Claude SuperMemory Skill: Persistent Context Explained](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) — Track which operations consume most requests
-- [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — All Claude Code error and API issue guides
+- [Claude Code API Backward Compatibility Guide](/claude-code-api-backward-compatibility-guide/) — Write resilient code that handles API changes gracefully
+- [Claude Code Uses Deprecated API Methods Fix](/claude-code-uses-deprecated-api-methods-fix/) — Related API error: deprecated methods causing failures
+- [Claude SuperMemory Skill: Persistent Context Explained](/claude-supermemory-skill-persistent-context-explained/) — Track which operations consume most requests
+- [Claude Skills Troubleshooting Hub](/troubleshooting-hub/) — All Claude Code error and API issue guides
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

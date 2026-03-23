@@ -14,9 +14,9 @@ permalink: /claude-code-nextjs-image-optimization-guide/
 
 # Claude Code Next.js Image Optimization Guide
 
-Image optimization in Next.js combines the framework's built-in Image component with modern formats like WebP and AVIF. [When you pair Next.js image handling with Claude Code's CLI capabilities](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), you can automate optimization workflows, validate image implementations, and maintain consistent performance across your application.
+Image optimization in Next.js combines the framework's built-in Image component with modern formats like WebP and AVIF. [When you pair Next.js image handling with Claude Code's CLI capabilities](/best-claude-code-skills-to-install-first-2026/), you can automate optimization workflows, validate image implementations, and maintain consistent performance across your application.
 
-This guide covers practical approaches for [developers using Claude Code for frontend work](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) with Next.js image optimization, from foundational component usage to advanced automation and testing patterns.
+This guide covers practical approaches for [developers using Claude Code for frontend work](/best-claude-code-skills-for-frontend-development/) with Next.js image optimization, from foundational component usage to advanced automation and testing patterns.
 
 ## Next.js Image Component Basics
 
@@ -175,7 +175,7 @@ For user-generated content where image URLs come from a database, you may not kn
 
 ## Testing Image Implementations
 
-The `tdd` skill helps you [write tests for image components through a test-driven pipeline](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/). Describe your testing requirements:
+The `tdd` skill helps you [write tests for image components through a test-driven pipeline](/claude-tdd-skill-test-driven-development-workflow/). Describe your testing requirements:
 
 ```
 Write tests for the ProductGallery component.
@@ -349,14 +349,14 @@ Add this script to your `prebuild` npm script so it runs automatically before ea
 
 ## Summary
 
-Next.js image optimization works best when you understand the component's key features: the `priority` prop for above-the-fold content, the `sizes` prop for responsive images, direct imports for static assets, and proper remote domain configuration. The `fill` layout handles dynamic content where dimensions are unknown, and build-time scripts can generate blur placeholders and manifests to keep components clean. After optimizing images, you can deploy your Next.js app with confidence using [Claude Code's Vercel deployment workflow](/claude-skills-guide/claude-code-vercel-deployment-nextjs-workflow-guide/). Using Claude Code with skills like `frontend-design` and `tdd` accelerates development while maintaining quality through tested implementations.
+Next.js image optimization works best when you understand the component's key features: the `priority` prop for above-the-fold content, the `sizes` prop for responsive images, direct imports for static assets, and proper remote domain configuration. The `fill` layout handles dynamic content where dimensions are unknown, and build-time scripts can generate blur placeholders and manifests to keep components clean. After optimizing images, you can deploy your Next.js app with confidence using [Claude Code's Vercel deployment workflow](/claude-code-vercel-deployment-nextjs-workflow-guide/). Using Claude Code with skills like `frontend-design` and `tdd` accelerates development while maintaining quality through tested implementations.
 
 ## Related Reading
 
-- [Best Claude Code Skills to Install First (2026)](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
-- [Claude Code React Router v7 Navigation Guide](/claude-skills-guide/claude-code-react-router-v7-navigation-guide/)
-- [Vibe Coding with Claude Code: Complete Guide 2026](/claude-skills-guide/vibe-coding-productivity-tips-and-best-practices/)
-- [Workflows Hub](/claude-skills-guide/workflows-hub/)
+- [Best Claude Code Skills to Install First (2026)](/best-claude-code-skills-to-install-first-2026/)
+- [Claude Code React Router v7 Navigation Guide](/claude-code-react-router-v7-navigation-guide/)
+- [Vibe Coding with Claude Code: Complete Guide 2026](/vibe-coding-productivity-tips-and-best-practices/)
+- [Workflows Hub](/workflows-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

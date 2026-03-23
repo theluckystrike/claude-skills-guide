@@ -16,13 +16,13 @@ permalink: /claude-skills-for-legal-document-automation/
 
 # Claude Skills for Legal Document Automation
 
-Legal document automation transforms static legal templates into dynamic documents that populate variables, apply conditional logic, and generate output in multiple formats. [Claude skills](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/) enhance this workflow by providing specialized instructions that guide Claude's behavior when processing legal documents.
+Legal document automation transforms static legal templates into dynamic documents that populate variables, apply conditional logic, and generate output in multiple formats. [Claude skills](/claude-code-for-beginners-complete-getting-started-2026/) enhance this workflow by providing specialized instructions that guide Claude's behavior when processing legal documents.
 
 This guide covers practical implementations for automating contracts, NDAs, compliance documents, and other legal paperwork using Claude Code and custom skills.
 
 ## Setting Up a Legal Document Skill
 
-[A Claude skill is a Markdown file that defines instructions](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) Claude follows during your session. Create a skill for legal document automation by placing a file in `~/.claude/skills/legal-docs.md`:
+[A Claude skill is a Markdown file that defines instructions](/claude-skill-md-format-complete-specification-guide/) Claude follows during your session. Create a skill for legal document automation by placing a file in `~/.claude/skills/legal-docs.md`:
 
 ```markdown
 # Legal Document Automation Skill
@@ -126,7 +126,7 @@ This Agreement complies with California Civil Code Section 1542.
 {{/if}}
 ```
 
-Claude processes these directives when populating the template, including or excluding clauses based on your data. Teams handling sensitive legal documents may also benefit from reviewing the [GDPR data privacy implementation guide](/claude-skills-guide/claude-code-gdpr-data-privacy-implementation-checklist/) to ensure compliance throughout the generation pipeline.
+Claude processes these directives when populating the template, including or excluding clauses based on your data. Teams handling sensitive legal documents may also benefit from reviewing the [GDPR data privacy implementation guide](/claude-code-gdpr-data-privacy-implementation-checklist/) to ensure compliance throughout the generation pipeline.
 
 ## Batch Processing Multiple Documents
 
@@ -226,7 +226,7 @@ Legal documents require specific output formats:
 
 When automating legal documents with Claude:
 
-- **Version control templates**: Store templates in Git with change tracking — the [automated code documentation workflow](/claude-skills-guide/automated-code-documentation-workflow-with-claude-skills/) covers how to keep generated docs in sync with code changes
+- **Version control templates**: Store templates in Git with change tracking — the [automated code documentation workflow](/automated-code-documentation-workflow-with-claude-skills/) covers how to keep generated docs in sync with code changes
 - **Review outputs**: Always have legal counsel review generated documents
 - **Audit trails**: Log all document generations with timestamps and data used
 - **Test edge cases**: Verify conditional logic handles all scenarios
@@ -240,9 +240,9 @@ The combination of Claude's natural language processing and skill-based instruct
 
 ## Related Reading
 
-- [GDPR Data Privacy Implementation with Claude Code 2026](/claude-skills-guide/claude-code-gdpr-data-privacy-implementation-checklist/) — Ensure automated legal document workflows comply with privacy regulations
-- [Automated Code Documentation Workflow with Claude Skills](/claude-skills-guide/automated-code-documentation-workflow-with-claude-skills/) — Apply similar automation patterns to technical documentation pipelines
-- [Claude Code for Beginners: Getting Started 2026](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/) — Set up Claude Code before building your first document automation skill
+- [GDPR Data Privacy Implementation with Claude Code 2026](/claude-code-gdpr-data-privacy-implementation-checklist/) — Ensure automated legal document workflows comply with privacy regulations
+- [Automated Code Documentation Workflow with Claude Skills](/automated-code-documentation-workflow-with-claude-skills/) — Apply similar automation patterns to technical documentation pipelines
+- [Claude Code for Beginners: Getting Started 2026](/claude-code-for-beginners-complete-getting-started-2026/) — Set up Claude Code before building your first document automation skill
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

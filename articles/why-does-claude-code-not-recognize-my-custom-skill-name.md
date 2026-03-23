@@ -13,7 +13,7 @@ permalink: /why-does-claude-code-not-recognize-my-custom-skill-name/
 
 # Why Does Claude Code Not Recognize My Custom Skill Name?
 
-[You've created a custom skill, placed it in the right directory, but when you try to invoke it with /skill-name, Claude Code gives you a confused response](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/). Your skill isn't loading. This is a common issue with several potential causes. Let's walk through why this happens and how to fix it.
+[You've created a custom skill, placed it in the right directory, but when you try to invoke it with /skill-name, Claude Code gives you a confused response](/claude-skill-md-format-complete-specification-guide/). Your skill isn't loading. This is a common issue with several potential causes. Let's walk through why this happens and how to fix it.
 
 ## Where Claude Looks for Skills
 
@@ -59,7 +59,7 @@ Claude expects a flat directory structure or a specific organizational pattern. 
 
 ## Skill Name Conflicts
 
-Sometimes your skill exists but gets overshadowed by a built-in skill or another custom skill with the same name. Built-in skills like `pdf`, `pptx`, `docx`, `xlsx`, [`tdd`](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/), and `supermemory` take precedence. If you create a skill named `pdf` expecting it to override the built-in, you may encounter unexpected behavior.
+Sometimes your skill exists but gets overshadowed by a built-in skill or another custom skill with the same name. Built-in skills like `pdf`, `pptx`, `docx`, `xlsx`, [`tdd`](/claude-tdd-skill-test-driven-development-workflow/), and `supermemory` take precedence. If you create a skill named `pdf` expecting it to override the built-in, you may encounter unexpected behavior.
 
 To check for conflicts, list all available skills in your directory:
 
@@ -181,9 +181,9 @@ With your skill properly configured, you can invoke it with `/skill-name` and Cl
 
 ## Related Reading
 
-- [Why Is My Claude Skill Not Showing Up: Fix Guide](/claude-skills-guide/claude-code-skill-not-found-in-skills-directory-how-to-fix/) — If the skill isn't recognized even after registration, this guide addresses the skill list display issues
-- [Claude Skill MD Format: Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — Ensure your skill name and metadata follow the correct format to guarantee recognition by Claude Code
-- [How Do I Debug a Claude Skill That Silently Fails](/claude-skills-guide/how-do-i-debug-a-claude-skill-that-silently-fails/) — Use these debugging techniques when your skill is recognized but not behaving as expected
-- [Claude Skills: Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Explore skill registration, naming conventions, and troubleshooting patterns across the Claude ecosystem
+- [Why Is My Claude Skill Not Showing Up: Fix Guide](/claude-code-skill-not-found-in-skills-directory-how-to-fix/) — If the skill isn't recognized even after registration, this guide addresses the skill list display issues
+- [Claude Skill MD Format: Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/) — Ensure your skill name and metadata follow the correct format to guarantee recognition by Claude Code
+- [How Do I Debug a Claude Skill That Silently Fails](/how-do-i-debug-a-claude-skill-that-silently-fails/) — Use these debugging techniques when your skill is recognized but not behaving as expected
+- [Claude Skills: Getting Started Hub](/getting-started-hub/) — Explore skill registration, naming conventions, and troubleshooting patterns across the Claude ecosystem
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

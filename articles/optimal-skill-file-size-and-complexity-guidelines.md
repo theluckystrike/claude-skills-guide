@@ -13,7 +13,7 @@ permalink: /optimal-skill-file-size-and-complexity-guidelines/
 
 # Optimal Skill File Size and Complexity Guidelines
 
-[Claude skills have transformed how developers interact with AI assistants](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) A well-crafted skill can automate repetitive tasks, enforce coding standards, or provide specialized expertise. However, one common pitfall is creating skills that are either too simple or excessively complex. Finding the right balance ensures your skills remain maintainable, testable, and effective.
+[Claude skills have transformed how developers interact with AI assistants](/best-claude-code-skills-to-install-first-2026/) A well-crafted skill can automate repetitive tasks, enforce coding standards, or provide specialized expertise. However, one common pitfall is creating skills that are either too simple or excessively complex. Finding the right balance ensures your skills remain maintainable, testable, and effective.
 
 This guide provides practical recommendations for determining optimal skill file size and complexity, with real examples you can apply immediately.
 
@@ -127,7 +127,7 @@ When the user says: "Create a test for the user authentication function"
 
 ### Define Boundaries Clearly
 
-Explicitly state what your skill does not cover. The [`supermemory` skill](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/), for instance, might focus on memory retrieval and organization while explicitly excluding external API integrations or real-time sync functionality.
+Explicitly state what your skill does not cover. The [`supermemory` skill](/claude-supermemory-skill-persistent-context-explained/), for instance, might focus on memory retrieval and organization while explicitly excluding external API integrations or real-time sync functionality.
 
 ## Testing Your Skill Complexity
 
@@ -148,9 +148,9 @@ Start with a narrow scope and expand only when clear patterns emerge across mult
 
 ## Related Reading
 
-- [What Is the Best File Structure for a Complex Claude Skill](/claude-skills-guide/what-is-the-best-file-structure-for-a-complex-claude-skill/) — Apply these complexity guidelines to a concrete directory structure for larger multi-file skills
-- [Claude Skill MD Format: Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — Master the skill.md format to structure your skills at the right file size from the start
-- [Claude Skill Inheritance and Composition Patterns](/claude-skills-guide/claude-skill-inheritance-and-composition-patterns/) — Split complex skills using composition patterns that keep each component within optimal size bounds
-- [Claude Skills: Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Explore foundational skill authoring patterns and best practices for skill design
+- [What Is the Best File Structure for a Complex Claude Skill](/what-is-the-best-file-structure-for-a-complex-claude-skill/) — Apply these complexity guidelines to a concrete directory structure for larger multi-file skills
+- [Claude Skill MD Format: Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/) — Master the skill.md format to structure your skills at the right file size from the start
+- [Claude Skill Inheritance and Composition Patterns](/claude-skill-inheritance-and-composition-patterns/) — Split complex skills using composition patterns that keep each component within optimal size bounds
+- [Claude Skills: Getting Started Hub](/getting-started-hub/) — Explore foundational skill authoring patterns and best practices for skill design
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

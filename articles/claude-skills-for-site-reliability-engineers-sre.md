@@ -16,11 +16,11 @@ permalink: /claude-skills-for-site-reliability-engineers-sre/
 
 # Claude Skills for Site Reliability Engineers SRE
 
-Site reliability engineers need tools that handle incident response, log analysis, [monitoring](/claude-skills-guide/claude-code-sentry-error-tracking-source-maps-workflow/), and system debugging. Claude Code provides skills that integrate with common SRE tooling to accelerate these workflows. This guide covers practical applications for SRE teams.
+Site reliability engineers need tools that handle incident response, log analysis, [monitoring](/claude-code-sentry-error-tracking-source-maps-workflow/), and system debugging. Claude Code provides skills that integrate with common SRE tooling to accelerate these workflows. This guide covers practical applications for SRE teams.
 
 ## Incident Response Automation
 
-[When a production incident occurs, speed matters](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Claude Code helps you build incident response runbooks that execute directly in your terminal. Describe your alerting setup and Claude generates bash scripts for common remediation steps.
+[When a production incident occurs, speed matters](/best-claude-code-skills-to-install-first-2026/) Claude Code helps you build incident response runbooks that execute directly in your terminal. Describe your alerting setup and Claude generates bash scripts for common remediation steps.
 
 For example, a high-memory alert response might look like this:
 
@@ -205,10 +205,10 @@ Built by theluckystrike — More at [zovo.one](https://zovo.one)
 
 ## Related Reading
 
-- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — DevOps skill recommendations relevant to SRE on-call and deployment workflows
-- [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/) — Integrate AI-powered analysis into CI/CD pipelines for SRE quality gates
-- [Claude Code Skills for Infrastructure as Code Terraform](/claude-skills-guide/claude-code-skills-for-infrastructure-as-code-terraform/) — Manage SRE infrastructure with Terraform using Claude Code skills
-- [Claude Code Best-Of Skills Hub](/claude-skills-guide/best-of-hub/) — Discover the top Claude Code skills for infrastructure and reliability work
+- [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/) — DevOps skill recommendations relevant to SRE on-call and deployment workflows
+- [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-with-github-actions-ci-cd-pipeline/) — Integrate AI-powered analysis into CI/CD pipelines for SRE quality gates
+- [Claude Code Skills for Infrastructure as Code Terraform](/claude-code-skills-for-infrastructure-as-code-terraform/) — Manage SRE infrastructure with Terraform using Claude Code skills
+- [Claude Code Best-Of Skills Hub](/best-of-hub/) — Discover the top Claude Code skills for infrastructure and reliability work
 
 ## Step-by-Step: Using Claude Skills for On-Call Workflows
 

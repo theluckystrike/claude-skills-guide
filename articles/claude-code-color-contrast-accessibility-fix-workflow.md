@@ -13,7 +13,7 @@ permalink: /claude-code-color-contrast-accessibility-fix-workflow/
 
 # Claude Code Color Contrast Accessibility Fix Workflow
 
-[Accessibility issues in web applications often slip through development cycles](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), particularly color contrast problems that affect users with visual impairments. Addressing these issues systematically saves time and ensures compliance with WCAG guidelines. This workflow uses Claude Code skills to automate detection, analysis, and remediation of color contrast problems in your projects.
+[Accessibility issues in web applications often slip through development cycles](/best-claude-code-skills-to-install-first-2026/), particularly color contrast problems that affect users with visual impairments. Addressing these issues systematically saves time and ensures compliance with WCAG guidelines. This workflow uses Claude Code skills to automate detection, analysis, and remediation of color contrast problems in your projects.
 
 ## Understanding Color Contrast Requirements
 
@@ -23,7 +23,7 @@ The challenge lies not just in detecting issues, but in systematically fixing th
 
 ## Setting Up Your Accessibility Workflow
 
-Before starting, ensure you have the necessary Claude Code skills installed. The [**frontend-design** skill](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) includes accessibility-aware component generation, while [**tdd**](/claude-skills-guide/best-claude-skills-for-developers-2026/) helps you write tests that validate contrast requirements.
+Before starting, ensure you have the necessary Claude Code skills installed. The [**frontend-design** skill](/best-claude-code-skills-for-frontend-development/) includes accessibility-aware component generation, while [**tdd**](/best-claude-skills-for-developers-2026/) helps you write tests that validate contrast requirements.
 
 Check your `~/.claude/skills/` directory to verify these skills are present. If they are not installed, download the `.md` files from community GitHub repositories and place them in `~/.claude/skills/`. There is no official marketplace.
 
@@ -162,8 +162,8 @@ Implement this workflow in your next project sprint, and you will see measurable
 
 ## Related Reading
 
-- [Best Claude Skills for Frontend and UI Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) — Frontend skills including accessibility and design system automation
-- [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Core developer skills that pair with accessibility workflows
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep automated accessibility audit sessions cost-efficient
+- [Best Claude Skills for Frontend and UI Development](/best-claude-code-skills-for-frontend-development/) — Frontend skills including accessibility and design system automation
+- [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/) — Core developer skills that pair with accessibility workflows
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — Keep automated accessibility audit sessions cost-efficient
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

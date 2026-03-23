@@ -16,9 +16,9 @@ permalink: /claude-code-aws-ecs-fargate-setup-deployment-tutorial/
 
 # Claude Code AWS ECS Fargate Setup Deployment Tutorial
 
-[AWS ECS Fargate provides serverless container orchestration](/claude-skills-guide/aws-mcp-server-cloud-automation-with-claude-code/), eliminating the need to manage underlying EC2 instances. This guide walks through setting up and deploying containerized applications to ECS Fargate using Claude Code.
+[AWS ECS Fargate provides serverless container orchestration](/aws-mcp-server-cloud-automation-with-claude-code/), eliminating the need to manage underlying EC2 instances. This guide walks through setting up and deploying containerized applications to ECS Fargate using Claude Code.
 
-[Skills referenced here are `.md` files in `~/.claude/skills/`](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) and invoked with `/skill-name`. There are no `shell-expert`, `docker-expert`, or `terraform-expert` skills — those do not exist. Real built-in skills for this workflow are `/tdd`, `/pdf`, and `/supermemory`.
+[Skills referenced here are `.md` files in `~/.claude/skills/`](/claude-skill-md-format-complete-specification-guide/) and invoked with `/skill-name`. There are no `shell-expert`, `docker-expert`, or `terraform-expert` skills — those do not exist. Real built-in skills for this workflow are `/tdd`, `/pdf`, and `/supermemory`.
 
 ## Prerequisites and Environment Setup
 
@@ -77,7 +77,7 @@ docker build -t myapp:latest .
 docker run -p 3000:3000 myapp:latest
 ```
 
-The [`/tdd` skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) helps write integration tests for your API endpoints before deploying:
+The [`/tdd` skill](/claude-tdd-skill-test-driven-development-workflow/) helps write integration tests for your API endpoints before deploying:
 
 ```
 /tdd
@@ -105,7 +105,7 @@ Write Terraform for an ECS Fargate service:
 - ECS task with 256 CPU / 512 MB memory
 ```
 
-Claude will generate the Terraform configuration. The [Claude Code Skills for Terraform](/claude-skills-guide/claude-code-skills-for-infrastructure-as-code-terraform/) guide covers more complex IaC patterns.
+Claude will generate the Terraform configuration. The [Claude Code Skills for Terraform](/claude-code-skills-for-infrastructure-as-code-terraform/) guide covers more complex IaC patterns.
 
 ## Creating ECS Task Definitions
 
@@ -175,7 +175,7 @@ aws ecs describe-services \
 
 ## Automating Deployments with CI/CD
 
-Set up automated deployments using AWS CodePipeline or [GitHub Actions](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/). Here's a GitHub Actions workflow:
+Set up automated deployments using AWS CodePipeline or [GitHub Actions](/claude-skills-with-github-actions-ci-cd-pipeline/). Here's a GitHub Actions workflow:
 
 ```yaml
 name: Deploy to ECS Fargate
@@ -243,7 +243,7 @@ Update your task definition to reference these secrets:
 ]
 ```
 
-The [`/supermemory` skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) tracks deployment configuration across sessions:
+The [`/supermemory` skill](/claude-skills-token-optimization-reduce-api-costs/) tracks deployment configuration across sessions:
 
 ```
 /supermemory store: myapp ECS Fargate - us-east-1, cluster=myapp-cluster,
@@ -278,7 +278,7 @@ View logs using CloudWatch:
 aws logs tail /ecs/myapp-task --follow
 ```
 
-Use the [`/pdf` skill](/claude-skills-guide/best-claude-skills-for-data-analysis/) to generate deployment health reports from CloudWatch metrics:
+Use the [`/pdf` skill](/best-claude-skills-for-data-analysis/) to generate deployment health reports from CloudWatch metrics:
 
 ```
 /pdf
@@ -297,9 +297,9 @@ Claude Code accelerates each phase: generating Terraform and task definitions, w
 
 ## Related Reading
 
-- [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/) — Integrating Claude Code into automated deployment pipelines
-- [Claude Code Skills for Terraform Infrastructure as Code](/claude-skills-guide/claude-code-skills-for-infrastructure-as-code-terraform/) — IaC patterns for reproducible cloud infrastructure
-- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — Skills for deployment workflows
+- [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-with-github-actions-ci-cd-pipeline/) — Integrating Claude Code into automated deployment pipelines
+- [Claude Code Skills for Terraform Infrastructure as Code](/claude-code-skills-for-infrastructure-as-code-terraform/) — IaC patterns for reproducible cloud infrastructure
+- [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/) — Skills for deployment workflows
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 

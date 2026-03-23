@@ -13,7 +13,7 @@ permalink: /why-does-claude-skill-produce-different-output-each-run/
 
 # Why Does Claude Skill Produce Different Output Each Run
 
-If you've used Claude Code skills extensively, you've probably noticed something peculiar: [running the same skill with identical input](/claude-skills-guide/how-to-optimize-claude-skill-prompts-for-accuracy/) each time. A skill that generated perfect code yesterday might produce something slightly different today. This isn't a bug — it's a fundamental characteristic of how large language models work. Understanding why this happens helps you build more predictable workflows and diagnose issues when outputs diverge unexpectedly.
+If you've used Claude Code skills extensively, you've probably noticed something peculiar: [running the same skill with identical input](/how-to-optimize-claude-skill-prompts-for-accuracy/) each time. A skill that generated perfect code yesterday might produce something slightly different today. This isn't a bug — it's a fundamental characteristic of how large language models work. Understanding why this happens helps you build more predictable workflows and diagnose issues when outputs diverge unexpectedly.
 
 ## The Core Reason: Probabilistic Text Generation
 
@@ -25,7 +25,7 @@ This randomness isn't noise. It actually makes the model more useful by allowing
 
 ## Temperature and Top-P Settings
 
-The primary control developers have over output variability is through [temperature settings](/claude-skills-guide/claude-code-extended-thinking-skills-integration-guide/). Temperature affects how the model balances between choosing the most likely next token versus exploring less probable alternatives.
+The primary control developers have over output variability is through [temperature settings](/claude-code-extended-thinking-skills-integration-guide/). Temperature affects how the model balances between choosing the most likely next token versus exploring less probable alternatives.
 
 A temperature of 0 makes the model almost deterministic — it will consistently pick the highest-probability token at each step. Higher temperatures introduce more randomness. Most Claude skills run with a moderate temperature (around 0.7) to balance coherence with creativity.
 
@@ -168,9 +168,9 @@ Understanding why Claude skills produce different outputs each run puts you in c
 
 ## Related Reading
 
-- [How to Optimize Claude Skill Prompts for Accuracy](/claude-skills-guide/how-to-optimize-claude-skill-prompts-for-accuracy/) — Structure skill prompts to reduce output variability and improve consistency
-- [Claude Skill Prompt Compression Techniques](/claude-skills-guide/claude-skill-prompt-compression-techniques/) — Write tighter, more deterministic skill prompts
-- [Claude Skill State Machine Design Patterns](/claude-skills-guide/claude-skill-state-machine-design-patterns/) — Use state machines to enforce consistent skill output across runs
-- [Claude Skills Hub](/claude-skills-guide/troubleshooting-hub/) — Find solutions to skill consistency and determinism issues
+- [How to Optimize Claude Skill Prompts for Accuracy](/how-to-optimize-claude-skill-prompts-for-accuracy/) — Structure skill prompts to reduce output variability and improve consistency
+- [Claude Skill Prompt Compression Techniques](/claude-skill-prompt-compression-techniques/) — Write tighter, more deterministic skill prompts
+- [Claude Skill State Machine Design Patterns](/claude-skill-state-machine-design-patterns/) — Use state machines to enforce consistent skill output across runs
+- [Claude Skills Hub](/troubleshooting-hub/) — Find solutions to skill consistency and determinism issues
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

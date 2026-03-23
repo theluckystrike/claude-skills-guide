@@ -414,8 +414,8 @@ Start with simple tag enforcement, then gradually add more sophisticated Aspects
 
 ## Related Reading
 
-- [Claude Code for Terraform AWS Provider Guide](/claude-skills-guide/claude-code-for-terraform-aws-provider-guide/)
-- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Code for Terraform AWS Provider Guide](/claude-code-for-terraform-aws-provider-guide/)
+- [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

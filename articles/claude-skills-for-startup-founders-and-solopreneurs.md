@@ -13,9 +13,9 @@ permalink: /claude-skills-for-startup-founders-and-solopreneurs/
 
 # Claude Skills for Startup Founders and Solopreneurs
 
-[Running a startup or operating as a solopreneur means handling multiple roles simultaneously](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) You're not just building the product—you're also managing customers, finances, marketing, and operations. Claude Code skills can significantly reduce the technical overhead that typically slows down solo builders.
+[Running a startup or operating as a solopreneur means handling multiple roles simultaneously](/best-claude-code-skills-to-install-first-2026/) You're not just building the product—you're also managing customers, finances, marketing, and operations. Claude Code skills can significantly reduce the technical overhead that typically slows down solo builders.
 
-Claude skills are Markdown files stored in `~/.claude/skills/` and invoked with `/skill-name` inside a Claude Code session. [This guide covers the skills that have the most immediate impact for founders](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/).
+Claude skills are Markdown files stored in `~/.claude/skills/` and invoked with `/skill-name` inside a Claude Code session. [This guide covers the skills that have the most immediate impact for founders](/claude-skill-md-format-complete-specification-guide/).
 
 ## Speed Up Documentation with the pdf Skill
 
@@ -201,9 +201,9 @@ Each skill handles a specific bottleneck that slows down solo builders. Start wi
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Top skills every developer should know
-- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/claude-skills-vs-prompts-which-is-better/) — Decide when skills beat plain prompts
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Top skills every developer should know
+- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-vs-prompts-which-is-better/) — Decide when skills beat plain prompts
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -192,9 +192,9 @@ The combination of trunk based development's rapid iteration and Claude Code's c
 
 ## Related Reading
 
-- [Claude Code Git Workflow Best Practices Guide](/claude-skills-guide/claude-code-git-workflow-best-practices-guide/) — Git best practices that support trunk-based development
-- [Best Way to Use Claude Code with Existing CI/CD Pipelines](/claude-skills-guide/best-way-to-use-claude-code-with-existing-ci-cd/) — CI/CD is essential for trunk-based development
-- [Claude Code Merge Conflict Resolution Guide](/claude-skills-guide/claude-code-merge-conflict-resolution-guide/) — Short-lived branches reduce conflicts in TBD
-- [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — Git and workflow automation guides
+- [Claude Code Git Workflow Best Practices Guide](/claude-code-git-workflow-best-practices-guide/) — Git best practices that support trunk-based development
+- [Best Way to Use Claude Code with Existing CI/CD Pipelines](/best-way-to-use-claude-code-with-existing-ci-cd/) — CI/CD is essential for trunk-based development
+- [Claude Code Merge Conflict Resolution Guide](/claude-code-merge-conflict-resolution-guide/) — Short-lived branches reduce conflicts in TBD
+- [Claude Skills Workflows Hub](/workflows-hub/) — Git and workflow automation guides
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

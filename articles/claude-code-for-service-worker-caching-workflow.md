@@ -16,7 +16,7 @@ score: 7
 {% raw %}
 # Claude Code for Service Worker Caching Workflow
 
-Service workers have become essential for building Progressive Web Apps (PWAs) that deliver fast, reliable experiences. When combined with Claude Code, you can automate the creation, testing, and optimization of service worker caching strategies that would otherwise require significant manual effort. This guide walks you through using Claude Code to implement professional-grade caching workflows using the raw Cache API with no external dependencies. For a library-based approach using Google's Workbox, see the [Workbox Service Worker Workflow Guide](/claude-skills-guide/claude-code-for-workbox-service-worker-workflow-guide/).
+Service workers have become essential for building Progressive Web Apps (PWAs) that deliver fast, reliable experiences. When combined with Claude Code, you can automate the creation, testing, and optimization of service worker caching strategies that would otherwise require significant manual effort. This guide walks you through using Claude Code to implement professional-grade caching workflows using the raw Cache API with no external dependencies. For a library-based approach using Google's Workbox, see the [Workbox Service Worker Workflow Guide](/claude-code-for-workbox-service-worker-workflow-guide/).
 
 ## Understanding Service Worker Caching Basics
 
@@ -234,8 +234,8 @@ Remember: the best caching strategy is one that your users never notice—becaus
 
 ## Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

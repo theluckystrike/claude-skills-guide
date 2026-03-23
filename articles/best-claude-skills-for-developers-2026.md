@@ -33,7 +33,7 @@ The practical difference is significant. In a raw Claude session, you might spen
 
 ### TDD (Test-Driven Development)
 
-The [`tdd` skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) enforces the red-green-refactor cycle. Instead of writing implementation code and bolting on tests afterward, Claude writes a failing test first, implements the minimum code to pass it, then refactors.
+The [`tdd` skill](/claude-tdd-skill-test-driven-development-workflow/) enforces the red-green-refactor cycle. Instead of writing implementation code and bolting on tests afterward, Claude writes a failing test first, implements the minimum code to pass it, then refactors.
 
 ```
 /tdd Add input validation to the checkout form component
@@ -86,7 +86,7 @@ The distinction between unit testing and end-to-end testing matters here. A unit
 
 ### PDF
 
-The [`pdf` skill](/claude-skills-guide/claude-pdf-skill-document-generation-guide/) generates structured PDF documents from your codebase or specifications. It handles invoices, technical specs, reports, and documentation exports.
+The [`pdf` skill](/claude-pdf-skill-document-generation-guide/) generates structured PDF documents from your codebase or specifications. It handles invoices, technical specs, reports, and documentation exports.
 
 ```
 /pdf Create an API reference document from the routes in src/api/
@@ -137,7 +137,7 @@ The `canvas-design` skill works with HTML Canvas and SVG for generative graphics
 
 ### Supermemory
 
-The [`supermemory` skill](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) maintains persistent context across Claude Code sessions. It stores project decisions, architectural patterns, and debugging notes so you do not repeat yourself in every new conversation.
+The [`supermemory` skill](/claude-supermemory-skill-persistent-context-explained/) maintains persistent context across Claude Code sessions. It stores project decisions, architectural patterns, and debugging notes so you do not repeat yourself in every new conversation.
 
 ```
 /supermemory Save the decision to use PostgreSQL with row-level security
@@ -171,7 +171,7 @@ Good candidates for custom skill creation include: your team's specific commit m
 
 ### MCP Builder
 
-The `mcp-builder` skill helps construct [Model Context Protocol](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) server integrations. MCP connects Claude to external tools and data sources like databases, APIs, and file systems.
+The `mcp-builder` skill helps construct [Model Context Protocol](/building-your-first-mcp-tool-integration-guide-2026/) server integrations. MCP connects Claude to external tools and data sources like databases, APIs, and file systems.
 
 Without MCP, Claude can only see what you explicitly paste into the conversation. With MCP, you can connect Claude directly to your database, your internal API, your file storage, or any tool that exposes an MCP-compatible server. The `mcp-builder` skill handles the scaffolding for building these integrations so you do not start from scratch.
 
@@ -207,15 +207,15 @@ A good onboarding sequence for most developers is: `tdd` first (it changes how y
 
 ## Getting Started
 
-Skills ship with Claude Code or can be downloaded from the community. See the [complete guide to installing skills](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) for step-by-step setup, or explore the [skill .md file format](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) to build your own.
+Skills ship with Claude Code or can be downloaded from the community. See the [complete guide to installing skills](/best-claude-code-skills-to-install-first-2026/) for step-by-step setup, or explore the [skill .md file format](/claude-skill-md-format-complete-specification-guide/) to build your own.
 
 The skill system is designed to grow with your workflow. You start with the defaults, discover the gaps, and fill them with custom skills tailored exactly to how your team works. Over time, your `~/.claude/skills/` directory becomes a codified record of your team's best practices.
 
 ## Related Reading
 
-- [Best Claude Code Skills to Install First in 2026](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/)
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [How to Write a Skill .md File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Best Claude Code Skills to Install First in 2026](/best-claude-code-skills-to-install-first-2026/)
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [How to Write a Skill .md File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

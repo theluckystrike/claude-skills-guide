@@ -22,7 +22,7 @@ Automated testing forms the backbone of reliable software development, and Jest 
 
 Jest is the default test runner for Create React App and has a mature, battle-tested ecosystem built up over many years. Its built-in mocking system—`jest.fn()`, `jest.spyOn()`, and manual mocks via `__mocks__` directories—requires no extra configuration and covers the vast majority of real-world scenarios. Teams migrating from Enzyme or maintaining large React codebases often stay with Jest because of its deep tooling integration, extensive community plugins, and stable long-term support. If your project already uses Jest or you need maximum compatibility with the broader JavaScript testing ecosystem, Jest is the right choice.
 
-For teams using Vitest instead, see [Vitest Fast Testing Workflow](/claude-skills-guide/claude-code-vitest-fast-testing-workflow/)
+For teams using Vitest instead, see [Vitest Fast Testing Workflow](/claude-code-vitest-fast-testing-workflow/)
 
 ## Setting Up Jest with Claude Code
 
@@ -229,10 +229,10 @@ Remember that testing is a skill that improves with practice. Use Claude Code as
 
 ## Related Reading
 
-- [Vitest Fast Testing Workflow](/claude-skills-guide/claude-code-vitest-fast-testing-workflow/)
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Vitest Fast Testing Workflow](/claude-code-vitest-fast-testing-workflow/)
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

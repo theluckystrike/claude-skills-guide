@@ -13,13 +13,13 @@ permalink: /claude-code-qwik-resumability-lazy-loading-workflow-guide/
 
 # Claude Code Qwik Resumability Lazy Loading Workflow Guide
 
-Qwik changes how web applications handle interactivity. Unlike traditional frameworks that rely on hydration, Qwik uses resumability to deliver near-instant page loads. When combined with [Claude Code's frontend development skills](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) and its ecosystem of specialized skills, you can build highly performant Qwik applications while maintaining development velocity.
+Qwik changes how web applications handle interactivity. Unlike traditional frameworks that rely on hydration, Qwik uses resumability to deliver near-instant page loads. When combined with [Claude Code's frontend development skills](/best-claude-code-skills-for-frontend-development/) and its ecosystem of specialized skills, you can build highly performant Qwik applications while maintaining development velocity.
 
 This workflow guide walks you through implementing Qwik projects using Claude Code, focusing on resumability patterns, lazy loading strategies, and practical development workflows.
 
 ## Understanding Qwik Resumability
 
-Traditional frameworks like React execute JavaScript on page load to rebuild the application state—this process is called hydration. Qwik eliminates this overhead entirely. Instead of replaying application logic, Qwik serializes the state into the HTML and resumes execution exactly where the server left off. The performance improvements this delivers are measurable: tools like the [Lighthouse score improvement workflow](/claude-skills-guide/claude-code-lighthouse-score-improvement-automation-guide/) can quantify the gains.
+Traditional frameworks like React execute JavaScript on page load to rebuild the application state—this process is called hydration. Qwik eliminates this overhead entirely. Instead of replaying application logic, Qwik serializes the state into the HTML and resumes execution exactly where the server left off. The performance improvements this delivers are measurable: tools like the [Lighthouse score improvement workflow](/claude-code-lighthouse-score-improvement-automation-guide/) can quantify the gains.
 
 The key difference lies in how components become interactive. In Qwik, each component can have its JavaScript loaded independently. When a user clicks a button, only the JavaScript for that specific interaction downloads and executes. This approach achieves what Qwik calls "zero JavaScript" by default.
 
@@ -43,7 +43,7 @@ Notice the `$` suffix on `component$` and `onClick$`. This marker tells Qwik to 
 
 ## Setting Up Qwik with Claude Code Skills
 
-When starting a new Qwik project, use Claude Code's skills to accelerate development. The `/frontend-design` skill helps establish component patterns and design system integration. For testing, `/tdd` ensures your components have proper test coverage from the beginning. A [test-driven workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) is especially valuable with Qwik's serializable component model.
+When starting a new Qwik project, use Claude Code's skills to accelerate development. The `/frontend-design` skill helps establish component patterns and design system integration. For testing, `/tdd` ensures your components have proper test coverage from the beginning. A [test-driven workflow](/claude-tdd-skill-test-driven-development-workflow/) is especially valuable with Qwik's serializable component model.
 
 Initialize your Qwik project with the standard CLI:
 
@@ -243,9 +243,9 @@ Start with simple components, use signals for reactivity, and progressively adop
 
 ## Related Reading
 
-- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) — The full roster of frontend skills including frontend-design, tdd, and canvas-design for building modern UI applications.
-- [Bundle Size Reduction: Webpack to Vite 2026 Guide](/claude-skills-guide/claude-code-bundle-size-reduction-webpack-vite-workflow/) — Complement Qwik's zero-JS approach with bundle optimization techniques for other toolchains.
-- [Claude Code Lighthouse Score Improvement Automation Guide](/claude-skills-guide/claude-code-lighthouse-score-improvement-automation-guide/) — Measure and automate the performance wins your Qwik resumability implementation delivers.
-- [Claude Skills Workflow Guide](/claude-skills-guide/workflows-hub/) — See how frontend skill workflows chain together for complete development pipelines.
+- [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/) — The full roster of frontend skills including frontend-design, tdd, and canvas-design for building modern UI applications.
+- [Bundle Size Reduction: Webpack to Vite 2026 Guide](/claude-code-bundle-size-reduction-webpack-vite-workflow/) — Complement Qwik's zero-JS approach with bundle optimization techniques for other toolchains.
+- [Claude Code Lighthouse Score Improvement Automation Guide](/claude-code-lighthouse-score-improvement-automation-guide/) — Measure and automate the performance wins your Qwik resumability implementation delivers.
+- [Claude Skills Workflow Guide](/workflows-hub/) — See how frontend skill workflows chain together for complete development pipelines.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

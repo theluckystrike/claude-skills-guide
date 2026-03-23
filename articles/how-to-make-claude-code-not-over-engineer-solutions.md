@@ -162,9 +162,9 @@ The goal isn't to limit Claude Code's capabilities—it's to direct them toward 
 
 ## Related Reading
 
-- [How to Make Claude Code Make Smaller Focused Changes](/claude-skills-guide/how-to-make-claude-code-make-smaller-focused-changes/) — Smaller changes prevent over-engineering
-- [Best Way to Scope Tasks for Claude Code Success](/claude-skills-guide/best-way-to-scope-tasks-for-claude-code-success/) — Scoping prevents over-engineered solutions
-- [Best Way to Prompt Claude Code for Complex Features](/claude-skills-guide/how-to-write-effective-prompts-for-claude-code/) — Better prompts produce right-sized solutions
-- [Claude Skills Tutorials Hub](/claude-skills-guide/tutorials-hub/) — More how-to guides for Claude Code behavior
+- [How to Make Claude Code Make Smaller Focused Changes](/how-to-make-claude-code-make-smaller-focused-changes/) — Smaller changes prevent over-engineering
+- [Best Way to Scope Tasks for Claude Code Success](/best-way-to-scope-tasks-for-claude-code-success/) — Scoping prevents over-engineered solutions
+- [Best Way to Prompt Claude Code for Complex Features](/how-to-write-effective-prompts-for-claude-code/) — Better prompts produce right-sized solutions
+- [Claude Skills Tutorials Hub](/tutorials-hub/) — More how-to guides for Claude Code behavior
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

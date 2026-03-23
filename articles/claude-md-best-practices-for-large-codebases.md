@@ -13,13 +13,13 @@ permalink: /claude-md-best-practices-for-large-codebases/
 
 # Claude MD Best Practices for Large Codebases
 
-When working with large codebases, Claude Code's skill system becomes a powerful tool for automating workflows and enforcing consistency. [The `.md` files you place in `~/.claude/skills/` shape how Claude behaves](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) in every session. Getting them right means faster development, fewer errors, and more predictable results across your entire team.
+When working with large codebases, Claude Code's skill system becomes a powerful tool for automating workflows and enforcing consistency. [The `.md` files you place in `~/.claude/skills/` shape how Claude behaves](/claude-skill-md-format-complete-specification-guide/) in every session. Getting them right means faster development, fewer errors, and more predictable results across your entire team.
 
 This guide covers practical patterns for writing Claude MD files that work well in large, complex projects.
 
 ## How Claude MD Files Work
 
-[Every skill in Claude Code is a Markdown file stored in `~/.claude/skills/`](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) When you invoke a skill with `/skillname` or through auto-invocation, Claude loads that file's content and uses it to guide its responses. The file can contain instructions, examples, code snippets, and context that Claude references throughout your session.
+[Every skill in Claude Code is a Markdown file stored in `~/.claude/skills/`](/best-claude-code-skills-to-install-first-2026/) When you invoke a skill with `/skillname` or through auto-invocation, Claude loads that file's content and uses it to guide its responses. The file can contain instructions, examples, code snippets, and context that Claude references throughout your session.
 
 For large codebases, the challenge shifts from "what does this skill do?" to "how does this skill handle complexity, multiple environments, and team-wide conventions?"
 
@@ -207,9 +207,9 @@ Combine your custom skills with built-in skills like `/tdd` for testing, `/pdf` 
 
 ## Related Reading
 
-- [Claude Skill .md Format: Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)
-- [Claude MD Character Limit and Optimization Guide](/claude-skills-guide/claude-md-character-limit-and-optimization-guide/)
-- [Shared Claude Skills Across Monorepo Multiple Packages](/claude-skills-guide/shared-claude-skills-across-monorepo-multiple-packages/)
-- [Advanced Hub](/claude-skills-guide/advanced-hub/)
+- [Claude Skill .md Format: Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/)
+- [Claude MD Character Limit and Optimization Guide](/claude-md-character-limit-and-optimization-guide/)
+- [Shared Claude Skills Across Monorepo Multiple Packages](/shared-claude-skills-across-monorepo-multiple-packages/)
+- [Advanced Hub](/advanced-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

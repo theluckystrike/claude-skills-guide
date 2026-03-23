@@ -386,9 +386,9 @@ The key is starting simple and expanding gradually. Begin with basic checks, the
 
 ## Related Reading
 
-- [Understanding Claude Code Hooks System: Complete Guide](/claude-skills-guide/understanding-claude-code-hooks-system-complete-guide/) — Claude Code hooks and git hooks work together
-- [Claude Code Git Workflow Best Practices Guide](/claude-skills-guide/claude-code-git-workflow-best-practices-guide/) — Pre-commit hooks are a git best practice
-- [Claude Code for Release Automation Workflow Tutorial](/claude-skills-guide/claude-code-for-release-automation-workflow-tutorial/) — Hooks are part of the full release automation pipeline
+- [Understanding Claude Code Hooks System: Complete Guide](/understanding-claude-code-hooks-system-complete-guide/) — Claude Code hooks and git hooks work together
+- [Claude Code Git Workflow Best Practices Guide](/claude-code-git-workflow-best-practices-guide/) — Pre-commit hooks are a git best practice
+- [Claude Code for Release Automation Workflow Tutorial](/claude-code-for-release-automation-workflow-tutorial/) — Hooks are part of the full release automation pipeline
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

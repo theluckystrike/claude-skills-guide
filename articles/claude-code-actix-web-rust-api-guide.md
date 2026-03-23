@@ -13,7 +13,7 @@ permalink: /claude-code-actix-web-rust-api-guide/
 
 # Claude Code Actix Web Rust API Guide
 
-[Actix Web remains one of the most performant web frameworks in the Rust ecosystem](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) When combined with Claude Code's AI capabilities, you can rapidly prototype, develop, and test REST APIs while using Rust's memory safety guarantees. This guide covers building practical APIs using Claude Code sessions and relevant skills.
+[Actix Web remains one of the most performant web frameworks in the Rust ecosystem](/best-claude-code-skills-to-install-first-2026/) When combined with Claude Code's AI capabilities, you can rapidly prototype, develop, and test REST APIs while using Rust's memory safety guarantees. This guide covers building practical APIs using Claude Code sessions and relevant skills.
 
 ## Why Actix Web for Rust APIs
 
@@ -119,7 +119,7 @@ async fn main() -> std::io::Result<()> {
 }
 ```
 
-[Run the server with cargo run and test with curl](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/):
+[Run the server with cargo run and test with curl](/claude-tdd-skill-test-driven-development-workflow/):
 
 ```bash
 curl http://127.0.0.1:8080/users
@@ -545,9 +545,9 @@ Where Claude Code adds the most value in Rust specifically is in the error-handl
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Full developer skill stack
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — CI/CD integration
-- [Frontend Design Skills for React Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) — Building UI layers
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Full developer skill stack
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/) — CI/CD integration
+- [Frontend Design Skills for React Development](/best-claude-code-skills-for-frontend-development/) — Building UI layers
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

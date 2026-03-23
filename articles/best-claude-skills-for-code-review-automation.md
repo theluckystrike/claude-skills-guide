@@ -14,13 +14,13 @@ permalink: /best-claude-skills-for-code-review-automation/
 {% raw %}
 # Best Claude Skills for Code Review Automation
 
-[Code review is one of the most time-intensive activities in software development](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/). Manually checking pull requests for style violations, security vulnerabilities, and architectural inconsistencies drains developer hours each week. Claude Code skills reduce this load by handling repetitive checks while you focus on logic and architecture.
+[Code review is one of the most time-intensive activities in software development](/best-claude-code-skills-to-install-first-2026/). Manually checking pull requests for style violations, security vulnerabilities, and architectural inconsistencies drains developer hours each week. Claude Code skills reduce this load by handling repetitive checks while you focus on logic and architecture.
 
-[Skills are `.md` files in `~/.claude/skills/`, invoked with `/skill-name`](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/). Here are the skills that deliver the most value in code review workflows.
+[Skills are `.md` files in `~/.claude/skills/`, invoked with `/skill-name`](/claude-skill-md-format-complete-specification-guide/). Here are the skills that deliver the most value in code review workflows.
 
 ## Test-Driven Review with the tdd Skill
 
-The [`tdd` skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) is the most direct tool for review automation. Rather than reviewing untested code and hoping for the best, use it to verify test coverage before approving a PR.
+The [`tdd` skill](/best-claude-skills-for-developers-2026/) is the most direct tool for review automation. Rather than reviewing untested code and hoping for the best, use it to verify test coverage before approving a PR.
 
 ```
 /tdd analyze this pull request diff and identify which functions lack test coverage: [paste diff]
@@ -72,7 +72,7 @@ For teams maintaining external APIs or compliance documentation, this prevents m
 
 ## Consistent Standards with the supermemory Skill
 
-The [`supermemory` skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) maintains institutional knowledge across review sessions. Store your team's established conventions once, then recall them in every review.
+The [`supermemory` skill](/claude-skills-token-optimization-reduce-api-costs/) maintains institutional knowledge across review sessions. Store your team's established conventions once, then recall them in every review.
 
 ```
 /supermemory store: code-review-standards = no console.log in production code, all async functions must have try/catch, use named exports not default exports, SQL queries must use parameterized inputs
@@ -268,11 +268,11 @@ Each stage produces specific, actionable findings. The result is faster reviews 
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Full developer skill stack including tdd
-- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — Automate deployments with Claude skills
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Full developer skill stack including tdd
+- [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/) — Automate deployments with Claude skills
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
 
-**Related guides:** [Best Way to Use Claude Code for Code Review Prep](https://theluckystrike.github.io/claude-skills-guide/claude-code-for-code-review-preparation-tips/)
+**Related guides:** [Best Way to Use Claude Code for Code Review Prep](https://theluckystrike.github.io/claude-code-for-code-review-preparation-tips/)
 
 ---
 

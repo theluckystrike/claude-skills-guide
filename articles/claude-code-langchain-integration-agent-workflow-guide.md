@@ -13,11 +13,11 @@ permalink: /claude-code-langchain-integration-agent-workflow-guide/
 
 # Claude Code LangChain Integration Agent Workflow Guide
 
-[Building intelligent agent workflows requires combining the right tools](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Claude Code provides a powerful CLI for AI-assisted development, while LangChain offers a reliable framework for orchestrating language model interactions. This guide shows you how to integrate these technologies to create sophisticated automation pipelines.
+[Building intelligent agent workflows requires combining the right tools](/best-claude-code-skills-to-install-first-2026/) Claude Code provides a powerful CLI for AI-assisted development, while LangChain offers a reliable framework for orchestrating language model interactions. This guide shows you how to integrate these technologies to create sophisticated automation pipelines.
 
 ## Understanding the Integration Architecture
 
-Claude Code operates as your development companion, handling tasks through natural language commands. [LangChain provides the infrastructure for chaining together language model calls, memory management](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/), and tool usage. When combined, you get an agent system that can reason about tasks, use external tools, and maintain context across interactions.
+Claude Code operates as your development companion, handling tasks through natural language commands. [LangChain provides the infrastructure for chaining together language model calls, memory management](/claude-skill-md-format-complete-specification-guide/), and tool usage. When combined, you get an agent system that can reason about tasks, use external tools, and maintain context across interactions.
 
 The integration works through Claude Code's ability to execute shell commands and interact with Python environments. You trigger LangChain-based scripts from within Claude Code, passing context and receiving structured outputs.
 
@@ -105,7 +105,7 @@ Invoke this from Claude Code using a simple shell command that runs your Python 
 
 ### Document Processing Pipeline
 
-Use the [**pdf** skill](/claude-skills-guide/best-claude-skills-for-data-analysis/) alongside LangChain to build document understanding workflows. LangChain's document loaders combined with Claude Code's file handling create powerful extraction pipelines:
+Use the [**pdf** skill](/best-claude-skills-for-data-analysis/) alongside LangChain to build document understanding workflows. LangChain's document loaders combined with Claude Code's file handling create powerful extraction pipelines:
 
 ```python
 from langchain.document_loaders import PyPDFLoader
@@ -121,7 +121,7 @@ def summarize_pdf(pdf_path: str) -> str:
 
 ### Test-Driven Development Workflow
 
-Integrate the [**tdd** skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) with LangChain agents to automate test creation. Your LangChain agent can generate unit tests that Claude Code then executes:
+Integrate the [**tdd** skill](/best-claude-skills-for-developers-2026/) with LangChain agents to automate test creation. Your LangChain agent can generate unit tests that Claude Code then executes:
 
 ```python
 def generate_tests(source_file: str) -> str:
@@ -285,8 +285,8 @@ Integrating Claude Code with LangChain unlocks sophisticated agent workflows. St
 
 ## Related Reading
 
-- [MCP Servers vs Claude Skills: What Is the Difference](/claude-skills-guide/mcp-servers-vs-claude-skills-what-is-the-difference/) — Understand how MCP servers and skills compare for agent orchestration
-- [Multi-Agent Orchestration With Claude Subagents Guide](/claude-skills-guide/multi-agent-orchestration-with-claude-subagents-guide/) — Patterns for orchestrating multi-agent workflows with Claude Code
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Manage token consumption in LangChain agent loops
+- [MCP Servers vs Claude Skills: What Is the Difference](/mcp-servers-vs-claude-skills-what-is-the-difference/) — Understand how MCP servers and skills compare for agent orchestration
+- [Multi-Agent Orchestration With Claude Subagents Guide](/multi-agent-orchestration-with-claude-subagents-guide/) — Patterns for orchestrating multi-agent workflows with Claude Code
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — Manage token consumption in LangChain agent loops
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -18,7 +18,7 @@ score: 7
 
 Remix's nested routing system is one of its most powerful architectural features — and understanding how error boundaries interact with that hierarchy is the key to building applications where failures are contained rather than catastrophic. This guide focuses on the structural decisions: where to place boundaries in your route tree, how parent and child boundaries relate, and the practical patterns for loader errors, action errors, and error recovery in a nested route context.
 
-If you're looking for how to use Claude Code to generate and manage error boundaries efficiently, see [Claude Code for Remix Error Boundary Workflow Guide](/claude-skills-guide/claude-code-for-remix-error-boundary-workflow-guide/).
+If you're looking for how to use Claude Code to generate and manage error boundaries efficiently, see [Claude Code for Remix Error Boundary Workflow Guide](/claude-code-for-remix-error-boundary-workflow-guide/).
 
 ## The Basic Error Boundary Contract
 
@@ -258,8 +258,8 @@ Remix's error boundaries combined with nested routes give you precise control ov
 
 ## Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

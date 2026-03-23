@@ -167,11 +167,11 @@ The most successful team integrations emerge organically from solving real probl
 
 ## Related Reading
 
-- [Best Way to Use Claude Code with Existing CI/CD Pipelines](/claude-skills-guide/best-way-to-use-claude-code-with-existing-ci-cd/) — CI/CD is central to team workflow integration
-- [Claude Code Git Workflow Best Practices Guide](/claude-skills-guide/claude-code-git-workflow-best-practices-guide/) — Git workflow is the team's shared foundation
-- [How to Make Claude Code Write Better Unit Tests](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Shared test standards matter for team workflows
-- [Claude Skills Workflows Hub](/claude-skills-guide/workflows-hub/) — Team and workflow automation guides
+- [Best Way to Use Claude Code with Existing CI/CD Pipelines](/best-way-to-use-claude-code-with-existing-ci-cd/) — CI/CD is central to team workflow integration
+- [Claude Code Git Workflow Best Practices Guide](/claude-code-git-workflow-best-practices-guide/) — Git workflow is the team's shared foundation
+- [How to Make Claude Code Write Better Unit Tests](/claude-tdd-skill-test-driven-development-workflow/) — Shared test standards matter for team workflows
+- [Claude Skills Workflows Hub](/workflows-hub/) — Team and workflow automation guides
 
-**Related guides:** [Best Way to Onboard New Developers Using Claude Code](https://theluckystrike.github.io/claude-skills-guide/best-way-to-onboard-new-developers-using-claude-code/)
+**Related guides:** [Best Way to Onboard New Developers Using Claude Code](https://theluckystrike.github.io/best-way-to-onboard-new-developers-using-claude-code/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

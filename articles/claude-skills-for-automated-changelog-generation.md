@@ -16,9 +16,9 @@ permalink: /claude-skills-for-automated-changelog-generation/
 
 # Claude Skills for Automated Changelog Generation
 
-This guide focuses on *building* the Claude skill files that power automated changelog generation: the `.md` definitions for `changelog-generator`, `git-changelog-extractor`, `changelog-filter`, `changelog-formatter`, and `changelog-summarizer`. If you are looking for the *operational* side — how to invoke the workflow, configure output formats, and wire it into CI/CD — see [Claude Code Changelog Generation Workflow](/claude-skills-guide/claude-code-changelogs-and-release-notes-automation/).
+This guide focuses on *building* the Claude skill files that power automated changelog generation: the `.md` definitions for `changelog-generator`, `git-changelog-extractor`, `changelog-filter`, `changelog-formatter`, and `changelog-summarizer`. If you are looking for the *operational* side — how to invoke the workflow, configure output formats, and wire it into CI/CD — see [Claude Code Changelog Generation Workflow](/claude-code-changelogs-and-release-notes-automation/).
 
-Changelogs are critical for maintaining transparent release processes, yet manually documenting every change across commits, pull requests, and issues consumes valuable development time. Claude skills enable you to automate this process entirely, generating comprehensive, well-formatted changelogs that keep your team and users informed without the manual effort. For an overview of automation workflows, visit the [workflows hub](/claude-skills-guide/workflows-hub/).
+Changelogs are critical for maintaining transparent release processes, yet manually documenting every change across commits, pull requests, and issues consumes valuable development time. Claude skills enable you to automate this process entirely, generating comprehensive, well-formatted changelogs that keep your team and users informed without the manual effort. For an overview of automation workflows, visit the [workflows hub](/workflows-hub/).
 
 ## Understanding the Changelog Generation Challenge
 
@@ -30,7 +30,7 @@ Claude skills address this problem by applying the language model's understandin
 
 ## Core Skills for Changelog Automation
 
-Several Claude skills work together to create a complete changelog generation system. Understanding each component helps you build a customized workflow that matches your project's conventions. The [skill .md file format guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) explains how to structure each skill file correctly.
+Several Claude skills work together to create a complete changelog generation system. Understanding each component helps you build a customized workflow that matches your project's conventions. The [skill .md file format guide](/claude-skill-md-format-complete-specification-guide/) explains how to structure each skill file correctly.
 
 The foundation skill is a custom **changelog-generator** skill that orchestrates the entire process. Create this file at `~/.claude/skills/changelog-generator.md`:
 
@@ -133,7 +133,7 @@ Running changes through this formatter before output ensures consistency across 
 
 ## Practical Example: Complete Workflow
 
-[Combine these skills into a cohesive workflow](/claude-skills-guide/how-do-i-combine-two-claude-skills-in-one-workflow/). Here's how to generate a release changelog:
+[Combine these skills into a cohesive workflow](/how-do-i-combine-two-claude-skills-in-one-workflow/). Here's how to generate a release changelog:
 
 ```bash
 # First, invoke changelog-generator
@@ -190,7 +190,7 @@ This skill transforms the raw changelog into communication-ready content.
 
 ## Automating Changelog Generation in CI/CD
 
-Continuous integration pipelines benefit from automated changelog creation. The [Claude Code GitHub Actions workflow guide](/claude-skills-guide/claude-code-github-actions-workflow-matrix-strategy-guide/) covers the CI/CD integration in depth. Add a GitHub Actions workflow:
+Continuous integration pipelines benefit from automated changelog creation. The [Claude Code GitHub Actions workflow guide](/claude-code-github-actions-workflow-matrix-strategy-guide/) covers the CI/CD integration in depth. Add a GitHub Actions workflow:
 
 ```yaml
 name: Generate Changelog
@@ -228,11 +228,11 @@ Automate the trivial, focus on the meaningful. Use Claude skills to handle parsi
 
 ## Related Reading
 
-- [Claude Code Changelog Generation Workflow](/claude-skills-guide/claude-code-changelogs-and-release-notes-automation/) — The operational companion: invoking the workflow, configuring output formats, and integrating with GitHub Actions releases
-- [Claude Skills Automated Dependency Update Workflow](/claude-skills-guide/claude-skills-automated-dependency-update-workflow/) — automate version bumps alongside your changelog generation
-- [Claude Code GitHub Actions Workflow Matrix Strategy Guide](/claude-skills-guide/claude-code-github-actions-workflow-matrix-strategy-guide/) — wire changelog generation into your CI/CD pipeline
-- [Claude Skill Versioning: Semver Best Practices](/claude-skills-guide/claude-skill-versioning-semver-best-practices/) — version your skills using the same conventions as your changelogs
-- [Best Claude Skills for Code Review Automation](/claude-skills-guide/best-claude-skills-for-code-review-automation/) — combine code review with automated release notes
+- [Claude Code Changelog Generation Workflow](/claude-code-changelogs-and-release-notes-automation/) — The operational companion: invoking the workflow, configuring output formats, and integrating with GitHub Actions releases
+- [Claude Skills Automated Dependency Update Workflow](/claude-skills-automated-dependency-update-workflow/) — automate version bumps alongside your changelog generation
+- [Claude Code GitHub Actions Workflow Matrix Strategy Guide](/claude-code-github-actions-workflow-matrix-strategy-guide/) — wire changelog generation into your CI/CD pipeline
+- [Claude Skill Versioning: Semver Best Practices](/claude-skill-versioning-semver-best-practices/) — version your skills using the same conventions as your changelogs
+- [Best Claude Skills for Code Review Automation](/best-claude-skills-for-code-review-automation/) — combine code review with automated release notes
 
 ---
 

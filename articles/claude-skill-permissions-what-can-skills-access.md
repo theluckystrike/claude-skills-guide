@@ -13,11 +13,11 @@ permalink: /claude-skill-permissions-what-can-skills-access/
 
 # Claude Skill Permissions: What Can Skills Access?
 
-[When you create or use a Claude skill, understanding what that skill can and cannot access is critical](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) for security, reliability, and predictable behavior. This guide breaks down the permission model for Claude skills, showing developers and power users exactly what capabilities are available and how to control them.
+[When you create or use a Claude skill, understanding what that skill can and cannot access is critical](/claude-skill-md-format-complete-specification-guide/) for security, reliability, and predictable behavior. This guide breaks down the permission model for Claude skills, showing developers and power users exactly what capabilities are available and how to control them.
 
 ## The Permission Model Overview
 
-[Claude skills operate within a defined permission boundary](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) This boundary determines three key things:
+[Claude skills operate within a defined permission boundary](/best-claude-code-skills-to-install-first-2026/) This boundary determines three key things:
 
 1. **Tool access**: Which tools the skill can call (Read, Write, Bash, etc.)
 2. **Resource access**: Which files, directories, and external services the skill can interact with
@@ -215,8 +215,8 @@ By understanding and properly configuring these permissions, you can build relia
 
 ## Related Reading
 
-- [Skill .md File Format Explained With Examples](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — Complete reference for skill front matter fields including `tools` and `max_turns`
-- [Advanced Claude Skills with Tool Use and Function Calling](/claude-skills-guide/advanced-claude-skills-with-tool-use-and-function-calling/) — Guide to building skills that orchestrate multiple tool calls effectively
-- [How to Write a Skill .md File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) — Step-by-step guide for creating well-structured skills with proper permission boundaries
+- [Skill .md File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/) — Complete reference for skill front matter fields including `tools` and `max_turns`
+- [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/) — Guide to building skills that orchestrate multiple tool calls effectively
+- [How to Write a Skill .md File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/) — Step-by-step guide for creating well-structured skills with proper permission boundaries
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

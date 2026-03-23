@@ -374,9 +374,9 @@ These techniques work regardless of which skills you are using and help you main
 
 ## Related Reading
 
-- [Best Way to Scope Tasks for Claude Code Success](/claude-skills-guide/best-way-to-scope-tasks-for-claude-code-success/) — Scoping tasks leads to smaller changes naturally
-- [How to Make Claude Code Not Over Engineer Solutions](/claude-skills-guide/how-to-make-claude-code-not-over-engineer-solutions/) — Over-engineering and large changes are related
-- [Claude Code Trunk Based Development Guide](/claude-skills-guide/claude-code-trunk-based-development-guide/) — Small changes are core to trunk-based development
-- [Claude Skills Tutorials Hub](/claude-skills-guide/tutorials-hub/) — More behavioral guidance for Claude Code
+- [Best Way to Scope Tasks for Claude Code Success](/best-way-to-scope-tasks-for-claude-code-success/) — Scoping tasks leads to smaller changes naturally
+- [How to Make Claude Code Not Over Engineer Solutions](/how-to-make-claude-code-not-over-engineer-solutions/) — Over-engineering and large changes are related
+- [Claude Code Trunk Based Development Guide](/claude-code-trunk-based-development-guide/) — Small changes are core to trunk-based development
+- [Claude Skills Tutorials Hub](/tutorials-hub/) — More behavioral guidance for Claude Code
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

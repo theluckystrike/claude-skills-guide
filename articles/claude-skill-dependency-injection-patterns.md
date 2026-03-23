@@ -13,11 +13,11 @@ permalink: /claude-skill-dependency-injection-patterns/
 
 # Claude Skill Dependency Injection Patterns
 
-Dependency injection isn't just a software engineering concept. When you structure Claude skills to compose and chain together, you unlock modular AI workflows that scale. This guide shows you how to design skills that delegate to other skills, share common logic, and build composable automation pipelines. For foundational skill composition patterns, see [Claude skill inheritance and composition patterns](/claude-skills-guide/claude-skill-inheritance-and-composition-patterns/).
+Dependency injection isn't just a software engineering concept. When you structure Claude skills to compose and chain together, you unlock modular AI workflows that scale. This guide shows you how to design skills that delegate to other skills, share common logic, and build composable automation pipelines. For foundational skill composition patterns, see [Claude skill inheritance and composition patterns](/claude-skill-inheritance-and-composition-patterns/).
 
 ## What Dependency Injection Means for Claude Skills
 
-[In traditional software, dependency injection means passing dependencies into a function rather than having the function create them](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) For Claude skills, the equivalent is designing one skill to invoke another skill as part of its workflow. Instead of building monolithic skills that handle everything, you create focused skills that delegate to specialized skills.
+[In traditional software, dependency injection means passing dependencies into a function rather than having the function create them](/claude-skill-md-format-complete-specification-guide/) For Claude skills, the equivalent is designing one skill to invoke another skill as part of its workflow. Instead of building monolithic skills that handle everything, you create focused skills that delegate to specialized skills.
 
 Consider a workflow where you need to extract data from a PDF, transform it into a spreadsheet, and then run analysis. Without dependency injection patterns, you might create one massive skill that tries to handle all three steps. With dependency injection, you compose three focused skills: one using the **pdf** skill for extraction, one using **xlsx** for spreadsheet operations, and a third skill that orchestrates the pipeline.
 
@@ -176,10 +176,10 @@ Start by identifying repetitive tasks in your Claude workflows. Extract the comm
 
 ## Related Reading
 
-- [Claude Skill Inheritance and Composition Patterns](/claude-skills-guide/claude-skill-inheritance-and-composition-patterns/) — Learn skill inheritance as the foundation for dependency injection and composition.
-- [When to Split One Claude Skill Into Multiple Files](/claude-skills-guide/when-to-split-one-claude-skill-into-multiple-files/) — Structure skills for dependency injection by splitting them into focused modules.
-- [What Is the Best File Structure for a Complex Claude Skill](/claude-skills-guide/what-is-the-best-file-structure-for-a-complex-claude-skill/) — Design file structures that enable clean dependency injection between skill components.
-- [Claude Skills Advanced Hub](/claude-skills-guide/advanced-hub/) — Explore advanced skill architecture patterns including composition and dependency injection.
-- [Claude Code FastAPI Dependency Injection Patterns Guide](/claude-skills-guide/claude-code-fastapi-dependency-injection-patterns-guide/) — If you are building Python APIs and want to use FastAPI's built-in Depends() system, see this companion guide for framework-level DI patterns.
+- [Claude Skill Inheritance and Composition Patterns](/claude-skill-inheritance-and-composition-patterns/) — Learn skill inheritance as the foundation for dependency injection and composition.
+- [When to Split One Claude Skill Into Multiple Files](/when-to-split-one-claude-skill-into-multiple-files/) — Structure skills for dependency injection by splitting them into focused modules.
+- [What Is the Best File Structure for a Complex Claude Skill](/what-is-the-best-file-structure-for-a-complex-claude-skill/) — Design file structures that enable clean dependency injection between skill components.
+- [Claude Skills Advanced Hub](/advanced-hub/) — Explore advanced skill architecture patterns including composition and dependency injection.
+- [Claude Code FastAPI Dependency Injection Patterns Guide](/claude-code-fastapi-dependency-injection-patterns-guide/) — If you are building Python APIs and want to use FastAPI's built-in Depends() system, see this companion guide for framework-level DI patterns.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

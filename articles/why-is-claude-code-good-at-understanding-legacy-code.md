@@ -115,9 +115,9 @@ For developers facing the daunting task of maintaining or modernizing older code
 
 ## Related Reading
 
-- [Claude Code Git Blame Code Archaeology Guide](/claude-skills-guide/claude-code-git-blame-code-archaeology-guide/) — Git blame is a key tool for legacy code understanding
-- [Why Is Claude Code Popular for Complex Codebases](/claude-skills-guide/why-is-claude-code-popular-for-complex-codebases/) — Legacy codebases are often complex codebases
-- [Why Is Claude Code Recommended for Refactoring Tasks](/claude-skills-guide/why-is-claude-code-recommended-for-refactoring-tasks/) — Refactoring is the next step after understanding legacy code
-- [What Is Claude Code and Why Developers Love It in 2026](/claude-skills-guide/what-is-claude-code-and-why-developers-love-it-2026/) — Claude Code fundamentals
+- [Claude Code Git Blame Code Archaeology Guide](/claude-code-git-blame-code-archaeology-guide/) — Git blame is a key tool for legacy code understanding
+- [Why Is Claude Code Popular for Complex Codebases](/why-is-claude-code-popular-for-complex-codebases/) — Legacy codebases are often complex codebases
+- [Why Is Claude Code Recommended for Refactoring Tasks](/why-is-claude-code-recommended-for-refactoring-tasks/) — Refactoring is the next step after understanding legacy code
+- [What Is Claude Code and Why Developers Love It in 2026](/what-is-claude-code-and-why-developers-love-it-2026/) — Claude Code fundamentals
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

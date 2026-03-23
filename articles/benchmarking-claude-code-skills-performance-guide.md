@@ -13,15 +13,15 @@ permalink: /benchmarking-claude-code-skills-performance-guide/
 
 # Benchmarking Claude Code Skills Performance Guide
 
-Performance benchmarking for Claude Code skills helps you identify bottlenecks, optimize execution time, and reduce token consumption. Whether you are running simple skills or complex multi-step workflows, measuring key metrics lets you make data-driven decisions about skill selection and configuration. If your first priority is cutting API spend rather than raw speed, the [token optimization guide](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) is the right companion to this one.
+Performance benchmarking for Claude Code skills helps you identify bottlenecks, optimize execution time, and reduce token consumption. Whether you are running simple skills or complex multi-step workflows, measuring key metrics lets you make data-driven decisions about skill selection and configuration. If your first priority is cutting API spend rather than raw speed, the [token optimization guide](/claude-skills-token-optimization-reduce-api-costs/) is the right companion to this one.
 
 This guide covers the essential metrics to track, practical measurement techniques, and real-world optimization strategies using specific skill examples.
 
 ## Key Performance Metrics
 
-[Before benchmarking, understand the metrics that matter](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/):
+[Before benchmarking, understand the metrics that matter](/best-claude-code-skills-to-install-first-2026/):
 
-1. **Execution Time** — [Total wall-clock time from skill invocation to completion](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)
+1. **Execution Time** — [Total wall-clock time from skill invocation to completion](/claude-skill-md-format-complete-specification-guide/)
 2. **Token Usage** — Input and output tokens consumed per skill run
 3. **Tool Call Count** — Number of file operations, bash commands, or external API calls
 4. **Round-Trip Latency** — Time between each model response and the next tool call
@@ -104,7 +104,7 @@ Total execution: 45-90 seconds
 Token usage: 8000-15000 tokens
 ```
 
-The **supermemory** skill introduces persistent context, which can reduce initialization time in long sessions but adds memory overhead. Benchmark both approaches to see which fits your workflow. For a deeper look at how Claude evaluates model outputs and measures quality, see the [LLM evaluation and benchmarking workflow](/claude-skills-guide/claude-code-for-llm-evaluation-workflow-guide/).
+The **supermemory** skill introduces persistent context, which can reduce initialization time in long sessions but adds memory overhead. Benchmark both approaches to see which fits your workflow. For a deeper look at how Claude evaluates model outputs and measures quality, see the [LLM evaluation and benchmarking workflow](/claude-code-for-llm-evaluation-workflow-guide/).
 
 ## Benchmarking Real-World Scenarios
 
@@ -146,7 +146,7 @@ Run benchmarks across different scenarios:
 
 ## Identifying Performance Bottlenecks
 
-After collecting baseline metrics, analyze results to find bottlenecks. If slow initialization keeps showing up, the [skill slow performance speed-up guide](/claude-skills-guide/claude-skills-slow-performance-speed-up-guide/) covers targeted fixes for each symptom type:
+After collecting baseline metrics, analyze results to find bottlenecks. If slow initialization keeps showing up, the [skill slow performance speed-up guide](/claude-skills-slow-performance-speed-up-guide/) covers targeted fixes for each symptom type:
 
 | Symptom | Likely Cause | Solution |
 |---------|--------------|----------|
@@ -205,7 +205,7 @@ wait
 
 ## Continuous Benchmarking
 
-Integrate performance testing into your CI pipeline. Run skill benchmarks on every commit to catch regressions. The [Claude Skills with GitHub Actions CI/CD Pipeline guide](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/) explains how to wire these benchmarks into your existing workflow automation:
+Integrate performance testing into your CI pipeline. Run skill benchmarks on every commit to catch regressions. The [Claude Skills with GitHub Actions CI/CD Pipeline guide](/claude-skills-with-github-actions-ci-cd-pipeline/) explains how to wire these benchmarks into your existing workflow automation:
 
 ```yaml
 # .github/workflows/skill-benchmark.yml
@@ -234,11 +234,11 @@ Regular benchmarking catches performance regressions early and validates optimiz
 
 ## Related Reading
 
-- [Claude Skills Token Optimization: Reduce API Costs Guide](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/)
-- [LLM Evaluation and Benchmarking with Claude Code 2026](/claude-skills-guide/claude-code-for-llm-evaluation-workflow-guide/)
-- [Claude Skills Slow Performance: Speed Up Guide](/claude-skills-guide/claude-skills-slow-performance-speed-up-guide/)
-- [Claude Skills with GitHub Actions CI/CD Pipeline 2026](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/)
+- [Claude Skills Token Optimization: Reduce API Costs Guide](/claude-skills-token-optimization-reduce-api-costs/)
+- [LLM Evaluation and Benchmarking with Claude Code 2026](/claude-code-for-llm-evaluation-workflow-guide/)
+- [Claude Skills Slow Performance: Speed Up Guide](/claude-skills-slow-performance-speed-up-guide/)
+- [Claude Skills with GitHub Actions CI/CD Pipeline 2026](/claude-skills-with-github-actions-ci-cd-pipeline/)
 
-**Related guides:** [Best Way to Reduce Claude Code API Token Costs](https://theluckystrike.github.io/claude-skills-guide/best-way-to-reduce-claude-code-api-token-costs/)
+**Related guides:** [Best Way to Reduce Claude Code API Token Costs](https://theluckystrike.github.io/best-way-to-reduce-claude-code-api-token-costs/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

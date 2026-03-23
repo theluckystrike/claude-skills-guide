@@ -18,7 +18,7 @@ tags: [claude-code, claude-skills]
 
 When running automated workflows through GitHub Actions, protecting sensitive environment variables and secrets is critical. Claude Code can help you implement robust security patterns for your CI/CD pipelines, preventing credential leaks and unauthorized access to production environments.
 
-**Scope of this article:** This article focuses on GitHub Actions environment protection rules — required reviewers, wait timers, deployment gates, and fork-PR validation. These are the controls that govern when and whether a deployment is allowed to proceed. If you need guidance on secrets creation, rotation, org-level scoping, composite actions, or Vault integration, see [Claude Code GitHub Actions Secrets Management](/claude-skills-guide/claude-code-github-actions-secrets-management/).
+**Scope of this article:** This article focuses on GitHub Actions environment protection rules — required reviewers, wait timers, deployment gates, and fork-PR validation. These are the controls that govern when and whether a deployment is allowed to proceed. If you need guidance on secrets creation, rotation, org-level scoping, composite actions, or Vault integration, see [Claude Code GitHub Actions Secrets Management](/claude-code-github-actions-secrets-management/).
 
 ## Understanding the Risk
 
@@ -276,9 +276,9 @@ Claude Code can help you implement all of these patterns, review your existing w
 
 ## Related Reading
 
-- [Claude Code GitHub Actions Secrets Management](/claude-skills-guide/claude-code-github-actions-secrets-management/) — Complete guide to managing secrets across workflows
-- [Claude Code Container Security Scanning](/claude-skills-guide/claude-code-container-security-scanning-workflow-guide/) — Protect your container builds
-- [Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — Skills that accelerate secure deployments
+- [Claude Code GitHub Actions Secrets Management](/claude-code-github-actions-secrets-management/) — Complete guide to managing secrets across workflows
+- [Claude Code Container Security Scanning](/claude-code-container-security-scanning-workflow-guide/) — Protect your container builds
+- [Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/) — Skills that accelerate secure deployments
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

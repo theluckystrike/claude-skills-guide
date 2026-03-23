@@ -375,10 +375,10 @@ For anyone maintaining or improving existing codebases, Claude Code offers tangi
 
 ## Related Reading
 
-- [Claude Code vs Cursor: Multi-File Refactoring Comparison](/claude-skills-guide/claude-code-vs-cursor-multi-file-refactoring/) — See how Claude Code stacks up against Cursor specifically for multi-file refactoring
-- [Claude Code Test Driven Refactoring Guide](/claude-skills-guide/claude-code-test-driven-refactoring-guide/) — Safe refactoring with test coverage
-- [Claude Code Cyclomatic Complexity Reduction](/claude-skills-guide/claude-code-cyclomatic-complexity-reduction/) — Complexity reduction is a key refactoring goal
-- [Why Is Claude Code Good at Understanding Legacy Code](/claude-skills-guide/why-is-claude-code-good-at-understanding-legacy-code/) — Understanding code is a prerequisite for refactoring
-- [Claude Code Technical Debt Tracking Workflow](/claude-skills-guide/claude-code-technical-debt-tracking-workflow/) — Refactoring reduces technical debt
+- [Claude Code vs Cursor: Multi-File Refactoring Comparison](/claude-code-vs-cursor-multi-file-refactoring/) — See how Claude Code stacks up against Cursor specifically for multi-file refactoring
+- [Claude Code Test Driven Refactoring Guide](/claude-code-test-driven-refactoring-guide/) — Safe refactoring with test coverage
+- [Claude Code Cyclomatic Complexity Reduction](/claude-code-cyclomatic-complexity-reduction/) — Complexity reduction is a key refactoring goal
+- [Why Is Claude Code Good at Understanding Legacy Code](/why-is-claude-code-good-at-understanding-legacy-code/) — Understanding code is a prerequisite for refactoring
+- [Claude Code Technical Debt Tracking Workflow](/claude-code-technical-debt-tracking-workflow/) — Refactoring reduces technical debt
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

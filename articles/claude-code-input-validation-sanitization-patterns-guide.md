@@ -13,19 +13,19 @@ permalink: /claude-code-input-validation-sanitization-patterns-guide/
 
 # Claude Code Input Validation and Sanitization Patterns Guide
 
-[Building reliable Claude Code skills requires careful attention to how data flows through your prompts](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/), tools, and outputs. Input validation and sanitization patterns protect your skills from malformed data, injection attacks, and unexpected behavior that can break your automation workflows.
+[Building reliable Claude Code skills requires careful attention to how data flows through your prompts](/claude-skill-md-format-complete-specification-guide/), tools, and outputs. Input validation and sanitization patterns protect your skills from malformed data, injection attacks, and unexpected behavior that can break your automation workflows.
 
 ## Why Input Validation Matters for Claude Skills
 
-Claude Code skills interact with external systems through tools, MCP servers, and APIs. Each interface point represents a potential vulnerability where unexpected input can cause failures or security issues. When you chain multiple skills together—like using the [tdd skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) for test generation followed by the frontend-design skill for UI creation—the data passing between them must be predictable and safe.
+Claude Code skills interact with external systems through tools, MCP servers, and APIs. Each interface point represents a potential vulnerability where unexpected input can cause failures or security issues. When you chain multiple skills together—like using the [tdd skill](/best-claude-skills-for-developers-2026/) for test generation followed by the frontend-design skill for UI creation—the data passing between them must be predictable and safe.
 
-Without proper validation, a malformed response from one skill can cascade into failures across your entire workflow. The [supermemory skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/), for instance, relies on clean data structures to store and retrieve context. Corrupted input can corrupt your persisted knowledge base.
+Without proper validation, a malformed response from one skill can cascade into failures across your entire workflow. The [supermemory skill](/claude-skills-token-optimization-reduce-api-costs/), for instance, relies on clean data structures to store and retrieve context. Corrupted input can corrupt your persisted knowledge base.
 
 ## Core Validation Patterns
 
 ### Type Checking and Schema Validation
 
-[The foundation of input validation begins with type checking](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) When a skill receives data from an external source—whether from user input, API responses, or file contents—you must verify the data matches expected types before processing.
+[The foundation of input validation begins with type checking](/best-claude-code-skills-to-install-first-2026/) When a skill receives data from an external source—whether from user input, API responses, or file contents—you must verify the data matches expected types before processing.
 
 ```javascript
 // Validate incoming data structure
@@ -209,8 +209,8 @@ Finally, remember that validation adds latency. Balance thoroughness with perfor
 
 ## Related Reading
 
-- [Claude Skills for Enterprise Security and Compliance](/claude-skills-guide/claude-skills-for-enterprise-security-compliance-guide/) — Enterprise security patterns that build on solid input validation foundations
-- [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Developer skills including tdd for test-driven validation pattern development
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Efficiently automate validation code generation without runaway API costs
+- [Claude Skills for Enterprise Security and Compliance](/claude-skills-for-enterprise-security-compliance-guide/) — Enterprise security patterns that build on solid input validation foundations
+- [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/) — Developer skills including tdd for test-driven validation pattern development
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — Efficiently automate validation code generation without runaway API costs
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

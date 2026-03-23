@@ -13,13 +13,13 @@ permalink: /claude-code-jest-to-vitest-migration-workflow-tutorial/
 
 # Claude Code Jest to Vitest Migration Workflow Tutorial
 
-Migrating [test suite](/claude-skills-guide/best-claude-skills-for-code-review-automation/)s from Jest to Vitest is one of the most impactful upgrades you can make to your JavaScript development workflow. This transformation delivers dramatically faster test execution, native Vite integration, and a more intuitive API that aligns with modern frontend tooling. When you use Claude Code as your AI development assistant, the migration becomes a structured, low-friction process that handles the complexities of config translation, import rewrites, and test adaptation.
+Migrating [test suite](/best-claude-skills-for-code-review-automation/)s from Jest to Vitest is one of the most impactful upgrades you can make to your JavaScript development workflow. This transformation delivers dramatically faster test execution, native Vite integration, and a more intuitive API that aligns with modern frontend tooling. When you use Claude Code as your AI development assistant, the migration becomes a structured, low-friction process that handles the complexities of config translation, import rewrites, and test adaptation.
 
-[This tutorial walks you through a complete migration workflow using Claude Code](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), covering everything from initial assessment through final verification.
+[This tutorial walks you through a complete migration workflow using Claude Code](/best-claude-code-skills-to-install-first-2026/), covering everything from initial assessment through final verification.
 
 ## Why Migrate from Jest to Vitest
 
-[Vitest shares compatibility with Jest's API, meaning most of your existing test patterns translate directly](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) The performance gains stem from Vite's native hot module replacement and intelligent watch mode. Teams report test suites running 10x faster after switching, particularly beneficial in large codebases with hundreds of test files.
+[Vitest shares compatibility with Jest's API, meaning most of your existing test patterns translate directly](/claude-tdd-skill-test-driven-development-workflow/) The performance gains stem from Vite's native hot module replacement and intelligent watch mode. Teams report test suites running 10x faster after switching, particularly beneficial in large codebases with hundreds of test files.
 
 The migration makes particular sense if your project already uses Vite for bundling. Vitest uses the same configuration, plugin ecosystem, and dependency resolution, eliminating duplicate tooling and reducing maintenance overhead.
 
@@ -109,7 +109,7 @@ describe('UserService', () => {
 });
 ```
 
-The primary changes involve importing test utilities explicitly and replacing `jest` global with `vi`. Vitest supports `--globals` flag if you prefer the Jest-style global API, but explicit imports align better with modern ESM [workflows](/claude-skills-guide/workflows-hub/).
+The primary changes involve importing test utilities explicitly and replacing `jest` global with `vi`. Vitest supports `--globals` flag if you prefer the Jest-style global API, but explicit imports align better with modern ESM [workflows](/workflows-hub/).
 
 ## Phase 4: Handling Jest-Specific Features
 
@@ -174,8 +174,8 @@ The key to success lies in taking incremental steps rather than attempting a com
 
 ## Related Reading
 
-- [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — The tdd skill drives test-first migration workflows for Jest-to-Vitest transitions
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Auto-trigger the tdd skill when working on test configuration files
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep incremental migration sessions efficient and affordable
+- [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/) — The tdd skill drives test-first migration workflows for Jest-to-Vitest transitions
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — Auto-trigger the tdd skill when working on test configuration files
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — Keep incremental migration sessions efficient and affordable
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

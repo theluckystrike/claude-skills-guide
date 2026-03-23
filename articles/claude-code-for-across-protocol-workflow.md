@@ -15,11 +15,11 @@ score: 8
 
 # Claude Code for Across Protocol Workflow
 
-Modern applications rarely rely on a single communication protocol. [As systems become more distributed](/claude-skills-guide/claude-code-for-go-golang-microservices-workflow/), developers must navigate a ecosystem that includes REST APIs, GraphQL endpoints, WebSocket connections, gRPC services, message queues, and more. Claude Code provides powerful capabilities to help developers build, debug, and maintain applications that span multiple protocols.
+Modern applications rarely rely on a single communication protocol. [As systems become more distributed](/claude-code-for-go-golang-microservices-workflow/), developers must navigate a ecosystem that includes REST APIs, GraphQL endpoints, WebSocket connections, gRPC services, message queues, and more. Claude Code provides powerful capabilities to help developers build, debug, and maintain applications that span multiple protocols.
 
 ## Understanding Multi-Protocol Development Challenges
 
-When working across different protocols, developers face several common challenges. Each protocol has its own paradigms, tooling requirements, and debugging approaches. REST uses HTTP methods and status codes, GraphQL introduces queries and mutations, WebSocket requires connection management, and gRPC relies on protobuf definitions. [Claude Code can help navigate these differences](/claude-skills-guide/claude-code-for-grpc-service-development-workflow/) by understanding the context of each protocol and providing relevant suggestions.
+When working across different protocols, developers face several common challenges. Each protocol has its own paradigms, tooling requirements, and debugging approaches. REST uses HTTP methods and status codes, GraphQL introduces queries and mutations, WebSocket requires connection management, and gRPC relies on protobuf definitions. [Claude Code can help navigate these differences](/claude-code-for-grpc-service-development-workflow/) by understanding the context of each protocol and providing relevant suggestions.
 
 The key to success lies in understanding the strengths and limitations of each protocol. REST remains excellent for resource-oriented architectures and standard CRUD operations. GraphQL shines when clients need flexible data fetching with minimal over-fetching. WebSocket provides real-time bidirectional communication, while gRPC offers high-performance binary serialization for internal microservices.
 
@@ -33,7 +33,7 @@ Backend: Node.js with TypeScript
 Key patterns: Request/Response, Pub/Sub, Streaming
 ```
 
-[Using the claude-md file effectively](/claude-skills-guide/claude-md-best-practices-for-large-codebases/) helps Claude understand your protocol architecture and provide more relevant assistance.
+[Using the claude-md file effectively](/claude-md-best-practices-for-large-codebases/) helps Claude understand your protocol architecture and provide more relevant assistance.
 
 ## Working with REST APIs
 
@@ -69,7 +69,7 @@ app.use((err, req, res, next) => {
 
 ## Building GraphQL Services
 
-[GraphQL requires a different mindset](/claude-skills-guide/claude-code-for-graphql-schema-design-and-testing/). Instead of multiple endpoints, clients request exactly the data they need. Claude Code can help design schemas, resolvers, and optimize query performance.
+[GraphQL requires a different mindset](/claude-code-for-graphql-schema-design-and-testing/). Instead of multiple endpoints, clients request exactly the data they need. Claude Code can help design schemas, resolvers, and optimize query performance.
 
 ### Schema Design Assistance
 
@@ -150,7 +150,7 @@ class WebSocketManager {
 
 ## High-Performance gRPC Services
 
-[gRPC excels in microservices architectures](/claude-skills-guide/claude-code-for-grpc-protobuf-service-development-workflow/) where performance and type safety matter. Claude Code assists with proto file generation and service implementation.
+[gRPC excels in microservices architectures](/claude-code-for-grpc-protobuf-service-development-workflow/) where performance and type safety matter. Claude Code assists with proto file generation and service implementation.
 
 ### Defining Protobuf Messages
 
@@ -219,7 +219,7 @@ class ProtocolMapper {
 
 ## Testing Across Protocols
 
-Each protocol requires different testing approaches. [Claude Code can generate appropriate test suites](/claude-skills-guide/claude-code-for-writing-integration-tests/) for each:
+Each protocol requires different testing approaches. [Claude Code can generate appropriate test suites](/claude-code-for-writing-integration-tests/) for each:
 
 ### REST Testing
 
@@ -292,14 +292,14 @@ When building applications that span multiple protocols, follow these guidelines
 
 ## Conclusion
 
-[Building across protocols doesn't have to be complex](/claude-skills-guide/claude-code-for-microservices-communication-patterns/). Claude Code understands the nuances of each protocol and can help generate appropriate code, debug issues, and implement best practices. By using Claude Code's capabilities, developers can focus on business logic while the tool handles protocol-specific implementation details.
+[Building across protocols doesn't have to be complex](/claude-code-for-microservices-communication-patterns/). Claude Code understands the nuances of each protocol and can help generate appropriate code, debug issues, and implement best practices. By using Claude Code's capabilities, developers can focus on business logic while the tool handles protocol-specific implementation details.
 
 Remember to provide clear context about your protocol stack when working with Claude Code, specify which protocols are involved in each task, and use protocol-specific skills for specialized assistance. With these approaches, multi-protocol development becomes significantly more manageable.
 
 ## Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

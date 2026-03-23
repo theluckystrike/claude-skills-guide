@@ -159,9 +159,9 @@ Whether you're working on a small project or enterprise application, integrating
 
 ## Related Reading
 
-- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Test data generation supports TDD workflows
-- [Claude Code Mutation Testing Workflow Guide](/claude-skills-guide/claude-code-mutation-testing-workflow-guide/) — Good test data improves mutation testing quality
-- [Claude Skills Tutorials Hub](/claude-skills-guide/tutorials-hub/) — More testing workflow guides
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/) — Test data generation supports TDD workflows
+- [Claude Code Mutation Testing Workflow Guide](/claude-code-mutation-testing-workflow-guide/) — Good test data improves mutation testing quality
+- [Claude Skills Tutorials Hub](/tutorials-hub/) — More testing workflow guides
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 

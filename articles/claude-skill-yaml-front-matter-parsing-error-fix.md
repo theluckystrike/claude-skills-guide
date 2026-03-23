@@ -13,7 +13,7 @@ permalink: /claude-skill-yaml-front-matter-parsing-error-fix/
 
 # Claude Skill YAML Front Matter Parsing Error Fix
 
-A malformed [YAML front matter](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) block is one of the most common reasons a Claude Code skill silently fails to load. The skill file exists, permissions are correct, but Claude either ignores the invocation or loads the skill without its configured metadata. This guide covers every known cause of YAML front matter parsing errors and gives you the exact fix for each.
+A malformed [YAML front matter](/claude-skill-md-format-complete-specification-guide/) block is one of the most common reasons a Claude Code skill silently fails to load. The skill file exists, permissions are correct, but Claude either ignores the invocation or loads the skill without its configured metadata. This guide covers every known cause of YAML front matter parsing errors and gives you the exact fix for each.
 
 ## What YAML Front Matter Does in a Skill File
 
@@ -28,7 +28,7 @@ description: "Run tests before writing implementation code (TDD)"
 # The rest of the skill instructions go here...
 ```
 
-[Claude Code skills recognize only name and description in front matter](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) If the front matter fails to parse, the skill body may still load but the description will not be available to the skill system.
+[Claude Code skills recognize only name and description in front matter](/claude-skill-md-format-complete-specification-guide/) If the front matter fails to parse, the skill body may still load but the description will not be available to the skill system.
 
 ## Error 1: Missing or Mismatched Closing Delimiter
 
@@ -346,8 +346,8 @@ Make it executable with `chmod +x .git/hooks/pre-commit`. Now any skill file wit
 
 ## Related Reading
 
-- [Skill .md File Format Explained With Examples](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — The canonical reference for valid YAML front matter fields, including all optional configuration keys
-- [How to Write a Skill .md File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) — A walkthrough for writing skill files from scratch with properly structured YAML that avoids common parse errors
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — How skill design and YAML front matter affect token consumption, helping you tune for cost efficiency
+- [Skill .md File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/) — The canonical reference for valid YAML front matter fields, including all optional configuration keys
+- [How to Write a Skill .md File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/) — A walkthrough for writing skill files from scratch with properly structured YAML that avoids common parse errors
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — How skill design and YAML front matter affect token consumption, helping you tune for cost efficiency
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

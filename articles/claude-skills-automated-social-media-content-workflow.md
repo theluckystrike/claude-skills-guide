@@ -13,7 +13,7 @@ permalink: /claude-skills-automated-social-media-content-workflow/
 
 # Automate Social Media Content with Claude Skills
 
-[Social media management](/claude-skills-guide/build-personal-ai-assistant-with-claude-skills-guide/) for developers and content creators. This guide walks through building an automated social media content workflow using Claude Code skills—Markdown files stored in `~/.claude/skills/` that you invoke with `/skill-name` inside a Claude Code session.
+[Social media management](/build-personal-ai-assistant-with-claude-skills-guide/) for developers and content creators. This guide walks through building an automated social media content workflow using Claude Code skills—Markdown files stored in `~/.claude/skills/` that you invoke with `/skill-name` inside a Claude Code session.
 
 ## Understanding the Workflow Architecture
 
@@ -210,15 +210,15 @@ Consider these factors when designing your workflow:
 
 The order of operations matters. Build scheduling infrastructure first, then add content extraction, then analytics. Trying to build all phases simultaneously creates complexity before you understand your actual bottlenecks.
 
-Claude Code skills provide the building blocks. Assemble them according to [your specific requirements](/claude-skills-guide/use-cases-hub/) a one-size-fits-all approach.
+Claude Code skills provide the building blocks. Assemble them according to [your specific requirements](/use-cases-hub/) a one-size-fits-all approach.
 
 ---
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Full developer skill stack including tdd
-- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — Automate deployments with Claude skills
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Full developer skill stack including tdd
+- [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/) — Automate deployments with Claude skills
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
 
 
 ---

@@ -13,7 +13,7 @@ permalink: /claude-skills-vs-langflow-for-building-ai-agents/
 
 # Claude Skills vs Langflow for Building AI Agents
 
-[Claude skills and Langflow both help developers build AI agents, but they take fundamentally different approaches](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) Langflow is a visual, drag-and-drop workflow builder for LLM pipelines. Claude skills are file-based, code-adjacent agent definitions that live in your repository. This comparison helps you choose the right approach for your needs.
+[Claude skills and Langflow both help developers build AI agents, but they take fundamentally different approaches](/best-claude-code-skills-to-install-first-2026/) Langflow is a visual, drag-and-drop workflow builder for LLM pipelines. Claude skills are file-based, code-adjacent agent definitions that live in your repository. This comparison helps you choose the right approach for your needs.
 
 ## What Each Tool Is
 
@@ -50,7 +50,7 @@ permalink: /claude-skills-vs-langflow-for-building-ai-agents/
 
 **True version control.** Skills are plain files. `git diff` shows you exactly what changed in a skill. Pull requests for skill changes go through the same review process as code changes. Langflow exports JSON that technically can be committed to Git, but diffing and reviewing JSON flow definitions is painful in practice.
 
-**Composability.** Skills can call other skills, creating hierarchical, modular agent behaviors. A "release" skill might invoke a "test" skill (like the [`/tdd` skill](/claude-skills-guide/best-claude-skills-for-developers-2026/)), a "changelog" skill, and a "deploy" skill in sequence. This composition pattern is natural to implement and understand.
+**Composability.** Skills can call other skills, creating hierarchical, modular agent behaviors. A "release" skill might invoke a "test" skill (like the [`/tdd` skill](/best-claude-skills-for-developers-2026/)), a "changelog" skill, and a "deploy" skill in sequence. This composition pattern is natural to implement and understand.
 
 **No infrastructure required.** Skills work wherever Claude Code runs. No server to provision, no Docker container to manage, no cloud account to configure.
 
@@ -130,8 +130,8 @@ Choose Claude skills if you are a developer automating your workflow. Choose Lan
 
 ## Related Reading
 
-- [Anthropic Official Skills vs Community Skills: Which Should You Use?](/claude-skills-guide/anthropic-official-skills-vs-community-skills-comparison/) — An overview of the Claude skills ecosystem that helps contextualize what skills offer compared to visual agent builders like Langflow
-- [Claude Skills vs Prompts: Which Is Better for Your Workflow?](/claude-skills-guide/claude-skills-vs-prompts-which-is-better/) — Explores the trade-offs between structured reusable skills and ad-hoc prompting, relevant to the Langflow vs skills comparison
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Skills' automatic invocation capability has no direct equivalent in Langflow; understanding it highlights one of the key functional differences
+- [Anthropic Official Skills vs Community Skills: Which Should You Use?](/anthropic-official-skills-vs-community-skills-comparison/) — An overview of the Claude skills ecosystem that helps contextualize what skills offer compared to visual agent builders like Langflow
+- [Claude Skills vs Prompts: Which Is Better for Your Workflow?](/claude-skills-vs-prompts-which-is-better/) — Explores the trade-offs between structured reusable skills and ad-hoc prompting, relevant to the Langflow vs skills comparison
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — Skills' automatic invocation capability has no direct equivalent in Langflow; understanding it highlights one of the key functional differences
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -13,7 +13,7 @@ permalink: /claude-code-gitignore-best-practices/
 
 # Claude Code Gitignore Best Practices
 
-When working with Claude Code and its skills ecosystem, proper `.gitignore` configuration prevents accidentally committing sensitive data, skill cache files, and project artifacts that should stay local. This guide covers essential gitignore patterns for Claude Code projects. For a broader introduction to project setup, see [Claude Code for beginners: getting started 2026](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/).
+When working with Claude Code and its skills ecosystem, proper `.gitignore` configuration prevents accidentally committing sensitive data, skill cache files, and project artifacts that should stay local. This guide covers essential gitignore patterns for Claude Code projects. For a broader introduction to project setup, see [Claude Code for beginners: getting started 2026](/claude-code-for-beginners-complete-getting-started-2026/).
 
 ## Why Gitignore Matters for Claude Code
 
@@ -97,7 +97,7 @@ This pattern lets your team share a baseline configuration through source contro
 
 ### For Projects Using the pdf Skill
 
-If you're processing documents with the `pdf` skill, exclude output directories. The [best Claude Code skills to install first in 2026](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) guide covers which skills generate the most filesystem output worth excluding:
+If you're processing documents with the `pdf` skill, exclude output directories. The [best Claude Code skills to install first in 2026](/best-claude-code-skills-to-install-first-2026/) guide covers which skills generate the most filesystem output worth excluding:
 
 ```
 # PDF processing outputs
@@ -368,7 +368,7 @@ Note that `_site/` is always safe to gitignore for Jekyll projects — GitHub Pa
 
 ## Integrating with Claude Skills Workflow
 
-When using skills like `docx` for documentation or `xlsx` for data analysis, ensure your workflow generates to excluded directories. The [Claude xlsx skill spreadsheet automation tutorial](/claude-skills-guide/claude-xlsx-skill-spreadsheet-automation-tutorial/) shows how to configure output paths to keep generated files out of source control. Configure skill output paths in your project structure:
+When using skills like `docx` for documentation or `xlsx` for data analysis, ensure your workflow generates to excluded directories. The [Claude xlsx skill spreadsheet automation tutorial](/claude-xlsx-skill-spreadsheet-automation-tutorial/) shows how to configure output paths to keep generated files out of source control. Configure skill output paths in your project structure:
 
 ```
 project/
@@ -393,9 +393,9 @@ Proper gitignore configuration is foundational to maintain clean repositories wh
 
 ## Related Reading
 
-- [Best Claude Code Skills to Install First in 2026](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) — Know which skills generate the most filesystem output so you can plan your gitignore patterns ahead of time
-- [Claude MD Best Practices for Large Codebases](/claude-skills-guide/claude-md-best-practices-for-large-codebases/) — Learn how CLAUDE.md and project configuration files relate to what should and should not be committed
-- [Claude Code for End-of-Day Commit Workflow](/claude-skills-guide/claude-code-for-end-of-day-commit-workflow/) — Build a daily commit habit that works cleanly with the gitignore patterns described here
-- [Claude Skills Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Start with foundational Claude Code setup including version control hygiene
+- [Best Claude Code Skills to Install First in 2026](/best-claude-code-skills-to-install-first-2026/) — Know which skills generate the most filesystem output so you can plan your gitignore patterns ahead of time
+- [Claude MD Best Practices for Large Codebases](/claude-md-best-practices-for-large-codebases/) — Learn how CLAUDE.md and project configuration files relate to what should and should not be committed
+- [Claude Code for End-of-Day Commit Workflow](/claude-code-for-end-of-day-commit-workflow/) — Build a daily commit habit that works cleanly with the gitignore patterns described here
+- [Claude Skills Getting Started Hub](/getting-started-hub/) — Start with foundational Claude Code setup including version control hygiene
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

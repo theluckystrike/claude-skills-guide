@@ -13,7 +13,7 @@ permalink: /claude-skills-compliance-soc2-iso27001-guide/
 
 # Claude Skills Compliance SOC2 ISO27001 Guide
 
-Security compliance isn't optional in regulated industries. When your organization needs SOC2 Type II certification or ISO27001 certification, every tool in your development pipeline becomes part of the audit surface. Claude Code skills can help you implement, document, and verify compliance controls faster than manual processes allow. For teams preparing for an actual SOC 2 audit, the [Claude Code SOC 2 audit preparation guide](/claude-skills-guide/claude-code-soc2-compliance-audit-preparation-guide-2026/) walks through the specific evidence collection process.
+Security compliance isn't optional in regulated industries. When your organization needs SOC2 Type II certification or ISO27001 certification, every tool in your development pipeline becomes part of the audit surface. Claude Code skills can help you implement, document, and verify compliance controls faster than manual processes allow. For teams preparing for an actual SOC 2 audit, the [Claude Code SOC 2 audit preparation guide](/claude-code-soc2-compliance-audit-preparation-guide-2026/) walks through the specific evidence collection process.
 
 This guide shows how to use Claude skills to support SOC2 and ISO27001 compliance workflows without turning your development environment into a bureaucracy.
 
@@ -56,7 +56,7 @@ def test_password_policy_enforcement():
         create_user(password="nouppercase123")
 ```
 
-Run these tests in your CI pipeline to maintain continuous compliance evidence. Automating the test pipeline end-to-end is covered in the [automated testing pipeline with Claude TDD skill guide](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/).
+Run these tests in your CI pipeline to maintain continuous compliance evidence. Automating the test pipeline end-to-end is covered in the [automated testing pipeline with Claude TDD skill guide](/claude-tdd-skill-test-driven-development-workflow/).
 
 ## Documenting Controls with the pdf Skill
 
@@ -152,7 +152,7 @@ Keep compliance evidence separate from project code. Create a dedicated director
 
 Document every Claude-assisted security decision. Use the supermemory skill to tag decisions with compliance framework references.
 
-Review generated code for sensitive data before committing. Claude skills accelerate development but don't replace security review. The [Claude Code secret scanning guide](/claude-skills-guide/claude-code-secret-scanning-prevent-credential-leaks-guide/) shows how to add automated credential detection before any code leaves your machine.
+Review generated code for sensitive data before committing. Claude skills accelerate development but don't replace security review. The [Claude Code secret scanning guide](/claude-code-secret-scanning-prevent-credential-leaks-guide/) shows how to add automated credential detection before any code leaves your machine.
 
 ## SOC2 Pre-Audit Readiness Checklist
 
@@ -274,9 +274,9 @@ The goal isn't to use Claude skills for everything—it's to use them strategica
 
 ## Related Reading
 
-- [Claude Code SOC 2 Compliance Audit Preparation Guide 2026](/claude-skills-guide/claude-code-soc2-compliance-audit-preparation-guide-2026/)
-- [GDPR Data Privacy Implementation with Claude Code 2026](/claude-skills-guide/claude-code-gdpr-data-privacy-implementation-checklist/)
-- [Claude Code OWASP Top 10 Security Scanning Workflow](/claude-skills-guide/claude-code-owasp-top-10-security-scanning-workflow/)
-- [Claude Code Secret Scanning: Prevent Credential Leaks Guide](/claude-skills-guide/claude-code-secret-scanning-prevent-credential-leaks-guide/)
+- [Claude Code SOC 2 Compliance Audit Preparation Guide 2026](/claude-code-soc2-compliance-audit-preparation-guide-2026/)
+- [GDPR Data Privacy Implementation with Claude Code 2026](/claude-code-gdpr-data-privacy-implementation-checklist/)
+- [Claude Code OWASP Top 10 Security Scanning Workflow](/claude-code-owasp-top-10-security-scanning-workflow/)
+- [Claude Code Secret Scanning: Prevent Credential Leaks Guide](/claude-code-secret-scanning-prevent-credential-leaks-guide/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

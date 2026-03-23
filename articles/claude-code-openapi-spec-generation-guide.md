@@ -76,7 +76,7 @@ This method works best when your route handlers include clear parameter names, t
 
 ## Method 2: Using the API Documentation Skill
 
-The [automated-code-documentation-workflow-with-claude-skills](/claude-skills-guide/automated-code-documentation-workflow-with-claude-skills/) approach complements OpenAPI generation by maintaining comprehensive API docs. Combine this with the tdd skill to ensure your OpenAPI specs align with test-driven development practices.
+The [automated-code-documentation-workflow-with-claude-skills](/automated-code-documentation-workflow-with-claude-skills/) approach complements OpenAPI generation by maintaining comprehensive API docs. Combine this with the tdd skill to ensure your OpenAPI specs align with test-driven development practices.
 
 When working with multiple endpoints, organizing your documentation workflow helps maintain consistency. The supermemory skill can store and retrieve API design decisions, making it easier to maintain coherence across large API projects.
 
@@ -257,13 +257,13 @@ Combine with the tdd skill to generate tests from your OpenAPI specs, creating a
 
 ## Related Reading
 
-- [Claude Code OpenAPI Client Generation Guide](/claude-skills-guide/claude-code-openapi-client-generation-guide/) — Generate type-safe API clients from OpenAPI specs (the reverse workflow)
-- [Claude Code Swagger Documentation Workflow](/claude-skills-guide/claude-code-swagger-documentation-workflow/)
-- [Claude Code REST API Design Best Practices](/claude-skills-guide/claude-code-rest-api-design-best-practices/)
-- [Claude Code API Documentation OpenAPI Guide](/claude-skills-guide/claude-code-api-documentation-best-practices/)
-- [Claude Skills Tutorials Hub](/claude-skills-guide/tutorials-hub/)
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Code OpenAPI Client Generation Guide](/claude-code-openapi-client-generation-guide/) — Generate type-safe API clients from OpenAPI specs (the reverse workflow)
+- [Claude Code Swagger Documentation Workflow](/claude-code-swagger-documentation-workflow/)
+- [Claude Code REST API Design Best Practices](/claude-code-rest-api-design-best-practices/)
+- [Claude Code API Documentation OpenAPI Guide](/claude-code-api-documentation-best-practices/)
+- [Claude Skills Tutorials Hub](/tutorials-hub/)
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

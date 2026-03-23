@@ -13,15 +13,15 @@ permalink: /ai-agent-skills-standardization-efforts-2026/
 
 # AI Agent Skills Standardization Efforts 2026
 
-[skills built for one platform rarely work elsewhere](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) Developers invest significant time crafting capabilities for Claude, Cursor, or other AI assistants, only to find those skills incompatible when switching platforms. A growing movement addresses this fragmentation through standardization efforts that promise true skill portability.
+[skills built for one platform rarely work elsewhere](/claude-skill-md-format-complete-specification-guide/) Developers invest significant time crafting capabilities for Claude, Cursor, or other AI assistants, only to find those skills incompatible when switching platforms. A growing movement addresses this fragmentation through standardization efforts that promise true skill portability.
 
 The problem is real and getting worse. As AI assistant adoption accelerates across engineering teams, the skill ecosystem has exploded in size but not in coherence. Each platform invented its own formats, its own invocation conventions, and its own ideas about what a "skill" even is. 2026 is the year the industry is trying to fix that.
 
 ## The Portability Problem
 
-[comprehensive frontend-design skill for generating React components](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) with Tailwind CSS. This skill includes detailed prompts for component architecture, accessibility compliance, and responsive design patterns. When that developer switches from Claude to another AI assistant, they face rebuilding everything from scratch.
+[comprehensive frontend-design skill for generating React components](/best-claude-code-skills-to-install-first-2026/) with Tailwind CSS. This skill includes detailed prompts for component architecture, accessibility compliance, and responsive design patterns. When that developer switches from Claude to another AI assistant, they face rebuilding everything from scratch.
 
-The same issue affects enterprise teams. [A company standardizing on AI-assisted development needs skills that work consistently](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) across all team members' chosen tools. Without standardization, knowledge stays locked within specific platforms.
+The same issue affects enterprise teams. [A company standardizing on AI-assisted development needs skills that work consistently](/best-claude-code-skills-to-install-first-2026/) across all team members' chosen tools. Without standardization, knowledge stays locked within specific platforms.
 
 Consider what this costs in practice. A senior engineer spends two weeks building a code-review skill that catches common security vulnerabilities in their stack. They tune the prompts, add examples, and validate it against real pull requests. Then their company decides to shift from Claude to a competing assistant — or a new team member prefers a different tool. That two-week investment does not transfer. The skill gets rebuilt, the institutional knowledge embedded in those prompts gets partially lost in translation, and the team loses consistency in code review quality during the transition.
 
@@ -72,7 +72,7 @@ The community has developed a skill interface specification that standardizes ho
 - **Output**: Defined response formats for skill results
 - **State**: Clear conventions for maintaining skill state across sessions
 
-Skills built to these interfaces work similarly regardless of which AI platform runs them. The [tdd skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/), for example, can generate test cases following the same patterns whether invoked through Claude or another compatible assistant.
+Skills built to these interfaces work similarly regardless of which AI platform runs them. The [tdd skill](/claude-tdd-skill-test-driven-development-workflow/), for example, can generate test cases following the same patterns whether invoked through Claude or another compatible assistant.
 
 The activation specification is where standardization has the most immediate practical impact. Previously, invoking a skill might look like `/tdd` in one platform, `@tdd` in another, and `use the tdd skill` as a natural language instruction in a third. Standardized invocation means developers can document skills once and have that documentation work across supported platforms.
 
@@ -126,7 +126,7 @@ Distribution channels now accept standardized skill packages. A single package c
 - Configuration schemas
 - Example invocations
 
-When you publish a skill, platforms parse the manifest and adapt the core prompts to their environment. [The `docx` skill for document processing demonstrates this](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — publish once, use everywhere.
+When you publish a skill, platforms parse the manifest and adapt the core prompts to their environment. [The `docx` skill for document processing demonstrates this](/claude-skill-md-format-complete-specification-guide/) — publish once, use everywhere.
 
 The configuration schema component deserves particular attention. When a skill accepts configuration (max file size, language preferences, output verbosity), a JSON Schema definition of those configuration options allows platforms to generate appropriate UI for configuration rather than requiring users to hand-edit YAML or JSON files. A well-defined schema also enables runtime validation, preventing misconfigured skills from producing confusing errors.
 
@@ -176,9 +176,9 @@ The organizations that invest in portable skills now will benefit twice: they re
 
 ## Related Reading
 
-- [MCP Servers vs Claude Skills: What Is the Difference?](/claude-skills-guide/mcp-servers-vs-claude-skills-what-is-the-difference/) — Understand the structural foundations that make cross-platform skill standardization possible via MCP.
-- [Claude Code Skills Roadmap 2026: What Is Coming](/claude-skills-guide/claude-code-skills-roadmap-2026-what-is-coming/) — See how Anthropic's own skill roadmap aligns with the broader standardization movement.
-- [How to Contribute Claude Skills to Open Source](/claude-skills-guide/how-to-contribute-claude-skills-to-open-source/) — Build portable skills today that align with emerging standards for cross-platform distribution.
-- [Advanced Claude Skills](/claude-skills-guide/advanced-hub/) — Explore advanced skill patterns that benefit most from cross-platform portability.
+- [MCP Servers vs Claude Skills: What Is the Difference?](/mcp-servers-vs-claude-skills-what-is-the-difference/) — Understand the structural foundations that make cross-platform skill standardization possible via MCP.
+- [Claude Code Skills Roadmap 2026: What Is Coming](/claude-code-skills-roadmap-2026-what-is-coming/) — See how Anthropic's own skill roadmap aligns with the broader standardization movement.
+- [How to Contribute Claude Skills to Open Source](/how-to-contribute-claude-skills-to-open-source/) — Build portable skills today that align with emerging standards for cross-platform distribution.
+- [Advanced Claude Skills](/advanced-hub/) — Explore advanced skill patterns that benefit most from cross-platform portability.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -13,11 +13,11 @@ permalink: /antigravity-skills-vs-claude-native-skills/
 
 # Antigravity Skills vs Claude Native Skills: What's the Difference?
 
-When you start using Claude Code, [two categories of skills: native skills that ship with Claude and community-built skills](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) and community-built skills distributed through the Antigravity registry. Understanding the difference helps you build a more productive workflow.
+When you start using Claude Code, [two categories of skills: native skills that ship with Claude and community-built skills](/best-claude-code-skills-to-install-first-2026/) and community-built skills distributed through the Antigravity registry. Understanding the difference helps you build a more productive workflow.
 
 ## How Claude Skills Actually Work
 
-[Skills are Markdown files stored in `~/.claude/skills/`](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) When you invoke `/skill-name` in a Claude Code session, Claude loads the corresponding file and uses its instructions to guide behavior. There is no package manager, no `claude skills install` CLI command, and no Python import API — skills are plain `.md` files that you place in the skills directory.
+[Skills are Markdown files stored in `~/.claude/skills/`](/claude-skill-md-format-complete-specification-guide/) When you invoke `/skill-name` in a Claude Code session, Claude loads the corresponding file and uses its instructions to guide behavior. There is no package manager, no `claude skills install` CLI command, and no Python import API — skills are plain `.md` files that you place in the skills directory.
 
 To use any skill, invoke it by name:
 
@@ -39,11 +39,11 @@ Native skills ship pre-installed in `~/.claude/skills/` as part of the standard 
 
 The core native skills include:
 
-- [**pdf** skill](/claude-skills-guide/best-claude-skills-for-data-analysis/) — Extract text, tables, and forms from PDF files
+- [**pdf** skill](/best-claude-skills-for-data-analysis/) — Extract text, tables, and forms from PDF files
 - **xlsx** — Create and edit spreadsheets with formula support
-- [**tdd** skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Guide test-first development and generate test cases
+- [**tdd** skill](/best-claude-skills-for-developers-2026/) — Guide test-first development and generate test cases
 - **frontend-design** — Generate and verify UI component implementations
-- [**supermemory** skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Persist context and decisions across sessions
+- [**supermemory** skill](/claude-skills-token-optimization-reduce-api-costs/) — Persist context and decisions across sessions
 
 Native skills receive updates through Claude Code's release cycle. When Anthropic improves the `tdd` skill, you get the improvement automatically.
 
@@ -223,9 +223,9 @@ When evaluating a community skill, read the `.md` file itself before using it. S
 
 ## Related Reading
 
-- [Official vs Community Claude Skills: Which Should You Use?](/claude-skills-guide/anthropic-official-skills-vs-community-skills-comparison/) — Another key Claude comparison
-- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/claude-skills-vs-prompts-which-is-better/) — Skills vs plain prompts decision guide
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [Official vs Community Claude Skills: Which Should You Use?](/anthropic-official-skills-vs-community-skills-comparison/) — Another key Claude comparison
+- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-vs-prompts-which-is-better/) — Skills vs plain prompts decision guide
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
 
 
 ---

@@ -326,8 +326,8 @@ The supervisor-worker pattern is one of the most effective ways to apply Claude 
 
 ## Related Reading
 
-- [Advanced Claude Skills with Tool Use and Function Calling](/claude-skills-guide/advanced-claude-skills-with-tool-use-and-function-calling/)
-- [Agent Handoff Strategies for Long-Running Tasks](/claude-skills-guide/agent-handoff-strategies-for-long-running-tasks-guide/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/)
+- [Agent Handoff Strategies for Long-Running Tasks](/agent-handoff-strategies-for-long-running-tasks-guide/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

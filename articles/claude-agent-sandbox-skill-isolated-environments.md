@@ -13,15 +13,15 @@ permalink: /claude-agent-sandbox-skill-isolated-environments/
 
 # Claude Agent Sandbox Skill: Isolated Environments Explained
 
-[When you run AI agents in production workflows, security and isolation become critical](/claude-skills-guide/securing-mcp-servers-in-production-environments/) concerns. The `agent` skill in Claude Code includes sandboxing capabilities that create boundaries between the AI's operations and your actual filesystem, network, and credentials.
+[When you run AI agents in production workflows, security and isolation become critical](/securing-mcp-servers-in-production-environments/) concerns. The `agent` skill in Claude Code includes sandboxing capabilities that create boundaries between the AI's operations and your actual filesystem, network, and credentials.
 
-[Skills are `.md` files in `~/.claude/skills/`](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/). The `agent` skill is invoked like any other:
+[Skills are `.md` files in `~/.claude/skills/`](/claude-skill-md-format-complete-specification-guide/). The `agent` skill is invoked like any other:
 
 ```
 /agent refactor the authentication module in src/auth/ — do not touch anything outside that directory
 ```
 
-[The sandbox behavior defines what that agent can and cannot do](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) when Claude executes bash commands or file operations in response to the task.
+[The sandbox behavior defines what that agent can and cannot do](/claude-skill-md-format-complete-specification-guide/) when Claude executes bash commands or file operations in response to the task.
 
 ## What Sandbox Isolation Does
 
@@ -56,7 +56,7 @@ The most common sandbox configuration constrains filesystem access. Claude Code'
 
 With this in place, a `/agent` invocation that tries to modify `./config/secrets.yml` will be blocked by the deny rule. The agent sees the restriction and should report it rather than proceeding.
 
-[For testing new community skills without risking your production code](/claude-skills-guide/how-do-i-test-a-claude-skill-before-deploying-to-team/), set up an isolated directory structure:
+[For testing new community skills without risking your production code](/how-do-i-test-a-claude-skill-before-deploying-to-team/), set up an isolated directory structure:
 
 ```
 /project/
@@ -216,7 +216,7 @@ Starting from this table and tightening based on your specific setup is faster t
 
 ## Practical Use Case: Running Tests Safely
 
-The [`tdd` skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) generates tests that may include third-party dependencies. Running those tests in a sandboxed context prevents buggy or malicious packages from accessing your environment variables or SSH keys.
+The [`tdd` skill](/best-claude-skills-for-developers-2026/) generates tests that may include third-party dependencies. Running those tests in a sandboxed context prevents buggy or malicious packages from accessing your environment variables or SSH keys.
 
 ```
 /agent run the test suite in tests/ using the tdd skill — only read from tests/ and src/, write only to build/test-results/, no network access
@@ -368,9 +368,9 @@ The goal is not to prevent Claude from being useful — it is to make Claude use
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Overview of essential Claude Code skills for developers
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How Claude decides when to load skills
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep API costs down as you scale
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Overview of essential Claude Code skills for developers
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — How Claude decides when to load skills
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — Keep API costs down as you scale
 
 
 ---

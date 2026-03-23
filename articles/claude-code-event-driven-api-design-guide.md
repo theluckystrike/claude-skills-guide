@@ -227,9 +227,9 @@ Event-driven API design requires careful attention to acknowledgment patterns, i
 
 ## Related Reading
 
-- [What Is the Best Claude Skill for REST API Development?](/claude-skills-guide/what-is-the-best-claude-skill-for-rest-api-development/)
-- [Claude Code WebSocket Implementation Real-Time Events Guide](/claude-skills-guide/claude-code-websocket-implementation-real-time-events-guide/)
-- [Claude Skills Event-Driven Architecture Setup](/claude-skills-guide/claude-skills-event-driven-architecture-setup/)
-- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
+- [What Is the Best Claude Skill for REST API Development?](/what-is-the-best-claude-skill-for-rest-api-development/)
+- [Claude Code WebSocket Implementation Real-Time Events Guide](/claude-code-websocket-implementation-real-time-events-guide/)
+- [Claude Skills Event-Driven Architecture Setup](/claude-skills-event-driven-architecture-setup/)
+- [Claude Code Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

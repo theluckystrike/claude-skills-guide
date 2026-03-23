@@ -17,7 +17,7 @@ If you are using Claude Code (claude.ai/code) as part of your daily development 
 
 ## Understanding Claude Skills
 
-[Claude skills are modular extensions that add specialized capabilities to Claude Code](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) They work by providing additional context, tools, and workflows that Claude can invoke when needed. Most skills are open source and hosted on GitHub, making them freely available for anyone to install and use.
+[Claude skills are modular extensions that add specialized capabilities to Claude Code](/best-claude-code-skills-to-install-first-2026/) They work by providing additional context, tools, and workflows that Claude can invoke when needed. Most skills are open source and hosted on GitHub, making them freely available for anyone to install and use.
 
 The best skill for you depends on what you build. A frontend developer will benefit most from skills focused on UI implementation, while a backend engineer might prefer skills that handle testing, database schema design, or API integration. Below is a practical breakdown of the top free skills across different categories.
 
@@ -151,7 +151,7 @@ Before installing any skill, check the repository for recent commits, issue acti
 
 The best free Claude Code skill depends entirely on your workflow. If you build web applications regularly, the frontend-design skill will provide the most immediate value. If you work with documentation or data extraction, the pdf and xlsx skills are more relevant. For long-running projects where memory matters, supermemory fills a critical gap.
 
-Many developers install multiple skills and let Claude determine which one applies to the current task through [auto-invocation](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/). This approach works well because Claude automatically selects the most appropriate skill based on your prompts and the context of your request.
+Many developers install multiple skills and let Claude determine which one applies to the current task through [auto-invocation](/claude-skills-auto-invocation-how-it-works/). This approach works well because Claude automatically selects the most appropriate skill based on your prompts and the context of your request.
 
 ## Conclusion
 
@@ -159,9 +159,9 @@ Claude skills represent a powerful way to extend Claude Code's capabilities with
 
 ## Related Reading
 
-- [Claude Skills Directory: Where to Find Skills](/claude-skills-guide/claude-skills-directory-where-to-find-skills/) — The comprehensive directory of available Claude skills including free GitHub-hosted options
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — The definitive developer-focused skill recommendations expanding on the free GitHub options listed here
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Understand how Claude selects which installed skill to use automatically based on your prompt
-- [Claude Skills: Getting Started Hub](/claude-skills-guide/getting-started-hub/) — Explore installation guides and first-use workflows for all the free skills mentioned in this article
+- [Claude Skills Directory: Where to Find Skills](/claude-skills-directory-where-to-find-skills/) — The comprehensive directory of available Claude skills including free GitHub-hosted options
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — The definitive developer-focused skill recommendations expanding on the free GitHub options listed here
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — Understand how Claude selects which installed skill to use automatically based on your prompt
+- [Claude Skills: Getting Started Hub](/getting-started-hub/) — Explore installation guides and first-use workflows for all the free skills mentioned in this article
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

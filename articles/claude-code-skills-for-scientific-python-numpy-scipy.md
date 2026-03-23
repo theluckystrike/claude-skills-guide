@@ -13,7 +13,7 @@ permalink: /claude-code-skills-for-scientific-python-numpy-scipy/
 
 # Claude Code Skills for Scientific Python: NumPy and SciPy
 
-Scientific computing with Python demands precision, reproducibility, and efficient workflow management. NumPy and SciPy form the backbone of numerical computing in Python, and integrating Claude Code skills into your research pipeline can dramatically accelerate development cycles. This guide shows you how to apply Claude's specialized skills to data-heavy scientific projects. For Jupyter-centric research workflows, the [Claude skills for data science and Jupyter notebooks guide](/claude-skills-guide/claude-skills-for-data-science-and-jupyter-notebooks/) covers the interactive computing side of this ecosystem.
+Scientific computing with Python demands precision, reproducibility, and efficient workflow management. NumPy and SciPy form the backbone of numerical computing in Python, and integrating Claude Code skills into your research pipeline can dramatically accelerate development cycles. This guide shows you how to apply Claude's specialized skills to data-heavy scientific projects. For Jupyter-centric research workflows, the [Claude skills for data science and Jupyter notebooks guide](/claude-skills-for-data-science-and-jupyter-notebooks/) covers the interactive computing side of this ecosystem.
 
 ## Setting Up Your Scientific Python Environment
 
@@ -106,7 +106,7 @@ params, covariance = optimize.curve_fit(model, x_data, y_data, p0=[1, 1, 0])
 t_stat, p_value = stats.ttest_ind(y_data[:50], y_data[50:])
 ```
 
-For research projects involving statistical analysis, the `supermemory` skill helps you maintain a searchable knowledge base of your analytical approaches, making it easier to recall previous methodologies when similar questions arise. If your analysis involves biological data, the [Claude skills for computational biology and bioinformatics guide](/claude-skills-guide/claude-skills-for-computational-biology-bioinformatics/) demonstrates domain-specific patterns that complement NumPy and SciPy workflows.
+For research projects involving statistical analysis, the `supermemory` skill helps you maintain a searchable knowledge base of your analytical approaches, making it easier to recall previous methodologies when similar questions arise. If your analysis involves biological data, the [Claude skills for computational biology and bioinformatics guide](/claude-skills-for-computational-biology-bioinformatics/) demonstrates domain-specific patterns that complement NumPy and SciPy workflows.
 
 ### Choosing the Right SciPy Submodule
 
@@ -197,7 +197,7 @@ def process_scientific_data(filepath):
     return cleaned, derivatives
 ```
 
-The `frontend-design` skill becomes relevant when building interactive dashboards for visualizing scientific data. Even though NumPy and SciPy are backend technologies, presenting results effectively often requires thoughtful UI implementation. For general Python data workflows beyond scientific computing, the [best Claude skill for Python data workflows guide](/claude-skills-guide/what-is-the-best-claude-skill-for-python-data-workflows/) surveys additional options.
+The `frontend-design` skill becomes relevant when building interactive dashboards for visualizing scientific data. Even though NumPy and SciPy are backend technologies, presenting results effectively often requires thoughtful UI implementation. For general Python data workflows beyond scientific computing, the [best Claude skill for Python data workflows guide](/what-is-the-best-claude-skill-for-python-data-workflows/) surveys additional options.
 
 ### Building Robust Pipelines with Error Handling
 
@@ -444,10 +444,10 @@ A few practices that make Claude Code interactions more productive in scientific
 
 ## Related Reading
 
-- [Claude Skills for Data Science and Jupyter: 2026 Guide](/claude-skills-guide/claude-skills-for-data-science-and-jupyter-notebooks/)
-- [Best Claude Skills for Data Analysis in 2026](/claude-skills-guide/best-claude-skills-for-data-analysis/)
-- [Claude Skills for Computational Biology and Bioinformatics](/claude-skills-guide/claude-skills-for-computational-biology-bioinformatics/)
-- [Best Claude Skill for Python Data Workflows](/claude-skills-guide/what-is-the-best-claude-skill-for-python-data-workflows/)
+- [Claude Skills for Data Science and Jupyter: 2026 Guide](/claude-skills-for-data-science-and-jupyter-notebooks/)
+- [Best Claude Skills for Data Analysis in 2026](/best-claude-skills-for-data-analysis/)
+- [Claude Skills for Computational Biology and Bioinformatics](/claude-skills-for-computational-biology-bioinformatics/)
+- [Best Claude Skill for Python Data Workflows](/what-is-the-best-claude-skill-for-python-data-workflows/)
 
 ---
 

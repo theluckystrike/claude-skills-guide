@@ -216,11 +216,11 @@ WireMock transforms how you test HTTP-dependent code. By running a local mock se
 
 ## Related Reading
 
-- [What Is the Best Claude Skill for REST API Development?](/claude-skills-guide/what-is-the-best-claude-skill-for-rest-api-development/)
-- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Code Guides Hub](/claude-skills-guide/guides-hub/)
-- [Claude Code Postman Collection Automation](/claude-skills-guide/claude-code-postman-collection-automation/) — Pair WireMock mocks with automated Postman collections for end-to-end API test coverage
+- [What Is the Best Claude Skill for REST API Development?](/what-is-the-best-claude-skill-for-rest-api-development/)
+- [Claude Code Tutorials Hub](/tutorials-hub/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Code Guides Hub](/guides-hub/)
+- [Claude Code Postman Collection Automation](/claude-code-postman-collection-automation/) — Pair WireMock mocks with automated Postman collections for end-to-end API test coverage
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 {% endraw %}

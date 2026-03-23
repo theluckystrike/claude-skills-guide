@@ -13,13 +13,13 @@ permalink: /how-do-i-create-a-private-claude-skill-not-on-github/
 
 # How to Create a Private Claude Skill Not on GitHub
 
-Private Claude skills let you build custom workflows that stay completely local. Whether you're working with proprietary code, sensitive business logic, or just want to experiment without sharing your work publicly, keeping skills off GitHub is straightforward. This guide walks you through creating private skills that Claude Code can still discover and use. For best practices on the `.md` format these skills use, see the [Claude skill .md file format specification guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/).
+Private Claude skills let you build custom workflows that stay completely local. Whether you're working with proprietary code, sensitive business logic, or just want to experiment without sharing your work publicly, keeping skills off GitHub is straightforward. This guide walks you through creating private skills that Claude Code can still discover and use. For best practices on the `.md` format these skills use, see the [Claude skill .md file format specification guide](/claude-skill-md-format-complete-specification-guide/).
 
 ## Understanding Private vs Public Skills
 
 Claude Code skills live in a designated skills directory, typically `~/.claude/skills/` on Linux and macOS, or `%USERPROFILE%\.claude\skills\` on Windows. When you install a skill from GitHub using `cp skill.md ~/.claude/skills/`, it clones the repository into this folder. However, you can create skills manually in this directory without any GitHub involvement.
 
-[Public skills like frontend-design, pdf, tdd, and supermemory get shared because developers want community contributions](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) and widespread usage. Private skills serve different purposes: internal company workflows, personal automation scripts, or experimental features you aren't ready to publish.
+[Public skills like frontend-design, pdf, tdd, and supermemory get shared because developers want community contributions](/best-claude-code-skills-to-install-first-2026/) and widespread usage. Private skills serve different purposes: internal company workflows, personal automation scripts, or experimental features you aren't ready to publish.
 
 The key difference is simply where the skill file lives. Public skills have remote repositories. Private skills exist only in your local skills directory.
 
@@ -182,10 +182,10 @@ Building private skills keeps your custom workflows secure and under your contro
 
 ## Related Reading
 
-- [Claude Skill MD Format: Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — Master the full skill file format before creating your private skills
-- [How to Write a Skill MD File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) — Learn the basics of authoring skill files before keeping them private
-- [How Do I Use Claude Skills in an Air-Gapped Environment](/claude-skills-guide/how-do-i-use-claude-skills-in-an-air-gapped-environment/) — Extend private skill setups to fully offline secure environments
-- [Claude Skills Hub](/claude-skills-guide/getting-started-hub/) — Explore foundational skill creation and distribution approaches
+- [Claude Skill MD Format: Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/) — Master the full skill file format before creating your private skills
+- [How to Write a Skill MD File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/) — Learn the basics of authoring skill files before keeping them private
+- [How Do I Use Claude Skills in an Air-Gapped Environment](/how-do-i-use-claude-skills-in-an-air-gapped-environment/) — Extend private skill setups to fully offline secure environments
+- [Claude Skills Hub](/getting-started-hub/) — Explore foundational skill creation and distribution approaches
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
 ```

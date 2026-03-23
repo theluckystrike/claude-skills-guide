@@ -63,7 +63,7 @@ Claude Code's documentation capabilities surface most clearly when compared agai
 
 **API specification**: Generating an OpenAPI 3.0 spec requires cross-file analysis of route handlers, middleware, and schema definitions. This is a single-session task for Claude Code; Copilot cannot do it without manual assembly.
 
-For a step-by-step implementation guide covering all three documentation types—plus version control integration and CI/CD automation—see the [Claude Code Documentation Generation Workflow](/claude-skills-guide/automated-code-documentation-workflow-with-claude-skills/).
+For a step-by-step implementation guide covering all three documentation types—plus version control integration and CI/CD automation—see the [Claude Code Documentation Generation Workflow](/automated-code-documentation-workflow-with-claude-skills/).
 
 ## Comparing with GitHub Copilot
 
@@ -130,9 +130,9 @@ For teams serious about documentation quality, Claude Code represents a signific
 
 ## Related Reading
 
-- [Claude Code Documentation Generation Workflow](/claude-skills-guide/automated-code-documentation-workflow-with-claude-skills/) — Step-by-step guide to implementing automated documentation with Claude Code
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Code Documentation Generation Workflow](/automated-code-documentation-workflow-with-claude-skills/) — Step-by-step guide to implementing automated documentation with Claude Code
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

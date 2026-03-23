@@ -13,11 +13,11 @@ permalink: /aws-mcp-server-cloud-automation-with-claude-code/
 
 # AWS MCP Server Cloud Automation with Claude Code
 
-[The Model Context Protocol (MCP) server for AWS enables Claude Code to interact directly with your cloud infrastructure](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/) This integration transforms how developers manage AWS resources, allowing you to provision, configure, and monitor cloud services through natural language commands. This guide covers practical setup and automation patterns for AWS MCP server cloud automation with Claude Code.
+[The Model Context Protocol (MCP) server for AWS enables Claude Code to interact directly with your cloud infrastructure](/building-your-first-mcp-tool-integration-guide-2026/) This integration transforms how developers manage AWS resources, allowing you to provision, configure, and monitor cloud services through natural language commands. This guide covers practical setup and automation patterns for AWS MCP server cloud automation with Claude Code.
 
 ## Setting Up the AWS MCP Server
 
-Before automating AWS resources, [you need to configure the MCP server to authenticate with your AWS account](/claude-skills-guide/mcp-oauth-21-authentication-implementation-guide/) The server supports multiple authentication methods including AWS credentials file, environment variables, and IAM roles.
+Before automating AWS resources, [you need to configure the MCP server to authenticate with your AWS account](/mcp-oauth-21-authentication-implementation-guide/) The server supports multiple authentication methods including AWS credentials file, environment variables, and IAM roles.
 
 Install the AWS MCP server package using npm:
 
@@ -68,7 +68,7 @@ This approach reduces the time spent on repetitive infrastructure tasks and mini
 
 The AWS MCP server works well alongside traditional Infrastructure as Code tools. You can generate CloudFormation or Terraform configurations by describing your requirements to Claude.
 
-Combine the MCP server with the [tdd skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) to create testable infrastructure. First, describe the architecture you need, then ask Claude to generate the CloudFormation template. The tdd skill helps ensure your infrastructure meets specific requirements before deployment.
+Combine the MCP server with the [tdd skill](/claude-tdd-skill-test-driven-development-workflow/) to create testable infrastructure. First, describe the architecture you need, then ask Claude to generate the CloudFormation template. The tdd skill helps ensure your infrastructure meets specific requirements before deployment.
 
 Example workflow:
 
@@ -95,7 +95,7 @@ For existing functions, you can update the code:
 Update the code for my-function-handler using the files in my-lambda-project/
 ```
 
-The MCP server handles the upload and configuration updates. This workflow pairs well with the [frontend-design skill](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) when you need to deploy serverless backends alongside frontend assets.
+The MCP server handles the upload and configuration updates. This workflow pairs well with the [frontend-design skill](/best-claude-code-skills-for-frontend-development/) when you need to deploy serverless backends alongside frontend assets.
 
 ## S3 Bucket Management
 
@@ -109,7 +109,7 @@ Upload the files from ./dist/ to s3://my-app-assets-2026/
 List all objects in s3://my-app-assets-2026/ older than 90 days
 ```
 
-For content-heavy workflows, combine this with the [pdf skill](/claude-skills-guide/claude-skills-for-legal-document-automation/) to generate reports about your S3 usage and automatically archive them.
+For content-heavy workflows, combine this with the [pdf skill](/claude-skills-for-legal-document-automation/) to generate reports about your S3 usage and automatically archive them.
 
 ## Security and Access Control
 
@@ -136,7 +136,7 @@ Create an IAM user with specific permissions for the tasks you want to automate:
 }
 ```
 
-Use the [supermemory skill](/claude-skills-guide/claude-code-2026-new-features-skills-and-hooks-roundup/) to document your IAM configurations and track changes over time.
+Use the [supermemory skill](/claude-code-2026-new-features-skills-and-hooks-roundup/) to document your IAM configurations and track changes over time.
 
 ## Monitoring and Operations
 
@@ -153,9 +153,9 @@ This conversational interface reduces the learning curve for developers new to A
 
 ## Combining with Other Claude Skills
 
-The real power emerges when combining AWS automation with other Claude skills. Use the [tdd skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) to validate infrastructure changes before applying them. Apply the [frontend-design skill](/claude-skills-guide/best-claude-code-skills-for-frontend-development/) to deploy complete applications with cloud backends.
+The real power emerges when combining AWS automation with other Claude skills. Use the [tdd skill](/claude-tdd-skill-test-driven-development-workflow/) to validate infrastructure changes before applying them. Apply the [frontend-design skill](/best-claude-code-skills-for-frontend-development/) to deploy complete applications with cloud backends.
 
-For documentation, the [pdf skill](/claude-skills-guide/claude-skills-for-legal-document-automation/) generates architecture diagrams and deployment guides. The [supermemory skill](/claude-skills-guide/claude-code-2026-new-features-skills-and-hooks-roundup/) maintains institutional knowledge about your AWS setup.
+For documentation, the [pdf skill](/claude-skills-for-legal-document-automation/) generates architecture diagrams and deployment guides. The [supermemory skill](/claude-code-2026-new-features-skills-and-hooks-roundup/) maintains institutional knowledge about your AWS setup.
 
 ## Best Practices
 
@@ -177,11 +177,11 @@ Start with simple queries to verify your setup, then gradually introduce more co
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/)
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/)
-- [Claude Code Skills for Writing CloudFormation Templates](/claude-skills-guide/claude-code-cloudformation-template-generation-workflow-guid/)
-- [Integrations Hub](/claude-skills-guide/integrations-hub/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/)
+- [Claude Code Skills for Writing CloudFormation Templates](/claude-code-cloudformation-template-generation-workflow-guid/)
+- [Integrations Hub](/integrations-hub/)
 
-**Related guides:** [Claude Code API Authentication Patterns Guide](https://theluckystrike.github.io/claude-skills-guide/claude-code-api-authentication-patterns-guide/)
+**Related guides:** [Claude Code API Authentication Patterns Guide](https://theluckystrike.github.io/claude-code-api-authentication-patterns-guide/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

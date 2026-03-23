@@ -13,7 +13,7 @@ permalink: /linear-mcp-server-issue-tracking-with-claude-code/
 
 # Linear MCP Server Issue Tracking with Claude Code
 
-Managing issues and projects directly from your coding environment saves context-switching overhead and keeps your development workflow fluid. [The Linear MCP server enables Claude Code to interact with your Linear workspace](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/), creating, updating, and querying issues without leaving your terminal or IDE.
+Managing issues and projects directly from your coding environment saves context-switching overhead and keeps your development workflow fluid. [The Linear MCP server enables Claude Code to interact with your Linear workspace](/building-your-first-mcp-tool-integration-guide-2026/), creating, updating, and querying issues without leaving your terminal or IDE.
 
 This guide walks you through setting up the Linear MCP server and demonstrates practical workflows for issue tracking with Claude Code.
 
@@ -57,7 +57,7 @@ createIssue(
 
 This creates an issue in your specified team with priority level 2 (urgent). The description can include code snippets, error messages, or any context you gather during your coding session.
 
-The integration works particularly well when combined with other skills. Use the tdd skill to generate test cases for your new issue, then create the issue with those test details included. Or use the code-analysis skill to gather relevant code context before writing your issue description. For a broader view of how Claude skills fit into issue-driven workflows, see the [Claude skills workflow for technical product managers guide](/claude-skills-guide/claude-skills-workflow-for-technical-product-managers/).
+The integration works particularly well when combined with other skills. Use the tdd skill to generate test cases for your new issue, then create the issue with those test details included. Or use the code-analysis skill to gather relevant code context before writing your issue description. For a broader view of how Claude skills fit into issue-driven workflows, see the [Claude skills workflow for technical product managers guide](/claude-skills-workflow-for-technical-product-managers/).
 
 ## Querying and Managing Issues
 
@@ -132,7 +132,7 @@ description: Update Linear issues with daily progress
 For each issue in the current sprint, check if there's been activity using the Linear MCP tools. If the issue has been waiting for review for more than 2 days, add a comment requesting review. If an issue is blocked, update the status to reflect that and notify the assignee.
 ```
 
-This automation reduces manual status updates and keeps your team aware of bottlenecks. You can explore even more patterns in the [Claude skills with Linear project management tutorial](/claude-skills-guide/claude-skills-with-linear-project-management-tutorial/).
+This automation reduces manual status updates and keeps your team aware of bottlenecks. You can explore even more patterns in the [Claude skills with Linear project management tutorial](/claude-skills-with-linear-project-management-tutorial/).
 
 ## Practical Example: Bug Reporting Workflow
 
@@ -162,7 +162,7 @@ Keep your Linear integration effective with these approaches:
 - **Link issues to code**: Reference issue IDs in commit messages and PR descriptions for automatic tracking
 - **Use priority levels**: Set priorities to help Claude Code focus on high-impact work first
 
-Before committing your Linear API key to any config file, review the [MCP credential management and secrets handling guide](/claude-skills-guide/mcp-credential-management-and-secrets-handling/) for secure storage patterns.
+Before committing your Linear API key to any config file, review the [MCP credential management and secrets handling guide](/mcp-credential-management-and-secrets-handling/) for secure storage patterns.
 
 ## Conclusion
 
@@ -170,9 +170,9 @@ The Linear MCP server transforms Claude Code into a powerful issue tracking hub.
 
 ## Related Reading
 
-- [Claude Code MCP Server Setup: Complete Guide 2026](/claude-skills-guide/building-your-first-mcp-tool-integration-guide-2026/)
-- [Jira MCP Server Claude Code Integration Guide](/claude-skills-guide/jira-mcp-server-claude-code-integration-guide/)
-- [ClickUp MCP Server Workflow Automation Guide](/claude-skills-guide/clickup-mcp-server-workflow-automation-guide/)
-- [Integrations Hub](/claude-skills-guide/integrations-hub/)
+- [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)
+- [Jira MCP Server Claude Code Integration Guide](/jira-mcp-server-claude-code-integration-guide/)
+- [ClickUp MCP Server Workflow Automation Guide](/clickup-mcp-server-workflow-automation-guide/)
+- [Integrations Hub](/integrations-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

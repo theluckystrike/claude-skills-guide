@@ -455,9 +455,9 @@ The single most impactful change you can make is adopting a consistent response 
 
 ## Related Reading
 
-- [Claude Code API Documentation OpenAPI Guide](/claude-skills-guide/claude-code-api-documentation-best-practices/) — OpenAPI documents REST API designs
-- [How to Make Claude Code Generate Consistent API Responses](/claude-skills-guide/how-to-make-claude-code-generate-consistent-api-responses/) — Consistent responses are a REST best practice
-- [Claude Code API Contract Testing Guide](/claude-skills-guide/claude-code-api-contract-testing-guide/) — Contract tests validate REST API design
-- [Claude Code API Backward Compatibility Guide](/claude-skills-guide/claude-code-api-backward-compatibility-guide/) — REST API versioning and backward compatibility
+- [Claude Code API Documentation OpenAPI Guide](/claude-code-api-documentation-best-practices/) — OpenAPI documents REST API designs
+- [How to Make Claude Code Generate Consistent API Responses](/how-to-make-claude-code-generate-consistent-api-responses/) — Consistent responses are a REST best practice
+- [Claude Code API Contract Testing Guide](/claude-code-api-contract-testing-guide/) — Contract tests validate REST API design
+- [Claude Code API Backward Compatibility Guide](/claude-code-api-backward-compatibility-guide/) — REST API versioning and backward compatibility
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

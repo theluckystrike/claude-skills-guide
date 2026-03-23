@@ -19,14 +19,14 @@ Claude Code skills are `.md` files stored locally at `~/.claude/skills/`. When y
 
 Claude Code ships with a set of official skills that cover common development tasks. These are available by default and don't require manual installation. The primary built-in skills include:
 
-- [**pdf**](/claude-skills-guide/best-claude-skills-for-data-analysis/) — document text extraction, merging, form filling
+- [**pdf**](/best-claude-skills-for-data-analysis/) — document text extraction, merging, form filling
 - **docx** — Word document creation and manipulation
 - **pptx** — PowerPoint presentation generation
 - **xlsx** — spreadsheet operations with formula support
-- [**tdd**](/claude-skills-guide/best-claude-skills-for-developers-2026/) — test-driven development guidance
+- [**tdd**](/best-claude-skills-for-developers-2026/) — test-driven development guidance
 - **frontend-design** — UI component generation for React, Vue, Svelte
 - **canvas-design** — visual asset generation
-- [**supermemory**](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — persistent knowledge base across sessions
+- [**supermemory**](/claude-skills-token-optimization-reduce-api-costs/) — persistent knowledge base across sessions
 
 To see which skills are available in your session, check your `~/.claude/skills/` directory:
 
@@ -204,9 +204,9 @@ Save this as `update-skills.sh`, make it executable with `chmod +x update-skills
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Top skills every developer should know
-- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-guide/claude-skills-vs-prompts-which-is-better/) — Decide when skills beat plain prompts
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Top skills every developer should know
+- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-vs-prompts-which-is-better/) — Decide when skills beat plain prompts
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
 
 
 ---

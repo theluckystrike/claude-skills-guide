@@ -13,11 +13,11 @@ permalink: /claude-code-french-developer-community-resources-guide/
 
 # Claude Code French Developer Community Resources Guide
 
-[French developers using Claude Code have access to a growing ecosystem of community resources](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), localized documentation, and specialized tools. This guide covers practical ways to connect with other French-speaking developers, find relevant skills, and accelerate your workflow.
+[French developers using Claude Code have access to a growing ecosystem of community resources](/best-claude-code-skills-to-install-first-2026/), localized documentation, and specialized tools. This guide covers practical ways to connect with other French-speaking developers, find relevant skills, and accelerate your workflow.
 
 ## Finding French Developer Communities
 
-The French developer scene is active across multiple platforms. [Several Discord servers cater specifically to French-speaking developers working with AI tools](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) These communities often share Claude Code configurations, discuss skill implementations, and troubleshoot issues in French.
+The French developer scene is active across multiple platforms. [Several Discord servers cater specifically to French-speaking developers working with AI tools](/claude-skill-md-format-complete-specification-guide/) These communities often share Claude Code configurations, discuss skill implementations, and troubleshoot issues in French.
 
 Reddit's r/frenchdev and r/dev__FR subreddits host discussions about AI-assisted development. Developers share their prompts, skill configurations, and workflows in these spaces. Searching for "Claude Code" within these subreddits reveals real-world usage patterns from French developers.
 
@@ -25,7 +25,7 @@ GitHub itself contains French-language repositories focused on AI development. S
 
 ## Claude Skills Relevant for French Developers
 
-Several Claude skills work particularly well for French development workflows. [The **supermemory** skill helps you organize research](/claude-skills-guide/building-stateful-agents-with-claude-skills-guide/) across French documentation and tutorials. When you accumulate links, code snippets, and notes from various French sources, supermemory provides a searchable knowledge base:
+Several Claude skills work particularly well for French development workflows. [The **supermemory** skill helps you organize research](/building-stateful-agents-with-claude-skills-guide/) across French documentation and tutorials. When you accumulate links, code snippets, and notes from various French sources, supermemory provides a searchable knowledge base:
 
 ```
 /supermemory Remember: https://docs.python.org/fr/3/ is the French Python documentation site
@@ -37,7 +37,7 @@ The **pdf** skill extracts text from French technical documentation:
 /pdf summarize the key concepts from Rapport-Technique-FR.pdf
 ```
 
-For frontend work, **frontend-design** generates component documentation in French when you specify the language in your prompts. [The **tdd** skill assists in writing tests in French](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/), producing test descriptions that match your project's language conventions.
+For frontend work, **frontend-design** generates component documentation in French when you specify the language in your prompts. [The **tdd** skill assists in writing tests in French](/claude-tdd-skill-test-driven-development-workflow/), producing test descriptions that match your project's language conventions.
 
 ## Working with French Documentation
 
@@ -151,9 +151,9 @@ Your first step: explore one community listed above and share your Claude Code s
 
 ## Related Reading
 
-- [Building Stateful Agents with Claude Skills Guide](/claude-skills-guide/building-stateful-agents-with-claude-skills-guide/) — use supermemory to build a persistent French developer knowledge base
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — write tests with French descriptions and documentation
-- [Best Claude Code Skills to Install First in 2026](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) — identify the most valuable skills for frontend French development
-- [Getting Started Hub](/claude-skills-guide/getting-started-hub/) — complete guide to getting Claude Code running in your environment
+- [Building Stateful Agents with Claude Skills Guide](/building-stateful-agents-with-claude-skills-guide/) — use supermemory to build a persistent French developer knowledge base
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/) — write tests with French descriptions and documentation
+- [Best Claude Code Skills to Install First in 2026](/best-claude-code-skills-to-install-first-2026/) — identify the most valuable skills for frontend French development
+- [Getting Started Hub](/getting-started-hub/) — complete guide to getting Claude Code running in your environment
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -13,11 +13,11 @@ permalink: /will-claude-skills-support-voice-interfaces-2026/
 
 # Will Claude Skills Support Voice Interfaces in 2026?
 
-If you have been building workflows around Claude Code skills, you might wonder whether [voice interfaces](/claude-skills-guide/will-claude-skills-replace-traditional-ide-plugins/) will become a first-class option in 2026. The short answer: native voice input is not built directly into Claude skills themselves, but several practical workarounds let you drive skill-powered workflows with your voice today.
+If you have been building workflows around Claude Code skills, you might wonder whether [voice interfaces](/will-claude-skills-replace-traditional-ide-plugins/) will become a first-class option in 2026. The short answer: native voice input is not built directly into Claude skills themselves, but several practical workarounds let you drive skill-powered workflows with your voice today.
 
 ## How Claude Skills Work Right Now
 
-[Claude skills are Markdown files stored in ~/.claude/skills/ that define instructions Claude follows during your session](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) When you type `/skillname`, Claude loads those instructions and applies them to your conversation. This design works entirely with text input and output.
+[Claude skills are Markdown files stored in ~/.claude/skills/ that define instructions Claude follows during your session](/claude-skill-md-format-complete-specification-guide/) When you type `/skillname`, Claude loads those instructions and applies them to your conversation. This design works entirely with text input and output.
 
 The skill system does not include built-in voice recognition, text-to-speech generation, or audio processing. Skills are essentially prompt templates that shape Claude's behavior based on what you type. This makes them lightweight and easy to customize, but also means voice is not a native feature.
 
@@ -175,9 +175,9 @@ For now, combine voice dictation with skills like `/tdd`, `/frontend-design`, `/
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Full developer skill stack including tdd and frontend-design
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically based on context
-- [Automating Code Documentation with Claude Skills](/claude-skills-guide/automated-code-documentation-workflow-with-claude-skills/) — Documentation workflow that works with voice input
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Full developer skill stack including tdd and frontend-design
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically based on context
+- [Automating Code Documentation with Claude Skills](/automated-code-documentation-workflow-with-claude-skills/) — Documentation workflow that works with voice input
 
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

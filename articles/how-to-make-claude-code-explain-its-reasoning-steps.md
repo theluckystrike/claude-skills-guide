@@ -160,8 +160,8 @@ This creates a reasoning loop where Claude's thought process is visible before a
 
 ## Related Reading
 
-- [Advanced Claude Skills with Tool Use and Function Calling](/claude-skills-guide/advanced-claude-skills-with-tool-use-and-function-calling/) — Skills can be designed to expose their tool reasoning patterns
-- [Claude Skill .md File Format Explained](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — How to embed reasoning requirements in skill definitions
-- [How to Write a Skill .md File for Claude Code](/claude-skills-guide/how-to-write-a-skill-md-file-for-claude-code/) — Step-by-step guide for creating skills that encourage transparent thinking
+- [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/) — Skills can be designed to expose their tool reasoning patterns
+- [Claude Skill .md File Format Explained](/claude-skill-md-format-complete-specification-guide/) — How to embed reasoning requirements in skill definitions
+- [How to Write a Skill .md File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/) — Step-by-step guide for creating skills that encourage transparent thinking
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -275,8 +275,8 @@ Claude Code transforms database seeding from manual work into an automated proce
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Full developer skill stack
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Test-driven development workflow
-- [Claude Skills Token Optimization](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Reduce API costs with smart seeding patterns
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Full developer skill stack
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/) — Test-driven development workflow
+- [Claude Skills Token Optimization](/claude-skills-token-optimization-reduce-api-costs/) — Reduce API costs with smart seeding patterns
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -382,9 +382,9 @@ Documenting what not to do is equally important as documenting what to do. If mo
 
 ## Related Reading
 
-- [Best Way to Write CLAUDE.md File for Your Project](/claude-skills-guide/how-to-write-effective-claude-md-for-your-project/) — Write an effective CLAUDE.md that improves performance
-- [Claude MD File: Complete Guide to What It Does](/claude-skills-guide/claude-md-file-complete-guide-what-it-does/) — Full reference for CLAUDE.md capabilities
-- [How to Write Effective CLAUDE.md for Your Project](/claude-skills-guide/how-to-write-effective-claude-md-for-your-project/) — Practical guide with real examples
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/) — CLAUDE.md setup as a first step
+- [Best Way to Write CLAUDE.md File for Your Project](/how-to-write-effective-claude-md-for-your-project/) — Write an effective CLAUDE.md that improves performance
+- [Claude MD File: Complete Guide to What It Does](/claude-md-file-complete-guide-what-it-does/) — Full reference for CLAUDE.md capabilities
+- [How to Write Effective CLAUDE.md for Your Project](/how-to-write-effective-claude-md-for-your-project/) — Practical guide with real examples
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/) — CLAUDE.md setup as a first step
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

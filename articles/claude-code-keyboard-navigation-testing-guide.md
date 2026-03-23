@@ -412,9 +412,9 @@ Start with the manual audit checklist to identify the most critical gaps, then l
 
 ## Related Reading
 
-- [Claude Code WCAG Accessibility Audit Workflow](/claude-skills-guide/claude-code-wcag-accessibility-audit-workflow/) — WCAG auditing covers keyboard navigation requirements
-- [Best Way to Use Claude Code for Frontend Styling](/claude-skills-guide/best-way-to-use-claude-code-for-frontend-styling/) — Styling affects keyboard navigation visual indicators
-- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Write keyboard navigation tests with TDD
-- [Claude Skills Tutorials Hub](/claude-skills-guide/tutorials-hub/) — More testing and quality workflow guides
+- [Claude Code WCAG Accessibility Audit Workflow](/claude-code-wcag-accessibility-audit-workflow/) — WCAG auditing covers keyboard navigation requirements
+- [Best Way to Use Claude Code for Frontend Styling](/best-way-to-use-claude-code-for-frontend-styling/) — Styling affects keyboard navigation visual indicators
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/) — Write keyboard navigation tests with TDD
+- [Claude Skills Tutorials Hub](/tutorials-hub/) — More testing and quality workflow guides
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -13,7 +13,7 @@ permalink: /claude-code-slow-response-how-to-fix-latency-issues/
 
 # Claude Code Slow Response: How to Fix Latency Issues
 
-When Claude Code responds slowly, it disrupts your development workflow and kills productivity. This guide covers practical solutions for diagnosing and fixing latency issues in Claude Code, from skill configuration to context management. For related optimization strategies at the skill file level, see [Claude MD too long: context window optimization](/claude-skills-guide/claude-md-too-long-context-window-optimization/).
+When Claude Code responds slowly, it disrupts your development workflow and kills productivity. This guide covers practical solutions for diagnosing and fixing latency issues in Claude Code, from skill configuration to context management. For related optimization strategies at the skill file level, see [Claude MD too long: context window optimization](/claude-md-too-long-context-window-optimization/).
 
 ## Common Causes of Slow Responses
 
@@ -87,7 +87,7 @@ For projects requiring extensive history, consider splitting work across multipl
 /new-session
 ```
 
-Starting fresh sessions prevents context bloat. You can reference previous work through the [supermemory skill, which maintains searchable project memory](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) without bloating active context:
+Starting fresh sessions prevents context bloat. You can reference previous work through the [supermemory skill, which maintains searchable project memory](/claude-supermemory-skill-persistent-context-explained/) without bloating active context:
 
 ```
 /supermemory What do you know about the previous implementation details?
@@ -208,7 +208,7 @@ For teams with shared configuration, push a standardized `settings.json` through
 
 Certain skills require special consideration for performance.
 
-The [**tdd** skill](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) generates comprehensive test coverage, which naturally takes longer. Expect slightly slower initial responses as Claude produces thorough test suites. This trade-off often proves worthwhile for code quality.
+The [**tdd** skill](/claude-tdd-skill-test-driven-development-workflow/) generates comprehensive test coverage, which naturally takes longer. Expect slightly slower initial responses as Claude produces thorough test suites. This trade-off often proves worthwhile for code quality.
 
 The **pdf** skill processes document content during extraction. Large PDFs take time to parse. Use specific page ranges when possible:
 
@@ -232,9 +232,9 @@ If you're on a team, compare response times with a colleague on a different mach
 
 ## Related Reading
 
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Cut token usage alongside latency for more efficient sessions
-- [Claude Code Skills Context Window Exceeded Error Fix](/claude-skills-guide/claude-code-skills-context-window-exceeded-error-fix/) — Resolve context overload that compounds slow responses
-- [Best Claude Code Skills to Install First in 2026](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) — Start lean with only the skills that justify their overhead
-- [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — All performance and troubleshooting guides indexed
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — Cut token usage alongside latency for more efficient sessions
+- [Claude Code Skills Context Window Exceeded Error Fix](/claude-code-skills-context-window-exceeded-error-fix/) — Resolve context overload that compounds slow responses
+- [Best Claude Code Skills to Install First in 2026](/best-claude-code-skills-to-install-first-2026/) — Start lean with only the skills that justify their overhead
+- [Claude Skills Troubleshooting Hub](/troubleshooting-hub/) — All performance and troubleshooting guides indexed
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

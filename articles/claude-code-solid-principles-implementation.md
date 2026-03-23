@@ -220,9 +220,9 @@ Implementing SOLID principles with Claude Code requires explicit guidance, consi
 
 ## Related Reading
 
-- [How to Make Claude Code Follow DRY and SOLID Principles](/claude-skills-guide/how-to-make-claude-code-follow-dry-solid-principles/) — DRY and SOLID implementation guide
-- [Claude Code Dependency Injection Refactoring](/claude-skills-guide/claude-code-dependency-injection-refactoring/) — Dependency Injection implements the D in SOLID
-- [Claude Code Design Patterns Refactoring Guide](/claude-skills-guide/claude-code-design-patterns-refactoring-guide/) — Design patterns enable SOLID implementation
-- [Claude Code Coupling and Cohesion Improvement](/claude-skills-guide/claude-code-coupling-and-cohesion-improvement/) — High cohesion and low coupling embody SOLID
+- [How to Make Claude Code Follow DRY and SOLID Principles](/how-to-make-claude-code-follow-dry-solid-principles/) — DRY and SOLID implementation guide
+- [Claude Code Dependency Injection Refactoring](/claude-code-dependency-injection-refactoring/) — Dependency Injection implements the D in SOLID
+- [Claude Code Design Patterns Refactoring Guide](/claude-code-design-patterns-refactoring-guide/) — Design patterns enable SOLID implementation
+- [Claude Code Coupling and Cohesion Improvement](/claude-code-coupling-and-cohesion-improvement/) — High cohesion and low coupling embody SOLID
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

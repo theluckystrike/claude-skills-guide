@@ -13,11 +13,11 @@ permalink: /claude-md-template-for-new-projects-starter-guide/
 
 # Claude MD Template for New Projects Starter Guide
 
-When you start a new project, having a solid prompt template saves time and ensures consistent results. [Claude MD templates are structured Markdown files that define how Claude should approach](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) different types of project tasks. This guide walks you through creating and using these templates effectively, with real-world examples that apply across web apps, APIs, and backend services.
+When you start a new project, having a solid prompt template saves time and ensures consistent results. [Claude MD templates are structured Markdown files that define how Claude should approach](/claude-skill-md-format-complete-specification-guide/) different types of project tasks. This guide walks you through creating and using these templates effectively, with real-world examples that apply across web apps, APIs, and backend services.
 
 ## What Is a Claude MD Template
 
-[A Claude MD template is a Markdown file containing predefined prompts, instructions, and context that you can reuse across multiple projects.](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) Unlike Claude skills which extend Claude's capabilities, MD templates focus on structuring your prompts for specific workflows. Think of them as reusable project blueprints — documents that carry your team's conventions, your tech stack preferences, and the exact phrasing that produces the output you want.
+[A Claude MD template is a Markdown file containing predefined prompts, instructions, and context that you can reuse across multiple projects.](/claude-skill-md-format-complete-specification-guide/) Unlike Claude skills which extend Claude's capabilities, MD templates focus on structuring your prompts for specific workflows. Think of them as reusable project blueprints — documents that carry your team's conventions, your tech stack preferences, and the exact phrasing that produces the output you want.
 
 When you combine a template with skills like **tdd** or **frontend-design**, you get a powerful starting point for any project phase. The template provides context and structure; the skill provides the action.
 
@@ -378,9 +378,9 @@ Here is a concrete process for creating a CLAUDE.md template that your team actu
 
 ## Related Reading
 
-- [Claude Skill .md Format: Complete Specification Guide](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/)
-- [Claude MD File Complete Guide: What It Does](/claude-skills-guide/claude-md-file-complete-guide-what-it-does/)
-- [How to Write Effective CLAUDE.md for Your Project](/claude-skills-guide/how-to-write-effective-claude-md-for-your-project/)
-- [Getting Started Hub](/claude-skills-guide/getting-started-hub/)
+- [Claude Skill .md Format: Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/)
+- [Claude MD File Complete Guide: What It Does](/claude-md-file-complete-guide-what-it-does/)
+- [How to Write Effective CLAUDE.md for Your Project](/how-to-write-effective-claude-md-for-your-project/)
+- [Getting Started Hub](/getting-started-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

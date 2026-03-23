@@ -228,9 +228,9 @@ This workflow reduces component development from hours to minutes while maintain
 
 ## Related Reading
 
-- [Best Claude Code Skills for Frontend Development](/claude-skills-guide/best-claude-code-skills-for-frontend-development/)
-- [Claude Code React Router v7 Navigation Guide](/claude-skills-guide/claude-code-react-router-v7-navigation-guide/)
-- [Claude Code i18n Workflow for React Applications Guide](/claude-skills-guide/claude-code-i18n-workflow-for-react-applications-guide/)
-- [Claude Code Tutorials Hub](/claude-skills-guide/tutorials-hub/)
+- [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/)
+- [Claude Code React Router v7 Navigation Guide](/claude-code-react-router-v7-navigation-guide/)
+- [Claude Code i18n Workflow for React Applications Guide](/claude-code-i18n-workflow-for-react-applications-guide/)
+- [Claude Code Tutorials Hub](/tutorials-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

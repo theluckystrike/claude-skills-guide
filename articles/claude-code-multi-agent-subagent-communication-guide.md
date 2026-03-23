@@ -13,7 +13,7 @@ permalink: /claude-code-multi-agent-subagent-communication-guide/
 
 # Claude Code Multi-Agent and Subagent Communication Guide
 
-[Claude Code supports multi-agent workflows where a primary agent orchestrates one or more subagents](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/), each running in isolated sessions with their own context. This architecture enables parallel work, task specialization, and complex autonomous workflows that single-session approaches cannot handle cleanly.
+[Claude Code supports multi-agent workflows where a primary agent orchestrates one or more subagents](/best-claude-code-skills-to-install-first-2026/), each running in isolated sessions with their own context. This architecture enables parallel work, task specialization, and complex autonomous workflows that single-session approaches cannot handle cleanly.
 
 ## The Multi-Agent Mental Model
 
@@ -23,7 +23,7 @@ In a multi-agent Claude Code setup:
 - **Subagents**: Claude Code instances run in print mode (`claude -p "..."`) to handle specific tasks
 - **Shared state**: Files, directories, or JSON that agents use to communicate
 
-Each subagent runs in [its own isolated environment](/claude-skills-guide/claude-agent-sandbox-skill-isolated-environments/) with a fresh context window, which means inter-agent communication must be explicit.
+Each subagent runs in [its own isolated environment](/claude-agent-sandbox-skill-isolated-environments/) with a fresh context window, which means inter-agent communication must be explicit.
 
 The orchestrator writes task specifications, subagents execute them and write results, and the orchestrator aggregates and reports.
 
@@ -175,7 +175,7 @@ for result_file in result_files:
 
 ## Parallel Execution
 
-The power of multi-agent workflows is parallelism. Running 10 subagents in background processes is much faster than sequential runs. Be aware that [response latency and throughput scale differently](/claude-skills-guide/claude-code-response-latency-optimization-with-skills/) in parallel vs sequential architectures:
+The power of multi-agent workflows is parallelism. Running 10 subagents in background processes is much faster than sequential runs. Be aware that [response latency and throughput scale differently](/claude-code-response-latency-optimization-with-skills/) in parallel vs sequential architectures:
 
 ```bash
 #!/bin/bash
@@ -279,7 +279,7 @@ run_subagent_with_retry() {
 
 ## Using /supermemory for Shared Context
 
-If subagents need to share learned context, use [`/supermemory`](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) to store context before spawning subagents, then retrieve it in each subagent's prompt:
+If subagents need to share learned context, use [`/supermemory`](/claude-skills-token-optimization-reduce-api-costs/) to store context before spawning subagents, then retrieve it in each subagent's prompt:
 
 ```bash
 # Store shared context once
@@ -382,8 +382,8 @@ const response = await claude.messages.create({
 
 ## Related Reading
 
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — The skills most suited for subagent use (tdd, pdf, frontend-design) are profiled here with invocation patterns that translate to multi-agent workflows
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — Understanding auto-invocation is key for orchestration: you need to know when to use explicit skill invocations in subagent print mode
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Running many subagents in parallel multiplies API costs; these optimization techniques are especially important in multi-agent architectures
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — The skills most suited for subagent use (tdd, pdf, frontend-design) are profiled here with invocation patterns that translate to multi-agent workflows
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — Understanding auto-invocation is key for orchestration: you need to know when to use explicit skill invocations in subagent print mode
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — Running many subagents in parallel multiplies API costs; these optimization techniques are especially important in multi-agent architectures
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -13,7 +13,7 @@ permalink: /claude-code-azure-devops-integration-workflow-tutorial/
 
 # Claude Code Azure DevOps Integration Workflow Tutorial
 
-[Connecting Claude Code with Azure DevOps creates a powerful automation pipeline](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) that handles code review, testing, building, and deployment without manual intervention. This tutorial walks you through setting up this integration using Azure Pipelines, the Azure CLI, and Claude skills that enhance your development workflow.
+[Connecting Claude Code with Azure DevOps creates a powerful automation pipeline](/best-claude-code-skills-to-install-first-2026/) that handles code review, testing, building, and deployment without manual intervention. This tutorial walks you through setting up this integration using Azure Pipelines, the Azure CLI, and Claude skills that enhance your development workflow.
 
 ## Prerequisites
 
@@ -145,7 +145,7 @@ done
 
 ## Automated Testing with Claude TDD Skill
 
-The [Claude TDD skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) complements Azure DevOps integration by generating comprehensive tests before code reaches your CI pipeline. This workflow ensures higher code quality and fewer pipeline failures.
+The [Claude TDD skill](/best-claude-skills-for-developers-2026/) complements Azure DevOps integration by generating comprehensive tests before code reaches your CI pipeline. This workflow ensures higher code quality and fewer pipeline failures.
 
 Configure your Azure Pipeline to run TDD-generated tests:
 
@@ -298,7 +298,7 @@ The `environment` keyword in the deployment jobs enables Azure DevOps approval g
 
 ## Document Generation with PDF Skill
 
-Use the [PDF skill](/claude-skills-guide/best-claude-skills-for-data-analysis/) to generate deployment reports directly from Azure DevOps pipeline outputs. This proves valuable for compliance documentation and audit trails.
+Use the [PDF skill](/best-claude-skills-for-data-analysis/) to generate deployment reports directly from Azure DevOps pipeline outputs. This proves valuable for compliance documentation and audit trails.
 
 ```yaml
 # Add to your Azure Pipeline
@@ -342,7 +342,7 @@ This produces a structured document that satisfies change advisory board require
 
 ## Memory Integration with Supermemory
 
-For teams managing multiple Azure environments, the [supermemory skill](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) provides context retention across sessions. This proves essential when working across development, staging, and production environments.
+For teams managing multiple Azure environments, the [supermemory skill](/claude-skills-token-optimization-reduce-api-costs/) provides context retention across sessions. This proves essential when working across development, staging, and production environments.
 
 Configure supermemory to track environment-specific variables:
 
@@ -457,8 +457,8 @@ The key insight is that Claude Code works best as an orchestration layer sitting
 
 ## Related Reading
 
-- [Best Claude Skills for DevOps and Deployment](/claude-skills-guide/best-claude-skills-for-devops-and-deployment/) — Skills for CI/CD pipelines, infrastructure, and automated deployments
-- [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — The most useful developer skills in the Claude ecosystem
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Keep your DevOps automation loops cost-efficient
+- [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/) — Skills for CI/CD pipelines, infrastructure, and automated deployments
+- [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/) — The most useful developer skills in the Claude ecosystem
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — Keep your DevOps automation loops cost-efficient
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -433,9 +433,9 @@ Start with one duplicated function today. Extract it, test it, and notice how mu
 
 ## Related Reading
 
-- [Claude Code Code Smell Identification Guide](/claude-skills-guide/claude-code-for-code-smell-detection-workflow-guide/) — Duplicate code is a classic code smell
-- [How to Make Claude Code Follow DRY and SOLID Principles](/claude-skills-guide/how-to-make-claude-code-follow-dry-solid-principles/) — DRY principle directly addresses duplicate code
-- [Claude Code Test Driven Refactoring Guide](/claude-skills-guide/claude-code-test-driven-refactoring-guide/) — Tests protect duplicate code refactors
-- [Claude Code Technical Debt Tracking Workflow](/claude-skills-guide/claude-code-technical-debt-tracking-workflow/) — Duplicate code is a measurable debt source
+- [Claude Code Code Smell Identification Guide](/claude-code-for-code-smell-detection-workflow-guide/) — Duplicate code is a classic code smell
+- [How to Make Claude Code Follow DRY and SOLID Principles](/how-to-make-claude-code-follow-dry-solid-principles/) — DRY principle directly addresses duplicate code
+- [Claude Code Test Driven Refactoring Guide](/claude-code-test-driven-refactoring-guide/) — Tests protect duplicate code refactors
+- [Claude Code Technical Debt Tracking Workflow](/claude-code-technical-debt-tracking-workflow/) — Duplicate code is a measurable debt source
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

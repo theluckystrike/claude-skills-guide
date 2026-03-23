@@ -262,9 +262,9 @@ The key is consistency—test regularly, document findings, and iterate. Each cy
 
 ## Related Reading
 
-- [Claude Code WCAG Accessibility Audit Workflow](/claude-skills-guide/claude-code-wcag-accessibility-audit-workflow/)
-- [Claude Code Axe Accessibility Testing Guide](/claude-skills-guide/claude-code-axe-accessibility-testing-guide/)
-- [Claude Code Color Contrast Checking Workflow](/claude-skills-guide/claude-code-color-contrast-checking-workflow/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Code WCAG Accessibility Audit Workflow](/claude-code-wcag-accessibility-audit-workflow/)
+- [Claude Code Axe Accessibility Testing Guide](/claude-code-axe-accessibility-testing-guide/)
+- [Claude Code Color Contrast Checking Workflow](/claude-code-color-contrast-checking-workflow/)
+- [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

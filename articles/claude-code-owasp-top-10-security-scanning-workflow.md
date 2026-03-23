@@ -25,7 +25,7 @@ Before building a scanning workflow, you need the right skills installed. The fo
 # Place supermemory.md in .claude/ then invoke: /supermemory
 ```
 
-The [**tdd** skill](/claude-skills-guide/best-claude-skills-for-developers-2026/) helps you write security-focused tests, while [**supermemory**](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) maintains a persistent vulnerability database across sessions. If you're building PDF reports of findings, the **pdf** skill generates professional documentation.
+The [**tdd** skill](/best-claude-skills-for-developers-2026/) helps you write security-focused tests, while [**supermemory**](/claude-skills-token-optimization-reduce-api-costs/) maintains a persistent vulnerability database across sessions. If you're building PDF reports of findings, the **pdf** skill generates professional documentation.
 
 ## Building the OWASP Scanning Workflow
 
@@ -115,7 +115,7 @@ add_header Content-Security-Policy "default-src 'self'" always;
 
 ### 6. A06:2021 – Vulnerable and Outdated Components
 
-Dependency scanning has become critical as supply chain attacks increase. Pair this with [secret scanning to prevent credential leaks](/claude-skills-guide/claude-code-secret-scanning-prevent-credential-leaks-guide/) in your repositories. Claude can:
+Dependency scanning has become critical as supply chain attacks increase. Pair this with [secret scanning to prevent credential leaks](/claude-code-secret-scanning-prevent-credential-leaks-guide/) in your repositories. Claude can:
 
 - Parse package.json, requirements.txt, or Cargo.toml
 - Cross-reference with known vulnerability databases
@@ -210,7 +210,7 @@ The most effective approach embeds security scanning into your existing developm
 claude --print "scan code for OWASP top 10 vulnerabilities --severity critical"
 ```
 
-For teams using CI/CD, [integrate scanning into GitHub Actions with approval workflows](/claude-skills-guide/claude-code-github-actions-approval-workflows/) so security findings require human sign-off before merging:
+For teams using CI/CD, [integrate scanning into GitHub Actions with approval workflows](/claude-code-github-actions-approval-workflows/) so security findings require human sign-off before merging:
 
 ```yaml
 name: OWASP Security Scan
@@ -232,16 +232,16 @@ jobs:
 
 ## Conclusion
 
-Building a Claude Code OWASP Top 10 security scanning workflow transforms security from a periodic audit into continuous protection. The key lies in combining Claude's code analysis capabilities with specialized skills like **tdd** for security testing, **supermemory** for tracking findings, and **pdf** for compliance reporting. Pair this workflow with the [security code review checklist automation](/claude-skills-guide/claude-code-security-code-review-checklist-automation/) to cover both OWASP categories and project-specific security standards.
+Building a Claude Code OWASP Top 10 security scanning workflow transforms security from a periodic audit into continuous protection. The key lies in combining Claude's code analysis capabilities with specialized skills like **tdd** for security testing, **supermemory** for tracking findings, and **pdf** for compliance reporting. Pair this workflow with the [security code review checklist automation](/claude-code-security-code-review-checklist-automation/) to cover both OWASP categories and project-specific security standards.
 
 Start with the ten categories above, customize the scanning rules to your tech stack, and integrate checks into your development workflow. Security improves dramatically when scanning happens at every code change rather than waiting for dedicated audit phases.
 ---
 
 ## Related Reading
 
-- [Claude Skills for Enterprise Security and Compliance](/claude-skills-guide/claude-skills-for-enterprise-security-compliance-guide/) — Integrate OWASP scanning into enterprise-grade access control and audit pipelines
-- [Best Claude Skills for Developers 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/) — Developer skills that pair with security scanning in the CI/CD pipeline
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-guide/claude-skills-token-optimization-reduce-api-costs/) — Run regular security scans without runaway API costs
-- [Claude Code API Security OWASP Guide](/claude-skills-guide/claude-code-api-security-owasp-guide/) — Apply OWASP Top 10 protections specifically to Claude Code API integrations
+- [Claude Skills for Enterprise Security and Compliance](/claude-skills-for-enterprise-security-compliance-guide/) — Integrate OWASP scanning into enterprise-grade access control and audit pipelines
+- [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/) — Developer skills that pair with security scanning in the CI/CD pipeline
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — Run regular security scans without runaway API costs
+- [Claude Code API Security OWASP Guide](/claude-code-api-security-owasp-guide/) — Apply OWASP Top 10 protections specifically to Claude Code API integrations
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

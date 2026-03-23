@@ -290,15 +290,15 @@ Start with a pilot project, measure results against your baseline metrics, and e
 
 Finally, revisit your evaluation annually. The AI coding tool landscape moves quickly. The tool that was the clear choice 18 months ago may have been surpassed, and new entrants with specialized capabilities for your stack may have emerged. A structured re-evaluation every 12-18 months ensures you stay ahead of the curve rather than locked into a legacy choice.
 
-**Related guides:** [Claude Code Total Cost of Ownership for Enterprise Teams](https://theluckystrike.github.io/claude-skills-guide/claude-code-total-cost-of-ownership-enterprise/)
+**Related guides:** [Claude Code Total Cost of Ownership for Enterprise Teams](https://theluckystrike.github.io/claude-code-total-cost-of-ownership-enterprise/)
 
-**Related guides:** [Claude Code Total Cost of Ownership for Enterprise Teams](https://theluckystrike.github.io/claude-skills-guide/claude-code-total-cost-of-ownership-enterprise/)
+**Related guides:** [Claude Code Total Cost of Ownership for Enterprise Teams](https://theluckystrike.github.io/claude-code-total-cost-of-ownership-enterprise/)
 
 ## Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-skills-guide/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/claude-skills-guide/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/claude-skills-guide/guides-hub/)
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [Claude Skills Guides Hub](/guides-hub/)
 - [How Enterprise Teams Adopt Claude Code Workflow](/how-enterprise-teams-adopt-claude-code-workflow/) — Real-world case studies of how enterprise engineering teams roll out and measure AI coding tools.
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

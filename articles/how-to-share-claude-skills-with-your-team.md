@@ -13,7 +13,7 @@ permalink: /how-to-share-claude-skills-with-your-team/
 
 # How to Share Claude Skills with Your Team
 
-[Claude Code skills are `.md` files in `~/.claude/skills/`](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/). Sharing them across a team means distributing those files consistently. Here are practical approaches that work.
+[Claude Code skills are `.md` files in `~/.claude/skills/`](/claude-skill-md-format-complete-specification-guide/). Sharing them across a team means distributing those files consistently. Here are practical approaches that work.
 
 ## The Git Repository Approach
 
@@ -79,7 +79,7 @@ Keep your skill descriptions accurate — when you update a skill, update the de
 
 ## Automating Distribution
 
-[A GitHub Actions workflow can notify the team when skills are updated](/claude-skills-guide/claude-skills-with-github-actions-ci-cd-pipeline/):
+[A GitHub Actions workflow can notify the team when skills are updated](/claude-skills-with-github-actions-ci-cd-pipeline/):
 
 ```yaml
 # .github/workflows/skill-sync.yml
@@ -244,9 +244,9 @@ A quarterly skill audit — thirty minutes in a team meeting — is enough to ke
 
 ## Related Reading
 
-- [How to Contribute Claude Skills to Open Source](/claude-skills-guide/how-to-contribute-claude-skills-to-open-source/) — Full contribution walkthrough
-- [Skill MD File Format Explained With Examples](/claude-skills-guide/claude-skill-md-format-complete-specification-guide/) — Format your skill correctly before submitting
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-guide/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [How to Contribute Claude Skills to Open Source](/how-to-contribute-claude-skills-to-open-source/) — Full contribution walkthrough
+- [Skill MD File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/) — Format your skill correctly before submitting
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
 
 
 ---

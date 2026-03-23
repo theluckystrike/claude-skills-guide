@@ -200,9 +200,9 @@ Remember: the permission system exists to protect you. The goal isn't to elimina
 
 ## Related Reading
 
-- [Claude Code Permissions Model Security Guide 2026](/claude-skills-guide/claude-code-permissions-model-security-guide-2026/) — See also
-- [Claude Code DisallowedTools Security Configuration](/claude-skills-guide/claude-code-disallowedtools-security-configuration/) — See also
-- [Claude Code MCP Tool Allow and Deny Lists](/claude-skills-guide/claude-code-mcp-tool-allow-and-deny-lists/) — See also
-- [Claude Skills Troubleshooting Hub](/claude-skills-guide/troubleshooting-hub/) — See also
+- [Claude Code Permissions Model Security Guide 2026](/claude-code-permissions-model-security-guide-2026/) — See also
+- [Claude Code DisallowedTools Security Configuration](/claude-code-disallowedtools-security-configuration/) — See also
+- [Claude Code MCP Tool Allow and Deny Lists](/claude-code-mcp-tool-allow-and-deny-lists/) — See also
+- [Claude Skills Troubleshooting Hub](/troubleshooting-hub/) — See also
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)

@@ -13,13 +13,13 @@ permalink: /claude-code-skills-for-data-engineers-automating-pipelines/
 
 # Claude Code Skills for Data Engineers Automating Pipelines
 
-[Data engineers spend significant time building and maintaining pipelines that move data from source to destination](/claude-skills-guide/best-claude-code-skills-to-install-first-2026/) The repetitive nature of pipeline work — writing transformation scripts, handling edge cases, testing data quality — makes it an ideal candidate for automation with Claude Code skills. This guide shows you which skills to use and how to combine them into a productive workflow.
+[Data engineers spend significant time building and maintaining pipelines that move data from source to destination](/best-claude-code-skills-to-install-first-2026/) The repetitive nature of pipeline work — writing transformation scripts, handling edge cases, testing data quality — makes it an ideal candidate for automation with Claude Code skills. This guide shows you which skills to use and how to combine them into a productive workflow.
 
 ## Core Skills for Pipeline Development
 
 Several Claude skills directly address data engineering challenges. The **xlsx** skill helps when you need to generate Excel reports or process spreadsheet data. The **tdd** skill enforces test-driven development practices, ensuring your pipeline code has adequate coverage before deployment. For documentation, the **pdf** skill generates pipeline documentation automatically.
 
-The [**supermemory** skill](/claude-skills-guide/claude-supermemory-skill-persistent-context-explained/) maintains context across pipeline development sessions, remembering schema changes and business rules you've established. This is particularly useful when you're context-switching between multiple pipelines or returning to a pipeline after several days.
+The [**supermemory** skill](/claude-supermemory-skill-persistent-context-explained/) maintains context across pipeline development sessions, remembering schema changes and business rules you've established. This is particularly useful when you're context-switching between multiple pipelines or returning to a pipeline after several days.
 
 ## Setting Up a Pipeline Project
 
@@ -245,9 +245,9 @@ Claude Code skills provide specialized context for data engineering tasks. The c
 
 ## Related Reading
 
-- [Claude TDD Skill: Test-Driven Development Workflow](/claude-skills-guide/claude-tdd-skill-test-driven-development-workflow/) — Full coverage of the tdd skill used throughout this data engineering pipeline guide
-- [Best Claude Skills for Data Analysis](/claude-skills-guide/best-claude-skills-for-data-analysis/) — Explore the full suite of data analysis skills that complement pipeline automation workflows
-- [Claude Code Batch Processing with Skills Guide](/claude-skills-guide/claude-code-batch-processing-with-skills-guide/) — Implement batch processing patterns for large-scale pipeline data using the same skills covered here
-- [Claude Skills Use Cases Hub](/claude-skills-guide/use-cases-hub/) — Discover more data engineering and infrastructure automation use case skill guides
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/) — Full coverage of the tdd skill used throughout this data engineering pipeline guide
+- [Best Claude Skills for Data Analysis](/best-claude-skills-for-data-analysis/) — Explore the full suite of data analysis skills that complement pipeline automation workflows
+- [Claude Code Batch Processing with Skills Guide](/claude-code-batch-processing-with-skills-guide/) — Implement batch processing patterns for large-scale pipeline data using the same skills covered here
+- [Claude Skills Use Cases Hub](/use-cases-hub/) — Discover more data engineering and infrastructure automation use case skill guides
 
 Built by theluckystrike — More at [zovo.one](https://zovo.one)
