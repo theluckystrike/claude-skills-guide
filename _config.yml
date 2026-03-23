@@ -1,7 +1,7 @@
 title: "Claude Skills Guide"
 description: "Comprehensive guides, tutorials, and comparisons for Claude AI Skills, Claude Code workflows, and AI agent productivity"
-url: "https://theluckystrike.github.io"
-baseurl: "/claude-skills-guide"
+url: "https://claudecodeguides.com"
+baseurl: ""
 permalink: /:title/
 theme: minima
 twitter:
