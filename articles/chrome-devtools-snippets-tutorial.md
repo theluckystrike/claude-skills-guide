@@ -14,21 +14,21 @@ tags: [claude-code, claude-skills]
 
 
 {% raw %}
-# Chrome DevTools Snippets Tutorial: Automate Your Browser Workflow
+Chrome DevTools Snippets Tutorial: Automate Your Browser Workflow
 
 Chrome DevTools Snippets are small JavaScript programs you can write, save, and execute directly within your browser's developer tools. They bridge the gap between console one-liners and full browser extensions, giving developers a powerful way to automate repetitive tasks, debug complex issues, and prototype ideas without leaving Chrome.
 
 If you find yourself typing the same console commands repeatedly or manually manipulating the DOM during testing, Snippets will transform your workflow.
 
-## Accessing the Snippets Panel
+Accessing the Snippets Panel
 
-Open Chrome DevTools using **F12** or **Cmd+Opt+I** (Mac) / **Ctrl+Shift+I** (Windows). Navigate to the **Sources** tab, then look for the **Snippets** section in the left sidebar. If you don't see it, click the dropdown menu (three dots) and enable "Snippets."
+Open Chrome DevTools using F12 or Cmd+Opt+I (Mac) / Ctrl+Shift+I (Windows). Navigate to the Sources tab, then look for the Snippets section in the left sidebar. If you don't see it, click the dropdown menu (three dots) and enable "Snippets."
 
 The Snippets panel functions like a lightweight code editor with syntax highlighting, line numbers, and automatic saving. You can create multiple snippets, organize them into folders, and run any snippet with a keyboard shortcut.
 
-## Creating Your First Snippet
+Creating Your First Snippet
 
-Click the **+ New Snippet** button in the Snippets panel. Name it something descriptive—perhaps `hello-snippet`. Enter the following code:
+Click the + New Snippet button in the Snippets panel. Name it something descriptive, perhaps `hello-snippet`. Enter the following code:
 
 ```javascript
 function greetDeveloper(name) {
@@ -38,13 +38,13 @@ function greetDeveloper(name) {
 console.log(greetDeveloper('Developer'));
 ```
 
-To run the snippet, press **Cmd+Enter** (Mac) or **Ctrl+Enter** (Windows), or right-click the snippet name and select "Run."
+To run the snippet, press Cmd+Enter (Mac) or Ctrl+Enter (Windows), or right-click the snippet name and select "Run."
 
 The output appears in the Console, confirming your snippet executed successfully. This basic example demonstrates the core workflow: write code, save automatically, execute on demand.
 
-## Practical Examples for Real Development
+Practical Examples for Real Development
 
-### 1. List All Event Listeners on an Element
+1. List All Event Listeners on an Element
 
 Debugging event attachment becomes effortless with a snippet that retrieves all listeners:
 
@@ -73,7 +73,7 @@ getEventListeners($0);
 
 This snippet uses `$0`, a DevTools shortcut that references the currently selected element in the Elements panel. Run it after selecting a DOM element to see all attached listeners.
 
-### 2. Measure Function Execution Time
+2. Measure Function Execution Time
 
 Performance profiling often requires timing specific operations:
 
@@ -96,7 +96,7 @@ measureExecution(() => {
 
 Wrap any function in `measureExecution` to get immediate timing feedback without setting up full profiling sessions.
 
-### 3. Simulate Network Latency
+3. Simulate Network Latency
 
 Testing how your application handles slow connections becomes simple:
 
@@ -131,7 +131,7 @@ setNetworkThrottle(200, 1024, 512);
 
 Note that programmatic throttling requires Chrome's more advanced APIs, but this snippet documents the settings and reminds you to enable throttling through the Network panel.
 
-### 4. Export LocalStorage Data
+4. Export LocalStorage Data
 
 Backing up test data becomes trivial:
 
@@ -165,7 +165,7 @@ exportLocalStorage();
 
 This snippet serializes all LocalStorage entries and triggers a download, preserving your test data between sessions.
 
-## Keyboard Shortcuts That Speed Up Workflow
+Keyboard Shortcuts That Speed Up Workflow
 
 Master these shortcuts to navigate Snippets efficiently:
 
@@ -178,23 +178,23 @@ Master these shortcuts to navigate Snippets efficiently:
 
 Additionally, you can execute any saved snippet from the Command Palette by typing "!" followed by the snippet name.
 
-## Snippets Versus Console Versus Extensions
+Snippets Versus Console Versus Extensions
 
 Understanding when to use each approach prevents unnecessary complexity:
 
-**Console**: Quick calculations and one-off commands. No persistence between sessions.
+Console: Quick calculations and one-off commands. No persistence between sessions.
 
-**Snippets**: Reusable scripts you edit frequently. Persist across browser sessions and support multiple files.
+Snippets: Reusable scripts you edit frequently. Persist across browser sessions and support multiple files.
 
-**Extensions**: Full-blown features requiring distribution, installation, and browser restarts. Overkill for personal workflow automation.
+Extensions: Full-blown features requiring distribution, installation, and browser restarts. Overkill for personal workflow automation.
 
 Snippets hit the sweet spot for developer productivity tools you build for yourself.
 
-## Organizing Your Snippet Library
+Organizing Your Snippet Library
 
-As your collection grows, organize snippets using the folder feature in the left sidebar. Create logical groupings like "Debug," "Testing," or "Data Export." Prefix snippet names with numbers to control sort order—`01-debug-listener`, `02-debug-cookies`—ensuring your most-used tools appear at the top.
+As your collection grows, organize snippets using the folder feature in the left sidebar. Create logical groupings like "Debug," "Testing," or "Data Export." Prefix snippet names with numbers to control sort order, `01-debug-listener`, `02-debug-cookies`, ensuring your most-used tools appear at the top.
 
-## Sharing Snippets Across Projects
+Sharing Snippets Across Projects
 
 Snippets live in your browser profile, not your code repository. To share snippets with teammates, either:
 
@@ -204,18 +204,18 @@ Snippets live in your browser profile, not your code repository. To share snippe
 
 Version-controlling your snippets ensures consistency across team members and preserves your automation investments.
 
-## Conclusion
+Conclusion
 
 Chrome DevTools Snippets unlock browser-side automation without the overhead of building extensions. Whether you're debugging event handlers, timing performance-critical functions, or exporting test data, snippets provide a fast, persistent, and executable solution.
 
 Start with one snippet that solves a daily annoyance. Build from there. Your browser will become a more powerful development environment with each addition.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

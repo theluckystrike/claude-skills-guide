@@ -18,7 +18,7 @@ AI research assistant Chrome extensions transform how developers and researchers
 
 This guide covers the technical architecture of AI-powered research extensions, practical implementation patterns, and real-world use cases for developers building or customizing these tools.
 
-## How Chrome Extensions Access Web Content
+How Chrome Extensions Access Web Content
 
 Chrome extensions interact with web pages through several APIs. For research assistants, the most critical is the `chrome.scripting` API, which lets your extension inject content scripts into pages you visit.
 
@@ -67,13 +67,13 @@ chrome.runtime.sendMessage({
 });
 ```
 
-## Building the Extension's Core Logic
+Building the Extension's Core Logic
 
 A well-structured research assistant extension separates concerns across three components:
 
-1. **Content scripts** - Extract data from web pages
-2. **Background service worker** - Handle long-running tasks and API calls
-3. **Popup UI** - Provide quick controls for the user
+1. Content scripts - Extract data from web pages
+2. Background service worker - Handle long-running tasks and API calls
+3. Popup UI - Provide quick controls for the user
 
 The background script acts as a bridge between your content scripts and external AI APIs. Here's a pattern for handling extracted content:
 
@@ -110,9 +110,9 @@ async function processResearchContent(content) {
 }
 ```
 
-## Practical Use Cases for Developers
+Practical Use Cases for Developers
 
-### Code Documentation Research
+Code Documentation Research
 
 When exploring new libraries or frameworks, you often visit documentation pages, GitHub repos, and Stack Overflow threads scattered across many tabs. A research assistant extension can:
 
@@ -132,7 +132,7 @@ function extractCodeSnippets() {
 }
 ```
 
-### Technical Article Curation
+Technical Article Curation
 
 Building a personal knowledge base requires organizing articles by topic, extracting key insights, and linking related concepts. Your extension can automatically tag and categorize saved content:
 
@@ -154,7 +154,7 @@ function categorizeContent(url) {
 }
 ```
 
-### API Reference Management
+API Reference Management
 
 Working with multiple APIs means constantly referring back to authentication requirements, endpoint structures, and response formats. Research assistants can index and search your saved API documentation:
 
@@ -182,13 +182,13 @@ function indexApiEndpoints() {
 }
 ```
 
-## Considerations for Extension Performance
+Considerations for Extension Performance
 
 Research assistant extensions can consume significant resources if not optimized. Follow these practices:
 
-- **Lazy loading** - Only inject content scripts when needed, not on every page
-- **Storage limits** - Chrome provides 5MB of local storage per extension; use IndexedDB for larger datasets
-- **API rate limiting** - Implement request queuing to avoid overwhelming external services
+- Lazy loading - Only inject content scripts when needed, not on every page
+- Storage limits - Chrome provides 5MB of local storage per extension; use IndexedDB for larger datasets
+- API rate limiting - Implement request queuing to avoid overwhelming external services
 
 ```javascript
 // Manifest V3: Use declarative content for selective injection
@@ -202,7 +202,7 @@ Research assistant extensions can consume significant resources if not optimized
 }
 ```
 
-## Extending Functionality with AI Providers
+Extending Functionality with AI Providers
 
 The real power of research assistants comes from integrating AI processing. Most implementations support multiple providers:
 
@@ -243,31 +243,31 @@ const providers = {
 };
 ```
 
-## Conclusion
+Conclusion
 
 AI research assistant Chrome extensions bridge the gap between passive browsing and active knowledge building. By understanding how to extract web content, process it with AI services, and organize results for later retrieval, developers can create powerful tools tailored to their specific research workflows.
 
-The patterns covered here—content script injection, background service worker architecture, and AI provider integration—form the foundation for building extensions that scale from personal projects to production releases used by thousands of researchers.
+The patterns covered here, content script injection, background service worker architecture, and AI provider integration, form the foundation for building extensions that scale from personal projects to production releases used by thousands of researchers.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-## Step-by-Step: Building the Research Assistant
+Step-by-Step: Building the Research Assistant
 
-1. **Set up Manifest V3** with `storage`, `contextMenus`, `sidePanel`, and `activeTab` permissions. The `sidePanel` permission (Chrome 114+) lets you open a persistent sidebar panel alongside the web page — ideal for research workflows.
-2. **Implement text selection capture**: use a context menu with `contexts: ['selection']` so users can right-click any selected text and send it to the research assistant. The text is passed to the background script via `chrome.runtime.sendMessage`.
-3. **Build the research pipeline**: when text is received, send it to the AI API with a research-focused system prompt. Ask it to summarize the concept, identify related terms, and suggest 2-3 questions for deeper investigation.
-4. **Display results in the side panel**: render the AI response in the side panel with the original text quoted at the top. Format the output with clear sections: Summary, Key Concepts, Related Topics, and Suggested Readings.
-5. **Save to research notes**: add a "Save to Notes" button that appends the research result to a collection in `chrome.storage.local`. Display saved notes in a second tab within the side panel.
-6. **Export research session**: at the end of a research session, let users export all saved notes as a Markdown file with the source URL and timestamp for each entry.
+1. Set up Manifest V3 with `storage`, `contextMenus`, `sidePanel`, and `activeTab` permissions. The `sidePanel` permission (Chrome 114+) lets you open a persistent sidebar panel alongside the web page. ideal for research workflows.
+2. Implement text selection capture: use a context menu with `contexts: ['selection']` so users can right-click any selected text and send it to the research assistant. The text is passed to the background script via `chrome.runtime.sendMessage`.
+3. Build the research pipeline: when text is received, send it to the AI API with a research-focused system prompt. Ask it to summarize the concept, identify related terms, and suggest 2-3 questions for deeper investigation.
+4. Display results in the side panel: render the AI response in the side panel with the original text quoted at the top. Format the output with clear sections: Summary, Key Concepts, Related Topics, and Suggested Readings.
+5. Save to research notes: add a "Save to Notes" button that appends the research result to a collection in `chrome.storage.local`. Display saved notes in a second tab within the side panel.
+6. Export research session: at the end of a research session, let users export all saved notes as a Markdown file with the source URL and timestamp for each entry.
 
-## Using the Chrome Side Panel API
+Using the Chrome Side Panel API
 
 The Side Panel API gives the extension a persistent, browser-managed sidebar that opens alongside the page:
 
@@ -276,7 +276,7 @@ The Side Panel API gives the extension a persistent, browser-managed sidebar tha
 // "side_panel": { "default_path": "sidepanel.html" }
 // "permissions": ["sidePanel"]
 
-// background.js — open side panel on extension icon click
+// background.js. open side panel on extension icon click
 chrome.action.onClicked.addListener((tab) => {
   chrome.sidePanel.open({ tabId: tab.id });
 });
@@ -285,9 +285,9 @@ chrome.action.onClicked.addListener((tab) => {
 chrome.sidePanel.setPanelBehavior({ openPanelOnActionClick: true });
 ```
 
-The side panel persists across page navigations within the same tab, which is exactly what researchers need — the notes panel stays open as they move between sources.
+The side panel persists across page navigations within the same tab, which is exactly what researchers need. the notes panel stays open as they move between sources.
 
-## Comparison with Research Tools
+Comparison with Research Tools
 
 | Tool | Browser integration | AI analysis | Note export | Offline | Cost |
 |---|---|---|---|---|---|
@@ -297,9 +297,9 @@ The side panel persists across page navigations within the same tab, which is ex
 | Notion Web Clipper | Extension | No AI | Notion import | No | Free with Notion |
 | Readwise Reader | Extension + app | AI summary | Yes | No | $7.99/mo |
 
-The key advantage of a custom extension is the tight integration with the side panel and local storage — research notes accumulate automatically as you browse, with no account required.
+The key advantage of a custom extension is the tight integration with the side panel and local storage. research notes accumulate automatically as you browse, with no account required.
 
-## Advanced: Cross-Page Research Graph
+Advanced: Cross-Page Research Graph
 
 Build a knowledge graph of research sessions by tracking how concepts from different pages connect:
 
@@ -320,12 +320,12 @@ async function linkConcepts(newNote, existingNotes) {
 
 Display this graph as a simple list of "Related notes" links within each note, or render it as a visual node graph using a lightweight library like Cytoscape.js bundled with the extension.
 
-## Troubleshooting
+Troubleshooting
 
-**Side panel not opening on some pages**: The side panel requires the `sidePanel` permission and Chrome 114+. On older Chrome versions, fall back to opening a popup window using `chrome.windows.create`. Check `chrome.sidePanel` availability at runtime before calling its API.
+Side panel not opening on some pages: The side panel requires the `sidePanel` permission and Chrome 114+. On older Chrome versions, fall back to opening a popup window using `chrome.windows.create`. Check `chrome.sidePanel` availability at runtime before calling its API.
 
-**Research notes lost when storage quota is exceeded**: Add a storage usage check on every save. Call `chrome.storage.local.getBytesInUse(null)` and warn the user when usage exceeds 8 MB (leaving 2 MB buffer from the 10 MB limit). Offer an export-and-clear option to free space without losing research.
+Research notes lost when storage quota is exceeded: Add a storage usage check on every save. Call `chrome.storage.local.getBytesInUse(null)` and warn the user when usage exceeds 8 MB (leaving 2 MB buffer from the 10 MB limit). Offer an export-and-clear option to free space without losing research.
 
-**AI responses too long for the side panel**: Constrain the response length in your prompt. Ask for "a 3-sentence summary followed by exactly 3 bullet points for key concepts". Longer responses are harder to scan in the narrow side panel width.
+AI responses too long for the side panel: Constrain the response length in your prompt. Ask for "a 3-sentence summary followed by exactly 3 bullet points for key concepts". Longer responses are harder to scan in the narrow side panel width.
 
 {% endraw %}

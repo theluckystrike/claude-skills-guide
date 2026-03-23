@@ -14,13 +14,13 @@ score: 7
 
 
 {% raw %}
-# Claude Code for Wake Smart Contract Workflow
+Claude Code for Wake Smart Contract Workflow
 
-Wake is a powerful Python-based smart contract development framework that provides testing, deployment, and formal verification tools for Ethereum and EVM-compatible blockchains. Integrating Claude Code with Wake creates a seamless development experience where AI assistance enhances every phase of smart contract development. This guide shows you how to set up and optimize this workflow, from initial project scaffolding through production deployment.
+Wake is a powerful Python-based smart contract development framework that provides testing, deployment, and formal verification tools for Ethereum and EVM-compatible blockchains. Integrating Claude Code with Wake creates a smooth development experience where AI assistance enhances every phase of smart contract development. This guide shows you how to set up and optimize this workflow, from initial project scaffolding through production deployment.
 
-## Why Wake and Claude Code Together?
+Why Wake and Claude Code Together?
 
-Smart contract development is uniquely unforgiving. A bug in a deployed EVM contract can result in permanent loss of funds, and upgradability patterns add complexity rather than eliminate risk. Wake addresses this by providing a Python-based testing harness that is expressive, introspectable, and fast. Claude Code addresses the human bottleneck—the time spent reading documentation, writing boilerplate, reasoning about edge cases, and reviewing code for security issues.
+Smart contract development is uniquely unforgiving. A bug in a deployed EVM contract can result in permanent loss of funds, and upgradability patterns add complexity rather than eliminate risk. Wake addresses this by providing a Python-based testing harness that is expressive, introspectable, and fast. Claude Code addresses the human bottleneck, the time spent reading documentation, writing boilerplate, reasoning about edge cases, and reviewing code for security issues.
 
 The combination works because Wake exposes contract state as typed Python objects, making it easy for Claude to reason about what a test is doing and what it should assert. You can paste a failing test into Claude Code along with the contract source and receive actionable suggestions rather than generic advice.
 
@@ -32,12 +32,12 @@ The combination works because Wake exposes contract state as typed Python object
 | Solidity | Smart contract implementation |
 | Git | Version control, deployment audit trail |
 
-## Setting Up Wake with Claude Code
+Setting Up Wake with Claude Code
 
 Before integrating with Claude Code, ensure Wake is properly installed in your project environment. Create a new Python virtual environment and install Wake alongside its dependencies:
 
 ```python
-# Using uv for Python environment management
+Using uv for Python environment management
 uv venv .venv
 source .venv/bin/activate
 uv pip install wake wake[testing] wake[cli]
@@ -61,44 +61,44 @@ This creates the necessary configuration files including `wake.toml`, which cont
 
 ```toml
 [compiler.solc]
-# Specify the Solidity version range your contracts require
+Specify the Solidity version range your contracts require
 include_paths = ["node_modules"]
 
 [testing]
-# Number of parallel processes for test execution
+Number of parallel processes for test execution
 cmd = "pytest"
 
 [lsp]
-# Language server settings for IDE integration
+Language server settings for IDE integration
 compilation_timeout = 30
 ```
 
 Once the project is initialized, open it with Claude Code so it can index the file structure, read the existing contracts and tests, and understand the project's conventions before you start working.
 
-## Project Structure Best Practices
+Project Structure Best Practices
 
 Wake projects follow a consistent structure. Keeping to this layout helps Claude give better suggestions because it can predict where files live:
 
 ```
 my-project/
-├── contracts/
-│   ├── Token.sol
-│   ├── Vault.sol
-│   └── interfaces/
-│       └── IToken.sol
-├── tests/
-│   ├── conftest.py
-│   ├── test_token.py
-│   └── test_vault.py
-├── scripts/
-│   └── deploy.py
-├── wake.toml
-└── pyproject.toml
+ contracts/
+    Token.sol
+    Vault.sol
+    interfaces/
+        IToken.sol
+ tests/
+    conftest.py
+    test_token.py
+    test_vault.py
+ scripts/
+    deploy.py
+ wake.toml
+ pyproject.toml
 ```
 
 Keep contracts in `contracts/`, tests in `tests/`, and deployment scripts in `scripts/`. Use `conftest.py` for shared fixtures so you do not duplicate setup logic across test files.
 
-## Creating a Claude Skill for Wake Development
+Creating a Claude Skill for Wake Development
 
 Develop a specialized Claude Skill that understands Wake's commands and Python testing framework. This skill should include knowledge of Wake's testing syntax, deployment commands, and common development patterns.
 
@@ -110,11 +110,11 @@ name: wake-developer
 description: "Assists with Wake smart contract development, testing, and deployment"
 ---
 
-# Wake Smart Contract Development Assistant
+Wake Smart Contract Development Assistant
 
 You specialize in helping developers work with the Wake framework for Ethereum smart contract development.
 
-## Available Commands
+Available Commands
 
 - `wake test` - Run all tests in the `tests/` directory
 - `wake test tests/example.py::test_name` - Run specific test
@@ -122,7 +122,7 @@ You specialize in helping developers work with the Wake framework for Ethereum s
 - `wake deploy` - Deploy contracts to specified network
 - `wake clean` - Clear cache and build artifacts
 
-## Testing Patterns
+Testing Patterns
 
 Use pytest with Wake's testing utilities:
 
@@ -133,7 +133,7 @@ from wake.testing.console import console
 @chain_fixture()
 def fixture():
     # Setup initial state
-    yield Faucet(default_chain.accounts[0], 1000 * 10**18)
+    yield Faucet(default_chain.accounts[0], 1000 * 1018)
 
 def test_basic_transfer(fixture):
     """Test basic token transfer functionality."""
@@ -151,11 +151,11 @@ def test_basic_transfer(fixture):
 
 Having a custom skill pre-loaded with Wake's command reference and testing conventions means you do not need to explain the framework each time you open a new conversation. Claude already knows that `default_chain.accounts` gives you funded accounts, that `@chain_fixture()` resets state between tests, and that deployment uses `ContractName.deploy(from_=account, args=(...))`.
 
-## Contract Development Workflow
+Contract Development Workflow
 
 Follow this workflow when developing smart contracts with Wake and Claude Code:
 
-### 1. Specification and Design
+1. Specification and Design
 
 Start by describing your contract requirements to Claude. Include details about functionality, security requirements, and integration points. Claude can help you structure the specification and identify potential issues early.
 
@@ -163,7 +163,7 @@ A useful prompt pattern is: "I am building a token staking contract. Users depos
 
 Claude will often surface issues like: reentrancy risk during withdrawal, rounding errors in reward calculation, and edge cases when the reward pool is empty. Catching these at the design stage is far cheaper than fixing them after deployment.
 
-### 2. Contract Implementation
+2. Contract Implementation
 
 Write your Solidity contracts in the `contracts/` directory. Use Wake's compilation features to catch errors:
 
@@ -194,7 +194,7 @@ interface IStakingVault {
 
 Writing the interface before the implementation forces clarity about what the contract must do and gives Claude a specification to validate the implementation against.
 
-### 3. Test-Driven Development
+3. Test-Driven Development
 
 Write comprehensive tests before implementing full functionality. Use Wake's testing framework:
 
@@ -239,38 +239,38 @@ def setup():
     token = MockERC20.deploy(from_=owner)
     vault = StakingVault.deploy(token.address, from_=owner)
     # Fund user with tokens
-    token.transfer(user, 1000 * 10**18, from_=owner)
-    token.approve(vault.address, 2**256 - 1, from_=user)
+    token.transfer(user, 1000 * 1018, from_=owner)
+    token.approve(vault.address, 2256 - 1, from_=user)
     return owner, user, token, vault
 
 def test_deposit_updates_stake(setup):
     owner, user, token, vault = setup
-    vault.deposit(100 * 10**18, from_=user)
-    assert vault.stakedBalance(user.address) == 100 * 10**18
-    assert vault.totalStaked() == 100 * 10**18
+    vault.deposit(100 * 1018, from_=user)
+    assert vault.stakedBalance(user.address) == 100 * 1018
+    assert vault.totalStaked() == 100 * 1018
 
 def test_withdraw_returns_tokens(setup):
     owner, user, token, vault = setup
     initial_balance = token.balanceOf(user.address)
-    vault.deposit(100 * 10**18, from_=user)
+    vault.deposit(100 * 1018, from_=user)
     default_chain.mine(11)  # Pass the 10-block cooldown
     vault.withdraw(from_=user)
     assert token.balanceOf(user.address) >= initial_balance  # at least original amount returned
 
 def test_withdraw_before_cooldown_reverts(setup):
     owner, user, token, vault = setup
-    vault.deposit(100 * 10**18, from_=user)
+    vault.deposit(100 * 1018, from_=user)
     with must_revert():
         vault.withdraw(from_=user)
 ```
 
-### 4. Deployment and Verification
+4. Deployment and Verification
 
 When ready to deploy, configure your deployment settings in `wake.toml`:
 
 ```toml
 [deployment]
-# Configure networks and deployment accounts
+Configure networks and deployment accounts
 [rpc."mainnet"]
 url = "${MAINNET_RPC_URL}"
 
@@ -314,9 +314,9 @@ def deploy_contract():
 
 Before deploying to mainnet, run a final pre-deployment checklist with Claude: paste the contract code and deployment script, and ask it to verify that all constructor arguments are correct, that no privileged functions are left unprotected, and that the contract matches the audited version.
 
-## Optimizing the Development Experience
+Optimizing the Development Experience
 
-### Leveraging Claude for Code Review
+Leveraging Claude for Code Review
 
 Share your smart contract code with Claude for automated review:
 
@@ -331,7 +331,7 @@ For security reviews, use targeted prompts rather than generic "review this" req
 - "Does this access control implementation follow the principle of least privilege?"
 - "What is the worst-case gas cost for the `batchWithdraw` function if called with 100 users?"
 
-### Debugging Failed Tests
+Debugging Failed Tests
 
 When tests fail, use Claude to analyze the error output and suggest fixes. Provide the full error message and relevant code sections. Claude can help identify common issues like:
 
@@ -344,7 +344,7 @@ When tests fail, use Claude to analyze the error output and suggest fixes. Provi
 
 When pasting error output, include the full stack trace. Wake's Python test errors often include the revert reason string, which makes diagnosis straightforward when you share it with Claude.
 
-### Using Fuzzing to Find Edge Cases
+Using Fuzzing to Find Edge Cases
 
 Wake supports fuzz testing via its built-in fuzzer. Claude can help you write fuzz test stubs:
 
@@ -363,7 +363,7 @@ class StakingFuzzTest(FuzzTest):
     @flow()
     def flow_deposit(self, amount: uint256):
         user = random.choice(default_chain.accounts[1:5])
-        amount = amount % (1000 * 10**18) + 1
+        amount = amount % (1000 * 1018) + 1
         self.token.transfer(user, amount, from_=default_chain.accounts[0])
         self.token.approve(self.vault.address, amount, from_=user)
         self.vault.deposit(amount, from_=user)
@@ -382,7 +382,7 @@ wake test --fuzz --seq-count 1000 tests/test_fuzz.py
 
 Ask Claude to interpret fuzzer output when it finds a counterexample. Fuzz failures often reveal subtle state invariant violations that unit tests miss.
 
-### Integration with Version Control
+Integration with Version Control
 
 Maintain your Wake project with Git:
 
@@ -397,7 +397,7 @@ Claude can help generate commit messages, create branches for features, and revi
 
 For deployment tracking, commit deployment addresses to a `deployments/` directory keyed by network and date. This creates an auditable record of what was deployed where and when.
 
-## Common Pitfalls and How to Avoid Them
+Common Pitfalls and How to Avoid Them
 
 | Pitfall | Symptom | Fix |
 |---|---|---|
@@ -408,31 +408,31 @@ For deployment tracking, commit deployment addresses to a `deployments/` directo
 | Non-deterministic test order | Tests pass alone, fail together | Use fixtures to reset state; avoid global mutable state |
 | Missing `must_revert` context | Revert swallowed silently | Wrap expected-revert calls in `with must_revert():` |
 
-## Best Practices
+Best Practices
 
-1. **Write tests first** - Define expected behavior before implementation. This forces clarity about what the contract must do and makes Claude's code review more targeted.
-2. **Use console logging** - Wake's console module (`from wake.testing.console import console`) helps debug complex scenarios by printing values mid-test without reverting the chain.
-3. **Keep contracts modular** - Break large contracts into smaller, reusable components. Easier to test, easier for Claude to review, and easier to audit.
-4. **Test edge cases** - Include tests for boundary conditions, empty states, maximum values, and error paths. Ask Claude to enumerate edge cases you may have missed.
-5. **Review before deployment** - Always run a final Claude review of the complete contract and deployment script before mainnet deployment. Include the audit scope: "Review for reentrancy, access control, arithmetic errors, and incorrect event emissions."
-6. **Pin compiler versions** - Specify an exact Solidity version in `wake.toml` rather than a range. This ensures reproducible compilation across environments.
-7. **Document invariants** - Add a comment block at the top of each contract listing the invariants it maintains. This helps Claude give better review feedback and makes audits faster.
+1. Write tests first - Define expected behavior before implementation. This forces clarity about what the contract must do and makes Claude's code review more targeted.
+2. Use console logging - Wake's console module (`from wake.testing.console import console`) helps debug complex scenarios by printing values mid-test without reverting the chain.
+3. Keep contracts modular - Break large contracts into smaller, reusable components. Easier to test, easier for Claude to review, and easier to audit.
+4. Test edge cases - Include tests for boundary conditions, empty states, maximum values, and error paths. Ask Claude to enumerate edge cases you may have missed.
+5. Review before deployment - Always run a final Claude review of the complete contract and deployment script before mainnet deployment. Include the audit scope: "Review for reentrancy, access control, arithmetic errors, and incorrect event emissions."
+6. Pin compiler versions - Specify an exact Solidity version in `wake.toml` rather than a range. This ensures reproducible compilation across environments.
+7. Document invariants - Add a comment block at the top of each contract listing the invariants it maintains. This helps Claude give better review feedback and makes audits faster.
 
-## Conclusion
+Conclusion
 
-Integrating Claude Code with Wake creates a powerful development environment for smart contract developers. Claude assists with code writing, review, testing, and debugging while Wake provides the robust infrastructure for compilation, testing, fuzzing, and deployment. Together, these tools significantly accelerate the smart contract development lifecycle while maintaining code quality and security standards.
+Integrating Claude Code with Wake creates a powerful development environment for smart contract developers. Claude assists with code writing, review, testing, and debugging while Wake provides the solid infrastructure for compilation, testing, fuzzing, and deployment. Together, these tools significantly accelerate the smart contract development lifecycle while maintaining code quality and security standards.
 
 The key insight is that Wake's Python-based testing layer makes contract state inspectable and readable in a way that Hardhat's JavaScript tests are not. Claude can read and write Python test code as naturally as application code, which means its suggestions are practical and immediately usable rather than theoretical.
 
-Start by setting up a Wake project, creating a specialized Claude Skill, and gradually incorporating AI assistance into your development workflow. The combination of human oversight and AI capability leads to more reliable, well-documented smart contracts—and fewer late-night debugging sessions after a production incident.
+Start by setting up a Wake project, creating a specialized Claude Skill, and gradually incorporating AI assistance into your development workflow. The combination of human oversight and AI capability leads to more reliable, well-documented smart contracts, and fewer late-night debugging sessions after a production incident.
 
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 ```

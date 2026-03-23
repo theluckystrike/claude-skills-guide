@@ -15,7 +15,7 @@ permalink: /best-of-hub/
 
 There are dozens of Claude skills. Not all of them are worth your time. This hub collects the best-of guides and rankings to help you identify the skills with the highest ROI for your workflow.
 
-## Table of Contents
+Table of Contents
 
 1. [Top Skills by Category](#top-skills-by-category)
 2. [The Universal Top 5](#the-universal-top-5)
@@ -24,60 +24,60 @@ There are dozens of Claude skills. Not all of them are worth your time. This hub
 
 ---
 
-## Top Skills by Category
+Top Skills by Category
 
-### Document Processing
+Document Processing
 | Skill | Why It's Top-Tier |
 |-------|-------------------|
-| `pdf` | Extracts text, tables, forms from any PDF—the workhorse of document automation |
+| `pdf` | Extracts text, tables, forms from any PDF, the workhorse of document automation |
 | `docx` | Generates formatted Word documents programmatically, preserves tracked changes |
 | `xlsx` | Handles formulas, charts, and batch processing for spreadsheet-heavy workflows |
-| `pptx` | Automates slide creation from data—saves hours of weekly reporting work |
+| `pptx` | Automates slide creation from data, saves hours of weekly reporting work |
 
-### Development
+Development
 | Skill | Why It's Top-Tier |
 |-------|-------------------|
 | `tdd` | Enforces test-first development with smart test generation and fixture management |
 | `frontend-design` | Translates mockups and descriptions to component code across React/Vue/Svelte |
 | `webapp-testing` | Playwright-powered E2E and visual regression testing |
-| `skill-creator` | Scaffolds new skill `.md` files — describe what you need and it generates the file |
+| `skill-creator` | Scaffolds new skill `.md` files. describe what you need and it generates the file |
 
-### Infrastructure & Intelligence
+Infrastructure & Intelligence
 | Skill | Why It's Top-Tier |
 |-------|-------------------|
-| `supermemory` | Persistent knowledge base across sessions—eliminates re-explaining context |
+| `supermemory` | Persistent knowledge base across sessions, eliminates re-explaining context |
 
 ---
 
-## The Universal Top 5
+The Universal Top 5
 
 If you're just getting started with skills, these five deliver the highest value across the widest range of workflows:
 
-1. **tdd** — Better code quality from day one, across every language and framework
-2. **pdf** — The gap between PDF data and usable data is enormous; this bridges it
-3. **xlsx** — Spreadsheets are everywhere; this makes them programmable
-4. **supermemory** — Context persistence transforms multi-session work
-5. **frontend-design** — UI scaffolding that would take an hour takes minutes
+1. tdd. Better code quality from day one, across every language and framework
+2. pdf. The gap between PDF data and usable data is enormous; this bridges it
+3. xlsx. Spreadsheets are everywhere; this makes them programmable
+4. supermemory. Context persistence transforms multi-session work
+5. frontend-design. UI scaffolding that would take an hour takes minutes
 
 ---
 
-## By Developer Role
+By Developer Role
 
-**Frontend developers:** frontend-design, tdd, canvas-design, pdf, supermemory
+Frontend developers: frontend-design, tdd, canvas-design, pdf, supermemory
 → [Full frontend guide](/best-claude-code-skills-for-frontend-development/)
 
-**Data analysts:** xlsx, pdf, tdd, docx, pptx
+Data analysts: xlsx, pdf, tdd, docx, pptx
 → [Full data analysis guide](/best-claude-skills-for-data-analysis/)
 
-**DevOps engineers:** webapp-testing, tdd, supermemory
+DevOps engineers: webapp-testing, tdd, supermemory
 → [Full DevOps guide](/best-claude-skills-for-devops-and-deployment/)
 
-**Full-stack developers:** All of the above, plus skill-creator for custom integrations
+Full-stack developers: All of the above, plus skill-creator for custom integrations
 → [Full developer guide](/best-claude-skills-for-developers-2026/)
 
 ---
 
-## Full Guide Index: Best-Of Cluster
+Full Guide Index: Best-Of Cluster
 
 | Article | What You'll Learn |
 |---------|-------------------|
@@ -119,16 +119,16 @@ If you're just getting started with skills, these five deliver the highest value
 
 ---
 
-### Related Reading
+Related Reading
 
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — Top skills are only worth it if you use them efficiently
-- [Official vs Community Claude Skills: Which Should You Use?](/anthropic-official-skills-vs-community-skills-comparison/) — Not all best skills are official—understand the trade-offs
-- [Best Claude Code Skills to Install First in 2026](/best-claude-code-skills-to-install-first-2026/) — The right install order to get value immediately
-- [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/) — Deep dive on the top-rated development skill
-- [Claude SuperMemory Skill: Persistent Context Explained](/claude-supermemory-skill-persistent-context-explained/) — How the #4 ranked skill actually works under the hood
-- [Advanced Claude Skills Hub](/advanced-hub/) — Once you know the best skills, learn to use them efficiently
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Top skills are only worth it if you use them efficiently
+- [Official vs Community Claude Skills: Which Should You Use?](/anthropic-official-skills-vs-community-skills-comparison/). Not all best skills are official, understand the trade-offs
+- [Best Claude Code Skills to Install First in 2026](/best-claude-code-skills-to-install-first-2026/). The right install order to get value immediately
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/). Detailed look on the top-rated development skill
+- [Claude SuperMemory Skill: Persistent Context Explained](/claude-supermemory-skill-persistent-context-explained/). How the #4 ranked skill actually works under the hood
+- [Advanced Claude Skills Hub](/advanced-hub/). Once you know the best skills, learn to use them efficiently
 
 ---
 
-*Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*Built by theluckystrike. More at [zovo.one](https://zovo.one)
 *

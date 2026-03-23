@@ -15,12 +15,12 @@ permalink: /claude-skills-for-salesforce-apex-development/
 
 [Salesforce Apex development presents unique challenges](/claude-code-skills-for-c-sharp-dotnet-developers/) that differ from traditional object-oriented programming. The platform's governor limits, trigger patterns, and declarative customization options require specific workflows. Claude Code skills can help you navigate these requirements efficiently, reducing boilerplate code and improving test coverage.
 
-## apex-generator: Scaffold Classes and Triggers Quickly
+apex-generator: Scaffold Classes and Triggers Quickly
 
-The **apex-generator** skill creates boilerplate Apex classes, triggers, and supporting structures. This skill understands Salesforce naming conventions and generates code that follows platform best practices.
+The apex-generator skill creates boilerplate Apex classes, triggers, and supporting structures. This skill understands Salesforce naming conventions and generates code that follows platform best practices.
 
 ```bash
-# Generate a trigger with helper class
+Generate a trigger with helper class
 "Create an Apex trigger on the Opportunity object that updates a custom field when the stage changes"
 ```
 
@@ -49,12 +49,12 @@ public class OpportunityTriggerHandler {
 
 The generated code includes proper null checks and bulkification patterns from the start.
 
-## test-generator: Create Comprehensive Test Classes
+test-generator: Create Comprehensive Test Classes
 
-[Testing in Salesforce is mandatory for deployment](/claude-tdd-skill-test-driven-development-workflow/). The **test-generator** skill builds test classes with realistic test data, assert statements, and proper coverage targets.
+[Testing in Salesforce is mandatory for deployment](/claude-tdd-skill-test-driven-development-workflow/). The test-generator skill builds test classes with realistic test data, assert statements, and proper coverage targets.
 
 ```bash
-# Generate test class for OpportunityTriggerHandler
+Generate test class for OpportunityTriggerHandler
 "Create a test class for OpportunityTriggerHandler with test methods for stage change scenarios including closed won, closed lost, and stage progression"
 ```
 
@@ -101,12 +101,12 @@ private class OpportunityTriggerHandlerTest {
 
 The test class includes TestSetup methods for reusable test data and covers multiple execution paths.
 
-## soql-builder: Construct Complex Queries
+soql-builder: Construct Complex Queries
 
-The **soql-builder** skill helps construct optimized SOQL queries with proper relationship traversal and filter conditions. This skill is particularly useful for complex reporting queries or data migration scripts.
+The soql-builder skill helps construct optimized SOQL queries with proper relationship traversal and filter conditions. This skill is particularly useful for complex reporting queries or data migration scripts.
 
 ```bash
-# Generate SOQL query with subquery
+Generate SOQL query with subquery
 "Write a SOQL query to retrieve all contacts from accounts where the account has more than 5 opportunities in the Closed Won stage"
 ```
 
@@ -128,12 +128,12 @@ List<Account> accounts = [
 
 This query uses a subquery and HAVING clause correctly, avoiding inefficient loops.
 
-## debug-analyzer: Interpret Debug Logs
+debug-analyzer: Interpret Debug Logs
 
-Salesforce debug logs can be overwhelming. The **debug-analyzer** skill parses debug output, identifies governor limit violations, and suggests optimizations.
+Salesforce debug logs can be overwhelming. The debug-analyzer skill parses debug output, identifies governor limit violations, and suggests optimizations.
 
 ```bash
-# Analyze a debug log for performance issues
+Analyze a debug log for performance issues
 "Identify the cause of CPU time limit exceeded in this debug log excerpt"
 ```
 
@@ -159,12 +159,12 @@ for (Task t : [SELECT Id, WhatId FROM Task
 }
 ```
 
-## deployment-helper: Package and Deploy Metadata
+deployment-helper: Package and Deploy Metadata
 
-[The **deployment-helper** skill generates deployment scripts](/claude-skills-with-github-actions-ci-cd-pipeline/) using Salesforce CLI or Ant migration tools. It creates package.xml files and validates components before deployment.
+[The deployment-helper skill generates deployment scripts](/claude-skills-with-github-actions-ci-cd-pipeline/) using Salesforce CLI or Ant migration tools. It creates package.xml files and validates components before deployment.
 
 ```bash
-# Generate deployment package
+Generate deployment package
 "Create a deployment package for moving a custom object, its fields, and related Apex classes from sandbox to production"
 ```
 
@@ -193,35 +193,35 @@ This produces the necessary metadata package:
 Combined with a deployment script:
 
 ```bash
-# Using Salesforce CLI
+Using Salesforce CLI
 sf project deploy metadata \
   --source-dir ./metadata/package.xml \
   --target-org production \
   --test-level RunLocalTests
 ```
 
-## flow-to-apex: Convert Declarative Elements
+flow-to-apex: Convert Declarative Elements
 
-When declarative automation reaches its limits, the **flow-to-apex** skill helps translate Flow Builder elements into Apex code. This is useful for complex calculations or logic that requires fine-grained control.
+When declarative automation reaches its limits, the flow-to-apex skill helps translate Flow Builder elements into Apex code. This is useful for complex calculations or logic that requires fine-grained control.
 
 ```bash
-# Convert a flow to Apex
+Convert a flow to Apex
 "Convert this Flow Builder logic to an Apex class: loop through opportunity line items, calculate discount based on quantity tiers, and update the opportunity amount"
 ```
 
-## Practical Workflow Example
+Practical Workflow Example
 
 Here is how these skills work together in a real development scenario:
 
-1. **Scaffold**: Use `apex-generator` to create a new trigger and handler for account validation
-2. **Test**: Generate tests with `test-generator` to achieve required coverage
-3. **Query**: Build complex SOQL with `soql-builder` for data retrieval
-4. **Debug**: Run the code and use `debug-analyzer` to fix any limit issues
-5. **Deploy**: Package with `deployment-helper` for sandboxes or production
+1. Scaffold: Use `apex-generator` to create a new trigger and handler for account validation
+2. Test: Generate tests with `test-generator` to achieve required coverage
+3. Query: Build complex SOQL with `soql-builder` for data retrieval
+4. Debug: Run the code and use `debug-analyzer` to fix any limit issues
+5. Deploy: Package with `deployment-helper` for sandboxes or production
 
 This workflow reduces manual coding time significantly, especially for repetitive patterns like trigger handlers and test classes.
 
-## Limitations and Considerations
+Limitations and Considerations
 
 These skills work best with standard Salesforce patterns. Complex scenarios involving Platform Events, Big Objects, or Experience Cloud may require manual refinement. Always review generated code against your organization's coding standards and security requirements.
 
@@ -237,11 +237,11 @@ if (Schema.sObjectType.Opportunity.fields.Amount.isUpdateable()) {
 Add these security checks before deploying to production environments.
 
 
-## Related Reading
+Related Reading
 
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/) — achieve Salesforce code coverage requirements with TDD patterns
-- [Claude Code Skills for C# .NET Developers](/claude-code-skills-for-c-sharp-dotnet-developers/) — compare enterprise development skill patterns across platforms
-- [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-with-github-actions-ci-cd-pipeline/) — automate Salesforce metadata deployment in CI/CD
-- [Use Cases Hub](/use-cases-hub/) — explore Claude Code skills for enterprise CRM development
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/). achieve Salesforce code coverage requirements with TDD patterns
+- [Claude Code Skills for C# .NET Developers](/claude-code-skills-for-c-sharp-dotnet-developers/). compare enterprise development skill patterns across platforms
+- [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-with-github-actions-ci-cd-pipeline/). automate Salesforce metadata deployment in CI/CD
+- [Use Cases Hub](/use-cases-hub/). explore Claude Code skills for enterprise CRM development
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

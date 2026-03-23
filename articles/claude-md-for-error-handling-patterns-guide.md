@@ -14,11 +14,11 @@ tags: [claude-code, claude-skills]
 {% raw %}
 
 
-# Claude MD for Error Handling Patterns Guide
+Claude MD for Error Handling Patterns Guide
 
-Error handling in Claude skills requires deliberate design. When you build automated workflows with Claude Code, unexpected failures can derail entire pipelines. This guide shows developers and power users how to embed robust error handling directly into Claude MD files, ensuring your skills recover gracefully from failures.
+Error handling in Claude skills requires deliberate design. When you build automated workflows with Claude Code, unexpected failures can derail entire pipelines. This guide shows developers and power users how to embed solid error handling directly into Claude MD files, ensuring your skills recover gracefully from failures.
 
-## Why Error Handling Matters in Claude MD Files
+Why Error Handling Matters in Claude MD Files
 
 Claude MD files serve as persistent instructions that shape how Claude Code behaves across sessions. Without proper error handling patterns, a single failure can cause your skill to produce incomplete output, hang indefinitely, or generate misleading results. The cost of poor error handling compounds when skills run in automated pipelines or CI/CD environments.
 
@@ -26,19 +26,19 @@ Consider a skill that processes user uploads using the `pdf` skill. If the file 
 
 What makes error handling in Claude MD files different from error handling in traditional code is that you cannot write `try/catch` blocks or `if err != nil` guards in the usual sense. Instead, you write declarative instructions that tell Claude Code what to look for, what constitutes a failure state, and what actions to take when failure occurs. The model interprets these instructions and applies them contextually during execution. Done well, this produces remarkably resilient behavior. Done poorly, it produces skills that silently swallow errors or fail in confusing ways.
 
-## Core Error Handling Patterns
+Core Error Handling Patterns
 
-### Try-Catch Equivalent Using Conditional Branches
+Try-Catch Equivalent Using Conditional Branches
 
 Claude Code does not have native try-catch syntax, but you can simulate error handling through conditional instructions. Structure your Claude MD to check preconditions before executing risky operations.
 
 ```markdown
-# Before attempting file operations
+Before attempting file operations
 {% if file_exists == false %}
 Stop and report: Required configuration file not found at {{ config_path }}
 {% endif %}
 
-# Before API calls
+Before API calls
 {% if api_key_missing == true %}
 Abort with: API key not configured. Set ANTHROPIC_API_KEY environment variable.
 {% endif %}
@@ -49,7 +49,7 @@ This pattern works by embedding conditional logic that Claude evaluates before p
 The equivalent in a traditional language would look like:
 
 ```python
-# Python equivalent of what the Claude MD pattern achieves
+Python equivalent of what the Claude MD pattern achieves
 if not os.path.exists(config_path):
     raise FileNotFoundError(f"Required config not found at {config_path}")
 
@@ -57,14 +57,14 @@ if not os.environ.get("ANTHROPIC_API_KEY"):
     raise EnvironmentError("API key not configured")
 ```
 
-The Claude MD version is declarative rather than imperative, but it achieves the same protective effect — it stops execution with a useful message rather than proceeding into an operation that will definitely fail.
+The Claude MD version is declarative rather than imperative, but it achieves the same protective effect. it stops execution with a useful message rather than proceeding into an operation that will definitely fail.
 
-### Validation Gates
+Validation Gates
 
 Place validation gates at critical decision points in your skill workflow. The `frontend-design` skill demonstrates this by validating design tokens exist before applying them to components.
 
 ```markdown
-## Validation Gate: Project Structure
+Validation Gate: Project Structure
 
 Before modifying any files, verify:
 1. Package.json exists in project root
@@ -79,10 +79,10 @@ The key to making validation gates effective is specificity. A gate that says "c
 Compare these two formulations:
 
 ```markdown
-# Weak gate — too vague
+Weak gate. too vague
 Verify the project is ready before running.
 
-# Strong gate — specific and actionable
+Strong gate. specific and actionable
 Before running, verify these four things in order:
 1. Run `ls package.json` and confirm exit code is 0
 2. Run `ls -d src/ tests/` and confirm both directories exist
@@ -94,12 +94,12 @@ If any check fails, stop and report exactly which check failed and what the actu
 
 The second version gives Claude Code specific commands to run and specific success criteria to evaluate. This eliminates guesswork and makes failures easy to diagnose.
 
-### Graceful Degradation Strategies
+Graceful Degradation Strategies
 
 When ideal resources are unavailable, your skill should fall back to sensible defaults. The `supermemory` skill handles this by loading minimal context when memory services are unavailable.
 
 ```markdown
-## Fallback Behavior
+Fallback Behavior
 
 If external service fails:
 1. Log the error with timestamp
@@ -113,7 +113,7 @@ Graceful degradation is particularly valuable in skills that integrate with exte
 A more complete degradation hierarchy for a skill that depends on external data might look like:
 
 ```markdown
-## Data Source Fallback Chain
+Data Source Fallback Chain
 
 Attempt to load data in this order, stopping at the first success:
 1. Primary API endpoint (https://api.example.com/data)
@@ -129,14 +129,14 @@ Never silently use stale data without notifying the user.
 
 This kind of explicit hierarchy ensures the skill stays functional under a range of failure conditions while being transparent about the quality of its results.
 
-## Implementing Retry Logic
+Implementing Retry Logic
 
 Retry patterns require careful design in Claude MD since you cannot write loops directly. Instead, structure your skill to recognize failure states and re-execute with modified parameters.
 
-### Explicit Retry Instructions
+Explicit Retry Instructions
 
 ```markdown
-## Retry Strategy for Network Requests
+Retry Strategy for Network Requests
 
 If API call fails with 5xx error:
 1. Wait 2 seconds
@@ -145,12 +145,12 @@ If API call fails with 5xx error:
 4. Report failure count to user
 ```
 
-### State Tracking for Retries
+State Tracking for Retries
 
 Include retry counters in your skill instructions to prevent infinite loops:
 
 ```markdown
-## Retry Counter Management
+Retry Counter Management
 
 Maintain a retry_count variable:
 - Initialize at 0 before any network operation
@@ -164,20 +164,20 @@ The reason to be explicit about the maximum retry count is that without a hard l
 For operations where the failure might be transient versus permanent, you can add error classification to your retry logic:
 
 ```markdown
-## Error Classification for Retry Decisions
+Error Classification for Retry Decisions
 
 Before retrying, classify the error:
 
 Transient errors (worth retrying):
-- HTTP 429 (rate limit) — wait longer before retry
-- HTTP 502, 503, 504 (server/gateway error) — retry with backoff
-- Connection timeout — retry immediately once, then with backoff
+- HTTP 429 (rate limit). wait longer before retry
+- HTTP 502, 503, 504 (server/gateway error). retry with backoff
+- Connection timeout. retry immediately once, then with backoff
 
 Permanent errors (do not retry):
-- HTTP 400, 401, 403 (client/auth error) — stop and report
-- HTTP 404 (not found) — stop and report
-- File not found — stop and report
-- Invalid input format — stop and report
+- HTTP 400, 401, 403 (client/auth error). stop and report
+- HTTP 404 (not found). stop and report
+- File not found. stop and report
+- Invalid input format. stop and report
 
 Only apply retry logic to transient errors. For permanent errors, fail immediately
 with a clear explanation of what the user needs to fix.
@@ -185,14 +185,14 @@ with a clear explanation of what the user needs to fix.
 
 This classification prevents the skill from wasting retries on errors that will never resolve on their own.
 
-## Error Context and Debugging
+Error Context and Debugging
 
 Rich error context dramatically improves troubleshooting. When failures occur, your skill should capture enough information for effective debugging.
 
-### Structured Error Reporting
+Structured Error Reporting
 
 ```markdown
-## Error Reporting Format
+Error Reporting Format
 
 When any operation fails, report:
 - Operation name and timestamp
@@ -215,12 +215,12 @@ The structure matters here. Error reports that dump raw output without context f
 
 Note the explicit instruction to exclude secrets from error reports. Skills that log API keys, tokens, or passwords in error output create security vulnerabilities. Making this exclusion explicit in the skill definition prevents it from happening accidentally.
 
-### Debug Mode Toggle
+Debug Mode Toggle
 
 Include a debug flag in your skill that enables verbose logging:
 
 ```markdown
-## Debug Mode
+Debug Mode
 
 When DEBUG=true is set in environment:
 1. Log all tool invocations with full parameters
@@ -238,7 +238,7 @@ This two-tier logging approach is a standard pattern in well-engineered software
 You can extend this pattern to support graduated debug levels:
 
 ```markdown
-## Log Levels
+Log Levels
 
 LOG_LEVEL environment variable controls output verbosity:
 
@@ -248,14 +248,14 @@ LOG_LEVEL environment variable controls output verbosity:
 - LOG_LEVEL=debug: Report all tool calls, intermediate values, and timing
 ```
 
-## Handling Specific Failure Categories
+Handling Specific Failure Categories
 
 Different types of operations fail in different ways, and your error handling should be tailored to each category.
 
-### File System Errors
+File System Errors
 
 ```markdown
-## File Operation Error Handling
+File Operation Error Handling
 
 For read operations:
 - File not found: Report exact path and suggest checking the path with `ls`
@@ -268,10 +268,10 @@ For write operations:
 - Path not found: Report missing parent directory and offer to create it
 ```
 
-### External Service Errors
+External Service Errors
 
 ```markdown
-## API Error Handling
+API Error Handling
 
 For authentication errors (401, 403):
 - Never retry
@@ -289,10 +289,10 @@ For server errors (5xx):
 - On final failure, report all collected errors and suggest checking service status
 ```
 
-### Input Validation Errors
+Input Validation Errors
 
 ```markdown
-## Input Validation
+Input Validation
 
 Validate inputs at the start of skill execution before any file operations or API calls.
 
@@ -305,18 +305,18 @@ Example validation report:
 Received: 'yaml'. No files were modified."
 ```
 
-## Integration with Claude Skills Ecosystem
+Integration with Claude Skills Ecosystem
 
 Several existing skills demonstrate error handling patterns worth studying:
 
 The `pdf` skill validates file signatures before attempting parsing, preventing crashes on invalid files. The `tdd` skill wraps test execution in validation gates, ensuring test frameworks are available before generating tests. The `supermemory` skill implements graceful degradation when external storage services are unreachable.
 
-Study these patterns and adapt them to your own skills. Error handling becomes especially critical when skills chain together — each skill's error output becomes input to the next stage.
+Study these patterns and adapt them to your own skills. Error handling becomes especially critical when skills chain together. each skill's error output becomes input to the next stage.
 
 When chaining skills, design each one to produce a structured result object that includes both the output data and an error status field:
 
 ```markdown
-## Chained Skill Output Format
+Chained Skill Output Format
 
 Always produce a result in this format so downstream skills can check it:
 
@@ -337,9 +337,9 @@ If status is "error", propagate the error rather than attempting to process part
 
 This contract between chained skills prevents silent partial failures where one skill errors but the next stage processes garbage data and produces a plausible-looking but wrong result.
 
-## Best Practices Summary
+Best Practices Summary
 
-Keep error handling declarative and specific. Instead of generic "handle errors" instructions, specify exactly what constitutes an error, how to detect it, and what action to take. Test your error paths by intentionally triggering failures during development. Document expected error states in your skill's usage section so users understand failure modes. Finally, ensure error messages remain helpful rather than technical — users should understand what went wrong and how to fix it.
+Keep error handling declarative and specific. Instead of generic "handle errors" instructions, specify exactly what constitutes an error, how to detect it, and what action to take. Test your error paths by intentionally triggering failures during development. Document expected error states in your skill's usage section so users understand failure modes. Finally, ensure error messages remain helpful rather than technical. users should understand what went wrong and how to fix it.
 
 A quick reference for the patterns covered in this guide:
 
@@ -355,11 +355,11 @@ A quick reference for the patterns covered in this guide:
 The investment in thoughtful error handling pays dividends every time a skill runs in a real environment with real, messy data. Skills that fail clearly and recover gracefully earn trust. Skills that silently produce wrong output or crash without explanation erode it.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Code Troubleshooting Hub](/troubleshooting-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

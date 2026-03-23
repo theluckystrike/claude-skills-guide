@@ -13,9 +13,9 @@ permalink: /how-to-connect-claude-skills-to-external-apis-guide/
 
 # How to Connect Claude Skills to External APIs Guide
 
-[Claude Code skills become significantly more powerful when they can call external APIs](/best-claude-code-skills-to-install-first-2026/) to fetch real data, trigger actions, or store results. Whether you are extending the `tdd` skill to pull test results from a CI API, using `supermemory` to store context in an external memory service, or having `pdf` push extracted data to a CRM — the pattern for connecting Claude skills to external APIs follows consistent principles. This guide covers how to connect Claude skills to external APIs with practical code and production-ready patterns.
+[Claude Code skills become significantly more powerful when they can call external APIs](/best-claude-code-skills-to-install-first-2026/) to fetch real data, trigger actions, or store results. Whether you are extending the `tdd` skill to pull test results from a CI API, using `supermemory` to store context in an external memory service, or having `pdf` push extracted data to a CRM. the pattern for connecting Claude skills to external APIs follows consistent principles. This guide covers how to connect Claude skills to external APIs with practical code and production-ready patterns.
 
-## The Core Pattern: Tool Use
+The Core Pattern: Tool Use
 
 [Claude communicates with external APIs through tool use (also called function calling)](/claude-skill-md-format-complete-specification-guide/) You define tools with JSON Schema, Claude decides when to call them based on context, the results come back to Claude, and it continues reasoning. This loop is the foundation of all external API integration.
 
@@ -31,7 +31,7 @@ User → Claude (with skill system prompt)
      Claude continues + responds
 ```
 
-## Step 1: Define Your Tools
+Step 1: Define Your Tools
 
 Tools are JSON Schema objects describing the function signature:
 
@@ -72,7 +72,7 @@ const githubTool = {
 };
 ```
 
-## Step 2: Build the Tool Execution Loop
+Step 2: Build the Tool Execution Loop
 
 ```javascript
 require('dotenv').config();
@@ -124,7 +124,7 @@ async function runWithTools(systemPrompt, userMessage, tools) {
       messages,
     });
     
-    // No tool calls — return final response
+    // No tool calls. return final response
     if (response.stop_reason === 'end_turn') {
       const textBlock = response.content.find(b => b.type === 'text');
       return textBlock?.text || '';
@@ -173,7 +173,7 @@ async function runWithTools(systemPrompt, userMessage, tools) {
 }
 ```
 
-## Step 3: Apply Skill System Prompts
+Step 3: Apply Skill System Prompts
 
 Combine tool use with skill prompts to get skill-specific behavior with API access:
 
@@ -191,7 +191,7 @@ const review = await runWithTools(
 console.log(review);
 ```
 
-## Step 4: Handle Authentication Patterns
+Step 4: Handle Authentication Patterns
 
 Different APIs use different auth methods. Build reusable auth helpers:
 
@@ -224,7 +224,7 @@ async function refreshAndCall(url, options, refreshFn) {
 }
 ```
 
-## Step 5: Rate Limiting and Retry Logic
+Step 5: Rate Limiting and Retry Logic
 
 Most APIs enforce rate limits. Implement exponential backoff:
 
@@ -252,7 +252,7 @@ async function fetchWithRetry(url, options, maxRetries = 3) {
 }
 ```
 
-## Step 6: Validate and Sanitize API Responses
+Step 6: Validate and Sanitize API Responses
 
 Never pass raw API responses directly to Claude without sanitization:
 
@@ -275,7 +275,7 @@ function sanitizeForClaude(data, maxLength = 10000) {
 }
 ```
 
-## Step 7: Caching API Results
+Step 7: Caching API Results
 
 Reduce latency and API costs by caching tool results:
 
@@ -296,7 +296,7 @@ async function cachedToolCall(toolName, args, handler, ttlMs = 60000) {
 }
 ```
 
-## Step 8: Production Patterns
+Step 8: Production Patterns
 
 For production Claude skills with API integrations:
 
@@ -328,7 +328,7 @@ class CircuitBreaker {
       if (Date.now() - this.lastFailure > this.timeout) {
         this.state = 'half-open';
       } else {
-        throw new Error('Circuit breaker open — API unavailable');
+        throw new Error('Circuit breaker open. API unavailable');
       }
     }
     
@@ -349,7 +349,7 @@ class CircuitBreaker {
 const githubBreaker = new CircuitBreaker();
 ```
 
-## Common API Integration Patterns by Skill
+Common API Integration Patterns by Skill
 
 | Claude Skill | External API | Tool Purpose |
 |---|---|---|
@@ -358,24 +358,24 @@ const githubBreaker = new CircuitBreaker();
 | `supermemory` | Supabase / Redis | Persist and recall context |
 | `frontend-design` | Figma API | Fetch design tokens and components |
 
-## Conclusion
+Conclusion
 
-Connecting Claude skills to external APIs transforms static prompts into dynamic workflows that operate on live data. The tool use loop in Step 2 is the foundation — everything else (auth, retries, caching, circuit breakers) makes it production-ready. Start by wiring one skill to one API, verify the tool use loop works correctly, then add resilience patterns as you scale.
+Connecting Claude skills to external APIs transforms static prompts into dynamic workflows that operate on live data. The tool use loop in Step 2 is the foundation. everything else (auth, retries, caching, circuit breakers) makes it production-ready. Start by wiring one skill to one API, verify the tool use loop works correctly, then add resilience patterns as you scale.
 
 ---
 
-## Step-by-Step: Wiring a Skill to an External API
+Step-by-Step: Wiring a Skill to an External API
 
-1. **Identify the API endpoint**: determine the base URL, authentication method (API key, OAuth2, or Bearer token), and the specific endpoint your skill will call.
-2. **Define the skill's input schema**: describe what parameters the user will provide — e.g., `{ "city": "string", "units": "celsius|fahrenheit" }` for a weather skill.
-3. **Write the fetch call**: in the skill's action handler, call the API using the `fetch` function and pass the user's input as query parameters or a request body.
-4. **Parse and normalize the response**: extract only the fields relevant to your use case. Flatten nested objects so the model does not have to navigate complex JSON structures.
-5. **Return structured output**: provide the model with clean, labeled data. A response like `{ "tempC": 22, "description": "partly cloudy", "wind_kph": 15 }` is easier for the model to reason about than the raw API response.
-6. **Handle errors gracefully**: if the API returns a 4xx or 5xx, return a user-friendly error message instead of throwing — the model should be able to explain the failure to the user.
+1. Identify the API endpoint: determine the base URL, authentication method (API key, OAuth2, or Bearer token), and the specific endpoint your skill will call.
+2. Define the skill's input schema: describe what parameters the user will provide. e.g., `{ "city": "string", "units": "celsius|fahrenheit" }` for a weather skill.
+3. Write the fetch call: in the skill's action handler, call the API using the `fetch` function and pass the user's input as query parameters or a request body.
+4. Parse and normalize the response: extract only the fields relevant to your use case. Flatten nested objects so the model does not have to navigate complex JSON structures.
+5. Return structured output: provide the model with clean, labeled data. A response like `{ "tempC": 22, "description": "partly cloudy", "wind_kph": 15 }` is easier for the model to reason about than the raw API response.
+6. Handle errors gracefully: if the API returns a 4xx or 5xx, return a user-friendly error message instead of throwing. the model should be able to explain the failure to the user.
 
-## Authentication Patterns
+Authentication Patterns
 
-**API Key (most common)**
+API Key (most common)
 ```javascript
 const response = await fetch(`https://api.example.com/v1/data?q=${query}`, {
   headers: {
@@ -385,7 +385,7 @@ const response = await fetch(`https://api.example.com/v1/data?q=${query}`, {
 });
 ```
 
-**OAuth2 Client Credentials**
+OAuth2 Client Credentials
 ```javascript
 // Exchange client_id + client_secret for an access token first
 const tokenResp = await fetch('https://auth.example.com/token', {
@@ -400,9 +400,9 @@ const { access_token } = await tokenResp.json();
 // Then use the token in subsequent requests
 ```
 
-Store credentials in environment variables — never embed them in the skill source code.
+Store credentials in environment variables. never embed them in the skill source code.
 
-## Common External API Integrations
+Common External API Integrations
 
 | API Type | Example | Skill Use Case |
 |---|---|---|
@@ -413,7 +413,7 @@ Store credentials in environment variables — never embed them in the skill sou
 | Communication | Twilio, SendGrid | Sending SMS or email on user request |
 | Calendar | Google Calendar, Caldav | Creating events, reading schedules |
 
-## Advanced: Rate Limiting and Caching
+Advanced: Rate Limiting and Caching
 
 External APIs impose rate limits. Add a simple in-memory cache to avoid redundant calls:
 
@@ -436,18 +436,18 @@ async function cachedFetch(url, options) {
 
 For skills deployed as long-running servers, replace the in-memory Map with Redis so the cache survives restarts and is shared across multiple skill instances.
 
-## Troubleshooting
+Troubleshooting
 
-**CORS errors when calling APIs from a browser-based skill**: Some APIs do not allow cross-origin requests from browser contexts. Use a server-side skill proxy so the fetch call happens on the server where CORS rules do not apply.
+CORS errors when calling APIs from a browser-based skill: Some APIs do not allow cross-origin requests from browser contexts. Use a server-side skill proxy so the fetch call happens on the server where CORS rules do not apply.
 
-**Timeouts on slow APIs**: Set an `AbortController` timeout to prevent the skill from hanging indefinitely. A 10-second timeout is appropriate for most APIs — if the response takes longer, return a helpful message asking the user to retry.
+Timeouts on slow APIs: Set an `AbortController` timeout to prevent the skill from hanging indefinitely. A 10-second timeout is appropriate for most APIs. if the response takes longer, return a helpful message asking the user to retry.
 
-**API responses changing schema**: Pin the API version in the URL (e.g., `/v2/`) and add a schema validation step using `zod` so the skill fails fast with a clear error if the API changes its response shape rather than silently passing malformed data to the model.
+API responses changing schema: Pin the API version in the URL (e.g., `/v2/`) and add a schema validation step using `zod` so the skill fails fast with a clear error if the API changes its response shape rather than silently passing malformed data to the model.
 
-## Related Reading
+Related Reading
 
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Profiles the skills most commonly wired to external APIs (tdd, pdf, supermemory) with practical invocation patterns
-- [Skill .md File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/) — Understanding the `tools` field in skill YAML is essential for giving skills access to the custom API tools you define
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — API response caching and sanitization (covered in this guide) are also key token cost reduction strategies worth pairing
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Profiles the skills most commonly wired to external APIs (tdd, pdf, supermemory) with practical invocation patterns
+- [Skill .md File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/). Understanding the `tools` field in skill YAML is essential for giving skills access to the custom API tools you define
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). API response caching and sanitization (covered in this guide) are also key token cost reduction strategies worth pairing
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

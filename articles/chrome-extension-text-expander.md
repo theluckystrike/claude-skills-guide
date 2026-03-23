@@ -12,24 +12,24 @@ score: 8
 ---
 
 {% raw %}
-# Building a Chrome Extension Text Expander from Scratch
+Building a Chrome Extension Text Expander from Scratch
 
 Text expanders save you from typing repetitive phrases, code snippets, and formatted text. Instead of typing your full email address, a common code comment, or a lengthy signature every time, you type a short trigger and the extension expands it. Building this functionality as a Chrome extension gives you cross-site support, cloud sync possibilities, and integration with your browser workflow.
 
 This guide walks you through creating a functional text expander extension. You'll learn the architecture, see working code, and understand how to customize it for your needs.
 
-## How a Chrome Text Expander Works
+How a Chrome Text Expander Works
 
-A text expander monitors your keystrokes in input fields across the web. When you type a trigger sequence—typically a short prefix like `;sig` or `;;email`—the extension replaces that trigger with your predefined expansion. The replacement happens at the browser level, making it work in text boxes, textareas, code editors, and any other editable field.
+A text expander monitors your keystrokes in input fields across the web. When you type a trigger sequence, typically a short prefix like `;sig` or `;;email`, the extension replaces that trigger with your predefined expansion. The replacement happens at the browser level, making it work in text boxes, textareas, code editors, and any other editable field.
 
 The core components you need:
 
-1. **Manifest file** - Defines permissions and extension structure
-2. **Content script** - Injects into web pages to capture keystrokes
-3. **Background script** - Handles storage and long-term data management
-4. **Popup interface** - Lets users manage their snippets
+1. Manifest file - Defines permissions and extension structure
+2. Content script - Injects into web pages to capture keystrokes
+3. Background script - Handles storage and long-term data management
+4. Popup interface - Lets users manage their snippets
 
-## Setting Up Your Extension
+Setting Up Your Extension
 
 Create a new folder for your project and add the manifest file first:
 
@@ -55,7 +55,7 @@ Create a new folder for your project and add the manifest file first:
 
 The `activeTab` permission lets you access the current page when needed, while `<all_urls>` in host_permissions allows your content script to run everywhere. The `run_at: "_start"` setting ensures your script loads before page content, giving you early access to input fields.
 
-## Capturing Keystrokes in Content Scripts
+Capturing Keystrokes in Content Scripts
 
 The content script listens for keyboard input and checks each keystroke against your snippet definitions. Here's a working implementation:
 
@@ -147,7 +147,7 @@ document.addEventListener('keydown', (e) => expander.handleKeydown(e));
 
 This script maintains a rolling buffer of recent keystrokes. When the buffer matches a trigger, it calculates the cursor position, removes the trigger, and inserts the full expansion. The `dispatchEvent` call ensures React and similar frameworks update their internal state.
 
-## Managing Snippets with Chrome Storage
+Managing Snippets with Chrome Storage
 
 Users need a way to add, edit, and delete snippets. Create a simple popup interface:
 
@@ -223,38 +223,38 @@ async function loadSnippets() {
 
 Chrome's `storage.sync` automatically syncs your snippets across devices when the user signs into Chrome. This gives you cloud sync without additional infrastructure.
 
-## Practical Use Cases for Developers
+Practical Use Cases for Developers
 
 Once you have a working text expander, here are practical applications:
 
-**Code snippets**: Store common patterns like console logging, React component templates, or import statements. A trigger like `;clg` expands to `console.log('', );` with your cursor positioned after the first quote.
+Code snippets: Store common patterns like console logging, React component templates, or import statements. A trigger like `;clg` expands to `console.log('', );` with your cursor positioned after the first quote.
 
-**Email templates**: Create shortcuts for frequently sent messages—meeting requests, status updates, or support responses.
+Email templates: Create shortcuts for frequently sent messages, meeting requests, status updates, or support responses.
 
-**Documentation shortcuts**: Expand `:api` to your API endpoint documentation link, or `:contrib` to your contribution guidelines.
+Documentation shortcuts: Expand `:api` to your API endpoint documentation link, or `:contrib` to your contribution guidelines.
 
-**Date and time stamps**: Create triggers that insert dynamic content. You can store a placeholder like `{{date}}` and use a content script replacement to insert today's date when the expansion occurs.
+Date and time stamps: Create triggers that insert dynamic content. You can store a placeholder like `{{date}}` and use a content script replacement to insert today's date when the expansion occurs.
 
-## Advanced Features to Consider
+Advanced Features to Consider
 
 As you extend your implementation, consider adding:
 
-- **Variable placeholders** within expansions for dynamic content
-- **Multi-line expansions** for code blocks with proper indentation
-- **Scope filtering** to enable different snippets on specific domains
-- **Plain text vs. rich text** handling for different input contexts
-- **Import/export** functionality for backing up snippets
+- Variable placeholders within expansions for dynamic content
+- Multi-line expansions for code blocks with proper indentation
+- Scope filtering to enable different snippets on specific domains
+- Plain text vs. rich text handling for different input contexts
+- Import/export functionality for backing up snippets
 
 Building your own text expander gives you full control over triggers, expansions, and storage. You can tailor it exactly to your workflow without relying on third-party services.
 
 ---
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

@@ -14,11 +14,11 @@ score: 7
 
 
 {% raw %}
-# Claude Code NextAuth Database Adapter Setup Guide
+Claude Code NextAuth Database Adapter Setup Guide
 
 NextAuth.js (now Auth.js) provides a flexible authentication system for Next.js applications, and one of its most powerful features is the database adapter system. This guide walks you through setting up NextAuth with various database adapters using Claude Code, demonstrating how Claude Code can accelerate your authentication infrastructure setup.
 
-## Understanding NextAuth Database Adapters
+Understanding NextAuth Database Adapters
 
 Database adapters in NextAuth allow you to persist user sessions, accounts, and verification tokens in your own database instead of relying solely on JWT-based authentication. This is essential for applications requiring:
 
@@ -28,28 +28,26 @@ Database adapters in NextAuth allow you to persist user sessions, accounts, and 
 - Multi-device session management
 - Compliance with data residency requirements
 
-### Supported Database Adapters
+Supported Database Adapters
 
 NextAuth supports multiple database backends through its adapter ecosystem:
 
-- **Prisma** - Most popular ORM for Node.js/TypeScript
-- **Drizzle** - Lightweight, type-safe ORM
-- **MongoDB** - NoSQL document database
-- **PostgreSQL/MySQL** - Direct SQL connections
-- **Redis** - For session caching
+- Prisma - Most popular ORM for Node.js/TypeScript
+- Drizzle - Lightweight, type-safe ORM
+- MongoDB - NoSQL document database
+- PostgreSQL/MySQL - Direct SQL connections
+- Redis - For session caching
 
-## Setting Up NextAuth with Prisma Adapter
+Setting Up NextAuth with Prisma Adapter
 
-Prisma is the most commonly used adapter. Here's how Claude Code can help you set it up efficiently.
-
-### Step 1: Install Dependencies
+Prisma is the most commonly used adapter. Install Dependencies
 
 ```bash
 npm install @next-auth/prisma-adapter prisma @prisma/client
 npm install next-auth
 ```
 
-### Step 2: Configure Prisma Schema
+Step 2: Configure Prisma Schema
 
 Ask Claude Code to generate your Prisma schema with NextAuth models:
 
@@ -110,7 +108,7 @@ model VerificationToken {
 }
 ```
 
-### Step 3: Create the NextAuth Configuration
+Step 3: Create the NextAuth Configuration
 
 Here's a practical NextAuth configuration with Prisma adapter:
 
@@ -150,18 +148,9 @@ export const authOptions = {
 }
 ```
 
-## Using Drizzle ORM Adapter
+Using Drizzle ORM Adapter
 
-Drizzle offers a lightweight alternative with better performance. Here's how to set it up with Claude Code's assistance.
-
-### Drizzle Schema Definition
-
-```typescript
-// db/schema.ts
-import { pgTable, text, timestamp, uuid, boolean } from 'drizzle-orm/pg-core';
-
-export const users = pgTable('users', {
-  id: uuid('id').defaultRandom().primaryKey(),
+Drizzle offers a lightweight alternative with better performance. uuid('id').defaultRandom().primaryKey(),
   name: text('name'),
   email: text('email').notNull().unique(),
   emailVerified: timestamp('email_verified'),
@@ -199,7 +188,7 @@ export const verificationTokens = pgTable('verification_tokens', {
 });
 ```
 
-### Drizzle Adapter Implementation
+Drizzle Adapter Implementation
 
 ```typescript
 // auth.ts
@@ -220,11 +209,11 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 })
 ```
 
-## Practical Examples with Claude Code
+Practical Examples with Claude Code
 
 Claude Code can significantly speed up your NextAuth adapter setup. Here are practical scenarios:
 
-### Example 1: Generating Database Migration Scripts
+Example 1: Generating Database Migration Scripts
 
 Ask Claude Code to generate the migration for your adapter:
 
@@ -235,7 +224,7 @@ Include the Account, Session, User, and VerificationToken models.
 
 Claude Code will generate the appropriate migration commands and SQL statements.
 
-### Example 2: Customizing Session Handling
+Example 2: Customizing Session Handling
 
 For applications requiring session revocation or database-backed sessions:
 
@@ -262,7 +251,7 @@ callbacks: {
 }
 ```
 
-### Example 3: Adding Custom User Fields
+Example 3: Adding Custom User Fields
 
 Extend the user model with application-specific fields:
 
@@ -281,35 +270,35 @@ model User {
 }
 ```
 
-## Best Practices for Database Adapter Setup
+Best Practices for Database Adapter Setup
 
 When implementing NextAuth with database adapters, consider these Claude Code tips:
 
-1. **Always use connection pooling** - Configure Prisma with connection pooling for production
-2. **Handle adapter errors gracefully** - Add error handling for database connection failures
-3. **Index your queries** - Ensure proper database indexes on userId, provider fields
-4. **Use environment variables** - Never hardcode database credentials
-5. **Test migrations** - Always test database migrations in staging before production
+1. Always use connection pooling - Configure Prisma with connection pooling for production
+2. Handle adapter errors gracefully - Add error handling for database connection failures
+3. Index your queries - Ensure proper database indexes on userId, provider fields
+4. Use environment variables - Never hardcode database credentials
+5. Test migrations - Always test database migrations in staging before production
 
-## Troubleshooting Common Issues
+Troubleshooting Common Issues
 
 Claude Code can help diagnose common adapter problems:
 
-- **Adapter not initializing**: Check your Prisma/Drizzle client configuration
-- **Session not persisting**: Verify database connection and session expiry settings
-- **OAuth account linking failing**: Ensure unique constraints on provider + providerAccountId
+- Adapter not initializing: Check your Prisma/Drizzle client configuration
+- Session not persisting: Verify database connection and session expiry settings
+- OAuth account linking failing: Ensure unique constraints on provider + providerAccountId
 
-## Conclusion
+Conclusion
 
 Setting up NextAuth with database adapters doesn't have to be complex. Claude Code can help you generate schemas, configuration files, and migration scripts quickly. Whether you choose Prisma, Drizzle, or another adapter, the key is understanding how your data model aligns with NextAuth's requirements.
 
 Start with the adapter that matches your existing stack, and use Claude Code's code generation capabilities to accelerate your authentication setup. Remember to always handle sensitive user data according to privacy regulations and security best practices.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

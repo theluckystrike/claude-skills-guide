@@ -15,32 +15,32 @@ score: 8
 
 Creating a Chrome extension that identifies lower prices across multiple retailers is a practical project that demonstrates core extension development concepts. This guide walks through building a price match finder extension using manifest V3, with patterns you can adapt for your own projects.
 
-## Understanding the Architecture
+Understanding the Architecture
 
 Chrome extensions with manifest V3 follow a specific architecture. Your extension needs three primary components working together:
 
-- **Background service worker** handles long-running tasks and API calls
-- **Content scripts** interact with web page DOM
-- **Popup UI** provides user controls and displays results
+- Background service worker handles long-running tasks and API calls
+- Content scripts interact with web page DOM
+- Popup UI provides user controls and displays results
 
 For a price match finder, the typical flow involves detecting product pages, extracting product identifiers, querying price APIs, and displaying savings to users.
 
-## Project Structure
+Project Structure
 
 A minimal extension structure looks like this:
 
 ```
 price-match-finder/
-├── manifest.json
-├── background.js
-├── content.js
-├── popup/
-│   ├── popup.html
-│   └── popup.js
-└── styles.css
+ manifest.json
+ background.js
+ content.js
+ popup/
+    popup.html
+    popup.js
+ styles.css
 ```
 
-## Manifest Configuration
+Manifest Configuration
 
 Your manifest.json defines capabilities and permissions:
 
@@ -72,7 +72,7 @@ Your manifest.json defines capabilities and permissions:
 
 The `host_permissions` array specifies which sites your extension can access. Add retailers relevant to your price comparison logic.
 
-## Extracting Product Information
+Extracting Product Information
 
 Content scripts run in the context of web pages and can extract product data. Here's a pattern for detecting product pages:
 
@@ -116,7 +116,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 This script detects which retailer you're on and extracts the appropriate product identifier. Extend the selectors for additional retailers.
 
-## Background Service Worker Logic
+Background Service Worker Logic
 
 The service worker handles API calls and data processing:
 
@@ -160,7 +160,7 @@ async function getApiKey() {
 }
 ```
 
-## Popup Interface
+Popup Interface
 
 The popup provides user controls:
 
@@ -237,23 +237,23 @@ function showError(message) {
 }
 ```
 
-## Testing Your Extension
+Testing Your Extension
 
 Load your extension in Chrome through `chrome://extensions/`. Enable Developer mode, click "Load unpacked", and select your extension directory. Test on various retailer pages to verify product detection works correctly.
 
 For development, use Chrome's DevTools on the extension popup. Right-click the extension icon and choose "Inspect popup" to open console and debug issues.
 
-## Price API Considerations
+Price API Considerations
 
 Building a comprehensive price database requires either aggregating multiple retailer APIs or using a third-party service. Options include:
 
-- **Retailer affiliate APIs** — Many retailers offer affiliate programs with product data access
-- **Price aggregation services** — Services like PriceAPI, Pronto, or Keepa provide product data
-- **Web scraping** — More complex but gives full control (ensure compliance with retailer terms)
+- Retailer affiliate APIs. Many retailers offer affiliate programs with product data access
+- Price aggregation services. Services like PriceAPI, Pronto, or Keepa provide product data
+- Web scraping. More complex but gives full control (ensure compliance with retailer terms)
 
 For personal projects, starting with a single retailer's API or a limited dataset helps validate your architecture before scaling.
 
-## Extension Distribution
+Extension Distribution
 
 When ready to distribute:
 
@@ -262,22 +262,22 @@ When ready to distribute:
 3. Upload through the Chrome Web Store developer dashboard
 4. Submit for review (typically 24-72 hours)
 
-## Summary
+Summary
 
-Building a price match finder demonstrates several Chrome extension concepts: content script injection, message passing between components, manifest configuration, and popup UI development. The architecture scales well—you can add more retailers, implement price alerts, or integrate with deal notification systems.
+Building a price match finder demonstrates several Chrome extension concepts: content script injection, message passing between components, manifest configuration, and popup UI development. The architecture scales well, you can add more retailers, implement price alerts, or integrate with deal notification systems.
 
 Start with a minimal viable product that detects products on two or three major retailers, then expand based on your use case and API access.
 
-## Step-by-Step: Building the Price Match Workflow
+Step-by-Step: Building the Price Match Workflow
 
-1. **Detect product pages**: identify product detail pages on major retailers by matching URL patterns (`/product/`, `/item/`, `/p/`) and the presence of structured data (`<script type="application/ld+json">` with `@type: "Product"`).
-2. **Extract product identifiers**: read the UPC, EAN, or model number from the page. These are more reliable for cross-retailer matching than product names, which vary significantly between stores.
-3. **Query comparison sources**: use a price comparison API (e.g., Google Shopping Content API, PriceAPI, or your own scraper) to look up the same product at competing retailers.
-4. **Parse retailer price-match policies**: store a database of major retailer policies — which competitors they match, the time window (e.g., "within 30 days of purchase"), and any exclusions (marketplace sellers, lightning deals).
-5. **Present the match opportunity**: if a lower price is found at an eligible competitor, show a notification with the price difference and a link to the retailer's price-match request page.
-6. **Track match history**: store successful price matches in `chrome.storage.local` with the amount saved. Display a cumulative savings counter in the popup — users love seeing their total savings grow.
+1. Detect product pages: identify product detail pages on major retailers by matching URL patterns (`/product/`, `/item/`, `/p/`) and the presence of structured data (`<script type="application/ld+json">` with `@type: "Product"`).
+2. Extract product identifiers: read the UPC, EAN, or model number from the page. These are more reliable for cross-retailer matching than product names, which vary significantly between stores.
+3. Query comparison sources: use a price comparison API (e.g., Google Shopping Content API, PriceAPI, or your own scraper) to look up the same product at competing retailers.
+4. Parse retailer price-match policies: store a database of major retailer policies. which competitors they match, the time window (e.g., "within 30 days of purchase"), and any exclusions (marketplace sellers, lightning deals).
+5. Present the match opportunity: if a lower price is found at an eligible competitor, show a notification with the price difference and a link to the retailer's price-match request page.
+6. Track match history: store successful price matches in `chrome.storage.local` with the amount saved. Display a cumulative savings counter in the popup. users love seeing their total savings grow.
 
-## Parsing Structured Product Data
+Parsing Structured Product Data
 
 Most modern e-commerce sites include structured data that makes product identification reliable:
 
@@ -306,7 +306,7 @@ function extractProductData() {
 }
 ```
 
-## Retailer Price Match Policy Summary
+Retailer Price Match Policy Summary
 
 | Retailer | Matches competitors | Time window | Exclusions |
 |---|---|---|---|
@@ -316,9 +316,9 @@ function extractProductData() {
 | Home Depot | Amazon, local stores | 30 days | Installation items |
 | Staples | Amazon, Office Depot + others | At purchase | Clearance items |
 
-Store this policy table in `chrome.storage.local` and update it periodically — policies change during sales events.
+Store this policy table in `chrome.storage.local` and update it periodically. policies change during sales events.
 
-## Advanced: Historical Price Trend Analysis
+Advanced: Historical Price Trend Analysis
 
 A price match is most valuable when the competitor's price is at a historical low. Add trend analysis to surface the best timing:
 
@@ -332,18 +332,18 @@ async function isPriceAtHistoricalLow(asin, currentPrice) {
 }
 ```
 
-## Troubleshooting
+Troubleshooting
 
-**UPC not found in structured data**: Fall back to reading the product page's meta tags (`<meta itemprop="sku">`, `<meta property="og:upc">`) and the URL itself, which often contains a numeric product ID that can be used as a fallback identifier for the comparison API query.
+UPC not found in structured data: Fall back to reading the product page's meta tags (`<meta itemprop="sku">`, `<meta property="og:upc">`) and the URL itself, which often contains a numeric product ID that can be used as a fallback identifier for the comparison API query.
 
-**Price comparison API rate limits**: Cache API responses for at least 2 hours per product. Most users revisit the same product page multiple times before purchasing, so a cached comparison result is still valuable. Use the product's UPC as the cache key.
+Price comparison API rate limits: Cache API responses for at least 2 hours per product. Most users revisit the same product page multiple times before purchasing, so a cached comparison result is still valuable. Use the product's UPC as the cache key.
 
-**False positives — same model number, different configuration**: Laptops and appliances are often sold in multiple configurations under the same model number but with different specs (RAM, storage). Add a specification fingerprint step that also compares CPU/RAM/storage values extracted from the product page before flagging a price match.
+False positives. same model number, different configuration: Laptops and appliances are often sold in multiple configurations under the same model number but with different specs (RAM, storage). Add a specification fingerprint step that also compares CPU/RAM/storage values extracted from the product page before flagging a price match.
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

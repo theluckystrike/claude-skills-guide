@@ -11,13 +11,13 @@ permalink: /chrome-extension-seo-checker/
 {% raw %}
 Chrome extension SEO checkers allow developers and power users to analyze web pages for search engine optimization issues without leaving the browser. These tools inspect on-page elements, meta tags, heading structure, and content quality in real-time. Building your own SEO checker extension gives you complete control over which metrics to track and how to present the data.
 
-## How Chrome Extension SEO Checkers Work
+How Chrome Extension SEO Checkers Work
 
 A SEO checker extension operates by injecting a content script into web pages, extracting relevant DOM elements, and analyzing them against SEO best practices. The analysis typically runs entirely in the browser using JavaScript, though some extensions send data to external APIs for more advanced processing.
 
 The core functionality involves reading page content through the Document Object Model (DOM). Extensions can access titles, meta descriptions, heading hierarchy, image alt attributes, internal and external links, and semantic HTML structure. This data gets processed through a set of rules that score the page's SEO health.
 
-## Building a Basic SEO Checker Extension
+Building a Basic SEO Checker Extension
 
 Creating a chrome extension SEO checker starts with the manifest file. Here's a minimal setup for Manifest V3:
 
@@ -60,7 +60,7 @@ The popup interface provides the user interface for displaying results. A clean 
 </html>
 ```
 
-## Core SEO Metrics to Analyze
+Core SEO Metrics to Analyze
 
 A practical SEO checker examines several key elements. The page title should exist and fall within an optimal length range, typically between 30 and 60 characters. Meta descriptions provide search engines with page summaries and should range from 120 to 160 characters.
 
@@ -117,7 +117,7 @@ function gatherSEOData() {
 }
 ```
 
-## Displaying and Scoring Results
+Displaying and Scoring Results
 
 The scoring system converts raw metrics into actionable feedback. Each check receives a status: pass, warning, or fail. Aggregating these into an overall score helps users prioritize fixes:
 
@@ -157,7 +157,7 @@ function renderMetric(label, value, status) {
 }
 ```
 
-## Advanced Features for Power Users
+Advanced Features for Power Users
 
 Beyond basic checks, consider adding functionality that experienced users appreciate. Schema markup validation identifies structured data and reports parsing errors. Canonical URL detection prevents duplicate content issues. Open Graph and Twitter Card analysis ensures social sharing works correctly.
 
@@ -165,7 +165,7 @@ A content analysis module can estimate word count, readability scores, and keywo
 
 For developers, exposing an API or export functionality lets teams integrate SEO data into their workflows. Exporting results as JSON enables CI/CD pipeline integration, automatically checking SEO compliance during deployments.
 
-## Extension Distribution and Maintenance
+Extension Distribution and Maintenance
 
 Publishing your SEO checker to the Chrome Web Store requires a developer account and compliance with store policies. Prepare a clear privacy policy explaining any data your extension collects. Most SEO checkers process everything locally, which simplifies compliance.
 
@@ -173,5 +173,5 @@ Regular updates keep the extension functional as browser APIs evolve. Manifest V
 
 Building a chrome extension SEO checker provides immediate utility for your own workflow while demonstrating practical browser extension development. The patterns shown here scale from simple analysis tools to comprehensive SEO platforms, depending on your requirements and user needs.
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

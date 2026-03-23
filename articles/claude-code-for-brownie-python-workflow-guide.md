@@ -13,11 +13,11 @@ score: 7
 ---
 
 
-# Claude Code for Brownie Python Workflow Guide
+Claude Code for Brownie Python Workflow Guide
 
-Brownie is a Python-based framework for developing, testing, and deploying smart contracts on Ethereum and other EVM-compatible networks. When combined with Claude Code, you get an intelligent pair programming assistant that can accelerate your entire development workflow—from initial contract design to final deployment. This guide shows you how to integrate Claude Code smoothly with your Brownie projects.
+Brownie is a Python-based framework for developing, testing, and deploying smart contracts on Ethereum and other EVM-compatible networks. When combined with Claude Code, you get an intelligent pair programming assistant that can accelerate your entire development workflow, from initial contract design to final deployment. This guide shows you how to integrate Claude Code smoothly with your Brownie projects.
 
-## Setting Up Claude Code with Brownie
+Setting Up Claude Code with Brownie
 
 Before integrating Claude Code with Brownie, ensure both tools are properly installed. Brownie requires Python 3.8+ and ganache-cli for local development:
 
@@ -30,16 +30,16 @@ You will also need Node.js installed for ganache-cli, which Brownie uses as a lo
 
 ```bash
 npm install -g ganache-cli
-# Verify installation
+Verify installation
 ganache-cli --version
 ```
 
 Initialize Claude Code and configure it to recognize your Brownie project:
 
 ```bash
-# Start Claude Code in your Brownie project directory
+Start Claude Code in your Brownie project directory
 claude
-# Claude Code will automatically detect your Python/Brownie project
+Claude Code will automatically detect your Python/Brownie project
 ```
 
 Claude Code will automatically detect Python projects and configure appropriate tools. For Brownie projects, you'll want to ensure the following tools are available: read_file, write_file, edit_file, bash, and glob. These enable Claude to interact with your contract files, run Brownie commands, and navigate your project structure.
@@ -47,57 +47,57 @@ Claude Code will automatically detect Python projects and configure appropriate 
 A good practice is to create a `CLAUDE.md` file at your project root to give Claude Code context about your Brownie setup:
 
 ```markdown
-# Project: MyToken DeFi Protocol
+Project: MyToken DeFi Protocol
 
-## Stack
+Stack
 - Brownie 1.19+
 - Solidity 0.8.x
 - Python 3.10
 
-## Key Commands
-- `brownie compile` — compile all contracts
-- `brownie test` — run full test suite with coverage
-- `brownie run scripts/deploy.py --network mainnet-fork` — test deploy on fork
-- `brownie console` — interactive REPL with deployed contracts
+Key Commands
+- `brownie compile`. compile all contracts
+- `brownie test`. run full test suite with coverage
+- `brownie run scripts/deploy.py --network mainnet-fork`. test deploy on fork
+- `brownie console`. interactive REPL with deployed contracts
 
-## Networks
+Networks
 - development: local ganache
 - mainnet-fork: `http://localhost:8545` forked via Alchemy
 - goerli: Goerli testnet (requires PRIVATE_KEY env var)
 
-## Contract Architecture
-- Token.sol — ERC-20 base with burnable + pausable
-- Vault.sol — Yield vault, depends on Token
-- Governance.sol — DAO voting contract
+Contract Architecture
+- Token.sol. ERC-20 base with burnable + pausable
+- Vault.sol. Yield vault, depends on Token
+- Governance.sol. DAO voting contract
 ```
 
 This file ensures Claude Code understands your project conventions from the first prompt, avoiding generic suggestions that don't fit your setup.
 
-## Project Structure Navigation
+Project Structure Navigation
 
 Brownie projects follow a specific directory structure that Claude Code can help you navigate and maintain:
 
 ```
 my-project/
-├── contracts/
-│   ├── Token.sol
-│   ├── Vault.sol
-│   └── interfaces/
-│       └── IToken.sol
-├── scripts/
-│   ├── deploy.py
-│   ├── deploy_vault.py
-│   └── utils/
-│       └── helpers.py
-├── tests/
-│   ├── conftest.py
-│   ├── test_token.py
-│   └── test_vault.py
-├── build/
-│   └── contracts/
-│       └── Token.json   (ABI + bytecode after compile)
-├── brownie-config.yaml
-└── .brownie/
+ contracts/
+    Token.sol
+    Vault.sol
+    interfaces/
+        IToken.sol
+ scripts/
+    deploy.py
+    deploy_vault.py
+    utils/
+        helpers.py
+ tests/
+    conftest.py
+    test_token.py
+    test_vault.py
+ build/
+    contracts/
+        Token.json   (ABI + bytecode after compile)
+ brownie-config.yaml
+ .brownie/
 ```
 
 Understanding this structure is critical because Brownie auto-discovers contracts in `contracts/`, auto-discovers tests in `tests/`, and writes deployment records to `.brownie/`. Claude Code navigates this without any extra configuration.
@@ -108,7 +108,7 @@ When working with Claude Code, you can ask it to explore your project structure,
 
 Claude Code will analyze your project and return relevant file paths along with coverage information from Brownie's test output.
 
-### Useful Navigation Prompts
+Useful Navigation Prompts
 
 Some prompts that work particularly well for Brownie project navigation:
 
@@ -119,11 +119,11 @@ Some prompts that work particularly well for Brownie project navigation:
 
 Claude Code reads multiple files in parallel and synthesizes the answer, something that would take several minutes of manual grepping.
 
-## Smart Contract Development Workflow
+Smart Contract Development Workflow
 
 Claude Code excels at assisting with contract development. Here's how to use it effectively:
 
-### Writing New Contracts
+Writing New Contracts
 
 When you need to create a new smart contract, describe your requirements to Claude Code:
 
@@ -150,7 +150,7 @@ contract MyToken is ERC20, ERC20Burnable, Pausable, Ownable {
         string memory symbol,
         uint256 initialSupply
     ) ERC20(name, symbol) {
-        _mint(msg.sender, initialSupply * 10 ** decimals());
+        _mint(msg.sender, initialSupply * 10  decimals());
     }
 
     /// @notice Pause all token transfers. Only callable by owner.
@@ -174,9 +174,9 @@ contract MyToken is ERC20, ERC20Burnable, Pausable, Ownable {
 }
 ```
 
-Notice that Claude Code automatically imports OpenZeppelin contracts, adds NatSpec documentation, and resolves the multiple-inheritance `_beforeTokenTransfer` override—details that are easy to miss when writing from scratch.
+Notice that Claude Code automatically imports OpenZeppelin contracts, adds NatSpec documentation, and resolves the multiple-inheritance `_beforeTokenTransfer` override, details that are easy to miss when writing from scratch.
 
-### Iterative Development
+Iterative Development
 
 For existing contracts, use Claude Code to analyze and suggest improvements:
 
@@ -204,9 +204,9 @@ INFO: Consider replacing ownerOnly modifier with AccessControl
 for more granular permission management.
 ```
 
-Use these findings as a starting point for your own review—Claude Code's analysis is a first pass, not a substitute for a formal audit.
+Use these findings as a starting point for your own review, Claude Code's analysis is a first pass, not a substitute for a formal audit.
 
-### Running Tests
+Running Tests
 
 Brownie's testing framework integrates smoothly with Claude Code. Run tests through the CLI:
 
@@ -223,23 +223,23 @@ Claude Code will execute the tests and interpret the results, highlighting any f
 You can also ask Claude Code to run tests with specific flags that Brownie supports:
 
 ```bash
-# Run with coverage report
+Run with coverage report
 brownie test --coverage
 
-# Run a specific test function
+Run a specific test function
 brownie test tests/test_token.py::test_transfer_reverts_on_zero_amount -v
 
-# Run with gas profiling
+Run with gas profiling
 brownie test --gas
 ```
 
 Claude Code can parse the gas profiling output and tell you which functions are the most expensive, helping you prioritize optimization work.
 
-## Deployment Automation
+Deployment Automation
 
 Deploying smart contracts requires careful orchestration. Claude Code can help you create and manage deployment scripts:
 
-### Creating Deployment Scripts
+Creating Deployment Scripts
 
 Ask Claude Code to generate deployment scripts:
 
@@ -335,30 +335,30 @@ wallets:
 dotenv: .env
 ```
 
-This pattern ensures private keys never appear in source code—they come from environment variables resolved at runtime.
+This pattern ensures private keys never appear in source code, they come from environment variables resolved at runtime.
 
-### Managing Deployments Across Networks
+Managing Deployments Across Networks
 
 Brownie supports multiple networks through its configuration. Claude Code can help you manage deployments:
 
 > "Show me the current deployment addresses on goerli testnet"
 
-Claude Code reads your deployment records and displays the relevant addresses. For mainnet deployments, ensure you use secure key management—never hardcode private keys.
+Claude Code reads your deployment records and displays the relevant addresses. For mainnet deployments, ensure you use secure key management, never hardcode private keys.
 
 Brownie saves deployment addresses in `.brownie/accounts/` and exposes them through the contract interface. Claude Code can query these directly:
 
 ```python
-# Claude Code can run this interactively in brownie console
+Claude Code can run this interactively in brownie console
 from brownie import Token, network
 network.connect("goerli")
 print(Token[-1].address)  # Most recently deployed instance
 ```
 
-## Testing Strategies with Claude Code
+Testing Strategies with Claude Code
 
 Comprehensive testing is crucial for smart contract development. Claude Code can enhance your testing workflow significantly.
 
-### Writing Test Cases
+Writing Test Cases
 
 Generate test cases by describing your requirements:
 
@@ -387,7 +387,7 @@ class TestTransfer:
     def test_transfer_updates_balances(self, token, accounts):
         sender = accounts[0]
         receiver = accounts[1]
-        amount = 100 * 10 ** 18
+        amount = 100 * 10  18
 
         initial_sender = token.balanceOf(sender)
         initial_receiver = token.balanceOf(receiver)
@@ -398,9 +398,9 @@ class TestTransfer:
         assert token.balanceOf(receiver) == initial_receiver + amount
 
     def test_transfer_emits_event(self, token, accounts):
-        tx = token.transfer(accounts[1], 50 * 10 ** 18, {"from": accounts[0]})
+        tx = token.transfer(accounts[1], 50 * 10  18, {"from": accounts[0]})
         assert "Transfer" in tx.events
-        assert tx.events["Transfer"]["value"] == 50 * 10 ** 18
+        assert tx.events["Transfer"]["value"] == 50 * 10  18
 
     def test_transfer_reverts_on_insufficient_balance(self, token, accounts):
         poor_account = accounts[5]
@@ -415,7 +415,7 @@ class TestTransfer:
 class TestBurn:
     def test_burn_reduces_total_supply(self, token, accounts):
         supply_before = token.totalSupply()
-        burn_amount = 500 * 10 ** 18
+        burn_amount = 500 * 10  18
 
         token.burn(burn_amount, {"from": accounts[0]})
 
@@ -423,7 +423,7 @@ class TestBurn:
 
     def test_burn_reverts_on_insufficient_balance(self, token, accounts):
         with reverts("ERC20: burn amount exceeds balance"):
-            token.burn(10 ** 30, {"from": accounts[9]})
+            token.burn(10  30, {"from": accounts[9]})
 
 
 class TestPause:
@@ -438,9 +438,9 @@ class TestPause:
         token.unpause({"from": accounts[0]})
 ```
 
-The `fn_isolation` fixture is critical—it snapshots the EVM state before each test and reverts after, ensuring tests don't bleed state into each other. Claude Code adds this automatically when generating Brownie tests.
+The `fn_isolation` fixture is critical, it snapshots the EVM state before each test and reverts after, ensuring tests don't bleed state into each other. Claude Code adds this automatically when generating Brownie tests.
 
-### Test-Driven Development
+Test-Driven Development
 
 Use Claude Code for TDD workflows:
 
@@ -464,10 +464,10 @@ Claude Code: [writes VestingSchedule.sol]
 
 You: brownie test tests/test_vesting.py
 
-Claude Code: "6 pass, 2 fail — the cliff boundary condition test is off by one block. Here is the fix..."
+Claude Code: "6 pass, 2 fail. the cliff boundary condition test is off by one block. Here is the fix..."
 ```
 
-### Coverage Analysis
+Coverage Analysis
 
 After running tests, ask Claude Code to analyze coverage:
 
@@ -479,7 +479,7 @@ Brownie generates coverage data automatically when you pass the `--coverage` fla
 
 ```bash
 brownie test --coverage
-# Coverage report written to reports/coverage.json
+Coverage report written to reports/coverage.json
 ```
 
 Claude Code can read `reports/coverage.json` and produce a human-readable summary:
@@ -491,22 +491,22 @@ Token.sol coverage summary:
   Branches: 18/24 (75.0%)
 
 Untested paths:
-  - Line 87: emergencyWithdraw() — never called in tests
-  - Lines 102-105: receive() fallback — no ETH transfer tests
+  - Line 87: emergencyWithdraw(). never called in tests
+  - Lines 102-105: receive() fallback. no ETH transfer tests
   - Branch on line 63: permit() EIP-2612 deadline expiry branch
 ```
 
 This level of specificity lets you focus your test-writing effort precisely where it is needed.
 
-## Debugging and Error Resolution
+Debugging and Error Resolution
 
 When tests fail or deployments error, Claude Code helps diagnose issues:
 
 > "Debug why the transfer test is failing with 'Insufficient balance'"
 
-Claude Code examines the failing test, reads the contract implementation, and identifies the root cause—often spotting issues like incorrect balance checks or missing state updates.
+Claude Code examines the failing test, reads the contract implementation, and identifies the root cause, often spotting issues like incorrect balance checks or missing state updates.
 
-### Reading Revert Reasons
+Reading Revert Reasons
 
 Brownie captures revert reasons from the EVM. Claude Code can decode these and explain what went wrong:
 
@@ -524,7 +524,7 @@ If you paste this error into Claude Code and ask "why is this happening in my de
 3. Check the approval amount vs deposit amount
 4. Explain the fix
 
-### Common Brownie Error Patterns
+Common Brownie Error Patterns
 
 | Error | Likely Cause | Claude Code Fix Strategy |
 |---|---|---|
@@ -535,33 +535,33 @@ If you paste this error into Claude Code and ask "why is this happening in my de
 | `brownie.exceptions.ContractNotFound` | Accessing stale deployment | Claude suggests re-deploying or using contract[-1] |
 | `Web3.exceptions.TimeExhausted` | Transaction not mined in time | Claude checks network config and gas price settings |
 
-### Transaction Debugging with Brownie Console
+Transaction Debugging with Brownie Console
 
 For complex failures, Claude Code can walk you through interactive debugging in the Brownie console:
 
 ```python
-# In brownie console (brownie console --network mainnet-fork)
-# Claude Code can guide you through this sequence:
+In brownie console (brownie console --network mainnet-fork)
+Claude Code can guide you through this sequence:
 
 from brownie import Token, Vault, accounts
 
-# Reproduce the failing state
+Reproduce the failing state
 token = Token[-1]
 vault = Vault[-1]
 user = accounts[2]
 
-# Inspect state before the failing transaction
+Inspect state before the failing transaction
 print("User balance:", token.balanceOf(user) / 1e18)
 print("Vault allowance:", token.allowance(user, vault.address) / 1e18)
 
-# Attempt transaction and capture the tx object (not receipt)
+Attempt transaction and capture the tx object (not receipt)
 tx = vault.deposit(100e18, {"from": user})
 tx.call_trace()  # Shows the full call tree with revert location
 ```
 
 Claude Code interprets the call trace output and pinpoints exactly which internal call reverted and why.
 
-## Comparison: Claude Code vs. Manual Brownie Workflow
+Comparison: Claude Code vs. Manual Brownie Workflow
 
 | Task | Manual Workflow | With Claude Code |
 |---|---|---|
@@ -570,33 +570,33 @@ Claude Code interprets the call trace output and pinpoints exactly which interna
 | Identify missing test coverage | Read coverage JSON manually | One prompt, immediate summary |
 | Debug revert error | Cross-reference contract, test, and stack trace | One prompt, root cause + fix |
 | Generate deploy script with network handling | 30-60 min researching Brownie config | 5-10 min |
-| Security review of one contract | 1-2 hours manual checklist | 5 min first pass, then manual deep dive |
+| Security review of one contract | 1-2 hours manual checklist | 5 min first pass, then manual detailed look |
 
-These numbers reflect workflows where Claude Code handles the mechanical work—you still own the architectural decisions and final review.
+These numbers reflect workflows where Claude Code handles the mechanical work, you still own the architectural decisions and final review.
 
-## Best Practices for Claude Code with Brownie
+Best Practices for Claude Code with Brownie
 
-1. **Be Specific**: Provide concrete details about your contracts, including interfaces and expected behaviors
-2. **Review Generated Code**: Always review code before committing—Claude Code assists but doesn't replace developer judgment
-3. **Use Type Hints**: Brownie supports type hints; Claude Code generates better code with them
-4. **Maintain Test Coverage**: Ask Claude Code regularly about coverage gaps
-5. **Version Control**: Commit changes incrementally so you can track Claude Code's modifications
-6. **Use fn_isolation in Every Test**: Always include the `fn_isolation` autouse fixture to prevent state leakage between tests—Claude Code includes this by default but verify it is present
-7. **Keep CLAUDE.md Updated**: As your project evolves, update the CLAUDE.md context file so Claude Code's suggestions stay relevant to your current architecture
-8. **Prompt for Edge Cases Explicitly**: Claude Code generates happy-path tests by default; explicitly ask for "all revert conditions" and "boundary value tests" to get comprehensive coverage
-9. **Separate Concerns in Scripts**: Ask Claude Code to put shared utilities in `scripts/utils/` so deployment scripts stay clean and reusable
-10. **Audit OpenZeppelin Versions**: Claude Code will use the latest stable OZ version by default; confirm this matches what is in your `brownie-config.yaml` dependencies
+1. Be Specific: Provide concrete details about your contracts, including interfaces and expected behaviors
+2. Review Generated Code: Always review code before committing, Claude Code assists but doesn't replace developer judgment
+3. Use Type Hints: Brownie supports type hints; Claude Code generates better code with them
+4. Maintain Test Coverage: Ask Claude Code regularly about coverage gaps
+5. Version Control: Commit changes incrementally so you can track Claude Code's modifications
+6. Use fn_isolation in Every Test: Always include the `fn_isolation` autouse fixture to prevent state leakage between tests, Claude Code includes this by default but verify it is present
+7. Keep CLAUDE.md Updated: As your project evolves, update the CLAUDE.md context file so Claude Code's suggestions stay relevant to your current architecture
+8. Prompt for Edge Cases Explicitly: Claude Code generates happy-path tests by default; explicitly ask for "all revert conditions" and "boundary value tests" to get comprehensive coverage
+9. Separate Concerns in Scripts: Ask Claude Code to put shared utilities in `scripts/utils/` so deployment scripts stay clean and reusable
+10. Audit OpenZeppelin Versions: Claude Code will use the latest stable OZ version by default; confirm this matches what is in your `brownie-config.yaml` dependencies
 
-## Conclusion
+Conclusion
 
-Integrating Claude Code with Brownie transforms your smart contract development workflow. From initial contract design through testing and deployment, Claude Code acts as an intelligent partner—generating code, running tests, debugging issues, and suggesting improvements. The key is providing clear, specific prompts and reviewing all generated code before deployment.
+Integrating Claude Code with Brownie transforms your smart contract development workflow. From initial contract design through testing and deployment, Claude Code acts as an intelligent partner, generating code, running tests, debugging issues, and suggesting improvements. The key is providing clear, specific prompts and reviewing all generated code before deployment.
 
-Start with small tasks, gradually incorporating more complex workflows as you become comfortable with the collaboration pattern. Your Brownie projects will benefit from faster development cycles, improved code quality, and more comprehensive testing— all while maintaining the security vigilance essential for smart contract development.
+Start with small tasks, gradually incorporating more complex workflows as you become comfortable with the collaboration pattern. Your Brownie projects will benefit from faster development cycles, improved code quality, and more comprehensive testing,  all while maintaining the security vigilance essential for smart contract development.
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

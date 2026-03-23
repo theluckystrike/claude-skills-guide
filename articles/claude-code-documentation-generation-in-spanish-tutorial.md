@@ -17,7 +17,7 @@ permalink: /claude-code-documentation-generation-in-spanish-tutorial/
 
 This guide shows you how to [set up a documentation generation workflow that produces Spanish-language output](/claude-skill-md-format-complete-specification-guide/) that produces Spanish-language output from your codebase. You will learn to configure Claude Code skills, generate different types of documentation, and integrate the workflow into your development process.
 
-## Prerequisites
+Prerequisites
 
 Before starting, ensure you have:
 
@@ -27,11 +27,11 @@ Before starting, ensure you have:
 
 The following skills enhance the workflow but are not strictly required:
 
-- **pdf** skill: For generating formatted PDF documentation
-- **supermemory** skill: For storing terminology preferences across sessions
-- **tdd** skill: For generating test documentation alongside code documentation
+- pdf skill: For generating formatted PDF documentation
+- supermemory skill: For storing terminology preferences across sessions
+- tdd skill: For generating test documentation alongside code documentation
 
-## Setting Up Your Spanish Documentation Workflow
+Setting Up Your Spanish Documentation Workflow
 
 The foundation of generating Spanish documentation lies in how you structure your prompts. Claude Code responds to natural language instructions, so you can specify language preferences directly in your requests.
 
@@ -44,7 +44,7 @@ description: Generate Spanish-language documentation for codebases
 
 This skill file stores Spanish documentation instructions in its body. When you invoke it, Claude Code follows those instructions when generating documentation.
 
-### Project Configuration File
+Project Configuration File
 
 For consistent results across a project, create a `claude-docs.json` file in your project root to define language and output preferences:
 
@@ -74,7 +74,7 @@ destinada a [usuario objetivo]. El stack tecnológico es: [lista de tecnologías
 Genera documentación técnica en español siguiendo las convenciones de la industria.
 ```
 
-## Generating Function Documentation in Spanish
+Generating Function Documentation in Spanish
 
 To document a specific function in Spanish, invoke Claude Code with a precise prompt:
 
@@ -92,7 +92,7 @@ Source file: src/utils/calculator.js
 Claude Code analyzes the function and produces Spanish documentation:
 
 ```javascript
-/**
+/
  * Suma dos números y devuelve el resultado.
  * 
  * @param {number} a - El primer número a sumar
@@ -110,12 +110,12 @@ function sumar(a, b) {
 
 This approach works for JavaScript, TypeScript, Python, and other languages. Adjust the documentation format to match your language's conventions.
 
-## Creating README Files in Spanish
+Creating README Files in Spanish
 
 Project README files often need the most attention whenlocalizing for Spanish-speaking teams. Use the following workflow:
 
 ```bash
-# Generate a Spanish README for your project
+Generate a Spanish README for your project
 claude "Generate a Spanish README.md for this project.
 Include:
 - Project title (Nombre del Proyecto)
@@ -139,7 +139,7 @@ Document all exported functions with their parameters and return types."
 
 This segmented approach prevents context overflow for large codebases.
 
-## Using the docx and xlsx Skills for Structured Documentation
+Using the docx and xlsx Skills for Structured Documentation
 
 When your documentation requires formal corporate templates or offline distribution, the `docx` skill creates professionally formatted Word documents. Place `docx.md` in your `.claude/` directory, then invoke `/docx`:
 
@@ -153,12 +153,12 @@ Crea una guía de API en español para mi proyecto de biblioteca JavaScript. Inc
 
 For API matrices, feature comparisons, or tabular technical data, the `xlsx` skill generates structured spreadsheets. Place `xlsx.md` in `.claude/` and invoke `/xlsx` with a prompt describing your columns and content.
 
-## API Documentation in Spanish
+API Documentation in Spanish
 
-API documentation requires consistent terminology and structure. [The **pdf** skill works well for generating formatted API docs](/what-is-the-best-claude-skill-for-generating-documentation/):
+API documentation requires consistent terminology and structure. [The pdf skill works well for generating formatted API docs](/what-is-the-best-claude-skill-for-generating-documentation/):
 
 ```bash
-# Generate PDF API documentation in Spanish
+Generate PDF API documentation in Spanish
 claude "Create API documentation in Spanish (es-419) for this REST API.
 Include:
 - Endpoint descriptions
@@ -178,9 +178,9 @@ Include header with project name and generation date.
 Language: Spanish
 ```
 
-## Managing Terminology with Supermemory
+Managing Terminology with Supermemory
 
-When generating Spanish documentation across multiple sessions, maintaining consistent terminology matters. [The **supermemory** skill stores your preferences](/building-stateful-agents-with-claude-skills-guide/):
+When generating Spanish documentation across multiple sessions, maintaining consistent terminology matters. [The supermemory skill stores your preferences](/building-stateful-agents-with-claude-skills-guide/):
 
 ```
 Invoke supermemory to store:
@@ -202,13 +202,13 @@ Maintain consistent translations for technical terms.
 
 This ensures your entire documentation suite uses the same vocabulary, which is critical for professional deliverables.
 
-## Automating Documentation Generation
+Automating Documentation Generation
 
 To streamline the workflow, create a shell script that invokes Claude Code:
 
 ```bash
 #!/bin/bash
-# generate-spanish-docs.sh
+generate-spanish-docs.sh
 
 FILE="$1"
 LANGUAGE="Spanish (es-MX)"
@@ -228,7 +228,7 @@ chmod +x generate-spanish-docs.sh
 For automated runs, integrate with your CI pipeline:
 
 ```yaml
-# .github/workflows/docs.yml
+.github/workflows/docs.yml
 name: Spanish Documentation
 on: [push]
 jobs:
@@ -241,11 +241,11 @@ jobs:
           claude "Run spanish-docs skill on ./src directory"
 ```
 
-## Full Prompt Examples in Spanish
+Full Prompt Examples in Spanish
 
 The following complete prompts can be used directly in Claude Code sessions.
 
-### JavaScript Library Documentation
+JavaScript Library Documentation
 
 ```
 Eres un escritor técnico especializado en documentación para desarrolladores.
@@ -262,7 +262,7 @@ Incluye:
 Usa markdown con encabezados jerárquicos y código ejecutable.
 ```
 
-### REST API Documentation
+REST API Documentation
 
 ```
 Genera documentación de API en español para un servicio RESTful de gestión de tareas.
@@ -277,7 +277,7 @@ Para cada endpoint incluye: método, URL, parámetros, cuerpo de solicitud,
 respuestas posibles con códigos de estado y ejemplos de uso.
 ```
 
-### README Completo de Proyecto
+README Completo de Proyecto
 
 ```
 Crea un README.md completo en español para un proyecto de aplicación web
@@ -293,13 +293,13 @@ llamada "GestorPro". Incluye:
 - Créditos
 ```
 
-## Best Practices
+Best Practices
 
 When generating Spanish documentation with Claude Code, keep these points in mind:
 
-**Specify regional variants**: Spanish varies between Spain (es-ES), Mexico (es-MX), Argentina (es-AR), and other regions. Include your target variant in prompts for accurate terminology.
+Specify regional variants: Spanish varies between Spain (es-ES), Mexico (es-MX), Argentina (es-AR), and other regions. Include your target variant in prompts for accurate terminology.
 
-**Maintain a terminology glossary**: Decide upfront how to handle English technical terms that have common Spanish equivalents and specify your choice at the start of each prompt. Common decisions include:
+Maintain a terminology glossary: Decide upfront how to handle English technical terms that have common Spanish equivalents and specify your choice at the start of each prompt. Common decisions include:
 
 - "commit" → "confirmar" or keep "commit"
 - "branch" → "rama"
@@ -308,24 +308,24 @@ When generating Spanish documentation with Claude Code, keep these points in min
 
 Claude Code will respect whichever convention you specify.
 
-**Review generated content**: Claude Code produces accurate translations, but always review for context-specific nuances that automated systems might miss. Check technical accuracy of code examples, terminology specific to your industry, version numbers and links, and clarity for your target audience.
+Review generated content: Claude Code produces accurate translations, but always review for context-specific nuances that automated systems might miss. Check technical accuracy of code examples, terminology specific to your industry, version numbers and links, and clarity for your target audience.
 
-**Combine with the frontend-design skill**: When documenting UI components, the frontend-design skill helps generate prop tables and component stories in Spanish.
+Combine with the frontend-design skill: When documenting UI components, the frontend-design skill helps generate prop tables and component stories in Spanish.
 
-**Use the tdd skill for test documentation**: Generate test case descriptions in Spanish alongside your test files.
+Use the tdd skill for test documentation: Generate test case descriptions in Spanish alongside your test files.
 
-## Conclusion
+Conclusion
 
 Claude Code skills provide a powerful foundation for generating Spanish-language documentation. By configuring language settings, storing terminology preferences with supermemory, and using targeted prompts, you can automate documentation workflows that serve Spanish-speaking teams and users.
 
 The key is starting simple: document a single function in Spanish, refine your terminology mappings, then expand to full project READMEs and API documentation. As your configuration matures, the workflow becomes increasingly automated while maintaining consistency across your documentation suite.
 
 
-## Related Reading
+Related Reading
 
-- [Claude Skill MD Format Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/) — create skill configuration files for language-specific documentation
-- [Automated Code Documentation Workflow with Claude Skills](/automated-code-documentation-workflow-with-claude-skills/) — build automated documentation pipelines
-- [Building Stateful Agents with Claude Skills Guide](/building-stateful-agents-with-claude-skills-guide/) — maintain terminology preferences with supermemory across sessions
-- [Getting Started Hub](/getting-started-hub/) — explore the full range of Claude skills for developer workflows
+- [Claude Skill MD Format Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/). create skill configuration files for language-specific documentation
+- [Automated Code Documentation Workflow with Claude Skills](/automated-code-documentation-workflow-with-claude-skills/). build automated documentation pipelines
+- [Building Stateful Agents with Claude Skills Guide](/building-stateful-agents-with-claude-skills-guide/). maintain terminology preferences with supermemory across sessions
+- [Getting Started Hub](/getting-started-hub/). explore the full range of Claude skills for developer workflows
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -16,7 +16,7 @@ tags: [chrome-extension, javascript, screenshot-api]
 
 Screenshot annotations have become essential for documentation, bug reporting, and communication. Building a Chrome extension that captures screenshots and allows users to add arrows and text overlays gives you full control over visual communication without relying on third-party services. This guide walks through the implementation, from browser permissions to canvas-based rendering.
 
-## Understanding the Chrome Screenshot API
+Understanding the Chrome Screenshot API
 
 Chrome provides the `chrome.tabs.captureVisibleTab()` API for capturing screenshots of the current tab. This method returns a PNG data URL that you can manipulate using the HTML5 Canvas API. The key advantage is that users can capture exactly what they see, including dynamically rendered content.
 
@@ -41,23 +41,23 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 This basic capture gives you the foundation. Next, you need to build the overlay system that lets users draw arrows and add text.
 
-## Project Structure
+Project Structure
 
 A well-organized extension structure keeps your code maintainable:
 
 ```
 arrow-text-screenshot/
-├── manifest.json
-├── background.js
-├── popup.html
-├── popup.js
-├── editor.html
-├── editor.js
-├── styles.css
-└── icons/
-    ├── icon16.png
-    ├── icon48.png
-    └── icon128.png
+ manifest.json
+ background.js
+ popup.html
+ popup.js
+ editor.html
+ editor.js
+ styles.css
+ icons/
+     icon16.png
+     icon48.png
+     icon128.png
 ```
 
 The manifest.json declares the necessary permissions:
@@ -75,7 +75,7 @@ The manifest.json declares the necessary permissions:
 }
 ```
 
-## Building the Annotation Editor
+Building the Annotation Editor
 
 The core of your extension is the canvas-based editor. This allows users to draw arrows and place text on top of the captured screenshot.
 
@@ -226,7 +226,7 @@ function redrawCanvas() {
 }
 ```
 
-## Handling the Extension Workflow
+Handling the Extension Workflow
 
 The popup serves as the entry point, triggering the capture and opening the editor:
 
@@ -261,15 +261,15 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 });
 ```
 
-## Advanced Features for Power Users
+Advanced Features for Power Users
 
-Consider implementing these enhancements for a more robust tool:
+Consider implementing these enhancements for a more solid tool:
 
-1. **Color picker**: Allow users to select custom colors for arrows and text
-2. **Undo/redo**: Maintain a history stack of annotation states
-3. **Export formats**: Support PNG, JPEG, and WebP output
-4. **Keyboard shortcuts**: Add hotkeys for quick tool switching
-5. **Clipboard integration**: Copy directly to clipboard after editing
+1. Color picker: Allow users to select custom colors for arrows and text
+2. Undo/redo: Maintain a history stack of annotation states
+3. Export formats: Support PNG, JPEG, and WebP output
+4. Keyboard shortcuts: Add hotkeys for quick tool switching
+5. Clipboard integration: Copy directly to clipboard after editing
 
 The clipboard export feature is particularly useful:
 
@@ -283,7 +283,7 @@ function copyToClipboard(canvas) {
 ```
 
 
-## Step-by-Step: From Capture to Export
+Step-by-Step: From Capture to Export
 
 1. Navigate to the page you want to capture
 2. Click the extension icon in the toolbar
@@ -295,7 +295,7 @@ function copyToClipboard(canvas) {
 8. Use the color picker to change annotation colors
 9. Click "Save" to download the annotated PNG, or "Copy" to send directly to clipboard
 
-## Advanced: Blur Tool for Sensitive Data
+Advanced: Blur Tool for Sensitive Data
 
 Screenshots for documentation often contain passwords or PII. Add a pixelate-to-blur region tool:
 
@@ -322,7 +322,7 @@ function blurRegion(x, y, width, height, blockSize = 10) {
 }
 ```
 
-## Advanced: Undo / Redo Stack
+Advanced: Undo / Redo Stack
 
 Implement an undo stack using annotation history:
 
@@ -358,7 +358,7 @@ document.addEventListener('keydown', (e) => {
 
 Call `pushHistory()` in `stopDrawing` after each annotation is committed.
 
-## Comparison with Desktop Annotation Tools
+Comparison with Desktop Annotation Tools
 
 | Tool | Setup | Blur tool | Clipboard export | Cost |
 |---|---|---|---|---|
@@ -367,13 +367,13 @@ Call `pushHistory()` in `stopDrawing` after each annotation is committed.
 | Greenshot | Desktop install | Yes | Yes | Free |
 | CleanShot X (macOS) | Desktop install | Yes | Yes | $29 |
 
-The extension wins on zero install friction — no desktop app required, works across all operating systems inside Chrome.
+The extension wins on zero install friction. no desktop app required, works across all operating systems inside Chrome.
 
-## Troubleshooting Common Issues
+Troubleshooting Common Issues
 
-**`captureVisibleTab` returning a blank image**: Try `{ format: 'jpeg', quality: 90 }` as a fallback if the PNG capture returns blank on hardware-accelerated pages.
+`captureVisibleTab` returning a blank image: Try `{ format: 'jpeg', quality: 90 }` as a fallback if the PNG capture returns blank on hardware-accelerated pages.
 
-**Canvas blurry on high-DPI displays**: Account for `window.devicePixelRatio` when sizing the canvas:
+Canvas blurry on high-DPI displays: Account for `window.devicePixelRatio` when sizing the canvas:
 
 ```javascript
 const dpr = window.devicePixelRatio || 1;
@@ -384,15 +384,15 @@ canvas.style.height = image.height + 'px';
 ctx.scale(dpr, dpr);
 ```
 
-**Clipboard API not working in extension context**: The copy must be triggered directly by a button click — not from a `setTimeout` or async callback — to satisfy the user gesture requirement.
+Clipboard API not working in extension context: The copy must be triggered directly by a button click. not from a `setTimeout` or async callback. to satisfy the user gesture requirement.
 
-**Editor page not opening**: Register the editor as an options page or open it explicitly:
+Editor page not opening: Register the editor as an options page or open it explicitly:
 
 ```javascript
 chrome.tabs.create({ url: chrome.runtime.getURL('editor.html') });
 ```
 
-## Security and Performance Considerations
+Security and Performance Considerations
 
 - Request only the minimum necessary permissions (`activeTab` and `tabCapture` are sufficient for basic capture)
 - Process heavy image operations in a background offscreen document using `chrome.offscreen` to avoid freezing the popup UI
@@ -400,10 +400,10 @@ chrome.tabs.create({ url: chrome.runtime.getURL('editor.html') });
 - The blur tool is essential before sharing screenshots in public bug trackers or documentation systems
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

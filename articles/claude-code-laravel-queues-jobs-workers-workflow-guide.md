@@ -14,11 +14,11 @@ tags: [claude-code, claude-skills]
 
 {% raw %}
 
-# Claude Code Laravel Queues, Jobs, Workers & Workflow Guide
+Claude Code Laravel Queues, Jobs, Workers & Workflow Guide
 
-Building scalable Laravel applications requires effectively handling asynchronous tasks through queues, jobs, and workers. Claude Code can help you implement robust background processing workflows that improve application performance and user experience. This guide covers practical techniques for working with Laravel's queue system, from basic job creation to advanced worker management.
+Building scalable Laravel applications requires effectively handling asynchronous tasks through queues, jobs, and workers. Claude Code can help you implement solid background processing workflows that improve application performance and user experience. This guide covers practical techniques for working with Laravel's queue system, from basic job creation to advanced worker management.
 
-## Setting Up Laravel Queues with Claude Code
+Setting Up Laravel Queues with Claude Code
 
 Before implementing queue-based workflows, ensure Claude Code understands your Laravel queue configuration. Create a comprehensive CLAUDE.md file that specifies your queue driver and connection details:
 
@@ -30,7 +30,7 @@ This Laravel application uses:
 - PHP 8.2+ with Laravel 10+
 ```
 
-### Configuring Queue Connections
+Configuring Queue Connections
 
 Laravel supports multiple queue drivers including Redis, Database, SQS, and RabbitMQ. Here's how to configure a Redis-backed queue using Claude Code:
 
@@ -54,11 +54,11 @@ Laravel supports multiple queue drivers including Redis, Database, SQS, and Rabb
 ],
 ```
 
-## Creating Jobs with Claude Code
+Creating Jobs with Claude Code
 
 Laravel jobs encapsulate the logic for asynchronous task processing. Claude Code can help you generate well-structured jobs with proper error handling, retries, and event handling.
 
-### Basic Job Structure
+Basic Job Structure
 
 Here's a typical job class for sending welcome emails:
 
@@ -103,7 +103,7 @@ class SendWelcomeEmail implements ShouldQueue
 }
 ```
 
-### Dispatching Jobs
+Dispatching Jobs
 
 You can dispatch jobs synchronously or asynchronously:
 
@@ -126,22 +126,22 @@ $users = User::whereNull('welcome_sent_at')->get();
 SendWelcomeEmail::batch($users)->dispatch();
 ```
 
-## Worker Management and Supervision
+Worker Management and Supervision
 
 Laravel workers process jobs from the queue. For production environments, you need proper worker supervision using Supervisor or similar process managers.
 
-### Running Queue Workers
+Running Queue Workers
 
 Start workers for different queues based on priority:
 
 ```bash
-# Process default queue
+Process default queue
 php artisan queue:work redis --queue=default
 
-# Process multiple queues with priority
+Process multiple queues with priority
 php artisan queue:work redis --queue=high-priority,default,low-priority
 
-# Supervisor configuration example
+Supervisor configuration example
 [program:laravel-worker]
 process_name=%(program_name)s_%(process_num)02d
 command=php /var/www/html/artisan queue:work redis --queue=high-priority,default --sleep=3 --tries=3 --max-time=3600
@@ -156,7 +156,7 @@ stdout_logfile=/var/log/laravel-worker.log
 stopwaitsecs=3600
 ```
 
-### Queue Monitoring with Horizon
+Queue Monitoring with Horizon
 
 Laravel Horizon provides a powerful dashboard for monitoring queues:
 
@@ -173,15 +173,15 @@ public function boot(): void
 ```
 
 ```bash
-# Install and publish Horizon
+Install and publish Horizon
 composer require laravel/horizon
 php artisan vendor:publish --provider="Laravel\Horizon\HorizonServiceProvider"
 
-# Start Horizon supervisor
+Start Horizon supervisor
 php artisan horizon
 ```
 
-## Building Workflows with Chained Jobs
+Building Workflows with Chained Jobs
 
 For complex business processes, you can chain jobs together to create reliable workflows:
 
@@ -204,9 +204,9 @@ class ProcessOrderWorkflow
 }
 ```
 
-## Handling Failed Jobs
+Handling Failed Jobs
 
-Implement robust error handling and job retries:
+Implement solid error handling and job retries:
 
 ```php
 class ProcessPaymentJob implements ShouldQueue
@@ -235,7 +235,7 @@ class ProcessPaymentJob implements ShouldQueue
 }
 ```
 
-## Using Job Batches for Parallel Processing
+Using Job Batches for Parallel Processing
 
 When you need to process a large collection of items in parallel and then react when the entire batch completes, Laravel's batch system is the right tool. Claude Code can scaffold the batch dispatch and callback structure for you in seconds.
 
@@ -307,7 +307,7 @@ public function importStatus(string $batchId): JsonResponse
 }
 ```
 
-## Rate Limiting and Throttling Jobs
+Rate Limiting and Throttling Jobs
 
 Some external APIs enforce rate limits that your queue workers must respect. Laravel provides a `RateLimiter`-based approach that works directly inside job classes, preventing excessive calls without complex external coordination.
 
@@ -351,7 +351,7 @@ RateLimiter::for('hubspot-api', function () {
 
 When a job hits the rate limit, Laravel automatically releases it back onto the queue and retries after the window expires. You do not need to write any retry logic yourself. Claude Code can generate this pattern for any third-party API by asking it: "scaffold a throttled job for the [service] API respecting [N] requests per [period]."
 
-## Testing Queue Jobs Locally
+Testing Queue Jobs Locally
 
 Debugging jobs in production is painful. Set up a proper local testing workflow from day one. The `Queue::fake()` helper lets you assert job dispatches without actually running workers.
 
@@ -390,7 +390,7 @@ For integration tests where you want the job to actually execute, use `Queue::fa
 
 With `sync`, every dispatched job runs immediately in the same process, so you can assert on the side effects (database records written, emails sent) rather than just the dispatch itself. Reserve this for tests that are explicitly checking job behavior end-to-end, not for unit tests of controllers or services.
 
-## Debugging Stuck or Failed Jobs
+Debugging Stuck or Failed Jobs
 
 When jobs start piling up or failing silently, the first place to look is the `failed_jobs` table. Run this Artisan command to list recent failures with their exception messages:
 
@@ -412,34 +412,34 @@ php artisan queue:failed --id=12345
 
 For jobs that appear to be processing but never complete, check the `retry_after` value in `config/queue.php`. If a job takes longer than `retry_after` seconds, Laravel assumes the worker died and re-queues the job, which can produce duplicate processing. Always set `retry_after` to at least 30 seconds more than your job's expected worst-case runtime.
 
-Horizon gives you a live view of this data. The "Metrics" tab shows throughput and runtime averages per queue and per job class, which makes it easy to spot a job that normally takes 2 seconds suddenly averaging 45 seconds—a sign of an upstream dependency degrading.
+Horizon gives you a live view of this data. The "Metrics" tab shows throughput and runtime averages per queue and per job class, which makes it easy to spot a job that normally takes 2 seconds suddenly averaging 45 seconds, a sign of an upstream dependency degrading.
 
-## Best Practices for Queue-Based Systems
+Best Practices for Queue-Based Systems
 
 When building queue-based systems with Claude Code, follow these practical guidelines:
 
-1. **Keep jobs single-purpose**: Each job should handle one specific task. This improves reliability and makes debugging easier.
+1. Keep jobs single-purpose: Each job should handle one specific task. This improves reliability and makes debugging easier.
 
-2. **Implement proper timeouts**: Set realistic timeout values based on expected job duration. Use longer timeouts for batch processing jobs.
+2. Implement proper timeouts: Set realistic timeout values based on expected job duration. Use longer timeouts for batch processing jobs.
 
-3. **Use dedicated queues**: Separate different job types into dedicated queues (emails, notifications, data processing) to prioritize critical tasks.
+3. Use dedicated queues: Separate different job types into dedicated queues (emails, notifications, data processing) to prioritize critical tasks.
 
-4. **Monitor queue health**: Set up Horizon or custom monitoring to track job success rates, processing times, and queue depths.
+4. Monitor queue health: Set up Horizon or custom monitoring to track job success rates, processing times, and queue depths.
 
-5. **Handle idempotency**: Design jobs to be safely retried by implementing idempotent operations. Use unique job IDs to prevent duplicate processing.
+5. Handle idempotency: Design jobs to be safely retried by implementing idempotent operations. Use unique job IDs to prevent duplicate processing.
 
-6. **Implement proper logging**: Add detailed logging in job classes to trace execution flow and troubleshoot issues.
+6. Implement proper logging: Add detailed logging in job classes to trace execution flow and troubleshoot issues.
 
-## Conclusion
+Conclusion
 
-Laravel's queue system provides a powerful foundation for building asynchronous workflows. With Claude Code's assistance, you can rapidly implement robust job classes, configure worker supervision, and build complex chained workflows that scale with your application needs. Remember to monitor your queues in production and implement proper error handling to ensure reliable background task processing.
+Laravel's queue system provides a powerful foundation for building asynchronous workflows. With Claude Code's assistance, you can rapidly implement solid job classes, configure worker supervision, and build complex chained workflows that scale with your application needs. Remember to monitor your queues in production and implement proper error handling to ensure reliable background task processing.
 
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

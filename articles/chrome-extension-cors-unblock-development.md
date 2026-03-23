@@ -12,17 +12,17 @@ categories: [guides]
 
 Cross-Origin Resource Sharing (CORS) errors are a common obstacle when developing web applications that communicate with APIs. If you've worked on frontend projects that fetch data from external services, you've likely encountered the dreaded "No 'Access-Control-Allow-Origin' header" error. This guide shows you how to create a Chrome extension that helps manage CORS restrictions during development workflows.
 
-## Understanding the CORS Problem in Development
+Understanding the CORS Problem in Development
 
 When your application running on localhost:3000 tries to fetch data from an API at api.example.com, browsers block the request due to the Same-Origin Policy. This security mechanism prevents malicious scripts from accessing resources on different domains, but it also blocks legitimate development requests.
 
 Chrome extensions have a significant advantage over regular web pages: they can make cross-origin requests without being subject to the same CORS restrictions. This is because extension contexts are treated differently by the browser security model. However, there are still specific patterns you need to follow to implement this correctly.
 
-## Building Your CORS Helper Extension
+Building Your CORS Helper Extension
 
 The core of a CORS unblock extension relies on the `web_accessible_resources` manifest key and background scripts that proxy requests. Here's a practical implementation:
 
-### Manifest Configuration (manifest.json)
+Manifest Configuration (manifest.json)
 
 ```json
 {
@@ -52,7 +52,7 @@ The core of a CORS unblock extension relies on the `web_accessible_resources` ma
 }
 ```
 
-### Background Script (background.js)
+Background Script (background.js)
 
 The background script acts as a proxy, handling requests that would otherwise be blocked:
 
@@ -73,7 +73,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 });
 ```
 
-### Content Script Integration
+Content Script Integration
 
 From your web application, you communicate with the extension to make cross-origin requests:
 
@@ -105,11 +105,11 @@ const data = await corsFetch('https://api.example.com/data', {
 });
 ```
 
-## Alternative Approaches
+Alternative Approaches
 
 There are several ways to handle CORS during development, each with trade-offs:
 
-### Server-Side Proxy
+Server-Side Proxy
 
 Set up a simple Node.js proxy:
 
@@ -130,28 +130,28 @@ app.use('/proxy/:url(*)', async (req, res) => {
 app.listen(3001);
 ```
 
-### Browser Flags
+Browser Flags
 
 For quick testing, you can launch Chrome with security disabled:
 
 ```bash
-# macOS
+macOS
 open -a Google\ Chrome --args --disable-web-security --user-data-dir
 
-# Linux
+Linux
 google-chrome --disable-web-security
 
-# Windows
+Windows
 "C:\Program Files\Google\Chrome\Application\chrome.exe" --disable-web-security
 ```
 
 This approach is useful for rapid debugging but should never be used in production or on machines with sensitive data.
 
-## Security Considerations
+Security Considerations
 
 Building a CORS bypass extension requires careful security thinking:
 
-**Restrict to Development Environments**: Add checks to ensure requests only go to known development URLs. You can store allowed domains in extension storage:
+Restrict to Development Environments: Add checks to ensure requests only go to known development URLs. You can store allowed domains in extension storage:
 
 ```javascript
 // background.js - Domain validation
@@ -164,11 +164,11 @@ function isDevUrl(url) {
 }
 ```
 
-**Validate All Inputs**: Never blindly proxy requests. Validate URLs, methods, and content to prevent your extension from being used as an open proxy.
+Validate All Inputs: Never blindly proxy requests. Validate URLs, methods, and content to prevent your extension from being used as an open proxy.
 
-**Use HTTPS in Production**: Even for development proxies, establish secure connections to avoid exposing sensitive credentials.
+Use HTTPS in Production: Even for development proxies, establish secure connections to avoid exposing sensitive credentials.
 
-## Advanced: Programmatic Header Injection
+Advanced: Programmatic Header Injection
 
 For more complex scenarios, you might need to modify headers programmatically:
 
@@ -191,7 +191,7 @@ chrome.webRequest.onBeforeRequest.addListener(
 
 This approach intercepts requests at the network level, allowing you to add custom headers or modify request behavior.
 
-## Deployment and Testing
+Deployment and Testing
 
 When your extension is ready:
 
@@ -200,20 +200,20 @@ When your extension is ready:
 3. Test with a simple fetch call to verify the proxy works
 4. Check the background script console for any errors
 
-## When to Use Each Approach
+When to Use Each Approach
 
 For most development scenarios, consider this decision tree:
 
-- **Quick debugging**: Browser flags provide the fastest solution
-- **Repeated API testing**: A custom extension with the proxy pattern works best
-- **Team environments**: A shared proxy server ensures consistency
-- **CI/CD pipelines**: Server-side proxies integrate more naturally
+- Quick debugging: Browser flags provide the fastest solution
+- Repeated API testing: A custom extension with the proxy pattern works best
+- Team environments: A shared proxy server ensures consistency
+- CI/CD pipelines: Server-side proxies integrate more naturally
 
 Chrome extensions give you the most flexibility for local development, while server-side solutions scale better for team environments.
 
-## Handling Non-JSON Response Types
+Handling Non-JSON Response Types
 
-The background script shown above only handles JSON responses. Real APIs return HTML, plain text, binary data, and streaming responses. Here is a more robust version of the fetch proxy that preserves the response type:
+The background script shown above only handles JSON responses. Real APIs return HTML, plain text, binary data, and streaming responses. Here is a more solid version of the fetch proxy that preserves the response type:
 
 ```javascript
 // background.js - Type-aware proxy
@@ -254,7 +254,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 The caller can inspect `contentType` in the response to decide how to consume `data`, making this a drop-in proxy for any API surface.
 
-## Persisting Allowed Origins in Extension Storage
+Persisting Allowed Origins in Extension Storage
 
 Hardcoding `ALLOWED_DEV_DOMAINS` as a constant gets unwieldy when you work across many projects. A better pattern stores the allowed list in `chrome.storage.sync` and exposes a settings popup to manage it:
 
@@ -315,19 +315,19 @@ async function isAllowedOrigin(url) {
 
 Now adding a new development API host takes three seconds through the popup instead of a code change and extension reload.
 
-## Debugging the Extension Itself
+Debugging the Extension Itself
 
 When the proxy silently fails, the most common culprits are the message channel closing before the async response arrives, a missing `return true` in the listener, or a permission gap in `manifest.json`. The following checklist catches most issues:
 
-**Check the service worker console.** In `chrome://extensions`, click the "service worker" link next to your extension. This opens a DevTools window attached to the background context where `console.log` calls and uncaught errors appear.
+Check the service worker console. In `chrome://extensions`, click the "service worker" link next to your extension. This opens a DevTools window attached to the background context where `console.log` calls and uncaught errors appear.
 
-**Verify host permissions match the target URL.** A request to `https://api.internal.example.com` will silently fail if your manifest only grants `http://localhost/*`. Use `<all_urls>` during development and scope it down before any wider distribution.
+Verify host permissions match the target URL. A request to `https://api.internal.example.com` will silently fail if your manifest only grants `http://localhost/*`. Use `<all_urls>` during development and scope it down before any wider distribution.
 
-**Confirm the message channel stays open.** The `return true` at the end of the `onMessage` listener is not optional — omitting it closes the channel synchronously, so `sendResponse` called inside a promise always arrives after the channel is gone, and the caller receives `undefined`.
+Confirm the message channel stays open. The `return true` at the end of the `onMessage` listener is not optional. omitting it closes the channel synchronously, so `sendResponse` called inside a promise always arrives after the channel is gone, and the caller receives `undefined`.
 
-**Test the background fetch in isolation.** Open the service worker DevTools console and call fetch directly on the target URL. If this fails, the problem is network-level (firewall, DNS, TLS certificate) not extension logic.
+Test the background fetch in isolation. Open the service worker DevTools console and call fetch directly on the target URL. If this fails, the problem is network-level (firewall, DNS, TLS certificate) not extension logic.
 
-## Using declarativeNetRequest for Header Injection in MV3
+Using declarativeNetRequest for Header Injection in MV3
 
 The `webRequest` API with the `"blocking"` option shown earlier is not permitted in Manifest V3 for extensions distributed through the Chrome Web Store. The modern equivalent is `declarativeNetRequest`, which lets you declare header modification rules statically or update them dynamically at runtime:
 
@@ -360,7 +360,7 @@ chrome.declarativeNetRequest.updateDynamicRules({
 
 This requires the `declarativeNetRequest` permission in your manifest rather than `webRequestBlocking`. The rule activates immediately and persists across browser restarts until you remove it programmatically. For development use, call `updateDynamicRules` on extension startup and clear rules matching your dev hosts when the popup is toggled off.
 
-## Packaging the Extension for Your Team
+Packaging the Extension for Your Team
 
 A custom CORS helper extension does not need to go through the Chrome Web Store to be shared with teammates. You can distribute it as a packed `.crx` file or, more practically, as a zipped source directory that each developer loads unpacked.
 
@@ -371,10 +371,10 @@ If the extension needs to be installed on many developer machines, an organizati
 ---
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

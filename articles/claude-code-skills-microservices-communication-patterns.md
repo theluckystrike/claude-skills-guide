@@ -17,18 +17,18 @@ Building microservices architectures requires careful consideration of how servi
 
 This guide covers practical patterns for implementing microservices communication using Claude Code skills, with real code examples you can apply to your architecture.
 
-## Understanding Microservices Communication
+Understanding Microservices Communication
 
 Microservices communicate through two primary mechanisms: synchronous communication where a client waits for a response, and asynchronous communication where services exchange messages without blocking. Each approach has trade-offs around latency, consistency, and complexity that affect your system design.
 
 Claude Code skills can generate boilerplate code, validate API contracts, implement error handling, and create documentation for all these communication patterns. The [skill system](/building-production-ai-agents-with-claude-skills-2026/) acts as a specialized assistant that understands your architecture and produces consistent, production-ready implementations.
 
-## Pattern 1: REST API Communication
+Pattern 1: REST API Communication
 
 REST remains the most common pattern for synchronous microservices communication. Claude Code skills can generate client libraries, validate request/response schemas, and implement retry logic.
 
 ```yaml
-# rest-client-skill.md
+rest-client-skill.md
 name: REST Microservice Client Generator
 description: Generate type-safe REST client code for microservices communication
 ```
@@ -108,12 +108,12 @@ class UserServiceClient {
 }
 ```
 
-## Pattern 2: Message Queue Communication
+Pattern 2: Message Queue Communication
 
 Asynchronous communication through [message queues decouples services](/claude-code-multi-agent-orchestration-patterns-guide/) and improves system resilience. Claude Code skills can generate publisher and consumer code, handle dead letter queues, and implement idempotency.
 
 ```yaml
-# message-queue-skill.md
+message-queue-skill.md
 name: Message Queue Pattern Generator
 description: Generate async communication code using RabbitMQ, Kafka, or SQS
 ```
@@ -129,7 +129,7 @@ Generate message queue implementations that include:
 A practical implementation:
 
 ```python
-# message_publisher.py
+message_publisher.py
 import json
 import time
 import uuid
@@ -175,7 +175,7 @@ class ResilientPublisher:
                 )
                 return
             except AMQPConnectionError:
-                wait_time = 2 ** attempt
+                wait_time = 2  attempt
                 print(f"Connection failed, retrying in {wait_time}s...")
                 time.sleep(wait_time)
         raise ConnectionError("Failed to connect after max retries")
@@ -220,12 +220,12 @@ class ResilientPublisher:
             self.connection.close()
 ```
 
-## Pattern 3: Event-Driven Communication
+Pattern 3: Event-Driven Communication
 
 Event-driven architectures enable loose coupling and scalability. Services emit events that other services consume independently, allowing you to add new consumers without modifying producers.
 
 ```yaml
-# event-skill.md
+event-skill.md
 name: Event Schema Generator
 description: Generate event schemas and handlers for event-driven microservices
 ```
@@ -238,7 +238,7 @@ Create event-driven communication that includes:
 4. Schema evolution handling
 5. Event sourcing support
 
-## Pattern 4: Saga Pattern for Distributed Transactions
+Pattern 4: Saga Pattern for Distributed Transactions
 
 When microservices need to coordinate multi-step operations across services, the saga pattern provides a way to maintain consistency without distributed transactions. For broader agent coordination patterns, see [Claude Code Multi-Agent Subagent Communication Guide](/claude-code-multi-agent-subagent-communication-guide/).
 
@@ -340,22 +340,22 @@ async function processOrder(orderData: OrderData) {
 }
 ```
 
-## Choosing the Right Pattern
+Choosing the Right Pattern
 
 Select your communication pattern based on these factors:
 
-- **Latency requirements**: Use synchronous REST for low-latency needs, async queues for background processing
-- **Consistency needs**: Saga patterns for distributed transactions, event sourcing for audit trails
-- **Coupling level**: Event-driven for loose coupling, direct calls for tight integration
-- **Failure handling**: Circuit breakers and retries for resilience, dead letter queues for failed messages
+- Latency requirements: Use synchronous REST for low-latency needs, async queues for background processing
+- Consistency needs: Saga patterns for distributed transactions, event sourcing for audit trails
+- Coupling level: Event-driven for loose coupling, direct calls for tight integration
+- Failure handling: Circuit breakers and retries for resilience, dead letter queues for failed messages
 
 Claude Code skills accelerate implementing all these patterns by generating boilerplate, validating implementations, and maintaining consistency across your microservices ecosystem.
 
-## Related Reading
+Related Reading
 
-- [Claude Code Multi-Agent Orchestration Patterns Guide](/claude-code-multi-agent-orchestration-patterns-guide/) — orchestration patterns for distributed Claude agent systems
-- [Claude Code Multi-Agent Subagent Communication Guide](/claude-code-multi-agent-subagent-communication-guide/) — how subagents pass context and coordinate
-- [Building Production AI Agents with Claude Skills in 2026](/building-production-ai-agents-with-claude-skills-2026/) — production architecture for Claude-powered services
-- [Claude Code Skills for Infrastructure as Code Terraform](/claude-code-skills-for-infrastructure-as-code-terraform/) — infrastructure automation for microservices deployments
+- [Claude Code Multi-Agent Orchestration Patterns Guide](/claude-code-multi-agent-orchestration-patterns-guide/). orchestration patterns for distributed Claude agent systems
+- [Claude Code Multi-Agent Subagent Communication Guide](/claude-code-multi-agent-subagent-communication-guide/). how subagents pass context and coordinate
+- [Building Production AI Agents with Claude Skills in 2026](/building-production-ai-agents-with-claude-skills-2026/). production architecture for Claude-powered services
+- [Claude Code Skills for Infrastructure as Code Terraform](/claude-code-skills-for-infrastructure-as-code-terraform/). infrastructure automation for microservices deployments
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

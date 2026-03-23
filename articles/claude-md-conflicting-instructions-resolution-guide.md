@@ -17,30 +17,30 @@ When working with Claude Code or Claude desktop skills, you will inevitably enco
 
 This guide provides practical patterns for developers and power users dealing with conflicting instructions in Claude MD environments. For a deeper look at the skill format itself, see the [Claude skill .md format complete specification guide](/claude-skill-md-format-complete-specification-guide/).
 
-## Understanding Instruction Conflicts
+Understanding Instruction Conflicts
 
 An instruction conflict occurs when two or more directives cannot all be satisfied simultaneously. In Claude's architecture, conflicts can arise at several levels:
 
-- **Skill-to-skill conflicts**: Two loaded skills provide contradictory guidance
-- **User vs. system conflicts**: Your explicit request contradicts the skill's defined behavior
-- **Priority conflicts**: Multiple valid approaches exist, and Claude must choose one
-- **Scope conflicts**: One skill defines behavior globally while another defines it narrowly for a specific context
+- Skill-to-skill conflicts: Two loaded skills provide contradictory guidance
+- User vs. system conflicts: Your explicit request contradicts the skill's defined behavior
+- Priority conflicts: Multiple valid approaches exist, and Claude must choose one
+- Scope conflicts: One skill defines behavior globally while another defines it narrowly for a specific context
 
 For example, a `pdf` skill might instruct Claude to extract all table data, while a `tdd` skill simultaneously directs the model to validate every extracted value against a schema. When both skills are active, Claude needs a clear resolution mechanism.
 
 Consider a more subtle conflict: a documentation skill tells Claude to always include code comments, while a brevity-focused skill says to keep outputs minimal. Neither instruction is wrong in isolation, but together they produce inconsistent output depending on which one Claude weights more heavily at any given moment. These quiet conflicts are often more damaging than obvious ones because they are harder to detect and reproduce.
 
-## Why Conflicts Are More Common Than You Expect
+Why Conflicts Are More Common Than You Expect
 
 Most developers start with a single skill and add more as their workflows grow. Each new skill is written in isolation, which means it carries implicit assumptions about what other skills are or are not doing. The `frontend-design` skill assumes it has full latitude over component structure. The `tdd` skill assumes it controls how functions are shaped to be testable. When both load together, they tug at the same decisions from different angles.
 
 System prompts in `CLAUDE.md` add another layer. A project-level `CLAUDE.md` might declare naming conventions that conflict with a skill's preferred naming patterns. A user-level `CLAUDE.md` might set a tone or verbosity level that conflicts with a task-specific skill's output requirements. Claude resolves these by falling back to general judgment, which is unpredictable across sessions.
 
-The cost of leaving conflicts unresolved is not just wrong output on a single run. It is variance — the same prompt producing different results in different sessions, making your workflows unreliable and harder to debug.
+The cost of leaving conflicts unresolved is not just wrong output on a single run. It is variance. the same prompt producing different results in different sessions, making your workflows unreliable and harder to debug.
 
-## Resolution Strategies
+Resolution Strategies
 
-### 1. Explicit Priority Declaration
+1. Explicit Priority Declaration
 
 The most reliable approach is declaring instruction priority directly in your skill definition. [How to write a skill .md file for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/) covers the front matter fields available for precedence control. Front matter allows you to specify precedence:
 
@@ -57,14 +57,14 @@ Higher priority values override lower ones. Reserve priority 1-3 for core system
 
 When writing priority declarations, be as specific as possible about the domain where the priority applies. A broad declaration like "this skill takes precedence over all others" is less useful than "this skill takes precedence over formatting decisions during extraction tasks." Narrow scope means Claude can satisfy both skills across their respective domains rather than suppressing one entirely.
 
-### 2. Phase-Based Resolution
+2. Phase-Based Resolution
 
 Break complex workflows into sequential phases where different skills dominate at each stage. The `tdd` skill works well in a validation phase after extraction:
 
 ```yaml
-# Phase 1: Extraction (pdf skill active)
-# Phase 2: Validation (tdd skill active)
-# Phase 3: Output (supermemory skill records results)
+Phase 1: Extraction (pdf skill active)
+Phase 2: Validation (tdd skill active)
+Phase 3: Output (supermemory skill records results)
 ```
 
 This pattern prevents conflicts by ensuring only one skill provides active guidance at any moment.
@@ -79,7 +79,7 @@ Phase 3 - Record the validated results to the memory store. Apply supermemory gu
 
 Explicit phase prompts eliminate ambiguity without requiring changes to skill definitions. This matters when you are using skills you did not write and cannot easily modify.
 
-### 3. Contextual Fallback Chains
+3. Contextual Fallback Chains
 
 Define explicit fallback behavior when conflicts occur. Create a resolution chain:
 
@@ -95,7 +95,7 @@ resolution_order:
 
 Claude evaluates each condition in order and follows the first matching skill's instructions.
 
-Fallback chains work best when the conflict is conditional — when the right skill to apply depends on the input rather than the task phase. For file processing workflows, matching on `file_type` is natural. For code generation workflows, you might match on whether the target directory already contains tests, or whether the task includes the word "validate" or "test."
+Fallback chains work best when the conflict is conditional. when the right skill to apply depends on the input rather than the task phase. For file processing workflows, matching on `file_type` is natural. For code generation workflows, you might match on whether the target directory already contains tests, or whether the task includes the word "validate" or "test."
 
 A practical trick is to define a catch-all fallback at the end of your chain:
 
@@ -109,7 +109,7 @@ resolution_order:
 
 The catch-all ensures Claude always has a clear instruction source even when none of the specific conditions match.
 
-### 4. Conflict Detection Hooks
+4. Conflict Detection Hooks
 
 For advanced implementations, use hooks to detect and handle conflicts programmatically:
 
@@ -174,9 +174,9 @@ function findOverlappingDirectives(skills) {
 
 The logging output becomes invaluable during debugging when you cannot tell why Claude followed one skill's guidance instead of another's.
 
-## Practical Examples
+Practical Examples
 
-### Example 1: PDF Extraction with Schema Validation
+Example 1: PDF Extraction with Schema Validation
 
 You want to extract data from a PDF while ensuring type consistency:
 
@@ -203,7 +203,7 @@ Using the pdf-with-validation skill configuration:
 
 The numbered steps reinforce the sequential structure defined in the skill configuration.
 
-### Example 2: Frontend Design with Testing
+Example 2: Frontend Design with Testing
 
 When `frontend-design` and `tdd` both load, they may conflict on code structure preferences:
 
@@ -219,9 +219,9 @@ override:
 
 This declares that when test files exist, the `tdd` skill guidance overrides `frontend-design` preferences for code organization.
 
-In practice, this resolves the most common friction between these two skills. The `frontend-design` skill might prefer colocation of styles and markup in a single component file, while `tdd` wants functions extracted so they can be unit tested independently. Giving `tdd` precedence when test files exist means Claude will structure new components with testing in mind — smaller functions, explicit prop interfaces, and separated logic — rather than optimizing purely for visual organization.
+In practice, this resolves the most common friction between these two skills. The `frontend-design` skill might prefer colocation of styles and markup in a single component file, while `tdd` wants functions extracted so they can be unit tested independently. Giving `tdd` precedence when test files exist means Claude will structure new components with testing in mind. smaller functions, explicit prop interfaces, and separated logic. rather than optimizing purely for visual organization.
 
-### Example 3: Memory and Documentation Conflicts
+Example 3: Memory and Documentation Conflicts
 
 The `supermemory` skill might want to record every action, while you want selective logging:
 
@@ -241,7 +241,7 @@ supermemory:
 
 This pattern is particularly relevant for long-running workflows where indiscriminate logging creates noise that buries important decisions. By declaring what to record and what to ignore, you maintain a useful audit trail without filling memory with every file read and tool call.
 
-### Example 4: Tone Conflicts Between Project and User Instructions
+Example 4: Tone Conflicts Between Project and User Instructions
 
 A `CLAUDE.md` at the user level might set Claude's communication style to "concise, no explanations," while a project-level `CLAUDE.md` requires verbose, documented output for audit purposes. Both are legitimate preferences in their respective contexts.
 
@@ -254,32 +254,32 @@ explaining each decision. This overrides any user-level brevity settings for cod
 For conversational replies and status updates, follow user-level tone settings.
 ```
 
-The key is separating code output (where verbosity has audit value) from conversational output (where brevity improves usability). Most tone conflicts can be resolved this way — by narrowing the scope of each instruction so they no longer overlap.
+The key is separating code output (where verbosity has audit value) from conversational output (where brevity improves usability). Most tone conflicts can be resolved this way. by narrowing the scope of each instruction so they no longer overlap.
 
-## Best Practices
+Best Practices
 
-**Define a clear hierarchy before starting complex projects.** Document which skills take precedence and under what conditions. A simple table in your project `CLAUDE.md` works well:
+Define a clear hierarchy before starting complex projects. Document which skills take precedence and under what conditions. A simple table in your project `CLAUDE.md` works well:
 
 ```markdown
-## Skill Priority (for this project)
+Skill Priority (for this project)
 | Skill | Priority | Overrides | Defers To |
 |-------|----------|-----------|-----------|
-| tdd | 9 | frontend-design (code structure) | — |
-| frontend-design | 7 | — | tdd |
-| supermemory | 5 | — | tdd, frontend-design |
+| tdd | 9 | frontend-design (code structure) |. |
+| frontend-design | 7 |. | tdd |
+| supermemory | 5 |. | tdd, frontend-design |
 ```
 
-**Use sequential phases** for tasks requiring multiple skill domains. Switching skills on/off based on workflow phase prevents ambiguous states.
+Use sequential phases for tasks requiring multiple skill domains. Switching skills on/off based on workflow phase prevents ambiguous states.
 
-**Prefer explicit over implicit resolution.** When conflicts arise, add front matter declarations rather than relying on Claude's default resolution. Implicit resolution produces different results across model versions and sessions.
+Prefer explicit over implicit resolution. When conflicts arise, add front matter declarations rather than relying on Claude's default resolution. Implicit resolution produces different results across model versions and sessions.
 
-**Test conflict scenarios during skill development.** Load multiple skills together and verify the resolution matches your expectations. The [Claude MD changes not taking effect fix guide](/claude-md-changes-not-taking-effect-fix-guide/) can help when resolution rules are not applying as expected.
+Test conflict scenarios during skill development. Load multiple skills together and verify the resolution matches your expectations. The [Claude MD changes not taking effect fix guide](/claude-md-changes-not-taking-effect-fix-guide/) can help when resolution rules are not applying as expected.
 
-**Keep skill instruction scope narrow.** Skills that define behavior for a broad surface area are more likely to conflict with everything. Skills that define behavior only within their specific domain compose cleanly.
+Keep skill instruction scope narrow. Skills that define behavior for a broad surface area are more likely to conflict with everything. Skills that define behavior only within their specific domain compose cleanly.
 
-**Document resolution decisions.** When you add a priority declaration or override to resolve a conflict, add a comment explaining why. Six months later, neither you nor another developer will remember what prompted the resolution, and removing it may reintroduce the original problem.
+Document resolution decisions. When you add a priority declaration or override to resolve a conflict, add a comment explaining why. Six months later, neither you nor another developer will remember what prompted the resolution, and removing it may reintroduce the original problem.
 
-## Common Pitfalls
+Common Pitfalls
 
 Avoid leaving conflicts unresolved. Unaddressed conflicts lead to unpredictable behavior where Claude may:
 
@@ -289,23 +289,23 @@ Avoid leaving conflicts unresolved. Unaddressed conflicts lead to unpredictable 
 
 These outcomes reduce workflow reliability and increase cognitive load on users.
 
-**Overly broad priority declarations** are a common overcorrection. Making one skill take absolute precedence over all others usually suppresses useful guidance from other skills entirely. Prefer narrow, scoped priority declarations.
+Overly broad priority declarations are a common overcorrection. Making one skill take absolute precedence over all others usually suppresses useful guidance from other skills entirely. Prefer narrow, scoped priority declarations.
 
-**Circular dependencies** can emerge in fallback chains if you are not careful. If skill A defers to skill B, and skill B defers to skill A under overlapping conditions, Claude has no clear resolution path. Always ensure your fallback chains are acyclic.
+Circular dependencies can emerge in fallback chains if you are not careful. If skill A defers to skill B, and skill B defers to skill A under overlapping conditions, Claude has no clear resolution path. Always ensure your fallback chains are acyclic.
 
-**Forgetting about `CLAUDE.md` as a conflict source.** Developers focus on skill-to-skill conflicts but often overlook that project or user `CLAUDE.md` files can conflict with skill instructions just as easily. Audit your `CLAUDE.md` files when adding new skills to look for overlapping directives.
+Forgetting about `CLAUDE.md` as a conflict source. Developers focus on skill-to-skill conflicts but often overlook that project or user `CLAUDE.md` files can conflict with skill instructions just as easily. Audit your `CLAUDE.md` files when adding new skills to look for overlapping directives.
 
-## Conclusion
+Conclusion
 
 Resolving conflicting instructions in Claude MD requires explicit strategy rather than hoping for implicit correctness. By declaring priority, using phase-based execution, implementing fallback chains, and using conflict detection hooks, you build reliable systems that handle ambiguity gracefully.
 
 Whether you're combining `pdf` extraction with `tdd` validation, integrating `frontend-design` with testing frameworks, or orchestrating multiple skills through `supermemory` memory management, explicit conflict resolution transforms potential chaos into reliable automation. The investment in defining clear resolution rules pays dividends every time a workflow runs consistently instead of producing unpredictable output.
 
-## Related Reading
+Related Reading
 
-- [Claude Skill .md Format: Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/) — Reference the full front matter schema including priority and conflict-related fields
-- [How to Write a Skill .md File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/) — Build skills from scratch with clear instruction boundaries that reduce conflict likelihood
-- [Claude MD Changes Not Taking Effect: Fix Guide](/claude-md-changes-not-taking-effect-fix-guide/) — Troubleshoot why conflict resolution rules may not be applying as expected
-- [Claude Skills Advanced Hub](/advanced-hub/) — Explore advanced skill orchestration patterns beyond basic conflict resolution
+- [Claude Skill .md Format: Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/). Reference the full front matter schema including priority and conflict-related fields
+- [How to Write a Skill .md File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/). Build skills from scratch with clear instruction boundaries that reduce conflict likelihood
+- [Claude MD Changes Not Taking Effect: Fix Guide](/claude-md-changes-not-taking-effect-fix-guide/). Troubleshoot why conflict resolution rules may not be applying as expected
+- [Claude Skills Advanced Hub](/advanced-hub/). Explore advanced skill orchestration patterns beyond basic conflict resolution
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

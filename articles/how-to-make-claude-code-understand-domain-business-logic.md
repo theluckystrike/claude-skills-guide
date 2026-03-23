@@ -13,19 +13,19 @@ score: 7
 ---
 
 
-# How to Make Claude Code Understand Domain Business Logic
+How to Make Claude Code Understand Domain Business Logic
 
 Claude Code comes equipped with broad general knowledge, but getting it to understand your specific business domain requires deliberate setup. Whether you're building skills for healthcare compliance, financial services, or e-commerce, teaching Claude about your domain logic unlocks more accurate, context-aware responses.
 
 This guide covers practical methods to inject domain knowledge into Claude Code, from crafting domain-specific skills to configuring knowledge retrieval systems.
 
-## Why Domain Context Matters
+Why Domain Context Matters
 
 General-purpose AI models excel at reasoning but lack awareness of your specific terminology, business rules, and data structures. When you ask Claude to help with a complex order processing workflow, it doesn't know that "pending" means something different in your system than in a typical REST API, or that certain field combinations trigger compliance checks.
 
 By providing structured domain context, you transform Claude from a capable generalist into a specialist that understands your business logic.
 
-## Method 1: Domain-Specific Skill Creation
+Method 1: Domain-Specific Skill Creation
 
 The most direct approach involves creating custom skills that encode your business rules. Skills act as persistent instruction sets that Claude loads when working on specific tasks.
 
@@ -37,7 +37,7 @@ name: ecommerce-orders
 description: "Handle e-commerce order processing with business rules"
 ---
 
-# Order Processing Domain
+Order Processing Domain
 
 When processing orders, apply these rules:
 
@@ -46,7 +46,7 @@ When processing orders, apply these rules:
 3. International orders must include VAT number validation
 4. Discount codes expire after the date specified in the promotions table
 
-## Status Transitions
+Status Transitions
 
 Valid order status transitions:
 - draft → pending → confirmed → shipped → delivered
@@ -56,26 +56,26 @@ Valid order status transitions:
 
 When you invoke this skill using `/ecommerce-orders`, Claude loads these rules and applies them consistently across conversations.
 
-## Method 2: Entity Definition Files
+Method 2: Entity Definition Files
 
 For complex domains with many specific terms, create dedicated entity definition files that Claude can reference. Store these as markdown files in a consistent location and reference them in your skills.
 
 Create a file like `domain/finance-entities.md`:
 
 ```markdown
-# Finance Domain Entities
+Finance Domain Entities
 
-## Account Types
+Account Types
 - CHECKING: Standard transactional account, no interest
 - SAVINGS: Interest-bearing account, max 6 withdrawals/month
 - INVESTMENT: Holds securities, requires risk assessment on file
 
-## Transaction Categories
+Transaction Categories
 - ACH_TRANSFER: Bank-to-bank transfer, 2-3 day settlement
 - WIRE: Same-day transfer, $25 fee applies
 - INTERNAL: Movement between accounts, instant
 
-## Compliance Flags
+Compliance Flags
 - CTR_REQUIRED: Cash transactions over $10,000
 - SAR_REQUIRED: Suspicious activity patterns
 - OFAC_HIT: Match on sanctions list
@@ -93,14 +93,14 @@ Load the domain entities from ../domain/finance-entities.md
 and use these definitions when validating transactions or answering customer questions.
 ```
 
-## Method 3: Database Schema Integration
+Method 3: Database Schema Integration
 
 For applications with structured data, provide Claude with schema context. This helps it understand relationships and constraints:
 
 ```markdown
-## Database Schema Context
+Database Schema Context
 
-### Orders Table
+Orders Table
 - id: UUID, primary key
 - customer_id: FK to customers.id
 - status: enum (draft, pending, confirmed, shipped, delivered, cancelled, refunded)
@@ -108,14 +108,14 @@ For applications with structured data, provide Claude with schema context. This 
 - created_at: timestamp
 - updated_at: timestamp
 
-### Order Items Table  
+Order Items Table  
 - id: UUID, primary key
 - order_id: FK to orders.id
 - product_id: FK to products.id
 - quantity: integer
 - unit_price: decimal(10,2)
 
-### Relationships
+Relationships
 - One customer has many orders
 - One order has many order items
 - One product appears in many order items
@@ -123,23 +123,23 @@ For applications with structured data, provide Claude with schema context. This 
 
 This approach pairs well with the tdd skill for generating tests that respect your actual data model.
 
-## Method 4: Business Rule Documentation
+Method 4: Business Rule Documentation
 
 Document your business logic in a format Claude can parse and apply. Use clear conditional structures:
 
 ```markdown
-# Pricing Rules
+Pricing Rules
 
-## Discount Eligibility
+Discount Eligibility
 IF customer.tier == "premium" THEN discount_rate = 0.15
 ELSE IF customer.tier == "standard" THEN discount_rate = 0.05
 ELSE discount_rate = 0
 
-## Bulk Discounts
+Bulk Discounts
 quantity >= 10 AND quantity < 50: additional 5% off
 quantity >= 50: additional 10% off (stack with tier discount)
 
-## Shipping Calculation
+Shipping Calculation
 - Under $50: $7.99 flat rate
 - $50-$100: $4.99 flat rate
 - Over $100: free shipping
@@ -148,12 +148,12 @@ quantity >= 50: additional 10% off (stack with tier discount)
 
 When working with skills like frontend-design or pdf generation, having these rules documented ensures the output reflects your actual business logic rather than generic implementations.
 
-## Method 5: Using supermemory for Context
+Method 5: Using supermemory for Context
 
 The supermemory skill provides persistent memory across sessions. Use it to maintain domain context that persists beyond individual conversations:
 
 ```bash
-# Store domain context
+Store domain context
 sm add "Our platform uses a 3-tier subscription model: 
 Basic ($9/mo), Professional ($29/mo), Enterprise (custom pricing).
 Basic limits: 1000 API calls/day, 5 team members.
@@ -163,12 +163,12 @@ Enterprise: unlimited calls, unlimited members, 24/7 support + SLA."
 
 This creates a retrievable knowledge base that Claude queries when working on support-related tasks.
 
-## Method 6: Example-Based Learning
+Method 6: Example-Based Learning
 
 Provide Claude with concrete examples of correct domain behavior:
 
 ```markdown
-## Example: Correct Order Creation
+Correct Order Creation
 
 Input:
 {
@@ -186,7 +186,7 @@ Correct processing:
 5. Create order with status "pending"
 6. Return order_id for confirmation
 
-## Example: Invalid Order (missing required field)
+Invalid Order (missing required field)
 
 Input:
 {
@@ -201,7 +201,7 @@ Expected error:
 
 These examples train Claude on your expected inputs and outputs, reducing hallucinations around domain-specific edge cases.
 
-## Combining Methods for Best Results
+Combining Methods for Best Results
 
 The most effective domain understanding comes from layering multiple approaches:
 
@@ -215,11 +215,11 @@ This approach scales well as your domain grows more complex. When combined with 
 
 The key is treating domain knowledge as code: version-controlled, documented, and tested. As your business evolves, your domain definitions evolve with it.
 
-## Related Reading
+Related Reading
 
-- [How to Write Effective CLAUDE.md for Your Project](/how-to-write-effective-claude-md-for-your-project/) — CLAUDE.md is the primary place to encode domain rules for Claude
-- [Claude SuperMemory Skill: Persistent Context Explained](/claude-supermemory-skill-persistent-context-explained/) — Supermemory persists domain knowledge across sessions
-- [How to Write Your First Custom Prompt with Claude Code](/how-to-write-a-skill-md-file-for-claude-code/) — Custom prompts encode domain-specific behavior
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/) — Foundation for building domain-aware Claude workflows
+- [How to Write Effective CLAUDE.md for Your Project](/how-to-write-effective-claude-md-for-your-project/). CLAUDE.md is the primary place to encode domain rules for Claude
+- [Claude SuperMemory Skill: Persistent Context Explained](/claude-supermemory-skill-persistent-context-explained/). Supermemory persists domain knowledge across sessions
+- [How to Write Your First Custom Prompt with Claude Code](/how-to-write-a-skill-md-file-for-claude-code/). Custom prompts encode domain-specific behavior
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/). Foundation for building domain-aware Claude workflows
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude MD for Accessibility Requirements: A Practical."
-description: "Learn how to leverage Claude Code skills to generate, audit, and maintain accessibility-compliant code. Practical examples for WCAG compliance, ARIA."
+description: "Learn how to use Claude Code skills to generate, audit, and maintain accessibility-compliant code. Practical examples for WCAG compliance, ARIA."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, accessibility, a11y, wcag, aria, keyboard-navigation, claude-skills]
@@ -13,7 +13,7 @@ score: 7
 ---
 
 
-# Claude MD for Accessibility Requirements: A Practical A11y Guide
+Claude MD for Accessibility Requirements: A Practical A11y Guide
 
 Accessibility isn't a feature you bolt on at the end of development. It's a fundamental aspect of building inclusive web applications that serve all users, including those using assistive technologies like screen readers, voice control software, and switch access devices. The Web Content Accessibility Guidelines (WCAG) exist to provide a shared standard for making web content accessible, and failing to meet those standards exposes your project to both legal risk and a worse experience for a large portion of your users.
 
@@ -21,7 +21,7 @@ Claude Code, combined with well-designed skills, can help you integrate accessib
 
 This guide shows you how to use Claude MD skills to generate accessible markup, audit existing code for WCAG compliance, handle complex ARIA patterns, and maintain accessibility as your projects evolve.
 
-## Why Accessibility Can't Be an Afterthought
+Why Accessibility Can't Be an Afterthought
 
 Before diving into tooling, it's worth understanding the scale of the problem. According to the CDC, roughly 1 in 4 adults in the US has some type of disability. Many of these users rely on assistive technologies: screen readers like NVDA and VoiceOver, keyboard-only navigation, zoom software, and alternative input devices.
 
@@ -37,7 +37,7 @@ The cost argument is equally compelling. Fixing an accessibility defect in produ
 
 Claude skills help you hit Level AA reliably without needing an accessibility specialist on every pull request.
 
-## Setting Up Accessibility-Focused Skills
+Setting Up Accessibility-Focused Skills
 
 Claude skills can be configured with specific tools and prompts that focus on accessibility requirements. The key is establishing a skill that understands WCAG 2.1 guidelines and can apply them to your codebase.
 
@@ -67,9 +67,9 @@ systemPrompt: |
 ---
 ```
 
-With this skill active, you can ask Claude to review any component and receive structured feedback tied directly to WCAG criterion numbers—making it straightforward to document compliance status.
+With this skill active, you can ask Claude to review any component and receive structured feedback tied directly to WCAG criterion numbers, making it straightforward to document compliance status.
 
-## Generating Accessible Components
+Generating Accessible Components
 
 One of the most practical applications of Claude skills for accessibility is component generation. Instead of writing accessible markup from scratch, you can prompt Claude to generate components that meet WCAG requirements by default.
 
@@ -135,13 +135,13 @@ function openModal(modalEl) {
 }
 ```
 
-Without this focus management code, a screen reader user can Tab out of the modal and into the page behind it—a serious usability failure that the WCAG 2.1 criterion 2.1.2 (No Keyboard Trap) specifically addresses.
+Without this focus management code, a screen reader user can Tab out of the modal and into the page behind it, a serious usability failure that the WCAG 2.1 criterion 2.1.2 (No Keyboard Trap) specifically addresses.
 
-## Common ARIA Patterns and Where Developers Go Wrong
+Common ARIA Patterns and Where Developers Go Wrong
 
 ARIA (Accessible Rich Internet Applications) is powerful but frequently misused. Claude's accessibility skills can audit for these common mistakes:
 
-**1. Using ARIA roles on the wrong elements**
+1. Using ARIA roles on the wrong elements
 
 ```html
 <!-- Wrong: ARIA role does not override native semantics -->
@@ -151,7 +151,7 @@ ARIA (Accessible Rich Internet Applications) is powerful but frequently misused.
 <button type="submit">Submit</button>
 ```
 
-**2. Missing required ARIA properties**
+2. Missing required ARIA properties
 
 Some roles require companion attributes. A `role="combobox"` without `aria-expanded` will generate errors in accessibility tree inspectors:
 
@@ -169,9 +169,9 @@ Some roles require companion attributes. A `role="combobox"` without `aria-expan
 />
 ```
 
-**3. Live regions not announcing updates**
+3. Live regions not announcing updates
 
-Dynamic content updates—search results, form validation errors, notifications—must be announced to screen readers. Without `aria-live`, users relying on screen readers will never know something changed:
+Dynamic content updates, search results, form validation errors, notifications, must be announced to screen readers. Without `aria-live`, users relying on screen readers will never know something changed:
 
 ```html
 <!-- Screen readers won't announce this when it updates -->
@@ -181,9 +181,9 @@ Dynamic content updates—search results, form validation errors, notifications�
 <div id="status-message" aria-live="polite" aria-atomic="true"></div>
 ```
 
-Claude can scan your entire component library for these patterns and generate a prioritized report. Prompt it with your component directory and ask for an ARIA audit—you'll typically surface a dozen or more issues that automated tools like axe-core miss because they require understanding intent, not just syntax.
+Claude can scan your entire component library for these patterns and generate a prioritized report. Prompt it with your component directory and ask for an ARIA audit, you'll typically surface a dozen or more issues that automated tools like axe-core miss because they require understanding intent, not just syntax.
 
-## Using the PDF Skill for Accessibility Documentation
+Using the PDF Skill for Accessibility Documentation
 
 Accessibility compliance requires thorough documentation. The PDF skill in Claude can help you generate accessibility statements, WCAG compliance reports, and VPAT (Voluntary Product Accessibility Template) documents.
 
@@ -194,19 +194,19 @@ When creating accessibility documentation, ensure you include:
 - Known limitations and alternative navigation methods
 - Contact information for accessibility support
 
-The PDF skill can also extract text from existing PDF documents to audit them for accessibility, checking for proper tagging, reading order, and alternative text for images. Many organizations receive vendor PDFs that need to meet Section 508 standards before distribution—the PDF skill makes it possible to run these audits quickly at scale.
+The PDF skill can also extract text from existing PDF documents to audit them for accessibility, checking for proper tagging, reading order, and alternative text for images. Many organizations receive vendor PDFs that need to meet Section 508 standards before distribution, the PDF skill makes it possible to run these audits quickly at scale.
 
-## Auditing JavaScript for Keyboard Navigation
+Auditing JavaScript for Keyboard Navigation
 
 JavaScript-heavy applications often break keyboard navigation. Interactive elements must be reachable and operable using only the keyboard. Claude can audit your JavaScript code to identify accessibility issues.
 
 Common keyboard navigation problems include:
 
-1. **Missing focus management** — When content updates dynamically, focus can be lost or stranded
-2. **Custom elements without keyboard support** — Buttons implemented as divs lack keyboard interaction
-3. **Trap scenarios** — Users can enter an element but cannot exit
-4. **`tabindex` misuse** — Using large positive tabindex values breaks the natural tab order
-5. **Event listener gaps** — Handling `click` but not `keydown` for Enter/Space activation
+1. Missing focus management. When content updates dynamically, focus can be lost or stranded
+2. Custom elements without keyboard support. Buttons implemented as divs lack keyboard interaction
+3. Trap scenarios. Users can enter an element but cannot exit
+4. `tabindex` misuse. Using large positive tabindex values breaks the natural tab order
+5. Event listener gaps. Handling `click` but not `keydown` for Enter/Space activation
 
 The frontend-design skill includes patterns for implementing keyboard-accessible interactive components. It provides templates for:
 - Skip links that allow bypassing repetitive navigation
@@ -279,9 +279,9 @@ class AccessibleDropdown {
 }
 ```
 
-This implementation follows the ARIA Authoring Practices Guide (APG) menu button pattern, covering Home/End navigation, arrow key cycling, and Escape to close—exactly what screen reader users expect.
+This implementation follows the ARIA Authoring Practices Guide (APG) menu button pattern, covering Home/End navigation, arrow key cycling, and Escape to close, exactly what screen reader users expect.
 
-## Integrating Accessibility Testing with TDD
+Integrating Accessibility Testing with TDD
 
 The tdd (test-driven development) skill pairs well with accessibility requirements. You can write tests that verify accessibility compliance alongside functional tests. Testing libraries like jest-dom, Testing Library, and axe-core integrate cleanly with this workflow.
 
@@ -326,11 +326,11 @@ describe('Accessible Button Component', () => {
 });
 ```
 
-The `jest-axe` integration is particularly valuable—it runs axe-core's rule engine against your rendered components and fails the test if any violations are found. Claude's TDD skill can generate both the component and its accessibility test suite simultaneously, so you never ship a component that hasn't been checked.
+The `jest-axe` integration is particularly valuable, it runs axe-core's rule engine against your rendered components and fails the test if any violations are found. Claude's TDD skill can generate both the component and its accessibility test suite simultaneously, so you never ship a component that hasn't been checked.
 
 By writing accessibility tests as part of your TDD workflow, you ensure that accessibility requirements are treated with the same importance as functional requirements.
 
-## Color Contrast and Visual Design Checks
+Color Contrast and Visual Design Checks
 
 WCAG 2.1 criterion 1.4.3 requires a minimum contrast ratio of 4.5:1 for normal text and 3:1 for large text (18pt or 14pt bold). Criterion 1.4.11 extends this to UI components like buttons, input borders, and focus indicators.
 
@@ -341,14 +341,14 @@ Claude can analyze CSS and flag contrast issues by examining color values in con
 .button-secondary {
   color: #767676;        /* Gray text */
   background: #f5f5f5;  /* Light gray background */
-  /* Contrast ratio: ~2.3:1 — fails WCAG AA */
+  /* Contrast ratio: ~2.3:1. fails WCAG AA */
 }
 
 /* Suggested fix */
 .button-secondary {
   color: #595959;        /* Darker gray */
   background: #f5f5f5;
-  /* Contrast ratio: ~4.6:1 — passes WCAG AA */
+  /* Contrast ratio: ~4.6:1. passes WCAG AA */
 }
 ```
 
@@ -363,7 +363,7 @@ When Claude reviews your design tokens or CSS custom properties, it can build a 
 
 Disabled state elements are typically exempted from contrast requirements, so Claude's audit should be smart enough to flag them as expected rather than failures.
 
-## Maintaining Accessibility with Supermemory
+Maintaining Accessibility with Supermemory
 
 As projects grow, maintaining accessibility becomes challenging. The supermemory skill helps you track accessibility decisions, known issues, and remediation plans across your codebase.
 
@@ -376,7 +376,7 @@ Supermemory can store:
 
 When you modify a component, supermemory can surface related accessibility context, reminding you of connected tests and any documented concerns. This is especially valuable for cross-functional teams where designers, developers, and QA engineers are all touching the same components.
 
-## Automating Accessibility Reviews in CI/CD
+Automating Accessibility Reviews in CI/CD
 
 Rather than relying solely on manual audits, use Claude skills to automate parts of your accessibility review process. The combination of code analysis skills and testing skills creates a pipeline where accessibility checks run automatically on every pull request.
 
@@ -409,29 +409,29 @@ jobs:
           path: reports/accessibility/
 ```
 
-This automation catches issues early, before they reach production and affect real users. Claude can generate the test scripts that power this pipeline—ask it to write an axe-core scan against your production URL or a local Playwright-driven crawl of your application.
+This automation catches issues early, before they reach production and affect real users. Claude can generate the test scripts that power this pipeline, ask it to write an axe-core scan against your production URL or a local Playwright-driven crawl of your application.
 
-## Getting Started with Accessible Development
+Getting Started with Accessible Development
 
-Begin by auditing your current codebase with an accessibility-focused Claude skill. Identify the highest-impact issues—those affecting the most users or violating the most critical WCAG criteria—and address them systematically.
+Begin by auditing your current codebase with an accessibility-focused Claude skill. Identify the highest-impact issues, those affecting the most users or violating the most critical WCAG criteria, and address them systematically.
 
 A practical triage approach for existing codebases:
 
-1. **Run automated scanning first.** Tools like axe-core, Lighthouse, and WAVE can catch roughly 30–40% of WCAG failures automatically. Use Claude to parse and prioritize those reports.
-2. **Test with real assistive technology.** Use NVDA (Windows) or VoiceOver (macOS/iOS) to navigate your app as a screen reader user would. Ask Claude to help interpret what you find.
-3. **Keyboard-only testing.** Unplug your mouse and try to complete every critical user journey. Document where you get stuck.
-4. **Color contrast sweep.** Use Claude to review all CSS color pairings against WCAG thresholds.
-5. **Form audit.** Forms are the highest-risk area—every input needs a visible label, every error message needs to be programmatically associated with its field.
+1. Run automated scanning first. Tools like axe-core, Lighthouse, and WAVE can catch roughly 30–40% of WCAG failures automatically. Use Claude to parse and prioritize those reports.
+2. Test with real assistive technology. Use NVDA (Windows) or VoiceOver (macOS/iOS) to navigate your app as a screen reader user would. Ask Claude to help interpret what you find.
+3. Keyboard-only testing. Unplug your mouse and try to complete every critical user journey. Document where you get stuck.
+4. Color contrast sweep. Use Claude to review all CSS color pairings against WCAG thresholds.
+5. Form audit. Forms are the highest-risk area, every input needs a visible label, every error message needs to be programmatically associated with its field.
 
-As you build new features, include accessibility requirements in your initial specifications. Use Claude skills to generate accessible components from the start rather than retrofitting accessibility later. The ARIA Authoring Practices Guide (APG) at w3.org/WAI/ARIA/apg is the canonical reference for complex widget patterns—Claude knows this guide well and can generate implementations that follow it precisely.
+As you build new features, include accessibility requirements in your initial specifications. Use Claude skills to generate accessible components from the start rather than retrofitting accessibility later. The ARIA Authoring Practices Guide (APG) at w3.org/WAI/ARIA/apg is the canonical reference for complex widget patterns, Claude knows this guide well and can generate implementations that follow it precisely.
 
 The accessibility skills ecosystem continues to evolve. Stay current by exploring new skills as they become available, and consider contributing your own accessibility-focused skills back to the community.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

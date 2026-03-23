@@ -12,17 +12,17 @@ tags: [claude-code, claude-skills]
 ---
 
 
-# Building a Chrome Extension Trello Power-Up
+Building a Chrome Extension Trello Power-Up
 
 Trello Power-Ups extend Trello's functionality, allowing developers to add custom features to boards, cards, and lists. When combined with Chrome extensions, you create powerful browser-based tools that interact directly with Trello's API and UI. This guide walks through building a Chrome extension that functions as a Trello Power-Up, with practical code examples for developers and power users.
 
-## Understanding the Architecture
+Understanding the Architecture
 
 A Trello Power-Up is essentially a JavaScript application that runs within Trello's iframe environment. It communicates with Trello through their Power-Up SDK, which provides methods for reading card data, updating UI, and storing persistence data. A Chrome extension, meanwhile, runs in the browser context and can access Chrome APIs, local storage, and the broader web.
 
-The key distinction: Trello Power-Ups only run inside Trello. Chrome extensions run in the browser but can inject content scripts into Trello pages. The most robust approach combines both—a Chrome extension that provides the "Power-Up" capabilities while using Trello's client-side API.
+The key distinction: Trello Power-Ups only run inside Trello. Chrome extensions run in the browser but can inject content scripts into Trello pages. The most solid approach combines both, a Chrome extension that provides the "Power-Up" capabilities while using Trello's client-side API.
 
-## Setting Up Your Project
+Setting Up Your Project
 
 Create a new directory for your project and set up the basic Chrome extension structure:
 
@@ -56,7 +56,7 @@ Your manifest.json defines the extension's capabilities:
 }
 ```
 
-## Integrating with Trello's Power-Up SDK
+Integrating with Trello's Power-Up SDK
 
 Trello provides a JavaScript SDK that your extension can load. The SDK exposes `TrelloPowerUp` globally, which you initialize with your Power-Up's capabilities.
 
@@ -120,7 +120,7 @@ window.TrelloPowerUp.initialize({
 });
 ```
 
-## Communicating Between Chrome Extension and Trello
+Communicating Between Chrome Extension and Trello
 
 The content script bridges your Chrome extension with Trello's iframe. This script injects the Power-Up SDK and handles messaging:
 
@@ -183,7 +183,7 @@ async function getTrelloToken() {
 }
 ```
 
-## Building a Practical Example: Card Priority Highlighter
+Building a Practical Example: Card Priority Highlighter
 
 Here's a complete example of a Chrome extension Power-Up that highlights cards based on priority keywords:
 
@@ -234,7 +234,7 @@ window.TrelloPowerUp.initialize({
 });
 ```
 
-## Best Practices for Production
+Best Practices for Production
 
 Store your API credentials securely using Chrome's identity API rather than hardcoding tokens:
 
@@ -257,15 +257,15 @@ chrome.identity.getAuthToken({ interactive: false }, (token) => {
 });
 ```
 
-Always handle the case where users haven't authorized Trello. Provide clear UI prompts and fallback behavior. Test your extension across different Trello plans—some Power-Up capabilities require Trello Gold or Enterprise.
+Always handle the case where users haven't authorized Trello. Provide clear UI prompts and fallback behavior. Test your extension across different Trello plans, some Power-Up capabilities require Trello Gold or Enterprise.
 
-## Wrapping Up
+Wrapping Up
 
 Building a Chrome extension that functions as a Trello Power-Up combines the best of both worlds: browser extension capabilities with Trello's embedded Power-Up SDK. The architecture described here gives you the foundation to create sophisticated integrations that can read, modify, and enhance Trello cards directly from the browser.
 
 Start with the basic structure, add Trello SDK initialization, then layer on your specific functionality. The Trello developer documentation provides additional capability references, and their Power-Up framework handles the complexity of iframe communication and authentication.
 
-## Advanced: Card Automation Triggers
+Advanced: Card Automation Triggers
 
 React to card events automatically. When a card moves to "Done", trigger a deployment webhook:
 
@@ -280,16 +280,16 @@ t.board('all').then(board => {
 });
 ```
 
-## Step-by-Step: Adding the Extension to Trello
+Step-by-Step: Adding the Extension to Trello
 
 1. Load the extension via `chrome://extensions` > "Load unpacked"
 2. Navigate to your Trello board
 3. Click "Power-Ups" in the board menu
 4. Select "Custom Power-Up" and enter your extension's capability URL
 5. The Power-Up iframe initializes and renders custom buttons on each card
-6. Click a card — your extension's custom section appears below the card description
+6. Click a card. your extension's custom section appears below the card description
 
-## Comparison with Native Trello Integrations
+Comparison with Native Trello Integrations
 
 | Feature | Chrome Extension + Power-Up | Trello Butler | Zapier |
 |---|---|---|---|
@@ -298,11 +298,11 @@ t.board('all').then(board => {
 | Runs when browser is closed | No | Yes | Yes |
 | Cost | Free | Free/Gold plan | Subscription |
 
-## Troubleshooting Common Issues
+Troubleshooting Common Issues
 
-**Power-Up iframe not loading**: Trello requires Power-Up pages served over HTTPS. Use `ngrok` during development to expose your local server with a public HTTPS URL.
+Power-Up iframe not loading: Trello requires Power-Up pages served over HTTPS. Use `ngrok` during development to expose your local server with a public HTTPS URL.
 
-**Trello API rate limits**: Batch multiple card requests using the `/batch` endpoint:
+Trello API rate limits: Batch multiple card requests using the `/batch` endpoint:
 
 ```javascript
 async function getBatchCardData(cardIds) {
@@ -312,7 +312,7 @@ async function getBatchCardData(cardIds) {
 }
 ```
 
-**Custom button not appearing**: Ensure your capability registration includes `card-buttons`:
+Custom button not appearing: Ensure your capability registration includes `card-buttons`:
 
 ```javascript
 TrelloPowerUp.initialize({ 'card-buttons': (t) => [{ text: 'My Action', callback: myAction }] });
@@ -321,10 +321,10 @@ TrelloPowerUp.initialize({ 'card-buttons': (t) => [{ text: 'My Action', callback
 The combination of Chrome extension capabilities with Trello's Power-Up framework gives you a powerful integration layer for custom project management automation.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

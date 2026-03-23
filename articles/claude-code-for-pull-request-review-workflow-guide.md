@@ -12,11 +12,11 @@ reviewed: true
 ---
 
 {% raw %}
-# Claude Code for Pull Request Review Workflow Guide
+Claude Code for Pull Request Review Workflow Guide
 
 Pull request reviews are a critical part of software development, but they can also be time-consuming and inconsistent. Claude Code transforms your review process by providing intelligent, context-aware code analysis that helps you identify issues faster, maintain quality standards, and focus your attention where it matters most. This guide shows you how to integrate Claude into your PR workflow effectively.
 
-## Setting Up Claude for Pull Request Reviews
+Setting Up Claude for Pull Request Reviews
 
 Before diving into review workflows, ensure Claude Code is properly configured for your project. The key is creating a dedicated skill for code reviews that understands your project's standards, coding conventions, and common pitfall patterns.
 
@@ -31,37 +31,37 @@ tools: [read_file, bash, glob]
 
 You are an expert code reviewer helping improve code quality. When given a diff or changed files, analyze them for:
 
-1. **Security vulnerabilities** - injection risks, exposed secrets, improper validation
-2. **Performance issues** - N+1 queries, unnecessary computations, missing caching
-3. **Code smells** - duplicated logic, overly complex functions, unclear naming
-4. **Testing gaps** - missing test coverage for new functionality
-5. **Documentation** - unclear comments or missing API docs
+1. Security vulnerabilities - injection risks, exposed secrets, improper validation
+2. Performance issues - N+1 queries, unnecessary computations, missing caching
+3. Code smells - duplicated logic, overly complex functions, unclear naming
+4. Testing gaps - missing test coverage for new functionality
+5. Documentation - unclear comments or missing API docs
 
 Provide feedback in a structured format with severity levels (critical, major, minor, suggestion).
 ```
 
 This skill gives Claude the context it needs to provide relevant, project-specific feedback.
 
-## Reviewing Changed Files
+Reviewing Changed Files
 
 The most straightforward way to use Claude for PR reviews is to analyze the files that have changed. Here's a practical workflow:
 
-### Step 1: Get the Diff
+Step 1: Get the Diff
 
 First, capture the changes you want reviewed:
 
 ```bash
-# Get diff for a specific PR
+Get diff for a specific PR
 git diff main...feature-branch > changes.diff
 
-# Or review unstaged changes
+Or review unstaged changes
 git diff
 
-# Review staged changes
+Review staged changes
 git diff --cached
 ```
 
-### Step 2: Invoke Claude for Review
+Step 2: Invoke Claude for Review
 
 Use your review skill to analyze the changes:
 
@@ -79,20 +79,20 @@ Please review the following changes. I've attached the diff from my feature bran
 
 Claude will analyze the diff and provide structured feedback with specific line references and severity levels.
 
-## Practical Review Examples
+Practical Review Examples
 
 Let's walk through concrete examples of how Claude enhances different aspects of PR review.
 
-### Example 1: Security Vulnerability Detection
+Example 1: Security Vulnerability Detection
 
 When reviewing authentication code, Claude can identify common security mistakes:
 
 ```
 Here's my analysis of the auth changes:
 
-## Critical Issues
+Critical Issues
 
-**Line 42-45: SQL Injection Risk**
+Line 42-45: SQL Injection Risk
 ```javascript
 // VULNERABLE
 const query = `SELECT * FROM users WHERE id = ${userId}`;
@@ -105,18 +105,18 @@ const query = 'SELECT * FROM users WHERE id = $1';
 const result = await db.query(query, [userId]);
 ```
 
-**Line 78: Missing Authorization Check**
+Line 78: Missing Authorization Check
 The `deleteUser` function validates the request but doesn't verify the caller has admin privileges.
 ```
 
-### Example 2: Performance Analysis
+Example 2: Performance Analysis
 
 Claude excels at spotting performance anti-patterns:
 
 ```
-## Performance Review
+Performance Review
 
-**N+1 Query Problem (Lines 23-31)**
+N+1 Query Problem (Lines 23-31)
 ```javascript
 // Current: Makes N+1 database calls
 for (const order of orders) {
@@ -125,7 +125,7 @@ for (const order of orders) {
 }
 ```
 
-**Suggested Fix:**
+Suggested Fix:
 ```javascript
 // Better: Single query with JOIN
 const orders = await db.query(`
@@ -138,32 +138,32 @@ const orders = await db.query(`
 This reduces 101 queries to 1 for 100 orders.
 ```
 
-### Example 3: Code Quality Improvements
+Example 3: Code Quality Improvements
 
 Beyond bugs and security, Claude helps enforce coding standards:
 
 ```
-## Code Quality Suggestions
+Code Quality Suggestions
 
-**Naming Clarity (Line 15)**
+Naming Clarity (Line 15)
 The function `process()` is too generic. Consider renaming to `validateOrderInput()` to convey its purpose.
 
-**Function Length (Lines 50-120)**
+Function Length (Lines 50-120)
 This 70-line function handles validation, database operations, and email notifications. Consider extracting:
 - `validateOrderData()` 
 - `saveOrderToDatabase()`
 - `sendOrderConfirmation()`
 
-**Missing Error Handling (Line 89)**
+Missing Error Handling (Line 89)
 The API call lacks try-catch. If the external service fails, users see a generic 500 error.
 ```
 
-## Integrating with Your CI Pipeline
+Integrating with Your CI Pipeline
 
 For teams wanting automated preliminary reviews, integrate Claude into your CI workflow:
 
 ```yaml
-# .github/workflows/code-review.yml
+.github/workflows/code-review.yml
 name: Claude PR Review
 on: [pull_request]
 
@@ -194,9 +194,9 @@ jobs:
 
 This runs an automated preliminary review on every PR, flagging obvious issues before human reviewers dive in.
 
-## Best Practices for Effective Reviews
+Best Practices for Effective Reviews
 
-### 1. Provide Context
+1. Provide Context
 
 The more context you give Claude, the better its feedback. Include:
 
@@ -205,7 +205,7 @@ The more context you give Claude, the better its feedback. Include:
 - Areas of particular concern
 - Your team's coding standards or style guide
 
-### 2. Review the Reviewer
+2. Review the Reviewer
 
 Don't accept Claude's feedback blindly. Use it as a second opinion, not a replacement for your judgment. Claude can miss:
 
@@ -213,7 +213,7 @@ Don't accept Claude's feedback blindly. Use it as a second opinion, not a replac
 - Architectural decisions that conflict with team strategy
 - Context from conversations outside the code
 
-### 3. Iterate on Your Review Skill
+3. Iterate on Your Review Skill
 
 As you use Claude for reviews, refine its skill based on:
 
@@ -223,35 +223,35 @@ As you use Claude for reviews, refine its skill based on:
 
 Update the skill's instructions to improve accuracy over time.
 
-### 4. Combine with Human Review
+4. Combine with Human Review
 
-Claude handles the mechanical aspects well—syntax errors, obvious bugs, style violations. Reserve human attention for:
+Claude handles the mechanical aspects well, syntax errors, obvious bugs, style violations. Reserve human attention for:
 
 - Architectural decisions
 - Business logic validation
 - User experience considerations
 - Edge cases specific to your domain
 
-## Actionable Summary
+Actionable Summary
 
 To get started with Claude-powered PR reviews today:
 
-1. **Create a review skill** with your project's standards and common issue patterns
-2. **Run manual reviews first** to calibrate Claude's feedback quality
-3. **Add to CI** for automated preliminary reviews on every PR
-4. **Iterate and improve** the skill based on real-world feedback
+1. Create a review skill with your project's standards and common issue patterns
+2. Run manual reviews first to calibrate Claude's feedback quality
+3. Add to CI for automated preliminary reviews on every PR
+4. Iterate and improve the skill based on real-world feedback
 
-Claude doesn't replace thoughtful code review—it makes you more effective by handling the mechanical detection work, so you can focus on the higher-level architectural and design decisions that truly matter.
+Claude doesn't replace thoughtful code review, it makes you more effective by handling the mechanical detection work, so you can focus on the higher-level architectural and design decisions that truly matter.
 
 The result: faster reviews, more consistent quality, and more time for the nuanced discussions that improve your codebase.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 {% endraw %}

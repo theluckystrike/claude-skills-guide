@@ -13,21 +13,21 @@ score: 7
 ---
 
 
-# Claude Code Axe Accessibility Testing Guide
+Claude Code Axe Accessibility Testing Guide
 
 Automated accessibility testing has become essential for building inclusive web applications. Axe, the accessibility engine from Deque Systems, provides a powerful library for detecting accessibility violations directly in your development workflow. This guide demonstrates how to integrate axe accessibility testing with Claude Code using specialized skills and practical automation patterns.
 
-## Understanding Axe and Accessibility Testing
+Understanding Axe and Accessibility Testing
 
 Axe is an open-source accessibility testing engine that runs in browsers and CI/CD pipelines. It checks against WCAG 2.1, Section 508, and ARIA accessibility standards. The library offers over 100 accessibility rules covering common issues like missing alt text, improper heading hierarchy, color contrast failures, and keyboard navigation problems.
 
-When combined with Claude Code, you can automate the entire accessibility testing lifecycle—from initial audit through remediation validation. The key is structuring your prompts effectively and using Claude skills designed for testing workflows.
+When combined with Claude Code, you can automate the entire accessibility testing lifecycle, from initial audit through remediation validation. The key is structuring your prompts effectively and using Claude skills designed for testing workflows.
 
 Axe operates in three modes: browser extensions for manual audits, JavaScript library injection for automated testing, and CLI tools for headless pipeline integration. Each mode serves a different part of the workflow. Browser extensions are useful for quick spot-checks during development. The JavaScript library integrates with Playwright, Puppeteer, WebdriverIO, and testing frameworks like Jest and Vitest. The CLI tool handles CI/CD scenarios where you need to fail builds on violations.
 
-Understanding axe's violation severity levels is critical for prioritization. Critical violations block screen reader users entirely—examples include interactive elements with no accessible name, or form fields with no associated labels. Serious violations make tasks significantly harder but not impossible. Moderate and minor violations create friction and should be resolved but rarely block work entirely. A practical strategy is to set your CI/CD pipeline to fail on critical and serious, track moderate in your backlog, and fix minor violations as you touch related code.
+Understanding axe's violation severity levels is critical for prioritization. Critical violations block screen reader users entirely, examples include interactive elements with no accessible name, or form fields with no associated labels. Serious violations make tasks significantly harder but not impossible. Moderate and minor violations create friction and should be resolved but rarely block work entirely. A practical strategy is to set your CI/CD pipeline to fail on critical and serious, track moderate in your backlog, and fix minor violations as you touch related code.
 
-## Setting Up Your Testing Environment
+Setting Up Your Testing Environment
 
 First, install the required dependencies in your project:
 
@@ -94,7 +94,7 @@ async function auditPage(url) {
 
 The Playwright integration is preferred over raw Puppeteer because Playwright handles authentication flows, dynamic content rendering, and multi-page navigation more reliably. When testing applications that require login, you can authenticate first, then run the audit on protected pages.
 
-## Using Claude Code Skills for Accessibility
+Using Claude Code Skills for Accessibility
 
 The `/frontend-design` skill helps generate accessible components from the start. When starting a new component, prompt Claude with explicit accessibility requirements:
 
@@ -126,7 +126,7 @@ async function accessibilitySpec(driver) {
 }
 ```
 
-When using Claude to analyze axe output, paste the raw JSON violations array into your prompt rather than summarizing it. Claude can read the full structure—including the `nodes[].failureSummary` and `nodes[].target` selectors—and provide targeted fixes for each specific element. A prompt like "Fix these axe violations: [paste JSON]" produces more precise recommendations than "I have some accessibility violations."
+When using Claude to analyze axe output, paste the raw JSON violations array into your prompt rather than summarizing it. Claude can read the full structure, including the `nodes[].failureSummary` and `nodes[].target` selectors, and provide targeted fixes for each specific element. A prompt like "Fix these axe violations: [paste JSON]" produces more precise recommendations than "I have some accessibility violations."
 
 You can also use Claude to write targeted axe configurations. If your project uses third-party components that intentionally fail certain rules (for example, a legacy date picker you cannot modify), Claude can generate rule exclusions that suppress known false positives without hiding real problems:
 
@@ -140,11 +140,11 @@ const results = await new AxeBuilder({ page })
 
 Document every exclusion with a comment explaining why it exists. Claude is good at generating these explanatory comments when you provide the business context.
 
-## Practical Workflow for Automated Audits
+Practical Workflow for Automated Audits
 
 Integrate axe testing into your Claude Code workflow using these steps:
 
-### 1. Initial Audit with Claude
+1. Initial Audit with Claude
 
 Ask Claude Code to run an accessibility audit:
 
@@ -171,7 +171,7 @@ Claude can analyze the JSON output and translate technical violations into actio
 
 A common mistake is relying on `placeholder` as a substitute for a visible label. Screen readers do not consistently announce placeholder text. The fix above adds a visible label (which also benefits sighted users) and adds a hint linked via `aria-describedby` for additional context. This pattern satisfies WCAG 1.3.1 (Info and Relationships) and 3.3.2 (Labels or Instructions).
 
-### 2. Remediation with Claude Skills
+2. Remediation with Claude Skills
 
 Use `/pdf` skill to generate accessibility compliance reports for stakeholders. Combine with `/supermemory` to track accessibility debt across sprints:
 
@@ -183,12 +183,12 @@ the component location and estimated fix time.
 
 When remediating a backlog of violations, group them by component rather than by rule type. Fixing all violations in the navigation component at once is more efficient than fixing all `aria-required-attr` violations across unrelated components. Ask Claude to group violations by component, then generate targeted fix batches.
 
-### 3. CI/CD Integration
+3. CI/CD Integration
 
 Add axe testing to your continuous integration:
 
 ```yaml
-# GitHub Actions workflow
+GitHub Actions workflow
 - name: Accessibility Audit
   run: |
     npm run start &
@@ -218,7 +218,7 @@ Configure axe-cli to fail builds on critical violations:
 A more practical CI configuration gates on impact level rather than total count. This prevents noise from low-priority violations blocking deployments:
 
 ```bash
-# Only fail on critical and serious violations
+Only fail on critical and serious violations
 node -e "
 const report = require('./a11y-report.json');
 const blocking = report[0].violations.filter(v =>
@@ -233,9 +233,9 @@ console.log('No blocking violations. Moderate/minor tracked separately.');
 "
 ```
 
-## Common Axe Violations and Fixes
+Common Axe Violations and Fixes
 
-### Color Contrast Failures
+Color Contrast Failures
 
 Axe frequently flags contrast ratio issues. Use Claude to suggest fixes:
 
@@ -264,7 +264,7 @@ When working with design systems, contrast failures often originate in color tok
 
 Catching a failing token at the design system level is significantly more efficient than fixing it in dozens of individual components.
 
-### Missing ARIA Attributes
+Missing ARIA Attributes
 
 Dynamic content requires proper ARIA handling:
 
@@ -298,7 +298,7 @@ The `aria-expanded` pattern applies to any disclosure widget: accordions, dropdo
 
 The `aria-controls` attribute links the button to the element it controls, which helps screen reader users understand the relationship even without visual context.
 
-### Focus Management Issues
+Focus Management Issues
 
 Ensure proper focus handling for modal dialogs:
 
@@ -343,9 +343,9 @@ function closeModal(modalElement) {
 }
 ```
 
-Without this, keyboard users lose their place in the page after dismissing a modal—they land at the top of the document and must tab through everything again to return to where they were.
+Without this, keyboard users lose their place in the page after dismissing a modal, they land at the top of the document and must tab through everything again to return to where they were.
 
-### Landmark Region Violations
+Landmark Region Violations
 
 Axe also checks for missing landmark regions. Pages without proper landmarks force screen reader users to navigate linearly through every element to find content. A complete landmark structure looks like:
 
@@ -363,7 +363,7 @@ Axe also checks for missing landmark regions. Pages without proper landmarks for
 
 If your page has multiple navigation elements (main nav plus breadcrumbs, for example), each needs a unique `aria-label` to distinguish them. Axe flags duplicate landmark roles without distinguishing labels as a violation.
 
-## Comparing Axe Against Other Testing Tools
+Comparing Axe Against Other Testing Tools
 
 Axe is not the only automated accessibility testing tool, and understanding its strengths and limitations helps you build a complete testing strategy.
 
@@ -377,30 +377,30 @@ Axe is not the only automated accessibility testing tool, and understanding its 
 
 Automated tools collectively catch about 30-40% of WCAG violations. The remaining violations require manual testing: checking tab order makes logical sense, verifying that screen reader announcements are meaningful, testing with real assistive technologies like NVDA, JAWS, or VoiceOver. Use axe as your automated baseline, then layer manual testing on top for complete coverage.
 
-## Best Practices for Sustainable Accessibility
+Best Practices for Sustainable Accessibility
 
-1. **Run tests locally before commits**: Catch issues early in development
-2. **Use axe-core in component tests**: Test accessibility at the unit level
-3. **Automate visual regression checks**: Combine with tools like Percy for visual a11y validation
-4. **Document accessibility decisions**: Use /supermemory to track patterns and exceptions
-5. **Prioritize critical violations**: Address critical and serious issues before minor ones
-6. **Test with real users**: Automated tools cannot replace testing with people who use assistive technology
-7. **Establish a baseline early**: Running axe on a new project before writing any code gives you a clean baseline to maintain; retrofitting accessibility on legacy code is significantly harder
-8. **Keep axe-core updated**: New rules are added regularly; updating the library can surface violations in previously clean code, which is worth catching early
+1. Run tests locally before commits: Catch issues early in development
+2. Use axe-core in component tests: Test accessibility at the unit level
+3. Automate visual regression checks: Combine with tools like Percy for visual a11y validation
+4. Document accessibility decisions: Use /supermemory to track patterns and exceptions
+5. Prioritize critical violations: Address critical and serious issues before minor ones
+6. Test with real users: Automated tools cannot replace testing with people who use assistive technology
+7. Establish a baseline early: Running axe on a new project before writing any code gives you a clean baseline to maintain; retrofitting accessibility on legacy code is significantly harder
+8. Keep axe-core updated: New rules are added regularly; updating the library can surface violations in previously clean code, which is worth catching early
 
-## Conclusion
+Conclusion
 
 Integrating axe accessibility testing with Claude Code transforms accessibility from a periodic audit into a continuous process. By using skills like `/frontend-design` for accessible component generation and `/tdd` for automated test creation, you build accessibility into your development DNA rather than treating it as an afterthought.
 
-The key is starting simple—run an initial audit, fix critical violations, then expand your test coverage incrementally. Claude Code excels at translating technical axe output into specific, actionable fixes that developers can implement immediately.
+The key is starting simple, run an initial audit, fix critical violations, then expand your test coverage incrementally. Claude Code excels at translating technical axe output into specific, actionable fixes that developers can implement immediately.
 
 As your testing matures, extend your axe setup to cover authenticated pages, dynamic content loaded after interaction, and third-party embedded components. The combination of automated axe coverage in CI, manual spot-checks in the browser extension, and Claude-assisted remediation creates a workflow that keeps accessibility issues from accumulating into an unmanageable backlog.
 
-## Related Reading
+Related Reading
 
-- [Claude Code WCAG Accessibility Audit Workflow](/claude-code-wcag-accessibility-audit-workflow/) — WCAG is the standard axe tests against
-- [Claude Code Aria Labels Implementation Guide](/claude-code-aria-labels-implementation-guide/) — Fix the ARIA issues axe discovers
-- [Claude Code Keyboard Navigation Testing Guide](/claude-code-keyboard-navigation-testing-guide/) — Combine axe with keyboard nav testing
-- [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/) — Run axe tests in your TDD workflow
+- [Claude Code WCAG Accessibility Audit Workflow](/claude-code-wcag-accessibility-audit-workflow/). WCAG is the standard axe tests against
+- [Claude Code Aria Labels Implementation Guide](/claude-code-aria-labels-implementation-guide/). Fix the ARIA issues axe discovers
+- [Claude Code Keyboard Navigation Testing Guide](/claude-code-keyboard-navigation-testing-guide/). Combine axe with keyboard nav testing
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/). Run axe tests in your TDD workflow
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

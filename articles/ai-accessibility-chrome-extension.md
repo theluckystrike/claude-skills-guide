@@ -14,17 +14,17 @@ tags: [claude-code, claude-skills]
 
 
 {% raw %}
-# AI Accessibility Chrome Extension: A Developer Guide
+AI Accessibility Chrome Extension: A Developer Guide
 
 Building an accessibility-focused Chrome extension that uses artificial intelligence opens up powerful possibilities for making the web more inclusive. This guide walks you through the core concepts, APIs, and practical implementation patterns for creating an AI-powered accessibility tool from scratch. If you already have an extension and want to test it for accessibility compliance, see the companion guide on [Chrome extension accessibility auditing](/chrome-extension-accessibility-audit/).
 
-## Understanding the Architecture
+Understanding the Architecture
 
-A Chrome extension for accessibility typically operates at three levels: content scripts that interact with page DOM, background workers for persistent state, and popup interfaces for user controls. When you add AI capabilities, you introduce a fourth layer—an inference service that processes accessibility data and generates meaningful improvements.
+A Chrome extension for accessibility typically operates at three levels: content scripts that interact with page DOM, background workers for persistent state, and popup interfaces for user controls. When you add AI capabilities, you introduce a fourth layer, an inference service that processes accessibility data and generates meaningful improvements.
 
 The most effective AI accessibility extensions focus on three primary use cases: automated alt-text generation for images, semantic analysis of complex layouts, and real-time text simplification for readability. Each requires different technical approaches but share common architectural patterns.
 
-## Setting Up Your Extension
+Setting Up Your Extension
 
 Every Chrome extension starts with a manifest file. For an AI accessibility extension, you'll need version 3 of the manifest and specific permissions:
 
@@ -56,7 +56,7 @@ Every Chrome extension starts with a manifest file. For an AI accessibility exte
 
 The critical permission here is `scripting`, which allows your extension to inject JavaScript into web pages. Without it, your accessibility features cannot interact with page content.
 
-## Content Script Implementation
+Content Script Implementation
 
 The content script serves as your primary interface with the page. Here's how to structure it for accessibility improvements:
 
@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 This script analyzes elements as they appear on the page and sends data to your AI service for processing.
 
-## Practical Example: Alt-Text Generation
+Practical Example: Alt-Text Generation
 
 One of the most useful features for an accessibility extension is automatic alt-text generation for images. Here's how to implement this:
 
@@ -176,7 +176,7 @@ async function generateAltText(image) {
 
 This approach captures the image, sends it to an AI vision model, and applies the generated description as the alt attribute. Users can then verify and edit the generated text.
 
-## Handling User Preferences
+Handling User Preferences
 
 Power users expect control over how accessibility features work. Store preferences using the Chrome storage API:
 
@@ -205,14 +205,14 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 This allows users to toggle features on and off, choose their preferred AI service, and customize sensitivity thresholds.
 
-## Performance Considerations
+Performance Considerations
 
 AI operations can be resource-intensive. Implement these patterns to maintain smooth user experience:
 
-1. **Debounce analysis requests** — Wait until users stop scrolling or interacting before running AI analysis
-2. **Use web workers** — Offload computation to prevent blocking the main thread
-3. **Cache results** — Store AI responses for identical elements to avoid redundant API calls
-4. **Limit scope** — Analyze only visible elements, not the entire page
+1. Debounce analysis requests. Wait until users stop scrolling or interacting before running AI analysis
+2. Use web workers. Offload computation to prevent blocking the main thread
+3. Cache results. Store AI responses for identical elements to avoid redundant API calls
+4. Limit scope. Analyze only visible elements, not the entire page
 
 ```javascript
 // Debounce utility
@@ -234,7 +234,7 @@ window.addEventListener('scroll', debounce(() => {
 }, 500));
 ```
 
-## Building the User Interface
+Building the User Interface
 
 Your popup should give users quick access to common actions:
 
@@ -270,7 +270,7 @@ Your popup should give users quick access to common actions:
 </html>
 ```
 
-## Testing Your Extension
+Testing Your Extension
 
 Load your extension in Chrome by navigating to `chrome://extensions/`, enabling Developer mode, and clicking "Load unpacked". Test across different websites and edge cases:
 
@@ -279,22 +279,22 @@ Load your extension in Chrome by navigating to `chrome://extensions/`, enabling 
 - Images loaded lazily
 - Dark mode and high contrast modes
 
-## Conclusion
+Conclusion
 
 Building an AI accessibility Chrome extension requires understanding both browser extension APIs and AI integration patterns. The core approach remains straightforward: extract meaningful data from page elements, process it through AI services, and apply improvements that enhance accessibility.
 
-Focus on specific, measurable improvements—alt-text accuracy, reading level adjustments, or color contrast fixes—rather than trying to solve every accessibility challenge at once. Users appreciate focused tools that solve real problems effectively.
+Focus on specific, measurable improvements, alt-text accuracy, reading level adjustments, or color contrast fixes, rather than trying to solve every accessibility challenge at once. Users appreciate focused tools that solve real problems effectively.
 
 Start with one core feature, test thoroughly, and expand gradually. The accessibility improvements your extension provides directly impact users who need them most.
 
 ---
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

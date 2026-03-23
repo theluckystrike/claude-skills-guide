@@ -13,15 +13,15 @@ score: 8
 
 # Claude Code for ZenRows Scraping Workflow Tutorial
 
-Web scraping has evolved significantly with the emergence of AI-powered tools. ZenRows provides a powerful API that handles anti-bot protection, CAPTCHA solving, and proxy rotation—making it an excellent choice for developers who need reliable scraping capabilities. When combined with Claude Code, you can create intelligent, maintainable scraping workflows that adapt to dynamic websites.
+Web scraping has evolved significantly with the emergence of AI-powered tools. ZenRows provides a powerful API that handles anti-bot protection, CAPTCHA solving, and proxy rotation, making it an excellent choice for developers who need reliable scraping capabilities. When combined with Claude Code, you can create intelligent, maintainable scraping workflows that adapt to dynamic websites.
 
 This tutorial walks you through building a complete ZenRows scraping workflow using Claude Code. You'll learn how to set up the integration, handle common scraping challenges, and create reusable code that scales.
 
-## Prerequisites and Environment Setup
+Prerequisites and Environment Setup
 
 Before diving into the code, ensure you have Node.js installed and a ZenRows API key. If you haven't already, sign up at ZenRows to get your API key.
 
-### Installing Required Dependencies
+Installing Required Dependencies
 
 Create a new directory for your project and install the necessary packages:
 
@@ -45,7 +45,7 @@ claude
 
 You can create a `CLAUDE.md` file where you define project-specific instructions for Claude Code, which it will read automatically at session start.
 
-## Building Your First ZenRows Scraper
+Building Your First ZenRows Scraper
 
 Now let's create a basic scraper that uses ZenRows to fetch webpage content. Create a file called `scraper.js`:
 
@@ -90,22 +90,22 @@ module.exports = ZenRowsScraper;
 
 This basic class provides the foundation for all your scraping needs. The key parameters include `js_rendering` for JavaScript-heavy sites, `premium_proxy` for difficult targets, and `country` for geo-specific requests.
 
-## Integrating Claude Code for Smart Scraping
+Integrating Claude Code for Smart Scraping
 
 The real power emerges when you combine ZenRows with Claude Code. Create a CLAUDE.md file to guide Claude Code on your scraping project:
 
 ```markdown
-# ZenRows Scraping Project
+ZenRows Scraping Project
 
-## Project Overview
+Project Overview
 This project uses ZenRows API for web scraping with Claude Code assistance.
 
-## Key Files
+Key Files
 - `scraper.js` - Main scraping class
 - `parser.js` - Content extraction utilities
 - `workflow.js` - Orchestration scripts
 
-## Guidelines
+Guidelines
 - Always respect robots.txt when possible
 - Add rate limiting between requests
 - Store results in structured JSON format
@@ -118,7 +118,7 @@ Now you can ask Claude Code to help with specific scraping tasks:
 
 Claude Code can analyze the HTML structure and create targeted extraction functions.
 
-## Handling Dynamic Content
+Handling Dynamic Content
 
 Many modern websites use JavaScript to load content dynamically. ZenRows handles this with its JavaScript rendering feature. Here's an enhanced scraper that handles various dynamic content scenarios:
 
@@ -159,7 +159,7 @@ class DynamicScraper extends ZenRowsScraper {
 
 This pattern handles transient failures gracefully, which is crucial for production scraping systems.
 
-## Creating Reusable Extraction Functions
+Creating Reusable Extraction Functions
 
 One of Claude Code's strengths is generating targeted extraction logic. Here's how to structure your extraction utilities:
 
@@ -199,7 +199,7 @@ class ContentExtractor {
 
 Ask Claude Code to adapt these patterns for specific websites by describing the HTML structure you're working with.
 
-## Building Production Workflows
+Building Production Workflows
 
 For larger scraping projects, create orchestration scripts that manage multiple pages:
 
@@ -241,19 +241,19 @@ class ScraperWorkflow {
 
 This workflow processes URLs in controlled batches, respecting rate limits while maximizing throughput.
 
-## Best Practices for Claude Code Scraping Projects
+Best Practices for Claude Code Scraping Projects
 
 When working on ZenRows projects with Claude Code, keep these practices in mind:
 
-**Error Handling**: Always implement comprehensive error handling. Network requests fail for numerous reasons, and your scraper should handle each case gracefully.
+Error Handling: Always implement comprehensive error handling. Network requests fail for numerous reasons, and your scraper should handle each case gracefully.
 
-**Rate Limiting**: ZenRows provides different tier plans with varying rate limits. Implement exponential backoff to avoid hitting these limits.
+Rate Limiting: ZenRows provides different tier plans with varying rate limits. Implement exponential backoff to avoid hitting these limits.
 
-**Data Validation**: After scraping, validate the extracted data. Claude Code can help you write validation logic that ensures data quality before processing.
+Data Validation: After scraping, validate the extracted data. Claude Code can help you write validation logic that ensures data quality before processing.
 
-**Logging**: Maintain detailed logs of your scraping activities. This helps debug issues and provides audit trails for compliance purposes.
+Logging: Maintain detailed logs of your scraping activities. This helps debug issues and provides audit trails for compliance purposes.
 
-## Conclusion
+Conclusion
 
 Combining Claude Code with ZenRows creates a powerful scraping solution that balances simplicity with sophistication. The ZenRows API handles the complex anti-bot mechanisms, while Claude Code helps you write maintainable, adaptive extraction logic.
 
@@ -261,10 +261,10 @@ Start with the basic scraper class, then progressively add features like retry l
 
 Remember to always scrape responsibly and respect the websites you target. With the right approach, you'll have a reliable, AI-assisted scraping system that serves your data needs while maintaining ethical standards.
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

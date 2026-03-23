@@ -15,11 +15,11 @@ score: 8
 
 
 {% raw %}
-# Claude Code for AI Red Teaming Workflow Guide
+Claude Code for AI Red Teaming Workflow Guide
 
 AI red teaming has become an essential practice for identifying vulnerabilities, biases, and failure modes in AI systems before deployment. This guide shows you how to build effective red teaming workflows using Claude Code, enabling systematic testing and improvement of your AI applications.
 
-## Understanding AI Red Teaming with Claude Code
+Understanding AI Red Teaming with Claude Code
 
 AI red teaming involves simulating adversarial attacks, probing for harmful outputs, and stress-testing AI systems to discover weaknesses. Claude Code enhances this process by automating test generation, orchestrating complex attack scenarios, and analyzing results at scale.
 
@@ -29,11 +29,11 @@ When you integrate Claude Code into your red teaming workflow, you gain several 
 - Consistent documentation of findings
 - Reproducible testing pipelines
 
-## Setting Up Your Red Teaming Environment
+Setting Up Your Red Teaming Environment
 
 Before building workflows, establish a proper testing environment that isolates your red teaming activities from production systems.
 
-### Project Structure
+Project Structure
 
 Create a dedicated red teaming project structure:
 
@@ -47,16 +47,16 @@ Organize your project with clear separation between test cases, results, and rep
 
 ```
 ai-red-team/
-├── test-cases/
-│   ├── bias-tests.json
-│   ├── jailbreak-attempts.json
-│   └── toxicity-tests.json
-├── results/
-├── reports/
-└── runner.js
+ test-cases/
+    bias-tests.json
+    jailbreak-attempts.json
+    toxicity-tests.json
+ results/
+ reports/
+ runner.js
 ```
 
-### Configuration for Safe Testing
+Configuration for Safe Testing
 
 Always use separate API keys and environment variables for red teaming:
 
@@ -71,11 +71,11 @@ export const config = {
 };
 ```
 
-## Building Test Case Libraries
+Building Test Case Libraries
 
 Effective red teaming requires comprehensive test case libraries covering different vulnerability categories.
 
-### Bias Testing
+Bias Testing
 
 Create systematic bias tests across demographic categories:
 
@@ -94,7 +94,7 @@ Create systematic bias tests across demographic categories:
 }
 ```
 
-### Jailbreak Attempt Testing
+Jailbreak Attempt Testing
 
 Document common jailbreak patterns for detection:
 
@@ -119,9 +119,9 @@ Document common jailbreak patterns for detection:
 }
 ```
 
-## Automating Test Execution
+Automating Test Execution
 
-Build a robust test runner that executes all test cases systematically:
+Build a solid test runner that executes all test cases systematically:
 
 ```javascript
 // runner.js
@@ -194,11 +194,11 @@ class RedTeamRunner {
 export { RedTeamRunner };
 ```
 
-## Analyzing Results and Generating Reports
+Analyzing Results and Generating Reports
 
 After running tests, analyze the results to identify patterns and generate actionable reports.
 
-### Result Analysis Pattern
+Result Analysis Pattern
 
 ```javascript
 // analyze.js
@@ -253,7 +253,7 @@ function containsHarmfulContent(response) {
 }
 ```
 
-### Report Generation
+Report Generation
 
 Create comprehensive reports for stakeholders:
 
@@ -263,25 +263,25 @@ export function generateReport(analysis, category) {
   const report = `# AI Red Teaming Report - ${category}
 Date: ${new Date().toISOString()}
 
-## Summary
+Summary
 - Total Tests: ${analysis.totalTests}
 - Successful: ${analysis.successfulTests}
 - Errors: ${analysis.failedTests}
 
-## Vulnerabilities Found: ${analysis.vulnerabilitiesFound.length}
+Vulnerabilities Found: ${analysis.vulnerabilitiesFound.length}
 
-### By Severity
+By Severity
 - Critical: ${analysis.severityCounts.critical}
 - High: ${analysis.severityCounts.high}
 - Medium: ${analysis.severityCounts.medium}
 - Low: ${analysis.severityCounts.low}
 
-## Detailed Findings
+Detailed Findings
 ${analysis.vulnerabilitiesFound.map(v => 
-  `- **${v.testId}**: ${v.type}\n  Response: ${v.response}...`
+  `- ${v.testId}: ${v.type}\n  Response: ${v.response}...`
 ).join('\n')}
 
-## Recommendations
+Recommendations
 1. Review all critical and high severity findings
 2. Implement additional safety guardrails
 3. Update training data to address identified biases
@@ -291,11 +291,11 @@ ${analysis.vulnerabilitiesFound.map(v =>
 }
 ```
 
-## Integrating with CI/CD Pipelines
+Integrating with CI/CD Pipelines
 
 Automate red teaming as part of your deployment pipeline to catch issues before they reach production.
 
-### GitHub Actions Example
+GitHub Actions Example
 
 ```yaml
 name: AI Red Teaming
@@ -319,31 +319,31 @@ jobs:
           path: results/
 ```
 
-## Best Practices for Effective Red Teaming
+Best Practices for Effective Red Teaming
 
 Follow these practices to maximize the value of your red teaming efforts:
 
-**Test Regularly**: Run red team tests after any significant model update or prompt change. Small modifications can introduce unexpected vulnerabilities.
+Test Regularly: Run red team tests after any significant model update or prompt change. Small modifications can introduce unexpected vulnerabilities.
 
-**Document Everything**: Maintain detailed records of test cases, findings, and remediation steps. This creates institutional knowledge and helps track improvements over time.
+Document Everything: Maintain detailed records of test cases, findings, and remediation steps. This creates institutional knowledge and helps track improvements over time.
 
-**Use Multiple Perspectives**: Rotate team members responsible for creating test cases. Different perspectives uncover different vulnerabilities.
+Use Multiple Perspectives: Rotate team members responsible for creating test cases. Different perspectives uncover different vulnerabilities.
 
-**Focus on Realistic Scenarios**: Prioritize test cases that reflect actual user behavior and attack patterns rather than theoretical vulnerabilities.
+Focus on Realistic Scenarios: Prioritize test cases that reflect actual user behavior and attack patterns rather than theoretical vulnerabilities.
 
-**Measure Progress**: Track vulnerability counts and severity over time to demonstrate improvement and justify continued investment in AI safety.
+Measure Progress: Track vulnerability counts and severity over time to demonstrate improvement and justify continued investment in AI safety.
 
-## Conclusion
+Conclusion
 
-Building a robust AI red teaming workflow with Claude Code enables systematic security testing and continuous improvement of your AI systems. By automating test execution, maintaining comprehensive test libraries, and integrating with CI/CD pipelines, you can catch vulnerabilities before they reach production while building more trustworthy AI applications.
+Building a solid AI red teaming workflow with Claude Code enables systematic security testing and continuous improvement of your AI systems. By automating test execution, maintaining comprehensive test libraries, and integrating with CI/CD pipelines, you can catch vulnerabilities before they reach production while building more trustworthy AI applications.
 
 Start with the basic patterns in this guide, then expand your test coverage based on your specific use cases and emerging threat patterns. Regular red teaming becomes more effective as your test libraries grow and your team gains experience identifying and addressing AI vulnerabilities.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

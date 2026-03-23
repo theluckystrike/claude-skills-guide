@@ -12,11 +12,11 @@ reviewed: true
 ---
 
 {% raw %}
-# Claude Code for Core Web Vitals Workflow Tutorial
+Claude Code for Core Web Vitals Workflow Tutorial
 
-Core Web Vitals have become essential metrics for web performance, directly impacting user experience and search engine rankings. Google's Core Web Vitals—Largest Contentful Paint (LCP), First Input Delay (FID), and Cumulative Layout Shift (CLS)—measure loading performance, interactivity, and visual stability. This tutorial shows you how to leverage Claude Code to create efficient workflows for measuring, monitoring, and optimizing these critical metrics.
+Core Web Vitals have become essential metrics for web performance, directly impacting user experience and search engine rankings. Google's Core Web Vitals, Largest Contentful Paint (LCP), First Input Delay (FID), and Cumulative Layout Shift (CLS), measure loading performance, interactivity, and visual stability. This tutorial shows you how to use Claude Code to create efficient workflows for measuring, monitoring, and optimizing these critical metrics.
 
-## Understanding Core Web Vitals Metrics
+Understanding Core Web Vitals Metrics
 
 Before diving into workflows, let's review what each metric measures, what counts as a passing score, and why it matters for your users:
 
@@ -29,14 +29,14 @@ Before diving into workflows, let's review what each metric measures, what count
 
 *Interaction to Next Paint (INP) replaced FID as an official Core Web Vital in March 2024. Lighthouse still reports FID, but Google Search Console and CrUX now use INP.
 
-- **Largest Contentful Paint (LCP)**: Marks when the largest visible content element—a hero image, a heading, or a block of text—finishes loading. Slow server response times, render-blocking resources, and un-optimized images are the most common culprits.
-- **First Input Delay (FID)**: Measures the delay between a user's first interaction (click, tap, key press) and the browser's response. Long JavaScript tasks on the main thread push this number up.
-- **Cumulative Layout Shift (CLS)**: Tracks unexpected layout movement during the page's lifetime. Images without explicit dimensions, late-loading ads, and dynamically injected content all contribute.
-- **Interaction to Next Paint (INP)**: The successor to FID, INP measures the full duration of every interaction, not just the first one, and reports the worst-case latency.
+- Largest Contentful Paint (LCP): Marks when the largest visible content element, a hero image, a heading, or a block of text, finishes loading. Slow server response times, render-blocking resources, and un-optimized images are the most common culprits.
+- First Input Delay (FID): Measures the delay between a user's first interaction (click, tap, key press) and the browser's response. Long JavaScript tasks on the main thread push this number up.
+- Cumulative Layout Shift (CLS): Tracks unexpected layout movement during the page's lifetime. Images without explicit dimensions, late-loading ads, and dynamically injected content all contribute.
+- Interaction to Next Paint (INP): The successor to FID, INP measures the full duration of every interaction, not just the first one, and reports the worst-case latency.
 
-Claude Code can help you audit all four metrics, identify root causes, and implement fixes systematically. Let's explore practical workflows.
+Claude Code can help you audit all four metrics, identify root causes, and implement fixes systematically.  practical workflows.
 
-## Setting Up Your Web Vitals Testing Environment
+Setting Up Your Web Vitals Testing Environment
 
 First, create a Claude Code skill that helps you run Web Vitals audits consistently. This skill encapsulates the tools and prompts needed across sessions:
 
@@ -70,13 +70,13 @@ lighthouse https://example.com \
   --chrome-flags="--headless"
 ```
 
-## Workflow 1: Running Quick Web Vitals Audits
+Workflow 1: Running Quick Web Vitals Audits
 
 The most common workflow is running a quick audit on a URL to get baseline metrics. Create a simple bash function to run Lighthouse and extract the scores you actually care about:
 
 ```bash
 #!/usr/bin/env bash
-# audit.sh — run Lighthouse and print Core Web Vitals summary
+audit.sh. run Lighthouse and print Core Web Vitals summary
 set -euo pipefail
 
 URL="${1:?Usage: audit.sh <url>}"
@@ -105,7 +105,7 @@ for (const [name, audit] of Object.entries(metrics)) {
   if (!audit) continue;
   const score = audit.score !== null ? (audit.score * 100).toFixed(0) : 'N/A';
   const value = audit.displayValue ?? audit.numericValue;
-  const status = audit.score >= 0.9 ? '✓ PASS' : audit.score >= 0.5 ? '~ NEEDS WORK' : '✗ FAIL';
+  const status = audit.score >= 0.9 ? ' PASS' : audit.score >= 0.5 ? '~ NEEDS WORK' : ' FAIL';
   console.log(`  ${name.padEnd(5)} ${String(value).padEnd(12)} score=${score}  ${status}`);
 }
 EOF
@@ -122,13 +122,13 @@ Read lighthouse-20260315-143022.json and explain:
 
 Claude Code will parse the JSON, identify the `lcp-lazy-loaded`, `render-blocking-resources`, and `unused-javascript` audits, and give you specific file names and sizes rather than generic advice.
 
-## Workflow 2: Batch Testing Multiple Pages
+Workflow 2: Batch Testing Multiple Pages
 
 For larger sites, you need to test multiple pages systematically. Create a workflow that reads a list of URLs and runs audits on each, then aggregates the results into a single report:
 
 ```bash
 #!/usr/bin/env bash
-# batch-audit.sh
+batch-audit.sh
 set -euo pipefail
 
 URLS_FILE="${1:-urls.txt}"
@@ -178,7 +178,7 @@ Highlight any page where LCP > 2.5s or CLS > 0.1.
 
 This batch approach lets you track performance across your entire site without manually opening each report. Store the reports directory in Git to compare runs over time.
 
-## Workflow 3: Automated Regression Detection
+Workflow 3: Automated Regression Detection
 
 Set up a GitHub Actions workflow that runs Web Vitals audits on every pull request and blocks merges that regress your scores:
 
@@ -248,16 +248,16 @@ Suggest thresholds for each Core Web Vital assertion that:
 - Match our P75 field data from CrUX
 ```
 
-## Workflow 4: Real User Monitoring Integration
+Workflow 4: Real User Monitoring Integration
 
 Lab tests measure a controlled environment. Real users have different devices, networks, and browser extensions. Combine Claude Code with real user monitoring (RUM) data for a complete picture.
 
-### Collecting Field Data with the web-vitals Library
+Collecting Field Data with the web-vitals Library
 
 Add the `web-vitals` npm package to your frontend to collect INP, LCP, and CLS from actual users:
 
 ```js
-// vitals.js — add to your main bundle entry point
+// vitals.js. add to your main bundle entry point
 import { onCLS, onINP, onLCP, onFCP, onTTFB } from 'web-vitals';
 
 function sendToAnalytics({ name, value, rating, id }) {
@@ -284,12 +284,12 @@ onFCP(sendToAnalytics);
 onTTFB(sendToAnalytics);
 ```
 
-### Querying the Chrome UX Report API
+Querying the Chrome UX Report API
 
 For public-facing sites Google collects field data automatically. Export it via the CrUX API:
 
 ```bash
-# Fetch CrUX data — requires a free API key from Google Cloud Console
+Fetch CrUX data. requires a free API key from Google Cloud Console
 curl "https://chromeuxreport.googleapis.com/v1/records:queryRecord?key=$CRUX_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -312,7 +312,7 @@ For each metric, note whether field P75 is better or worse than lab results.
 Explain likely reasons for any gaps larger than 30%.
 ```
 
-### Lab vs. Field Data Comparison
+Lab vs. Field Data Comparison
 
 Understanding the gap between lab and field performance is important for prioritizing fixes:
 
@@ -325,15 +325,15 @@ Understanding the gap between lab and field performance is important for priorit
 
 Claude Code can help you interpret these discrepancies and decide which metric to prioritize based on your actual user demographics.
 
-## Common Optimization Patterns
+Common Optimization Patterns
 
 Claude Code can help you implement proven optimization techniques. Here are patterns for each metric, with concrete before/after examples.
 
-### Optimizing LCP
+Optimizing LCP
 
 LCP measures when the largest content element becomes visible. The most impactful optimizations:
 
-**1. Preload the LCP element**
+1. Preload the LCP element
 
 Before:
 ```html
@@ -354,7 +354,7 @@ After:
 
 The `fetchpriority="high"` attribute (supported in all modern browsers) tells the browser this image is critical and should jump the preload queue. The `<link rel="preload">` ensures the browser discovers it before parsing the `<body>`.
 
-**2. Eliminate render-blocking stylesheets**
+2. Eliminate render-blocking stylesheets
 
 Before:
 ```html
@@ -367,7 +367,7 @@ After (inline critical CSS + async load the rest):
 ```html
 <head>
   <style>
-    /* Critical above-fold CSS only — generated by critical-css tool */
+    /* Critical above-fold CSS only. generated by critical-css tool */
     body { margin: 0; font-family: system-ui; }
     .hero { min-height: 60vh; background: #f5f5f5; }
   </style>
@@ -383,12 +383,12 @@ Using the critical npm package, extract above-fold CSS for these 5 URLs
 and output inline <style> blocks ready to paste into our base layout template.
 ```
 
-**3. Optimize server response time**
+3. Optimize server response time
 
 If your TTFB (Time to First Byte) exceeds 600ms, LCP will almost certainly fail regardless of other optimizations. Claude Code can audit your server response and suggest caching strategies:
 
 ```bash
-# Measure TTFB from multiple locations using curl
+Measure TTFB from multiple locations using curl
 for region in us-east eu-west ap-south; do
   echo "=== $region ==="
   curl -o /dev/null -s -w "TTFB: %{time_starttransfer}s\n" \
@@ -398,11 +398,11 @@ for region in us-east eu-west ap-south; do
 done
 ```
 
-### Optimizing FID and INP
+Optimizing FID and INP
 
 FID and INP both stem from the same root cause: long JavaScript tasks blocking the main thread. The key strategies:
 
-**1. Break up long tasks with scheduler.yield()**
+1. Break up long tasks with scheduler.yield()
 
 Before (single long synchronous operation):
 ```js
@@ -431,7 +431,7 @@ async function processLargeDataset(items) {
 }
 ```
 
-**2. Defer third-party scripts**
+2. Defer third-party scripts
 
 Third-party scripts are frequently the largest contributor to Total Blocking Time. Use a facade pattern to load them only when needed:
 
@@ -452,7 +452,7 @@ function loadChatWidget() {
 </script>
 ```
 
-**3. Reduce bundle size with code splitting**
+3. Reduce bundle size with code splitting
 
 Ask Claude Code to analyze your webpack or Vite bundle:
 ```
@@ -463,11 +463,11 @@ then read the generated stats.html and identify:
 - Tree-shaking opportunities in our utility imports
 ```
 
-### Optimizing CLS
+Optimizing CLS
 
 CLS measures visual stability during page load. Preventing layout shifts requires reserving space before content loads.
 
-**1. Always set explicit image dimensions**
+1. Always set explicit image dimensions
 
 Before:
 ```html
@@ -494,19 +494,19 @@ Or use the CSS aspect-ratio property for responsive images:
 }
 ```
 
-**2. Reserve space for dynamic content**
+2. Reserve space for dynamic content
 
 Ads, embeds, and cookie banners are common CLS triggers. Reserve their space upfront:
 
 ```css
-/* Ad slot — fixed height prevents layout shift when ad loads */
+/* Ad slot. fixed height prevents layout shift when ad loads */
 .ad-slot-leaderboard {
   min-height: 90px;      /* standard leaderboard height */
   width: 100%;
   background: #f9f9f9;   /* visible placeholder while ad loads */
 }
 
-/* Cookie banner — position fixed so it doesn't push content */
+/* Cookie banner. position fixed so it doesn't push content */
 .cookie-banner {
   position: fixed;
   bottom: 0;
@@ -516,13 +516,13 @@ Ads, embeds, and cookie banners are common CLS triggers. Reserve their space upf
 }
 ```
 
-**3. Optimize font loading to prevent FOUT-driven shifts**
+3. Optimize font loading to prevent FOUT-driven shifts
 
 ```css
 @font-face {
   font-family: 'Brand Sans';
   src: url('/fonts/brand-sans.woff2') format('woff2');
-  font-display: optional;   /* No FOUT — falls back to system font if not ready */
+  font-display: optional;   /* No FOUT. falls back to system font if not ready */
   font-weight: 400;
 }
 ```
@@ -535,16 +535,16 @@ And preload the font in your HTML head:
 
 Using `font-display: optional` eliminates font-swap layout shift entirely by only using the web font if it has already been cached or loads within the first 100ms of the page load.
 
-## Diagnosing CLS with Claude Code
+Diagnosing CLS with Claude Code
 
 CLS is notoriously difficult to debug because the shift may happen after the initial load. Use Claude Code to write a diagnostic script that captures shift sources in the browser:
 
 ```js
-// cls-debug.js — paste into DevTools console or inject as a script
+// cls-debug.js. paste into DevTools console or inject as a script
 const observer = new PerformanceObserver((list) => {
   for (const entry of list.getEntries()) {
     if (!entry.hadRecentInput) {
-      console.group(`CLS shift — value: ${entry.value.toFixed(4)}`);
+      console.group(`CLS shift. value: ${entry.value.toFixed(4)}`);
       for (const source of entry.sources ?? []) {
         console.log('Element:', source.node);
         console.log('Previous rect:', source.previousRect);
@@ -564,7 +564,7 @@ Identify which elements are causing the largest shifts and
 suggest the CSS or HTML changes needed to fix each one.
 ```
 
-## Continuous Monitoring Strategy
+Continuous Monitoring Strategy
 
 For sustainable performance improvement, establish a layered monitoring strategy:
 
@@ -580,7 +580,7 @@ Claude Code can automate much of this pipeline. A practical alerting script that
 
 ```bash
 #!/usr/bin/env bash
-# daily-vitals-check.sh — run via cron or GitHub Actions schedule
+daily-vitals-check.sh. run via cron or GitHub Actions schedule
 set -euo pipefail
 
 SLACK_WEBHOOK="${SLACK_WEBHOOK_URL:?}"
@@ -617,23 +617,23 @@ rm -f "$REPORT"
 
 Schedule this with a GitHub Actions `schedule` trigger (daily at 6am UTC) so failures alert your team before users notice.
 
-## Conclusion
+Conclusion
 
 Claude Code transforms Core Web Vitals optimization from a manual, sporadic process into an automated, systematic workflow. By integrating Lighthouse audits into your development pipeline, setting up regression detection, and following proven optimization patterns, you can maintain excellent Core Web Vitals scores consistently.
 
-Start with quick audits on your key pages to establish baseline metrics. Then move to batch testing to understand your worst-performing URLs. Add CI integration to catch regressions automatically. Finally, layer in RUM data so you know what real users on real devices are experiencing—not just what a headless Chrome in a datacenter reports.
+Start with quick audits on your key pages to establish baseline metrics. Then move to batch testing to understand your worst-performing URLs. Add CI integration to catch regressions automatically. Finally, layer in RUM data so you know what real users on real devices are experiencing, not just what a headless Chrome in a datacenter reports.
 
-Claude Code handles the heavy lifting at every step—generating audit scripts, interpreting JSON output, suggesting fixes with working code, and building monitoring pipelines—so you can focus on the optimizations that matter most.
+Claude Code handles the heavy lifting at every step, generating audit scripts, interpreting JSON output, suggesting fixes with working code, and building monitoring pipelines, so you can focus on the optimizations that matter most.
 
 Remember: good Core Web Vitals scores not only improve user experience but also contribute to better search rankings. Make them a priority in your development workflow.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 {% endraw %}

@@ -13,47 +13,47 @@ tags: [chrome-extension, claude-skills]
 ---
 
 
-# Chrome Extension Military Discount Finder: A Developer Guide
+Chrome Extension Military Discount Finder: A Developer Guide
 
-Building a Chrome extension that helps users discover military discounts requires understanding discount verification, real-time site detection, and seamless user experience integration. This guide covers the technical implementation for developers building discount discovery tools — from the manifest and content scripts through to data synchronization, UI polish, and Chrome Web Store deployment.
+Building a Chrome extension that helps users discover military discounts requires understanding discount verification, real-time site detection, and smooth user experience integration. This guide covers the technical implementation for developers building discount discovery tools. from the manifest and content scripts through to data synchronization, UI polish, and Chrome Web Store deployment.
 
-## Understanding the Discount Discovery Problem
+Understanding the Discount Discovery Problem
 
 Military discount verification presents unique challenges. Unlike simple coupon codes, many retailer discounts require proof of service through various methods: ID verification, login-based authentication, or exclusive member portals. A well-designed discount finder extension needs to handle multiple verification workflows while providing a clean interface.
 
 The core functionality breaks down into three components: site detection to identify when a user visits a retailer, discount lookup to retrieve available offers, and verification handling to guide users through proving their military status.
 
-There is also a data freshness problem. Retailers change their discount programs frequently — a store that offered 15% off last quarter might now offer 10%, or may have moved verification to a third-party platform. Your extension architecture needs to account for this by separating the discount database from the extension binary so you can update offers without pushing a new extension version.
+There is also a data freshness problem. Retailers change their discount programs frequently. a store that offered 15% off last quarter might now offer 10%, or may have moved verification to a third-party platform. Your extension architecture needs to account for this by separating the discount database from the extension binary so you can update offers without pushing a new extension version.
 
 Finally, consider scope: active duty military, veterans, and dependents may qualify for different tiers at the same retailer. Your data model and UI should represent this distinction clearly from the start, since retrofitting it later requires schema changes that break existing cached data.
 
-## Architecture Overview
+Architecture Overview
 
 A military discount finder extension typically uses a content script architecture with a background service worker for data management. The content script injects UI elements when a matching retailer is detected, while the background script maintains the discount database and handles extension state.
 
-The two-process split matters for Manifest V3 compliance. Service workers in MV3 are ephemeral — they spin down after a few seconds of inactivity. This means you cannot rely on in-memory state. Any discount data the background script loads must be persisted to `chrome.storage.local` immediately so it survives the worker going idle between page loads.
+The two-process split matters for Manifest V3 compliance. Service workers in MV3 are ephemeral. they spin down after a few seconds of inactivity. This means you cannot rely on in-memory state. Any discount data the background script loads must be persisted to `chrome.storage.local` immediately so it survives the worker going idle between page loads.
 
-### Project Structure
+Project Structure
 
 ```
 military-discount-finder/
-├── manifest.json
-├── background.js
-├── content.js
-├── popup/
-│   ├── popup.html
-│   └── popup.js
-├── data/
-│   └── discounts.json
-└── icons/
-    └── icon-48.png
+ manifest.json
+ background.js
+ content.js
+ popup/
+    popup.html
+    popup.js
+ data/
+    discounts.json
+ icons/
+     icon-48.png
 ```
 
 The `data/discounts.json` file ships with the extension as a fallback baseline. The background script attempts to fetch a live version from your update server on first run and every 24 hours thereafter, storing the result in `chrome.storage.local`. If the fetch fails, the bundled baseline continues to work.
 
-## Implementing the Core Components
+Implementing the Core Components
 
-### Manifest Configuration
+Manifest Configuration
 
 Your manifest.json defines the extension capabilities:
 
@@ -76,7 +76,7 @@ Your manifest.json defines the extension capabilities:
 
 A note on `host_permissions`: requesting `<all_urls>` triggers a broader review during Chrome Web Store submission. If your retailer list is finite and unlikely to grow beyond a few hundred domains, consider generating a specific list of `host_permissions` entries for those domains instead. This reduces the extension's attack surface and may speed up store review.
 
-### Discount Data Structure
+Discount Data Structure
 
 Organize your discount database with retailer information and verification requirements:
 
@@ -117,7 +117,7 @@ Organize your discount database with retailer information and verification requi
 
 The `eligible` array lets your UI show "this discount is for active duty and veterans" rather than a generic label. This is important because showing a discount to someone who cannot claim it erodes trust in the extension.
 
-### Content Script Site Detection
+Content Script Site Detection
 
 The content script runs on page load and checks if the current site has available discounts:
 
@@ -153,7 +153,7 @@ function showDiscountBadge(discount) {
 
 Position the badge carefully. Injecting a fixed-position element into every page can conflict with a retailer's own sticky headers or chat widgets. A defensive approach is to append the badge to `document.body` with `position: fixed; bottom: 24px; right: 24px; z-index: 2147483647;` and give users a dismiss button that stores the dismissed state in `sessionStorage` so it does not reappear during the same browsing session.
 
-### Background Script Handler
+Background Script Handler
 
 The background service worker manages discount data and handles messages from content scripts:
 
@@ -191,9 +191,9 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 The `return true` at the end of the listener is critical. Without it, the message channel closes before the async `getDiscountData()` resolves and `sendResponse` is called, causing the content script to receive an undefined response.
 
-## Advanced Features for Power Users
+Advanced Features for Power Users
 
-### Local Storage for Favorites
+Local Storage for Favorites
 
 Let users save frequently visited retailers:
 
@@ -218,7 +218,7 @@ function toggleFavorite(retailerId) {
 
 Surface favorites prominently in the popup so users can jump directly to their most-used retailer pages. This is especially useful for service members who shop the same few stores repeatedly.
 
-### Automatic Update System
+Automatic Update System
 
 For maintaining an up-to-date discount database, implement a sync mechanism. Because MV3 service workers cannot run persistent timers, use `chrome.alarms` instead of `setInterval`:
 
@@ -252,14 +252,14 @@ async function updateDiscountData() {
     console.log('Discount data updated successfully');
   } catch (error) {
     console.error('Failed to update discounts:', error);
-    // Existing cached data remains in place — no action needed
+    // Existing cached data remains in place. no action needed
   }
 }
 ```
 
 Using `chrome.alarms` ensures the update fires even if the user does not have the popup open. The alarm wakes the service worker, runs the fetch, and the worker goes idle again. This is the correct MV3 pattern for periodic background work.
 
-### User Eligibility Filter
+User Eligibility Filter
 
 Let users specify their status once so the extension can filter irrelevant offers:
 
@@ -280,7 +280,7 @@ async function filterDiscountsForUser(retailers) {
 
 Store this preference in `chrome.storage.sync` if you want it to follow the user across devices when they are signed into Chrome. Use `chrome.storage.local` if you want it device-specific.
 
-## Verification Methods Comparison
+Verification Methods Comparison
 
 Military discounts require different verification approaches. The table below summarizes what each method means for your UX and what your extension needs to do:
 
@@ -294,13 +294,13 @@ Military discounts require different verification approaches. The table below su
 
 Your extension should handle these common patterns:
 
-**ID Verification Services**: ID.me and SheerID are the dominant platforms. Many major retailers offload verification to one of these services. When a retailer uses ID.me, link directly to `https://wallet.id.me/benefits/military` rather than the retailer's landing page, which often has confusing navigation.
+ID Verification Services: ID.me and SheerID are the dominant platforms. Many major retailers offload verification to one of these services. When a retailer uses ID.me, link directly to `https://wallet.id.me/benefits/military` rather than the retailer's landing page, which often has confusing navigation.
 
-**Login-Based**: Some retailers offer exclusive discounts through military verification portals. Guide users to create or link their account. A clear CTA button in your popup ("Set up your military discount on Target.com") outperforms a bare link.
+Login-Based: Some retailers offer exclusive discounts through military verification portals. Guide users to create or link their account. A clear CTA button in your popup ("Set up your military discount on Target.com") outperforms a bare link.
 
-**In-Store Verification**: Many discounts apply only at physical locations. Provide clear instructions for in-store verification and consider adding a "show this screen to the cashier" view that displays the discount details in large text.
+In-Store Verification: Many discounts apply only at physical locations. Provide clear instructions for in-store verification and consider adding a "show this screen to the cashier" view that displays the discount details in large text.
 
-## Security Considerations
+Security Considerations
 
 When building discount finder tools, avoid collecting or storing sensitive military verification data. Your extension should:
 
@@ -308,11 +308,11 @@ When building discount finder tools, avoid collecting or storing sensitive milit
 - Link to official retailer verification pages
 - Use HTTPS for all data transmission
 - Store only retailer metadata, not user data
-- Declare a minimal set of permissions in the manifest — avoid `tabs`, `history`, or `webRequest` unless strictly necessary, as these trigger elevated Chrome Web Store scrutiny
+- Declare a minimal set of permissions in the manifest. avoid `tabs`, `history`, or `webRequest` unless strictly necessary, as these trigger elevated Chrome Web Store scrutiny
 
 Also review Google's [Extension Quality Guidelines](https://developer.chrome.com/docs/webstore/program-policies/). Extensions that appear to collect military status information improperly can be rejected or suspended. Your privacy policy must clearly state that you do not collect verification data.
 
-## Testing Your Extension Locally
+Testing Your Extension Locally
 
 Before submitting, test the full flow manually:
 
@@ -340,28 +340,28 @@ test('returns bundled data when storage is empty', async () => {
 });
 ```
 
-## Deployment and Distribution
+Deployment and Distribution
 
 After testing your extension locally using Chrome's developer mode, consider submitting to the Chrome Web Store. Prepare your store listing with:
 
 - At least 3 screenshots (1280x800 or 640x400) showing the badge on a real retailer page and the popup UI
 - A detailed description that mentions specific retailer names so users can find it through search
-- A privacy policy URL — this is required for extensions using `storage` permission
+- A privacy policy URL. this is required for extensions using `storage` permission
 - A clear explanation of why `host_permissions: <all_urls>` is needed (site detection across any retailer)
 
 The review process for new extensions currently takes 1–3 business days. Extensions that request broad host permissions may take longer due to additional security review.
 
-For self-hosted distribution in enterprise environments, package your extension as a .crx file using `chrome --pack-extension=./military-discount-finder` and host it on an internal server. Distribute the installation via Group Policy using the `ExtensionInstallForcelist` policy — this is the standard path for corporate-managed Chrome deployments that need to push internal tools silently.
+For self-hosted distribution in enterprise environments, package your extension as a .crx file using `chrome --pack-extension=./military-discount-finder` and host it on an internal server. Distribute the installation via Group Policy using the `ExtensionInstallForcelist` policy. this is the standard path for corporate-managed Chrome deployments that need to push internal tools silently.
 
 ---
 
-Building a military discount finder extension requires attention to user experience, data accuracy, and verification handling. Start with a core set of 20–30 well-known retailers and expand based on user feedback and analytics. The extension architecture shown here — content script detection, service worker data management, alarm-based sync, and eligibility filtering — provides a foundation that scales well for adding features like discount alerts, price tracking, and community-submitted offers. Keeping the discount database external and updateable independently of the extension binary is the single most important architectural decision: it means you can correct an expired offer the same day without waiting for a store review cycle.
+Building a military discount finder extension requires attention to user experience, data accuracy, and verification handling. Start with a core set of 20–30 well-known retailers and expand based on user feedback and analytics. The extension architecture shown here. content script detection, service worker data management, alarm-based sync, and eligibility filtering. provides a foundation that scales well for adding features like discount alerts, price tracking, and community-submitted offers. Keeping the discount database external and updateable independently of the extension binary is the single most important architectural decision: it means you can correct an expired offer the same day without waiting for a store review cycle.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

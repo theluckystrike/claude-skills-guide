@@ -14,29 +14,29 @@ score: 7
 
 
 {% raw %}
-# Claude Code for New Relic APM Workflow Guide
+Claude Code for New Relic APM Workflow Guide
 
 Application Performance Monitoring (APM) is critical for maintaining reliable software systems. New Relic APM provides deep visibility into your application's behavior, but analyzing performance data and debugging issues can be time-consuming. This guide shows how to integrate Claude Code with New Relic APM to automate monitoring workflows, accelerate debugging, and streamline observability tasks.
 
-## What is New Relic APM?
+What is New Relic APM?
 
 New Relic APM is a comprehensive monitoring solution that provides real-time insights into application performance. It tracks key metrics like response times, error rates, throughput, andApdex scores. The platform supports multiple programming languages and integrates with various infrastructure components.
 
-### Key Features of New Relic APM
+Key Features of New Relic APM
 
 New Relic APM offers several core capabilities that make it invaluable for development teams:
 
-- **Transaction Tracing**: Captures detailed performance data for individual requests
-- **Error Analytics**: Groups and analyzes errors to identify root causes
-- **Service Maps**: Visualizes dependencies between microservices
-- **Infrastructure Monitoring**: Tracks host-level metrics and configurations
-- **Log Management**: Correlates logs with APM data for complete visibility
+- Transaction Tracing: Captures detailed performance data for individual requests
+- Error Analytics: Groups and analyzes errors to identify root causes
+- Service Maps: Visualizes dependencies between microservices
+- Infrastructure Monitoring: Tracks host-level metrics and configurations
+- Log Management: Correlates logs with APM data for complete visibility
 
-## Setting Up Claude Code with New Relic
+Setting Up Claude Code with New Relic
 
 Before integrating Claude Code with New Relic, you'll need proper API access and authentication configuration.
 
-### Prerequisites
+Prerequisites
 
 Ensure you have the following ready:
 
@@ -45,12 +45,12 @@ Ensure you have the following ready:
 3. Claude Code installed and configured
 4. Basic familiarity with your application's architecture
 
-### Authentication Configuration
+Authentication Configuration
 
 Create a configuration file to store your New Relic credentials securely:
 
 ```bash
-# Store your New Relic API key
+Store your New Relic API key
 export NEW_RELIC_API_KEY="your_api_key_here"
 export NEW_RELIC_ACCOUNT_ID="your_account_id"
 ```
@@ -58,18 +58,18 @@ export NEW_RELIC_ACCOUNT_ID="your_account_id"
 You can also use New Relic's CLI for authenticated requests:
 
 ```bash
-# Install New Relic CLI
+Install New Relic CLI
 npm install -g newrelic-cli
 
-# Authenticate
+Authenticate
 newrelic api key create --name "Claude Integration" --keyType "USER" --writeable
 ```
 
-## Using Claude Code for APM Analysis
+Using Claude Code for APM Analysis
 
 Claude Code can help you query New Relic's APIs, analyze performance data, and generate insights. Here's how to structure your prompts for effective APM analysis.
 
-### Querying APM Data
+Querying APM Data
 
 When you need to retrieve specific metrics from New Relic, frame your requests clearly:
 
@@ -79,7 +79,7 @@ Query New Relic APM for the payment service. Get the average response time, erro
 
 Claude Code will construct the appropriate API calls to New Relic's GraphQL or REST API and present the data in your requested format.
 
-### Analyzing Error Patterns
+Analyzing Error Patterns
 
 Debugging errors becomes more efficient when you ask Claude Code to analyze error trends:
 
@@ -91,7 +91,7 @@ Analyze the error patterns in our main API service over the past week. Look for:
 4. Suggested root causes based on error messages
 ```
 
-### Performance Optimization Recommendations
+Performance Optimization Recommendations
 
 Generate actionable insights from your APM data:
 
@@ -103,11 +103,11 @@ Based on the transaction traces from our checkout service, identify the top 5 sl
 - Recommended optimizations
 ```
 
-## Automating APM Workflows with Claude Skills
+Automating APM Workflows with Claude Skills
 
 Create reusable Claude Skills to standardize your New Relic interactions.
 
-### Creating a New Relic APM Skill
+Creating a New Relic APM Skill
 
 Here's a skill structure for common APM tasks:
 
@@ -117,7 +117,7 @@ name: newrelic-apm
 description: "Integration with New Relic APM for monitoring and debugging"
 ---
 
-## APM Overview
+APM Overview
 
 Query New Relic APM for all services in the account.
 For each service, retrieve:
@@ -127,25 +127,25 @@ For each service, retrieve:
 - Throughput
 Format as a health dashboard table.
 
-## Trace Analysis
+Trace Analysis
 
 Find the most recent trace for the specified transaction.
 Show the complete span hierarchy with timing information.
 Identify any spans exceeding 100ms.
 
-## Alert Investigation
+Alert Investigation
 
 List all active alerts in the account.
 For each alert, find related errors and metric data from the past hour.
 Suggest possible remediation steps.
 ```
 
-### Using the Skill
+Using the Skill
 
 Once you've created the skill file and placed it in `~/.claude/skills/` or `.claude/`, invoke it in the Claude Code REPL:
 
 ```
-# In the Claude Code REPL:
+In the Claude Code REPL:
 /newrelic-apm
 ```
 
@@ -155,11 +155,11 @@ Then ask natural language questions:
 What services are currently experiencing degraded performance?
 ```
 
-## Practical Examples
+Practical Examples
 
 Let's walk through real-world scenarios where Claude Code enhances your New Relic workflow.
 
-### Example 1: Post-Deployment Performance Review
+Example 1: Post-Deployment Performance Review
 
 After deploying a new version, quickly assess its impact:
 
@@ -171,7 +171,7 @@ Compare the performance metrics of our user service before and after the deploym
 - Whether Apdex improved or degraded
 ```
 
-### Example 2: Incident Response
+Example 2: Incident Response
 
 During an incident, get rapid context:
 
@@ -183,7 +183,7 @@ Our checkout service is experiencing high latency. Show me:
 4. Active users affected based on Apdex
 ```
 
-### Example 3: Performance Trend Analysis
+Example 3: Performance Trend Analysis
 
 Identify long-term patterns:
 
@@ -195,32 +195,32 @@ Analyze the database query performance for our analytics service over the past 3
 - Recommendations for optimization
 ```
 
-## Best Practices
+Best Practices
 
 Follow these guidelines to get the most out of your Claude Code and New Relic integration.
 
-### Security Considerations
+Security Considerations
 
 - Never commit API keys to version control
 - Use environment variables or secrets management
 - Restrict API key permissions to minimum required scope
 - Rotate keys regularly
 
-### Performance Tips
+Performance Tips
 
 - Cache frequently accessed data to reduce API calls
 - Use New Relic's NerdGraph (GraphQL) for complex queries
 - Limit time ranges in queries to reduce response size
 - Prefer aggregated data over raw traces when possible
 
-### Collaboration
+Collaboration
 
 - Share Claude Skills configurations across your team
 - Document common query patterns in your skill library
 - Create runbooks that combine Claude Code with New Relic queries
 - Use Claude Code to generate incident reports automatically
 
-## Conclusion
+Conclusion
 
 Integrating Claude Code with New Relic APM transforms how you monitor and debug applications. By automating data retrieval, analysis, and insight generation, you can respond to issues faster and maintain better system health. Start with simple queries and gradually build comprehensive skills that match your team's workflow.
 
@@ -228,10 +228,10 @@ Remember to iterate on your prompts and skills based on what works best for your
 
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

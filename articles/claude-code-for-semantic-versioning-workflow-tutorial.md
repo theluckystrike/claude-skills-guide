@@ -17,7 +17,7 @@ score: 8
 
 Semantic versioning provides a standardized approach to communicating project changes, but manually tracking versions, analyzing commits, and generating releases consumes valuable development time. This comprehensive tutorial demonstrates how to build an automated semantic versioning workflow using Claude Code that handles version detection, changelog generation, and release tagging without manual intervention.
 
-## Prerequisites and Setup
+Prerequisites and Setup
 
 Before building your semantic versioning workflow, ensure your project has the necessary foundation. You'll need Node.js installed, a Git repository initialized, and Claude Code configured with access to file system operations and shell command execution.
 
@@ -30,7 +30,7 @@ mkdir -p claude-skills/semantic-version/lib
 
 The skill will consist of three main components: a commit analyzer, a version calculator, and a release orchestrator. Each component handles a specific aspect of the versioning pipeline, enabling modular testing and easy customization.
 
-## Building the Commit Analyzer
+Building the Commit Analyzer
 
 The commit analyzer examines your Git history to determine which version component requires incrementing. This skill component parses conventional commit messages and detects breaking changes that warrant a major version bump.
 
@@ -39,7 +39,7 @@ Create the analyzer module in `claude-skills/semantic-version/lib/analyzer.js`:
 ```javascript
 // claude-skills/semantic-version/lib/analyzer.js
 
-/**
+/
  * Analyzes commit messages to determine version impact
  * Following conventional commits specification
  */
@@ -87,7 +87,7 @@ module.exports = { analyzeCommit, analyzeCommits };
 
 This analyzer distinguishes between patch fixes, new features, and breaking changes. The logic prioritizes major versions when any breaking change exists, since semantic versioning mandates that major version increments supersede minor and patch changes.
 
-## Creating the Version Calculator
+Creating the Version Calculator
 
 The version calculator applies the analysis results to your current version string. It parses existing version numbers, applies the appropriate increment, and generates the new version along with appropriate git tags.
 
@@ -96,7 +96,7 @@ Implement the calculator in `claude-skills/semantic-version/lib/calculator.js`:
 ```javascript
 // claude-skills/semantic-version/lib/calculator.js
 
-/**
+/
  * Calculates new version based on impact analysis
  * Follows semver.org specification
  */
@@ -139,24 +139,24 @@ module.exports = { parseVersion, calculateNewVersion, getVersionFromPackageJson 
 
 The calculator maintains backward compatibility by returning the current version unchanged when no commits warrant an update. This prevents unnecessary version bumps during maintenance work or documentation changes.
 
-## Orchestrating the Release Workflow
+Orchestrating the Release Workflow
 
 The main skill file coordinates the entire versioning process, from fetching commits to creating git tags and updating package files. This orchestrator serves as the entry point that Claude Code invokes.
 
 Create the main skill file in `claude-skills/semantic-version/SKILL.md`:
 
 ```markdown
-# Semantic Versioning Skill
+Semantic Versioning Skill
 
 This skill automates semantic versioning based on conventional commits analysis.
 
-## When to Use
+When to Use
 
 - Before creating releases
 - After merging significant changes
 - During release preparation
 
-## Actions
+Actions
 
 1. Fetch commits since last tag
 2. Analyze commit messages for impact
@@ -212,12 +212,12 @@ function executeVersionBump() {
 module.exports = { executeVersionBump };
 ```
 
-## Integrating with Claude Code
+Integrating with Claude Code
 
 After creating the skill files, register them with Claude Code by adding the skill to your configuration:
 
 ```bash
-# Add to your CLAUDE.md or project-specific configuration
+Add to your CLAUDE.md or project-specific configuration
 Available skills:
 - semantic-version: Automated semantic versioning and release tagging
 ```
@@ -230,7 +230,7 @@ Bump the version using semantic-version skill
 
 Claude Code will execute the versioning workflow, analyzing your commits and creating the appropriate release.
 
-## CI/CD Integration
+CI/CD Integration
 
 Automate version bumps in your CI pipeline with a GitHub Actions workflow:
 
@@ -258,7 +258,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
-### Changelog Generation
+Changelog Generation
 
 Extend the skill with a changelog generator that groups commits by type:
 
@@ -277,30 +277,30 @@ function generateChangelog(commits, newVersion) {
 }
 ```
 
-## Best Practices for Versioning Workflows
+Best Practices for Versioning Workflows
 
-Maintain consistency in your versioning workflow by following these proven practices. First, always use conventional commit messages—establish team conventions requiring `feat:`, `fix:`, and `BREAKING CHANGE:` prefixes for clear version impact detection. Second, automate the version bump in your CI pipeline. Third, use **annotated tags** over lightweight tags—they store metadata, author info, and message content that lightweight tags omit. Fourth, document versioning conventions in a **CONTRIBUTING.md** file for contributors. Fifth, test version calculations in isolation before applying changes to production repositories.
+Maintain consistency in your versioning workflow by following these proven practices. First, always use conventional commit messages, establish team conventions requiring `feat:`, `fix:`, and `BREAKING CHANGE:` prefixes for clear version impact detection. Second, automate the version bump in your CI pipeline. Third, use annotated tags over lightweight tags, they store metadata, author info, and message content that lightweight tags omit. Fourth, document versioning conventions in a CONTRIBUTING.md file for contributors. Fifth, test version calculations in isolation before applying changes to production repositories.
 
-The **tdd** skill helps verify release-readiness, **pdf** and **docx** skills generate versioned release documentation, and **supermemory** tracks release history across sessions.
+The tdd skill helps verify release-readiness, pdf and docx skills generate versioned release documentation, and supermemory tracks release history across sessions.
 
-## Troubleshooting Common Issues
+Troubleshooting Common Issues
 
-Several common issues can disrupt your versioning workflow. When commits aren't detected, verify that tags exist in your repository—first-time setup requires an initial tag like `v1.0.0` for the analyzer to calculate diffs. When version files aren't found, ensure package.json exists in your working directory or modify the skill to accept a custom path parameter.
+Several common issues can disrupt your versioning workflow. When commits aren't detected, verify that tags exist in your repository, first-time setup requires an initial tag like `v1.0.0` for the analyzer to calculate diffs. When version files aren't found, ensure package.json exists in your working directory or modify the skill to accept a custom path parameter.
 
 If breaking changes aren't detected, confirm that `BREAKING CHANGE:` appears exactly as specified in the conventional commits standard. The analyzer performs exact matching, so variations won't trigger major version bumps.
 
-## Conclusion
+Conclusion
 
-Automating semantic versioning with Claude Code eliminates manual version tracking while ensuring consistent, predictable releases. The modular skill architecture allows incremental improvements—start with basic commit analysis, then add changelog generation, GitHub release creation, or npm publishing as your workflow matures.
+Automating semantic versioning with Claude Code eliminates manual version tracking while ensuring consistent, predictable releases. The modular skill architecture allows incremental improvements, start with basic commit analysis, then add changelog generation, GitHub release creation, or npm publishing as your workflow matures.
 
 By implementing this tutorial's patterns, your team gains reliable version management that scales with project complexity while maintaining the flexibility to adapt to specific release requirements.
 
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

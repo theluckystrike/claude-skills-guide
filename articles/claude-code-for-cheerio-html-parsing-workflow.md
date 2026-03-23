@@ -15,7 +15,7 @@ score: 7
 
 When you need to extract structured data from HTML documents, Cheerio provides a fast, jQuery-like API that pairs perfectly with Claude Code. Whether you're building a web scraper, monitoring competitor prices, or aggregating content from multiple sources, this guide shows you how to create efficient HTML parsing workflows that use Claude Code's automation capabilities.
 
-## Setting Up Cheerio in Your Project
+Setting Up Cheerio in Your Project
 
 Before diving into parsing workflows, you need to install and configure Cheerio properly. Create a new Node.js project or use an existing one:
 
@@ -42,7 +42,7 @@ export async function fetchAndParse(url) {
 
 This foundation lets you focus on data extraction rather than boilerplate setup.
 
-## Basic Element Selection and Extraction
+Basic Element Selection and Extraction
 
 Cheerio's selector API mirrors jQuery, making it intuitive for developers familiar with frontend JavaScript. The key is understanding how to target elements precisely while handling edge cases gracefully.
 
@@ -76,7 +76,7 @@ $('img.gallery-image').each((i, el) => {
 
 Claude Code can help you iterate on selectors when initial attempts don't capture the right elements. Describe the structure you're seeing and ask for alternative selector strategies.
 
-## Handling Dynamic Tables and Lists
+Handling Dynamic Tables and Lists
 
 Tabular data requires different extraction strategies. When scraping product listings, financial data, or comparison tables, you'll often need to combine multiple selectors and handle variable row structures.
 
@@ -116,7 +116,7 @@ function extractTitle($) {
 }
 ```
 
-## Pagination and Multi-Page Scraping
+Pagination and Multi-Page Scraping
 
 Real-world scraping often requires traversing multiple pages. Build a paginated workflow that handles navigation automatically:
 
@@ -148,7 +148,7 @@ async function scrapeAllPages(baseUrl, maxPages = 10) {
 
 Claude Code can help you extend this pattern to handle infinite scroll pages, API-based pagination, or sessions that require authentication.
 
-## Handling Malformed HTML
+Handling Malformed HTML
 
 Cheerio is forgiving with malformed HTML, but you'll encounter edge cases. Use error boundaries and validation to prevent crashes:
 
@@ -184,13 +184,13 @@ async function extractWithFallback(url, selectors) {
 
 This approach ensures your scraper continues running even when pages change structure or return unexpected content.
 
-## Integrating with Claude Code Workflows
+Integrating with Claude Code Workflows
 
 The real power emerges when you combine Cheerio parsing with Claude Code's task orchestration. Create reusable skills that encapsulate your parsing logic:
 
 ```javascript
 // claude-skills/cheerio-parser/skill.md
-# Cheerio HTML Parser Skill
+Cheerio HTML Parser Skill
 
 Use this skill when you need to:
 - Extract structured data from HTML documents
@@ -206,13 +206,13 @@ Available functions:
 
 This lets you delegate HTML parsing tasks to Claude Code while maintaining clean, testable extraction logic in your codebase.
 
-## Best Practices for Production Scrapers
+Best Practices for Production Scrapers
 
 When moving from development to production, follow these guidelines:
 
-**Respect robots.txt and rate limits.** Always check a site's terms of service before scraping, and implement delays between requests to avoid overwhelming servers.
+Respect robots.txt and rate limits. Always check a site's terms of service before scraping, and implement delays between requests to avoid overwhelming servers.
 
-**Handle errors gracefully.** Network requests fail regularly. Wrap fetches in try-catch blocks and implement retry logic with exponential backoff:
+Handle errors gracefully. Network requests fail regularly. Wrap fetches in try-catch blocks and implement retry logic with exponential backoff:
 
 ```javascript
 async function fetchWithRetry(url, retries = 3) {
@@ -227,7 +227,7 @@ async function fetchWithRetry(url, retries = 3) {
 }
 ```
 
-**Validate extracted data.** Don't assume selectors will always work. Log warnings when expected elements are missing and consider implementing data quality checks:
+Validate extracted data. Don't assume selectors will always work. Log warnings when expected elements are missing and consider implementing data quality checks:
 
 ```javascript
 function validateProduct(product) {
@@ -243,18 +243,18 @@ function validateProduct(product) {
 }
 ```
 
-**Store results incrementally.** For large scraping jobs, save progress after each batch to avoid losing work if the process crashes.
+Store results incrementally. For large scraping jobs, save progress after each batch to avoid losing work if the process crashes.
 
-## Conclusion
+Conclusion
 
-Cheerio provides a robust foundation for HTML parsing in Node.js, and when combined with Claude Code's automation capabilities, you can build sophisticated data extraction workflows. Start with basic text and attribute extraction, then progressively add pagination, error handling, and validation as your needs grow. The key is maintaining clean separation between fetching, parsing, and data processing so each component remains testable and maintainable.
+Cheerio provides a solid foundation for HTML parsing in Node.js, and when combined with Claude Code's automation capabilities, you can build sophisticated data extraction workflows. Start with basic text and attribute extraction, then progressively add pagination, error handling, and validation as your needs grow. The key is maintaining clean separation between fetching, parsing, and data processing so each component remains testable and maintainable.
 
-Remember to always scrape responsibly—respect server resources, implement appropriate delays, and verify you're allowed to access the data you need before building production scrapers.
+Remember to always scrape responsibly, respect server resources, implement appropriate delays, and verify you're allowed to access the data you need before building production scrapers.
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -14,21 +14,21 @@ permalink: /fly-io-mcp-server-deployment-workflow-guide/
 
 
 
-# Fly.io MCP Server Deployment Workflow Guide
+Fly.io MCP Server Deployment Workflow Guide
 
 [Deploying a Model Context Protocol (MCP) server to Fly.io gives you](/building-your-first-mcp-tool-integration-guide-2026/) a globally distributed, low-latency endpoint that Claude Code can connect to for enhanced tool-calling capabilities. This guide covers the complete deployment workflow, from containerization to automated deployments using Claude skills.
 
-## Why Deploy MCP Servers on Fly.io
+Why Deploy MCP Servers on Fly.io
 
-Fly.io runs containers close to users, making it ideal for MCP servers that need fast response times. The platform handles TLS certificates automatically, manages edge networking, and supports persistent volumes when your server needs state. Many developers [combine their MCP deployment with the frontend-design skill](/best-claude-code-skills-to-install-first-2026/) for generating UI components, or the pdf skill for document processing—all without requiring local infrastructure.
+Fly.io runs containers close to users, making it ideal for MCP servers that need fast response times. The platform handles TLS certificates automatically, manages edge networking, and supports persistent volumes when your server needs state. Many developers [combine their MCP deployment with the frontend-design skill](/best-claude-code-skills-to-install-first-2026/) for generating UI components, or the pdf skill for document processing, all without requiring local infrastructure.
 
 The workflow described here works with any MCP server implementation, whether you built it in Python, Node.js, or Go.
 
-There are several reasons to prefer Fly.io over alternatives like Railway, Render, or self-managed servers for MCP deployments. First, Fly.io's anycast routing places your server in the region closest to whoever is initiating requests—important when Claude Code itself may be running on different machines or by different team members across the globe. Second, Fly.io's free tier is genuinely useful: a small MCP server with modest traffic runs comfortably within the free allowance. Third, the `flyctl` CLI is well-designed and scriptable, which matters when you want to automate deployments from Claude skills or CI pipelines.
+There are several reasons to prefer Fly.io over alternatives like Railway, Render, or self-managed servers for MCP deployments. First, Fly.io's anycast routing places your server in the region closest to whoever is initiating requests, important when Claude Code itself may be running on different machines or by different team members across the globe. Second, Fly.io's free tier is genuinely useful: a small MCP server with modest traffic runs comfortably within the free allowance. Third, the `flyctl` CLI is well-designed and scriptable, which matters when you want to automate deployments from Claude skills or CI pipelines.
 
 Compared to running an MCP server on a VPS, Fly.io removes the operational overhead of managing certificates, configuring nginx or caddy, handling restarts on failure, and shipping logs to an external provider. Those things come out of the box.
 
-## Preparing Your MCP Server for Containerization
+Preparing Your MCP Server for Containerization
 
 Before deploying to Fly.io, ensure your MCP server listens on the correct port and handles shutdown signals gracefully. Fly.io exposes applications through port 8080 by default. Graceful shutdown matters because Fly.io sends `SIGTERM` before terminating a machine, giving your server a window to finish in-flight requests. If your server ignores `SIGTERM` and gets killed mid-request, Claude Code will see a connection error that breaks whatever workflow it was executing.
 
@@ -103,7 +103,7 @@ process.on('SIGTERM', () => {
 });
 ```
 
-## Configuring Fly.io Deployment
+Configuring Fly.io Deployment
 
 Create a `fly.toml` file in your project root. This configuration tells Fly.io how to deploy your container:
 
@@ -133,7 +133,7 @@ fly secrets set OPENAI_API_KEY=sk-...
 fly secrets set DATABASE_URL=postgres://...
 ```
 
-Secrets set this way are encrypted at rest and injected as environment variables at runtime—exactly the same as `[env]` entries but without exposing values in your repository.
+Secrets set this way are encrypted at rest and injected as environment variables at runtime, exactly the same as `[env]` entries but without exposing values in your repository.
 
 For production deployments, add health check configuration to `fly.toml` so Fly.io knows when your server is actually ready to serve traffic:
 
@@ -150,7 +150,7 @@ For production deployments, add health check configuration to `fly.toml` so Fly.
 
 Your server needs to expose a `/health` endpoint that returns a 200 status. Without this, Fly.io has no way to distinguish a server that is starting up from one that has crashed.
 
-## Deploying Your MCP Server
+Deploying Your MCP Server
 
 With your configuration ready, deploy using the Fly.io CLI:
 
@@ -167,7 +167,7 @@ Test your server by sending a request:
 curl https://my-mcp-server.fly.dev/health
 ```
 
-The `fly launch` command is interactive by default—it asks about regions, pricing plans, and whether to deploy Postgres. If you want a non-interactive launch (useful in CI or scripted workflows), pass flags:
+The `fly launch` command is interactive by default, it asks about regions, pricing plans, and whether to deploy Postgres. If you want a non-interactive launch (useful in CI or scripted workflows), pass flags:
 
 ```bash
 fly launch --name my-mcp-server --region iad --no-deploy --copy-config
@@ -185,7 +185,7 @@ fly ssh console       # Open a shell in a running machine
 
 If the deployment fails, `fly logs --recent` is usually the fastest way to understand why.
 
-## Connecting Claude Code to Your Deployed MCP Server
+Connecting Claude Code to Your Deployed MCP Server
 
 Once your server runs on Fly.io, configure Claude Code to use it. Create or update your Claude settings:
 
@@ -232,12 +232,12 @@ app.use('/mcp', (req, res, next) => {
 
 This is particularly important if your MCP server has access to sensitive resources or can perform write operations.
 
-## Automating Deployments with Claude Skills
+Automating Deployments with Claude Skills
 
 You can streamline deployments using a Claude skill that encapsulates your workflow. Create a skill file that guides Claude through the deployment process:
 
 ```markdown
-# Deploy Skill
+Deploy Skill
 
 When the user wants to deploy an MCP server to Fly.io:
 
@@ -255,7 +255,7 @@ For more complex workflows, consider chaining the deploy skill with other Claude
 A more complete deploy skill might also handle rollback scenarios:
 
 ```markdown
-# Deploy Skill
+Deploy Skill
 
 When the user wants to deploy an MCP server to Fly.io:
 
@@ -270,7 +270,7 @@ When the user wants to deploy an MCP server to Fly.io:
 6. If health check passes, report the live URL
 ```
 
-## Setting Up Continuous Deployment
+Setting Up Continuous Deployment
 
 Automate deployments whenever you push to your repository. Create a GitHub Actions workflow:
 
@@ -316,7 +316,7 @@ Add a smoke test step after deployment to catch regressions early:
 
 If the smoke test fails, the workflow marks the deployment as failed, and you can configure branch protection rules to block merges when CI fails. This gives you a safety net against deploying broken MCP servers that would silently fail for Claude Code users.
 
-## Managing Multiple Environments
+Managing Multiple Environments
 
 For staging and production environments, create separate `fly.toml` configurations:
 
@@ -344,7 +344,7 @@ on:
 
 For staging environments where you want to test against production-like data without risking real data, use Fly.io's volume cloning feature to copy a production volume snapshot to staging. This is more reliable than maintaining separate seed scripts.
 
-## Monitoring Your MCP Server
+Monitoring Your MCP Server
 
 Fly.io provides built-in metrics through its dashboard. For custom monitoring, add structured logging to your server:
 
@@ -388,7 +388,7 @@ console.log(JSON.stringify({
 
 This gives you the data to identify which tools are slow or error-prone, so you can prioritize optimization work.
 
-## Common Deployment Issues
+Common Deployment Issues
 
 If your server fails to start, check the logs:
 
@@ -403,7 +403,7 @@ Common problems include missing environment variables, incorrect port configurat
   timeout = 60
 ```
 
-A common gotcha: the `timeout` in `[deploy]` refers to the deployment timeout—how long Fly.io waits for your new instance to pass health checks before considering the deployment failed. If your server takes 20+ seconds to start (for example, because it loads a large ML model into memory), raise this value.
+A common gotcha: the `timeout` in `[deploy]` refers to the deployment timeout, how long Fly.io waits for your new instance to pass health checks before considering the deployment failed. If your server takes 20+ seconds to start (for example, because it loads a large ML model into memory), raise this value.
 
 For connection issues between Claude Code and your server, verify the endpoint responds correctly:
 
@@ -411,7 +411,7 @@ For connection issues between Claude Code and your server, verify the endpoint r
 curl https://your-server.fly.dev/mcp
 ```
 
-If you see TLS errors, check that your `fly.toml` is not using the `http` handler on port 443—Fly.io handles TLS termination automatically and your container should only speak HTTP internally.
+If you see TLS errors, check that your `fly.toml` is not using the `http` handler on port 443, Fly.io handles TLS termination automatically and your container should only speak HTTP internally.
 
 Another common issue is forgetting to set required secrets before the first deployment. If your server crashes immediately with an error about a missing environment variable, set the secret and redeploy:
 
@@ -422,18 +422,18 @@ fly deploy
 
 Port binding failures happen when the server tries to bind to a privileged port (below 1024) inside the container. Always use port 8080 or higher inside the container; Fly.io maps external ports to internal ones transparently.
 
-## Next Steps
+Next Steps
 
 With your MCP server deployed on Fly.io, explore extending its capabilities. The pdf skill can process documents through your server, while the canvas-design skill might generate visual assets. Each skill you add creates new possibilities for what Claude Code can accomplish through your deployed endpoint.
 
 Consider adding Fly.io's persistent volumes if your MCP server needs to cache data between restarts or maintain state across requests. Volumes cost a small amount but are far cheaper than adding an external database for simple use cases like caching API responses or storing user preferences.
 
-## Related Reading
+Related Reading
 
 - [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)
 - [AWS MCP Server Cloud Automation with Claude Code](/aws-mcp-server-cloud-automation-with-claude-code/)
 - [Claude Code for Fly.io Deployment Automation Workflow](/claude-code-for-fly-io-deployment-automation-workflow/)
 - [Integrations Hub](/integrations-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

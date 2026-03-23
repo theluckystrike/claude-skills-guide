@@ -16,19 +16,19 @@ tags: [claude-code, claude-skills]
 {% raw %}
 Running Claude Code inside Podman rootless containers gives developers a secure, reproducible way to use AI-assisted development without compromising system security. This guide walks through setting up a rootless Podman environment and configuring Claude Code to work smoothly within it. By the end you will have a portable, team-shareable container image that can spin up a full Claude Code session in under thirty seconds on any Linux host.
 
-## Why Rootless Containers Matter
+Why Rootless Containers Matter
 
-Rootless Podman runs containers without root privileges on the host system. This approach reduces the attack surface significantly—your development environment stays isolated, yet you maintain full control over the container lifecycle. For developers working with sensitive codebases or sharing systems, rootless containers provide an essential layer of security.
+Rootless Podman runs containers without root privileges on the host system. This approach reduces the attack surface significantly, your development environment stays isolated, yet you maintain full control over the container lifecycle. For developers working with sensitive codebases or sharing systems, rootless containers provide an essential layer of security.
 
 Unlike Docker, Podman operates daemonless by default. This means no persistent background service, fewer points of failure, and easier integration with systemd units. When you pair this with Claude Code, you get AI-powered development in an environment you can spin up and tear down instantly.
 
-### Podman vs Docker for Rootless Development
+Podman vs Docker for Rootless Development
 
 The table below summarises the key differences relevant to a Claude Code workflow:
 
 | Feature | Podman (rootless) | Docker (rootless) |
 |---|---|---|
-| Daemon required | No — each command is a direct fork/exec | No in rootless mode, but dockerd must run |
+| Daemon required | No. each command is a direct fork/exec | No in rootless mode, but dockerd must run |
 | Default user mapping | Host UID via user namespaces | Same |
 | SELinux / AppArmor | Native `:z`/`:Z` volume label support | Requires manual label policy |
 | Systemd integration | `podman generate systemd` built-in | Needs third-party tooling |
@@ -36,9 +36,9 @@ The table below summarises the key differences relevant to a Claude Code workflo
 | Compose support | `podman-compose` or `docker-compose` compat | `docker compose` (v2) |
 | Installation on RHEL/Fedora | Included in base repos | Third-party RPM |
 
-For a solo developer on Fedora or RHEL, Podman is the natural choice—it ships in the default repos and rootless operation requires zero post-install configuration. On Ubuntu and Debian the installation step is slightly more involved, but the operational model is identical once set up.
+For a solo developer on Fedora or RHEL, Podman is the natural choice, it ships in the default repos and rootless operation requires zero post-install configuration. On Ubuntu and Debian the installation step is slightly more involved, but the operational model is identical once set up.
 
-## Setting Up Podman for Rootless Operation
+Setting Up Podman for Rootless Operation
 
 Most modern Linux distributions include Podman in their default repositories. On Fedora, CentOS, or RHEL:
 
@@ -64,7 +64,7 @@ podman run --rm quay.io/podman/hello
 
 If you see the Podman hello message, your user is configured correctly for rootless operation. The process runs entirely under your user ID, using user namespaces to map container root to an unprivileged host user.
 
-### Verifying User Namespace Configuration
+Verifying User Namespace Configuration
 
 Rootless containers rely on `/etc/subuid` and `/etc/subgid` entries for your user. Check that they exist:
 
@@ -88,7 +88,7 @@ podman system migrate
 
 The `podman system migrate` command updates existing storage to use the new mappings. After this, re-run the hello container to confirm everything works.
 
-### Storage Driver Considerations
+Storage Driver Considerations
 
 Rootless Podman defaults to the `overlay` storage driver when the kernel supports unprivileged overlay mounts (kernel 5.11+ with `fuse-overlayfs` as a fallback). Check which driver is active:
 
@@ -103,7 +103,7 @@ sudo dnf install fuse-overlayfs    # Fedora / RHEL
 sudo apt-get install fuse-overlayfs # Debian / Ubuntu
 ```
 
-## Creating the Claude Code Container Image
+Creating the Claude Code Container Image
 
 Build a custom container image that includes Claude Code and its dependencies. Create a Containerfile:
 
@@ -139,21 +139,21 @@ Build and tag the image:
 podman build -t claude-code-dev:latest .
 ```
 
-### Multi-Stage Build for a Leaner Image
+Multi-Stage Build for a Leaner Image
 
 The single-stage Containerfile above is straightforward, but installing build tools in the final image inflates its size. A multi-stage build keeps the runtime image small:
 
 ```dockerfile
-# Stage 1: install Node and Claude Code
+Stage 1: install Node and Claude Code
 FROM fedora:40 AS builder
 
 RUN dnf install -y nodejs npm git curl ca-certificates && dnf clean all
 RUN npm install -g claude-code
 
-# Stage 2: minimal runtime
+Stage 2: minimal runtime
 FROM fedora:40
 
-# Copy only the global npm prefix from the builder
+Copy only the global npm prefix from the builder
 COPY --from=builder /usr/lib/node_modules /usr/lib/node_modules
 COPY --from=builder /usr/bin/node /usr/bin/node
 COPY --from=builder /usr/bin/claude /usr/bin/claude
@@ -179,7 +179,7 @@ podman build -t claude-code-dev:latest -f Containerfile.multistage .
 
 The multi-stage approach typically reduces the final image size by 30–50% compared to a single-stage build because DNF metadata, build caches, and intermediate artifacts are left behind in the builder stage.
 
-### Pinning the Node Version
+Pinning the Node Version
 
 For reproducible builds across team members, pin the exact Node version rather than relying on `dnf install nodejs`:
 
@@ -191,7 +191,7 @@ RUN curl -fsSL https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-li
 
 Pass a different version at build time with `--build-arg NODE_VERSION=22.0.0` if you need to test across Node versions.
 
-## Running Claude Code in the Container
+Running Claude Code in the Container
 
 Mount your project directory into the container to work with your actual codebase:
 
@@ -205,7 +205,7 @@ podman run -it --rm \
 
 The `:z` flag in the volume mount ensures correct SELinux labeling on Fedora and RHEL systems. This command drops you into an interactive Claude Code session with access to your project files.
 
-### Volume Mount Flags at a Glance
+Volume Mount Flags at a Glance
 
 | Flag | Meaning | When to Use |
 |---|---|---|
@@ -225,7 +225,7 @@ podman run -it --rm \
     claude
 ```
 
-## Persisting Claude Code Configuration
+Persisting Claude Code Configuration
 
 Your Claude Code settings and conversation history live in `~/.claude`. To preserve these across container runs:
 
@@ -250,16 +250,16 @@ alias claude-dev='podman run -it --rm \
 
 Add this to your `~/.bashrc` for persistent access.
 
-### What Lives in ~/.claude
+What Lives in ~/.claude
 
 Understanding what the `~/.claude` directory contains helps you decide what to mount and what to leave out:
 
 | Path | Contents | Mount? |
 |---|---|---|
-| `~/.claude/settings.json` | Global preferences, model selection | Yes — your personal config |
-| `~/.claude/skills/` | Installed skill Markdown files | Yes — skills follow you across projects |
-| `~/.claude/conversations/` | Session history | Optional — large over time |
-| `~/.claude/credentials` | API key storage | Yes — required to authenticate |
+| `~/.claude/settings.json` | Global preferences, model selection | Yes. your personal config |
+| `~/.claude/skills/` | Installed skill Markdown files | Yes. skills follow you across projects |
+| `~/.claude/conversations/` | Session history | Optional. large over time |
+| `~/.claude/credentials` | API key storage | Yes. required to authenticate |
 
 If you prefer not to mount the entire `~/.claude` directory (for example, on a shared build server where you do not want the host credentials inside the container), pass the API key as an environment variable instead:
 
@@ -274,7 +274,7 @@ podman run -it --rm \
 
 Claude Code reads `ANTHROPIC_API_KEY` from the environment, so this works as a zero-credential-file alternative.
 
-## Integrating Claude Skills
+Integrating Claude Skills
 
 Claude Code excels when combined with specialized skills. The container environment supports full skill functionality. For frontend development tasks, use the frontend-design skill to generate responsive layouts and components:
 
@@ -288,23 +288,23 @@ Need to generate documentation? The pdf skill creates professional PDF output di
 Apply the tdd skill to write unit tests for the authentication module.
 ```
 
-The supermemory skill enables persistent context across sessions—useful when working on long-term projects. Install skills within the container by placing skill Markdown files in `~/.claude/skills/` (which you've mounted from your host via `-v ~/.claude:/homedeveloper/.claude:z`). Any skill files already in your host `~/.claude/skills/` directory will be available automatically.
+The supermemory skill enables persistent context across sessions, useful when working on long-term projects. Install skills within the container by placing skill Markdown files in `~/.claude/skills/` (which you've mounted from your host via `-v ~/.claude:/homedeveloper/.claude:z`). Any skill files already in your host `~/.claude/skills/` directory will be available automatically.
 
-### Baking Skills Into the Image
+Baking Skills Into the Image
 
 For team deployments where everyone should have the same skill set, embed skills directly in the image:
 
 ```dockerfile
 FROM claude-code-dev:latest
 
-# Add a layer with shared skills
+Add a layer with shared skills
 RUN mkdir -p /homedeveloper/.claude/skills
 COPY skills/ /homedeveloper/.claude/skills/
 ```
 
-Build a team image from this Containerfile and push it to an internal registry. Every developer pulls the same image and gets the same skill set without any manual installation. When skills are updated, rebuild and push the image—developers pull the new version with `podman pull`.
+Build a team image from this Containerfile and push it to an internal registry. Every developer pulls the same image and gets the same skill set without any manual installation. When skills are updated, rebuild and push the image, developers pull the new version with `podman pull`.
 
-## Practical Development Workflow
+Practical Development Workflow
 
 Consider a typical workflow: you're contributing to an open-source project and want to test changes in an isolated environment. Start your container:
 
@@ -329,7 +329,7 @@ This approach keeps the container alive between Claude Code invocations, preserv
 podman rm -f dev-session
 ```
 
-### Managing Multiple Projects Simultaneously
+Managing Multiple Projects Simultaneously
 
 When you work on several projects at the same time, name containers after the project to avoid confusion:
 
@@ -359,7 +359,7 @@ Stop all of them at once when you are done for the day:
 podman ps --filter name=claude- --format '{{.Names}}' | xargs podman rm -f
 ```
 
-## Security Considerations
+Security Considerations
 
 Rootless Podman containers cannot access host resources beyond what you explicitly mount. However, follow these best practices:
 
@@ -369,9 +369,9 @@ Rootless Podman containers cannot access host resources beyond what you explicit
 
 The combination of rootless containers and Claude Code gives you AI-assisted development without granting elevated privileges to either the container or the AI assistant.
 
-### Network Isolation
+Network Isolation
 
-By default, Podman rootless containers use a user-mode network stack (`slirp4netns` or `pasta`). This means the container can initiate outbound connections—required for Claude Code to reach the Anthropic API—but no inbound ports are exposed on the host unless you explicitly publish them. For most development use cases this is exactly the right default.
+By default, Podman rootless containers use a user-mode network stack (`slirp4netns` or `pasta`). This means the container can initiate outbound connections, required for Claude Code to reach the Anthropic API, but no inbound ports are exposed on the host unless you explicitly publish them. For most development use cases this is exactly the right default.
 
 If you need to run a local web server alongside Claude Code (for example, to preview a documentation site), publish only the specific port you need:
 
@@ -387,7 +387,7 @@ podman run -it --rm \
 
 Binding to `127.0.0.1` rather than `0.0.0.0` ensures the port is only accessible from the local machine, not exposed on the network.
 
-### Running with a Read-Only Root Filesystem
+Running with a Read-Only Root Filesystem
 
 For maximum isolation, run the container with a read-only root filesystem and only writable tmpfs mounts where the process actually needs write access:
 
@@ -405,7 +405,7 @@ podman run -it --rm \
 
 With `--read-only`, any attempt to write to the container filesystem outside the tmpfs mounts and your volume-mounted directories will fail immediately. This makes the container's behaviour entirely predictable and prevents any tool Claude invokes from writing files outside your project directory.
 
-## Automating Container Management
+Automating Container Management
 
 For teams, consider creating a wrapper script that handles common tasks:
 
@@ -436,36 +436,36 @@ esac
 
 Save this as `claude-dev` in your PATH for quick container management.
 
-### Generating a Systemd Unit for Automatic Startup
+Generating a Systemd Unit for Automatic Startup
 
 Podman can generate a systemd user unit that starts your development container on login and stops it on logout:
 
 ```bash
-# Start the container once to generate the unit
+Start the container once to generate the unit
 podman run -d --name claude-dev \
     -v "$HOME/projects":/homedeveloper/project:z \
     -v "$HOME/.claude":/homedeveloper/.claude:z \
     claude-code-dev:latest sleep infinity
 
-# Generate the unit file
+Generate the unit file
 mkdir -p ~/.config/systemd/user
 podman generate systemd --name --files claude-dev
 mv container-claude-dev.service ~/.config/systemd/user/
 
-# Enable and start
+Enable and start
 systemctl --user daemon-reload
 systemctl --user enable --now container-claude-dev.service
 ```
 
 After this, the container starts automatically when you log in. Attach to it any time with `podman exec -it claude-dev claude`. No manual `podman run` is needed.
 
-### Keeping the Image Updated
+Keeping the Image Updated
 
 Claude Code releases frequently. Add an update step to your team's CI pipeline or create a cron job:
 
 ```bash
 #!/bin/bash
-# update-claude-dev.sh
+update-claude-dev.sh
 set -e
 
 echo "Building updated image..."
@@ -479,20 +479,20 @@ echo "Done. Restart your dev container to pick up the update."
 
 The `--pull` flag tells Podman to always fetch the latest version of the base image (`fedora:40`) before building, ensuring OS-level security patches are included.
 
-## Conclusion
+Conclusion
 
 Running Claude Code in Podman rootless containers provides a secure, portable development environment. The setup takes minutes, and you gain isolation, reproducibility, and the full power of AI-assisted coding. Whether you're exploring new libraries, contributing to unfamiliar projects, or working with sensitive code, rootless containers keep your host system untouched while giving Claude Code everything it needs to help you build.
 
-The combination of daemonless operation, user namespace isolation, SELinux labeling, and optional read-only root filesystems makes Podman the most security-forward choice for containerised development on Linux. Pair that with Claude Code's ability to understand context, generate code, run tests, and iterate—all within the boundaries of the volumes you explicitly mount—and you have an environment that is both powerful and auditable.
+The combination of daemonless operation, user namespace isolation, SELinux labeling, and optional read-only root filesystems makes Podman the most security-forward choice for containerised development on Linux. Pair that with Claude Code's ability to understand context, generate code, run tests, and iterate, all within the boundaries of the volumes you explicitly mount, and you have an environment that is both powerful and auditable.
 
 Start with the alias approach for local development, graduate to the wrapper script when you want to share the workflow with your team, and use the systemd unit when you need the container available the moment you log in.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

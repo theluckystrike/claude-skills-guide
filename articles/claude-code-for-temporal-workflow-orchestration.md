@@ -15,11 +15,11 @@ score: 7
 
 
 {% raw %}
-# Claude Code for Temporal Workflow Orchestration
+Claude Code for Temporal Workflow Orchestration
 
 Temporal has emerged as one of the most powerful platforms for building durable, reliable workflows that can survive failures, retries, and long-running processes. When combined with Claude Code's AI-assisted development capabilities, developers can dramatically accelerate the creation of complex workflow orchestrations. This guide explores how to use Claude Code effectively for Temporal workflow development.
 
-## Understanding Temporal's Programming Model
+Understanding Temporal's Programming Model
 
 Before diving into the practical aspects, it's essential to understand Temporal's core concepts. Temporal provides durable execution for applications through three main components: Workflows, Activities, and Workers. Workflows define the business logic and coordinate multiple activities, while Activities are individual tasks that can fail and retry. Workers are the processes that execute workflows and activities.
 
@@ -27,7 +27,7 @@ The key advantage of Temporal is its ability to preserve workflow state even dur
 
 Claude Code can help you understand these concepts faster by explaining Temporal patterns, generating boilerplate code, and helping you debug issues within your workflow definitions.
 
-## Setting Up Your Temporal Project with Claude Code
+Setting Up Your Temporal Project with Claude Code
 
 Getting started with Temporal development becomes much smoother when using Claude Code's assistance. First, ensure you have the Temporal CLI installed and a development cluster running. Then, create your project structure using your preferred language SDK.
 
@@ -82,13 +82,13 @@ class OrderProcessingWorkflow:
 
 Claude Code can help you generate this boilerplate and explain each component's purpose. When you need clarification on retry policies, activity timeouts, or signal handlers, simply ask Claude Code for explanations.
 
-## Implementing Advanced Workflow Patterns
+Implementing Advanced Workflow Patterns
 
-Temporal shines when implementing sophisticated orchestration patterns. Let's explore some common patterns that Claude Code can help you build.
+Temporal shines when implementing sophisticated orchestration patterns.  some common patterns that Claude Code can help you build.
 
-### Parallel Execution with Scoped Context
+Parallel Execution with Scoped Context
 
-When you need to execute multiple activities concurrently while managing their results, Temporal's `asyncio.gather` pattern combined with workflow local臨時 state becomes powerful:
+When you need to execute multiple activities concurrently while managing their results, Temporal's `asyncio.gather` pattern combined with workflow local state becomes powerful:
 
 ```python
 import asyncio
@@ -138,9 +138,9 @@ class BulkOrderProcessingWorkflow:
         }
 ```
 
-### Saga Pattern for Distributed Transactions
+Saga Pattern for Distributed Transactions
 
-For scenarios requiring compensation across multiple services, the Saga pattern provides a robust solution. Claude Code can help you implement this pattern correctly:
+For scenarios requiring compensation across multiple services, the Saga pattern provides a solid solution. Claude Code can help you implement this pattern correctly:
 
 ```python
 @workflow.defn
@@ -195,7 +195,7 @@ class OrderSagaWorkflow:
             return {"status": "compensated", "error": str(e)}
 ```
 
-## Debugging Temporal Workflows with Claude Code
+Debugging Temporal Workflows with Claude Code
 
 One of the most valuable use cases for Claude Code in Temporal development is debugging. When your workflows behave unexpectedly, Claude Code can help you trace through the execution history and identify issues.
 
@@ -215,29 +215,29 @@ Claude Code can then guide you through:
 4. Understanding retry behavior and backoff schedules
 5. Identifying potential deadlock scenarios
 
-## Best Practices for Claude Code-Assisted Temporal Development
+Best Practices for Claude Code-Assisted Temporal Development
 
 To get the most out of Claude Code when working with Temporal, follow these practical recommendations:
 
-**Provide Context Early**: When asking Claude Code to help with Temporal code, mention you're working with Temporal and share relevant workflow details. This helps Claude Code provide more accurate suggestions.
+Provide Context Early: When asking Claude Code to help with Temporal code, mention you're working with Temporal and share relevant workflow details. This helps Claude Code provide more accurate suggestions.
 
-**Iterative Development**: Start with simple workflows and gradually add complexity. Claude Code excels at helping you understand each component before combining them.
+Iterative Development: Start with simple workflows and gradually add complexity. Claude Code excels at helping you understand each component before combining them.
 
-**Use Type Hints**: Python users should use type hints extensively. Claude Code uses these to provide better suggestions and catch potential errors before runtime.
+Use Type Hints: Python users should use type hints extensively. Claude Code uses these to provide better suggestions and catch potential errors before runtime.
 
-**Test Activities Independently**: Before testing full workflows, ensure each activity works correctly in isolation. Claude Code can help you write unit tests for individual activities.
+Test Activities Independently: Before testing full workflows, ensure each activity works correctly in isolation. Claude Code can help you write unit tests for individual activities.
 
-## Conclusion
+Conclusion
 
 Claude Code significantly accelerates Temporal workflow development by handling boilerplate generation, explaining complex patterns, and assisting with debugging. The combination of AI-assisted development with Temporal's durable execution model enables developers to build more reliable, maintainable workflow applications faster than ever.
 
 Whether you're implementing simple task queues or complex distributed transaction patterns, Claude Code serves as an intelligent partner throughout the development lifecycle. Start small, iterate frequently, and use Claude Code's capabilities to handle the complexity that comes with sophisticated workflow orchestration.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

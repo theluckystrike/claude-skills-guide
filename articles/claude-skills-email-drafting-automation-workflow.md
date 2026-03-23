@@ -13,17 +13,17 @@ permalink: /claude-skills-email-drafting-automation-workflow/
 
 # Claude Skills Email Drafting Automation Workflow
 
-Developers spend more time writing emails than they should. Incident reports, API deprecation notices, sprint retrospectives sent to stakeholders, onboarding emails for new team members — these follow predictable patterns but take real effort to write well every time. Claude skills let you encode those patterns once and invoke them on demand, producing draft emails in seconds that match your tone and contain the right structure.
+Developers spend more time writing emails than they should. Incident reports, API deprecation notices, sprint retrospectives sent to stakeholders, onboarding emails for new team members. these follow predictable patterns but take real effort to write well every time. Claude skills let you encode those patterns once and invoke them on demand, producing draft emails in seconds that match your tone and contain the right structure.
 
-This guide covers building a practical email drafting workflow using Claude skills. No external email API required — this works directly inside Claude Code sessions and produces drafts you copy into your email client.
+This guide covers building a practical email drafting workflow using Claude skills. No external email API required. this works directly inside Claude Code sessions and produces drafts you copy into your email client.
 
-## The Core Approach
+The Core Approach
 
-Claude skills are Markdown files in `~/.claude/skills/`. You invoke them with `/skill-name` inside a Claude Code session. For email drafting, you create one skill per email type — each skill encodes the format, tone, required fields, and any relevant conventions for that type of communication.
+Claude skills are Markdown files in `~/.claude/skills/`. You invoke them with `/skill-name` inside a Claude Code session. For email drafting, you create one skill per email type. each skill encodes the format, tone, required fields, and any relevant conventions for that type of communication.
 
 The [`supermemory` skill](/claude-skills-token-optimization-reduce-api-costs/) stores your personal context: your name, role, communication preferences, and frequently used boilerplate. Combining a typed email skill with your supermemory context produces drafts that read like you wrote them.
 
-## Step 1: Set Up Your Communication Profile in Supermemory
+Step 1: Set Up Your Communication Profile in Supermemory
 
 Before writing any email skills, load your communication context into supermemory:
 
@@ -50,14 +50,14 @@ Retrieve this at the start of any email drafting session:
 Retrieve my communication profile before drafting any emails.
 ```
 
-## Step 2: Create an Incident Report Email Skill
+Step 2: Create an Incident Report Email Skill
 
 Incident communications follow a strict format: what happened, when, impact, root cause, resolution, and prevention steps. Inconsistent incident emails erode trust. A skill ensures every incident report has the same structure.
 
 Create `~/.claude/skills/incident-email.md`:
 
 ```markdown
-# incident-email
+incident-email
 
 You are drafting a post-incident email to be sent to stakeholders after a production incident has been resolved.
 
@@ -71,7 +71,7 @@ Required inputs from the user:
 - Prevention measures (specific action items with owners if known)
 
 Email structure:
-Subject: [RESOLVED] Incident: {title} — {date}
+Subject: [RESOLVED] Incident: {title}. {date}
 
 Body:
 1. One-sentence summary of what happened and that it is resolved
@@ -103,14 +103,14 @@ Incident details:
 
 The output is a complete, ready-to-send incident report in under ten seconds.
 
-## Step 3: Create an API Deprecation Notice Skill
+Step 3: Create an API Deprecation Notice Skill
 
 API deprecation emails need to be clear about timelines, migration paths, and impact. Ambiguous deprecation notices generate follow-up emails and support tickets. A skill enforces clarity.
 
 Create `~/.claude/skills/deprecation-notice.md`:
 
 ```markdown
-# deprecation-notice
+deprecation-notice
 
 You are drafting an API deprecation notice to send to developers who use an endpoint or feature that will be removed.
 
@@ -127,7 +127,7 @@ Subject: Action Required: {what} deprecating on {EOL date}
 
 Body:
 1. What is being deprecated and when it stops working (no ambiguity)
-2. Why (brief — framework upgrade, security, performance)
+2. Why (brief. framework upgrade, security, performance)
 3. What to migrate to (specific replacement with code example)
 4. Migration steps (numbered list, copy-paste commands where possible)
 5. Timeline summary (announcement date, final deprecation date)
@@ -155,14 +155,14 @@ Deprecation details:
 - Help: #api-support Slack channel
 ```
 
-## Step 4: Build a Sprint Update Email Skill
+Step 4: Build a Sprint Update Email Skill
 
 End-of-sprint emails to stakeholders follow a pattern: what shipped, what did not, what is next, any blockers that need attention. Most engineers write these from scratch each sprint.
 
 Create `~/.claude/skills/sprint-update.md`:
 
 ```markdown
-# sprint-update
+sprint-update
 
 You are drafting a sprint update email from an engineering team to non-technical stakeholders.
 
@@ -174,12 +174,12 @@ Required inputs:
 - Blockers or decisions needed from stakeholders
 
 Email structure:
-Subject: Sprint {number} Update — {date range}
+Subject: Sprint {number} Update. {date range}
 
 Body:
-1. One-sentence sprint outcome (delivered/partially delivered/did not deliver — be honest)
+1. One-sentence sprint outcome (delivered/partially delivered/did not deliver. be honest)
 2. What shipped (bullet list, plain English descriptions, avoid jargon)
-3. What did not ship (bullet list with brief reason — scope change, dependency, complexity)
+3. What did not ship (bullet list with brief reason. scope change, dependency, complexity)
 4. Next sprint focus (top 3 goals)
 5. Blockers needing input (only include if action is needed from reader)
 
@@ -187,7 +187,7 @@ Tone: factual, no hype. If it was a bad sprint, say so plainly. Stakeholders res
 Maximum length: 300 words. Force brevity.
 ```
 
-## Step 5: Create a pdf-Formatted Email Package
+Step 5: Create a pdf-Formatted Email Package
 
 For important communications that need a paper trail, combine your email draft with the `pdf` skill to generate a formatted record:
 
@@ -200,9 +200,9 @@ After drafting the email, use /pdf to create a formatted sprint summary document
 
 The [`pdf` skill](/best-claude-skills-for-data-analysis/) packages the content with proper formatting, date, and section headers. Store these in a `communications/` folder in your project for future reference.
 
-## Step 6: Batch Email Generation
+Step 6: Batch Email Generation
 
-When you need to send multiple communications at once — say, deprecation notices for five endpoints, or update emails for three teams — use supermemory to store the shared context and iterate:
+When you need to send multiple communications at once. say, deprecation notices for five endpoints, or update emails for three teams. use supermemory to store the shared context and iterate:
 
 ```
 /supermemory
@@ -220,7 +220,7 @@ Now draft deprecation notices for these three endpoints:
 
 Claude generates all three drafts in sequence, each with the correct endpoint-specific details pulled from the shared context.
 
-## Organizing Your Email Skills
+Organizing Your Email Skills
 
 As you build out more skills, name them consistently:
 
@@ -245,10 +245,10 @@ The investment is about 20 minutes to write each skill. A well-written incident 
 
 ---
 
-## Related Reading
+Related Reading
 
-- [Claude Skills Daily Standup Automation Workflow](/claude-skills-daily-standup-automation-workflow/) — Automate daily team communications
-- [Build Personal AI Assistant with Claude Skills Guide](/build-personal-ai-assistant-with-claude-skills-guide/) — Build a broader personal assistant on top of Claude skills
-- [Automated Code Documentation Workflow with Claude Skills](/automated-code-documentation-workflow-with-claude-skills/) — Apply the same workflow approach to code docs
+- [Claude Skills Daily Standup Automation Workflow](/claude-skills-daily-standup-automation-workflow/). Automate daily team communications
+- [Build Personal AI Assistant with Claude Skills Guide](/build-personal-ai-assistant-with-claude-skills-guide/). Build a broader personal assistant on top of Claude skills
+- [Automated Code Documentation Workflow with Claude Skills](/automated-code-documentation-workflow-with-claude-skills/). Apply the same workflow approach to code docs
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

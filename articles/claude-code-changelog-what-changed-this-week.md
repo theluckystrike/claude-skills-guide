@@ -13,17 +13,17 @@ score: 7
 ---
 
 
-# Claude Code Changelog: What Changed This Week
+Claude Code Changelog: What Changed This Week
 
 Keeping track of Claude Code updates helps developers and power users stay productive with the latest features, skill releases, and capability improvements. This weekly changelog covers the most significant updates affecting how you work with Claude skills and the Claude Code CLI, and explains what each change means for your day-to-day workflows.
 
-## Why Following the Changelog Matters
+Why Following the Changelog Matters
 
 Claude Code is a fast-moving tool. Skills added last month may already have improved versions with better prompting strategies, new tool integrations, or performance fixes. If you installed the `tdd` skill three months ago and never updated it, you're likely missing test pattern refinements that ship weekly based on community feedback.
 
 This changelog is structured to give you not just what changed, but why it matters and what you should do about it. Each section covers a specific area of the system, with concrete examples where behavior has changed.
 
-## Recent Skill Framework Updates
+Recent Skill Framework Updates
 
 The Claude skills system has seen several refinements that improve how skills interact with tools and manage complex workflows. These changes directly impact skill authors building custom capabilities.
 
@@ -36,7 +36,7 @@ The `get_skill()` function now returns metadata alongside the skill content, inc
 A practical example of using this metadata:
 
 ```python
-# Dynamically select the right skill based on output format needed
+Dynamically select the right skill based on output format needed
 import subprocess
 import json
 
@@ -51,7 +51,7 @@ def choose_output_skill(output_format: str) -> str:
     }
     return skill_map.get(output_format.lower(), "docx")
 
-# Use in an agent pipeline
+Use in an agent pipeline
 target_format = "pptx"
 skill_name = choose_output_skill(target_format)
 print(f"Selected skill: {skill_name}")
@@ -59,7 +59,7 @@ print(f"Selected skill: {skill_name}")
 
 This pattern is increasingly common in agent workflows that need to produce different artifact types based on user input at runtime.
 
-## Tool Integration Improvements
+Tool Integration Improvements
 
 Tool calling within skills received stability improvements this week. The execution context now properly isolates tool state between skill invocations, preventing cross-contamination when chaining multiple skills together.
 
@@ -68,7 +68,7 @@ Previously, if you chained the `webapp-testing` skill (which opens a browser ses
 A new hook system allows skills to intercept and modify tool results before they're returned to the model. This proves particularly useful when working with the `webapp-testing` skill, where you might want to filter browser console logs or extract specific DOM elements from screenshots before Claude processes them. Here is what a result-filtering hook looks like in practice:
 
 ```python
-# Hook to strip noise from browser console logs before Claude sees them
+Hook to strip noise from browser console logs before Claude sees them
 def filter_console_output(raw_output: str) -> str:
     """Remove common noise patterns from browser console logs."""
     noise_patterns = [
@@ -83,45 +83,45 @@ def filter_console_output(raw_output: str) -> str:
 
 Hooks run synchronously before the tool result is returned to the model, so they're suitable for lightweight transformations. For expensive transformations (image processing, OCR, etc.) you'd want to handle those asynchronously outside the hook.
 
-The bash tool gained support for background execution with explicit timeout configuration. Skills that spawn long-running processes—like those using the `algorithmic-art` skill to generate procedural visuals—can now manage execution time more precisely:
+The bash tool gained support for background execution with explicit timeout configuration. Skills that spawn long-running processes, like those using the `algorithmic-art` skill to generate procedural visuals, can now manage execution time more precisely:
 
 ```bash
-# Run a long task with a 5-minute timeout before terminating
+Run a long task with a 5-minute timeout before terminating
 timeout 300 uv run python generate_art.py --output artwork.png
 
-# Run in background and capture PID for later management
+Run in background and capture PID for later management
 timeout 300 uv run python generate_art.py --output artwork.png &
 ART_PID=$!
 echo "Generation running as PID $ART_PID"
 
-# Wait for completion or handle timeout
+Wait for completion or handle timeout
 wait $ART_PID && echo "Art generation complete" || echo "Generation timed out"
 ```
 
-## New Skill Capabilities
+New Skill Capabilities
 
 Several new features expanded what skills can accomplish this week:
 
-**Canvas Design Skill Enhancements**: The `canvas-design` skill now supports PDF export alongside PNG output. This matters when you need vector-quality output for print materials or want to include generated designs in documentation built with the `docx` skill. Previously you'd need to run a separate conversion step through ImageMagick or a PDF library. The export is now a single parameter change:
+Canvas Design Skill Enhancements: The `canvas-design` skill now supports PDF export alongside PNG output. This matters when you need vector-quality output for print materials or want to include generated designs in documentation built with the `docx` skill. Previously you'd need to run a separate conversion step through ImageMagick or a PDF library. The export is now a single parameter change:
 
 ```bash
-# PNG output (previous behavior, still works)
-# /canvas-design --format png --output diagram.png
+PNG output (previous behavior, still works)
+/canvas-design --format png --output diagram.png
 
-# PDF export (new)
-# /canvas-design --format pdf --output diagram.pdf
+PDF export (new)
+/canvas-design --format pdf --output diagram.pdf
 ```
 
-**Supermemory Integration**: The `supermemory` skill now supports vector-based semantic search across your knowledge base. You can query past conversations, notes, and research with natural language rather than exact keyword matches. This creates powerful workflows where Claude can reference relevant prior context automatically.
+Supermemory Integration: The `supermemory` skill now supports vector-based semantic search across your knowledge base. You can query past conversations, notes, and research with natural language rather than exact keyword matches. This creates powerful workflows where Claude can reference relevant prior context automatically.
 
 Before this update, finding a specific past note required you to remember exact keywords or dates. Now you can ask for "that discussion about rate limiting strategies from a few weeks ago" and the vector search will surface the right entries even if your phrasing doesn't match the stored text verbatim. This is a significant quality-of-life improvement for anyone using `supermemory` as a persistent research journal.
 
-**MCP Builder Updates**: Skills built using the `mcp-builder` framework now support streaming responses. If you're building an MCP server that connects to real-time data sources—stock prices, server metrics, or live feeds—the server can push updates to Claude as they arrive rather than waiting for a complete response.
+MCP Builder Updates: Skills built using the `mcp-builder` framework now support streaming responses. If you're building an MCP server that connects to real-time data sources, stock prices, server metrics, or live feeds, the server can push updates to Claude as they arrive rather than waiting for a complete response.
 
 The difference in user experience is substantial. A polling-based setup might return stale data and feel sluggish. With streaming, Claude can narrate what it's seeing in real time:
 
 ```python
-# Example: Streaming MCP server handler (simplified)
+Streaming MCP server handler (simplified)
 async def stream_metric_updates(metric_name: str):
     async for data_point in live_metrics_feed(metric_name):
         yield {
@@ -130,7 +130,7 @@ async def stream_metric_updates(metric_name: str):
         }
 ```
 
-## Bug Fixes and Performance
+Bug Fixes and Performance
 
 The team addressed several issues affecting developer experience:
 
@@ -141,17 +141,17 @@ The team addressed several issues affecting developer experience:
 
 If you maintain skills that others use on Windows, the path resolution fix is worth testing. Run your skill on a Windows machine or WSL environment and verify file references resolve correctly after the update.
 
-## Deprecation Notices
+Deprecation Notices
 
 The legacy skill format using `+description` front matter fields is now deprecated. Migration to the standard `description` field completes by the end of the month. Skills still using the old format will continue working but will emit warnings during loading.
 
 Check your installed skills and update any that use the old format:
 
 ```bash
-# List all installed skills
+List all installed skills
 ls -la ~/.claude/skills/
 
-# Search for skills using the deprecated format
+Search for skills using the deprecated format
 grep -r "^\+description" ~/.claude/skills/
 ```
 
@@ -167,7 +167,7 @@ description: "Current format"
 
 This is a straightforward find-and-replace. If you maintain a private skill library, run the grep above before the end-of-month deadline to avoid warning noise during startup.
 
-## Comparing Old vs New Behavior: Key Changes at a Glance
+Comparing Old vs New Behavior: Key Changes at a Glance
 
 | Area | Previous Behavior | New Behavior |
 |---|---|---|
@@ -180,7 +180,7 @@ This is a straightforward find-and-replace. If you maintain a private skill libr
 | MCP server responses | Request-response only | Streaming responses supported |
 | Windows path handling | Often broken for relative paths | Correct backslash handling |
 
-## Coming Soon
+Coming Soon
 
 Preview features landing next week include:
 
@@ -190,7 +190,7 @@ Preview features landing next week include:
 
 The multi-file skill packages feature is particularly significant. Right now, complex skills sometimes need to embed long code blocks directly in the Markdown file, making them hard to read and edit. Packages will allow a skill to reference external Python files, configs, and templates in a structured directory layout.
 
-## Staying Updated
+Staying Updated
 
 To check your current Claude Code version and installed skills:
 
@@ -204,28 +204,28 @@ Update skills regularly by replacing skill `.md` files in `~/.claude/skills/` wi
 The recommended update workflow for a team shared skill library:
 
 ```bash
-# Pull latest skill files from your team's shared repo
+Pull latest skill files from your team's shared repo
 cd ~/team-skills-repo
 git pull origin main
 
-# Copy updated skills to the Claude skills directory
+Copy updated skills to the Claude skills directory
 cp skills/*.md ~/.claude/skills/
 
-# Verify skills loaded correctly on next Claude Code launch
+Verify skills loaded correctly on next Claude Code launch
 claude --version
 ```
 
 The `internal-comms` skill received a significant update this week with new templates for project status reports. If you regularly communicate team progress, this skill now generates formatted updates in multiple formats compatible with the `docx` skill for Word documents or direct Markdown output. The new templates cover sprint retrospectives, incident postmortems, and stakeholder briefings.
 
-## Practical Example: Chaining Skills With the New Context Isolation
+Practical Example: Chaining Skills With the New Context Isolation
 
 Here is a full example demonstrating how multiple skills now work together reliably after the context isolation fix:
 
 ```python
-# Example: Generate a technical test report using chained skills
-# 1. Use tdd to generate test cases for a new feature
-# 2. Run the tests and capture results
-# 3. Use docx to create a formatted test report
+Generate a technical test report using chained skills
+1. Use tdd to generate test cases for a new feature
+2. Run the tests and capture results
+3. Use docx to create a formatted test report
 
 import subprocess
 import datetime
@@ -266,7 +266,7 @@ def run_skill_pipeline(feature_name: str, output_path: str):
 
     return test_result.returncode == 0
 
-# Run the pipeline
+Run the pipeline
 success = run_skill_pipeline("user-auth", "/tmp/auth-test-report.txt")
 print(f"Pipeline {'succeeded' if success else 'failed'}")
 ```
@@ -278,10 +278,10 @@ The key insight here is that with proper context isolation, each step in this pi
 Each weekly update improves either skill authoring, tool integration, or runtime performance. Bookmark this changelog to stay informed about changes that affect your Claude Code workflows. If you maintain a private skill library or build on top of the MCP framework, the deprecation notice and tool isolation fixes deserve attention before the end of the month.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -15,17 +15,17 @@ score: 7
 
 Model Context Protocol (MCP) servers have become essential infrastructure for AI-powered workflows, enabling Claude and similar assistants to interact with external tools, databases, and services. However, exposing these servers in production environments introduces security considerations that many developers overlook. This guide covers practical strategies for securing your MCP servers against common threats.
 
-## Understanding the Attack Surface
+Understanding the Attack Surface
 
 MCP servers typically expose HTTP endpoints that accept JSON-RPC requests. These endpoints can read files, execute commands, query databases, or interact with third-party APIs. When deployed without proper security measures, they become attractive targets for attackers.
 
 The primary attack vectors include unauthenticated access, command injection through poorly validated inputs, excessive permissions, and exposure of sensitive credentials. Each of these requires a different defensive approach.
 
-## Authentication and Authorization
+Authentication and Authorization
 
 The foundational layer of MCP server security starts with authentication. Never expose an MCP server to the public internet without authentication mechanisms.
 
-### Implementing Token-Based Authentication
+Implementing Token-Based Authentication
 
 ```python
 from functools import wraps
@@ -46,15 +46,15 @@ async def verify_token(authorization: str = Header(None)):
 
 def require_auth(func):
     @wraps(func)
-    async def wrapper(*args, **kwargs):
+    async def wrapper(*args, kwargs):
         await verify_token(kwargs.get("authorization"))
-        return await func(*args, **kwargs)
+        return await func(*args, kwargs)
     return wrapper
 ```
 
 This pattern ensures only authenticated clients can invoke MCP tools. Store tokens in secure vaults rather than environment variables for production deployments.
 
-### Role-Based Access Control
+Role-Based Access Control
 
 Different Claude skills require different permission levels. The `supermemory` skill might need read access to knowledge bases, while `pdf` processing requires file system access. Implement granular permissions:
 
@@ -74,11 +74,11 @@ function checkPermission(toolName, userRole) {
 }
 ```
 
-## Input Validation and Sanitization
+Input Validation and Sanitization
 
 Command injection remains one of the most critical vulnerabilities in MCP servers. Any tool that accepts user input and passes it to system commands requires rigorous validation.
 
-### Safe Parameter Handling
+Safe Parameter Handling
 
 ```python
 import shlex
@@ -106,9 +106,9 @@ def execute_safe_command(tool_name: str, args: dict):
 
 The `tdd` skill emphasizes writing tests before implementing security controls. Apply this methodology by creating test cases for malicious inputs before deploying sanitization logic.
 
-## Network Security
+Network Security
 
-### TLS Encryption
+TLS Encryption
 
 Always terminate TLS at your MCP server or behind a reverse proxy. Here's a minimal Nginx configuration:
 
@@ -133,7 +133,7 @@ server {
 }
 ```
 
-### Rate Limiting
+Rate Limiting
 
 Protect against denial-of-service attacks and brute-force attempts by implementing rate limiting:
 
@@ -162,7 +162,7 @@ class RateLimiter:
         return True
 ```
 
-## Secrets Management
+Secrets Management
 
 Never hardcode API keys, database credentials, or encryption keys in your MCP server codebase. The `frontend-design` skill and other Claude capabilities should integrate with proper secrets management:
 
@@ -187,7 +187,7 @@ def get_secret(secret_name: str) -> str:
     return get_vault_secret(secret_name)
 ```
 
-## Logging and Monitoring
+Logging and Monitoring
 
 Comprehensive logging enables incident detection and forensic analysis. Log all authentication attempts, tool invocations, and errors:
 
@@ -212,12 +212,12 @@ def log_mcp_request(client_id: str, tool: str, args: dict, success: bool):
 
 Integrate with SIEM systems for production alerting. The `supermemory` skill can help maintain an audit trail of security events across your infrastructure.
 
-## Container Isolation
+Container Isolation
 
 When deploying MCP servers in containers, apply defense-in-depth principles:
 
 ```dockerfile
-# Run as non-root user
+Run as non-root user
 FROM node:20-alpine
 RUN addgroup -g 1001 appgroup && adduser -u 1001 -G appgroup -s /bin/sh -D appuser
 
@@ -225,7 +225,7 @@ WORKDIR /app
 COPY --chown=appuser:appgroup . .
 USER appuser
 
-# Read-only filesystem where possible
+Read-only filesystem where possible
 ENTRYPOINT ["node", "server.js"]
 ```
 
@@ -250,7 +250,7 @@ spec:
               app: claude-frontend
 ```
 
-## Regular Security Audits
+Regular Security Audits
 
 Schedule periodic reviews of your MCP server configurations. The `pdf` skill can generate automated security reports, while code analysis tools should scan for vulnerabilities in tool implementations.
 
@@ -260,14 +260,14 @@ Key audit points include:
 - Overly permissive access controls
 - Missing logging on sensitive operations
 
-## Summary
+Summary
 
 Securing MCP servers in production requires a layered approach: authentication at the entry point, input validation at every tool handler, network encryption in transit, secrets management throughout, and comprehensive logging for visibility. These controls work together to reduce your attack surface while maintaining the functionality that makes MCP valuable.
 
 Apply these practices incrementally, starting with authentication and TLS, then adding rate limiting and monitoring. Regular audits ensure your security posture improves over time rather than degrading as your deployment grows.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)
 - [MCP Servers vs Claude Skills: What's the Difference?](/mcp-servers-vs-claude-skills-what-is-the-difference/)
@@ -275,4 +275,4 @@ Apply these practices incrementally, starting with authentication and TLS, then 
 - [Claude SuperMemory Skill: Persistent Context Explained](/claude-supermemory-skill-persistent-context-explained/)
 - [Advanced Claude Skills Hub](/advanced-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

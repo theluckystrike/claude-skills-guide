@@ -16,7 +16,7 @@ score: 8
 {% raw %}
 Team wikis are the central nervous system of knowledge sharing in modern engineering organizations. Yet they often become outdated quickly, with stale pages, inconsistent formatting, and abandoned sections that no one trusts. Claude Code transforms wiki maintenance from a dreaded chore into an automated, efficient workflow that keeps your team's knowledge base current and reliable.
 
-## The Challenge of Wiki Maintenance
+The Challenge of Wiki Maintenance
 
 Engineering wikis face unique challenges that make maintenance difficult. Multiple contributors with different writing styles, constantly evolving technical landscapes, and the sheer volume of content all contribute to documentation decay. Teams typically address this in one of three ways: ignoring the problem and accepting stale docs, assigning dedicated documentation owners (who become bottlenecks), or using complex CI/CD pipelines that few understand.
 
@@ -24,26 +24,26 @@ The result is predictable: wikis accumulate pages that reference decommissioned 
 
 Claude Code offers a fourth path: embedding AI-assisted maintenance directly into the development workflow where documentation naturally happens.
 
-## Setting Up Claude Code for Wiki Tasks
+Setting Up Claude Code for Wiki Tasks
 
 Before implementing your maintenance workflow, configure Claude Code to understand your wiki structure and standards. Create a dedicated skill or CLAUDE.md file that defines your wiki conventions.
 
 ```markdown
-# Wiki Maintenance Guidelines
+Wiki Maintenance Guidelines
 
-## Page Structure
+Page Structure
 - Always include a last-updated timestamp
 - Add a table of contents for pages over 800 words
 - Use consistent heading hierarchy (H1 → H2 → H3)
 - Include relevant tags at the bottom of each page
 
-## Content Standards
+Content Standards
 - Write in present tense
 - Use active voice
 - Include practical code examples
 - Cross-link related pages using full paths
 
-## Review Triggers
+Review Triggers
 - Flag pages older than 90 days
 - Identify broken internal links
 - Highlight missing code examples
@@ -54,7 +54,7 @@ Load this configuration when working with wiki-related tasks by referencing it i
 
 For teams using hosted platforms like Confluence or Notion, store the equivalent guidelines in a pinned document and paste the relevant sections into your Claude Code session when starting wiki work. Consistency in what you tell Claude about your standards directly impacts the quality of what it produces.
 
-## Automated Wiki Auditing Workflow
+Automated Wiki Auditing Workflow
 
 One of the most valuable applications is running periodic audits to identify stale content. Create a skill that systematically reviews your wiki:
 
@@ -69,7 +69,7 @@ Please audit our team wiki at /path/to/wiki and identify:
 Output a prioritized list of pages needing attention, grouped by severity.
 ```
 
-This audit can run weekly or on-demand, giving your team concrete tasks rather than vague "update the docs" mandates. The output becomes a backlog item list—something a team lead can assign, track, and close like any other engineering work.
+This audit can run weekly or on-demand, giving your team concrete tasks rather than vague "update the docs" mandates. The output becomes a backlog item list, something a team lead can assign, track, and close like any other engineering work.
 
 To make audits more actionable, ask Claude to produce structured output that maps directly to your issue tracker:
 
@@ -86,7 +86,7 @@ Wrap the entire output in a JSON array so I can pipe it to our ticket creation s
 
 Pairing this with a simple shell script that creates GitHub Issues or Jira tickets from the JSON output means your audit automatically populates your team's sprint backlog. The friction of going from "the wiki is stale" to "there are 14 assigned tickets" drops to near zero.
 
-## Real-Time Documentation Updates
+Real-Time Documentation Updates
 
 The real power of Claude Code emerges when you integrate documentation into daily development. Instead of treating docs as an afterthought, prompt Claude to update relevant wiki pages whenever significant code changes occur.
 
@@ -99,7 +99,7 @@ After completing the user authentication refactor, please:
 5. Update the glossary entry for "auth token" to reflect the new JWT format
 ```
 
-This approach keeps documentation synchronized with code because updates happen while the context is fresh in Claude's conversation. The developer who wrote the code is the most qualified person to explain it—and with Claude handling the writing, that developer spends minutes on documentation rather than hours.
+This approach keeps documentation synchronized with code because updates happen while the context is fresh in Claude's conversation. The developer who wrote the code is the most qualified person to explain it, and with Claude handling the writing, that developer spends minutes on documentation rather than hours.
 
 Compare the two approaches:
 
@@ -111,9 +111,9 @@ Compare the two approaches:
 | Review cycle adds days | Review cycle same as code review |
 | Docs lag by weeks or months | Docs lag by hours at most |
 
-The time investment difference is significant. A developer spending 30 minutes writing documentation is a real cost. A developer spending 5 minutes reviewing Claude's draft documentation—and making corrections—produces roughly the same quality output at a fraction of the effort.
+The time investment difference is significant. A developer spending 30 minutes writing documentation is a real cost. A developer spending 5 minutes reviewing Claude's draft documentation, and making corrections, produces roughly the same quality output at a fraction of the effort.
 
-## Template-Based Page Generation
+Template-Based Page Generation
 
 Claude Code excels at generating consistent content from templates. Define standard templates for common wiki page types and let Claude populate them:
 
@@ -138,21 +138,21 @@ This ensures every new page follows your team's standards without manual enforce
 For teams maintaining multiple service wikis, creating a library of page templates directly in your CLAUDE.md file lets Claude apply them consistently:
 
 ```markdown
-## Available Templates
+Available Templates
 
-### Service Documentation Template
+Service Documentation Template
 Required sections: Overview, Architecture Diagram, API Reference,
 Configuration, Dependencies, Error Codes, Troubleshooting, Escalation Path
 
-### Runbook Template
+Runbook Template
 Required sections: Alert Description, Severity, Initial Triage Steps,
 Common Causes, Resolution Steps, Escalation, Post-Incident Notes
 
-### ADR Template (Architecture Decision Record)
+ADR Template (Architecture Decision Record)
 Required sections: Status, Context, Decision, Consequences, Alternatives Considered
 ```
 
-## Cross-Page Consistency Checking
+Cross-Page Consistency Checking
 
 Wikis often develop inconsistencies as different authors add content over time. The payments team writes API examples using `curl`. The platform team uses `httpie`. The frontend team uses `fetch`. A new engineer reading across pages encounters three different tools for the same task and cannot tell which is canonical.
 
@@ -171,11 +171,11 @@ Our wiki has evolved inconsistently. Please:
 Make changes in-place and output a summary of what was changed in each file.
 ```
 
-This transforms what would be hours of tedious find-replace into a focused task. The key is specificity—tell Claude exactly what the old pattern is and exactly what it should become. Vague instructions like "make it consistent" produce inconsistent results. Precise instructions like "replace `requests.get(BASE_URL)` with `httpx.get(BASE_URL)` in all Python examples" produce predictable, reviewable changes.
+This transforms what would be hours of tedious find-replace into a focused task. The key is specificity, tell Claude exactly what the old pattern is and exactly what it should become. Vague instructions like "make it consistent" produce inconsistent results. Precise instructions like "replace `requests.get(BASE_URL)` with `httpx.get(BASE_URL)` in all Python examples" produce predictable, reviewable changes.
 
-## Integration with Wiki Platforms
+Integration with Wiki Platforms
 
-Whether your team uses Confluence, GitBook, Notion, or a Git-backed wiki, Claude Code can interact with the underlying content. For file-based wikis (Markdown in Git), direct file operations work seamlessly. For hosted platforms, use API integrations:
+Whether your team uses Confluence, GitBook, Notion, or a Git-backed wiki, Claude Code can interact with the underlying content. For file-based wikis (Markdown in Git), direct file operations work smoothly. For hosted platforms, use API integrations:
 
 ```javascript
 // Example: Confluence API integration
@@ -216,36 +216,36 @@ async function flagStalePages(daysThreshold = 90) {
 
 Combine this with Claude Code prompts to create automated workflows that update wiki content based on code changes or scheduled triggers. A GitHub Actions workflow that fires on merges to main can call a script that fetches the diff, prompts Claude to summarize changes affecting documentation, and creates a PR in your wiki repository with proposed updates.
 
-For Notion-backed wikis, the Notion API follows similar patterns. For GitBook, the content lives in a Git repository and Claude Code can work with it directly using standard file operations. The integration layer is thin—Claude handles the reasoning about what needs updating and how to phrase it; your scripts handle the mechanical API calls.
+For Notion-backed wikis, the Notion API follows similar patterns. For GitBook, the content lives in a Git repository and Claude Code can work with it directly using standard file operations. The integration layer is thin, Claude handles the reasoning about what needs updating and how to phrase it; your scripts handle the mechanical API calls.
 
-## Measuring Wiki Health Over Time
+Measuring Wiki Health Over Time
 
 A maintenance workflow without metrics is hard to justify and hard to improve. Track these indicators to demonstrate value and identify where your workflow needs tuning:
 
-- **Page freshness score**: percentage of pages updated within the last 90 days
-- **Broken link count**: number of internal links pointing to non-existent pages
-- **Orphan page count**: pages with no inbound links from other wiki pages
-- **Coverage ratio**: number of production services with corresponding wiki pages
-- **Time-to-update**: median time from code merge to wiki update for significant changes
+- Page freshness score: percentage of pages updated within the last 90 days
+- Broken link count: number of internal links pointing to non-existent pages
+- Orphan page count: pages with no inbound links from other wiki pages
+- Coverage ratio: number of production services with corresponding wiki pages
+- Time-to-update: median time from code merge to wiki update for significant changes
 
 Running the audit script weekly and storing results gives you a trend line. A wiki health score that improves from 45% to 78% over a quarter is a concrete outcome to present to engineering leadership.
 
-## Practical Team Implementation
+Practical Team Implementation
 
-To successfully implement this workflow, start small. Choose one wiki section to focus on—the on-call runbooks are often the highest-value target because stale runbooks directly cause longer incidents. Create clear maintenance prompts, run them for two or three sprints, and gather feedback from the engineers using the updated docs.
+To successfully implement this workflow, start small. Choose one wiki section to focus on, the on-call runbooks are often the highest-value target because stale runbooks directly cause longer incidents. Create clear maintenance prompts, run them for two or three sprints, and gather feedback from the engineers using the updated docs.
 
 From there, expand to service documentation, then API references, then architecture decision records. Each expansion is incremental and the team builds familiarity with the workflow before it covers the entire knowledge base.
 
-The key insight is treating wiki maintenance not as a separate concern but as an integral part of the development process. When Claude Code helps developers write and update documentation in the same session where they write code, your wiki becomes a living, accurate resource that teams actually use. The documentation debt that accumulates in traditional workflows—and that periodically requires a "documentation sprint" that everyone dreads—simply does not build up in the same way.
+The key insight is treating wiki maintenance not as a separate concern but as an integral part of the development process. When Claude Code helps developers write and update documentation in the same session where they write code, your wiki becomes a living, accurate resource that teams actually use. The documentation debt that accumulates in traditional workflows, and that periodically requires a "documentation sprint" that everyone dreads, simply does not build up in the same way.
 
 Engineering teams that implement this workflow consistently report that new engineers onboard faster, incident response improves when runbooks are accurate, and the culture around documentation shifts from "something we should do" to "something we actually do."
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at zovo.one
+Built by theluckystrike. More at zovo.one
 {% endraw %}

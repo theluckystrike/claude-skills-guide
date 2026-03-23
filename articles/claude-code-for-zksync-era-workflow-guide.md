@@ -15,32 +15,32 @@ score: 8
 
 
 {% raw %}
-# Claude Code for zkSync Era Workflow Guide
+Claude Code for zkSync Era Workflow Guide
 
 zkSync Era is a Layer 2 scaling solution for Ethereum that uses zero-knowledge proofs to deliver fast, low-cost transactions while maintaining Ethereum's security guarantees. As a developer working with zkSync Era, establishing an efficient workflow is crucial for building secure and optimized decentralized applications. This guide demonstrates how to use Claude Code to streamline your zkSync Era development process from initial setup through production deployment.
 
-## Understanding zkSync Era Development Fundamentals
+Understanding zkSync Era Development Fundamentals
 
 Before implementing workflows, it's essential to understand what makes zkSync Era development unique. Unlike traditional Ethereum development, zkSync Era introduces account abstraction, different gas mechanics, and specific contract deployment patterns. Claude Code can help you navigate these differences effectively.
 
 zkSync Era supports two primary programming approaches: Solidity with zkSync extensions and Zinc, a Rust-like language designed specifically for zero-knowledge circuits. Most developers use Solidity with the zkSync toolchain, which Claude Code can help you configure and optimize.
 
-## Setting Up Your Development Environment
+Setting Up Your Development Environment
 
 The foundation of an efficient zkSync Era workflow begins with proper environment configuration. Claude Code can guide you through the setup process step by step.
 
-### Installing Required Tools
+Installing Required Tools
 
 Your development environment needs several key components:
 
 ```bash
-# Install zkSync CLI
+Install zkSync CLI
 npm install -g zksync-cli
 
-# Initialize a new zkSync project
+Initialize a new zkSync project
 zksync-cli create my-zksync-dapp
 
-# Install Hardhat with zkSync plugin
+Install Hardhat with zkSync plugin
 npm install -D @matterlabs/hardhat-zksync
 ```
 
@@ -75,52 +75,52 @@ module.exports = {
 };
 ```
 
-### Project Structure Best Practices
+Project Structure Best Practices
 
 Organizing your zkSync Era project for maintainability is essential. Claude Code can suggest an optimal structure:
 
 ```
 my-zksync-dapp/
-├── contracts/
-│   ├── your-contracts.sol
-│   └── interfaces/
-├── deploy/
-│   ├── deploy.ts
-│   └── utils.ts
-├── test/
-│   ├── unit/
-│   └── integration/
-├── scripts/
-│   └── interaction-scripts.ts
-└── hardhat.config.ts
+ contracts/
+    your-contracts.sol
+    interfaces/
+ deploy/
+    deploy.ts
+    utils.ts
+ test/
+    unit/
+    integration/
+ scripts/
+    interaction-scripts.ts
+ hardhat.config.ts
 ```
 
-### Configuring Claude Code for Your Project
+Configuring Claude Code for Your Project
 
 Create a `CLAUDE.md` file in your project root so Claude Code understands your zkSync Era project structure and available commands:
 
 ```markdown
-# zkSync Era Project Context
+zkSync Era Project Context
 
 This is a zkSync Era Layer 2 project using Hardhat.
 
-## Key Commands
+Key Commands
 - `npx hardhat compile` - Compile contracts
 - `npx hardhat deploy-zksync` - Deploy to zkSync Era testnet/mainnet
 - `npx hardhat test` - Run tests
 
-## Project Structure
+Project Structure
 - `/contracts` - Solidity smart contracts
 - `/deploy` - Deployment scripts
 - `/test` - Test files
 - `/artifacts` - Compiled contract artifacts
 ```
 
-## Smart Contract Development Workflow
+Smart Contract Development Workflow
 
 When developing smart contracts for zkSync Era, Claude Code can significantly accelerate your workflow by generating boilerplate code, identifying potential issues, and suggesting optimizations.
 
-### Writing a Standard ERC-20 Token
+Writing a Standard ERC-20 Token
 
 For common token patterns, Claude Code can scaffold an OpenZeppelin-based ERC-20 contract in seconds. Ask:
 
@@ -139,7 +139,7 @@ contract MyToken is ERC20 {
 }
 ```
 
-### Writing zkSync-Enhanced Contracts
+Writing zkSync-Enhanced Contracts
 
 zkSync Era supports several features beyond standard Solidity. Here's how Claude Code can help you use them:
 
@@ -167,7 +167,7 @@ contract MyContract {
 }
 ```
 
-### using Account Abstraction
+using Account Abstraction
 
 One of zkSync Era's most powerful features is native account abstraction. Claude Code can help you implement custom account logic:
 
@@ -194,11 +194,11 @@ contract MyAccount is IAccount {
 }
 ```
 
-## Deployment and Testing Strategies
+Deployment and Testing Strategies
 
-Claude Code can help you create robust deployment and testing workflows for zkSync Era.
+Claude Code can help you create solid deployment and testing workflows for zkSync Era.
 
-### Deployment Scripts
+Deployment Scripts
 
 Create reliable deployment scripts with proper error handling:
 
@@ -219,7 +219,7 @@ async function deployContract() {
 }
 ```
 
-### Testing zkSync Era Contracts with Hardhat
+Testing zkSync Era Contracts with Hardhat
 
 Testing on zkSync Era requires specific configurations. Claude Code can help you set up comprehensive tests:
 
@@ -244,7 +244,7 @@ describe("MyContract", function() {
 });
 ```
 
-### Unit Testing with Foundry
+Unit Testing with Foundry
 
 zkSync Era also supports Foundry. Claude Code can generate Forge-style tests:
 
@@ -259,12 +259,12 @@ contract MyTokenTest is Test {
     MyToken public token;
 
     function setUp() public {
-        token = new MyToken(1000000 * 10 ** 18);
+        token = new MyToken(1000000 * 10  18);
     }
 
     function testInitialSupply() public {
-        assertEq(token.totalSupply(), 1000000 * 10 ** 18);
-        assertEq(token.balanceOf(address(this)), 1000000 * 10 ** 18);
+        assertEq(token.totalSupply(), 1000000 * 10  18);
+        assertEq(token.balanceOf(address(this)), 1000000 * 10  18);
     }
 }
 ```
@@ -282,11 +282,11 @@ When testing zkSync Era contracts, keep these considerations in mind:
 - Verify zkSync-specific features like account abstraction
 - Test cross-layer messaging if your app interacts with L1
 
-## Optimizing for zkSync Era Performance
+Optimizing for zkSync Era Performance
 
 Performance optimization in zkSync Era differs from Ethereum mainnet. Claude Code can guide you through key optimizations.
 
-### Storage Optimizations
+Storage Optimizations
 
 zkSync Era's storage mechanics allow for innovative optimization patterns:
 
@@ -306,28 +306,28 @@ contract OptimizedStorage {
 }
 ```
 
-### Gas Optimization Strategies
+Gas Optimization Strategies
 
 While zkSync Era gas costs are lower, optimization remains important:
 
-1. **Use immutable variables** for values that don't change after deployment
-2. **use constant expressions** for compile-time calculations
-3. **Minimize storage writes** by batching operations
-4. **Use events efficiently** for off-chain data storage
+1. Use immutable variables for values that don't change after deployment
+2. use constant expressions for compile-time calculations
+3. Minimize storage writes by batching operations
+4. Use events efficiently for off-chain data storage
 
-## Production Deployment Workflow
+Production Deployment Workflow
 
 When moving to production on zkSync Era mainnet, follow this structured approach:
 
-1. **Comprehensive Testing**: Run all tests on zkSync Era testnet first
-2. **Security Audits**: Verify contracts with zkSync-specific security considerations
-3. **Gas Estimation**: Use zkSync's gas estimation tools before deployment
-4. **Verification**: Verify contracts on zkSync Era block explorer
-5. **Monitoring**: Set up monitoring for contract interactions
+1. Comprehensive Testing: Run all tests on zkSync Era testnet first
+2. Security Audits: Verify contracts with zkSync-specific security considerations
+3. Gas Estimation: Use zkSync's gas estimation tools before deployment
+4. Verification: Verify contracts on zkSync Era block explorer
+5. Monitoring: Set up monitoring for contract interactions
 
 Claude Code can help you create deployment scripts that handle all these steps systematically.
 
-### Security Checklist
+Security Checklist
 
 Before deploying to mainnet, use Claude Code to verify each item:
 
@@ -337,12 +337,12 @@ Before deploying to mainnet, use Claude Code to verify each item:
 - [ ] Upgradeability patterns properly implemented
 - [ ] Emergency stop functionality available
 
-### Continuous Integration
+Continuous Integration
 
 Automate your zkSync Era test and deploy pipeline with GitHub Actions:
 
 ```yaml
-# .github/workflows/test.yml
+.github/workflows/test.yml
 name: zkSync Era Tests
 
 on: [push, pull_request]
@@ -362,7 +362,7 @@ jobs:
         run: npx hardhat deploy-zksync --network zkSyncTestnet
 ```
 
-### Using Claude Code for Code Reviews
+Using Claude Code for Code Reviews
 
 Before finalizing any contract, prompt Claude Code to audit it:
 
@@ -374,18 +374,18 @@ Before finalizing any contract, prompt Claude Code to audit it:
 > - zkSync-specific considerations
 ```
 
-### Automated Documentation with NatSpec
+Automated Documentation with NatSpec
 
 Claude Code can generate comprehensive NatSpec documentation for your contracts. Use inline comment stubs and ask Claude Code to fill them in:
 
 ```bash
-# Use NatSpec comments for auto-documentation
+Use NatSpec comments for auto-documentation
 /// @title MyToken
 /// @notice ERC-20 token for zkSync Era
 /// @dev Implements zkSync Era compatibility
 ```
 
-### Monitoring Deployed Contracts
+Monitoring Deployed Contracts
 
 Set up on-chain event monitoring to observe live contract activity:
 
@@ -406,18 +406,18 @@ async function monitorEvents(contractAddress, abi) {
 }
 ```
 
-## Conclusion
+Conclusion
 
-Developing on zkSync Era offers significant advantages in transaction costs and speed, but requires understanding its unique architecture. By using Claude Code throughout your development workflow—from environment setup through production deployment—you can build efficient, secure applications that fully capitalize on zkSync Era's capabilities.
+Developing on zkSync Era offers significant advantages in transaction costs and speed, but requires understanding its unique architecture. By using Claude Code throughout your development workflow, from environment setup through production deployment, you can build efficient, secure applications that fully capitalize on zkSync Era's capabilities.
 
 The key to success is understanding the differences between zkSync Era and Ethereum mainnet, particularly around account abstraction, gas mechanics, and deployment patterns. With Claude Code as your development partner, you can navigate these differences confidently and build production-ready applications on one of Ethereum's most promising Layer 2 solutions.
 
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -13,15 +13,15 @@ score: 7
 ---
 
 
-# Learning Claude Code in 30 Days: A Structured Challenge
+Learning Claude Code in 30 Days: A Structured Challenge
 
 Claude Code represents a paradigm shift in developer productivity. Rather than treating AI as a simple chat interface, mastering Claude Code means understanding how to build reusable skills, use Model Context Protocol (MCP) servers, and create automation workflows that scale. This 30-day challenge transforms you from a casual user into a power user capable of building sophisticated AI-assisted development pipelines.
 
-## Challenge Overview
+Challenge Overview
 
 This challenge assumes basic familiarity with command-line tools and at least one programming language. Each week focuses on a distinct skill tier, progressing from fundamentals through advanced automation. By day 30, you will have built a complete skill ecosystem tailored to your development workflow.
 
-**Prerequisites:**
+Prerequisites:
 - Claude Code installed (available via npm or direct download)
 - A code editor (VS Code recommended)
 - Access to terminal/command prompt
@@ -29,25 +29,25 @@ This challenge assumes basic familiarity with command-line tools and at least on
 
 ---
 
-## Week 1: Foundations (Days 1-7)
+Week 1: Foundations (Days 1-7)
 
-### Day 1-2: Skill Discovery and Installation
+Day 1-2: Skill Discovery and Installation
 
 Start by exploring the skill system. Skills are Markdown files stored in `~/.claude/skills/`. Community-created skills can be downloaded and placed in that directory.
 
 ```bash
-# List skills you have installed
+List skills you have installed
 ls ~/.claude/skills/
 ```
 
 Install your first skill by downloading a skill Markdown file and placing it in `~/.claude/skills/`:
 
 ```bash
-# Download a community skill (example)
+Download a community skill (example)
 curl -o ~/.claude/skills/pdf.md https://example.com/skills/pdf.md
 ```
 
-### Day 3-4: Understanding Skill Anatomy
+Day 3-4: Understanding Skill Anatomy
 
 Every skill consists of three main components: front matter metadata, system instructions, and optional tool definitions. Create your first skill to understand the structure:
 
@@ -57,7 +57,7 @@ name: my-first-skill
 description: "A simple skill for generating boilerplate code"
 ---
 
-# Skill Instructions
+Skill Instructions
 You are a code generator specializing in {language} applications.
 When asked to create a new project, generate a complete structure including:
 - Main entry point
@@ -67,29 +67,29 @@ When asked to create a new project, generate a complete structure including:
 Always explain what each generated file does.
 ```
 
-### Day 5-7: Modifying Existing Skills
+Day 5-7: Modifying Existing Skills
 
-Rather than building from scratch, customize existing skills for your needs. The **frontend-design** skill provides UI patterns—modify its defaults to match your component library. The **tdd** skill generates test files—adjust its templates to match your testing framework conventions.
+Rather than building from scratch, customize existing skills for your needs. The frontend-design skill provides UI patterns, modify its defaults to match your component library. The tdd skill generates test files, adjust its templates to match your testing framework conventions.
 
-**Week 1 Milestone:** You can install, inspect, and modify skills. You understand the skill file format (.md with YAML front matter).
+Week 1 Milestone: You can install, inspect, and modify skills. You understand the skill file format (.md with YAML front matter).
 
 ---
 
-## Week 2: Integration and Tools (Days 8-14)
+Week 2: Integration and Tools (Days 8-14)
 
-### Day 8-9: MCP Server Setup
+Day 8-9: MCP Server Setup
 
-Model Context Protocol servers extend Claude's capabilities by connecting to external services. The **supermemory** skill, for instance, uses an MCP server to maintain persistent context across sessions.
+Model Context Protocol servers extend Claude's capabilities by connecting to external services. The supermemory skill, for instance, uses an MCP server to maintain persistent context across sessions.
 
 ```bash
-# Install a common MCP server
+Install a common MCP server
 npx @modelcontext/server-filesystem ./my-projects
 
-# Configure in your Claude settings
-# (settings typically stored in ~/.claude/settings.json)
+Configure in your Claude settings
+(settings typically stored in ~/.claude/settings.json)
 ```
 
-### Day 10-11: Building Custom MCP Tools
+Day 10-11: Building Custom MCP Tools
 
 Create a simple MCP server to connect Claude with your internal APIs:
 
@@ -109,49 +109,49 @@ if __name__ == "__main__":
     stdio_server.run(app)
 ```
 
-### Day 12-14: Chain Multiple Skills
+Day 12-14: Chain Multiple Skills
 
-Combine skills for complex workflows. Use the **pdf** skill to generate documentation, then employ the **canvas-design** skill to create visual summaries:
+Combine skills for complex workflows. Use the pdf skill to generate documentation, then employ the canvas-design skill to create visual summaries:
 
 ```bash
-# Example skill chain concept — start a session and invoke each skill in sequence
+Example skill chain concept. start a session and invoke each skill in sequence
 claude
-# Then in the session:
-# /pdf Generate API documentation
-# /canvas-design Summarize ./docs/api-summary.md visually
+Then in the session:
+/pdf Generate API documentation
+/canvas-design Summarize ./docs/api-summary.md visually
 ```
 
-**Week 2 Milestone:** You can set up MCP servers and understand how to chain external tools with skills.
+Week 2 Milestone: You can set up MCP servers and understand how to chain external tools with skills.
 
 ---
 
-## Week 3: Automation and Workflows (Days 15-21)
+Week 3: Automation and Workflows (Days 15-21)
 
-### Day 15-17: Scripting Skill Execution
+Day 15-17: Scripting Skill Execution
 
 Automate skill execution using shell scripts or CI/CD pipelines:
 
 ```bash
 #!/bin/bash
-# daily-code-review.sh
+daily-code-review.sh
 
 claude --print "Review and improve test coverage in ./src using TDD principles"
 claude --print "Check for security vulnerabilities in the codebase"
 claude --print "Update API documentation based on current source"
 ```
 
-### Day 18-19: Event-Driven Automation
+Day 18-19: Event-Driven Automation
 
 Set up triggers for skill execution based on file changes or git events:
 
 ```bash
-# Using a file watcher to trigger skill execution
+Using a file watcher to trigger skill execution
 while inotifywait -e modify ./src/*.py; do
     claude --print "Check modified Python files for linting issues"
 done
 ```
 
-### Day 20-21: Creating Reusable Workflows
+Day 20-21: Creating Reusable Workflows
 
 Build a personal workflow skill that orchestrates multiple skills:
 
@@ -161,7 +161,7 @@ name: dev-workflow
 description: "Daily development workflow automation"
 ---
 
-# Workflow: Code → Test → Document
+Workflow: Code → Test → Document
 
 1. Run tests using the tdd skill
 2. Check code quality using linting tools
@@ -169,13 +169,13 @@ description: "Daily development workflow automation"
 4. Report summary of changes
 ```
 
-**Week 3 Milestone:** You can automate repetitive tasks and create composite workflows.
+Week 3 Milestone: You can automate repetitive tasks and create composite workflows.
 
 ---
 
-## Week 4: Mastery and Teaching (Days 22-30)
+Week 4: Mastery and Teaching (Days 22-30)
 
-### Day 22-24: Advanced Skill Patterns
+Day 22-24: Advanced Skill Patterns
 
 Implement advanced patterns like conditional tool usage and context-aware responses:
 
@@ -185,59 +185,59 @@ name: adaptive-coder
 description: "Smart coding assistant that adapts to project context"
 ---
 
-# Context Detection
+Context Detection
 First, detect the project type by checking:
 - package.json (JavaScript/TypeScript)
 - requirements.txt or pyproject.toml (Python)
 - go.mod (Go)
 
-# Adapt behavior based on detected context
+Adapt behavior based on detected context
 When project type is detected:
 - JavaScript: Use npm/yarn commands, check eslint config
 - Python: Use pip/poetry commands, check pyproject.toml
 ```
 
-### Day 25-27: Sharing and Versioning Skills
+Day 25-27: Sharing and Versioning Skills
 
 Publish your optimized skills to share with the community or maintain private registries:
 
 ```bash
-# Copy skill for sharing
+Copy skill for sharing
 cp ~/.claude/skills/my-custom-skill.md ./shared-skills/
 
-# Version control your skill collection
+Version control your skill collection
 git add shared-skills/
 git commit -m "Add project-specific workflow skills"
 ```
 
-### Day 28-30: Teaching Others
+Day 28-30: Teaching Others
 
 Document your learning journey. Create a skill that teaches the concepts you've mastered. This reinforces your understanding while helping others.
 
-**Final Milestone:** You possess a complete skill ecosystem tailored to your workflow. You can teach, share, and continuously improve your setup.
+Final Milestone: You possess a complete skill ecosystem tailored to your workflow. You can teach, share, and continuously improve your setup.
 
 ---
 
-## Continuing Your Journey
+Continuing Your Journey
 
 The 30-day challenge provides structure, but mastery comes from continuous experimentation. Key focus areas for ongoing learning:
 
-1. **Skill composition:** Combine multiple skills for complex tasks
-2. **MCP ecosystem:** Explore community servers for databases, APIs, and services
-3. **Custom tooling:** Build internal tools that integrate with your company's systems
-4. **Performance optimization:** Refine skills based on real usage patterns
+1. Skill composition: Combine multiple skills for complex tasks
+2. MCP ecosystem: Explore community servers for databases, APIs, and services
+3. Custom tooling: Build internal tools that integrate with your company's systems
+4. Performance optimization: Refine skills based on real usage patterns
 
 Claude Code rewards developers who invest time in understanding its architecture. The skills you build today become the automation foundation for every project tomorrow.
 
-Start small, iterate quickly, and most importantly—automate what bores you.
+Start small, iterate quickly, and most importantly, automate what bores you.
 
 ---
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

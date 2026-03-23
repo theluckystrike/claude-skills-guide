@@ -18,9 +18,9 @@ Dark Reader has become the go-to solution for browser dark mode, but developers 
 
 This guide evaluates the best Dark Reader alternatives, focusing on features that matter to developers: CSS customization, keyboard shortcuts, automation APIs, and self-hosted options.
 
-## Night Mode Z: Developer-Centric Dark Theme Engine
+Night Mode Z: Developer-Centric Dark Theme Engine
 
-Night Mode Z stands out as the most developer-friendly alternative, offering a powerful JavaScript API for programmatic theme control. Unlike Dark Reader's declarative approach, Night Mode Z provides an event-driven model that integrates seamlessly with browser automation.
+Night Mode Z stands out as the most developer-friendly alternative, offering a powerful JavaScript API for programmatic theme control. Unlike Dark Reader's declarative approach, Night Mode Z provides an event-driven model that integrates smoothly with browser automation.
 
 The extension exposes a comprehensive API accessible from the console:
 
@@ -46,7 +46,7 @@ nightModeZ.scheduleTheme({
 
 For developers building tools around browser themes, this API-first approach provides the flexibility that Dark Reader lacks. The extension also supports userCSS/userJS injection, making it ideal for applying custom styles to specific domains without maintaining separate style files.
 
-## Stylus: The Open-Source Style Manager
+Stylus: The Open-Source Style Manager
 
 While Stylus is primarily known as a userstyle manager, it functions as a powerful dark mode solution when paired with pre-built dark themes. Unlike extensions that automatically invert colors, Stylus lets you install exact dark theme replacements for thousands of websites.
 
@@ -82,7 +82,7 @@ For developers who prefer precise control over appearance, Stylus offers several
 
 The extension stores styles locally and syncs through your browser's native sync mechanism, eliminating account dependencies.
 
-## Midnight Lizard: Intelligent Theme Automation
+Midnight Lizard: Intelligent Theme Automation
 
 Midnight Lizard differentiates itself with intelligent automation that responds to system preferences, time of day, and user-defined rules. The extension works similarly to Dark Reader but with enhanced performance optimizations and more granular controls.
 
@@ -118,7 +118,7 @@ The configuration uses a JSON-based schema that developers can version control:
 
 Midnight Lizard's memory footprint remains minimal because it applies stylesheets once rather than continuously monitoring DOM changes.
 
-## Darkman: Minimalist API-First Approach
+Darkman: Minimalist API-First Approach
 
 Darkman takes a different approach by functioning as a theme server rather than a traditional extension. Users run a local server that serves dark mode CSS, and the extension applies these stylesheets to matching domains.
 
@@ -158,35 +158,35 @@ module.exports = {
 By separating theme definition from application, Darkman enables reusable theme libraries and easier testing. You can switch themes by making HTTP requests:
 
 ```bash
-# Switch to a different theme via API
+Switch to a different theme via API
 curl -X POST http://localhost:3456/theme/matrix
 ```
 
-## Choosing the Right Alternative
+Choosing the Right Alternative
 
 Selecting a Dark Reader alternative depends on your specific requirements:
 
-**Choose Night Mode Z** if you need programmatic control and want to build automation around theme switching. The JavaScript API integrates naturally with developer workflows.
+Choose Night Mode Z if you need programmatic control and want to build automation around theme switching. The JavaScript API integrates naturally with developer workflows.
 
-**Choose Stylus** if you prefer exact color control and want to install community-maintained dark themes. The style management approach produces more accurate results than automated inversion.
+Choose Stylus if you prefer exact color control and want to install community-maintained dark themes. The style management approach produces more accurate results than automated inversion.
 
-**Choose Midnight Lizard** if you want intelligent automation without sacrificing performance. The scheduled switching and contrast controls work well for daily use.
+Choose Midnight Lizard if you want intelligent automation without sacrificing performance. The scheduled switching and contrast controls work well for daily use.
 
-**Choose Darkman** if you want maximum control through a local development setup. Running a theme server enables custom theming workflows that integrate with your existing tooling.
+Choose Darkman if you want maximum control through a local development setup. Running a theme server enables custom theming workflows that integrate with your existing tooling.
 
 Each alternative handles the core dark mode requirement while offering distinct advantages for developers and power users. Test a few options to determine which workflow matches your preferences.
 
-## Performance Comparison: Why Dark Reader's Approach Costs You
+Performance Comparison: Why Dark Reader's Approach Costs You
 
-The core technical difference between Dark Reader and its alternatives comes down to how each extension intercepts and transforms page styles. Dark Reader operates by injecting dynamic CSS filters and continuously monitoring DOM mutations through a MutationObserver. On content-heavy pages — documentation sites, GitHub diffs, complex dashboards — this constant observation creates measurable CPU overhead.
+The core technical difference between Dark Reader and its alternatives comes down to how each extension intercepts and transforms page styles. Dark Reader operates by injecting dynamic CSS filters and continuously monitoring DOM mutations through a MutationObserver. On content-heavy pages. documentation sites, GitHub diffs, complex dashboards. this constant observation creates measurable CPU overhead.
 
 To quantify the difference yourself, open Chrome DevTools and run a performance profile on a site like the MDN Web Docs homepage. With Dark Reader active, you will typically see recurring style recalculation tasks firing every few hundred milliseconds. With Stylus or Midnight Lizard applying a static stylesheet once on page load, those tasks disappear entirely.
 
 For developers running multiple browser tabs during a long coding session, this difference compounds. A laptop with fifteen tabs open will run noticeably cooler and quieter when a static stylesheet approach replaces continuous DOM monitoring.
 
-The architectural tradeoff is coverage: Dark Reader works everywhere automatically, while static stylesheet extensions require explicit theme files per site. The right balance depends on your browsing patterns. If most of your time is spent on twenty specific sites — GitHub, Stack Overflow, your company's internal tools, a few documentation domains — Stylus with curated styles wins on both performance and visual accuracy.
+The architectural tradeoff is coverage: Dark Reader works everywhere automatically, while static stylesheet extensions require explicit theme files per site. The right balance depends on your browsing patterns. If most of your time is spent on twenty specific sites. GitHub, Stack Overflow, your company's internal tools, a few documentation domains. Stylus with curated styles wins on both performance and visual accuracy.
 
-## Building Your Own Minimal Dark Mode Extension
+Building Your Own Minimal Dark Mode Extension
 
 For developers who want complete control without any dependency on third-party extensions, building a minimal dark mode extension takes roughly an hour and produces a tool precisely tuned to your preferences. This approach also removes any concern about extension updates changing behavior unexpectedly.
 
@@ -264,9 +264,9 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
 
 This pattern keeps the extension stateless per-tab and centralized in storage, avoiding the race conditions that plague extensions maintaining separate per-tab state objects.
 
-## Integrating Dark Mode with Playwright and Browser Automation
+Integrating Dark Mode with Playwright and Browser Automation
 
-Developers using Playwright for end-to-end testing or scraping often need to test their applications under dark mode conditions. None of the popular dark mode extensions expose a clean automation interface, which is a practical reason to favor alternatives that do — or to build your own.
+Developers using Playwright for end-to-end testing or scraping often need to test their applications under dark mode conditions. None of the popular dark mode extensions expose a clean automation interface, which is a practical reason to favor alternatives that do. or to build your own.
 
 Playwright supports emulating the `prefers-color-scheme` media feature directly, which is the cleanest approach when testing your own applications:
 
@@ -314,16 +314,16 @@ await page.screenshot({ path: 'dark-mode-capture.png' });
 
 This setup is useful for visual regression testing workflows where you want consistent screenshots across automated runs without relying on OS-level dark mode state.
 
-## Site-Specific Overrides: Handling Difficult Pages
+Site-Specific Overrides: Handling Difficult Pages
 
 Every dark mode extension eventually encounters pages that break under automated color inversion. Common offenders include pages that use canvas-based rendering, PDF viewers, embedded maps, and design tools where color accuracy is critical.
 
 All four alternatives covered in this guide support per-site exclusions, but the implementation details differ in ways that matter to developers.
 
-For Stylus, exclusions are handled naturally by the domain-scoped nature of styles — you simply do not create a style for a domain you want to exclude. Night Mode Z and Midnight Lizard both support exclusion lists in their settings panels, accepting glob patterns:
+For Stylus, exclusions are handled naturally by the domain-scoped nature of styles. you simply do not create a style for a domain you want to exclude. Night Mode Z and Midnight Lizard both support exclusion lists in their settings panels, accepting glob patterns:
 
 ```
-# Night Mode Z exclusion patterns
+Night Mode Z exclusion patterns
 figma.com/*
 *.google.com/maps*
 localhost:*
@@ -348,9 +348,9 @@ app.use('/theme.css', (req, res) => {
 
 This server-side approach means exclusion logic lives in one place and updates immediately without touching extension settings. For teams maintaining a consistent development environment, checking this configuration into version control keeps everyone's dark mode behavior synchronized.
 
-## Accessibility and Contrast Ratios
+Accessibility and Contrast Ratios
 
-Dark mode implementations vary significantly in how they handle contrast ratios, which matters for developers building accessible applications and for users with visual sensitivities. Automated color inversion, which both Dark Reader and some alternatives use, does not guarantee WCAG compliance — it can actually reduce contrast on pages that were designed with dark mode in mind.
+Dark mode implementations vary significantly in how they handle contrast ratios, which matters for developers building accessible applications and for users with visual sensitivities. Automated color inversion, which both Dark Reader and some alternatives use, does not guarantee WCAG compliance. it can actually reduce contrast on pages that were designed with dark mode in mind.
 
 Midnight Lizard's contrast auto-adjustment feature is the most thoughtful implementation here. It runs a post-processing pass on applied styles and bumps contrast values that fall below a configurable threshold:
 
@@ -386,10 +386,10 @@ test('dark mode maintains contrast compliance', async ({ page }) => {
 Running this check in CI as part of your visual regression suite catches contrast regressions before they reach users.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

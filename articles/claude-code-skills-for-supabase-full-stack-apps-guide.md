@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Skills for Supabase Full Stack Apps Guide"
-description: "A practical guide to using Claude Code skills for building Supabase full-stack applications — from database design to deployment."
+description: "A practical guide to using Claude Code skills for building Supabase full-stack applications. from database design to deployment."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, supabase, full-stack, backend]
@@ -12,11 +12,11 @@ permalink: /claude-code-skills-for-supabase-full-stack-apps-guide/
 ---
 {% raw %}
 
-# Claude Code Skills for Supabase Full Stack Apps Guide
+Claude Code Skills for Supabase Full Stack Apps Guide
 
 Building a Supabase-powered full-stack application involves multiple layers: database schema, authentication, backend logic, API endpoints, and frontend interfaces. [Claude Code skills](/claude-skill-md-format-complete-specification-guide/) streamline each phase of this workflow. This guide covers the most useful skills for Supabase development and shows how to invoke them effectively.
 
-## Setting Up Your Supabase Project
+Setting Up Your Supabase Project
 
 Before diving into skills, ensure your local environment is ready. Initialize a new project with your preferred framework. Supabase works well with Next.js, Remix, SvelteKit, or Vue. The key is establishing a clean connection to your Supabase instance.
 
@@ -28,7 +28,7 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
 SUPABASE_SERVICE_ROLE_KEY=your-service-role-key  # Server-side only, never expose to client
 ```
 
-Keep your credentials secure and never commit them to version control. Distinguish clearly between the anon key (safe for client-side use, gated by RLS) and the service role key (bypasses RLS entirely — backend only).
+Keep your credentials secure and never commit them to version control. Distinguish clearly between the anon key (safe for client-side use, gated by RLS) and the service role key (bypasses RLS entirely. backend only).
 
 Install the Supabase client library and create a shared client instance:
 
@@ -51,7 +51,7 @@ export const supabaseAdmin = createClient<Database>(
 
 Using the generated `Database` type from `supabase gen types typescript` gives you end-to-end type safety from database to frontend, catching schema mismatches at compile time rather than at runtime. The [supermemory skill](/claude-supermemory-skill-persistent-context-explained/) helps maintain organized documentation of your project configuration across different environments.
 
-## Database Design and Schema Management
+Database Design and Schema Management
 
 Designing your PostgreSQL schema correctly from the start prevents costly migrations later. A well-structured schema should account for your access patterns, not just your data shape. Think about which queries will run most frequently and create indexes accordingly.
 
@@ -137,7 +137,7 @@ create policy "authors and admins update posts"
   );
 ```
 
-Use the **xlsx** skill to document your database schema in a spreadsheet format, creating a clear reference for table relationships, column types, and constraints. The **docx** skill generates formal database design documents you can share with team members or stakeholders.
+Use the xlsx skill to document your database schema in a spreadsheet format, creating a clear reference for table relationships, column types, and constraints. The docx skill generates formal database design documents you can share with team members or stakeholders.
 
 A useful pattern is to generate Supabase types directly from your database and commit them to the repository, so the TypeScript compiler enforces schema alignment across the entire codebase:
 
@@ -145,7 +145,7 @@ A useful pattern is to generate Supabase types directly from your database and c
 npx supabase gen types typescript --project-id your-project-id > lib/database.types.ts
 ```
 
-## Backend Development with Edge Functions
+Backend Development with Edge Functions
 
 Supabase Edge Functions run Deno at the edge, handling serverless backend logic. They are ideal for webhooks, background processing, and any backend operation that needs to happen outside the client. The [tdd skill](/claude-tdd-skill-test-driven-development-workflow/) proves invaluable here. Write your tests first, then implement the function logic.
 
@@ -211,9 +211,9 @@ serve(async (req) => {
 
 A few things this example demonstrates that are easy to get wrong: always handle CORS preflight OPTIONS requests, always verify the user's JWT before processing privileged actions, and use the service role key (not the anon key) only for operations that legitimately need to bypass RLS.
 
-The **pptx** skill helps create technical presentations for architecture reviews or sprint demos. Export your Edge Function documentation to slides for team meetings.
+The pptx skill helps create technical presentations for architecture reviews or sprint demos. Export your Edge Function documentation to slides for team meetings.
 
-## Frontend Integration
+Frontend Integration
 
 Connecting your frontend to Supabase involves handling authentication state, real-time subscriptions, and data fetching. The [frontend-design skill](/claude-frontend-design-skill-review-and-tutorial/) generates component structures that follow best practices for Supabase integration.
 
@@ -311,11 +311,11 @@ export function useTeamPosts(teamId: string) {
 }
 ```
 
-Remember to enable the `realtime` feature for each table in the Supabase dashboard, and to set appropriate RLS policies — realtime subscriptions respect your row-level security rules.
+Remember to enable the `realtime` feature for each table in the Supabase dashboard, and to set appropriate RLS policies. realtime subscriptions respect your row-level security rules.
 
-## Testing and Quality Assurance
+Testing and Quality Assurance
 
-The **tdd** skill integrates with your Supabase project to create comprehensive test suites. Test authentication flows, RLS policies, Edge Functions, and API integrations. For Supabase specifically, use the Supabase CLI to run a local stack so tests don't hit your production database:
+The tdd skill integrates with your Supabase project to create comprehensive test suites. Test authentication flows, RLS policies, Edge Functions, and API integrations. For Supabase specifically, use the Supabase CLI to run a local stack so tests don't hit your production database:
 
 ```bash
 supabase start          # Starts local Postgres, Auth, Storage, etc.
@@ -372,7 +372,7 @@ describe('Posts RLS policies', () => {
 });
 ```
 
-The **pdf** skill generates test reports and quality documentation. Export your test coverage reports to PDF for compliance or stakeholder reviews.
+The pdf skill generates test reports and quality documentation. Export your test coverage reports to PDF for compliance or stakeholder reviews.
 
 | Test Category | What to Cover | Recommended Tool |
 |---|---|---|
@@ -382,9 +382,9 @@ The **pdf** skill generates test reports and quality documentation. Export your 
 | Real-time | Subscribe, receive events, unsubscribe | Jest with fake timers |
 | Type safety | Schema drift detection | `supabase gen types` in CI |
 
-## Documentation and Knowledge Management
+Documentation and Knowledge Management
 
-Maintaining clear documentation accelerates team collaboration. The **docx** skill creates comprehensive API documentation from your Supabase project.
+Maintaining clear documentation accelerates team collaboration. The docx skill creates comprehensive API documentation from your Supabase project.
 
 One of the most useful documentation artifacts for a Supabase project is a migration changelog that explains the *why* behind each schema change, not just the *what*. Store this alongside your migrations directory:
 
@@ -399,14 +399,14 @@ supabase/
   MIGRATIONS.md  # plain English explanation of each migration
 ```
 
-The **supermemory** skill maintains contextual awareness of your project decisions, making it easier to recall why specific architectural choices were made. For instance, if you chose to use `profiles` as a separate table instead of extending `auth.users` directly, that reasoning should be captured so future developers don't inadvertently reverse it.
+The supermemory skill maintains contextual awareness of your project decisions, making it easier to recall why specific architectural choices were made. For instance, if you chose to use `profiles` as a separate table instead of extending `auth.users` directly, that reasoning should be captured so future developers don't inadvertently reverse it.
 
-## Deployment and DevOps
+Deployment and DevOps
 
 Deploying Supabase applications involves multiple steps: building your frontend, deploying Edge Functions, and configuring environment variables. Automate this with a CI/CD pipeline that runs your test suite against the local Supabase stack before deploying:
 
 ```yaml
-# .github/workflows/deploy.yml
+.github/workflows/deploy.yml
 name: Test and Deploy
 
 on:
@@ -453,11 +453,11 @@ jobs:
         run: npm run build && npm run deploy
 ```
 
-The **webapp-testing** skill validates your deployed application, checking that authentication flows, database connections, and API endpoints work correctly in production.
+The webapp-testing skill validates your deployed application, checking that authentication flows, database connections, and API endpoints work correctly in production.
 
-Use version control for your Supabase configuration. Store migrations and schema changes in your repository, enabling reproducible deployments across environments. Never apply schema changes directly in the Supabase dashboard without also creating the corresponding migration file — otherwise your local development environment and production will diverge silently.
+Use version control for your Supabase configuration. Store migrations and schema changes in your repository, enabling reproducible deployments across environments. Never apply schema changes directly in the Supabase dashboard without also creating the corresponding migration file. otherwise your local development environment and production will diverge silently.
 
-## Skill-to-Phase Mapping for Supabase Projects
+Skill-to-Phase Mapping for Supabase Projects
 
 | Project Phase | Recommended Skill | Primary Use Case |
 |---|---|---|
@@ -469,22 +469,22 @@ Use version control for your Supabase configuration. Store migrations and schema
 | Compliance / reporting | pdf | Test reports, audit exports |
 | Production validation | webapp-testing | Post-deploy smoke tests |
 
-## Summary
+Summary
 
-Claude Code skills enhance every phase of Supabase full-stack development. The **frontend-design** skill accelerates UI implementation, especially for auth flows and real-time components. The **tdd** skill ensures reliable backend logic through test-driven development, and pairs naturally with Supabase's local development stack for genuine integration testing. The **xlsx** and **docx** skills maintain clear documentation for schema design and API contracts. The **supermemory** skill preserves project context across sessions, so architectural decisions don't get lost. The **pdf** skill generates reports and documentation for stakeholders and compliance needs.
+Claude Code skills enhance every phase of Supabase full-stack development. The frontend-design skill accelerates UI implementation, especially for auth flows and real-time components. The tdd skill ensures reliable backend logic through test-driven development, and pairs naturally with Supabase's local development stack for genuine integration testing. The xlsx and docx skills maintain clear documentation for schema design and API contracts. The supermemory skill preserves project context across sessions, so architectural decisions don't get lost. The pdf skill generates reports and documentation for stakeholders and compliance needs.
 
-The most important thing to get right early is your RLS policy design — it determines both your security posture and your query complexity. Invest the time to write thorough RLS tests against a local stack before deploying, and use generated TypeScript types to enforce schema alignment from database to UI. These habits compound over the lifetime of the project.
+The most important thing to get right early is your RLS policy design. it determines both your security posture and your query complexity. Invest the time to write thorough RLS tests against a local stack before deploying, and use generated TypeScript types to enforce schema alignment from database to UI. These habits compound over the lifetime of the project.
 
 Start with the skills matching your current bottleneck. As your project matures, integrate additional skills to maintain code quality and team productivity.
 
 ---
 
-## Related Reading
+Related Reading
 
-- [Claude Supermemory Skill: Persistent Context Explained](/claude-supermemory-skill-persistent-context-explained/) — persist Supabase project decisions and configuration across sessions
-- [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/) — write tests for Edge Functions and RLS policies before implementing them
-- [Claude Frontend Design Skill Review and Tutorial](/claude-frontend-design-skill-review-and-tutorial/) — generate Supabase-connected React and Svelte component structures
-- [Claude Skills with Supabase Database Integration](/claude-skills-with-supabase-database-integration/) — connect Claude skills directly to your Supabase database for live queries
+- [Claude Supermemory Skill: Persistent Context Explained](/claude-supermemory-skill-persistent-context-explained/). persist Supabase project decisions and configuration across sessions
+- [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/). write tests for Edge Functions and RLS policies before implementing them
+- [Claude Frontend Design Skill Review and Tutorial](/claude-frontend-design-skill-review-and-tutorial/). generate Supabase-connected React and Svelte component structures
+- [Claude Skills with Supabase Database Integration](/claude-skills-with-supabase-database-integration/). connect Claude skills directly to your Supabase database for live queries
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

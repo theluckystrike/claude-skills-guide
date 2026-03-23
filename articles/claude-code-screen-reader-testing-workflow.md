@@ -13,45 +13,45 @@ score: 7
 ---
 
 
-# Claude Code Screen Reader Testing Workflow
+Claude Code Screen Reader Testing Workflow
 
 Building accessible web applications requires more than just following WCAG guidelines. You need to verify that your content actually works with assistive technologies. Screen reader testing is a critical part of this process, and Claude Code can help streamline your workflow.
 
-## Why Screen Reader Testing Matters
+Why Screen Reader Testing Matters
 
-Automated accessibility tools catch about 30-40% of accessibility issues. The remaining issues—like confusing heading structures, unclear link text, or missing form labels—require human testing with actual screen readers. Popular options include NVDA (Windows), VoiceOver (macOS), and JAWS (Windows).
+Automated accessibility tools catch about 30-40% of accessibility issues. The remaining issues, like confusing heading structures, unclear link text, or missing form labels, require human testing with actual screen readers. Popular options include NVDA (Windows), VoiceOver (macOS), and JAWS (Windows).
 
 Testing manually is time-consuming. Integrating screen reader testing into your regular development workflow helps catch issues early and reduces the effort required for remediation.
 
-## Setting Up Your Testing Environment
+Setting Up Your Testing Environment
 
 Before automating, establish a consistent testing environment. Here's a practical setup for macOS developers:
 
 ```bash
-# Enable VoiceOver from terminal
+Enable VoiceOver from terminal
 open -a VoiceOver
 
-# Or use the keyboard shortcut: Cmd + F5
+Or use the keyboard shortcut: Cmd + F5
 ```
 
 For cross-platform testing, consider using virtual machines with Windows and NVDA installed. Tools like VirtualBox or Parallels make this manageable.
 
-### Configuring NVDA for Consistent Results
+Configuring NVDA for Consistent Results
 
 When testing with NVDA on Windows, use these settings for repeatable test outcomes:
 
-- **Speech viewer**: Enabled — displays announced text on-screen for verification
-- **Punctuation level**: All — ensures complete announcements during testing
-- **Input composition**: Disabled — produces more predictable behavior
-- **Table headers**: Report all — verifies data table accessibility
+- Speech viewer: Enabled. displays announced text on-screen for verification
+- Punctuation level: All. ensures complete announcements during testing
+- Input composition: Disabled. produces more predictable behavior
+- Table headers: Report all. verifies data table accessibility
 
 Key NVDA navigation commands to document alongside your test cases: Tab/Shift+Tab for form fields, arrow keys for content, Enter to activate links and buttons, Escape to close dialogs.
 
-## Automating Screen Reader Checks with Claude
+Automating Screen Reader Checks with Claude
 
 While you cannot fully automate screen reader testing (human judgment is still required), Claude Code can help in several ways:
 
-### 1. Generate Testing Scripts
+1. Generate Testing Scripts
 
 Use Claude to create manual testing scripts that document exactly what to check:
 
@@ -63,7 +63,7 @@ Create a VoiceOver testing checklist for a login form that includes:
 - ARIA attributes
 ```
 
-### 2. Analyze HTML for Accessibility Issues
+2. Analyze HTML for Accessibility Issues
 
 Paste your component HTML and ask Claude to identify potential screen reader problems:
 
@@ -74,7 +74,7 @@ Paste your component HTML and ask Claude to identify potential screen reader pro
 
 Claude will flag issues like missing button semantics, lack of focus management, and missing accessible names.
 
-### 3. Validate ARIA Implementation
+3. Validate ARIA Implementation
 
 The frontend-design skill includes accessibility patterns. When working on complex components, activate it:
 
@@ -84,11 +84,11 @@ The frontend-design skill includes accessibility patterns. When working on compl
 
 Then describe your component. The skill helps ensure proper ARIA roles, states, and properties are implemented correctly.
 
-## Practical Workflow Integration
+Practical Workflow Integration
 
 Here's how to integrate screen reader testing into your development process:
 
-### Step 1: Code Review Phase
+Step 1: Code Review Phase
 
 When reviewing pull requests, use the tdd skill to ensure tests include accessibility cases:
 
@@ -105,15 +105,15 @@ Generate test cases for this form component that include:
 - Focus management
 ```
 
-### Step 2: Pre-Commit Validation
+Step 2: Pre-Commit Validation
 
 Add a simple pre-commit check using html-validate or axe-cli:
 
 ```bash
-# Install axe-cli
+Install axe-cli
 npm install -g @axe-core/cli
 
-# Run accessibility audit
+Run accessibility audit
 axe http://localhost:3000 --timeout 10000
 ```
 
@@ -135,7 +135,7 @@ jobs:
         run: npm run test:a11y-html
 ```
 
-### Step 3: Document Findings
+Step 3: Document Findings
 
 Use the supermemory skill to track accessibility issues across your project:
 
@@ -154,16 +154,16 @@ Actual: Silence
 Priority: High
 ```
 
-## Common Screen Reader Issues to Check
+Common Screen Reader Issues to Check
 
 Focus on these high-impact areas during testing:
 
-1. **Images without alt text** — Screen readers skip or read filename
-2. **Form fields without labels** — Users cannot understand input purpose
-3. **Heading hierarchy** — Skipping levels (h1 to h3) confuses navigation
-4. **Link text clarity** — "Click here" or "Read more" lacks context
-5. **Dynamic content announcements** — ARIA live regions missing for updates
-6. **Keyboard trap** — Users cannot exit modal or dialog
+1. Images without alt text. Screen readers skip or read filename
+2. Form fields without labels. Users cannot understand input purpose
+3. Heading hierarchy. Skipping levels (h1 to h3) confuses navigation
+4. Link text clarity. "Click here" or "Read more" lacks context
+5. Dynamic content announcements. ARIA live regions missing for updates
+6. Keyboard trap. Users cannot exit modal or dialog
 
 When NVDA encounters a keyboard trap, users have no way to continue navigating. Implement focus trapping correctly in modals:
 
@@ -189,11 +189,11 @@ function trapFocus(element) {
 }
 ```
 
-For NVDA-specific test scenarios, verify that announcements match expectations — for example, a login form should announce "Username, edit, required" when tabbing to the first field, "Password, password edit, required" for the password field, and "Sign in, button" for the submit button.
+For NVDA-specific test scenarios, verify that announcements match expectations. for example, a login form should announce "Username, edit, required" when tabbing to the first field, "Password, password edit, required" for the password field, and "Sign in, button" for the submit button.
 
-## Testing Specific Components
+Testing Specific Components
 
-### Modal Dialogs
+Modal Dialogs
 
 ```html
 <!-- Test this pattern -->
@@ -207,7 +207,7 @@ For NVDA-specific test scenarios, verify that announcements match expectations �
 
 Check: Focus moves into modal on open, trapped within modal, returns to trigger on close.
 
-### Form Validation
+Form Validation
 
 ```html
 <input 
@@ -221,7 +221,7 @@ Check: Focus moves into modal on open, trapped within modal, returns to trigger 
 
 Check: Error announced when field loses focus, error message read, input state communicated.
 
-### Dynamic Lists
+Dynamic Lists
 
 ```html
 <ul aria-live="polite" aria-atomic="false">
@@ -231,18 +231,18 @@ Check: Error announced when field loses focus, error message read, input state c
 
 Check: New items announced, count communicated, updates don't interrupt unexpectedly.
 
-## Tools That Complement Manual Testing
+Tools That Complement Manual Testing
 
 Beyond direct screen reader testing, these tools support your workflow:
 
-- **axe DevTools** — Browser extension for automated checks
-- **WAVE** — Web accessibility evaluation tool
-- **Accessibility Insights** — Microsoft's testing platform
-- **Color Contrast Analyzers** — Verify text visibility
+- axe DevTools. Browser extension for automated checks
+- WAVE. Web accessibility evaluation tool
+- Accessibility Insights. Microsoft's testing platform
+- Color Contrast Analyzers. Verify text visibility
 
-The pdf skill can help if you're documenting accessibility reports—generate properly formatted PDFs of your testing results.
+The pdf skill can help if you're documenting accessibility reports, generate properly formatted PDFs of your testing results.
 
-## Measuring Progress
+Measuring Progress
 
 Track accessibility improvements over time:
 
@@ -253,18 +253,18 @@ Track accessibility improvements over time:
 
 This data helps justify accessibility investment to stakeholders and identifies training needs.
 
-## Conclusion
+Conclusion
 
-Screen reader testing requires human involvement, but Claude Code reduces friction throughout the process. Use it to generate testing scripts, analyze markup, validate ARIA patterns, and document findings. Combined with automated tools and a structured workflow, you can achieve robust accessibility without slowing development.
+Screen reader testing requires human involvement, but Claude Code reduces friction throughout the process. Use it to generate testing scripts, analyze markup, validate ARIA patterns, and document findings. Combined with automated tools and a structured workflow, you can achieve solid accessibility without slowing development.
 
-The key is consistency—test regularly, document findings, and iterate. Each cycle improves both your product and your team's accessibility expertise.
+The key is consistency, test regularly, document findings, and iterate. Each cycle improves both your product and your team's accessibility expertise.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code WCAG Accessibility Audit Workflow](/claude-code-wcag-accessibility-audit-workflow/)
 - [Claude Code Axe Accessibility Testing Guide](/claude-code-axe-accessibility-testing-guide/)
 - [Claude Code Color Contrast Checking Workflow](/claude-code-color-contrast-checking-workflow/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

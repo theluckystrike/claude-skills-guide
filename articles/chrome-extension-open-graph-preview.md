@@ -15,13 +15,13 @@ score: 7
 
 Open Graph protocol metadata controls how links appear when shared on social media platforms. A Chrome extension that previews Open Graph tags helps developers and content creators verify their social sharing cards before publishing. This guide walks through building a functional Open Graph preview extension with practical code examples.
 
-## Understanding Open Graph Meta Tags
+Understanding Open Graph Meta Tags
 
 Open Graph tags live in the `<head>` section of HTML documents. The essential tags include `og:title`, `og:description`, `og:image`, and `og:url`. Twitter and other platforms extend these with their own namespace, but the core Open Graph structure remains consistent across platforms.
 
 When you share a link on Facebook, LinkedIn, or Twitter, these platforms fetch the Open Graph metadata to generate preview cards. Without proper tags, you get plain text links that perform poorly in engagement metrics. A preview extension lets you catch these issues before sharing.
 
-## Extension Architecture
+Extension Architecture
 
 Chrome extensions consist of several components working together. For an Open Graph preview extension, you need a popup interface for displaying results and a content script or background script for fetching page metadata.
 
@@ -42,7 +42,7 @@ The manifest file defines permissions and components:
 
 The popup serves as the main interface where users see extracted metadata when they click the extension icon.
 
-## Extracting Open Graph Tags
+Extracting Open Graph Tags
 
 The core functionality involves parsing HTML to find Open Graph meta tags. You can accomplish this through a content script that runs on the active tab or by using the Chrome DevTools Protocol in a background script.
 
@@ -87,7 +87,7 @@ async function getOpenGraphTags() {
 
 This function runs directly in the context of the current page, giving it access to the full DOM including dynamically loaded meta tags.
 
-## Building the Popup Interface
+Building the Popup Interface
 
 The popup needs to display the extracted metadata in a visual format that resembles the actual social card. Create an HTML file with CSS styling:
 
@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 ```
 
-## Handling Dynamic Content
+Handling Dynamic Content
 
 Single-page applications and dynamically loaded content present challenges because meta tags may update after the initial page load. You can address this by using a MutationObserver in your content script to detect changes to the `<head>` element.
 
@@ -201,7 +201,7 @@ observer.observe(document.head, {
 
 The background script listens for these updates and refreshes the popup when reopened.
 
-## Debugging Common Issues
+Debugging Common Issues
 
 Several problems frequently arise when building Open Graph preview extensions. Image URLs are often relative paths rather than absolute URLs. Resolve this by combining the page URL with the image path:
 
@@ -226,7 +226,7 @@ const imageWidth = ogImage?.getAttribute('width');
 const imageHeight = ogImage?.getAttribute('height');
 ```
 
-## Testing Your Extension
+Testing Your Extension
 
 Load your extension in Chrome by navigating to `chrome://extensions/`, enabling Developer mode, and selecting the directory containing your extension files. Open a webpage with Open Graph tags and click the extension icon to verify the preview displays correctly.
 
@@ -235,10 +235,10 @@ Test with popular sites like GitHub, Medium, and news websites that implement Op
 Building an Open Graph preview extension gives you a practical tool for verifying social metadata while learning Chrome extension development fundamentals. The same techniques apply to more complex extensions that analyze SEO, validate structured data, or extract other page metadata.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -14,21 +14,21 @@ score: 7
 
 
 {% raw %}
-# Claude Code for LLM Caching Workflow Tutorial
+Claude Code for LLM Caching Workflow Tutorial
 
-LLM caching is one of the most impactful optimizations you can add to your AI-powered applications. By storing and reusing responses for identical or similar requests, you can dramatically reduce API costs, decrease response latency, and handle higher traffic volumes without hitting rate limits. In this tutorial, you'll learn how to build a robust LLM caching workflow using Claude Code and Claude Skills.
+LLM caching is one of the most impactful optimizations you can add to your AI-powered applications. By storing and reusing responses for identical or similar requests, you can dramatically reduce API costs, decrease response latency, and handle higher traffic volumes without hitting rate limits. In this tutorial, you'll learn how to build a solid LLM caching workflow using Claude Code and Claude Skills.
 
-## Why LLM Caching Matters
+Why LLM Caching Matters
 
-Every time you send a prompt to an LLM, you're paying for the full computation—even if you've asked the exact same question before. For applications with repetitive queries, user FAQs, or structured data extraction tasks, caching can reduce costs by 50-90% while improving response times from seconds to milliseconds.
+Every time you send a prompt to an LLM, you're paying for the full computation, even if you've asked the exact same question before. For applications with repetitive queries, user FAQs, or structured data extraction tasks, caching can reduce costs by 50-90% while improving response times from seconds to milliseconds.
 
 The challenge is that LLMs don't have built-in caching like traditional databases. You need to implement it yourself, and that's where Claude Code skills become invaluable.
 
-## Setting Up Your Caching Infrastructure
+Setting Up Your Caching Infrastructure
 
 Before building the caching workflow, you need to decide on your storage backend. For most use cases, Redis offers the best balance of speed, persistence, and simplicity. Let's create a skill that handles cache operations.
 
-### Redis-Based Cache Skill
+Redis-Based Cache Skill
 
 Create a new skill file `llm-cache-skill.md` in your skills directory:
 
@@ -38,11 +38,11 @@ name: llm-cache
 description: "Cache and retrieve LLM responses with intelligent key generation"
 ---
 
-# LLM Response Cache Skill
+LLM Response Cache Skill
 
 This skill manages caching of LLM responses using Redis with smart key generation.
 
-## Cache Key Generation
+Cache Key Generation
 
 Generate deterministic cache keys from prompts:
 
@@ -62,7 +62,7 @@ def generate_cache_key(prompt: str, model: str, temperature: float) -> str:
     return f"llm:cache:{model}:{hash_obj.hexdigest()[:16]}"
 ```
 
-## Cache Retrieval
+Cache Retrieval
 
 Check if a cached response exists before calling the LLM:
 
@@ -78,7 +78,7 @@ async def get_cached_response(key: str, redis_client) -> str | None:
     return None
 ```
 
-## Cache Storage
+Cache Storage
 
 Store responses with optional TTL (time-to-live):
 
@@ -89,11 +89,11 @@ async def cache_response(key: str, response: str, ttl: int = 3600):
     print(f"Cached response with TTL: {ttl}s")
 ```
 
-## Implementing the Cached LLM Workflow
+Implementing the Cached LLM Workflow
 
-Now let's build the complete workflow that ties everything together. This is where Claude Code shines—you can create a skill that orchestrates the entire process.
+Now let's build the complete workflow that ties everything together. This is where Claude Code shines, you can create a skill that orchestrates the entire process.
 
-### Complete Caching Workflow
+Complete Caching Workflow
 
 ```python
 class LLMCacheWorkflow:
@@ -101,7 +101,7 @@ class LLMCacheWorkflow:
         self.redis = redis_client
         self.llm = llm_client
     
-    async def execute(self, prompt: str, **llm_params):
+    async def execute(self, prompt: str, llm_params):
         # Step 1: Generate cache key
         cache_key = generate_cache_key(prompt, 
                                        llm_params.get('model', 'claude-3-5-sonnet'),
@@ -117,7 +117,7 @@ class LLMCacheWorkflow:
             }
         
         # Step 3: Call LLM if not cached
-        llm_response = await self.llm.complete(prompt, **llm_params)
+        llm_response = await self.llm.complete(prompt, llm_params)
         
         # Step 4: Store in cache
         await cache_response(cache_key, llm_response)
@@ -129,11 +129,11 @@ class LLMCacheWorkflow:
         }
 ```
 
-## Advanced Caching Strategies
+Advanced Caching Strategies
 
 Basic exact-match caching is powerful, but you can take it further with semantic caching. This approach caches responses for prompts that are "similar enough" to previous ones.
 
-### Semantic Caching with Embeddings
+Semantic Caching with Embeddings
 
 ```python
 from sklearn.metrics.pairwise import cosine_similarity
@@ -173,11 +173,11 @@ class SemanticCache:
         return response, False
 ```
 
-## Handling Cache Invalidation
+Handling Cache Invalidation
 
 Caching introduces the challenge of stale data. You need a solid invalidation strategy.
 
-### Invalidation Patterns
+Invalidation Patterns
 
 ```python
 class CacheInvalidator:
@@ -200,21 +200,21 @@ class CacheInvalidator:
         await self.invalidate_by_pattern(f"llm:cache:{model}:*")
 ```
 
-## Best Practices for Production
+Best Practices for Production
 
 When deploying LLM caching in production, follow these guidelines:
 
-1. **Set appropriate TTL values**: FAQ-style content can cache for days, while dynamic queries should have shorter TTLs (minutes to hours).
+1. Set appropriate TTL values: FAQ-style content can cache for days, while dynamic queries should have shorter TTLs (minutes to hours).
 
-2. **Monitor cache hit rates**: A healthy production cache should achieve 60-80% hit rates for typical applications.
+2. Monitor cache hit rates: A healthy production cache should achieve 60-80% hit rates for typical applications.
 
-3. **Implement cache warming**: Pre-populate cache with frequently requested prompts during startup for better user experience.
+3. Implement cache warming: Pre-populate cache with frequently requested prompts during startup for better user experience.
 
-4. **Handle cache failures gracefully**: Never let cache errors break your application—fall back to direct LLM calls.
+4. Handle cache failures gracefully: Never let cache errors break your application, fall back to direct LLM calls.
 
-5. **Use structured prompts**: Consistent prompt formatting improves cache effectiveness by increasing exact-match hits.
+5. Use structured prompts: Consistent prompt formatting improves cache effectiveness by increasing exact-match hits.
 
-## Testing Your Caching Implementation
+Testing Your Caching Implementation
 
 Finally, verify your implementation works correctly:
 
@@ -236,18 +236,18 @@ async def test_cache_workflow():
     assert result1["response"] == result2["response"]
 ```
 
-## Conclusion
+Conclusion
 
 Implementing LLM caching with Claude Code is straightforward and delivers immediate benefits. Start with exact-match caching for quick wins, then evolve to semantic caching as your application matures. The skills you create for caching become reusable infrastructure that improves every AI-powered feature in your application.
 
 Remember to monitor your metrics, tune your TTL values, and always have fallback mechanisms in place. With proper implementation, you can significantly reduce costs while delivering faster responses to your users.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 ```

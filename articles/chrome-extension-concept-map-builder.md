@@ -13,11 +13,11 @@ tags: [claude-code, claude-skills]
 ---
 
 
-# Chrome Extension Concept Map Builder: A Developer's Guide
+Chrome Extension Concept Map Builder: A Developer's Guide
 
 Concept maps are powerful tools for visualizing relationships between ideas. Building a Chrome extension that enables users to create, edit, and export concept maps directly from their browser opens up numerous possibilities for knowledge workers, researchers, and developers. This guide walks you through the architecture, key components, and implementation details for creating a functional concept map builder as a Chrome extension.
 
-## Understanding the Core Architecture
+Understanding the Core Architecture
 
 A Chrome extension concept map builder consists of three primary components: the popup interface, the background service worker, and the content script for page interaction. The popup handles the primary user interface where users create and manipulate nodes. The background worker manages data persistence and handles communication between different parts of the extension.
 
@@ -39,7 +39,7 @@ const conceptMap = {
 
 This structure allows you to serialize the concept map easily for storage and export.
 
-## Setting Up the Extension Structure
+Setting Up the Extension Structure
 
 Every Chrome extension requires a manifest file. For a concept map builder targeting modern Chrome versions, use Manifest V3:
 
@@ -60,7 +60,7 @@ Every Chrome extension requires a manifest file. For a concept map builder targe
 
 The popup.html file serves as your primary interface. Include a canvas element for rendering the concept map and toolbar buttons for common actions like adding nodes, connecting them, and exporting the result.
 
-## Implementing the Canvas Rendering
+Implementing the Canvas Rendering
 
 The rendering engine is the heart of your concept map builder. HTML5 Canvas provides excellent performance for interactive diagrams. Create a dedicated JavaScript module that handles node rendering, edge drawing, and user interactions.
 
@@ -116,7 +116,7 @@ class ConceptMapRenderer {
 
 This renderer supports basic node selection, dragging, and edge visualization. Extend it with double-click handlers for node editing and zoom controls for larger concept maps.
 
-## Managing State and Persistence
+Managing State and Persistence
 
 Chrome's storage API provides reliable persistence for your concept maps. Use chrome.storage.local for extension-specific data:
 
@@ -158,7 +158,7 @@ class ConceptMapStore {
 
 This storage layer enables users to save multiple concept maps and resume their work across browser sessions.
 
-## Adding Export Functionality
+Adding Export Functionality
 
 Users often need to export their concept maps for presentations or documentation. Implement multiple export formats:
 
@@ -200,7 +200,7 @@ function downloadBlob(blob, filename) {
 }
 ```
 
-## Integrating with Web Content
+Integrating with Web Content
 
 A powerful feature for a concept map builder is the ability to extract content from web pages. Use content scripts to scrape headings and key terms:
 
@@ -230,7 +230,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 This enables users to quickly generate concept maps from research materials or organize their browsing findings.
 
-## Performance Optimization Tips
+Performance Optimization Tips
 
 For larger concept maps, implement viewport culling to only render visible nodes. Use requestAnimationFrame for smooth drag interactions. Consider using Web Workers for complex layout algorithms if you implement automatic node positioning.
 
@@ -244,17 +244,17 @@ function renderFrame() {
 }
 ```
 
-## Step-by-Step: Creating Your First Concept Map
+Step-by-Step: Creating Your First Concept Map
 
 1. Open any article, documentation page, or research paper in Chrome
 2. Click the extension icon to open the concept map editor panel
-3. Click "Extract Concepts" — the content script identifies key terms from the page text
+3. Click "Extract Concepts". the content script identifies key terms from the page text
 4. Drag extracted concepts onto the canvas as nodes
 5. Click two nodes sequentially to create an edge (relationship) between them
 6. Label the edge by typing in the popup that appears ("causes", "depends on", "part of")
 7. Click "Export" to download the map as SVG or JSON for use in other tools
 
-## Advanced: Auto-Generating Edges from Page Content
+Advanced: Auto-Generating Edges from Page Content
 
 Parse sentence co-occurrences to suggest relationships between extracted concepts:
 
@@ -283,7 +283,7 @@ function suggestEdges(concepts, pageText) {
 
 Display suggested edges as dashed lines that users can confirm or dismiss with a click.
 
-## Comparison with Standalone Mind-Mapping Tools
+Comparison with Standalone Mind-Mapping Tools
 
 | Feature | This Extension | MindMeister | Miro |
 |---|---|---|---|
@@ -295,9 +295,9 @@ Display suggested edges as dashed lines that users can confirm or dismiss with a
 
 The extension's key differentiator is the ability to extract concepts directly from the web page you are reading, rather than manually entering all nodes. Miro and MindMeister win for collaborative work.
 
-## Troubleshooting Common Issues
+Troubleshooting Common Issues
 
-**Canvas performance degrades with many nodes**: Switch from SVG to Canvas API rendering for concept maps with more than 50 nodes. Use `requestAnimationFrame` and only redraw elements that have changed:
+Canvas performance degrades with many nodes: Switch from SVG to Canvas API rendering for concept maps with more than 50 nodes. Use `requestAnimationFrame` and only redraw elements that have changed:
 
 ```javascript
 function renderFrame() {
@@ -309,19 +309,19 @@ function renderFrame() {
 }
 ```
 
-**Concept extraction returning too many or too few terms**: Add a relevance threshold based on term frequency — filter out both very common words (stop words) and very rare words that appear only once in the text.
+Concept extraction returning too many or too few terms: Add a relevance threshold based on term frequency. filter out both very common words (stop words) and very rare words that appear only once in the text.
 
-**Export JSON not compatible with other tools**: Use standard graph interchange formats like GraphML or the Cytoscape.js JSON format so exported maps can be imported into visualization tools.
+Export JSON not compatible with other tools: Use standard graph interchange formats like GraphML or the Cytoscape.js JSON format so exported maps can be imported into visualization tools.
 
-**Edges overlapping nodes on complex maps**: Implement a simple force-directed layout algorithm that spaces nodes apart automatically, or let users drag nodes to manual positions and snap to a grid.
+Edges overlapping nodes on complex maps: Implement a simple force-directed layout algorithm that spaces nodes apart automatically, or let users drag nodes to manual positions and snap to a grid.
 
 The modular architecture separates concerns cleanly, making it straightforward to add features like deal alerts, real-time collaboration, or integration with Obsidian and Roam Research.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -13,20 +13,20 @@ permalink: /mcp-credential-management-and-secrets-handling/
 
 # MCP Credential Management and Secrets Handling
 
-[Building MCP servers that interact with databases, cloud services, and third-party APIs](/building-your-first-mcp-tool-integration-guide-2026/) requires careful handling of credentials and secrets. Whether you're building a custom MCP server for AWS, connecting the `pdf` skill to process documents from a secure bucket, or wiring the `tdd` skill to your CI/CD pipeline — the way you manage secrets directly impacts security and reliability. This guide covers practical approaches to credential management for MCP servers, with code examples you can adapt immediately.
+[Building MCP servers that interact with databases, cloud services, and third-party APIs](/building-your-first-mcp-tool-integration-guide-2026/) requires careful handling of credentials and secrets. Whether you're building a custom MCP server for AWS, connecting the `pdf` skill to process documents from a secure bucket, or wiring the `tdd` skill to your CI/CD pipeline. the way you manage secrets directly impacts security and reliability. This guide covers practical approaches to credential management for MCP servers, with code examples you can adapt immediately.
 
-## Understanding the Threat Landscape
+Understanding the Threat Landscape
 
 MCP servers run as long-lived processes that often maintain persistent connections to external services. This makes them attractive targets for attackers seeking API keys, database credentials, or OAuth tokens. The most common risks include credential leakage through logs, environment variable exposure, hardcoded secrets in source code, and improper token refresh handling.
 
 When building MCP integrations, remember that credentials passed through tool calls may appear in Claude's context window. While Claude Code doesn't persist these in logs, the attack surface includes your server's environment, configuration files, and any third-party services your MCP server connects to.
 
-## Environment Variables: The Foundation
+Environment Variables: The Foundation
 
 The most straightforward approach for handling secrets in MCP servers is environment variables. Most cloud providers and API services support configuration through environment variables, making this pattern portable and compatible with containerized deployments.
 
 ```python
-# mcp_server_example/server.py
+mcp_server_example/server.py
 import os
 from mcp.server import Server
 from mcp.types import Tool, TextContent
@@ -48,7 +48,7 @@ class SecureMCPServer:
 When deploying this server, you inject secrets at runtime rather than baking them into the image:
 
 ```bash
-# Docker compose example
+Docker compose example
 services:
   mcp-server:
     image: your-mcp-server:latest
@@ -68,7 +68,7 @@ secrets:
 
 This pattern works well with skills like `supermemory` that persist data to external stores. The key is ensuring your deployment pipeline never echoes or logs these environment variables.
 
-## OAuth 2.0 for User-Authenticated Requests
+OAuth 2.0 for User-Authenticated Requests
 
 Many MCP servers need to act on behalf of users, requiring OAuth flows rather than service-level credentials. For detailed patterns on implementing OAuth in MCP contexts, see the related guides on MCP authentication flows.
 
@@ -81,7 +81,7 @@ from mcp.server import Server
 app = FastAPI()
 server = Server("oauth-mcp-server")
 
-# Store tokens securely per user session
+Store tokens securely per user session
 user_tokens: dict[str, dict] = {}
 
 @app.get("/oauth/callback")
@@ -113,14 +113,14 @@ async def make_user_request(user_id: str, endpoint: str):
 
 This approach is essential when building integrations that access user data from services like GitHub, Google Workspace, or Slack. Custom skills that integrate with Slack or Google Workspace demonstrate this pattern when they require OAuth tokens for API access.
 
-## Secret Scanning and Prevention
+Secret Scanning and Prevention
 
 Automated detection of leaked secrets complements MCP-level prevention for defense in depth.
 
 Never log or return credentials in tool responses:
 
 ```python
-# BAD: Credentials in response
+BAD: Credentials in response
 async def get_user_info(user_id: str) -> dict:
     user = await database.fetch("SELECT * FROM users WHERE id = ?", user_id)
     return {
@@ -128,7 +128,7 @@ async def get_user_info(user_id: str) -> dict:
         "db_connection_string": os.environ.get("DATABASE_URL")  # LEAKED!
     }
 
-# GOOD: Sanitized response
+GOOD: Sanitized response
 async def get_user_info(user_id: str) -> dict:
     user = await database.fetch("SELECT * FROM users WHERE id = ?", user_id)
     return {
@@ -157,29 +157,29 @@ async def handle_tool_call(tool_name: str, arguments: dict) -> CallToolResult:
     return result
 ```
 
-## Working with Claude Code Skills
+Working with Claude Code Skills
 
 The `pdf` skill can process sensitive documents through your MCP server, while the `tdd` skill might run tests against APIs requiring authentication. Here's how to connect skills securely:
 
 ```markdown
 <!-- In your skill .md file -->
-# Secure API Tester
+Secure API Tester
 
 Run API integration tests using the MCP server.
 
 When running tests:
 - Use the API endpoint provided by the user
-- Load the auth token from MCP_AUTH_TOKEN environment variable — never accept tokens as user input
+- Load the auth token from MCP_AUTH_TOKEN environment variable. never accept tokens as user input
 - Report pass/fail status and any authentication errors clearly
 ```
 
 The `frontend-design` skill can integrate with design APIs that require authentication, while `xlsx` might connect to spreadsheets containing sensitive data. In each case, ensure credentials flow through environment variables rather than appearing in skill prompts or tool arguments. The [MCP server input validation security patterns guide](/mcp-server-input-validation-security-patterns/) shows how to reinforce this boundary at the server layer.
 
-## Production Deployment Patterns
+Production Deployment Patterns
 
 When deploying MCP servers to production, consider these patterns:
 
-**External secrets services** work well for enterprise deployments:
+External secrets services work well for enterprise deployments:
 
 ```python
 import boto3
@@ -190,7 +190,7 @@ async def get_secret(secret_name: str) -> str:
     return response["SecretString"]
 ```
 
-**Rotation automation** ensures credentials don't become stale:
+Rotation automation ensures credentials don't become stale:
 
 ```python
 class RotatingCredential:
@@ -217,15 +217,15 @@ class RotatingCredential:
         return (time.time() - self._last_rotated) > (self.rotation_days * 86400)
 ```
 
-## Conclusion
+Conclusion
 
 Secure credential management in MCP servers requires layering environment variables for configuration, OAuth flows for user-authenticated requests, secret scanning for prevention, and production-grade patterns like external secrets services and automated rotation. Start with environment variables for simplicity, implement OAuth when user delegation is needed, and add secret scanning and rotation as your deployments scale. The `tdd` skill can validate your credential handling implementation through integration tests, while `supermemory` can help you document your security architecture. Pair this foundation with the [MCP server vulnerability scanning and testing guide](/mcp-server-vulnerability-scanning-and-testing/) to catch weaknesses in your overall security posture.
 
-## Related Reading
+Related Reading
 
 - [MCP Server Permission Auditing Best Practices](/mcp-server-permission-auditing-best-practices/)
 - [MCP OAuth 2.1 Authentication Implementation Guide](/mcp-oauth-21-authentication-implementation-guide/)
 - [Securing MCP Servers in Production Environments](/securing-mcp-servers-in-production-environments/)
 - [Advanced Hub](/advanced-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -17,7 +17,7 @@ A Claude skill by itself is powerful. A Claude skill wired into your actual infr
 
 This hub covers every major integration category, with a practical breakdown of what Claude skills can do in each context and links to the complete setup guides.
 
-## Table of Contents
+Table of Contents
 
 1. [CI/CD and Version Control](#cicd-and-version-control)
 2. [Automation Platforms](#automation-platforms)
@@ -33,20 +33,20 @@ This hub covers every major integration category, with a practical breakdown of 
 
 ---
 
-## CI/CD and Version Control
+CI/CD and Version Control
 
 GitHub Actions and GitLab CI are the natural home for skills that work on code. Because every push, pull request, and merge triggers a pipeline event, you can attach Claude skill execution to any of those moments with a few lines of YAML.
 
-**GitHub Actions** is the most common integration point. The pattern is simple: add a workflow step that calls Claude Code with a specific skill, passing the relevant context (the diff, the changed files, the PR description). Useful applications:
+GitHub Actions is the most common integration point. The pattern is simple: add a workflow step that calls Claude Code with a specific skill, passing the relevant context (the diff, the changed files, the PR description). Useful applications:
 
 - Automated PR review: Claude reads the diff and leaves structured comments
 - Issue triage: Claude labels, prioritizes, and drafts responses for new issues
 - Documentation generation: Claude writes or updates docs based on changed code
 - Test coverage analysis: Claude identifies untested code paths and proposes tests
 
-The key constraint is token budget. Long diffs consume context fast. Skills designed for CI/CD should be focused—one job per skill—and should pre-filter input to only the relevant code sections.
+The key constraint is token budget. Long diffs consume context fast. Skills designed for CI/CD should be focused, one job per skill, and should pre-filter input to only the relevant code sections.
 
-**GitLab CI** follows the same pattern. Claude Code can run as a CI job, with the skill invoked via CLI. The integration is slightly less turnkey than GitHub Actions but fully supported.
+GitLab CI follows the same pattern. Claude Code can run as a CI job, with the skill invoked via CLI. The integration is slightly less turnkey than GitHub Actions but fully supported.
 
 - [Claude Skills with GitHub Actions CI/CD Pipeline 2026](/claude-skills-with-github-actions-ci-cd-pipeline/)
 - [How to Automate Pull Request Review with Claude Skills](/best-claude-skills-for-code-review-automation/)
@@ -55,11 +55,11 @@ The key constraint is token budget. Long diffs consume context fast. Skills desi
 
 ---
 
-## Automation Platforms
+Automation Platforms
 
-n8n and Zapier are the connective tissue of modern software stacks. Both platforms let you build multi-step automation flows that trigger on events from hundreds of services. Adding Claude skills to these flows gives your automations the ability to understand, summarize, classify, and generate content—not just route data.
+n8n and Zapier are the connective tissue of modern software stacks. Both platforms let you build multi-step automation flows that trigger on events from hundreds of services. Adding Claude skills to these flows gives your automations the ability to understand, summarize, classify, and generate content, not just route data.
 
-**n8n** is the preferred choice for developers who want full control and self-hosting. Claude Code integrates with n8n through an HTTP request node that calls the Claude API with a skill-specific system prompt. A well-designed n8n + Claude flow can:
+n8n is the preferred choice for developers who want full control and self-hosting. Claude Code integrates with n8n through an HTTP request node that calls the Claude API with a skill-specific system prompt. A well-designed n8n + Claude flow can:
 
 - Receive a webhook from any external service
 - Pass the payload to a Claude skill for analysis or transformation
@@ -67,7 +67,7 @@ n8n and Zapier are the connective tissue of modern software stacks. Both platfor
 
 Because n8n is self-hosted, you can inject full skill context without worrying about third-party data retention.
 
-**Zapier** is the faster path for non-developers and for prototyping. The Claude integration in Zapier supports custom prompts, which means you can effectively embed a simplified skill inline. For production automation with complex skill logic, n8n gives more flexibility. Zapier works best for simpler, high-volume routing tasks where Claude adds a classification or summarization step.
+Zapier is the faster path for non-developers and for prototyping. The Claude integration in Zapier supports custom prompts, which means you can effectively embed a simplified skill inline. For production automation with complex skill logic, n8n gives more flexibility. Zapier works best for simpler, high-volume routing tasks where Claude adds a classification or summarization step.
 
 - [How to Use Claude Skills with n8n Automation Workflows](/how-to-use-claude-skills-with-n8n-automation-workflows/)
 - [Claude Code Skills + Zapier: Step-by-Step](/claude-code-skills-zapier-integration-step-by-step/)
@@ -76,21 +76,21 @@ Because n8n is self-hosted, you can inject full skill context without worrying a
 
 ---
 
-## Project Management and CRM
+Project Management and CRM
 
 Connecting Claude skills to project management and CRM tools closes the loop between where work is tracked and where AI assistance is most useful. The primary integration targets in the developer ecosystem are Notion, Linear, Jira, and ClickUp.
 
-**Notion** has a rich API that allows Claude skills to read and write pages, databases, and blocks. Practical use cases:
+Notion has a rich API that allows Claude skills to read and write pages, databases, and blocks. Practical use cases:
 
 - Automatically generate project briefs from a template, filled with data from your codebase
 - Create meeting notes, action items, and summaries from raw conversation transcripts
 - Maintain a living documentation database where Claude updates pages as code changes
 
-**Linear** is where engineering teams track issues and sprints. Claude skills can connect to the Linear API to triage new issues, generate ticket descriptions from Slack messages, estimate complexity, and keep sprint boards updated based on code activity. The combination of GitHub Actions + Linear + Claude creates a nearly automated issue lifecycle for active projects.
+Linear is where engineering teams track issues and sprints. Claude skills can connect to the Linear API to triage new issues, generate ticket descriptions from Slack messages, estimate complexity, and keep sprint boards updated based on code activity. The combination of GitHub Actions + Linear + Claude creates a nearly automated issue lifecycle for active projects.
 
-**Jira** remains the dominant issue tracker in enterprise environments. The Jira MCP server gives Claude read and write access to Jira projects, enabling ticket creation, status updates, and sprint management from within Claude Code sessions.
+Jira remains the dominant issue tracker in enterprise environments. The Jira MCP server gives Claude read and write access to Jira projects, enabling ticket creation, status updates, and sprint management from within Claude Code sessions.
 
-**ClickUp** offers a flexible project management API. Claude skills can create tasks, update statuses, generate summaries of in-progress work, and connect sprint data to code activity through the ClickUp MCP server.
+ClickUp offers a flexible project management API. Claude skills can create tasks, update statuses, generate summaries of in-progress work, and connect sprint data to code activity through the ClickUp MCP server.
 
 - [How to Integrate Claude Skills with Notion API Guide](/how-to-integrate-claude-skills-with-notion-api-guide/)
 - [Claude Skills with Linear Project Management Tutorial](/claude-skills-with-linear-project-management-tutorial/)
@@ -101,15 +101,15 @@ Connecting Claude skills to project management and CRM tools closes the loop bet
 
 ---
 
-## Backend and Databases
+Backend and Databases
 
 Claude skills become significantly more powerful when they can read from and write to real data stores. Two integration patterns dominate here: direct database access through a skill-managed connection, and indirect access through an MCP server that abstracts the database layer.
 
-**Supabase** is the most popular target for Claude database integrations. Its PostgreSQL-compatible API, built-in auth, and REST/realtime interfaces make it accessible from within a skill without complex setup. Claude can query tables, insert records, and trigger edge functions as part of a workflow. The most common pattern: Claude reads context from a Supabase table at the start of a session, performs its work, and writes results back at the end.
+Supabase is the most popular target for Claude database integrations. Its PostgreSQL-compatible API, built-in auth, and REST/realtime interfaces make it accessible from within a skill without complex setup. Claude can query tables, insert records, and trigger edge functions as part of a workflow. The most common pattern: Claude reads context from a Supabase table at the start of a session, performs its work, and writes results back at the end.
 
-**PostgreSQL** directly is also fully supported. Skills that need to query production databases typically do so through an MCP server, which provides a safe, sandboxed interface to the database without exposing credentials in the skill file.
+PostgreSQL directly is also fully supported. Skills that need to query production databases typically do so through an MCP server, which provides a safe, sandboxed interface to the database without exposing credentials in the skill file.
 
-**AWS Lambda** and serverless functions are another integration layer. Claude skills can invoke Lambda functions via API calls to trigger compute-heavy operations, process results, and incorporate them into the ongoing conversation.
+AWS Lambda and serverless functions are another integration layer. Claude skills can invoke Lambda functions via API calls to trigger compute-heavy operations, process results, and incorporate them into the ongoing conversation.
 
 - [Claude Skills with Supabase: Practical Workflows](/claude-skills-with-supabase-database-integration/)
 - [Claude Skills + AWS Lambda: Serverless Guide](/claude-skills-aws-lambda-serverless-integration/)
@@ -118,7 +118,7 @@ Claude skills become significantly more powerful when they can read from and wri
 
 ---
 
-## Communication and Email
+Communication and Email
 
 Slack is the primary communication integration for Claude skills in team environments. The pattern is bidirectional: Slack events (messages, reactions, mentions) can trigger Claude skill execution, and skill output can be posted back to Slack channels or DMs.
 
@@ -131,11 +131,11 @@ Useful Slack + Claude skill applications:
 
 The Slack integration requires a Slack app with the appropriate OAuth scopes. Claude Code communicates with Slack through the Events API or incoming webhooks, depending on whether the integration needs to read messages or only post them.
 
-**Email** is another high-value integration target. SendGrid connects Claude to transactional email infrastructure — Claude can generate email content, draft sequences, and trigger sends based on workflow events. The SendGrid MCP server makes this connection programmatic and auditable.
+Email is another high-value integration target. SendGrid connects Claude to transactional email infrastructure. Claude can generate email content, draft sequences, and trigger sends based on workflow events. The SendGrid MCP server makes this connection programmatic and auditable.
 
-**Customer communication platforms** like Intercom give Claude access to conversation history, user data, and support ticket context. Claude can classify incoming messages, draft responses, escalate issues, and maintain consistency across support interactions.
+Customer communication platforms like Intercom give Claude access to conversation history, user data, and support ticket context. Claude can classify incoming messages, draft responses, escalate issues, and maintain consistency across support interactions.
 
-**Video conferencing** integration via Zoom MCP server allows Claude to process meeting data: summarizing transcripts, extracting action items, and distributing meeting notes automatically after calls conclude.
+Video conferencing integration via Zoom MCP server allows Claude to process meeting data: summarizing transcripts, extracting action items, and distributing meeting notes automatically after calls conclude.
 
 - [Claude Skills with Slack Bot Integration Tutorial](/claude-skills-with-slack-bot-integration-tutorial/)
 - [Claude Code Skills SendGrid Email Automation Setup](/claude-code-skills-sendgrid-email-automation-setup/)
@@ -146,15 +146,15 @@ The Slack integration requires a Slack app with the appropriate OAuth scopes. Cl
 
 ---
 
-## Cloud Platforms
+Cloud Platforms
 
 Major cloud platforms are integration targets for skills that manage infrastructure, deployments, and cloud resources. Three platforms see the most Claude Code activity: AWS, GCP, and Vercel.
 
-**AWS** integrations span Lambda (serverless compute), S3 (file storage for skill inputs/outputs), and CloudFormation/CDK (infrastructure management). Skills designed for DevOps workflows often interact with AWS CLI commands or the SDK, with Claude interpreting the output and suggesting next steps.
+AWS integrations span Lambda (serverless compute), S3 (file storage for skill inputs/outputs), and CloudFormation/CDK (infrastructure management). Skills designed for DevOps workflows often interact with AWS CLI commands or the SDK, with Claude interpreting the output and suggesting next steps.
 
-**Google Cloud Platform (GCP)** is a common target for teams running Kubernetes workloads or using BigQuery for data. Claude skills can help interpret GCP logs, generate Cloud Run deployment configs, and assist with IAM policy reviews.
+Google Cloud Platform (GCP) is a common target for teams running Kubernetes workloads or using BigQuery for data. Claude skills can help interpret GCP logs, generate Cloud Run deployment configs, and assist with IAM policy reviews.
 
-**Vercel** is the standard deployment target for Next.js applications. Claude skills can read Vercel deployment logs, diagnose build failures, and trigger redeployments as part of a CI/CD workflow. The combination of GitHub Actions + Claude + Vercel creates a nearly automated deployment pipeline with AI-assisted validation at each step.
+Vercel is the standard deployment target for Next.js applications. Claude skills can read Vercel deployment logs, diagnose build failures, and trigger redeployments as part of a CI/CD workflow. The combination of GitHub Actions + Claude + Vercel creates a nearly automated deployment pipeline with AI-assisted validation at each step.
 
 - [Claude Skills + Vercel Deployment Automation Guide](/claude-code-vercel-deployment-nextjs-workflow-guide/)
 - [Claude Code Vercel Deployment Next.js Workflow Guide](/claude-code-vercel-deployment-nextjs-workflow-guide/)
@@ -164,41 +164,41 @@ Major cloud platforms are integration targets for skills that manage infrastruct
 
 ---
 
-## Monitoring and Observability
+Monitoring and Observability
 
-Monitoring integrations give Claude real-time visibility into production system health. Datadog is the most common observability platform in Claude Code integrations — its MCP server allows Claude to query metrics, read dashboards, and correlate error spikes with recent deployments.
+Monitoring integrations give Claude real-time visibility into production system health. Datadog is the most common observability platform in Claude Code integrations. its MCP server allows Claude to query metrics, read dashboards, and correlate error spikes with recent deployments.
 
-**Datadog** integration via MCP server enables Claude to:
+Datadog integration via MCP server enables Claude to:
 - Query metrics and alerts programmatically
 - Correlate error events with deployment timelines
 - Draft incident summaries with recommended next steps
 - Generate on-call runbooks from observed failure patterns
 
-**Trigger.dev** is a developer-first workflow automation platform that runs background jobs and event-driven workflows. Claude Code integrates with Trigger.dev to orchestrate multi-step automation pipelines that can spawn Claude skill invocations as job steps.
+Trigger.dev is a developer-first workflow automation platform that runs background jobs and event-driven workflows. Claude Code integrates with Trigger.dev to orchestrate multi-step automation pipelines that can spawn Claude skill invocations as job steps.
 
 - [Datadog MCP Server Monitoring Automation with Claude](/datadog-mcp-server-monitoring-automation-claude/)
 - [Claude Code for Trigger.dev Workflow Automation Tutorial](/claude-code-for-trigger-dev-workflow-automation-tutorial/)
 
 ---
 
-## Web Automation and Research
+Web Automation and Research
 
 Web automation integrations give Claude the ability to browse, extract, and process web content at scale.
 
-**Firecrawl** is a web scraping and crawling API that returns clean Markdown from any URL. The Firecrawl MCP server connects Claude to this capability, enabling research automation where Claude requests pages, processes the extracted content, and synthesizes findings—without any browser automation code.
+Firecrawl is a web scraping and crawling API that returns clean Markdown from any URL. The Firecrawl MCP server connects Claude to this capability, enabling research automation where Claude requests pages, processes the extracted content, and synthesizes findings, without any browser automation code.
 
-**Tavily** provides a research-grade search API optimized for AI applications. Claude skills connected to Tavily can perform factual research, gather competitive intelligence, and retrieve up-to-date information without the hallucination risk of relying on training data alone.
+Tavily provides a research-grade search API optimized for AI applications. Claude skills connected to Tavily can perform factual research, gather competitive intelligence, and retrieve up-to-date information without the hallucination risk of relying on training data alone.
 
 - [Firecrawl MCP Server: Web Scraping Automation with Claude](/firecrawl-mcp-server-web-scraping-automation/)
 - [Tavily MCP Server: Research Automation Guide](/tavily-mcp-server-research-automation-guide/)
 
 ---
 
-## Content and Publishing
+Content and Publishing
 
 Publishing platform integrations let Claude participate directly in the content creation and publishing workflow.
 
-**Ghost** is a popular open-source publishing platform with a well-documented API. The Ghost MCP server allows Claude to create posts, update content, manage tags, and trigger publish actions from within Claude Code workflows. Combined with a content generation skill, this creates an end-to-end automated blog pipeline: Claude generates the post, formats it for Ghost, and publishes it on a schedule.
+Ghost is a popular open-source publishing platform with a well-documented API. The Ghost MCP server allows Claude to create posts, update content, manage tags, and trigger publish actions from within Claude Code workflows. Combined with a content generation skill, this creates an end-to-end automated blog pipeline: Claude generates the post, formats it for Ghost, and publishes it on a schedule.
 
 - [Ghost MCP Server: Blogging Automation Workflow](/ghost-mcp-server-blogging-automation-workflow/)
 - [Automated Blog Workflow with Claude Skills](/claude-skills-automated-blog-post-workflow-tutorial/)
@@ -206,7 +206,7 @@ Publishing platform integrations let Claude participate directly in the content 
 
 ---
 
-## Integration Quick-Reference Table
+Integration Quick-Reference Table
 
 | Platform | What Claude Skills Can Do | Guide |
 |----------|--------------------------|-------|
@@ -235,7 +235,7 @@ Publishing platform integrations let Claude participate directly in the content 
 
 ---
 
-## Full Article Index
+Full Article Index
 
 | Article | What You'll Learn |
 |---------|-------------------|
@@ -275,16 +275,16 @@ Publishing platform integrations let Claude participate directly in the content 
 
 ---
 
-## Related Reading
+Related Reading
 
-- [Getting Started Hub](/getting-started-hub/) — Foundations: what skills are, the .md format, and writing your first skill
-- [Troubleshooting Hub](/troubleshooting-hub/) — Fix every common skill error: permissions, YAML, context overflow, and more
-- [Comparisons Hub](/comparisons-hub/) — How Claude Code stacks up against Copilot, Cursor, and other tools
-- [Workflows Hub](/workflows-hub/) — Practical skill workflows for code review, documentation, and CI/CD
-- [Projects Hub](/projects-hub/) — Build real SaaS apps, CLI tools, and APIs using Claude skills
-- [Pricing Hub](/pricing-hub/) — Cost optimization and Claude Code pricing breakdown
+- [Getting Started Hub](/getting-started-hub/). Foundations: what skills are, the .md format, and writing your first skill
+- [Troubleshooting Hub](/troubleshooting-hub/). Fix every common skill error: permissions, YAML, context overflow, and more
+- [Comparisons Hub](/comparisons-hub/). How Claude Code stacks up against Copilot, Cursor, and other tools
+- [Workflows Hub](/workflows-hub/). Practical skill workflows for code review, documentation, and CI/CD
+- [Projects Hub](/projects-hub/). Build real SaaS apps, CLI tools, and APIs using Claude skills
+- [Pricing Hub](/pricing-hub/). Cost optimization and Claude Code pricing breakdown
 
 ---
 
-*Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*Built by theluckystrike. More at [zovo.one](https://zovo.one)
 *

@@ -17,7 +17,7 @@ This hub indexes all 124 step-by-step tutorials in the Claude Code library. Wher
 
 The collection covers MCP server integrations, framework-specific development, skill file writing, testing workflows, language-specific patterns, CI/CD automation, deployment targets, and skill management practices.
 
-## Table of Contents
+Table of Contents
 
 1. [MCP Server Tutorials](#mcp-server-tutorials)
 2. [Framework and Language Tutorials](#framework-and-language-tutorials)
@@ -31,209 +31,209 @@ The collection covers MCP server integrations, framework-specific development, s
 
 ---
 
-## MCP Server Tutorials
+MCP Server Tutorials
 
 Model Context Protocol servers connect Claude Code to external systems. These tutorials walk through setting up specific MCP servers from scratch: authentication, connection, permissions, and testing the integration with Claude.
 
-### Infrastructure and Deployment MCP Servers
-- [Ansible MCP Server Configuration Management](/ansible-mcp-server-configuration-management/) — Set up the Ansible MCP server to drive configuration management tasks from Claude
-- [Apache Kafka MCP Server for Event Streaming Guide](/apache-kafka-mcp-server-event-streaming-guide/) — Connect Claude to Kafka for event streaming automation
-- [AWS MCP Server Cloud Automation with Claude Code](/aws-mcp-server-cloud-automation-with-claude-code/) — AWS resource management through the AWS MCP server
-- [Cloudflare MCP Server Edge Automation Workflow](/cloudflare-mcp-server-edge-automation-workflow/) — Automating Cloudflare edge configuration and deployments
-- [Heroku MCP Server Application Deployment Guide](/heroku-mcp-server-application-deployment-guide/) — Deploying and managing Heroku applications via MCP
-- [Kubernetes MCP Server Cluster Management Guide](/kubernetes-mcp-server-cluster-management-guide/) — Managing Kubernetes clusters with Claude via MCP server
-- [Planetscale MCP Server Branching Workflow Guide](/planetscale-mcp-server-branching-workflow-guide/) — Database branching and schema management with PlanetScale MCP
-- [Railway MCP Server Deployment Automation Guide](/railway-mcp-server-deployment-automation-guide/) — Railway application deployment automation
+Infrastructure and Deployment MCP Servers
+- [Ansible MCP Server Configuration Management](/ansible-mcp-server-configuration-management/). Set up the Ansible MCP server to drive configuration management tasks from Claude
+- [Apache Kafka MCP Server for Event Streaming Guide](/apache-kafka-mcp-server-event-streaming-guide/). Connect Claude to Kafka for event streaming automation
+- [AWS MCP Server Cloud Automation with Claude Code](/aws-mcp-server-cloud-automation-with-claude-code/). AWS resource management through the AWS MCP server
+- [Cloudflare MCP Server Edge Automation Workflow](/cloudflare-mcp-server-edge-automation-workflow/). Automating Cloudflare edge configuration and deployments
+- [Heroku MCP Server Application Deployment Guide](/heroku-mcp-server-application-deployment-guide/). Deploying and managing Heroku applications via MCP
+- [Kubernetes MCP Server Cluster Management Guide](/kubernetes-mcp-server-cluster-management-guide/). Managing Kubernetes clusters with Claude via MCP server
+- [Planetscale MCP Server Branching Workflow Guide](/planetscale-mcp-server-branching-workflow-guide/). Database branching and schema management with PlanetScale MCP
+- [Railway MCP Server Deployment Automation Guide](/railway-mcp-server-deployment-automation-guide/). Railway application deployment automation
 
-### Developer Tool MCP Servers
-- [GitHub MCP Server Advanced Workflow Automation](/github-mcp-server-advanced-workflow-automation/) — Advanced GitHub automation through the official GitHub MCP server
-- [Notion MCP Server Knowledge Base Automation](/notion-mcp-server-knowledge-base-automation/) — Building automated Notion knowledge bases with Claude
-- [Puppeteer MCP Server Web Automation Workflow](/puppeteer-mcp-server-web-automation-workflow/) — Browser automation through Puppeteer MCP server
-- [Reddit MCP Server for Content Research Automation](/reddit-mcp-server-content-research-automation/) — Automating Reddit-based research and content collection
-- [Salesforce MCP Server Data Integration Guide](/salesforce-mcp-server-data-integration-guide/) — Salesforce CRM data integration via MCP
-- [Slack MCP Server Team Notification Automation](/slack-mcp-server-team-notification-automation/) — Automated team notifications via Slack MCP server
-- [Telegram MCP Server Bot Automation Workflow](/telegram-mcp-server-bot-automation-workflow/) — Building Telegram bots powered by Claude via MCP
+Developer Tool MCP Servers
+- [GitHub MCP Server Advanced Workflow Automation](/github-mcp-server-advanced-workflow-automation/). Advanced GitHub automation through the official GitHub MCP server
+- [Notion MCP Server Knowledge Base Automation](/notion-mcp-server-knowledge-base-automation/). Building automated Notion knowledge bases with Claude
+- [Puppeteer MCP Server Web Automation Workflow](/puppeteer-mcp-server-web-automation-workflow/). Browser automation through Puppeteer MCP server
+- [Reddit MCP Server for Content Research Automation](/reddit-mcp-server-content-research-automation/). Automating Reddit-based research and content collection
+- [Salesforce MCP Server Data Integration Guide](/salesforce-mcp-server-data-integration-guide/). Salesforce CRM data integration via MCP
+- [Slack MCP Server Team Notification Automation](/slack-mcp-server-team-notification-automation/). Automated team notifications via Slack MCP server
+- [Telegram MCP Server Bot Automation Workflow](/telegram-mcp-server-bot-automation-workflow/). Building Telegram bots powered by Claude via MCP
 
-### Monitoring and Observability MCP Servers
-- [MCP Server Logging, Audit Trail, and Security Guide](/mcp-server-logging-audit-trail-security-guide/) — Setting up logging and audit trails for MCP server operations
-- [PagerDuty MCP Server Incident Management Guide](/pagerduty-mcp-server-incident-management-guide/) — Incident management automation with PagerDuty MCP
+Monitoring and Observability MCP Servers
+- [MCP Server Logging, Audit Trail, and Security Guide](/mcp-server-logging-audit-trail-security-guide/). Setting up logging and audit trails for MCP server operations
+- [PagerDuty MCP Server Incident Management Guide](/pagerduty-mcp-server-incident-management-guide/). Incident management automation with PagerDuty MCP
 
-### Authentication and Security MCP Tutorials
-- [MCP OAuth 2.1 Authentication Implementation Guide](/mcp-oauth-21-authentication-implementation-guide/) — Implementing OAuth 2.1 authentication for MCP servers
-- [Claude Code MCP Tool Allow and Deny Lists](/claude-code-mcp-tool-allow-and-deny-lists/) — Configuring tool allowlists and denylists for MCP security
+Authentication and Security MCP Tutorials
+- [MCP OAuth 2.1 Authentication Implementation Guide](/mcp-oauth-21-authentication-implementation-guide/). Implementing OAuth 2.1 authentication for MCP servers
+- [Claude Code MCP Tool Allow and Deny Lists](/claude-code-mcp-tool-allow-and-deny-lists/). Configuring tool allowlists and denylists for MCP security
 
 ---
 
-## Framework and Language Tutorials
+Framework and Language Tutorials
 
 These tutorials are framework-specific and language-specific. Each one teaches Claude Code patterns that are idiomatic to the framework in question.
 
-### Frontend and UI Frameworks
-- [Claude Code Qwik Resumability Lazy Loading Workflow Guide](/claude-code-qwik-resumability-lazy-loading-workflow-guide/) — Working with Qwik's resumability model and lazy loading
-- [Claude Code React Native Paper Mobile UI Guide](/claude-code-react-native-paper-mobile-ui-guide/) — Building React Native apps with Paper UI components
-- [Claude Code React Router v7 Navigation Guide](/claude-code-react-router-v7-navigation-guide/) — Navigation patterns with React Router v7
-- [Claude Code Redux Toolkit State Management Guide](/claude-code-redux-toolkit-state-management-guide/) — Redux Toolkit state management with Claude Code assistance
-- [Claude Code Remix Loader Action Data Fetching Tutorial](/claude-code-remix-loader-action-data-fetching-tutorial/) — Remix loaders and server actions with Claude-assisted patterns
-- [Claude Frontend Design Skill Review and Tutorial](/claude-frontend-design-skill-review-and-tutorial/) — Complete review and tutorial for the `/frontend-design` skill
+Frontend and UI Frameworks
+- [Claude Code Qwik Resumability Lazy Loading Workflow Guide](/claude-code-qwik-resumability-lazy-loading-workflow-guide/). Working with Qwik's resumability model and lazy loading
+- [Claude Code React Native Paper Mobile UI Guide](/claude-code-react-native-paper-mobile-ui-guide/). Building React Native apps with Paper UI components
+- [Claude Code React Router v7 Navigation Guide](/claude-code-react-router-v7-navigation-guide/). Navigation patterns with React Router v7
+- [Claude Code Redux Toolkit State Management Guide](/claude-code-redux-toolkit-state-management-guide/). Redux Toolkit state management with Claude Code assistance
+- [Claude Code Remix Loader Action Data Fetching Tutorial](/claude-code-remix-loader-action-data-fetching-tutorial/). Remix loaders and server actions with Claude-assisted patterns
+- [Claude Frontend Design Skill Review and Tutorial](/claude-frontend-design-skill-review-and-tutorial/). Complete review and tutorial for the `/frontend-design` skill
 
-### Backend Frameworks and Languages
-- [Claude Code Actix Web Rust API Guide](/claude-code-actix-web-rust-api-guide/) — Building production Rust APIs with Actix-web
-- [Claude Code AWS ECS Fargate Setup and Deployment Tutorial](/claude-code-aws-ecs-fargate-setup-deployment-tutorial/) — Containerized deployments on ECS Fargate
-- [Claude Code CloudFormation Template Generation Workflow Guide](/claude-code-cloudformation-template-generation-workflow-guid/) — Generating and validating CloudFormation templates
-- [Claude Code Dockerfile Generation: Multi-Stage Build Guide](/claude-code-dockerfile-generation-multi-stage-build-guide/) — Multi-stage Dockerfiles for production-ready container images
-- [Claude Code Express to Fastify Migration Tutorial (2026)](/claude-code-express-to-fastify-migration-tutorial-2026/) — Migrating from Express to Fastify with Claude Code
-- [Claude Code Scala Functional Programming Workflow Tips](/claude-code-scala-functional-programming-workflow-tips/) — Functional programming patterns in Scala with Claude
-- [Claude Code Skills for Backend Developers: Node.js and Python](/claude-code-skills-for-backend-developers-node-and-python/) — Practical skill configurations for Node.js and Python API development
-- [Claude Code Skills for C# .NET Developers](/claude-code-skills-for-c-sharp-dotnet-developers/) — .NET and C# development patterns with Claude Code
-- [Claude Code Skills for Data Engineers Automating Pipelines](/claude-code-skills-for-data-engineers-automating-pipelines/) — ETL/ELT pipeline automation with Claude
-- [Claude Code Skills for Golang Microservices: Practical Development Guide](/claude-code-skills-for-golang-microservices/) — Go microservice patterns and testing with Claude Code
-- [Claude Code Skills for Hardware Description Language VHDL](/claude-code-skills-for-hardware-description-language-vhdl/) — VHDL development and simulation with Claude Code
-- [Claude Code Skills for Infrastructure as Code Terraform](/claude-code-skills-for-infrastructure-as-code-terraform/) — Writing and validating Terraform modules with Claude
-- [Claude Code Skills for Ruby on Rails Projects](/claude-code-skills-for-ruby-on-rails-projects/) — Rails conventions, testing, and migration patterns
-- [Claude Code Skills for Scientific Python: NumPy and SciPy](/claude-code-skills-for-scientific-python-numpy-scipy/) — Scientific computing workflows with NumPy and SciPy
-- [Claude Code Skills for WebSocket Real-Time App Development](/claude-code-skills-websocket-real-time-app-development/) — Real-time WebSocket application development
-- [Claude Skills for Android Kotlin Development](/claude-skills-for-android-kotlin-development/) — Android development workflow with Kotlin and Claude
-- [Claude Skills for Rust Systems Programming](/claude-skills-for-rust-systems-programming/) — Systems programming patterns in Rust with Claude Code
-- [Claude Skills for Solidity Smart Contract Development](/claude-skills-for-solidity-smart-contract-development/) — Smart contract development and testing on EVM chains
-- [Claude Skills for Unreal Engine C++ Development](/claude-skills-for-unreal-engine-c-development/) — Game development with Unreal Engine and Claude Code
-- [Claude Skills for WebSocket Realtime App Development](/claude-skills-for-websocket-realtime-app-development/) — Building WebSocket servers and clients with Claude skills
+Backend Frameworks and Languages
+- [Claude Code Actix Web Rust API Guide](/claude-code-actix-web-rust-api-guide/). Building production Rust APIs with Actix-web
+- [Claude Code AWS ECS Fargate Setup and Deployment Tutorial](/claude-code-aws-ecs-fargate-setup-deployment-tutorial/). Containerized deployments on ECS Fargate
+- [Claude Code CloudFormation Template Generation Workflow Guide](/claude-code-cloudformation-template-generation-workflow-guid/). Generating and validating CloudFormation templates
+- [Claude Code Dockerfile Generation: Multi-Stage Build Guide](/claude-code-dockerfile-generation-multi-stage-build-guide/). Multi-stage Dockerfiles for production-ready container images
+- [Claude Code Express to Fastify Migration Tutorial (2026)](/claude-code-express-to-fastify-migration-tutorial-2026/). Migrating from Express to Fastify with Claude Code
+- [Claude Code Scala Functional Programming Workflow Tips](/claude-code-scala-functional-programming-workflow-tips/). Functional programming patterns in Scala with Claude
+- [Claude Code Skills for Backend Developers: Node.js and Python](/claude-code-skills-for-backend-developers-node-and-python/). Practical skill configurations for Node.js and Python API development
+- [Claude Code Skills for C# .NET Developers](/claude-code-skills-for-c-sharp-dotnet-developers/). .NET and C# development patterns with Claude Code
+- [Claude Code Skills for Data Engineers Automating Pipelines](/claude-code-skills-for-data-engineers-automating-pipelines/). ETL/ELT pipeline automation with Claude
+- [Claude Code Skills for Golang Microservices: Practical Development Guide](/claude-code-skills-for-golang-microservices/). Go microservice patterns and testing with Claude Code
+- [Claude Code Skills for Hardware Description Language VHDL](/claude-code-skills-for-hardware-description-language-vhdl/). VHDL development and simulation with Claude Code
+- [Claude Code Skills for Infrastructure as Code Terraform](/claude-code-skills-for-infrastructure-as-code-terraform/). Writing and validating Terraform modules with Claude
+- [Claude Code Skills for Ruby on Rails Projects](/claude-code-skills-for-ruby-on-rails-projects/). Rails conventions, testing, and migration patterns
+- [Claude Code Skills for Scientific Python: NumPy and SciPy](/claude-code-skills-for-scientific-python-numpy-scipy/). Scientific computing workflows with NumPy and SciPy
+- [Claude Code Skills for WebSocket Real-Time App Development](/claude-code-skills-websocket-real-time-app-development/). Real-time WebSocket application development
+- [Claude Skills for Android Kotlin Development](/claude-skills-for-android-kotlin-development/). Android development workflow with Kotlin and Claude
+- [Claude Skills for Rust Systems Programming](/claude-skills-for-rust-systems-programming/). Systems programming patterns in Rust with Claude Code
+- [Claude Skills for Solidity Smart Contract Development](/claude-skills-for-solidity-smart-contract-development/). Smart contract development and testing on EVM chains
+- [Claude Skills for Unreal Engine C++ Development](/claude-skills-for-unreal-engine-c-development/). Game development with Unreal Engine and Claude Code
+- [Claude Skills for WebSocket Realtime App Development](/claude-skills-for-websocket-realtime-app-development/). Building WebSocket servers and clients with Claude skills
 
-### Databases and Storage
-- [Claude Code Firebase Security Rules Validation Testing Guide](/claude-code-firebase-security-rules-validation-testing-guide/) — Writing and testing Firebase security rules
-- [Claude Code for Turso SQLite Edge Database Tutorial](/claude-code-for-turso-sqlite-edge-database-tutorial/) — Edge database development with Turso and LibSQL
-- [Claude Skills for Creating Database Migration Scripts](/claude-skills-for-creating-database-migration-scripts/) — Automated migration script generation and testing
-- [Claude Skills for GraphQL Schema Design and Testing](/claude-skills-for-graphql-schema-design-and-testing/) — GraphQL schema design, resolver patterns, and testing
+Databases and Storage
+- [Claude Code Firebase Security Rules Validation Testing Guide](/claude-code-firebase-security-rules-validation-testing-guide/). Writing and testing Firebase security rules
+- [Claude Code for Turso SQLite Edge Database Tutorial](/claude-code-for-turso-sqlite-edge-database-tutorial/). Edge database development with Turso and LibSQL
+- [Claude Skills for Creating Database Migration Scripts](/claude-skills-for-creating-database-migration-scripts/). Automated migration script generation and testing
+- [Claude Skills for GraphQL Schema Design and Testing](/claude-skills-for-graphql-schema-design-and-testing/). GraphQL schema design, resolver patterns, and testing
 
-### Data Science and ML
-- [Claude Code for W&B Weights & Biases Integration Setup](/claude-code-for-wandb-weights-biases-integration-setup/) — ML experiment tracking with Weights & Biases
-- [Claude Skills for Financial Modeling: Excel Alternative](/claude-skills-for-financial-modeling-excel-alternative/) — Financial modeling workflows replacing Excel macros
-- [Claude Skills for Generating Mock Data and Fixtures](/claude-skills-for-generating-mock-data-and-fixtures/) — Generating realistic test data and fixtures at scale
-- [Claude /xlsx Skill: Spreadsheet Automation Guide](/claude-xlsx-skill-spreadsheet-automation-tutorial/) — Automating spreadsheet tasks with the `/xlsx` skill
+Data Science and ML
+- [Claude Code for W&B Weights & Biases Integration Setup](/claude-code-for-wandb-weights-biases-integration-setup/). ML experiment tracking with Weights & Biases
+- [Claude Skills for Financial Modeling: Excel Alternative](/claude-skills-for-financial-modeling-excel-alternative/). Financial modeling workflows replacing Excel macros
+- [Claude Skills for Generating Mock Data and Fixtures](/claude-skills-for-generating-mock-data-and-fixtures/). Generating realistic test data and fixtures at scale
+- [Claude /xlsx Skill: Spreadsheet Automation Guide](/claude-xlsx-skill-spreadsheet-automation-tutorial/). Automating spreadsheet tasks with the `/xlsx` skill
 
-### Specialized and Niche
-- [Claude Code Documentation Generation in Spanish Tutorial](/claude-code-documentation-generation-in-spanish-tutorial/) — Generating Spanish-language documentation with Claude
-- [Claude Code L10n Testing Automation Workflow Tutorial](/claude-code-l10n-testing-automation-workflow-tutorial/) — Automated localization testing for multi-language apps
-- [Claude Code Translate Code Comments Between Languages](/claude-code-translate-code-comments-between-languages/) — Translating code comments to different natural languages
-- [Claude Code Skills for Ansible Automation](/claude-code-skills-for-ansible-automation/) — Ansible playbook generation and validation with Claude
-- [Claude Skills for EdTech Learning Management Systems](/claude-skills-for-edtech-learning-management-systems/) — LMS development patterns with Claude Code
-- [Claude Skills for Logistics Supply Chain Software](/claude-skills-for-logistics-supply-chain-software/) — Supply chain application development workflows
-- [Claude Skills for Robotics ROS2 Development Workflow](/claude-skills-for-robotics-ros2-development-workflow/) — ROS2 node development and simulation with Claude
-
----
-
-## Skill Writing and Management
-
-These tutorials cover the mechanics of creating, managing, and distributing Claude skills — from writing your first skill.md file to rolling out shared skills to an entire organization.
-
-- [Claude MD for Backend Projects Best Practices](/claude-md-for-backend-projects-best-practices/) — Backend-specific CLAUDE.md patterns and conventions
-- [Claude Skill Inheritance and Composition Patterns](/claude-skill-inheritance-and-composition-patterns/) — Building reusable skill components through inheritance
-- [Claude Skill Versioning: Semver Best Practices](/claude-skill-versioning-semver-best-practices/) — Version management for Claude skills using semantic versioning
-- [Claude Skills Change Management: Rolling Out to Teams](/claude-skills-change-management-rolling-out-to-teams/) — Managing skill rollouts and updates across engineering teams
-- [Claude Skills Disaster Recovery and Backup Strategies](/claude-skills-disaster-recovery-and-backup-strategies/) — Backing up and recovering Claude skill configurations
-- [Claude Skills with Local LLM Ollama Self-Hosted Guide](/claude-skills-with-local-llm-ollama-self-hosted-guide/) — Running Claude skills against locally hosted Ollama models
-- [Full Stack Web App with Claude Skills Step-by-Step](/full-stack-web-app-with-claude-skills-step-by-step/) — Building a complete full-stack application with Claude skills
-- [How Do I Combine Two Claude Skills in One Workflow](/how-do-i-combine-two-claude-skills-in-one-workflow/) — Combining two skills in a single Claude Code workflow
-- [How Do I Know Which Claude Skill Is Currently Active?](/how-do-i-know-which-claude-skill-is-currently-active/) — Identifying which skill is active during a session
-- [How Do I Rollback a Bad Claude Skill Update Safely](/how-do-i-rollback-a-bad-claude-skill-update-safely/) — Safe rollback procedures for broken skill updates
-- [How Do I Set Environment Variables for a Claude Skill](/how-do-i-set-environment-variables-for-a-claude-skill/) — Injecting environment variables into Claude skill execution
-- [How Do I Share Claude Skills Across Multiple Projects](/how-do-i-share-claude-skills-across-multiple-projects/) — Patterns for sharing skills across multiple repositories
-- [How Do I Test a Claude Skill Before Deploying to Team](/how-do-i-test-a-claude-skill-before-deploying-to-team/) — Testing skills thoroughly before team-wide rollout
-- [How Do I Use Claude Skills in an Air-Gapped Environment](/how-do-i-use-claude-skills-in-an-air-gapped-environment/) — Running Claude Code in air-gapped or restricted-network environments
-- [How to Combine Multiple Claude Skills in One Project](/how-to-combine-multiple-claude-skills-in-one-project/) — Project-level skill composition patterns
-- [How to Connect Claude Skills to External APIs Guide](/how-to-connect-claude-skills-to-external-apis-guide/) — General patterns for connecting skills to external APIs
-- [How to Write a Skill MD File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/) — The complete tutorial for writing your first skill.md
-- [Optimal Skill File Size and Complexity Guidelines](/optimal-skill-file-size-and-complexity-guidelines/) — Guidelines for keeping skill files appropriately scoped
-- [Shared Claude Skills Across Monorepo Multiple Packages](/shared-claude-skills-across-monorepo-multiple-packages/) — Sharing a single skill set across a monorepo
-- [Skill MD File Format Explained With Examples Guide](/claude-skill-md-format-complete-specification-guide/) — The skill.md format explained with concrete examples
-- [What Is the Best File Structure for a Complex Claude Skill](/what-is-the-best-file-structure-for-a-complex-claude-skill/) — File organization for multi-file skill implementations
-- [What Is the Best Free Claude Code Skill Available on GitHub](/what-is-the-best-free-claude-code-skill-available-on-github/) — Top free skills available on GitHub right now
+Specialized and Niche
+- [Claude Code Documentation Generation in Spanish Tutorial](/claude-code-documentation-generation-in-spanish-tutorial/). Generating Spanish-language documentation with Claude
+- [Claude Code L10n Testing Automation Workflow Tutorial](/claude-code-l10n-testing-automation-workflow-tutorial/). Automated localization testing for multi-language apps
+- [Claude Code Translate Code Comments Between Languages](/claude-code-translate-code-comments-between-languages/). Translating code comments to different natural languages
+- [Claude Code Skills for Ansible Automation](/claude-code-skills-for-ansible-automation/). Ansible playbook generation and validation with Claude
+- [Claude Skills for EdTech Learning Management Systems](/claude-skills-for-edtech-learning-management-systems/). LMS development patterns with Claude Code
+- [Claude Skills for Logistics Supply Chain Software](/claude-skills-for-logistics-supply-chain-software/). Supply chain application development workflows
+- [Claude Skills for Robotics ROS2 Development Workflow](/claude-skills-for-robotics-ros2-development-workflow/). ROS2 node development and simulation with Claude
 
 ---
 
-## Testing and Quality Assurance
+Skill Writing and Management
+
+These tutorials cover the mechanics of creating, managing, and distributing Claude skills. from writing your first skill.md file to rolling out shared skills to an entire organization.
+
+- [Claude MD for Backend Projects Best Practices](/claude-md-for-backend-projects-best-practices/). Backend-specific CLAUDE.md patterns and conventions
+- [Claude Skill Inheritance and Composition Patterns](/claude-skill-inheritance-and-composition-patterns/). Building reusable skill components through inheritance
+- [Claude Skill Versioning: Semver Best Practices](/claude-skill-versioning-semver-best-practices/). Version management for Claude skills using semantic versioning
+- [Claude Skills Change Management: Rolling Out to Teams](/claude-skills-change-management-rolling-out-to-teams/). Managing skill rollouts and updates across engineering teams
+- [Claude Skills Disaster Recovery and Backup Strategies](/claude-skills-disaster-recovery-and-backup-strategies/). Backing up and recovering Claude skill configurations
+- [Claude Skills with Local LLM Ollama Self-Hosted Guide](/claude-skills-with-local-llm-ollama-self-hosted-guide/). Running Claude skills against locally hosted Ollama models
+- [Full Stack Web App with Claude Skills Step-by-Step](/full-stack-web-app-with-claude-skills-step-by-step/). Building a complete full-stack application with Claude skills
+- [How Do I Combine Two Claude Skills in One Workflow](/how-do-i-combine-two-claude-skills-in-one-workflow/). Combining two skills in a single Claude Code workflow
+- [How Do I Know Which Claude Skill Is Currently Active?](/how-do-i-know-which-claude-skill-is-currently-active/). Identifying which skill is active during a session
+- [How Do I Rollback a Bad Claude Skill Update Safely](/how-do-i-rollback-a-bad-claude-skill-update-safely/). Safe rollback procedures for broken skill updates
+- [How Do I Set Environment Variables for a Claude Skill](/how-do-i-set-environment-variables-for-a-claude-skill/). Injecting environment variables into Claude skill execution
+- [How Do I Share Claude Skills Across Multiple Projects](/how-do-i-share-claude-skills-across-multiple-projects/). Patterns for sharing skills across multiple repositories
+- [How Do I Test a Claude Skill Before Deploying to Team](/how-do-i-test-a-claude-skill-before-deploying-to-team/). Testing skills thoroughly before team-wide rollout
+- [How Do I Use Claude Skills in an Air-Gapped Environment](/how-do-i-use-claude-skills-in-an-air-gapped-environment/). Running Claude Code in air-gapped or restricted-network environments
+- [How to Combine Multiple Claude Skills in One Project](/how-to-combine-multiple-claude-skills-in-one-project/). Project-level skill composition patterns
+- [How to Connect Claude Skills to External APIs Guide](/how-to-connect-claude-skills-to-external-apis-guide/). General patterns for connecting skills to external APIs
+- [How to Write a Skill MD File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/). The complete tutorial for writing your first skill.md
+- [Optimal Skill File Size and Complexity Guidelines](/optimal-skill-file-size-and-complexity-guidelines/). Guidelines for keeping skill files appropriately scoped
+- [Shared Claude Skills Across Monorepo Multiple Packages](/shared-claude-skills-across-monorepo-multiple-packages/). Sharing a single skill set across a monorepo
+- [Skill MD File Format Explained With Examples Guide](/claude-skill-md-format-complete-specification-guide/). The skill.md format explained with concrete examples
+- [What Is the Best File Structure for a Complex Claude Skill](/what-is-the-best-file-structure-for-a-complex-claude-skill/). File organization for multi-file skill implementations
+- [What Is the Best Free Claude Code Skill Available on GitHub](/what-is-the-best-free-claude-code-skill-available-on-github/). Top free skills available on GitHub right now
+
+---
+
+Testing and Quality Assurance
 
 Testing is one of Claude Code's most reliable applied domains. The `/tdd` skill enforces red-green-refactor cycles. The `/webapp-testing` skill drives Playwright end-to-end and visual regression suites. These tutorials take you from zero to a working test pipeline.
 
-- [Automated Testing Pipeline with Claude TDD Skill (2026)](/claude-tdd-skill-test-driven-development-workflow/) — Building a full CI-integrated test pipeline with the `/tdd` skill
-- [Claude Code Breaks Existing Tests After Changes Fix](/claude-code-breaks-existing-tests-after-changes-fix/) — Diagnosing and fixing test regressions caused by Claude Code changes
-- [Claude Code Chaos Engineering Testing Automation Guide](/claude-code-chaos-engineering-testing-automation-guide/) — Chaos engineering test automation with Claude Code
-- [Claude Code Jest to Vitest Migration Workflow Tutorial](/claude-code-jest-to-vitest-migration-workflow-tutorial/) — Migrating test suites from Jest to Vitest with Claude assistance
-- [Claude Code Lighthouse Score Improvement Automation Guide](/claude-code-lighthouse-score-improvement-automation-guide/) — Automated Lighthouse performance score improvements
-- [Claude Code Pytest Fixtures Parametrize Workflow Tutorial](/claude-code-pytest-fixtures-parametrize-workflow-tutorial-20/) — Advanced pytest fixture and parametrize patterns
-- [Claude Code Selenium Browser Testing Automation Guide](/claude-code-selenium-browser-testing-automation-guide/) — Cross-browser test automation with Selenium
-- [Claude Code Skills for Travel Booking Platforms](/claude-code-skills-for-travel-booking-platforms/) — Testing and development patterns for travel booking systems
-- [Claude Code Skills for Writing Integration Tests](/claude-code-skills-for-writing-integration-tests/) — Writing integration tests with Claude Code skill assistance
-- [Claude Skills for Writing Unit Tests Automatically](/claude-skills-for-writing-unit-tests-automatically/) — Automated unit test generation with Claude skills
-- [Claude TDD Skill: Test-Driven Development Guide (2026)](/claude-tdd-skill-test-driven-development-workflow/) — Complete guide to the `/tdd` skill workflow
-- [How to Automate Code Reviews with Claude Skills](/best-claude-skills-for-code-review-automation/) — End-to-end setup for PR-triggered automated code review
-- [How to Make Claude Code Test Before Implementing Feature](/claude-tdd-skill-test-driven-development-workflow/) — Enforcing test-first development with Claude Code
+- [Automated Testing Pipeline with Claude TDD Skill (2026)](/claude-tdd-skill-test-driven-development-workflow/). Building a full CI-integrated test pipeline with the `/tdd` skill
+- [Claude Code Breaks Existing Tests After Changes Fix](/claude-code-breaks-existing-tests-after-changes-fix/). Diagnosing and fixing test regressions caused by Claude Code changes
+- [Claude Code Chaos Engineering Testing Automation Guide](/claude-code-chaos-engineering-testing-automation-guide/). Chaos engineering test automation with Claude Code
+- [Claude Code Jest to Vitest Migration Workflow Tutorial](/claude-code-jest-to-vitest-migration-workflow-tutorial/). Migrating test suites from Jest to Vitest with Claude assistance
+- [Claude Code Lighthouse Score Improvement Automation Guide](/claude-code-lighthouse-score-improvement-automation-guide/). Automated Lighthouse performance score improvements
+- [Claude Code Pytest Fixtures Parametrize Workflow Tutorial](/claude-code-pytest-fixtures-parametrize-workflow-tutorial-20/). Advanced pytest fixture and parametrize patterns
+- [Claude Code Selenium Browser Testing Automation Guide](/claude-code-selenium-browser-testing-automation-guide/). Cross-browser test automation with Selenium
+- [Claude Code Skills for Travel Booking Platforms](/claude-code-skills-for-travel-booking-platforms/). Testing and development patterns for travel booking systems
+- [Claude Code Skills for Writing Integration Tests](/claude-code-skills-for-writing-integration-tests/). Writing integration tests with Claude Code skill assistance
+- [Claude Skills for Writing Unit Tests Automatically](/claude-skills-for-writing-unit-tests-automatically/). Automated unit test generation with Claude skills
+- [Claude TDD Skill: Test-Driven Development Guide (2026)](/claude-tdd-skill-test-driven-development-workflow/). Complete guide to the `/tdd` skill workflow
+- [How to Automate Code Reviews with Claude Skills](/best-claude-skills-for-code-review-automation/). End-to-end setup for PR-triggered automated code review
+- [How to Make Claude Code Test Before Implementing Feature](/claude-tdd-skill-test-driven-development-workflow/). Enforcing test-first development with Claude Code
 
 ---
 
-## CI/CD and Deployment
+CI/CD and Deployment
 
-CI/CD tutorials walk through integrating Claude Code into GitHub Actions, GitLab CI, and other pipeline tools — making Claude an active participant in your release process rather than just a local coding assistant.
+CI/CD tutorials walk through integrating Claude Code into GitHub Actions, GitLab CI, and other pipeline tools. making Claude an active participant in your release process rather than just a local coding assistant.
 
-- [Claude Code GitHub Actions Composite Actions](/claude-code-github-actions-composite-actions/) — Building reusable composite actions for Claude Code workflows
-- [Claude Code GitHub Actions Matrix Builds Guide](/claude-code-github-actions-matrix-builds-guide/) — Matrix build strategies for multi-platform Claude Code testing
-- [Claude Code GitHub Actions Workflow Matrix Strategy Guide](/claude-code-github-actions-workflow-matrix-strategy-guide/) — Workflow matrix strategies for comprehensive CI coverage
-- [Claude Code GitLab CI Pipeline Docker Registry Tutorial](/claude-code-gitlab-ci-pipeline-docker-registry-tutorial/) — GitLab CI pipeline setup with Docker registry integration
-- [Claude Code Tmux Session Management Multi Agent Workflow](/claude-code-tmux-session-management-multi-agent-workflow/) — Managing multi-agent workflows with tmux session isolation
-- [Claude Skills with Linear Project Management Tutorial](/claude-skills-with-linear-project-management-tutorial/) — Automating Linear issue management in CI pipelines
-- [Claude Skills with Slack Bot Integration Tutorial](/claude-skills-with-slack-bot-integration-tutorial/) — Slack bot integration for pipeline notifications and commands
+- [Claude Code GitHub Actions Composite Actions](/claude-code-github-actions-composite-actions/). Building reusable composite actions for Claude Code workflows
+- [Claude Code GitHub Actions Matrix Builds Guide](/claude-code-github-actions-matrix-builds-guide/). Matrix build strategies for multi-platform Claude Code testing
+- [Claude Code GitHub Actions Workflow Matrix Strategy Guide](/claude-code-github-actions-workflow-matrix-strategy-guide/). Workflow matrix strategies for comprehensive CI coverage
+- [Claude Code GitLab CI Pipeline Docker Registry Tutorial](/claude-code-gitlab-ci-pipeline-docker-registry-tutorial/). GitLab CI pipeline setup with Docker registry integration
+- [Claude Code Tmux Session Management Multi Agent Workflow](/claude-code-tmux-session-management-multi-agent-workflow/). Managing multi-agent workflows with tmux session isolation
+- [Claude Skills with Linear Project Management Tutorial](/claude-skills-with-linear-project-management-tutorial/). Automating Linear issue management in CI pipelines
+- [Claude Skills with Slack Bot Integration Tutorial](/claude-skills-with-slack-bot-integration-tutorial/). Slack bot integration for pipeline notifications and commands
 
 ---
 
-## Vibe Coding and Workflow Patterns
+Vibe Coding and Workflow Patterns
 
 Vibe coding is the practice of generating working code through rapid AI-assisted iteration. These tutorials teach the patterns and project structures that make vibe coding sessions productive rather than chaotic.
 
-- [Vibe Coding Explained: What It Is and How It Works](/vibe-coding-productivity-tips-and-best-practices/) — Introduction to vibe coding methodology and principles
-- [Vibe Coding Project Structure Best Practices](/vibe-coding-project-structure-best-practices/) — Structuring projects for vibe coding success
-- [Claude Skills Workflow for Technical Product Managers](/claude-skills-workflow-for-technical-product-managers/) — How technical PMs use Claude Code skills in their workflow
-- [Claude Skills Ecosystem: Predictions for the Next 12 Months](/claude-skills-ecosystem-predictions-next-12-months/) — What to expect from the Claude skills ecosystem in 2026-2027
+- [Vibe Coding Explained: What It Is and How It Works](/vibe-coding-productivity-tips-and-best-practices/). Introduction to vibe coding methodology and principles
+- [Vibe Coding Project Structure Best Practices](/vibe-coding-project-structure-best-practices/). Structuring projects for vibe coding success
+- [Claude Skills Workflow for Technical Product Managers](/claude-skills-workflow-for-technical-product-managers/). How technical PMs use Claude Code skills in their workflow
+- [Claude Skills Ecosystem: Predictions for the Next 12 Months](/claude-skills-ecosystem-predictions-next-12-months/). What to expect from the Claude skills ecosystem in 2026-2027
 
 ---
 
-## Multi-Agent and Subagent Patterns
+Multi-Agent and Subagent Patterns
 
 Multi-agent Claude Code workflows distribute work across parallel agent instances, each specialized for a part of the task. These tutorials cover the coordination patterns, communication channels, and error handling strategies that make multi-agent workflows reliable.
 
-- [Claude Code Multi-Agent Error Recovery Strategies](/claude-code-multi-agent-error-recovery-strategies/) — Handling failures in multi-agent Claude Code pipelines
-- [Parallel Subagents in Claude Code: Best Practices for 2026](/parallel-subagents-claude-code-best-practices-2026/) — Running parallel subagents efficiently and safely
-- [Passing Context Between Claude Code Subagents Guide](/passing-context-between-claude-code-subagents-guide/) — Context passing patterns for multi-agent orchestration
+- [Claude Code Multi-Agent Error Recovery Strategies](/claude-code-multi-agent-error-recovery-strategies/). Handling failures in multi-agent Claude Code pipelines
+- [Parallel Subagents in Claude Code: Best Practices for 2026](/parallel-subagents-claude-code-best-practices-2026/). Running parallel subagents efficiently and safely
+- [Passing Context Between Claude Code Subagents Guide](/passing-context-between-claude-code-subagents-guide/). Context passing patterns for multi-agent orchestration
 
 ---
 
-## Skill Questions and How-Tos
+Skill Questions and How-Tos
 
 Short, focused tutorials answering specific "how do I" questions about Claude Code skills.
 
-**Subscription and Access:**
-- [Can Claude Code Skills Call External APIs Automatically?](/can-claude-code-skills-call-external-apis-automatically/) — Which external API calls skills can make and when
-- [Can You Use Claude Skills Without a Claude Max Subscription?](/can-you-use-claude-skills-without-a-claude-max-subscription/) — Skill access tiers and what each subscription includes
+Subscription and Access:
+- [Can Claude Code Skills Call External APIs Automatically?](/can-claude-code-skills-call-external-apis-automatically/). Which external API calls skills can make and when
+- [Can You Use Claude Skills Without a Claude Max Subscription?](/can-you-use-claude-skills-without-a-claude-max-subscription/). Skill access tiers and what each subscription includes
 
-**Skill Behavior:**
-- [Claude Code Skills Context Window Exceeded Error Fix](/claude-code-skills-context-window-exceeded-error-fix/) — Fix context overflow that triggers on skill load
-- [Claude Code Keeps Making Same Mistake Fix Guide](/claude-code-keeps-making-same-mistake-fix-guide/) — Breaking repeating error patterns in Claude Code sessions
-- [Claude Code Project Initialization Best Practices](/claude-code-project-initialization-best-practices/) — Best practices for initializing new projects with Claude Code
-- [Claude Code Skill Exceeded Maximum Output Length Error Fix](/claude-code-skill-exceeded-maximum-output-length-error-fix/) — Fixing output truncation errors in long skill responses
+Skill Behavior:
+- [Claude Code Skills Context Window Exceeded Error Fix](/claude-code-skills-context-window-exceeded-error-fix/). Fix context overflow that triggers on skill load
+- [Claude Code Keeps Making Same Mistake Fix Guide](/claude-code-keeps-making-same-mistake-fix-guide/). Breaking repeating error patterns in Claude Code sessions
+- [Claude Code Project Initialization Best Practices](/claude-code-project-initialization-best-practices/). Best practices for initializing new projects with Claude Code
+- [Claude Code Skill Exceeded Maximum Output Length Error Fix](/claude-code-skill-exceeded-maximum-output-length-error-fix/). Fixing output truncation errors in long skill responses
 
-**Debugging Skill Behavior:**
-- [Why Does Claude Code Ignore My Skill MD File Entirely](/why-does-claude-code-ignore-my-skill-md-file-entirely/) — Root causes when Claude Code skips your skill file
-- [Why Does Claude Code Reject My Skill Instruction Block](/why-does-claude-code-reject-my-skill-instruction-block/) — Instruction block errors that cause silent rejections
-- [Why Does Claude Skill Auto Invocation Fail Intermittently?](/why-does-claude-skill-auto-invocation-fail-intermittently/) — Diagnosing intermittent auto-invocation failures
-- [Why Does Claude Skill Produce Different Output Each Run](/why-does-claude-skill-produce-different-output-each-run/) — Understanding output variance and enforcing determinism
-- [Why Does My Claude Skill Work Locally But Fail in CI?](/why-does-my-claude-skill-work-locally-but-fail-in-ci/) — Environment differences causing local-to-CI skill failures
-- [Will Claude Skills Support Voice Interfaces in 2026?](/will-claude-skills-support-voice-interfaces-2026/) — Voice interface roadmap for Claude Code skills
+Debugging Skill Behavior:
+- [Why Does Claude Code Ignore My Skill MD File Entirely](/why-does-claude-code-ignore-my-skill-md-file-entirely/). Root causes when Claude Code skips your skill file
+- [Why Does Claude Code Reject My Skill Instruction Block](/why-does-claude-code-reject-my-skill-instruction-block/). Instruction block errors that cause silent rejections
+- [Why Does Claude Skill Auto Invocation Fail Intermittently?](/why-does-claude-skill-auto-invocation-fail-intermittently/). Diagnosing intermittent auto-invocation failures
+- [Why Does Claude Skill Produce Different Output Each Run](/why-does-claude-skill-produce-different-output-each-run/). Understanding output variance and enforcing determinism
+- [Why Does My Claude Skill Work Locally But Fail in CI?](/why-does-my-claude-skill-work-locally-but-fail-in-ci/). Environment differences causing local-to-CI skill failures
+- [Will Claude Skills Support Voice Interfaces in 2026?](/will-claude-skills-support-voice-interfaces-2026/). Voice interface roadmap for Claude Code skills
 
-**Getting Started Tutorials:**
-- [Claude Code for Beginners: Getting Started 2026](/claude-code-for-beginners-complete-getting-started-2026/) — Complete beginner setup guide for Claude Code
-- [Claude Code Skills Change Management: Rolling Out to Teams](/claude-skills-change-management-rolling-out-to-teams/) — Rolling out Claude Code skills to engineering teams
+Getting Started Tutorials:
+- [Claude Code for Beginners: Getting Started 2026](/claude-code-for-beginners-complete-getting-started-2026/). Complete beginner setup guide for Claude Code
+- [Claude Code Skills Change Management: Rolling Out to Teams](/claude-skills-change-management-rolling-out-to-teams/). Rolling out Claude Code skills to engineering teams
 
 ---
 
-## Complete Tutorial Index
+Complete Tutorial Index
 
 | Tutorial | Category |
 |---------|---------|
@@ -363,22 +363,22 @@ Short, focused tutorials answering specific "how do I" questions about Claude Co
 
 ---
 
-## Related Hubs
+Related Hubs
 
-- [Getting Started Hub](/getting-started-hub/) — Install Claude Code and run your first skill
-- [Guides Hub](/guides-hub/) — Deep reference guides for every Claude Code topic
-- [Workflows Hub](/workflows-hub/) — Repeatable workflow automation patterns
-- [Integrations Hub](/integrations-hub/) — Connect Claude skills to GitHub Actions, Slack, Supabase, and more
-- [Troubleshooting Hub](/troubleshooting-hub/) — Fix every common Claude Code skill error
-- [Advanced Hub](/advanced-hub/) — Token optimization, chaining, and production architecture
+- [Getting Started Hub](/getting-started-hub/). Install Claude Code and run your first skill
+- [Guides Hub](/guides-hub/). Deep reference guides for every Claude Code topic
+- [Workflows Hub](/workflows-hub/). Repeatable workflow automation patterns
+- [Integrations Hub](/integrations-hub/). Connect Claude skills to GitHub Actions, Slack, Supabase, and more
+- [Troubleshooting Hub](/troubleshooting-hub/). Fix every common Claude Code skill error
+- [Advanced Hub](/advanced-hub/). Token optimization, chaining, and production architecture
 
 ---
 
-## Related Reading
+Related Reading
 
-- [How to Write a Skill MD File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/) — The starting point before most tutorials
-- [Skill MD File Format Explained With Examples Guide](/claude-skill-md-format-complete-specification-guide/) — The format reference every tutorial assumes
-- [Claude TDD Skill: Test-Driven Development Guide (2026)](/claude-tdd-skill-test-driven-development-workflow/) — The most used Claude Code skill, explained in full
+- [How to Write a Skill MD File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/). The starting point before most tutorials
+- [Skill MD File Format Explained With Examples Guide](/claude-skill-md-format-complete-specification-guide/). The format reference every tutorial assumes
+- [Claude TDD Skill: Test-Driven Development Guide (2026)](/claude-tdd-skill-test-driven-development-workflow/). The most used Claude Code skill, explained in full
 
-*Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*Built by theluckystrike. More at [zovo.one](https://zovo.one)
 *

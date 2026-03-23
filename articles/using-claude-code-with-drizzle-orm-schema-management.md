@@ -15,13 +15,13 @@ permalink: /using-claude-code-with-drizzle-orm-schema-management/
 
 Managing database schemas can feel tedious, especially when your application grows and migrations become complex. Drizzle ORM provides a lightweight, type-safe approach to database operations, and when paired with Claude Code, you get an intelligent assistant that understands your schema context and helps you write better, safer database code faster.
 
-## Why Drizzle ORM Works Well with Claude Code
+Why Drizzle ORM Works Well with Claude Code
 
 Drizzle ORM stands out because it uses a declarative schema definition that translates naturally into code Claude can analyze and improve. Unlike heavy ORMs that hide SQL behind abstraction layers, Drizzle keeps your schema readable and inspectable. This transparency means Claude Code can understand your database structure, suggest optimizations, and help you write migrations with confidence.
 
 When you describe your project structure and database needs to Claude, it can generate schema definitions, identify relationships, and even spot potential issues before they become migration headaches.
 
-## Setting Up Drizzle Schema for Claude Code
+Setting Up Drizzle Schema for Claude Code
 
 Start with a clear schema definition in your project. Here's a typical Drizzle setup for a users table:
 
@@ -41,9 +41,9 @@ export const users = pgTable('users', {
 
 When working with Claude Code, keep your schema files organized in a dedicated directory like `src/db/schema/` so Claude can easily reference and modify them.
 
-## Practical Workflows with Claude Code
+Practical Workflows with Claude Code
 
-### Schema Generation and Review
+Schema Generation and Review
 
 Describe your data requirements conversationally. Instead of writing table definitions from scratch, tell Claude what you need:
 
@@ -66,7 +66,7 @@ export const posts = pgTable('posts', {
 });
 ```
 
-### Migration Generation
+Migration Generation
 
 Drizzle Kit handles migrations, but Claude helps you prepare the ground. Ask Claude to review your schema changes and suggest necessary modifications before running migrations. This prevents issues like adding required columns to tables with existing data.
 
@@ -77,7 +77,7 @@ npx drizzle-kit push:pg
 npx drizzle-kit generate:pg
 ```
 
-### Type-Safe Queries
+Type-Safe Queries
 
 One of Drizzle's strongest features is compile-time type safety. Claude Code understands TypeScript and Drizzle's query builder, so it can help you construct queries that maintain full type inference:
 
@@ -102,7 +102,7 @@ const getUserPosts = async (userId: number) => {
 
 Claude ensures your query types align with your schema definitions and suggests improvements when needed.
 
-## Integrating with Claude Skills
+Integrating with Claude Skills
 
 You can create a Claude skill focused on database operations using the xlsx skill for tracking schema versions, the pdf skill for generating database documentation, or even the tdd skill for writing tests around your data layer.
 
@@ -125,7 +125,7 @@ describe('User Schema Constraints', () => {
 
 The frontend-design skill can help you visualize database relationships when documenting your schema for team members.
 
-## Tips for Effective Collaboration
+Tips for Effective Collaboration
 
 Keep your Drizzle configuration accessible to Claude by maintaining a clean project structure. Group your schema definitions, connection setup, and queries in predictable locations. When Claude understands your file organization, it provides more accurate suggestions.
 
@@ -133,13 +133,13 @@ Document complex relationships in comments within your schema files. If you have
 
 Finally, review generated migrations before applying them. Claude accelerates the creation process, but database changes still require careful human oversight.
 
-## Working with Relations
+Working with Relations
 
 Drizzle makes defining relationships straightforward, and Claude helps you get them right the first time. Use Drizzle's `relations` helper to declare one-to-many and many-to-one associations in your schema files. These relation definitions enable eager loading with the `with` clause, and Claude can construct the appropriate `findFirst` or `findMany` calls for you once the relations are in place.
 
 For a full walkthrough of defining relations alongside CRUD operations and advanced queries, see [Claude Code for Drizzle ORM TypeScript Database Workflow](/claude-code-drizzle-orm-typescript-database-workflow/).
 
-## Common Pitfalls and How Claude Helps Avoid Them
+Common Pitfalls and How Claude Helps Avoid Them
 
 Several frequent mistakes trip up developers working with Drizzle. First, forgetting to mark columns as `notNull()` when they should be required creates runtime errors that TypeScript cannot catch. Claude reviews your schema and flags columns that probably should not allow null values based on their naming conventions.
 
@@ -147,25 +147,25 @@ Second, circular dependencies between schema files cause build failures. Claude 
 
 Third, mixing up local development and production database configurations leads to accidental data modifications. Keep your environment configurations separate and verify with Claude which database you are targeting before running any migration command.
 
-## Automating Schema Documentation
+Automating Schema Documentation
 
 Use the pdf skill to generate schema documentation for your team. Claude can extract your Drizzle schema definitions and format them into a readable document that describes tables, columns, relationships, and constraints. This proves invaluable for onboarding new team members or maintaining external API documentation.
 
 You can also use the xlsx skill to create a visual spreadsheet mapping your database schema, useful for non-technical stakeholders who need to understand data structures without reading code.
 
-## Final Thoughts
+Final Thoughts
 
 Claude Code transforms Drizzle ORM schema management from a manual, error-prone process into a collaborative workflow where an intelligent assistant helps you design, review, and maintain your database layer. The combination of Drizzle's transparent schema approach and Claude's understanding of TypeScript and database patterns creates a powerful workflow for modern application development.
 
 ---
 
 
-## Related Reading
+Related Reading
 
-- [Claude Code for Drizzle ORM TypeScript Database Workflow](/claude-code-drizzle-orm-typescript-database-workflow/) — Full CRUD, transactions, advanced queries, testing, and performance optimization
-- [Claude Code Skills for Supabase Full-Stack Apps Guide](/claude-code-skills-for-supabase-full-stack-apps-guide/) — See also
-- [Claude Skills With Supabase Database Integration](/claude-skills-with-supabase-database-integration/) — See also
-- [Claude Code Turso SQLite Edge Database Tutorial](/claude-code-for-turso-sqlite-edge-database-tutorial/) — See also
-- [Claude Code Tutorials Hub](/tutorials-hub/) — See also
+- [Claude Code for Drizzle ORM TypeScript Database Workflow](/claude-code-drizzle-orm-typescript-database-workflow/). Full CRUD, transactions, advanced queries, testing, and performance optimization
+- [Claude Code Skills for Supabase Full-Stack Apps Guide](/claude-code-skills-for-supabase-full-stack-apps-guide/). See also
+- [Claude Skills With Supabase Database Integration](/claude-skills-with-supabase-database-integration/). See also
+- [Claude Code Turso SQLite Edge Database Tutorial](/claude-code-for-turso-sqlite-edge-database-tutorial/). See also
+- [Claude Code Tutorials Hub](/tutorials-hub/). See also
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

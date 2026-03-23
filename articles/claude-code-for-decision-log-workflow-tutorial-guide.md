@@ -14,110 +14,110 @@ score: 8
 
 
 {% raw %}
-# Claude Code for Decision Log Workflow: A Complete Tutorial Guide
+Claude Code for Decision Log Workflow: A Complete Tutorial Guide
 
 Decision logs are one of the most underutilized tools in software development, yet they provide immense value for team alignment, project history, and onboarding new team members. A well-maintained decision log answers the critical question: "Why did we make this choice?" When combined with Claude Code's automation capabilities, creating and maintaining decision logs becomes effortless rather than burdensome.
 
 This guide walks you through building a decision log workflow using Claude Code, with practical examples you can implement immediately in your projects.
 
-## What Is a Decision Log and Why Does It Matter?
+What Is a Decision Log and Why Does It Matter?
 
 A decision log (also called an Architecture Decision Record or ADR) is a structured document that captures important decisions made during a project. Each entry typically includes:
 
-- **The decision**: What was decided
-- **Context**: The situation that prompted the decision
-- **Options considered**: Alternative approaches that were evaluated
-- **Consequences**: Expected benefits and drawbacks
-- **Status**: Proposed, accepted, deprecated, or superseded
+- The decision: What was decided
+- Context: The situation that prompted the decision
+- Options considered: Alternative approaches that were evaluated
+- Consequences: Expected benefits and drawbacks
+- Status: Proposed, accepted, deprecated, or superseded
 
 Without a decision log, teams lose institutional knowledge. Developers who join months later can't understand why certain technical choices were made. Teams forget why they chose PostgreSQL over MongoDB or why a particular library was selected. A decision log preserves this context.
 
-## Setting Up Your Decision Log Structure
+Setting Up Your Decision Log Structure
 
 Before integrating with Claude Code, establish a simple folder structure for your decision logs. Create a `docs/decisions` directory in your project with a simple naming convention:
 
 ```
 docs/
-└── decisions/
-    ├── 001-choose-postgres-database.md
-    ├── 002-adopt-typescript-for-type-safety.md
-    └── 003-implement-caching-strategy.md
+ decisions/
+     001-choose-postgres-database.md
+     002-adopt-typescript-for-type-safety.md
+     003-implement-caching-strategy.md
 ```
 
 Each decision file follows a consistent template. Create a standard template you can reuse:
 
 ```markdown
-# Decision: [Short Title]
+Decision: [Short Title]
 
-## Status
+Status
 [Proposed | Accepted | Deprecated | Superseded]
 
-## Context
+Context
 [Describe the situation that prompted this decision. What problem are we trying to solve?]
 
-## Decision
+Decision
 [What was decided? Be specific about the chosen approach.]
 
-## Options Considered
-- **Option 1**: [Description]
-  - Pros: [List]
-  - Cons: [List]
-- **Option 2**: [Description]
-  - Pros: [List]
-  - Cons: [List]
+Options Considered
+- Option 1: [Description]
+  - [List]
+  - [List]
+- Option 2: [Description]
+  - [List]
+  - [List]
 
-## Consequences
-### Positive
+Consequences
+Positive
 - [List benefits]
 
-### Negative
+Negative
 - [List drawbacks or trade-offs]
 
-## Related Decisions
+Related Decisions
 - [Link to related decisions if any]
 
-## Date
+Date
 YYYY-MM-DD
 ```
 
-## Automating Decision Log Creation with Claude Code
+Automating Decision Log Creation with Claude Code
 
 Now comes the powerful part: using Claude Code to automate creating and managing decision logs. Create a custom skill that generates decision log entries from your conversations.
 
-### Creating a Decision Log Skill
+Creating a Decision Log Skill
 
 Set up a skill file at `~/.claude/skills/decision-log.md` that Claude Code can reference:
 
 ```markdown
-# Skill: Decision Log Manager
+Skill: Decision Log Manager
 
-## Description
+Description
 Helps create, update, and maintain project decision logs.
 
-## Commands
+Commands
 - `create-decision <title>` - Creates a new decision log entry
 - `list-decisions` - Lists all decisions in the project
 - `update-decision <id> <field>` - Updates a specific field
 - `deprecate-decision <id>` - Marks a decision as deprecated
 - `supersede <id> <new-id>` - Links old decision to new one
 
-## Examples
+Examples
 When asked to document a decision, generate a new entry in docs/decisions/
 with the appropriate template, incrementing the number from existing files.
 ```
 
-### Using Claude Code to Generate Decisions
+Using Claude Code to Generate Decisions
 
 When working with Claude Code, you can prompt it to automatically generate decision log entries. Here's a practical workflow:
 
-**Step 1: Initialize your decision log**
+Step 1: Initialize your decision log
 
 ```bash
 mkdir -p docs/decisions
 touch docs/decisions/000-template.md
 ```
 
-**Step 2: During development, capture decisions**
+Step 2: During development, capture decisions
 
 When Claude Code suggests a technical approach, ask it to document the decision:
 
@@ -128,73 +128,73 @@ Please create a decision log entry for choosing React Query over Redux for state
 Claude Code will generate a properly formatted entry:
 
 ```markdown
-# Decision: Adopt React Query for Server State Management
+Decision: Adopt React Query for Server State Management
 
-## Status
+Status
 Accepted
 
-## Context
+Context
 Our application requires efficient management of server state. We currently use Redux for all state, but it's verbose for server data and requires manual caching logic.
 
-## Decision
+Decision
 We will use React Query (TanStack Query) for all server state management, keeping Redux only for client-side UI state.
 
-## Options Considered
-- **Continue with Redux**: Use Redux with RTK Query
-  - Pros: Single state solution, familiar to team
-  - Cons: More boilerplate, steeper learning curve
+Options Considered
+- Continue with Redux: Use Redux with RTK Query
+  - Single state solution, familiar to team
+  - More boilerplate, steeper learning curve
   
-- **Use React Query**: Adopt TanStack Query specifically
-  - Pros: Purpose-built for server state, automatic caching, good devtools
-  - Cons: Another library to learn, extra dependency
+- Use React Query: Adopt TanStack Query specifically
+  - Purpose-built for server state, automatic caching, good devtools
+  - Another library to learn, extra dependency
 
-- **Use Zustand**: Simple state management
-  - Pros: Lightweight, simple API
-  - Cons: Not specialized for server state
+- Use Zustand: Simple state management
+  - Lightweight, simple API
+  - Not specialized for server state
 
-## Consequences
-### Positive
+Consequences
+Positive
 - Reduced boilerplate for data fetching
 - Automatic background refetching
 - Better caching behavior out of the box
 
-### Negative
+Negative
 - Additional dependency in the project
 - Team needs to learn React Query patterns
 
-## Date
+Date
 2026-03-15
 ```
 
-## Integrating Decision Logs into Your Workflow
+Integrating Decision Logs into Your Workflow
 
 The best decision logs are created when the decision is fresh. Integrate this into your development workflow using Claude Code's capabilities.
 
-### Pre-Commit Decision Capture
+Pre-Commit Decision Capture
 
 Create a pre-commit hook that prompts for decision documentation when significant changes occur. Add to your `.git/hooks/pre-commit`:
 
 ```bash
 #!/bin/bash
-# Prompt developer to document architectural decisions
-# when significant files change
+Prompt developer to document architectural decisions
+when significant files change
 
 CHANGED_FILES=$(git diff --name-only --cached)
 DECISION_FILES="src/architecture src/config src/models"
 
 if echo "$CHANGED_FILES" | grep -qE "$DECISION_FILES"; then
-  echo "⚠️  You modified core architecture files."
+  echo "  You modified core architecture files."
   echo "Consider documenting any decisions in docs/decisions/"
   echo "Ask Claude Code: 'Create a decision log for [change]'"
 fi
 ```
 
-### Claude Code Project Instructions
+Claude Code Project Instructions
 
 Add decision log guidance to your project's CLAUDE.md or instructions file:
 
 ```markdown
-## Decision Logging
+Decision Logging
 
 When making architectural or significant technical choices:
 1. Ask Claude Code to create a decision log entry
@@ -205,47 +205,47 @@ When making architectural or significant technical choices:
 Run `ls docs/decisions/` to review past decisions before making new ones.
 ```
 
-## Practical Example: Building a Feature with Decision Logging
+Practical Example: Building a Feature with Decision Logging
 
 Here's how a typical feature development session works with decision logging:
 
-**You**: "Help me implement user authentication."
+You: "Help me implement user authentication."
 
-**Claude Code**: "I'll help you build authentication. Before we start, let's document our approach. I can see we need to decide on the authentication method. What are your preferences—JWT tokens, session-based, or OAuth?"
+Claude Code: "I'll help you build authentication. Before we start, let's document our approach. I can see we need to decide on the authentication method. What are your preferences, JWT tokens, session-based, or OAuth?"
 
-**You**: "Let's use JWT with refresh tokens."
+You: "Let's use JWT with refresh tokens."
 
-**Claude Code**: "Great choice. Let me create a decision log for this, then implement the solution."
+Claude Code: "Great choice. Let me create a decision log for this, then implement the solution."
 
 Claude Code then generates `docs/decisions/004-jwt-authentication-implementation.md` with the full documentation, then proceeds to implement the feature.
 
-## Maintaining and Evolving Decision Logs
+Maintaining and Evolving Decision Logs
 
 Deprecate rather than delete old decisions. When a decision gets superseded, update its status and link to the replacement:
 
 ```markdown
-## Status
+Status
 Superseded by [ADR-007: Migrate to Event-Driven Architecture](007-event-driven-architecture.md)
 ```
 
 This preserves the historical record while guiding readers to current thinking. The pdf skill can generate summary reports of your architecture decisions, useful for stakeholder presentations or compliance documentation.
 
-### Real-World Example: Database Selection
+Real-World Example: Database Selection
 
-Consider a scenario where your team chose PostgreSQL over MongoDB and DynamoDB. Document the evaluation criteria — query patterns, scaling requirements, team expertise, operational overhead — and list alternatives with reasoning. Six months later, when performance issues arise, your decision log provides the context needed to evaluate whether to optimize, migrate, or supplement with another database. Without it, you spend hours reconstructing why the original choice was made.
+Consider a scenario where your team chose PostgreSQL over MongoDB and DynamoDB. Document the evaluation criteria. query patterns, scaling requirements, team expertise, operational overhead. and list alternatives with reasoning. Six months later, when performance issues arise, your decision log provides the context needed to evaluate whether to optimize, migrate, or supplement with another database. Without it, you spend hours reconstructing why the original choice was made.
 
-## Best Practices for Decision Logs
+Best Practices for Decision Logs
 
 Follow these guidelines to maintain useful decision logs:
 
-1. **Write them small and focused**: Each decision should address one specific topic
-2. **Capture context immediately**: Document decisions while the reasoning is fresh
-3. **Link related decisions**: Create a web of context, not isolated entries
-4. **Review periodically**: Check decision logs during planning sessions
-5. **Keep templates consistent**: Uniform format makes future reference easier
-6. **Deprecate, never delete**: Old decisions provide valuable context even when superseded
+1. Write them small and focused: Each decision should address one specific topic
+2. Capture context immediately: Document decisions while the reasoning is fresh
+3. Link related decisions: Create a web of context, not isolated entries
+4. Review periodically: Check decision logs during planning sessions
+5. Keep templates consistent: Uniform format makes future reference easier
+6. Deprecate, never delete: Old decisions provide valuable context even when superseded
 
-## Conclusion
+Conclusion
 
 Claude Code transforms decision logging from a chore into a natural part of your development workflow. By automating the creation process and integrating documentation into your coding sessions, you preserve valuable project context without adding overhead.
 
@@ -253,17 +253,17 @@ Start small: create your first decision log entry today, and you'll immediately 
 
 ---
 
-**Next Steps:**
+Next Steps:
 - Set up your `docs/decisions/` directory
 - Create a decision log template
 - Add decision logging to your project instructions
 - Next time you make a technical choice, ask Claude Code to document it
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

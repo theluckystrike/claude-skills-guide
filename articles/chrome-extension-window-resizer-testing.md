@@ -15,19 +15,19 @@ tags: [claude-code, claude-skills]
 
 
 {% raw %}
-# Chrome Extension Window Resizer Testing: A Practical Guide
+Chrome Extension Window Resizer Testing: A Practical Guide
 
 Testing window resizing behavior in Chrome extensions presents unique challenges that differ from traditional web application testing. Whether you are building a side panel extension, a popup that needs responsive layouts, or an extension that manipulates browser window dimensions, understanding how to properly test these interactions is essential for delivering a polished user experience.
 
 This guide covers practical approaches to testing window resizer functionality in Chrome extensions, with code examples you can apply directly to your projects.
 
-## Understanding Window Resizer Testing Scope
+Understanding Window Resizer Testing Scope
 
 Chrome extensions interact with windows through several APIs, each requiring specific testing approaches. The primary scenarios include testing popup and side panel resizing, testing content scripts that respond to viewport changes, and testing extensions that programmatically resize browser windows using the `chrome.windows` API.
 
 When you test window resizer behavior, you are verifying that your extension correctly responds to user-initiated resizing, handles window state transitions, maintains proper layout across different window sizes, and correctly uses the `chrome.windows.OnBoundsChanged` event listener.
 
-## Testing Popup and Side Panel Resizing
+Testing Popup and Side Panel Resizing
 
 Popup windows in Chrome extensions have strict size limitations. By default, popups cannot exceed 600x600 pixels, and you must define minimum and maximum dimensions in your manifest. Testing these constraints requires careful verification across different scenarios.
 
@@ -83,7 +83,7 @@ async function testPopupResize() {
 }
 ```
 
-## Testing Chrome Windows API Resize Operations
+Testing Chrome Windows API Resize Operations
 
 For extensions that programmatically resize browser windows, thorough testing is critical because incorrect window dimensions can disrupt the user experience significantly. The `chrome.windows.update()` method handles these operations.
 
@@ -127,7 +127,7 @@ function testResizeBounds() {
 }
 ```
 
-## Testing Content Script Viewport Responses
+Testing Content Script Viewport Responses
 
 Content scripts running in web pages must handle viewport changes when users resize their browser windows. This is particularly important for fixed-position elements and responsive designs that depend on viewport dimensions.
 
@@ -190,7 +190,7 @@ function testViewportResponse() {
 }
 ```
 
-## Debugging Window Resizer Issues
+Debugging Window Resizer Issues
 
 When testing reveals problems, Chrome DevTools provides essential debugging capabilities. For popup testing, right-click the extension icon and choose "Inspect popup" to open DevTools in the popup context. This allows you to examine console output, set breakpoints in your popup code, and manually interact with resize events.
 
@@ -198,7 +198,7 @@ For content script testing, open DevTools on any web page and select your conten
 
 Common issues you will encounter include resize event handlers firing too frequently, leading to performance problems. The debounce technique shown earlier addresses this. Another frequent issue involves stale closure references where event listeners capture outdated variable values. Always use current values or pass parameters directly to your event handlers.
 
-## Best Practices for Window Resizer Testing
+Best Practices for Window Resizer Testing
 
 Implement these practices to ensure reliable window resizer testing across your extension projects.
 
@@ -212,18 +212,18 @@ Fourth, consider accessibility implications when implementing resize-dependent l
 
 Finally, maintain test coverage for all resize-related code paths. As your extension evolves, changes to resize handling can introduce regressions that automated tests catch quickly.
 
-## Conclusion
+Conclusion
 
-Chrome extension window resizer testing requires understanding the distinct contexts where resizing occurs—popups, side panels, content scripts, and programmatic window manipulation. By implementing proper test coverage with the patterns demonstrated in this guide, you can build extensions that deliver consistent behavior across all window sizes and states.
+Chrome extension window resizer testing requires understanding the distinct contexts where resizing occurs, popups, side panels, content scripts, and programmatic window manipulation. By implementing proper test coverage with the patterns demonstrated in this guide, you can build extensions that deliver consistent behavior across all window sizes and states.
 
 The key is combining automated unit tests that verify logic with manual testing that confirms real-world usability. This dual approach ensures your extension handles the diverse ways users interact with window dimensions in their daily browsing.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

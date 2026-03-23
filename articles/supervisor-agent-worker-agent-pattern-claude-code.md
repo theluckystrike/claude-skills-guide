@@ -17,7 +17,7 @@ The supervisor-worker pattern is one of the most practical multi-agent architect
 
 This guide covers the mechanics of implementing this pattern with Claude Code's SDK: how to decompose tasks cleanly, run workers in parallel, aggregate results, and handle failures without cascading breakdowns.
 
-## When to Use the Supervisor-Worker Pattern
+When to Use the Supervisor-Worker Pattern
 
 Not every task benefits from this architecture. It makes sense when:
 
@@ -28,7 +28,7 @@ Not every task benefits from this architecture. It makes sense when:
 
 Avoid it when the task is inherently sequential, when subtask outputs depend on each other, or when the coordination overhead exceeds the parallelism benefit.
 
-## Task Decomposition: The Supervisor's Core Responsibility
+Task Decomposition: The Supervisor's Core Responsibility
 
 The supervisor's first job is to produce a task list that workers can execute independently. Good decomposition has three properties: tasks are atomic, tasks are independent, and tasks carry enough context for a worker to complete them without asking follow-up questions.
 
@@ -51,11 +51,11 @@ Output only valid JSON. No prose.
 """
 ```
 
-The `context` field is critical. Workers operate in isolated sessions — they cannot see what the supervisor knows. Pack everything the worker needs into the subtask context field: relevant file paths, constraints, prior decisions, and output format requirements.
+The `context` field is critical. Workers operate in isolated sessions. they cannot see what the supervisor knows. Pack everything the worker needs into the subtask context field: relevant file paths, constraints, prior decisions, and output format requirements.
 
-## Spawning Workers with the Claude Code SDK
+Spawning Workers with the Claude Code SDK
 
-The Claude Code SDK's `query` function is the right primitive for spawning workers. Each worker call is independent — it gets its own context window and runs to completion before returning.
+The Claude Code SDK's `query` function is the right primitive for spawning workers. Each worker call is independent. it gets its own context window and runs to completion before returning.
 
 ```python
 import anthropic
@@ -108,9 +108,9 @@ When complete, output a JSON object with:
         }
 ```
 
-## Running Workers in Parallel
+Running Workers in Parallel
 
-Parallel execution is where the pattern pays off. Use `asyncio.gather` with a semaphore to control concurrency — unbounded parallelism will saturate your API rate limits.
+Parallel execution is where the pattern pays off. Use `asyncio.gather` with a semaphore to control concurrency. unbounded parallelism will saturate your API rate limits.
 
 ```python
 async def run_workers_parallel(
@@ -147,9 +147,9 @@ async def run_workers_parallel(
 
 With `max_concurrent=5`, you run five workers at a time regardless of how many subtasks the supervisor generated. Tune this based on your Anthropic API tier.
 
-## Result Aggregation
+Result Aggregation
 
-The supervisor receives all worker results and synthesizes a final output. Do not concatenate worker results blindly — have the supervisor reason over them.
+The supervisor receives all worker results and synthesizes a final output. Do not concatenate worker results blindly. have the supervisor reason over them.
 
 ```python
 async def aggregate_results(
@@ -188,13 +188,13 @@ Be concrete. Do not omit results from successful workers.
     return response.content[0].text
 ```
 
-## Error Handling: Isolation and Retry
+Error Handling: Isolation and Retry
 
 Worker failures should not abort the pipeline. There are three levels of error handling to implement.
 
-**Level 1: Worker-level isolation.** Each worker catches its own exceptions and returns a structured failure result. The supervisor sees a failed result, not an unhandled exception.
+Level 1: Worker-level isolation. Each worker catches its own exceptions and returns a structured failure result. The supervisor sees a failed result, not an unhandled exception.
 
-**Level 2: Retry logic.** For transient failures (rate limits, network errors), retry the specific worker rather than the whole pipeline.
+Level 2: Retry logic. For transient failures (rate limits, network errors), retry the specific worker rather than the whole pipeline.
 
 ```python
 async def run_worker_with_retry(
@@ -206,13 +206,13 @@ async def run_worker_with_retry(
         if result["status"] == "success":
             return result
         if attempt < max_retries:
-            await asyncio.sleep(2 ** attempt)  # exponential backoff
+            await asyncio.sleep(2  attempt)  # exponential backoff
     return result  # return final failure after retries exhausted
 ```
 
-**Level 3: Supervisor recovery.** After aggregation, give the supervisor the list of failed subtasks and ask it to either re-attempt them with adjusted context or produce a partial result with explicit gaps noted.
+Level 3: Supervisor recovery. After aggregation, give the supervisor the list of failed subtasks and ask it to either re-attempt them with adjusted context or produce a partial result with explicit gaps noted.
 
-## Real-World Use Case: Code Review Pipeline
+Real-World Use Case: Code Review Pipeline
 
 A code review pipeline is an ideal fit for the supervisor-worker pattern. The supervisor receives a pull request diff, decomposes it into per-file reviews, runs workers in parallel (one per file), and aggregates a final PR summary.
 
@@ -249,12 +249,12 @@ Output JSON array of subtasks. Each subtask: id, description, context, success_c
     )
 ```
 
-## Real-World Use Case: Test Generation
+Real-World Use Case: Test Generation
 
 Test generation benefits from parallelism because each module's tests are independent. The supervisor identifies untested functions, assigns one worker per function, and collects test files.
 
 ```python
-# Supervisor identifies targets
+Supervisor identifies targets
 decompose_prompt = """
 Given this list of untested functions, create a test generation subtask for each.
 Each subtask context must include the function signature and docstring.
@@ -263,7 +263,7 @@ Each worker must output a complete pytest test file as a string.
 Functions: {function_list}
 """
 
-# Workers produce test files
+Workers produce test files
 worker_instruction = """
 Write a complete pytest test file for the function described in context.
 Include: happy path tests, edge cases, and one test for expected exceptions.
@@ -271,7 +271,7 @@ Output only valid Python code. No markdown.
 """
 ```
 
-## Putting It Together: Full Supervisor Loop
+Putting It Together: Full Supervisor Loop
 
 ```python
 import asyncio
@@ -304,7 +304,7 @@ async def supervisor_loop(task: str, max_workers: int = 8) -> str:
     # 3. Aggregate
     return await aggregate_results(task, subtasks, list(results))
 
-# Entry point
+Entry point
 if __name__ == "__main__":
     result = asyncio.run(supervisor_loop(
         "Review all Python files in src/ for security vulnerabilities"
@@ -312,22 +312,22 @@ if __name__ == "__main__":
     print(result)
 ```
 
-## Common Mistakes
+Common Mistakes
 
-**Underspecified subtask context.** Workers fail because they lack the information needed. Always include file paths, relevant constraints, and exact output format requirements in the context field.
+Underspecified subtask context. Workers fail because they lack the information needed. Always include file paths, relevant constraints, and exact output format requirements in the context field.
 
-**Ignoring partial failures.** Pipelines that require all workers to succeed will break on any transient error. Design aggregation to produce useful output even when some workers fail.
+Ignoring partial failures. Pipelines that require all workers to succeed will break on any transient error. Design aggregation to produce useful output even when some workers fail.
 
-**No concurrency limit.** Spawning 50 workers simultaneously will hit rate limits immediately. Always use a semaphore or equivalent.
+No concurrency limit. Spawning 50 workers simultaneously will hit rate limits immediately. Always use a semaphore or equivalent.
 
-**Supervisor and worker using the same context window.** These should be separate API calls. Mixing them defeats the purpose of the pattern.
+Supervisor and worker using the same context window. These should be separate API calls. Mixing them defeats the purpose of the pattern.
 
-The supervisor-worker pattern is one of the most effective ways to apply Claude Code at scale. The implementation overhead is modest — roughly 100 lines of Python — and the gains in throughput and fault isolation are substantial.
+The supervisor-worker pattern is one of the most effective ways to apply Claude Code at scale. The implementation overhead is modest. roughly 100 lines of Python. and the gains in throughput and fault isolation are substantial.
 
-## Related Reading
+Related Reading
 
 - [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/)
 - [Agent Handoff Strategies for Long-Running Tasks](/agent-handoff-strategies-for-long-running-tasks-guide/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

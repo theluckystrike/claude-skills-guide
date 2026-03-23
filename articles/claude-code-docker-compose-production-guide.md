@@ -14,11 +14,11 @@ tags: [claude-code, claude-skills]
 
 
 {% raw %}
-# Claude Code Docker Compose Production Guide
+Claude Code Docker Compose Production Guide
 
 Running Claude Code in a Docker Compose environment offers significant advantages for teams seeking consistent AI assistant behavior across multiple workstations or CI/CD pipelines. This guide covers practical deployment patterns, configuration strategies, and production-ready examples that work with modern development workflows.
 
-## Why Docker Compose for Claude Code
+Why Docker Compose for Claude Code
 
 Docker Compose simplifies container orchestration for multi-service applications. When you containerize Claude Code, you gain reproducible environments, easy scaling, and straightforward dependency management. Many developers use this approach to ensure every team member works with identical Claude Code configurations, eliminating the "it works on my machine" problems that plague collaborative projects.
 
@@ -26,7 +26,7 @@ Beyond consistency, containerizing Claude Code solves a real operational problem
 
 The setup works particularly well when combined with other containerized development tools. For instance, pairing Claude Code with a [frontend-design](https://github.com/get-skill/frontend-design) skill container lets you generate consistent UI prototypes across your entire team without installing Node.js dependencies locally.
 
-## Basic Docker Compose Setup
+Basic Docker Compose Setup
 
 Create a `docker-compose.yml` file in your project directory:
 
@@ -63,13 +63,13 @@ For interactive sessions, attach to the running container:
 
 ```bash
 docker-compose exec claude-code bash
-# Then inside the container:
+Then inside the container:
 claude "explain the architecture of the files in /workspace/src"
 ```
 
 The `claude-config` named volume persists your Claude settings, installed skills, and conversation history between container restarts. Without it, every `docker-compose down` would reset your configuration.
 
-## Production Configuration with Multiple Services
+Production Configuration with Multiple Services
 
 Production deployments often require more sophisticated setups. Here's a practical example that combines Claude Code with supporting services:
 
@@ -116,7 +116,7 @@ volumes:
 
 This configuration demonstrates several production best practices. The health check ensures container health monitoring works correctly with your orchestration platform. Dedicated networks isolate services while allowing controlled communication. The persistent volume preserves state between deployments.
 
-### Key Production Settings Explained
+Key Production Settings Explained
 
 | Setting | Value | Why It Matters |
 |---|---|---|
@@ -126,7 +126,7 @@ This configuration demonstrates several production best practices. The health ch
 | Named network | `claude-network` | Isolates Claude Code traffic from other application services |
 | Named volume | `claude-state` | Survives `docker-compose down` without losing configuration |
 
-## Integrating Claude Skills in Docker
+Integrating Claude Skills in Docker
 
 One powerful pattern involves pre-loading Claude skills into your container. The [pdf](https://github.com/get-skill/pdf) skill works excellently in containerized environments where you need programmatic PDF generation:
 
@@ -146,12 +146,12 @@ To pre-install skills at container build time rather than mounting them from the
 ```dockerfile
 FROM anthropic/claude-code:latest
 
-# Pre-install skills so the container starts ready
+Pre-install skills so the container starts ready
 RUN claude skill install pdf && \
     claude skill install tdd && \
     claude skill install frontend-design
 
-# Set working directory
+Set working directory
 WORKDIR /workspace
 ```
 
@@ -168,18 +168,18 @@ services:
 
 This pattern is useful for team environments where you want all developers to have the same skill set without requiring each person to run installation commands manually.
 
-## Environment-Specific Configurations
+Environment-Specific Configurations
 
 Different environments require different configurations. Use Docker Compose overrides for environment-specific settings:
 
-**docker-compose.yml** (base):
+docker-compose.yml (base):
 ```yaml
 services:
   claude-code:
     image: anthropic/claude-code:latest
 ```
 
-**docker-compose.override.yml** (development):
+docker-compose.override.yml (development):
 ```yaml
 services:
   claude-code:
@@ -189,7 +189,7 @@ services:
       - DEBUG=true
 ```
 
-**docker-compose.prod.yml** (production):
+docker-compose.prod.yml (production):
 ```yaml
 services:
   claude-code:
@@ -224,12 +224,12 @@ services:
 
 The `restart: "no"` ensures the container exits cleanly after the CI job completes rather than restarting and consuming runner credits.
 
-## Security Considerations
+Security Considerations
 
 Production deployments require attention to security. Never commit API keys to version control. Use Docker secrets or environment files that are excluded from git:
 
 ```bash
-# .gitignore
+.gitignore
 .env
 .env.local
 *.env
@@ -238,7 +238,7 @@ Production deployments require attention to security. Never commit API keys to v
 Create a `.env.example` file instead that documents required variables without values:
 
 ```bash
-# .env.example — copy to .env and fill in values
+.env.example. copy to .env and fill in values
 ANTHROPIC_API_KEY=
 CLAUDE_MODEL=claude-opus-4-6
 LOG_LEVEL=info
@@ -273,7 +273,7 @@ Setting `read_only: true` with a tmpfs mount for `/tmp` prevents the container f
 
 For enhanced security, consider running Claude Code in an isolated network namespace and using a reverse proxy for any exposed ports. The [supermemory](https://github.com/get-skill/supermemory) skill can help maintain secure conversation context without persisting sensitive data to disk.
 
-## Monitoring and Logging
+Monitoring and Logging
 
 Production Claude Code deployments benefit from structured logging and monitoring. The simplest approach uses JSON file logging with rotation:
 
@@ -320,7 +320,7 @@ services:
 
 Combine this with a Docker event listener that fires alerts to Slack or PagerDuty when the container transitions to `unhealthy`.
 
-## Scaling Considerations
+Scaling Considerations
 
 When scaling Claude Code across multiple instances, consider the stateless nature of the container. Each instance maintains its own conversation context, so implement session affinity if your workflow requires consistent context. A load balancer with sticky sessions handles this effectively:
 
@@ -380,27 +380,27 @@ docker-compose up -d --scale claude-code=4
 
 Note that `--scale` requires removing the explicit `container_name` field from your service definition, since multiple containers cannot share a name.
 
-## Debugging Production Issues
+Debugging Production Issues
 
 When a production Claude Code container behaves unexpectedly, these commands help narrow down the problem:
 
 ```bash
-# Check container status and exit codes
+Check container status and exit codes
 docker-compose ps
 
-# Tail logs from the last 100 lines
+Tail logs from the last 100 lines
 docker-compose logs --tail=100 -f claude-code
 
-# Inspect resource usage
+Inspect resource usage
 docker stats claude-code-prod
 
-# Run a one-off diagnostic command inside the container
+Run a one-off diagnostic command inside the container
 docker-compose exec claude-code claude --version
 
-# Check which skills are installed
+Check which skills are installed
 docker-compose exec claude-code claude skill list
 
-# Verify environment variables reached the container
+Verify environment variables reached the container
 docker-compose exec claude-code env | grep ANTHROPIC
 ```
 
@@ -412,18 +412,18 @@ docker start claude-code-prod
 docker logs --tail=200 claude-code-prod
 ```
 
-## Conclusion
+Conclusion
 
-Docker Compose provides a robust foundation for deploying Claude Code in production environments. The configuration patterns shown here—from basic single-container setups to multi-service architectures—scale from individual developer workstations to enterprise deployments. Combine these patterns with skills like [frontend-design](https://github.com/get-skill/frontend-design), [pdf](https://github.com/get-skill/pdf), and [tdd](https://github.com/get-skill/tdd) to build powerful, containerized AI-assisted development workflows that your entire team can rely on.
+Docker Compose provides a solid foundation for deploying Claude Code in production environments. The configuration patterns shown here, from basic single-container setups to multi-service architectures, scale from individual developer workstations to enterprise deployments. Combine these patterns with skills like [frontend-design](https://github.com/get-skill/frontend-design), [pdf](https://github.com/get-skill/pdf), and [tdd](https://github.com/get-skill/tdd) to build powerful, containerized AI-assisted development workflows that your entire team can rely on.
 
-Start with the basic configuration, add production hardening as needed, and use Docker Compose's flexibility to adapt your setup to evolving project requirements. The override file pattern in particular pays off quickly once you are managing more than one environment—a small upfront investment in file organization prevents significant configuration drift over time.
+Start with the basic configuration, add production hardening as needed, and use Docker Compose's flexibility to adapt your setup to evolving project requirements. The override file pattern in particular pays off quickly once you are managing more than one environment, a small upfront investment in file organization prevents significant configuration drift over time.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

@@ -13,11 +13,11 @@ tags: [claude-code, claude-skills]
 ---
 
 
-# Continue Dev Review: Open Source AI Coding in 2026
+Continue Dev Review: Open Source AI Coding in 2026
 
-The landscape of AI-assisted coding has evolved dramatically, and Continue.dev stands at the intersection of open source innovation and powerful AI integration. In 2026, developers are using Continue alongside Claude Code skills to create comprehensive development environments that combine the best of both worlds. This guide explores how these tools work together to streamline code review and open source contributions—from quick inline suggestions to deep security analysis across entire repositories.
+The landscape of AI-assisted coding has evolved dramatically, and Continue.dev stands at the intersection of open source innovation and powerful AI integration. In 2026, developers are using Continue alongside Claude Code skills to create comprehensive development environments that combine the best of both worlds. This guide explores how these tools work together to streamline code review and open source contributions, from quick inline suggestions to deep security analysis across entire repositories.
 
-## What is Continue.dev?
+What is Continue.dev?
 
 Continue.dev is an open source AI code assistant that integrates directly into VS Code and JetBrains IDEs. Unlike closed-source alternatives, Continue.dev allows developers to customize and extend their AI coding experience through configuration files and community-built prompts. The tool supports multiple AI providers, including Anthropic's Claude, OpenAI models, and local models through Ollama.
 
@@ -25,13 +25,13 @@ In 2026, Continue.dev has become particularly valuable for developers working wi
 
 Key capabilities that make Continue.dev compelling:
 
-- **Context-aware completions**: Continue indexes your entire codebase so suggestions reflect your actual patterns, not generic boilerplate
-- **Multi-model support**: Switch between Claude, GPT-4o, Mistral, and local Ollama models without reconfiguring your workflow
-- **Custom slash commands**: Define project-specific commands that become available directly in your editor
-- **@-mentions for context**: Reference open files, symbols, terminal output, or git diffs inline when asking questions
-- **Local LLM support**: Route sensitive code to on-premise models while using cloud models for open projects
+- Context-aware completions: Continue indexes your entire codebase so suggestions reflect your actual patterns, not generic boilerplate
+- Multi-model support: Switch between Claude, GPT-4o, Mistral, and local Ollama models without reconfiguring your workflow
+- Custom slash commands: Define project-specific commands that become available directly in your editor
+- @-mentions for context: Reference open files, symbols, terminal output, or git diffs inline when asking questions
+- Local LLM support: Route sensitive code to on-premise models while using cloud models for open projects
 
-## How Continue.dev Compares to Alternatives
+How Continue.dev Compares to Alternatives
 
 Before diving deeper, it helps to understand where Continue fits in the 2026 AI coding tool landscape.
 
@@ -47,18 +47,18 @@ Before diving deeper, it helps to understand where Continue fits in the 2026 AI 
 
 For open source contributors and developers who work across multiple organizations with different AI policies, Continue's flexibility is a decisive advantage. You can use Claude for one project, a local model for another, and switch instantly.
 
-## Integrating Continue.dev with Claude Code Skills
+Integrating Continue.dev with Claude Code Skills
 
 The real power emerges when you combine Continue.dev with Claude Code skills. While Continue handles inline code completion and IDE integration, Claude Code skills provide specialized workflows for complex tasks like code review, documentation generation, and testing.
 
 Here's how to set up both tools to work together:
 
 ```bash
-# Install Continue.dev extension in VS Code
+Install Continue.dev extension in VS Code
 code --install-extension continue.continue
 
-# Configure Claude as the primary model in Continue
-# Edit ~/.continue/config.json:
+Configure Claude as the primary model in Continue
+Edit ~/.continue/config.json:
 {
   "models": [
     {
@@ -103,11 +103,11 @@ Once configured, you can use Continue.dev for quick code completions while invok
 Analyze the architecture of this PR and suggest improvements.
 ```
 
-## Practical Code Review Workflow
+Practical Code Review Workflow
 
 When reviewing open source contributions, a systematic approach ensures quality and consistency. Here's a practical workflow combining both tools across a typical PR lifecycle.
 
-### Step 1: Initial Assessment with Continue
+Step 1: Initial Assessment with Continue
 
 Use Continue.dev to quickly understand the changes in a pull request. The `@git diff` context provider is especially useful here:
 
@@ -125,7 +125,7 @@ Summarize what this middleware does and flag anything unusual.
 
 This initial pass takes under a minute and gives you the mental model needed to ask smarter follow-up questions.
 
-### Step 2: Deep Analysis with Claude Code Skills
+Step 2: Deep Analysis with Claude Code Skills
 
 Once you have a baseline understanding, invoke specialized skills for thorough review:
 
@@ -146,7 +146,7 @@ Check if documentation is updated for API changes.
 
 The skill-based approach works better for cross-file analysis because Claude Code reads your entire project tree rather than just the currently open file. This matters for catching issues like a function that's changed signatures but callers haven't been updated.
 
-### Step 3: Interactive Clarification
+Step 3: Interactive Clarification
 
 After the initial skill run, Continue.dev shines for quick follow-up questions without re-running the full skill:
 
@@ -159,7 +159,7 @@ The /code-review output flagged the token expiry logic. Can you show me a fixed 
 Why is this refresh logic different from the pattern used in session.js?
 ```
 
-### Example: Reviewing a New Feature
+Reviewing a New Feature
 
 Consider you're reviewing a PR that adds a new authentication module. Here's how the combined workflow works:
 
@@ -187,13 +187,13 @@ A quick Continue.dev question catches the obvious problem:
 Is there a timing attack risk in this authentication flow?
 ```
 
-The response flags that returning early for "user not found" vs. "wrong password" creates a timing difference that leaks whether an email is registered. Claude Code's `/security` skill then provides the fix pattern—using a constant-time comparison regardless of whether the user exists.
+The response flags that returning early for "user not found" vs. "wrong password" creates a timing difference that leaks whether an email is registered. Claude Code's `/security` skill then provides the fix pattern, using a constant-time comparison regardless of whether the user exists.
 
-## Claude Code Skills for Code Review
+Claude Code Skills for Code Review
 
 Several Claude Code skills enhance the review process in 2026. Understanding when to use each saves time and produces better results.
 
-### The tdd Skill
+The tdd Skill
 
 The tdd skill ensures new code comes with proper test coverage. It works best when pointed at a specific file or module rather than an entire codebase:
 
@@ -207,7 +207,7 @@ Write tests for the new authentication module.
 Check coverage for api/routes/auth.js and suggest edge cases to test.
 ```
 
-The skill identifies not just missing tests but missing categories of tests—happy path vs. error path vs. edge cases. For authentication code specifically, it will typically flag missing tests for expired tokens, malformed inputs, and concurrent session scenarios.
+The skill identifies not just missing tests but missing categories of tests, happy path vs. error path vs. edge cases. For authentication code specifically, it will typically flag missing tests for expired tokens, malformed inputs, and concurrent session scenarios.
 
 A sample output from `/tdd` on an auth module:
 
@@ -225,7 +225,7 @@ describe('authenticateUser', () => {
 });
 ```
 
-### The code-review Skill
+The code-review Skill
 
 Specialized for comprehensive code analysis across an entire file or diff:
 
@@ -241,7 +241,7 @@ Review error handling patterns throughout the codebase.
 
 The `/code-review` skill is most effective when you provide it with a focused scope. Asking it to review the entire repository produces superficial feedback. Asking it to review a specific module or the files changed in a PR produces actionable findings with line-level specificity.
 
-### The security Skill
+The security Skill
 
 For open source projects, security review is critical because contributions can come from anyone:
 
@@ -255,9 +255,9 @@ Check for SQL injection vulnerabilities and verify input validation is present.
 Analyze dependency changes for known CVEs.
 ```
 
-The `/security` skill understands common vulnerability patterns—OWASP Top 10, injection attacks, improper deserialization, insecure defaults—and flags code that resembles these patterns. It cannot replace a full security audit, but it catches the obvious issues before human reviewers spend time on them.
+The `/security` skill understands common vulnerability patterns, OWASP Top 10, injection attacks, improper deserialization, insecure defaults, and flags code that resembles these patterns. It cannot replace a full security audit, but it catches the obvious issues before human reviewers spend time on them.
 
-### The docs Skill
+The docs Skill
 
 Open source projects live and die by documentation quality. The `/docs` skill helps maintain consistency:
 
@@ -273,16 +273,16 @@ Check if the README reflects the new configuration options added in this PR.
 
 This is particularly valuable for large open source projects where documentation often lags behind implementation. Running `/docs` as part of every PR review catches documentation gaps before merge rather than after.
 
-## Open Source Contribution Workflow
+Open Source Contribution Workflow
 
 Continue.dev excels at helping developers contribute to open source projects. The open nature of both tools means you can customize prompts for specific project requirements.
 
-### Setting Up Project-Specific Reviews
+Setting Up Project-Specific Reviews
 
 Create a `.continue` directory in your project with custom prompts that encode your project's specific standards:
 
 ```python
-# .continue/prompts/review.py
+.continue/prompts/review.py
 """
 Review this open source contribution for:
 1. Code style consistency
@@ -303,12 +303,12 @@ For larger projects with formal contribution guidelines, you can embed those gui
 }
 ```
 
-### Automating Review Tasks
+Automating Review Tasks
 
 Combine Continue.dev with Claude Code skills for automated checks in your CI pipeline. This catches issues before human review is even requested:
 
 ```yaml
-# .github/workflows/ai-review.yml
+.github/workflows/ai-review.yml
 name: AI Code Review
 on: [pull_request]
 
@@ -340,12 +340,12 @@ jobs:
 
 This pipeline automatically posts AI review findings as a PR comment, giving human reviewers a head start. The PR author gets feedback within minutes of opening the PR rather than waiting for reviewer availability.
 
-### Managing Context for Large PRs
+Managing Context for Large PRs
 
 Large PRs are a challenge for any AI tool because context windows have limits. The most effective strategy is to break the review into focused passes:
 
 ```bash
-# Review only changed files, one at a time
+Review only changed files, one at a time
 git diff --name-only HEAD~1 | while read file; do
   claude --print "Review $file for security and correctness issues. Focus on changes from the diff only."
 done
@@ -358,7 +358,7 @@ Continue.dev handles this naturally through its `@git diff` context provider, wh
 Review only the changes in this file. What's the payment flow change doing, and is it correct?
 ```
 
-## Choosing the Right Tool for Each Task
+Choosing the Right Tool for Each Task
 
 One of the most common mistakes when adopting both Continue.dev and Claude Code skills is using the wrong tool for the task. Here's a practical decision guide:
 
@@ -376,41 +376,41 @@ One of the most common mistakes when adopting both Continue.dev and Claude Code 
 
 The pattern is straightforward: use Continue.dev for conversational, exploratory, and quick tasks. Use Claude Code skills when you need structured, comprehensive analysis that benefits from reading many files at once.
 
-## Best Practices for AI-Assisted Reviews
+Best Practices for AI-Assisted Reviews
 
 To get the most out of Continue.dev and Claude Code skills in 2026:
 
-1. **Start with Continue for Quick Understanding**: Use inline completions and @-mentions to quickly grasp code changes before invoking heavyweight skills
-2. **Invoke Skills for Deep Analysis**: Use Claude Code skills for thorough, specialized reviews where cross-file context matters
-3. **Combine Both Tools Sequentially**: Run the skill first for structured findings, then use Continue for conversational follow-up questions about specific findings
-4. **Review the AI Output Critically**: AI tools miss context like business logic intent, historical decisions, and real-world usage patterns—always validate before acting
-5. **Encode Project Standards in Prompts**: Custom `.continue` prompts that embed your contribution guidelines make AI reviews project-specific rather than generic
-6. **Run AI Review in CI**: Posting AI findings as PR comments before human review creates a forcing function that improves PR quality at the source
-7. **Contribute Back**: Share your custom prompts and skills with the community—the open source ecosystem improves when practitioners publish their real-world configurations
+1. Start with Continue for Quick Understanding: Use inline completions and @-mentions to quickly grasp code changes before invoking heavyweight skills
+2. Invoke Skills for Deep Analysis: Use Claude Code skills for thorough, specialized reviews where cross-file context matters
+3. Combine Both Tools Sequentially: Run the skill first for structured findings, then use Continue for conversational follow-up questions about specific findings
+4. Review the AI Output Critically: AI tools miss context like business logic intent, historical decisions, and real-world usage patterns, always validate before acting
+5. Encode Project Standards in Prompts: Custom `.continue` prompts that embed your contribution guidelines make AI reviews project-specific rather than generic
+6. Run AI Review in CI: Posting AI findings as PR comments before human review creates a forcing function that improves PR quality at the source
+7. Contribute Back: Share your custom prompts and skills with the community, the open source ecosystem improves when practitioners publish their real-world configurations
 
-## Common Pitfalls to Avoid
+Common Pitfalls to Avoid
 
-**Over-trusting security findings**: The `/security` skill flags patterns, not verified vulnerabilities. A flagged line may be safe in context. Always verify before filing as a security issue.
+Over-trusting security findings: The `/security` skill flags patterns, not verified vulnerabilities. A flagged line may be safe in context. Always verify before filing as a security issue.
 
-**Under-providing context**: Asking "review this code" produces worse results than "review this authentication middleware for timing attack vulnerabilities and improper error exposure." The more specific the request, the more useful the output.
+Under-providing context: Asking "review this code" produces worse results than "review this authentication middleware for timing attack vulnerabilities and improper error exposure." The more specific the request, the more useful the output.
 
-**Ignoring the learning curve**: Continue.dev requires a few days to become productive with. The `@`-context system, custom slash commands, and model switching all need practice. Budget time for onboarding.
+Ignoring the learning curve: Continue.dev requires a few days to become productive with. The `@`-context system, custom slash commands, and model switching all need practice. Budget time for onboarding.
 
-**Using AI review as a replacement for human review**: AI tools catch syntax and pattern issues well. They miss intent mismatches, business logic errors, and architectural anti-patterns that require domain knowledge. Use AI to augment human review, not replace it.
+Using AI review as a replacement for human review: AI tools catch syntax and pattern issues well. They miss intent mismatches, business logic errors, and architectural anti-patterns that require domain knowledge. Use AI to augment human review, not replace it.
 
-## Conclusion
+Conclusion
 
-The combination of Continue.dev and Claude Code skills represents a mature approach to open source AI coding in 2026. Continue provides seamless IDE integration and quick conversational answers, while Claude Code skills offer structured, comprehensive analysis for complex tasks like security audits, test generation, and documentation review.
+The combination of Continue.dev and Claude Code skills represents a mature approach to open source AI coding in 2026. Continue provides smooth IDE integration and quick conversational answers, while Claude Code skills offer structured, comprehensive analysis for complex tasks like security audits, test generation, and documentation review.
 
 The key to productivity is understanding the division of labor: Continue for speed and interaction, skills for depth and structure. By encoding project-specific standards into custom prompts and automating AI review through CI, teams can maintain high code quality in open source projects without waiting on reviewer availability.
 
-As the ecosystem continues to evolve, the open source nature of Continue.dev means practitioners can extend and improve the tooling, creating a feedback loop where the community's real-world configurations become available to everyone. That transparency—knowing exactly what prompts run and why—is what makes the combination of Continue.dev and Claude Code skills a durable choice rather than a vendor-locked one.
+As the ecosystem continues to evolve, the open source nature of Continue.dev means practitioners can extend and improve the tooling, creating a feedback loop where the community's real-world configurations become available to everyone. That transparency, knowing exactly what prompts run and why, is what makes the combination of Continue.dev and Claude Code skills a durable choice rather than a vendor-locked one.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -13,17 +13,17 @@ tags: [claude-code, claude-skills]
 ---
 
 {% raw %}
-# Claude Code for Aqua Security Container Workflow Guide
+Claude Code for Aqua Security Container Workflow Guide
 
-Container security has become a critical concern for development teams deploying applications at scale. Aqua Security provides comprehensive protection for containerized environments, but integrating it effectively into your development workflow requires careful planning and automation. This guide demonstrates how to leverage Claude Code to streamline Aqua Security container workflows, from image scanning to runtime protection.
+Container security has become a critical concern for development teams deploying applications at scale. Aqua Security provides comprehensive protection for containerized environments, but integrating it effectively into your development workflow requires careful planning and automation. This guide demonstrates how to use Claude Code to streamline Aqua Security container workflows, from image scanning to runtime protection.
 
-## Understanding the Aqua Security Integration Points
+Understanding the Aqua Security Integration Points
 
 Aqua Security offers multiple integration layers within the container lifecycle. Before automating with Claude Code, understand where security fits into your pipeline. The primary integration points include image scanning during build, registry security, admission control, and runtime protection.
 
 When working with Claude Code, you can use natural language prompts to generate configuration files, explain security findings, and create automation scripts. This significantly reduces the learning curve for teams adopting Aqua Security for the first time.
 
-### Prerequisites and Setup
+Prerequisites and Setup
 
 Ensure you have the following components in place before integrating Claude Code with Aqua Security:
 
@@ -34,18 +34,18 @@ Ensure you have the following components in place before integrating Claude Code
 
 Claude Code can help you generate the necessary configuration files and scripts. Simply describe your environment and requirements.
 
-## Automating Image Scanning Workflows
+Automating Image Scanning Workflows
 
 Image scanning forms the foundation of container security. Claude Code excels at generating scanning scripts that fit your specific pipeline requirements. Here's how to automate the scanning workflow effectively.
 
-### Generating Scan Scripts
+Generating Scan Scripts
 
 Instead of manually writing scanning commands, describe your requirements to Claude Code:
 
 ```bash
-# Example prompt to Claude Code
-# "Generate a Python script that scans Docker images using Aqua Security CLI
-# and fails the build if critical vulnerabilities are found"
+Example prompt to Claude Code
+"Generate a Python script that scans Docker images using Aqua Security CLI
+and fails the build if critical vulnerabilities are found"
 ```
 
 Claude Code can produce scripts like this:
@@ -96,19 +96,19 @@ if __name__ == "__main__":
         results = scan_image(image)
         
         if not check_vulnerability_threshold(results):
-            print(f"✗ Security threshold exceeded for {image}")
+            print(f" Security threshold exceeded for {image}")
             sys.exit(1)
         
-        print(f"✓ Image {image} passed security scan")
+        print(f" Image {image} passed security scan")
         
     except Exception as e:
         print(f"Error: {e}")
         sys.exit(2)
 ```
 
-This script integrates seamlessly with CI/CD platforms like Jenkins, GitLab CI, or GitHub Actions.
+This script integrates smoothly with CI/CD platforms like Jenkins, GitLab CI, or GitHub Actions.
 
-### Integrating with CI/CD Pipelines
+Integrating with CI/CD Pipelines
 
 Claude Code can help you create pipeline configurations that incorporate Aqua Security scanning at the right stages. Here's a GitHub Actions example:
 
@@ -142,16 +142,16 @@ jobs:
 
 The key is ensuring scans happen early in the pipeline to catch vulnerabilities before they reach production.
 
-## Implementing Admission Control Policies
+Implementing Admission Control Policies
 
 Aqua Security's admission controller prevents vulnerable or non-compliant containers from being deployed to your cluster. Claude Code can help you craft nuanced policies that balance security with developer productivity.
 
-### Writing Admission Control Policies
+Writing Admission Control Policies
 
 Admission control policies use Rego language for Open Policy Agent integration. Claude Code can generate these policies based on your security requirements:
 
 ```rego
-# Example: Block images without security scans
+Block images without security scans
 package admission
 
 deny[msg] {
@@ -167,7 +167,7 @@ deny[msg] {
 
 When writing admission policies, start permissive and tighten gradually. This approach prevents workflow disruptions while you fine-tune your security posture.
 
-### Best Practices for Policy Development
+Best Practices for Policy Development
 
 Follow these guidelines when creating admission control policies with Claude Code assistance:
 
@@ -177,16 +177,16 @@ Second, maintain policy documentation. For each policy, document the security co
 
 Third, use policy testing frameworks. Before deploying new policies, test them against representative workloads. Claude Code can help generate test cases that exercise various deployment scenarios.
 
-## Managing Runtime Security
+Managing Runtime Security
 
 Runtime protection monitors containers for suspicious activity after deployment. Aqua Security provides runtime policies that detect anomalies, and Claude Code can help you configure and manage these effectively.
 
-### Creating Runtime Detection Rules
+Creating Runtime Detection Rules
 
 Runtime rules monitor container behavior for indicators of compromise. Claude Code can generate baseline detection rules:
 
 ```yaml
-# Aqua Security Runtime Policy Example
+Aqua Security Runtime Policy Example
 apiVersion: v1
 kind: RuntimePolicy
 metadata:
@@ -216,20 +216,20 @@ spec:
     - audit
 ```
 
-### Responding to Security Alerts
+Responding to Security Alerts
 
 When Aqua Security detects potential threats, rapid response becomes critical. Claude Code can help you develop runbooks for common alert scenarios:
 
-1. **Unauthorized privilege escalation** - Review container specifications and recent deployment changes
-2. **Suspicious network connections** - Identify the source and destination of unusual traffic
-3. **Malicious file access** - Analyze the file system changes and container provenance
-4. **Cryptominer detection** - Isolate affected workloads and investigate the attack vector
+1. Unauthorized privilege escalation - Review container specifications and recent deployment changes
+2. Suspicious network connections - Identify the source and destination of unusual traffic
+3. Malicious file access - Analyze the file system changes and container provenance
+4. Cryptominer detection - Isolate affected workloads and investigate the attack vector
 
-## Streamlining Security Operations
+Streamlining Security Operations
 
 Beyond initial setup, Claude Code helps maintain and improve your security posture over time. Regular tasks include vulnerability management, compliance reporting, and policy refinement.
 
-### Generating Compliance Reports
+Generating Compliance Reports
 
 Aqua Security provides detailed findings, but presenting them meaningfully requires effort. Claude Code can help generate formatted reports:
 
@@ -252,37 +252,37 @@ def generate_compliance_report(scan_data: dict) -> str:
         for issue in critical_issues:
             report.append(f"- {issue['name']}: {issue['vulnerabilities']['critical']} critical")
     else:
-        report.append("\n✓ No critical vulnerabilities detected")
+        report.append("\n No critical vulnerabilities detected")
     
     return "\n".join(report)
 ```
 
-### Continuous Improvement Workflows
+Continuous Improvement Workflows
 
 Security isn't a one-time setup. Establish regular review cycles:
 
-- **Weekly**: Review new vulnerabilities in production images
-- **Monthly**: Update admission policies based on developer feedback
-- **Quarterly**: Conduct comprehensive security architecture reviews
+- Weekly: Review new vulnerabilities in production images
+- Monthly: Update admission policies based on developer feedback
+- Quarterly: Conduct comprehensive security architecture reviews
 
 Claude Code can prompt you for these reviews and help document findings and action items.
 
-## Conclusion
+Conclusion
 
 Integrating Claude Code with Aqua Security transforms container security from a manual burden into an automated, developer-friendly process. By leveraging AI assistance for script generation, policy creation, and operational tasks, teams maintain strong security posture without sacrificing development velocity.
 
-Start with image scanning automation, then progressively add admission control and runtime protection. Claude Code's ability to understand context and generate relevant code accelerates each step of this journey. Remember that security policies require ongoing tuning—use the feedback loops provided by Aqua Security findings to continuously refine your approach.
+Start with image scanning automation, then progressively add admission control and runtime protection. Claude Code's ability to understand context and generate relevant code accelerates each step of this journey. Remember that security policies require ongoing tuning, use the feedback loops provided by Aqua Security findings to continuously refine your approach.
 
-The combination of Claude Code's productivity capabilities and Aqua Security's comprehensive protection creates a robust foundation for secure container deployments at any scale.
+The combination of Claude Code's productivity capabilities and Aqua Security's comprehensive protection creates a solid foundation for secure container deployments at any scale.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code Container Security Scanning Workflow Guide](/claude-code-container-security-scanning-workflow-guide/)
 - [Claude Code Container Debugging: Docker Logs Workflow Guide](/claude-code-container-debugging-docker-logs-workflow-guide/)
 - [Claude Code Container Registry Workflow Guide](/claude-code-container-registry-workflow-guide/)
 
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 {% endraw %}

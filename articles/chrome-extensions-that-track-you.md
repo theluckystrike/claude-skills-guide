@@ -16,25 +16,25 @@ tags: [chrome, extensions, tracking, privacy]
 
 Chrome extensions run with powerful privileges in your browser. Understanding how they can track you helps you make informed decisions about what you install. This guide covers the technical mechanisms extensions use for tracking, with practical examples developers and power users can use to audit their extensions.
 
-## How Chrome Extensions Gain Tracking Access
+How Chrome Extensions Gain Tracking Access
 
 When you install an extension, it requests permissions. Some permissions directly enable tracking capabilities:
 
-- **"Read and change all your data on all websites"** — the broadest permission, allowing access to page content, form inputs, and cookies
-- **"tabs"** — access to tab URLs, titles, and favicons
-- **"history"** — read your browsing history
-- **"webRequest"** — intercept and modify network requests
-- **"cookies"** — read and modify cookies for any site
+- "Read and change all your data on all websites". the broadest permission, allowing access to page content, form inputs, and cookies
+- "tabs". access to tab URLs, titles, and favicons
+- "history". read your browsing history
+- "webRequest". intercept and modify network requests
+- "cookies". read and modify cookies for any site
 
 Extensions with these permissions can build comprehensive browsing profiles without your explicit awareness.
 
-The permission model is intentionally binary. An extension either has "all data on all websites" or it doesn't—there is no granular middle ground where an extension can only access one specific site. This means a coupon-clipping extension requesting broad content permissions can technically read every banking page you visit, not just checkout pages at retail sites. Users rarely read past the install dialog, and even when they do, the permission labels are vague enough to obscure the actual risk.
+The permission model is intentionally binary. An extension either has "all data on all websites" or it doesn't, there is no granular middle ground where an extension can only access one specific site. This means a coupon-clipping extension requesting broad content permissions can technically read every banking page you visit, not just checkout pages at retail sites. Users rarely read past the install dialog, and even when they do, the permission labels are vague enough to obscure the actual risk.
 
 What makes extension tracking particularly effective is persistence. Unlike a website that you can close, an extension runs in your browser continuously across every session. A tracker embedded in a popular extension might observe millions of browsing sessions daily, building profiles far more detailed than third-party cookies ever could.
 
-## Common Tracking Mechanisms
+Common Tracking Mechanisms
 
-### 1. Page Content Scraping
+1. Page Content Scraping
 
 Extensions with content scripts can read any text, form data, or DOM elements on pages you visit:
 
@@ -63,7 +63,7 @@ This pattern appears in both legitimate utilities and questionable extensions. T
 
 What makes content scraping hard to detect is that it can be done passively, without any visible behavior. A well-written tracking script observes `MutationObserver` events to capture dynamically loaded content, listens for form submit events to capture credentials before they are sent, and debounces its server calls to avoid obvious network spikes. From a user perspective, everything looks normal.
 
-Sophisticated content scripts can also fingerprint users without any cookies. By reading browser properties available in content scripts—screen dimensions, installed fonts via canvas, time zone, language settings—an extension can construct a stable identifier that persists even if the user clears cookies and browsing data.
+Sophisticated content scripts can also fingerprint users without any cookies. By reading browser properties available in content scripts, screen dimensions, installed fonts via canvas, time zone, language settings, an extension can construct a stable identifier that persists even if the user clears cookies and browsing data.
 
 ```javascript
 // Passive fingerprinting without cookies
@@ -82,7 +82,7 @@ function buildFingerprint() {
 }
 ```
 
-### 2. Network Request Monitoring
+2. Network Request Monitoring
 
 Extensions with webRequest permissions can observe all HTTP traffic:
 
@@ -108,11 +108,11 @@ chrome.webRequest.onCompleted.addListener((details) => {
 
 This allows extensions to build detailed records of your browsing patterns, including API calls, resource loads, and navigation events.
 
-The webRequest API is particularly revealing because it captures more than just page navigation. It sees every API call your applications make, every CDN resource loaded, every third-party widget phoning home. For developers using web-based tools like GitHub, Linear, or Figma, this means an extension can infer your work patterns—which repositories you access, when you push commits, how long you spend in specific tools—without ever reading page content.
+The webRequest API is particularly revealing because it captures more than just page navigation. It sees every API call your applications make, every CDN resource loaded, every third-party widget phoning home. For developers using web-based tools like GitHub, Linear, or Figma, this means an extension can infer your work patterns, which repositories you access, when you push commits, how long you spend in specific tools, without ever reading page content.
 
 In Manifest V3, the `webRequest` API was partially replaced with `declarativeNetRequest`, which is intentionally less powerful. Extensions can block requests based on rules, but they can no longer observe arbitrary request details in real time. This is a meaningful restriction for tracking, though extensions installed before the transition and those granted the legacy `webRequestBlocking` permission still retain the original capabilities.
 
-### 3. Cookie and Local Storage Manipulation
+3. Cookie and Local Storage Manipulation
 
 With appropriate permissions, extensions can read cookies that websites use for authentication and tracking:
 
@@ -147,7 +147,7 @@ if (authToken) {
 
 This is not a theoretical attack. Several browser extensions have been caught harvesting authentication tokens from financial and social media sites by reading localStorage values during page load.
 
-### 4. Tab and History Tracking
+4. Tab and History Tracking
 
 The tabs and history permissions let extensions monitor your browsing activity:
 
@@ -173,9 +173,9 @@ chrome.tabs.onActivated.addListener((activeInfo) => {
 });
 ```
 
-The `typedCount` field in history records is worth noting specifically. It indicates how many times you typed that URL directly, rather than arriving from a link. URLs you type are qualitatively different—they reveal habitual destinations, not just casual browsing. A history tracker that weights typed URLs more heavily builds a more accurate picture of your daily digital life.
+The `typedCount` field in history records is worth noting specifically. It indicates how many times you typed that URL directly, rather than arriving from a link. URLs you type are qualitatively different, they reveal habitual destinations, not just casual browsing. A history tracker that weights typed URLs more heavily builds a more accurate picture of your daily digital life.
 
-### 5. Timing and Behavior Analysis
+5. Timing and Behavior Analysis
 
 A tracking extension does not need to exfiltrate sensitive data to be invasive. Time-on-page data combined with scroll depth and click patterns is extremely valuable for behavioral analytics:
 
@@ -202,42 +202,42 @@ window.addEventListener('beforeunload', () => {
 });
 ```
 
-This pattern—session length, scroll depth, click maps—is the core of many legitimate analytics tools and equally the foundation of behavioral advertising profiles.
+This pattern, session length, scroll depth, click maps, is the core of many legitimate analytics tools and equally the foundation of behavioral advertising profiles.
 
-## Real-World Examples
+Real-World Examples
 
-### Legitimate Uses
+Legitimate Uses
 
 Extensions legitimately need these permissions for core functionality:
 
-- **Password managers** require content access to autofill forms and cookie access to maintain sessions
-- **Note-taking tools** need content scripts to extract page context
-- **Developer tools** may monitor network requests for debugging
+- Password managers require content access to autofill forms and cookie access to maintain sessions
+- Note-taking tools need content scripts to extract page context
+- Developer tools may monitor network requests for debugging
 
 The distinction lies in what data the extension does with these capabilities.
 
-### Problematic Patterns
+Problematic Patterns
 
 Watch for these red flags:
 
-1. **Overly broad permissions** — a simple calculator app requesting "all data on all websites"
-2. **Obfuscated code** — extensions with minified code that prevents inspection
-3. **Unusual network destinations** — analytics calls to unknown domains
-4. **Data aggregation** — sending collected data to third-party analytics services
-5. **Sudden permission escalation** — an extension requesting new permissions after an update
-6. **Vague privacy policies** — language like "we may share data with partners" without specifics
+1. Overly broad permissions. a simple calculator app requesting "all data on all websites"
+2. Obfuscated code. extensions with minified code that prevents inspection
+3. Unusual network destinations. analytics calls to unknown domains
+4. Data aggregation. sending collected data to third-party analytics services
+5. Sudden permission escalation. an extension requesting new permissions after an update
+6. Vague privacy policies. language like "we may share data with partners" without specifics
 
-The last two are particularly worth tracking. Extensions that ship an update adding new permissions are worth immediate scrutiny. The Chrome Web Store will prompt users to re-approve permissions, but many users click through without reading. An extension acquired by a new company—which has happened repeatedly with popular utilities—may ship tracking code in an update that the original developer never included.
+The last two are particularly worth tracking. Extensions that ship an update adding new permissions are worth immediate scrutiny. The Chrome Web Store will prompt users to re-approve permissions, but many users click through without reading. An extension acquired by a new company, which has happened repeatedly with popular utilities, may ship tracking code in an update that the original developer never included.
 
-### Known Historical Cases
+Known Historical Cases
 
 Several high-profile cases illustrate the risk:
 
 A popular extension called Stylish (a custom CSS injector used by millions of developers) was found in 2018 to be transmitting full browsing history to a data broker. The extension had been acquired and the new owner added telemetry that sent every URL visited, along with a unique identifier, to a third-party analytics firm. The extension had entirely legitimate functionality; the tracking was added silently after acquisition.
 
-DataSpii, documented in 2019, was a data leak operation that harvested browsing histories from millions of users through a collection of browser extensions. The extensions had legitimate functions—some were productivity tools, some were coupon finders—but all shared a common SDK that transmitted detailed browsing data.
+DataSpii, documented in 2019, was a data leak operation that harvested browsing histories from millions of users through a collection of browser extensions. The extensions had legitimate functions, some were productivity tools, some were coupon finders, but all shared a common SDK that transmitted detailed browsing data.
 
-### Auditing Extensions
+Auditing Extensions
 
 Use Chrome's extension management to review permissions:
 
@@ -249,39 +249,39 @@ Use Chrome's extension management to review permissions:
 For deeper analysis, examine the extension's background scripts:
 
 ```bash
-# Download extension CRX and inspect
-# Find extension ID in chrome://extensions
+Download extension CRX and inspect
+Find extension ID in chrome://extensions
 
-# Use Chrome's dev tools to monitor extension network activity
-# 1. Go to chrome://extensions
-# 2. Enable "Developer mode"
-# 3. Click "Service worker" for background scripts
-# 4. Open DevTools and monitor Network tab
+Use Chrome's dev tools to monitor extension network activity
+1. Go to chrome://extensions
+2. Enable "Developer mode"
+3. Click "Service worker" for background scripts
+4. Open DevTools and monitor Network tab
 ```
 
 To go deeper, you can unpack a CRX file directly. Chrome extensions are ZIP archives with a CRX header:
 
 ```bash
-# Unpack a CRX file for manual inspection
-# First, get the extension path from chrome://version (Profile Path)
-# Extensions are stored in: ~/Library/Application Support/Google/Chrome/Default/Extensions/
+Unpack a CRX file for manual inspection
+First, get the extension path from chrome://version (Profile Path)
+Extensions are stored in: ~/Library/Application Support/Google/Chrome/Default/Extensions/
 
 EXTENSION_ID="your_extension_id_here"
 EXT_PATH=~/Library/Application\ Support/Google/Chrome/Default/Extensions/$EXTENSION_ID
 
-# List installed versions
+List installed versions
 ls "$EXT_PATH"
 
-# Inspect background script
+Inspect background script
 cat "$EXT_PATH"/*/background.js | head -100
 
-# Search for suspicious network calls
+Search for suspicious network calls
 grep -r "fetch\|XMLHttpRequest\|sendBeacon" "$EXT_PATH"/*/
 ```
 
-Look for calls to domains that are not the extension's own service. An ad-blocker calling back to `analytics-collector.net` is a red flag. Look also for obfuscated strings—base64-encoded URLs or variable names that look machine-generated—which indicate deliberate concealment.
+Look for calls to domains that are not the extension's own service. An ad-blocker calling back to `analytics-collector.net` is a red flag. Look also for obfuscated strings, base64-encoded URLs or variable names that look machine-generated, which indicate deliberate concealment.
 
-## Permission Risk Levels
+Permission Risk Levels
 
 Not all permissions carry equal risk. Here is a practical breakdown:
 
@@ -298,21 +298,21 @@ Not all permissions carry equal risk. Here is a practical breakdown:
 
 An extension that only needs `storage` and `notifications` to function but requests `<all_urls>` content access should be treated with suspicion. There is no legitimate reason a simple utility needs to read every page you visit.
 
-## Protecting Yourself
+Protecting Yourself
 
-### Minimizing Risk
+Minimizing Risk
 
-- **Audit existing extensions** — review permissions of every installed extension
-- **Remove unused extensions** — each extension is a potential attack surface
-- **Use manifest V3** — newer extensions have more restricted capabilities
-- **Check update history** — sudden permission changes after updates warrant investigation
-- **Use separate Chrome profiles** — a dedicated profile for sensitive work (banking, medical) with zero extensions
-- **Prefer open-source extensions** — code that can be inspected is code that is accountable
-- **Watch for ownership changes** — search for news about extensions you rely on heavily
+- Audit existing extensions. review permissions of every installed extension
+- Remove unused extensions. each extension is a potential attack surface
+- Use manifest V3. newer extensions have more restricted capabilities
+- Check update history. sudden permission changes after updates warrant investigation
+- Use separate Chrome profiles. a dedicated profile for sensitive work (banking, medical) with zero extensions
+- Prefer open-source extensions. code that can be inspected is code that is accountable
+- Watch for ownership changes. search for news about extensions you rely on heavily
 
-A dedicated Chrome profile for sensitive work is one of the most underused protections. Create a profile with no extensions installed and use it exclusively for banking, medical sites, and any service where you store sensitive personal data. The performance benefit alone—a profile with zero extensions loads pages faster—makes it worthwhile.
+A dedicated Chrome profile for sensitive work is one of the most underused protections. Create a profile with no extensions installed and use it exclusively for banking, medical sites, and any service where you store sensitive personal data. The performance benefit alone, a profile with zero extensions loads pages faster, makes it worthwhile.
 
-### For Developers Building Extensions
+For Developers Building Extensions
 
 If you develop extensions, follow privacy-conscious practices:
 
@@ -339,25 +339,25 @@ Publish your source code. Extensions with public source repositories are far mor
 
 Document your data practices precisely. "We collect anonymous usage statistics" is not sufficient disclosure. Enumerate exactly what events are tracked, what data is sent, where it goes, how long it is retained, and whether it is shared with third parties. Users who are technical enough to care will check, and vague language signals that you have something to hide.
 
-## Detection Tools
+Detection Tools
 
 Several tools help identify tracking behavior:
 
-- **Chrome Web Store warnings** — Google flags extensions with excessive permissions
-- **Extension permission managers** — tools like "Extension Permissions Manager" show all active permissions
-- **Network monitoring** — use browser DevTools to identify unexpected network requests from extensions
-- **Privacy Badger** — EFF's extension can identify third-party trackers embedded in other extensions' network calls
-- **uBlock Origin's logger** — the network logger in uBlock Origin shows all requests including those from extension content scripts
+- Chrome Web Store warnings. Google flags extensions with excessive permissions
+- Extension permission managers. tools like "Extension Permissions Manager" show all active permissions
+- Network monitoring. use browser DevTools to identify unexpected network requests from extensions
+- Privacy Badger. EFF's extension can identify third-party trackers embedded in other extensions' network calls
+- uBlock Origin's logger. the network logger in uBlock Origin shows all requests including those from extension content scripts
 
-The DevTools approach is worth explaining in more detail. Open DevTools, go to the Network tab, and filter by "Other" request type. Any requests that appear when you are not actively loading a page are likely coming from extensions. Look at the initiator column—requests initiated by extension scripts will show the extension ID in the path. Cross-reference those IDs against your installed extensions to identify the source.
+The DevTools approach is worth explaining in more detail. Open DevTools, go to the Network tab, and filter by "Other" request type. Any requests that appear when you are not actively loading a page are likely coming from extensions. Look at the initiator column, requests initiated by extension scripts will show the extension ID in the path. Cross-reference those IDs against your installed extensions to identify the source.
 
-The key takeaway: every extension you install is code running with elevated privileges in your browser. Regular audits and minimal installation policies reduce your exposure to tracking. Treat your extension list the way a security-conscious developer treats their dependency list—review it periodically, remove what you do not use, and investigate anything that requests more access than it needs to function.
+The key takeaway: every extension you install is code running with elevated privileges in your browser. Regular audits and minimal installation policies reduce your exposure to tracking. Treat your extension list the way a security-conscious developer treats their dependency list, review it periodically, remove what you do not use, and investigate anything that requests more access than it needs to function.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

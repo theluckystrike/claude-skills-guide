@@ -13,31 +13,31 @@ score: 7
 ---
 
 
-# Claude Code for Electric SQL Sync Workflow Guide
+Claude Code for Electric SQL Sync Workflow Guide
 
 Electric SQL is a powerful toolkit for building local-first applications with SQLite that automatically syncs with your backend database. When combined with Claude Code, you can dramatically accelerate the development of reactive applications that work smoothly offline and online. This guide walks you through practical strategies for integrating Claude Code into your Electric SQL workflow.
 
-## Understanding Electric SQL Architecture
+Understanding Electric SQL Architecture
 
 Before diving into implementation, it's essential to understand how Electric SQL works. Electric SQL provides a local SQLite database that syncs with a PostgreSQL backend using a sync service. The key components include:
 
-- **Local SQLite Database**: An embedded database that works offline
-- **Satellite**: The local sync client that manages data synchronization
-- **Electric Sync Service**: The backend service that coordinates data changes
-- **PostgreSQL Backend**: The authoritative database that stores your data
+- Local SQLite Database: An embedded database that works offline
+- Satellite: The local sync client that manages data synchronization
+- Electric Sync Service: The backend service that coordinates data changes
+- PostgreSQL Backend: The authoritative database that stores your data
 
 Claude Code can help you set up, configure, and troubleshoot this architecture more efficiently by generating boilerplate code, explaining complex sync scenarios, and helping debug synchronization issues.
 
-## Setting Up Your Electric SQL Project
+Setting Up Your Electric SQL Project
 
 The first step is to initialize your project with Electric SQL. Claude Code can guide you through this process and generate the necessary configuration files.
 
-### Project Initialization
+Project Initialization
 
 Start by creating your project structure and installing dependencies:
 
 ```bash
-# Initialize a new project with Electric SQL
+Initialize a new project with Electric SQL
 npx create-electric-app@latest my-electric-app
 cd my-electric-app
 npm install @electric-sql/client @electric-sql/local
@@ -56,7 +56,7 @@ When setting up Electric SQL with Claude Code, create a context file that descri
 
 This context helps Claude Code generate accurate code that matches your project structure and conventions.
 
-### Defining Your Schema
+Defining Your Schema
 
 Electric SQL uses a schema definition that maps to both your local SQLite and PostgreSQL backend. Here's how to define tables that sync correctly:
 
@@ -87,11 +87,11 @@ export const appSchema = defineSchema({
 
 Claude Code can help you generate these schemas from natural language descriptions of your data model, making it easy to define complex relationships and constraints.
 
-## Implementing Data Sync with Claude Code
+Implementing Data Sync with Claude Code
 
 Once your schema is defined, you need to implement the sync logic. Electric SQL handles most of this automatically, but there are patterns and best practices Claude Code can help you implement.
 
-### Connecting to the Electric Service
+Connecting to the Electric Service
 
 Here's how to set up your Electric SQL client:
 
@@ -118,7 +118,7 @@ export const db = await electrify(
 
 Claude Code can help you customize this configuration for different environments, add error handling, and implement reconnection logic for unstable networks.
 
-### Performing CRUD Operations
+Performing CRUD Operations
 
 With Electric SQL, your local SQLite database automatically syncs with the backend. Here's a typical workflow:
 
@@ -158,11 +158,11 @@ function PostList() {
 
 Claude Code can help you implement more complex queries, handle edge cases, and optimize your data access patterns.
 
-## Handling Sync Conflicts and Errors
+Handling Sync Conflicts and Errors
 
 One of the most challenging aspects of local-first development is handling conflicts when the same data is modified offline. Electric SQL provides built-in conflict resolution, but you may need custom logic for specific scenarios.
 
-### Implementing Custom Conflict Resolution
+Implementing Custom Conflict Resolution
 
 ```typescript
 // Configure conflict resolution strategies
@@ -187,9 +187,9 @@ const db = await electrify(schema, {
 
 Claude Code can help you analyze your specific conflict scenarios and implement appropriate resolution strategies.
 
-### Error Handling Best Practices
+Error Handling Best Practices
 
-Implement robust error handling for sync failures:
+Implement solid error handling for sync failures:
 
 ```typescript
 async function syncWithRetry(maxRetries = 3) {
@@ -212,11 +212,11 @@ async function syncWithRetry(maxRetries = 3) {
 }
 ```
 
-## Optimizing Your Sync Workflow
+Optimizing Your Sync Workflow
 
 To get the most out of Electric SQL with Claude Code, follow these optimization strategies:
 
-### Selective Sync
+Selective Sync
 
 Only sync the data your users need:
 
@@ -233,7 +233,7 @@ const db = await electrify(schema, {
 })
 ```
 
-### Index Optimization
+Index Optimization
 
 Create indexes to speed up queries:
 
@@ -245,11 +245,11 @@ CREATE INDEX idx_posts_published ON posts(published) WHERE published = true;
 
 Claude Code can analyze your query patterns and recommend appropriate indexes.
 
-## Testing Your Electric SQL Application
+Testing Your Electric SQL Application
 
 Testing local-first applications requires special considerations. Here's how to approach testing with Claude Code:
 
-### Unit Testing Database Operations
+Unit Testing Database Operations
 
 ```typescript
 import { testDb } from './test-utils'
@@ -268,7 +268,7 @@ describe('Post operations', () => {
 })
 ```
 
-## Conclusion
+Conclusion
 
 Electric SQL combined with Claude Code provides a powerful toolkit for building responsive, offline-first applications. By using Claude Code's ability to generate code, explain complex concepts, and help debug issues, you can significantly accelerate your development workflow. Remember to:
 
@@ -278,12 +278,12 @@ Electric SQL combined with Claude Code provides a powerful toolkit for building 
 - Optimize queries with selective sync and proper indexing
 - Test thoroughly for both online and offline scenarios
 
-With these practices, you'll be well-equipped to build robust local-first applications that work smoothly whether your users are online or offline.
+With these practices, you'll be well-equipped to build solid local-first applications that work smoothly whether your users are online or offline.
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -13,9 +13,9 @@ permalink: /multi-agent-orchestration-with-claude-subagents-guide/
 
 # Multi-Agent Orchestration with Claude Subagents Guide
 
-Claude Code enables multi-agent systems through its subagent architecture. Rather than one long conversation handling everything, you can orchestrate multiple specialized Claude instances that collaborate on complex tasks — each focused on a narrow domain, coordinated by a parent agent that tracks overall progress.
+Claude Code enables multi-agent systems through its subagent architecture. Rather than one long conversation handling everything, you can orchestrate multiple specialized Claude instances that collaborate on complex tasks. each focused on a narrow domain, coordinated by a parent agent that tracks overall progress.
 
-## Understanding Claude Subagents
+Understanding Claude Subagents
 
 In Claude Code, a subagent is a separate Claude process spawned by a parent agent using the `Task` tool. Each subagent runs with its own context window, can be assigned a specific skill, and reports back structured output to the parent.
 
@@ -26,7 +26,7 @@ The key advantage is separation of concerns. A parent agent coordinating a full-
 
 Each subagent works in its domain; the parent integrates their outputs.
 
-## How Subagents Are Invoked in Practice
+How Subagents Are Invoked in Practice
 
 The parent agent uses the `Task` tool to spawn subagents. From within a Claude Code session, this looks like:
 
@@ -53,9 +53,9 @@ Output: the test file content
 
 There is no `from claude import SubAgent` Python library. Subagent orchestration happens inside Claude Code itself, not through an external SDK.
 
-## Coordination Patterns
+Coordination Patterns
 
-### Sequential Workflow
+Sequential Workflow
 
 Sequential orchestration passes output from one subagent as input to the next. The parent waits for each step to complete before starting the next:
 
@@ -65,7 +65,7 @@ Sequential orchestration passes output from one subagent as input to the next. T
 
 This is the right pattern when each step depends on the previous one's output.
 
-### Parallel Execution
+Parallel Execution
 
 For independent tasks, the parent can launch multiple subagents simultaneously using multiple `Task` tool calls in a single turn. Claude Code will execute them concurrently:
 
@@ -78,32 +78,32 @@ Launch three parallel subagents:
 Collect all three outputs and summarize what was completed.
 ```
 
-The [`supermemory` skill](/claude-skills-token-optimization-reduce-api-costs/) is useful in the parent context here — it stores what each subagent has completed so the parent maintains a coherent picture across many concurrent tasks.
+The [`supermemory` skill](/claude-skills-token-optimization-reduce-api-costs/) is useful in the parent context here. it stores what each subagent has completed so the parent maintains a coherent picture across many concurrent tasks.
 
-### Hierarchical Control
+Hierarchical Control
 
 For large projects, mid-level manager agents can own specific subsystems:
 
 ```
 Parent agent
-├── Frontend manager (owns src/components/)
-│   ├── UI subagent (frontend-design)
-│   └── Test subagent (tdd)
-└── Infrastructure manager (owns deployment/)
-    ├── Scripts subagent (handles deployment scripts)
-    └── Config subagent (handles IaC)
+ Frontend manager (owns src/components/)
+    UI subagent (frontend-design)
+    Test subagent (tdd)
+ Infrastructure manager (owns deployment/)
+     Scripts subagent (handles deployment scripts)
+     Config subagent (handles IaC)
 ```
 
 Each manager reduces the cognitive load on the parent and allows finer-grained progress tracking.
 
-## Defining Agent Responsibilities
+Defining Agent Responsibilities
 
 Clear task definitions are more important than any other factor in subagent quality. Vague instructions produce inconsistent outputs. Specify:
 
-- **Domain:** exactly what files or directories the subagent should work in
-- **Skill:** which skill to activate (`/tdd`, `/frontend-design`, etc.)
-- **Input:** what context or artifacts the subagent needs
-- **Output format:** what to return and how (file content, JSON summary, list of issues)
+- Domain: exactly what files or directories the subagent should work in
+- Skill: which skill to activate (`/tdd`, `/frontend-design`, etc.)
+- Input: what context or artifacts the subagent needs
+- Output format: what to return and how (file content, JSON summary, list of issues)
 
 A well-structured task definition:
 
@@ -116,7 +116,7 @@ Context: The frontend NotificationBell component expects GET /api/notifications
 Output: Express route handler file for these two endpoints, including input validation.
 ```
 
-## Context Management Across Agents
+Context Management Across Agents
 
 Each subagent has its own context window. Avoid dumping the entire codebase into every subagent; give each one only what it needs:
 
@@ -126,9 +126,9 @@ Each subagent has its own context window. Avoid dumping the entire codebase into
 | Agent-specific | Relevant files, requirements for this domain | Each subagent's task prompt |
 | Session state | Task status, inter-agent messages, blockers | Parent agent, optionally persisted via supermemory |
 
-When one subagent needs to reference another's output, the parent summarizes and passes only the relevant portion — not the full conversation history.
+When one subagent needs to reference another's output, the parent summarizes and passes only the relevant portion. not the full conversation history.
 
-## Handling Agent Communication
+Handling Agent Communication
 
 Establish a convention for how subagents report results. A structured output format lets the parent make routing decisions without parsing free-form text:
 
@@ -144,7 +144,7 @@ Establish a convention for how subagents report results. A structured output for
 
 If a subagent hits a blocker, the parent can retry with adjusted context, re-assign the task, or escalate to the user.
 
-## Event-Driven Agent Communication
+Event-Driven Agent Communication
 
 For reactive systems, subagents can respond to events rather than following predetermined sequences. This suits monitoring, alerting, and continuous integration scenarios. The parent agent acts as the event router:
 
@@ -161,11 +161,11 @@ Collect results and post a status summary.
 
 The parent tracks which events have been handled and which subagent outputs remain pending, then routes follow-up actions based on what each subagent reports.
 
-## Skill Composition Techniques
+Skill Composition Techniques
 
 Effective orchestration requires thoughtful composition of what you pass to each subagent.
 
-**Output Normalization**: Define a standard output format across subagents so the parent can parse results consistently without guessing. The structured format shown in the Agent Communication section above works well. Extend it with a `confidence` field for tasks where the subagent is uncertain:
+Output Normalization: Define a standard output format across subagents so the parent can parse results consistently without guessing. The structured format shown in the Agent Communication section above works well. Extend it with a `confidence` field for tasks where the subagent is uncertain:
 
 ```json
 {
@@ -178,7 +178,7 @@ Effective orchestration requires thoughtful composition of what you pass to each
 }
 ```
 
-**Fallback Chains**: Define what happens when a subagent fails or returns low-confidence results. The parent can retry with a simpler scope, reassign to a different skill, or escalate to the user:
+Fallback Chains: Define what happens when a subagent fails or returns low-confidence results. The parent can retry with a simpler scope, reassign to a different skill, or escalate to the user:
 
 ```
 Primary: code-review subagent
@@ -186,32 +186,32 @@ On failure: reduce scope to a single function, retry
 On second failure: surface to user with context
 ```
 
-**Context Passing**: Maintain a running summary in the parent context. Each subagent adds its key findings; the parent distills these into a compact handoff for the next subagent rather than forwarding full conversation history.
+Context Passing: Maintain a running summary in the parent context. Each subagent adds its key findings; the parent distills these into a compact handoff for the next subagent rather than forwarding full conversation history.
 
-## Error Handling and Recovery
+Error Handling and Recovery
 
 Multi-agent workflows need defined recovery paths:
 
-- **Retry with clarified instructions:** Most failures come from ambiguous task definitions. Restate the task with more specific constraints.
-- **Reduce scope:** If a subagent fails on a large task, break it into smaller subtasks and retry.
-- **Human escalation:** Define upfront which failure modes require user input (e.g., missing environment variables, authentication issues).
+- Retry with clarified instructions: Most failures come from ambiguous task definitions. Restate the task with more specific constraints.
+- Reduce scope: If a subagent fails on a large task, break it into smaller subtasks and retry.
+- Human escalation: Define upfront which failure modes require user input (e.g., missing environment variables, authentication issues).
 
 Log all subagent interactions. The `supermemory` skill in the parent context can persist these logs across sessions, creating an audit trail for multi-day projects.
 
-## Real-World Example: Adding a Notification System
+Real-World Example: Adding a Notification System
 
 A complete feature addition across a real codebase:
 
-1. **Parent** receives the feature request and plans the work
-2. **`frontend-design` subagent** scaffolds the NotificationBell UI component
-3. **Backend subagent** designs WebSocket infrastructure and notification schema
-4. **`tdd` subagent** creates test scenarios for delivery, ordering, and read-state
-5. **`webapp-testing` subagent** validates the integrated feature in a running browser
-6. **Parent** reviews all outputs, resolves conflicts, and assembles the final PR description
+1. Parent receives the feature request and plans the work
+2. `frontend-design` subagent scaffolds the NotificationBell UI component
+3. Backend subagent designs WebSocket infrastructure and notification schema
+4. `tdd` subagent creates test scenarios for delivery, ordering, and read-state
+5. `webapp-testing` subagent validates the integrated feature in a running browser
+6. Parent reviews all outputs, resolves conflicts, and assembles the final PR description
 
 Steps 2, 3, and 4 can run in parallel once the schema is agreed. Step 5 depends on all three completing. The parent manages that dependency.
 
-## Best Practices
+Best Practices
 
 Keep subagent responsibilities narrow. Agents with multiple unrelated responsibilities produce mediocre results across all of them. Specialized agents with clear boundaries consistently outperform general-purpose ones.
 
@@ -221,14 +221,14 @@ Monitor token usage. Context accumulates quickly in long-running multi-agent pro
 
 ---
 
-## Related Reading
+Related Reading
 
-- [Multi-Agent Workflow Design Patterns for Developers](/multi-agent-workflow-design-patterns-for-developers/) — Conceptual pattern overview covering handoff chains and debate-and-consensus patterns
-- [Supervisor Agent and Worker Agent Pattern with Claude Code](/supervisor-agent-worker-agent-pattern-claude-code/) — Deep dive on the supervisor/worker topology
-- [Claude Code Multi-Agent Subagent Communication Guide](/claude-code-multi-agent-subagent-communication-guide/) — How results pass between agents
-- [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/) — Top frontend skills with examples
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Broader developer skill overview
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [Multi-Agent Workflow Design Patterns for Developers](/multi-agent-workflow-design-patterns-for-developers/). Conceptual pattern overview covering handoff chains and debate-and-consensus patterns
+- [Supervisor Agent and Worker Agent Pattern with Claude Code](/supervisor-agent-worker-agent-pattern-claude-code/). Detailed look on the supervisor/worker topology
+- [Claude Code Multi-Agent Subagent Communication Guide](/claude-code-multi-agent-subagent-communication-guide/). How results pass between agents
+- [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/). Top frontend skills with examples
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Broader developer skill overview
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate automatically
 
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

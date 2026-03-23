@@ -12,27 +12,27 @@ permalink: /claude-code-accessibility-regression-testing/
 ---
 
 
-Automated accessibility testing has become essential for teams that want to ship inclusive products without sacrificing development velocity. When you modify a component, it's easy to accidentally introduce accessibility regressions—broken keyboard navigation, missing alt text, or color contrast violations. Claude Code provides a powerful workflow for catching these issues through regression testing, especially when combined with specialized skills like frontend-design and testing automation tools.
+Automated accessibility testing has become essential for teams that want to ship inclusive products without sacrificing development velocity. When you modify a component, it's easy to accidentally introduce accessibility regressions, broken keyboard navigation, missing alt text, or color contrast violations. Claude Code provides a powerful workflow for catching these issues through regression testing, especially when combined with specialized skills like frontend-design and testing automation tools.
 
-Accessibility regression testing ensures that changes to your codebase do not reintroduce previously fixed accessibility issues. With Claude Code and its ecosystem of skills, you can build robust automated workflows that catch accessibility regressions before they reach production.
+Accessibility regression testing ensures that changes to your codebase do not reintroduce previously fixed accessibility issues. With Claude Code and its ecosystem of skills, you can build solid automated workflows that catch accessibility regressions before they reach production.
 
-## Understanding Accessibility Regression Testing
+Understanding Accessibility Regression Testing
 
-Regression testing in accessibility specifically focuses on preventing the reintroduction of previously fixed accessibility issues. When you add new features or refactor existing code, changes can inadvertently break keyboard navigation, remove ARIA attributes, or introduce color contrast problems. Traditional regression testing catches functional bugs—but accessibility regressions often go unnoticed because they don't break functionality.
+Regression testing in accessibility specifically focuses on preventing the reintroduction of previously fixed accessibility issues. When you add new features or refactor existing code, changes can inadvertently break keyboard navigation, remove ARIA attributes, or introduce color contrast problems. Traditional regression testing catches functional bugs, but accessibility regressions often go unnoticed because they don't break functionality.
 
 Claude Code helps by embedding accessibility knowledge directly into your development workflow. The AI assistant understands WCAG 2.1/2.2 guidelines, ARIA specifications, and screen reader behaviors. This means you can describe accessibility requirements conversationally and receive accurate, standards-compliant solutions.
 
-## Why Accessibility Regression Testing Matters
+Why Accessibility Regression Testing Matters
 
 Every code change carries the risk of accidentally breaking accessibility features. A simple CSS tweak might break keyboard navigation. A new component might lack proper ARIA labels. Without regression testing, these issues slip into production and exclude users who rely on assistive technologies.
 
 The cost of fixing accessibility bugs increases dramatically throughout the development cycle. Catching regressions in CI is far cheaper than addressing complaints from users or facing compliance violations.
 
-## Setting Up Your Accessibility Testing Foundation
+Setting Up Your Accessibility Testing Foundation
 
 Before implementing regression tests, establish a baseline of your current accessibility state. Document existing issues and their fixes so Claude Code can recognize when they reappear.
 
-### Creating an Accessibility Test Specification
+Creating an Accessibility Test Specification
 
 Work with Claude Code to generate a test specification document that maps your application's components to accessibility requirements:
 
@@ -45,7 +45,7 @@ and visual accessibility criteria.
 
 Claude Code will generate a detailed specification that becomes your regression test baseline. This document should include component-by-component accessibility requirements, including which WCAG success criteria apply to each element.
 
-### Configuring Accessibility Rules
+Configuring Accessibility Rules
 
 Create an accessibility test configuration in your project:
 
@@ -74,7 +74,7 @@ npx @axe-core/cli https://your-app.example.com --save-accessibility-baseline
 
 This baseline becomes the reference point for all future regression tests.
 
-## Using the Axe Skill with Claude Code
+Using the Axe Skill with Claude Code
 
 The axe skill in Claude Code provides direct integration with axe-core for accessibility testing. Activate it in your session:
 
@@ -91,9 +91,9 @@ Run accessibility tests on the navigation component in src/components/Navigation
 
 Claude will analyze the component, identify violations, and suggest fixes. The skill understands WCAG guidelines and can explain why each violation matters.
 
-### Setting Up Axe-Core Tests with jest-axe
+Setting Up Axe-Core Tests with jest-axe
 
-The axe-core library provides robust automated accessibility testing. Here's how to integrate jest-axe into your test suite:
+The axe-core library provides solid automated accessibility testing. Here's how to integrate jest-axe into your test suite:
 
 ```javascript
 // accessibility.test.js
@@ -122,7 +122,7 @@ describe('Accessibility Tests', () => {
 
 Ask Claude Code to generate additional test cases for specific components in your application. The AI understands which accessibility issues are most common for different component types and can suggest targeted tests.
 
-### Running Bulk Regression Tests
+Running Bulk Regression Tests
 
 For comprehensive regression testing across your application, create a test script that uses both axe and your baseline:
 
@@ -165,7 +165,7 @@ describe('Accessibility Regression Tests', () => {
 });
 ```
 
-### Building Custom Accessibility Rules
+Building Custom Accessibility Rules
 
 Sometimes your application has unique accessibility requirements that standard tools don't cover. Claude Code can help you create custom accessibility rules:
 
@@ -179,11 +179,11 @@ The rule should:
 
 Claude Code will generate a complete ESLint rule with proper documentation and test cases.
 
-## Integrating with Claude Code Workflows
+Integrating with Claude Code Workflows
 
 Claude Code excels at incorporating accessibility checks into your daily development workflow. Use the skill-creator skill to build custom automation that fits your team's process.
 
-### Requesting an Accessibility Code Review
+Requesting an Accessibility Code Review
 
 When submitting pull requests, include Claude Code in your review process:
 
@@ -200,7 +200,7 @@ Check for:
 
 Claude Code will analyze the component and provide specific, actionable recommendations. This review catches issues before they merge into your main branch.
 
-### Fixing Accessibility Issues with Claude Code
+Fixing Accessibility Issues with Claude Code
 
 When Claude Code identifies accessibility problems, ask for specific fixes:
 
@@ -212,20 +212,20 @@ including proper focus styles and Enter/Space key handlers.
 
 The AI will provide corrected code with explanations of why the changes improve accessibility.
 
-### Creating a Custom Regression Skill
+Creating a Custom Regression Skill
 
 Use the skill-creator skill to build a dedicated regression testing skill:
 
 ```markdown
-# Skill: /accessibility-regression
+Skill: /accessibility-regression
 
-## Description
+Description
 Runs accessibility regression tests and compares results against the baseline.
 
-## Usage
+Usage
 Type /accessibility-regression to run the full test suite.
 
-## Workflow
+Workflow
 1. Run axe-core tests against the current codebase
 2. Load the accessibility baseline from baseline/accessibility.json
 3. Compare current results against baseline
@@ -234,24 +234,24 @@ Type /accessibility-regression to run the full test suite.
 6. Offer to apply fixes automatically
 ```
 
-## Automating in CI/CD Pipelines
+Automating in CI/CD Pipelines
 
-### Pre-Commit Hooks for Accessibility
+Pre-Commit Hooks for Accessibility
 
 Set up pre-commit hooks that run quick accessibility checks before code is committed:
 
 ```bash
 #!/bin/bash
-# pre-accessibility-check.sh
+pre-accessibility-check.sh
 
-# Check for missing alt text in images
+Check for missing alt text in images
 echo "Checking for missing alt attributes..."
 grep -r '<img' --include='*.jsx' --include='*.tsx' . | \
   grep -v 'alt=' | \
   grep -v 'alt={"' | \
   grep -v "alt={'"
 
-# Verify ARIA attributes are valid
+Verify ARIA attributes are valid
 npx eslint src/ --rule 'aria: error' --max-warnings 0
 
 echo "Pre-commit accessibility check complete"
@@ -259,12 +259,12 @@ echo "Pre-commit accessibility check complete"
 
 Ask Claude Code to expand this script with additional checks relevant to your technology stack.
 
-### CI/CD Pipeline Integration
+CI/CD Pipeline Integration
 
 Incorporate accessibility regression testing into your continuous integration pipeline to catch issues before deployment:
 
 ```yaml
-# .github/workflows/accessibility.yml
+.github/workflows/accessibility.yml
 name: Accessibility Regression Tests
 
 on: [push, pull_request]
@@ -309,11 +309,11 @@ jobs:
           fi
 ```
 
-## Testing Specific Accessibility Patterns
+Testing Specific Accessibility Patterns
 
 Focus your regression tests on the most critical accessibility patterns that frequently break:
 
-### Keyboard Navigation
+Keyboard Navigation
 
 Ensure all interactive elements remain keyboard-accessible:
 
@@ -348,7 +348,7 @@ it('should maintain keyboard navigation', async () => {
 });
 ```
 
-### Screen Reader Compatibility
+Screen Reader Compatibility
 
 Verify that dynamic content updates are announced:
 
@@ -370,11 +370,11 @@ it('should announce dynamic content changes', async () => {
 });
 ```
 
-## Maintaining Accessibility Over Time
+Maintaining Accessibility Over Time
 
-Accessibility isn't a one-time achievement—it requires ongoing vigilance. Claude Code helps maintain accessibility standards as your application evolves.
+Accessibility isn't a one-time achievement, it requires ongoing vigilance. Claude Code helps maintain accessibility standards as your application evolves.
 
-### Creating Accessibility Documentation
+Creating Accessibility Documentation
 
 Ask Claude Code to generate accessibility documentation that teams can reference:
 
@@ -390,7 +390,7 @@ For each component, document:
 
 This documentation becomes a living resource that helps developers make accessible decisions.
 
-### Establishing Accessibility Code Patterns
+Establishing Accessibility Code Patterns
 
 Work with Claude Code to establish and document accessible code patterns:
 
@@ -405,32 +405,32 @@ Generate TypeScript/React code patterns for:
 
 These patterns become templates that developers can use, ensuring new code meets accessibility standards from the start.
 
-## Best Practices for Sustainable Testing
+Best Practices for Sustainable Testing
 
 Maintain your regression tests effectively by following these practices:
 
-1. **Keep baseline updated** - After fixing accessibility issues, regenerate your baseline to reflect the improved state.
+1. Keep baseline updated - After fixing accessibility issues, regenerate your baseline to reflect the improved state.
 
-2. **Prioritize critical paths** - Focus regression tests on user journeys that are most vulnerable to accessibility breaks.
+2. Prioritize critical paths - Focus regression tests on user journeys that are most vulnerable to accessibility breaks.
 
-3. **Document exemptions** - When you intentionally accept a violation, document it in an exemptions file so future tests don't flag it as a regression.
+3. Document exemptions - When you intentionally accept a violation, document it in an exemptions file so future tests don't flag it as a regression.
 
-4. **Run frequently** - Execute accessibility regression tests on every pull request to catch issues early.
+4. Run frequently - Execute accessibility regression tests on every pull request to catch issues early.
 
-5. **Involve Claude proactively** - Ask Claude Code to review code changes for potential accessibility impact before you even run tests.
+5. Involve Claude proactively - Ask Claude Code to review code changes for potential accessibility impact before you even run tests.
 
-6. **Test with real users** - Automated tools and code reviews complement—but don't replace—testing with actual assistive technology users. Schedule regular accessibility user testing.
+6. Test with real users - Automated tools and code reviews complement, but don't replace, testing with actual assistive technology users. Schedule regular accessibility user testing.
 
-## Conclusion
+Conclusion
 
 Accessibility regression testing with Claude Code transforms what was once a manual, tedious process into an automated workflow that catches issues automatically. By establishing baselines, using the axe skill, and integrating tests into your CI pipeline, you protect your application from reintroducing accessibility barriers.
 
 The key is starting small: add accessibility checks to your next pull request, generate tests for your most critical components, and gradually expand coverage. With Claude Code as your accessibility partner, building and maintaining accessible applications becomes achievable for teams of any size. The initial setup investment pays dividends in compliance confidence, user trust, and development velocity.
 
-## Related Reading
+Related Reading
 
-- [Claude Code Axe Accessibility Testing Guide](/claude-code-axe-accessibility-testing-guide/) — Axe is a core tool for accessibility regression testing
-- [Claude Code WCAG Accessibility Audit Workflow](/claude-code-wcag-accessibility-audit-workflow/) — WCAG audits provide the baseline for regression testing
-- [Claude Code Aria Labels Implementation Guide](/claude-code-aria-labels-implementation-guide/) — ARIA label regressions are among the most common
+- [Claude Code Axe Accessibility Testing Guide](/claude-code-axe-accessibility-testing-guide/). Axe is a core tool for accessibility regression testing
+- [Claude Code WCAG Accessibility Audit Workflow](/claude-code-wcag-accessibility-audit-workflow/). WCAG audits provide the baseline for regression testing
+- [Claude Code Aria Labels Implementation Guide](/claude-code-aria-labels-implementation-guide/). ARIA label regressions are among the most common
 
-Built by theluckystrike — More at https://zovo.one
+Built by theluckystrike. More at https://zovo.one

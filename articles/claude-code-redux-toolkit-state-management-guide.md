@@ -14,13 +14,13 @@ tags: [claude-code, claude-skills]
 ---
 
 
-# Claude Code Redux Toolkit State Management Guide
+Claude Code Redux Toolkit State Management Guide
 
 State management remains one of the most challenging aspects of building React applications. Redux Toolkit, the official opinionated approach to Redux, simplifies this process significantly. When combined with Claude Code's capabilities, you can accelerate Redux implementation while maintaining clean, maintainable code architecture.
 
 This guide walks you through integrating Redux Toolkit into your projects using Claude Code, with practical examples that work in real-world scenarios.
 
-## Setting Up Redux Toolkit with Claude Code
+Setting Up Redux Toolkit with Claude Code
 
 Before implementing Redux Toolkit, ensure your project has the necessary dependencies. If you're starting fresh, Claude Code can scaffold the entire setup using the frontend-design skill to create a React application with Redux already configured.
 
@@ -43,7 +43,7 @@ export const store = configureStore({
 });
 ```
 
-## Understanding Redux Toolkit Slices
+Understanding Redux Toolkit Slices
 
 Redux Toolkit slices are the cornerstone of modern Redux development. Each slice contains the reducer logic and actions for a specific feature. Claude Code excels at generating these slices following best practices.
 
@@ -103,7 +103,7 @@ export default usersSlice.reducer;
 
 This pattern eliminates boilerplate while keeping your state predictable. The createAsyncThunk handles asynchronous operations cleanly, and the extraReducers builder provides a readable flow for async states.
 
-## Integrating Redux with React Components
+Integrating Redux with React Components
 
 Connecting Redux to React components requires the Provider wrapper and useSelector/useDispatch hooks. Here's how to integrate a component with your Redux store:
 
@@ -129,7 +129,7 @@ export default Counter;
 
 Claude Code can refactor existing components to use Redux by analyzing the prop drilling patterns and suggesting appropriate slice extractions.
 
-## Advanced Patterns: Selectors and Memoization
+Advanced Patterns: Selectors and Memoization
 
 For complex state shapes, use createSelector from Reselect for memoized selectors. This prevents unnecessary re-renders and improves performance:
 
@@ -152,7 +152,7 @@ export const selectFilteredUsers = createSelector(
 
 This selector only recomputes when either the users array or filter changes, saving computational resources in large applications.
 
-## Testing Redux with Claude Code
+Testing Redux with Claude Code
 
 Testing Redux logic becomes straightforward with proper setup. The tdd skill works exceptionally well with Redux testing patterns. Here's a basic test for a slice reducer:
 
@@ -178,7 +178,7 @@ describe('counter slice', () => {
 
 Run these tests with your preferred test runner to ensure your Redux logic remains correct as your application evolves.
 
-## Best Practices for Redux Architecture
+Best Practices for Redux Architecture
 
 Keep your Redux architecture clean by following these principles. First, normalize your state using entities when dealing with collections. The normalized structure prevents duplication and simplifies updates.
 
@@ -186,13 +186,13 @@ Second, colocate selectors with their corresponding slices. This keeps related l
 
 When your application grows, consider splitting your store into multiple smaller stores using the context API pattern. This approach, sometimes called "component state" for local data and Redux for global data, provides better separation of concerns.
 
-## Documenting Your Redux Implementation
+Documenting Your Redux Implementation
 
 Documentation matters for maintainability. Use the pdf skill to generate API documentation for your Redux actions and state shape. This helps new team members understand your state architecture quickly.
 
 For internal team documentation, consider using tools like Storybook to visualize your state-driven components. The supermemory skill can help maintain a searchable knowledge base of your Redux patterns and conventions.
 
-## Common Pitfalls to Avoid
+Common Pitfalls to Avoid
 
 A frequent mistake is updating state mutably. Redux Toolkit's Immer integration allows "mutating" syntax in reducers, but understanding that this creates immutable updates under the hood remains crucial.
 
@@ -200,17 +200,17 @@ Another pitfall involves over-fetching. Selectors should return only the data co
 
 Finally, resist the temptation to put everything in Redux. Local component state, URL parameters, and server state management tools like React Query often serve specific use cases better.
 
-## Conclusion
+Conclusion
 
-Redux Toolkit provides a robust foundation for state management in React applications. By using Claude Code's capabilities, you can implement Redux patterns quickly while maintaining code quality. The combination of createSlice, createAsyncThunk, and selectors gives you powerful tools for managing complex application state.
+Redux Toolkit provides a solid foundation for state management in React applications. By using Claude Code's capabilities, you can implement Redux patterns quickly while maintaining code quality. The combination of createSlice, createAsyncThunk, and selectors gives you powerful tools for managing complex application state.
 
 Start with simple slices and gradually adopt advanced patterns as your application grows. The initial investment in proper Redux architecture pays dividends in maintainability and developer experience.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

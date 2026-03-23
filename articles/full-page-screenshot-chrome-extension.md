@@ -13,11 +13,11 @@ Capturing complete webpage screenshots beyond what fits in the viewport is a com
 
 This guide covers practical approaches to full-page screenshots in Chrome, from built-in developer tools to custom programmatic solutions.
 
-## Built-in Chrome DevTools Method
+Built-in Chrome DevTools Method
 
 Chrome's Developer Tools include a screenshot feature that captures the entire page without requiring extensions.
 
-### Using the Command Menu
+Using the Command Menu
 
 1. Open Developer Tools (F12 or Cmd+Option+I on Mac)
 2. Press Cmd+Shift+P (Mac) or Ctrl+Shift+P (Windows/Linux) to open the Command Menu
@@ -25,26 +25,26 @@ Chrome's Developer Tools include a screenshot feature that captures the entire p
 
 This method captures the full page height, including content below the fold. The resulting PNG file downloads automatically to your default downloads folder.
 
-### Limitations
+Limitations
 
 - No visual feedback during capture
 - Fixed at device pixel ratio of your current viewport
 - Cannot capture scrolling elements that lazy-load on scroll
 - Some shadow and filter effects may render differently
 
-## Chrome Extensions for Full Page Screenshots
+Chrome Extensions for Full Page Screenshots
 
 Several extensions provide more control over the capture process. Here's a practical comparison:
 
-### Screenshot Extensions with Developer-Friendly Features
+Screenshot Extensions with Developer-Friendly Features
 
-**GoFullPage** is a popular choice that assembles multiple viewport captures into a single image. After installation, clicking the extension icon captures the full page and opens a preview where you can annotate or copy the result.
+GoFullPage is a popular choice that assembles multiple viewport captures into a single image. After installation, clicking the extension icon captures the full page and opens a preview where you can annotate or copy the result.
 
-**Lightshot** offers quick captures with basic annotation tools. Right-click anywhere and select "Capture region" or use the extension icon for full-page mode.
+Lightshot offers quick captures with basic annotation tools. Right-click anywhere and select "Capture region" or use the extension icon for full-page mode.
 
-**Fireshot** provides multiple output formats including PDF and saves directly to file. It handles dynamic content better than basic tools.
+Fireshot provides multiple output formats including PDF and saves directly to file. It handles dynamic content better than basic tools.
 
-### Extension API Capabilities
+Extension API Capabilities
 
 For developers building custom solutions, Chrome extensions access screenshot functionality through the `chrome.debugger` API or by using content scripts that capture canvas elements:
 
@@ -75,11 +75,11 @@ async function capturePage() {
 }
 ```
 
-## Programmatic Screenshot Solutions
+Programmatic Screenshot Solutions
 
 For automated workflows or build pipelines, programmatic approaches provide more control.
 
-### Puppeteer with Full Page Screenshots
+Puppeteer with Full Page Screenshots
 
 Puppeteer provides reliable full-page capture as part of automated testing and CI/CD workflows:
 
@@ -119,7 +119,7 @@ async function captureFullPage(url, outputPath) {
 }
 ```
 
-### Handling Dynamic Content
+Handling Dynamic Content
 
 For pages with lazy-loaded images or infinite scroll, wait for specific elements before capturing:
 
@@ -144,7 +144,7 @@ await page.evaluate(async () => {
 });
 ```
 
-### Playwright Alternative
+Playwright Alternative
 
 Playwright offers similar functionality with cross-browser support:
 
@@ -160,40 +160,40 @@ def capture_full_page(url, output_file):
         browser.close()
 ```
 
-## Use Cases for Developers
+Use Cases for Developers
 
-### Bug Reporting
+Bug Reporting
 
 When reporting UI bugs, full-page screenshots provide context that viewport-only captures miss. Include the full page in bug reports, then annotate specific issues with rectangle tools.
 
-### Design Review
+Design Review
 
 Capture completed pages for design comparison. Use consistent viewport settings across captures to ensure accurate visual comparison between versions.
 
-### Documentation
+Documentation
 
 Technical documentation often needs visual examples. Full-page captures provide complete context for API documentation, tutorial screenshots, and changelog visuals.
 
-### Archiving
+Archiving
 
 For projects requiring page archives, programmatic capture with timestamps provides an auditable record. Store metadata alongside images for searchability.
 
-## Best Practices
+Best Practices
 
-1. **Test on target browsers**: Screenshot rendering varies between browsers. Test on your target browsers before finalizing captures.
+1. Test on target browsers: Screenshot rendering varies between browsers. Test on your target browsers before finalizing captures.
 
-2. **Handle dynamic content carefully**: Pages with animations, lazy-loading, or infinite scroll need additional wait logic.
+2. Handle dynamic content carefully: Pages with animations, lazy-loading, or infinite scroll need additional wait logic.
 
-3. **Consider privacy**: Screenshots may capture user data. Be mindful when sharing captures publicly.
+3. Consider privacy: Screenshots may capture user data. Be mindful when sharing captures publicly.
 
-4. **Use consistent viewports**: For comparison purposes, standardize on common viewports like 1920x1080, 1440x900, and mobile dimensions.
+4. Use consistent viewports: For comparison purposes, standardize on common viewports like 1920x1080, 1440x900, and mobile dimensions.
 
-5. **Automate repetitive tasks**: If you capture pages regularly, invest time in scripting the process rather than manually using extensions.
+5. Automate repetitive tasks: If you capture pages regularly, invest time in scripting the process rather than manually using extensions.
 
-## Choosing Your Approach
+Choosing Your Approach
 
 For occasional manual captures, Chrome's built-in DevTools Command Menu or a simple extension like GoFullPage works well. For automated testing and CI/CD pipelines, Puppeteer or Playwright provide reliability and repeatability. For custom workflows or building your own extension, the Chrome APIs offer the flexibility to create exactly what you need.
 
 The right tool depends on your specific requirements: frequency of captures, need for automation, handling of dynamic content, and integration with your existing workflows.
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -13,24 +13,24 @@ score: 7
 ---
 
 
-# Claude Code for Apache Drill Workflow Tutorial
+Claude Code for Apache Drill Workflow Tutorial
 
-Apache Drill is a schema-free SQL query engine that enables analysts and developers to explore data across multiple data sources—including HDFS, MongoDB, Amazon S3, and cloud storage—using familiar SQL syntax. When combined with Claude Code's automation capabilities, you can create powerful, reproducible workflows for data exploration, schema discovery, and complex query generation. This tutorial walks you through building Drill-powered workflows using Claude Code, from initial setup through production-ready automation patterns.
+Apache Drill is a schema-free SQL query engine that enables analysts and developers to explore data across multiple data sources, including HDFS, MongoDB, Amazon S3, and cloud storage, using familiar SQL syntax. When combined with Claude Code's automation capabilities, you can create powerful, reproducible workflows for data exploration, schema discovery, and complex query generation. This tutorial walks you through building Drill-powered workflows using Claude Code, from initial setup through production-ready automation patterns.
 
-## Why Combine Apache Drill with Claude Code?
+Why Combine Apache Drill with Claude Code?
 
-Before jumping into setup, it's worth understanding what you gain from this combination. Apache Drill solves the problem of querying heterogeneous data sources without needing a predefined schema—you can query JSON files, Parquet, Avro, CSV, HBase, MongoDB, and cloud storage all through a single SQL interface. Claude Code adds an automation layer on top: it can generate queries from natural language descriptions, iterate on failed queries with error context, build parameterized workflow scripts, and help you interpret complex nested results.
+Before jumping into setup, it's worth understanding what you gain from this combination. Apache Drill solves the problem of querying heterogeneous data sources without needing a predefined schema, you can query JSON files, Parquet, Avro, CSV, HBase, MongoDB, and cloud storage all through a single SQL interface. Claude Code adds an automation layer on top: it can generate queries from natural language descriptions, iterate on failed queries with error context, build parameterized workflow scripts, and help you interpret complex nested results.
 
 Teams that integrate Claude Code into their Drill workflows typically see faster iteration on ad hoc analysis requests, more consistent query structures across analysts, and reproducible scripts that non-SQL users can run with simple parameter changes.
 
-## Prerequisites and Setup
+Prerequisites and Setup
 
 Before creating Drill workflows with Claude Code, ensure you have the following components installed and configured:
 
-1. **Apache Drill** - Download from the [official Apache Drill site](https://drill.apache.org/) and start the embedded mode or Drillbit service
-2. **Claude Code** - Installed and configured with appropriate tool access (Bash, read_file, write_file)
-3. **Python with JayDeBeApi** - For JDBC connectivity to Drill (optional but recommended)
-4. **jq** - For parsing JSON responses from Drill's REST API (`brew install jq` on macOS)
+1. Apache Drill - Download from the [official Apache Drill site](https://drill.apache.org/) and start the embedded mode or Drillbit service
+2. Claude Code - Installed and configured with appropriate tool access (Bash, read_file, write_file)
+3. Python with JayDeBeApi - For JDBC connectivity to Drill (optional but recommended)
+4. jq - For parsing JSON responses from Drill's REST API (`brew install jq` on macOS)
 
 Verify Drill is running by executing:
 
@@ -50,7 +50,7 @@ curl -s -X POST -H "Content-Type: application/json" \
 
 If this returns `[{"result":"2"}]`, your pipeline is working end-to-end.
 
-## Connecting Claude Code to Apache Drill
+Connecting Claude Code to Apache Drill
 
 The most straightforward approach involves using Drill's REST API through curl commands executed via Claude Code's Bash tool. This method requires no additional Python dependencies and works across all platforms.
 
@@ -62,11 +62,11 @@ name: drill
 description: Execute Apache Drill queries via REST API
 ---
 
-# Apache Drill Query Runner
+Apache Drill Query Runner
 
 This skill executes SQL queries against Apache Drill and returns formatted results.
 
-## Connection Configuration
+Connection Configuration
 
 Drill defaults to localhost:8047. Set environment variables for custom configurations:
 
@@ -103,11 +103,11 @@ curl -u "$DRILL_USER:$DRILL_PASS" -X POST -H "Content-Type: application/json" \
   "http://$DRILL_HOST:$DRILL_PORT/query.json"
 ```
 
-## Building Your First Drill Workflow
+Building Your First Drill Workflow
 
 A practical Drill workflow typically involves three phases: schema discovery, query construction, and result export. Let's build a complete example that explores a nested JSON dataset.
 
-### Step 1: Discover Available Data Sources
+Step 1: Discover Available Data Sources
 
 Start by listing storage plugins and their configurations:
 
@@ -129,11 +129,11 @@ Claude Code can automate this exploration, systematically discovering tables and
 "List all Apache Drill storage plugins at localhost:8047 and show me which ones are enabled, their type, and whether they have any workspace configurations."
 ```
 
-Claude Code will issue the REST API call, parse the JSON response, and present a readable summary — far faster than manually scrolling through raw JSON.
+Claude Code will issue the REST API call, parse the JSON response, and present a readable summary. far faster than manually scrolling through raw JSON.
 
-### Step 2: Analyze Schema with DESCRIBE
+Step 2: Analyze Schema with DESCRIBE
 
-Drill's DESCRIBE command reveals complex nested structures—crucial for JSON, Parquet, and MongoDB sources:
+Drill's DESCRIBE command reveals complex nested structures, crucial for JSON, Parquet, and MongoDB sources:
 
 ```bash
 curl -X POST -H "Content-Type: application/json" \
@@ -151,9 +151,9 @@ FROM dfs.`/data/sales`
 LIMIT 50
 ```
 
-This reveals whether fields are consistently typed across records—critical information before running aggregations. Pass this output to Claude Code and ask it to identify any fields with inconsistent types that could cause query failures at scale.
+This reveals whether fields are consistently typed across records, critical information before running aggregations. Pass this output to Claude Code and ask it to identify any fields with inconsistent types that could cause query failures at scale.
 
-### Step 3: Construct and Execute Queries
+Step 3: Construct and Execute Queries
 
 Now build your analysis query. A well-structured Drill query handles complex types explicitly:
 
@@ -182,7 +182,7 @@ curl -X POST -H "Content-Type: application/json" \
 
 When queries fail, pass the full error response to Claude Code for diagnosis. Drill's error messages often include detailed position information that Claude Code can use to pinpoint and fix syntax issues in complex queries.
 
-## Working with Multi-Source Joins
+Working with Multi-Source Joins
 
 One of Drill's most powerful capabilities is joining data across storage systems. You can join a JSON file on the local filesystem with a MongoDB collection and a Parquet file on S3 in a single query. Claude Code helps manage the complexity of cross-source queries.
 
@@ -208,12 +208,12 @@ joins these three sources to show total revenue by customer tier and campaign so
 
 Claude Code will produce a properly structured multi-source join, handling the different plugin naming conventions automatically.
 
-## Exporting and Transforming Results
+Exporting and Transforming Results
 
 Raw Drill query output is a JSON object with a `rows` array. For downstream processing, you often need CSV or a specific JSON structure. Here is a reusable extraction pattern:
 
 ```bash
-# Extract to CSV using jq
+Extract to CSV using jq
 curl -s -X POST -H "Content-Type: application/json" \
   -d '{"queryType": "SQL", "query": "SELECT customer_id, total_spent FROM dfs.`/data/sales` LIMIT 100"}' \
   http://localhost:8047/query.json \
@@ -223,13 +223,13 @@ curl -s -X POST -H "Content-Type: application/json" \
 
 For transforming output into a specific shape for downstream APIs or dashboards, describe the target format to Claude Code and it will generate the appropriate jq transformation pipeline.
 
-## Automating Repeated Workflows
+Automating Repeated Workflows
 
 For recurring analysis tasks, create Claude Code skills that encapsulate entire workflows. A typical pattern involves:
 
-1. **Parameter-driven queries**: Pass date ranges, filters, or table names as variables
-2. **Result caching**: Store query results for subsequent processing
-3. **Output formatting**: Transform Drill output into CSV, JSON, or analysis-ready formats
+1. Parameter-driven queries: Pass date ranges, filters, or table names as variables
+2. Result caching: Store query results for subsequent processing
+3. Output formatting: Transform Drill output into CSV, JSON, or analysis-ready formats
 
 Here's a skill for weekly sales reporting:
 
@@ -239,16 +239,16 @@ name: drill-sales-report
 description: Generate weekly sales summary from Drill
 ---
 
-# Weekly Sales Report Generator
+Weekly Sales Report Generator
 
-## Usage
+Usage
 
 Provide the following parameters:
 - start_date: Report start date (YYYY-MM-DD)
 - end_date: Report end date (YYYY-MM-DD)
 - output_format: csv or json
 
-## Query Template
+Query Template
 
 SELECT
   DATE_TRUNC('week', order_date) AS week,
@@ -268,7 +268,7 @@ For more complex workflows, build a shell script wrapper that Claude Code genera
 
 ```bash
 #!/bin/bash
-# drill-weekly-report.sh — generated and maintained by Claude Code
+drill-weekly-report.sh. generated and maintained by Claude Code
 
 START_DATE=${1:-$(date -d 'last monday' +%Y-%m-%d)}
 END_DATE=${2:-$(date -d 'last sunday' +%Y-%m-%d)}
@@ -294,7 +294,7 @@ fi
 echo "Report saved to $OUTPUT_DIR"
 ```
 
-## Comparing Drill to Other Query Engines
+Comparing Drill to Other Query Engines
 
 Understanding where Drill fits relative to other tools helps you make better architectural decisions:
 
@@ -307,15 +307,15 @@ Understanding where Drill fits relative to other tools helps you make better arc
 | Startup time | Fast (embedded) | Slow (cluster) | Slow | Slow |
 | Best for | Ad hoc exploration | Large-scale ETL | ML pipelines | Batch BI |
 
-Drill's embedded mode makes it uniquely suited to developer workstations and CI pipelines—no cluster required. Claude Code workflows built on Drill can run anywhere Drill can be installed, making them highly portable.
+Drill's embedded mode makes it uniquely suited to developer workstations and CI pipelines, no cluster required. Claude Code workflows built on Drill can run anywhere Drill can be installed, making them highly portable.
 
-## Best Practices for Drill Workflows
+Best Practices for Drill Workflows
 
 When building production-grade Drill workflows with Claude Code, consider these recommendations:
 
-**Optimize Query Performance**: Use LIMIT clauses during exploration to avoid scanning entire datasets. Drill's distributed execution model means poorly optimized queries can stress cluster resources significantly. A practical rule: always add `LIMIT 1000` during development and remove it only when you have confirmed the query shape is correct.
+Optimize Query Performance: Use LIMIT clauses during exploration to avoid scanning entire datasets. Drill's distributed execution model means poorly optimized queries can stress cluster resources significantly. A practical rule: always add `LIMIT 1000` during development and remove it only when you have confirmed the query shape is correct.
 
-**Leverage Metadata Caching**: Drill caches metadata aggressively. For frequently queried sources, maintain a separate metadata refresh workflow to ensure schema changes are recognized. Trigger a metadata refresh by calling the REST API after new data lands:
+Leverage Metadata Caching: Drill caches metadata aggressively. For frequently queried sources, maintain a separate metadata refresh workflow to ensure schema changes are recognized. Trigger a metadata refresh by calling the REST API after new data lands:
 
 ```bash
 curl -X POST -H "Content-Type: application/json" \
@@ -323,43 +323,43 @@ curl -X POST -H "Content-Type: application/json" \
   http://localhost:8047/query.json > /dev/null
 ```
 
-**Handle Nested Data Carefully**: Complex types (arrays, maps, structs) require explicit handling. Always use DESCRIBE before querying unfamiliar data structures, and test FLATTEN operations on small samples before scaling. When FLATTEN produces unexpected row multiplication, ask Claude Code to explain the cardinality behavior and suggest alternative approaches like REPEATED_COUNT or array indexing.
+Handle Nested Data Carefully: Complex types (arrays, maps, structs) require explicit handling. Always use DESCRIBE before querying unfamiliar data structures, and test FLATTEN operations on small samples before scaling. When FLATTEN produces unexpected row multiplication, ask Claude Code to explain the cardinality behavior and suggest alternative approaches like REPEATED_COUNT or array indexing.
 
-**Implement Error Handling**: Drill queries can fail due to malformed SQL, missing files, or permission issues. Wrap API calls in error-checking logic and provide meaningful feedback when queries fail:
+Implement Error Handling: Drill queries can fail due to malformed SQL, missing files, or permission issues. Wrap API calls in error-checking logic and provide meaningful feedback when queries fail:
 
 ```bash
 RESPONSE=$(curl -s -X POST -H "Content-Type: application/json" \
   -d "{\"queryType\": \"SQL\", \"query\": \"$QUERY\"}" \
   http://localhost:8047/query.json)
 
-# Check for error in response
+Check for error in response
 if echo "$RESPONSE" | jq -e '.errorMessage' > /dev/null 2>&1; then
   echo "Query failed: $(echo "$RESPONSE" | jq -r '.errorMessage')"
   exit 1
 fi
 ```
 
-**Version Control Your Skills**: Store Claude Code skills for Drill workflows in a shared repository. This enables team members to build on each other's query templates and ensures that complex multi-source queries are preserved and documented rather than re-derived each time.
+Version Control Your Skills: Store Claude Code skills for Drill workflows in a shared repository. This enables team members to build on each other's query templates and ensures that complex multi-source queries are preserved and documented rather than re-derived each time.
 
-**Use Query Profiles for Debugging**: Drill generates a query profile for every execution, accessible at `http://localhost:8047/profiles.json`. When a query runs slower than expected, retrieve the profile and pass it to Claude Code for analysis:
+Use Query Profiles for Debugging: Drill generates a query profile for every execution, accessible at `http://localhost:8047/profiles.json`. When a query runs slower than expected, retrieve the profile and pass it to Claude Code for analysis:
 
 ```bash
-# Get the most recent query profile
+Get the most recent query profile
 curl -s http://localhost:8047/profiles.json | jq '.finishedQueries[0].queryId'
-# Then fetch the full profile
+Then fetch the full profile
 curl -s http://localhost:8047/profiles/YOUR_QUERY_ID.json | jq '.totalFragmentDuration'
 ```
 
 Claude Code can identify which fragments consumed the most time and suggest targeted optimizations such as filter pushdown, partition pruning, or join reordering.
 
-## Conclusion
+Conclusion
 
 Claude Code transforms Apache Drill from an interactive query tool into an automatable workflow engine. By encapsulating connection logic, query templates, and result processing into skills, you enable reproducible data exploration across your organization. Start with simple REST API interactions, then graduate to parameterized workflows that handle real-world analytical requirements. The combination of Drill's schema-free flexibility and Claude Code's automation capabilities creates a powerful foundation for data-driven workflows that scale from individual developer machines to multi-node clusters without requiring changes to your automation layer.
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

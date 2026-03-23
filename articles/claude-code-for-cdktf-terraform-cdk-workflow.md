@@ -16,39 +16,39 @@ score: 8
 
 {% raw %}
 
-# Claude Code for CDKTF Terraform CDK Workflow
+Claude Code for CDKTF Terraform CDK Workflow
 
 The Cloud Development Kit for Terraform (CDKTF) enables you to define cloud infrastructure using familiar programming languages like TypeScript, Python, Go, and C#. By combining the expressive power of general-purpose languages with Terraform's infrastructure provisioning capabilities, CDKTF offers a powerful approach to infrastructure-as-code. This guide shows you how to integrate Claude Code into your CDKTF workflow to accelerate development, improve code quality, and streamline infrastructure management.
 
-## Understanding CDKTF and Its Workflow
+Understanding CDKTF and Its Workflow
 
 CDKTF bridges the gap between developer-friendly programming languages and Terraform's declarative infrastructure model. Instead of writing HCL (HashiCorp Configuration Language), you can use TypeScript, Python, Go, C#, or Java to define your infrastructure. CDKTF then synthesizes your code into Terraform configuration files that Terraform can deploy.
 
 This approach brings several advantages: strong typing, IDE autocomplete, testing frameworks, and the ability to use existing software engineering practices. However, it also introduces new challenges around testing, state management, and workflow integration that Claude Code can help address.
 
-## Setting Up Claude Code for CDKTF Projects
+Setting Up Claude Code for CDKTF Projects
 
 Before diving into practical examples, ensure Claude Code understands your CDKTF project structure. Create a CLAUDE.md file in your project root with the following context:
 
 ```markdown
-# CDKTF Project Context
+CDKTF Project Context
 
 This is a Terraform Cloud Development Kit (CDKTF) project using [TypeScript/Python/Go].
 
-## Project Structure
+Project Structure
 - /src - CDKTF application code
 - /src/stacks - Infrastructure stack definitions
 - /src/constructs - Reusable infrastructure constructs
 - /cdk.out - Synthesized Terraform output
 
-## Key Patterns
+Key Patterns
 - All stacks extend the base Stack class
 - Use constructs for reusable components
 - Store Terraform outputs in cdk.out
 - Run synth before deploy: cdk synth
 - Deploy with: cdk deploy
 
-## Coding Standards
+Coding Standards
 - Use TypeScript strict mode
 - Import constructs from @cdktf/provider-aws (or other providers)
 - Always define sensible defaults for optional props
@@ -57,7 +57,7 @@ This is a Terraform Cloud Development Kit (CDKTF) project using [TypeScript/Pyth
 
 This context helps Claude understand your project structure and apply appropriate patterns when generating code.
 
-## Generating CDKTF Infrastructure with Claude
+Generating CDKTF Infrastructure with Claude
 
 One of the most powerful use cases for Claude Code in CDKTF projects is infrastructure code generation. Instead of manually writing every resource definition, you can describe your desired infrastructure in natural language and let Claude generate the TypeScript, Python, or Go code.
 
@@ -164,7 +164,7 @@ export class LambdaApi extends Construct {
 }
 ```
 
-## Building Reusable Infrastructure Constructs
+Building Reusable Infrastructure Constructs
 
 Claude excels at helping you build composable, reusable constructs. Rather than defining infrastructure repeatedly, you can create abstractions that encapsulate common patterns.
 
@@ -178,7 +178,7 @@ and ECS Fargate service. Include proper networking and security groups.
 
 Claude generates a comprehensive construct that you can reuse across multiple services, significantly reducing boilerplate code and ensuring consistency.
 
-## Reviewing and Refactoring CDKTF Code
+Reviewing and Refactoring CDKTF Code
 
 Beyond code generation, Claude Code serves as an excellent code reviewer for CDKTF infrastructure. It can identify issues like missing tags, insecure configurations, or inefficient resource definitions:
 
@@ -193,7 +193,7 @@ and potential cost optimizations. Check for:
 
 This kind of review helps catch problems before they reach production and ensures your infrastructure follows organizational standards.
 
-## Integrating CDKTF with CI/CD Pipelines
+Integrating CDKTF with CI/CD Pipelines
 
 Claude can also help you set up automated workflows for CDKTF projects. You might ask:
 
@@ -208,28 +208,28 @@ Create a GitHub Actions workflow for CDKTF that:
 
 Claude will generate a complete workflow file with proper caching, secret management, and deployment strategies.
 
-## Best Practices for CDKTF Development with Claude
+Best Practices for CDKTF Development with Claude
 
 When working with Claude Code on CDKTF projects, keep these recommendations in mind:
 
-**Provide Complete Context**: Include your provider versions, Terraform version, and any organizational standards in your CLAUDE.md file. This ensures Claude generates compatible code.
+Provide Complete Context: Include your provider versions, Terraform version, and any organizational standards in your CLAUDE.md file. This ensures Claude generates compatible code.
 
-**Iterate on Code Generation**: Start with a simple construct and ask Claude to add complexity incrementally. This produces more accurate results than asking for everything at once.
+Iterate on Code Generation: Start with a simple construct and ask Claude to add complexity incrementally. This produces more accurate results than asking for everything at once.
 
-**Review Before Deploying**: Always run `cdk diff` to see what changes Claude's code will make to your infrastructure before deploying.
+Review Before Deploying: Always run `cdk diff` to see what changes Claude's code will make to your infrastructure before deploying.
 
-**Test Infrastructure Code**: Use CDKTF's testing capabilities. Claude can help write unit tests for your constructs to ensure they behave as expected.
+Test Infrastructure Code: Use CDKTF's testing capabilities. Claude can help write unit tests for your constructs to ensure they behave as expected.
 
-## Conclusion
+Conclusion
 
 Claude Code transforms CDKTF development by bringing intelligent assistance to every phase of infrastructure development. From generating boilerplate code and building reusable constructs to reviewing for security and setting up CI/CD pipelines, Claude accelerates your workflow while improving code quality. Start by setting up proper context in your project, then iterate with specific, focused requests to get the most out of your CDKTF and Claude Code combination.
 
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

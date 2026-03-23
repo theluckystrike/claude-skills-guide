@@ -13,13 +13,13 @@ tags: [claude-code, claude-skills]
 ---
 
 
-# Claude Code Next.js App Router Migration Guide
+Claude Code Next.js App Router Migration Guide
 
 Migrating from Next.js Pages Router to App Router represents one of the most significant architectural shifts in the framework's history. This transition involves moving from a directory-based routing system to a file-system based approach with React Server Components, new data fetching patterns, and fundamentally different caching mechanisms. For developers working with Claude Code, this migration becomes considerably smoother when you use the right skills and workflows.
 
 This guide walks you through the practical aspects of migrating your Next.js application to the App Router while maximizing your productivity with Claude Code and related skills.
 
-## Understanding the Key Differences
+Understanding the Key Differences
 
 Before diving into code changes, you need to understand what actually changes between the two routing systems. The App Router introduces React Server Components by default, which means your components run on the server unless you explicitly opt into client-side rendering with the `"use client"` directive.
 
@@ -43,14 +43,14 @@ export async function GET() {
 
 Notice how the API route structure changes from a handler function to route modules with explicit HTTP method exports.
 
-## Setting Up Claude Code for the Migration
+Setting Up Claude Code for the Migration
 
-Proper tool configuration significantly impacts migration efficiency. Install the **frontend-design** skill first—it provides component patterns and styling workflows that align with App Router conventions. The **tdd** skill helps you maintain test coverage during the transition, ensuring nothing breaks.
+Proper tool configuration significantly impacts migration efficiency. Install the frontend-design skill first, it provides component patterns and styling workflows that align with App Router conventions. The tdd skill helps you maintain test coverage during the transition, ensuring nothing breaks.
 
 Create a Claude.md file in your project root to establish migration-specific guidelines:
 
 ```markdown
-# Migration Guidelines
+Migration Guidelines
 
 - Use App Router conventions for all new files
 - Prefer Server Components over Client Components
@@ -61,7 +61,7 @@ Create a Claude.md file in your project root to establish migration-specific gui
 
 This tells Claude Code exactly how to approach new code and modifications during your migration.
 
-## Migrating Pages to App Router
+Migrating Pages to App Router
 
 The most straightforward migration path involves moving each page individually while maintaining functionality. Start with simple pages that have minimal data fetching requirements.
 
@@ -69,37 +69,37 @@ For a typical pages directory structure:
 
 ```
 pages/
-├── _app.tsx
-├── _document.tsx
-├── index.tsx
-├── about.tsx
-├── products/
-│   ├── index.tsx
-│   └── [id].tsx
-└── api/
-    └── products/
-        └── [id].js
+ _app.tsx
+ _document.tsx
+ index.tsx
+ about.tsx
+ products/
+    index.tsx
+    [id].tsx
+ api/
+     products/
+         [id].js
 ```
 
 Your target App Router structure becomes:
 
 ```
 app/
-├── layout.tsx
-├── page.tsx
-├── about/
-│   └── page.tsx
-├── products/
-│   ├── page.tsx
-│   └── [id]/
-│       └── page.tsx
-└── api/
-    └── products/
-        └── [id]/
-            └── route.js
+ layout.tsx
+ page.tsx
+ about/
+    page.tsx
+ products/
+    page.tsx
+    [id]/
+        page.tsx
+ api/
+     products/
+         [id]/
+             route.js
 ```
 
-## Converting getStaticProps and getServerSideProps
+Converting getStaticProps and getServerSideProps
 
 This represents the most substantial change in the migration. The App Router replaces these data fetching functions with async component patterns:
 
@@ -146,7 +146,7 @@ export async function generateStaticParams() {
 export const revalidate = 3600; // ISR: revalidate every hour
 ```
 
-## Handling _app.tsx and _document.tsx
+Handling _app.tsx and _document.tsx
 
 The App Router uses `layout.tsx` files that wrap your pages. This replaces both `_app.tsx` and `_document.tsx` functionality:
 
@@ -189,7 +189,7 @@ export default function RootLayout({ children }) {
 }
 ```
 
-## Migrating API Routes
+Migrating API Routes
 
 API routes become Route Handlers using the Web Fetch API:
 
@@ -234,7 +234,7 @@ export async function DELETE(request, { params }) {
 }
 ```
 
-## Using Server Actions
+Using Server Actions
 
 One of the App Router's most powerful features replaces API routes for mutations. Define server actions directly in your components or separate files:
 
@@ -270,7 +270,7 @@ export default function NewProduct() {
 }
 ```
 
-## Implementing Error and Loading States
+Implementing Error and Loading States
 
 The App Router provides built-in error handling through error.tsx files:
 
@@ -303,21 +303,21 @@ export default function Loading() {
 }
 ```
 
-## Recommended Skills for Migration
+Recommended Skills for Migration
 
-Beyond **frontend-design** and **tdd**, several skills accelerate your migration workflow. The **pdf** skill helps generate migration documentation. For teams managing this transition, **supermemory** provides persistent context about migration decisions and patterns discovered.
+Beyond frontend-design and tdd, several skills accelerate your migration workflow. The pdf skill helps generate migration documentation. For teams managing this transition, supermemory provides persistent context about migration decisions and patterns discovered.
 
-The **skill-creator** skill becomes valuable when you need to build custom migration prompts specific to your codebase patterns.
+The skill-creator skill becomes valuable when you need to build custom migration prompts specific to your codebase patterns.
 
-## Common Pitfalls to Avoid
+Common Pitfalls to Avoid
 
 Many developers struggle with the client-server boundary in App Router. Remember: components are Server Components by default. Only add `"use client"` when you need hooks like `useState`, `useEffect`, or event handlers.
 
-Another frequent issue involves `next/image` and `next/font` imports—these work differently in App Router and may require configuration updates in next.config.js.
+Another frequent issue involves `next/image` and `next/font` imports, these work differently in App Router and may require configuration updates in next.config.js.
 
 Finally, API routes that rely on request body parsing need adjustment since Route Handlers use the Web Fetch API's Request object.
 
-## Testing Your Migration
+Testing Your Migration
 
 Run your development server and test each migrated route systematically:
 
@@ -327,15 +327,15 @@ npm run dev
 
 Check both the UI rendering and any API endpoints. Use the Network tab in browser DevTools to verify proper caching headers and Server Component streaming behavior.
 
-The **playwright** skill provides excellent E2E testing capabilities for validating your migration completeness.
+The playwright skill provides excellent E2E testing capabilities for validating your migration completeness.
 
 ---
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

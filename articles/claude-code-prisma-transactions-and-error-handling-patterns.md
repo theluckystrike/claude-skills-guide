@@ -13,15 +13,15 @@ score: 7
 ---
 
 
-# Claude Code Prisma Transactions and Error Handling Patterns
+Claude Code Prisma Transactions and Error Handling Patterns
 
-Building reliable database operations requires more than just executing queries—it demands careful handling of transactions and errors. When you're writing Claude Code skills that interact with databases through Prisma, understanding how to manage atomic operations and handle failures gracefully can mean the difference between a robust application and one that leaves data in inconsistent states.
+Building reliable database operations requires more than just executing queries, it demands careful handling of transactions and errors. When you're writing Claude Code skills that interact with databases through Prisma, understanding how to manage atomic operations and handle failures gracefully can mean the difference between a solid application and one that leaves data in inconsistent states.
 
 This guide walks you through practical patterns for implementing transactions and error handling in Prisma-powered Claude skills, with actionable examples you can apply immediately.
 
-## Understanding Prisma Transactions
+Understanding Prisma Transactions
 
-Prisma provides several transaction mechanisms, each suited to different scenarios. The most common is `$transaction`, which allows you to group multiple operations into a single atomic unit. If any operation fails, the entire transaction rolls back—no partial data, no orphaned records.
+Prisma provides several transaction mechanisms, each suited to different scenarios. The most common is `$transaction`, which allows you to group multiple operations into a single atomic unit. If any operation fails, the entire transaction rolls back, no partial data, no orphaned records.
 
 Here's the basic pattern:
 
@@ -39,21 +39,21 @@ const result = await prisma.$transaction(async (tx) => {
 });
 ```
 
-This creates a user and their profile atomically. If profile creation fails, the user is never created—a critical guarantee for maintaining data integrity.
+This creates a user and their profile atomically. If profile creation fails, the user is never created, a critical guarantee for maintaining data integrity.
 
-### Sequential vs. Batch Transaction APIs
+Sequential vs. Batch Transaction APIs
 
 Prisma offers two flavors of `$transaction`. The interactive transaction (shown above) passes a `tx` client object and runs each operation sequentially. The batch API accepts an array of Prisma promises and resolves them all at once:
 
 ```javascript
-// Batch API — all operations run in a single round trip
+// Batch API. all operations run in a single round trip
 const [user, settings] = await prisma.$transaction([
   prisma.user.create({ data: { email: 'bob@example.com' } }),
   prisma.settings.create({ data: { theme: 'dark', userId: 'placeholder' } })
 ]);
 ```
 
-The batch API is faster when operations are independent of each other, because Prisma sends them to the database in one round trip. The interactive API is necessary when the result of one operation feeds into the next—for example, when you need the auto-generated `id` from a newly created record.
+The batch API is faster when operations are independent of each other, because Prisma sends them to the database in one round trip. The interactive API is necessary when the result of one operation feeds into the next, for example, when you need the auto-generated `id` from a newly created record.
 
 | Use Case | Recommended API |
 |---|---|
@@ -63,9 +63,9 @@ The batch API is faster when operations are independent of each other, because P
 | Maximum throughput for bulk operations | Batch |
 | Cross-table foreign key dependencies | Interactive |
 
-## Interactive Transactions for Complex Workflows
+Interactive Transactions for Complex Workflows
 
-Sometimes you need to read data, make decisions, and then write based on those decisions—all within a single transaction. Prisma's interactive transactions handle this elegantly:
+Sometimes you need to read data, make decisions, and then write based on those decisions, all within a single transaction. Prisma's interactive transactions handle this elegantly:
 
 ```javascript
 await prisma.$transaction(async (tx) => {
@@ -83,9 +83,9 @@ await prisma.$transaction(async (tx) => {
 });
 ```
 
-This pattern ensures no concurrent modifications can interfere with your workflow—the transaction isolates your read-then-write sequence.
+This pattern ensures no concurrent modifications can interfere with your workflow, the transaction isolates your read-then-write sequence.
 
-### Setting Transaction Timeouts
+Setting Transaction Timeouts
 
 Long-running interactive transactions hold database locks, which can block other operations. Prisma lets you configure the timeout:
 
@@ -98,9 +98,9 @@ await prisma.$transaction(async (tx) => {
 });
 ```
 
-For Claude skills that process large datasets or call external APIs mid-transaction, set timeouts explicitly. The default `timeout` is 5 seconds, which may be too short for some workflows. Do not hold transactions open while waiting on network calls—fetch external data before opening the transaction, then use the fetched data inside it.
+For Claude skills that process large datasets or call external APIs mid-transaction, set timeouts explicitly. The default `timeout` is 5 seconds, which may be too short for some workflows. Do not hold transactions open while waiting on network calls, fetch external data before opening the transaction, then use the fetched data inside it.
 
-## Error Handling Strategies
+Error Handling Strategies
 
 Proper error handling in Prisma goes beyond try-catch blocks. You need to handle different error types appropriately:
 
@@ -122,7 +122,7 @@ try {
 
 Prisma error codes `P2002` (unique constraint) and `P2025` (record not found) are the most common. Handle them explicitly rather than letting them bubble up unhandled.
 
-### Complete Prisma Error Code Reference
+Complete Prisma Error Code Reference
 
 The full set of codes you are most likely to encounter in Claude skills:
 
@@ -159,7 +159,7 @@ try {
 
 Using `instanceof` rather than duck-typing the error object makes your error handling more reliable across Prisma major versions.
 
-## Combining Transactions with Error Handling
+Combining Transactions with Error Handling
 
 The real power emerges when you combine transactions with comprehensive error handling:
 
@@ -199,7 +199,7 @@ async function transferFunds(fromId, toId, amount) {
 
 This function transfers funds atomically while providing meaningful error messages to callers.
 
-### Structured Error Results vs. Throwing
+Structured Error Results vs. Throwing
 
 In Claude skills that surface results to an AI model, returning structured error objects is often preferable to throwing. Thrown errors halt skill execution and may produce generic failure messages. Structured results let the model reason about the error and respond appropriately:
 
@@ -211,7 +211,7 @@ return { success: false, code: 'DUPLICATE_EMAIL', message: 'That email is alread
 throw new Error('P2002');
 ```
 
-## Retry Patterns for Transient Failures
+Retry Patterns for Transient Failures
 
 Network issues and temporary database unavailability can cause transient failures. Implementing retry logic adds resilience:
 
@@ -242,9 +242,9 @@ Use the wrapper like this:
 const result = await withRetry(() => transferFunds(fromId, toId, amount));
 ```
 
-For write-write conflicts specifically (`P2034`), the entire transaction must be retried—not just a single operation. The `withRetry` wrapper handles this correctly because it re-runs the full `operation` function on each attempt.
+For write-write conflicts specifically (`P2034`), the entire transaction must be retried, not just a single operation. The `withRetry` wrapper handles this correctly because it re-runs the full `operation` function on each attempt.
 
-## Batch Operations with Transactional Guarantees
+Batch Operations with Transactional Guarantees
 
 When processing multiple records, batch operations within transactions ensure consistency:
 
@@ -269,9 +269,9 @@ async function processOrders(orders) {
 }
 ```
 
-Each order processes atomically—either all succeed or all fail together.
+Each order processes atomically, either all succeed or all fail together.
 
-### Chunking Large Batches
+Chunking Large Batches
 
 For very large datasets, wrapping thousands of updates in a single transaction can exhaust memory or exceed timeout limits. Chunk your batches and run separate transactions per chunk:
 
@@ -293,7 +293,7 @@ async function processOrdersInChunks(orders, chunkSize = 100) {
 
 This keeps each transaction short-lived while still guaranteeing per-chunk atomicity. If you need all-or-nothing semantics across every chunk, track which chunks succeeded and implement compensating writes for rollback.
 
-## Savepoints and Nested Transaction Emulation
+Savepoints and Nested Transaction Emulation
 
 Prisma does not natively support savepoints or nested transactions, but you can emulate partial rollback by using separate transaction calls with compensating logic:
 
@@ -306,7 +306,7 @@ async function complexWorkflow(data) {
     const user = await prisma.user.create({ data: data.user });
     createdUserId = user.id;
 
-    // Phase 2 — if this fails, compensate phase 1
+    // Phase 2. if this fails, compensate phase 1
     await prisma.$transaction(async (tx) => {
       await tx.subscription.create({ data: { userId: createdUserId, ...data.sub } });
       await tx.invoice.create({ data: { userId: createdUserId, ...data.invoice } });
@@ -325,29 +325,29 @@ async function complexWorkflow(data) {
 
 This pattern keeps transactions short while still providing cleanup on failure.
 
-## Best Practices for Claude Skills
+Best Practices for Claude Skills
 
 When implementing Prisma transactions in Claude Code skills, follow these guidelines:
 
-1. **Always use transactions for multi-step operations** that modify related data
-2. **Handle specific Prisma error codes** rather than generic catch-all handlers
-3. **Keep transactions short** to minimize lock contention and improve performance
-4. **Do not make network calls inside transactions**—fetch external data before opening a transaction
-5. **Implement retry logic** for transient failures in production systems
-6. **Chunk large batch operations** rather than wrapping thousands of writes in one transaction
-7. **Return meaningful error information** to enable proper user feedback and AI model reasoning
-8. **Use `instanceof Prisma.PrismaClientKnownRequestError`** for type-safe error discrimination
+1. Always use transactions for multi-step operations that modify related data
+2. Handle specific Prisma error codes rather than generic catch-all handlers
+3. Keep transactions short to minimize lock contention and improve performance
+4. Do not make network calls inside transactions, fetch external data before opening a transaction
+5. Implement retry logic for transient failures in production systems
+6. Chunk large batch operations rather than wrapping thousands of writes in one transaction
+7. Return meaningful error information to enable proper user feedback and AI model reasoning
+8. Use `instanceof Prisma.PrismaClientKnownRequestError` for type-safe error discrimination
 
-## Summary
+Summary
 
 Prisma transactions and error handling form the backbone of reliable database operations. By using `$transaction` for atomic operations, handling Prisma-specific error codes, implementing retry patterns for transient failures, and following best practices, you build Claude Code skills that handle database interactions gracefully and maintain data integrity under all conditions.
 
-The patterns shown here scale from simple single-operation skills to complex multi-step workflows—adapt them to your specific use case and your database operations will be rock-solid. The most common mistakes are holding transactions open too long, using generic error handlers that swallow useful detail, and omitting retry logic for connection-level failures. Fixing all three puts your skill in a different class of reliability than most Prisma codebases you will encounter in the wild.
+The patterns shown here scale from simple single-operation skills to complex multi-step workflows, adapt them to your specific use case and your database operations will be rock-solid. The most common mistakes are holding transactions open too long, using generic error handlers that swallow useful detail, and omitting retry logic for connection-level failures. Fixing all three puts your skill in a different class of reliability than most Prisma codebases you will encounter in the wild.
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

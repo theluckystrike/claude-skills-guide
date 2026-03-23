@@ -16,17 +16,17 @@ tags: [chrome, claude-skills]
 
 React DevTools is an essential browser extension for anyone working with React applications. This guide covers installation, core features, and practical techniques that will help you debug React components more effectively.
 
-## Installing React DevTools
+Installing React DevTools
 
-The React DevTools extension is available for Chrome, Firefox, and Edge. Install it from the Chrome Web Store by searching for "React Developer Tools" or visiting the official extension page. Once installed, you'll see two new tabs in your browser's developer console: **Components** and **Profiler**.
+The React DevTools extension is available for Chrome, Firefox, and Edge. Install it from the Chrome Web Store by searching for "React Developer Tools" or visiting the official extension page. Once installed, you'll see two new tabs in your browser's developer console: Components and Profiler.
 
 The extension automatically detects React applications. When you open DevTools on a page running React, the React logo in the toolbar turns blue instead of gray, indicating that the page contains React code.
 
-## Navigating the Components Tab
+Navigating the Components Tab
 
 The Components tab displays your React component tree in a hierarchical view. This is where you'll spend most of your debugging time.
 
-### Inspecting Component Props
+Inspecting Component Props
 
 Click any component in the tree to view its props in the right panel. You'll see the exact props passed to that component, including their values and types. This is incredibly useful when a component receives unexpected data.
 
@@ -43,7 +43,7 @@ function UserProfile({ user, theme }) {
 
 When you inspect this component in React DevTools, you'll see an object like `{ user: {name: "John", email: "john@example.com"}, theme: "dark" }` in the props panel.
 
-### Viewing Component State
+Viewing Component State
 
 For class components and components using `useState`, the right panel also shows the current state. State values appear below props with a special state indicator. Click the `useState` hook to expand and see the full state object.
 
@@ -64,21 +64,21 @@ function Counter() {
 
 In DevTools, you can expand each state hook to see its current value. This makes it easy to verify that state updates are happening correctly.
 
-### Finding Components by Name
+Finding Components by Name
 
 Search functionality helps you locate specific components quickly. Press `Cmd+P` (Mac) or `Ctrl+P` (Windows) to open the search box, then type the component name. DevTools highlights matching components in the tree. This saves time when working with large applications containing hundreds of components.
 
-## Using the Profiler Tab
+Using the Profiler Tab
 
 The Profiler records performance data about your React application. It helps identify components that render too frequently or take too long to update.
 
-### Recording a Profile
+Recording a Profile
 
-Click the record button (the circle icon) to start profiling. Perform the actions you want to analyze—click buttons, navigate between views, or trigger state changes. Click the record button again to stop.
+Click the record button (the circle icon) to start profiling. Perform the actions you want to analyze, click buttons, navigate between views, or trigger state changes. Click the record button again to stop.
 
 The profiler shows a flame graph where each bar represents a component's render time. Taller bars indicate slower renders. Click any bar to see why that component re-rendered, including which props or state changes triggered the update.
 
-### Reading Render Durations
+Reading Render Durations
 
 The ranked chart view shows components sorted by total render time. This helps you identify the biggest performance bottlenecks. Look for components with consistently high render times or those that render unexpectedly often.
 
@@ -102,13 +102,13 @@ function ProductItem({ product }) {
 
 React DevTools highlights components that re-rendered but didn't actually change. These are opportunities for optimization using `React.memo` or `useMemo`.
 
-## Advanced Debugging Techniques
+Advanced Debugging Techniques
 
-### Highlighting Updates
+Highlighting Updates
 
 Enable "Highlight updates when components render" in DevTools settings. When active, colored borders appear around components as they re-render. Green indicates fast renders, yellow slower renders, and red indicates very slow renders. This visual feedback helps you spot unnecessary re-renders immediately.
 
-### Examining Hooks
+Examining Hooks
 
 React DevTools shows custom hooks in the component tree, making it easier to debug complex hook logic. Expand any hook to see its internal state and dependencies.
 
@@ -138,7 +138,7 @@ function useLocalStorage(key, initialValue) {
 
 When inspecting a component using this hook, you'll see it listed in the hooks section with its current value and any dependencies.
 
-### Console Integration
+Console Integration
 
 React DevTools adds useful commands to the console. Use `$r` to reference the currently selected component directly. You can then call methods or inspect properties programmatically.
 
@@ -151,9 +151,9 @@ $r.forceUpdate()  // Force re-render
 
 This is particularly helpful when you need to test state changes without manually triggering them in the UI.
 
-## Troubleshooting Common Issues
+Troubleshooting Common Issues
 
-### DevTools Not Detecting React
+DevTools Not Detecting React
 
 If the React logo stays gray, your application might be using a production build that strips out development code. React DevTools works with development builds. Check your build configuration to ensure you're running the development version during debugging.
 
@@ -166,27 +166,27 @@ react-devtools
 
 Then connect your browser to the standalone DevTools window.
 
-### Extension Conflicts
+Extension Conflicts
 
 Sometimes other extensions interfere with React DevTools. Try disabling other extensions temporarily if you experience issues. Specific extensions that modify the DOM or inject scripts are common culprits.
 
-## Extension Settings Worth Exploring
+Extension Settings Worth Exploring
 
 Several settings customize React DevTools behavior:
 
-- **Theme**: Match your browser's dark or light mode preference
-- **Component display**: Show display names, keys, or file paths
-- **Profiler settings**: Configure what gets recorded and how data displays
+- Theme: Match your browser's dark or light mode preference
+- Component display: Show display names, keys, or file paths
+- Profiler settings: Configure what gets recorded and how data displays
 
 Access settings by clicking the gear icon in the DevTools toolbar.
 
 React DevTools transforms how you debug React applications. By mastering these features, you'll identify bugs faster, optimize performance more effectively, and gain deeper insight into how your components work together.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

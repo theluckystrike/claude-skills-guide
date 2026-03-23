@@ -17,15 +17,15 @@ Developers and power users increasingly seek alternatives to Excel for financial
 
 This guide explores how Claude skills transform financial modeling from point-and-click operations into automated, version-controlled pipelines.
 
-## Why Move Beyond Excel for Financial Modeling
+Why Move Beyond Excel for Financial Modeling
 
 Excel remains ubiquitous in finance, but it presents real challenges for technical users. Formula dependencies become impossible to trace across large workbooks. Collaboration requires careful merge handling. Testing financial logic requires manual verification or expensive add-ins.
 
 Programmatic alternatives using Python or JavaScript provide structured approaches. You can version control models with Git, write tests for financial calculations, and automate entire reporting pipelines. The learning curve exists, but Claude skills bridge the gap by generating appropriate code and explaining financial logic in context.
 
-## The xlsx Skill: Spreadsheets Without the Fragility
+The xlsx Skill: Spreadsheets Without the Fragility
 
-The **xlsx** skill serves as your primary tool for spreadsheet automation. It understands openpyxl, pandas, and xlsx.js patterns, helping you generate working code for complex spreadsheet operations.
+The xlsx skill serves as your primary tool for spreadsheet automation. It understands openpyxl, pandas, and xlsx.js patterns, helping you generate working code for complex spreadsheet operations.
 
 Invoke the skill for financial modeling tasks:
 
@@ -64,7 +64,7 @@ class FinancialModel:
         })
 ```
 
-This approach allows you to test calculations programmatically. Use the [**tdd** skill to validate your financial logic](/claude-tdd-skill-test-driven-development-workflow/):
+This approach allows you to test calculations programmatically. Use the [tdd skill to validate your financial logic](/claude-tdd-skill-test-driven-development-workflow/):
 
 ```
 /tdd
@@ -74,9 +74,9 @@ that handles edge cases: zero revenue, negative values,
 and missing data. Use pytest.
 ```
 
-## PDF Skill: Professional Report Generation
+PDF Skill: Professional Report Generation
 
-Financial models require stakeholder-facing outputs. The **pdf** skill generates professional reports from your Python calculations, replacing manual Excel-to-PowerPoint workflows.
+Financial models require stakeholder-facing outputs. The pdf skill generates professional reports from your Python calculations, replacing manual Excel-to-PowerPoint workflows.
 
 Combine financial calculations with PDF generation:
 
@@ -119,9 +119,9 @@ def generate_financial_report(model_results, output_path):
     doc.build(story)
 ```
 
-The **pdf** skill guides you through more complex layouts, multi-page reports, and chart integration using libraries like matplotlib or reportlab's graphics modules.
+The pdf skill guides you through more complex layouts, multi-page reports, and chart integration using libraries like matplotlib or reportlab's graphics modules.
 
-## Scenario Analysis with Claude Skills
+Scenario Analysis with Claude Skills
 
 Financial modeling requires exploring multiple scenarios. Claude skills enable systematic scenario generation without manual spreadsheet copying.
 
@@ -170,46 +170,46 @@ class ScenarioManager:
         return results
 ```
 
-## Automation Workflows with Skills
+Automation Workflows with Skills
 
-Combine skills for end-to-end financial workflows. Use the **automated-blog-post** skill pattern to trigger model updates and report generation on schedules:
+Combine skills for end-to-end financial workflows. Use the automated-blog-post skill pattern to trigger model updates and report generation on schedules:
 
 ```bash
-# Cron job triggers model refresh
+Cron job triggers model refresh
 0 6 * * 1-5 cd /path/to/financial-models && python run_model.py
 ```
 
 The run_model.py script executes your financial calculations and generates both Excel outputs for detailed analysis and PDF reports for stakeholders:
 
 ```python
-# run_model.py
+run_model.py
 from financial_model import FinancialModel, ScenarioManager
 from report_generator import generate_financial_report
 
-# Load latest data
+Load latest data
 revenue_data = load_revenue_from_database()
 cost_structure = load_cost_assumptions()
 
-# Run base case and scenarios
+Run base case and scenarios
 model = FinancialModel(revenue_data, cost_structure)
 base_results = model.calculate_income_statement()
 
 scenarios = ScenarioManager(model)
 scenario_results = scenarios.run_all_scenarios()
 
-# Generate outputs
+Generate outputs
 base_results.to_excel('outputs/base_case.xlsx')
 generate_financial_report(base_results, 'reports/weekly_summary.pdf')
 
-# Commit to version control
+Commit to version control
 import subprocess
 subprocess.run(['git', 'add', 'outputs/', 'reports/'])
 subprocess.run(['git', 'commit', '-m', 'Weekly model refresh'])
 ```
 
-## Integration with Data Sources
+Integration with Data Sources
 
-Financial models require external data. The **mcp-servers-vs-claude-skills** concept applies here—use MCP servers for real-time market data, then process through your Claude-generated Python logic:
+Financial models require external data. The mcp-servers-vs-claude-skills concept applies here, use MCP servers for real-time market data, then process through your Claude-generated Python logic:
 
 ```
 /xlsx
@@ -221,18 +221,18 @@ and calculates rolling averages and year-over-year
 growth rates.
 ```
 
-## Choosing the Right Approach
+Choosing the Right Approach
 
 Not every financial task needs full Python automation. Use this decision framework:
 
-- **Quick estimates or one-off analysis**: Excel remains practical
-- **Recurring reports with multiple stakeholders**: Python with xlsx and pdf skills
-- **Complex models requiring testing**: Full programmatic approach with tdd skill
-- **Collaborative models needing audit trails**: Version-controlled Python pipelines
+- Quick estimates or one-off analysis: Excel remains practical
+- Recurring reports with multiple stakeholders: Python with xlsx and pdf skills
+- Complex models requiring testing: Full programmatic approach with tdd skill
+- Collaborative models needing audit trails: Version-controlled Python pipelines
 
-The **skill-creator** skill lets you build custom skills for domain-specific financial calculations, encapsulating your team's methodologies for reuse across projects.
+The skill-creator skill lets you build custom skills for domain-specific financial calculations, encapsulating your team's methodologies for reuse across projects.
 
-## Getting Started
+Getting Started
 
 Begin with simple automations and expand incrementally:
 
@@ -245,11 +245,11 @@ Begin with simple automations and expand incrementally:
 Claude skills handle the code generation heavy lifting. Your expertise in financial modeling directs the logic. The combination replaces Excel's manual workflows with sustainable, testable, automatable pipelines.
 
 
-## Related Reading
+Related Reading
 
-- [Claude Skills for Data Science and Jupyter: 2026 Guide](/claude-skills-for-data-science-and-jupyter-notebooks/) — Complement financial modeling with data science workflows and Jupyter notebook integration.
-- [Caching Strategies for Claude Code Skill Outputs](/caching-strategies-for-claude-code-skill-outputs/) — Cache financial model outputs to avoid re-running expensive calculations on unchanged data.
-- [Claude Skills for Computational Biology and Bioinformatics](/claude-skills-for-computational-biology-bioinformatics/) — Apply similar code-based, testable data modeling patterns to bioinformatics workflows.
-- [Claude Skills Use Cases](/use-cases-hub/) — Explore more domain-specific use cases where Claude skills replace manual spreadsheet workflows.
+- [Claude Skills for Data Science and Jupyter: 2026 Guide](/claude-skills-for-data-science-and-jupyter-notebooks/). Complement financial modeling with data science workflows and Jupyter notebook integration.
+- [Caching Strategies for Claude Code Skill Outputs](/caching-strategies-for-claude-code-skill-outputs/). Cache financial model outputs to avoid re-running expensive calculations on unchanged data.
+- [Claude Skills for Computational Biology and Bioinformatics](/claude-skills-for-computational-biology-bioinformatics/). Apply similar code-based, testable data modeling patterns to bioinformatics workflows.
+- [Claude Skills Use Cases](/use-cases-hub/). Explore more domain-specific use cases where Claude skills replace manual spreadsheet workflows.
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

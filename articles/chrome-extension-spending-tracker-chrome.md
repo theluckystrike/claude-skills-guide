@@ -13,31 +13,31 @@ score: 8
 
 Building a Chrome extension for tracking spending combines web development skills with practical finance management. This guide walks through creating a spending tracker that runs directly in your browser, storing data locally without relying on external servers.
 
-## Why Build Your Own Spending Tracker?
+Why Build Your Own Spending Tracker?
 
 Most budget apps require accounts, cloud storage, and constant internet connectivity. A custom Chrome extension gives you complete control over your data. You decide where it lives, how it's analyzed, and who has access. For developers who value privacy and customization, this approach beats commercial alternatives.
 
-The Chrome extension platform provides several advantages: background scripts for automation, the Storage API for persistent data, and seamless integration with browser UI through popup windows and options pages.
+The Chrome extension platform provides several advantages: background scripts for automation, the Storage API for persistent data, and smooth integration with browser UI through popup windows and options pages.
 
-## Project Structure
+Project Structure
 
 A Chrome extension needs a manifest file and at least one JavaScript file. Here's a minimal structure for your spending tracker:
 
 ```
 spending-tracker/
-├── manifest.json
-├── popup.html
-├── popup.js
-├── background.js
-└── icons/
-    ├── icon16.png
-    ├── icon48.png
-    └── icon128.png
+ manifest.json
+ popup.html
+ popup.js
+ background.js
+ icons/
+     icon16.png
+     icon48.png
+     icon128.png
 ```
 
 The manifest defines your extension's capabilities. Version 3 (MV3) is the current standard with improved security and performance.
 
-## Manifest Configuration
+Manifest Configuration
 
 Your `manifest.json` declares permissions and entry points:
 
@@ -62,7 +62,7 @@ Your `manifest.json` declares permissions and entry points:
 
 The `storage` permission enables the chrome.storage API, which syncs data across browser sessions. For purely local storage without sync, use `local` storage instead.
 
-## Core Data Structure
+Core Data Structure
 
 Design your data model before writing logic. A simple transaction schema works well:
 
@@ -94,7 +94,7 @@ async function addTransaction(transaction) {
 }
 ```
 
-## Building the Popup Interface
+Building the Popup Interface
 
 The popup provides quick entry and viewing capabilities. Create `popup.html`:
 
@@ -147,7 +147,7 @@ The popup provides quick entry and viewing capabilities. Create `popup.html`:
 </html>
 ```
 
-## Popup Logic
+Popup Logic
 
 Connect the interface to your storage in `popup.js`:
 
@@ -212,7 +212,7 @@ async function addTransaction(transaction) {
 }
 ```
 
-## Adding Analytics with Background Scripts
+Adding Analytics with Background Scripts
 
 Background scripts run continuously, enabling automated insights. In `background.js`:
 
@@ -245,7 +245,7 @@ function calculateSummary(transactions) {
 }
 ```
 
-## Loading Your Extension
+Loading Your Extension
 
 To test your extension in Chrome:
 
@@ -256,7 +256,7 @@ To test your extension in Chrome:
 
 The extension icon appears in your toolbar. Click it to add transactions and see your spending at a glance.
 
-## Next Steps for Enhancement
+Next Steps for Enhancement
 
 Several features can elevate this foundation. Add an options page for custom categories and budget limits. Implement data export to CSV for spreadsheet analysis. Create charts using a library like Chart.js for visual spending breakdowns. Add keyboard shortcuts for rapid entry without opening the popup.
 
@@ -264,7 +264,7 @@ For developers seeking deeper integration, the Declarative Content API can trigg
 
 This extension keeps your financial data in your browser, under your control. No subscriptions, no data harvesting, just functional expense tracking built exactly to your specifications.
 
-## Advanced: Monthly Budget Tracking
+Advanced: Monthly Budget Tracking
 
 Show progress toward a monthly budget with visual progress bars:
 
@@ -285,7 +285,7 @@ function calculateBudgetStatus(transactions, budgets) {
 
 Render each category as a progress bar colored green (under 80%), yellow (80-100%), red (over budget).
 
-## Comparison with Standalone Budgeting Tools
+Comparison with Standalone Budgeting Tools
 
 | Feature | This Extension | YNAB | Mint |
 |---|---|---|---|
@@ -294,30 +294,30 @@ Render each category as a progress bar colored green (under 80%), yellow (80-100
 | Privacy | Complete local control | Shared | Shared |
 | Cost | Free to build | $14.99/month | Free (ads) |
 
-## Troubleshooting Common Issues
+Troubleshooting Common Issues
 
-**Storage filling up after months of data**: Auto-archive transactions older than 90 days to a JSON file in Downloads, then clear them from storage.
+Storage filling up after months of data: Auto-archive transactions older than 90 days to a JSON file in Downloads, then clear them from storage.
 
-**Category totals showing rounding errors**: Store amounts in cents (integers) and divide by 100 only when displaying:
+Category totals showing rounding errors: Store amounts in cents (integers) and divide by 100 only when displaying:
 
 ```javascript
 // Store: amount_cents: 4250 (for $42.50)
 // Display: (transaction.amount_cents / 100).toFixed(2)
 ```
 
-**CSV not opening correctly in Excel**: Add a UTF-8 BOM at the start:
+CSV not opening correctly in Excel: Add a UTF-8 BOM at the start:
 
 ```javascript
 const csvContent = '\uFEFF' + [headers, ...rows].map(r => r.join(',')).join('\n');
 ```
 
-This extension keeps your financial data in your browser with no subscriptions and no data harvesting — just functional expense tracking built to your exact specifications.
+This extension keeps your financial data in your browser with no subscriptions and no data harvesting. just functional expense tracking built to your exact specifications.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

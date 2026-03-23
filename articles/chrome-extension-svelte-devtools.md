@@ -2,7 +2,7 @@
 
 layout: default
 title: "Chrome Extension Svelte Devtools: A Practical Guide"
-description: "Learn how to build Chrome extensions with Svelte and leverage devtools for debugging. Practical examples and code snippets for developers."
+description: "Learn how to build Chrome extensions with Svelte and use devtools for debugging. Practical examples and code snippets for developers."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-svelte-devtools/
@@ -16,11 +16,11 @@ tags: [claude-code, claude-skills]
 {% raw %}
 Building Chrome extensions with Svelte gives you a powerful combination: Svelte's reactive framework for creating responsive UI, and Chrome's extension APIs for browser functionality. This guide walks you through setting up a Chrome extension with Svelte and using devtools effectively during development.
 
-You'll cover project scaffolding, Manifest V3 configuration, bridging Chrome's async APIs with Svelte stores, and a systematic debugging approach for every extension context—popup, service worker, and content script.
+You'll cover project scaffolding, Manifest V3 configuration, bridging Chrome's async APIs with Svelte stores, and a systematic debugging approach for every extension context, popup, service worker, and content script.
 
-## Why Svelte for Chrome Extensions?
+Why Svelte for Chrome Extensions?
 
-Svelte compiles your components to vanilla JavaScript, which means smaller bundle sizes and faster execution—critical when Chrome enforces strict limits on extension package sizes. Unlike React or Vue, Svelte doesn't require a runtime, reducing memory overhead in the browser context.
+Svelte compiles your components to vanilla JavaScript, which means smaller bundle sizes and faster execution, critical when Chrome enforces strict limits on extension package sizes. Unlike React or Vue, Svelte doesn't require a runtime, reducing memory overhead in the browser context.
 
 The reactive nature of Svelte works naturally with Chrome's event-driven API model. When you listen to browser events like `chrome.tabs.onUpdated` or `chrome.runtime.onMessage`, Svelte stores can immediately reflect those changes in your popup or options page UI.
 
@@ -35,31 +35,31 @@ Here's how Svelte compares to other popular frameworks for extension development
 
 Svelte's compiled output is closest to vanilla JS in size, which matters when Chrome's extension review process scrutinizes large bundles and when users expect popup UIs to open instantly.
 
-## Project Structure
+Project Structure
 
 Before writing code, understand the file layout you're targeting:
 
 ```
 my-extension/
-├── public/
-│   └── manifest.json
-├── src/
-│   ├── popup/
-│   │   ├── Popup.svelte
-│   │   └── main.js
-│   ├── background/
-│   │   └── service-worker.js
-│   ├── content/
-│   │   └── content.js
-│   └── stores/
-│       └── tabs.js
-├── vite.config.js
-└── package.json
+ public/
+    manifest.json
+ src/
+    popup/
+       Popup.svelte
+       main.js
+    background/
+       service-worker.js
+    content/
+       content.js
+    stores/
+        tabs.js
+ vite.config.js
+ package.json
 ```
 
-This separation keeps each extension context in its own directory. Chrome's Manifest V3 treats each context as an isolated JavaScript environment—the popup, service worker, and content scripts cannot share module state at runtime. Your Svelte stores live in the popup context only; background and content scripts use message passing to communicate with them.
+This separation keeps each extension context in its own directory. Chrome's Manifest V3 treats each context as an isolated JavaScript environment, the popup, service worker, and content scripts cannot share module state at runtime. Your Svelte stores live in the popup context only; background and content scripts use message passing to communicate with them.
 
-## Setting Up Your Project
+Setting Up Your Project
 
 Create a new Svelte project using Vite, then configure it for Chrome extension development:
 
@@ -129,15 +129,15 @@ Create your `manifest.json` in the `public` folder:
 
 Build your project with `npm run build`, then load the `dist` folder as an unpacked extension in Chrome's `chrome://extensions` page.
 
-## Connecting DevTools to Your Extension
+Connecting DevTools to Your Extension
 
-Chrome provides several devtools pages for debugging extensions. Each context has its own DevTools instance—understanding which one to open is the first skill you need.
+Chrome provides several devtools pages for debugging extensions. Each context has its own DevTools instance, understanding which one to open is the first skill you need.
 
-### Popup DevTools
+Popup DevTools
 
 When your popup is open, right-click and select Inspect to open DevTools specifically for the popup context. This is where you'll debug your Svelte components, inspect reactive state, and trace event handlers.
 
-A key limitation: the popup DevTools session ends when the popup closes. If you need to keep DevTools open while the popup is visible, pin the popup using the dock-to-left DevTools layout—this prevents the popup from closing when you click away.
+A key limitation: the popup DevTools session ends when the popup closes. If you need to keep DevTools open while the popup is visible, pin the popup using the dock-to-left DevTools layout, this prevents the popup from closing when you click away.
 
 Useful popup debugging patterns:
 
@@ -153,11 +153,11 @@ if (import.meta.env.DEV) {
 
 With this, you can run `$.__store` in the DevTools console to read current store state without adding permanent logging.
 
-### Background Script Debugging
+Background Script Debugging
 
 Navigate to `chrome://extensions` and click the "service worker" link under your extension. This opens DevTools for the background context where `chrome.runtime` listeners operate. Your Svelte app's initialization logic runs here if you're building a full-page extension.
 
-Note that Manifest V3 service workers are ephemeral—Chrome unloads them after 30 seconds of inactivity. This means you cannot rely on in-memory state in the service worker surviving between events. Always persist state you need across events to `chrome.storage.session` or `chrome.storage.local`:
+Note that Manifest V3 service workers are ephemeral, Chrome unloads them after 30 seconds of inactivity. This means you cannot rely on in-memory state in the service worker surviving between events. Always persist state you need across events to `chrome.storage.session` or `chrome.storage.local`:
 
 ```javascript
 // service-worker.js
@@ -171,13 +171,13 @@ async function getCachedData(key) {
 }
 ```
 
-### Content Script Debugging
+Content Script Debugging
 
 Content scripts run in the context of web pages. Set breakpoints in DevTools by navigating to the Sources panel and expanding the "Content Scripts" section. You'll see your bundled content script there alongside the page's own scripts.
 
-Content scripts have a restricted view of the page—they run in an isolated world with access to the DOM but not the page's JavaScript globals. If you're trying to read a variable set by the page, use `chrome.scripting.executeScript` from the popup instead.
+Content scripts have a restricted view of the page, they run in an isolated world with access to the DOM but not the page's JavaScript globals. If you're trying to read a variable set by the page, use `chrome.scripting.executeScript` from the popup instead.
 
-## Using Svelte Stores with Chrome APIs
+Using Svelte Stores with Chrome APIs
 
 Svelte stores provide an elegant way to bridge Chrome's asynchronous APIs with reactive UI. Here's a pattern for managing tab state:
 
@@ -237,7 +237,7 @@ In your Svelte component, use the store to automatically reflect Chrome state:
 </style>
 ```
 
-### Persisting Store State Across Sessions
+Persisting Store State Across Sessions
 
 A Svelte writable store resets to its initial value every time the popup reopens. For data you want to survive popup close-and-open cycles, write a custom store that syncs with `chrome.storage.local`:
 
@@ -276,9 +276,9 @@ export const userPreferences = persistentWritable('prefs', {
 });
 ```
 
-## Debugging Common Issues
+Debugging Common Issues
 
-### Hot Reload Problems
+Hot Reload Problems
 
 During development, Chrome caches your extension files. After making changes:
 
@@ -286,9 +286,9 @@ During development, Chrome caches your extension files. After making changes:
 2. Close and reopen your popup
 3. Check "Allow in incognito" if testing there
 
-For faster iteration, consider using [crxjs/vite-plugin](https://crxjs.dev) which adds hot module replacement support specifically for Chrome extensions—popup and content script changes reload automatically without touching `chrome://extensions`.
+For faster iteration, consider using [crxjs/vite-plugin](https://crxjs.dev) which adds hot module replacement support specifically for Chrome extensions, popup and content script changes reload automatically without touching `chrome://extensions`.
 
-### Message Passing Failures
+Message Passing Failures
 
 When communication between content scripts and background scripts fails, verify your message structure:
 
@@ -309,7 +309,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 });
 ```
 
-The `return true` is critical for asynchronous responses. Without it, Chrome closes the channel before your async operation completes. This is one of the most common sources of silent failures in extension message passing—the `sendResponse` callback executes successfully, but no one is listening on the other end.
+The `return true` is critical for asynchronous responses. Without it, Chrome closes the channel before your async operation completes. This is one of the most common sources of silent failures in extension message passing, the `sendResponse` callback executes successfully, but no one is listening on the other end.
 
 To debug message passing, add logging in both the sender and receiver:
 
@@ -326,7 +326,7 @@ function debugSendMessage(message) {
 }
 ```
 
-### State Not Updating
+State Not Updating
 
 If your Svelte store updates but the UI doesn't reflect changes, verify you're accessing the store with the `$` prefix in your template. This triggers Svelte's subscription mechanism.
 
@@ -340,7 +340,7 @@ If your Svelte store updates but the UI doesn't reflect changes, verify you're a
 
 The distinction matters: `currentTab` is a store object with `subscribe`, `set`, and `update` methods. `$currentTab` is the unwrapped value Svelte automatically subscribes to and unsubscribes from when the component unmounts.
 
-### Content Security Policy Errors
+Content Security Policy Errors
 
 Manifest V3 enforces a strict Content Security Policy that blocks inline scripts and `eval`. If you see CSP errors in the console, check that your Vite build isn't generating inline scripts. Configure Rollup to externalize them:
 
@@ -356,14 +356,14 @@ build: {
 }
 ```
 
-## Performance Optimization
+Performance Optimization
 
 Chrome extensions have resource limits. Svelte helps by producing minimal JavaScript, but follow these practices:
 
-- **Lazy-load non-critical components** using Svelte's dynamic imports—if your popup has a settings panel that rarely opens, don't bundle it in the main chunk
-- **Use `chrome.storage.session` for ephemeral data** instead of in-memory variables that get cleared when the service worker sleeps
-- **Avoid polling** — use event listeners instead of `setInterval` for checking state; Chrome will throttle or kill intervals in inactive extension contexts
-- **Debounce storage writes** — if a store updates frequently (e.g., on every keystroke), batch writes to avoid excessive storage API calls:
+- Lazy-load non-critical components using Svelte's dynamic imports, if your popup has a settings panel that rarely opens, don't bundle it in the main chunk
+- Use `chrome.storage.session` for ephemeral data instead of in-memory variables that get cleared when the service worker sleeps
+- Avoid polling. use event listeners instead of `setInterval` for checking state; Chrome will throttle or kill intervals in inactive extension contexts
+- Debounce storage writes. if a store updates frequently (e.g., on every keystroke), batch writes to avoid excessive storage API calls:
 
 ```javascript
 import { debounce } from 'lodash-es';
@@ -375,7 +375,7 @@ const debouncedSave = debounce((value) => {
 myStore.subscribe(debouncedSave);
 ```
 
-## Building for Production
+Building for Production
 
 When ready to publish, create a production build that minimizes bundle size:
 
@@ -383,12 +383,12 @@ When ready to publish, create a production build that minimizes bundle size:
 npm run build
 ```
 
-Vite minifies by default in production mode. Inspect your `dist` folder before submitting—Chrome Web Store reviewers look at your extension's source, and a clean, readable build (even minified) avoids delays.
+Vite minifies by default in production mode. Inspect your `dist` folder before submitting, Chrome Web Store reviewers look at your extension's source, and a clean, readable build (even minified) avoids delays.
 
 Checklist before publishing:
 
 - Remove all `console.log` calls or gate them behind `import.meta.env.DEV`
-- Audit permissions in `manifest.json`—request only what you actually use
+- Audit permissions in `manifest.json`, request only what you actually use
 - Test the unpacked `dist` folder in a fresh Chrome profile (no dev flags)
 - Verify the popup opens and closes without JavaScript errors
 - Check that the service worker registers correctly at `chrome://extensions`
@@ -396,26 +396,26 @@ Checklist before publishing:
 Package your extension for the store:
 
 ```bash
-# Zip the dist folder contents (not the folder itself)
+Zip the dist folder contents (not the folder itself)
 cd dist && zip -r ../my-extension.zip .
 ```
 
 Submit the zip at the Chrome Web Store Developer Dashboard along with screenshots and a privacy policy if you handle any user data.
 
-## What Svelte Devtools Shows You
+What Svelte Devtools Shows You
 
 The official [Svelte DevTools browser extension](https://chrome.google.com/webstore/detail/svelte-devtools) adds a Svelte panel to Chrome DevTools. When you're building an extension with Svelte, you can install Svelte DevTools alongside your own extension to inspect component trees and store values in real time.
 
-Inside the Svelte panel, you'll see your component hierarchy, the current value of every store, and which props are passed where. This is especially useful when debugging reactive state that's supposed to update in response to Chrome API events—you can watch store values change live as you interact with the browser.
+Inside the Svelte panel, you'll see your component hierarchy, the current value of every store, and which props are passed where. This is especially useful when debugging reactive state that's supposed to update in response to Chrome API events, you can watch store values change live as you interact with the browser.
 
 Your extension is now ready for the Chrome Web Store. The combination of Svelte's developer experience and Chrome's powerful APIs enables you to build sophisticated browser tools with minimal overhead.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

@@ -14,11 +14,11 @@ score: 7
 
 
 {% raw %}
-# Claude Code for Nitric Cloud Framework Workflow
+Claude Code for Nitric Cloud Framework Workflow
 
-The Nitric framework provides a refreshing approach to cloud development—write once, deploy anywhere (AWS, Azure, GCP). Combined with Claude Code, you get an AI-powered development partner that understands both your business logic and cloud infrastructure patterns. This guide shows you how to integrate Claude Code into your Nitric workflow for maximum productivity.
+The Nitric framework provides a refreshing approach to cloud development, write once, deploy anywhere (AWS, Azure, GCP). Combined with Claude Code, you get an AI-powered development partner that understands both your business logic and cloud infrastructure patterns. This guide shows you how to integrate Claude Code into your Nitric workflow for maximum productivity.
 
-## Understanding Nitric and Claude Code Together
+Understanding Nitric and Claude Code Together
 
 Nitric lets developers define cloud resources using a declarative approach directly in TypeScript, Python, Go, or C#. Instead of wrestling with cloud-specific SDKs or YAML templates, you write regular code that describes your infrastructure:
 
@@ -30,14 +30,14 @@ const processingQueue = queue('processing').allow('send', 'receive');
 const documentsApi = api('documents');
 ```
 
-When you run `nitric up`, Nitric compiles this into cloud-specific templates and handles deployment. It's elegant—but even elegant frameworks benefit from an AI assistant that understands the nuances.
+When you run `nitric up`, Nitric compiles this into cloud-specific templates and handles deployment. It's elegant, but even elegant frameworks benefit from an AI assistant that understands the nuances.
 
-## Setting Up Claude Code for Nitric Projects
+Setting Up Claude Code for Nitric Projects
 
 The first step is ensuring Claude Code understands your Nitric project structure. Create a CLAUDE.md file in your project root:
 
 ```markdown
-# Project Context
+Project Context
 
 This is a Nitric serverless project using TypeScript.
 - Main API definition: src/api/
@@ -54,7 +54,7 @@ Framework: Nitric v2 with AWS/Azure providers
 
 This context helps Claude provide relevant suggestions when you're working on routes, middleware, or resource definitions.
 
-## Generating API Routes with Claude Code
+Generating API Routes with Claude Code
 
 One of Claude Code's strongest use cases in Nitric projects is intelligent API route generation. Instead of manually creating each route file, describe your endpoint and let Claude scaffold it:
 
@@ -97,7 +97,7 @@ documentsApi.post('/documents', async (ctx) => {
 
 Claude Code will understand that `ctx.req` and `ctx.res` follow Nitric's context pattern, and suggest appropriate middleware and error handling.
 
-## Building Multi-Cloud Compatible Services
+Building Multi-Cloud Compatible Services
 
 Nitric's killer feature is deployment to multiple clouds from the same codebase. Use Claude Code to ensure your services remain cloud-agnostic:
 
@@ -132,9 +132,9 @@ export class DocumentService {
 }
 ```
 
-**Actionable Advice**: Always use Nitric's built-in abstractions (bucket, queue, api, schedule) rather than importing cloud-specific SDKs directly. This keeps your code portable and lets Claude help you more effectively.
+Actionable Advice: Always use Nitric's built-in abstractions (bucket, queue, api, schedule) rather than importing cloud-specific SDKs directly. This keeps your code portable and lets Claude help you more effectively.
 
-## Implementing Authentication Patterns
+Implementing Authentication Patterns
 
 Security is non-negotiable in cloud applications. Claude Code excels at implementing authentication patterns that work across cloud providers:
 
@@ -172,7 +172,7 @@ export const authenticate = async (ctx: Context): Promise<Context> => {
 usersApi.use('/profile/*', authenticate);
 ```
 
-## Testing Nitric Applications with Claude Code
+Testing Nitric Applications with Claude Code
 
 Claude Code can generate comprehensive tests for your Nitric functions. The key is to use Nitric's testing utilities:
 
@@ -223,14 +223,14 @@ test('POST /documents returns 415 for invalid file type', async () => {
 });
 ```
 
-**Actionable Advice**: Write tests alongside your implementation. Claude Code can generate these test cases, but you need to ensure the mocking accurately reflects Nitric's runtime behavior.
+Actionable Advice: Write tests alongside your implementation. Claude Code can generate these test cases, but you need to ensure the mocking accurately reflects Nitric's runtime behavior.
 
-## Deployment Workflows with Claude Code
+Deployment Workflows with Claude Code
 
 When you're ready to deploy, Claude Code helps you navigate the multi-cloud deployment process:
 
 ```bash
-# Prompt: "What's the correct command to deploy to AWS in production?"
+Prompt: "What's the correct command to deploy to AWS in production?"
 nitric stack new production --provider aws
 nitric deploy --stack production
 ```
@@ -241,29 +241,29 @@ Claude understands Nitric's stack system and can guide you through:
 - Configuring custom domains
 - Setting up CI/CD pipelines
 
-## Best Practices for Claude-Nitric Workflow
+Best Practices for Claude-Nitric Workflow
 
-1. **Use TypeScript**: Claude Code has better type inference with TypeScript, leading to more accurate suggestions. Nitric's TypeScript support is excellent.
+1. Use TypeScript: Claude Code has better type inference with TypeScript, leading to more accurate suggestions. Nitric's TypeScript support is excellent.
 
-2. **Keep resources declarative**: Define your Nitric resources (buckets, queues, APIs) in dedicated files. This helps Claude understand your infrastructure at a glance.
+2. Keep resources declarative: Define your Nitric resources (buckets, queues, APIs) in dedicated files. This helps Claude understand your infrastructure at a glance.
 
-3. **Leverage middleware**: Create reusable middleware for cross-cutting concerns. Claude can then suggest where to apply it across your API.
+3. Use middleware: Create reusable middleware for cross-cutting concerns. Claude can then suggest where to apply it across your API.
 
-4. **Document cloud-specific quirks**: If you encounter provider-specific behavior, add notes to your CLAUDE.md. Future Claude sessions will benefit from this context.
+4. Document cloud-specific quirks: If you encounter provider-specific behavior, add notes to your CLAUDE.md. Future Claude sessions will benefit from this context.
 
-5. **Use the Nitric CLI for scaffolding**: Let `nitric new` create your project structure, then have Claude Code populate the implementation details.
+5. Use the Nitric CLI for scaffolding: Let `nitric new` create your project structure, then have Claude Code populate the implementation details.
 
-## Conclusion
+Conclusion
 
 Claude Code and Nitric form a powerful combination for modern cloud development. Nitric's declarative approach to infrastructure pairs naturally with Claude Code's ability to understand and generate contextual code. By setting up proper project context, using Claude for route generation and testing, and maintaining cloud-agnostic patterns, you'll accelerate your serverless development significantly.
 
 The key is treating Claude not just as a code generator, but as a development partner that understands your framework choices. With the right context and patterns, your Nitric workflow becomes significantly more productive.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

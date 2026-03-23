@@ -15,13 +15,13 @@ permalink: /claude-code-prettier-code-formatting-guide/
 
 Prettier has become the de facto standard for automated code formatting in modern development workflows. When combined with Claude Code, it creates a powerful tandem that handles code quality without manual intervention. This guide covers practical approaches to integrating Prettier with Claude Code for consistent, automated formatting across your projects.
 
-## Understanding Prettier Integration
+Understanding Prettier Integration
 
 Prettier works as an opinionated code formatter that supports JavaScript, TypeScript, CSS, HTML, JSON, Markdown, and many other languages. The tool eliminates debates about tabs versus spaces, line lengths, and semicolons by enforcing a single, configurable style. Claude Code can invoke Prettier through shell commands or custom skills to format code automatically during development sessions.
 
 The integration works best when you establish Prettier as a project dependency and configure it to match your team's preferences. Most projects benefit from a `.prettierrc` configuration file in the repository root, ensuring consistent formatting regardless of who runs the formatter.
 
-## Setting Up Prettier in Your Project
+Setting Up Prettier in Your Project
 
 Begin by installing Prettier as a development dependency:
 
@@ -46,15 +46,15 @@ Add formatting scripts to your `package.json`:
 ```json
 {
   "scripts": {
-    "format": "prettier --write \"**/*.{js,ts,jsx,tsx,css,json}\"",
-    "format:check": "prettier --check \"**/*.{js,ts,jsx,tsx,css,json}\""
+    "format": "prettier --write \"/*.{js,ts,jsx,tsx,css,json}\"",
+    "format:check": "prettier --check \"/*.{js,ts,jsx,tsx,css,json}\""
   }
 }
 ```
 
 Running `npm run format` formats all matching files in your project. The `--write` flag updates files in place; use `--check` for CI pipelines that verify formatting without modifying files.
 
-## Invoking Prettier Through Claude Code
+Invoking Prettier Through Claude Code
 
 When working in Claude Code, you can format code using bash commands or by creating a custom formatting skill. The simplest approach involves direct command execution:
 
@@ -70,22 +70,22 @@ Run Prettier on all TypeScript files in the src directory
 
 This approach works well for occasional formatting needs. For frequent use, consider creating a dedicated skill that handles common formatting tasks.
 
-## Creating a Formatting Skill
+Creating a Formatting Skill
 
 A custom formatting skill encapsulates your formatting preferences and provides consistent invocation. Create `~/.claude/skills/format.md`:
 
 ```markdown
-# Format Skill
+Format Skill
 
 This skill runs Prettier on specified files or directories.
 
-## Commands
+Commands
 
 - `format file <filepath>` - Format a single file
 - `format dir <directory>` - Format all supported files in a directory
 - `format project` - Format the entire project
 
-## Supported Extensions
+Supported Extensions
 
 .js, .ts, .jsx, .tsx, .css, .scss, .json, .md, .html
 ```
@@ -99,11 +99,11 @@ With this skill loaded, you invoke it naturally:
 
 The skill delegates to Prettier and reports formatting changes. This pattern works similarly for other formatting tools like ESLint, Black (Python), or gofmt (Go).
 
-## Formatting Strategies for Different File Types
+Formatting Strategies for Different File Types
 
 Prettier handles various file types differently. Understanding these differences helps you configure appropriate settings.
 
-### JavaScript and TypeScript
+JavaScript and TypeScript
 
 For JavaScript projects, Prettier integrates well with ESLint. Install the ESLint Prettier plugin:
 
@@ -113,7 +113,7 @@ npm install --save-dev eslint-config-prettier
 
 This disables ESLint rules that conflict with Prettier, allowing both tools to work together without interference.
 
-### CSS and Styling
+CSS and Styling
 
 Prettier formats CSS, SCSS, Less, and styled-components. Configuration options include:
 
@@ -124,7 +124,7 @@ Prettier formats CSS, SCSS, Less, and styled-components. Configuration options i
 }
 ```
 
-### Configuration Files
+Configuration Files
 
 Format JSON and YAML files for consistency across your project:
 
@@ -132,7 +132,7 @@ Format JSON and YAML files for consistency across your project:
 prettier --write package.json tsconfig.json .eslintrc
 ```
 
-### Markdown
+Markdown
 
 Prettier reformats Markdown, including proper paragraph spacing and list formatting:
 
@@ -140,14 +140,14 @@ Prettier reformats Markdown, including proper paragraph spacing and list formatt
 prettier --write README.md CONTRIBUTING.md
 ```
 
-## Integrating with Development Workflows
+Integrating with Development Workflows
 
 The most effective formatting strategy combines multiple approaches:
 
-1. **Pre-commit hooks** - Run Prettier before code commits using Husky or lint-staged
-2. **Editor integration** - Configure your IDE to format on save
-3. **CI verification** - Add formatting checks to your continuous integration pipeline
-4. **Claude Code commands** - Use natural language to format specific files or sections
+1. Pre-commit hooks - Run Prettier before code commits using Husky or lint-staged
+2. Editor integration - Configure your IDE to format on save
+3. CI verification - Add formatting checks to your continuous integration pipeline
+4. Claude Code commands - Use natural language to format specific files or sections
 
 For teams using the TDD approach with the tdd skill, formatting fits naturally into the red-green-refactor cycle. After writing passing tests, invoke Claude Code to format the new code before committing:
 
@@ -157,17 +157,17 @@ Format the new test file and the corresponding implementation
 
 The frontend-design skill often requires formatting when working with component libraries or styling solutions. Running Prettier ensures the generated code follows project conventions.
 
-## Handling Prettier Conflicts
+Handling Prettier Conflicts
 
 Sometimes Prettier produces unexpected results or conflicts with other tools. Here are common solutions:
 
-**Conflict with ESLint**: Use `eslint-config-prettier` to disable conflicting rules. Run both tools in sequence: ESLint first for linting, then Prettier for formatting.
+Conflict with ESLint: Use `eslint-config-prettier` to disable conflicting rules. Run both tools in sequence: ESLint first for linting, then Prettier for formatting.
 
-**Conflict with TypeScript**: Ensure your `tsconfig.json` and `.prettierrc` agree on indentation and quotes. Prettier reads TypeScript configuration but doesn't override all settings.
+Conflict with TypeScript: Ensure your `tsconfig.json` and `.prettierrc` agree on indentation and quotes. Prettier reads TypeScript configuration but doesn't override all settings.
 
-**Large file formatting**: Prettier can slow down with very large files. Use the `--write` flag with specific file paths rather than glob patterns for better performance.
+Large file formatting: Prettier can slow down with very large files. Use the `--write` flag with specific file paths rather than glob patterns for better performance.
 
-## Automating Format Checks
+Automating Format Checks
 
 For automated workflows, create a GitHub Actions workflow that checks formatting:
 
@@ -183,12 +183,12 @@ jobs:
         with:
           node-version: '18'
       - run: npm install
-      - run: npx prettier --check "src/**/*.{js,ts,jsx,tsx}"
+      - run: npx prettier --check "src//*.{js,ts,jsx,tsx}"
 ```
 
 This ensures all Pull Requests maintain consistent formatting without manual review.
 
-## Best Practices
+Best Practices
 
 Start with default Prettier settings and adjust only when necessary. The tool's defaults represent industry best practices. Avoid creating overly complex configurations that deviate significantly from defaults.
 
@@ -196,15 +196,15 @@ Run formatting early and often. Combining Prettier with Claude Code's natural la
 
 For documentation generation with the pdf skill, ensure Markdown files are properly formatted before conversion. Prettier's Markdown support handles the syntax correctly, producing clean output for PDF generation.
 
-## Summary
+Summary
 
 Prettier integration with Claude Code simplifies code formatting significantly. Install it as a project dependency, create a sensible configuration, and invoke it through Claude Code's natural language interface. For teams, pre-commit hooks and CI checks ensure consistency. The tdd, frontend-design, and pdf skills work well alongside formatting, creating a complete development workflow where code quality happens automatically.
 
-## Related Reading
+Related Reading
 
-- [Claude Code Git Hooks Pre-Commit Automation](/claude-code-git-hooks-pre-commit-automation/) — Pre-commit hooks run Prettier automatically
-- [Claude Code Static Analysis Automation Guide](/claude-code-static-analysis-automation-guide/) — Formatting is part of static analysis workflow
-- [How to Make Claude Code Match Existing Code Patterns](/how-to-make-claude-code-follow-team-style-guide/) — Prettier ensures consistent code formatting
-- [Best Way to Use Claude Code with Existing CI/CD Pipelines](/best-way-to-use-claude-code-with-existing-ci-cd/) — Prettier format checks run in CI
+- [Claude Code Git Hooks Pre-Commit Automation](/claude-code-git-hooks-pre-commit-automation/). Pre-commit hooks run Prettier automatically
+- [Claude Code Static Analysis Automation Guide](/claude-code-static-analysis-automation-guide/). Formatting is part of static analysis workflow
+- [How to Make Claude Code Match Existing Code Patterns](/how-to-make-claude-code-follow-team-style-guide/). Prettier ensures consistent code formatting
+- [Best Way to Use Claude Code with Existing CI/CD Pipelines](/best-way-to-use-claude-code-with-existing-ci-cd/). Prettier format checks run in CI
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

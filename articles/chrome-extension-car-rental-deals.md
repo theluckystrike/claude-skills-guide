@@ -15,33 +15,33 @@ tags: [chrome-extension, claude-skills]
 
 Building a Chrome extension to track car rental deals represents a practical intersection of web development skills and real-world utility. This guide walks through the technical implementation of creating an extension that monitors rental prices, alerts users to deals, and provides price comparison functionality.
 
-## Understanding the Architecture
+Understanding the Architecture
 
 A car rental deal tracker extension operates through three core components: a content script that scrapes pricing data from rental company websites, a background service worker that manages price alerts and storage, and a popup interface for users to view tracked deals. Modern Chrome extensions use Manifest V3, which requires adjustments to how background scripts operate compared to older V2 implementations.
 
 The fundamental challenge lies in the dynamic nature of car rental pricing. Prices fluctuate based on location, dates, vehicle type, and demand. Your extension needs to handle these variables while remaining efficient and respecting website terms of service.
 
-## Project Structure
+Project Structure
 
 Create the following directory structure for your extension:
 
 ```
 car-rental-deals/
-├── manifest.json
-├── popup/
-│   ├── popup.html
-│   └── popup.js
-├── content/
-│   └── content.js
-├── background/
-│   └── background.js
-└── icons/
-    ├── icon16.png
-    ├── icon48.png
-    └── icon128.png
+ manifest.json
+ popup/
+    popup.html
+    popup.js
+ content/
+    content.js
+ background/
+    background.js
+ icons/
+     icon16.png
+     icon48.png
+     icon128.png
 ```
 
-## Manifest Configuration
+Manifest Configuration
 
 Your manifest.json defines the extension's capabilities and permissions:
 
@@ -86,7 +86,7 @@ Your manifest.json defines the extension's capabilities and permissions:
 }
 ```
 
-## Content Script Implementation
+Content Script Implementation
 
 The content script runs on rental company pages and extracts pricing information. Different websites structure their data differently, so you need adaptive selectors:
 
@@ -162,7 +162,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 });
 ```
 
-## Background Service Worker
+Background Service Worker
 
 The background script manages data storage and price alerts. With Manifest V3, use persistent storage and handle alerts through the notifications API:
 
@@ -258,7 +258,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 });
 ```
 
-## Popup Interface
+Popup Interface
 
 The popup provides users with a view of their tracked deals and current prices:
 
@@ -340,7 +340,7 @@ async function refreshPrices() {
 }
 ```
 
-## Key Implementation Considerations
+Key Implementation Considerations
 
 When building price tracking extensions, consider rate limiting your requests to avoid triggering anti-bot measures on rental websites. Implement exponential backoff when requests fail, and always respect robots.txt files and website terms of service.
 
@@ -348,7 +348,7 @@ Data storage presents another challenge. Chrome's chrome.storage API offers conv
 
 Price alert functionality requires careful threshold tuning. A 10% price drop threshold typically captures meaningful deals while avoiding notification fatigue from minor fluctuations.
 
-## Testing Your Extension
+Testing Your Extension
 
 Load your extension in Chrome by navigating to chrome://extensions/, enabling Developer mode, and clicking "Load unpacked". Test on multiple rental websites to verify selector accuracy. Use Chrome DevTools to debug content scripts and inspect network requests for pricing data.
 
@@ -360,18 +360,18 @@ console.log('[CarRentalDeals] Detected provider:', provider);
 console.log('[CarRentalDeals] Found deals:', deals.length);
 ```
 
-Building a functional car rental deal tracker demonstrates practical skills in Chrome extension development, web scraping techniques, IndexedDB usage, and notification systems—all valuable competencies for developer portfolios and real-world applications.
+Building a functional car rental deal tracker demonstrates practical skills in Chrome extension development, web scraping techniques, IndexedDB usage, and notification systems, all valuable competencies for developer portfolios and real-world applications.
 
-## Step-by-Step: Finding Deals for Your Next Trip
+Step-by-Step: Finding Deals for Your Next Trip
 
 1. Navigate to a supported rental site and enter your trip dates
-2. Click the extension icon — popup shows deals detected from the current page
+2. Click the extension icon. popup shows deals detected from the current page
 3. Click "Compare All" to search across all configured providers
 4. Results populate sorted by price ascending
-5. Set a price alert threshold — the extension notifies you if prices drop before pickup
+5. Set a price alert threshold. the extension notifies you if prices drop before pickup
 6. Click any deal row to open that provider's booking page
 
-## Advanced: Multi-Provider Aggregation
+Advanced: Multi-Provider Aggregation
 
 Aggregate prices from multiple provider APIs:
 
@@ -386,7 +386,7 @@ class CarRentalAggregator {
 }
 ```
 
-## Comparison with Existing Tools
+Comparison with Existing Tools
 
 | Tool | Provider coverage | Price alerts | Browser-integrated | Cost |
 |---|---|---|---|---|
@@ -394,21 +394,21 @@ class CarRentalAggregator {
 | Kayak | Many | Email | Website/app | Free |
 | AutoSlash | Many | Yes (email) | Website | Subscription |
 
-## Troubleshooting Common Issues
+Troubleshooting Common Issues
 
-**Selector breaking after site update**: Use arrays of fallback selectors and a maintenance-friendly config object so a single update breaks only one selector.
+Selector breaking after site update: Use arrays of fallback selectors and a maintenance-friendly config object so a single update breaks only one selector.
 
-**CORS blocking API requests**: Add rental site domains to `host_permissions` in your manifest. Background service worker requests bypass CORS when host permission is granted.
+CORS blocking API requests: Add rental site domains to `host_permissions` in your manifest. Background service worker requests bypass CORS when host permission is granted.
 
-**Rate limiting from rental sites**: Implement exponential backoff and add a 2-3 second gap between provider queries.
+Rate limiting from rental sites: Implement exponential backoff and add a 2-3 second gap between provider queries.
 
 Building a car rental deal tracker demonstrates practical skills in Chrome extension development, web scraping, data aggregation, and notification systems.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -14,33 +14,33 @@ categories: [guides]
 
 Accessibility testing remains one of the most overlooked aspects of web development. The axe DevTools Chrome extension provides a practical solution for developers who want to catch accessibility issues directly in their browser. This guide covers everything you need to integrate automated accessibility testing into your workflow using this powerful tool.
 
-## What is axe DevTools?
+What is axe DevTools?
 
 The axe DevTools Chrome extension is an open-source accessibility testing tool developed by Deque Systems. It integrates directly into Chrome DevTools and scans your web pages against WCAG (Web Content Accessibility Guidelines) rules. Unlike manual accessibility audits, axe runs automated tests that identify common issues such as missing alt text, improper heading structure, color contrast problems, and keyboard navigation failures.
 
 The extension uses the axe-core library, which is widely adopted across the accessibility testing ecosystem. You can find it in the Chrome Web Store or install it directly from the official GitHub repository.
 
-## Installing and Setting Up axe DevTools
+Installing and Setting Up axe DevTools
 
 Installing the extension takes less than a minute. Open Chrome and navigate to the axe DevTools page in the Chrome Web Store. Click "Add to Chrome" and confirm the permissions. Once installed, you will see an axe icon in your browser toolbar.
 
 To access axe DevTools, open Chrome DevTools (F12 or right-click → Inspect) and look for the "Accessibility" tab. The axe panel displays scan results, allowing you to filter issues by severity, WCAG level (A, AA, AAA), and impact category.
 
-## Running Your First Accessibility Scan
+Running Your First Accessibility Scan
 
 Navigate to any webpage you want to test and open the Accessibility tab in DevTools. Click the "Analyze" button to start the scan. Within seconds, axe displays a list of issues found on the page.
 
 Each issue includes several key pieces of information:
 
-- **Rule**: The specific accessibility rule that was violated
-- **Impact**: How severely the issue affects users (critical, serious, moderate, minor)
-- **Description**: What the rule requires for compliance
-- **HTML**: The specific element causing the issue
-- **Fix**: Suggested remediation steps
+- Rule: The specific accessibility rule that was violated
+- Impact: How severely the issue affects users (critical, serious, moderate, minor)
+- Description: What the rule requires for compliance
+- HTML: The specific element causing the issue
+- Fix: Suggested remediation steps
 
 For example, a common issue you will encounter is missing alt text on images. The axe report shows the exact `<img>` tag lacking the alt attribute and provides guidance on how to add descriptive alternative text.
 
-## Understanding Scan Results
+Understanding Scan Results
 
 The axe extension categorizes issues by their impact on users with disabilities. Critical and serious issues typically fail WCAG Level A and AA compliance and should be addressed immediately. Moderate and minor issues affect the user experience but may not block compliance.
 
@@ -56,7 +56,7 @@ Here is a practical example of what your scan results might reveal:
 
 The extension also highlights passing tests, showing you what is already working correctly on your page. This positive feedback helps maintain accessibility momentum across your project.
 
-## Integrating axe Into Your Development Workflow
+Integrating axe Into Your Development Workflow
 
 For teams committed to accessibility, integrating axe into continuous integration pipelines provides the greatest value. You can run axe-core programmatically as part of your test suite:
 
@@ -86,11 +86,11 @@ runAccessibilityTest();
 
 This script launches a headless browser, loads your page, runs the axe analysis, and outputs all violations. You can extend this pattern to fail builds when critical accessibility issues are detected.
 
-## Common Accessibility Issues Detected
+Common Accessibility Issues Detected
 
 The axe library checks for over 100 different accessibility rules. Understanding the most frequent issues helps you prioritize fixes effectively.
 
-**Color Contrast**: Text must maintain a contrast ratio of at least 4.5:1 for normal text and 3:1 for large text. Axe flags any text elements that fail this requirement.
+Color Contrast: Text must maintain a contrast ratio of at least 4.5:1 for normal text and 3:1 for large text. Axe flags any text elements that fail this requirement.
 
 ```css
 /* Failing contrast */
@@ -106,13 +106,13 @@ The axe library checks for over 100 different accessibility rules. Understanding
 }
 ```
 
-**Heading Structure**: Pages must use proper heading levels (h1 → h2 → h3) without skipping levels. Axe verifies that your heading hierarchy makes sense.
+Heading Structure: Pages must use proper heading levels (h1 → h2 → h3) without skipping levels. Axe verifies that your heading hierarchy makes sense.
 
-**Keyboard Accessibility**: All interactive elements must be reachable and operable via keyboard. Axe checks for proper focus management and tab order.
+Keyboard Accessibility: All interactive elements must be reachable and operable via keyboard. Axe checks for proper focus management and tab order.
 
-**ARIA Labels**: Interactive elements with visual labels must have corresponding ARIA attributes for screen reader users.
+ARIA Labels: Interactive elements with visual labels must have corresponding ARIA attributes for screen reader users.
 
-## Using axe With Framework Applications
+Using axe With Framework Applications
 
 Modern JavaScript frameworks present unique accessibility testing challenges. Single-page applications often render content dynamically, meaning you need to test after the page fully loads.
 
@@ -135,19 +135,19 @@ test('should have no accessibility violations', async () => {
 
 This test runs axe automatically whenever your component renders, catching issues during development rather than after deployment.
 
-## Best Practices for Accessibility Testing
+Best Practices for Accessibility Testing
 
-1. **Test early and often**: Run axe scans during development, not just before release. Catching issues early reduces remediation cost significantly.
+1. Test early and often: Run axe scans during development, not just before release. Catching issues early reduces remediation cost significantly.
 
-2. **Prioritize by impact**: Focus on critical and serious violations first. These directly prevent users with disabilities from accessing your content.
+2. Prioritize by impact: Focus on critical and serious violations first. These directly prevent users with disabilities from accessing your content.
 
-3. **Verify fixes manually**: Automated tests catch approximately 30-40% of accessibility issues. Always supplement axe results with manual testing using screen readers and keyboard-only navigation.
+3. Verify fixes manually: Automated tests catch approximately 30-40% of accessibility issues. Always supplement axe results with manual testing using screen readers and keyboard-only navigation.
 
-4. **Set up CI automation**: Integrate accessibility testing into your pull request checks. Several axe packages support popular CI platforms.
+4. Set up CI automation: Integrate accessibility testing into your pull request checks. Several axe packages support popular CI platforms.
 
-5. **Track progress over time**: Record axe scan results to identify trends. Accessibility debt accumulates quickly if left unchecked.
+5. Track progress over time: Record axe scan results to identify trends. Accessibility debt accumulates quickly if left unchecked.
 
-## Advanced Configuration
+Advanced Configuration
 
 You can customize axe to match your project's specific requirements. The extension allows you to configure which rules to run, which elements to exclude, and which WCAG levels to target.
 
@@ -169,19 +169,19 @@ const results = await new AxePuppeteer(page)
 
 This flexibility makes axe suitable for projects with varying accessibility requirements.
 
-## Conclusion
+Conclusion
 
 The axe DevTools Chrome extension transforms accessibility testing from a manual, time-consuming process into an automated workflow element. By catching issues during development, you build more inclusive applications without slowing down your team.
 
 Start by installing the extension and running scans on your current projects. Address the critical and serious violations first, then gradually expand your testing coverage. Over time, accessibility becomes a natural part of your development process rather than an afterthought.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 {% endraw %}

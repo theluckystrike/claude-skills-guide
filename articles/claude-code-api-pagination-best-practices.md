@@ -13,11 +13,11 @@ score: 7
 ---
 
 
-When building applications that interact with the Claude Code API, handling large datasets efficiently becomes crucial. Pagination isn't just about splitting data into chunks—it's about creating a smooth, performant experience for your users while respecting API rate limits and response times.
+When building applications that interact with the Claude Code API, handling large datasets efficiently becomes crucial. Pagination isn't just about splitting data into chunks, it's about creating a smooth, performant experience for your users while respecting API rate limits and response times.
 
 This guide covers practical pagination strategies you can implement today, with code examples that work with real-world scenarios. Whether you're pulling conversation history, traversing a library of documents for the `pdf` skill, or building a dashboard that aggregates data from multiple threads, solid pagination fundamentals will save you hours of debugging and unexpected failures in production.
 
-## Understanding Cursor-Based Pagination
+Understanding Cursor-Based Pagination
 
 The Claude Code API uses cursor-based pagination rather than offset-based approaches. This means each response includes a cursor token that points to the next set of results. Unlike traditional offset pagination (skip 10, take 10), cursor-based pagination is more stable when data changes between requests.
 
@@ -56,7 +56,7 @@ The key insight is that you always check `has_more` before attempting to fetch t
 
 A subtle trap here: never assume the last page is full. If you expect 50 results per page and receive 23, that does not mean there are more. Always rely on `has_more` as the authoritative signal to continue or stop.
 
-## Offset vs. Cursor Pagination: A Direct Comparison
+Offset vs. Cursor Pagination: A Direct Comparison
 
 Understanding why cursors are preferred over offsets helps you make better design decisions when building on top of the API.
 
@@ -65,12 +65,12 @@ Understanding why cursors are preferred over offsets helps you make better desig
 | Consistency | Data may shift between pages | Stable regardless of inserts/deletes |
 | Performance | Slower as offset grows (DB must count rows) | Consistent speed regardless of position |
 | Random access | Can jump to page 5 directly | Must traverse forward sequentially |
-| Resumability | Fragile — offset becomes stale | Robust — cursor remains valid |
+| Resumability | Fragile. offset becomes stale | Robust. cursor remains valid |
 | Implementation | Simple to reason about | Slightly more complex initially |
 
 For the Claude Code API, cursors are the right tool because conversation history and document libraries change frequently. Offset pagination would give you unreliable results in any live system.
 
-## Setting Appropriate Page Sizes
+Setting Appropriate Page Sizes
 
 The `limit` parameter controls how many items return per request. The Claude Code API typically allows limits between 1 and 100, but choosing the right value depends on your use case.
 
@@ -120,7 +120,7 @@ def export_all_threads(output_file, page_size=100):
 
 In this export scenario, 100 per page reduces total round trips while keeping each individual response fast enough to avoid timeouts.
 
-## Handling Rate Limits Gracefully
+Handling Rate Limits Gracefully
 
 When paginating through large datasets, you'll inevitably encounter rate limits. The Claude Code API returns a 429 status code when you've exceeded your quota. Implement exponential backoff to handle this gracefully:
 
@@ -137,7 +137,7 @@ def fetch_with_retry(url, max_retries=3):
             return response.json()
 
         if response.status_code == 429:
-            wait_time = 2 ** attempt
+            wait_time = 2  attempt
             print(f"Rate limited. Waiting {wait_time}s...")
             time.sleep(wait_time)
 
@@ -168,7 +168,7 @@ def fetch_page_with_header_backoff(url, headers={}):
 
 Using the reset timestamp from the header avoids both over-sleeping (wasting time) and under-sleeping (retrying before you're allowed).
 
-## Parallel Page Fetching for Independent Data
+Parallel Page Fetching for Independent Data
 
 Sometimes you need to fetch multiple paginated resources simultaneously. Rather than sequentially waiting for each page, you can use concurrent requests:
 
@@ -188,7 +188,7 @@ async function fetchMultipleThreads(threadIds: string[]) {
 }
 ```
 
-This approach works well when you know the thread IDs upfront. However, be mindful of total concurrent connections—too many simultaneous requests can trigger rate limits regardless of individual request patterns.
+This approach works well when you know the thread IDs upfront. However, be mindful of total concurrent connections, too many simultaneous requests can trigger rate limits regardless of individual request patterns.
 
 A safer pattern uses a concurrency limiter rather than firing all requests at once. Here is a Python implementation using asyncio with a semaphore to cap parallel requests:
 
@@ -221,7 +221,7 @@ async def fetch_all_parallel(urls, max_concurrent=5):
 
 This limits to 5 concurrent requests at any time. Increase or decrease based on your rate limit tier and observed error rates.
 
-## Combining Claude Skills with Pagination
+Combining Claude Skills with Pagination
 
 The real power of pagination emerges when you combine it with Claude's specialized skills. For instance, when using the `frontend-design` skill to generate UI components, you might paginate through a library of design tokens:
 
@@ -264,17 +264,17 @@ async function generateTestsForFiles(fileIds, testGenerator) {
 }
 ```
 
-The `supermemory` skill can also benefit from pagination when retrieving historical context—fetching memories in chunks prevents single-request timeouts while still building a complete context window.
+The `supermemory` skill can also benefit from pagination when retrieving historical context, fetching memories in chunks prevents single-request timeouts while still building a complete context window.
 
 A common pattern when combining skills with pagination is the "accumulate then process" model versus the "process as you go" model. Choose based on your memory constraints:
 
 ```python
-# Accumulate then process — works for smaller datasets
+Accumulate then process. works for smaller datasets
 def batch_process_with_pdf_skill(document_ids):
     all_docs = list(paginate_all(document_ids))
     return process_with_pdf_skill(all_docs)
 
-# Process as you go — required for large datasets
+Process as you go. required for large datasets
 def stream_process_with_pdf_skill(document_ids):
     cursor = None
     results = []
@@ -294,7 +294,7 @@ def stream_process_with_pdf_skill(document_ids):
 
 The streaming model is almost always safer for production workflows involving skills that process large files. You avoid loading thousands of documents into memory before any processing begins.
 
-## Tracking Pagination State
+Tracking Pagination State
 
 For long-running operations or user-resumable flows, persist pagination state:
 
@@ -345,14 +345,14 @@ def resume_job(filename):
 
     age_minutes = (time.time() - state["saved_at"]) / 60
     if age_minutes > 60:
-        print(f"Warning: state is {age_minutes:.0f} minutes old — cursor may be stale")
+        print(f"Warning: state is {age_minutes:.0f} minutes old. cursor may be stale")
 
     return state["cursor"], state["processed_count"]
 ```
 
 Storing the timestamp allows you to warn when a saved cursor might have expired. Some APIs invalidate cursors after a certain period of inactivity.
 
-## Testing Your Pagination Logic
+Testing Your Pagination Logic
 
 Pagination code often breaks at boundaries: exactly at the page size limit, on the last partial page, or when a dataset has exactly zero items. Test these edge cases explicitly:
 
@@ -378,7 +378,7 @@ def test_pagination_edge_cases():
 
 These tests are easy to write and catch the most common pagination bugs before they reach production. Mock the API client responses to cover cases your live test data might not include.
 
-## Key Takeaways
+Key Takeaways
 
 Cursor-based pagination with the Claude Code API requires a different mindset than traditional offset pagination, but it offers significant advantages for data consistency and performance. Set appropriate page sizes based on your use case, implement proper rate limit handling, and consider parallel fetching when you need to gather data from multiple independent sources.
 
@@ -387,11 +387,11 @@ Always test boundary conditions: empty datasets, exactly full pages, and partial
 The skills like `pdf`, `tdd`, `frontend-design`, and `supermemory` all work better when you build pagination into your workflows from the start rather than treating it as an afterthought.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code REST API Design Best Practices](/claude-code-rest-api-design-best-practices/)
 - [Claude Code GraphQL Schema Design Guide](/claude-code-graphql-schema-design-guide/)
 - [Claude Code OpenAPI Spec Generation Guide](/claude-code-openapi-spec-generation-guide/)
 - [Claude Skills Integrations Hub](/integrations-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

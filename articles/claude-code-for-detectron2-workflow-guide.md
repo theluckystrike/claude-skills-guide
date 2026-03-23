@@ -15,15 +15,15 @@ score: 8
 
 {% raw %}
 
-# Claude Code for Detectron2 Workflow Guide
+Claude Code for Detectron2 Workflow Guide
 
 Detectron2, Facebook AI Research's next-generation object detection and segmentation library, is a powerful tool for computer vision projects. However, working with its complex APIs, custom dataset configurations, and model architectures can be challenging. This guide shows you how to use Claude Code to streamline your Detectron2 development workflow, from project setup to model deployment.
 
-## Setting Up Your Detectron2 Environment
+Setting Up Your Detectron2 Environment
 
 The first step in any Detectron2 project is getting your development environment configured correctly. Claude Code can help you create a well-structured project with all necessary dependencies.
 
-### Project Initialization
+Project Initialization
 
 Start by creating a new directory and initializing your project structure:
 
@@ -34,7 +34,7 @@ mkdir detectron2-project && cd detectron2-project
 Claude Code can generate a comprehensive `requirements.txt` for your project:
 
 ```python
-# requirements.txt
+requirements.txt
 torch>=2.0.0
 torchvision>=0.15.0
 detectron2>=0.6
@@ -46,7 +46,7 @@ pyyaml>=6.0
 
 For GPU acceleration, ensure you have the appropriate CUDA version installed. Claude Code can help you generate the correct installation commands based on your system specifications.
 
-### Docker Setup for Reproducibility
+Docker Setup for Reproducibility
 
 Containerizing your Detectron2 environment ensures consistency across development and deployment. Here's a practical Dockerfile:
 
@@ -55,7 +55,7 @@ FROM pytorch/pytorch:2.0.1-cuda11.7-cudnn8-runtime
 
 WORKDIR /app
 
-# Install Detectron2 dependencies
+Install Detectron2 dependencies
 RUN apt-get update && apt-get install -y \
     libgl1-mesa-glx \
     libglib2.0-0 \
@@ -64,7 +64,7 @@ RUN apt-get update && apt-get install -y \
     libxrender-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# Clone and install Detectron2
+Clone and install Detectron2
 RUN git clone https://github.com/facebookresearch/detectron2.git /tmp/detectron2 && \
     cd /tmp/detectron2 && \
     pip install -e . && \
@@ -76,11 +76,11 @@ RUN pip install -r requirements.txt
 COPY . .
 ```
 
-## Data Preparation and Dataset Registration
+Data Preparation and Dataset Registration
 
 One of the most time-consuming aspects of Detectron2 projects is preparing and registering datasets. Claude Code can significantly accelerate this process.
 
-### Registering Custom Datasets
+Registering Custom Datasets
 
 Detectron2 requires datasets to be registered with its dataset catalog. Here's how to structure your dataset registration:
 
@@ -119,7 +119,7 @@ if __name__ == "__main__":
 
 Claude Code can also help you convert datasets from other formats (YOLO, VOC, labelme) to COCO format, which Detectron2 natively supports.
 
-### Data Augmentation Strategies
+Data Augmentation Strategies
 
 Effective data augmentation is crucial for model generalization. Here's a configuration example:
 
@@ -139,9 +139,9 @@ def get_train_augmentation():
     ]
 ```
 
-## Model Configuration and Training
+Model Configuration and Training
 
-### Choosing the Right Model Architecture
+Choosing the Right Model Architecture
 
 Detectron2 offers various pre-built models. Claude Code can help you select the appropriate architecture based on your requirements:
 
@@ -152,7 +152,7 @@ Detectron2 offers various pre-built models. Claude Code can help you select the 
 | X101-FPN | Maximum accuracy | Slow | Best |
 | R50-FPN-Mask | Instance segmentation | Fast | Good |
 
-### Training Configuration
+Training Configuration
 
 Here's a practical training script:
 
@@ -195,22 +195,22 @@ if __name__ == "__main__":
     train_model()
 ```
 
-### Handling Common Training Issues
+Handling Common Training Issues
 
 Claude Code can help you diagnose and resolve common training problems:
 
-1. **Out of Memory Errors**: Reduce batch size or image size
-2. **Slow Training**: Enable mixed-precision training with `cfg.SOLVER.AMP_ENABLED = True`
-3. **Overfitting**: Adjust learning rate schedule or add more augmentation
+1. Out of Memory Errors: Reduce batch size or image size
+2. Slow Training: Enable mixed-precision training with `cfg.SOLVER.AMP_ENABLED = True`
+3. Overfitting: Adjust learning rate schedule or add more augmentation
 
 ```python
-# Enable mixed-precision training for faster training with less memory
+Enable mixed-precision training for faster training with less memory
 cfg.SOLVER.AMP_ENABLED = True
 ```
 
-## Inference and Model Deployment
+Inference and Model Deployment
 
-### Running Inference
+Running Inference
 
 After training, here's how to perform inference:
 
@@ -239,7 +239,7 @@ def run_inference(model_path, config_path, image_path):
     
     cv2.imwrite("output.png", v.get_image()[:, :, ::-1])
 
-# Run inference
+Run inference
 run_inference(
     model_path="output/model_final.pth",
     config_path="detectron2/configs/COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml",
@@ -247,7 +247,7 @@ run_inference(
 )
 ```
 
-### Exporting for Production
+Exporting for Production
 
 For production deployment, consider exporting your model to ONNX format:
 
@@ -285,34 +285,34 @@ def export_to_onnx(cfg, model_path, output_path):
 export_to_onnx(cfg, "output/model_final.pth", "model.onnx")
 ```
 
-## Best Practices and Tips
+Best Practices and Tips
 
-### Project Structure
+Project Structure
 
 Maintain a clean, organized project structure:
 
 ```
 detectron2-project/
-├── configs/
-│   └── my_config.yaml
-├── datasets/
-│   ├── train/
-│   └── val/
-├── models/
-│   └── output/
-├── scripts/
-│   ├── train.py
-│   ├── inference.py
-│   └── export.py
-├── src/
-│   └── dataset_utils.py
-├── tests/
-│   └── test_model.py
-├── requirements.txt
-└── README.md
+ configs/
+    my_config.yaml
+ datasets/
+    train/
+    val/
+ models/
+    output/
+ scripts/
+    train.py
+    inference.py
+    export.py
+ src/
+    dataset_utils.py
+ tests/
+    test_model.py
+ requirements.txt
+ README.md
 ```
 
-### Claude Code Prompts for Detectron2
+Claude Code Prompts for Detectron2
 
 Here are effective prompts to use with Claude Code:
 
@@ -322,7 +322,7 @@ Here are effective prompts to use with Claude Code:
 - "Help me debug why my model isn't learning from my custom dataset"
 - "Create an evaluation script that computes mAP at different IoU thresholds"
 
-## Conclusion
+Conclusion
 
 Claude Code significantly accelerates Detectron2 development by helping with environment setup, dataset preparation, training configuration, and deployment. By following this workflow guide, you can focus more on the creative aspects of your computer vision projects while Claude Code handles the boilerplate code and helps troubleshoot issues.
 
@@ -330,10 +330,10 @@ Remember to always verify generated code against the official Detectron2 documen
 
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

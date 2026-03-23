@@ -15,11 +15,11 @@ score: 7
 
 {% raw %}
 
-# Claude Code for PyTorch LoRA Fine-Tuning Workflow
+Claude Code for PyTorch LoRA Fine-Tuning Workflow
 
-Low-Rank Adaptation (LoRA) has revolutionized how developers fine-tune large language models. By training only a small set of parameters while keeping the base model frozen, LoRA enables efficient customization without the computational overhead of full fine-tuning. When combined with Claude Code's powerful skill system, you can automate and accelerate every step of your LoRA workflow—from dataset preparation to model export.
+Low-Rank Adaptation (LoRA) has revolutionized how developers fine-tune large language models. By training only a small set of parameters while keeping the base model frozen, LoRA enables efficient customization without the computational overhead of full fine-tuning. When combined with Claude Code's powerful skill system, you can automate and accelerate every step of your LoRA workflow, from dataset preparation to model export.
 
-## Setting Up Your LoRA Environment with Claude Code
+Setting Up Your LoRA Environment with Claude Code
 
 Claude Code excels at environment setup and dependency management. Before diving into LoRA fine-tuning, you'll want a well-configured Python environment with all necessary packages. Claude Code can scaffold this automatically using its bash and file operations tools.
 
@@ -27,28 +27,28 @@ Start by having Claude Code create a dedicated project structure:
 
 ```python
 lora-project/
-├── config/
-│   └── training_config.yaml
-├── data/
-│   ├── train/
-│   └── eval/
-├── models/
-├── scripts/
-│   ├── prepare_dataset.py
-│   ├── train.py
-│   └── export_model.py
-└── requirements.txt
+ config/
+    training_config.yaml
+ data/
+    train/
+    eval/
+ models/
+ scripts/
+    prepare_dataset.py
+    train.py
+    export_model.py
+ requirements.txt
 ```
 
 This structure keeps your LoRA project organized and reproducible. Claude Code can generate this with a single prompt, creating all necessary directories and configuration files.
 
-## Dataset Preparation with Claude Code Skills
+Dataset Preparation with Claude Code Skills
 
 Preparing high-quality training data is crucial for successful LoRA fine-tuning. Claude Code can help you:
 
-1. **Clean and format your dataset** - Transform raw text into training-ready formats
-2. **Split data into train/validation sets** - Ensure proper evaluation
-3. **Create JSONL or Hugging Face datasets** - Compatible with most LoRA frameworks
+1. Clean and format your dataset - Transform raw text into training-ready formats
+2. Split data into train/validation sets - Ensure proper evaluation
+3. Create JSONL or Hugging Face datasets - Compatible with most LoRA frameworks
 
 Here's a practical example of how Claude Code can generate dataset preparation code:
 
@@ -94,23 +94,23 @@ if __name__ == '__main__':
 
 Claude Code can generate this entire script based on your dataset format. Simply describe your data structure and training requirements, and Claude will produce the necessary preprocessing code.
 
-## Configuring LoRA Training
+Configuring LoRA Training
 
 The training configuration is where LoRA fine-tuning becomes nuanced. You need to choose the right rank (r), alpha, target modules, and learning rate. Claude Code can help you understand these parameters and generate optimal configurations.
 
 Key LoRA parameters to configure:
 
-- **rank (r)**: The rank of the LoRA adaptation. Higher values capture more complexity but increase memory usage. Typical values: 8, 16, 32, 64.
-- **alpha**: Scaling factor for LoRA weights. Usually set to twice the rank.
-- **target_modules**: Which layers to apply LoRA to. For transformer models, typically attention modules (q_proj, v_proj, k_proj, o_proj).
-- **learning_rate**: LoRA typically benefits from higher learning rates than full fine-tuning (e.g., 3e-4 instead of 1e-5).
+- rank (r): The rank of the LoRA adaptation. Higher values capture more complexity but increase memory usage. Typical values: 8, 16, 32, 64.
+- alpha: Scaling factor for LoRA weights. Usually set to twice the rank.
+- target_modules: Which layers to apply LoRA to. For transformer models, typically attention modules (q_proj, v_proj, k_proj, o_proj).
+- learning_rate: LoRA typically benefits from higher learning rates than full fine-tuning (e.g., 3e-4 instead of 1e-5).
 
 Here's a training configuration example:
 
 ```python
 from peft import LoraConfig, get_peft_model, TaskType
 
-# LoRA configuration
+LoRA configuration
 lora_config = LoraConfig(
     task_type=TaskType.CAUSAL_LM,
     r=16,
@@ -121,15 +121,15 @@ lora_config = LoraConfig(
     inference_mode=False
 )
 
-# Apply LoRA to base model
+Apply LoRA to base model
 model = get_peft_model(base_model, lora_config)
 model.print_trainable_parameters()
-# Output: trainable params: 4,194,304 || all params: 7,068,870,912 || trainable%: 0.06
+Output: trainable params: 4,194,304 || all params: 7,068,870,912 || trainable%: 0.06
 ```
 
-Notice how only 0.06% of parameters are trainable—this is the power of LoRA.
+Notice how only 0.06% of parameters are trainable, this is the power of LoRA.
 
-## Creating the Training Loop
+Creating the Training Loop
 
 Claude Code can generate a complete training loop using PyTorch and the PEFT library. The training script handles:
 
@@ -180,7 +180,7 @@ def setup_trainer(model, train_dataset, eval_dataset, tokenizer):
 
 This configuration enables mixed-precision training (fp16) for faster training and reduced memory usage. Claude Code can help you tune these parameters based on your hardware constraints.
 
-## Model Export and Deployment
+Model Export and Deployment
 
 After training, you'll want to export your LoRA weights for deployment. Claude Code can generate export scripts that merge the LoRA weights with the base model or save them separately for inference with frameworks like vLLM or llama.cpp.
 
@@ -210,22 +210,22 @@ def export_merged_model(base_model_path, lora_path, output_path):
     print(f"Merged model saved to {output_path}")
 ```
 
-## Optimizing Your Workflow with Claude Code
+Optimizing Your Workflow with Claude Code
 
 Beyond generating code, Claude Code offers several features that enhance LoRA fine-tuning:
 
-- **Incremental development**: Claude can help you iterate on training configurations based on evaluation results
-- **Error debugging**: When training fails, Claude analyzes error messages and suggests fixes
-- **Documentation generation**: Auto-generate README files explaining your training setup
-- **Hyperparameter search**: Claude can help design systematic experiments to find optimal parameters
+- Incremental development: Claude can help you iterate on training configurations based on evaluation results
+- Error debugging: When training fails, Claude analyzes error messages and suggests fixes
+- Documentation generation: Auto-generate README files explaining your training setup
+- Hyperparameter search: Claude can help design systematic experiments to find optimal parameters
 
-## Best Practices for LoRA with Claude Code
+Best Practices for LoRA with Claude Code
 
-1. **Start small**: Begin with a small dataset and low rank (r=8) to verify your pipeline works
-2. **Monitor training**: Use Weights & Biases or TensorBoard to track loss curves and metrics
-3. **Validate before full training**: Run one training step to catch configuration errors early
-4. **Version control**: Track your training configurations in git for reproducibility
-5. **Test merged models**: Always verify that merged models produce expected outputs
+1. Start small: Begin with a small dataset and low rank (r=8) to verify your pipeline works
+2. Monitor training: Use Weights & Biases or TensorBoard to track loss curves and metrics
+3. Validate before full training: Run one training step to catch configuration errors early
+4. Version control: Track your training configurations in git for reproducibility
+5. Test merged models: Always verify that merged models produce expected outputs
 
 Claude Code transforms LoRA fine-tuning from a complex, error-prone process into a streamlined workflow. By using Claude's code generation, debugging, and automation capabilities, you can focus on the creative aspects of model customization while letting Claude handle the implementation details.
 
@@ -236,10 +236,10 @@ Claude Code transforms LoRA fine-tuning from a complex, error-prone process into
 {% endraw %}
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

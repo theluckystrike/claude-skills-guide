@@ -15,15 +15,15 @@ score: 7
 {% raw %}
 
 
-# Claude Code Kubernetes Monitoring with Prometheus
+Claude Code Kubernetes Monitoring with Prometheus
 
 Monitoring Kubernetes clusters effectively requires the right combination of tools and automation. Prometheus has become the standard for Kubernetes observability, but configuring alerts, managing scrape targets, and debugging metrics can be time-consuming. Claude Code transforms these workflows by acting as an intelligent assistant that understands your infrastructure context and helps you write Prometheus rules, debug alerting issues, and maintain healthy monitoring configurations.
 
 This guide shows you how to integrate Claude Code into your Kubernetes monitoring stack using Prometheus, with practical examples you can apply immediately.
 
-## Why Prometheus for Kubernetes Monitoring?
+Why Prometheus for Kubernetes Monitoring?
 
-Prometheus has become the de facto standard for Kubernetes monitoring for several reasons. It uses a pull-based model that naturally fits the dynamic nature of Kubernetes workloads, supports multi-dimensional data through labels, and integrates natively with the kubernetes ecosystem. The Prometheus Operator extends this further by defining monitoring resources as Kubernetes Custom Resource Definitions (CRDs), which means you manage your monitoring configuration the same way you manage your applications—as declarative YAML.
+Prometheus has become the de facto standard for Kubernetes monitoring for several reasons. It uses a pull-based model that naturally fits the dynamic nature of Kubernetes workloads, supports multi-dimensional data through labels, and integrates natively with the kubernetes ecosystem. The Prometheus Operator extends this further by defining monitoring resources as Kubernetes Custom Resource Definitions (CRDs), which means you manage your monitoring configuration the same way you manage your applications, as declarative YAML.
 
 Here's a quick comparison of popular Kubernetes monitoring approaches:
 
@@ -37,7 +37,7 @@ Here's a quick comparison of popular Kubernetes monitoring approaches:
 
 Claude Code is particularly effective with Prometheus because it can read and write PromQL queries, understand the Prometheus Operator CRD schema, and reason about your alerting logic in context.
 
-## Setting Up Prometheus Metrics Collection
+Setting Up Prometheus Metrics Collection
 
 Before Claude Code can assist with Prometheus, you need proper metrics collection. The prometheus-operator simplifies this significantly by defining monitoring resources through Custom Resource Definitions.
 
@@ -101,7 +101,7 @@ spec:
 
 Claude Code can help you create ServiceMonitors for custom applications. When you describe your application architecture to Claude, it understands service relationships and can suggest appropriate labels and endpoints.
 
-## Writing Effective Prometheus Alerting Rules
+Writing Effective Prometheus Alerting Rules
 
 Alerting rules form the backbone of Kubernetes monitoring. Poorly written rules create alert fatigue or miss critical issues. Claude Code excels at crafting precise PromQL queries that capture actual problems without false positives.
 
@@ -180,30 +180,30 @@ groups:
 
 When you ask Claude Code to write a new alert, give it context about your workload. Tell it the expected baseline, the traffic pattern, and how urgent the issue is. Claude uses that context to set appropriate thresholds and `for` durations rather than copying generic values that may not match your environment.
 
-## PromQL Queries Worth Knowing
+PromQL Queries Worth Knowing
 
 PromQL is a powerful but sometimes tricky query language. Claude Code can explain what a query does, optimize it for performance, or write one from scratch based on a plain-English description. Here are several useful queries with explanations:
 
-**Pod restart rate over the last hour:**
+Pod restart rate over the last hour:
 ```promql
 sort_desc(increase(kube_pod_container_status_restarts_total[1h]))
 ```
 
-**Nodes with the highest memory pressure:**
+Nodes with the highest memory pressure:
 ```promql
 sort_desc(
   node_memory_MemTotal_bytes - node_memory_MemAvailable_bytes
 ) / node_memory_MemTotal_bytes * 100
 ```
 
-**Top 10 pods by CPU consumption:**
+Top 10 pods by CPU consumption:
 ```promql
 topk(10, sum by(pod, namespace)(
   rate(container_cpu_usage_seconds_total{container!=""}[5m])
 ))
 ```
 
-**Request error rate per service (requires istio or similar sidecar metrics):**
+Request error rate per service (requires istio or similar sidecar metrics):
 ```promql
 sum by(destination_service_name)(
   rate(istio_requests_total{response_code=~"5.."}[5m])
@@ -215,7 +215,7 @@ sum by(destination_service_name)(
 
 If you paste one of these into Claude Code and ask "explain what this query does step by step," Claude will walk through each function and operator, which is an effective way to learn PromQL without reading dense documentation.
 
-## Integrating Alertmanager with Notification Systems
+Integrating Alertmanager with Notification Systems
 
 Prometheus sends alerts to Alertmanager, which handles deduplication, grouping, and routing to appropriate receivers. Proper Alertmanager configuration ensures the right people receive the right alerts.
 
@@ -274,15 +274,15 @@ receivers:
 
 When debugging notification issues, Claude Code can trace through your routing logic and identify why alerts might be going to the wrong receiver or not being sent at all.
 
-## Using Claude Skills for Kubernetes Monitoring
+Using Claude Skills for Kubernetes Monitoring
 
-Several Claude skills enhance Kubernetes monitoring workflows. The **pdf** skill helps generate monitoring reports by extracting metrics data and creating documentation. If you need to analyze existing Prometheus snapshots or export dashboard data, the **xlsx** skill formats this information into readable spreadsheets.
+Several Claude skills enhance Kubernetes monitoring workflows. The pdf skill helps generate monitoring reports by extracting metrics data and creating documentation. If you need to analyze existing Prometheus snapshots or export dashboard data, the xlsx skill formats this information into readable spreadsheets.
 
-For incident response, the **tdd** skill proves valuable when you need to write tests for alerting logic before deploying changes to production. This test-driven approach prevents misconfigured alerts from causing problems during actual incidents.
+For incident response, the tdd skill proves valuable when you need to write tests for alerting logic before deploying changes to production. This test-driven approach prevents misconfigured alerts from causing problems during actual incidents.
 
-The **supermemory** skill integrates with your note-taking system to maintain a knowledge base of past incidents and their resolutions. When a familiar alert fires, Claude can reference previous incidents and suggest proven remediation steps.
+The supermemory skill integrates with your note-taking system to maintain a knowledge base of past incidents and their resolutions. When a familiar alert fires, Claude can reference previous incidents and suggest proven remediation steps.
 
-## Debugging Common Prometheus Issues
+Debugging Common Prometheus Issues
 
 One frequent challenge is understanding why specific metrics are missing. Claude Code helps you trace metric paths through your monitoring stack.
 
@@ -302,24 +302,24 @@ For metrics that exist but show unexpected values, Claude analyzes the metric de
 
 A systematic debugging workflow for missing metrics looks like this:
 
-**Step 1 — Verify the Pod is exposing metrics:**
+Step 1. Verify the Pod is exposing metrics:
 ```bash
 kubectl exec -it <pod-name> -- curl localhost:8080/metrics | head -20
 ```
 
-**Step 2 — Check ServiceMonitor selector matches Service labels:**
+Step 2. Check ServiceMonitor selector matches Service labels:
 ```bash
 kubectl get svc -n production -l app=nodejs-api -o yaml
 kubectl get servicemonitor -n monitoring nodejs-app-monitor -o yaml
 ```
 
-**Step 3 — Verify Prometheus discovered the target:**
+Step 3. Verify Prometheus discovered the target:
 ```bash
 kubectl port-forward -n monitoring svc/monitoring-kube-prometheus-prometheus 9090:9090
-# Then open http://localhost:9090/targets in your browser
+Then open http://localhost:9090/targets in your browser
 ```
 
-**Step 4 — Check for scrape errors in Prometheus logs:**
+Step 4. Check for scrape errors in Prometheus logs:
 ```bash
 kubectl logs -n monitoring prometheus-monitoring-kube-prometheus-prometheus-0 \
   | grep -i "scrape\|error" | tail -20
@@ -327,20 +327,20 @@ kubectl logs -n monitoring prometheus-monitoring-kube-prometheus-prometheus-0 \
 
 Claude Code is particularly useful at step 2, where label selector mismatches are the most common cause of missing targets. Paste your service YAML and your ServiceMonitor YAML and ask "do these selectors match?" Claude will immediately spot discrepancies.
 
-## Setting Up Grafana Dashboards
+Setting Up Grafana Dashboards
 
 Prometheus metrics are most useful when visualized. The kube-prometheus-stack includes a set of pre-built dashboards, but you'll want custom dashboards for your own applications. Claude Code can generate Grafana dashboard JSON from a description of what you want to display.
 
 Here's how to import a dashboard using the Grafana API:
 
 ```bash
-# Export an existing dashboard
+Export an existing dashboard
 GRAFANA_URL="http://localhost:3000"
 curl -s -u admin:password \
   "${GRAFANA_URL}/api/dashboards/uid/kubernetes-nodes" \
   | jq '.dashboard' > kubernetes-nodes.json
 
-# Import a modified dashboard
+Import a modified dashboard
 curl -s -X POST \
   -H "Content-Type: application/json" \
   -u admin:password \
@@ -350,7 +350,7 @@ curl -s -X POST \
 
 Ask Claude Code to help you write a Grafana panel query for a specific metric, and it will produce the PromQL expression along with suggested visualization settings (graph type, thresholds, unit labels).
 
-## Automating Monitoring Configuration Updates
+Automating Monitoring Configuration Updates
 
 GitOps workflows work well for monitoring configurations. Store your Prometheus rules, Alertmanager config, and ServiceMonitors in a Git repository, then use ArgoCD or Flux to synchronize changes to your cluster.
 
@@ -360,7 +360,7 @@ A pre-commit hook that uses Claude to validate configurations:
 
 ```bash
 #!/bin/bash
-# Validate Prometheus rules
+Validate Prometheus rules
 for rulefile in monitoring/*.yaml; do
   if ! promtool check rules "$rulefile"; then
     echo "Invalid rules in $rulefile"
@@ -373,13 +373,13 @@ You can extend this to also validate Alertmanager config syntax:
 
 ```bash
 #!/bin/bash
-# Validate Alertmanager config
+Validate Alertmanager config
 if ! amtool check-config alertmanager.yaml; then
   echo "Invalid Alertmanager configuration"
   exit 1
 fi
 
-# Validate all PrometheusRule manifests
+Validate all PrometheusRule manifests
 for rulefile in monitoring/rules/*.yaml; do
   promtool check rules <(kubectl apply --dry-run=client -f "$rulefile" -o json \
     | jq -r '.spec') || exit 1
@@ -409,7 +409,7 @@ spec:
       selfHeal: true
 ```
 
-## Metrics Persistence and Long-Term Analysis
+Metrics Persistence and Long-Term Analysis
 
 By default, Prometheus stores metrics locally on disk with a retention period (commonly 15 to 90 days). For long-term storage across multiple clusters, Thanos or Cortex extends Prometheus with horizontal scalability.
 
@@ -444,7 +444,7 @@ containers:
 
 When analyzing historical trends, the combination of Thanos Querier for efficient metric retrieval and Claude for query construction accelerates root cause analysis significantly. You can paste a Thanos query and a description of a past incident and ask Claude to help you identify the contributing metrics.
 
-## Practical Workflow: Responding to a Production Alert
+Practical Workflow: Responding to a Production Alert
 
 To see how all of this comes together, here's a realistic workflow where Claude Code assists during an incident:
 
@@ -469,20 +469,20 @@ To see how all of this comes together, here's a realistic workflow where Claude 
 
 This kind of interactive back-and-forth with Claude Code during an incident is where the productivity gains are most tangible.
 
-## Building Your Monitoring Foundation
+Building Your Monitoring Foundation
 
 Effective Kubernetes monitoring with Prometheus requires thoughtful configuration of collectors, alerts, and notification pathways. Claude Code acts as a knowledgeable teammate that understands your infrastructure context and helps you build reliable monitoring systems faster.
 
 Start with solid scrape configurations, write targeted alerts that reduce noise, and ensure notifications reach the right people. Build incrementally: get the basics working first, then add custom application metrics, refine alert thresholds based on real data, and eventually layer in long-term storage with Thanos or Mimir.
 
-Claude skills like pdf for reporting, xlsx for data analysis, and tdd for testing alert logic create a comprehensive monitoring toolkit that scales with your cluster. The biggest gains come from treating Claude as a peer reviewer for your PromQL and alerting logic—it catches subtle issues that are easy to miss when you're deep in the details of a complex configuration.
+Claude skills like pdf for reporting, xlsx for data analysis, and tdd for testing alert logic create a comprehensive monitoring toolkit that scales with your cluster. The biggest gains come from treating Claude as a peer reviewer for your PromQL and alerting logic, it catches subtle issues that are easy to miss when you're deep in the details of a complex configuration.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

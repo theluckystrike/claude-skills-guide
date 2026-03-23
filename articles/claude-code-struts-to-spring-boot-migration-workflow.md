@@ -12,24 +12,24 @@ permalink: /claude-code-struts-to-spring-boot-migration-workflow/
 ---
 {% raw %}
 
-# Claude Code Struts to Spring Boot Migration Workflow
+Claude Code Struts to Spring Boot Migration Workflow
 
 Legacy Struts applications served enterprises well for decades, but modern development demands Spring Boot's agility, auto-configuration, and cloud-native capabilities. Migrating from Struts to Spring Boot is complex, requiring careful analysis of Action classes, XML configurations, and JSP views. This guide demonstrates how Claude Code skills transform a tedious manual migration into an automated, reliable workflow.
 
-## Understanding the Migration Challenge
+Understanding the Migration Challenge
 
 Struts applications typically comprise Action classes extending `ActionSupport`, XML configuration files (`struts.xml`), JSP views, and form beans. Each component requires different transformation strategies:
 
-- **Action Classes**: Convert to Spring MVC `@Controller` or `@RestController`
-- **XML Configurations**: Replace with Spring annotations and application properties
-- **Form Beans**: Map to Spring `@ModelAttribute` or DTOs
-- **JSP Views**: Modernize with Thymeleaf or keep as JSP with minimal changes
+- Action Classes: Convert to Spring MVC `@Controller` or `@RestController`
+- XML Configurations: Replace with Spring annotations and application properties
+- Form Beans: Map to Spring `@ModelAttribute` or DTOs
+- JSP Views: Modernize with Thymeleaf or keep as JSP with minimal changes
 
 Claude Code excels at analyzing existing codebases, identifying patterns, and generating equivalent Spring Boot implementations. The key lies in leveraging skills that combine code analysis tools with intelligent transformation capabilities.
 
 The typical Struts application carries substantial technical debt. Action classes often accumulate direct database calls, session manipulation, and business logic that was never separated from the web layer. Before writing a single line of migrated code, you need a clear picture of what you are dealing with. Attempting to rewrite without a full inventory leads to missed dependencies, broken functionality, and months of debugging after go-live.
 
-## Why Migrate From Struts to Spring Boot?
+Why Migrate From Struts to Spring Boot?
 
 Organizations resist Struts migrations because existing applications work, the risk is real, and the cost is high. But the technical case for migrating is compelling:
 
@@ -45,7 +45,7 @@ Organizations resist Struts migrations because existing applications work, the r
 
 The OGNL expression language vulnerabilities that plagued Struts 2 throughout the 2010s are a persistent reminder that aging frameworks accumulate security surface area faster than teams can patch it. Spring Boot's frequent release cadence and auto-dependency management dramatically reduce that exposure.
 
-## Setting Up Claude Code for Migration
+Setting Up Claude Code for Migration
 
 Begin by ensuring Claude Code has the necessary skills set up for comprehensive migration support. Place `code-analysis.md`, `java-expert.md`, and `spring-framework.md` skill files in your `.claude/` directory and invoke them with `/code-analysis`, `/java-expert`, and `/spring-framework`.
 
@@ -63,7 +63,7 @@ deployment cycle.
 
 Claude Code responds with a phased plan tailored to your application's size. For a project of this scale, a typical plan covers three phases: inventory and risk assessment, component-by-component conversion with parallel running, and cutover with deprecation of the Struts layer.
 
-## Step 1: Analyzing the Struts Application
+Step 1: Analyzing the Struts Application
 
 The first phase involves inventorying your Struts application structure. Create a migration analysis skill that scans the codebase:
 
@@ -76,7 +76,7 @@ public class StrutsActionAnalyzer {
         // Scan for Action class files
         FileScanner scanner = new FileScanner();
         List<File> actionFiles = scanner.findFiles(basePath,
-            "**/*Action.java");
+            "/*Action.java");
 
         for (File actionFile : actionFiles) {
             ActionMapping mapping = parseActionClass(actionFile);
@@ -114,7 +114,7 @@ Output as a CSV for project planning.
 
 This single analysis step can save weeks of scheduling surprises during the actual migration.
 
-## Step 2: Converting Action Classes
+Step 2: Converting Action Classes
 
 The core transformation converts Struts Action classes to Spring MVC controllers. Claude Code applies pattern recognition to map:
 
@@ -168,7 +168,7 @@ Claude Code's transformation skills preserve business logic while updating the p
 
 When the original Action instantiates services with `new UserService()`, Claude Code recognizes this as a candidate for constructor injection and refactors accordingly. This is one of the highest-value transformations because it simultaneously modernizes the code and makes the resulting controller unit-testable without a running application context.
 
-### Handling Validation Migration
+Handling Validation Migration
 
 Struts validation through XML files (`UserAction-validation.xml`) or `validate()` method overrides translates cleanly to Spring's `@Valid` annotation combined with Bean Validation constraints:
 
@@ -210,7 +210,7 @@ public String createUser(@Valid @ModelAttribute UserDto userDto,
 }
 ```
 
-## Step 3: Configuration Migration
+Step 3: Configuration Migration
 
 Struts XML configurations become Spring Boot's annotation-driven approach. Claude Code parses `struts.xml` and generates equivalent Spring configurations:
 
@@ -240,16 +240,16 @@ public class WebMvcConfig implements WebMvcConfigurer {
 For properties previously in `struts.xml`, migrate to `application.properties`:
 
 ```properties
-# Migration of Struts constants
+Migration of Struts constants
 struts.ui.theme=xhtml
 struts.convention.result.path=/WEB-INF/views
 
-# Spring Boot equivalents
+Spring Boot equivalents
 spring.mvc.view.prefix=/WEB-INF/views/
 spring.mvc.view.suffix=.jsp
 ```
 
-### Interceptor Stack Migration
+Interceptor Stack Migration
 
 Struts interceptor stacks are one of the trickier migration targets. Common patterns translate as follows:
 
@@ -263,7 +263,7 @@ Struts interceptor stacks are one of the trickier migration targets. Common patt
 
 For custom interceptors containing business logic, Claude Code extracts that logic into `@Aspect` components using Spring AOP, preserving cross-cutting behavior without coupling it to the web layer.
 
-## Step 4: Dependency and Build Migration
+Step 4: Dependency and Build Migration
 
 Update your build configuration from Struts to Spring Boot dependencies:
 
@@ -301,7 +301,7 @@ Add the Spring Boot parent POM to centralize dependency version management:
 </parent>
 ```
 
-Claude Code's build analysis skill identifies all transitive dependencies requiring updates, preventing runtime conflicts that often plague manual migrations. It specifically checks for libraries that Struts brought in transitively — like older Commons libraries — that may conflict with Spring Boot's managed versions.
+Claude Code's build analysis skill identifies all transitive dependencies requiring updates, preventing runtime conflicts that often plague manual migrations. It specifically checks for libraries that Struts brought in transitively. like older Commons libraries. that may conflict with Spring Boot's managed versions.
 
 Ask Claude Code to audit dependency conflicts before you attempt a build:
 
@@ -311,7 +311,7 @@ with spring-boot-starter-parent 3.2.4. Flag commons-fileupload,
 freemarker, and OGNL versions specifically.
 ```
 
-## Step 5: Validation and Testing
+Step 5: Validation and Testing
 
 The migration workflow concludes with comprehensive validation. Generate test cases that verify functional equivalence:
 
@@ -373,22 +373,22 @@ public class MigrationValidator {
 
 Claude Code can generate this comparison harness automatically, then run it against a list of all known action URLs extracted from `struts.xml`.
 
-## Handling Edge Cases in Real Applications
+Handling Edge Cases in Real Applications
 
 Real Struts applications contain patterns that do not map cleanly. Claude Code handles several common edge cases:
 
-**Dynamic Method Invocation (DMI)**: Struts DMI allows URLs like `/user!delete` to call the `delete()` method directly. Spring Boot does not support this pattern. Claude Code converts each DMI endpoint to an explicit `@DeleteMapping` or `@PostMapping` with a separate URL.
+Dynamic Method Invocation (DMI): Struts DMI allows URLs like `/user!delete` to call the `delete()` method directly. Spring Boot does not support this pattern. Claude Code converts each DMI endpoint to an explicit `@DeleteMapping` or `@PostMapping` with a separate URL.
 
-**Chained Actions**: Struts allows one action to forward to another action via the `chain` result type. In Spring Boot, this is replaced with `redirect:` prefixes or service-layer orchestration.
+Chained Actions: Struts allows one action to forward to another action via the `chain` result type. In Spring Boot, this is replaced with `redirect:` prefixes or service-layer orchestration.
 
-**Wildcard Mappings**: Struts wildcard action mappings like `<action name="*User" class="UserAction" method="{1}">` require explicit controller method generation. Claude Code identifies each concrete invocation in JSP files and generates the corresponding controller methods.
+Wildcard Mappings: Struts wildcard action mappings like `<action name="*User" class="UserAction" method="{1}">` require explicit controller method generation. Claude Code identifies each concrete invocation in JSP files and generates the corresponding controller methods.
 
-## Automating the Complete Workflow
+Automating the Complete Workflow
 
 Chain these phases into a reproducible Claude Code skill:
 
 ```yaml
-# Migration workflow skill
+Migration workflow skill
 name: struts-to-spring-boot-migration
 description: Automated Struts to Spring Boot migration
 ```
@@ -405,7 +405,7 @@ A practical full-session workflow for a medium-sized application looks like this
 
 1. Run `/code-analysis` to inventory all Action classes and form beans
 2. Generate complexity CSV with Claude Code's Java analysis
-3. Migrate LOW complexity actions first — validate each in isolation
+3. Migrate LOW complexity actions first. validate each in isolation
 4. Migrate MEDIUM complexity actions with interceptor mapping
 5. Tackle HIGH complexity actions with paired review
 6. Run parallel response comparison across all endpoints
@@ -413,20 +413,20 @@ A practical full-session workflow for a medium-sized application looks like this
 
 Following this order means you have working Spring Boot controllers handling the majority of traffic before you tackle the complicated cases. Rollback risk decreases with each validated batch.
 
-## Conclusion
+Conclusion
 
 Claude Code transforms the daunting Struts to Spring Boot migration from months of manual effort into a structured, automated workflow. By leveraging code analysis, pattern recognition, and intelligent transformation skills, you preserve business logic while modernizing your architecture. The key advantages include consistent code generation, comprehensive dependency management, and built-in validation ensuring functional equivalence.
 
-The most successful migrations treat Claude Code as an experienced pairing partner rather than a code generator. Use it to analyze before transforming, validate after each batch, and generate the tedious boilerplate — test classes, DTO mappings, Spring Security configuration — that slows down manual migrations. Keep your focus on the business logic that only your team fully understands.
+The most successful migrations treat Claude Code as an experienced pairing partner rather than a code generator. Use it to analyze before transforming, validate after each batch, and generate the tedious boilerplate. test classes, DTO mappings, Spring Security configuration. that slows down manual migrations. Keep your focus on the business logic that only your team fully understands.
 
 Start your migration today by installing the recommended skills and executing the workflow against your legacy Struts applications.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

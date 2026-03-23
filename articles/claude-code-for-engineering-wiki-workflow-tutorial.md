@@ -18,34 +18,34 @@ score: 8
 
 Engineering wikis are the backbone of knowledge sharing in modern development teams. Whether you're using Confluence, Notion, GitHub Wiki, or a custom solution, maintaining accurate and up-to-date documentation is critical. However, the manual effort required to keep wikis current often leads to stale content and knowledge silos. This is where Claude Code transforms your documentation workflow.
 
-## Why Claude Code for Wiki Workflows
+Why Claude Code for Wiki Workflows
 
-Claude Code excels at understanding context, generating structured content, and following consistent patterns—all essential skills for wiki maintenance. By integrating Claude Code into your engineering wiki workflow, you can automate documentation generation, enforce consistency across pages, and ensure your wiki remains a reliable single source of truth.
+Claude Code excels at understanding context, generating structured content, and following consistent patterns, all essential skills for wiki maintenance. By integrating Claude Code into your engineering wiki workflow, you can automate documentation generation, enforce consistency across pages, and ensure your wiki remains a reliable single source of truth.
 
-The key advantage is Claude Code's ability to understand your project's specific context through CLAUDE.md files and custom skills. This means documentation generated isn't generic—it reflects your team's conventions, architecture decisions, and coding standards.
+The key advantage is Claude Code's ability to understand your project's specific context through CLAUDE.md files and custom skills. This means documentation generated isn't generic, it reflects your team's conventions, architecture decisions, and coding standards.
 
-## Setting Up Your Wiki Workflow
+Setting Up Your Wiki Workflow
 
-### Defining Project Context
+Defining Project Context
 
 Before automating wiki documentation, establish clear context for Claude Code. Create a CLAUDE.md file in your project root that defines your wiki structure and documentation standards:
 
 ```markdown
-# Project Wiki Standards
+Project Wiki Standards
 
-## Documentation Structure
+Documentation Structure
 - /docs/architecture/ - System design documents
 - /docs/api/ - API references and endpoints
 - /docs/guides/ - How-to guides and tutorials
 - /docs/runbooks/ - Operational procedures
 
-## Writing Standards
+Writing Standards
 - Use active voice
 - Include code examples for every concept
 - Add troubleshooting sections to technical docs
 - Maintain a "Last Updated" banner on all pages
 
-## Wiki Platform
+Wiki Platform
 - Confluence space: ENGINEERING
 - Use standard templates from /templates/
 - Include JIRA ticket links where relevant
@@ -53,12 +53,12 @@ Before automating wiki documentation, establish clear context for Claude Code. C
 
 This context file ensures every documentation task aligns with your team's standards.
 
-### Creating a Wiki Documentation Skill
+Creating a Wiki Documentation Skill
 
 Custom skills automate repetitive wiki tasks. Here's a skill structure for engineering wiki workflows:
 
 ```yaml
-# skills/wiki-docs-skill.yaml
+skills/wiki-docs-skill.yaml
 name: wiki-docs
 description: Generate and maintain engineering wiki documentation
 version: 1.0.0
@@ -81,9 +81,9 @@ context_requirements:
 
 The skill defines the types of documentation tasks Claude Code can handle, making it simple to invoke wiki-related assistance.
 
-## Practical Examples
+Practical Examples
 
-### Generating API Documentation
+Generating API Documentation
 
 When you need to document a new API endpoint, Claude Code can generate comprehensive documentation based on your code. Here's how to structure your request:
 
@@ -118,7 +118,7 @@ Claude Code analyzes your authentication code and produces wiki-ready documentat
 
 This approach ensures your API docs stay synchronized with your actual implementation.
 
-### Maintaining Runbooks
+Maintaining Runbooks
 
 Operational runbooks are critical for incident response but often become outdated. Use Claude Code to create and maintain runbooks that evolve with your systems:
 
@@ -130,12 +130,12 @@ common failure modes, rollback procedures, and monitoring dashboards to check.
 
 The generated runbook includes actionable steps derived from your actual infrastructure code and deployment configurations.
 
-### Documentation Auditing
+Documentation Auditing
 
 Regular wiki audits ensure content remains accurate. Claude Code can systematically review your documentation:
 
 ```python
-# audit_wiki.py - Documentation audit script
+audit_wiki.py - Documentation audit script
 import os
 from pathlib import Path
 
@@ -163,19 +163,19 @@ def audit_documentation(docs_path):
 
 Run this audit regularly to identify wiki pages needing attention.
 
-## Automating Wiki Updates
+Automating Wiki Updates
 
-### Integration with CI/CD
+Integration with CI/CD
 
 Trigger wiki updates automatically when code changes:
 
 ```yaml
-# .github/workflows/wiki-update.yml
+.github/workflows/wiki-update.yml
 name: Update Wiki on Deploy
 on:
   push:
     branches: [main]
-    paths: ['src/**', 'docs/**']
+    paths: ['src/', 'docs/']
 
 jobs:
   update-api-docs:
@@ -195,7 +195,7 @@ jobs:
 
 This workflow ensures your wiki reflects the current state of your codebase after every deployment.
 
-### Scheduled Reviews
+Scheduled Reviews
 
 Set up periodic documentation reviews using scheduled triggers:
 
@@ -207,9 +207,9 @@ stale pages, missing sections, and outdated code examples.
 
 This proactive approach prevents documentation rot before it starts.
 
-## Best Practices
+Best Practices
 
-### Version Control Your Wiki
+Version Control Your Wiki
 
 Treat your wiki content as code by storing it in Git. This provides:
 - History tracking for all changes
@@ -217,36 +217,36 @@ Treat your wiki content as code by storing it in Git. This provides:
 - Branch-based writing for major updates
 - Easy rollback when mistakes occur
 
-### Use Templates Consistently
+Use Templates Consistently
 
 Create standard templates for recurring documentation types:
 
 ```markdown
-# {{title}}
+{{title}}
 
-## Overview
+Overview
 {{brief description of the topic}}
 
-## Prerequisites
+Prerequisites
 - {{requirement 1}}
 - {{requirement 2}}
 
-## Steps
+Steps
 1. {{step one}}
 2. {{step two}}
 
-## Troubleshooting
+Troubleshooting
 | Issue | Solution |
 |-------|----------|
 | {{problem}} | {{fix}} |
 
-## Related Links
+Related Links
 - {{related documentation}}
 ```
 
 Templates ensure consistency and reduce the effort required to create new pages.
 
-### Implement a Documentation Owner System
+Implement a Documentation Owner System
 
 Assign owners to each wiki section:
 
@@ -256,36 +256,36 @@ Assign owners to each wiki section:
 
 Claude Code can generate ownership reports and send notifications based on your team's structure.
 
-## Measuring Success
+Measuring Success
 
 Track wiki health with metrics:
 
-- **Page Views**: Identify most-used documentation
-- **Search Queries**: Understand what information people seek
-- **Update Frequency**: Monitor how often pages change
-- **Staleness Age**: Track average time since last update
+- Page Views: Identify most-used documentation
+- Search Queries: Understand what information people seek
+- Update Frequency: Monitor how often pages change
+- Staleness Age: Track average time since last update
 
 Use these metrics to prioritize documentation efforts and demonstrate wiki ROI to leadership.
 
-## Conclusion
+Conclusion
 
 Claude Code transforms engineering wiki management from a manual chore into an automated, reliable process. By defining clear context, creating custom skills, and integrating with your CI/CD pipeline, you can maintain a living wiki that truly serves your team's needs.
 
-Start small—pick one documentation type to automate—and expand gradually. The key is consistency: regular maintenance beats occasional massive cleanup efforts every time.
+Start small, pick one documentation type to automate, and expand gradually. The key is consistency: regular maintenance beats occasional massive cleanup efforts every time.
 
 ---
 
-**Next Steps:**
+Next Steps:
 - Create your CLAUDE.md file with wiki standards
 - Build a custom skill for your most common documentation tasks
 - Integrate wiki generation into your deployment pipeline
 
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

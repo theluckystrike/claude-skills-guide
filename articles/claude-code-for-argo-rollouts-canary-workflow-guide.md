@@ -12,11 +12,11 @@ tags: [claude-code, claude-skills]
 
 {% raw %}
 
-# Claude Code for Argo Rollouts Canary Workflow Guide
+Claude Code for Argo Rollouts Canary Workflow Guide
 
-Deploying applications with confidence requires robust progressive delivery strategies. Argo Rollouts provides Kubernetes-native progressive delivery with automated canary deployments, and when combined with Claude Code, you gain an intelligent assistant that can help design, implement, and troubleshoot your deployment workflows. This guide demonstrates how to leverage Claude Code effectively for Argo Rollouts canary workflows.
+Deploying applications with confidence requires solid progressive delivery strategies. Argo Rollouts provides Kubernetes-native progressive delivery with automated canary deployments, and when combined with Claude Code, you gain an intelligent assistant that can help design, implement, and troubleshoot your deployment workflows. This guide demonstrates how to use Claude Code effectively for Argo Rollouts canary workflows.
 
-## Understanding Argo Rollouts Canary Deployments
+Understanding Argo Rollouts Canary Deployments
 
 Argo Rollouts extends Kubernetes with progressive delivery capabilities. Unlike traditional rolling updates, canary deployments route a percentage of traffic to the new version while monitoring metrics. If the new version performs well, traffic gradually increases until it receives 100%. If issues arise, automatic rollback protects users from faulty releases.
 
@@ -56,7 +56,7 @@ spec:
           image: my-app:v2
 ```
 
-## Setting Up Claude Code for Argo Rollouts
+Setting Up Claude Code for Argo Rollouts
 
 Before integrating Claude Code with your Argo Rollouts workflow, ensure you have the necessary tools configured. Install the Argo Rollouts kubectl plugin to interact with Rollouts directly:
 
@@ -73,15 +73,15 @@ kubectl get pods -n argo-rollouts
 
 With Claude Code, you can generate Rollout configurations, analyze existing deployments, and get explanations of complex settings. When working on your local machine with access to your Kubernetes cluster, Claude Code can help craft YAML configurations tailored to your application's needs.
 
-## Designing Effective Canary Strategies
+Designing Effective Canary Strategies
 
 Creating effective canary strategies requires balancing deployment speed with risk mitigation. Claude Code can suggest appropriate step configurations based on your use case. For high-stakes applications requiring thorough validation, consider longer pause durations and smaller weight increments. For lower-risk services, faster progression may be acceptable.
 
 When designing your strategy, consider these factors:
 
-- **Traffic volume**: High-traffic applications benefit from slower rollouts with more granular weight increases
-- **Validation time**: Complex validation suites require longer pause periods
-- **Rollback speed**: Automated analysis hooks enable quick detection of issues
+- Traffic volume: High-traffic applications benefit from slower rollouts with more granular weight increases
+- Validation time: Complex validation suites require longer pause periods
+- Rollback speed: Automated analysis hooks enable quick detection of issues
 
 Here's a more advanced canary configuration with analysis templates:
 
@@ -122,15 +122,15 @@ spec:
         unsuccessfulRunHistoryLimit: 3
 ```
 
-## Integrating Claude Code into Your Workflow
+Integrating Claude Code into Your Workflow
 
 Claude Code serves as an excellent companion throughout the Argo Rollouts lifecycle. Here are practical ways to integrate it:
 
-**Configuration Generation**: When starting a new service, describe your requirements to Claude Code and receive a tailored Rollout configuration:
+Configuration Generation: When starting a new service, describe your requirements to Claude Code and receive a tailored Rollout configuration:
 
 > "Create an Argo Rollout for a Node.js API service with 3 replicas, using canary strategy with initial 10% traffic, 5-minute pause, then 50%, 5-minute pause, then full rollout. Include Prometheus metrics for success rate analysis."
 
-**Troubleshooting**: When encountering issues, describe the problem and share relevant output. Claude Code can help identify misconfigurations or suggest debugging steps:
+Troubleshooting: When encountering issues, describe the problem and share relevant output. Claude Code can help identify misconfigurations or suggest debugging steps:
 
 ```bash
 kubectl get rollout my-app-rollout -o yaml
@@ -138,9 +138,9 @@ kubectl describe rollout my-app-rollout
 kubectl get pods -l app=my-app
 ```
 
-**Documentation**: Use Claude Code to generate documentation for your deployment strategies, helping team members understand the progression logic and rollback procedures.
+Documentation: Use Claude Code to generate documentation for your deployment strategies, helping team members understand the progression logic and rollback procedures.
 
-## Implementing Automated Analysis
+Implementing Automated Analysis
 
 Argo Rollouts supports automated analysis through AnalysisTemplates and ClusterAnalysisTemplates. These define metrics queries that validate the canary version's health. Claude Code can help you construct appropriate analysis configurations.
 
@@ -170,24 +170,24 @@ spec:
 
 The analysis ensures that before traffic increases to the next weight level, the canary meets your success criteria. Claude Code can suggest appropriate thresholds based on your application's tolerance for errors.
 
-## Best Practices for Claude Code and Argo Rollouts
+Best Practices for Claude Code and Argo Rollouts
 
 When combining Claude Code with Argo Rollouts, keep these recommendations in mind:
 
-1. **Version control your Rollout definitions**: Store all Rollout and AnalysisTemplate YAML files in your repository. Claude Code can review changes and suggest improvements before deployment.
+1. Version control your Rollout definitions: Store all Rollout and AnalysisTemplate YAML files in your repository. Claude Code can review changes and suggest improvements before deployment.
 
-2. **Use meaningful labels and annotations**: Help Claude Code understand your deployment by adding descriptive metadata to your resources.
+2. Use meaningful labels and annotations: Help Claude Code understand your deployment by adding descriptive metadata to your resources.
 
-3. **Start conservative, iterate**: Begin with smaller weight increments and longer pauses. Adjust based on your operational experience.
+3. Start conservative, iterate: Begin with smaller weight increments and longer pauses. Adjust based on your operational experience.
 
-4. **Document rollback procedures**: Ensure your team knows how to manually abort a rollout if automated rollback fails. Claude Code can help create runbooks.
+4. Document rollback procedures: Ensure your team knows how to manually abort a rollout if automated rollback fails. Claude Code can help create runbooks.
 
-5. **Monitor the right metrics**: Choose metrics that genuinely indicate application health rather than vanity metrics.
+5. Monitor the right metrics: Choose metrics that genuinely indicate application health rather than vanity metrics.
 
-## Conclusion
+Conclusion
 
-Integrating Claude Code with Argo Rollouts transforms your deployment workflow from manual configuration to intelligent, assisted progressive delivery. Claude Code helps generate configurations, explains complex setups, troubleshoots issues, and suggests improvements based on deployment best practices. Start with simple canary configurations, add automated analysis as you build confidence, and leverage Claude Code's assistance throughout the process.
+Integrating Claude Code with Argo Rollouts transforms your deployment workflow from manual configuration to intelligent, assisted progressive delivery. Claude Code helps generate configurations, explains complex setups, troubleshoots issues, and suggests improvements based on deployment best practices. Start with simple canary configurations, add automated analysis as you build confidence, and use Claude Code's assistance throughout the process.
 
-The combination of Claude Code's contextual understanding and Argo Rollouts' powerful progressive delivery creates a robust foundation for confident software releases.
+The combination of Claude Code's contextual understanding and Argo Rollouts' powerful progressive delivery creates a solid foundation for confident software releases.
 
 {% endraw %}

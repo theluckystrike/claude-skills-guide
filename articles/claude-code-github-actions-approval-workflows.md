@@ -14,31 +14,31 @@ permalink: /claude-code-github-actions-approval-workflows/
 
 
 
-# Claude Code GitHub Actions Approval Workflows
+Claude Code GitHub Actions Approval Workflows
 
 [Manual approval gates are essential for production deployments](/claude-tdd-skill-test-driven-development-workflow/), security-sensitive operations, and any workflow requiring human oversight before critical actions execute. GitHub Actions provides native environment protection through required reviewers, and Claude Code skills can enhance these workflows with intelligent decision-making, automated checks, and streamlined approval processes.
 
 This guide covers practical implementations of approval workflows using GitHub Actions environments and Claude Code skills for developers who need controlled deployment pipelines.
 
-## Understanding GitHub Actions Environment Protection
+Understanding GitHub Actions Environment Protection
 
 [GitHub repository environments provide the foundation for approval workflows](/how-do-i-combine-two-claude-skills-in-one-workflow/) Environments allow you to configure protection rules, including required reviewers who must approve workflow runs before they can proceed.
 
 To enable environment protection, navigate to your repository settings and create an environment:
 
-1. Go to **Settings** → **Environments**
-2. Click **New environment** and name it (e.g., `production`, `staging`)
-3. Enable **Required reviewers** and select team members or users
+1. Go to Settings → Environments
+2. Click New environment and name it (e.g., `production`, `staging`)
+3. Enable Required reviewers and select team members or users
 4. Optionally set a timeout for how long a workflow can wait for approval
 
 Once configured, any workflow job that references this environment will pause and wait for approval before executing.
 
-## Basic Approval Workflow Implementation
+Basic Approval Workflow Implementation
 
 Here is a straightforward workflow that requires approval before deploying to a production environment:
 
 ```yaml
-# .github/workflows/production-deploy.yml
+.github/workflows/production-deploy.yml
 name: Production Deployment
 
 on:
@@ -78,9 +78,9 @@ jobs:
 
 The `environment: production` line triggers GitHub's built-in approval mechanism. When the workflow reaches this job, it enters a waiting state until at least one required reviewer approves it.
 
-## Enhancing Approvals with Claude Code Skills
+Enhancing Approvals with Claude Code Skills
 
-Claude Code can augment approval workflows by performing automated pre-checks, gathering context, and providing recommendations to reviewers. The **supermemory** skill is particularly useful for retrieving relevant deployment history and context before approval decisions.
+Claude Code can augment approval workflows by performing automated pre-checks, gathering context, and providing recommendations to reviewers. The supermemory skill is particularly useful for retrieving relevant deployment history and context before approval decisions.
 
 Before triggering a deployment workflow, run Claude Code locally to gather context for reviewers:
 
@@ -90,12 +90,12 @@ claude "Summarize the last 20 commits on main, highlight any changes to database
 
 This gives reviewers actionable information without requiring them to dig through git logs manually.
 
-## Multi-Environment Approval Chains
+Multi-Environment Approval Chains
 
 Complex projects often require sequential approvals across multiple environments. You can model this with a staged deployment approach where each environment requires approval:
 
 ```yaml
-# .github/workflows/staged-deployment.yml
+.github/workflows/staged-deployment.yml
 name: Staged Deployment Pipeline
 
 on:
@@ -140,12 +140,12 @@ jobs:
 
 This workflow creates a clear chain: build → staging approval → tests → production approval. Each environment has its own protection rules, allowing different reviewers for each stage.
 
-## Using the tdd Skill for Approval Validation
+Using the tdd Skill for Approval Validation
 
-The **tdd** skill can generate automated validation tests that run as part of the approval process. Create tests specifically for deployment validation:
+The tdd skill can generate automated validation tests that run as part of the approval process. Create tests specifically for deployment validation:
 
 ```yaml
-# .github/workflows/deployment-approval-checks.yml
+.github/workflows/deployment-approval-checks.yml
 name: Deployment Approval Checks
 
 on:
@@ -183,12 +183,12 @@ jobs:
 
 The workflow runs automated checks before requiring human approval, ensuring that deployments meet specific criteria regardless of approval status.
 
-## Slack Integration for Approval Notifications
+Slack Integration for Approval Notifications
 
 Real-world teams need timely approval notifications. Use GitHub's official Slack actions to send alerts when a workflow enters a waiting state:
 
 ```yaml
-# .github/workflows/approval-notification.yml
+.github/workflows/approval-notification.yml
 name: Approval Notification
 
 on:
@@ -227,20 +227,20 @@ jobs:
 
 This configuration notifies your Slack channel when approval is needed, with a direct link to the workflow run.
 
-## Best Practices for Approval Workflows
+Best Practices for Approval Workflows
 
 Implement these practices to make approval workflows effective:
 
-**Keep environments specific.** Create separate environments for development, staging, and production rather than reusing a single environment. Each environment should have appropriate reviewers.
+Keep environments specific. Create separate environments for development, staging, and production rather than reusing a single environment. Each environment should have appropriate reviewers.
 
-**Timeout stale approvals.** GitHub automatically cancels workflow runs after a default period, but you can configure shorter timeouts through your repository's environment settings. In the GitHub UI under Settings → Environments, set a wait timer to automatically cancel workflows that have not received approval within a set number of minutes.
+Timeout stale approvals. GitHub automatically cancels workflow runs after a default period, but you can configure shorter timeouts through your repository's environment settings. In the GitHub UI under Settings → Environments, set a wait timer to automatically cancel workflows that have not received approval within a set number of minutes.
 
-**Use the principle of least privilege.** Grant approval permissions to the smallest possible group of people. The **pdf** skill can generate audit reports documenting who approved which deployments for compliance purposes.
+Use the principle of least privilege. Grant approval permissions to the smallest possible group of people. The pdf skill can generate audit reports documenting who approved which deployments for compliance purposes.
 
-**Document approval criteria.** Store a checklist in your repository that reviewers must work through before approving:
+Document approval criteria. Store a checklist in your repository that reviewers must work through before approving:
 
 ```markdown
-## Pre-Approval Checklist
+Pre-Approval Checklist
 
 - [ ] Code review completed and approved
 - [ ] Security scan passed (no critical vulnerabilities)
@@ -252,18 +252,18 @@ Implement these practices to make approval workflows effective:
 
 Reference this checklist in your environment's deployment policy documentation.
 
-## Conclusion
+Conclusion
 
-GitHub Actions environment protection combined with Claude Code skills creates powerful approval workflows for production systems. Start with basic environment protection, then enhance workflows with the **tdd** skill for automated validation, **supermemory** for context gathering, and Slack notifications for timely approvals.
+GitHub Actions environment protection combined with Claude Code skills creates powerful approval workflows for production systems. Start with basic environment protection, then enhance workflows with the tdd skill for automated validation, supermemory for context gathering, and Slack notifications for timely approvals.
 
 The key is finding the right balance between security controls and developer velocity. Too many approval gates create bottlenecks; too few expose you to risk. Review your workflows regularly and adjust based on team size, project criticality, and deployment frequency.
 
-## Related Reading
+Related Reading
 
 - [Automated Testing Pipeline with Claude TDD Skill 2026](/claude-tdd-skill-test-driven-development-workflow/)
 - [Claude Code GitHub Actions Matrix Builds Guide](/claude-code-github-actions-matrix-builds-guide/)
 - [Claude Code GitHub Actions Composite Actions](/claude-code-github-actions-composite-actions/)
 - [Workflows Hub](/workflows-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

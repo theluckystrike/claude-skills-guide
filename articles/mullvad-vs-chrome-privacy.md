@@ -13,11 +13,11 @@ tags: [claude-code, claude-skills]
 ---
 
 
-# Mullvad vs Chrome Privacy: A Developer and Power User Guide
+Mullvad vs Chrome Privacy: A Developer and Power User Guide
 
 When building privacy-conscious applications or simply browsing the web without leaving traces, the choice between Mullvad Browser and Chrome carries significant implications. This comparison breaks down the technical differences for developers and power users who need to understand exactly what happens to their network traffic, browsing fingerprint, and personal data.
 
-## The Fundamental Difference
+The Fundamental Difference
 
 Chrome, developed by Google, is designed to personalize your experience and serve targeted advertisements. Every feature in Chrome exists partially to improve ad targeting precision. Mullvad Browser, built by the Mullvad VPN team, aims to make all users look identical to prevent fingerprinting-based tracking.
 
@@ -27,7 +27,7 @@ At the architecture level, the two browsers have fundamentally different goals b
 
 This architectural divergence means the privacy gap is not just about settings you toggle. It is about what the browser does before you even open a tab.
 
-## Feature Comparison at a Glance
+Feature Comparison at a Glance
 
 | Feature | Chrome | Mullvad Browser |
 |---|---|---|
@@ -44,7 +44,7 @@ This architectural divergence means the privacy gap is not just about settings y
 | DevTools maturity | Excellent | Good |
 | Price | Free | Free (VPN sold separately) |
 
-## Network Traffic and DNS Queries
+Network Traffic and DNS Queries
 
 Chrome sends all DNS queries through your system's default resolver, which typically reveals every domain you visit to your ISP or network administrator. For developers testing applications, this means production traffic can be logged at the network level. Chrome also sends prefetch requests for links visible in the viewport, which can cause your resolver to log domains for pages you never actually visited.
 
@@ -53,18 +53,18 @@ Mullvad Browser includes DNS leak protection and can route DNS queries through M
 You can verify DNS behavior using `dig` or `nslookup`:
 
 ```bash
-# Test DNS resolution behavior
+Test DNS resolution behavior
 dig example.com
 nslookup example.com
 
-# Check what resolver you're using
+Check what resolver you're using
 scutil --dns | grep 'resolver'
 
-# Verify if DoH is active by watching network traffic with tcpdump
-# Standard DNS: port 53 (plaintext)
+Verify if DoH is active by watching network traffic with tcpdump
+Standard DNS: port 53 (plaintext)
 sudo tcpdump -i en0 port 53
 
-# DoH goes over port 443 (HTTPS), so absence of port 53 traffic is good
+DoH goes over port 443 (HTTPS), so absence of port 53 traffic is good
 sudo tcpdump -i en0 port 53 and host 8.8.8.8
 ```
 
@@ -72,7 +72,7 @@ If you see no output from the port 53 tcpdump while browsing in Mullvad, your DN
 
 Another key difference is SNI (Server Name Indication) exposure. During the TLS handshake, the requested domain is sent in plaintext so servers can present the correct certificate. Both Chrome and Mullvad expose this by default, but Mullvad is paired with the expectation of VPN use, which tunnels the entire connection and hides SNI from your local network.
 
-## Fingerprinting Resistance
+Fingerprinting Resistance
 
 Browser fingerprinting creates a unique identifier based on your device's characteristics: screen resolution, installed fonts, GPU renderer, timezone, and dozens of other signals. Chrome exposes extensive fingerprinting surface through its rich API access and consistent user agent string.
 
@@ -118,9 +118,9 @@ const fingerprint = {
 
 When you run this in Chrome, you get your real device values. In Mullvad, canvas returns noise-added pixel data, WebGL reports a generic string, screen uses common dimensions, and timezone reports UTC regardless of your actual location.
 
-## Developer Tools and Extensions
+Developer Tools and Extensions
 
-Chrome provides the most comprehensive developer tools in any browser. The Chrome DevTools protocol enables sophisticated debugging, performance profiling, and automated testing. Extensions for development workflows—like React Developer Tools, Redux DevTools, and various API clients—work smoothly.
+Chrome provides the most comprehensive developer tools in any browser. The Chrome DevTools protocol enables sophisticated debugging, performance profiling, and automated testing. Extensions for development workflows, like React Developer Tools, Redux DevTools, and various API clients, work smoothly.
 
 Mullvad Browser includes developer tools, but with reduced functionality to prevent fingerprinting. Canvas inspection, WebGL debugging, and certain extension APIs may behave differently or be restricted. This trade-off matters if your workflow depends on deep browser introspection.
 
@@ -142,7 +142,7 @@ Here is a practical breakdown of DevTools capability differences:
 
 If you rely on the Chrome DevTools Protocol (CDP) for test automation with Playwright or Puppeteer, you cannot use Mullvad Browser as a drop-in replacement. Mullvad uses Gecko, so you would need the Firefox driver instead.
 
-## Cookie and Storage Handling
+Cookie and Storage Handling
 
 Chrome maintains persistent storage across sessions, including cookies, localStorage, IndexedDB, and cache. This persistence enables persistent logins and offline functionality but creates tracking surface that persists across websites.
 
@@ -166,20 +166,20 @@ function cleanUrl(url) {
 
 This has a direct implication for developers building analytics pipelines. If you are testing how your attribution flow works, a Mullvad user visiting a campaign URL will appear as direct traffic in your analytics rather than paid or organic search. This is intentional behavior from the browser and reflects what privacy-focused users actually experience in production.
 
-The storage clearing behavior also affects multi-step authentication flows. If your app uses OAuth and relies on state cookies surviving across redirects, verify those flows under Mullvad's strict mode. They work in most cases because cookies within a single session are preserved—it is only at browser close that everything wipes.
+The storage clearing behavior also affects multi-step authentication flows. If your app uses OAuth and relies on state cookies surviving across redirects, verify those flows under Mullvad's strict mode. They work in most cases because cookies within a single session are preserved, it is only at browser close that everything wipes.
 
-## Threat Model Comparison
+Threat Model Comparison
 
 Understanding what you are actually protected against with each browser helps set realistic expectations.
 
-**Chrome's threat model** is primarily oriented around phishing and malware via SafeBrowsing, and credential theft via its built-in password manager. It does not protect against:
+Chrome's threat model is primarily oriented around phishing and malware via SafeBrowsing, and credential theft via its built-in password manager. It does not protect against:
 
 - Behavioral tracking by Google and its ad network partners
 - Third-party tracker networks on sites you visit
 - Fingerprinting by analytics vendors
 - ISP-level DNS logging of your browsing
 
-**Mullvad Browser's threat model** addresses:
+Mullvad Browser's threat model addresses:
 
 - Fingerprint-based tracking across sites
 - Third-party cookie tracking
@@ -196,22 +196,22 @@ Mullvad Browser does not protect against:
 
 Neither browser provides anonymity by itself. Mullvad reduces the signals available for passive tracking. Actual anonymity requires combining the browser with a VPN, not using identifying accounts, and avoiding behaviors that re-link your identity.
 
-## Practical Implications for Developers
+Practical Implications for Developers
 
 When testing privacy-focused applications, using Mullvad Browser reveals how your application behaves under strict privacy conditions. You discover which features break when cookies are blocked, how your analytics handles missing referrer data, and whether your authentication flows work without persistent storage.
 
 Chrome remains superior for debugging web applications due to its DevTools maturity. The practical approach involves using both browsers for different purposes:
 
 ```bash
-# Launch Mullvad Browser for privacy-sensitive testing
+Launch Mullvad Browser for privacy-sensitive testing
 open -a "Mullvad Browser" --args --private-window
 
-# Launch Chrome with specific debugging port
+Launch Chrome with specific debugging port
 open -a "Google Chrome" --args --remote-debugging-port=9222
 
-# Run a quick fingerprint test from the command line before launching
+Run a quick fingerprint test from the command line before launching
 curl -s https://api.ipify.org?format=json | python3 -m json.tool
-# This shows your outbound IP — useful for verifying VPN is active before testing
+This shows your outbound IP. useful for verifying VPN is active before testing
 ```
 
 A useful development workflow is to run your application in Mullvad Browser to simulate what a privacy-conscious user experiences, then switch to Chrome DevTools to diagnose anything broken. Mullvad tells you what breaks. Chrome tells you why.
@@ -250,7 +250,7 @@ function storageAvailable(type) {
 }
 ```
 
-## Network Level Considerations
+Network Level Considerations
 
 Both browsers operate at the application layer and cannot fully protect against network-level surveillance. Your ISP, network administrator, or anyone monitoring network traffic can see which IP addresses you connect to, even when using HTTPS. The domain name in SNI (Server Name Indication) remains visible during TLS handshake.
 
@@ -265,19 +265,19 @@ For developers building privacy-aware applications, consider implementing:
 Here is how to check whether a given server supports Encrypted Client Hello (the successor to ESNI), which hides the SNI from passive network observers:
 
 ```bash
-# Check for ECH support using OpenSSL
+Check for ECH support using OpenSSL
 openssl s_client -connect example.com:443 -ech_grease 2>&1 | grep -i "ech"
 
-# Or use curl with verbose output
+Or use curl with verbose output
 curl -v --tls-earlydata https://example.com 2>&1 | grep -i "ech\|esni"
 
-# Check HTTPS DNS record for ECH config
+Check HTTPS DNS record for ECH config
 dig +short https example.com TYPE65
 ```
 
 ECH support is still rolling out across major CDNs. Cloudflare-proxied domains typically support it. When your application runs behind Cloudflare, users on modern browsers with ECH support effectively hide the requested domain from network observers even without a VPN.
 
-## Making the Choice
+Making the Choice
 
 Your browser choice depends on your threat model and workflow requirements. Chrome serves developers who need powerful debugging capabilities and don't mind Google's data collection. Mullvad Browser suits privacy-conscious users and developers testing how applications behave under strict privacy conditions.
 
@@ -287,15 +287,15 @@ For active development work where you need the best debugging tools and don't mi
 
 A recommended setup for developers who care about both productivity and privacy is to run three browser profiles:
 
-1. **Chrome** with your Google account for development, debugging, and authenticated services where convenience matters
-2. **Mullvad Browser** for general privacy browsing, research, and anything you want compartmentalized from your Google identity
-3. **Chrome Incognito** (or a second Chrome profile) for testing how your applications behave without stored state, as a lightweight alternative to Mullvad for quick checks
+1. Chrome with your Google account for development, debugging, and authenticated services where convenience matters
+2. Mullvad Browser for general privacy browsing, research, and anything you want compartmentalized from your Google identity
+3. Chrome Incognito (or a second Chrome profile) for testing how your applications behave without stored state, as a lightweight alternative to Mullvad for quick checks
 
 This three-browser approach costs nothing and gives you the right tool for each situation without compromising either your development workflow or your privacy posture.
 
 The key insight is that browser privacy is one layer of a larger security strategy. Understanding what each browser does and doesn't protect allows you to make informed decisions about your development environment and personal browsing habits.
 
-## Extension Policies and Third-Party Code Injection
+Extension Policies and Third-Party Code Injection
 
 One of the sharpest privacy differences between Mullvad Browser and Chrome involves how each handles browser extensions and third-party script injection.
 
@@ -305,13 +305,13 @@ Mullvad Browser takes the opposite stance. The browser ships with uBlock Origin 
 
 This creates a practical tension for developers. A typical development Chrome profile might include React DevTools, a password manager, ad blockers, accessibility checkers, and GitHub-enhancing tools. Each of these is absent from Mullvad Browser by design. Developers who want both strong privacy and their full toolchain face a genuine tradeoff: use Chrome with extensions for productivity work and Mullvad Browser for privacy-sensitive browsing sessions.
 
-The cleanest approach is profile separation. Keep a hardened Chrome profile with minimal extensions for general development, a full-extension Chrome profile for productivity, and Mullvad Browser for any browsing where you want to minimize tracking — research, competitor analysis, or sessions involving sensitive personal accounts.
+The cleanest approach is profile separation. Keep a hardened Chrome profile with minimal extensions for general development, a full-extension Chrome profile for productivity, and Mullvad Browser for any browsing where you want to minimize tracking. research, competitor analysis, or sessions involving sensitive personal accounts.
 
-## Handling Cookies and Local Storage for Development Testing
+Handling Cookies and Local Storage for Development Testing
 
 Chrome defaults to persistent cookies with no automatic expiration for first-party cookies, and partitioned storage for third-party contexts under its Privacy Sandbox changes. Developers building applications can rely on cookies persisting across browser restarts, localStorage and sessionStorage behaving predictably, and IndexedDB data persisting indefinitely unless explicitly cleared.
 
-Mullvad Browser deletes all cookies and site data when you close the browser. This is not configurable — it is a core privacy guarantee. For developers, this means you cannot use Mullvad Browser as your primary development browser without significant workflow disruption: every browser restart clears your authentication sessions, localStorage test data, and any IndexedDB content your app created.
+Mullvad Browser deletes all cookies and site data when you close the browser. This is not configurable. it is a core privacy guarantee. For developers, this means you cannot use Mullvad Browser as your primary development browser without significant workflow disruption: every browser restart clears your authentication sessions, localStorage test data, and any IndexedDB content your app created.
 
 Where Mullvad Browser's storage behavior becomes useful for developers is testing the "first visit" experience. Because every session starts clean, you can verify your application's onboarding flows without manually clearing storage each time:
 
@@ -323,7 +323,7 @@ if (isFirstVisit) {
   localStorage.setItem('hasVisitedBefore', 'true');
 }
 
-// Cookie consent flows — confirmed clean on every session open
+// Cookie consent flows. confirmed clean on every session open
 function initCookieConsent() {
   const consent = document.cookie
     .split('; ')
@@ -339,10 +339,10 @@ Opening these flows in Mullvad Browser guarantees you are testing the true first
 
 The practical workflow: use Chrome for active development and state-dependent debugging, then switch to Mullvad Browser to validate the first-visit user experience before shipping. The two tools complement each other rather than compete.
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -12,26 +12,26 @@ score: 8
 ---
 
 {% raw %}
-# Claude Code Qwik City Routing SSR Workflow Tutorial
+Claude Code Qwik City Routing SSR Workflow Tutorial
 
 Qwik City is a revolutionary meta-framework that brings resumability to server-side rendering, dramatically improving application performance. Combined with Claude Code, you have a powerful duo for building modern web applications. This tutorial walks you through setting up Qwik City routing with SSR using Claude Code as your development assistant.
 
-## Understanding Qwik City's Resumability Model
+Understanding Qwik City's Resumability Model
 
-Before diving into routing, it's essential to understand what makes Qwik City special. Unlike traditional frameworks that hydrate the entire application on the client, Qwik uses **resumability**—the ability to pause server execution and resume it on the client without replaying all the logic.
+Before diving into routing, it's essential to understand what makes Qwik City special. Unlike traditional frameworks that hydrate the entire application on the client, Qwik uses resumability, the ability to pause server execution and resume it on the client without replaying all the logic.
 
 This approach means your applications ship less JavaScript to the browser, resulting in faster load times and better SEO. Qwik City provides the routing layer and SSR capabilities on top of Qwik's core resumability engine.
 
-### Why Combine Qwik City with Claude Code?
+Why Combine Qwik City with Claude Code?
 
 Claude Code excels at understanding complex codebases and generating boilerplate, explaining concepts, and helping debug issues. When working with Qwik City:
 
-- **Scaffold routes quickly**: Describe your desired route structure, and Claude Code generates the files
-- **Understand loaders and actions**: SSR data patterns can be confusing; Claude Code explains them clearly
-- **Debug SSR issues**: Get help tracing through server and client code boundaries
-- **Generate type-safe APIs**: Claude Code understands TypeScript and Qwik's type system
+- Scaffold routes quickly: Describe your desired route structure, and Claude Code generates the files
+- Understand loaders and actions: SSR data patterns can be confusing; Claude Code explains them clearly
+- Debug SSR issues: Get help tracing through server and client code boundaries
+- Generate type-safe APIs: Claude Code understands TypeScript and Qwik's type system
 
-## Setting Up Your Qwik City Project
+Setting Up Your Qwik City Project
 
 Start by creating a new Qwik City project. Claude Code can guide you through the initial setup:
 
@@ -43,25 +43,25 @@ npm install
 
 The project structure follows a file-based routing convention similar to Next.js or Nuxt. Your routes live in the `src/routes` directory, with each folder representing a route segment.
 
-### Understanding the Route Structure
+Understanding the Route Structure
 
 Qwik City's routing system uses directory-based routing:
 
 ```
 src/routes/
-├── index.tsx           # Homepage (/)
-├── about/
-│   └── index.tsx      # /about
-├── blog/
-│   ├── index.tsx      # /blog
-│   └── [slug]/
-│       └── index.tsx  # /blog/:slug (dynamic)
-└── layout.tsx         # Shared layout for all routes
+ index.tsx           # Homepage (/)
+ about/
+    index.tsx      # /about
+ blog/
+    index.tsx      # /blog
+    [slug]/
+        index.tsx  # /blog/:slug (dynamic)
+ layout.tsx         # Shared layout for all routes
 ```
 
 Claude Code can help you visualize this structure and explain how each file maps to routes in your application.
 
-## Implementing SSR Data Loading with routeLoader$
+Implementing SSR Data Loading with routeLoader$
 
 Server-side data loading in Qwik City uses the `routeLoader$` function. This runs on the server during the initial request, and the data becomes available to your component without sending the loading logic to the client.
 
@@ -99,7 +99,7 @@ export default component$(() => {
 
 The key insight: `routeLoader$` creates a server-only data fetching function that runs during SSR. The client receives only the serialized data, not the fetch logic.
 
-### Using Route Parameters
+Using Route Parameters
 
 Dynamic routes capture URL parameters using square brackets. Here's how to use a slug parameter:
 
@@ -126,11 +126,11 @@ export default component$(() => {
 });
 ```
 
-## Creating Layouts and Nested Routes
+Creating Layouts and Nested Routes
 
 Qwik City supports nested layouts for shared UI elements across multiple routes. The `layout.tsx` file in each directory wraps its child routes.
 
-### Shared Layout Example
+Shared Layout Example
 
 ```typescript
 // src/routes/layout.tsx
@@ -158,25 +158,25 @@ export default component$(() => {
 
 This layout wraps every route in your application. You can create nested layouts by adding `layout.tsx` files in subdirectories.
 
-### Grouped Routes (Layouts Without URL Segment)
+Grouped Routes (Layouts Without URL Segment)
 
 Sometimes you want routes grouped under a common layout without adding a URL segment. Use parentheses:
 
 ```
 src/routes/
-├── (marketing)/
-│   ├── layout.tsx
-│   ├── index.tsx      # / (no marketing prefix)
-│   └── pricing.tsx   # /pricing
-└── (app)/
-    ├── layout.tsx
-    └── dashboard/
-        └── index.tsx  # /dashboard
+ (marketing)/
+    layout.tsx
+    index.tsx      # / (no marketing prefix)
+    pricing.tsx   # /pricing
+ (app)/
+     layout.tsx
+     dashboard/
+         index.tsx  # /dashboard
 ```
 
 Claude Code can help you understand when to use grouped routes and how they affect your URL structure.
 
-## Form Handling with routeAction$
+Form Handling with routeAction$
 
 For handling form submissions in Qwik City, use `routeAction$`. This creates server-side action handlers that work without JavaScript and progressively enhance when JS loads.
 
@@ -213,15 +213,15 @@ export default component$(() => {
 });
 ```
 
-## Best Practices for Qwik City SSR
+Best Practices for Qwik City SSR
 
 When building with Qwik City and Claude Code, keep these practices in mind:
 
-### 1. Keep Server and Client Code Separate
+1. Keep Server and Client Code Separate
 
 Qwik makes it easy to distinguish server-only code using `routeLoader$`, `routeAction$`, and `$` for lazy-loading. Claude Code can help you identify when code might accidentally leak to the client.
 
-### 2. Use TypeScript for Better DX
+2. Use TypeScript for Better DX
 
 Qwik City's type system works well with TypeScript. Define interfaces for your data and let TypeScript catch errors before runtime:
 
@@ -237,11 +237,11 @@ export const usePosts = routeLoader$<Post[]>(async () => {
 });
 ```
 
-### 3. Leverage Progressive Enhancement
+3. Use Progressive Enhancement
 
 Always ensure your routes work without JavaScript. Qwik City handles this automatically with `routeAction$` and standard HTML forms. Test your forms with JavaScript disabled to verify.
 
-### 4. Optimize Images and Assets
+4. Optimize Images and Assets
 
 Use Qwik's image optimization features:
 
@@ -251,29 +251,29 @@ import { Image } from '@unpic/qwik';
 
 Claude Code can guide you through integrating image optimization for better Core Web Vitals.
 
-## Debugging SSR Issues
+Debugging SSR Issues
 
 When things go wrong in SSR, Claude Code becomes invaluable. Common issues include:
 
-- **Hydration mismatches**: Client and server render different content
-- **Missing environment variables**: API keys not available on server
-- **Serialization errors**: Trying to pass non-serializable data
+- Hydration mismatches: Client and server render different content
+- Missing environment variables: API keys not available on server
+- Serialization errors: Trying to pass non-serializable data
 
 For debugging, check the server logs and use Qwik's built-in dev tools. Describe the error to Claude Code, and it can help trace through the SSR lifecycle to find the root cause.
 
-## Conclusion
+Conclusion
 
 Qwik City combined with Claude Code provides a modern, performant approach to building web applications. The resumability model eliminates hydration overhead, while Claude Code helps you navigate routing, SSR data loading, and form handling patterns.
 
 Start with simple routes, add `routeLoader$` for server data, and progressively add `routeAction$` for form handling. Claude Code can accelerate your learning by generating boilerplate, explaining concepts, and helping debug issues along the way.
 
-Remember: the goal isn't to use every feature, but to leverage Qwik City's strengths where they matter most—typically in content-heavy pages where SEO and initial load performance are critical.
+Remember: the goal isn't to use every feature, but to use Qwik City's strengths where they matter most, typically in content-heavy pages where SEO and initial load performance are critical.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

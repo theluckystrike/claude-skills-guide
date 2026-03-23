@@ -14,21 +14,21 @@ score: 8
 
 
 {% raw %}
-# Claude Code for Compound Governance Workflow
+Claude Code for Compound Governance Workflow
 
-Automating decentralized governance is one of the most powerful use cases for Claude Code in the Web3 space. Compound's governance model—which relies on proposers, delegates, and executors—lends itself perfectly to Claude-assisted automation. This guide walks you through building a complete governance workflow using Claude Code, from drafting proposals to executing passed measures.
+Automating decentralized governance is one of the most powerful use cases for Claude Code in the Web3 space. Compound's governance model, which relies on proposers, delegates, and executors, lends itself perfectly to Claude-assisted automation. This guide walks you through building a complete governance workflow using Claude Code, from drafting proposals to executing passed measures.
 
-## Understanding Compound Governance Architecture
+Understanding Compound Governance Architecture
 
 Compound's governance operates on a three-phase model: proposal submission, voting period, and execution. The protocol uses COMP tokens as voting power, with delegates able to cast votes on behalf of token holders. Before automating, you need to understand how these components interact:
 
-- **Proposal Contract**: The on-chain entity that holds the executable code
-- **Governor Bravo**: The governance contract that manages voting thresholds and timing
-- **Timelock Controller**: The contract that enforces a delay between proposal passage and execution
+- Proposal Contract: The on-chain entity that holds the executable code
+- Governor Bravo: The governance contract that manages voting thresholds and timing
+- Timelock Controller: The contract that enforces a delay between proposal passage and execution
 
 Claude Code can interact with all three through a combination of RPC calls and local file operations for proposal drafting.
 
-## Setting Up Your Governance Skill
+Setting Up Your Governance Skill
 
 Create a specialized skill for governance operations. This skill should handle both the off-chain drafting and on-chain interaction aspects:
 
@@ -39,13 +39,13 @@ description: Manage Compound governance proposals and voting
 ---
 ```
 
-This skill declaration restricts tool access to file operations and bash—enough to draft proposals locally while keeping governance calls isolated in executable scripts.
+This skill declaration restricts tool access to file operations and bash, enough to draft proposals locally while keeping governance calls isolated in executable scripts.
 
-## Proposal Drafting Workflow
+Proposal Drafting Workflow
 
 The first governance task Claude Code excels at is proposal drafting. Rather than manually writing Solidity and configuration files, you can automate the entire drafting process:
 
-### Step 1: Define Proposal Parameters
+Step 1: Define Proposal Parameters
 
 Create a configuration-driven approach where proposal details live in structured files:
 
@@ -64,7 +64,7 @@ Create a configuration-driven approach where proposal details live in structured
 }
 ```
 
-### Step 2: Generate Proposal Script
+Step 2: Generate Proposal Script
 
 Use Claude Code to generate the executable JavaScript that submits your proposal:
 
@@ -98,24 +98,24 @@ async function propose(config) {
 module.exports = { propose };
 ```
 
-### Step 3: Automate Execution
+Step 3: Automate Execution
 
 Combine everything into a bash script that Claude Code can execute:
 
 ```bash
 #!/bin/bash
-# Governance proposal submission script
+Governance proposal submission script
 
 CONFIG_FILE=$1
 PROPOSAL_ID=$(node submit-proposal.js "$CONFIG_FILE")
 echo "Proposal ID: $PROPOSAL_ID"
 ```
 
-## Voting Automation with Delegates
+Voting Automation with Delegates
 
 Once proposals exist, Claude Code can help manage voting through delegate accounts. This is particularly useful for protocols where you hold voting power across multiple wallets.
 
-### Delegate Voting Pattern
+Delegate Voting Pattern
 
 ```javascript
 class GovernanceVoter {
@@ -141,7 +141,7 @@ class GovernanceVoter {
 
 The key insight here is that Claude Code can maintain a secure configuration of delegate keys (never committing them to version control) and execute voting across all accounts with a single command.
 
-## Monitoring and Execution
+Monitoring and Execution
 
 The final piece of the governance workflow is monitoring proposal status and executing passed measures. Claude Code can continuously monitor chain state:
 
@@ -160,11 +160,11 @@ async function checkProposalState(proposalId) {
 For continuous monitoring, set up a simple cron job that Claude Code can manage:
 
 ```bash
-# Run every 5 minutes to check active proposals
+Run every 5 minutes to check active proposals
 */5 * * * * cd /path/to/governance && node monitor-proposals.js >> /var/log/governance.log
 ```
 
-## Queuing and Executing Passed Proposals
+Queuing and Executing Passed Proposals
 
 When a proposal reaches the Succeeded state, it needs to be queued in the Timelock before it can be executed. This is a separate on-chain transaction that starts the mandatory delay clock. Claude Code can automate both steps as part of a continuous monitoring loop:
 
@@ -194,7 +194,7 @@ async function executeWhenReady(proposalId) {
 
   if (Date.now() < state.executableAt) {
     const remaining = Math.ceil((state.executableAt - Date.now()) / 1000 / 60);
-    console.log(`Not yet executable — ${remaining} minutes remaining`);
+    console.log(`Not yet executable. ${remaining} minutes remaining`);
     return;
   }
 
@@ -208,9 +208,9 @@ async function executeWhenReady(proposalId) {
 
 Writing state to disk between runs means your monitoring loop survives restarts without losing track of where proposals stand in the lifecycle.
 
-## Calldata Encoding and Validation
+Calldata Encoding and Validation
 
-One of the most error-prone parts of governance is encoding calldata correctly. A single byte offset wrong means your proposal passes and then silently does nothing—or worse, executes against the wrong parameters. Claude Code can generate and verify calldata before submission:
+One of the most error-prone parts of governance is encoding calldata correctly. A single byte offset wrong means your proposal passes and then silently does nothing, or worse, executes against the wrong parameters. Claude Code can generate and verify calldata before submission:
 
 ```javascript
 const { ethers } = require('ethers');
@@ -266,7 +266,7 @@ if (!isValid) {
 
 Run this validation as part of your CI pipeline so bad calldata never reaches the chain.
 
-## Building a Governance Audit Trail
+Building a Governance Audit Trail
 
 Governance decisions are permanent and public. Keeping a local audit trail that correlates on-chain events with the off-chain intent behind them is invaluable for post-mortems and protocol transparency reports.
 
@@ -304,12 +304,12 @@ auditLog({
 
 The JSONL format (one JSON object per line) makes it easy to grep specific proposal IDs or event types without loading the entire log into memory.
 
-## Multi-Protocol Governance with Shared Skill Infrastructure
+Multi-Protocol Governance with Shared Skill Infrastructure
 
 Once you have a working governance skill for Compound, the same architecture extends to any Governor Bravo-compatible protocol: Uniswap, Aave (with minor adapter changes), and Compound forks. The key is parameterizing the contract addresses and ABIs rather than hardcoding them:
 
 ```javascript
-// governance-config.js — supports multiple protocols
+// governance-config.js. supports multiple protocols
 const PROTOCOLS = {
   compound: {
     governor: '0xc0Da02939E1441F497fd74F78cE7Decb17B66529',
@@ -334,16 +334,16 @@ module.exports = { PROTOCOLS };
 
 Your Claude Code skill can accept a `--protocol` flag and load the appropriate configuration, making the same skill reusable across your entire governance portfolio.
 
-## Security Considerations
+Security Considerations
 
 When automating governance with Claude Code, follow these security practices:
 
-1. **Never commit private keys**: Use environment variables or a secrets manager like AWS Secrets Manager or HashiCorp Vault
-2. **Multi-sig for execution**: Configure your timelock to require multiple signatures using a Gnosis Safe as the executor
-3. **Timelock verification**: Always verify the timelock delay before execution—protocol upgrades can change it
-4. **Proposal simulation**: Test calldata with `eth_call` before submitting, as shown in the validation section above
-5. **Dry-run mode**: Add a `DRY_RUN=true` environment variable that logs what would happen without sending transactions
-6. **Rotate keys regularly**: Delegate-voting keys should be rotated on a schedule; automate key rotation with your secrets manager
+1. Never commit private keys: Use environment variables or a secrets manager like AWS Secrets Manager or HashiCorp Vault
+2. Multi-sig for execution: Configure your timelock to require multiple signatures using a Gnosis Safe as the executor
+3. Timelock verification: Always verify the timelock delay before execution, protocol upgrades can change it
+4. Proposal simulation: Test calldata with `eth_call` before submitting, as shown in the validation section above
+5. Dry-run mode: Add a `DRY_RUN=true` environment variable that logs what would happen without sending transactions
+6. Rotate keys regularly: Delegate-voting keys should be rotated on a schedule; automate key rotation with your secrets manager
 
 A practical dry-run implementation keeps the same code path but skips the actual `tx.wait()`:
 
@@ -358,7 +358,7 @@ async function submitProposal(config) {
 }
 ```
 
-## Actionable Summary
+Actionable Summary
 
 To implement a complete Compound governance workflow with Claude Code:
 
@@ -375,10 +375,10 @@ To implement a complete Compound governance workflow with Claude Code:
 Claude Code transforms governance from a manual, error-prone process into a reliable, auditable workflow. By treating governance operations as code-configured actions, you gain repeatability and safety in protocol management.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

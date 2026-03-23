@@ -14,17 +14,17 @@ score: 7
 
 
 {% raw %}
-# Claude Code Laravel Sanctum API Authentication Guide
+Claude Code Laravel Sanctum API Authentication Guide
 
-Building secure APIs requires robust authentication mechanisms. Laravel Sanctum provides a lightweight, token-based authentication system perfect for SPAs, mobile applications, and APIs. This guide walks you through implementing complete API authentication with Laravel Sanctum, from installation to advanced token management, using Claude Code to accelerate the process.
+Building secure APIs requires solid authentication mechanisms. Laravel Sanctum provides a lightweight, token-based authentication system perfect for SPAs, mobile applications, and APIs. This guide walks you through implementing complete API authentication with Laravel Sanctum, from installation to advanced token management, using Claude Code to accelerate the process.
 
-## What is Laravel Sanctum?
+What is Laravel Sanctum?
 
 Laravel Sanctum is Laravel's official authentication package for SPAs and mobile applications. Unlike OAuth2, Sanctum uses simple token-based authentication that doesn't require complex JWT libraries or external providers. It issues personal access tokens that clients include in request headers.
 
 Sanctum is ideal when you need to authenticate: single-page applications communicating with Laravel APIs, mobile apps consuming Laravel backends, or any client requiring simple API token authentication without the overhead of Passport.
 
-### Sanctum vs. Passport vs. JWT: When to Choose What
+Sanctum vs. Passport vs. JWT: When to Choose What
 
 | Feature | Sanctum | Passport | JWT (tymon) |
 |---|---|---|---|
@@ -38,7 +38,7 @@ Sanctum is ideal when you need to authenticate: single-page applications communi
 
 Sanctum is the right choice for the majority of Laravel API projects. If you're building an internal API consumed by your own frontend or mobile app, Sanctum gets you production-ready in minutes rather than hours.
 
-## Installing and Configuring Sanctum
+Installing and Configuring Sanctum
 
 Begin by installing Sanctum via Composer in your Laravel project:
 
@@ -99,7 +99,7 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
 });
 ```
 
-### Configuring Token Expiration
+Configuring Token Expiration
 
 Out of the box, Sanctum tokens do not expire. For most production APIs, you should set a sensible default expiration in `config/sanctum.php`:
 
@@ -121,7 +121,7 @@ $token = $user->createToken(
 )->plainTextToken;
 ```
 
-## Creating API Authentication Endpoints
+Creating API Authentication Endpoints
 
 Build authentication endpoints for registration, login, and logout. Create a dedicated controller to handle these operations:
 
@@ -211,7 +211,7 @@ Route::middleware('auth:sanctum')->group(function () {
 });
 ```
 
-### Adding a Token Refresh Endpoint
+Adding a Token Refresh Endpoint
 
 Unlike JWTs, Sanctum tokens don't have a built-in refresh mechanism. A pragmatic pattern is to issue a new token on request and revoke the old one:
 
@@ -238,7 +238,7 @@ Add the route under the `auth:sanctum` middleware group:
 Route::post('/token/refresh', [AuthController::class, 'refresh']);
 ```
 
-## Protecting API Routes
+Protecting API Routes
 
 Secure your API endpoints using the auth:sanctum middleware. This ensures only authenticated users with valid tokens can access protected resources:
 
@@ -271,7 +271,7 @@ Route::middleware(['auth:sanctum', 'can:admin'])->prefix('admin')->group(functio
 });
 ```
 
-### Token Abilities (Scopes)
+Token Abilities (Scopes)
 
 Sanctum supports a lightweight ability system that lets you restrict what a given token can do. This is useful for issuing read-only tokens to third-party integrations:
 
@@ -306,7 +306,7 @@ Route::middleware(['auth:sanctum', CheckAbilities::class . ':create:posts,update
     ->post('/posts', [PostController::class, 'store']);
 ```
 
-## Managing Tokens Effectively
+Managing Tokens Effectively
 
 Sanctum provides powerful token management capabilities. Issue tokens with descriptive names for better tracking:
 
@@ -329,7 +329,7 @@ if ($token->can('create-posts')) {
 }
 ```
 
-### Building a Token Management Endpoint
+Building a Token Management Endpoint
 
 Expose token management to your users so they can see and revoke active sessions:
 
@@ -377,7 +377,7 @@ Route::middleware('auth:sanctum')->group(function () {
 });
 ```
 
-## Consuming the API from Clients
+Consuming the API from Clients
 
 When making authenticated requests, include the Bearer token in the Authorization header:
 
@@ -412,9 +412,9 @@ api.interceptors.request.use((config) => {
 const user = await api.get('/user');
 ```
 
-### Handling Token Expiry on the Client
+Handling Token Expiry on the Client
 
-When a token expires, the API returns a 401 Unauthorized response. A robust client should handle this gracefully:
+When a token expires, the API returns a 401 Unauthorized response. A solid client should handle this gracefully:
 
 ```javascript
 api.interceptors.response.use(
@@ -454,7 +454,7 @@ Future<Map<String, dynamic>> fetchUserData() async {
 }
 ```
 
-## Testing Sanctum Authentication
+Testing Sanctum Authentication
 
 Always write tests for your authentication endpoints. Laravel provides convenient helpers for authenticating as a user in tests:
 
@@ -521,7 +521,7 @@ class AuthTest extends TestCase
 }
 ```
 
-## Best Practices for Production
+Best Practices for Production
 
 Follow these security best practices when deploying Sanctum in production. First, always use HTTPS to encrypt token transmission. Configure CORS properly to restrict which domains can access your API:
 
@@ -540,11 +540,11 @@ Route::post('/login', [AuthController::class, 'login'])
     ->middleware('throttle:5,1'); // 5 attempts per minute
 ```
 
-### Security Checklist
+Security Checklist
 
 | Practice | Why it matters |
 |---|---|
-| Always use HTTPS | Tokens are bearer credentials — anyone who intercepts them can impersonate the user |
+| Always use HTTPS | Tokens are bearer credentials. anyone who intercepts them can impersonate the user |
 | Set token expiration | Limits the damage window if a token is leaked |
 | Rate-limit login | Prevents brute-force credential attacks |
 | Use token abilities | Limits blast radius for compromised third-party tokens |
@@ -553,7 +553,7 @@ Route::post('/login', [AuthController::class, 'login'])
 | Hash passwords with bcrypt | Laravel's default; never store plain text passwords |
 | Validate email on registration | Reduces fake accounts and spam |
 
-### Cleaning Up Expired Tokens
+Cleaning Up Expired Tokens
 
 Expired tokens accumulate in the `personal_access_tokens` table over time. Use Laravel's pruning feature to clean them up automatically:
 
@@ -564,11 +564,11 @@ php artisan sanctum:prune-expired --hours=24
 Schedule this in your `routes/console.php` (Laravel 11) or `app/Console/Kernel.php` (Laravel 10):
 
 ```php
-// Laravel 11 — routes/console.php
+// Laravel 11. routes/console.php
 Schedule::command('sanctum:prune-expired --hours=24')->daily();
 ```
 
-## Using Claude Code to Scaffold Sanctum Authentication
+Using Claude Code to Scaffold Sanctum Authentication
 
 Claude Code can accelerate the entire setup process. A well-structured prompt like the one below generates most of the boilerplate instantly:
 
@@ -583,17 +583,17 @@ Set up Laravel Sanctum API authentication with:
 
 Claude Code understands the full Laravel ecosystem and can generate the controller, routes, middleware, and tests in a single pass. You can then iterate with follow-up prompts to add features like two-factor authentication, social login, or custom token expiration logic.
 
-## Conclusion
+Conclusion
 
-Laravel Sanctum provides a secure, straightforward solution for API authentication in Laravel applications. Its token-based approach integrates smoothly with Laravel's authentication system while remaining simple enough for quick implementation. By following this guide, you can build robust API authentication that protects your endpoints while providing a smooth experience for API consumers.
+Laravel Sanctum provides a secure, straightforward solution for API authentication in Laravel applications. Its token-based approach integrates smoothly with Laravel's authentication system while remaining simple enough for quick implementation. By following this guide, you can build solid API authentication that protects your endpoints while providing a smooth experience for API consumers.
 
 The key areas to get right in production are: setting meaningful token expiration, using abilities to scope third-party integrations, implementing rate limiting on auth endpoints, and writing comprehensive tests using `Sanctum::actingAs`. With these practices in place, your Laravel API will have professional-grade authentication ready for production use.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

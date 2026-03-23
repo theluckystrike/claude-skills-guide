@@ -15,7 +15,7 @@ score: 7
 
 Image-heavy web applications often face performance bottlenecks when users upload large files directly from their devices. A Chrome extension that compresses images before upload can reduce bandwidth usage, improve upload speeds, and enhance the user experience without requiring server-side processing. This guide walks through building a practical image compression extension using modern browser APIs.
 
-## Understanding the Compression Pipeline
+Understanding the Compression Pipeline
 
 The core approach involves intercepting file input events, processing the image data in the browser using the Canvas API or the OffscreenCanvas API available in service workers, and replacing the original file with a compressed version before the upload completes.
 
@@ -62,11 +62,11 @@ async function compressImage(file, options = {}) {
 }
 ```
 
-## Extension Architecture
+Extension Architecture
 
 The extension needs three main components: a content script that detects file inputs, a background worker for handling heavy processing, and proper messaging between them.
 
-### Manifest Configuration
+Manifest Configuration
 
 The manifest file declares the necessary permissions and defines the extension structure:
 
@@ -89,7 +89,7 @@ The manifest file declares the necessary permissions and defines the extension s
 }
 ```
 
-### Content Script Implementation
+Content Script Implementation
 
 The content script monitors for file input changes and communicates with the background worker:
 
@@ -155,7 +155,7 @@ const observer = new MutationObserver((mutations) => {
 observer.observe(document.body, { childList: true, subtree: true });
 ```
 
-### Background Worker Handling
+Background Worker Handling
 
 Since extensions run in an isolated context, passing File objects directly to the background worker requires transferables or alternative approaches. One reliable method uses Message Channels for asynchronous processing:
 
@@ -198,7 +198,7 @@ async function compressInBackground(file, options) {
 }
 ```
 
-## Handling Edge Cases
+Handling Edge Cases
 
 Several scenarios require additional consideration. Drag-and-drop zones do not use standard file inputs, so you need to intercept the drop event and process the DataTransfer object. Multiple file selection requires handling each file individually, potentially with parallel processing. Form submissions where the form is populated programmatically may bypass input change listeners.
 
@@ -223,7 +223,7 @@ document.addEventListener('drop', async (event) => {
 }, true);
 ```
 
-## Optimizing Performance
+Optimizing Performance
 
 Processing large images can impact the browser UI thread. OffscreenCanvas in the background worker prevents interface freezing, but transferring large ImageBitmaps still carries overhead. Consider implementing progressive compression that starts with a lower quality preview and increases quality in the background.
 
@@ -244,7 +244,7 @@ async function getCompressedImage(file, options) {
 }
 ```
 
-## Testing and Debugging
+Testing and Debugging
 
 Use Chrome's extension debugging tools to verify the compression pipeline. The Application panel shows service worker state, while the Console logs messages from both content and background scripts. Test with various image formats including PNG, WebP, and HEIC (on supported systems) to ensure broad compatibility.
 
@@ -254,17 +254,17 @@ Monitor compression ratios in production by logging before and after file sizes:
 console.log(`Compressed ${file.name}: ${(file.size / 1024).toFixed(1)}KB → ${(blob.size / 1024).toFixed(1)}KB (${Math.round((1 - blob.size / file.size) * 100)}% reduction)`);
 ```
 
-## Summary
+Summary
 
 Building an image compression Chrome extension requires understanding browser APIs, extension messaging patterns, and performance considerations. The Canvas and OffscreenCanvas APIs provide reliable cross-browser compression without server dependencies. By intercepting file inputs in content scripts and processing in the background worker, you can transparently reduce upload sizes while maintaining compatibility with existing web forms.
 
 The implementation above provides a foundation that handles standard file inputs, drag-and-drop zones, and provides caching for repeated uploads. Adjust quality settings and maximum dimensions based on your specific use case requirements.
 
 
-## Related Reading
+Related Reading
 
 - [Chrome Extension Edit Images: A Practical Guide for Developers](/chrome-extension-edit-images/)
 - [Chrome Extension Resize Images: A Practical Guide for Developers](/chrome-extension-resize-images/)
 - [AI Code Assistant Chrome Extension: Practical Guide for.](/ai-code-assistant-chrome-extension/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

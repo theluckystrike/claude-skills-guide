@@ -14,11 +14,11 @@ permalink: /claude-code-react-native-paper-mobile-ui-guide/
 
 
 
-# Claude Code React Native Paper Mobile UI Guide
+Claude Code React Native Paper Mobile UI Guide
 
 React Native Paper provides a comprehensive set of Material Design components for cross-platform mobile applications. Combined with Claude Code and its [frontend-design skill](/claude-frontend-design-skill-review-and-tutorial/), you can accelerate development significantly. This guide covers practical workflows for building mobile UIs efficiently.
 
-## Setting Up React Native Paper
+Setting Up React Native Paper
 
 Before diving into component development, ensure your project has React Native Paper installed and configured. The library requires React Native Paper itself, along with react-native-vector-icons for icons and react-native-safe-area-context for proper layout handling.
 
@@ -49,13 +49,13 @@ export default function App() {
 }
 ```
 
-The **frontend-design** skill can help you set up the entire theming structure and generate component scaffolds based on your design requirements.
+The frontend-design skill can help you set up the entire theming structure and generate component scaffolds based on your design requirements.
 
-## Component Development Workflow
+Component Development Workflow
 
 When building mobile UIs with React Native Paper, Claude Code becomes invaluable for generating components, handling navigation, and managing state. The typical workflow involves creating the component structure, implementing the UI with Paper components, and adding interaction logic.
 
-The **tdd** skill proves essential here. Write your component tests first to define the expected behavior:
+The tdd skill proves essential here. Write your component tests first to define the expected behavior:
 
 ```javascript
 import { render, fireEvent } from '@testing-library/react-native';
@@ -78,13 +78,13 @@ describe('MyButton', () => {
 });
 ```
 
-Run tests with the **tdd** skill loaded, and Claude Code will help identify edge cases and ensure your components behave correctly across different scenarios.
+Run tests with the tdd skill loaded, and Claude Code will help identify edge cases and ensure your components behave correctly across different scenarios.
 
-## Building Common UI Patterns
+Building Common UI Patterns
 
 React Native Paper excels at implementing standard mobile UI patterns. Here are practical implementations for common scenarios.
 
-### Lists with Actions
+Lists with Actions
 
 The DataTable component handles large datasets elegantly with built-in sorting and pagination:
 
@@ -115,7 +115,7 @@ export function UserList({ users, onEdit, onDelete }) {
 }
 ```
 
-### Form Components
+Form Components
 
 Paper provides TextInput with built-in validation states and helper text:
 
@@ -180,7 +180,7 @@ export function LoginForm({ onSubmit }) {
 }
 ```
 
-## Navigation and Screen Management
+Navigation and Screen Management
 
 Combine React Native Paper with React Navigation for complete screen management. The Appbar component works well with navigation headers:
 
@@ -202,9 +202,9 @@ export function ScreenHeader({ title }) {
 }
 ```
 
-The **frontend-design** skill can generate entire screen layouts based on descriptions. For example, describe a settings screen with specific sections, and Claude Code will produce the complete component structure with appropriate Paper components.
+The frontend-design skill can generate entire screen layouts based on descriptions. For example, describe a settings screen with specific sections, and Claude Code will produce the complete component structure with appropriate Paper components.
 
-## State Management Integration
+State Management Integration
 
 React Native Paper works well with various state management solutions. For simpler applications, React Context provides adequate state sharing:
 
@@ -230,22 +230,22 @@ export function ThemeProvider({ children }) {
 export const useTheme = () => useContext(ThemeContext);
 ```
 
-For complex applications, consider integrating with [Redux Toolkit for state management](/claude-code-redux-toolkit-state-management-guide/). The **supermemory** skill helps maintain context across sessions when working on larger feature implementations that span multiple development sessions.
+For complex applications, consider integrating with [Redux Toolkit for state management](/claude-code-redux-toolkit-state-management-guide/). The supermemory skill helps maintain context across sessions when working on larger feature implementations that span multiple development sessions.
 
-## Documentation and Asset Generation
+Documentation and Asset Generation
 
-Once your components are built, the **pdf** skill generates documentation from your component files:
+Once your components are built, the pdf skill generates documentation from your component files:
 
 ```bash
-# Generate component documentation
+Generate component documentation
 "Create a PDF documenting all the Paper components used in this project with props tables"
 ```
 
-The **canvas-design** skill assists with generating icons and visual assets when you need custom graphics that match your Paper-based UI.
+The canvas-design skill assists with generating icons and visual assets when you need custom graphics that match your Paper-based UI.
 
-## Testing Considerations
+Testing Considerations
 
-Mobile UI testing requires attention to platform-specific behaviors. Use the **tdd** skill to establish testing patterns:
+Mobile UI testing requires attention to platform-specific behaviors. Use the tdd skill to establish testing patterns:
 
 ```javascript
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
@@ -271,7 +271,7 @@ describe('Mobile Components', () => {
 });
 ```
 
-## Performance Optimization
+Performance Optimization
 
 React Native Paper components are optimized for performance, but you can enhance them further:
 
@@ -279,18 +279,18 @@ React Native Paper components are optimized for performance, but you can enhance
 - Implement `useCallback` for event handlers passed to Paper components
 - Use the `pagination` prop on DataTable for large datasets
 
-The **frontend-design** skill can analyze your component tree and suggest performance improvements specific to your implementation.
+The frontend-design skill can analyze your component tree and suggest performance improvements specific to your implementation.
 
 ---
 
-Building mobile UIs with React Native Paper becomes significantly more productive when combined with Claude Code's specialized skills. The **frontend-design** skill accelerates component generation, the **tdd** skill ensures test coverage, and the **pdf** skill automates documentation. These tools together form a powerful development workflow for cross-platform mobile applications. For more on [best frontend development skills](/best-claude-code-skills-for-frontend-development/), see the dedicated guide.
+Building mobile UIs with React Native Paper becomes significantly more productive when combined with Claude Code's specialized skills. The frontend-design skill accelerates component generation, the tdd skill ensures test coverage, and the pdf skill automates documentation. These tools together form a powerful development workflow for cross-platform mobile applications. For more on [best frontend development skills](/best-claude-code-skills-for-frontend-development/), see the dedicated guide.
 
-## Related Reading
+Related Reading
 
 - [Best Claude Code Skills to Install First (2026)](/best-claude-code-skills-to-install-first-2026/)
 - [Claude Code Next.js Image Optimization Guide](/claude-code-nextjs-image-optimization-guide/)
 - [Vibe Coding with Claude Code: Complete Guide 2026](/vibe-coding-productivity-tips-and-best-practices/)
 - [Workflows Hub](/workflows-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

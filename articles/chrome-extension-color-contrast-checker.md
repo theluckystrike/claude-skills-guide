@@ -16,19 +16,19 @@ Color contrast is one of the most critical yet overlooked aspects of web accessi
 
 This guide covers the most useful Chrome extensions for color contrast checking, practical workflows for integrating accessibility checks into your development process, and how to handle tricky contrast scenarios.
 
-## Why Color Contrast Matters
+Why Color Contrast Matters
 
 Beyond legal compliance under regulations like the ADA and EN 301 549, adequate contrast improves usability for everyone. Users browsing on mobile devices in bright sunlight, older adults with reduced visual acuity, and developers working in poorly lit environments all benefit from thoughtful color choices. Contrast issues also affect color-blind users, particularly those with deuteranopia (red-green blindness) or protanopia (red blindness).
 
 A study by the Nielsen Norman Group found that only 6% of users abandon a well-designed page due to contrast issues, but the impact on user trust and brand perception is harder to quantify.
 
-## Top Chrome Extensions for Color Contrast Checking
+Top Chrome Extensions for Color Contrast Checking
 
-### 1. WCAG Color Contrast Checker
+1. WCAG Color Contrast Checker
 
 This extension, developed by WebAIM, is straightforward and reliable. Click any element in the browser to analyze its foreground and background colors, instantly displaying whether they pass WCAG AA or AAA levels.
 
-**Key features:**
+Key features:
 - One-click color sampling from any webpage
 - Shows contrast ratio with decimal precision
 - Displays pass/fail status for WCAG 2.0 and 2.1 levels
@@ -36,11 +36,11 @@ This extension, developed by WebAIM, is straightforward and reliable. Click any 
 
 To use it effectively, install the extension and simply hover over any text element. The popup shows the contrast ratio immediately.
 
-### 2. Color Contrast Analyzer
+2. Color Contrast Analyzer
 
 Similar to WebAIM's tool but with additional features for designers. This extension provides a color picker that lets you test color combinations before implementing them in your code.
 
-**Workflow example:**
+Workflow example:
 ```javascript
 // Use the extension to find a compliant combination
 // Then apply in your CSS:
@@ -60,21 +60,21 @@ Similar to WebAIM's tool but with additional features for designers. This extens
 }
 ```
 
-### 3. Axe DevTools
+3. Axe DevTools
 
-While primarily a comprehensive accessibility testing tool, Axe includes robust color contrast checking. It scans entire pages and reports all contrast failures, making it ideal for auditing existing websites.
+While primarily a comprehensive accessibility testing tool, Axe includes solid color contrast checking. It scans entire pages and reports all contrast failures, making it ideal for auditing existing websites.
 
 The advantage of Axe is its comprehensive report that identifies not just contrast issues but also other accessibility problems like missing ARIA attributes, improper heading hierarchy, and image alt text issues.
 
-### 4. ColorPick Eyedropper
+4. ColorPick Eyedropper
 
 This extension functions as a literal eyedropper tool, letting you pick any color from the browser viewport. Combined with a separate contrast calculator or built-in tools, it offers flexibility for designers who want maximum control.
 
-**Practical tip:** Use ColorPick to sample colors from design mockups or competitor sites, then verify them against WCAG standards using an online contrast calculator or another extension.
+Practical tip: Use ColorPick to sample colors from design mockups or competitor sites, then verify them against WCAG standards using an online contrast calculator or another extension.
 
-## Integrating Contrast Checking into Your Workflow
+Integrating Contrast Checking into Your Workflow
 
-### During Design
+During Design
 
 Before writing any code, check your color palette against WCAG standards. Create a small matrix of your brand colors and their compliant pairings:
 
@@ -87,7 +87,7 @@ Before writing any code, check your color palette against WCAG standards. Create
 
 This prevents the common problem of designing in Figma or Sketch with colors that pass on your monitor but fail in real-world viewing conditions.
 
-### During Development
+During Development
 
 For React developers, consider creating a simple component to test contrast:
 
@@ -100,8 +100,8 @@ const ContrastChecker = ({ foreground, background }) => {
   return (
     <div style={{ backgroundColor: background, color: foreground, padding: '1rem' }}>
       <p>Contrast Ratio: {ratio.toFixed(2)}:1</p>
-      <p>WCAG AA: {passesAA ? '✓ Pass' : '✗ Fail'}</p>
-      <p>WCAG AAA: {passesAAA ? '✓ Pass' : '✗ Fail'}</p>
+      <p>WCAG AA: {passesAA ? ' Pass' : ' Fail'}</p>
+      <p>WCAG AAA: {passesAAA ? ' Pass' : ' Fail'}</p>
     </div>
   );
 };
@@ -109,23 +109,23 @@ const ContrastChecker = ({ foreground, background }) => {
 
 Adding such components to a development staging environment lets QA testers verify contrast without special tools.
 
-### In CI/CD Pipelines
+In CI/CD Pipelines
 
 For teams serious about accessibility, automate contrast checking in your continuous integration pipeline. Tools like pa11y can run accessibility audits including contrast checks:
 
 ```bash
-# Install pa11y
+Install pa11y
 npm install -g pa11y
 
-# Run a contrast audit
+Run a contrast audit
 pa11y https://your-website.com --standard WCAG2AA
 ```
 
 This catches contrast regressions before they reach production.
 
-## Handling Tricky Scenarios
+Handling Tricky Scenarios
 
-### Dynamic Color Combinations
+Dynamic Color Combinations
 
 Some interfaces use color changes based on user interaction or state. Use CSS custom properties to maintain consistent contrast:
 
@@ -149,7 +149,7 @@ Some interfaces use color changes based on user interaction or state. Use CSS cu
 
 Always verify both light and dark mode combinations meet contrast requirements.
 
-### Large Text Exceptions
+Large Text Exceptions
 
 WCAG provides a 3:1 contrast ratio allowance for large text (18pt or 14pt bold). However, verify your understanding of "large" correctly:
 
@@ -158,11 +158,11 @@ WCAG provides a 3:1 contrast ratio allowance for large text (18pt or 14pt bold).
 
 For headlines and call-to-action buttons, the lower threshold might be acceptable, but testing with actual users remains advisable.
 
-### Logo and Decorative Text
+Logo and Decorative Text
 
 Text within logos or brand elements is exempt from contrast requirements under WCAG 2.1 Success Criterion 1.4.3. However, any text that conveys meaningful information must still meet contrast standards regardless of its visual treatment.
 
-## Building Better Habits
+Building Better Habits
 
 Make contrast checking a habit rather than an afterthought. Install a contrast checker extension in your primary browser, and before finalizing any design or code review, run a quick contrast check on all text-background combinations.
 
@@ -171,11 +171,11 @@ For teams, establish a design system with pre-tested color combinations. Documen
 The investment in proper contrast pays dividends in broader accessibility, improved SEO (search engines favor accessible sites), and better user experience across all demographics and viewing conditions.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

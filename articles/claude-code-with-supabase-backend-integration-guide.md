@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code with Supabase Backend Integration Guide"
-description: "A practical guide to integrating Claude Code with Supabase for backend development — covering database operations, authentication, Edge Functions, and."
+description: "A practical guide to integrating Claude Code with Supabase for backend development. covering database operations, authentication, Edge Functions, and."
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-with-supabase-backend-integration-guide/
@@ -15,7 +15,7 @@ tags: [claude-code, claude-skills]
 
 Integrating Claude Code with Supabase provides a powerful workflow for building backend services. This guide walks through connecting Claude Code to your Supabase project, executing database operations, and deploying serverless functions. For project structure, migration strategies, RLS policy patterns, and CI/CD pipelines, see the [Claude Code Supabase Backend Development Workflow Tips](/claude-code-supabase-backend-development-workflow-tips/) guide.
 
-## Prerequisites
+Prerequisites
 
 You need a Supabase project with the following credentials:
 - Project URL
@@ -46,7 +46,7 @@ supabase status
 
 This prints your project URL, keys, and connected database. If it fails, check that your project ref matches the one in the Supabase dashboard under Project Settings.
 
-## Setting Up the Connection
+Setting Up the Connection
 
 Create a simple Supabase client in your project:
 
@@ -61,7 +61,7 @@ const supabase = createClient(
 
 The service role key bypasses Row Level Security (RLS), so use it only in server-side code or Claude Code workflows where you need full database access.
 
-For client-side code — React components, browser scripts, mobile apps — always use the anon key instead. The anon key respects RLS policies and prevents users from accessing each other's data even if the frontend code is compromised:
+For client-side code. React components, browser scripts, mobile apps. always use the anon key instead. The anon key respects RLS policies and prevents users from accessing each other's data even if the frontend code is compromised:
 
 ```typescript
 // Client-side: respects RLS
@@ -77,13 +77,13 @@ const supabaseAdmin = createClient(
 );
 ```
 
-A common mistake is exposing the service role key in frontend code. If you see `SUPABASE_SERVICE_KEY` without a `NEXT_PUBLIC_` prefix, you are safe — Next.js will not send server-only env vars to the browser. For other frameworks, double-check your bundler configuration.
+A common mistake is exposing the service role key in frontend code. If you see `SUPABASE_SERVICE_KEY` without a `NEXT_PUBLIC_` prefix, you are safe. Next.js will not send server-only env vars to the browser. For other frameworks, double-check your bundler configuration.
 
-## Database Operations with Claude Code
+Database Operations with Claude Code
 
 Claude Code can execute SQL queries directly against your Supabase database. Here's how to perform common operations:
 
-### Inserting Records
+Inserting Records
 
 ```typescript
 async function createUser(email: string, name: string) {
@@ -98,7 +98,7 @@ async function createUser(email: string, name: string) {
 }
 ```
 
-### Querying with Filters
+Querying with Filters
 
 ```typescript
 async function getUserByEmail(email: string) {
@@ -113,7 +113,7 @@ async function getUserByEmail(email: string) {
 }
 ```
 
-### Batch Operations and Upserts
+Batch Operations and Upserts
 
 When inserting multiple records or syncing data from an external source, use upsert to avoid duplicate errors:
 
@@ -134,7 +134,7 @@ async function syncProducts(products: Product[]) {
 
 This pattern is especially useful when Claude Code is helping you build ETL scripts that pull data from external APIs and write it into Supabase. Rather than checking for existence first, let the database handle conflict resolution.
 
-### Joins and Nested Selects
+Joins and Nested Selects
 
 Supabase supports PostgREST-style relationship queries. Define foreign keys in your schema and you can query across tables in a single call:
 
@@ -165,7 +165,7 @@ async function getOrdersWithItems(userId: string) {
 
 This avoids multiple round trips and lets Claude Code reason about your data model more naturally when you describe your schema in context.
 
-### Real-time Subscriptions
+Real-time Subscriptions
 
 Supabase provides real-time capabilities. Subscribe to database changes:
 
@@ -200,9 +200,9 @@ useEffect(() => {
 }, []);
 ```
 
-For real-time features, consider using the **frontend-design** skill to build reactive UI components that update automatically when data changes.
+For real-time features, consider using the frontend-design skill to build reactive UI components that update automatically when data changes.
 
-## Schema Design with Row Level Security
+Schema Design with Row Level Security
 
 Design your database schema with RLS from the start. Here is a practical example for a todo application:
 
@@ -231,7 +231,7 @@ CREATE POLICY "Users can delete own todos" ON todos
   FOR DELETE USING (auth.uid() = user_id);
 ```
 
-### Shared Data with Team Access
+Shared Data with Team Access
 
 Real applications often need more complex access patterns. Here is an example where team members can read shared resources, but only owners can modify them:
 
@@ -270,11 +270,11 @@ When Claude Code writes migration scripts for you, describe access patterns this
 
 For advanced RLS patterns and fine-grained access control, see the [Supabase Auth RLS Guide](/claude-code-supabase-auth-row-level-security-guide/).
 
-## Authentication Integration
+Authentication Integration
 
 Supabase handles authentication with multiple providers. Claude Code can manage user sessions and protected routes.
 
-### Sign Up New Users
+Sign Up New Users
 
 ```typescript
 async function signUpUser(email: string, password: string) {
@@ -288,7 +288,7 @@ async function signUpUser(email: string, password: string) {
 }
 ```
 
-### Session Management
+Session Management
 
 ```typescript
 async function signInUser(email: string, password: string) {
@@ -302,7 +302,7 @@ async function signInUser(email: string, password: string) {
 }
 ```
 
-### OAuth Providers
+OAuth Providers
 
 Supabase supports GitHub, Google, Twitter, and other OAuth providers. Adding a provider takes one configuration step in the dashboard plus a client-side call:
 
@@ -321,7 +321,7 @@ async function signInWithGitHub() {
 }
 ```
 
-### Protecting Server Routes
+Protecting Server Routes
 
 In a Next.js App Router application, use Supabase's server-side auth helpers to protect routes and read the user's session:
 
@@ -350,9 +350,9 @@ export default async function Dashboard() {
 }
 ```
 
-The **tdd** skill pairs well here — write tests for your authentication flow before implementing to ensure secure user management.
+The tdd skill pairs well here. write tests for your authentication flow before implementing to ensure secure user management.
 
-## Edge Functions
+Edge Functions
 
 Supabase Edge Functions run Deno at the edge and integrate tightly with your database. For detailed examples of writing Edge Functions with full error handling, authentication checks, and deployment patterns, see the [Claude Code Supabase Backend Development Workflow Tips](/claude-code-supabase-backend-development-workflow-tips/) guide.
 
@@ -412,7 +412,7 @@ serve(async (req) => {
 
 When Claude Code writes Edge Functions, give it the function's purpose, the expected request shape, and any database tables it should interact with. The model handles Deno-specific imports and Supabase service role usage correctly when you establish that context upfront.
 
-## Working with Storage
+Working with Storage
 
 Supabase Storage handles file uploads. Here's a practical workflow:
 
@@ -438,7 +438,7 @@ async function getPublicUrl(bucket: string, path: string) {
 }
 ```
 
-### Generating Signed URLs for Private Files
+Generating Signed URLs for Private Files
 
 Not all files should be publicly accessible. For user-uploaded content that should only be readable by the owner, use signed URLs that expire:
 
@@ -453,7 +453,7 @@ async function getSignedUrl(bucket: string, path: string, expiresIn = 3600) {
 }
 ```
 
-### Organizing Storage with Folder Structures
+Organizing Storage with Folder Structures
 
 Use a consistent path convention so RLS-style folder rules work correctly:
 
@@ -475,9 +475,9 @@ async function uploadUserAvatar(userId: string, file: File) {
 }
 ```
 
-Combine this with the **pdf** skill to generate reports, store them in Supabase Storage, and share via public URLs.
+Combine this with the pdf skill to generate reports, store them in Supabase Storage, and share via public URLs.
 
-## Database Migrations
+Database Migrations
 
 When schema changes are needed, use the Supabase CLI:
 
@@ -493,7 +493,7 @@ supabase db push
 
 Claude Code can help generate migration scripts by analyzing your existing schema and suggesting improvements.
 
-### A Practical Migration Workflow
+A Practical Migration Workflow
 
 The most reliable pattern when using Claude Code for migrations is to describe the change in plain language and let it draft the SQL, then review before applying:
 
@@ -520,21 +520,21 @@ COMMENT ON COLUMN users.preferences IS 'User-configurable settings stored as JSO
 
 Always use `IF NOT EXISTS` and `IF EXISTS` guards so migrations are idempotent and re-runnable without errors.
 
-## Best Practices
+Best Practices
 
-1. **Use RLS everywhere** — Enable Row Level Security on all tables, even during development
-2. **Separate service and anon keys** — Use service role only in trusted environments
-3. **Handle errors gracefully** — Always check for Supabase errors in your callbacks
-4. **Use connection pooling** — For high-traffic applications, configure connection pooling via the Supabase dashboard under Database > Connection Pooling
-5. **Monitor with Supabase logs** — Check the dashboard for query performance and errors
-6. **Name policies descriptively** — `"Users can view own orders"` is better than `"select_policy_1"` when debugging production access issues
-7. **Test RLS with the SQL editor** — Use `SET LOCAL role TO authenticated; SET LOCAL request.jwt.claims TO '{"sub": "user-uuid"}';` to simulate a user and verify policies work as expected
+1. Use RLS everywhere. Enable Row Level Security on all tables, even during development
+2. Separate service and anon keys. Use service role only in trusted environments
+3. Handle errors gracefully. Always check for Supabase errors in your callbacks
+4. Use connection pooling. For high-traffic applications, configure connection pooling via the Supabase dashboard under Database > Connection Pooling
+5. Monitor with Supabase logs. Check the dashboard for query performance and errors
+6. Name policies descriptively. `"Users can view own orders"` is better than `"select_policy_1"` when debugging production access issues
+7. Test RLS with the SQL editor. Use `SET LOCAL role TO authenticated; SET LOCAL request.jwt.claims TO '{"sub": "user-uuid"}';` to simulate a user and verify policies work as expected
 
-## Using Claude Skills Together
+Using Claude Skills Together
 
-The **supermemory** skill helps maintain context across sessions when working on complex Supabase projects. Document your database schema, API endpoints, and edge function configurations.
+The supermemory skill helps maintain context across sessions when working on complex Supabase projects. Document your database schema, API endpoints, and edge function configurations.
 
-For testing, the **tdd** skill generates comprehensive test suites for your Supabase operations. A typical test suite for a Supabase-backed service should cover:
+For testing, the tdd skill generates comprehensive test suites for your Supabase operations. A typical test suite for a Supabase-backed service should cover:
 
 - Happy path CRUD operations
 - RLS policy enforcement (verify that user A cannot access user B's data)
@@ -543,16 +543,16 @@ For testing, the **tdd** skill generates comprehensive test suites for your Supa
 
 Combined with proper RLS policies, you get a reliable backend that passes security audits.
 
-The **frontend-design** skill complements backend work by generating UI components that connect smoothly to your Supabase data layer. When you share your database schema in context, the frontend-design skill can generate typed hooks and components that match your actual column names and relationships — saving significant back-and-forth between backend and frontend work.
+The frontend-design skill complements backend work by generating UI components that connect smoothly to your Supabase data layer. When you share your database schema in context, the frontend-design skill can generate typed hooks and components that match your actual column names and relationships. saving significant back-and-forth between backend and frontend work.
 
-For greenfield projects, a productive sequence is: define your schema and RLS policies with Claude Code, run migrations, then hand the schema to **frontend-design** and **tdd** to generate the application layer and test coverage simultaneously.
+For greenfield projects, a productive sequence is: define your schema and RLS policies with Claude Code, run migrations, then hand the schema to frontend-design and tdd to generate the application layer and test coverage simultaneously.
 
 
-## Related Reading
+Related Reading
 
-- [Claude Code Skills for Supabase Full-Stack Apps Guide](/claude-code-skills-for-supabase-full-stack-apps-guide/) — See also
-- [Claude Skills With Supabase Database Integration](/claude-skills-with-supabase-database-integration/) — See also
-- [Full Stack Web App with Claude Skills: Step by Step](/full-stack-web-app-with-claude-skills-step-by-step/) — See also
-- [Claude Code Tutorials Hub](/tutorials-hub/) — See also
+- [Claude Code Skills for Supabase Full-Stack Apps Guide](/claude-code-skills-for-supabase-full-stack-apps-guide/). See also
+- [Claude Skills With Supabase Database Integration](/claude-skills-with-supabase-database-integration/). See also
+- [Full Stack Web App with Claude Skills: Step by Step](/full-stack-web-app-with-claude-skills-step-by-step/). See also
+- [Claude Code Tutorials Hub](/tutorials-hub/). See also
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

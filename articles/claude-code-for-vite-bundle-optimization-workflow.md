@@ -3,7 +3,7 @@
 
 layout: default
 title: "Claude Code for Vite Bundle Optimization Workflow"
-description: "Learn how to leverage Claude Code to automate Vite bundle optimization, reduce bundle size, and improve build performance with practical workflows and."
+description: "Learn how to use Claude Code to automate Vite bundle optimization, reduce bundle size, and improve build performance with practical workflows and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-vite-bundle-optimization-workflow/
@@ -15,11 +15,11 @@ score: 7
 
 {% raw %}
 
-Vite has transformed how developers build modern web applications with its lightning-fast dev server and optimized production builds. However, achieving optimal bundle sizes and build performance often requires deep knowledge of its configuration options, plugins, and best practices. This is where Claude Code becomes invaluable—acting as an intelligent assistant that understands Vite's ecosystem and can guide you through complex optimization decisions.
+Vite has transformed how developers build modern web applications with its lightning-fast dev server and optimized production builds. However, achieving optimal bundle sizes and build performance often requires deep knowledge of its configuration options, plugins, and best practices. This is where Claude Code becomes invaluable, acting as an intelligent assistant that understands Vite's ecosystem and can guide you through complex optimization decisions.
 
 This guide presents a practical workflow for using Claude Code to analyze, optimize, and maintain your Vite bundle configuration. By the end, you will have a repeatable, measurable process for driving bundle size down and keeping it there.
 
-## Understanding Your Current Bundle Profile
+Understanding Your Current Bundle Profile
 
 Before making any optimizations, you need a clear picture of what's in your bundle. Claude Code can help you generate and interpret bundle analysis reports, making the process much less intimidating.
 
@@ -31,7 +31,7 @@ Analyze my vite.config.ts and explain the current build optimization settings. I
 
 Claude will examine your configuration and provide actionable feedback. For example, it might notice you're not using code splitting effectively or that your build target could be more specific.
 
-### Generating Bundle Analysis Reports
+Generating Bundle Analysis Reports
 
 To see exactly what's contributing to your bundle size, add the `rollup-plugin-visualizer` to your project:
 
@@ -59,13 +59,13 @@ export default defineConfig({
 
 Run your production build and open the generated HTML file. You'll see a visual representation of your bundle, showing which modules contribute the most to size.
 
-### Interpreting the Visualizer Output
+Interpreting the Visualizer Output
 
 The treemap visualization uses area to represent relative byte size. Patterns Claude Code can help you recognize:
 
-- **Large single-color blocks**: A single dependency dominating the bundle — usually a sign that the library is being imported in full rather than tree-shaken
-- **Repeated module names**: The same utility appearing in multiple chunks — usually a misconfigured `manualChunks` strategy
-- **Oversized vendor chunk**: When all third-party code is lumped together, users re-download unchanged libraries after every app update
+- Large single-color blocks: A single dependency dominating the bundle. usually a sign that the library is being imported in full rather than tree-shaken
+- Repeated module names: The same utility appearing in multiple chunks. usually a misconfigured `manualChunks` strategy
+- Oversized vendor chunk: When all third-party code is lumped together, users re-download unchanged libraries after every app update
 
 Ask Claude to interpret a screenshot or the raw `stats.json` output:
 
@@ -73,11 +73,11 @@ Ask Claude to interpret a screenshot or the raw `stats.json` output:
 I've attached my rollup-plugin-visualizer stats.html. Walk me through the top 5 largest modules and suggest whether each should be code-split, externalized, or replaced with a lighter alternative.
 ```
 
-## Automating Common Optimizations
+Automating Common Optimizations
 
 Claude Code excels at applying systematic optimizations. Here are key areas where it provides immediate value:
 
-### Tree Shaking Configuration
+Tree Shaking Configuration
 
 Modern JavaScript allows for aggressive tree shaking, but only when your code and dependencies are properly configured. Ask Claude to audit your code:
 
@@ -112,9 +112,9 @@ import { debounce } from 'lodash-es'
 import debounce from 'lodash/debounce'
 ```
 
-Ask Claude which approach is correct for each dependency in your project—the answer differs per library.
+Ask Claude which approach is correct for each dependency in your project, the answer differs per library.
 
-### Dynamic Imports for Code Splitting
+Dynamic Imports for Code Splitting
 
 Large applications benefit from splitting code into smaller chunks that load on demand. Claude can identify opportunities for dynamic imports:
 
@@ -163,7 +163,7 @@ export function AppRoutes() {
 
 Each page becomes its own chunk. Users navigating to `/dashboard` never download the Reports or Settings bundles until they navigate there.
 
-### Granular Chunk Splitting with `manualChunks`
+Granular Chunk Splitting with `manualChunks`
 
 Vite's default chunking groups all vendor code into a single `vendor` chunk. This means a change to any dependency forces users to re-download the entire vendor bundle. The `manualChunks` option lets you be surgical:
 
@@ -173,11 +173,11 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          // Stable UI framework — rarely changes
+          // Stable UI framework. rarely changes
           'vendor-react': ['react', 'react-dom', 'react-router-dom'],
-          // Date utilities — updated infrequently
+          // Date utilities. updated infrequently
           'vendor-dates': ['date-fns', 'luxon'],
-          // Charting — large and standalone
+          // Charting. large and standalone
           'vendor-charts': ['recharts', 'd3'],
           // Form libraries
           'vendor-forms': ['react-hook-form', 'zod', '@hookform/resolvers']
@@ -190,9 +190,9 @@ export default defineConfig({
 
 With this configuration, upgrading your charting library only invalidates the `vendor-charts` chunk. React, dates, and forms chunks stay cached in the browser. Claude can audit your `package.json` and suggest an appropriate `manualChunks` grouping tailored to your dependency update frequency.
 
-## Optimizing Dependencies and Build Settings
+Optimizing Dependencies and Build Settings
 
-### External Dependencies Strategy
+External Dependencies Strategy
 
 For large dependencies that rarely change, consider externalizing them in development to speed up builds:
 
@@ -206,7 +206,7 @@ export default defineConfig({
 })
 ```
 
-However, be strategic—external dependencies must be loaded via CDN or a separate script tag. Claude can help you set up the appropriate HTML injection.
+However, be strategic, external dependencies must be loaded via CDN or a separate script tag. Claude can help you set up the appropriate HTML injection.
 
 When externalizing to a CDN, you also need to declare the globals for non-ESM scripts:
 
@@ -243,7 +243,7 @@ The trade-off is worth understanding before committing:
 
 For most production applications, `manualChunks` gives the best balance without introducing CDN dependency risk.
 
-### Target and Polyfill Configuration
+Target and Polyfill Configuration
 
 Setting a specific browser target reduces polyfill bloat:
 
@@ -273,9 +273,9 @@ export default defineConfig({
 })
 ```
 
-This eliminates optional chaining polyfills, nullish coalescing transforms, and several CSS compatibility shims—often saving 15–30 KB in output for a typical React app.
+This eliminates optional chaining polyfills, nullish coalescing transforms, and several CSS compatibility shims, often saving 15–30 KB in output for a typical React app.
 
-### Image and Asset Optimization
+Image and Asset Optimization
 
 Vite handles static assets, but Claude can help you configure thresholds intelligently:
 
@@ -289,7 +289,7 @@ export default defineConfig({
     // Generate source maps only for staging/preview, not production
     sourcemap: process.env.VITE_ENV === 'staging'
   },
-  assetsInclude: ['**/*.gltf', '**/*.glb'] // Register non-default asset types
+  assetsInclude: ['/*.gltf', '/*.glb'] // Register non-default asset types
 })
 ```
 
@@ -322,11 +322,11 @@ import heroImage from './hero.jpg?w=800&format=webp&quality=75'
 
 Vite transforms the import at build time, generating an optimized WebP variant. Claude can suggest appropriate width and quality values based on where the image appears in your layout.
 
-## Creating an Optimization Workflow
+Creating an Optimization Workflow
 
 The real power of Claude Code comes from creating repeatable workflows. Here's a structured approach:
 
-### Step 1: Baseline Measurement
+Step 1: Baseline Measurement
 
 Before any changes, measure your current bundle:
 
@@ -353,7 +353,7 @@ Store this in a file called `bundle-baseline.json`:
 }
 ```
 
-### Step 2: Claude-Powered Analysis
+Step 2: Claude-Powered Analysis
 
 Ask Claude to generate a comprehensive optimization report:
 
@@ -366,19 +366,19 @@ Create a detailed optimization report for my Vite project. Include:
 5. Estimated size savings for each change
 ```
 
-### Step 3: Incremental Changes
+Step 3: Incremental Changes
 
 Implement changes one at a time, measuring the impact of each:
 
-1. Apply tree shaking fixes — check import patterns across all source files
-2. Add route-level code splitting — split each page into its own chunk
-3. Configure `manualChunks` — group vendor libraries by update frequency
-4. Adjust build target — raise the minimum browser baseline if justified
-5. Optimize images — convert to WebP, add responsive sizes
+1. Apply tree shaking fixes. check import patterns across all source files
+2. Add route-level code splitting. split each page into its own chunk
+3. Configure `manualChunks`. group vendor libraries by update frequency
+4. Adjust build target. raise the minimum browser baseline if justified
+5. Optimize images. convert to WebP, add responsive sizes
 
 Measure after each step. If a change makes things worse, revert it before continuing. Claude can help you interpret whether a size increase is acceptable (for example, adding a new feature) or a regression.
 
-### Step 4: Continuous Monitoring
+Step 4: Continuous Monitoring
 
 Add bundle size checks to your CI pipeline to prevent regression:
 
@@ -425,9 +425,9 @@ Ask Claude to suggest appropriate size budgets based on your baseline measuremen
 Given my current bundle baseline of 312 KB gzip total and a target of under 200 KB, suggest bundlesize limits for each chunk in my Vite build.
 ```
 
-## Advanced Configuration Patterns
+Advanced Configuration Patterns
 
-### Environment-Specific Builds
+Environment-Specific Builds
 
 Different deployment environments have different needs. Production should be as small as possible; staging benefits from source maps:
 
@@ -455,7 +455,7 @@ export default defineConfig(({ mode }) => {
 
 Terser produces slightly smaller output than the default esbuild minifier but takes longer to run. Reserve it for production builds where build time is less critical than output size.
 
-### Preloading Critical Chunks
+Preloading Critical Chunks
 
 You can instruct Vite to inject `<link rel="modulepreload">` hints for chunks the user will likely need soon:
 
@@ -475,18 +475,18 @@ export default defineConfig({
 
 Ask Claude to audit your application entry points and identify which secondary chunks should be preloaded for the most common navigation paths.
 
-## Common Pitfalls to Avoid
+Common Pitfalls to Avoid
 
 Through experience with many Vite projects, Claude can warn you about common mistakes:
 
-1. **Over-optimization**: Don't split too aggressively—it increases HTTP requests and can hurt performance on slow connections. The HTTP/2 multiplexing benefit plateaus after roughly 10–15 chunks.
-2. **Premature optimization**: Optimize only after measuring, not based on assumptions. A 200 KB gzip bundle loading in 300 ms is not a problem worth solving.
-3. **Ignoring runtime**: Some libraries add significant runtime overhead that code splitting can't address. If a library is 150 KB gzip, code-splitting defers the download but doesn't reduce it. Consider alternatives.
-4. **Forgetting about CSS**: Large CSS bundles can block rendering. Enable `cssCodeSplit: true` and audit for unused CSS with PurgeCSS.
-5. **Mixing ESM and CJS**: If a dependency ships only CJS, Vite pre-bundles it with esbuild but cannot tree-shake it. Ask Claude to find ESM alternatives or wrappers.
-6. **Skipping the visualizer after changes**: Always re-run the visualizer after optimizations to confirm the change had the expected effect. Assumptions fail; measurements don't.
+1. Over-optimization: Don't split too aggressively, it increases HTTP requests and can hurt performance on slow connections. The HTTP/2 multiplexing benefit plateaus after roughly 10–15 chunks.
+2. Premature optimization: Optimize only after measuring, not based on assumptions. A 200 KB gzip bundle loading in 300 ms is not a problem worth solving.
+3. Ignoring runtime: Some libraries add significant runtime overhead that code splitting can't address. If a library is 150 KB gzip, code-splitting defers the download but doesn't reduce it. Consider alternatives.
+4. Forgetting about CSS: Large CSS bundles can block rendering. Enable `cssCodeSplit: true` and audit for unused CSS with PurgeCSS.
+5. Mixing ESM and CJS: If a dependency ships only CJS, Vite pre-bundles it with esbuild but cannot tree-shake it. Ask Claude to find ESM alternatives or wrappers.
+6. Skipping the visualizer after changes: Always re-run the visualizer after optimizations to confirm the change had the expected effect. Assumptions fail; measurements don't.
 
-### Quick Reference: Claude Prompts for Common Optimization Tasks
+Quick Reference: Claude Prompts for Common Optimization Tasks
 
 | Task | Claude prompt |
 |---|---|
@@ -497,7 +497,7 @@ Through experience with many Vite projects, Claude can warn you about common mis
 | Size budget calculation | "My gzip target is 150 KB total. Given my current chunks, suggest per-chunk budgets" |
 | Vendor chunk strategy | "Group my dependencies into manualChunks based on how often they update" |
 
-## Conclusion
+Conclusion
 
 Claude Code transforms Vite bundle optimization from a complex, trial-and-error process into a systematic workflow. By using its ability to analyze code, suggest changes, and explain trade-offs, you can achieve optimal bundle sizes without becoming a Vite internals expert.
 
@@ -505,10 +505,10 @@ Start with a baseline measurement, use Claude to identify opportunities, apply c
 
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

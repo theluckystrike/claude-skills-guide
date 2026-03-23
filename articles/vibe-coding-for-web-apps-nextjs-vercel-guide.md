@@ -13,17 +13,17 @@ score: 7
 ---
 
 
-# Vibe Coding for Web Apps: NextJS + Vercel Guide
+Vibe Coding for Web Apps: NextJS + Vercel Guide
 
 Building web applications has never been faster thanks to the combination of NextJS, Vercel, and AI-assisted development. This guide shows you how to use vibe coding principles to create production-ready NextJS applications that deploy smoothly to Vercel.
 
-## Why NextJS and Vercel Work Well for Vibe Coding
+Why NextJS and Vercel Work Well for Vibe Coding
 
-NextJS provides a robust framework with file-based routing, server-side rendering, and API routes. Vercel adds zero-config deployment, preview deployments for every git push, and automatic SSL. Together, they create a development experience where you can focus on your application logic while the infrastructure handles itself.
+NextJS provides a solid framework with file-based routing, server-side rendering, and API routes. Vercel adds zero-config deployment, preview deployments for every git push, and automatic SSL. Together, they create a development experience where you can focus on your application logic while the infrastructure handles itself.
 
-The real power emerges when you combine this stack with Claude Code. You describe what you want—a user dashboard, an authentication flow, a data visualization—and Claude translates that into working NextJS code with proper TypeScript types, Tailwind styling, and Vercel-compatible deployment configuration.
+The real power emerges when you combine this stack with Claude Code. You describe what you want, a user dashboard, an authentication flow, a data visualization, and Claude translates that into working NextJS code with proper TypeScript types, Tailwind styling, and Vercel-compatible deployment configuration.
 
-## Setting Up Your Vibe Coding Environment
+Setting Up Your Vibe Coding Environment
 
 Before you start, ensure you have the necessary tools. You'll need Node.js installed, a Vercel account, and Claude Code running locally. Initialize your NextJS project with TypeScript and Tailwind CSS:
 
@@ -39,9 +39,9 @@ npx vercel link
 npx vercel env pull
 ```
 
-Once connected, every push to your repository triggers a deployment. This workflow pairs perfectly with vibe coding because you can rapidly iterate—describe changes, Claude implements them, you test the deployment.
+Once connected, every push to your repository triggers a deployment. This workflow pairs perfectly with vibe coding because you can rapidly iterate, describe changes, Claude implements them, you test the deployment.
 
-## Building Your First Feature with Vibe Coding
+Building Your First Feature with Vibe Coding
 
 Start a conversation with Claude and describe your feature. For example, suppose you want a product listing page with filtering:
 
@@ -56,22 +56,22 @@ Create a product listing page for an e-commerce store. Include:
 
 Claude will generate the necessary components, typically creating files like `components/ProductGrid.tsx`, `components/ProductCard.tsx`, and `components/FilterSidebar.tsx`. Review the output, request adjustments if needed, then move forward.
 
-## Leveraging Claude Skills for Specialized Tasks
+Leveraging Claude Skills for Specialized Tasks
 
-Claude skills transform how Claude approaches different development scenarios. For frontend work, the **frontend-design** skill provides design-focused prompting that produces cleaner, more cohesive UI code. Invoke it when you need help with layouts, component composition, or visual polish.
+Claude skills transform how Claude approaches different development scenarios. For frontend work, the frontend-design skill provides design-focused prompting that produces cleaner, more cohesive UI code. Invoke it when you need help with layouts, component composition, or visual polish.
 
-When you need test coverage, switch to the **tdd** skill. It guides Claude to write tests before implementation, resulting in more reliable code. Start a session and invoke the skill:
+When you need test coverage, switch to the tdd skill. It guides Claude to write tests before implementation, resulting in more reliable code. Start a session and invoke the skill:
 
 ```bash
 claude
-# Then in the session: /tdd
+Then in the session: /tdd
 ```
 
-For persistent context across sessions, the **supermemory** skill helps Claude remember your project decisions, architectural choices, and coding conventions. This creates a more personalized development experience where Claude understands your project's history.
+For persistent context across sessions, the supermemory skill helps Claude remember your project decisions, architectural choices, and coding conventions. This creates a more personalized development experience where Claude understands your project's history.
 
-Other useful skills for NextJS development include **pdf** for generating invoices or reports, **pptx** for creating presentations about your project, and **xlsx** for handling spreadsheet exports or imports.
+Other useful skills for NextJS development include pdf for generating invoices or reports, pptx for creating presentations about your project, and xlsx for handling spreadsheet exports or imports.
 
-## Creating API Routes in NextJS
+Creating API Routes in NextJS
 
 NextJS API routes provide a straightforward way to build backend functionality without a separate server. Describe what endpoint you need and let Claude implement it:
 
@@ -85,7 +85,7 @@ Add an API route at /api/products that:
 
 Claude will create the route in `app/api/products/route.ts` (or `pages/api/products.ts` if using the pages router). The implementation follows NextJS conventions with proper request handling and response formatting.
 
-## Working with Databases and External Services
+Working with Databases and External Services
 
 Most real applications need data persistence. Vercel integrates well with various databases. For a quick start, describe your database needs to Claude:
 
@@ -98,7 +98,7 @@ Add PostgreSQL integration using Prisma ORM. Create:
 
 Claude will set up the Prisma schema, generate migrations, and create the necessary API routes and frontend components. For other databases like Turso (SQLite at the edge) or Neon (serverless PostgreSQL), adjust your description accordingly.
 
-## Styling and Design Implementation
+Styling and Design Implementation
 
 Tailwind CSS ships with NextJS by default, making it the natural choice for vibe coding. Describe your design requirements in natural language:
 
@@ -112,9 +112,9 @@ Style the product cards with:
 - Clean typography using the Inter font
 ```
 
-Claude translates these design descriptions into Tailwind classes. For more complex design systems, the **frontend-design** skill provides additional guidance on component composition and design patterns.
+Claude translates these design descriptions into Tailwind classes. For more complex design systems, the frontend-design skill provides additional guidance on component composition and design patterns.
 
-## Deployment and Environment Configuration
+Deployment and Environment Configuration
 
 Vercel handles deployment automatically, but you may need environment variables for API keys or database connection strings. Describe what environment variables your application needs:
 
@@ -127,7 +127,7 @@ Add environment variables for:
 
 Create a `.env.example` file with placeholder values, then use `vercel env add` to add actual values. Claude can help structure this properly.
 
-## Testing Your Application
+Testing Your Application
 
 Before deploying to production, ensure your application works correctly. Run the development server and test manually:
 
@@ -146,9 +146,9 @@ Test that:
 - Combined filters work together
 ```
 
-The **tdd** skill helps Claude write tests that match your expectations. Run tests with `npm test` before deploying.
+The tdd skill helps Claude write tests that match your expectations. Run tests with `npm test` before deploying.
 
-## Adding Subscription Payments
+Adding Subscription Payments
 
 For SaaS apps, Stripe integration provides recurring revenue. Model your plans and create checkout sessions:
 
@@ -191,9 +191,9 @@ export async function createCheckoutSession(userId: string, plan: string) {
 }
 ```
 
-Test payment flows with the **tdd** skill — cover successful payments, failed payments, plan upgrades, and cancellations before deploying.
+Test payment flows with the tdd skill. cover successful payments, failed payments, plan upgrades, and cancellations before deploying.
 
-## Maintaining and Iterating on Your App
+Maintaining and Iterating on Your App
 
 Vibe coding truly shines during iteration. When you need to add features or make changes, simply describe them to Claude. The workflow stays consistent:
 
@@ -204,7 +204,7 @@ Vibe coding truly shines during iteration. When you need to add features or make
 
 Keep a running list of desired changes and work through them systematically. Claude maintains context within a session, making it easy to tackle multiple related changes.
 
-## Best Practices for Successful Vibe Coding
+Best Practices for Successful Vibe Coding
 
 Clear communication produces better results. Instead of vague requests like "make it look better," be specific: "increase the padding from 4 to 6 units and add a subtle gradient to the header background."
 
@@ -215,10 +215,10 @@ Document your decisions. When Claude makes architectural choices, add comments e
 ---
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

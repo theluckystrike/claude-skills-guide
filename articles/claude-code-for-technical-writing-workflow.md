@@ -14,29 +14,29 @@ score: 8
 
 
 {% raw %}
-# Claude Code for Technical Writing Workflow
+Claude Code for Technical Writing Workflow
 
 Technical writing is a skill that bridges the gap between complex code and human understanding. Whether you're documenting APIs, writing README files, or creating developer guides, Claude Code can transform your writing workflow from a tedious chore into an efficient, automated process. This guide shows you how to build Claude Skills specifically designed for technical writing tasks.
 
-## Why Use Claude Code for Technical Writing?
+Why Use Claude Code for Technical Writing?
 
 Traditional technical writing often involves repetitive tasks: updating API documentation after code changes, maintaining consistent formatting across multiple files, and ensuring code examples stay in sync with actual implementations. Claude Code addresses these challenges by providing:
 
-- **Consistent output** across all your documentation
-- **Automated format enforcement** using skill templates
-- **Context-aware suggestions** based on your codebase
-- **Batch processing** for updating multiple files simultaneously
+- Consistent output across all your documentation
+- Automated format enforcement using skill templates
+- Context-aware suggestions based on your codebase
+- Batch processing for updating multiple files simultaneously
 
 Instead of starting from scratch each time, you create reusable skills that understand your project's conventions and apply them automatically.
 
-## Setting Up Your Technical Writing Environment
+Setting Up Your Technical Writing Environment
 
 Before creating dedicated skills, ensure your Claude Code environment is properly configured for documentation work. Create a `.claude/settings.local.md` file that defines your documentation preferences:
 
 ```markdown
-# Local Settings
+Local Settings
 
-## Documentation Conventions
+Documentation Conventions
 - Use American English spelling
 - Code fence language labels required
 - Maximum line length: 80 characters
@@ -46,7 +46,7 @@ Before creating dedicated skills, ensure your Claude Code environment is properl
 
 This settings file becomes context that Claude references when working on any documentation task, ensuring consistency without repeated instructions.
 
-## Creating a Technical Writing Skill
+Creating a Technical Writing Skill
 
 The core of your workflow is a custom skill for technical writing. Here's a practical example:
 
@@ -56,32 +56,31 @@ name: Technical Writer
 description: Generate clear, consistent technical documentation for code projects
 ---
 
-# Context
+Context
 
 You are a technical writer specializing in developer documentation. You write for an audience of software engineers who need accurate, actionable information.
 
-## Documentation Standards
+Documentation Standards
 
-1. **Clarity over cleverness** - Explain the "why" not just the "what"
-2. **Provide context** - Show how a feature fits into the larger system
-3. **Include examples** - Every API endpoint needs a working example
-4. **Be specific** - Use actual values, not placeholders
+1. Clarity over cleverness - Explain the "why" not just the "what"
+2. Provide context - Show how a feature fits into the larger system
+3. Include examples - Every API endpoint needs a working example
+4. Be specific - Use actual values, not placeholders
 
-## Output Formats
+Output Formats
 
 When documenting functions, use this template:
 
 ```
-### FunctionName
+FunctionName
 
-**Purpose**: One sentence describing what this does
+Purpose: One sentence describing what this does
 
-**Parameters**:
+Parameters:
 - `paramName`: type - Description
 
-**Returns**: type - Description
+Returns: type - Description
 
-**Example**:
 \`\`\`language
 // Working code example
 \`\`\`
@@ -92,7 +91,7 @@ Now, analyze the provided code or files and generate documentation following the
 
 Save this skill to your skills directory and invoke it whenever you need to document code.
 
-## Documenting APIs with Claude Skills
+Documenting APIs with Claude Skills
 
 API documentation is one of the most valuable use cases for Claude Code. Create a dedicated skill for generating OpenAPI-compatible documentation:
 
@@ -102,11 +101,11 @@ name: API Documentor
 description: Generate OpenAPI documentation from code comments and endpoint definitions
 ---
 
-# Task
+Task
 
 Analyze the provided code and generate OpenAPI 3.0 documentation.
 
-## Requirements
+Requirements
 
 For each endpoint, extract:
 - HTTP method and path
@@ -114,7 +113,7 @@ For each endpoint, extract:
 - Response status codes and schemas
 - Authentication requirements
 
-## Output Format
+Output Format
 
 Generate YAML in this structure:
 
@@ -146,7 +145,7 @@ Ensure all schemas are defined in the components section.
 
 This skill parses your actual code and generates documentation that stays synchronized with your implementation.
 
-## README Generation Workflow
+README Generation Workflow
 
 A well-structured README is essential for any project. Create a skill that generates comprehensive README files from your project structure:
 
@@ -156,7 +155,7 @@ name: README Generator
 description: Create comprehensive README files from project structure
 ---
 
-# Project Analysis
+Project Analysis
 
 Examine the project to understand:
 1. Programming language and framework
@@ -165,22 +164,22 @@ Examine the project to understand:
 4. CI/CD configuration
 5. Directory structure
 
-## README Template
+README Template
 
 Generate a README with these sections:
 
-1. **Project Title** - One-line description
-2. **Badges** - Build status, version, license
-3. **Installation** - Platform-specific commands
-4. **Usage** - Code example with expected output
-5. **API Reference** - Link to full documentation
-6. **Contributing** - Guidelines for PRs
-7. **License** - SPDX identifier
+1. Project Title - One-line description
+2. Badges - Build status, version, license
+3. Installation - Platform-specific commands
+4. Usage - Code example with expected output
+5. API Reference - Link to full documentation
+6. Contributing - Guidelines for PRs
+7. License - SPDX identifier
 
 Use appropriate formatting for the detected language/framework.
 ```
 
-## Maintaining Documentation Consistency
+Maintaining Documentation Consistency
 
 The real power of Claude Code emerges when you use it for ongoing maintenance. Create a skill that audits your documentation for consistency:
 
@@ -190,17 +189,17 @@ name: Documentation Auditor
 description: Check documentation for consistency and completeness
 ---
 
-# Audit Criteria
+Audit Criteria
 
 Check all markdown files in the project for:
 
-1. **Broken links** - Verify all internal links resolve
-2. **Missing examples** - Code blocks should have language labels
-3. **Outdated content** - Look for TODO, FIXME, or dated references
-4. **Formatting consistency** - Headers, lists, code blocks follow patterns
-5. **Missing sections** - Required sections present per file type
+1. Broken links - Verify all internal links resolve
+2. Missing examples - Code blocks should have language labels
+3. Outdated content - Look for TODO, FIXME, or dated references
+4. Formatting consistency - Headers, lists, code blocks follow patterns
+5. Missing sections - Required sections present per file type
 
-## Output
+Output
 
 Generate a report listing:
 - File path
@@ -213,39 +212,39 @@ Prioritize issues that affect readability or accuracy.
 
 Run this auditor periodically to catch documentation drift before it becomes a problem.
 
-## Actionable Advice for Technical Writing Workflows
+Actionable Advice for Technical Writing Workflows
 
-### Start Small and Iterate
+Start Small and Iterate
 
 Begin with a simple skill that handles one documentation type, such as function comments. Test it extensively, refine the output format, then expand to more complex documentation.
 
-### Version Your Skills
+Version Your Skills
 
 Technical writing requirements evolve. Keep your skills in version control and tag releases. This lets you roll back if a skill change produces undesired output.
 
-### Combine Skills for Complex Tasks
+Combine Skills for Complex Tasks
 
 Layer multiple skills for sophisticated workflows. Use your documentation auditor skill as a final step after generating new content to catch any issues immediately.
 
-### use Claude's Context Window
+use Claude's Context Window
 
 Provide rich context to your skills. Include your existing documentation style guide, coding conventions, and example outputs. The more context Claude has, the better the documentation it produces.
 
-### Automate Repetitive Tasks
+Automate Repetitive Tasks
 
-Identify documentation tasks you perform frequently—weekly status updates, changelog generation, release notes—and create dedicated skills. These become quick one-command operations.
+Identify documentation tasks you perform frequently, weekly status updates, changelog generation, release notes, and create dedicated skills. These become quick one-command operations.
 
-## Conclusion
+Conclusion
 
 Claude Code transforms technical writing from a manual, time-consuming process into an automated workflow that produces consistent, high-quality documentation. By creating specialized skills for different documentation types, you build a reusable toolkit that improves with use. Start with one skill focused on your most frequent documentation task, then expand gradually as you discover more opportunities for automation.
 
-The key is treating your documentation workflow as a system worth optimizing—because well-maintained documentation is as valuable to your project as the code itself.
+The key is treating your documentation workflow as a system worth optimizing, because well-maintained documentation is as valuable to your project as the code itself.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

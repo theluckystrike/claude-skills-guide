@@ -17,15 +17,15 @@ tags: [chrome, claude-skills]
 
 Angular DevTools is an official Chrome extension provided by the Angular team that provides powerful debugging and profiling capabilities for Angular applications. Whether you are maintaining a legacy Angular project or building a modern application with the latest Angular version, this extension significantly improves your development workflow. It bridges the gap between generic browser DevTools and Angular-specific internals, exposing the component tree, change detection behavior, and performance timing in ways that were previously only accessible through console logging or guesswork.
 
-## Installing Angular DevTools
+Installing Angular DevTools
 
 The installation process is straightforward. Open Chrome and navigate to the [Angular DevTools Chrome Web Store page](https://chrome.google.com/webstore/detail/angular-devtools/ienfalfjdbdpebioblbfnkbdplhggbhce). Click the "Add to Chrome" button and confirm the installation.
 
 After installation, you will see the Angular logo in your Chrome toolbar. The extension remains disabled until you open an Angular application running Angular version 9 or later. When you visit a qualifying app, the toolbar icon activates, indicating that DevTools has detected the Angular runtime.
 
-Angular DevTools works entirely client-side — it communicates with Angular's debugging APIs built into development builds. No server configuration or npm package is required for basic usage.
+Angular DevTools works entirely client-side. it communicates with Angular's debugging APIs built into development builds. No server configuration or npm package is required for basic usage.
 
-## Verifying Your Installation
+Verifying Your Installation
 
 Once installed, verify that Angular DevTools is working correctly:
 
@@ -41,7 +41,7 @@ If the Angular tab does not appear, ensure your application meets the following 
 
 A quick way to confirm the Ivy renderer is active is to check your browser console. If you see no "View Engine" references and your build was produced with Angular 9+, Ivy is running. For projects with custom webpack configurations, double-check that you have not disabled Ivy explicitly in `tsconfig.app.json`.
 
-## Comparing Angular DevTools to Browser DevTools
+Comparing Angular DevTools to Browser DevTools
 
 Before diving into the Angular-specific features, it helps to understand what Angular DevTools adds on top of the standard Chrome DevTools.
 
@@ -58,11 +58,11 @@ Before diving into the Angular-specific features, it helps to understand what An
 
 The two toolsets are complementary. Use Chrome DevTools for network, console, and DOM work. Use Angular DevTools for everything related to Angular's runtime: components, inputs, outputs, change detection, and performance.
 
-## Understanding the Angular DevTools Interface
+Understanding the Angular DevTools Interface
 
-The Angular DevTools interface consists of two main tabs: the **Component Explorer** and the **Profiler**.
+The Angular DevTools interface consists of two main tabs: the Component Explorer and the Profiler.
 
-### Component Explorer Tab
+Component Explorer Tab
 
 The Component Explorer provides a tree view of your application's component hierarchy. You can expand nodes to see child components, directives, and pipes. Each node displays:
 
@@ -74,7 +74,7 @@ You can interact directly with components from this view. Click on any component
 
 The Component Explorer is particularly useful when debugging deeply nested component trees. Rather than tracing through parent-child relationships manually in code, you can visualize the full hierarchy instantly and jump to the component that holds the state you care about.
 
-### Profiler Tab
+Profiler Tab
 
 The Profiler tab records and displays change detection cycles. This helps you identify performance bottlenecks by showing:
 
@@ -84,9 +84,9 @@ The Profiler tab records and displays change detection cycles. This helps you id
 
 To use the profiler, click the "Record" button and interact with your application. Stop recording to analyze the results. The resulting timeline breaks down exactly which components ran change detection, how long each took, and what triggered each cycle.
 
-## Practical Examples
+Practical Examples
 
-### Inspecting Component State
+Inspecting Component State
 
 Consider a simple counter application:
 
@@ -116,7 +116,7 @@ export class CounterComponent {
 
 With Angular DevTools, you can select the `app-counter` component in the Component Explorer and view the current `count` value in real-time. You can also modify the count value directly in the properties panel to test edge cases without writing test code or console logs.
 
-### Inspecting Service-Driven Components
+Inspecting Service-Driven Components
 
 Components that receive data from services are a common source of confusion during debugging. Consider a product list that loads from a service:
 
@@ -158,7 +158,7 @@ export class ProductListComponent implements OnInit {
 
 In the Component Explorer, you can monitor `products`, `isLoading`, and `errorMessage` as they change during the data fetch. If `isLoading` stays `true`, you know the observable never completed. If `products` remains empty despite a successful request, you can inspect the actual response data without adding a single `console.log`.
 
-### Debugging Change Detection Issues
+Debugging Change Detection Issues
 
 When your application experiences performance problems, the Profiler helps identify the cause:
 
@@ -171,7 +171,7 @@ The profiler displays a timeline showing each change detection cycle. Bars highl
 
 For applications using `OnPush` change detection strategy, this is particularly valuable. You can verify that change detection only runs when expected, rather than on every event.
 
-### Diagnosing Over-Rendering with OnPush
+Diagnosing Over-Rendering with OnPush
 
 The most impactful use of the Profiler is identifying unnecessary change detection in large lists. Consider a dashboard with many child components that use `Default` change detection:
 
@@ -204,11 +204,11 @@ export class DashboardCardComponent {
 
 Re-run the profiler after this change. You should see a dramatic reduction in components included in each change detection cycle. The Profiler makes this before-and-after comparison concrete and measurable.
 
-## Configuration Options
+Configuration Options
 
 Angular DevTools offers several configuration options accessible through the extension popup:
 
-### Enable Debugging
+Enable Debugging
 
 By default, Angular DevTools works automatically. However, you can force-enable debugging for applications that disable it in production builds:
 
@@ -236,17 +236,17 @@ bootstrapApplication(AppComponent, appConfig)
   });
 ```
 
-### Profiler Settings
+Profiler Settings
 
 Adjust profiler settings to capture more detailed information:
 
-- **Capture stack traces**: Enable this to see the call stack for each change detection cycle
-- **Flame graph view**: Toggle between timeline and flame graph visualizations
-- **Frame threshold**: Set the minimum frame time to highlight in red
+- Capture stack traces: Enable this to see the call stack for each change detection cycle
+- Flame graph view: Toggle between timeline and flame graph visualizations
+- Frame threshold: Set the minimum frame time to highlight in red
 
 Setting a frame threshold of 16ms (roughly 60fps) is a useful starting point for performance-sensitive applications. Any cycle exceeding that threshold is worth investigating.
 
-## Angular DevTools Across Angular Versions
+Angular DevTools Across Angular Versions
 
 Angular DevTools works with Angular 9 and above, but some features have evolved across major versions:
 
@@ -259,9 +259,9 @@ Angular DevTools works with Angular 9 and above, but some features have evolved 
 
 If you are on an older project (Angular 9–11), the Component Explorer may not show all directives or present change detection details as clearly as it does in v16+. In those cases, the Profiler remains the most valuable tool for diagnosing slow rendering.
 
-## Troubleshooting Common Issues
+Troubleshooting Common Issues
 
-### Extension Not Appearing
+Extension Not Appearing
 
 If Angular DevTools does not appear in your DevTools panel:
 
@@ -272,7 +272,7 @@ If Angular DevTools does not appear in your DevTools panel:
 
 A common cause of the tab not appearing is opening DevTools before the Angular app has finished bootstrapping. Try closing DevTools, waiting for the app to load, then reopening DevTools. The Angular tab should be present once the runtime has initialized.
 
-### Components Not Showing Properties
+Components Not Showing Properties
 
 Some properties may not appear in the Component Explorer if they are:
 
@@ -282,7 +282,7 @@ Some properties may not appear in the Component Explorer if they are:
 
 To expose private properties for debugging purposes without altering production code, you can temporarily use `public` during a debugging session and revert once the issue is identified.
 
-### Profiler Data Not Recording
+Profiler Data Not Recording
 
 Ensure you are not running the application in production mode, as some debugging features are disabled. If using Angular CLI, verify your build configuration:
 
@@ -302,16 +302,16 @@ For development, use the default development configuration that preserves debugg
 
 If you accidentally ran a production build locally for testing, re-run `ng serve` without any production flag to restore debugging support.
 
-## Tips for Effective Use
+Tips for Effective Use
 
-- **Pin frequently inspected components**: Right-click on a component in the tree and select "Pin to top" for quick access
-- **Use the search function**: Press Ctrl+F or Cmd+F in the Component Explorer to find components by name
-- **Navigate the breadcrumb**: Click breadcrumb items at the top of the properties panel to switch between component contexts
-- **Export profiler data**: Save profiler results as JSON for further analysis or to share with team members
-- **Use alongside network throttling**: Combine Angular DevTools profiling with Chrome's CPU throttling (in the Performance panel) to simulate lower-end devices and surface change detection bottlenecks that only appear under load
-- **Focus on red bars first**: In the Profiler timeline, red bars indicate cycles that exceeded 16ms. Start your investigation there rather than trying to optimize fast cycles
+- Pin frequently inspected components: Right-click on a component in the tree and select "Pin to top" for quick access
+- Use the search function: Press Ctrl+F or Cmd+F in the Component Explorer to find components by name
+- Navigate the breadcrumb: Click breadcrumb items at the top of the properties panel to switch between component contexts
+- Export profiler data: Save profiler results as JSON for further analysis or to share with team members
+- Use alongside network throttling: Combine Angular DevTools profiling with Chrome's CPU throttling (in the Performance panel) to simulate lower-end devices and surface change detection bottlenecks that only appear under load
+- Focus on red bars first: In the Profiler timeline, red bars indicate cycles that exceeded 16ms. Start your investigation there rather than trying to optimize fast cycles
 
-## Integrating Angular DevTools into Your Development Workflow
+Integrating Angular DevTools into Your Development Workflow
 
 Angular DevTools is most effective when used proactively rather than reactively. Rather than waiting for a user to report a slowdown, incorporate profiling into your standard feature development cycle.
 
@@ -329,12 +329,12 @@ When you repeat this process before and after performance optimizations, you get
 Angular DevTools integrates smoothly with Chrome DevTools, providing Angular-specific insights alongside the browser's standard debugging tools. Once you incorporate this extension into your workflow, debugging Angular applications becomes significantly more efficient and the guesswork of tracking down performance regressions is replaced with measurable, reproducible data.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 {% endraw %}

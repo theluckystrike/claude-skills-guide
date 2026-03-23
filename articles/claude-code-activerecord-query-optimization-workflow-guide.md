@@ -16,27 +16,27 @@ score: 7
 
 {% raw %}
 
-# Claude Code ActiveRecord Query Optimization Workflow Guide
+Claude Code ActiveRecord Query Optimization Workflow Guide
 
 ActiveRecord is Rails' powerful ORM that abstracts database interactions, but it can silently introduce performance bottlenecks if you're not careful. N+1 queries, missing indexes, and inefficient query patterns can turn a snappy application into a sluggish one. This guide shows you how to use Claude Code to identify, diagnose, and fix ActiveRecord performance issues systematically.
 
-## Why ActiveRecord Optimization Matters
+Why ActiveRecord Optimization Matters
 
 Database queries are often the primary cause of application slowdowns. A single request can trigger dozens of database calls, each adding latency. For Rails applications handling moderate traffic, inefficient queries can escalate response times from milliseconds to seconds. Optimizing your ActiveRecord usage directly impacts user experience, server costs, and your application's scalability.
 
 Claude Code excels at analyzing Rails codebases because it understands the relationships between models, controllers, and views. This makes it particularly effective for identifying query patterns that cause performance issues across your application.
 
-## Identifying N+1 Query Problems
+Identifying N+1 Query Problems
 
 The N+1 query problem is the most common performance issue in Rails applications. It occurs when your code fetches a parent record and then makes separate queries for each related object. Consider this typical pattern:
 
 ```ruby
-# Controller
+Controller
 def index
   @posts = Post.all
 end
 
-# View
+View
 <% @posts.each do |post| %>
   <h2><%= post.title %></h2>
   <p>Author: <%= post.author.name %></p>
@@ -46,9 +46,9 @@ end
 <% end %>
 ```
 
-This code executes one query for posts, then one query per author, and one query per comment collection—potentially hundreds of queries for a page with 50 posts.
+This code executes one query for posts, then one query per author, and one query per comment collection, potentially hundreds of queries for a page with 50 posts.
 
-### Using Claude Code to Detect N+1 Queries
+Using Claude Code to Detect N+1 Queries
 
 Ask Claude Code to analyze your code:
 
@@ -59,33 +59,33 @@ Claude Code will examine your model relationships and identify patterns like:
 - Calling methods that trigger additional queries in loops
 - Missing `includes`, `preload`, or `eager_load` clauses
 
-## Implementing Eager Loading
+Implementing Eager Loading
 
 Once you've identified N+1 problems, the fix is straightforward: use eager loading to fetch related records in a single query. ActiveRecord provides three methods for this: `includes`, `preload`, and `eager_load`.
 
-### Using includes for Associations
+Using includes for Associations
 
 The `includes` method is the most versatile:
 
 ```ruby
-# Before: N+1 problem
+Before: N+1 problem
 @posts = Post.all
 
-# After: Single query with JOIN or two queries
+After: Single query with JOIN or two queries
 @posts = Post.includes(:author, :comments)
 ```
 
 This generates either a single query with LEFT JOINs or two queries (one for posts, one for all related records), eliminating the N+1 problem entirely.
 
-### Choosing Between preload and eager_load
+Choosing Between preload and eager_load
 
 For complex scenarios, you may need to choose between these methods:
 
 ```ruby
-# preload: Executes separate queries (safe for all associations)
+preload: Executes separate queries (safe for all associations)
 @posts = Post.preload(:comments)
 
-# eager_load: Single query with LEFT JOIN (required for filtering)
+eager_load: Single query with LEFT JOIN (required for filtering)
 @posts = Post.eager_load(:comments).where(comments: { approved: true })
 ```
 
@@ -93,28 +93,28 @@ Ask Claude Code to recommend the appropriate method:
 
 > "What's the best way to eager load the comments association for this query? Should I use includes, preload, or eager_load?"
 
-## Optimizing Query Conditions
+Optimizing Query Conditions
 
 Beyond eager loading, optimizing your WHERE clauses and query conditions can yield significant improvements.
 
-### Using select to Limit Fields
+Using select to Limit Fields
 
 Fetching only the columns you need reduces memory usage and network transfer:
 
 ```ruby
-# Before: Selecting all fields
+Before: Selecting all fields
 @posts = Post.all
 
-# After: Selecting only needed fields
+After: Selecting only needed fields
 @posts = Post.select(:id, :title, :published_at)
 ```
 
-### Using where with Proper Indexing
+Using where with Proper Indexing
 
 Ensure your database has indexes on columns you frequently query:
 
 ```ruby
-# This query needs an index on status and created_at
+This query needs an index on status and created_at
 @posts = Post.where(status: 'published')
              .where('created_at > ?', 30.days.ago)
              .order(created_at: :desc)
@@ -124,55 +124,55 @@ Ask Claude Code to analyze your queries:
 
 > "Review these ActiveRecord queries and suggest which columns need indexes for optimal performance."
 
-## Leveraging Query Methods
+Leveraging Query Methods
 
 ActiveRecord provides numerous query methods that can simplify your code while improving performance.
 
-### Using pluck for Value Arrays
+Using pluck for Value Arrays
 
 When you only need a specific column's values, `pluck` is more efficient than `map`:
 
 ```ruby
-# Less efficient: Loads full records into memory
+Less efficient: Loads full records into memory
 user_ids = User.active.map(&:id)
 
-# More efficient: Direct database query
+More efficient: Direct database query
 user_ids = User.active.pluck(:id)
 ```
 
-### Using exists? for Boolean Checks
+Using exists? for Boolean Checks
 
 For checking record existence, use `exists?` instead of `any?`:
 
 ```ruby
-# Less efficient: Loads all records
+Less efficient: Loads all records
 has_posts = user.posts.any?
 
-# More efficient: Single COUNT query
+More efficient: Single COUNT query
 has_posts = user.posts.exists?
 ```
 
-## Caching and Counter Columns
+Caching and Counter Columns
 
 Frequent count queries can be expensive. Consider using counter caches:
 
 ```ruby
-# Model definition
+Model definition
 class Comment < ApplicationRecord
   belongs_to :post, counter_cache: true
 end
 
-# Migration to add counter cache column
+Migration to add counter cache column
 add_column :posts, :comments_count, :integer, default: 0
 ```
 
 Now ActiveRecord automatically updates the counter, and you can read it without a COUNT query:
 
 ```ruby
-# Without counter cache: SELECT COUNT(*) FROM comments...
+Without counter cache: SELECT COUNT(*) FROM comments...
 post.comments.count
 
-# With counter cache: Just reads the column
+With counter cache: Just reads the column
 post.comments_count
 ```
 
@@ -180,17 +180,17 @@ Ask Claude Code to implement counter caches:
 
 > "Add counter cache columns to all has_many associations in this Rails app that would benefit from them."
 
-## Using Bullet Gem with Claude Code
+Using Bullet Gem with Claude Code
 
 For comprehensive query analysis, combine Claude Code with the Bullet gem. Bullet alerts you to N+1 queries, unnecessary counts, and missing eager loading in development.
 
 ```ruby
-# Gemfile
+Gemfile
 group :development do
   gem 'bullet'
 end
 
-# config/environments/development.rb
+config/environments/development.rb
 config.after_initialize do
   Bullet.enable = true
   Bullet.alert = true
@@ -201,29 +201,29 @@ When Bullet reports issues, ask Claude Code to fix them:
 
 > "Fix the N+1 query that Bullet detected in the posts controller. The issue is with the comments association."
 
-## Practical Workflow with Claude Code
+Practical Workflow with Claude Code
 
 Here's a systematic approach to optimizing your ActiveRecord queries:
 
-1. **Identify**: Run your application with query logging or Bullet enabled. Note which pages are slow.
+1. Identify: Run your application with query logging or Bullet enabled. Note which pages are slow.
 
-2. **Analyze**: Ask Claude Code to examine the slow endpoints:
+2. Analyze: Ask Claude Code to examine the slow endpoints:
    > "Analyze the posts#show action for query performance issues. What N+1 problems exist?"
 
-3. **Implement**: Let Claude Code suggest and implement fixes:
+3. Implement: Let Claude Code suggest and implement fixes:
    > "Add eager loading to fix the N+1 query in posts#index. Use includes for the author and comments associations."
 
-4. **Verify**: Run your tests and check that the query count has decreased.
+4. Verify: Run your tests and check that the query count has decreased.
 
-5. **Document**: Ask Claude Code to add comments explaining the optimization:
+5. Document: Ask Claude Code to add comments explaining the optimization:
    > "Add comments explaining why we use includes here and what performance problem it solves."
 
-## Measuring Your Improvements
+Measuring Your Improvements
 
 Track query performance using Rails' built-in instrumentation:
 
 ```ruby
-# In your controller
+In your controller
 def index
   @posts = Post.includes(:author, :comments)
   
@@ -234,7 +234,7 @@ end
 
 For production monitoring, consider tools like Scout, New Relic, or PgHero that provide query performance insights.
 
-## Conclusion
+Conclusion
 
 Optimizing ActiveRecord queries is essential for building fast, scalable Rails applications. By using Claude Code's understanding of your codebase, you can systematically identify N+1 problems, implement eager loading, and apply best practices for query construction. Start with the most frequently accessed pages, measure your improvements, and make query optimization part of your regular development workflow.
 
@@ -242,10 +242,10 @@ Remember: every database query has a cost. By fetching only what you need, when 
 
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

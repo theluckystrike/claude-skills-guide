@@ -14,30 +14,30 @@ score: 8
 
 
 {% raw %}
-# Claude Code for Load Testing with K6: Script Generation and Result Analysis
+Claude Code for Load Testing with K6: Script Generation and Result Analysis
 
-Load testing is critical for building resilient applications, but writing comprehensive K6 test scripts from scratch and making sense of the output can be time-consuming. This guide focuses on using Claude Code as an AI-assisted authoring and analysis tool—covering how to prompt Claude Code to generate K6 scripts, create realistic user scenarios, and interpret test results to pinpoint performance bottlenecks.
+Load testing is critical for building resilient applications, but writing comprehensive K6 test scripts from scratch and making sense of the output can be time-consuming. This guide focuses on using Claude Code as an AI-assisted authoring and analysis tool, covering how to prompt Claude Code to generate K6 scripts, create realistic user scenarios, and interpret test results to pinpoint performance bottlenecks.
 
-## Why Combine Claude Code with K6?
+Why Combine Claude Code with K6?
 
 K6 is a modern, developer-friendly load testing tool that lets you write tests in JavaScript. Claude Code amplifies K6's capabilities by:
 
-- **Generating test scripts** from describe requirements or API documentation
-- **Creating realistic user scenarios** based on application behavior patterns
-- **Analyzing test results** and suggesting optimizations
-- **Automating recurring tests** as part of CI/CD pipelines
+- Generating test scripts from describe requirements or API documentation
+- Creating realistic user scenarios based on application behavior patterns
+- Analyzing test results and suggesting optimizations
+- Automating recurring tests as part of CI/CD pipelines
 
-The combination reduces the time needed to create robust load tests while improving test coverage through AI-assisted scenario generation.
+The combination reduces the time needed to create solid load tests while improving test coverage through AI-assisted scenario generation.
 
-## Setting Up Your Environment
+Setting Up Your Environment
 
 Before integrating Claude Code with K6, ensure both tools are installed:
 
 ```bash
-# Install K6
+Install K6
 brew install k6
 
-# Verify Claude Code installation
+Verify Claude Code installation
 claude --version
 ```
 
@@ -51,26 +51,26 @@ A common pattern is to keep load tests alongside your other test types using a d
 
 ```
 your-project/
-├── src/
-├── tests/
-│   ├── unit/
-│   ├── integration/
-│   └── load/          # K6 load tests here
-├── k6/                # Alternative location
-└── scripts/
+ src/
+ tests/
+    unit/
+    integration/
+    load/          # K6 load tests here
+ k6/                # Alternative location
+ scripts/
 ```
 
 This separation keeps load tests organized and easy to run independently from unit and integration test suites.
 
-## Creating K6 Test Scripts with Claude Code
+Creating K6 Test Scripts with Claude Code
 
 One of Claude Code's most valuable contributions is generating K6 test scripts from natural language descriptions. Here's how to use this capability effectively.
 
-### Example: API Endpoint Testing
+API Endpoint Testing
 
 When you need to test an API endpoint under load, ask Claude Code to generate a script:
 
-**Prompt:**
+Prompt:
 ```
 Create a K6 load test script for testing a REST API endpoint that handles user authentication. The script should:
 1. POST to /api/auth/login with username and password
@@ -150,7 +150,7 @@ export default function () {
 }
 ```
 
-### Advanced Scenario: E-Commerce User Journey
+Advanced Scenario: E-Commerce User Journey
 
 For more complex scenarios, Claude Code can generate multi-step user journeys:
 
@@ -210,7 +210,7 @@ export default function () {
 }
 ```
 
-## Running Tests and Interpreting Results
+Running Tests and Interpreting Results
 
 Execute your K6 tests using the CLI:
 
@@ -228,7 +228,7 @@ For repeatable runs across environments, create a wrapper script that handles en
 
 ```bash
 #!/bin/bash
-# scripts/run-load-test.sh
+scripts/run-load-test.sh
 
 export K6_CLOUD_TOKEN="${K6_CLOUD_TOKEN}"
 export ENVIRONMENT="${1:-staging}"
@@ -243,11 +243,11 @@ k6 run \
 
 This script accepts an environment parameter, making it easy to test against staging, production-mirror, or local environments. The `--out cloud` option sends results to k6.io for visualization and historical tracking.
 
-### Analyzing Results with Claude Code
+Analyzing Results with Claude Code
 
 After running tests, feed the results to Claude Code for analysis:
 
-**Prompt:**
+Prompt:
 ```
 Analyze these K6 test results and identify performance bottlenecks:
 
@@ -265,7 +265,7 @@ Claude Code can help identify:
 - Whether failures correlate with specific load levels
 - Suggestions for optimization
 
-## Automating with Claude Code Skills
+Automating with Claude Code Skills
 
 Create a custom Claude Code skill for consistent K6 workflows. Add to your skill configuration:
 
@@ -274,12 +274,12 @@ name: k6-load-test
 description: Run K6 load tests and analyze results
 ```
 
-## Automating Performance Gates in CI/CD
+Automating Performance Gates in CI/CD
 
 For teams that need strict performance requirements, integrate K6 into your CI/CD pipeline and fail builds when thresholds are exceeded. This prevents performance regressions from reaching production:
 
 ```yaml
-# Example GitHub Actions step
+Example GitHub Actions step
 - name: Run Load Tests
   run: |
     k6 run tests/load/api-tests.js \
@@ -289,23 +289,23 @@ For teams that need strict performance requirements, integrate K6 into your CI/C
 
 Start with lenient thresholds and tighten them as you establish baseline performance. Overly aggressive thresholds can cause false positives during CI congestion or temporary external service issues.
 
-## Best Practices
+Best Practices
 
-1. **Start small**: Begin with 10-50 virtual users before scaling up
-2. **Use realistic data**: Generate test data that mirrors production patterns
-3. **Monitor external dependencies**: Track API response times separately
-4. **Set clear thresholds**: Define acceptable p(95) latency and error rates
-5. **Automate in CI**: Run load tests on every major release
+1. Start small: Begin with 10-50 virtual users before scaling up
+2. Use realistic data: Generate test data that mirrors production patterns
+3. Monitor external dependencies: Track API response times separately
+4. Set clear thresholds: Define acceptable p(95) latency and error rates
+5. Automate in CI: Run load tests on every major release
 
-## Conclusion
+Conclusion
 
 Integrating Claude Code with K6 transforms load testing from a manual, time-intensive process into an AI-assisted workflow. Use Claude Code to generate scripts rapidly, analyze results intelligently, and maintain comprehensive test coverage. Start with simple API tests and gradually build complex user scenarios as your confidence grows.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

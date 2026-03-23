@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Prowler Compliance Workflow"
-description: "Learn how to leverage Claude Code to automate Prowler security compliance workflows. This guide covers practical techniques for integrating Prowler."
+description: "Learn how to use Claude Code to automate Prowler security compliance workflows. This guide covers practical techniques for integrating Prowler."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-prowler-compliance-workflow/
@@ -14,53 +14,53 @@ score: 7
 
 
 {% raw %}
-# Claude Code for Prowler Compliance Workflow
+Claude Code for Prowler Compliance Workflow
 
 Prowler is an essential open-source security tool that performs comprehensive security assessments across AWS, Azure, GCP, and Kubernetes environments. When combined with Claude Code, you can create powerful automated compliance workflows that continuously monitor your infrastructure, interpret findings, and even trigger remediation actions. This guide walks you through practical techniques for integrating Claude Code with Prowler to streamline your security compliance processes.
 
-## Understanding Prowler and Compliance Scanning
+Understanding Prowler and Compliance Scanning
 
 Prowler is a command-line tool that executes hundreds of security checks against cloud resources, aligning with frameworks like CIS, HIPAA, SOC2, PCI-DSS, and AWS Well-Architected. Each check returns a finding with severity levels: Critical, High, Medium, Low, and Informational. The tool outputs results in multiple formats including JSON, CSV, HTML, and JUNI XML.
 
 Before integrating with Claude Code, ensure Prowler is installed in your environment:
 
 ```bash
-# Install Prowler via pip
+Install Prowler via pip
 pip install prowler
 
-# Verify installation
+Verify installation
 prowler version
 
-# Quick AWS check (requires AWS credentials configured)
+Quick AWS check (requires AWS credentials configured)
 prowler aws -o json
 ```
 
-## Setting Up Claude Code for Prowler Integration
+Setting Up Claude Code for Prowler Integration
 
 Claude Code excels at parsing Prowler's output, analyzing findings, and generating actionable reports. The key is structuring your prompts to use Claude's strength in understanding security contexts.
 
-### Basic Scan Analysis Workflow
+Basic Scan Analysis Workflow
 
 Start by running a Prowler scan and piping the output to Claude Code for analysis:
 
 ```bash
-# Run Prowler scan and save JSON output
+Run Prowler scan and save JSON output
 prowler aws -f json -o ./prowler-output.json
 
-# Analyze with Claude Code
+Analyze with Claude Code
 claude "Analyze the security findings in prowler-output.json and prioritize the top 5 issues that require immediate attention. Provide specific remediation steps for each."
 ```
 
 This approach works well for ad-hoc analysis, but for recurring compliance workflows, you'll want to create more structured interactions.
 
-## Building Automated Compliance Pipelines
+Building Automated Compliance Pipelines
 
-### Step 1: Configure Scan Parameters
+Step 1: Configure Scan Parameters
 
 Create a configuration file that defines your compliance scope:
 
 ```yaml
-# prowler-config.yaml
+prowler-config.yaml
 provider: aws
 output_formats:
   - json
@@ -77,13 +77,13 @@ regions:
   - us-west-2
 ```
 
-### Step 2: Script the Scan Execution
+Step 2: Script the Scan Execution
 
 Create a bash script that runs Prowler and prepares output for Claude:
 
 ```bash
 #!/bin/bash
-# run-prowler-scan.sh
+run-prowler-scan.sh
 
 TIMESTAMP=$(date +%Y%m%d-%H%M%S)
 OUTPUT_DIR="./compliance-reports/${TIMESTAMP}"
@@ -98,35 +98,35 @@ prowler aws \
 
 echo "Scan complete. Findings saved to ${OUTPUT_DIR}"
 
-# Generate summary for Claude analysis
+Generate summary for Claude analysis
 jq -r '.[] | "\(.Severity) \(.CheckTitle): \(.Description)"' \
   "${OUTPUT_DIR}"/*.json > "${OUTPUT_DIR}/summary.txt"
 
 echo "Summary generated. Ready for Claude Code analysis."
 ```
 
-### Step 3: Claude Code Analysis Prompts
+Step 3: Claude Code Analysis Prompts
 
 Once you have scan results, use Claude Code to perform deep analysis:
 
-**For Severity-Based Triage:**
+For Severity-Based Triage:
 ```
 Prompt: "Review the Prowler findings in ./compliance-reports/ and categorize them by severity. Create a remediation priority matrix showing which findings to address first. For each Critical and High severity finding, provide: (1) the specific AWS resource affected, (2) the compliance framework requirement it violates, and (3) a concrete remediation action with AWS CLI commands where applicable."
 ```
 
-**For Compliance Reporting:**
+For Compliance Reporting:
 ```
 Prompt: "Generate a compliance executive summary from the Prowler findings. Include: (1) Overall compliance score by framework (CIS, PCI-DSS, SOC2), (2) Trend analysis compared to previous scans if historical data exists, (3) Resource-specific findings that need immediate attention, (4) Recommended remediation timeline based on severity and compliance requirements."
 ```
 
-## Advanced Patterns: Automated Remediation
+Advanced Patterns: Automated Remediation
 
 For organizations with mature DevSecOps practices, you can extend Claude Code's role beyond analysis to actively assist with remediation.
 
-### Remediation Workflow Example
+Remediation Workflow Example
 
 ```python
-# remediate-findings.py
+remediate-findings.py
 import json
 import subprocess
 
@@ -151,7 +151,7 @@ def generate_remediation_prompt(findings):
         prompt += f"  Region: {f.get('Region', 'N/A')}\n\n"
     return prompt
 
-# Main execution
+Main execution
 critical_findings = get_critical_findings('latest-scan.json')
 if critical_findings:
     remediation_prompt = generate_remediation_prompt(critical_findings)
@@ -159,15 +159,15 @@ if critical_findings:
     print(remediation_prompt)
 ```
 
-### Continuous Compliance Monitoring
+Continuous Compliance Monitoring
 
 Set up a continuous monitoring pattern:
 
 ```bash
 #!/bin/bash
-# continuous-compliance.sh
+continuous-compliance.sh
 
-# Run scheduled scans
+Run scheduled scans
 while true; do
     # Wait 6 hours between scans
     sleep 21600
@@ -186,17 +186,17 @@ while true; do
 done
 ```
 
-## Best Practices and Actionable Advice
+Best Practices and Actionable Advice
 
-### 1. Establish Clear Severity Thresholds
+1. Establish Clear Severity Thresholds
 
 Not all findings require immediate action. Use Claude Code to help define your organization's risk tolerance:
 
-- **Critical/High**: Immediate remediation within 24-48 hours
-- **Medium**: Address within 30-day sprint cycles
-- **Low/Informational**: Include in quarterly security reviews
+- Critical/High: Immediate remediation within 24-48 hours
+- Medium: Address within 30-day sprint cycles
+- Low/Informational: Include in quarterly security reviews
 
-### 2. Create Remediation Playbooks
+2. Create Remediation Playbooks
 
 Work with Claude Code to develop standardized remediation playbooks for common findings. Store these as reference documentation:
 
@@ -204,7 +204,7 @@ Work with Claude Code to develop standardized remediation playbooks for common f
 Prompt: "Create a remediation playbook for the following common Prowler findings: (1) S3 buckets public, (2) IAM password policy weak, (3) CloudTrail not multi-region, (4) Security Groups with open ports. Include prevention measures and monitoring recommendations."
 ```
 
-### 3. Implement Feedback Loops
+3. Implement Feedback Loops
 
 Use Claude Code to analyze your remediation history and identify patterns:
 
@@ -212,25 +212,25 @@ Use Claude Code to analyze your remediation history and identify patterns:
 Prompt: "Review the remediation history in ./remediation-log.json. Identify which security issues keep recurring despite remediation efforts. Suggest process improvements or architectural changes that would prevent these issues from reoccurring."
 ```
 
-### 4. Maintain Compliance Evidence
+4. Maintain Compliance Evidence
 
 Prowler output combined with Claude Code analysis creates comprehensive compliance evidence:
 
-- **Audit Trails**: Store Prowler JSON outputs with timestamps
-- **Remediation Documentation**: Use Claude Code to generate remediation summaries
-- **Trend Analysis**: Track compliance scores over time
+- Audit Trails: Store Prowler JSON outputs with timestamps
+- Remediation Documentation: Use Claude Code to generate remediation summaries
+- Trend Analysis: Track compliance scores over time
 
-## Conclusion
+Conclusion
 
 Integrating Claude Code with Prowler transforms security compliance from a periodic manual process into an automated, continuous workflow. By using Claude's natural language understanding and code generation capabilities, you can quickly analyze findings, generate actionable remediation steps, and maintain comprehensive compliance documentation. Start with basic scan analysis, then gradually build toward automated remediation pipelines as your team's confidence grows.
 
-The key is treating Claude Code not just as a reporting tool, but as an active participant in your security compliance workflow—asking it to generate specific commands, compare findings across scans, and develop long-term remediation strategies.
+The key is treating Claude Code not just as a reporting tool, but as an active participant in your security compliance workflow, asking it to generate specific commands, compare findings across scans, and develop long-term remediation strategies.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

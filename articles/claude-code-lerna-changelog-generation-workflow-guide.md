@@ -14,15 +14,15 @@ score: 7
 
 
 {% raw %}
-# Claude Code Lerna Changelog Generation Workflow Guide
+Claude Code Lerna Changelog Generation Workflow Guide
 
 Managing changelogs across a Lerna monorepo can quickly become a tedious task as your project grows. With multiple packages, each following different versioning schemes, manually tracking changes and generating meaningful release notes is error-prone and time-consuming. This guide shows you how to use Claude Code to automate and intelligentize your changelog generation workflow.
 
-## Understanding the Lerna Changelog Challenge
+Understanding the Lerna Changelog Challenge
 
-Lerna monorepos present unique challenges for changelog management. Each package in your monorepo may have its own release cycle, version numbers, and change patterns. When you run `lerna publish` or `lerna version`, you need changelogs that accurately reflect what changed in each package—not just a flat list of all commits.
+Lerna monorepos present unique challenges for changelog management. Each package in your monorepo may have its own release cycle, version numbers, and change patterns. When you run `lerna publish` or `lerna version`, you need changelogs that accurately reflect what changed in each package, not just a flat list of all commits.
 
-The core problem is attribution: a single git repository contains commits that touch many packages simultaneously. A refactor that spans `@myorg/ui`, `@myorg/core`, and `@myorg/api` produces commits that belong in all three changelogs—but not necessarily with the same wording. Automated tools that operate on raw commit messages often generate noisy or redundant changelogs. Claude Code adds an intelligence layer that categorizes, deduplicates, and rewrites entries into clean, human-readable prose.
+The core problem is attribution: a single git repository contains commits that touch many packages simultaneously. A refactor that spans `@myorg/ui`, `@myorg/core`, and `@myorg/api` produces commits that belong in all three changelogs, but not necessarily with the same wording. Automated tools that operate on raw commit messages often generate noisy or redundant changelogs. Claude Code adds an intelligence layer that categorizes, deduplicates, and rewrites entries into clean, human-readable prose.
 
 Claude Code can help by:
 - Parsing commit messages to categorize changes (feat, fix, docs, etc.)
@@ -31,7 +31,7 @@ Claude Code can help by:
 - Integrating with conventional commits standards
 - Detecting cross-package dependency changes that warrant coordinated release notes
 
-### Why Manual Changelog Management Fails at Scale
+Why Manual Changelog Management Fails at Scale
 
 Consider a monorepo with 12 packages releasing monthly. Each release cycle involves:
 
@@ -43,11 +43,11 @@ Consider a monorepo with 12 packages releasing monthly. Each release cycle invol
 | Write human-readable summaries | 45 min | 2 min (Claude Code) |
 | Cross-reference related packages | 20 min | 5 min (dependency graph) |
 | Format and insert into CHANGELOG.md | 15 min | 30 sec (script) |
-| **Total** | **~2.5 hours** | **~10 minutes** |
+| Total | ~2.5 hours | ~10 minutes |
 
 At twelve packages, the manual approach consumes a full afternoon before every release. The automated approach reduces it to a brief review step.
 
-## Setting Up Your Changelog Generation Skill
+Setting Up Your Changelog Generation Skill
 
 First, create a dedicated Claude skill for changelog operations. This skill will encapsulate the logic for parsing, grouping, and formatting your monorepo changes.
 
@@ -58,17 +58,17 @@ description: Generate and manage changelogs in Lerna monorepos
 ---
 ```
 
-This skill restricts tool access to only what's necessary—reading your repository structure, executing git and Lerna commands, and writing output files.
+This skill restricts tool access to only what's necessary, reading your repository structure, executing git and Lerna commands, and writing output files.
 
-### Project Prerequisites
+Project Prerequisites
 
 Before the workflow runs reliably, your repository needs a few structural requirements:
 
 ```bash
-# Confirm Lerna is installed and configured
+Confirm Lerna is installed and configured
 npx lerna --version
 
-# Confirm your lerna.json has version config
+Confirm your lerna.json has version config
 cat lerna.json
 ```
 
@@ -90,35 +90,35 @@ A minimal `lerna.json` for changelog automation:
 
 Setting `"version": "independent"` is important. It means each package gets its own version number and its own changelog entries, rather than all packages bumping together.
 
-### Installing Required Dependencies
+Installing Required Dependencies
 
 ```bash
-# Core Lerna
+Core Lerna
 npm install --save-dev lerna
 
-# Conventional commits tooling
+Conventional commits tooling
 npm install --save-dev @commitlint/config-conventional @commitlint/cli husky
 
-# Changelog preset
+Changelog preset
 npm install --save-dev conventional-changelog-angular
 
-# If you want programmatic access
+If you want programmatic access
 npm install --save-dev conventional-changelog-core
 ```
 
 Set up commit linting so every commit in the project follows the expected format:
 
 ```bash
-# commitlint.config.js
+commitlint.config.js
 module.exports = { extends: ['@commitlint/config-conventional'] };
 
-# .husky/commit-msg
+.husky/commit-msg
 npx --no -- commitlint --edit "$1"
 ```
 
 With this in place, commits that don't follow the `type(scope): description` format are rejected at the commit stage, before they pollute your history.
 
-## Parsing Commits with Claude
+Parsing Commits with Claude
 
 The core of intelligent changelog generation is commit parsing. Claude can analyze your git history and categorize changes based on conventional commit format:
 
@@ -152,7 +152,7 @@ module.exports = { getCommitsSince };
 
 This script parses commits into structured data that Claude can then organize into meaningful changelog entries.
 
-### Attributing Commits to Packages
+Attributing Commits to Packages
 
 Raw commit parsing gives you a flat list. The next step is mapping each commit to the packages it actually touched. Git's `--` path filter is the most reliable approach:
 
@@ -203,7 +203,7 @@ module.exports = { buildPackageCommitMap, attributeCommitToPackages };
 
 This produces a map keyed by package name, each containing only the commits that touched files within that package's directory. Commits that span multiple packages appear in each relevant package's list.
 
-### Handling Scope vs. Path Attribution
+Handling Scope vs. Path Attribution
 
 Conventional commits support an optional scope field: `feat(auth): add OAuth2 support`. When developers use scopes that match package names, you can use scope-based attribution instead of (or alongside) path-based attribution:
 
@@ -234,12 +234,12 @@ function attributeByScope(commits, packageNames) {
 
 A good practice is to prefer scope attribution when the scope is present and matches a known package, and fall back to path analysis otherwise.
 
-## Integrating with Lerna's Versioning
+Integrating with Lerna's Versioning
 
 Claude can read Lerna's package metadata to understand which packages changed:
 
 ```bash
-# Get changed packages since last release
+Get changed packages since last release
 lerna changed --since=last-release --json
 ```
 
@@ -268,7 +268,7 @@ async function generatePackageChangelogs() {
 
 This approach ensures each package maintains its own accurate changelog.
 
-### Reading the Lerna Dependency Graph
+Reading the Lerna Dependency Graph
 
 In a monorepo, packages depend on each other. When `@myorg/core` bumps a major version, every package that depends on it should mention the upstream change in its own changelog. Claude Code can read the dependency graph:
 
@@ -297,46 +297,46 @@ function getAffectedByUpstream(pkgName, graph) {
 With this information, Claude Code can append a note to downstream changelogs:
 
 ```markdown
-### Dependencies
+Dependencies
 
 - Updated dependency on `@myorg/core` to `^3.0.0` (breaking change in upstream)
 ```
 
 This kind of cross-package transparency is something purely mechanical tools miss entirely.
 
-## Building the Changelog Generation Workflow
+Building the Changelog Generation Workflow
 
 Here's how to orchestrate the full workflow with Claude:
 
-1. **Detect Changes**: Run `lerna changed` to find packages with updates
-2. **Fetch Commits**: Get commits for each changed package
-3. **Categorize**: Parse commit types using conventional commit patterns
-4. **Format**: Generate Markdown with proper headings and sections
-5. **Update Files**: Append or overwrite package changelogs
+1. Detect Changes: Run `lerna changed` to find packages with updates
+2. Fetch Commits: Get commits for each changed package
+3. Categorize: Parse commit types using conventional commit patterns
+4. Format: Generate Markdown with proper headings and sections
+5. Update Files: Append or overwrite package changelogs
 
 ```yaml
-## Changelog Generation Workflow
+Changelog Generation Workflow
 
-### Detect Changed Packages
+Detect Changed Packages
 Execute lerna changed to identify which packages have updates since the last release.
 
-### Analyze Commit History
+Analyze Commit History
 For each changed package:
 - Fetch commits touching that package's directory
 - Parse conventional commit format (type, scope, description)
 - Group by type: Features, Bug Fixes, Breaking Changes, etc.
 
-### Generate Changelog Entries
+Generate Changelog Entries
 Create well-formatted Markdown entries:
 - Use semantic headings
 - Include commit hash references
 - Link to issues and PRs when available
 
-### Update Changelog Files
+Update Changelog Files
 Automatically append new entries to each package's CHANGELOG.md
 ```
 
-### The Complete Orchestration Script
+The Complete Orchestration Script
 
 Here is a production-ready orchestration script that ties all the pieces together:
 
@@ -460,7 +460,7 @@ function formatChangelogEntry(version, categorized) {
     if (commits.length === 0) continue;
     lines.push(`### ${heading}\n`);
     for (const c of commits) {
-      const scope = c.scope ? `**${c.scope}:** ` : '';
+      const scope = c.scope ? `${c.scope}: ` : '';
       lines.push(`- ${scope}${c.description} ([${c.hash}])`);
     }
     lines.push('');
@@ -493,7 +493,7 @@ Wire this into your `package.json` scripts:
 }
 ```
 
-## Conventional Commits Integration
+Conventional Commits Integration
 
 For best results, enforce conventional commits in your workflow. This standard formats commit messages as:
 
@@ -516,7 +516,7 @@ Common types include:
 
 When your team follows this convention, Claude can automatically generate well-organized changelogs with proper categorization.
 
-### Commit Type Decision Guide
+Commit Type Decision Guide
 
 Developers often debate which type to use. This table clarifies the intent:
 
@@ -535,7 +535,7 @@ Developers often debate which type to use. This table clarifies the intent:
 
 A common mistake is using `chore` for everything non-feature. Keeping types accurate means users reading your changelogs get honest signal about what changed.
 
-### Enforcing Conventional Commits With Commitlint
+Enforcing Conventional Commits With Commitlint
 
 ```javascript
 // commitlint.config.js
@@ -560,9 +560,9 @@ module.exports = {
 
 The `scope-enum` rule is particularly valuable in monorepos: it forces developers to declare which package their commit targets, giving you clean scope-based attribution for free.
 
-## Actionable Tips for Better Changelogs
+Actionable Tips for Better Changelogs
 
-### 1. Automate Version Tagging
+1. Automate Version Tagging
 
 Pair changelog generation with Lerna's version command:
 
@@ -572,7 +572,7 @@ lerna version --conventional-commits --changelog
 
 This automatically updates versions and generates changelogs based on conventional commits.
 
-### 2. Include Context in Commits
+2. Include Context in Commits
 
 Encourage detailed commit messages that include:
 - What changed and why
@@ -595,18 +595,18 @@ BREAKING CHANGE: PaymentMethod enum adds 'apple_pay' value;
 consumers must handle the new variant.
 ```
 
-Versus a bare `feat(checkout): add Apple Pay support` — the former produces a rich changelog entry; the latter produces a one-liner.
+Versus a bare `feat(checkout): add Apple Pay support`. the former produces a rich changelog entry; the latter produces a one-liner.
 
-### 3. Review Before Publishing
+3. Review Before Publishing
 
 Generate changelogs as part of your PR process so reviewers can verify completeness:
 
 ```bash
-# Preview changelog without publishing
+Preview changelog without publishing
 claude --print "/lerna-changelog" --preview
 ```
 
-### 4. Handle Monorepo Dependencies
+4. Handle Monorepo Dependencies
 
 When packages depend on each other, reference those relationships in changelogs:
 
@@ -616,41 +616,41 @@ const dependencies = require('./package.json').dependencies;
 function getDeprecationNotices(pkgName) {
   return Object.entries(dependencies).map(([dep, version]) => {
     if (isDeprecated(dep)) {
-      return `**Note:** This package uses \`${dep}\` which is deprecated.`;
+      return `Note: This package uses \`${dep}\` which is deprecated.`;
     }
     return null;
   }).filter(Boolean);
 }
 ```
 
-### 5. Tag Releases Consistently
+5. Tag Releases Consistently
 
 The entire workflow depends on git tags being present and consistently named. Adopt a naming convention and never deviate:
 
 ```bash
-# For independent versioning (recommended)
-# Tags look like: @myorg/core@3.2.1
+For independent versioning (recommended)
+Tags look like: @myorg/core@3.2.1
 lerna version --conventional-commits
 
-# For fixed versioning
-# Tags look like: v1.5.0
+For fixed versioning
+Tags look like: v1.5.0
 lerna version --conventional-commits
 ```
 
 If you have an older repository with inconsistent tag formats, normalize them before setting up the automated workflow:
 
 ```bash
-# List all existing tags
+List all existing tags
 git tag -l | sort -V
 
-# Rename a tag (requires push force on the tag ref)
+Rename a tag (requires push force on the tag ref)
 git tag new-name old-name
 git tag -d old-name
 git push origin :refs/tags/old-name
 git push origin new-name
 ```
 
-### 6. Add a Root-Level Summary Changelog
+6. Add a Root-Level Summary Changelog
 
 Individual package changelogs are ideal for package consumers, but your team often wants a single view of everything that shipped in a release. Generate a root `CHANGELOG.md` that aggregates entries:
 
@@ -675,7 +675,7 @@ async function generateRootChangelog(version, packageChangelogs) {
 }
 ```
 
-## Advanced: Multi-Language Monorepo Support
+Advanced: Multi-Language Monorepo Support
 
 If your Lerna monorepo contains packages in different languages (TypeScript, Python, Rust), adapt your commit parsing:
 
@@ -699,7 +699,7 @@ function getCommitsForPackage(pkgPath) {
 
 This ensures accurate changelog generation regardless of your monorepo's composition.
 
-### Python Packages in a Node Monorepo
+Python Packages in a Node Monorepo
 
 Some teams keep a Python SDK alongside Node packages in the same Lerna repo. The path-based attribution handles this naturally, but you may want language-specific formatting:
 
@@ -717,7 +717,7 @@ function formatPythonChangelogEntry(version, commits) {
 }
 ```
 
-### Rust Crates in a Node Monorepo
+Rust Crates in a Node Monorepo
 
 Rust crates follow semantic versioning strictly. When a Rust crate in your monorepo has a breaking change, flag it prominently:
 
@@ -734,12 +734,12 @@ function formatRustChangelogEntry(version, commits) {
 }
 ```
 
-## Integrating With CI/CD
+Integrating With CI/CD
 
 The changelog workflow reaches its full value when automated in CI. Here is a GitHub Actions workflow that generates changelogs on every merge to main:
 
 ```yaml
-# .github/workflows/changelog.yml
+.github/workflows/changelog.yml
 name: Generate Changelogs
 
 on:
@@ -781,21 +781,21 @@ jobs:
           git push
 ```
 
-The `fetch-depth: 0` is critical—without the full git history, `git log` cannot look back past the shallow clone depth and your changelogs will be incomplete.
+The `fetch-depth: 0` is critical, without the full git history, `git log` cannot look back past the shallow clone depth and your changelogs will be incomplete.
 
-## Conclusion
+Conclusion
 
 Automating changelog generation in Lerna monorepos with Claude Code eliminates manual tracking and ensures consistent, comprehensive release notes. By combining conventional commits, Lerna's package detection, and Claude's natural language processing, you create a reproducible workflow that scales with your project.
 
-Start by setting up the basic commit parsing, then gradually add features like dependency tracking, multi-language support, and preview workflows. Your future self—and your users—will thank you for the clear, organized changelogs.
+Start by setting up the basic commit parsing, then gradually add features like dependency tracking, multi-language support, and preview workflows. Your future self, and your users, will thank you for the clear, organized changelogs.
 
 The single biggest lever in this entire system is consistent conventional commits. Once every developer on your team writes structured commits with accurate types and scopes, the changelog pipeline becomes nearly automatic. The scripts handle the mechanics; Claude Code handles the judgment calls around categorization and human-readable summaries. Together, they reduce one of the most tedious release tasks to a ten-minute review.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

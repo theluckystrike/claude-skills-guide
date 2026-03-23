@@ -15,7 +15,7 @@ permalink: /how-to-integrate-claude-skills-with-notion-api-guide/
 
 Notion serves as a knowledge base, project tracker, and documentation hub for many developer teams. Connecting Claude skills to the Notion API lets you automate document creation, populate databases from AI analysis, and build intelligent knowledge workflows. This guide covers how to integrate Claude skills with the Notion API, from authentication setup to practical patterns using `pdf`, `supermemory`, and `tdd` skills.
 
-## Why This Integration Matters
+Why This Integration Matters
 
 The combination solves real friction points:
 
@@ -24,26 +24,26 @@ The combination solves real friction points:
 - [`supermemory` skill](/claude-skills-token-optimization-reduce-api-costs/) can read from and write to Notion pages to maintain persistent project context
 - `frontend-design` skill feedback → organized in a Notion design review database
 
-## Prerequisites
+Prerequisites
 
 - A Notion workspace with API access enabled
 - Notion Internal Integration Token (from notion.so/my-integrations)
 - Node.js 18+ with the `@notionhq/client` package
-- Claude Code installed locally — skills run inside Claude Code, not via the Anthropic SDK
+- Claude Code installed locally. skills run inside Claude Code, not via the Anthropic SDK
 
-## Step 1: Create a Notion Integration
+Step 1: Create a Notion Integration
 
 1. Go to [notion.so/my-integrations](https://www.notion.so/my-integrations)
-2. Click **New integration**
+2. Click New integration
 3. Name it "Claude Skills Bot", select your workspace
-4. Under **Capabilities**, enable:
+4. Under Capabilities, enable:
    - Read content
    - Update content
    - Insert content
-5. Copy the **Internal Integration Token** — this is your `NOTION_TOKEN`
-6. Share your target Notion pages/databases with the integration by clicking the **...** menu on the page and choosing **Add connections**
+5. Copy the Internal Integration Token. this is your `NOTION_TOKEN`
+6. Share your target Notion pages/databases with the integration by clicking the ... menu on the page and choosing Add connections
 
-## Step 2: Install Dependencies
+Step 2: Install Dependencies
 
 ```bash
 npm install @notionhq/client dotenv
@@ -57,7 +57,7 @@ NOTION_DATABASE_ID=your_database_id_here
 
 Find your database ID in the Notion URL: `notion.so/workspace/{database_id}?v=...`
 
-## Step 3: Initialize Notion Client
+Step 3: Initialize Notion Client
 
 ```javascript
 require('dotenv').config();
@@ -66,23 +66,23 @@ const { Client } = require('@notionhq/client');
 const notion = new Client({ auth: process.env.NOTION_TOKEN });
 ```
 
-**Important:** Claude skills (`/pdf`, `/tdd`, `/supermemory`) run inside your Claude Code terminal session. They are not called via the Anthropic SDK in external scripts. To use skill output in this pipeline, run Claude Code in print mode and capture stdout, then pass the result to Notion:
+Claude skills (`/pdf`, `/tdd`, `/supermemory`) run inside your Claude Code terminal session. They are not called via the Anthropic SDK in external scripts. To use skill output in this pipeline, run Claude Code in print mode and capture stdout, then pass the result to Notion:
 
 ```bash
-# Run a skill in print mode and capture output
+Run a skill in print mode and capture output
 OUTPUT=$(claude --print "/pdf
 Extract action items from /tmp/meeting-notes.pdf" 2>/dev/null)
 ```
 
 Then your Node.js script reads from a file or stdin that Claude Code wrote.
 
-## Step 4: Run a Skill and Capture Output
+Step 4: Run a Skill and Capture Output
 
 Shell script that calls a Claude skill and writes output to a JSON file for the Node.js pipeline:
 
 ```bash
 #!/bin/bash
-# run-skill.sh — invoke a Claude skill and save output
+run-skill.sh. invoke a Claude skill and save output
 
 SKILL="$1"   # e.g. "pdf" or "tdd"
 INPUT="$2"   # path or description
@@ -108,7 +108,7 @@ function loadSkillOutput(filePath) {
 }
 ```
 
-## Step 5: Create a Notion Page from Claude Output
+Step 5: Create a Notion Page from Claude Output
 
 ```javascript
 async function createNotionPage(databaseId, title, content, tags = []) {
@@ -190,7 +190,7 @@ function contentToNotionBlocks(content) {
 }
 ```
 
-## Step 6: Read Pages for Supermemory Context
+Step 6: Read Pages for Supermemory Context
 
 The `supermemory` skill benefits from reading existing Notion content to build context:
 
@@ -221,7 +221,7 @@ async function buildProjectContext(pageIds) {
 }
 ```
 
-## Step 7: Full Pipeline — Document to Notion
+Step 7: Full Pipeline. Document to Notion
 
 ```javascript
 async function processDocumentToNotion(documentText, databaseId) {
@@ -241,7 +241,7 @@ async function processDocumentToNotion(documentText, databaseId) {
     extracted = { title: '', summary: raw, action_items: [], key_points: [], tags: [] };
   }
   
-  const title = extracted.title || `AI Summary — ${new Date().toLocaleDateString()}`;
+  const title = extracted.title || `AI Summary. ${new Date().toLocaleDateString()}`;
   const tags = extracted.tags || ['ai-generated'];
   
   console.log('Creating Notion page...');
@@ -258,7 +258,7 @@ processDocumentToNotion(
 );
 ```
 
-## Step 8: Query Notion Database for Context
+Step 8: Query Notion Database for Context
 
 Before sending content to Claude, retrieve related Notion entries to improve response quality:
 
@@ -281,9 +281,9 @@ async function getRelatedContext(databaseId, searchText) {
 }
 ```
 
-## Handling Rate Limits
+Handling Rate Limits
 
-The Notion API enforces rate limits — typically 3 requests per second on average. Implement exponential backoff for retry logic in your pipeline:
+The Notion API enforces rate limits. typically 3 requests per second on average. Implement exponential backoff for retry logic in your pipeline:
 
 ```javascript
 async function makeRequestWithRetry(fn, maxRetries = 3) {
@@ -306,16 +306,16 @@ async function makeRequestWithRetry(fn, maxRetries = 3) {
 
 For read-heavy workflows, implement caching to reduce API calls and improve response times. Version your API interactions by pinning to a specific Notion API version header and updating deliberately to avoid breaking changes.
 
-## Conclusion
+Conclusion
 
-Integrating Claude skills with the Notion API creates a knowledge management pipeline where AI analysis flows directly into your team's documentation. The `pdf` skill populates databases with structured extracts, `tdd` generates code review docs, and `supermemory` reads existing pages to maintain project context. Build the pipeline incrementally — start with document-to-Notion, then add the two-way reading pattern.
+Integrating Claude skills with the Notion API creates a knowledge management pipeline where AI analysis flows directly into your team's documentation. The `pdf` skill populates databases with structured extracts, `tdd` generates code review docs, and `supermemory` reads existing pages to maintain project context. Build the pipeline incrementally. start with document-to-Notion, then add the two-way reading pattern.
 
 ---
 
-## Related Reading
+Related Reading
 
-- [Best Claude Skills for Data Analysis](/best-claude-skills-for-data-analysis/) — Covers the pdf and xlsx skills in depth, both of which feed directly into Notion database pipelines like the one described here
-- [How to Share Claude Skills With Your Team](/how-to-share-claude-skills-with-your-team/) — If your Notion integration serves a team, this guide covers distributing and standardizing the skills that power it
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — Tips for batching and structuring document processing calls to keep API costs manageable at scale
+- [Best Claude Skills for Data Analysis](/best-claude-skills-for-data-analysis/). Covers the pdf and xlsx skills in depth, both of which feed directly into Notion database pipelines like the one described here
+- [How to Share Claude Skills With Your Team](/how-to-share-claude-skills-with-your-team/). If your Notion integration serves a team, this guide covers distributing and standardizing the skills that power it
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Tips for batching and structuring document processing calls to keep API costs manageable at scale
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

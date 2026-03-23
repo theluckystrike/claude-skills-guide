@@ -17,41 +17,41 @@ When working with large codebases, Claude Code's skill system becomes a powerful
 
 This guide covers practical patterns for writing Claude MD files that work well in large, complex projects.
 
-## How Claude MD Files Work
+How Claude MD Files Work
 
 [Every skill in Claude Code is a Markdown file stored in `~/.claude/skills/`](/best-claude-code-skills-to-install-first-2026/) When you invoke a skill with `/skillname` or through auto-invocation, Claude loads that file's content and uses it to guide its responses. The file can contain instructions, examples, code snippets, and context that Claude references throughout your session.
 
 For large codebases, the challenge shifts from "what does this skill do?" to "how does this skill handle complexity, multiple environments, and team-wide conventions?"
 
-## Directory Structure for Multi-Skill Projects
+Directory Structure for Multi-Skill Projects
 
 Large projects benefit from organizing skills into logical groups. Instead of a flat list of skill files, consider a hierarchical structure:
 
 ```
 ~/.claude/skills/
-├── project/
-│   ├── api-standards.md
-│   ├── security.md
-│   └── deployment.md
-├── testing/
-│   ├── tdd.md
-│   ├── integration.md
-│   └── e2e.md
-└── frontend/
-    ├── react-patterns.md
-    └── accessibility.md
+ project/
+    api-standards.md
+    security.md
+    deployment.md
+ testing/
+    tdd.md
+    integration.md
+    e2e.md
+ frontend/
+     react-patterns.md
+     accessibility.md
 ```
 
 This structure lets you invoke related skills together. For example, `/project/api-standards` loads your API conventions while `/testing/tdd` activates your test-driven development workflow.
 
-## Defining Context for Large Codebases
+Defining Context for Large Codebases
 
 A common mistake in Claude MD files for large projects is providing too little context. Claude needs to understand your project's architecture to give useful responses.
 
 Include a brief architecture overview at the top of your skill file:
 
 ```markdown
-# Project Standards Skill
+Project Standards Skill
 
 This skill enforces coding standards for our monorepo containing:
 - `/packages/api` - Node.js Express API
@@ -63,12 +63,12 @@ Always identify which package a file belongs to before making changes.
 
 This context helps Claude make informed decisions about imports, dependencies, and project-specific conventions.
 
-## Pattern: Conditional Instructions
+Pattern: Conditional Instructions
 
 Large codebases often have different rules for different contexts. Use conditional logic in your skill instructions to handle this:
 
 ```markdown
-# Multi-Environment Deployment Skill
+Multi-Environment Deployment Skill
 
 When deploying:
 - If target is `production`, require 2 approval reviews and run full test suite
@@ -83,15 +83,15 @@ For any deployment, verify:
 
 This pattern keeps your skill file concise while handling multiple scenarios intelligently.
 
-## Integration with Other Skills
+Integration with Other Skills
 
 The real power of Claude MD files emerges when skills work together. A large codebase typically uses several skills in combination:
 
 ```markdown
-# Feature Development Workflow
+Feature Development Workflow
 
 When developing a new feature:
-1. Activate `/testing/tdd` first—write failing tests before implementation
+1. Activate `/testing/tdd` first, write failing tests before implementation
 2. Use `/frontend-design` patterns if building UI components
 3. Reference `/project/security` for authentication and authorization logic
 4. Document the feature following your project's documentation conventions
@@ -101,12 +101,12 @@ Always run the full test suite before marking a feature complete.
 
 This approach creates a consistent workflow without duplicating instructions across skills. Each skill remains focused on its domain while the workflow skill orchestrates their use.
 
-## Code Snippet Examples
+Code Snippet Examples
 
 Include realistic code examples in your skill files. Claude uses these as reference when generating code:
 
 ```markdown
-# API Response Standard
+API Response Standard
 
 All API responses must follow this structure:
 
@@ -132,12 +132,12 @@ All API responses must follow this structure:
 
 The more complete your examples, the more accurate Claude's output becomes.
 
-## Handling Team Conventions
+Handling Team Conventions
 
 For teams, store shared conventions in a central skill and reference it:
 
 ```markdown
-# Team Code Review Standards
+Team Code Review Standards
 
 This project follows these conventions (see /team/standards for full list):
 - Commit messages use conventional commits format
@@ -150,16 +150,16 @@ Before submitting a PR, verify these standards are met.
 
 Team leads can update the central `/team/standards` skill, and all developers benefit from consistent enforcement.
 
-## Performance Considerations for Large Codebases
+Performance Considerations for Large Codebases
 
 When your codebase grows, some operations become slow. Include performance guidance in your skills:
 
 ```markdown
-# Performance Optimization Skill
+Performance Optimization Skill
 
 Before suggesting optimizations:
 1. Check if the code is in a hot path (called frequently)
-2. Identify the actual bottleneck—don't guess
+2. Identify the actual bottleneck, don't guess
 3. Prefer algorithmic improvements over micro-optimizations
 4. For database queries, check for N+1 problems first
 
@@ -168,12 +168,12 @@ Don't optimize code that isn't measured as slow.
 
 This prevents premature optimization while ensuring real performance issues get addressed.
 
-## Using supermemory with Skills
+Using supermemory with Skills
 
 The supermemory skill works alongside your custom skills to persist project-specific knowledge:
 
 ```markdown
-# Project Onboarding Skill
+Project Onboarding Skill
 
 When onboarding a new developer:
 1. Use `/supermemory` to retrieve their name and preferred pronouns
@@ -186,7 +186,7 @@ Always personalize the onboarding experience.
 
 Skills provide the framework; supermemory provides the data. Together they create a personalized experience across sessions.
 
-## Testing Your Claude MD Files
+Testing Your Claude MD Files
 
 After writing a skill file, test it in practice:
 
@@ -197,7 +197,7 @@ After writing a skill file, test it in practice:
 
 Iterate until Claude consistently follows your conventions.
 
-## Conclusion
+Conclusion
 
 Writing effective Claude MD files for large codebases requires thoughtful structure, contextual awareness, and integration with other skills. Use conditional instructions to handle complexity, include realistic code examples, and organize skills logically. Test your skills regularly and refine them based on actual usage patterns.
 
@@ -205,11 +205,11 @@ Combine your custom skills with built-in skills like `/tdd` for testing, `/pdf` 
 
 ---
 
-## Related Reading
+Related Reading
 
 - [Claude Skill .md Format: Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/)
 - [Claude MD Character Limit and Optimization Guide](/claude-md-character-limit-and-optimization-guide/)
 - [Shared Claude Skills Across Monorepo Multiple Packages](/shared-claude-skills-across-monorepo-multiple-packages/)
 - [Advanced Hub](/advanced-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

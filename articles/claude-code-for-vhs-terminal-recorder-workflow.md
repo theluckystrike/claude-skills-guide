@@ -14,11 +14,11 @@ score: 7
 
 
 {% raw %}
-# Claude Code for VHS Terminal Recorder Workflow
+Claude Code for VHS Terminal Recorder Workflow
 
-Creating high-quality terminal recordings for documentation, demos, and tutorials has never been easier than with the combination of Claude Code and VHS (Video Haskell System). This powerful workflow allows developers to automate the creation of terminal sessions that can be exported as GIFs, MP4s, or WebM files. In this guide, we'll explore how to integrate Claude Code with VHS to streamline your terminal recording workflow.
+Creating high-quality terminal recordings for documentation, demos, and tutorials has never been easier than with the combination of Claude Code and VHS (Video Haskell System). This powerful workflow allows developers to automate the creation of terminal sessions that can be exported as GIFs, MP4s, or WebM files. we'll explore how to integrate Claude Code with VHS to streamline your terminal recording workflow.
 
-## What is VHS?
+What is VHS?
 
 VHS is a terminal recorder that allows you to script and record terminal sessions. Unlike traditional screen recording tools, VHS lets you write your terminal sessions as code, making them reproducible, version-controllable, and easy to edit. The tool parses a simple scripting language (a Haskell DSL) and renders the output as a video file.
 
@@ -29,26 +29,26 @@ Key features of VHS include:
 - Support for cursor animations and typing effects
 - Frame-by-frame control over the recording
 
-## Setting Up Claude Code with VHS
+Setting Up Claude Code with VHS
 
 Before diving into the workflow, ensure you have both Claude Code and VHS installed on your system.
 
-### Installing VHS
+Installing VHS
 
 You can install VHS using various methods depending on your operating system:
 
 ```bash
-# Using Homebrew on macOS
+Using Homebrew on macOS
 brew install vhs
 
-# Using npm
+Using npm
 npm install -g @vhs-cli/vhs
 
-# Using Cargo (Rust)
+Using Cargo (Rust)
 cargo install vhs-cli
 ```
 
-### Verifying Installation
+Verifying Installation
 
 After installation, verify that VHS is working correctly:
 
@@ -56,11 +56,11 @@ After installation, verify that VHS is working correctly:
 vhs --version
 ```
 
-## Creating Your First VHS Script with Claude Code
+Creating Your First VHS Script with Claude Code
 
 The true power of this workflow emerges when you use Claude Code to help draft, refine, and execute your VHS scripts. Claude Code can assist with writing the VHS syntax, troubleshooting errors, and suggesting improvements to make your recordings more professional.
 
-### Basic VHS Script Structure
+Basic VHS Script Structure
 
 A VHS script consists of commands that tell the recorder what to display. Here's a basic example:
 
@@ -82,11 +82,11 @@ Sleep 1s
 
 This script creates a GIF showing the `ls -la` and `git status` commands being executed with the Dracula theme.
 
-### How Claude Code Enhances VHS Workflows
+How Claude Code Enhances VHS Workflows
 
 Claude Code can assist you in several ways when working with VHS:
 
-**1. Script Generation**
+1. Script Generation
 
 Describe what you want to record, and Claude Code can generate the VHS script for you:
 
@@ -118,7 +118,7 @@ Enter
 Sleep 2s
 ```
 
-**2. Troubleshooting**
+2. Troubleshooting
 
 When your VHS script doesn't produce the expected output, Claude Code can help debug:
 
@@ -126,7 +126,7 @@ When your VHS script doesn't produce the expected output, Claude Code can help d
 - Suggesting correct command sequences
 - Recommending appropriate sleep durations for readability
 
-**3. Advanced Customization**
+3. Advanced Customization
 
 Claude Code can help implement advanced VHS features:
 
@@ -135,9 +135,9 @@ Claude Code can help implement advanced VHS features:
 - Multi-pane layouts using Tmux integration
 - Watermarks and frame annotations
 
-## Practical Examples
+Practical Examples
 
-### Example 1: API Documentation Recording
+Example 1: API Documentation Recording
 
 Create a recording showing API endpoint testing with curl:
 
@@ -168,7 +168,7 @@ Enter
 Sleep 2s
 ```
 
-### Example 2: Project Setup Tutorial
+Example 2: Project Setup Tutorial
 
 Demonstrate initializing a new project:
 
@@ -195,40 +195,40 @@ Type "# Server running at http://localhost:3000"
 Enter
 ```
 
-## Optimizing Your Workflow
+Optimizing Your Workflow
 
-### Best Practices for Claude Code + VHS Integration
+Best Practices for Claude Code + VHS Integration
 
-1. **Plan Your Script First**: Before generating code, outline the sequence of commands you want to record. This helps Claude Code produce more accurate scripts.
+1. Plan Your Script First: Before generating code, outline the sequence of commands you want to record. This helps Claude Code produce more accurate scripts.
 
-2. **Use Appropriate Sleep Durations**: Different commands need different pause times. File listings need less time (`300-500ms`), while command outputs that require reading need more (`1-3s`).
+2. Use Appropriate Sleep Durations: Different commands need different pause times. File listings need less time (`300-500ms`), while command outputs that require reading need more (`1-3s`).
 
-3. **Test Incremental Changes**: Build your VHS script piece by piece. Run the renderer after each addition to catch errors early.
+3. Test Incremental Changes: Build your VHS script piece by piece. Run the renderer after each addition to catch errors early.
 
-4. **Leverage Claude Code's Context**: When working on complex scripts, share previous attempts with Claude Code so it can refine the output.
+4. Use Claude Code's Context: When working on complex scripts, share previous attempts with Claude Code so it can refine the output.
 
-5. **Version Control Your Scripts**: Store VHS scripts alongside your code in version control. This makes it easy to update recordings when commands change.
+5. Version Control Your Scripts: Store VHS scripts alongside your code in version control. This makes it easy to update recordings when commands change.
 
-### Common Issues and Solutions
+Common Issues and Solutions
 
-**Issue**: Text appears cut off or wrapped incorrectly
+Issue: Text appears cut off or wrapped incorrectly
 
-**Solution**: Adjust the `Set Width` and `Set Height` values in your script. Higher values provide more space for terminal output.
+Solution: Adjust the `Set Width` and `Set Height` values in your script. Higher values provide more space for terminal output.
 
-**Issue**: Animations are too fast to follow
+Issue: Animations are too fast to follow
 
-**Solution**: Increase sleep durations between commands. A good rule is to add at least `1s` after commands that produce significant output.
+Solution: Increase sleep durations between commands. A good rule is to add at least `1s` after commands that produce significant output.
 
-**Issue**: Output file is too large
+Issue: Output file is too large
 
-**Solution**: 
+Solution: 
 - Reduce dimensions with smaller width/height values
 - Use fewer colors (set simpler themes)
 - Limit the number of frames by reducing unnecessary sleep times
 
-## Advanced Techniques
+Advanced Techniques
 
-### Tmux Integration for Complex Demos
+Tmux Integration for Complex Demos
 
 VHS supports Tmux, allowing you to create multi-pane recordings:
 
@@ -249,7 +249,7 @@ Sleep 2s
 
 This creates a split-screen demo with different commands running in each pane.
 
-### Custom Themes and Styling
+Custom Themes and Styling
 
 While VHS comes with built-in themes, you can create custom color schemes:
 
@@ -263,17 +263,17 @@ Type "echo 'Hello, World!'"
 Enter
 ```
 
-## Conclusion
+Conclusion
 
 The combination of Claude Code and VHS provides a powerful workflow for creating professional terminal recordings. By using Claude Code's ability to generate, debug, and refine VHS scripts, you can efficiently produce high-quality demos, tutorials, and documentation for your projects. Start incorporating this workflow into your development process, and you'll find creating terminal recordings becomes faster, more reliable, and far less frustrating.
 
 Remember to experiment with different themes, fonts, and recording configurations to find the perfect setup for your specific needs. With practice, you'll be producing polished terminal recordings that enhance your documentation and captivate your audience.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

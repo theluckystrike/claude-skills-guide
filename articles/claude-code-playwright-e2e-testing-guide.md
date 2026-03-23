@@ -13,11 +13,11 @@ tags: [claude-code, claude-skills]
 ---
 
 
-# Claude Code Playwright E2E Testing Guide
+Claude Code Playwright E2E Testing Guide
 
-End-to-end testing with Playwright combined with Claude Code creates a powerful workflow for automating browser-based tests. This guide shows you how to use Claude Code's capabilities to speed up Playwright test creation, handle complex test scenarios, and maintain robust E2E test suites.
+End-to-end testing with Playwright combined with Claude Code creates a powerful workflow for automating browser-based tests. This guide shows you how to use Claude Code's capabilities to speed up Playwright test creation, handle complex test scenarios, and maintain solid E2E test suites.
 
-## Setting Up Playwright with Claude Code
+Setting Up Playwright with Claude Code
 
 First, ensure Playwright is installed in your project. Claude Code can assist with the entire setup process, from installation to configuration.
 
@@ -52,7 +52,7 @@ module.exports = defineConfig({
 
 When setting up this configuration, you can ask Claude Code to explain each option and suggest modifications based on your specific testing needs. For projects that also require accessibility testing, consider combining Playwright with the axe accessibility testing skill to catch WCAG violations during your E2E runs.
 
-## Writing E2E Tests with Claude Code Assistance
+Writing E2E Tests with Claude Code Assistance
 
 Claude Code excels at generating Playwright test code quickly. Here's how to request effective test creation:
 
@@ -81,11 +81,11 @@ test('user can login and view dashboard', async ({ page }) => {
 
 The key to getting high-quality test code from Claude Code is providing clear selectors and describing the exact user flow you want to test. Always use stable selectors like data-testid attributes rather than relying on fragile CSS selectors.
 
-## Handling Complex Test Scenarios
+Handling Complex Test Scenarios
 
 Real-world E2E tests often involve complex workflows, authentication handling, and state management. Claude Code can help you implement patterns for these scenarios.
 
-### Authentication and Session Management
+Authentication and Session Management
 
 For tests requiring authenticated sessions, use Playwright's storageState to maintain login state across tests:
 
@@ -114,7 +114,7 @@ module.exports = { createAuthenticatedSession };
 
 Claude Code can also help you set up API mocking using tools like MSW (Mock Service Worker) for tests that need to verify API interactions without hitting real endpoints. This approach reduces test flakiness and improves execution speed.
 
-### Testing Form Submissions
+Testing Form Submissions
 
 Form testing is a common E2E scenario. Here's a pattern for comprehensive form testing:
 
@@ -146,7 +146,7 @@ test.describe('Contact Form', () => {
 });
 ```
 
-## Debugging Failed E2E Tests
+Debugging Failed E2E Tests
 
 When tests fail, Claude Code helps you diagnose issues quickly. Share the error output and ask for analysis:
 
@@ -174,12 +174,12 @@ use: {
 
 After a failure, run `npx playwright show-trace` to analyze the recorded execution. You can paste the trace analysis to Claude Code for further interpretation.
 
-## Running Tests in CI/CD Pipelines
+Running Tests in CI/CD Pipelines
 
 Integrating Playwright tests with CI requires proper browser installation and configuration. Claude Code can generate GitHub Actions workflows:
 
 ```yaml
-# .github/workflows/e2e.yml
+.github/workflows/e2e.yml
 name: E2E Tests
 on: [push, pull_request]
 jobs:
@@ -199,7 +199,7 @@ jobs:
 
 For teams using containerized environments, the docker skill can help set up Playwright in Docker containers for consistent test execution across environments.
 
-## Best Practices for AI-Assisted E2E Testing
+Best Practices for AI-Assisted E2E Testing
 
 Follow these guidelines to get the most out of Claude Code with Playwright:
 
@@ -211,23 +211,23 @@ Maintain test data independently. Create dedicated test accounts and use databas
 
 Clean up after tests. Ensure logout flows work and test isolation prevents state leakage between tests.
 
-## Complementary Testing Skills
+Complementary Testing Skills
 
 Claude Code's testing capabilities extend beyond Playwright. For comprehensive test suites, consider these skills:
 
-- **tdd**: Test-driven development workflows that integrate with Playwright
-- **frontend-design**: Visual regression testing for UI consistency
-- **pdf**: Testing PDF generation and download functionality
-- **supermemory**: Maintaining test documentation and patterns across projects
-- **api-contract-testing**: Combining E2E with contract testing for API reliability
+- tdd: Test-driven development workflows that integrate with Playwright
+- frontend-design: Visual regression testing for UI consistency
+- pdf: Testing PDF generation and download functionality
+- supermemory: Maintaining test documentation and patterns across projects
+- api-contract-testing: Combining E2E with contract testing for API reliability
 
 Combine these tools based on your project's specific needs. Playwright handles browser automation while these complementary skills address other testing scenarios.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

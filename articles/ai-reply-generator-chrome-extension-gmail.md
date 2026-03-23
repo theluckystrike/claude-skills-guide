@@ -15,29 +15,29 @@ tags: [claude-code, claude-skills]
 
 {% raw %}
 
-# AI Reply Generator Chrome Extension for Gmail: Build Your Own
+AI Reply Generator Chrome Extension for Gmail: Build Your Own
 
 Email responses consume significant time for developers and power users managing high-volume inboxes. Building a custom AI reply generator as a Chrome extension gives you full control over how responses are generated, styled, and integrated into your Gmail workflow. This guide walks through the architecture, key APIs, and implementation details you'll need to create a production-ready extension.
 
-## Extension Architecture Overview
+Extension Architecture Overview
 
 A Chrome extension for Gmail consists of three primary components: a background service worker for API communication, a content script that injects UI elements into Gmail, and a popup or side panel for user configuration. The AI reply generation happens server-side or through an API call from the background worker, while the content script handles DOM manipulation to insert generated responses.
 
 ```
-┌─────────────────┐     ┌──────────────────┐     ┌─────────────┐
-│  Gmail UI       │ ←── │ Content Script  │ ←── │ Background  │
-│  (injected UI)  │     │  (DOM access)    │     │  Worker     │
-└─────────────────┘     └──────────────────┘     └──────┬──────┘
-                                                       │
+          
+  Gmail UI        ←  Content Script   ←  Background  
+  (injected UI)         (DOM access)           Worker     
+          
+                                                       
                                                        ↓
-                                               ┌─────────────┐
-                                               │  AI API     │
-                                               │  (OpenAI,   │
-                                               │   Claude)   │
-                                               └─────────────┘
+                                               
+                                                 AI API     
+                                                 (OpenAI,   
+                                                  Claude)   
+                                               
 ```
 
-## Manifest V3 Setup
+Manifest V3 Setup
 
 Chrome extensions now require Manifest V3. Your manifest.json defines permissions and extension behavior:
 
@@ -62,9 +62,9 @@ Chrome extensions now require Manifest V3. Your manifest.json defines permission
 }
 ```
 
-The `host_permissions` field is critical—without `https://mail.google.com/*`, your extension cannot interact with Gmail's DOM. The `storage` permission lets you save API keys and user preferences.
+The `host_permissions` field is critical, without `https://mail.google.com/*`, your extension cannot interact with Gmail's DOM. The `storage` permission lets you save API keys and user preferences.
 
-## Reading Email Context
+Reading Email Context
 
 Your content script needs to extract the email content that the AI will use to generate a reply. Gmail's DOM structure changes periodically, so using mutation observers and multiple selectors increases reliability:
 
@@ -104,9 +104,9 @@ function getSubject() {
 
 The subject line helps the AI generate contextually appropriate responses. Extract both the email body and subject, then combine them in your API prompt.
 
-## Injecting the Generate Button
+Injecting the Generate Button
 
-Your extension needs to insert a button into Gmail's compose UI. Gmail uses dynamic class names that change with each release, so robust selectors matter:
+Your extension needs to insert a button into Gmail's compose UI. Gmail uses dynamic class names that change with each release, so solid selectors matter:
 
 ```javascript
 function injectGenerateButton() {
@@ -133,7 +133,7 @@ function injectGenerateButton() {
 
   const button = document.createElement('button');
   button.id = 'ai-reply-btn';
-  button.innerHTML = '✨ AI Reply';
+  button.innerHTML = ' AI Reply';
   button.className = 'T-I J-J5-Ji aoO v7 T-I-atl L3';
   button.style.cssText = 'background: #1a73e8; color: white; margin-right: 8px;';
 
@@ -161,7 +161,7 @@ function injectGenerateButton() {
       console.error('Generation failed:', error);
       alert('Failed to generate reply');
     } finally {
-      button.textContent = '✨ AI Reply';
+      button.textContent = ' AI Reply';
       button.disabled = false;
     }
   });
@@ -170,9 +170,9 @@ function injectGenerateButton() {
 }
 ```
 
-## Background Worker and API Integration
+Background Worker and API Integration
 
-The background worker handles communication with your AI provider. Never expose API keys in the content script—keep them secure in the background:
+The background worker handles communication with your AI provider. Never expose API keys in the content script, keep them secure in the background:
 
 ```javascript
 // background.js
@@ -217,7 +217,7 @@ Generate a ${tone || 'professional'} reply. Keep it concise and actionable.`;
 
 This pattern works with OpenAI, Anthropic Claude, or any compatible API. Adjust the fetch URL and request body based on your provider.
 
-## Inserting the Generated Reply
+Inserting the Generated Reply
 
 After generating the reply, your content script needs to insert it into Gmail's compose area:
 
@@ -254,7 +254,7 @@ function insertReply(text) {
 
 The execCommand approach works reliably across Gmail's various compose modes. For rich text compose, you may need additional handling.
 
-## User Settings Storage
+User Settings Storage
 
 Let users configure their preferences through the popup:
 
@@ -272,30 +272,30 @@ document.getElementById('save-btn').addEventListener('click', async () => {
 });
 ```
 
-Store settings in chrome.storage.local rather than localStorage—localStorage doesn't persist in Chrome's MV3 extension model the same way.
+Store settings in chrome.storage.local rather than localStorage, localStorage doesn't persist in Chrome's MV3 extension model the same way.
 
-## Deployment Considerations
+Deployment Considerations
 
 Before publishing to the Chrome Web Store, verify your extension handles edge cases gracefully. Test with different email formats, multi-part messages, and Gmail's various view modes. Include error handling for API failures, rate limits, and missing permissions.
 
 Consider adding these production features:
 
-- **Tone selection** — Professional, casual, brief, or detailed
-- **Language detection** — Auto-detect and match the original email's language  
-- **Custom prompts** — Allow advanced users to override the default prompt
-- **Reply history** — Store recent generations for quick reinsertion
+- Tone selection. Professional, casual, brief, or detailed
+- Language detection. Auto-detect and match the original email's language  
+- Custom prompts. Allow advanced users to override the default prompt
+- Reply history. Store recent generations for quick reinsertion
 
 Building your own AI reply generator gives you flexibility that commercial tools cannot match. You control the AI model, the prompt engineering, and the UI integration. For developers managing high-volume email, this automation pays dividends in time saved.
 
 ---
 
 *
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)*
+Built by theluckystrike. More at [zovo.one](https://zovo.one)*
 
 {% endraw %}

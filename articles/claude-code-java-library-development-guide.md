@@ -13,11 +13,11 @@ score: 7
 {% raw %}
 
 
-# Claude Code Java Library Development Guide
+Claude Code Java Library Development Guide
 
 Creating a well-structured Java library requires careful planning, clean architecture, and thorough testing. This guide walks you through building production-ready Java libraries using Claude Code, covering project setup, implementation patterns, testing strategies, and publishing workflows.
 
-## Setting Up Your Java Library Project
+Setting Up Your Java Library Project
 
 Start by initializing a new Java library project with Maven or Gradle. For most libraries, Gradle with the Kotlin DSL provides better IDE support and cleaner configuration. Create a new directory and initialize the project structure:
 
@@ -77,7 +77,7 @@ publishing {
 
 The `java-library` plugin automatically configures the `api` and `implementation` configurations, allowing you to control which dependencies are exposed to consumers of your library.
 
-### Maven vs Gradle: Which to Choose
+Maven vs Gradle: Which to Choose
 
 Both build tools are well-supported, but they have different strengths for library development:
 
@@ -85,16 +85,16 @@ Both build tools are well-supported, but they have different strengths for libra
 |---|---|---|
 | IDE support | Excellent | Excellent |
 | Build speed | Slower (no incremental) | Faster (incremental builds) |
-| Configuration style | XML — verbose | Kotlin — concise, type-safe |
+| Configuration style | XML. verbose | Kotlin. concise, type-safe |
 | Plugin ecosystem | Mature | Maturing quickly |
 | Maven Central publishing | Straightforward | Requires Nexus plugin or manual setup |
 | Build caching | Basic | Advanced (local + remote) |
 
 For new projects, Gradle with the Kotlin DSL is the better default. For libraries that target enterprise environments where Maven is the standard, matching that tooling reduces friction for contributors.
 
-## Defining Clear Public APIs
+Defining Clear Public APIs
 
-A well-designed library exposes a clean, minimal public API. Use interfaces to define contracts and provide implementation details only when necessary. The principle of least surprise applies here — if a developer can guess what a method does from its name and signature, you've designed it well.
+A well-designed library exposes a clean, minimal public API. Use interfaces to define contracts and provide implementation details only when necessary. The principle of least surprise applies here. if a developer can guess what a method does from its name and signature, you've designed it well.
 
 Consider this example of a simple utility class:
 
@@ -119,10 +119,10 @@ public final class StringUtils {
 }
 ```
 
-Notice the private constructor preventing instantiation — this signals to users that the class is a utility and should be used statically. For more complex types, define a public interface and package-private implementations:
+Notice the private constructor preventing instantiation. this signals to users that the class is a utility and should be used statically. For more complex types, define a public interface and package-private implementations:
 
 ```java
-// Public contract — part of the library API
+// Public contract. part of the library API
 public interface Transformer<T, R> {
     R transform(T input);
     default R transformOrNull(T input) {
@@ -134,7 +134,7 @@ public interface Transformer<T, R> {
     }
 }
 
-// Package-private implementation — hidden from consumers
+// Package-private implementation. hidden from consumers
 class UpperCaseTransformer implements Transformer<String, String> {
     @Override
     public String transform(String input) {
@@ -143,9 +143,9 @@ class UpperCaseTransformer implements Transformer<String, String> {
 }
 ```
 
-This pattern lets you change the implementation freely without breaking binary compatibility. Claude Code is useful here — ask it to review your public API surface before you ship: "Review this class and identify any methods or fields that should be package-private or moved to an internal package."
+This pattern lets you change the implementation freely without breaking binary compatibility. Claude Code is useful here. ask it to review your public API surface before you ship: "Review this class and identify any methods or fields that should be package-private or moved to an internal package."
 
-## Implementing Core Features
+Implementing Core Features
 
 When implementing library features, follow the single responsibility principle. Each class should do one thing well. Use dependency injection to make your code testable and flexible. Here's an example of a service class with constructor injection:
 
@@ -174,7 +174,7 @@ public class HttpClient {
 
 Note the use of `Objects.requireNonNull` with descriptive messages. Failing fast with a clear error is better than a NullPointerException deep in call stack later.
 
-### The Builder Pattern for Complex Configuration
+The Builder Pattern for Complex Configuration
 
 When a class needs more than three or four constructor parameters, the Builder pattern dramatically improves readability:
 
@@ -238,7 +238,7 @@ public final class ClientConfig {
 
 This design allows callers to configure only what they care about, with all other settings using sensible defaults.
 
-## Writing Tests with TDD Patterns
+Writing Tests with TDD Patterns
 
 Test-driven development leads to better API design because you write the code from a consumer's perspective before you write the implementation. Create a test directory structure matching your source packages:
 
@@ -298,7 +298,7 @@ class StringUtilsTest {
 }
 ```
 
-Using `@ParameterizedTest` with `@NullAndEmptySource` and `@ValueSource` covers edge cases concisely. Claude Code is excellent at generating comprehensive test cases — ask: "Generate a complete JUnit 5 parameterized test suite for this method covering edge cases, boundary values, and error conditions."
+Using `@ParameterizedTest` with `@NullAndEmptySource` and `@ValueSource` covers edge cases concisely. Claude Code is excellent at generating comprehensive test cases. ask: "Generate a complete JUnit 5 parameterized test suite for this method covering edge cases, boundary values, and error conditions."
 
 Run tests continuously during development:
 
@@ -334,23 +334,23 @@ tasks.register<Test>("integrationTest") {
 }
 ```
 
-## Managing Dependencies Carefully
+Managing Dependencies Carefully
 
-Library dependencies carry forward to your users — every dependency you add is a dependency they must resolve, and potential conflicts multiply. The goal is a small, stable dependency footprint.
+Library dependencies carry forward to your users. every dependency you add is a dependency they must resolve, and potential conflicts multiply. The goal is a small, stable dependency footprint.
 
 Practical rules:
 
 - Use `api` only for types that appear in your public API (method signatures, return types, thrown exceptions)
-- Use `implementation` for everything else — these are hidden from your library's consumers
+- Use `implementation` for everything else. these are hidden from your library's consumers
 - Prefer `compileOnly` for annotation processors and tools not needed at runtime
 - Never pull in a large framework like Spring as a hard dependency; use optional integrations instead
 
 ```kotlin
 dependencies {
-    // Exposed in public API — consumers get this transitively
+    // Exposed in public API. consumers get this transitively
     api("com.google.guava:guava:32.1.3-jre")
 
-    // Internal use only — NOT exposed to consumers
+    // Internal use only. NOT exposed to consumers
     implementation("org.slf4j:slf4j-api:2.0.9")
 
     // Only needed at compile time (e.g., null-safety annotations)
@@ -364,12 +364,12 @@ dependencies {
 
 Run `./gradlew dependencies` regularly to inspect your full dependency tree and spot unexpected transitive pulls. Claude Code can help you audit this output: paste the tree and ask "Which of these transitive dependencies pose version conflict risks, and how should I resolve them?"
 
-## Documenting Your Library
+Documenting Your Library
 
 Good documentation makes your library usable. The most important documentation is the Javadoc on every public class and method, because IDEs surface it directly in autocomplete.
 
 ```java
-/**
+/
  * A builder for constructing HTTP requests with fluent API.
  *
  * <p>Example usage:</p>
@@ -393,7 +393,7 @@ public final class Request {
 
 Key Javadoc conventions:
 
-- First sentence is the summary (shown in IDE tooltips) — make it a complete, informative sentence
+- First sentence is the summary (shown in IDE tooltips). make it a complete, informative sentence
 - Use `@param`, `@return`, and `@throws` for every non-trivial method
 - Include `@since` tags so users know when features were added
 - Document thread safety explicitly
@@ -406,11 +406,11 @@ Generate the Javadoc site as part of your build to catch broken `{@code}` blocks
 open build/docs/javadoc/index.html
 ```
 
-### Writing a Useful README
+Writing a Useful README
 
 Your README is the first thing a developer sees. It should answer three questions in the first ten lines: what does this library do, how do I add it as a dependency, and what does basic usage look like? Put a copy-pasteable dependency snippet at the top, not buried below a wall of text.
 
-## Publishing to Maven Central
+Publishing to Maven Central
 
 To share your library with the Java community, publish to Maven Central. The modern path uses the Central Portal at `central.sonatype.com` rather than the legacy OSSRH Nexus.
 
@@ -498,9 +498,9 @@ Run the publish command locally when testing:
 ./gradlew publish
 ```
 
-### Versioning Strategy
+Versioning Strategy
 
-Follow semantic versioning strictly for libraries — consumers depend on it to make upgrade decisions:
+Follow semantic versioning strictly for libraries. consumers depend on it to make upgrade decisions:
 
 | Version bump | When to use |
 |---|---|
@@ -510,27 +510,27 @@ Follow semantic versioning strictly for libraries — consumers depend on it to 
 
 Never break binary compatibility in a patch or minor release. Use `@Deprecated` with a `forRemoval = true` flag to signal upcoming removals at least one minor version before the breaking major release.
 
-## Using Claude Code for Library Development
+Using Claude Code for Library Development
 
 Claude Code accelerates every phase of Java library development. Here are specific prompts that produce high-value results:
 
-- **API design review**: "Review the public API surface of this package. Identify any methods that should be removed, renamed for clarity, or moved to an internal package."
-- **Test generation**: "Write a comprehensive JUnit 5 test class for `StringUtils` covering nulls, empty strings, whitespace, Unicode edge cases, and very long strings."
-- **Dependency audit**: "Here is my Gradle dependency tree. Which dependencies are exposed via `api` that should be `implementation`? Are there any known CVEs in this list?"
-- **Migration assistance**: "Migrate these JUnit 4 tests to JUnit 5, using parameterized tests where it reduces duplication."
-- **Javadoc drafting**: "Write Javadoc for every public method in this class, including `@param`, `@return`, `@throws`, and a code example in `@code` blocks."
+- API design review: "Review the public API surface of this package. Identify any methods that should be removed, renamed for clarity, or moved to an internal package."
+- Test generation: "Write a comprehensive JUnit 5 test class for `StringUtils` covering nulls, empty strings, whitespace, Unicode edge cases, and very long strings."
+- Dependency audit: "Here is my Gradle dependency tree. Which dependencies are exposed via `api` that should be `implementation`? Are there any known CVEs in this list?"
+- Migration assistance: "Migrate these JUnit 4 tests to JUnit 5, using parameterized tests where it reduces duplication."
+- Javadoc drafting: "Write Javadoc for every public method in this class, including `@param`, `@return`, `@throws`, and a code example in `@code` blocks."
 
-Claude Code works best when you give it the full context — paste in the class, describe the audience (library consumers vs. internal developers), and specify what kind of feedback you want.
+Claude Code works best when you give it the full context. paste in the class, describe the audience (library consumers vs. internal developers), and specify what kind of feedback you want.
 
-Building a Java library is an exercise in restraint — expose only what users need, test thoroughly, and document generously. Claude Code accelerates each phase of this process, from initial project scaffold through API review, test generation, and release automation.
+Building a Java library is an exercise in restraint. expose only what users need, test thoroughly, and document generously. Claude Code accelerates each phase of this process, from initial project scaffold through API review, test generation, and release automation.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code Tutorials Hub](/tutorials-hub/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Skill MD File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/)
 - [Claude Code Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

@@ -14,31 +14,31 @@ score: 7
 
 
 {% raw %}
-# Claude Code for Java Virtual Threads (Loom) Workflow
+Claude Code for Java Virtual Threads (Loom) Workflow
 
 Java Virtual Threads, formerly known as Project Loom, represent one of the most significant changes to Java concurrency in the language's history. Released in Java 21, Virtual Threads enable developers to build highly scalable applications that can handle millions of concurrent operations with minimal overhead. This guide demonstrates how Claude Code can accelerate your Virtual Threads development workflow.
 
-## Understanding Project Loom and Virtual Threads
+Understanding Project Loom and Virtual Threads
 
-Traditional Java threads (platform threads) are expensive resources. Each thread consumes approximately 1MB of stack memory and requires OS context switching overhead. For applications that need to handle thousands or millions of concurrent connections—common in microservices, web servers, and real-time applications—this limitation becomes a significant bottleneck.
+Traditional Java threads (platform threads) are expensive resources. Each thread consumes approximately 1MB of stack memory and requires OS context switching overhead. For applications that need to handle thousands or millions of concurrent connections, common in microservices, web servers, and real-time applications, this limitation becomes a significant bottleneck.
 
 Virtual Threads solve this problem by decoupling thread execution from OS threads. A virtual thread runs code on a carrier thread but can be suspended and resumed without blocking the carrier. This allows millions of virtual threads to run on fewer platform threads, dramatically improving scalability.
 
 Key benefits of Virtual Threads include:
-- **Reduced memory footprint**: Stack memory is allocated on-demand
-- **Simplified concurrency code**: No need for complex async/await patterns
-- **Better throughput**: Handle more requests with fewer resources
-- **Easy migration**: Existing thread-based code works with minimal changes
+- Reduced memory footprint: Stack memory is allocated on-demand
+- Simplified concurrency code: No need for complex async/await patterns
+- Better throughput: Handle more requests with fewer resources
+- Easy migration: Existing thread-based code works with minimal changes
 
-## Setting Up Your Development Environment
+Setting Up Your Development Environment
 
 Claude Code can help you configure your development environment for Virtual Threads. First, ensure you have Java 21 or later installed:
 
 ```bash
-# Check your Java version
+Check your Java version
 java -version
 
-# If needed, install Java 21 using SDKMAN
+If needed, install Java 21 using SDKMAN
 sdk install java 21.0.2-tem
 ```
 
@@ -62,11 +62,11 @@ java {
 
 Claude Code can generate these configurations automatically. Simply describe your project requirements, and Claude will produce the appropriate build configuration.
 
-## Creating Virtual Threads
+Creating Virtual Threads
 
 There are multiple ways to create Virtual Threads, and Claude Code can help you choose the right approach for your use case.
 
-### Using Thread.startVirtualThread()
+Using Thread.startVirtualThread()
 
 The simplest way to start a virtual thread is using the convenience method:
 
@@ -86,7 +86,7 @@ public class VirtualThreadExample {
 }
 ```
 
-### Using Thread.ofVirtual()
+Using Thread.ofVirtual()
 
 For more control over thread behavior:
 
@@ -103,7 +103,7 @@ public class CustomVirtualThread {
 }
 ```
 
-### Using Structured Concurrency
+Using Structured Concurrency
 
 Java 21 introduced structured concurrency for better lifecycle management:
 
@@ -130,7 +130,7 @@ public class StructuredConcurrencyExample {
 
 Claude Code can help you refactor existing asynchronous code to use structured concurrency, making your code more maintainable and easier to reason about.
 
-## Building a Scalable Web Server
+Building a Scalable Web Server
 
 Virtual Threads excel at building high-throughput web servers. Here's a pattern for creating a simple HTTP server:
 
@@ -165,11 +165,11 @@ public class VirtualThreadHttpServer {
 
 This pattern can handle thousands of concurrent connections with minimal memory usage. Claude Code can help you extend this to add routing, middleware, and error handling.
 
-## Integrating with Existing Libraries
+Integrating with Existing Libraries
 
 Many popular Java libraries already support Virtual Threads or require minimal changes to work with them. Here's how to use them effectively:
 
-### Using HttpClient with Virtual Threads
+Using HttpClient with Virtual Threads
 
 ```java
 public class HttpClientExample {
@@ -187,7 +187,7 @@ public class HttpClientExample {
 }
 ```
 
-### Database Connections with HikariCP
+Database Connections with HikariCP
 
 HikariCP automatically optimizes connection pools for Virtual Threads:
 
@@ -207,42 +207,42 @@ public class DatabaseConfig {
 }
 ```
 
-## Best Practices for Virtual Threads
+Best Practices for Virtual Threads
 
 Claude Code can help you follow these best practices when working with Virtual Threads:
 
-1. **Avoid ThreadLocal with excessive data**: Virtual threads are numerous, so avoid storing large objects in ThreadLocal
-2. **Don't block unnecessarily**: While Virtual Threads can handle blocking, prefer non-blocking IO when possible
-3. **Use structured concurrency**: This ensures proper error handling and resource cleanup
-4. **Test with realistic load**: Virtual Threads may expose concurrency issues not visible with platform threads
-5. **Monitor thread usage**: Use JFR (Java Flight Recorder) to observe virtual thread behavior
+1. Avoid ThreadLocal with excessive data: Virtual threads are numerous, so avoid storing large objects in ThreadLocal
+2. Don't block unnecessarily: While Virtual Threads can handle blocking, prefer non-blocking IO when possible
+3. Use structured concurrency: This ensures proper error handling and resource cleanup
+4. Test with realistic load: Virtual Threads may expose concurrency issues not visible with platform threads
+5. Monitor thread usage: Use JFR (Java Flight Recorder) to observe virtual thread behavior
 
-## Common Pitfalls and How to Avoid Them
+Common Pitfalls and How to Avoid Them
 
 Virtual Threads require some adjustments to existing patterns. Here are common issues Claude Code can help you resolve:
 
-- **Synchronized blocks**: These can prevent virtual threads from being suspended. Use java.util.concurrent locks instead
-- **Thread pool misconfiguration**: Virtual Threads don't need large thread pools—use one thread per task
-- **Blocking infinally blocks**: Ensure cleanup code doesn't block unnecessarily
+- Synchronized blocks: These can prevent virtual threads from being suspended. Use java.util.concurrent locks instead
+- Thread pool misconfiguration: Virtual Threads don't need large thread pools, use one thread per task
+- Blocking infinally blocks: Ensure cleanup code doesn't block unnecessarily
 
-## Conclusion
+Conclusion
 
 Java Virtual Threads (Project Loom) open new possibilities for building highly scalable Java applications. Claude Code can accelerate your adoption by generating boilerplate code, helping refactor existing patterns, and suggesting best practices. Start experimenting with Virtual Threads today to take advantage of Java's most significant concurrency improvement.
 
-## Actionable Advice
+Actionable Advice
 
-1. **Start small**: Begin by migrating one IO-bound service to Virtual Threads
-2. **Measure before and after**: Track throughput and memory usage to quantify benefits
-3. **Use Claude Code for code generation**: Let Claude generate starter templates and refactor patterns
-4. **Join the community**: Follow the Loom mailing list and JEP discussions for latest updates
-5. **Update your tooling**: Ensure your IDE and build tools support Java 21+ features
+1. Start small: Begin by migrating one IO-bound service to Virtual Threads
+2. Measure before and after: Track throughput and memory usage to quantify benefits
+3. Use Claude Code for code generation: Let Claude generate starter templates and refactor patterns
+4. Join the community: Follow the Loom mailing list and JEP discussions for latest updates
+5. Update your tooling: Ensure your IDE and build tools support Java 21+ features
 
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -15,11 +15,11 @@ permalink: /claude-code-esm-module-not-found-import-error-fix/
 
 
 
-# Claude Code ESM Module Not Found Import Error Fix
+Claude Code ESM Module Not Found Import Error Fix
 
-If you're working with Claude Code and encounter the dreaded "Module not found" or "Cannot find module" error, you're not alone. This is one of the most common issues developers face when building skills that interact with JavaScript or TypeScript projects. In this guide, we'll explore the root causes of these errors and provide practical solutions to fix them.
+If you're working with Claude Code and encounter the dreaded "Module not found" or "Cannot find module" error, you're not alone. This is one of the most common issues developers face when building skills that interact with JavaScript or TypeScript projects. we'll explore the root causes of these errors and provide practical solutions to fix them.
 
-## Understanding ESM and CommonJS in Claude Code
+Understanding ESM and CommonJS in Claude Code
 
 Before diving into fixes, it's essential to understand the difference between ES Modules (ESM) and CommonJS (CJS), as this distinction lies at the heart of most import errors.
 
@@ -27,7 +27,7 @@ ES Modules (`import`/`export` syntax) are the standard JavaScript module system 
 
 When Claude Code interacts with your project, it needs to correctly resolve modules based on your project's configuration. Understanding this helps you diagnose and fix import errors quickly.
 
-### ESM vs CommonJS at a Glance
+ESM vs CommonJS at a Glance
 
 | Feature | CommonJS (CJS) | ES Modules (ESM) |
 |---|---|---|
@@ -42,7 +42,7 @@ When Claude Code interacts with your project, it needs to correctly resolve modu
 
 This table matters because the error messages you see differ based on which direction the conflict runs. `ERR_REQUIRE_ESM` means CJS code tried to `require()` an ESM-only package. `ERR_UNKNOWN_FILE_EXTENSION` means Node.js couldn't determine the module type from the file extension. Each has a different fix.
 
-## Diagnosing the Error Before Fixing It
+Diagnosing the Error Before Fixing It
 
 Before applying any fix, identify which error you actually have. Copy the exact error text and match it against this reference:
 
@@ -58,9 +58,9 @@ Before applying any fix, identify which error you actually have. Copy the exact 
 
 Reading the error message carefully saves significant debugging time. The most common mistake is treating all module errors as "just install the package" when the actual problem is a module type mismatch.
 
-## Common Causes of Module Not Found Errors
+Common Causes of Module Not Found Errors
 
-### 1. Missing Dependencies
+1. Missing Dependencies
 
 The most straightforward cause is a missing package. When Claude Code tries to import a module that isn't installed, you'll see an error similar to:
 
@@ -68,13 +68,13 @@ The most straightforward cause is a missing package. When Claude Code tries to i
 Error: Cannot find module 'lodash'
 ```
 
-**Fix**: Install the missing dependency:
+Fix: Install the missing dependency:
 
 ```bash
 npm install lodash
-# or with yarn
+or with yarn
 yarn add lodash
-# or with pnpm
+or with pnpm
 pnpm add lodash
 ```
 
@@ -84,14 +84,14 @@ After installing, verify the package is in `node_modules`:
 ls node_modules/lodash
 ```
 
-If the directory does not exist after install, check for npm errors in the output. A corrupted `node_modules` directory can cause this — delete it and reinstall:
+If the directory does not exist after install, check for npm errors in the output. A corrupted `node_modules` directory can cause this. delete it and reinstall:
 
 ```bash
 rm -rf node_modules
 npm install
 ```
 
-### 2. Incorrect Package.json Type Configuration
+2. Incorrect Package.json Type Configuration
 
 Your `package.json` defines module behavior through the `"type"` field. If this is misconfigured, Node.js may look for the wrong type of exports:
 
@@ -107,7 +107,7 @@ Your `package.json` defines module behavior through the `"type"` field. If this 
 
 Without `"type": "module"`, Node.js defaults to CommonJS, which can cause ESM-specific imports to fail.
 
-**Fix**: Ensure your `package.json` type matches your import syntax. For ESM:
+Fix: Ensure your `package.json` type matches your import syntax. For ESM:
 
 ```json
 {
@@ -130,7 +130,7 @@ You can also control module type on a per-file basis regardless of the `package.
 
 This is useful when you have a mostly-CJS project but need one file to use ESM syntax, or vice versa.
 
-### 3. Wrong File Extension
+3. Wrong File Extension
 
 Node.js requires explicit extensions in imports when using ESM. If you have:
 
@@ -140,20 +140,20 @@ import { helperFunction } from './utils';
 
 But your file is actually `utils.js` or `utils.ts`, you'll get a module not found error.
 
-**Fix**: Always include the file extension in ESM imports:
+Fix: Always include the file extension in ESM imports:
 
 ```javascript
 import { helperFunction } from './utils.js';
 ```
 
-This trips up developers migrating from TypeScript, where the compiler traditionally handled extension resolution automatically. In native ESM Node.js, you must be explicit. Even when importing a `.ts` file in a TypeScript project that uses `tsx` or `ts-node`, the convention is to write `.js` in the import path — the TypeScript resolver maps it to the `.ts` source file at build time.
+This trips up developers migrating from TypeScript, where the compiler traditionally handled extension resolution automatically. In native ESM Node.js, you must be explicit. Even when importing a `.ts` file in a TypeScript project that uses `tsx` or `ts-node`, the convention is to write `.js` in the import path. the TypeScript resolver maps it to the `.ts` source file at build time.
 
 ```typescript
-// TypeScript with ESM — write .js even though the source file is .ts
+// TypeScript with ESM. write .js even though the source file is .ts
 import { helperFunction } from './utils.js';
 ```
 
-### 4. Missing index.js or package.json Exports
+4. Missing index.js or package.json Exports
 
 When importing from a directory, Node.js looks for either an `index.js` file or a `package.json` with an `"exports"` field:
 
@@ -161,7 +161,7 @@ When importing from a directory, Node.js looks for either an `index.js` file or 
 import { something } from './lib/utils';
 ```
 
-**Fix**: Either create an `index.js` in the directory:
+Fix: Either create an `index.js` in the directory:
 
 ```javascript
 // lib/utils/index.js
@@ -179,7 +179,7 @@ Or define exports in `package.json`:
 }
 ```
 
-The `"exports"` field is important to understand because it also acts as an access control mechanism. If a package defines `"exports"`, Node.js will refuse to load any path that is not listed there — even if the file physically exists on disk. This is a common source of confusion when using internal APIs of third-party packages:
+The `"exports"` field is important to understand because it also acts as an access control mechanism. If a package defines `"exports"`, Node.js will refuse to load any path that is not listed there. even if the file physically exists on disk. This is a common source of confusion when using internal APIs of third-party packages:
 
 ```
 Error [ERR_PACKAGE_PATH_NOT_EXPORTED]: Package subpath './internal/parser'
@@ -188,7 +188,7 @@ is not defined by "exports" in node_modules/some-package/package.json
 
 The solution is to use only the public API exposed in `"exports"`, or to check if the package offers an alternative entry point.
 
-### 5. Alias Resolution Issues
+5. Alias Resolution Issues
 
 Many projects use path aliases (like `@/` or `#/`) to shorten imports:
 
@@ -198,7 +198,7 @@ import { helper } from '@/utils/helper';
 
 Claude Code needs these aliases resolved correctly.
 
-**Fix**: Ensure your `jsconfig.json` or `tsconfig.json` properly defines paths:
+Fix: Ensure your `jsconfig.json` or `tsconfig.json` properly defines paths:
 
 ```json
 {
@@ -211,7 +211,7 @@ Claude Code needs these aliases resolved correctly.
 }
 ```
 
-However, TypeScript path aliases in `tsconfig.json` only affect the TypeScript compiler — they do not affect Node.js module resolution at runtime. If you are running code directly with Node.js (or through `ts-node`), you need an additional runtime mapping.
+However, TypeScript path aliases in `tsconfig.json` only affect the TypeScript compiler. they do not affect Node.js module resolution at runtime. If you are running code directly with Node.js (or through `ts-node`), you need an additional runtime mapping.
 
 For `ts-node`:
 
@@ -254,19 +254,19 @@ export default defineConfig({
 });
 ```
 
-Each tool in your chain — TypeScript compiler, test runner, bundler, Node.js runtime — must independently know about your aliases. Fixing one without fixing the others produces errors that appear only in certain contexts.
+Each tool in your chain. TypeScript compiler, test runner, bundler, Node.js runtime. must independently know about your aliases. Fixing one without fixing the others produces errors that appear only in certain contexts.
 
-## Troubleshooting Claude Code Specifically
+Troubleshooting Claude Code Specifically
 
 When working with Claude Code skills, consider these additional factors:
 
-### Skill Execution Context
+Skill Execution Context
 
 Claude Code skills execute within a specific Node.js context. If your skill runs a script, that script inherits your project's module resolution settings. Ensure your skill's working directory has a proper `package.json` with correct dependencies.
 
 If your skill spawns a subprocess (for example, running a Node.js script via `exec` or `spawn`), the subprocess has its own module resolution context based on its `cwd`. Make sure the subprocess runs from a directory that has the required `package.json` and `node_modules`.
 
-### Dependency Installation
+Dependency Installation
 
 Before running any code that imports modules, verify dependencies are installed:
 
@@ -276,7 +276,7 @@ npm install
 
 In monorepo setups, also check that workspace dependencies are installed at the right level. A package in `packages/skill-runner` may need its own `npm install` even if the root has been installed.
 
-### Checking Node Version
+Checking Node Version
 
 ESM support requires Node.js version 14 or higher. Older versions won't recognize ESM syntax:
 
@@ -305,16 +305,16 @@ More specifically, here is the ESM support history by Node.js version:
 
 If you are on Node.js 20 or higher, note that Node.js 22 introduced an experimental flag (`--experimental-require-module`) that allows `require()` to load ESM modules, which may change how some errors behave. Do not rely on this in production until it is stable.
 
-## Practical Examples
+Practical Examples
 
-### Example 1: Fixing a Simple Import
+Example 1: Fixing a Simple Import
 
-**Error**:
+Error:
 ```
 Error: Cannot find module 'axios'
 ```
 
-**Solution**:
+Solution:
 ```bash
 npm install axios
 ```
@@ -329,16 +329,16 @@ import axios from 'axios';
 const axios = require('axios');
 ```
 
-### Example 2: Converting CommonJS to ESM
+Example 2: Converting CommonJS to ESM
 
-**Error**:
+Error:
 ```
 Error [ERR_REQUIRE_ESM]: Must use import to load ES Module
 ```
 
 This error appears when a CJS `require()` call tries to load a package that only ships ESM. Many modern packages (like `node-fetch` v3, `chalk` v5, `ora` v6) dropped CJS support.
 
-**Solution**: Convert your code to use ESM syntax:
+Solution: Convert your code to use ESM syntax:
 
 ```javascript
 // Before (CommonJS)
@@ -374,11 +374,11 @@ This approach lets CJS and ESM-only packages coexist, at the cost of making the 
 Alternatively, pin the package to an older CJS-compatible version while you plan the migration:
 
 ```bash
-# Use chalk v4 (last CJS version) instead of v5+ (ESM-only)
+Use chalk v4 (last CJS version) instead of v5+ (ESM-only)
 npm install chalk@4
 ```
 
-### Example 3: Handling Dual Packages
+Example 3: Handling Dual Packages
 
 Some packages provide both CommonJS and ESM versions. This causes conflicts:
 
@@ -386,7 +386,7 @@ Some packages provide both CommonJS and ESM versions. This causes conflicts:
 Error: Multiple exports found for [package-name]
 ```
 
-**Solution**: Use the package's ESM entry point explicitly or configure your bundler:
+Solution: Use the package's ESM entry point explicitly or configure your bundler:
 
 ```javascript
 // Explicitly use ESM version
@@ -421,21 +421,21 @@ If you are seeing unexpected behavior from a dual package, add `--trace-warnings
 node --trace-warnings your-script.js
 ```
 
-### Example 4: The `__dirname` Problem in ESM
+Example 4: The `__dirname` Problem in ESM
 
 A frequent stumbling block when converting CJS files to ESM is that `__dirname` and `__filename` are not available:
 
 ```javascript
-// CJS — works fine
+// CJS. works fine
 const path = require('path');
 const configPath = path.join(__dirname, 'config.json');
 
-// ESM — __dirname is not defined!
+// ESM. __dirname is not defined!
 import path from 'path';
 const configPath = path.join(__dirname, 'config.json'); // ReferenceError
 ```
 
-**Fix**: Use `import.meta.url` to reconstruct `__dirname`:
+Fix: Use `import.meta.url` to reconstruct `__dirname`:
 
 ```javascript
 import { fileURLToPath } from 'url';
@@ -453,78 +453,78 @@ Or use `import.meta.resolve` in newer Node.js versions:
 const configPath = new URL('./config.json', import.meta.url).pathname;
 ```
 
-## Debugging Module Resolution Step by Step
+Debugging Module Resolution Step by Step
 
 When none of the standard fixes work, use these diagnostic commands to understand exactly what Node.js is doing.
 
-**Check what package.json "type" field Node.js sees for a given file:**
+Check what package.json "type" field Node.js sees for a given file:
 
 ```bash
 node -e "const m = require('module'); console.log(m._resolveFilename('./src/index.js', null, false))"
 ```
 
-**Trace the full module resolution process:**
+Trace the full module resolution process:
 
 ```bash
 node --trace-warnings --experimental-vm-modules your-script.js 2>&1 | head -50
 ```
 
-**Inspect a package's exports map:**
+Inspect a package's exports map:
 
 ```bash
 node -e "const p = require('./node_modules/some-package/package.json'); console.log(JSON.stringify(p.exports, null, 2))"
 ```
 
-**Check if a module resolves correctly before running your full script:**
+Check if a module resolves correctly before running your full script:
 
 ```bash
 node -e "import('some-package').then(m => console.log(Object.keys(m)))"
 ```
 
-**List all versions of a package in your dependency tree (useful for version conflicts):**
+List all versions of a package in your dependency tree (useful for version conflicts):
 
 ```bash
 npm ls some-package
 ```
 
-## Best Practices to Avoid Import Errors
+Best Practices to Avoid Import Errors
 
-1. **Use consistent module syntax**: Choose either ESM or CommonJS for your project and stick with it. Mixed projects are harder to maintain and debug.
+1. Use consistent module syntax: Choose either ESM or CommonJS for your project and stick with it. Mixed projects are harder to maintain and debug.
 
-2. **Keep dependencies updated**: Outdated packages may have resolution issues. Run `npm outdated` periodically to see which packages have newer versions available.
+2. Keep dependencies updated: Outdated packages may have resolution issues. Run `npm outdated` periodically to see which packages have newer versions available.
 
-3. **Document your module structure**: Clear exports and imports make debugging easier. A barrel file (an `index.js` that re-exports from subdirectories) makes the public API explicit.
+3. Document your module structure: Clear exports and imports make debugging easier. A barrel file (an `index.js` that re-exports from subdirectories) makes the public API explicit.
 
-4. **Test imports in isolation**: Verify each import works before combining them. A quick `node -e "import('./module.js').then(console.log)"` catches problems early.
+4. Test imports in isolation: Verify each import works before combining them. A quick `node -e "import('./module.js').then(console.log)"` catches problems early.
 
-5. **Use TypeScript**: TypeScript's module resolution is often more robust and catches issues early. Errors appear at compile time rather than at runtime.
+5. Use TypeScript: TypeScript's module resolution is often more solid and catches issues early. Errors appear at compile time rather than at runtime.
 
-6. **Lock your Node.js version**: Use an `.nvmrc` file at the project root so every developer and CI system uses the same Node.js version.
+6. Lock your Node.js version: Use an `.nvmrc` file at the project root so every developer and CI system uses the same Node.js version.
 
 ```bash
-# .nvmrc
+.nvmrc
 20.11.0
 ```
 
-7. **Separate tools by concern**: Keep your TypeScript config, Jest config, bundler config, and Node.js runtime config aligned. A mismatch in any one tool produces errors that look like code problems but are actually configuration problems.
+7. Separate tools by concern: Keep your TypeScript config, Jest config, bundler config, and Node.js runtime config aligned. A mismatch in any one tool produces errors that look like code problems but are actually configuration problems.
 
-8. **Use `"exports"` in your own packages**: If you are publishing or sharing internal packages, define `"exports"` explicitly rather than relying on implicit file-system access. This prevents accidental use of internal files.
+8. Use `"exports"` in your own packages: If you are publishing or sharing internal packages, define `"exports"` explicitly rather than relying on implicit file-system access. This prevents accidental use of internal files.
 
-## Conclusion
+Conclusion
 
 ESM module not found errors in Claude Code typically stem from misconfigured package.json settings, missing dependencies, or incorrect import syntax. By understanding how Node.js resolves modules and following the fixes outlined in this guide, you can quickly diagnose and resolve these issues.
 
-Remember to check your dependencies first, verify your `package.json` configuration, ensure correct file extensions, and test your imports incrementally. The diagnostic table at the top of this guide maps error messages to their root causes — start there to avoid applying the wrong fix to the right symptom.
+Remember to check your dependencies first, verify your `package.json` configuration, ensure correct file extensions, and test your imports incrementally. The diagnostic table at the top of this guide maps error messages to their root causes. start there to avoid applying the wrong fix to the right symptom.
 
 With these practices, you'll spend less time debugging import errors and more time building with Claude Code. Module system problems are entirely avoidable with a consistent project setup and the right understanding of how CJS and ESM interact.
 
 If you continue to experience issues, consider using tools like `npm ls` to inspect your dependency tree or `node --trace-warnings` for detailed resolution debugging.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Claude Code Not Working After Update: How to Fix](/claude-code-not-working-after-update-how-to-fix/)
 - [Claude Code Troubleshooting Hub](/troubleshooting-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

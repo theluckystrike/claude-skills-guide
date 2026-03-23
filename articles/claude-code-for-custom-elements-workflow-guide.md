@@ -14,32 +14,32 @@ score: 7
 
 
 {% raw %}
-# Claude Code for Custom Elements Workflow Guide
+Claude Code for Custom Elements Workflow Guide
 
 Custom elements extend Claude Code's capabilities by creating reusable tools, skills, and function-calling patterns tailored to your specific development needs. This guide walks you through the workflow of building, integrating, and maintaining custom elements that streamline your AI-assisted development process.
 
-## Understanding Custom Elements in Claude Code
+Understanding Custom Elements in Claude Code
 
 Custom elements in Claude Code refer to user-defined components that add specialized functionality beyond the default toolset. These include:
 
-- **Custom MCP Tools**: External service integrations via the Model Context Protocol
-- **Skill Components**: Reusable skill modules with specific capabilities
-- **Function Templates**: Pre-defined function-calling patterns for common tasks
-- **Workflow Automations**: Multi-step processes chained together
+- Custom MCP Tools: External service integrations via the Model Context Protocol
+- Skill Components: Reusable skill modules with specific capabilities
+- Function Templates: Pre-defined function-calling patterns for common tasks
+- Workflow Automations: Multi-step processes chained together
 
 The key advantage of custom elements is that they transform Claude from a general-purpose coding assistant into a specialized teammate familiar with your project's unique requirements. Rather than re-explaining your codebase and conventions on every session, you encode that knowledge into persistent custom elements that Claude loads automatically.
 
-This is particularly powerful for teams. When a new developer joins your project, they can load the same custom elements and instantly have Claude operating with team-specific knowledge — understanding your branching conventions, your database schema, your preferred patterns for error handling, and the tools specific to your stack.
+This is particularly powerful for teams. When a new developer joins your project, they can load the same custom elements and instantly have Claude operating with team-specific knowledge. understanding your branching conventions, your database schema, your preferred patterns for error handling, and the tools specific to your stack.
 
-## Setting Up Your Development Environment
+Setting Up Your Development Environment
 
 Before creating custom elements, ensure your environment is properly configured:
 
 ```bash
-# Verify Claude Code is installed
+Verify Claude Code is installed
 claude --version
 
-# Initialize a skills directory if you haven't
+Initialize a skills directory if you haven't
 mkdir -p ~/.claude/skills
 ```
 
@@ -59,33 +59,33 @@ git add README.md
 git commit -m "Initial commit"
 ```
 
-### Directory Layout That Scales
+Directory Layout That Scales
 
 A well-organized directory layout makes it easy to find and maintain elements as your library grows:
 
 ```
 ~/claude-custom-elements/
-├── tools/                    # MCP tool handlers
-│   ├── database-query.py
-│   ├── api-client.py
-│   └── file-transformer.py
-├── skills/                   # Reusable skill definitions
-│   ├── api-builder/
-│   ├── test-generator/
-│   └── code-reviewer/
-├── templates/                # Function-calling templates
-│   ├── function-caller.js
-│   └── async-wrapper.py
-└── configs/                  # Per-environment configurations
-    ├── dev.yaml
-    └── prod.yaml
+ tools/                    # MCP tool handlers
+    database-query.py
+    api-client.py
+    file-transformer.py
+ skills/                   # Reusable skill definitions
+    api-builder/
+    test-generator/
+    code-reviewer/
+ templates/                # Function-calling templates
+    function-caller.js
+    async-wrapper.py
+ configs/                  # Per-environment configurations
+     dev.yaml
+     prod.yaml
 ```
 
-## Creating Custom MCP Tools
+Creating Custom MCP Tools
 
 Custom MCP tools enable Claude to interact with external services, databases, or APIs. Here's the workflow for creating one:
 
-### Step 1: Define the Tool Specification
+Step 1: Define the Tool Specification
 
 Create a JSON specification for your tool:
 
@@ -106,14 +106,14 @@ Create a JSON specification for your tool:
 }
 ```
 
-Spending time on the description is not optional — it is the primary signal Claude uses when deciding whether to invoke this tool. A vague description like "does database things" will result in Claude under-utilizing or mis-using the tool. Be specific: describe what the tool does, what kinds of inputs it expects, and what it returns.
+Spending time on the description is not optional. it is the primary signal Claude uses when deciding whether to invoke this tool. A vague description like "does database things" will result in Claude under-utilizing or mis-using the tool. Be specific: describe what the tool does, what kinds of inputs it expects, and what it returns.
 
-### Step 2: Implement the Tool Handler
+Step 2: Implement the Tool Handler
 
 Create the execution logic:
 
 ```python
-# tools/database-query.py
+tools/database-query.py
 import sqlite3
 import json
 
@@ -135,7 +135,7 @@ def execute(query: str) -> str:
 For production use, you'll want to add connection pooling, timeouts, and row limits so that accidentally broad queries don't stall your session:
 
 ```python
-# tools/database-query.py (production-hardened)
+tools/database-query.py (production-hardened)
 import sqlite3
 import json
 import time
@@ -169,12 +169,12 @@ def execute(query: str, limit: Optional[int] = None) -> str:
         return json.dumps({"error": f"Query failed: {str(e)}"})
 ```
 
-### Step 3: Register the Tool
+Step 3: Register the Tool
 
 Add the tool to your Claude Code configuration:
 
 ```yaml
-# ~/.claude/mcp-config.yaml
+~/.claude/mcp-config.yaml
 mcp_servers:
   database-tools:
     command: python
@@ -183,31 +183,31 @@ mcp_servers:
       - database-query
 ```
 
-### Step 4: Verify Registration
+Step 4: Verify Registration
 
 After restarting Claude Code, verify the tool is recognized:
 
 ```bash
-# In your Claude Code session, ask Claude:
-# "What tools do you have available?"
-# Claude should list database-query among its available tools.
+In your Claude Code session, ask Claude:
+"What tools do you have available?"
+Claude should list database-query among its available tools.
 ```
 
-## Building Reusable Skill Components
+Building Reusable Skill Components
 
 Skill components allow you to package complex workflows into reusable units. The difference between a tool and a skill is scope: a tool performs a discrete action, while a skill encodes an entire working style or domain of knowledge.
 
-### Structure Your Skill
+Structure Your Skill
 
 ```
 my-skill/
-├── skill.md          # Main skill definition
-├── tools/            # Supporting tools
-├── prompts/          # Custom prompts
-└── config.yaml       # Skill configuration
+ skill.md          # Main skill definition
+ tools/            # Supporting tools
+ prompts/          # Custom prompts
+ config.yaml       # Skill configuration
 ```
 
-### Example Skill Definition
+Example Skill Definition
 
 ```yaml
 ---
@@ -215,17 +215,17 @@ name: api-builder
 description: Generate REST API boilerplate for Node.js projects
 ---
 
-# API Builder Skill
+API Builder Skill
 
 You help developers generate REST API boilerplate code.
 
-## Available Templates
+Available Templates
 
 - Express.js REST API
 - Fastify API
 - Koa REST API
 
-## Generation Workflow
+Generation Workflow
 
 1. Ask about the framework preference
 2. Determine required middleware
@@ -233,7 +233,7 @@ You help developers generate REST API boilerplate code.
 4. Create basic CRUD endpoints
 ```
 
-### A More Detailed Skill: Code Reviewer
+A More Detailed Skill: Code Reviewer
 
 Here is an example of a richer skill that encodes team-specific review criteria:
 
@@ -244,28 +244,28 @@ description: Review pull request diffs against team coding standards
 version: 1.0.0
 ---
 
-# Code Reviewer Skill
+Code Reviewer Skill
 
 You perform thorough code reviews following our team's standards.
 
-## Review Checklist
+Review Checklist
 
-### Security
+Security
 - Check for SQL injection risks (parameterized queries only)
 - Verify secrets are not hardcoded
 - Confirm input validation on all public-facing endpoints
 
-### Performance
+Performance
 - Flag N+1 query patterns
 - Identify missing database indexes based on filter columns
 - Note unbounded loops over large datasets
 
-### Style
+Style
 - Function names: snake_case for Python, camelCase for JavaScript
 - Maximum function length: 40 lines
 - Prefer early returns over deeply nested conditions
 
-## Output Format
+Output Format
 
 For each issue found, output:
 - File and line number
@@ -276,7 +276,7 @@ For each issue found, output:
 
 When you invoke this skill via `/code-reviewer`, Claude loads all of that institutional knowledge and applies it without you needing to re-state it.
 
-## Implementing Function-Calling Patterns
+Implementing Function-Calling Patterns
 
 Custom function templates standardize how Claude calls external code:
 
@@ -310,12 +310,12 @@ class FunctionCaller {
 }
 ```
 
-### Async Wrapper Pattern
+Async Wrapper Pattern
 
 For tools that interact with external APIs, an async wrapper with retry logic prevents transient failures from derailing long sessions:
 
 ```python
-# templates/async-wrapper.py
+templates/async-wrapper.py
 import asyncio
 import functools
 import json
@@ -325,11 +325,11 @@ def with_retry(max_attempts: int = 3, delay_seconds: float = 1.0):
     """Decorator that retries a tool function on transient errors."""
     def decorator(func: Callable) -> Callable:
         @functools.wraps(func)
-        async def wrapper(*args, **kwargs) -> Any:
+        async def wrapper(*args, kwargs) -> Any:
             last_error = None
             for attempt in range(1, max_attempts + 1):
                 try:
-                    return await func(*args, **kwargs)
+                    return await func(*args, kwargs)
                 except (ConnectionError, TimeoutError) as e:
                     last_error = e
                     if attempt < max_attempts:
@@ -338,14 +338,14 @@ def with_retry(max_attempts: int = 3, delay_seconds: float = 1.0):
         return wrapper
     return decorator
 
-# Usage
+Usage
 @with_retry(max_attempts=3, delay_seconds=2.0)
 async def call_external_api(endpoint: str, payload: dict) -> str:
     # ... API call logic
     pass
 ```
 
-## Comparing Custom Element Approaches
+Comparing Custom Element Approaches
 
 Choosing the right type of custom element depends on your use case. This comparison table helps clarify when to reach for each type:
 
@@ -358,25 +358,25 @@ Choosing the right type of custom element depends on your use case. This compari
 
 For most projects, skills provide the highest return on investment: they are easy to write, require no runtime infrastructure, and immediately make Claude more useful for your domain.
 
-## Best Practices for Custom Elements
+Best Practices for Custom Elements
 
-### 1. Keep Elements Focused
+1. Keep Elements Focused
 
 Each custom element should have a single, well-defined purpose. Avoid creating monolithic tools that try to do everything:
 
 ```yaml
-# Good: Focused tool
+Good: Focused tool
 name: format-sql
 description: Format SQL queries using standard formatting
 
-# Avoid: Overly broad tool
+Avoid: Overly broad tool
 name: database-everything
 description: Do database things
 ```
 
 This principle applies to skills as well. A skill that covers both API generation and database schema design will be harder to maintain and may give Claude conflicting guidance. Split them.
 
-### 2. Add Comprehensive Error Handling
+2. Add Comprehensive Error Handling
 
 Always handle errors gracefully:
 
@@ -393,40 +393,40 @@ def safe_execute(tool_name, args):
         return {"error": f"Unexpected error: {str(e)}"}
 ```
 
-Return structured error objects rather than raw exception messages — this makes it easier for Claude to understand what went wrong and suggest a recovery path.
+Return structured error objects rather than raw exception messages. this makes it easier for Claude to understand what went wrong and suggest a recovery path.
 
-### 3. Document Everything
+3. Document Everything
 
 Clear documentation ensures others (and future you) can understand and maintain the custom elements. Include a header comment in each skill file explaining its purpose, requirements, and example usage.
 
 Good documentation answers three questions: what does this element do, when should I use it, and what does it need to work? For MCP tools, this means documenting required environment variables, expected input formats, and example return values.
 
-### 4. Note Versions in Comments
+4. Note Versions in Comments
 
 Track the version of your skill in a comment at the top of the skill `.md` file:
 
 ```markdown
-<!-- version: 1.2.0 — Major: Breaking changes | Minor: New features | Patch: Bug fixes -->
+<!-- version: 1.2.0. Major: Breaking changes | Minor: New features | Patch: Bug fixes -->
 ```
 
 This becomes critical when you share elements across a team. If someone updates the `code-reviewer` skill to add a new check, other team members need to know to pull the latest version.
 
-### 5. Test Regularly
+5. Test Regularly
 
 Create test cases for your custom elements:
 
 ```bash
-# Test MCP tool
+Test MCP tool
 echo '{"query": "SELECT * FROM users"}' | python tools/database-query.py
 
-# Test skill — open Claude Code REPL and invoke:
-# /api-builder Generate an Express.js API
+Test skill. open Claude Code REPL and invoke:
+/api-builder Generate an Express.js API
 ```
 
 For MCP tools that call external services, write mock-based tests that don't require a live connection:
 
 ```python
-# tests/test_database_query.py
+tests/test_database_query.py
 import unittest
 from unittest.mock import patch, MagicMock
 import json
@@ -451,12 +451,12 @@ if __name__ == '__main__':
     unittest.main()
 ```
 
-### 6. Use Environment-Specific Configurations
+6. Use Environment-Specific Configurations
 
 Different environments often need different tool configurations. Use environment variables to avoid hardcoding connection strings or API keys:
 
 ```python
-# tools/database-query.py — environment-aware
+tools/database-query.py. environment-aware
 import os
 import sqlite3
 import json
@@ -479,28 +479,28 @@ mcp_servers:
       PROJECT_DB_PATH: "/var/data/myproject.db"
 ```
 
-## Integrating Custom Elements into Your Workflow
+Integrating Custom Elements into Your Workflow
 
 Once created, integrate custom elements smoothly:
 
-1. **Load on Demand**: Only load elements needed for current task
-2. **Environment-Based**: Use different elements for development vs. production
-3. **Project-Specific**: Store elements within project repositories
-4. **Shared Across Team**: Distribute via internal package registries
+1. Load on Demand: Only load elements needed for current task
+2. Environment-Based: Use different elements for development vs. production
+3. Project-Specific: Store elements within project repositories
+4. Shared Across Team: Distribute via internal package registries
 
 For team distribution, consider publishing your element library as a private npm or PyPI package. This allows team members to install and update elements with a single command:
 
 ```bash
-# Install shared elements from internal registry
+Install shared elements from internal registry
 pip install myteam-claude-elements
 
-# Update to latest version
+Update to latest version
 pip install --upgrade myteam-claude-elements
 ```
 
-## Troubleshooting Common Issues
+Troubleshooting Common Issues
 
-### Tool Not Found
+Tool Not Found
 
 Verify the tool is properly registered in your configuration:
 
@@ -510,7 +510,7 @@ ls ~/.claude/skills/ | grep <skill-name>
 
 Also check that Claude Code was restarted after updating the configuration. Changes to `mcp-config.yaml` do not take effect in running sessions.
 
-### Permission Errors
+Permission Errors
 
 Check file permissions on your custom element scripts:
 
@@ -520,7 +520,7 @@ chmod +x ~/claude-custom-elements/tools/*.py
 
 If you are running tool handlers as a different user than the Claude Code process, ensure both users have read access to the script and any data files it references.
 
-### Version Conflicts
+Version Conflicts
 
 Ensure dependencies match between your elements and Claude Code version:
 
@@ -535,7 +535,7 @@ Create a `requirements.txt` in your tools directory and verify it is satisfied:
 pip install -r ~/claude-custom-elements/tools/requirements.txt
 ```
 
-### Tool Invoked with Wrong Arguments
+Tool Invoked with Wrong Arguments
 
 If Claude is consistently calling your tool with malformed arguments, the issue is usually in the tool description or `input_schema`. Revisit the schema and make the field descriptions as specific as possible. Adding an `examples` array to the schema (even though it is not part of the JSON Schema standard, Claude reads it) can dramatically improve invocation accuracy.
 
@@ -548,7 +548,7 @@ If Claude is consistently calling your tool with malformed arguments, the issue 
     "properties": {
       "query": {
         "type": "string",
-        "description": "A valid SQL SELECT statement. Do not include LIMIT — it is applied automatically.",
+        "description": "A valid SQL SELECT statement. Do not include LIMIT. it is applied automatically.",
         "examples": ["SELECT id, name FROM users WHERE active = 1"]
       }
     },
@@ -557,7 +557,7 @@ If Claude is consistently calling your tool with malformed arguments, the issue 
 }
 ```
 
-## Real-World Scenario: Building a Project-Specific Element Library
+Real-World Scenario: Building a Project-Specific Element Library
 
 Consider a team building a SaaS product with a PostgreSQL database, a REST API, and a React frontend. Their custom element library might look like this:
 
@@ -569,19 +569,19 @@ Consider a team building a SaaS product with a PostgreSQL database, a REST API, 
 | `migration-writer` | Skill | Generate Alembic migration files |
 | `test-fixtures` | Function Template | Produce pytest fixtures from model definitions |
 
-With this library in place, a developer can ask Claude to "review the new UserProfile component" and Claude will automatically load the `react-reviewer` skill and apply the team's standards — without the developer needing to paste in the style guide every time.
+With this library in place, a developer can ask Claude to "review the new UserProfile component" and Claude will automatically load the `react-reviewer` skill and apply the team's standards. without the developer needing to paste in the style guide every time.
 
-## Conclusion
+Conclusion
 
 Custom elements transform Claude Code into a powerful, customized development assistant. By following this workflow guide, you can create reliable, maintainable tools that handle your specific development needs. Start small, iterate quickly, and build up a library of custom elements that make your development workflow more efficient.
 
-Remember to version your elements, document thoroughly, and test regularly. With proper custom elements in place, Claude becomes not just a coding assistant, but an integrated team member familiar with your project's unique requirements and patterns. The investment in building a strong element library pays dividends every day your team uses it — and because elements are just text files, they are cheap to write, easy to share, and trivial to update.
+Remember to version your elements, document thoroughly, and test regularly. With proper custom elements in place, Claude becomes not just a coding assistant, but an integrated team member familiar with your project's unique requirements and patterns. The investment in building a strong element library pays dividends every day your team uses it. and because elements are just text files, they are cheap to write, easy to share, and trivial to update.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -16,15 +16,15 @@ score: 7
 {% raw %}
 
 
-Real-time applications demand robust communication channels, and tRPC with WebSocket subscriptions offers a type-safe solution for building interactive features. This guide shows you how to use Claude Code to streamline the entire tRPC WebSocket workflow—from initial setup to production deployment.
+Real-time applications demand solid communication channels, and tRPC with WebSocket subscriptions offers a type-safe solution for building interactive features. This guide shows you how to use Claude Code to streamline the entire tRPC WebSocket workflow, from initial setup to production deployment.
 
-## Understanding tRPC WebSocket Subscriptions
+Understanding tRPC WebSocket Subscriptions
 
 tRPC's request-response model works well for most API calls, but real-time features require a different approach. WebSocket subscriptions enable bidirectional communication where the server pushes updates to clients without repeated requests. This is essential for live dashboards, collaborative editing, notification systems, and gaming features.
 
 The tRPC ecosystem provides `@trpc/server/adapters/ws` for WebSocket handling, creating a persistent connection between client and server. Unlike HTTP, this connection stays open, allowing instant data transfer in both directions.
 
-## Setting Up Your tRPC WebSocket Project
+Setting Up Your tRPC WebSocket Project
 
 Begin by creating a new project or adding WebSocket support to your existing tRPC setup. Claude Code can scaffold this efficiently by understanding your current stack and generating appropriate configuration.
 
@@ -64,7 +64,7 @@ export type AppRouter = typeof appRouter;
 
 This pattern uses RxJS observables to stream data to connected clients. The `observable` function from tRPC handles the subscription lifecycle, including connection establishment and cleanup on disconnect.
 
-## Implementing Real-Time Procedures with Claude Code
+Implementing Real-Time Procedures with Claude Code
 
 Claude Code excels at generating repetitive boilerplate for subscription handlers. When you need to subscribe to database changes, API updates, or custom events, describe your requirements and let Claude Code generate the implementation.
 
@@ -111,7 +111,7 @@ export const appRouter = t.router({
 
 The key insight here is using an EventEmitter to bridge mutations and subscriptions. When a notification is created, the mutation emits an event that triggers all matching subscriptions.
 
-## Client-Side Subscription Implementation
+Client-Side Subscription Implementation
 
 On the client side, you'll use `@trpc/client` with the WebSocket link to connect to your subscription endpoints. Here's a practical client setup:
 
@@ -148,11 +148,11 @@ subscription.unsubscribe();
 
 This client code establishes a persistent WebSocket connection and listens for push notifications. The `onData` callback fires whenever the server emits a matching notification.
 
-## Handling Connection Lifecycle
+Handling Connection Lifecycle
 
 Production applications must handle network interruptions gracefully. WebSocket connections can drop due to network changes, server restarts, or timeout issues. Implement reconnection logic to maintain reliable real-time features.
 
-Here's a robust reconnection pattern:
+Here's a solid reconnection pattern:
 
 ```typescript
 class TRPCWebSocketManager {
@@ -187,7 +187,7 @@ class TRPCWebSocketManager {
 
 Exponential backoff prevents overwhelming the server during outages while ensuring quick recovery when issues resolve.
 
-## Optimizing Performance for High-Volume Subscriptions
+Optimizing Performance for High-Volume Subscriptions
 
 When handling numerous concurrent subscriptions, consider implementing connection pooling and message batching. Each WebSocket connection consumes server resources, so optimize carefully.
 
@@ -219,7 +219,7 @@ export const createCrossServerSubscription = (channel: string) => {
 
 This approach allows multiple server instances to share subscription events, enabling horizontal scaling while maintaining real-time capabilities.
 
-## Testing Your WebSocket Workflows
+Testing Your WebSocket Workflows
 
 Comprehensive testing ensures your real-time features work reliably. Test both the happy path and failure scenarios including connection drops, message delivery failures, and concurrent updates.
 
@@ -246,17 +246,17 @@ process.on('SIGTERM', () => {
 });
 ```
 
-## Conclusion
+Conclusion
 
 Building real-time applications with tRPC and WebSockets requires understanding subscription patterns, connection lifecycle management, and production scaling strategies. Claude Code accelerates development by generating boilerplate code, suggesting optimizations, and helping debug complex async flows.
 
 Start with basic subscriptions, then layer in reconnection logic, cross-server communication, and performance optimizations as your application grows. The type-safe foundation tRPC provides makes this evolution manageable and maintainable.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

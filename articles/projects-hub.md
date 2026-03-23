@@ -17,7 +17,7 @@ Reading documentation teaches you how Claude skills work. Building projects teac
 
 This hub maps the most valuable project types to the skills and workflows that make them possible. Each section covers what skills are most useful, how they fit together, and where to find the detailed guide.
 
-## Table of Contents
+Table of Contents
 
 1. [SaaS Applications](#saas-applications)
 2. [CLI Tools and Scripts](#cli-tools-and-scripts)
@@ -30,18 +30,18 @@ This hub maps the most valuable project types to the skills and workflows that m
 
 ---
 
-## SaaS Applications
+SaaS Applications
 
-Building a SaaS product with Claude skills changes the development pace in a measurable way. What would normally require days of scaffolding—auth setup, database schema, API layer, frontend boilerplate—can be driven through in a single focused session when the right skills are active.
+Building a SaaS product with Claude skills changes the development pace in a measurable way. What would normally require days of scaffolding, auth setup, database schema, API layer, frontend boilerplate, can be driven through in a single focused session when the right skills are active.
 
-**The core skill stack for SaaS:**
+The core skill stack for SaaS:
 
-- **Frontend Design skill** — generates component trees, handles Tailwind/CSS, maintains design consistency across pages
-- **TDD skill** — writes tests first, then drives implementation to make them pass
-- **Supabase integration** — manages database schema, auth rows, and real-time subscriptions
-- **Code Review skill** — reviews each feature before it's committed, catching security issues and logic errors early
+- Frontend Design skill. generates component trees, handles Tailwind/CSS, maintains design consistency across pages
+- TDD skill. writes tests first, then drives implementation to make them pass
+- Supabase integration. manages database schema, auth rows, and real-time subscriptions
+- Code Review skill. reviews each feature before it's committed, catching security issues and logic errors early
 
-**The typical MVP workflow:**
+The typical MVP workflow:
 
 1. Define the core user story in plain English
 2. Use Claude with the frontend-design skill to scaffold the UI components
@@ -49,7 +49,7 @@ Building a SaaS product with Claude skills changes the development pace in a mea
 4. Use the Supabase integration to build the data layer
 5. Invoke the code review skill on the final diff before deploying to Vercel
 
-The result is not a demo—it is a production-ready MVP with test coverage, accessible markup, and a real database. The [SaaS MVP guide](/how-to-build-saas-mvp-with-claude-code-skills-guide/) walks through this entire process end to end.
+The result is not a demo, it is a production-ready MVP with test coverage, accessible markup, and a real database. The [SaaS MVP guide](/how-to-build-saas-mvp-with-claude-code-skills-guide/) walks through this entire process end to end.
 
 For solo founders and freelancers, this workflow is particularly effective because skills replace the need for a full-stack team. One developer with the right skills loaded can move at a pace previously only achievable by teams.
 
@@ -60,17 +60,17 @@ For solo founders and freelancers, this workflow is particularly effective becau
 
 ---
 
-## CLI Tools and Scripts
+CLI Tools and Scripts
 
 Command-line tools are among the most satisfying projects to build with Claude skills because the scope is tightly bounded and the feedback loop is immediate. You run the tool, it produces output, and you know immediately whether it works.
 
-**The most useful skills for CLI development:**
+The most useful skills for CLI development:
 
-- **TDD skill** — write the test harness first; drive implementation from failing assertions
-- **Code Review skill** — catch shell injection vulnerabilities, argument parsing edge cases, and missing error handling
-- **Documentation skill** — generate man pages, `--help` text, and README sections from the CLI's argument spec
+- TDD skill. write the test harness first; drive implementation from failing assertions
+- Code Review skill. catch shell injection vulnerabilities, argument parsing edge cases, and missing error handling
+- Documentation skill. generate man pages, `--help` text, and README sections from the CLI's argument spec
 
-**A practical CLI development workflow:**
+A practical CLI development workflow:
 
 1. Define the CLI's interface: commands, flags, and expected output format
 2. Use Claude with TDD skill to write integration tests that run the actual binary
@@ -87,22 +87,22 @@ Claude is particularly good at shell tooling because it understands unix convent
 
 ---
 
-## REST APIs and Backend Services
+REST APIs and Backend Services
 
-REST API projects benefit enormously from Claude skills because they involve highly repetitive patterns—endpoint scaffolding, input validation, error handling, authentication middleware—that skills can handle consistently without drift.
+REST API projects benefit enormously from Claude skills because they involve highly repetitive patterns, endpoint scaffolding, input validation, error handling, authentication middleware, that skills can handle consistently without drift.
 
-**Key skills for API development:**
+Key skills for API development:
 
-- **Input validation skill** — generates Zod/Joi/Pydantic schemas from natural-language descriptions, flags missing validations
-- **Security review skill** — checks endpoints for common vulnerabilities (IDOR, injection, broken auth)
-- **TDD skill** — drives endpoint implementation from API contract tests
-- **Code documentation skill** — generates OpenAPI specs from existing code
+- Input validation skill. generates Zod/Joi/Pydantic schemas from natural-language descriptions, flags missing validations
+- Security review skill. checks endpoints for common vulnerabilities (IDOR, injection, broken auth)
+- TDD skill. drives endpoint implementation from API contract tests
+- Code documentation skill. generates OpenAPI specs from existing code
 
-**Framework-specific workflows:**
+Framework-specific workflows:
 
-Claude Code has strong proficiency with Express, Fastify, FastAPI, and Spring Boot. If you are migrating between frameworks—a common scenario—there are dedicated guides for the most popular migrations. The Express to Fastify migration guide, for example, walks through how to use Claude skills to port an existing Express codebase incrementally, with tests validating each endpoint as it is migrated.
+Claude Code has strong proficiency with Express, Fastify, FastAPI, and Spring Boot. If you are migrating between frameworks, a common scenario, there are dedicated guides for the most popular migrations. The Express to Fastify migration guide, for example, walks through how to use Claude skills to port an existing Express codebase incrementally, with tests validating each endpoint as it is migrated.
 
-For microservices specifically, Claude's multi-agent capabilities become relevant. You can orchestrate multiple Claude subagents—one per service—that work in parallel on different parts of the system while a coordinator skill manages dependencies and shared contracts.
+For microservices specifically, Claude's multi-agent capabilities become relevant. You can orchestrate multiple Claude subagents, one per service, that work in parallel on different parts of the system while a coordinator skill manages dependencies and shared contracts.
 
 - [Claude Code Express to Fastify Migration Tutorial (2026)](/claude-code-express-to-fastify-migration-tutorial-2026/)
 - [Claude Code Spring Boot Java Microservices Guide 2026](/claude-code-spring-boot-java-microservices-development/)
@@ -112,19 +112,19 @@ For microservices specifically, Claude's multi-agent capabilities become relevan
 
 ---
 
-## Frontend Apps and Landing Pages
+Frontend Apps and Landing Pages
 
 Frontend projects with Claude skills fall into two categories: component-level work (individual UI pieces) and page-level work (complete layouts, landing pages, and application shells). Both are well-supported, but they use different skill configurations.
 
-**For component-level work:**
+For component-level work:
 
 The Frontend Design skill is the primary tool. It understands component APIs, prop typing, accessibility requirements (ARIA roles, keyboard navigation, color contrast), and design system conventions. Load it when building reusable components that need to meet production quality standards.
 
-**For page-level and landing page work:**
+For page-level and landing page work:
 
 The workflow is usually design-first: describe the page intent, have Claude generate the semantic HTML structure, then layer in styles. The Lighthouse optimization skill is worth invoking on the final output to catch performance and accessibility issues before deployment.
 
-**For React and Next.js specifically:**
+For React and Next.js specifically:
 
 The Vercel deployment skill and the Next.js workflow guide cover the full development-to-deployment lifecycle. Claude handles page component generation, API route scaffolding, and Vercel configuration, producing deployable Next.js applications with minimal manual intervention.
 
@@ -136,17 +136,17 @@ The Vercel deployment skill and the Next.js workflow guide cover the full develo
 
 ---
 
-## Browser Extensions
+Browser Extensions
 
-Browser extensions are a compact project type with a specific technical envelope: a manifest.json, a background service worker, content scripts, and a popup UI. Claude skills handle all of these layers, but the most important one to get right is the manifest—Chrome's strict validation means any error stops the extension from loading.
+Browser extensions are a compact project type with a specific technical envelope: a manifest.json, a background service worker, content scripts, and a popup UI. Claude skills handle all of these layers, but the most important one to get right is the manifest, Chrome's strict validation means any error stops the extension from loading.
 
-**Recommended skill stack for browser extensions:**
+Recommended skill stack for browser extensions:
 
-- **Frontend Design skill** — handles the popup HTML/CSS/JS
-- **Security review skill** — audits content script permissions and data handling
-- **Documentation skill** — generates Chrome Web Store listing descriptions and permission justifications
+- Frontend Design skill. handles the popup HTML/CSS/JS
+- Security review skill. audits content script permissions and data handling
+- Documentation skill. generates Chrome Web Store listing descriptions and permission justifications
 
-**The core challenge** with browser extensions is the content security policy (CSP). Extensions have strict restrictions on inline scripts, eval, and external resource loading. Claude's CSP generation skill is particularly useful here—it generates a valid CSP header that matches the extension's actual requirements without being unnecessarily permissive.
+The core challenge with browser extensions is the content security policy (CSP). Extensions have strict restrictions on inline scripts, eval, and external resource loading. Claude's CSP generation skill is particularly useful here, it generates a valid CSP header that matches the extension's actual requirements without being unnecessarily permissive.
 
 The Dart/Flutter guide is worth noting for developers building cross-platform apps that include a browser extension component, as the patterns for managing platform-specific code align well with the multi-target nature of extension development.
 
@@ -157,20 +157,20 @@ The Dart/Flutter guide is worth noting for developers building cross-platform ap
 
 ---
 
-## Data Pipelines and Automation
+Data Pipelines and Automation
 
 Data pipeline projects are where Claude skills and automation integrations converge most powerfully. A skill that understands your data schema, combined with a workflow that runs on a schedule or trigger, creates an AI-powered ETL layer that adapts to schema changes and formats output for downstream consumers.
 
-**Common data pipeline patterns with Claude skills:**
+Common data pipeline patterns with Claude skills:
 
-- **Scheduled data processing:** n8n trigger → Claude skill extracts and transforms raw data → writes to Supabase or S3
-- **Report generation:** Claude reads from a data warehouse, formats findings, and posts a summary to Slack or Notion
-- **Schema migration:** Claude skills assist with MongoDB-to-PostgreSQL migrations by generating migration scripts and validating data integrity after each batch
-- **LLM evaluation pipelines:** Claude reads test cases, runs evaluations, and writes structured benchmark results to a database
+- Scheduled data processing: n8n trigger → Claude skill extracts and transforms raw data → writes to Supabase or S3
+- Report generation: Claude reads from a data warehouse, formats findings, and posts a summary to Slack or Notion
+- Schema migration: Claude skills assist with MongoDB-to-PostgreSQL migrations by generating migration scripts and validating data integrity after each batch
+- LLM evaluation pipelines: Claude reads test cases, runs evaluations, and writes structured benchmark results to a database
 
-**The xlsx skill** is underrated for data pipeline work. Many data consumers still expect Excel output. Claude can take structured JSON data from any source and produce well-formatted Excel files with correct data types, formulas, and named ranges.
+The xlsx skill is underrated for data pipeline work. Many data consumers still expect Excel output. Claude can take structured JSON data from any source and produce well-formatted Excel files with correct data types, formulas, and named ranges.
 
-**For Jupyter-based data science workflows**, Claude's data science skill set integrates directly with notebook cells. Claude can write pandas transformations, generate visualizations, and help interpret statistical output without leaving the notebook environment.
+For Jupyter-based data science workflows, Claude's data science skill set integrates directly with notebook cells. Claude can write pandas transformations, generate visualizations, and help interpret statistical output without leaving the notebook environment.
 
 - [Claude Skills for Data Science and Jupyter: 2026 Guide](/claude-skills-for-data-science-and-jupyter-notebooks/)
 - [Best Claude Skills for Data Analysis in 2026](/best-claude-skills-for-data-analysis/)
@@ -180,7 +180,7 @@ Data pipeline projects are where Claude skills and automation integrations conve
 
 ---
 
-## Project Complexity Matrix
+Project Complexity Matrix
 
 Use this table to estimate what you are getting into before you start a new project with Claude skills.
 
@@ -199,7 +199,7 @@ Use this table to estimate what you are getting into before you start a new proj
 
 ---
 
-## Full Article Index
+Full Article Index
 
 | Article | What You'll Learn |
 |---------|-------------------|
@@ -231,16 +231,16 @@ Use this table to estimate what you are getting into before you start a new proj
 
 ---
 
-## Related Reading
+Related Reading
 
-- [Getting Started Hub](/getting-started-hub/) — Foundations: what skills are, the .md format, and writing your first skill
-- [Troubleshooting Hub](/troubleshooting-hub/) — Fix every common skill error: permissions, YAML, context overflow, and more
-- [Integrations Hub](/integrations-hub/) — Connect skills to GitHub Actions, n8n, Supabase, Slack, and more
-- [Comparisons Hub](/comparisons-hub/) — How Claude Code stacks up against Copilot, Cursor, and other tools
-- [Workflows Hub](/workflows-hub/) — Practical skill workflows for code review, documentation, and CI/CD
-- [Pricing Hub](/pricing-hub/) — Cost optimization and Claude Code pricing breakdown
+- [Getting Started Hub](/getting-started-hub/). Foundations: what skills are, the .md format, and writing your first skill
+- [Troubleshooting Hub](/troubleshooting-hub/). Fix every common skill error: permissions, YAML, context overflow, and more
+- [Integrations Hub](/integrations-hub/). Connect skills to GitHub Actions, n8n, Supabase, Slack, and more
+- [Comparisons Hub](/comparisons-hub/). How Claude Code stacks up against Copilot, Cursor, and other tools
+- [Workflows Hub](/workflows-hub/). Practical skill workflows for code review, documentation, and CI/CD
+- [Pricing Hub](/pricing-hub/). Cost optimization and Claude Code pricing breakdown
 
 ---
 
-*Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*Built by theluckystrike. More at [zovo.one](https://zovo.one)
 *

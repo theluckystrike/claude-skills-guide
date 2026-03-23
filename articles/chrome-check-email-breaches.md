@@ -14,13 +14,13 @@ score: 8
 {% raw %}
 Data breaches have become a routine threat in our connected world. When websites get hacked, millions of email addresses and passwords can leak onto the dark web. As a developer or power user, you need efficient ways to check whether your email has been exposed. This guide covers practical methods to check email breaches using Chrome and related developer tools.
 
-## Understanding Email Breach Data
+Understanding Email Breach Data
 
 Before diving into the methods, it's worth understanding where breach data lives. Services like Have I Been Pwned (HIBP) aggregate breach data from various sources and make it searchable through APIs. Chrome extensions and custom scripts can tap into these databases to alert you if your email appears in any known breaches.
 
 The key resource here is the Have I Been Pwned API, which provides programmatic access to breach data. This is the same database that powers the popular haveibeenpwned.com website.
 
-## Method 1: Using Chrome Extensions
+Method 1: Using Chrome Extensions
 
 The quickest way to check email breaches directly in your browser is through Chrome extensions. Several reputable security-focused extensions integrate with HIBP and other breach databases.
 
@@ -32,11 +32,11 @@ Search for extensions like "Breach Alarm" or "Firefox Monitor" in the Chrome Web
 
 For developers who prefer command-line tools, the HIBP API offers a more flexible approach.
 
-## Method 2: Using the Have I Been Pwned API
+Method 2: Using the Have I Been Pwned API
 
 The HIBP API provides a clean REST interface for checking breaches. Here's how to use it effectively.
 
-### Checking a Single Email Address
+Checking a Single Email Address
 
 You can use the `GET /breachedaccount/{account}` endpoint to check if an email appears in any breaches:
 
@@ -47,7 +47,7 @@ curl -H "hibp-api-key: YOUR_API_KEY" \
 
 Note that the API key is required for this endpoint. You can obtain a key from the HIBP website for programmatic access.
 
-### Using the k-Anonymity Model
+Using the k-Anonymity Model
 
 For privacy-conscious checking without an API key, use the password k-anonymity API. While primarily designed for password checking, you can adapt similar principles for email checking:
 
@@ -87,11 +87,11 @@ async function checkEmailBreaches(email) {
 
 This approach sends only the first 5 characters of your SHA-1 hash to the server, keeping your actual email hash private.
 
-## Method 3: Building a Custom Breach Checker
+Method 3: Building a Custom Breach Checker
 
 For developers who want full control, building a custom breach checker gives you flexibility to integrate with your own systems.
 
-### Simple Node.js Implementation
+Simple Node.js Implementation
 
 Here's a practical example using Node.js:
 
@@ -166,7 +166,7 @@ checkBreach('your-email@example.com')
   .catch(console.error);
 ```
 
-### Storing Results for Monitoring
+Storing Results for Monitoring
 
 If you're building a monitoring system, consider storing results in a database:
 
@@ -190,7 +190,7 @@ async function logBreachCheck(email, result) {
 }
 ```
 
-## Method 4: Using Chrome DevTools Protocol
+Method 4: Using Chrome DevTools Protocol
 
 For advanced automation, you can use Chrome DevTools Protocol to build a headless breach checker:
 
@@ -221,12 +221,12 @@ async function automatedBreachCheck(email) {
 
 This method is slower than API calls but useful if you need to check without API access.
 
-## Automating Regular Checks
+Automating Regular Checks
 
 For ongoing monitoring, set up scheduled checks using cron jobs or GitHub Actions:
 
 ```yaml
-# .github/workflows/breach-check.yml
+.github/workflows/breach-check.yml
 name: Weekly Breach Check
 on:
   schedule:
@@ -244,19 +244,19 @@ jobs:
         run: node check-breaches.js
 ```
 
-## Best Practices
+Best Practices
 
 When checking for email breaches, keep these security practices in mind:
 
-**Use API keys properly.** Store your HIBP API key in environment variables, never commit it to repositories. Use GitHub Secrets or similar secure storage for CI/CD pipelines.
+Use API keys properly. Store your HIBP API key in environment variables, never commit it to repositories. Use GitHub Secrets or similar secure storage for CI/CD pipelines.
 
-**Limit query frequency.** The HIBP API has rate limits. Space out your queries to avoid throttling.
+Limit query frequency. The HIBP API has rate limits. Space out your queries to avoid throttling.
 
-**Monitor multiple emails.** If you manage multiple accounts, create a system to track all of them. Consider using a password manager that includes breach monitoring.
+Monitor multiple emails. If you manage multiple accounts, create a system to track all of them. Consider using a password manager that includes breach monitoring.
 
-**Respond to breaches found.** If you discover your email in a breach, change passwords immediately, enable two-factor authentication, and check for any suspicious account activity.
+Respond to breaches found. If you discover your email in a breach, change passwords immediately, enable two-factor authentication, and check for any suspicious account activity.
 
-## Conclusion
+Conclusion
 
 Checking whether your email has appeared in data breaches is a straightforward process with the right tools. Whether you prefer browser extensions for quick checks, the HIBP API for programmatic access, or custom-built solutions for full control, you have options suited for different scenarios.
 
@@ -265,10 +265,10 @@ For developers, integrating breach checking into your security tooling provides 
 {% endraw %}
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

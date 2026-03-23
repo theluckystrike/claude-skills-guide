@@ -17,7 +17,7 @@ tags: [claude-code, claude-skills]
 {% raw %}
 Finding academic papers efficiently is a common challenge for researchers, students, and developers working in technical fields. Chrome extensions designed for academic paper discovery have evolved significantly, offering various approaches from simple search overlays to sophisticated AI-powered research assistants. This guide covers the ecosystem of available tools and provides implementation patterns for developers interested in building custom solutions.
 
-## Understanding Academic Paper Finder Extensions
+Understanding Academic Paper Finder Extensions
 
 Chrome extensions for finding academic papers typically connect to scholarly databases and preprint servers. The most common data sources include arXiv, PubMed, Semantic Scholar, Google Scholar, and institutional repositories. These extensions work by capturing page context, user selections, or explicit search queries, then querying APIs to return relevant papers with metadata like authors, citations, and abstracts.
 
@@ -25,11 +25,11 @@ The primary use cases include researchers looking for related work, students gat
 
 Different research disciplines have different primary sources. Computer science researchers lean on arXiv and ACM Digital Library. Biomedical researchers need PubMed and bioRxiv. Social scientists rely heavily on SSRN and JSTOR. A well-designed extension accommodates these differences rather than assuming a single database covers all needs.
 
-## Popular Extensions for Academic Paper Discovery
+Popular Extensions for Academic Paper Discovery
 
-Several extensions have gained traction in the research community. **ResearchRabbit** provides citation network visualization and integrates with reference managers. **Semantic Scholar** offers a browser extension that shows paper summaries and citation counts directly in search results. **Zotero** includes web importer functionality that captures paper metadata from publisher pages.
+Several extensions have gained traction in the research community. ResearchRabbit provides citation network visualization and integrates with reference managers. Semantic Scholar offers a browser extension that shows paper summaries and citation counts directly in search results. Zotero includes web importer functionality that captures paper metadata from publisher pages.
 
-For developers who prefer minimal solutions, **arXiv Quick Search** provides a lightweight popup for searching arXiv directly. These tools vary significantly in their feature sets, API access, and privacy policies, so evaluating them based on your specific research workflow matters.
+For developers who prefer minimal solutions, arXiv Quick Search provides a lightweight popup for searching arXiv directly. These tools vary significantly in their feature sets, API access, and privacy policies, so evaluating them based on your specific research workflow matters.
 
 Here is a comparison of the major extension options to help you choose based on your workflow:
 
@@ -41,13 +41,13 @@ Here is a comparison of the major extension options to help you choose based on 
 | arXiv Quick Search | arXiv only | No | No | Yes |
 | Connected Papers | Semantic Scholar | Yes (visual graph) | No | Limited |
 
-Zotero Connector is the strongest choice for anyone who already uses Zotero as a reference manager — it captures metadata from nearly every publisher page and institutional repository with a single click. Semantic Scholar's extension is better for exploratory discovery, where you want to see what else exists around a paper you have found. ResearchRabbit excels when you need to map an entire field visually.
+Zotero Connector is the strongest choice for anyone who already uses Zotero as a reference manager. it captures metadata from nearly every publisher page and institutional repository with a single click. Semantic Scholar's extension is better for exploratory discovery, where you want to see what else exists around a paper you have found. ResearchRabbit excels when you need to map an entire field visually.
 
-## Building a Custom Academic Paper Finder
+Building a Custom Academic Paper Finder
 
 For developers interested in building custom academic paper finder extensions, the implementation follows standard Chrome Extension Manifest V3 patterns. The core components include a popup interface for search input, a background script for API communication, and content scripts when you need page context awareness.
 
-### Setting Up the Manifest
+Setting Up the Manifest
 
 ```javascript
 // manifest.json
@@ -73,7 +73,7 @@ For developers interested in building custom academic paper finder extensions, t
 
 This manifest declares the necessary permissions for API calls to Semantic Scholar and arXiv. Adjust the host permissions based on which databases your extension will query.
 
-### Implementing the Search Popup
+Implementing the Search Popup
 
 ```html
 <!-- popup.html -->
@@ -98,7 +98,7 @@ This manifest declares the necessary permissions for API calls to Semantic Schol
 </html>
 ```
 
-### Handling API Requests
+Handling API Requests
 
 ```javascript
 // popup.js
@@ -133,7 +133,7 @@ function displayResults(papers) {
 
 This implementation queries the Semantic Scholar API and displays results with paper titles, authors, year, and abstracts. The API returns up to 10 results per query, which works well for quick searches.
 
-### Adding arXiv Support
+Adding arXiv Support
 
 For computer science and physics papers, querying arXiv directly provides additional coverage:
 
@@ -158,7 +158,7 @@ async function searchArXiv(query) {
 }
 ```
 
-### Merging Results from Multiple Sources
+Merging Results from Multiple Sources
 
 When querying both Semantic Scholar and arXiv, you need to de-duplicate and rank the combined results. A simple approach uses the paper title as a deduplication key after normalization:
 
@@ -195,11 +195,11 @@ function deduplicateAndRank(semanticResults, arxivResults) {
 
 This approach keeps results clean without requiring a backend service. The normalization strips punctuation and casing to catch near-duplicate titles that differ only in formatting.
 
-## Advanced Features for Power Users
+Advanced Features for Power Users
 
 Beyond basic search functionality, several advanced features can enhance academic paper finder extensions.
 
-### Citation Count Display
+Citation Count Display
 
 Citation tracking allows users to see how many times a paper has been cited, which helps identify influential work. Semantic Scholar's API provides citation counts alongside search results if you include the `citationCount` field:
 
@@ -220,7 +220,7 @@ function renderCitationBadge(count) {
 
 Adding citation counts to search results instantly lets researchers distinguish foundational papers from newer or less-cited work.
 
-### Highlighted Term Search from Page Selection
+Highlighted Term Search from Page Selection
 
 A practical feature is allowing users to right-click on selected text and search for papers about that topic. This requires adding a context menu entry in the service worker:
 
@@ -245,7 +245,7 @@ chrome.contextMenus.onClicked.addListener((info) => {
 
 Then in the popup, check for a pending search on load and run it automatically. This workflow is particularly effective when reading papers on publisher sites and wanting to explore related work without copying text manually.
 
-### Reference List Extraction
+Reference List Extraction
 
 A content script can parse the current page for citation formats and offer to search for papers mentioned in the reference list. This is useful when reading a survey paper and wanting to look up specific references:
 
@@ -274,7 +274,7 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
 
 The popup can then display the extracted references and let the user click any one to search for it. This transforms the extension from a standalone search tool into something deeply integrated with the research reading workflow.
 
-## Rate Limits and API Key Management
+Rate Limits and API Key Management
 
 When building academic paper finder extensions, consider API rate limits and authentication requirements. Semantic Scholar provides a free tier with reasonable limits, but higher usage requires an API key. arXiv has no authentication but enforces rate limits of about 3 requests per second.
 
@@ -306,7 +306,7 @@ async function searchWithAuth(query) {
 
 For team deployments or extensions shared within an organization, consider building a thin backend proxy that holds the API key server-side and rate-limits by user, rather than distributing the key in the extension itself.
 
-## Considerations for Extension Development
+Considerations for Extension Development
 
 Privacy matters when handling research queries. Some users prefer extensions that do not track search history. Building with clear data handling policies and minimizing external data collection helps maintain user trust. A simple approach: never store search queries beyond the current browser session, and document this clearly in the extension description.
 
@@ -318,7 +318,7 @@ async function safeSearch(query) {
     return await searchPapers(query);
   } catch (err) {
     if (err.message.includes('Failed to fetch')) {
-      return { error: 'Network error — check your connection or try again.' };
+      return { error: 'Network error. check your connection or try again.' };
     }
     if (err.status === 429) {
       return { error: 'Rate limit reached. Wait a moment before searching again.' };
@@ -330,7 +330,7 @@ async function safeSearch(query) {
 
 Performance is worth considering when displaying large result sets. Rendering 50 search results at once creates noticeable lag in the popup. Lazy rendering or virtual scrolling keeps the interface responsive even with larger result sets.
 
-## Choosing Between Building and Using Existing Tools
+Choosing Between Building and Using Existing Tools
 
 For most researchers, existing extensions like Zotero Connector or the Semantic Scholar extension handle the common cases well enough that building a custom tool is unnecessary. The decision to build a custom extension makes sense when:
 
@@ -339,13 +339,13 @@ For most researchers, existing extensions like Zotero Connector or the Semantic 
 - Your team has specific workflow requirements around how papers are tagged, classified, or shared
 - You want to aggregate sources that no single existing extension covers
 
-For developers, building even a simple version of an academic paper finder is a useful exercise in Manifest V3 patterns, API integration, and XML/JSON parsing — skills that transfer directly to other extension projects.
+For developers, building even a simple version of an academic paper finder is a useful exercise in Manifest V3 patterns, API integration, and XML/JSON parsing. skills that transfer directly to other extension projects.
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

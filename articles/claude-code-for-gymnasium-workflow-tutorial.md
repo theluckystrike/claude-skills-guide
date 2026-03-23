@@ -13,11 +13,11 @@ score: 8
 ---
 
 
-# Claude Code for Gymnasium Workflow Tutorial
+Claude Code for Gymnasium Workflow Tutorial
 
 Gymnasium has become the standard Python interface for reinforcement learning (RL) environments, offering a unified API for training agents across diverse tasks. Whether you're building your first RL agent or scaling up complex multi-environment training, Claude Code can significantly streamline your development workflow. This tutorial covers practical patterns for integrating Claude Code into your Gymnasium projects, from initial setup through deployment, debugging, and long-term maintenance.
 
-## Setting Up Gymnasium with Claude Code
+Setting Up Gymnasium with Claude Code
 
 Getting started with Gymnasium is straightforward, but Claude Code can help you set up the entire environment with best practices from day one. Start by asking Claude to scaffold your RL project structure:
 
@@ -29,23 +29,23 @@ Claude will generate a well-organized project structure with separate directorie
 
 ```
 rl_project/
-├── agents/
-│   ├── __init__.py
-│   ├── base_agent.py
-│   └── ppo_agent.py
-├── environments/
-│   ├── __init__.py
-│   └── custom_env.py
-├── training/
-│   ├── __init__.py
-│   ├── train.py
-│   └── evaluate.py
-├── callbacks/
-│   └── custom_callbacks.py
-├── configs/
-│   └── default.yaml
-├── requirements.txt
-└── README.md
+ agents/
+    __init__.py
+    base_agent.py
+    ppo_agent.py
+ environments/
+    __init__.py
+    custom_env.py
+ training/
+    __init__.py
+    train.py
+    evaluate.py
+ callbacks/
+    custom_callbacks.py
+ configs/
+    default.yaml
+ requirements.txt
+ README.md
 ```
 
 For dependency management, specify your requirements:
@@ -54,27 +54,27 @@ For dependency management, specify your requirements:
 Add requirements.txt with gymnasium, stable-baselines3, numpy, and torch. Use specific compatible versions.
 ```
 
-This ensures all your dependencies work together without conflicts — a common pain point in RL projects where library version mismatches can cause frustrating runtime errors. Claude will typically pin versions and add a note explaining why each version was chosen, which helps when you need to reproduce results or onboard new team members.
+This ensures all your dependencies work together without conflicts. a common problem in RL projects where library version mismatches can cause frustrating runtime errors. Claude will typically pin versions and add a note explaining why each version was chosen, which helps when you need to reproduce results or onboard new team members.
 
-### Python Environment Setup
+Python Environment Setup
 
 Before installing packages, ask Claude to set up a proper virtual environment workflow:
 
 ```bash
-# Create isolated environment
+Create isolated environment
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-# Install from requirements.txt
+Install from requirements.txt
 pip install -r requirements.txt
 
-# Verify GPU availability for PyTorch
+Verify GPU availability for PyTorch
 python -c "import torch; print(torch.cuda.is_available())"
 ```
 
-Claude Code can also help you write a `setup.py` or `pyproject.toml` if you want to package your environments and agents as installable modules — useful for larger projects shared across a team.
+Claude Code can also help you write a `setup.py` or `pyproject.toml` if you want to package your environments and agents as installable modules. useful for larger projects shared across a team.
 
-## Creating Your First Training Loop
+Creating Your First Training Loop
 
 The core of any RL project is the training loop. Claude Code can help you write efficient, well-structured training code that follows best practices. Here's a practical pattern for a basic training workflow:
 
@@ -83,14 +83,14 @@ import gymnasium as gym
 from stable_baselines3 import PPO
 from stable_baselines3.common.callbacks import EvalCallback
 
-# Create environment
+Create environment
 env = gym.make("CartPole-v1")
 
-# Train agent
+Train agent
 model = PPO("MlpPolicy", env, verbose=1)
 model.learn(total_timesteps=100000, progress_bar=True)
 
-# Save and evaluate
+Save and evaluate
 model.save("ppo_cartpole")
 ```
 
@@ -152,9 +152,9 @@ if __name__ == "__main__":
     train_env.close()
 ```
 
-The key difference here is the use of `SubprocVecEnv`, which runs each environment in a separate process for true parallelism — critical when environments have heavy computation like physics simulations or custom rendering.
+The key difference here is the use of `SubprocVecEnv`, which runs each environment in a separate process for true parallelism. critical when environments have heavy computation like physics simulations or custom rendering.
 
-## Building Custom Gymnasium Environments
+Building Custom Gymnasium Environments
 
 Creating custom environments is where Claude Code truly shines. The Gymnasium API requires implementing specific methods, and Claude can guide you through the process while catching common mistakes.
 
@@ -234,11 +234,11 @@ class GridNavEnv(gym.Env):
 
 Key aspects to verify in the generated code:
 
-- **Action space** matches your action types (Discrete, Box, MultiDiscrete)
-- **Observation space** correctly represents your state representation
-- **Reward shaping** aligns with your learning objectives
-- **Termination conditions** are properly defined
-- **Render modes** work as expected
+- Action space matches your action types (Discrete, Box, MultiDiscrete)
+- Observation space correctly represents your state representation
+- Reward shaping aligns with your learning objectives
+- Termination conditions are properly defined
+- Render modes work as expected
 
 For more complex environments, ask Claude to add specific features:
 
@@ -246,7 +246,7 @@ For more complex environments, ask Claude to add specific features:
 Add hierarchical actions to the grid environment where the agent can move north/south/east/west. Include a step penalty and goal reward of 100. Add obstacle collision detection.
 ```
 
-### Registering Custom Environments
+Registering Custom Environments
 
 Once your environment is built, you need to register it so you can use `gym.make()`:
 
@@ -262,11 +262,11 @@ register(
 
 Ask Claude to generate this registration code along with the environment, and include it in your package's `__init__.py` for automatic registration on import.
 
-## Integrating with Stable-Baselines3
+Integrating with Stable-Baselines3
 
 Stable-Baselines3 (SB3) provides reliable implementations of popular RL algorithms. Claude Code can help you switch between algorithms and optimize their hyperparameters.
 
-### Algorithm Comparison Table
+Algorithm Comparison Table
 
 | Algorithm | Action Space | Best For | Sample Efficiency |
 |-----------|-------------|----------|-------------------|
@@ -282,7 +282,7 @@ Switching from PPO to SAC for continuous control tasks:
 Convert this PPO training script to use SAC instead. The environment uses a Box action space with continuous values between -1 and 1.
 ```
 
-Claude will handle the algorithm-specific parameters automatically — SAC uses different defaults for buffer size, batch size, and learning starts that PPO does not need.
+Claude will handle the algorithm-specific parameters automatically. SAC uses different defaults for buffer size, batch size, and learning starts that PPO does not need.
 
 For hyperparameter tuning, Claude can suggest starting configurations based on your environment:
 
@@ -308,9 +308,9 @@ ppo:
     net_arch: [64, 64]
 ```
 
-## Advanced Training Patterns
+Advanced Training Patterns
 
-### Vectorized Environments
+Vectorized Environments
 
 For faster training, use multiple environments in parallel. Claude can help set this up:
 
@@ -323,16 +323,16 @@ The choice between `DummyVecEnv` (single process, lower overhead) and `SubprocVe
 ```python
 from stable_baselines3.common.vec_env import DummyVecEnv, SubprocVecEnv
 
-# Fast for lightweight envs (cart-pole, etc.)
+Fast for lightweight envs (cart-pole, etc.)
 dummy_env = DummyVecEnv([make_env(env_id, i) for i in range(4)])
 
-# Better for envs with heavy computation or rendering
+Better for envs with heavy computation or rendering
 subproc_env = SubprocVecEnv([make_env(env_id, i) for i in range(8)])
 ```
 
-Ask Claude to add `VecNormalize` for observation and reward normalization — a technique that can significantly improve learning stability on environments with large or varied observation scales.
+Ask Claude to add `VecNormalize` for observation and reward normalization. a technique that can significantly improve learning stability on environments with large or varied observation scales.
 
-### Custom Callbacks
+Custom Callbacks
 
 Track training progress with custom callbacks:
 
@@ -367,7 +367,7 @@ class WandBCallback(BaseCallback):
         return True
 ```
 
-### Hyperparameter Optimization
+Hyperparameter Optimization
 
 For systematic hyperparameter tuning, Claude can set up Optuna integration:
 
@@ -406,7 +406,7 @@ study.optimize(objective, n_trials=20)
 print("Best params:", study.best_params)
 ```
 
-## Debugging RL Agents
+Debugging RL Agents
 
 When your agent isn't learning, Claude Code helps diagnose common issues:
 
@@ -416,13 +416,13 @@ My PPO agent isn't learning - it keeps getting around 50 reward on CartPole-v1 w
 
 Typical issues Claude will identify:
 
-- **Reward scaling** — rewards may need normalization
-- **Learning rate** — too high can cause instability, too low causes slow learning
-- **Network architecture** — may need more or fewer neurons for your observation complexity
-- **Exploration** — entropy coefficient might be too low, causing premature convergence
-- **Environment bugs** — rewards or transitions may be incorrect in custom environments
+- Reward scaling. rewards may need normalization
+- Learning rate. too high can cause instability, too low causes slow learning
+- Network architecture. may need more or fewer neurons for your observation complexity
+- Exploration. entropy coefficient might be too low, causing premature convergence
+- Environment bugs. rewards or transitions may be incorrect in custom environments
 
-### Debugging Custom Environments
+Debugging Custom Environments
 
 For custom environments, ask Claude to write a validation script:
 
@@ -438,7 +438,7 @@ from gymnasium.utils.env_checker import check_env
 env = GridNavEnv()
 check_env(env, warn=True)
 
-# Manual sanity checks
+Manual sanity checks
 obs, info = env.reset()
 print(f"Observation shape: {obs.shape}, dtype: {obs.dtype}")
 assert env.observation_space.contains(obs), "Initial obs not in observation space"
@@ -453,7 +453,7 @@ for _ in range(100):
 print("Environment validation passed.")
 ```
 
-### Training Diagnostics
+Training Diagnostics
 
 Claude Code can also help you instrument training to catch problems early:
 
@@ -461,9 +461,9 @@ Claude Code can also help you instrument training to catch problems early:
 Add diagnostic logging to my training loop that tracks value loss, policy loss, entropy, and explained variance. Alert me if any metric goes out of normal range.
 ```
 
-Monitoring `explained_variance` is particularly useful — if it drops below 0.8 during training, your value function is struggling, which usually causes policy degradation.
+Monitoring `explained_variance` is particularly useful. if it drops below 0.8 during training, your value function is struggling, which usually causes policy degradation.
 
-## Deployment and Inference
+Deployment and Inference
 
 Once trained, deploy your model for inference:
 
@@ -502,7 +502,7 @@ For higher-throughput scenarios, ask Claude to convert to a batched inference en
 Create a Dockerfile for this Flask inference server. Use a slim Python base image and copy only the model file and application code.
 ```
 
-### Exporting to ONNX
+Exporting to ONNX
 
 For deployment in non-Python environments, ask Claude to add ONNX export:
 
@@ -512,19 +512,19 @@ Add a script to export the trained SB3 policy network to ONNX format for deploym
 
 ONNX export allows you to run the policy in environments without Python or PyTorch, useful for edge deployments or integration with game engines.
 
-## Best Practices for RL Development with Claude
+Best Practices for RL Development with Claude
 
-**Start Simple**: Begin with basic environments like CartPole before moving to complex custom environments. This helps you verify your training pipeline works end-to-end before introducing the complexity of custom reward functions and state spaces.
+Start Simple: Begin with basic environments like CartPole before moving to complex custom environments. This helps you verify your training pipeline works end-to-end before introducing the complexity of custom reward functions and state spaces.
 
-**Version Control Environments**: Gymnasium environments can behave differently across versions. Pin versions in requirements.txt and document your environment specifications. Use a `versions.txt` or `environment.yml` to capture exact package versions after a successful training run.
+Version Control Environments: Gymnasium environments can behave differently across versions. Pin versions in requirements.txt and document your environment specifications. Use a `versions.txt` or `environment.yml` to capture exact package versions after a successful training run.
 
-**Use Resumable Training**: Always save checkpoints and implement resume functionality:
+Use Resumable Training: Always save checkpoints and implement resume functionality:
 
 ```
 Add training resume capability - load the last checkpoint if it exists, otherwise start fresh. Save checkpoints every 50000 steps.
 ```
 
-Claude generates a robust resume pattern:
+Claude generates a solid resume pattern:
 
 ```python
 import os
@@ -544,20 +544,20 @@ else:
 model.learn(total_timesteps=500000, reset_num_timesteps=False)
 ```
 
-**Test Environment Dynamics**: Verify your environment follows the Gymnasium API correctly:
+Test Environment Dynamics: Verify your environment follows the Gymnasium API correctly:
 
 ```
 Add pytest tests that verify the custom environment satisfies gymnasium API requirements - valid action/observation spaces, proper step/reset returns, etc.
 ```
 
-**Document Experiment Results**: Ask Claude to generate experiment tracking templates that log hyperparameters, environment specs, and final performance metrics alongside your model checkpoints. This is invaluable when comparing different training runs weeks later.
+Document Experiment Results: Ask Claude to generate experiment tracking templates that log hyperparameters, environment specs, and final performance metrics alongside your model checkpoints. This is invaluable when comparing different training runs weeks later.
 
-**Use Reproducible Seeds**: Set seeds consistently in your training scripts to reproduce results. Claude can add seed management to ensure deterministic behavior across runs when needed for benchmarking.
+Use Reproducible Seeds: Set seeds consistently in your training scripts to reproduce results. Claude can add seed management to ensure deterministic behavior across runs when needed for benchmarking.
 
-## Related Reading
+Related Reading
 
 - [Best Claude Code Skills to Install First 2026](/best-claude-code-skills-to-install-first-2026/)
 - [Claude Code for Debugging Sessions](/best-way-to-use-claude-code-for-debugging-sessions/)
 - [Workflows Hub](/workflows-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

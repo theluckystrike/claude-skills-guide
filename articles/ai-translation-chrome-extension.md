@@ -13,17 +13,17 @@ score: 8
 ---
 
 {% raw %}
-# AI Translation Chrome Extension: A Developer Guide
+AI Translation Chrome Extension: A Developer Guide
 
 Building an AI-powered translation extension for Chrome combines browser extension development with modern machine learning APIs. This guide covers the essential components, architectural decisions, and practical code patterns you need to create a functional translation tool.
 
-## Core Architecture
+Core Architecture
 
 A translation Chrome extension operates through several interconnected components. The content script captures selected text or page content. A background service worker handles API communication and state management. The popup interface provides user controls for language selection and translation display.
 
-The AI component typically runs through external APIs—services like OpenAI, Anthropic, Google Cloud Translation, or self-hosted models. The extension acts as a bridge between the user's browser context and these inference endpoints.
+The AI component typically runs through external APIs, services like OpenAI, Anthropic, Google Cloud Translation, or self-hosted models. The extension acts as a bridge between the user's browser context and these inference endpoints.
 
-### Manifest Configuration
+Manifest Configuration
 
 Your extension begins with the manifest file. Version 3 is required for modern extensions:
 
@@ -48,13 +48,13 @@ Your extension begins with the manifest file. Version 3 is required for modern e
 }
 ```
 
-The `host_permissions` field is critical—without it, your extension cannot make requests to external AI APIs.
+The `host_permissions` field is critical, without it, your extension cannot make requests to external AI APIs.
 
-## Capturing Text for Translation
+Capturing Text for Translation
 
 Content scripts enable interaction with page content. You have several approaches for capturing text:
 
-**Selection-based translation** triggers when users highlight text:
+Selection-based translation triggers when users highlight text:
 
 ```javascript
 // content.js
@@ -70,7 +70,7 @@ document.addEventListener('mouseup', async (event) => {
 });
 ```
 
-**Page-level translation** processes entire documents. This requires careful handling to avoid translating UI elements like navigation and buttons:
+Page-level translation processes entire documents. This requires careful handling to avoid translating UI elements like navigation and buttons:
 
 ```javascript
 // content.js - translation scanner
@@ -97,7 +97,7 @@ function scanPageForTranslateableContent() {
 }
 ```
 
-## Building the Translation Service
+Building the Translation Service
 
 The background service worker handles API communication. This separation keeps your API keys secure and manages rate limiting:
 
@@ -141,7 +141,7 @@ async function handleTranslation(text, targetLang) {
 }
 ```
 
-## Managing API Keys Securely
+Managing API Keys Securely
 
 Never embed API keys directly in your extension code. Use Chrome's storage API with proper access controls:
 
@@ -163,11 +163,11 @@ document.getElementById('saveKey').addEventListener('click', async () => {
 });
 ```
 
-## Displaying Translations
+Displaying Translations
 
 Several approaches exist for showing translations to users. The choice depends on your use case:
 
-**Popup display** works for quick translations of selected text:
+Popup display works for quick translations of selected text:
 
 ```javascript
 // background.js - sending translation to popup
@@ -179,7 +179,7 @@ chrome.runtime.sendMessage({
 });
 ```
 
-**Inline replacement** replaces selected text with translated content:
+Inline replacement replaces selected text with translated content:
 
 ```javascript
 // content.js
@@ -199,7 +199,7 @@ function showInlineTranslation(originalText, translation, range) {
 }
 ```
 
-## Language Detection
+Language Detection
 
 Modern AI APIs often handle language detection automatically. If you need manual detection:
 
@@ -224,7 +224,7 @@ async function detectLanguage(text) {
 }
 ```
 
-## Handling Rate Limits and Errors
+Handling Rate Limits and Errors
 
 Production extensions must handle API failures gracefully:
 
@@ -244,37 +244,37 @@ async function translateWithRetry(text, targetLang, maxRetries = 3) {
 }
 ```
 
-## Extension Publishing Considerations
+Extension Publishing Considerations
 
 When preparing for the Chrome Web Store, ensure your extension meets specific requirements. Privacy policies are mandatory for extensions requesting broad permissions. The review process typically takes 1-3 days but can extend during peak periods.
 
 Consider implementing a free tier with limited translations to demonstrate value before requiring payment for API key setup. This approach reduces friction for users evaluating your extension.
 
-## Summary
+Summary
 
-Building an AI translation Chrome extension requires careful attention to security, user experience, and error handling. The architecture separates concerns between content scripts, background workers, and popup interfaces. API key management uses Chrome's storage API rather than embedded secrets. Multiple display options—popup, inline, or page-level—serve different use cases.
+Building an AI translation Chrome extension requires careful attention to security, user experience, and error handling. The architecture separates concerns between content scripts, background workers, and popup interfaces. API key management uses Chrome's storage API rather than embedded secrets. Multiple display options, popup, inline, or page-level, serve different use cases.
 
 The foundation established here scales from simple selection translation to complex document processing. As AI models improve, your extension can incorporate new capabilities without fundamental architectural changes.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-## Step-by-Step: Building the Translation Pipeline
+Step-by-Step: Building the Translation Pipeline
 
-1. **Set up Manifest V3** with `contextMenus`, `storage`, and `activeTab` permissions.
-2. **Add a context menu entry**: when the user right-clicks on selected text, show "Translate with AI". Register it in the background service worker on `chrome.runtime.onInstalled`.
-3. **Detect source language automatically**: pass the selected text to your translation API without specifying a source language — most models detect it reliably for common languages.
-4. **Show a floating tooltip**: inject a small overlay near the selection that displays the translated text. Position it using `getBoundingClientRect()` on the selection's range object.
-5. **Cache translations**: store `{ sourceText, sourceLang, targetLang, translation }` in `chrome.storage.session` keyed by a hash of the source text and language pair. Subsequent translations of the same phrase are instant without hitting the API again.
-6. **Add a settings popup**: let users select their preferred target language, toggle auto-translate on page load, and enter their API key (stored encrypted in `chrome.storage.sync`).
+1. Set up Manifest V3 with `contextMenus`, `storage`, and `activeTab` permissions.
+2. Add a context menu entry: when the user right-clicks on selected text, show "Translate with AI". Register it in the background service worker on `chrome.runtime.onInstalled`.
+3. Detect source language automatically: pass the selected text to your translation API without specifying a source language. most models detect it reliably for common languages.
+4. Show a floating tooltip: inject a small overlay near the selection that displays the translated text. Position it using `getBoundingClientRect()` on the selection's range object.
+5. Cache translations: store `{ sourceText, sourceLang, targetLang, translation }` in `chrome.storage.session` keyed by a hash of the source text and language pair. Subsequent translations of the same phrase are instant without hitting the API again.
+6. Add a settings popup: let users select their preferred target language, toggle auto-translate on page load, and enter their API key (stored encrypted in `chrome.storage.sync`).
 
-## Handling the Chrome AI APIs (Built-in Translation)
+Handling the Chrome AI APIs (Built-in Translation)
 
 Chrome 138+ ships the `translation` API as an origin trial, which enables on-device translation without any external API call:
 
@@ -292,7 +292,7 @@ if ('translation' in self && 'createTranslator' in self.translation) {
 
 For users on older Chrome versions, fall back to a cloud API. The extension can detect which path to use at runtime and only prompt for an API key when the built-in API is unavailable.
 
-## Comparison with Existing Translation Extensions
+Comparison with Existing Translation Extensions
 
 | Tool | Translation engine | Offline support | API key required | Cost |
 |---|---|---|---|---|
@@ -304,7 +304,7 @@ For users on older Chrome versions, fall back to a cloud API. The extension can 
 
 The key differentiator of a custom-built extension is the ability to use a model that fits your specific domain. Legal, medical, and technical translations often benefit from a domain-aware model rather than a general-purpose one.
 
-## Advanced: Page-Level Auto-Translation
+Advanced: Page-Level Auto-Translation
 
 For users reading foreign-language documentation regularly, add an auto-translate mode that replaces all text nodes on the page with their translations:
 
@@ -333,12 +333,12 @@ async function translatePage(targetLang) {
 
 Batch translation reduces API calls from hundreds to a handful per page by grouping text nodes and sending them together.
 
-## Troubleshooting
+Troubleshooting
 
-**Tooltip appearing behind page elements**: Set `z-index: 2147483647` on the tooltip container (the maximum CSS z-index value) and use `position: fixed` instead of `position: absolute` so it is not clipped by `overflow: hidden` ancestors.
+Tooltip appearing behind page elements: Set `z-index: 2147483647` on the tooltip container (the maximum CSS z-index value) and use `position: fixed` instead of `position: absolute` so it is not clipped by `overflow: hidden` ancestors.
 
-**API key exposed in extension source**: Never hard-code the key. Store it in `chrome.storage.sync` after the user enters it in the options page. The key is then only in the user's browser storage, not in the extension package that is distributed through the Web Store.
+API key exposed in extension source: Never hard-code the key. Store it in `chrome.storage.sync` after the user enters it in the options page. The key is then only in the user's browser storage, not in the extension package that is distributed through the Web Store.
 
-**Translation breaking on React/Vue pages**: Single-page apps re-render the DOM after navigation, undoing direct text node replacements. Use a `MutationObserver` to re-apply translations to newly added nodes, and skip nodes that already contain translated text by checking a custom data attribute like `data-translated="true"`.
+Translation breaking on React/Vue pages: Single-page apps re-render the DOM after navigation, undoing direct text node replacements. Use a `MutationObserver` to re-apply translations to newly added nodes, and skip nodes that already contain translated text by checking a custom data attribute like `data-translated="true"`.
 
 {% endraw %}

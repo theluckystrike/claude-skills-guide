@@ -14,17 +14,17 @@ score: 8
 
 {% raw %}
 
-# Claude Code for CDK Aspects Workflow Tutorial
+Claude Code for CDK Aspects Workflow Tutorial
 
-AWS CDK Aspects are one of the most powerful yet underutilized features in the CDK ecosystem. They enable you to apply cross-cutting concerns across your entire infrastructure stack during synthesis, making them ideal for enforcement, validation, and governance. Combined with Claude Code's AI-assisted development capabilities, you can build robust CDK projects with automated compliance checks and consistent infrastructure patterns.
+AWS CDK Aspects are one of the most powerful yet underutilized features in the CDK ecosystem. They enable you to apply cross-cutting concerns across your entire infrastructure stack during synthesis, making them ideal for enforcement, validation, and governance. Combined with Claude Code's AI-assisted development capabilities, you can build solid CDK projects with automated compliance checks and consistent infrastructure patterns.
 
 This tutorial walks you through practical workflows for creating, testing, and maintaining CDK Aspects using Claude Code.
 
-## Understanding CDK Aspects
+Understanding CDK Aspects
 
 Before diving into the workflow, it's essential to understand what Aspects do and why they matter for your CDK projects.
 
-### How Aspects Work
+How Aspects Work
 
 Aspects operate at synthesis time, traversing the CDK construct tree and applying modifications or validations to constructs. Unlike CloudFormation guards or policies that run after deployment, Aspects intervene during the synthesis phase, allowing you to catch issues before they reach AWS.
 
@@ -53,39 +53,39 @@ const myStack = new Stack(app, 'MyStack');
 Aspects.of(myStack).add(new MyAspect());
 ```
 
-### Common Use Cases
+Common Use Cases
 
 CDK Aspects excel at several scenarios:
 
-- **Tag enforcement**: Apply mandatory tags to all resources
-- **Compliance validation**: Check for required security configurations
-- **Cost governance**: Enforce budget tags or prevent expensive resource configurations
-- **Naming conventions**: Validate resource naming patterns
-- **Logging setup**: Automatically enable CloudWatch logging
+- Tag enforcement: Apply mandatory tags to all resources
+- Compliance validation: Check for required security configurations
+- Cost governance: Enforce budget tags or prevent expensive resource configurations
+- Naming conventions: Validate resource naming patterns
+- Logging setup: Automatically enable CloudWatch logging
 
-## Setting Up Claude Code for CDK Projects
+Setting Up Claude Code for CDK Projects
 
 Start by ensuring Claude Code understands your CDK project structure and organizational standards.
 
-### Creating Project Context
+Creating Project Context
 
 When you begin a CDK project session with Claude Code, provide a CLAUDE.md file with your infrastructure standards:
 
 ```markdown
-# CDK Project Context
+CDK Project Context
 
-## Naming Conventions
+Naming Conventions
 - All stack names: {Project}-{Environment}-{Component}
 - Resource names: PascalCase with descriptive purpose
 - Tags: Environment, CostCenter, Owner required on all resources
 
-## Compliance Requirements
+Compliance Requirements
 - All S3 buckets must have versioning enabled
 - All EC2 instances require specific IAM role
 - VPCs must flow logs enabled
 - RDS must have deletion protection in prod
 
-## Common Patterns
+Common Patterns
 - Use standardized VPC construct from ./lib/common/
 - All buckets use server-side encryption
 - ALB redirect HTTP to HTTPS always
@@ -93,11 +93,11 @@ When you begin a CDK project session with Claude Code, provide a CLAUDE.md file 
 
 This context helps Claude Code generate Aspects that align with your existing infrastructure.
 
-## Building Your First CDK Aspect
+Building Your First CDK Aspect
 
 Let's create a practical aspect that enforces tagging requirements across your stack.
 
-### Tag Enforcement Aspect
+Tag Enforcement Aspect
 
 Create a new file for your aspect:
 
@@ -151,7 +151,7 @@ export class TagEnforcement implements IAspect {
 }
 ```
 
-### Applying the Aspect
+Applying the Aspect
 
 Use the aspect in your stack:
 
@@ -179,11 +179,11 @@ Aspects.of(stack).add(new TagEnforcement(requiredTags));
 
 When you run `cdk synth`, the aspect validates tags and reports violations.
 
-## Advanced Aspect: Security Compliance Checker
+Advanced Aspect: Security Compliance Checker
 
 Build a more sophisticated aspect that checks for security configurations.
 
-### S3 Bucket Security Aspect
+S3 Bucket Security Aspect
 
 ```typescript
 // lib/aspects/security-checker.ts
@@ -243,11 +243,11 @@ export class SecurityChecker implements IAspect {
 }
 ```
 
-### Using with Claude Code
+Using with Claude Code
 
 When working with Claude Code, you can describe your security requirements in natural language and have it generate the appropriate aspect:
 
-**Prompt to Claude Code:**
+Prompt to Claude Code:
 ```
 Create a CDK aspect that validates:
 1. All EC2 instances have IAM roles attached
@@ -261,11 +261,11 @@ Report violations at different severity levels.
 
 Claude Code will generate a comprehensive security checker aspect matching your requirements.
 
-## CI/CD Integration Workflow
+CI/CD Integration Workflow
 
 Integrate Aspects into your continuous deployment pipeline.
 
-### GitHub Actions Example
+GitHub Actions Example
 
 ```yaml
 name: CDK Deploy
@@ -307,7 +307,7 @@ jobs:
           fi
 ```
 
-### Creating a Synth Hook
+Creating a Synth Hook
 
 For more control, create a synth step that runs Aspects explicitly:
 
@@ -337,16 +337,16 @@ app.synth({
 });
 ```
 
-## Best Practices for CDK Aspects
+Best Practices for CDK Aspects
 
 Follow these guidelines when building and maintaining Aspects with Claude Code.
 
-### Keep Aspects Focused
+Keep Aspects Focused
 
 Each aspect should handle one concern. Don't try to do everything in a single aspect:
 
 ```typescript
-// ❌ Don't: One aspect doing too much
+//  Don't: One aspect doing too much
 class EverythingAspect implements IAspect {
   visit(node: IConstruct): void {
     // Tagging
@@ -357,7 +357,7 @@ class EverythingAspect implements IAspect {
   }
 }
 
-// ✅ Do: Focused, composable aspects
+//  Do: Focused, composable aspects
 class TagEnforcement implements IAspect { /* tagging only */ }
 class SecurityChecker implements IAspect { /* security only */ }
 class NamingValidator implements IAspect { /* naming only */ }
@@ -371,7 +371,7 @@ Aspects.of(stack)
   .add(new CostTagger());
 ```
 
-### Test Your Aspects
+Test Your Aspects
 
 Claude Code can help generate tests for your aspects:
 
@@ -403,7 +403,7 @@ describe('TagEnforcement', () => {
 });
 ```
 
-## Conclusion
+Conclusion
 
 CDK Aspects combined with Claude Code create a powerful workflow for infrastructure governance. By automating compliance checks, tagging enforcement, and security validation at synthesis time, you catch issues before deployment and maintain consistent infrastructure standards across your organization.
 
@@ -412,10 +412,10 @@ Start with simple tag enforcement, then gradually add more sophisticated Aspects
 {% endraw %}
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Terraform AWS Provider Guide](/claude-code-for-terraform-aws-provider-guide/)
 - [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

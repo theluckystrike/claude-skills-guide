@@ -17,7 +17,7 @@ Writing high-quality tutorials takes significant time. Each code example needs v
 
 This guide shows you how to build an automated tutorial writing system using Claude skills. The workflow applies whether you are documenting APIs, explaining framework concepts, or creating developer guides.
 
-## Prerequisites
+Prerequisites
 
 Before building your tutorial automation system, ensure you have:
 
@@ -29,21 +29,21 @@ Before building your tutorial automation system, ensure you have:
 
 Install skills through Claude Code's skill management system. Each skill extends Claude's capabilities for specific document types and workflows.
 
-## Building Your Tutorial Template System
+Building Your Tutorial Template System
 
 The foundation of tutorial automation is a reusable template structure. Create a skill that defines your standard tutorial format:
 
 ```markdown
-# tutorial-generator
+tutorial-generator
 
 You generate developer tutorials in a consistent format. Each tutorial includes:
 
-1. **Prerequisites** — What the reader needs before starting
-2. **Overview** — One paragraph explaining what they will build
-3. **Step-by-step instructions** — Numbered steps with verified code
-4. **Complete code example** — Full working implementation
-5. **Troubleshooting** — Common issues and solutions
-6. **Next steps** — Suggested follow-up tutorials or advanced topics
+1. Prerequisites. What the reader needs before starting
+2. Overview. One paragraph explaining what they will build
+3. Step-by-step instructions. Numbered steps with verified code
+4. Complete code example. Full working implementation
+5. Troubleshooting. Common issues and solutions
+6. Next steps. Suggested follow-up tutorials or advanced topics
 
 For code blocks:
 - Use language-specific syntax highlighting
@@ -62,7 +62,7 @@ Create a tutorial on implementing JWT authentication in a Node.js Express API.
 Target audience: developers familiar with REST APIs but new to JWT.
 ```
 
-## Automating Code Example Generation
+Automating Code Example Generation
 
 Code examples are the most valuable part of any tutorial. Claude generates these automatically from specifications, but you need structured prompts to get usable output.
 
@@ -92,7 +92,7 @@ Using frontend-design principles, improve this React todo component:
 Apply these suggestions to the existing code.
 ```
 
-## Creating Step-by-Step Instruction Sets
+Creating Step-by-Step Instruction Sets
 
 Automated instruction generation works best when you provide clear task breakdowns. Instead of asking Claude to "explain how to build X," decompose the request:
 
@@ -114,7 +114,7 @@ For each step provide:
 
 This approach produces instructions that readers can follow without guesswork.
 
-## Versioning Tutorial Content
+Versioning Tutorial Content
 
 Tutorial content changes as software evolves. The `supermemory` skill tracks which tutorials need updates:
 
@@ -140,7 +140,7 @@ Verify these code examples work in the current environment:
 Report any failures and suggest fixes.
 ```
 
-## Generating Multiple Output Formats
+Generating Multiple Output Formats
 
 Different platforms require different formats. Build a pipeline that produces each automatically.
 
@@ -172,17 +172,17 @@ Create a formatted Word document from this tutorial:
 Output filename: tutorial-name.docx
 ```
 
-## Automating Tutorial Reviews
+Automating Tutorial Reviews
 
 Before publishing, run automated checks on your tutorial:
 
 ```
 Review this tutorial for:
-1. Broken links — verify every URL resolves
-2. Code accuracy — check syntax in all examples
-3. Clarity — flag any ambiguous instructions
-4. Completeness — ensure all prerequisites are listed
-5. Consistency — verify terminology matches throughout
+1. Broken links. verify every URL resolves
+2. Code accuracy. check syntax in all examples
+3. Clarity. flag any ambiguous instructions
+4. Completeness. ensure all prerequisites are listed
+5. Consistency. verify terminology matches throughout
 
 Provide a checklist of issues to fix before publishing.
 ```
@@ -199,26 +199,26 @@ Apply TDD principles to this tutorial:
 Organize the tutorial so readers get immediate feedback on progress.
 ```
 
-## Building a Tutorial Repository
+Building a Tutorial Repository
 
 Organize tutorials for maintainability. A typical structure:
 
 ```
 tutorials/
-├── _templates/
-│   └── tutorial-skill.md
-├── react/
-│   ├── hooks-basics/
-│   │   ├── index.md
-│   │   ├── code-examples/
-│   │   └── images/
-│   └── state-management/
-├── nodejs/
-│   ├── authentication/
-│   └── database-setup/
-└── python/
-    ├── async-basics/
-    └── web-scraping/
+ _templates/
+    tutorial-skill.md
+ react/
+    hooks-basics/
+       index.md
+       code-examples/
+       images/
+    state-management/
+ nodejs/
+    authentication/
+    database-setup/
+ python/
+     async-basics/
+     web-scraping/
 ```
 
 Use consistent naming and front matter in each tutorial:
@@ -234,7 +234,7 @@ skills: ["skill-name-1", "skill-name-2"]
 ---
 ```
 
-## Continuous Tutorial Improvement
+Continuous Tutorial Improvement
 
 Track tutorial effectiveness and iterate:
 
@@ -260,68 +260,68 @@ Generate an update that:
 - Preserves the existing step structure where possible
 ```
 
-## Workflow Summary
+Workflow Summary
 
 Your complete tutorial writing automation pipeline:
 
-1. **Start**: Invoke `/tutorial-generator` with your topic
-2. **Draft**: Review and refine the AI-generated outline
-3. **Verify**: Run all code examples locally
-4. **Format**: Generate PDF and DOCX versions
-5. **Review**: Run automated quality checks
-6. **Publish**: Deploy to your documentation site
-7. **Track**: Log to supermemory for future updates
+1. Start: Invoke `/tutorial-generator` with your topic
+2. Draft: Review and refine the AI-generated outline
+3. Verify: Run all code examples locally
+4. Format: Generate PDF and DOCX versions
+5. Review: Run automated quality checks
+6. Publish: Deploy to your documentation site
+7. Track: Log to supermemory for future updates
 
 This system reduces tutorial writing time by roughly 60 percent while maintaining quality through verification steps. The key is structuring your prompts precisely and always verifying generated code before publishing.
 
 ---
 
-## Step-by-Step: Automating Tutorial Writing with Claude Code
+Step-by-Step: Automating Tutorial Writing with Claude Code
 
-1. **Define the tutorial structure**: ask Claude Code to generate a tutorial outline from a topic description. A good outline includes prerequisites, what the reader will build, step-by-step sections, troubleshooting, and next steps.
-2. **Write sections iteratively**: for each section in the outline, ask Claude Code to write the content with working code examples. Review each section before moving to the next.
-3. **Generate code examples**: ask Claude Code to write the code for each step, then ask it to also write the explanation of what the code does and why. Keep code and explanation synchronized.
-4. **Add screenshots and diagrams**: describe what diagram or screenshot would help in each section. Claude Code can generate Mermaid diagrams and ASCII art where visual aids would help.
-5. **Create the exercise section**: ask Claude Code to generate 3-5 exercises that build on the tutorial. Include hints and solutions. Exercises dramatically improve tutorial retention.
-6. **Write the troubleshooting section**: ask Claude Code to identify the top 5 common mistakes a beginner would make in this tutorial and write debugging guidance for each one.
+1. Define the tutorial structure: ask Claude Code to generate a tutorial outline from a topic description. A good outline includes prerequisites, what the reader will build, step-by-step sections, troubleshooting, and next steps.
+2. Write sections iteratively: for each section in the outline, ask Claude Code to write the content with working code examples. Review each section before moving to the next.
+3. Generate code examples: ask Claude Code to write the code for each step, then ask it to also write the explanation of what the code does and why. Keep code and explanation synchronized.
+4. Add screenshots and diagrams: describe what diagram or screenshot would help in each section. Claude Code can generate Mermaid diagrams and ASCII art where visual aids would help.
+5. Create the exercise section: ask Claude Code to generate 3-5 exercises that build on the tutorial. Include hints and solutions. Exercises dramatically improve tutorial retention.
+6. Write the troubleshooting section: ask Claude Code to identify the top 5 common mistakes a beginner would make in this tutorial and write debugging guidance for each one.
 
-## Tutorial Structure Template
+Tutorial Structure Template
 
 Claude Code can fill this template for any topic:
 
 ```markdown
-# Tutorial Title
+Tutorial Title
 
-## Prerequisites
+Prerequisites
 - ...
 
-## What You Will Build
+What You Will Build
 [Brief description with a screenshot or diagram]
 
-## Step 1: [First milestone]
+Step 1: [First milestone]
 [Context paragraph explaining why this step matters]
 
-### Code
+Code
 [Working code snippet]
 
-### What This Does
+What This Does
 [Explanation of each key line]
 
-## Step 2: ...
+Step 2: ...
 
-## Common Mistakes and Fixes
+Common Mistakes and Fixes
 [Top 3-5 mistakes beginners make]
 
-## Exercises
+Exercises
 1. [Modify X to do Y]
 2. [Add feature Z]
 3. [Debug this broken code snippet]
 
-## Next Steps
+Next Steps
 [Links to advanced topics]
 ```
 
-## Comparison with Manual Tutorial Writing
+Comparison with Manual Tutorial Writing
 
 | Approach | Time per tutorial | Consistency | Code accuracy | Beginner-friendliness |
 |---|---|---|---|---|
@@ -332,7 +332,7 @@ Claude Code can fill this template for any topic:
 
 The Claude Code-assisted approach hits the sweet spot: you maintain quality control while Claude handles the repetitive parts (boilerplate explanations, code formatting, exercise generation).
 
-## Advanced: Consistency Checking
+Advanced: Consistency Checking
 
 After writing all sections, ask Claude Code to review the complete tutorial for consistency:
 
@@ -345,18 +345,18 @@ claude> Read tutorial.md and check:
 Return a list of specific inconsistencies to fix.
 ```
 
-## Troubleshooting
+Troubleshooting
 
-**Claude Code generating code that does not work**: Always run the generated code yourself before publishing. Ask Claude Code to also write a test for each code snippet — this surfaces bugs immediately and gives readers a way to verify their implementation.
+Claude Code generating code that does not work: Always run the generated code yourself before publishing. Ask Claude Code to also write a test for each code snippet. this surfaces bugs immediately and gives readers a way to verify their implementation.
 
-**Tutorials becoming too long**: Set a word count budget per section (e.g., 200 words max per step). Ask Claude Code to be concise. Long tutorials lose readers; a 1,500-word tutorial that works is more valuable than a 5,000-word one that is not finished.
+Tutorials becoming too long: Set a word count budget per section (e.g., 200 words max per step). Ask Claude Code to be concise. Long tutorials lose readers; a 1,500-word tutorial that works is more valuable than a 5,000-word one that is not finished.
 
-**Code examples becoming outdated**: Add a `date` front matter field and a "last tested with version X" note at the top of each tutorial. Ask Claude Code to flag which libraries or APIs in the tutorial are likely to change in the next 6-12 months.
+Code examples becoming outdated: Add a `date` front matter field and a "last tested with version X" note at the top of each tutorial. Ask Claude Code to flag which libraries or APIs in the tutorial are likely to change in the next 6-12 months.
 
-## Related Reading
+Related Reading
 
-- [Automated Code Documentation Workflow with Claude Skills](/automated-code-documentation-workflow-with-claude-skills/) — Documentation automation paired with tutorial writing
-- [Claude Skills Automated Blog Post Workflow](/claude-skills-automated-blog-post-workflow-tutorial/) — Content creation beyond tutorials
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Full developer skill stack
+- [Automated Code Documentation Workflow with Claude Skills](/automated-code-documentation-workflow-with-claude-skills/). Documentation automation paired with tutorial writing
+- [Claude Skills Automated Blog Post Workflow](/claude-skills-automated-blog-post-workflow-tutorial/). Content creation beyond tutorials
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Full developer skill stack
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

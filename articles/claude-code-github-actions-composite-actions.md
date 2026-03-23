@@ -14,11 +14,11 @@ permalink: /claude-code-github-actions-composite-actions/
 
 
 
-# Claude Code GitHub Actions Composite Actions
+Claude Code GitHub Actions Composite Actions
 
 [GitHub Actions composite actions let you package multiple workflow steps into a single, reusable action](/best-claude-code-skills-to-install-first-2026/) When you combine composite actions with Claude Code, you create reusable automation building blocks that can run AI-powered tasks across different repositories. This guide shows you how to build composite actions that invoke Claude skills for code review, documentation generation, and test automation.
 
-## Why Composite Actions Matter for Claude Integration
+Why Composite Actions Matter for Claude Integration
 
 Standard GitHub Actions workflows often repeat the same Claude invocation steps across multiple repositories. You might need to run a `tdd` skill to analyze test coverage on every pull request, [use `pdf` skill to generate formatted reports](/best-claude-code-skills-to-install-first-2026/)e reports, or invoke `frontend-design` skill to check accessibility. Composite actions eliminate this duplication by letting you define the Claude invocation once and reuse it anywhere.
 
@@ -28,7 +28,7 @@ Without composite actions, you end up copy-pasting YAML blocks between repositor
 
 There is also a readability benefit. A workflow that calls `./.github/actions/claude-review` is far easier to understand at a glance than one containing fifteen steps of environment setup, CLI installation, and output parsing. Composite actions push the complexity behind a clean interface.
 
-## Composite Actions vs. Other Reuse Patterns
+Composite Actions vs. Other Reuse Patterns
 
 Before building a composite action, it helps to understand where it fits relative to other GitHub Actions reuse mechanisms:
 
@@ -41,7 +41,7 @@ Before building a composite action, it helps to understand where it fits relativ
 
 For Claude Code integration, composite actions are usually the right choice. They run in the same job as the caller (so they have access to the checked-out repository), they require no containerization, and they support the simple input/output interface that Claude invocations need.
 
-## Creating a Basic Claude Composite Action
+Creating a Basic Claude Composite Action
 
 A composite action lives in `.github/actions/claude-action/action.yml`. The structure requires a `name`, `description`, `inputs`, and a `runs` section using `runs.using: composite`. Here is a minimal action that installs Claude Code and runs a review:
 
@@ -99,7 +99,7 @@ jobs:
           prompt: 'Check for any security vulnerabilities in the changed files.'
 ```
 
-## Passing Context with GitHub Context
+Passing Context with GitHub Context
 
 Composite actions have access to GitHub context through `${{ github }}` and `${{ steps }}` variables. This enables powerful patterns where Claude analyzes specific files from a pull request:
 
@@ -161,7 +161,7 @@ You can extend this pattern to filter by file type before passing to Claude. For
 
 Filtering before passing to Claude keeps the context window focused and reduces API costs on large pull requests.
 
-## Combining Multiple Claude Skills
+Combining Multiple Claude Skills
 
 A sophisticated composite action can invoke multiple Claude skills in sequence. For example, you might want to run both `tdd` and `pdf` skills together:
 
@@ -211,9 +211,9 @@ runs:
         path: ${{ inputs.output-file }}
 ```
 
-This composite action chains two Claude invocations. The first analyzes test coverage using TDD patterns, and the second generates a formatted markdown report. Splitting the work into two Claude calls means each call has a clear, bounded task—one for analysis, one for formatting—which tends to produce more reliable results than a single large prompt trying to do both at once.
+This composite action chains two Claude invocations. The first analyzes test coverage using TDD patterns, and the second generates a formatted markdown report. Splitting the work into two Claude calls means each call has a clear, bounded task, one for analysis, one for formatting, which tends to produce more reliable results than a single large prompt trying to do both at once.
 
-## Using Outputs for Pipeline Integration
+Using Outputs for Pipeline Integration
 
 Composite actions can output results that downstream steps consume. This matters when you want Claude's analysis to gate deployments or when you need to pass findings to other tools:
 
@@ -283,7 +283,7 @@ This gating pattern ensures Claude approval before deployment proceeds.
 
 One important design consideration: Claude's natural language output can be non-deterministic. If you are using outputs to drive boolean gate logic, write your prompt very precisely and add a parsing step that normalizes the response. Asking Claude to respond with "PASS" or "FAIL" as the first word makes parsing reliable. Asking Claude to "summarize whether the code is good or bad" will produce prose that is hard to parse reliably.
 
-## Caching Claude Code Installation
+Caching Claude Code Installation
 
 If your composite action is called frequently, the `npm install -g @anthropic-ai/claude-code` step adds time to every run. You can cache it using the actions/cache action:
 
@@ -293,7 +293,7 @@ If your composite action is called frequently, the `npm install -g @anthropic-ai
       id: cache-claude
       with:
         path: ~/.npm-global
-        key: claude-code-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+        key: claude-code-${{ runner.os }}-${{ hashFiles('/package-lock.json') }}
 
     - name: Install Claude Code
       if: steps.cache-claude.outputs.cache-hit != 'true'
@@ -309,7 +309,7 @@ If your composite action is called frequently, the `npm install -g @anthropic-ai
 
 This pattern checks the cache before installing, reducing installation time from roughly 30 seconds to under 2 seconds on cache hits.
 
-## Handling Authentication Securely
+Handling Authentication Securely
 
 Composite actions should never hardcode API keys. Instead, use GitHub secrets and pass them as masked inputs:
 
@@ -344,20 +344,20 @@ jobs:
 
 Environment-scoped secrets let you use a restricted API key for pull request reviews and a separate key for production deployments, following the principle of least privilege.
 
-## Publishing and Versioning Composite Actions
+Publishing and Versioning Composite Actions
 
 When your composite action is mature enough to share across multiple repositories, move it to its own dedicated repository. The standard pattern is:
 
 ```
 your-org/claude-actions
-  └── .github/
-      └── actions/
-          ├── claude-review/
-          │   └── action.yml
-          ├── claude-tdd-report/
-          │   └── action.yml
-          └── claude-pr-summary/
-              └── action.yml
+   .github/
+       actions/
+           claude-review/
+              action.yml
+           claude-tdd-report/
+              action.yml
+           claude-pr-summary/
+               action.yml
 ```
 
 Other repositories reference it with a tag:
@@ -370,7 +370,7 @@ Other repositories reference it with a tag:
 
 Tag your action releases with semantic versioning. When you make breaking changes to inputs or outputs, increment the major version. This lets consumers pin to a major version (`@v1`) and get patch updates automatically, or pin to an exact tag (`@v1.2.0`) for full control.
 
-## Best Practices for Claude Composite Actions
+Best Practices for Claude Composite Actions
 
 Keep composite actions focused on a single responsibility. Rather than building one massive action that does everything, create small, composable actions that chain together. This makes debugging easier and lets teams mix and match capabilities.
 
@@ -394,18 +394,18 @@ Add a timeout to Claude invocations to prevent runaway jobs. GitHub Actions jobs
 
 Finally, log intermediate results for debugging. When a composite action fails, you need enough information in the logs to understand what Claude received and what it returned. Writing the raw output to a file and uploading it as an artifact makes post-failure debugging much faster.
 
-## Summary
+Summary
 
-Composite actions provide the building blocks for reusable Claude Code automation in GitHub. By packaging Claude skill invocations into versioned actions, you create portable automation that works across repositories. The patterns in this guide—context passing, output handling, secure authentication, installation caching, skill chaining, and versioned publishing—form a foundation you can extend with specific skills like `supermemory` for persistent context or custom skills tailored to your codebase.
+Composite actions provide the building blocks for reusable Claude Code automation in GitHub. By packaging Claude skill invocations into versioned actions, you create portable automation that works across repositories. The patterns in this guide, context passing, output handling, secure authentication, installation caching, skill chaining, and versioned publishing, form a foundation you can extend with specific skills like `supermemory` for persistent context or custom skills tailored to your codebase.
 
 The key principle is to invest in the composite action once and reuse it everywhere. Every minute spent designing clean inputs, outputs, and error handling pays back when the action runs hundreds of times across dozens of repositories.
 
-## Related Reading
+Related Reading
 
 - [Claude Code GitHub Actions Approval Workflows](/claude-code-github-actions-approval-workflows/)
 - [Claude Code GitHub Actions Matrix Builds Guide](/claude-code-github-actions-matrix-builds-guide/)
 - [Automated Testing Pipeline with Claude TDD Skill 2026](/claude-tdd-skill-test-driven-development-workflow/)
 - [Workflows Hub](/workflows-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

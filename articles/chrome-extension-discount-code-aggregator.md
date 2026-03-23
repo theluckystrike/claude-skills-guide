@@ -10,38 +10,38 @@ score: 8
 categories: [guides]
 ---
 
-Building a Chrome extension that aggregates discount codes from e-commerce sites addresses a real pain point for developers and power users who want to save money online. Rather than visiting multiple coupon sites or manually searching for codes, users can have a tool that does the heavy lifting automatically.
+Building a Chrome extension that aggregates discount codes from e-commerce sites addresses a real problem for developers and power users who want to save money online. Rather than visiting multiple coupon sites or manually searching for codes, users can have a tool that does the heavy lifting automatically.
 
 This guide walks you through building a discount code aggregator extension from scratch. You'll learn the architecture, implementation patterns, and key considerations for creating a useful tool.
 
-## How Discount Code Aggregators Work
+How Discount Code Aggregators Work
 
 A discount code aggregator performs three main functions: discovery, validation, and presentation. Understanding these phases helps you build an effective extension.
 
-**Discovery** involves finding coupon codes on web pages. Extensions typically inject content scripts into e-commerce checkout pages to detect available discount input fields. Some aggregators also scrape coupon databases or use APIs from deal-aggregation services.
+Discovery involves finding coupon codes on web pages. Extensions typically inject content scripts into e-commerce checkout pages to detect available discount input fields. Some aggregators also scrape coupon databases or use APIs from deal-aggregation services.
 
-**Validation** tests whether discovered codes actually work. The extension applies each code programmatically and checks the resulting discount. This requires careful handling to avoid triggering fraud detection or rate limits.
+Validation tests whether discovered codes actually work. The extension applies each code programmatically and checks the resulting discount. This requires careful handling to avoid triggering fraud detection or rate limits.
 
-**Presentation** displays available codes to users in a clean interface. Most extensions show a popup when users click the extension icon, displaying validated codes ranked by discount amount.
+Presentation displays available codes to users in a clean interface. Most extensions show a popup when users click the extension icon, displaying validated codes ranked by discount amount.
 
-## Extension Architecture
+Extension Architecture
 
 Here's a practical architecture for a discount code aggregator:
 
 ```
 /discount-aggregator
-├── manifest.json
-├── background.js
-├── content.js
-├── popup/
-│   ├── popup.html
-│   ├── popup.js
-│   └── popup.css
-├── utils/
-│   ├── coupon-detector.js
-│   ├── code-validator.js
-│   └── storage.js
-└── icons/
+ manifest.json
+ background.js
+ content.js
+ popup/
+    popup.html
+    popup.js
+    popup.css
+ utils/
+    coupon-detector.js
+    code-validator.js
+    storage.js
+ icons/
 ```
 
 The manifest file defines permissions and the extension structure:
@@ -69,9 +69,9 @@ The manifest file defines permissions and the extension structure:
 }
 ```
 
-## Detecting Coupon Fields
+Detecting Coupon Fields
 
-The content script runs on every page and detects coupon input fields. Here's a robust detection pattern:
+The content script runs on every page and detects coupon input fields. Here's a solid detection pattern:
 
 ```javascript
 // content.js
@@ -122,7 +122,7 @@ function findApplyButton(couponField) {
 }
 ```
 
-## Validating Discount Codes
+Validating Discount Codes
 
 Validation requires simulating the checkout process without completing a purchase. The key is to listen for the result message that e-commerce platforms display:
 
@@ -226,7 +226,7 @@ class CouponValidator {
 }
 ```
 
-## Managing Code Storage
+Managing Code Storage
 
 Use Chrome's storage API to persist validated codes across sessions:
 
@@ -283,7 +283,7 @@ class CodeStorage {
 }
 ```
 
-## Handling Multiple Sources
+Handling Multiple Sources
 
 For a more comprehensive aggregator, fetch codes from external coupon APIs:
 
@@ -322,7 +322,7 @@ async function fetchExternalCodes(currentUrl) {
 }
 ```
 
-## Building the Popup Interface
+Building the Popup Interface
 
 The popup displays validated codes to users:
 
@@ -382,31 +382,31 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 ```
 
-## Ethical Considerations
+Ethical Considerations
 
 When building discount code aggregators, keep these guidelines in mind:
 
-1. **Rate Limiting**: Implement delays between validation attempts to avoid overwhelming server resources
-2. **Terms of Service**: Some sites explicitly prohibit automated coupon testing
-3. **User Privacy**: Only store codes locally; never send user browsing data to external servers
-4. **Transparency**: Clearly communicate to users how your extension works
+1. Rate Limiting: Implement delays between validation attempts to avoid overwhelming server resources
+2. Terms of Service: Some sites explicitly prohibit automated coupon testing
+3. User Privacy: Only store codes locally; never send user browsing data to external servers
+4. Transparency: Clearly communicate to users how your extension works
 
-## Conclusion
+Conclusion
 
 A Chrome extension discount code aggregator combines web scraping, programmatic form interaction, and local storage to help users find working coupon codes. The implementation requires careful attention to DOM detection, result parsing, and ethical operation practices.
 
 This guide provides the foundation for building your own aggregator. You can extend it with additional features like price tracking, deal alerts, or integration with deal-sharing communities. Remember to test thoroughly across different e-commerce platforms, as each has unique checkout flows and coupon field implementations.
 
-## Step-by-Step: Auto-Apply Coupon Architecture
+Step-by-Step: Auto-Apply Coupon Architecture
 
-1. **Detect checkout pages**: match URLs against a list of known checkout patterns (`/checkout`, `/cart`, `/order`) using `chrome.declarativeNetRequest` or a content script `matches` filter.
-2. **Identify the coupon input field**: use a ranked list of selectors — `input[name*="coupon"]`, `input[placeholder*="promo"]`, `input[id*="discount"]` — stopping at the first match.
-3. **Fetch available codes**: query your codes database (stored in `chrome.storage.local`) filtered by the current domain. Sort codes by historical success rate descending.
-4. **Try codes sequentially**: inject each code into the input, click the apply button, wait 1-2 seconds for the page to respond, and check whether a discount appeared in the order total.
-5. **Record outcomes**: store each attempt as `{ domain, code, success, discountAmount, testedAt }` to improve future ranking.
-6. **Show results in a popup badge**: update the extension action badge with the number of successful codes found. A green badge with "2" tells the user two codes worked without requiring them to open the popup.
+1. Detect checkout pages: match URLs against a list of known checkout patterns (`/checkout`, `/cart`, `/order`) using `chrome.declarativeNetRequest` or a content script `matches` filter.
+2. Identify the coupon input field: use a ranked list of selectors. `input[name*="coupon"]`, `input[placeholder*="promo"]`, `input[id*="discount"]`. stopping at the first match.
+3. Fetch available codes: query your codes database (stored in `chrome.storage.local`) filtered by the current domain. Sort codes by historical success rate descending.
+4. Try codes sequentially: inject each code into the input, click the apply button, wait 1-2 seconds for the page to respond, and check whether a discount appeared in the order total.
+5. Record outcomes: store each attempt as `{ domain, code, success, discountAmount, testedAt }` to improve future ranking.
+6. Show results in a popup badge: update the extension action badge with the number of successful codes found. A green badge with "2" tells the user two codes worked without requiring them to open the popup.
 
-## Advanced: Price Drop Reactivation
+Advanced: Price Drop Reactivation
 
 Some discount codes expire but later get reactivated by retailers for seasonal sales. Add a background job that re-tests expired codes monthly:
 
@@ -423,7 +423,7 @@ chrome.alarms.onAlarm.addListener(async (alarm) => {
 });
 ```
 
-## Comparison with Existing Coupon Extensions
+Comparison with Existing Coupon Extensions
 
 | Tool | Auto-apply | Code sources | Privacy | Cost |
 |---|---|---|---|---|
@@ -435,18 +435,18 @@ chrome.alarms.onAlarm.addListener(async (alarm) => {
 
 The custom extension advantage is data privacy: Honey and Capital One Shopping send your browsing data to their servers. A self-hosted extension stores everything locally and only fetches codes from sources you control.
 
-## Troubleshooting
+Troubleshooting
 
-**Apply button not being clicked**: Many checkout pages use custom React or Vue components whose click handlers are not triggered by a synthetic `element.click()`. Use `element.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true }))` to simulate a realistic click event that bubbles through the component tree.
+Apply button not being clicked: Many checkout pages use custom React or Vue components whose click handlers are not triggered by a synthetic `element.click()`. Use `element.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true }))` to simulate a realistic click event that bubbles through the component tree.
 
-**Code field validation rejecting programmatic input**: Some sites validate that the input value was typed character by character (tracking `input` events). Simulate typing by calling `element.dispatchEvent(new InputEvent('input', { inputType: 'insertText', data: char, bubbles: true }))` for each character of the code.
+Code field validation rejecting programmatic input: Some sites validate that the input value was typed character by character (tracking `input` events). Simulate typing by calling `element.dispatchEvent(new InputEvent('input', { inputType: 'insertText', data: char, bubbles: true }))` for each character of the code.
 
-**False positives — code "applied" but no discount shown**: Parse the order summary after each attempt and compare the total before and after. If the total is unchanged, mark the code as failed even if the page showed a success message (some sites accept invalid codes silently).
+False positives. code "applied" but no discount shown: Parse the order summary after each attempt and compare the total before and after. If the total is unchanged, mark the code as failed even if the page showed a success message (some sites accept invalid codes silently).
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

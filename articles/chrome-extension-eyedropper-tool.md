@@ -14,13 +14,13 @@ score: 8
 {% raw %}
 The Chrome Eyedropper API provides a powerful way to capture colors directly from web pages. This tool enables users to sample any pixel color on their screen and get its hex, RGB, or HSL values. For developers building design tools, color pickers, or accessibility utilities, understanding this API opens up practical possibilities.
 
-## What Is the Chrome Eyedropper API?
+What Is the Chrome Eyedropper API?
 
 The [EyeDropper API](https://developer.mozilla.org/en-US/docs/Web/API/EyeDropper) is a web standard that allows websites and extensions to access a system-provided color picker. Chrome added support in version 95, making it available to both regular web pages and browser extensions.
 
 This API solves a common problem: getting exact color values from designs, screenshots, or any content visible on screen. Rather than using external tools or taking screenshots, users can sample colors directly through your extension.
 
-## Checking Browser Support
+Checking Browser Support
 
 Before implementing, verify that the EyeDropper API is available in the user's browser:
 
@@ -39,7 +39,7 @@ if (isEyeDropperSupported()) {
 
 This check prevents errors on browsers that don't support the API, particularly Safari and older browser versions.
 
-## Basic Implementation
+Basic Implementation
 
 The EyeDropper API follows a simple promise-based pattern. Here's how to implement a basic color picker in your extension:
 
@@ -61,7 +61,7 @@ async function pickColor() {
 
 The `open()` method launches the system color picker. When the user selects a color, it returns an `EyeDropperResult` object containing the selected color in sRGB hex format. If the user cancels, the promise rejects with an `AbortError`.
 
-## Converting Color Formats
+Converting Color Formats
 
 The API returns colors in hex format by default (`#ff5733`). For most use cases, you'll want to convert this to other formats. Here's a utility to convert hex to RGB:
 
@@ -111,11 +111,11 @@ function hexToHsl(hex) {
 }
 ```
 
-## Building a Complete Extension
+Building a Complete Extension
 
 Here's a practical example of a Chrome extension popup that uses the Eyedropper API:
 
-**manifest.json:**
+manifest.json:
 ```json
 {
   "manifest_version": 3,
@@ -129,7 +129,7 @@ Here's a practical example of a Chrome extension popup that uses the Eyedropper 
 }
 ```
 
-**popup.html:**
+popup.html:
 ```html
 <!DOCTYPE html>
 <html>
@@ -156,7 +156,7 @@ Here's a practical example of a Chrome extension popup that uses the Eyedropper 
 </html>
 ```
 
-**popup.js:**
+popup.js:
 ```javascript
 document.getElementById('pick-btn').addEventListener('click', async () => {
   if (!('EyeDropper' in window)) {
@@ -183,38 +183,38 @@ document.getElementById('pick-btn').addEventListener('click', async () => {
 
 This extension provides a functional color picker that displays the selected color, shows the hex value, and copies it to the clipboard automatically.
 
-## Use Cases for Developers
+Use Cases for Developers
 
 The Eyedropper API serves several practical purposes:
 
-**Design System Management**: Extract colors from existing designs to build or update design systems. This helps maintain consistency across projects.
+Design System Management: Extract colors from existing designs to build or update design systems. This helps maintain consistency across projects.
 
-**Accessibility Testing**: Check color contrast ratios by sampling foreground and background colors. Combine with a contrast checker to verify WCAG compliance.
+Accessibility Testing: Check color contrast ratios by sampling foreground and background colors. Combine with a contrast checker to verify WCAG compliance.
 
-**Debugging Styles**: Quickly identify the exact colors used on a page without opening developer tools. Useful for CSS debugging and design verification.
+Debugging Styles: Quickly identify the exact colors used on a page without opening developer tools. Useful for CSS debugging and design verification.
 
-**Theme Development**: Sample colors from reference designs when building dark mode or theme switchers.
+Theme Development: Sample colors from reference designs when building dark mode or theme switchers.
 
-## Limitations and Considerations
+Limitations and Considerations
 
 The EyeDropper API has some constraints to keep in mind. It only works in secure contexts (HTTPS), which means it won't function on HTTP pages except for localhost. The API captures colors from the entire screen, not just the browser window, giving users flexibility but potentially raising privacy considerations.
 
 Additionally, the user must explicitly initiate each color selection. There's no programmatic way to silently sample colors, which prevents unauthorized color harvesting.
 
-## Browser Compatibility
+Browser Compatibility
 
 As of 2024, the EyeDropper API is supported in Chrome 95+, Edge 95+, and Opera 81+. Firefox and Safari have not yet implemented this feature. Always include a fallback message or alternative color selection method for users on unsupported browsers.
 
-## Conclusion
+Conclusion
 
 The Chrome Eyedropper API provides a straightforward way to integrate color sampling into your extensions and web applications. With just a few lines of code, you can give users the ability to pick any color visible on their screen. The promise-based API is easy to work with, and the integration shown here can serve as a starting point for more sophisticated color management tools.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

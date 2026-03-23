@@ -14,17 +14,17 @@ score: 8
 
 
 {% raw %}
-# Claude Code for Mythril Workflow Tutorial
+Claude Code for Mythril Workflow Tutorial
 
 Security analysis of Ethereum smart contracts is critical for any DeFi project, yet it can be time-consuming and error-prone when done manually. This tutorial shows you how to use Claude Code to automate your Mythril security scanning workflow, making vulnerability detection faster and more consistent across your development cycle.
 
-## What is Mythril?
+What is Mythril?
 
 Mythril is a security analysis tool for Ethereum smart contracts that uses symbolic execution to detect potential vulnerabilities. It can identify issues like reentrancy bugs, integer overflows, access control flaws, timestamp dependence, and many other common smart contract vulnerabilities. Mythril does this by modeling all possible execution paths through your contract's bytecode using the Z3 SMT solver, rather than simply scanning source code for known patterns.
 
-This symbolic execution approach catches bugs that simple pattern matching would miss, but it also means Mythril has a steep learning curve. The tool's output is technical, its flags are numerous, and translating findings into concrete code fixes requires expertise in Solidity security patterns. That is exactly where Claude Code closes the gap—it handles the execution, interprets the results, and generates remediation guidance in a single workflow.
+This symbolic execution approach catches bugs that simple pattern matching would miss, but it also means Mythril has a steep learning curve. The tool's output is technical, its flags are numerous, and translating findings into concrete code fixes requires expertise in Solidity security patterns. That is exactly where Claude Code closes the gap, it handles the execution, interprets the results, and generates remediation guidance in a single workflow.
 
-## Understanding What Mythril Detects
+Understanding What Mythril Detects
 
 Before setting up automation, it helps to understand the vulnerability categories Mythril covers:
 
@@ -40,29 +40,29 @@ Before setting up automation, it helps to understand the vulnerability categorie
 | SWC-116 | Timestamp Dependence | Using `block.timestamp` for randomness or locks |
 | SWC-120 | Weak Sources of Randomness | Using `blockhash` as entropy source |
 
-Knowing these categories helps you configure Mythril to focus on the checks most relevant to your contract type—a simple ERC-20 token needs different analysis priorities than a complex DeFi vault.
+Knowing these categories helps you configure Mythril to focus on the checks most relevant to your contract type, a simple ERC-20 token needs different analysis priorities than a complex DeFi vault.
 
-## Setting Up Your Environment
+Setting Up Your Environment
 
 Before integrating Claude Code with Mythril, ensure you have the necessary tools installed:
 
 ```bash
-# Create a Python virtual environment to isolate Mythril dependencies
+Create a Python virtual environment to isolate Mythril dependencies
 python3 -m venv mythril-env
 source mythril-env/bin/activate
 
-# Install Mythril
+Install Mythril
 pip install mythril
 
-# Verify installation
+Verify installation
 myth --version
 
-# Install solc-select for managing Solidity compiler versions
+Install solc-select for managing Solidity compiler versions
 pip install solc-select
 solc-select install 0.8.19
 solc-select use 0.8.19
 
-# Verify the Claude CLI is installed and configured
+Verify the Claude CLI is installed and configured
 claude --version
 ```
 
@@ -81,7 +81,7 @@ name: mythril
 description: Run Mythril security analysis on Ethereum smart contracts
 ---
 
-# Mythril Security Analysis Skill
+Mythril Security Analysis Skill
 
 You have access to bash commands and file operations. When asked to analyze a smart contract:
 
@@ -94,7 +94,7 @@ You have access to bash commands and file operations. When asked to analyze a sm
 
 This skill will have access to file system and bash operations, which are essential for running Mythril and processing results.
 
-## Creating Your First Automated Scan
+Creating Your First Automated Scan
 
 Start with a deliberately vulnerable contract to verify your setup works end to end. Create a test contract:
 
@@ -138,9 +138,9 @@ Read reports/VulnerableVault-scan.json and explain each finding in plain English
 For each issue, show the vulnerable code and the corrected version.
 ```
 
-Claude Code will produce a structured report explaining that the reentrancy issue in `withdraw()` allows an attacker to recursively call back into the function before the balance is decremented—a pattern responsible for the $60M DAO hack in 2016—and will show the fix using the checks-effects-interactions pattern.
+Claude Code will produce a structured report explaining that the reentrancy issue in `withdraw()` allows an attacker to recursively call back into the function before the balance is decremented, a pattern responsible for the $60M DAO hack in 2016, and will show the fix using the checks-effects-interactions pattern.
 
-## Building an Intelligent Analysis Skill
+Building an Intelligent Analysis Skill
 
 Create a skill that not only runs Mythril but interprets findings and generates remediation guidance:
 
@@ -150,7 +150,7 @@ name: mythril-analyze
 description: Analyze Solidity contracts with Mythril and provide remediation guidance
 ---
 
-# Mythril Analysis with Remediation
+Mythril Analysis with Remediation
 
 When analyzing a contract:
 
@@ -160,7 +160,7 @@ When analyzing a contract:
 4. Generate a developer-readable security report
 5. Produce a patched version of the contract where fixes are straightforward
 
-## Severity Classification
+Severity Classification
 
 - Critical: Direct theft of funds or contract destruction by unauthorized party
 - High: Potential fund loss under specific conditions, access control bypass
@@ -168,7 +168,7 @@ When analyzing a contract:
 - Low: Best practice violations, deprecated function usage
 - Informational: Code quality notes, gas optimization opportunities
 
-## Common Remediation Patterns
+Common Remediation Patterns
 
 - SWC-107 Reentrancy: Apply checks-effects-interactions; use OpenZeppelin ReentrancyGuard
 - SWC-101 Overflow: Use Solidity 0.8+ checked arithmetic or SafeMath for 0.7 and below
@@ -178,18 +178,18 @@ When analyzing a contract:
 
 The skill body instructs Claude on how to handle each finding category with concrete patterns, not just generic advice.
 
-## Integrating into Your Development Workflow
+Integrating into Your Development Workflow
 
 The real power of Claude Code + Mythril comes from integrating security scanning into your daily development process.
 
-### Pre-Commit Security Checks
+Pre-Commit Security Checks
 
 Configure a pre-commit hook that triggers Mythril analysis on any modified Solidity files:
 
 ```bash
 #!/bin/bash
-# .git/hooks/pre-commit
-# Make executable: chmod +x .git/hooks/pre-commit
+.git/hooks/pre-commit
+Make executable: chmod +x .git/hooks/pre-commit
 
 CHANGED_SOL=$(git diff --cached --name-only --diff-filter=ACM | grep '\.sol$')
 
@@ -228,12 +228,12 @@ exit 0
 
 This ensures every commit passes through security review before entering your repository. Critical findings block the commit entirely, while lower-severity findings are logged but do not block.
 
-### Continuous Integration Pipeline
+Continuous Integration Pipeline
 
 Add Mythril scanning to your CI/CD pipeline with structured JSON output and PR comment posting:
 
 ```yaml
-# .github/workflows/security-scan.yml
+.github/workflows/security-scan.yml
 name: Mythril Security Scan
 on: [push, pull_request]
 
@@ -276,7 +276,7 @@ jobs:
 The `check_severity.py` script gives you fine-grained control over what passes or fails the build:
 
 ```python
-# scripts/check_severity.py
+scripts/check_severity.py
 import json
 import sys
 
@@ -306,15 +306,15 @@ if by_severity["High"]:
 print("\nBuild passed security scan.")
 ```
 
-### Automated Code Review for Pull Requests
+Automated Code Review for Pull Requests
 
 Combine Mythril output with Claude Code for intelligent PR review comments:
 
 ```bash
-# scripts/pr-security-review.sh
+scripts/pr-security-review.sh
 #!/bin/bash
 
-# Get list of .sol files changed in the PR
+Get list of .sol files changed in the PR
 CHANGED=$(gh pr diff --name-only | grep '\.sol$')
 
 for file in $CHANGED; do
@@ -335,9 +335,9 @@ for file in $CHANGED; do
 done
 ```
 
-## Handling Common Issues
+Handling Common Issues
 
-### False Positives
+False Positives
 
 Mythril, like all static analysis tools, can produce false positives. Common sources include:
 
@@ -348,10 +348,10 @@ Mythril, like all static analysis tools, can produce false positives. Common sou
 Your workflow should help filter these systematically:
 
 ```bash
-# Create a baseline of known-acceptable findings
+Create a baseline of known-acceptable findings
 myth analyze contracts/Token.sol --solc-version 0.8.19 --json-output > baselines/Token.baseline.json
 
-# On future scans, diff against baseline to highlight only new issues
+On future scans, diff against baseline to highlight only new issues
 python3 scripts/diff_scan.py baselines/Token.baseline.json reports/Token.latest.json
 ```
 
@@ -373,12 +373,12 @@ For confirmed false positives, maintain a suppression file:
 }
 ```
 
-### Large Contracts
+Large Contracts
 
 For contracts that exceed Mythril's default analysis capacity:
 
 ```bash
-# Increase timeout and use optimization flags
+Increase timeout and use optimization flags
 myth analyze LargeVault.sol \
     --solc-version 0.8.19 \
     --execution-timeout 300 \
@@ -395,12 +395,12 @@ Then run myth analyze for each function individually using the --function flag,
 and compile a combined report.
 ```
 
-### Version Compatibility
+Version Compatibility
 
 Mythril requires matching the correct Solidity compiler version to the contract's pragma:
 
 ```bash
-# Extract pragma version from contract and switch automatically
+Extract pragma version from contract and switch automatically
 PRAGMA=$(grep 'pragma solidity' contracts/MyToken.sol | grep -oP '\d+\.\d+\.\d+' | head -1)
 echo "Detected pragma: $PRAGMA"
 
@@ -412,12 +412,12 @@ myth analyze contracts/MyToken.sol --solc-version $PRAGMA --json-output > report
 
 Your Claude Code skill can embed this auto-detection logic so you never need to manually specify compiler versions.
 
-## Advanced: Custom Security Rules
+Advanced: Custom Security Rules
 
 For specialized security requirements beyond Mythril's built-in checks, create custom detection modules:
 
 ```python
-# mythril/custom_rules.py
+mythril/custom_rules.py
 from mythril.analysis.module import DetectionModule, Issue
 from mythril.analysis.report import Issue
 
@@ -458,7 +458,7 @@ class CustomAccessControlCheck(DetectionModule):
 
 Register this module with your mythril-analyze skill and it will run alongside the standard checks on every scan.
 
-## Comparing Mythril with Other Smart Contract Security Tools
+Comparing Mythril with Other Smart Contract Security Tools
 
 Understanding how Mythril fits into the broader security tooling landscape helps you use it more effectively:
 
@@ -472,33 +472,33 @@ Understanding how Mythril fits into the broader security tooling landscape helps
 
 The recommended workflow is to use all three of Mythril, Slither, and manual review in sequence. Slither is faster and catches a wider class of code quality issues; Mythril goes deeper on specific vulnerability patterns. Claude Code can orchestrate all three tools and merge their findings into a unified report.
 
-## Best Practices
+Best Practices
 
-1. **Scan Early, Scan Often**: Integrate Mythril into your IDE workflow and CI pipeline. Security bugs are dramatically cheaper to fix during development than after deployment to mainnet.
+1. Scan Early, Scan Often: Integrate Mythril into your IDE workflow and CI pipeline. Security bugs are dramatically cheaper to fix during development than after deployment to mainnet.
 
-2. **Automate Remediation Suggestions**: Configure your skill to always produce a patched code snippet alongside each finding. Developers should never receive a bare warning with no clear fix.
+2. Automate Remediation Suggestions: Configure your skill to always produce a patched code snippet alongside each finding. Developers should never receive a bare warning with no clear fix.
 
-3. **Track Historical Results**: Store every scan result in version control alongside your contracts. A finding that appears and then disappears without explanation is a red flag—either a false positive you should document, or a suppressed real issue.
+3. Track Historical Results: Store every scan result in version control alongside your contracts. A finding that appears and then disappears without explanation is a red flag, either a false positive you should document, or a suppressed real issue.
 
-4. **Combine Tools**: Run Mythril alongside Slither for static analysis, Echidna for fuzz testing, and at minimum one manual audit before deploying contracts that hold significant value. No single tool catches everything.
+4. Combine Tools: Run Mythril alongside Slither for static analysis, Echidna for fuzz testing, and at minimum one manual audit before deploying contracts that hold significant value. No single tool catches everything.
 
-5. **Stay Updated**: Mythril is actively maintained and receives new detectors regularly. Pin a specific version in CI for reproducibility, but schedule quarterly upgrades to benefit from new detection capabilities.
+5. Stay Updated: Mythril is actively maintained and receives new detectors regularly. Pin a specific version in CI for reproducibility, but schedule quarterly upgrades to benefit from new detection capabilities.
 
-6. **Document Suppressed Findings**: Every time you suppress a Mythril warning, require a written justification in the suppression file. This creates an audit trail and forces deliberate decision-making rather than reflexive dismissal.
+6. Document Suppressed Findings: Every time you suppress a Mythril warning, require a written justification in the suppression file. This creates an audit trail and forces deliberate decision-making rather than reflexive dismissal.
 
-## Conclusion
+Conclusion
 
 Integrating Claude Code with Mythril transforms smart contract security from a manual, sporadic process into an automated, consistent workflow. By creating specialized skills that not only run analysis but also interpret results and guide remediation, you build a security-conscious development culture that catches vulnerabilities before they reach production.
 
-The combination is particularly powerful because Mythril's raw output is technical and intimidating, while Claude Code turns that output into actionable developer guidance. Developers who struggle to interpret a symbolic execution trace will immediately understand "this function allows an attacker to call back into your contract before you update the balance—add a reentrancy guard."
+The combination is particularly powerful because Mythril's raw output is technical and intimidating, while Claude Code turns that output into actionable developer guidance. Developers who struggle to interpret a symbolic execution trace will immediately understand "this function allows an attacker to call back into your contract before you update the balance, add a reentrancy guard."
 
 Start small: create your first mythril skill, run it against the `VulnerableVault.sol` example from this tutorial, and verify Claude Code produces the reentrancy finding with a working patch. Then integrate the pre-commit hook into your active project. The investment in setting up this workflow pays dividends in reduced security incidents, faster code reviews, and a team that develops security intuition over time rather than treating security as someone else's problem.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

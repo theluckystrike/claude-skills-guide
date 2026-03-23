@@ -15,31 +15,31 @@ permalink: /claude-skills-for-enterprise-security-compliance-guide/
 
 Deploying Claude Code in an enterprise environment means dealing with requirements that don't exist in personal or small-team use: access control, audit trails, data residency, secret management, and compliance frameworks. This guide covers how to configure Claude skills to meet these requirements without gutting their utility.
 
-## The Enterprise Security Stack for Claude Code
+The Enterprise Security Stack for Claude Code
 
 A production enterprise deployment of Claude Code typically involves five layers of control:
 
-1. **Identity and access**: Who can run Claude Code, and which skills can they invoke
-2. **Secret management**: Ensuring API keys and credentials are handled safely
-3. **Audit logging**: Complete, tamper-evident records of what Claude did
-4. **Data boundary enforcement**: Preventing sensitive data from leaving approved systems
-5. **Change management**: Tracking skill modifications and their approval status
+1. Identity and access: Who can run Claude Code, and which skills can they invoke
+2. Secret management: Ensuring API keys and credentials are handled safely
+3. Audit logging: Complete, tamper-evident records of what Claude did
+4. Data boundary enforcement: Preventing sensitive data from leaving approved systems
+5. Change management: Tracking skill modifications and their approval status
 
-## Identity and Access Control
+Identity and Access Control
 
-### Team-Based Skill Access
+Team-Based Skill Access
 
 Use `pre-skill` hooks to enforce skill access policies based on user identity:
 
 ```python
 #!/usr/bin/env python3
-# .claude/hooks/enterprise-acl.py
+.claude/hooks/enterprise-acl.py
 import sys, json, subprocess, os
 
 data = json.load(sys.stdin)
 skill_name = data.get("skill_name", "")
 
-# Get git identity
+Get git identity
 try:
     git_email = subprocess.check_output(
         ["git", "config", "user.email"],
@@ -48,7 +48,7 @@ try:
 except:
     git_email = os.environ.get("CLAUDE_USER_EMAIL", "unknown")
 
-# Load access control list
+Load access control list
 import yaml  # pip install pyyaml
 with open(".claude/enterprise/acl.yaml") as f:
     acl = yaml.safe_load(f)
@@ -58,7 +58,7 @@ allowed_users = skill_config.get("allowed_users", [])
 allowed_teams = skill_config.get("allowed_teams", [])
 requires_approval = skill_config.get("requires_approval", False)
 
-# Check email-based access
+Check email-based access
 if allowed_users and git_email not in allowed_users:
     # Check team membership
     user_teams = acl.get("users", {}).get(git_email, {}).get("teams", [])
@@ -96,7 +96,7 @@ users:
     teams: [design-engineering]
 ```
 
-### LDAP/Active Directory Integration
+LDAP/Active Directory Integration
 
 For larger teams, replace the static YAML with LDAP/AD lookups:
 
@@ -121,38 +121,38 @@ def get_user_groups(email):
     return []
 ```
 
-## Secret Management
+Secret Management
 
-### Never Let Claude See Secrets Directly
+Never Let Claude See Secrets Directly
 
-The biggest risk in AI coding tools: accidentally giving Claude access to production credentials. Skills like the [**tdd** skill](/best-claude-skills-for-developers-2026/) need access to run tests, while the [`pdf` skill](/best-claude-skills-for-data-analysis/) reads documents — scope each appropriately. Claude might log them, include them in generated code, or surface them in responses.
+The biggest risk in AI coding tools: accidentally giving Claude access to production credentials. Skills like the [tdd skill](/best-claude-skills-for-developers-2026/) need access to run tests, while the [`pdf` skill](/best-claude-skills-for-data-analysis/) reads documents. scope each appropriately. Claude might log them, include them in generated code, or surface them in responses.
 
-**Rule**: Secrets should be in environment variables or a secrets manager, never in files that a skill's instructions might reference.
+Rule: Secrets should be in environment variables or a secrets manager, never in files that a skill's instructions might reference.
 
-If a skill body tells Claude to read specific files, ensure those files contain only code structure — not secret values. For example:
+If a skill body tells Claude to read specific files, ensure those files contain only code structure. not secret values. For example:
 
 ```
-# BAD skill instruction — could expose secrets
+BAD skill instruction. could expose secrets
 Read .env to understand the environment configuration.
 
-# GOOD skill instruction — references code only
+GOOD skill instruction. references code only
 Read src/config/database.ts to understand the database configuration schema.
 ```
 
-Note: `context_files` is not a valid skill front matter field. Use prose instructions in the skill body to specify which files Claude should read.
+`context_files` is not a valid skill front matter field. Use prose instructions in the skill body to specify which files Claude should read.
 
-### Vault Integration for Skill Tool Calls
+Vault Integration for Skill Tool Calls
 
 If a skill needs to authenticate to an external service, use a vault-backed credential provider via a pre-tool hook:
 
 ```python
 #!/usr/bin/env python3
-# .claude/hooks/vault-credentials.py
+.claude/hooks/vault-credentials.py
 import sys, json, subprocess
 
 data = json.load(sys.stdin)
 
-# For bash commands that need AWS credentials, inject short-lived credentials
+For bash commands that need AWS credentials, inject short-lived credentials
 if data["tool_name"] == "bash":
     cmd = data["tool_input"].get("command", "")
     if "aws" in cmd:
@@ -173,15 +173,15 @@ print(json.dumps(data))
 sys.exit(0)
 ```
 
-## Audit Logging for Compliance
+Audit Logging for Compliance
 
-### SIEM-Compatible Audit Logs
+SIEM-Compatible Audit Logs
 
 Compliance frameworks like SOC 2 and ISO 27001 require structured, tamper-evident logs. Use post-tool hooks to write to a SIEM-compatible format:
 
 ```python
 #!/usr/bin/env python3
-# .claude/hooks/siem-audit.py
+.claude/hooks/siem-audit.py
 import sys, json, datetime, os, hashlib, hmac
 
 data = json.load(sys.stdin)
@@ -210,12 +210,12 @@ log_entry = {
     }
 }
 
-# Add HMAC signature for tamper detection
+Add HMAC signature for tamper detection
 if log_key:
     content = json.dumps(log_entry, sort_keys=True).encode()
     log_entry["_signature"] = hmac.new(log_key, content, hashlib.sha256).hexdigest()
 
-# Write to audit log file (or pipe to syslog/Splunk/Datadog)
+Write to audit log file (or pipe to syslog/Splunk/Datadog)
 audit_log_path = os.environ.get("CLAUDE_AUDIT_LOG", "/var/log/claude-code/audit.jsonl")
 os.makedirs(os.path.dirname(audit_log_path), exist_ok=True)
 with open(audit_log_path, "a") as f:
@@ -224,12 +224,12 @@ with open(audit_log_path, "a") as f:
 sys.exit(0)
 ```
 
-### Tracking Skill Invocations for Access Reviews
+Tracking Skill Invocations for Access Reviews
 
 For periodic access reviews, track which users invoked which skills:
 
 ```python
-# In the pre-skill hook, maintain a usage log
+In the pre-skill hook, maintain a usage log
 usage_entry = {
     "timestamp": datetime.datetime.utcnow().isoformat(),
     "user": git_email,
@@ -244,9 +244,9 @@ with open(usage_log, "a") as f:
 
 Run quarterly access reviews by analyzing this log to verify users still need the skills they're invoking.
 
-## Data Boundary Enforcement
+Data Boundary Enforcement
 
-### Blocking PII Exfiltration
+Blocking PII Exfiltration
 
 Use pre-tool hooks to scan for PII in WebFetch and WebSearch calls:
 
@@ -267,7 +267,7 @@ if data["tool_name"] in ["WebFetch", "WebSearch"]:
             sys.exit(1)
 ```
 
-### Restricting Write Access to Non-Production Paths
+Restricting Write Access to Non-Production Paths
 
 For environments where Claude Code might have access to production config:
 
@@ -288,7 +288,7 @@ if data["tool_name"] == "Write":
             sys.exit(1)
 ```
 
-## Skill Version Control and Change Management
+Skill Version Control and Change Management
 
 In enterprise deployments, skill changes should go through the same review process as code changes.
 
@@ -309,10 +309,10 @@ Store all skills in a `skills/` directory tracked in your git repository:
       vault-credentials.py
 ```
 
-Require PR approval for any change to `.claude/skills/` or `.claude/enterprise/` — add a CODEOWNERS rule:
+Require PR approval for any change to `.claude/skills/` or `.claude/enterprise/`. add a CODEOWNERS rule:
 
 ```
-# .github/CODEOWNERS
+.github/CODEOWNERS
 /.claude/enterprise/  @security-team
 /.claude/skills/      @engineering-leads
 ```
@@ -321,10 +321,10 @@ This ensures no single developer can quietly modify skill behavior or security h
 
 ---
 
-## Related Reading
+Related Reading
 
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Understanding which skills are most powerful helps security teams prioritize which ones need the strictest enterprise controls
-- [Skill .md File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/) — The `tools` field and YAML structure are the first things to audit when reviewing skills for enterprise compliance
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — Enterprise deployments at scale need both security controls and cost management; these techniques address the latter
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Understanding which skills are most powerful helps security teams prioritize which ones need the strictest enterprise controls
+- [Skill .md File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/). The `tools` field and YAML structure are the first things to audit when reviewing skills for enterprise compliance
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Enterprise deployments at scale need both security controls and cost management; these techniques address the latter
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

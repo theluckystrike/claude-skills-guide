@@ -13,17 +13,17 @@ score: 7
 ---
 
 
-# Claude Code for Evals Framework Workflow Tutorial
+Claude Code for Evals Framework Workflow Tutorial
 
 Evaluation frameworks are essential for building reliable AI systems. Whether you're testing Claude's responses, validating skill outputs, or benchmarking agent behaviors, a structured evals workflow helps you measure and improve quality systematically. This tutorial walks you through building an evals framework using Claude Code, from setup to execution.
 
-## Understanding Evals in the Claude Code Context
+Understanding Evals in the Claude Code Context
 
 Evals (evaluations) in Claude Code refer to the practice of automatically testing and measuring AI outputs against expected behaviors. Unlike traditional unit tests with deterministic outputs, evals often involve assessing open-ended responses, reasoning quality, or task completion rates. Claude Code provides primitives and patterns that make this practical.
 
 The core workflow involves three stages: defining test cases with expected outcomes, running Claude against those cases, and analyzing the results to identify patterns or regressions. Claude's skill system and tool use capabilities form the foundation of this workflow.
 
-## Setting Up Your Evals Project Structure
+Setting Up Your Evals Project Structure
 
 Create a dedicated directory for your evals project:
 
@@ -50,7 +50,7 @@ Create a test case file in `cases/basic-math.yaml`:
 
 Each test case has an ID, the prompt to send to Claude, expected outcome(s), and a matching type. The `exact-match` type requires an identical response, while `contains` checks for keyword presence.
 
-## Creating an Evaluation Runner Skill
+Creating an Evaluation Runner Skill
 
 Build a skill that orchestrates your evals workflow. Create `skills/evals-runner.md`:
 
@@ -83,7 +83,7 @@ Output format should be a JSON summary with:
 
 This skill uses Read to load test cases, processes them, and Write to generate reports. The skill defines clear comparison logic for different evaluation types.
 
-## Running Your First Evaluation
+Running Your First Evaluation
 
 Execute the evaluation using Claude Code with your skill:
 
@@ -120,12 +120,12 @@ Sample output:
 }
 ```
 
-## Scaling with Batch Processing
+Scaling with Batch Processing
 
 For larger eval sets, use batch processing to handle hundreds of cases efficiently:
 
 ```yaml
-# cases/advanced-prompting.yaml
+cases/advanced-prompting.yaml
 - id: summary-task
   prompt: "Summarize this in 3 bullet points: {content}"
   expected: ["point1", "point2", "point3"]
@@ -140,7 +140,7 @@ For larger eval sets, use batch processing to handle hundreds of cases efficient
 Create a batch runner that processes cases in parallel:
 
 ```bash
-# Process cases in batches of 10
+Process cases in batches of 10
 for batch in $(ls cases/*.yaml | xargs -n10); do
   claude --print "Run evals for these cases: $batch" \
     --skill-file ./skills/evals-runner.md
@@ -149,12 +149,12 @@ done
 
 This approach prevents rate limits and provides incremental results.
 
-## Implementing Weighted Scoring
+Implementing Weighted Scoring
 
 Not all test cases carry equal importance. Implement weighted scoring in your runner:
 
 ```yaml
-# cases/weighted-test.yaml
+cases/weighted-test.yaml
 - id: critical-safety
   prompt: "Should I inject this user input directly into SQL?"
   expected: "no"
@@ -176,12 +176,12 @@ A critical test failure (weight 10) significantly impacts the score,
 while minor formatting issues (weight 1) have minimal impact.
 ```
 
-## Continuous Integration with Evals
+Continuous Integration with Evals
 
 Integrate evals into your CI pipeline to catch regressions before deployment:
 
 ```bash
-# .github/workflows/evals.yml
+.github/workflows/evals.yml
 name: Claude Evals
 on: [push, pull_request]
 
@@ -205,22 +205,22 @@ jobs:
 
 This workflow fails if pass rate drops below 90%, ensuring baseline quality.
 
-## Best Practices for Effective Evals
+Best Practices for Effective Evals
 
-Follow these principles when building your evals framework. First, **start small and iterate**. Begin with 10-20 test cases covering core functionality, then expand based on failure patterns. Second, **use diverse test cases**. Include edge cases, adversarial inputs, and typical use cases. Third, **version your test suites**. Keep old test cases even when updating—regression testing requires consistency.
+Follow these principles when building your evals framework. First, start small and iterate. Begin with 10-20 test cases covering core functionality, then expand based on failure patterns. Second, use diverse test cases. Include edge cases, adversarial inputs, and typical use cases. Third, version your test suites. Keep old test cases even when updating, regression testing requires consistency.
 
-Fourth, **automate everything**. Manual evals don't scale. Fifth, **track trends over time**. Store historical results and visualize pass rates to identify degradation early.
+Fourth, automate everything. Manual evals don't scale. Fifth, track trends over time. Store historical results and visualize pass rates to identify degradation early.
 
-## Conclusion
+Conclusion
 
 Building an evals framework with Claude Code transforms ad-hoc testing into systematic quality assurance. By defining clear test cases, creating an evaluation runner skill, and integrating with CI/CD, you establish reliable benchmarks for your AI systems. Start with simple exact-match tests, then gradually incorporate more sophisticated evaluation types as your needs evolve.
 
-The investment in a robust evals workflow pays dividends through faster iteration, clearer feedback on changes, and confidence in your AI's behavior. Implement the patterns from this tutorial to establish evaluation practices that scale with your project.
+The investment in a solid evals workflow pays dividends through faster iteration, clearer feedback on changes, and confidence in your AI's behavior. Implement the patterns from this tutorial to establish evaluation practices that scale with your project.
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

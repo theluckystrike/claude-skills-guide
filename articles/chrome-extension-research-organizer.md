@@ -13,15 +13,15 @@ tags: [claude-code, chrome-extension, productivity]
 
 
 {% raw %}
-# Chrome Extension Research Organizer: A Developer Guide
+Chrome Extension Research Organizer: A Developer Guide
 
 Building a Chrome extension to organize your research is one of the most practical projects you can undertake. Whether you're collecting resources for a technical project, gathering competitive analysis, or simply managing bookmarks across multiple research threads, a well-designed research organizer extension transforms scattered browser tabs into structured, searchable knowledge bases.
 
 This guide walks you through building a research organizer extension from scratch, covering architecture, data storage, and practical implementation patterns that work for developers and power users.
 
-## Why Build Your Own Instead of Using an Existing Tool
+Why Build Your Own Instead of Using an Existing Tool
 
-Before writing a line of code, it's fair to ask whether this is worth building at all. Plenty of existing tools—Pocket, Raindrop.io, Notion web clipper, Obsidian's browser plugin—handle research capture. The answer depends on your workflow.
+Before writing a line of code, it's fair to ask whether this is worth building at all. Plenty of existing tools, Pocket, Raindrop.io, Notion web clipper, Obsidian's browser plugin, handle research capture. The answer depends on your workflow.
 
 The case for building your own: you get complete control over the data format, storage location, and feature set. Your data never touches a third-party server. You can add custom metadata fields that match your specific workflow, integrate directly with internal tools, and ship features overnight rather than waiting for a product team. If you are already comfortable with JavaScript, a working research organizer is a weekend project, not a months-long undertaking.
 
@@ -29,7 +29,7 @@ The case against: you take on maintenance responsibility. Chrome's extension API
 
 For developers who value data ownership and customization, building your own wins. This guide gives you a production-quality foundation.
 
-## Core Features Every Research Organizer Needs
+Core Features Every Research Organizer Needs
 
 Before writing code, define what your organizer should accomplish. The most useful research organizers share a common feature set: the ability to capture URLs with metadata, tag and categorize entries, add personal notes, search across all entries, and export data in portable formats. Some extensions add collaboration features, but for personal use, focus on the core capabilities first.
 
@@ -46,7 +46,7 @@ Here is a comparison of the main storage options to help you decide:
 
 For most personal research organizers, `chrome.storage.local` is the right default. It's straightforward, fast, and 10MB holds thousands of entries. If you later need cross-device sync, you can migrate entries to `chrome.storage.sync` incrementally, keeping only the most recent N entries in sync storage.
 
-## Setting Up Your Extension
+Setting Up Your Extension
 
 Every Chrome extension begins with the manifest file. For a research organizer, you need permissions for storage, activeTab (to capture the current page), and scripting (to extract page metadata):
 
@@ -70,9 +70,9 @@ Every Chrome extension begins with the manifest file. For a research organizer, 
 }
 ```
 
-The `activeTab` permission is worth understanding carefully. It grants temporary access to the current tab only when the user explicitly invokes your extension (by clicking the toolbar icon). This is a more privacy-preserving model than requesting access to all URLs, and it's what Google reviewers expect to see for this kind of tool. If you need to capture pages without user interaction—for example, to auto-save reading progress—you'll need the broader `tabs` permission, which requires additional justification in your privacy policy.
+The `activeTab` permission is worth understanding carefully. It grants temporary access to the current tab only when the user explicitly invokes your extension (by clicking the toolbar icon). This is a more privacy-preserving model than requesting access to all URLs, and it's what Google reviewers expect to see for this kind of tool. If you need to capture pages without user interaction, for example, to auto-save reading progress, you'll need the broader `tabs` permission, which requires additional justification in your privacy policy.
 
-Create a basic popup interface with HTML and JavaScript. The popup serves as your quick-capture interface—when you're browsing and find something worth saving, click the extension icon and add it to your research collection:
+Create a basic popup interface with HTML and JavaScript. The popup serves as your quick-capture interface, when you're browsing and find something worth saving, click the extension icon and add it to your research collection:
 
 ```html
 <!DOCTYPE html>
@@ -105,7 +105,7 @@ Create a basic popup interface with HTML and JavaScript. The popup serves as you
 
 Making the URL field `readonly` is a deliberate UX choice. It prevents accidental edits while still making the URL visible and copyable. Users who need to save a slightly different URL (a canonical version without tracking parameters, for instance) can use the notes field or a preprocessing step in JavaScript.
 
-## Implementing the Storage Logic
+Implementing the Storage Logic
 
 The JavaScript for your popup handles capturing the current page and saving it to Chrome storage. This is where the real functionality lives:
 
@@ -159,7 +159,7 @@ url: cleanUrl(document.getElementById('url').value),
 
 This small addition means your saved entries link directly to the canonical content rather than carrying analytics metadata that will be meaningless six months later.
 
-## Adding Search and Filtering
+Adding Search and Filtering
 
 A research organizer without search is just a bookmark manager. Add a dedicated search page that loads in a new tab:
 
@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 ```
 
-This basic search scans title, notes, and tags. For a corpus of hundreds or thousands of entries, this approach scales well enough—JavaScript's `Array.filter` handles several thousand objects comfortably in real time.
+This basic search scans title, notes, and tags. For a corpus of hundreds or thousands of entries, this approach scales well enough, JavaScript's `Array.filter` handles several thousand objects comfortably in real time.
 
 If your research collection grows into the tens of thousands of entries, consider moving to IndexedDB with a cursor-based search, or use a lightweight full-text search library like Fuse.js, which supports fuzzy matching and field weighting:
 
@@ -216,9 +216,9 @@ const results = fuse.search(query).map(r => r.item);
 render(results);
 ```
 
-The weight values here prioritize title matches over tag matches over note matches, which reflects how most people think about their research—the title is the most reliable signal of relevance.
+The weight values here prioritize title matches over tag matches over note matches, which reflects how most people think about their research, the title is the most reliable signal of relevance.
 
-## Tag Management and Organization
+Tag Management and Organization
 
 Tags are only useful if they're consistent. A sprawling tag vocabulary with minor variations (`react`, `React`, `reactjs`, `React.js`) creates fragmentation that defeats the purpose. Add a tag autocomplete feature that pulls from your existing tags:
 
@@ -244,7 +244,7 @@ async function getSuggestedTags(partial) {
 
 Displaying these suggestions as a dropdown below the tag input field significantly reduces tag fragmentation over time. After a few weeks of use, you'll find your tags naturally stabilize into a small, consistent vocabulary that covers your main research areas.
 
-For projects that involve multiple research threads—say, a technical evaluation, a competitive analysis, and a background literature review all running in parallel—consider adding a "collection" concept that groups entries into named workspaces. Collections are simply a top-level property on each entry:
+For projects that involve multiple research threads, say, a technical evaluation, a competitive analysis, and a background literature review all running in parallel, consider adding a "collection" concept that groups entries into named workspaces. Collections are simply a top-level property on each entry:
 
 ```javascript
 const entry = {
@@ -260,7 +260,7 @@ const entry = {
 
 A collection selector in the popup lets you switch contexts before saving, and the search page can filter by collection to show only the entries relevant to your current focus.
 
-## Advanced: Extracting Page Content
+Advanced: Extracting Page Content
 
 For a more powerful research tool, automatically extract meaningful content from pages when saving. Use the scripting API to pull out meta descriptions, article text, or specific elements:
 
@@ -307,9 +307,9 @@ function: () => {
 
 The reading time estimate is particularly useful for research curation. When you return to your saved entries later, knowing that an article is a 3-minute read versus a 25-minute read helps you triage what to re-read versus what to skim.
 
-## Export and Backup
+Export and Backup
 
-Research is valuable—ensure you can export it. Add an export function that downloads your data as JSON:
+Research is valuable, ensure you can export it. Add an export function that downloads your data as JSON:
 
 ```javascript
 document.getElementById('export').addEventListener('click', async () => {
@@ -334,8 +334,8 @@ function toMarkdown(entries) {
     const date = new Date(entry.timestamp).toLocaleDateString();
     return [
       `## [${entry.title}](${entry.url})`,
-      `**Date saved:** ${date}  `,
-      tags ? `**Tags:** ${tags}  ` : '',
+      `Date saved: ${date}  `,
+      tags ? `Tags: ${tags}  ` : '',
       entry.notes ? `\n${entry.notes}` : '',
       ''
     ].filter(Boolean).join('\n');
@@ -356,7 +356,7 @@ document.getElementById('exportMd').addEventListener('click', async () => {
 
 Having both JSON and Markdown exports gives you the best of both worlds: JSON for programmatic reimport, Markdown for human consumption in other tools.
 
-## Keyboard Shortcuts and Power User Features
+Keyboard Shortcuts and Power User Features
 
 A research organizer you actually use is one that gets out of your way. Adding a keyboard shortcut to trigger the popup without reaching for the mouse dramatically improves the capture experience:
 
@@ -407,26 +407,26 @@ chrome.commands.onCommand.addListener(async (command) => {
 
 The automatic `unsorted` tag on quick-saved entries gives you a clear queue to review and properly tag later. A weekly triage session through your unsorted entries is enough to keep your research collection organized.
 
-## Next Steps for Your Organizer
+Next Steps for Your Organizer
 
 With these core features in place, you have a functional research organizer that is genuinely useful for day-to-day work. From here, consider these extensions based on your evolving needs:
 
-**Cloud sync integration**: If you work across multiple machines, sync your research entries to a simple backend—even a static JSON file in an S3 bucket with presigned URLs is enough for personal use. A background service worker can push new entries on save and pull remote entries on browser start.
+Cloud sync integration: If you work across multiple machines, sync your research entries to a simple backend, even a static JSON file in an S3 bucket with presigned URLs is enough for personal use. A background service worker can push new entries on save and pull remote entries on browser start.
 
-**Duplicate detection**: Before saving, check whether the URL already exists in your research. A simple check against existing URLs prevents duplicate entries when you revisit pages you've already saved.
+Duplicate detection: Before saving, check whether the URL already exists in your research. A simple check against existing URLs prevents duplicate entries when you revisit pages you've already saved.
 
-**Reading list mode**: Add a "read later" flag to entries. A dedicated reading list view filters to flagged items, and checking one off removes the flag. This turns your organizer into a combined research archive and reading queue.
+Reading list mode: Add a "read later" flag to entries. A dedicated reading list view filters to flagged items, and checking one off removes the flag. This turns your organizer into a combined research archive and reading queue.
 
-**Integration with note-taking tools**: If you use Obsidian, you can write entries directly to your vault as Markdown files via the Local REST API plugin. If you use Notion, the Notion API accepts page creation requests that map cleanly to your entry structure.
+Integration with note-taking tools: If you use Obsidian, you can write entries directly to your vault as Markdown files via the Local REST API plugin. If you use Notion, the Notion API accepts page creation requests that map cleanly to your entry structure.
 
-The beauty of building your own organizer is tailoring it exactly to your workflow. Start with the foundation described here, use it daily for a few weeks, and then add features based on where you actually feel friction. Features built in response to real pain points are far more useful than features built speculatively.
+The beauty of building your own organizer is tailoring it exactly to your workflow. Start with the foundation described here, use it daily for a few weeks, and then add features based on where you actually feel friction. Features built in response to real problems are far more useful than features built speculatively.
 
 
-## Related Reading
+Related Reading
 
 - [Chrome Extension Outline Notes Organizer: A Developer Guide](/chrome-extension-outline-notes-organizer/)
 - [Chrome Extension for Amazon Product Research: A Developer Guide](/chrome-extension-product-research-amazon/)
 - [Chrome Extension Shopping List Organizer: A Developer Guide](/chrome-extension-shopping-list-organizer/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

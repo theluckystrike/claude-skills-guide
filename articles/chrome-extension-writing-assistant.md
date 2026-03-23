@@ -12,11 +12,11 @@ score: 8
 ---
 
 {% raw %}
-# Chrome Extension Writing Assistant: A Developer's Guide
+Chrome Extension Writing Assistant: A Developer's Guide
 
 Writing assistants integrated as Chrome extensions have become essential tools for developers, technical writers, and content creators. These extensions bring AI-powered writing capabilities directly into your browser, working across web forms, code comments, documentation sites, and communication platforms. This guide explores how these extensions work, practical implementation approaches, and how developers can customize or build their own writing assistants.
 
-## How Chrome Extension Writing Assistants Work
+How Chrome Extension Writing Assistants Work
 
 A Chrome extension writing assistant intercepts text input in web pages and provides intelligent suggestions, transformations, or completions. Unlike standalone writing tools, these extensions operate within your browser context, understanding the specific page you're working on and offering contextual assistance.
 
@@ -24,13 +24,13 @@ The architecture typically consists of three core components. First, a content s
 
 When you select text or type in a supported field, the content script captures that content and sends it to the background script. The background script then processes the request through an AI API and returns suggestions that the content script displays as an overlay or inline formatting.
 
-## Core Implementation Patterns
+Core Implementation Patterns
 
 Building a writing assistant extension requires understanding several key patterns that make these tools functional and responsive.
 
-### Content Script Input Detection
+Content Script Input Detection
 
-The foundation of any writing assistant is detecting where users are输入文字. Modern web pages use various input mechanisms, from simple `<input>` elements to complex contenteditable areas. Your content script needs to handle multiple input types:
+The foundation of any writing assistant is detecting where users are. Modern web pages use various input mechanisms, from simple `<input>` elements to complex contenteditable areas. Your content script needs to handle multiple input types:
 
 ```javascript
 // content-script.js - Input detection and capture
@@ -97,7 +97,7 @@ class InputDetector {
 }
 ```
 
-### Background Script API Integration
+Background Script API Integration
 
 The background script acts as a bridge between your content script and external AI services. It handles API authentication, request formatting, and response processing:
 
@@ -150,7 +150,7 @@ async function getApiKey() {
 }
 ```
 
-### Suggestion Display Overlay
+Suggestion Display Overlay
 
 Once you receive suggestions from the AI, displaying them effectively is crucial for good user experience. An overlay system that appears near the selected text or input provides the most intuitive interaction:
 
@@ -205,11 +205,11 @@ function insertSuggestion(element, suggestion) {
 }
 ```
 
-## Key Features for Developer Productivity
+Key Features for Developer Productivity
 
 Writing assistants for developers often include specialized features beyond basic text improvement.
 
-### Code Comment Enhancement
+Code Comment Enhancement
 
 Developers frequently need to write meaningful comments and documentation. A writing assistant can help generate or improve code comments while respecting programming language syntax:
 
@@ -222,7 +222,7 @@ Use appropriate comment syntax for the detected language.
 Code: ${selectedCode}`;
 ```
 
-### Documentation Formatting
+Documentation Formatting
 
 When writing technical documentation, extensions can suggest formatting improvements, heading structures, and help maintain consistent style:
 
@@ -238,7 +238,7 @@ Maintain markdown formatting. Suggest improvements for:
 Text: ${selectedText}`;
 ```
 
-### Multi-Language Support
+Multi-Language Support
 
 For developers working across languages, writing assistants can provide translations, explain foreign language error messages, or help craft messages in multiple languages:
 
@@ -251,7 +251,7 @@ Text: ${selectedText}
 Target language: ${targetLanguage}`;
 ```
 
-## Configuration and Customization
+Configuration and Customization
 
 Effective writing assistants provide users with control over behavior. Store user preferences using Chrome's storage API:
 
@@ -277,7 +277,7 @@ async function getPreferences() {
 }
 ```
 
-## Performance Considerations
+Performance Considerations
 
 When building production-ready writing assistants, several performance factors require attention. Debouncing input requests prevents excessive API calls while the user is still typing. Caching recent responses reduces redundant API calls for similar content. Lazy loading the extension's JavaScript ensures it does not impact page load times for unsupported sites.
 
@@ -285,14 +285,14 @@ Implementing these considerations creates a responsive extension that provides v
 
 ---
 
-Chrome extension writing assistants represent a practical intersection of AI capabilities and browser functionality. By understanding the core patterns—input detection, API integration, and suggestion display—developers can build customized tools that enhance productivity across the web. Whether improving code comments, drafting documentation, or composing communications, these extensions bring intelligent assistance directly into your workflow.
+Chrome extension writing assistants represent a practical intersection of AI capabilities and browser functionality. By understanding the core patterns, input detection, API integration, and suggestion display, developers can build customized tools that enhance productivity across the web. Whether improving code comments, drafting documentation, or composing communications, these extensions bring intelligent assistance directly into your workflow.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

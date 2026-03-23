@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Zeek Network Analysis Workflow"
-description: "Learn how to leverage Claude Code CLI to streamline Zeek network analysis workflows, automate log processing, and build efficient security."
+description: "Learn how to use Claude Code CLI to streamline Zeek network analysis workflows, automate log processing, and build efficient security."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-zeek-network-analysis-workflow/
@@ -13,17 +13,17 @@ score: 7
 ---
 
 
-# Claude Code for Zeek Network Analysis Workflow
+Claude Code for Zeek Network Analysis Workflow
 
 Network security monitoring is essential for modern infrastructure, and Zeek (formerly Bro) remains one of the most powerful open-source network security analyzers available. However, the sheer volume of logs Zeek generates can overwhelm even experienced analysts. This guide shows how Claude Code transforms your Zeek analysis workflow through intelligent automation, contextual understanding, and rapid investigation capabilities.
 
-## Understanding the Zeek Analysis Challenge
+Understanding the Zeek Analysis Challenge
 
-Zeek produces multiple log types—conn.log, http.log, dns.log, files.log, and more—each containing rich metadata about network traffic. A typical busy network can generate gigabytes of logs daily. The challenge isn't just volume; it's extracting meaningful insights quickly when investigating security incidents or conducting routine threat hunting.
+Zeek produces multiple log types, conn.log, http.log, dns.log, files.log, and more, each containing rich metadata about network traffic. A typical busy network can generate gigabytes of logs daily. The challenge isn't just volume; it's extracting meaningful insights quickly when investigating security incidents or conducting routine threat hunting.
 
-Traditional approaches require manual log parsing, custom scripting for each analysis task, and constant context-switching between tools. Claude Code addresses these pain points by acting as an intelligent assistant that understands both your codebase and your analysis patterns.
+Traditional approaches require manual log parsing, custom scripting for each analysis task, and constant context-switching between tools. Claude Code addresses these problems by acting as an intelligent assistant that understands both your codebase and your analysis patterns.
 
-### Zeek Log Types at a Glance
+Zeek Log Types at a Glance
 
 Understanding what each log type contains helps you know where to look first during an investigation.
 
@@ -38,7 +38,7 @@ Understanding what each log type contains helps you know where to look first dur
 | weird.log | Unusual/unexpected protocol behaviors | Zero-day indicators, protocol abuse |
 | x509.log | Certificate details for TLS sessions | Expired certs, self-signed, malicious CAs |
 
-## Setting Up Claude Code for Zeek Workflows
+Setting Up Claude Code for Zeek Workflows
 
 Before diving into advanced analysis, ensure your environment is properly configured. Create a dedicated Zeek analysis skill that understands your log structure and common analysis patterns:
 
@@ -57,20 +57,20 @@ name: zeek-analyst
 description: Network security analyst assistant for Zeek log investigation
 ---
 
-## Environment
+Environment
 
 - Zeek logs stored at: /var/log/zeek/current/ (live) and /var/log/zeek/logs/ (archived)
 - Log format: TSV with header comment lines starting with #
 - Typical volume: 2-5GB per day across all log types
 - Retention: 90 days online, 1 year in cold storage
 
-## Analysis Priorities
+Analysis Priorities
 
 1. Threat hunting: focus on conn.log for beaconing, dns.log for DGA, http.log for C2
 2. Incident response: correlate by UID across log types for full session reconstruction
 3. Compliance: weekly reports on TLS versions, unusual ports, policy violations
 
-## Known Baseline
+Known Baseline
 
 - Internal CIDR: 10.0.0.0/8 and 192.168.0.0/16
 - Known-good external resolvers: 8.8.8.8, 1.1.1.1
@@ -81,35 +81,35 @@ description: Network security analyst assistant for Zeek log investigation
 Initialize your analysis environment with structured log directories:
 
 ```bash
-# Create organized directory structure for Zeek logs
+Create organized directory structure for Zeek logs
 mkdir -p zeek-logs/{current,archived,reports,indicators}
 
-# Create a basic indicator library
+Create a basic indicator library
 cat > zeek-logs/indicators/known_bad_ips.txt << 'EOF'
-# Known malicious IPs - update regularly from threat feeds
-# Format: IP # source # description
+Known malicious IPs - update regularly from threat feeds
+Format: IP # source # description
 185.220.101.1  # TOR exit node
 198.98.54.119  # Known C2 infrastructure
 EOF
 ```
 
-## Automated Log Parsing and Filtering
+Automated Log Parsing and Filtering
 
 One of Claude Code's strongest capabilities is transforming raw data into actionable insights. For Zeek analysis, you can use this to create powerful parsing pipelines.
 
-### Parsing Connection Logs
+Parsing Connection Logs
 
 Connection logs (conn.log) form the backbone of most network investigations. Here's how to efficiently parse and filter them:
 
 ```python
 #!/usr/bin/env python3
-# scripts/parse_conn_log.py
+scripts/parse_conn_log.py
 
 import json
 from datetime import datetime
 from pathlib import Path
 
-# Zeek conn.log field names in order
+Zeek conn.log field names in order
 CONN_FIELDS = [
     'ts', 'uid', 'id.orig_h', 'id.orig_p', 'id.resp_h', 'id.resp_p',
     'proto', 'service', 'duration', 'orig_bytes', 'resp_bytes',
@@ -193,20 +193,20 @@ def detect_beaconing(conn_records, min_connections=10, jitter_threshold=0.15):
     return sorted(beacons, key=lambda x: x['jitter_ratio'])
 ```
 
-### Creating Reusable Analysis Scripts
+Creating Reusable Analysis Scripts
 
 Rather than rewriting analysis logic for each investigation, create reusable scripts that Claude Code can invoke:
 
 ```bash
 #!/bin/bash
-# scripts/zeek-summary.sh - Quick summary of Zeek logs
+scripts/zeek-summary.sh - Quick summary of Zeek logs
 
 LOG_DIR="${1:-.}"
 echo "=== Zeek Log Summary: $LOG_DIR ==="
 echo "Generated: $(date -u)"
 echo ""
 
-# Count non-comment lines in each log
+Count non-comment lines in each log
 for log in conn http dns ssl files notice weird; do
     log_file="$LOG_DIR/${log}.log"
     if [ -f "$log_file" ]; then
@@ -234,17 +234,17 @@ grep -v '^#' "$LOG_DIR/notice.log" 2>/dev/null \
     | sort | uniq -c | sort -rn | head -10 || echo "No notices found"
 ```
 
-## Building Incident Investigation Workflows
+Building Incident Investigation Workflows
 
 When security incidents occur, speed matters. Claude Code helps standardize and accelerate investigation procedures.
 
-### Correlating Across Log Types by UID
+Correlating Across Log Types by UID
 
 One of Zeek's most powerful features is the `uid` field that correlates the same network session across log types. When you find a suspicious connection, you can pivot to every related log entry.
 
 ```python
 #!/usr/bin/env python3
-# scripts/pivot_by_uid.py
+scripts/pivot_by_uid.py
 
 import sys
 import glob
@@ -293,13 +293,13 @@ if __name__ == '__main__':
                     print(f"  {k}: {v}")
 ```
 
-### Suspicious Connection Analysis
+Suspicious Connection Analysis
 
 Create a workflow that quickly identifies potentially malicious connections:
 
 ```python
 #!/usr/bin/env python3
-# scripts/analyze_suspicious.py
+scripts/analyze_suspicious.py
 
 def analyze_suspicious_connections(conn_logs, indicators):
     """Analyze connections against known threat indicators."""
@@ -353,13 +353,13 @@ def analyze_suspicious_connections(conn_logs, indicators):
     return suspicious
 ```
 
-### HTTP Traffic Deep Dive
+HTTP Traffic Deep Dive
 
 HTTP logs reveal significant threat intelligence. Build analysis that surfaces anomalies:
 
 ```python
 #!/usr/bin/env python3
-# scripts/analyze_http.py
+scripts/analyze_http.py
 
 from collections import Counter, defaultdict
 
@@ -425,26 +425,26 @@ def analyze_http_anomalies(http_logs):
                 'value': host,
                 'count': len(uris),
                 'severity': 'medium',
-                'detail': f"{unique_ratio*100:.0f}% unique URIs — possible DGA or C2"
+                'detail': f"{unique_ratio*100:.0f}% unique URIs. possible DGA or C2"
             })
 
     return anomalies
 ```
 
-## DNS Analysis for Threat Hunting
+DNS Analysis for Threat Hunting
 
 DNS logs are among the richest sources for threat hunting. Domain Generation Algorithm (DGA) detection, DNS tunneling, and fast-flux detection are all achievable with automated analysis.
 
 ```python
 #!/usr/bin/env python3
-# scripts/analyze_dns.py
+scripts/analyze_dns.py
 
 import math
 import re
 from collections import Counter
 
 def calculate_entropy(domain):
-    """Calculate Shannon entropy of a string — high entropy suggests DGA."""
+    """Calculate Shannon entropy of a string. high entropy suggests DGA."""
     if not domain:
         return 0
     counts = Counter(domain)
@@ -508,15 +508,15 @@ def analyze_dns_logs(dns_records, entropy_threshold=3.5, min_label_len=12):
     return findings
 ```
 
-## Integrating Zeek with SIEM and SOAR
+Integrating Zeek with SIEM and SOAR
 
 Modern security operations require integration with broader platforms. Claude Code facilitates building these integration layers.
 
-### Log Export and Normalization
+Log Export and Normalization
 
 ```python
 #!/usr/bin/env python3
-# scripts/normalize_for_siem.py
+scripts/normalize_for_siem.py
 
 import json
 from datetime import datetime, timezone
@@ -584,13 +584,13 @@ def normalize_zeek_to_json(log_type, records):
     return normalized
 ```
 
-### Generating Structured Incident Reports
+Generating Structured Incident Reports
 
 Claude Code can help write a report generator that produces analyst-ready summaries:
 
 ```python
 #!/usr/bin/env python3
-# scripts/generate_report.py
+scripts/generate_report.py
 
 import json
 from datetime import datetime, timezone
@@ -621,7 +621,7 @@ def generate_incident_report(findings, output_path):
             lines.append(f"### {finding.get('type', 'Unknown')}")
             for k, v in finding.items():
                 if k not in ('type', 'severity'):
-                    lines.append(f"- **{k}**: {v}")
+                    lines.append(f"- {k}: {v}")
             lines.append("")
 
     report = '\n'.join(lines)
@@ -632,34 +632,34 @@ def generate_incident_report(findings, output_path):
     return report
 ```
 
-## Best Practices for Zeek Analysis with Claude Code
+Best Practices for Zeek Analysis with Claude Code
 
 To maximize your analysis efficiency, follow these proven practices:
 
-1. **Structure your log storage** - Organize Zeek logs by date and log type in consistent directory structures. This enables rapid retrieval and archival management.
+1. Structure your log storage - Organize Zeek logs by date and log type in consistent directory structures. This enables rapid retrieval and archival management.
 
-2. **Create domain-specific skills** - Build specialized Claude Code skills for different analysis scenarios (incident response, threat hunting, compliance reporting). Each skill file should document your network's baseline behavior.
+2. Create domain-specific skills - Build specialized Claude Code skills for different analysis scenarios (incident response, threat hunting, compliance reporting). Each skill file should document your network's baseline behavior.
 
-3. **Automate routine summaries** - Generate daily/weekly summary reports automatically, allowing analysts to focus on anomalies rather than basic metrics.
+3. Automate routine summaries - Generate daily/weekly summary reports automatically, allowing analysts to focus on anomalies rather than basic metrics.
 
-4. **Maintain indicator libraries** - Keep updated lists of known malicious IPs, suspicious domains, and threat actor signatures that can be quickly referenced. Automate imports from OSINT feeds like Abuse.ch, AlienVault OTX, or your SIEM's threat intel module.
+4. Maintain indicator libraries - Keep updated lists of known malicious IPs, suspicious domains, and threat actor signatures that can be quickly referenced. Automate imports from OSINT feeds like Abuse.ch, AlienVault OTX, or your SIEM's threat intel module.
 
-5. **Version control your analysis scripts** - Treat your analysis code as production code with proper versioning, testing, and documentation. Git-track your scripts directory alongside your skill files.
+5. Version control your analysis scripts - Treat your analysis code as production code with proper versioning, testing, and documentation. Git-track your scripts directory alongside your skill files.
 
-6. **Establish baseline metrics** - Before you can detect anomalies, you need to know what normal looks like. Run your analysis scripts against several weeks of clean traffic to establish baseline values for bytes per connection, DNS query rates, and connection durations.
+6. Establish baseline metrics - Before you can detect anomalies, you need to know what normal looks like. Run your analysis scripts against several weeks of clean traffic to establish baseline values for bytes per connection, DNS query rates, and connection durations.
 
-7. **Use UID pivoting as a first step** - When any finding surfaces, immediately pivot by UID to see the full session across all log types. This single habit dramatically speeds up triage.
+7. Use UID pivoting as a first step - When any finding surfaces, immediately pivot by UID to see the full session across all log types. This single habit dramatically speeds up triage.
 
-## Conclusion
+Conclusion
 
 Claude Code transforms Zeek network analysis from a manual, time-intensive process into an efficient, automated workflow. By using intelligent parsing, reusable analysis scripts, and standardized investigation procedures, security teams can dramatically reduce response times and improve threat detection accuracy.
 
 The key is starting simple: set up proper log organization, create your first analysis scripts, and progressively build more sophisticated automation as your needs evolve. With Claude Code as your analysis partner, you have a powerful ally for navigating even the most complex network security investigations. The combination of Zeek's deep protocol visibility and Claude Code's ability to rapidly generate, test, and refine analysis scripts gives your team a significant edge in both proactive threat hunting and reactive incident response.
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

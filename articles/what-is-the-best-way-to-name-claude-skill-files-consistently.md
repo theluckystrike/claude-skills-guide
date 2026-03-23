@@ -15,27 +15,27 @@ permalink: /what-is-the-best-way-to-name-claude-skill-files-consistently/
 
 [Naming your Claude skill files consistently is one of those details that seems minor until your skill library grows beyond a handful](/claude-skill-md-format-complete-specification-guide/) When you have five skills, anything works. When you have fifty, inconsistent naming creates friction every time you invoke a skill. This guide provides concrete patterns you can adopt immediately.
 
-## Why Naming Conventions Matter
+Why Naming Conventions Matter
 
-Claude Code skills live in your `~/claude/skills/` directory as markdown files. The filename becomes part of the invocation command. If you have skills named `frontend-design.md`, `pdf.md`, [`tdd.md`](/claude-tdd-skill-test-driven-development-workflow/), and `Supermemory.md`, you end up with an inconsistent experience when typing `/frontend-design` versus `/pdf` versus `/Supermemory`. The inconsistency is not just aesthetic—it affects your muscle memory and makes it harder to remember which skills exist.
+Claude Code skills live in your `~/claude/skills/` directory as markdown files. The filename becomes part of the invocation command. If you have skills named `frontend-design.md`, `pdf.md`, [`tdd.md`](/claude-tdd-skill-test-driven-development-workflow/), and `Supermemory.md`, you end up with an inconsistent experience when typing `/frontend-design` versus `/pdf` versus `/Supermemory`. The inconsistency is not just aesthetic, it affects your muscle memory and makes it harder to remember which skills exist.
 
 A consistent naming convention also helps when sharing skills with others or browsing a team's skill collection. When everyone follows the same pattern, the library becomes predictable and navigable.
 
-## The Core Pattern: kebab-case with Descriptive Names
+The Core Pattern: kebab-case with Descriptive Names
 
 The most practical approach uses kebab-case (lowercase letters with hyphens) combined with descriptive, multi-word names. This aligns with how Claude Code itself handles skill invocation.
 
 ```
 good-name-example.md
-├── frontend-design.md
-├── pdf-parser.md
-├── tdd-helper.md
-└── supermemory-sync.md
+ frontend-design.md
+ pdf-parser.md
+ tdd-helper.md
+ supermemory-sync.md
 ```
 
 This pattern gives you several advantages. First, the hyphens make long names readable. Second, the all-lowercase format prevents case-sensitivity issues across operating systems. Third, the descriptive nature of the names means you can guess the invocation command even for skills you have not used recently.
 
-## Recommended Naming Structure
+Recommended Naming Structure
 
 A well-named skill file follows this formula:
 
@@ -43,14 +43,14 @@ A well-named skill file follows this formula:
 [domain]-[purpose].md
 ```
 
-The **domain** identifies what area the skill covers. The **purpose** describes what the skill does. This two-part structure creates a natural grouping when skills are sorted alphabetically.
+The domain identifies what area the skill covers. The purpose describes what the skill does. This two-part structure creates a natural grouping when skills are sorted alphabetically.
 
 Examples from common skill libraries:
 
-- `frontend-design` — frontend is the domain, design is the purpose
-- `pdf-extract` — pdf is the domain, extract is the purpose
-- `tdd-scaffold` — tdd is the domain, scaffold is the purpose
-- `supermemory-export` — supermemory is the domain, export is the purpose
+- `frontend-design`. frontend is the domain, design is the purpose
+- `pdf-extract`. pdf is the domain, extract is the purpose
+- `tdd-scaffold`. tdd is the domain, scaffold is the purpose
+- `supermemory-export`. supermemory is the domain, export is the purpose
 
 When you need more specificity, extend to three parts:
 
@@ -60,33 +60,33 @@ When you need more specificity, extend to three parts:
 
 The key principle is that each skill name should convey both what domain it touches and what action it performs.
 
-## What to Avoid
+What to Avoid
 
 Several common patterns create problems over time:
 
-**Single words**: A skill named `design.md` is too vague. What kind of design? UI design? Interior design? The name should communicate scope.
+Single words: A skill named `design.md` is too vague. What kind of design? UI design? Interior design? The name should communicate scope.
 
-**CamelCase or PascalCase**: Files named `FrontendDesign.md` or `FrontendDesign.md` create inconsistency when some skills use camelCase and others use PascalCase. Stick to kebab-case.
+CamelCase or PascalCase: Files named `FrontendDesign.md` or `FrontendDesign.md` create inconsistency when some skills use camelCase and others use PascalCase. Stick to kebab-case.
 
-**Underscores**: While technically valid, underscores `skill_name.md` look different from the hyphen-based pattern and can feel out of place in an otherwise consistent library.
+Underscores: While technically valid, underscores `skill_name.md` look different from the hyphen-based pattern and can feel out of place in an otherwise consistent library.
 
-**Numbers in names**: Avoid `skill2.md` or `v2-helper.md`. These become confusing quickly and do not convey meaning.
+Numbers in names: Avoid `skill2.md` or `v2-helper.md`. These become confusing quickly and do not convey meaning.
 
-**Abbreviations without context**: A skill named `db.md` is unclear. Is it for database design? Database connection strings? Use `database-connection` or `database-migration` instead.
+Abbreviations without context: A skill named `db.md` is unclear. Is it for database design? Database connection strings? Use `database-connection` or `database-migration` instead.
 
-## Practical Examples
+Practical Examples
 
 Here is how to apply these principles to skills you might create:
 
 ```
-# Instead of this:
+Instead of this:
 Code.md
 my_skill.md
 TDD.md
  SUPERMEMORY.md
 pdfhelper.md
 
-# Use this:
+Use this:
 code-review.md
 tdd-helper.md
 supermemory-export.md
@@ -104,31 +104,31 @@ When you invoke these skills, the commands become predictable:
 
 Each command clearly communicates what will happen, and the consistent formatting makes tab-completion work reliably if your terminal supports it.
 
-## Organizing Multiple Skills in Related Domains
+Organizing Multiple Skills in Related Domains
 
 When you have several skills covering the same domain, use a consistent prefix:
 
 ```
-# PDF-related skills
+PDF-related skills
 pdf-extract.md
 pdf-merge.md
 pdf-fill-form.md
 pdf-compress.md
 
-# Testing-related skills
+Testing-related skills
 tdd-scaffold.md
 tdd-assertion-helper.md
 integration-test-runner.md
 
-# Frontend-related skills
+Frontend-related skills
 frontend-design.md
 frontend-accessibility-check.md
 frontend-i18n-helper.md
 ```
 
-This grouping means skills sort together alphabetically, making it easier to scan the available options. It also helps when you want to document or explain your skill library—you can say "all the PDF skills" and know exactly which files you mean.
+This grouping means skills sort together alphabetically, making it easier to scan the available options. It also helps when you want to document or explain your skill library, you can say "all the PDF skills" and know exactly which files you mean.
 
-## Skill Names and Skill Metadata
+Skill Names and Skill Metadata
 
 The skill filename is separate from the internal skill definition. Inside each markdown file, you may also define a skill name in the front matter:
 
@@ -141,7 +141,7 @@ description: Generate frontend components with modern design patterns
 
 This internal name should match the filename (excluding the `.md` extension) to avoid confusion. If your file is `frontend-design.md`, the internal name should be `frontend-design`. This alignment ensures that when you view skill metadata or documentation, the names are consistent everywhere.
 
-## Testing Your Convention
+Testing Your Convention
 
 Before committing to a naming convention, verify it works for your use case:
 
@@ -153,17 +153,17 @@ Before committing to a naming convention, verify it works for your use case:
 
 If you work on a team, share the convention early. Adding a naming guideline to your team's onboarding docs prevents inconsistency before it starts.
 
-## Summary
+Summary
 
 The best way to name Claude skill files consistently is to use kebab-case with descriptive, multi-word names that follow the `[domain]-[purpose]` pattern. This approach creates predictable invocation commands, groups related skills together alphabetically, and scales well as your library grows.
 
-Avoid single words, mixed case styles, underscores, and numbers. Keep the names human-readable and domain-specific. When in doubt, err on the side of being more descriptive—the extra characters in the filename pay off every time you invoke the skill.
+Avoid single words, mixed case styles, underscores, and numbers. Keep the names human-readable and domain-specific. When in doubt, err on the side of being more descriptive, the extra characters in the filename pay off every time you invoke the skill.
 
-## Related Reading
+Related Reading
 
-- [Claude Skill MD Format: Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/) — Master the full skill.md format — file naming conventions pair with proper format to create well-organized skills
-- [What Is the Best File Structure for a Complex Claude Skill](/what-is-the-best-file-structure-for-a-complex-claude-skill/) — Apply consistent naming within the recommended multi-directory file structure for complex skills
-- [What Is the Best Way to Organize Claude Skills in a Monorepo](/what-is-the-best-way-to-organize-claude-skills-in-a-monorepo/) — Use naming conventions alongside monorepo directory organization for scalable skill libraries
-- [Claude Skills: Getting Started Hub](/getting-started-hub/) — Explore foundational skill authoring patterns and conventions across the full skills ecosystem
+- [Claude Skill MD Format: Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/). Master the full skill.md format. file naming conventions pair with proper format to create well-organized skills
+- [What Is the Best File Structure for a Complex Claude Skill](/what-is-the-best-file-structure-for-a-complex-claude-skill/). Apply consistent naming within the recommended multi-directory file structure for complex skills
+- [What Is the Best Way to Organize Claude Skills in a Monorepo](/what-is-the-best-way-to-organize-claude-skills-in-a-monorepo/). Use naming conventions alongside monorepo directory organization for scalable skill libraries
+- [Claude Skills: Getting Started Hub](/getting-started-hub/). Explore foundational skill authoring patterns and conventions across the full skills ecosystem
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

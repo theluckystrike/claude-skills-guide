@@ -14,25 +14,25 @@ score: 7
 
 
 {% raw %}
-# Claude Code for LlamaIndex RAG Pipeline Debugging
+Claude Code for LlamaIndex RAG Pipeline Debugging
 
 Debugging Retrieval-Augmented Generation (RAG) pipelines built with LlamaIndex can be challenging, especially when dealing with complex document processing, embedding generation, and query understanding. Claude Code provides a powerful toolkit that makes debugging these pipelines significantly more manageable. This guide explores how to use Claude Code's skills and features to effectively debug LlamaIndex RAG pipelines, including practical code examples, diagnostic patterns, and strategies for fixing the most common failure modes.
 
-## Understanding RAG Pipeline Components
+Understanding RAG Pipeline Components
 
 Before diving into debugging, it's essential to understand the key components of a LlamaIndex RAG pipeline:
 
-1. **Document Loading** - Reading and parsing various file formats
-2. **Text Chunking** - Splitting documents into manageable pieces
-3. **Embedding Generation** - Converting text chunks into vector representations
-4. **Vector Storage** - Storing embeddings in a database
-5. **Query Processing** - Transforming user queries for retrieval
-6. **Retrieval** - Finding relevant context from the vector store
-7. **Response Synthesis** - Generating answers using the retrieved context
+1. Document Loading - Reading and parsing various file formats
+2. Text Chunking - Splitting documents into manageable pieces
+3. Embedding Generation - Converting text chunks into vector representations
+4. Vector Storage - Storing embeddings in a database
+5. Query Processing - Transforming user queries for retrieval
+6. Retrieval - Finding relevant context from the vector store
+7. Response Synthesis - Generating answers using the retrieved context
 
-Each component presents potential points of failure that require systematic debugging. The challenge is that failures are often silent — the pipeline runs without errors but produces irrelevant answers or empty results. A disciplined, stage-by-stage approach is the only reliable way to isolate root causes.
+Each component presents potential points of failure that require systematic debugging. The challenge is that failures are often silent. the pipeline runs without errors but produces irrelevant answers or empty results. A disciplined, stage-by-stage approach is the only reliable way to isolate root causes.
 
-### Where Failures Typically Occur
+Where Failures Typically Occur
 
 | Pipeline Stage | Common Failure Mode | Visible Symptom |
 |---|---|---|
@@ -46,15 +46,15 @@ Each component presents potential points of failure that require systematic debu
 
 Understanding which stage is failing saves hours of debugging. The approach below tests each stage in isolation before combining them.
 
-## Setting Up Claude Code for RAG Debugging
+Setting Up Claude Code for RAG Debugging
 
 Start by ensuring Claude Code is properly configured with the necessary skills. The most relevant skills for RAG debugging include:
 
 ```bash
-# Place the python skill in ~/.claude/skills/python.md
-# Place the xlsx skill in ~/.claude/skills/xlsx.md
-# Place the docx skill in ~/.claude/skills/docx.md
-# Place the pdf skill in ~/.claude/skills/pdf.md
+Place the python skill in ~/.claude/skills/python.md
+Place the xlsx skill in ~/.claude/skills/xlsx.md
+Place the docx skill in ~/.claude/skills/docx.md
+Place the pdf skill in ~/.claude/skills/pdf.md
 ```
 
 These skills enable Claude to read and analyze various document types, which is crucial when debugging the document loading phase. The python skill in particular lets Claude Code read your pipeline source files directly and suggest targeted fixes rather than generic advice.
@@ -67,19 +67,19 @@ pip install llama-index llama-index-callbacks-arize-phoenix arize-phoenix
 
 Phoenix provides a full observability UI for LlamaIndex traces, which is invaluable when you need to see exactly what happened during a multi-step query.
 
-## Practical Debugging Techniques
+Practical Debugging Techniques
 
-### 1. Inspecting Document Loading
+1. Inspecting Document Loading
 
 One of the most common issues in RAG pipelines is improper document loading. Use Claude Code to examine loaded documents:
 
 ```python
 from llama_index.core import SimpleDirectoryReader
 
-# Load documents
+Load documents
 documents = SimpleDirectoryReader("./data").load_data()
 
-# Inspect document metadata and content
+Inspect document metadata and content
 for doc in documents[:3]:
     print(f"ID: {doc.doc_id}")
     print(f"Metadata: {doc.metadata}")
@@ -87,15 +87,15 @@ for doc in documents[:3]:
     print(f"Content length: {len(doc.text)} chars")
     print("---")
 
-# Verify total count
+Verify total count
 print(f"\nTotal documents loaded: {len(documents)}")
 ```
 
 A healthy document loading step should show consistent metadata across files and non-trivial content lengths. Watch for these red flags:
 
-- `Content length: 0` — file read as empty; check encoding or file permissions
-- Missing keys in metadata — the loader may not support that file type
-- Fewer documents than files in your directory — some files were silently skipped
+- `Content length: 0`. file read as empty; check encoding or file permissions
+- Missing keys in metadata. the loader may not support that file type
+- Fewer documents than files in your directory. some files were silently skipped
 
 To diagnose encoding issues specifically:
 
@@ -109,8 +109,8 @@ def detect_file_encoding(path: str) -> dict:
     result = chardet.detect(raw)
     return {"file": path, "encoding": result["encoding"], "confidence": result["confidence"]}
 
-# Run on all files in your data directory
-for p in Path("./data").glob("**/*"):
+Run on all files in your data directory
+for p in Path("./data").glob("/*"):
     if p.is_file():
         info = detect_file_encoding(str(p))
         print(info)
@@ -123,7 +123,7 @@ Claude Code can help you identify issues such as:
 - Missing or incorrect metadata
 - Documents not being loaded due to unsupported formats
 
-### 2. Analyzing Text Chunking
+2. Analyzing Text Chunking
 
 Poor chunking can significantly impact retrieval quality. Debug chunk sizes and overlaps:
 
@@ -136,7 +136,7 @@ text_splitter = SentenceSplitter(
     chunk_overlap=50
 )
 
-# Test chunking on sample text
+Test chunking on sample text
 sample_text = "Your long document text here..."
 chunks = text_splitter.split_text(sample_text)
 
@@ -187,7 +187,7 @@ def evaluate_chunking(documents, queries_and_answers, chunk_size=512, chunk_over
 
 Run this function with several chunk size configurations and pick the one that maximizes recall on your test query set.
 
-### 3. Validating Embeddings
+3. Validating Embeddings
 
 Embedding generation issues can silently degrade retrieval quality. Debug embeddings with:
 
@@ -196,17 +196,17 @@ from llama_index.core import Settings
 from llama_index.embeddings.openai import OpenAIEmbedding
 import numpy as np
 
-# Configure embedding
+Configure embedding
 embed_model = OpenAIEmbedding(model="text-embedding-ada-002")
 Settings.embed_model = embed_model
 
-# Test embedding generation
+Test embedding generation
 test_texts = ["What is AI?", "Machine learning is great", "Unrelated text about cooking"]
 embeddings = embed_model.get_text_embeddings(test_texts)
 
 print(f"Embedding dimension: {len(embeddings[0])}")
 
-# Compute pairwise cosine similarities
+Compute pairwise cosine similarities
 def cosine_sim(a, b):
     a, b = np.array(a), np.array(b)
     return float(np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b)))
@@ -217,7 +217,7 @@ print(f"AI vs cooking similarity: {cosine_sim(embeddings[0], embeddings[2]):.4f}
 
 For a well-functioning embedding model you should see the related texts score noticeably higher than the unrelated pair. If all similarities cluster near 1.0 or near 0.0, suspect a misconfigured model or an API returning zeros.
 
-A common source of silent failure is embedding dimension mismatch — you indexed documents with one model, then switched to another. Detect this before it causes problems:
+A common source of silent failure is embedding dimension mismatch. you indexed documents with one model, then switched to another. Detect this before it causes problems:
 
 ```python
 def verify_index_embedding_consistency(index, embed_model):
@@ -239,17 +239,17 @@ def verify_index_embedding_consistency(index, embed_model):
     return True
 ```
 
-### 4. Query Engine Debugging
+4. Query Engine Debugging
 
 The query engine often requires careful debugging to ensure proper retrieval:
 
 ```python
 from llama_index.core import VectorStoreIndex
 
-# Create index
+Create index
 index = VectorStoreIndex.from_documents(documents)
 
-# Test query
+Test query
 query_engine = index.as_query_engine(similarity_top_k=5)
 response = query_engine.query("What is the main topic?")
 
@@ -263,39 +263,39 @@ for i, node in enumerate(response.source_nodes):
 When `source_nodes` is empty, the problem is usually one of three things: the similarity threshold is too high, the query embedding is far from all document embeddings, or the vector store simply contains no documents. Debug each possibility in sequence:
 
 ```python
-# Step 1: Confirm the index contains nodes
+Step 1: Confirm the index contains nodes
 print(f"Index node count: {len(index.docstore.docs)}")
 
-# Step 2: Lower the similarity threshold to confirm retrieval works at all
+Step 2: Lower the similarity threshold to confirm retrieval works at all
 retriever = index.as_retriever(similarity_top_k=10)
 nodes = retriever.retrieve("any text")
 print(f"Retrieved with loose query: {len(nodes)} nodes")
 for n in nodes:
     print(f"  Score: {n.score:.4f} | Text: {n.text[:60]}...")
 
-# Step 3: Check that query and document embeddings share a space
+Step 3: Check that query and document embeddings share a space
 query_embedding = index._embed_model.get_query_embedding("What is the main topic?")
 print(f"Query embedding norm: {np.linalg.norm(query_embedding):.4f}")
 ```
 
 A near-zero norm on the query embedding indicates an API failure or model misconfiguration.
 
-### 5. Using Claude Code's Analysis Skills
+5. Using Claude Code's Analysis Skills
 
 Leverage Claude Code's specialized skills for deeper analysis:
 
-- **xlsx skill** - Analyze CSV exports of query logs and performance metrics. Ask Claude to open a spreadsheet of your query history and identify patterns in which queries fail consistently.
-- **docx skill** - Review documentation and identify inconsistencies between what your knowledge base describes and what users are actually asking.
-- **pdf skill** - Extract and analyze content from PDF documents in your knowledge base. Many PDF-to-text conversions lose table structure or produce garbled text; the pdf skill lets Claude inspect the raw extraction and flag documents that need manual cleaning.
+- xlsx skill - Analyze CSV exports of query logs and performance metrics. Ask Claude to open a spreadsheet of your query history and identify patterns in which queries fail consistently.
+- docx skill - Review documentation and identify inconsistencies between what your knowledge base describes and what users are actually asking.
+- pdf skill - Extract and analyze content from PDF documents in your knowledge base. Many PDF-to-text conversions lose table structure or produce garbled text; the pdf skill lets Claude inspect the raw extraction and flag documents that need manual cleaning.
 
 A practical workflow when debugging retrieval quality with Claude Code:
 
 1. Export your query logs to CSV (query, retrieved nodes, user rating)
 2. Use the xlsx skill: "Find queries where retrieved node scores are all below 0.6 and user rating was negative"
-3. Claude Code will surface the patterns — often a vocabulary mismatch between how documents are written and how users ask questions
+3. Claude Code will surface the patterns. often a vocabulary mismatch between how documents are written and how users ask questions
 4. Use that insight to add synonyms to your metadata or adjust your query rewriting step
 
-### 6. Pipeline Performance Monitoring
+6. Pipeline Performance Monitoring
 
 Implement comprehensive logging to track pipeline performance:
 
@@ -304,10 +304,10 @@ import logging
 from llama_index.core import Settings
 from llama_index.core.callbacks import CallbackManager, LlamaDebugHandler
 
-# Enable verbose logging
+Enable verbose logging
 logging.basicConfig(level=logging.DEBUG)
 
-# Use LlamaIndex's tracing
+Use LlamaIndex's tracing
 llama_debug = LlamaDebugHandler(print_trace_on_end=True)
 callback_manager = CallbackManager([llama_debug])
 
@@ -320,21 +320,21 @@ For production-grade observability, connect Phoenix:
 import phoenix as px
 from llama_index.core import set_global_handler
 
-# Launch Phoenix UI
+Launch Phoenix UI
 px.launch_app()
 
-# Wire into LlamaIndex
+Wire into LlamaIndex
 set_global_handler("arize_phoenix")
 
-# Now every query will appear in the Phoenix UI at http://localhost:6006
+Now every query will appear in the Phoenix UI at http://localhost:6006
 index = VectorStoreIndex.from_documents(documents)
 query_engine = index.as_query_engine()
 response = query_engine.query("What is the main topic?")
 ```
 
-Phoenix shows you each span in the pipeline — document loading, embedding, retrieval, synthesis — with latencies and intermediate values. It is the fastest way to find which stage is adding unexpected latency.
+Phoenix shows you each span in the pipeline. document loading, embedding, retrieval, synthesis. with latencies and intermediate values. It is the fastest way to find which stage is adding unexpected latency.
 
-### 7. End-to-End Regression Testing
+7. End-to-End Regression Testing
 
 A debugging session is only valuable if you can prevent the same issue from recurring. Build a lightweight regression harness:
 
@@ -342,7 +342,7 @@ A debugging session is only valuable if you can prevent the same issue from recu
 import json
 from pathlib import Path
 
-# golden_set.json: list of {query, expected_keywords, min_score}
+golden_set.json: list of {query, expected_keywords, min_score}
 GOLDEN_SET = Path("./tests/golden_set.json")
 
 def run_regression(query_engine, golden_path=GOLDEN_SET):
@@ -367,42 +367,42 @@ def run_regression(query_engine, golden_path=GOLDEN_SET):
 
 Run this after every pipeline change. A drop in pass rate pinpoints which queries broke and guides your next debugging session.
 
-## Common RAG Issues and Solutions
+Common RAG Issues and Solutions
 
-### Issue 1: Retrieval Returns No Results
+Issue 1: Retrieval Returns No Results
 
-**Symptoms**: Queries return empty source nodes
+Symptoms: Queries return empty source nodes
 
-**Debugging Approach**:
+Debugging Approach:
 1. Verify the vector store contains embeddings with `len(index.docstore.docs)`
 2. Check embedding dimension consistency between indexed documents and current model
-3. Test with exact text matches from known documents — if exact matches fail, the vector store is corrupted or empty
+3. Test with exact text matches from known documents. if exact matches fail, the vector store is corrupted or empty
 4. Lower `similarity_top_k` to 20 and `similarity_cutoff` to 0.0 to confirm documents are there at all
 
-**Fix**: Usually either re-index from scratch (if dimension mismatch) or reduce `similarity_cutoff` from the default (if threshold is too aggressive).
+Fix: Usually either re-index from scratch (if dimension mismatch) or reduce `similarity_cutoff` from the default (if threshold is too aggressive).
 
-### Issue 2: Poor Response Quality
+Issue 2: Poor Response Quality
 
-**Symptoms**: Responses are irrelevant or incomplete
+Symptoms: Responses are irrelevant or incomplete
 
-**Debugging Approach**:
-1. Examine retrieved context for relevance — print the full text of each source node
+Debugging Approach:
+1. Examine retrieved context for relevance. print the full text of each source node
 2. Adjust similarity threshold: `index.as_retriever(similarity_top_k=5, similarity_cutoff=0.75)`
 3. Review chunk size and overlap settings using the evaluation function above
 4. Inspect whether the LLM prompt template is including context correctly
 
-**Fix**: Most quality issues trace back to chunks that are either too small (no context) or too large (diluted signal). Run the chunk evaluation function with three different sizes and compare recall.
+Fix: Most quality issues trace back to chunks that are either too small (no context) or too large (diluted signal). Run the chunk evaluation function with three different sizes and compare recall.
 
-### Issue 3: Slow Query Performance
+Issue 3: Slow Query Performance
 
-**Symptoms**: Queries take excessive time
+Symptoms: Queries take excessive time
 
-**Debugging Approach**:
-1. Check vector database indexing — FAISS in-memory is fast; Chroma or Weaviate with network calls adds latency
-2. Review embedding batch sizes — batching 10 documents at a time vs 1 at a time is a 10x speed difference
-3. Analyze query complexity — multi-step query decomposition adds LLM calls
+Debugging Approach:
+1. Check vector database indexing. FAISS in-memory is fast; Chroma or Weaviate with network calls adds latency
+2. Review embedding batch sizes. batching 10 documents at a time vs 1 at a time is a 10x speed difference
+3. Analyze query complexity. multi-step query decomposition adds LLM calls
 
-**Fix**: Profile each stage using the Phoenix callback handler. Typically either the embedding API call or the LLM synthesis step dominates. Switch to a local embedding model (e.g., `BAAI/bge-small-en`) for latency-sensitive applications.
+Fix: Profile each stage using the Phoenix callback handler. Typically either the embedding API call or the LLM synthesis step dominates. Switch to a local embedding model (e.g., `BAAI/bge-small-en`) for latency-sensitive applications.
 
 | Optimization | Latency Reduction | Trade-off |
 |---|---|---|
@@ -412,52 +412,52 @@ Run this after every pipeline change. A drop in pass rate pinpoints which querie
 | Reduce similarity_top_k from 10 to 3 | 2–3x | May miss relevant context |
 | Use async query engine | Near-linear scaling | More complex error handling |
 
-### Issue 4: Hallucinations and Fabricated Facts
+Issue 4: Hallucinations and Fabricated Facts
 
-**Symptoms**: LLM generates confident-sounding answers not supported by retrieved context
+Symptoms: LLM generates confident-sounding answers not supported by retrieved context
 
-**Debugging Approach**:
-1. Print retrieved source nodes alongside the response — verify the claim appears in the context
+Debugging Approach:
+1. Print retrieved source nodes alongside the response. verify the claim appears in the context
 2. Check if `similarity_top_k` is too low, meaning the LLM is filling gaps with parametric memory
 3. Examine the system prompt for language that encourages the LLM to answer even when uncertain
 
-**Fix**: Add an explicit instruction in the synthesizer prompt: "Only answer using the provided context. If the context does not contain the answer, say you don't know." Also increase `similarity_top_k` to provide more context options.
+Fix: Add an explicit instruction in the synthesizer prompt: "Only answer using the provided context. If the context does not contain the answer, say you don't know." Also increase `similarity_top_k` to provide more context options.
 
-## Best Practices for RAG Debugging
+Best Practices for RAG Debugging
 
-1. **Incremental Testing** - Test each pipeline component independently before integration. Never try to debug retrieval quality when you haven't yet confirmed documents are loading correctly.
+1. Incremental Testing - Test each pipeline component independently before integration. Never try to debug retrieval quality when you haven't yet confirmed documents are loading correctly.
 
-2. **Version Control** - Track configuration changes that affect pipeline behavior. Chunking parameters, similarity thresholds, and embedding models should be stored in config files committed to git, not hardcoded.
+2. Version Control - Track configuration changes that affect pipeline behavior. Chunking parameters, similarity thresholds, and embedding models should be stored in config files committed to git, not hardcoded.
 
-3. **Comprehensive Logging** - Implement detailed logging at each stage. At minimum, log document count after loading, node count after chunking, embedding dimension on first generation, and source node scores on every query.
+3. Comprehensive Logging - Implement detailed logging at each stage. At minimum, log document count after loading, node count after chunking, embedding dimension on first generation, and source node scores on every query.
 
-4. **Test Datasets** - Maintain representative test documents and queries. A golden set of 20–50 question-answer pairs is the minimum needed to detect regressions. Include edge cases: very short questions, multi-hop reasoning, and questions the pipeline should decline to answer.
+4. Test Datasets - Maintain representative test documents and queries. A golden set of 20–50 question-answer pairs is the minimum needed to detect regressions. Include edge cases: very short questions, multi-hop reasoning, and questions the pipeline should decline to answer.
 
-5. **Metric Tracking** - Monitor retrieval precision, recall, and response quality over time. Even simple metrics like average source node score and response length tell you when the pipeline is degrading before users complain.
+5. Metric Tracking - Monitor retrieval precision, recall, and response quality over time. Even simple metrics like average source node score and response length tell you when the pipeline is degrading before users complain.
 
-6. **Separate Indexing from Querying** - Always persist your index to disk and load it separately. Re-indexing on every application start masks indexing bugs and adds unnecessary latency.
+6. Separate Indexing from Querying - Always persist your index to disk and load it separately. Re-indexing on every application start masks indexing bugs and adds unnecessary latency.
 
 ```python
-# Save index
+Save index
 index.storage_context.persist(persist_dir="./storage")
 
-# Load index (separate process)
+Load index (separate process)
 from llama_index.core import StorageContext, load_index_from_storage
 storage_context = StorageContext.from_defaults(persist_dir="./storage")
 index = load_index_from_storage(storage_context)
 ```
 
-## Advanced Debugging with Claude Code
+Advanced Debugging with Claude Code
 
 For complex RAG issues, use Claude Code's ability to analyze your entire codebase:
 
-- Request comprehensive analysis of your RAG pipeline architecture — paste your pipeline code and ask Claude to identify potential failure points before they occur in production
+- Request comprehensive analysis of your RAG pipeline architecture. paste your pipeline code and ask Claude to identify potential failure points before they occur in production
 - Get recommendations for optimization based on your specific setup, including which vector store backend suits your document count and query volume
 - Generate test cases to validate pipeline behavior, including adversarial queries designed to expose weakness in your chunking or retrieval strategy
 
 Claude Code can also help you implement advanced features like:
 
-**Hybrid search combining keyword and vector search** — improves recall for queries with rare terms that embeddings handle poorly:
+Hybrid search combining keyword and vector search. improves recall for queries with rare terms that embeddings handle poorly:
 
 ```python
 from llama_index.core.retrievers import QueryFusionRetriever
@@ -474,7 +474,7 @@ hybrid_retriever = QueryFusionRetriever(
 )
 ```
 
-**Re-ranking for improved result quality** — a cross-encoder re-ranker scores each retrieved chunk against the query more accurately than cosine similarity:
+Re-ranking for improved result quality. a cross-encoder re-ranker scores each retrieved chunk against the query more accurately than cosine similarity:
 
 ```python
 from llama_index.postprocessor.flag_embedding_reranker import FlagEmbeddingReranker
@@ -487,7 +487,7 @@ query_engine = index.as_query_engine(
 )
 ```
 
-**Multi-step query decomposition** — breaks complex questions into sub-questions, retrieves context for each, then synthesizes a final answer:
+Multi-step query decomposition. breaks complex questions into sub-questions, retrieves context for each, then synthesizes a final answer:
 
 ```python
 from llama_index.core.query_engine import SubQuestionQueryEngine
@@ -501,7 +501,7 @@ sub_question_engine = SubQuestionQueryEngine.from_defaults(query_engine_tools=to
 response = sub_question_engine.query("Compare the performance of feature A and feature B in the latest release")
 ```
 
-## Debugging Checklist
+Debugging Checklist
 
 Use this checklist before escalating a RAG pipeline issue:
 
@@ -509,25 +509,25 @@ Use this checklist before escalating a RAG pipeline issue:
 - [ ] Verified no documents have empty text content
 - [ ] Confirmed embedding dimension is consistent across index and current model
 - [ ] Tested retrieval with `similarity_cutoff=0.0` to verify nodes exist
-- [ ] Checked source node scores — are they above 0.5 for relevant queries?
+- [ ] Checked source node scores. are they above 0.5 for relevant queries?
 - [ ] Verified LLM is receiving the context (print the formatted prompt)
 - [ ] Confirmed index is persisted and loaded, not rebuilt on each query
 - [ ] Run regression test suite after any configuration change
 
-## Conclusion
+Conclusion
 
-Debugging LlamaIndex RAG pipelines requires a systematic approach and the right tools. Claude Code provides essential capabilities for analyzing documents, examining pipeline components, and identifying issues at each stage. By following the techniques outlined in this guide — stage-by-stage isolation, quantitative chunk evaluation, embedding consistency checks, and regression testing — you can effectively diagnose and resolve common RAG pipeline problems, leading to more reliable and accurate retrieval-augmented generation systems.
+Debugging LlamaIndex RAG pipelines requires a systematic approach and the right tools. Claude Code provides essential capabilities for analyzing documents, examining pipeline components, and identifying issues at each stage. By following the techniques outlined in this guide. stage-by-stage isolation, quantitative chunk evaluation, embedding consistency checks, and regression testing. you can effectively diagnose and resolve common RAG pipeline problems, leading to more reliable and accurate retrieval-augmented generation systems.
 
 The most important mindset shift is treating debugging as measurement, not guesswork. Instrument every stage, track metrics over time, and build a golden test set before you need it. Claude Code accelerates this process by letting you analyze query logs, inspect documents, and generate targeted test cases without switching context.
 
-Remember that successful RAG debugging is iterative — continuously monitor, analyze, and refine your pipeline based on real-world performance and user feedback.
+Remember that successful RAG debugging is iterative. continuously monitor, analyze, and refine your pipeline based on real-world performance and user feedback.
 {% endraw %}
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

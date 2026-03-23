@@ -10,19 +10,19 @@ tags: [claude-code, claude-skills]
 ---
 
 {% raw %}
-# Claude Code for Tree of Thought Prompting Workflow Guide
+Claude Code for Tree of Thought Prompting Workflow Guide
 
 [Tree of Thought (ToT) prompting](/what-is-claude-code-and-how-to-get-started/) transforms how you interact with Claude Code by enabling systematic exploration of multiple solution paths simultaneously. Rather than following a single linear reasoning chain, ToT encourages Claude to branch into different approaches, evaluate each path, and converge on the optimal solution. This guide shows you how to implement effective Tree of Thought workflows that dramatically improve problem-solving quality.
 
-## Understanding Tree of Thought Prompting
+Understanding Tree of Thought Prompting
 
 Traditional prompting follows a single reasoning thread from problem to solution. ToT prompting instead treats each decision point as an opportunity to explore multiple branches, creating a tree structure where each node represents a potential approach or partial solution.
 
 The core principle is simple: at any point where Claude might say "I'll do X," instead ask "what are the alternative approaches, and what are the trade-offs of each?" This forces explicit consideration of alternatives that linear reasoning might miss.
 
-### Why Tree of Thought Works Better
+Why Tree of Thought Works Better
 
-ToT prompting succeeds because it mirrors how expert humans solve complex problems. When a developer debugs a tricky issue, they don't just try one approach—they consider multiple hypotheses, test them in parallel, and eliminate possibilities based on results. ToT prompting gives Claude Code permission to do the same.
+ToT prompting succeeds because it mirrors how expert humans solve complex problems. When a developer debugs a tricky issue, they don't just try one approach, they consider multiple hypotheses, test them in parallel, and eliminate possibilities based on results. ToT prompting gives Claude Code permission to do the same.
 
 The technique is particularly valuable for:
 - Architectural decisions with multiple valid solutions
@@ -30,9 +30,9 @@ The technique is particularly valuable for:
 - Creative tasks where alternatives should be explored
 - Problems where the first approach might not be optimal
 
-## Implementing ToT in Your Claude Code Workflows
+Implementing ToT in Your Claude Code Workflows
 
-### The Branch-and-Evaluate Pattern
+The Branch-and-Evaluate Pattern
 
 The fundamental ToT workflow uses explicit branching. Here's a skill that implements this pattern:
 
@@ -44,12 +44,12 @@ description: Solve problems using Tree of Thought branching
 
 When faced with a complex problem, use the following branching workflow:
 
-1. **Problem Decomposition**: Break the problem into distinct sub-problems
-2. **Branch Generation**: For each sub-problem, generate 2-3 alternative approaches
-3. **Parallel Exploration**: Explore each branch independently for 2-3 steps
-4. **Evaluation**: Assess each branch on feasibility, efficiency, and completeness
-5. **Selection**: Choose the best branch and continue with it
-6. **Backtracking**: If the selected branch fails, return to step 4 and try alternatives
+1. Problem Decomposition: Break the problem into distinct sub-problems
+2. Branch Generation: For each sub-problem, generate 2-3 alternative approaches
+3. Parallel Exploration: Explore each branch independently for 2-3 steps
+4. Evaluation: Assess each branch on feasibility, efficiency, and completeness
+5. Selection: Choose the best branch and continue with it
+6. Backtracking: If the selected branch fails, return to step 4 and try alternatives
 
 For each branch, explicitly note:
 - What this approach assumes
@@ -59,7 +59,7 @@ For each branch, explicitly note:
 
 This skill provides a reusable framework for any ToT interaction. Call it at the start of complex tasks by saying "use tot-solver to approach this problem."
 
-### Structured Branching with Explicit Alternatives
+Structured Branching with Explicit Alternatives
 
 For more directed ToT exploration, use structured prompts that specify the branching structure:
 
@@ -71,19 +71,19 @@ description: Make architectural decisions using ToT evaluation
 
 For this architectural question, explore three distinct approaches simultaneously:
 
-**Approach A: [Microservices]**
+Approach A: [Microservices]
 - Describe the architecture
 - List key benefits (minimum 3)
 - Identify main trade-offs and risks
 - Estimate implementation complexity
 
-**Approach B: [Monolith]**
+Approach B: [Monolith]
 - Describe the architecture  
 - List key benefits (minimum 3)
 - Identify main trade-offs and risks
 - Estimate implementation complexity
 
-**Approach C: [Modular Monolith]**
+Approach C: [Modular Monolith]
 - Describe the architecture
 - List key benefits (minimum 3)
 - Identify main trade-offs and risks
@@ -94,9 +94,9 @@ After exploring all three approaches, recommend one with explicit reasoning for 
 
 This pattern forces parallel consideration of alternatives rather than defaulting to the most familiar approach.
 
-## Practical ToT Workflows for Common Tasks
+Practical ToT Workflows for Common Tasks
 
-### Debugging with Diagnostic Trees
+Debugging with Diagnostic Trees
 
 When debugging, create a diagnostic tree that explores multiple failure hypotheses:
 
@@ -111,7 +111,7 @@ Analyze this bug using Tree of Thought:
 
 This structured approach prevents premature conclusion on the first plausible explanation.
 
-### Code Review with Alternative Implementations
+Code Review with Alternative Implementations
 
 When reviewing code, use ToT to suggest improvements that explore the design space:
 
@@ -125,7 +125,7 @@ Review this code using Tree of Thought:
 
 This transforms code review from finding faults into exploring better solutions.
 
-### Learning Complex Concepts
+Learning Complex Concepts
 
 ToT excels at teaching complex topics by exploring multiple perspectives:
 
@@ -140,24 +140,24 @@ Explain [complex topic] using Tree of Thought:
 
 This approach ensures comprehensive understanding rather than single-perspective explanations.
 
-## Advanced ToT Patterns
+Advanced ToT Patterns
 
-### Iterative Deepening with Checkpoints
+Iterative Deepening with Checkpoints
 
 For very complex problems, use iterative deepening with explicit checkpoints:
 
 ```markdown
 Solve this problem using iterative Tree of Thought:
 
-**Level 1 (5 minutes)**: Generate 3 high-level approaches
+Level 1 (5 minutes): Generate 3 high-level approaches
 - Evaluate each on a complexity/feasibility matrix
 - Select best approach
 
-**Level 2 (10 minutes)**: Within selected approach, explore 3 sub-paths
+Level 2 (10 minutes): Within selected approach, explore 3 sub-paths
 - Evaluate each sub-path
 - Select best sub-path
 
-**Level 3 (15 minutes)**: Implement selected path
+Level 3 (15 minutes): Implement selected path
 - If blocked, backtrack to Level 2
 - Document why this path was chosen
 
@@ -166,7 +166,7 @@ At each checkpoint, summarize your reasoning so far.
 
 This prevents getting lost in complexity while maintaining the benefits of branching exploration.
 
-### ToT with Self-Correction
+ToT with Self-Correction
 
 Combine ToT with explicit error correction:
 
@@ -181,9 +181,9 @@ Attempt this task with Tree of Thought and self-correction:
 
 This pattern is particularly powerful for code generation where initial attempts often need refinement.
 
-## Best Practices for ToT Prompting
+Best Practices for ToT Prompting
 
-### When to Use Tree of Thought
+When to Use Tree of Thought
 
 ToT is not always necessary. Use it when:
 - The problem has genuinely multiple valid solution paths
@@ -191,18 +191,18 @@ ToT is not always necessary. Use it when:
 - You need to justify why one approach was chosen over others
 - The problem is complex enough that single-path reasoning might miss optimal solutions
 
-### When to Avoid ToT
+When to Avoid ToT
 
 Skip ToT for:
 - Simple, well-defined tasks with obvious solutions
 - Time-critical interactions where exploration is too slow
 - Tasks where any correct answer suffices
 
-### Managing ToT Complexity
+Managing ToT Complexity
 
 Too many branches become unwieldy. Stick to 2-4 branches at each level, and explicitly prune branches that prove unproductive early. The goal is better solutions through considered alternatives, not exhaustive exploration.
 
-## Conclusion
+Conclusion
 
 Tree of Thought prompting transforms Claude Code from a linear problem-solver into a systematic explorer of solution spaces. By structuring interactions around branching, evaluation, and selection, you get better solutions, more thoughtful reasoning, and clearer explanations of why particular approaches were chosen.
 

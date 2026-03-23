@@ -12,15 +12,15 @@ tags: [chrome-extension, productivity, task-management]
 ---
 
 {% raw %}
-Kanban board chrome extensions transform your browser into a powerful task management workspace. For developers and power users, these extensions provide a flexible way to organize projects, track bugs, and manage workflows directly within Chrome—without switching between applications.
+Kanban board chrome extensions transform your browser into a powerful task management workspace. For developers and power users, these extensions provide a flexible way to organize projects, track bugs, and manage workflows directly within Chrome, without switching between applications.
 
-## Understanding Kanban Board Extensions
+Understanding Kanban Board Extensions
 
 A kanban board chrome extension organizes tasks into columns representing different stages: To Do, In Progress, Done. The chrome extension variant runs entirely in your browser, storing data locally or syncing with external services through APIs.
 
 The key advantage for developers is the ability to create highly customized boards that integrate with your existing workflow. Whether you're tracking sprint tasks, managing code review queues, or organizing side projects, a well-built chrome extension gives you full control over your data and presentation.
 
-## Core Architecture with Manifest V3
+Core Architecture with Manifest V3
 
 Modern chrome extensions use Manifest V3, which requires specific patterns for storage and background processing. Here's a basic manifest structure for a kanban board extension:
 
@@ -44,11 +44,11 @@ Modern chrome extensions use Manifest V3, which requires specific patterns for s
 
 The extension stores board data using the Chrome Storage API, which provides synchronization across browser instances when signed into Chrome.
 
-## Building a Functional Kanban Board
+Building a Functional Kanban Board
 
 Creating a working kanban board extension requires three main components: the data model, the UI layer, and the interaction handlers. Let's build each piece.
 
-### Data Model
+Data Model
 
 The board structure uses a simple JSON schema that represents columns and tasks:
 
@@ -76,7 +76,7 @@ const createTask = (title, description = '') => ({
 
 This model supports multiple boards and includes timestamps useful for tracking when tasks were created or moved.
 
-### Storage Layer
+Storage Layer
 
 The background script handles all storage operations, ensuring data persistence:
 
@@ -103,7 +103,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 The popup or side panel communicates with this background handler to load and save board state.
 
-### UI Implementation
+UI Implementation
 
 The popup HTML provides the visual interface:
 
@@ -172,11 +172,11 @@ function renderBoard(board) {
 }
 ```
 
-## Advanced Features for Developers
+Advanced Features for Developers
 
 Beyond basic CRUD operations, several features make kanban board extensions genuinely useful for development workflows.
 
-### Tagging and Filtering
+Tagging and Filtering
 
 Adding tags to tasks enables powerful filtering:
 
@@ -194,7 +194,7 @@ const filterByTag = (tasks, tag) => {
 
 Common developer tags include: `bug`, `feature`, `review`, `blocked`, `documentation`.
 
-### Keyboard Shortcuts
+Keyboard Shortcuts
 
 Power users benefit from keyboard navigation. Implement shortcuts in your popup:
 
@@ -213,7 +213,7 @@ document.addEventListener('keydown', (e) => {
 });
 ```
 
-### Integration with External APIs
+Integration with External APIs
 
 For teams using external project management, extend the background script to sync:
 
@@ -233,40 +233,40 @@ async function syncToExternalService(board, apiKey) {
 
 This allows the extension to serve as a lightweight front-end while maintaining data in your team's preferred tool.
 
-## Use Cases for Developers
+Use Cases for Developers
 
 A kanban board chrome extension excels in several developer scenarios:
 
-**Sprint Tracking**: Create columns matching your sprint workflow—Backlog, In Development, In Review, QA, Deployed. Move cards as you progress through stages.
+Sprint Tracking: Create columns matching your sprint workflow, Backlog, In Development, In Review, QA, Deployed. Move cards as you progress through stages.
 
-**Bug Triage**: Use priority tags and quick-add buttons to capture bugs while browsing production logs or error reports.
+Bug Triage: Use priority tags and quick-add buttons to capture bugs while browsing production logs or error reports.
 
-**Learning Projects**: Organize tutorials, documentation links, and practice exercises across columns representing different topics or technologies.
+Learning Projects: Organize tutorials, documentation links, and practice exercises across columns representing different topics or technologies.
 
-**Content Planning**: Writers and technical authors can track article drafts, research, and publication status without leaving the browser.
+Content Planning: Writers and technical authors can track article drafts, research, and publication status without leaving the browser.
 
-## Performance Considerations
+Performance Considerations
 
 Chrome extensions run with limited memory, so optimize your implementation:
 
-- **Lazy Load**: Only render visible columns when boards have many items
-- **Debounce Saves**: Wait 500ms after changes before persisting to storage
-- **Limit History**: Store only the last 50 state transitions for undo functionality
+- Lazy Load: Only render visible columns when boards have many items
+- Debounce Saves: Wait 500ms after changes before persisting to storage
+- Limit History: Store only the last 50 state transitions for undo functionality
 
 The storage API has a 5MB limit per extension, which handles thousands of tasks comfortably but requires attention if storing large descriptions or attachments.
 
-## Conclusion
+Conclusion
 
-Kanban board chrome extensions provide developers with a flexible, customizable task management solution that integrates seamlessly into the browser. The Manifest V3 architecture enables reliable data persistence, while the web technologies behind the UI allow rapid development and styling.
+Kanban board chrome extensions provide developers with a flexible, customizable task management solution that integrates smoothly into the browser. The Manifest V3 architecture enables reliable data persistence, while the web technologies behind the UI allow rapid development and styling.
 
-Start with a minimal viable board, then add features like tagging, filtering, and external integrations as your workflow demands. The extension ecosystem rewards incremental development—you're not building a product, you're building a tool tailored exactly to how you work.
+Start with a minimal viable board, then add features like tagging, filtering, and external integrations as your workflow demands. The extension ecosystem rewards incremental development, you're not building a product, you're building a tool tailored exactly to how you work.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

@@ -14,28 +14,28 @@ permalink: /claude-code-generates-insecure-code-patterns-fix/
 
 
 
-# Claude Code Generates Insecure Code Patterns Fix
+Claude Code Generates Insecure Code Patterns Fix
 
 [When working with Claude Code, you might occasionally receive code that contains security vulnerabilities](/best-claude-code-skills-to-install-first-2026/) This happens because AI models generate code based on patterns in their training data, which can include legacy or insecure practices. Understanding how to identify and fix these patterns is essential for building secure applications.
 
 [This guide covers common insecure code patterns that Claude Code might generate, how to recognize them](/claude-tdd-skill-test-driven-development-workflow/), and practical workflows using Claude skills to improve your code security.
 
-## Why AI-Generated Code Can Be Insecure
+Why AI-Generated Code Can Be Insecure
 
-Before jumping to fixes, it helps to understand the root cause. Claude Code learns from enormous corpora of publicly available code. That training data includes Stack Overflow answers from 2012 that predate modern security guidance, tutorials that prioritize brevity over safety, and legacy codebases where security was retrofitted rather than designed in. The model does not inherently know that a pattern is dangerous—it knows that the pattern solves a certain kind of problem, because it has seen thousands of examples of that pattern doing so.
+Before jumping to fixes, it helps to understand the root cause. Claude Code learns from enormous corpora of publicly available code. That training data includes Stack Overflow answers from 2012 that predate modern security guidance, tutorials that prioritize brevity over safety, and legacy codebases where security was retrofitted rather than designed in. The model does not inherently know that a pattern is dangerous, it knows that the pattern solves a certain kind of problem, because it has seen thousands of examples of that pattern doing so.
 
 This does not mean Claude Code is unreliable. It means the same thing that has always been true of code generation tools: the output requires review. The difference is that AI-generated code is produced at a much higher velocity than hand-written code, which amplifies the impact of any security blind spots.
 
 The good news is that Claude Code responds well to explicit security framing. Telling it "write this function securely, using parameterized queries and input validation" will produce a significantly different output than "write a login function." Your prompting habits are the first layer of defense.
 
-## Common Insecure Patterns in AI-Generated Code
+Common Insecure Patterns in AI-Generated Code
 
-### SQL Injection Vulnerabilities
+SQL Injection Vulnerabilities
 
 One of the most frequent issues appears in database queries. Claude might generate code like this:
 
 ```python
-# INSECURE - Never use this pattern
+INSECURE - Never use this pattern
 user_input = request.form['username']
 query = f"SELECT * FROM users WHERE name = '{user_input}'"
 cursor.execute(query)
@@ -43,10 +43,10 @@ cursor.execute(query)
 
 This pattern is vulnerable to SQL injection attacks. An attacker who supplies `' OR '1'='1` as the username will receive every row in the users table. Supply `'; DROP TABLE users; --` and the table is gone.
 
-The fix is straightforward—use parameterized queries instead:
+The fix is straightforward, use parameterized queries instead:
 
 ```python
-# SECURE - Using parameterized query
+SECURE - Using parameterized query
 user_input = request.form['username']
 query = "SELECT * FROM users WHERE name = %s"
 cursor.execute(query, (user_input,))
@@ -55,13 +55,13 @@ cursor.execute(query, (user_input,))
 The `%s` placeholder is never interpreted as SQL. The database driver handles escaping completely, regardless of what the user submits. The same principle applies across all database libraries:
 
 ```python
-# SQLite
+SQLite
 cursor.execute("SELECT * FROM users WHERE name = ?", (user_input,))
 
-# SQLAlchemy ORM (safest option—no raw SQL)
+SQLAlchemy ORM (safest option, no raw SQL)
 user = session.query(User).filter(User.name == user_input).first()
 
-# SQLAlchemy Core with text()
+SQLAlchemy Core with text()
 from sqlalchemy import text
 stmt = text("SELECT * FROM users WHERE name = :name")
 result = conn.execute(stmt, {"name": user_input})
@@ -69,9 +69,9 @@ result = conn.execute(stmt, {"name": user_input})
 
 When you encounter this pattern, you can [use the `tdd` skill to write proper test cases](/claude-tdd-skill-test-driven-development-workflow/) that verify your queries are safe.
 
-**Prompt Claude securely:** Ask "generate a user lookup function using SQLAlchemy ORM with parameterized queries and error handling for missing users" rather than "generate a SQL query to look up a user by name."
+Prompt Claude securely: Ask "generate a user lookup function using SQLAlchemy ORM with parameterized queries and error handling for missing users" rather than "generate a SQL query to look up a user by name."
 
-### Hardcoded Secrets and API Keys
+Hardcoded Secrets and API Keys
 
 Another common issue is hardcoded credentials:
 
@@ -97,22 +97,22 @@ But environment variables alone are not enough. You also need to ensure those va
 import os
 import logging
 
-# Load from environment
+Load from environment
 DATABASE_URL = os.environ.get("DATABASE_URL")
 if not DATABASE_URL:
     raise RuntimeError("DATABASE_URL environment variable is required")
 
-# Never log secrets directly
+Never log secrets directly
 logger = logging.getLogger(__name__)
 logger.info("Connecting to database")  # GOOD - no secret in log
-# logger.info(f"Connecting to {DATABASE_URL}")  # BAD - logs the secret
+logger.info(f"Connecting to {DATABASE_URL}")  # BAD - logs the secret
 
-# Mask secrets in debug output
+Mask secrets in debug output
 def get_safe_db_url(url: str) -> str:
     """Return a version of the URL safe to log."""
     from urllib.parse import urlparse, urlunparse
     parsed = urlparse(url)
-    masked = parsed._replace(password="***")
+    masked = parsed._replace(password="*")
     return urlunparse(masked)
 
 logger.debug(f"Database: {get_safe_db_url(DATABASE_URL)}")
@@ -129,14 +129,14 @@ def get_secret(secret_name: str, region: str = "us-east-1") -> dict:
     response = client.get_secret_value(SecretId=secret_name)
     return json.loads(response["SecretString"])
 
-# Usage - secret is fetched at runtime, never stored in code
+Usage - secret is fetched at runtime, never stored in code
 db_creds = get_secret("myapp/production/database")
 db_password = db_creds["password"]
 ```
 
 Add `.env` and any `*secret*` or `*credential*` patterns to your `.gitignore` immediately when starting any project. Claude can help you generate a comprehensive `.gitignore` tailored to your tech stack.
 
-### Insecure Random Number Generation
+Insecure Random Number Generation
 
 For cryptographic operations, never use `Math.random()` in JavaScript:
 
@@ -156,11 +156,11 @@ const sessionId = crypto.randomBytes(32).toString('hex');
 The same issue exists in Python, where `random.random()` is a pseudorandom number generator (PRNG) suitable for simulations but not security:
 
 ```python
-# INSECURE
+INSECURE
 import random
 token = str(random.getrandbits(128))
 
-# SECURE
+SECURE
 import secrets
 token = secrets.token_hex(32)  # 32 bytes = 64 hex characters
 reset_url_token = secrets.token_urlsafe(32)  # URL-safe base64
@@ -176,7 +176,7 @@ The `secrets` module in Python 3.6+ is specifically designed for cryptographic u
 | API key generation | `uuid.uuid4()` | `secrets.token_hex(32)` |
 | OTP/TOTP secrets | Any PRNG | `pyotp.random_base32()` |
 
-### Cross-Site Scripting (XSS) Vulnerabilities
+Cross-Site Scripting (XSS) Vulnerabilities
 
 When rendering user input in web applications, always escape output:
 
@@ -230,38 +230,38 @@ Beyond output escaping, set the `Content-Security-Policy` HTTP header to restric
 Content-Security-Policy: default-src 'self'; script-src 'self' https://cdn.trusted.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:;
 ```
 
-### Command Injection
+Command Injection
 
 A less common but extremely dangerous pattern is passing user input to shell commands:
 
 ```python
-# INSECURE - Command injection
+INSECURE - Command injection
 import subprocess
 filename = request.args.get('file')
 result = subprocess.run(f"cat {filename}", shell=True, capture_output=True)
 
-# An attacker passes: filename=../../etc/passwd
-# Or: filename=harmless.txt; rm -rf /
+An attacker passes: filename=../../etc/passwd
+Or: filename=harmless.txt; rm -rf /
 ```
 
 Use `subprocess` with a list of arguments and `shell=False`:
 
 ```python
-# SECURE - No shell interpretation
+SECURE - No shell interpretation
 import subprocess
 import os
 
 filename = request.args.get('file', '')
 
-# Validate the filename before using it
+Validate the filename before using it
 if not filename or not filename.replace('.', '').replace('-', '').replace('_', '').isalnum():
     return "Invalid filename", 400
 
-# Construct a safe path
+Construct a safe path
 safe_dir = '/var/app/uploads'
 safe_path = os.path.realpath(os.path.join(safe_dir, filename))
 
-# Prevent directory traversal
+Prevent directory traversal
 if not safe_path.startswith(safe_dir):
     return "Access denied", 403
 
@@ -270,18 +270,18 @@ result = subprocess.run(['cat', safe_path], shell=False, capture_output=True, te
 
 When `shell=False`, the OS never interprets the arguments as shell commands. There is no injection surface.
 
-### Path Traversal
+Path Traversal
 
 Related to command injection, path traversal attacks occur when user input controls a file path:
 
 ```python
-# INSECURE - Path traversal
+INSECURE - Path traversal
 def serve_file(filename):
     path = f"/var/app/uploads/{filename}"
     with open(path) as f:
         return f.read()
 
-# Attacker passes: filename=../../etc/passwd
+Attacker passes: filename=../../etc/passwd
 ```
 
 Always normalize the path and verify it stays within your intended directory:
@@ -303,14 +303,14 @@ def serve_file(filename: str) -> str:
         return f.read()
 ```
 
-## Using Claude Skills for Security Reviews
+Using Claude Skills for Security Reviews
 
-### The Security Checklist Skill
+The Security Checklist Skill
 
 Create a custom skill for security reviews. Place this in `~/.claude/skills/security-review.md`:
 
 ```markdown
-# Security Review Skill
+Security Review Skill
 
 When reviewing code, check for:
 
@@ -332,7 +332,7 @@ Use this skill with any code review task:
 
 A more detailed prompt that Claude responds well to is: "Review the following code for the OWASP Top 10 vulnerabilities. For each issue found, rate the severity (Critical/High/Medium/Low), explain the attack vector, and provide a corrected version of the affected code."
 
-### Integrating with TDD Workflow
+Integrating with TDD Workflow
 
 The `tdd` skill already encourages writing tests first. Extend this practice to include security test cases:
 
@@ -361,12 +361,12 @@ def test_session_token_length():
 
 Run your security tests alongside regular unit tests. The `tdd` skill will help structure these tests properly.
 
-### Automating Security Checks
+Automating Security Checks
 
 Consider adding automated security scanning to your workflow. Tools like Bandit (Python), ESLint with security plugins (JavaScript), and SAST scanners can catch many issues automatically. You can create a Claude skill that runs these tools:
 
 ```markdown
-# Security Scan Skill
+Security Scan Skill
 
 Run the following security checks on the codebase:
 
@@ -380,14 +380,14 @@ Report findings in a structured format.
 Here is a concrete example of running Bandit and interpreting the output with Claude's help:
 
 ```bash
-# Install Bandit
+Install Bandit
 pip install bandit
 
-# Run against your project (exclude test files)
+Run against your project (exclude test files)
 bandit -r src/ -x tests/ -f json -o bandit_report.json
 
-# Then ask Claude: "Review this Bandit report and explain which findings
-# are high priority and how to fix them"
+Then ask Claude: "Review this Bandit report and explain which findings
+are high priority and how to fix them"
 cat bandit_report.json
 ```
 
@@ -396,21 +396,21 @@ For JavaScript projects, set up `eslint-plugin-security`:
 ```bash
 npm install --save-dev eslint eslint-plugin-security
 
-# .eslintrc.json
+.eslintrc.json
 {
   "plugins": ["security"],
   "extends": ["plugin:security/recommended"]
 }
 
-# Run the check
+Run the check
 npx eslint src/ --ext .js,.ts
 ```
 
 Integrate these checks into your CI pipeline so they run on every pull request. Claude can help you write the GitHub Actions configuration, CircleCI config, or whatever CI system you use.
 
-## Building Secure Defaults
+Building Secure Defaults
 
-### Project Templates
+Project Templates
 
 When starting new projects, establish secure defaults early. Use the `pdf` skill if you need to generate security documentation, or apply the `canvas-design` skill to create security awareness materials for your team.
 
@@ -418,22 +418,22 @@ A practical way to establish secure defaults is to create a project scaffold tha
 
 ```
 project/
-├── .github/
-│   └── workflows/
-│       └── security.yml     # CI security checks
-├── .gitignore               # Includes .env, secrets/
-├── .env.example             # Template with no real values
-├── pyproject.toml           # Includes bandit, safety dependencies
-└── src/
-    └── security/
-        ├── __init__.py
-        ├── auth.py          # Secure auth utilities
-        └── validation.py    # Input validation helpers
+ .github/
+    workflows/
+        security.yml     # CI security checks
+ .gitignore               # Includes .env, secrets/
+ .env.example             # Template with no real values
+ pyproject.toml           # Includes bandit, safety dependencies
+ src/
+     security/
+         __init__.py
+         auth.py          # Secure auth utilities
+         validation.py    # Input validation helpers
 ```
 
 Ask Claude to generate this scaffold with appropriate content in each file: "Create a Python project scaffold that includes Bandit security scanning, a pre-commit hook for secret detection, and a validation module with common input sanitizers."
 
-### Dependency Management
+Dependency Management
 
 AI-generated code might include outdated dependencies with known vulnerabilities. Always:
 
@@ -447,17 +447,17 @@ The `pip-audit` command is particularly useful because it checks your installed 
 pip install pip-audit
 pip-audit
 
-# Output example:
-# Found 2 known vulnerabilities in 2 packages
-# Name       Version  ID               Fix Versions
-# ------     -------  ---------------  ------------
-# requests   2.25.1   GHSA-29mw-wpgm   2.31.0
-# Pillow     8.1.0    GHSA-8vj2-vxx3   9.3.0
+Output example:
+Found 2 known vulnerabilities in 2 packages
+Name       Version  ID               Fix Versions
+------     -------  ---------------  ------------
+requests   2.25.1   GHSA-29mw-wpgm   2.31.0
+Pillow     8.1.0    GHSA-8vj2-vxx3   9.3.0
 ```
 
 When reviewing AI-generated `requirements.txt` files, check each pinned version against the current release. Claude will often use versions it saw frequently in training data, which may be one or two major releases behind.
 
-### Input Validation
+Input Validation
 
 Never trust user input. Implement validation at every layer:
 
@@ -473,7 +473,7 @@ function createUser(input: unknown): User {
 }
 ```
 
-For production Python applications, use Pydantic for data validation. It provides type enforcement, value constraints, and clear error messages—all in a declarative style that Claude generates reliably:
+For production Python applications, use Pydantic for data validation. It provides type enforcement, value constraints, and clear error messages, all in a declarative style that Claude generates reliably:
 
 ```python
 from pydantic import BaseModel, Field, validator
@@ -506,7 +506,7 @@ class UserCreateRequest(BaseModel):
             raise ValueError('Password must contain a digit')
         return v
 
-# Usage in a FastAPI route
+Usage in a FastAPI route
 from fastapi import FastAPI, HTTPException
 
 app = FastAPI()
@@ -521,29 +521,29 @@ async def create_user(request: UserCreateRequest):
 
 Pydantic validation runs before your business logic executes, so invalid data never reaches your database layer or external API calls.
 
-## Practical Workflow for Secure Development
+Practical Workflow for Secure Development
 
-1. **Before generating code**: Use the `supermemory` skill to recall security patterns relevant to your tech stack
+1. Before generating code: Use the `supermemory` skill to recall security patterns relevant to your tech stack
 
-2. **During code generation**: Activate your security checklist skill to prompt for secure implementations
+2. During code generation: Activate your security checklist skill to prompt for secure implementations
 
-3. **After code generation**: Run the `tdd` skill to write security-focused test cases, then execute security scans
+3. After code generation: Run the `tdd` skill to write security-focused test cases, then execute security scans
 
-4. **Before deployment**: Perform a manual security review using your custom security skill
+4. Before deployment: Perform a manual security review using your custom security skill
 
 This layered approach catches vulnerabilities at multiple stages.
 
 To make this concrete, here is how each stage looks in practice:
 
-**Before generating code** — Include security requirements in your initial prompt. Instead of "write a password reset endpoint," say "write a password reset endpoint that generates a cryptographically secure token, stores a hash of it with a 1-hour expiry, and invalidates the token after first use."
+Before generating code. Include security requirements in your initial prompt. Instead of "write a password reset endpoint," say "write a password reset endpoint that generates a cryptographically secure token, stores a hash of it with a 1-hour expiry, and invalidates the token after first use."
 
-**During code generation** — Watch for the red-flag patterns covered in this guide. When you see string interpolation in a query, an f-string building a shell command, or `Math.random()` generating a security token, stop and ask Claude to revise with the specific secure pattern: "Use parameterized queries instead" or "Use secrets.token_hex instead of random."
+During code generation. Watch for the red-flag patterns covered in this guide. When you see string interpolation in a query, an f-string building a shell command, or `Math.random()` generating a security token, stop and ask Claude to revise with the specific secure pattern: "Use parameterized queries instead" or "Use secrets.token_hex instead of random."
 
-**After code generation** — Run your automated tools (Bandit, ESLint security plugin, npm audit) and review their output. Ask Claude to explain any findings you don't understand and generate fixes for the ones it identifies.
+After code generation. Run your automated tools (Bandit, ESLint security plugin, npm audit) and review their output. Ask Claude to explain any findings you don't understand and generate fixes for the ones it identifies.
 
-**Before deployment** — Do a manual pass through the OWASP Top 10 checklist for your application category. Claude can walk you through each item and help you determine whether your current implementation is compliant.
+Before deployment. Do a manual pass through the OWASP Top 10 checklist for your application category. Claude can walk you through each item and help you determine whether your current implementation is compliant.
 
-## Quick Reference: Secure Patterns
+Quick Reference: Secure Patterns
 
 | Insecure Pattern | Secure Alternative |
 |-----------------|-------------------|
@@ -559,14 +559,14 @@ To make this concrete, here is how each stage looks in practice:
 | `md5` for passwords | `bcrypt`, `argon2`, or `scrypt` |
 | HTTP-only cookies | `Secure; HttpOnly; SameSite=Strict` flags |
 
-## Conclusion
+Conclusion
 
 Claude Code generates code based on patterns it has seen in training data, which sometimes includes legacy or insecure practices. By understanding common vulnerability patterns and using Claude skills strategically, you can catch and fix these issues before they reach production.
 
 The key is establishing security as a consistent part of your development workflow. Use the `tdd` skill for test-driven security, create custom security review skills, and automate scanning where possible. With these practices in place, you get the speed benefits of AI-assisted development without sacrificing code security.
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
-## Related Reading
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
+Related Reading
 
 - [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/)
 - [How to Make Claude Code Write Secure Code Always](/how-to-make-claude-code-write-secure-code-always/)

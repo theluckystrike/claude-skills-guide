@@ -3,7 +3,7 @@
 
 layout: default
 title: "Claude Code for Gravitee API Gateway Workflow"
-description: "Learn how to leverage Claude Code to streamline your Gravitee API Gateway workflow. Practical examples for API configuration, policy management, and."
+description: "Learn how to use Claude Code to streamline your Gravitee API Gateway workflow. Practical examples for API configuration, policy management, and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-gravitee-api-gateway-workflow/
@@ -15,24 +15,24 @@ score: 7
 
 
 {% raw %}
-# Claude Code for Gravitee API Gateway Workflow
+Claude Code for Gravitee API Gateway Workflow
 
-Gravitee.io is a powerful open-source API Gateway that provides robust traffic management, security, and analytics capabilities. When combined with Claude Code, you can dramatically accelerate your API gateway configuration, reduce errors, and automate repetitive tasks. This guide walks through practical workflows for integrating Claude Code into your Gravitee API management pipeline.
+Gravitee.io is a powerful open-source API Gateway that provides solid traffic management, security, and analytics capabilities. When combined with Claude Code, you can dramatically accelerate your API gateway configuration, reduce errors, and automate repetitive tasks. This guide walks through practical workflows for integrating Claude Code into your Gravitee API management pipeline.
 
-## Understanding the Gravitee Configuration Structure
+Understanding the Gravitee Configuration Structure
 
 Gravitee API Gateway uses a declarative configuration model centered around API definitions, plans, and policies. These configurations are typically stored as YAML files and can be managed through Gravitee's Management API or deployed directly via their Kubernetes operator.
 
 When working with Gravitee, you'll encounter several key concepts:
 
-- **API Definition**: The core configuration describing your API, including endpoints, paths, and routing rules
-- **Plans**: Subscription models controlling access to your APIs
-- **Policies**: Reusable components that transform, secure, or enrich requests and responses
-- **Gravitee Kubernetes Operator (GKO)**: Allows GitOps-style API management through Kubernetes custom resources
+- API Definition: The core configuration describing your API, including endpoints, paths, and routing rules
+- Plans: Subscription models controlling access to your APIs
+- Policies: Reusable components that transform, secure, or enrich requests and responses
+- Gravitee Kubernetes Operator (GKO): Allows GitOps-style API management through Kubernetes custom resources
 
 Claude Code excels at helping you generate these configurations correctly, explain complex policy chains, and maintain consistency across multiple API definitions.
 
-## Generating API Definitions with Claude Code
+Generating API Definitions with Claude Code
 
 One of the most valuable uses of Claude Code is generating valid Gravitee API definitions. Instead of manually writing YAML configurations, you can describe your API requirements in plain language and let Claude Code produce the correct structure.
 
@@ -56,7 +56,7 @@ api:
   plans:
     - name: "JWT Plan"
       security: "jwt"
-      selection_rule: "{\"path\":\"/**\"}"
+      selection_rule: "{\"path\":\"/\"}"
   flows:
     - name: "Default Flow"
       path-operator:
@@ -77,7 +77,7 @@ api:
 
 Claude Code can help you customize this template for your specific needs, explain what each section does, and validate that your configuration follows Gravitee best practices.
 
-## Automating Policy Configuration
+Automating Policy Configuration
 
 Gravitee's policy engine is one of its most powerful features. Policies can transform requests, enforce security, cache responses, and much more. However, configuring policies correctly requires understanding their configuration schemas.
 
@@ -125,7 +125,7 @@ flows:
 
 This approach saves significant time when configuring complex policy chains and ensures your policies are correctly structured.
 
-## Managing APIs Across Environments
+Managing APIs Across Environments
 
 A common challenge with Graveteer is maintaining consistent configurations across development, staging, and production environments. Claude Code can help you create environment-aware configurations using variable substitution.
 
@@ -150,7 +150,7 @@ api:
 Then use Claude Code to generate environment-specific overrides:
 
 ```bash
-# Development
+Development
 export API_NAME="My API"
 export API_VERSION="1.0.0-SNAPSHOT"
 export API_BASE_PATH="/api/dev"
@@ -160,7 +160,7 @@ export PLAN_NAME="Dev Plan"
 export SECURITY_TYPE="api_key"
 export PLAN_STATUS="CLOSED"
 
-# Production
+Production
 export API_NAME="My API"
 export API_VERSION="1.0.0"
 export API_BASE_PATH="/api/v1"
@@ -173,7 +173,7 @@ export PLAN_STATUS="PUBLISHED"
 
 Claude Code can also help you detect configuration drift between environments and generate the changes needed to bring them into sync.
 
-## Integrating with GitOps Workflows
+Integrating with GitOps Workflows
 
 For teams adopting GitOps with Gravitee's Kubernetes Operator, Claude Code becomes invaluable for managing Custom Resource Definitions (CRDs).
 
@@ -211,21 +211,21 @@ spec:
 
 Claude Code can help you write, validate, and troubleshoot these CRDs, making your GitOps workflow much smoother.
 
-## Best Practices for Claude Code with Gravitee
+Best Practices for Claude Code with Gravitee
 
 To get the most out of using Claude Code with Gravitee, follow these recommendations:
 
-1. **Use versioned templates**: Store your base API templates in version control and use Claude Code to generate variations from these templates.
+1. Use versioned templates: Store your base API templates in version control and use Claude Code to generate variations from these templates.
 
-2. **Validate before deployment**: Always validate generated configurations against Gravitee's schema before applying them. You can use Gravitee's validation API or CLI tools.
+2. Validate before deployment: Always validate generated configurations against Gravitee's schema before applying them. You can use Gravitee's validation API or CLI tools.
 
-3. **Document your policy rationale**: When Claude Code generates policy configurations, add comments explaining why each policy was chosen. This helps future maintainers understand the configuration.
+3. Document your policy rationale: When Claude Code generates policy configurations, add comments explaining why each policy was chosen. This helps future maintainers understand the configuration.
 
-4. **Test in non-production first**: Use Claude Code to generate test configurations that mirror production but use lower rate limits and mock backends.
+4. Test in non-production first: Use Claude Code to generate test configurations that mirror production but use lower rate limits and mock backends.
 
-5. **Keep configurations DRY**: Use YAML anchors and aliases to avoid duplicating policy configurations across multiple APIs.
+5. Keep configurations DRY: Use YAML anchors and aliases to avoid duplicating policy configurations across multiple APIs.
 
-## Conclusion
+Conclusion
 
 Claude Code transforms how you work with Gravitee API Gateway by automating configuration generation, ensuring correctness, and accelerating your development workflow. Whether you're defining new APIs, configuring complex policy chains, or managing multi-environment deployments, Claude Code serves as an intelligent assistant that understands both your requirements and Gravitee's configuration model.
 
@@ -233,10 +233,10 @@ Start by integrating Claude Code into your API definition workflow, then expand 
 
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

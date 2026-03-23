@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code Multi-Language Comment and Docstring Workflow"
-description: "Learn how to leverage Claude Code for managing comments and docstrings across multiple programming languages with practical examples and actionable advice."
+description: "Learn how to use Claude Code for managing comments and docstrings across multiple programming languages with practical examples and actionable advice."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-multi-language-comment-and-docstring-workflow/
@@ -14,51 +14,51 @@ score: 7
 
 
 {% raw %}
-# Claude Code Multi-Language Comment and Docstring Workflow
+Claude Code Multi-Language Comment and Docstring Workflow
 
 Documentation is the backbone of maintainable software, yet keeping comments and docstrings consistent across multiple programming languages remains a persistent challenge. Whether you're maintaining a polyglot codebase or switching between projects in different languages, Claude Code offers powerful capabilities to streamline your documentation workflow. This guide explores practical strategies for managing multi-language comments and docstrings efficiently.
 
-## Understanding the Multi-Language Documentation Challenge
+Understanding the Multi-Language Documentation Challenge
 
-Modern development teams often work with multiple programming languages—Python for backend services, TypeScript for frontends, Go for infrastructure, and Rust for performance-critical components. Each language has its own documentation conventions:
+Modern development teams often work with multiple programming languages, Python for backend services, TypeScript for frontends, Go for infrastructure, and Rust for performance-critical components. Each language has its own documentation conventions:
 
-- **Python** uses docstrings with reStructuredText, Google, or NumPy style
-- **JavaScript/TypeScript** relies on JSDoc comments
-- **Go** employs godoc conventions
-- **Rust** uses doc comments with markdown
-- **Java** and **C#** have their own Javadoc/XML documentation systems
+- Python uses docstrings with reStructuredText, Google, or NumPy style
+- JavaScript/TypeScript relies on JSDoc comments
+- Go employs godoc conventions
+- Rust uses doc comments with markdown
+- Java and C# have their own Javadoc/XML documentation systems
 
 Managing these different formats manually creates cognitive overhead and inconsistency. Claude Code can help automate and standardize this process across your entire codebase.
 
-## Setting Up Claude Code for Documentation Tasks
+Setting Up Claude Code for Documentation Tasks
 
 Before diving into workflows, ensure Claude Code is properly configured for your multi-language projects. The key is creating clear, explicit instructions about your documentation standards.
 
-### Initial Configuration
+Initial Configuration
 
 Create a project-specific CLAUDE.md file that documents your team's conventions:
 
 ```markdown
-# Documentation Standards
+Documentation Standards
 
-## Python
+Python
 - Use Google-style docstrings
 - Include: args, returns, raises, examples
 
-## TypeScript
+TypeScript
 - Use JSDoc with @param, @returns, @example
 - Document all exported functions and classes
 
-## Go
+Go
 - Follow standard godoc conventions
 - Start sentences with nouns, not verbs
 ```
 
 This file serves as a reference that Claude Code will consult when generating or modifying documentation.
 
-## Practical Workflows for Multi-Language Documentation
+Practical Workflows for Multi-Language Documentation
 
-### Workflow 1: Generate Documentation for New Functions
+Workflow 1: Generate Documentation for New Functions
 
 When writing new code, use Claude Code to generate appropriate documentation based on your established conventions. Here's how to prompt Claude effectively:
 
@@ -73,7 +73,7 @@ For TypeScript:
 
 This approach ensures consistency from the start, rather than adding documentation as an afterthought.
 
-### Workflow 2: Batch Documentation Updates
+Workflow 2: Batch Documentation Updates
 
 When refactoring or adding features across multiple files, use Claude Code to update documentation systematically. A practical prompt pattern:
 
@@ -85,23 +85,23 @@ When refactoring or adding features across multiple files, use Claude Code to up
 Maintain each file's existing documentation style."
 ```
 
-This works particularly well when you're adding new parameters or changing return types—Claude Code can trace through your code and update all relevant documentation.
+This works particularly well when you're adding new parameters or changing return types, Claude Code can trace through your code and update all relevant documentation.
 
-### Workflow 3: Cross-Language Documentation Audits
+Workflow 3: Cross-Language Documentation Audits
 
 For projects with multiple language components, establish a regular documentation audit workflow:
 
-1. **Identify files needing review**: `find . -name "*.py" -o -name "*.ts" | head -20`
-2. **Prompt Claude Code**: "Audit the documentation in these files for completeness and consistency. List any functions missing docstrings or with incomplete documentation."
-3. **Generate fix prompts**: Use the audit results to create targeted fixes
+1. Identify files needing review: `find . -name "*.py" -o -name "*.ts" | head -20`
+2. Prompt Claude Code: "Audit the documentation in these files for completeness and consistency. List any functions missing docstrings or with incomplete documentation."
+3. Generate fix prompts: Use the audit results to create targeted fixes
 
 This systematic approach catches documentation debt before it accumulates.
 
-## Code Examples: Before and After
+Code Examples: Before and After
 
-### Python Example
+Python Example
 
-**Before (incomplete documentation)**:
+Before (incomplete documentation):
 ```python
 def calculate_metrics(data, threshold):
     """Process data and return metrics."""
@@ -109,7 +109,7 @@ def calculate_metrics(data, threshold):
     return results
 ```
 
-**After (comprehensive documentation)**:
+After (comprehensive documentation):
 ```python
 def calculate_metrics(data: list[float], threshold: float = 0.5) -> dict[str, float]:
     """Calculate performance metrics from raw data.
@@ -127,8 +127,7 @@ def calculate_metrics(data: list[float], threshold: float = 0.5) -> dict[str, fl
     Raises:
         ValueError: If data is empty or threshold is negative.
 
-    Example:
-        >>> data = [1.2, 3.4, 5.6, 7.8, 9.0]
+    >>> data = [1.2, 3.4, 5.6, 7.8, 9.0]
         >>> metrics = calculate_metrics(data, threshold=5.0)
         >>> print(metrics['mean'])
         5.4
@@ -137,9 +136,9 @@ def calculate_metrics(data: list[float], threshold: float = 0.5) -> dict[str, fl
     return results
 ```
 
-### TypeScript Example
+TypeScript Example
 
-**Before (no documentation)**:
+Before (no documentation):
 ```typescript
 function processUserData(user: User): ProcessedUser {
   // Transform user data
@@ -147,9 +146,9 @@ function processUserData(user: User): ProcessedUser {
 }
 ```
 
-**After (with JSDoc)**:
+After (with JSDoc):
 ```typescript
-/**
+/
  * Transforms raw user data into a processed format.
  * 
  * @param user - The raw user object from the database
@@ -166,15 +165,15 @@ function processUserData(user: User): ProcessedUser {
 }
 ```
 
-## Actionable Advice for Implementation
+Actionable Advice for Implementation
 
-### Start Small and Be Consistent
+Start Small and Be Consistent
 
-1. **Choose one language** to document first—preferably your most frequently used or critical codebase
-2. **Establish conventions** in a CLAUDE.md file before规模化
-3. **Document incrementally**—add documentation when you touch code, not all at once
+1. Choose one language to document first, preferably your most frequently used or critical codebase
+2. Establish conventions in a CLAUDE.md file before
+3. Document incrementally, add documentation when you touch code, not all at once
 
-### Leverage Claude Code's Context
+Leverage Claude Code's Context
 
 When working with Claude Code, provide sufficient context for better results:
 
@@ -182,7 +181,7 @@ When working with Claude Code, provide sufficient context for better results:
 - Specify your documentation style preference explicitly
 - Ask for examples when learning new conventions
 
-### Integrate into Development Workflow
+Integrate into Development Workflow
 
 Make documentation part of your natural development process:
 
@@ -190,26 +189,26 @@ Make documentation part of your natural development process:
 - Use commit messages that reference documentation updates
 - Create pull request templates that remind contributors to document new functions
 
-## Common Pitfalls to Avoid
+Common Pitfalls to Avoid
 
-- **Over-documentation**: Don't document trivial getters/setters excessively
-- **Outdated documentation**: Update docs when signatures change
-- **Inconsistent styles**: Stick to one documentation style per language
-- **Ignoring edge cases**: Document error conditions and exceptions
+- Over-documentation: Don't document trivial getters/setters excessively
+- Outdated documentation: Update docs when signatures change
+- Inconsistent styles: Stick to one documentation style per language
+- Ignoring edge cases: Document error conditions and exceptions
 
-## Conclusion
+Conclusion
 
-Claude Code transforms multi-language documentation from a tedious chore into an efficient, consistent practice. By establishing clear conventions, using Claude Code's generation capabilities, and integrating documentation into your development workflow, you can maintain high-quality documentation across all your projects—regardless of how many programming languages you use.
+Claude Code transforms multi-language documentation from a tedious chore into an efficient, consistent practice. By establishing clear conventions, using Claude Code's generation capabilities, and integrating documentation into your development workflow, you can maintain high-quality documentation across all your projects, regardless of how many programming languages you use.
 
 Start by configuring your documentation standards in CLAUDE.md, then gradually adopt these workflows. The initial investment pays dividends in code maintainability and team collaboration.
 
 Remember: Good documentation is an investment in your future self and your team. Let Claude Code help you make that investment consistently across all your languages.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

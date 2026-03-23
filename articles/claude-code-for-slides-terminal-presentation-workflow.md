@@ -12,27 +12,27 @@ score: 8
 ---
 
 {% raw %}
-# Claude Code for Slides Terminal Presentation Workflow
+Claude Code for Slides Terminal Presentation Workflow
 
-Gone are the days of wrestling with PowerPoint or struggling with Google Slides' clunky interface. For developers who live in the terminal, there's a better way to create presentations—and when you combine terminal-based slide tools with Claude Code, you get a powerful workflow that can dramatically speed up your presentation creation process.
+Gone are the days of wrestling with PowerPoint or struggling with Google Slides' clunky interface. For developers who live in the terminal, there's a better way to create presentations, and when you combine terminal-based slide tools with Claude Code, you get a powerful workflow that can dramatically speed up your presentation creation process.
 
-## Why Terminal-Based Presentations?
+Why Terminal-Based Presentations?
 
-Terminal-based presentation tools offer several compelling advantages over traditional slide software. First, they keep you in your workflow—you never need to leave your terminal or switch context. Second, slides are typically written in Markdown, which means you can version control them with Git, collaborate via pull requests, and use your favorite text editors. Third, many terminal slide tools generate beautiful HTML presentations that work in any browser.
+Terminal-based presentation tools offer several compelling advantages over traditional slide software. First, they keep you in your workflow, you never need to leave your terminal or switch context. Second, slides are typically written in Markdown, which means you can version control them with Git, collaborate via pull requests, and use your favorite text editors. Third, many terminal slide tools generate beautiful HTML presentations that work in any browser.
 
 Popular terminal-based presentation tools include:
 
-- **Marp**: Markdown presentation ecosystem
-- **reveal.js**: HTML presentation framework
-- **mdp**: A Markdown-based presentation tool for Linux
-- **sentaku**: Terminal-based presentation tool
-- **t презентац**: Russian-language terminal presenter
+- Marp: Markdown presentation ecosystem
+- reveal.js: HTML presentation framework
+- mdp: A Markdown-based presentation tool for Linux
+- sentaku: Terminal-based presentation tool
+- t презентац: Russian-language terminal presenter
 
-## Setting Up Your Terminal Presentation Environment
+Setting Up Your Terminal Presentation Environment
 
-Before integrating with Claude Code, let's set up a basic terminal presentation environment. We'll use **Marp** as our primary tool because it offers excellent CLI support and generates professional HTML slides from Markdown.
+Before integrating with Claude Code, let's set up a basic terminal presentation environment. We'll use Marp as our primary tool because it offers excellent CLI support and generates professional HTML slides from Markdown.
 
-### Installing Marp CLI
+Installing Marp CLI
 
 Marp CLI can be installed via npm:
 
@@ -46,7 +46,7 @@ Verify the installation:
 marp --version
 ```
 
-### Creating Your First Slide Deck
+Creating Your First Slide Deck
 
 Create a new Markdown file for your presentation:
 
@@ -57,11 +57,11 @@ theme: default
 paginate: true
 ---
 
-# Welcome to My Presentation
+Welcome to My Presentation
 
 ---
 
-## Agenda
+Agenda
 
 - Introduction
 - Main Concepts
@@ -70,7 +70,7 @@ paginate: true
 
 ---
 
-## Key Points
+Key Points
 
 1. First important point
 2. Second important point  
@@ -83,31 +83,31 @@ Save this as `presentation.md` and convert it to slides:
 marp presentation.md -o slides.html
 ```
 
-## Integrating Claude Code into Your Workflow
+Integrating Claude Code into Your Workflow
 
 Now here's where Claude Code becomes invaluable. By creating a custom skill for presentation workflows, you can automate repetitive tasks and get AI assistance for content creation.
 
-### Creating a Presentation Skill
+Creating a Presentation Skill
 
 Create a skill file at `~/.claude/skills/presentation-skill.md`:
 
 ```markdown
-# Presentation Creation Skill
+Presentation Creation Skill
 
-## Overview
+Overview
 This skill helps create terminal-based presentations using Marp and other tools.
 
-## Capabilities
+Capabilities
 - Generate slide content from topic descriptions
 - Convert existing Markdown to presentation format
 - Apply consistent theming across slide decks
 - Export to multiple formats (HTML, PDF, PPTX)
 
-## Tools
+Tools
 - marp: For Markdown-to-slides conversion
 - pandoc: For format conversions
 
-## Instructions
+Instructions
 When creating presentations:
 1. Ask for the main topic and key points
 2. Generate structured Markdown with proper Marp directives
@@ -115,11 +115,11 @@ When creating presentations:
 4. Apply consistent styling throughout
 ```
 
-### Using Claude Code to Generate Slides
+Using Claude Code to Generate Slides
 
 With your skill loaded, you can now work with Claude Code to create presentations. Here's a practical example:
 
-**Prompt Claude Code with:**
+Prompt Claude Code with:
 ```
 Create a 10-slide presentation about API design best practices. Include sections on REST principles, versioning strategies, error handling, and authentication. Use a clean, developer-focused style.
 ```
@@ -132,11 +132,11 @@ marp: true
 theme: default
 ---
 
-# API Design Best Practices
+API Design Best Practices
 
 ---
 
-## Why API Design Matters
+Why API Design Matters
 
 - APIs are the interface of your product
 - Good APIs = happy developers
@@ -144,7 +144,7 @@ theme: default
 
 ---
 
-## REST Fundamentals
+REST Fundamentals
 
 - Resource-oriented URLs
 - HTTP verbs semantically
@@ -154,29 +154,29 @@ theme: default
 <!-- ... more slides ... -->
 ```
 
-## Advanced Workflow: Automated Presentation Generation
+Advanced Workflow: Automated Presentation Generation
 
 For teams that need to generate presentations regularly (weekly reports, status updates), you can create an automated pipeline.
 
-### Sample Automation Script
+Sample Automation Script
 
 ```bash
 #!/bin/bash
-# generate-presentation.sh
+generate-presentation.sh
 
 TOPIC=$1
 OUTPUT_DIR=${2:-"./presentations"}
 
-# Create output directory
+Create output directory
 mkdir -p "$OUTPUT_DIR"
 
-# Ask Claude Code to generate content
+Ask Claude Code to generate content
 claude --print "Generate a 5-slide presentation about $TOPIC" > "$OUTPUT_DIR/temp.md"
 
-# Convert to HTML with Marp
+Convert to HTML with Marp
 marp "$OUTPUT_DIR/temp.md" -o "$OUTPUT_DIR/${TOPIC// /-}.html"
 
-# Clean up temp file
+Clean up temp file
 rm "$OUTPUT_DIR/temp.md"
 
 echo "Presentation created: $OUTPUT_DIR/${TOPIC// /-}.html"
@@ -188,11 +188,11 @@ Run it with:
 ./generate-presentation.sh "Kubernetes Basics"
 ```
 
-## Enhancing Presentations with Code Examples
+Enhancing Presentations with Code Examples
 
-One of the biggest advantages of terminal-based presentations is seamless code integration. Here's how to make your code snippets shine:
+One of the biggest advantages of terminal-based presentations is smooth code integration. Here's how to make your code snippets shine:
 
-### Syntax Highlighting
+Syntax Highlighting
 
 Marp supports syntax highlighting out of the box:
 
@@ -203,46 +203,46 @@ def fibonacci(n):
         return n
     return fibonacci(n-1) + fibonacci(n-2)
 
-# Usage
+Usage
 print(fibonacci(10))  # Output: 55
 ```
 
-### Live Code Execution in Demos
+Live Code Execution in Demos
 
-For live coding demonstrations, consider using **ttygif** or **asciinema** to record your terminal and embed the recordings in presentations:
+For live coding demonstrations, consider using ttygif or asciinema to record your terminal and embed the recordings in presentations:
 
 ```bash
-# Record your terminal session
+Record your terminal session
 asciinema rec demo.cast
 
-# Embed in your slide
+Embed in your slide
 ![](./demo.cast)
 ```
 
-## Best Practices for Developer Presentations
+Best Practices for Developer Presentations
 
-### Keep It Clean
+Keep It Clean
 
 - One idea per slide
 - Use bullet points, not paragraphs
 - Limit to 6 bullets per slide
 - Choose readable fonts (minimum 24pt)
 
-### Make It Interactive
+Make It Interactive
 
 - Include live demos when possible
 - Add speaker notes for complex slides
 - Use animations sparingly
 
-### Optimize for Your Audience
+Optimize for Your Audience
 
 - Developers: Include code examples
 - Executives: Focus on business value
 - Mixed: Balance technical depth with accessibility
 
-## Troubleshooting Common Issues
+Troubleshooting Common Issues
 
-### Slides Not Rendering Correctly
+Slides Not Rendering Correctly
 
 If your Marp slides aren't rendering as expected:
 
@@ -250,16 +250,16 @@ If your Marp slides aren't rendering as expected:
 2. Verify Marp directives are in the correct position (top of file)
 3. Ensure you're using valid theme names
 
-### PDF Export Problems
+PDF Export Problems
 
 For PDF export issues:
 
 ```bash
-# Install puppeteer dependencies
+Install puppeteer dependencies
 marp --puppeteer-args --no-sandbox --disable-setuid-sandbox
 ```
 
-### Image Path Issues
+Image Path Issues
 
 Use relative paths for images and ensure they're in an accessible location:
 
@@ -267,17 +267,17 @@ Use relative paths for images and ensure they're in an accessible location:
 ![](./images/diagram.png)
 ```
 
-## Conclusion
+Conclusion
 
 Terminal-based presentation workflows, supercharged with Claude Code, offer developers a powerful alternative to traditional slide software. By staying in your terminal, using version control for your presentations, and leveraging AI assistance, you can create professional slides faster than ever before.
 
-Start small—convert your next presentation to Markdown and see the difference. Once you experience the workflow, you'll never go back to drag-and-drop slide builders.
+Start small, convert your next presentation to Markdown and see the difference. Once you experience the workflow, you'll never go back to drag-and-drop slide builders.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

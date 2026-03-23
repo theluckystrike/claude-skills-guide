@@ -14,11 +14,11 @@ score: 7
 {% raw %}
 
 
-# Claude Code Nuxt Vue Full Stack Workflow
+Claude Code Nuxt Vue Full Stack Workflow
 
 Building modern full stack applications requires coordination between frontend frameworks, backend services, and deployment pipelines. Claude Code combined with Nuxt and Vue provides a powerful workflow that handles everything from scaffolding to testing. This guide walks through a practical approach for developers building production applications.
 
-## Project Initialization and Structure
+Project Initialization and Structure
 
 Start by creating a new Nuxt project. Claude Code can bootstrap the entire structure with proper TypeScript configuration and folder organization.
 
@@ -30,7 +30,7 @@ cd my-nuxt-app
 Once the project exists, create a CLAUDE.md file in the root directory to establish project conventions. This file tells Claude Code about your stack preferences, coding standards, and common patterns.
 
 ```markdown
-# Project Context
+Project Context
 
 This is a Nuxt 3 + Vue 3 full stack application with TypeScript.
 Use Composition API with `<script setup>` syntax.
@@ -40,7 +40,7 @@ Server routes in /server/api for backend endpoints.
 
 The supermemory skill helps maintain context across sessions. When working on complex features that span multiple coding sessions, invoke it with `/skill supermemory` to preserve architectural decisions and design choices.
 
-## Component Generation Workflow
+Component Generation Workflow
 
 The frontend-design skill accelerates component creation significantly. Instead of manually writing every Vue component, describe what you need and let Claude Code generate the structure.
 
@@ -74,7 +74,7 @@ const emit = defineEmits<{
 
 The canvas-design skill proves useful when you need custom visualizations or icons within your components. Generate SVG assets programmatically rather than relying on external design tools during development.
 
-## Backend API Development
+Backend API Development
 
 Nuxt server routes handle backend logic without separate deployments. Use a structured approach for API endpoints:
 
@@ -101,7 +101,7 @@ export default defineEventHandler(async (event) => {
 For API documentation, the pdf skill generates comprehensive docs from your route definitions. Maintain clear documentation as your API grows:
 
 ```bash
-# Generate API documentation
+Generate API documentation
 "Create a PDF documenting all /api routes with request/response examples"
 ```
 
@@ -123,7 +123,7 @@ describe('GET /api/users/:id', () => {
 })
 ```
 
-## State Management with Pinia
+State Management with Pinia
 
 Vue applications benefit from centralized state management. Claude Code generates Pinia stores with proper typing and actions:
 
@@ -163,7 +163,7 @@ export const useUserStore = defineStore('user', {
 })
 ```
 
-## Form Handling and Validation
+Form Handling and Validation
 
 Forms require consistent validation patterns. Create reusable composables for form handling:
 
@@ -191,7 +191,7 @@ export function useForm<T extends Record<string, any>>(initialValues: T) {
 }
 ```
 
-## Database Integration
+Database Integration
 
 Prisma pairs well with Nuxt for type-safe database operations. The workflow involves defining your schema, generating the client, and using it in server routes:
 
@@ -222,7 +222,7 @@ npx prisma migrate dev --name init
 npx prisma generate
 ```
 
-## Deployment Pipeline
+Deployment Pipeline
 
 Deploy Nuxt applications to Vercel, Netlify, or Cloudflare Pages. Configure environment variables and deployment settings:
 
@@ -237,14 +237,14 @@ Deploy Nuxt applications to Vercel, Netlify, or Cloudflare Pages. Configure envi
 
 The claude-code-vercel-deployment workflow automates deployment configuration. For teams using GitHub Actions, the claude-skills-with-github-actions-ci-cd skill generates CI/CD pipelines that run tests and linting on every pull request.
 
-## Testing Strategy
+Testing Strategy
 
 Implement a multi-layer testing approach:
 
-- **Unit tests**: Individual composables and utilities
-- **Component tests**: Vue component rendering and interactions  
-- **API tests**: Server route behavior
-- **E2E tests**: Full user flows
+- Unit tests: Individual composables and utilities
+- Component tests: Vue component rendering and interactions  
+- API tests: Server route behavior
+- E2E tests: Full user flows
 
 The tdd skill generates appropriate tests based on feature descriptions. For component testing with Vitest:
 
@@ -264,18 +264,18 @@ describe('UserCard', () => {
 })
 ```
 
-## Summary
+Summary
 
 Claude Code transforms Nuxt and Vue development through intelligent code generation, context preservation, and workflow automation. Key skills like frontend-design for components, tdd for test-first development, pdf for documentation, and supermemory for session continuity make full stack development faster and more consistent.
 
 Build smaller, focused components. Test incrementally. Maintain documentation as you build rather than after. This workflow scales from small projects to larger team applications.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

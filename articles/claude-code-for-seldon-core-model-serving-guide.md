@@ -14,24 +14,24 @@ score: 7
 
 
 {% raw %}
-# Claude Code for Seldon Core Model Serving Guide
+Claude Code for Seldon Core Model Serving Guide
 
 Seldon Core transforms machine learning models into production-ready inference services running on Kubernetes. While powerful, setting up Seldon deployments involves multiple configuration files, understanding Kubernetes resources, and managing complex ML pipelines. Claude Code can significantly accelerate this workflow by automating repetitive tasks, generating configuration templates, and helping you debug deployment issues.
 
 This guide shows how to use Claude Code effectively for Seldon Core model serving projects.
 
-## Understanding the Seldon Core Ecosystem
+Understanding the Seldon Core Ecosystem
 
 Before diving into Claude Code integration, it is essential to understand what Seldon Core provides. Seldon Core extends Kubernetes with custom resources that handle model deployment, routing, and scaling. The core components include:
 
-- **SeldonDeployment**: A custom Kubernetes resource defining how your model serves predictions
-- **Model Servers**: Pre-built containers that load and run models (TensorFlow, PyTorch, sklearn, etc.)
-- **Explainers**: Add explainability to predictions using techniques like SHAP or Alibi
-- **Graph Components**: Enable inference graphs with transformers, routers, and combiners
+- SeldonDeployment: A custom Kubernetes resource defining how your model serves predictions
+- Model Servers: Pre-built containers that load and run models (TensorFlow, PyTorch, sklearn, etc.)
+- Explainers: Add explainability to predictions using techniques like SHAP or Alibi
+- Graph Components: Enable inference graphs with transformers, routers, and combiners
 
 When working with Seldon Core, you will typically create YAML manifests defining these resources. Claude Code excels at generating and validating these configurations.
 
-### Seldon Core vs. Alternatives
+Seldon Core vs. Alternatives
 
 Before investing in Seldon Core, it helps to understand where it fits among ML serving options:
 
@@ -46,7 +46,7 @@ Before investing in Seldon Core, it helps to understand where it fits among ML s
 
 Seldon Core is the right choice when you need inference graphs (transformer → model → postprocessor chains), sophisticated traffic routing for A/B testing, built-in model explainability, and a fully Kubernetes-native operational model. If you just need to serve a sklearn pickle file with minimal infrastructure, KServe may be simpler. Claude Code helps with either, but this guide focuses on Seldon.
 
-## Setting Up Your Project Structure
+Setting Up Your Project Structure
 
 A well-organized Seldon Core project accelerates development. Use Claude Code to scaffold your project:
 
@@ -60,7 +60,7 @@ Create a `models/` directory containing your trained model artifacts, a `configs
 Claude Code can generate a standard project template:
 
 ```yaml
-# configs/seldon-deployment.yaml
+configs/seldon-deployment.yaml
 apiVersion: machinelearning.seldon.io/v1
 kind: SeldonDeployment
 metadata:
@@ -83,7 +83,7 @@ spec:
       value: "http://minio:9000"
 ```
 
-### Environment-Specific Configuration with Kustomize
+Environment-Specific Configuration with Kustomize
 
 For real deployments, you will want different settings per environment. A Kustomize-based approach works well:
 
@@ -107,11 +107,11 @@ configs/
 
 The base manifest defines the canonical deployment. Overlays override replica counts, resource limits, model URIs, and environment variables per environment. Ask Claude Code to generate the full Kustomize tree given a description of your environments and resource requirements.
 
-## Creating Claude Skills for Seldon Core
+Creating Claude Skills for Seldon Core
 
 The real power of Claude Code emerges when you create specialized skills for Seldon Core workflows. A well-designed skill can handle common tasks like generating deployment manifests, validating configurations, and troubleshooting issues.
 
-### Skill Definition for Seldon Deployment Generation
+Skill Definition for Seldon Deployment Generation
 
 Create a skill that generates SeldonDeployment resources based on your model type:
 
@@ -140,7 +140,7 @@ Always include:
 
 This skill enables Claude Code to generate deployment manifests on demand, reducing configuration errors.
 
-### Skill Definition for Validation
+Skill Definition for Validation
 
 A complementary validation skill helps catch issues before deployment:
 
@@ -166,11 +166,11 @@ Return a list of warnings and errors with remediation steps.
 
 Pairing a generator skill with a validator skill creates a feedback loop that catches problems before they reach the cluster.
 
-## Common Deployment Patterns
+Common Deployment Patterns
 
 Seldon Core supports several deployment patterns that Claude Code can help you implement.
 
-### Simple Model Serving
+Simple Model Serving
 
 The most straightforward pattern deploys a single model:
 
@@ -190,9 +190,9 @@ spec:
     replicas: 1
 ```
 
-Claude Code can generate this automatically given model name, type, and storage location. It will also ask clarifying questions — for example, whether the S3 bucket is in the same region as the cluster, or whether MinIO credentials are managed via a Kubernetes secret.
+Claude Code can generate this automatically given model name, type, and storage location. It will also ask clarifying questions. for example, whether the S3 bucket is in the same region as the cluster, or whether MinIO credentials are managed via a Kubernetes secret.
 
-### Inference Graphs
+Inference Graphs
 
 For preprocessing, postprocessing, or ensemble models, create inference graphs:
 
@@ -217,11 +217,11 @@ spec:
           modelUri: s3://models/postprocessor
 ```
 
-This three-stage graph applies feature engineering before the model and formats the output afterwards. Inference graphs are where Seldon Core truly differentiates itself — you can compose reusable pre- and post-processors across multiple model deployments without duplicating logic in each model.
+This three-stage graph applies feature engineering before the model and formats the output afterwards. Inference graphs are where Seldon Core truly differentiates itself. you can compose reusable pre- and post-processors across multiple model deployments without duplicating logic in each model.
 
 Claude Code can help you design the graph structure by asking about your data pipeline needs, then generating the complete YAML including proper type and children configuration.
 
-### A/B Testing and Canary Deployments
+A/B Testing and Canary Deployments
 
 Seldon Core routing capabilities enable gradual rollouts:
 
@@ -251,7 +251,7 @@ spec:
 This configuration sends 90% of traffic to v1 and 10% to v2. As confidence in v2 grows, you update `ratioA` to shift traffic gradually. Claude Code can generate the complete manifest, but it can also help you write the traffic-shifting script:
 
 ```python
-# scripts/shift-traffic.py
+scripts/shift-traffic.py
 import subprocess
 import json
 import sys
@@ -291,7 +291,7 @@ if __name__ == "__main__":
     shift_traffic("iris-classifier", "production", float(sys.argv[1]))
 ```
 
-### Shadow Deployments
+Shadow Deployments
 
 A shadow deployment sends production traffic to a new model version without affecting the response returned to users. Seldon Core supports this through its shadow predictor configuration:
 
@@ -317,16 +317,16 @@ spec:
 
 The shadow predictor receives a copy of every request and logs its predictions, but its responses are discarded. This lets you validate v2 behavior against real production traffic with zero user impact. Claude Code can generate this pattern and help you write the comparison script that analyzes prediction divergence between v1 and v2.
 
-## Testing Seldon Deployments
+Testing Seldon Deployments
 
-A robust test suite is essential before promoting any model to production.
+A solid test suite is essential before promoting any model to production.
 
-### Unit Tests for Model Servers
+Unit Tests for Model Servers
 
 Test your model logic independently of Seldon infrastructure:
 
 ```python
-# tests/test_model.py
+tests/test_model.py
 import pytest
 import numpy as np
 from models.classifier import IrisClassifier
@@ -358,10 +358,10 @@ def test_batch_prediction(model):
     assert len(result) == 3
 ```
 
-### Integration Tests Against the Deployed Service
+Integration Tests Against the Deployed Service
 
 ```python
-# tests/test_inference.py
+tests/test_inference.py
 import requests
 import pytest
 
@@ -400,13 +400,13 @@ def test_invalid_input_handled():
 
 Claude Code can generate both test suites automatically when you describe your model inputs and expected output shapes.
 
-## Debugging Seldon Deployments
+Debugging Seldon Deployments
 
 When deployments fail, Claude Code helps diagnose issues quickly. Common problems include:
 
-**Model Loading Failures**: Check that `modelUri` points to accessible storage with correct credentials. Verify the model format matches the server implementation.
+Model Loading Failures: Check that `modelUri` points to accessible storage with correct credentials. Verify the model format matches the server implementation.
 
-**Resource Exhaustion**: Inspect pod logs for OOM errors. Adjust memory limits in your SeldonDeployment spec:
+Resource Exhaustion: Inspect pod logs for OOM errors. Adjust memory limits in your SeldonDeployment spec:
 
 ```yaml
 resources:
@@ -416,7 +416,7 @@ resources:
     memory: 1Gi
 ```
 
-**Probe Failures**: Liveness and readiness probe failures often indicate startup problems. Increase initial delay for models requiring warm-up time:
+Probe Failures: Liveness and readiness probe failures often indicate startup problems. Increase initial delay for models requiring warm-up time:
 
 ```yaml
 startupProbe:
@@ -424,7 +424,7 @@ startupProbe:
   failureThreshold: 30
 ```
 
-**Init Container Failures**: Seldon uses an init container to download model artifacts before the server starts. If the init container fails, the pod never reaches Running state. Check with:
+Init Container Failures: Seldon uses an init container to download model artifacts before the server starts. If the init container fails, the pod never reaches Running state. Check with:
 
 ```bash
 kubectl logs <pod-name> -c model-initializer -n <namespace>
@@ -440,11 +440,11 @@ kubectl get pods -l seldon-deployment-id=<name>
 kubectl logs -l seldon-deployment-id=<name> --all-containers=true --prefix=true
 ```
 
-### Diagnostic Workflow
+Diagnostic Workflow
 
 When a Seldon deployment is failing, follow this diagnostic sequence. Claude Code can walk through each step with you:
 
-1. Check `kubectl get seldondeployment <name> -n <ns> -o yaml` — look at the `status` field for error conditions
+1. Check `kubectl get seldondeployment <name> -n <ns> -o yaml`. look at the `status` field for error conditions
 2. Check pod status with `kubectl get pods -l seldon-deployment-id=<name>`
 3. If pods are in `Init:Error` or `Init:CrashLoopBackOff`, check the init container logs
 4. If pods are in `CrashLoopBackOff`, check the main container logs
@@ -453,13 +453,13 @@ When a Seldon deployment is failing, follow this diagnostic sequence. Claude Cod
 
 Paste the relevant log output to Claude Code and describe the failure mode. It can identify the root cause and suggest the specific configuration change needed.
 
-## Monitoring and Observability
+Monitoring and Observability
 
 Seldon Core exposes Prometheus metrics by default. Key metrics to track:
 
-- `seldon_api_executor_server_requests_seconds` — prediction latency histogram
-- `seldon_api_executor_server_requests_total` — request count by status code
-- `seldon_api_executor_client_requests_seconds` — latency between graph components
+- `seldon_api_executor_server_requests_seconds`. prediction latency histogram
+- `seldon_api_executor_server_requests_total`. request count by status code
+- `seldon_api_executor_client_requests_seconds`. latency between graph components
 
 Create a Grafana dashboard by asking Claude Code to generate the dashboard JSON for your specific SeldonDeployment name and namespace. A good dashboard shows:
 
@@ -468,12 +468,12 @@ Create a Grafana dashboard by asking Claude Code to generate the dashboard JSON 
 - Throughput (requests per second)
 - Per-predictor traffic split (critical for A/B test monitoring)
 
-### Alerting Rules
+Alerting Rules
 
 Ask Claude Code to generate Prometheus alerting rules appropriate for your SLA:
 
 ```yaml
-# prometheus-alerts.yaml
+prometheus-alerts.yaml
 groups:
 - name: seldon-model-serving
   rules:
@@ -501,22 +501,22 @@ groups:
       summary: "Error rate exceeds 1% for 2 minutes"
 ```
 
-## Best Practices for Claude Code + Seldon Workflows
+Best Practices for Claude Code + Seldon Workflows
 
 Implement these practices for efficient model serving workflows:
 
-1. **Version Control All Configurations**: Store SeldonDeployment manifests in git alongside your model artifacts. This enables reproducible deployments and easy rollback.
+1. Version Control All Configurations: Store SeldonDeployment manifests in git alongside your model artifacts. This enables reproducible deployments and easy rollback.
 
-2. **Use Environment-Specific Configs**: Create separate manifests for dev, staging, and production environments. Use Kustomize or Helm with Claude Code generating base templates.
+2. Use Environment-Specific Configs: Create separate manifests for dev, staging, and production environments. Use Kustomize or Helm with Claude Code generating base templates.
 
-3. **Never Use `latest` Image Tags in Production**: Pin to specific digest or version tags. Ask Claude Code to flag any `latest` tags during manifest review.
+3. Never Use `latest` Image Tags in Production: Pin to specific digest or version tags. Ask Claude Code to flag any `latest` tags during manifest review.
 
-4. **Set Resource Requests and Limits on Every Container**: Kubernetes scheduling depends on resource requests. Without limits, a single misbehaving pod can starve others.
+4. Set Resource Requests and Limits on Every Container: Kubernetes scheduling depends on resource requests. Without limits, a single misbehaving pod can starve others.
 
-5. **Implement Proper Testing**: Before deploying to production, test locally using Minikube or Kind. Claude Code can generate test payloads:
+5. Implement Proper Testing: Before deploying to production, test locally using Minikube or Kind. Claude Code can generate test payloads:
 
 ```python
-# tests/test_inference.py
+tests/test_inference.py
 import requests
 
 def test_prediction():
@@ -533,24 +533,24 @@ def test_prediction():
     assert "data" in response.json()
 ```
 
-6. **Monitor Continuously**: Integrate Prometheus metrics exposed by Seldon Core. Track prediction latency, error rates, and resource utilization.
+6. Monitor Continuously: Integrate Prometheus metrics exposed by Seldon Core. Track prediction latency, error rates, and resource utilization.
 
-7. **Use Horizontal Pod Autoscaling**: Configure HPA based on CPU or custom metrics so your serving infrastructure scales with traffic automatically. Claude Code can generate the HPA manifest alongside your SeldonDeployment.
+7. Use Horizontal Pod Autoscaling: Configure HPA based on CPU or custom metrics so your serving infrastructure scales with traffic automatically. Claude Code can generate the HPA manifest alongside your SeldonDeployment.
 
-8. **Document Your Inference Graph**: Complex graphs with multiple transformers and routers become difficult to reason about. Ask Claude Code to generate a plain-English description of what each graph does from the YAML — useful for onboarding and incident response.
+8. Document Your Inference Graph: Complex graphs with multiple transformers and routers become difficult to reason about. Ask Claude Code to generate a plain-English description of what each graph does from the YAML. useful for onboarding and incident response.
 
-## Conclusion
+Conclusion
 
 Claude Code transforms Seldon Core deployment from manual YAML editing into an automated, error-resistant workflow. By creating specialized skills for your model serving patterns, generating configurations on demand, and assisting with debugging, you accelerate the path from training to production inference. The combination of Claude Code's automation capabilities and Seldon Core's powerful serving infrastructure enables robust, scalable ML deployments with minimal friction.
 
-Start by creating a deployment generator skill for your specific model types, then expand to cover testing, monitoring, and advanced inference graph patterns as your serving needs grow. As your fleet of deployed models scales, the consistency that comes from Claude Code-generated configurations pays compounding dividends — fewer incidents caused by hand-crafted YAML errors, faster onboarding for new team members, and a documented, reproducible process for every deployment.
+Start by creating a deployment generator skill for your specific model types, then expand to cover testing, monitoring, and advanced inference graph patterns as your serving needs grow. As your fleet of deployed models scales, the consistency that comes from Claude Code-generated configurations pays compounding dividends. fewer incidents caused by hand-crafted YAML errors, faster onboarding for new team members, and a documented, reproducible process for every deployment.
 
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

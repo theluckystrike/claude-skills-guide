@@ -12,31 +12,31 @@ score: 8
 ---
 
 {% raw %}
-# Chrome Extension Core Web Vitals Checker: Developer Guide
+Chrome Extension Core Web Vitals Checker: Developer Guide
 
 Core Web Vitals have become the standard for measuring web performance and user experience. Building a Chrome extension that checks these metrics gives you real-time insights without leaving your browser. This guide walks you through creating a functional Core Web Vitals checker extension from scratch.
 
-## What Are Core Web Vitals
+What Are Core Web Vitals
 
 Core Web Vitals consist of three metrics that Google uses to evaluate page experience:
 
-- **Largest Contentful Paint (LCP)** measures loading performance. A good LCP is under 2.5 seconds.
-- **First Input Delay (FID)** measures interactivity. A good FID is under 100 milliseconds.
-- **Cumulative Layout Shift (CLS)** measures visual stability. A good CLS is under 0.1.
+- Largest Contentful Paint (LCP) measures loading performance. A good LCP is under 2.5 seconds.
+- First Input Delay (FID) measures interactivity. A good FID is under 100 milliseconds.
+- Cumulative Layout Shift (CLS) measures visual stability. A good CLS is under 0.1.
 
 Building an extension to track these metrics requires understanding the Chrome APIs available for performance measurement and how to extract meaningful data from them.
 
-## Extension Architecture
+Extension Architecture
 
 Your Core Web Vitals checker will need three main components:
 
-1. **Content script** - Injected into pages to collect performance data
-2. **Background worker** - Handles message passing and data aggregation
-3. **Popup UI** - Displays metrics to users in a clean interface
+1. Content script - Injected into pages to collect performance data
+2. Background worker - Handles message passing and data aggregation
+3. Popup UI - Displays metrics to users in a clean interface
 
 The content script uses the Performance API to gather metrics, then communicates with the popup through Chrome's message passing system.
 
-## Setting Up the Manifest
+Setting Up the Manifest
 
 Every Chrome extension starts with the manifest file. For a Core Web Vitals checker, you need Manifest V3 with specific permissions:
 
@@ -71,7 +71,7 @@ Every Chrome extension starts with the manifest file. For a Core Web Vitals chec
 
 The `activeTab` permission lets your extension interact with the currently active tab, while `scripting` allows you to execute content scripts. The host permissions `<all_urls>` grants access to measure performance on any website.
 
-## Collecting Performance Metrics
+Collecting Performance Metrics
 
 The content script is where the actual measurement happens. You'll use the Performance API to extract Core Web Vitals data:
 
@@ -138,7 +138,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 This script uses PerformanceObserver to watch for Largest Contentful Paint and layout shift events. The CLS calculation filters out entries with recent user input, as those shouldn't count toward cumulative shift. The script returns metrics after a 2-second delay to ensure enough time for all paint events to fire.
 
-## Building the Popup Interface
+Building the Popup Interface
 
 The popup provides the user-facing interface. It requests metrics from the content script and displays them with visual indicators:
 
@@ -169,7 +169,7 @@ The popup provides the user-facing interface. It requests metrics from the conte
 </html>
 ```
 
-## Handling Metric Display Logic
+Handling Metric Display Logic
 
 The popup JavaScript bridges the gap between the content script and the UI:
 
@@ -234,7 +234,7 @@ fetchMetrics();
 
 The rating function applies Google's official thresholds for each metric, coloring the results green for good, yellow for needs improvement, and red for poor performance. The fetchMetrics function queries the active tab and requests performance data from the content script.
 
-## Testing Your Extension
+Testing Your Extension
 
 To test the extension locally:
 
@@ -245,20 +245,20 @@ To test the extension locally:
 
 For debugging, check the popup console and the background service worker console in the extensions page. PerformanceObserver can be finicky, so test across multiple sites to ensure reliable data collection.
 
-## Limitations and Considerations
+Limitations and Considerations
 
-This approach captures metrics at the time of measurement, which differs from field data that Chrome's CrUX reports. Your extension provides lab data—a snapshot of performance under specific conditions. For comprehensive analysis, combine your extension with PageSpeed Insights or Chrome DevTools.
+This approach captures metrics at the time of measurement, which differs from field data that Chrome's CrUX reports. Your extension provides lab data, a snapshot of performance under specific conditions. For comprehensive analysis, combine your extension with PageSpeed Insights or Chrome DevTools.
 
 Some Single Page Applications may not trigger fresh LCP events on navigation, requiring users to manually refresh after content changes. The extension works best on traditional multi-page sites where full page loads occur.
 
 Building this extension gives you a practical tool for quick performance audits while learning the Chrome extension APIs and Performance API in depth.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

@@ -13,11 +13,11 @@ permalink: /claude-code-gitlab-ci-pipeline-docker-registry-tutorial/
 
 # Claude Code GitLab CI Pipeline Docker Registry Tutorial
 
-This tutorial walks you through building a complete GitLab CI pipeline from scratch — project structure, Dockerfile, enabling the Container Registry, and configuring build, test, and push stages.
+This tutorial walks you through building a complete GitLab CI pipeline from scratch. project structure, Dockerfile, enabling the Container Registry, and configuring build, test, and push stages.
 
 [Setting up automated deployments with GitLab CI and Docker Registry streamlines your development workflow significantly.](/best-claude-code-skills-to-install-first-2026/) By the end of this tutorial you will have a pipeline that builds Docker images, runs unit and integration tests in containers, scans for vulnerabilities, and pushes to GitLab's integrated private registry.
 
-## Prerequisites
+Prerequisites
 
 Before you begin, ensure you have:
 
@@ -28,46 +28,46 @@ Before you begin, ensure you have:
 
 If you are new to [CI/CD pipeline](/claude-skills-with-github-actions-ci-cd-pipeline/)s, consider using the `/[tdd skill for testing](/claude-tdd-skill-test-driven-development-workflow/)` skill in Claude Code to generate test cases for your application before setting up the pipeline. The skill helps ensure your code works correctly before automation takes over.
 
-## Project Structure
+Project Structure
 
 Organize your project to support Docker-based deployments:
 
 ```
 my-app/
-├── .gitlab-ci.yml
-├── Dockerfile
-├── src/
-│   └── index.js
-├── tests/
-│   └── app.test.js
-└── package.json
+ .gitlab-ci.yml
+ Dockerfile
+ src/
+    index.js
+ tests/
+    app.test.js
+ package.json
 ```
 
 [The `.gitlab-ci.yml` file defines your pipeline, while the `Dockerfile` specifies how to build your container image](/claude-tdd-skill-test-driven-development-workflow/)
 
-## Creating the Dockerfile
+Creating the Dockerfile
 
 Start with a production-ready Dockerfile for your application:
 
 ```dockerfile
-# Use Node.js 20 LTS as base image
+Use Node.js 20 LTS as base image
 FROM node:20-alpine AS builder
 
 WORKDIR /app
 
-# Copy package files and install dependencies
+Copy package files and install dependencies
 COPY package*.json ./
 RUN npm ci --only=production
 
-# Copy source code
+Copy source code
 COPY src/ ./src/
 
-# Production image
+Production image
 FROM node:20-alpine
 
 WORKDIR /app
 
-# Create non-root user for security
+Create non-root user for security
 RUN addgroup -g 1001 -S nodejs && \
     adduser -S nodejs -u 1001
 
@@ -82,7 +82,7 @@ CMD ["node", "src/index.js"]
 
 This multi-stage build reduces the final image size by excluding build dependencies from the production image.
 
-## Configuring GitLab CI Pipeline
+Configuring GitLab CI Pipeline
 
 Create your `.gitlab-ci.yml` file in the project root:
 
@@ -149,9 +149,9 @@ push:tag:
 
 This pipeline runs four stages: building the Docker image, running unit and integration tests, and pushing to the registry. The push stage is manual for tag releases, giving you control over production deployments.
 
-## Enabling GitLab Container Registry
+Enabling GitLab Container Registry
 
-Navigate to your project in GitLab and go to **Settings > General > Visibility**. Enable the Container Registry feature. GitLab automatically creates a registry at `registry.gitlab.com/username/project`.
+Navigate to your project in GitLab and go to Settings > General > Visibility. Enable the Container Registry feature. GitLab automatically creates a registry at `registry.gitlab.com/username/project`.
 
 The pipeline uses these built-in variables:
 
@@ -162,7 +162,7 @@ The pipeline uses these built-in variables:
 
 GitLab generates these credentials automatically for CI pipelines, so you do not need to configure additional secrets for basic usage.
 
-## Running Tests in Containers
+Running Tests in Containers
 
 The integration test stage uses the built image as the runtime environment. This ensures your containerized application works correctly in the same environment where it will deploy:
 
@@ -184,7 +184,7 @@ test:integration:
 
 The service definition starts a PostgreSQL container linked to your test container, allowing integration tests against a real database.
 
-## Combining with Claude Skills
+Combining with Claude Skills
 
 Use the `/tdd` skill to write comprehensive tests before setting up your pipeline. Claude generates test cases based on your function specifications, ensuring high coverage before automation begins.
 
@@ -199,7 +199,7 @@ The `/supermemory` skill stores your pipeline configurations and deployment patt
 
 For frontend applications, `/frontend-design` helps scaffold components that work well with your Docker setup, including proper environment variable handling and build configurations.
 
-## Running Claude Code Inside the Pipeline
+Running Claude Code Inside the Pipeline
 
 You can add Claude Code as a live AI analysis stage that reviews code on every merge request:
 
@@ -217,7 +217,7 @@ claude-analysis:
 
 Store your `ANTHROPIC_API_KEY` as a protected, masked CI/CD variable. The `--dangerously-skip-permissions` flag enables non-interactive execution in CI.
 
-## Multi-Environment Deployments
+Multi-Environment Deployments
 
 Extend your pipeline for staging and production with manual approval gates:
 
@@ -263,7 +263,7 @@ debug:
     - if: $CI_COMMIT_MESSAGE =~ /debug/
 ```
 
-## Security Best Practices
+Security Best Practices
 
 Harden your pipeline with these security measures:
 
@@ -280,9 +280,9 @@ security:scan:
 
 Add vulnerability scanning to catch security issues before deployment. The Trivy scanner checks your Docker image against known vulnerability databases.
 
-For sensitive deployments, store credentials in GitLab CI/CD variables rather than hardcoding them. Go to **Settings > CI/CD > Variables** to add secure variables that the pipeline can access.
+For sensitive deployments, store credentials in GitLab CI/CD variables rather than hardcoding them. Go to Settings > CI/CD > Variables to add secure variables that the pipeline can access.
 
-## Optimizing Pipeline Performance
+Optimizing Pipeline Performance
 
 Speed up your pipeline with caching and parallel execution:
 
@@ -307,7 +307,7 @@ test:unit:
 
 Caching node_modules between runs reduces installation time significantly for Node.js projects.
 
-## Conclusion
+Conclusion
 
 GitLab CI with integrated Docker Registry provides a powerful platform for automating your build, test, and deployment workflows. The pipeline in this tutorial handles building Docker images, running both unit and integration tests in containers, and pushing to your private registry with manual approval for releases.
 
@@ -315,11 +315,11 @@ Combining this setup with Claude Code skills like `/tdd` for test generation, `/
 
 ---
 
-## Related Reading
+Related Reading
 
-- [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/) — Automate infrastructure with Claude skills
-- [Claude Code Skills for Testing](/best-claude-skills-for-code-review-automation/) — Improve test coverage with AI assistance
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/) — Build testing workflows with Claude
+- [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/). Automate infrastructure with Claude skills
+- [Claude Code Skills for Testing](/best-claude-skills-for-code-review-automation/). Improve test coverage with AI assistance
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/). Build testing workflows with Claude
 
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -16,11 +16,11 @@ score: 7
 
 {% raw %}
 
-# Claude Code for React Reasoning Agent Workflow
+Claude Code for React Reasoning Agent Workflow
 
 Building intelligent React applications that can reason, plan, and execute tasks autonomously has become increasingly accessible with Claude Code. A reasoning agent workflow combines large language model capabilities with structured tool execution, enabling your React apps to handle complex, multi-step operations while maintaining user control. This guide walks you through implementing effective reasoning agent workflows in React applications.
 
-## Understanding Reasoning Agent Architecture
+Understanding Reasoning Agent Architecture
 
 A reasoning agent fundamentally operates through a continuous loop: observe the current state, reason about what action to take next, execute the action, and evaluate the results. In React, this translates to components that can dynamically respond to user intent while using AI capabilities.
 
@@ -66,7 +66,7 @@ const useAgent = () => {
 };
 ```
 
-## Setting Up Claude Code for React Agents
+Setting Up Claude Code for React Agents
 
 Before implementing reasoning workflows, ensure your React project has the proper Claude Code integration. You'll need the Anthropic SDK or a compatible wrapper that supports tool calling.
 
@@ -92,9 +92,9 @@ export const createAgentClient = () => ({
 });
 ```
 
-## Implementing Tool Calling Patterns
+Implementing Tool Calling Patterns
 
-Tools enable your agent to interact with the real world—making API calls, querying databases, or manipulating UI state. Define tools using a structured schema that Claude can understand and invoke.
+Tools enable your agent to interact with the real world, making API calls, querying databases, or manipulating UI state. Define tools using a structured schema that Claude can understand and invoke.
 
 ```tsx
 const toolDefinitions = [
@@ -138,7 +138,7 @@ const toolDefinitions = [
 ];
 ```
 
-## Building a Shopping Assistant Example
+Building a Shopping Assistant Example
 
 Let's put these concepts together into a practical shopping assistant that helps users find products, check shipping, and manage their cart.
 
@@ -223,7 +223,7 @@ const ShoppingAgent: React.FC = () => {
 };
 ```
 
-## Managing Agent State Effectively
+Managing Agent State Effectively
 
 State management in reasoning agents requires careful consideration. Your React components need to track multiple evolving states simultaneously.
 
@@ -296,11 +296,11 @@ export const AgentProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 };
 ```
 
-## Best Practices for Production Workflows
+Best Practices for Production Workflows
 
 When deploying reasoning agent workflows in production React applications, consider these practical guidelines.
 
-**Implement Human-in-the-Loop Controls**: Always provide users with the ability to review and approve potentially destructive actions before execution. Use confirmation dialogs for cart checkouts, order placements, or data modifications.
+Implement Human-in-the-Loop Controls: Always provide users with the ability to review and approve potentially destructive actions before execution. Use confirmation dialogs for cart checkouts, order placements, or data modifications.
 
 ```tsx
 const confirmToolExecution = async (toolCall: ToolCall): Promise<boolean> => {
@@ -318,24 +318,24 @@ const confirmToolExecution = async (toolCall: ToolCall): Promise<boolean> => {
 };
 ```
 
-**Set Appropriate Timeouts**: Agent workflows can take longer than synchronous operations. Implement loading states with estimated wait times and allow users to cancel long-running operations.
+Set Appropriate Timeouts: Agent workflows can take longer than synchronous operations. Implement loading states with estimated wait times and allow users to cancel long-running operations.
 
-**Handle Errors Gracefully**: Build retry logic for transient failures, but provide clear error messages when the agent cannot recover. Maintain conversation history so users can reference previous context.
+Handle Errors Gracefully: Build retry logic for transient failures, but provide clear error messages when the agent cannot recover. Maintain conversation history so users can reference previous context.
 
-**Monitor Token Usage**: Reasoning agents can consume significant tokens, especially with extended conversations. Implement usage tracking and consider summarizing older messages to stay within context limits.
+Monitor Token Usage: Reasoning agents can consume significant tokens, especially with extended conversations. Implement usage tracking and consider summarizing older messages to stay within context limits.
 
-## Common Pitfalls to Avoid
+Common Pitfalls to Avoid
 
-Several mistakes frequently cause issues in React agent implementations. Don't pass excessive context that exceeds model limits—be selective about what history to include. Avoid blocking the main thread with synchronous AI calls; always use async patterns. Finally, don't forget to validate tool inputs on both the client and server sides for security.
+Several mistakes frequently cause issues in React agent implementations. Don't pass excessive context that exceeds model limits, be selective about what history to include. Avoid blocking the main thread with synchronous AI calls; always use async patterns. Finally, don't forget to validate tool inputs on both the client and server sides for security.
 
 Reasoning agent workflows represent a powerful pattern for building intelligent React applications. By combining Claude's reasoning capabilities with well-structured tool execution, you can create experiences that feel both intelligent and controllable. Start with simple workflows, validate the patterns, then expand to more complex use cases as your confidence grows.
 
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

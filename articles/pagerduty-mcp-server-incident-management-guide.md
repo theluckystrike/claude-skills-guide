@@ -17,7 +17,7 @@ permalink: /pagerduty-mcp-server-incident-management-guide/
 
 [This guide walks you through setting up and using the PagerDuty MCP server for automated incident management](/building-your-first-mcp-tool-integration-guide-2026/), providing practical examples that developers and DevOps engineers can implement immediately.
 
-## Prerequisites and Initial Setup
+Prerequisites and Initial Setup
 
 Before configuring the PagerDuty MCP server, ensure you have a PagerDuty account with API access. You'll need to generate an API key with appropriate permissions for incident operations. The key should include read/write access to incidents, services, and escalation policies.
 
@@ -45,7 +45,7 @@ Configure your MCP settings in the project configuration file:
 
 Replace `your-api-key-here` with your actual PagerDuty API key. For production deployments, consider using environment variables or a secrets management solution rather than hardcoding credentials.
 
-## Retrieving and Managing Incidents
+Retrieving and Managing Incidents
 
 Once connected, you can query active incidents directly through natural language. The MCP server exposes comprehensive incident management capabilities that integrate with Claude's reasoning abilities.
 
@@ -65,7 +65,7 @@ Get all unresolved incidents assigned to the database-team escalation policy
 
 The MCP server translates these requests into appropriate PagerDuty API calls, handling pagination and rate limiting automatically.
 
-## Creating and Triggering Incidents Programmatically
+Creating and Triggering Incidents Programmatically
 
 Automating incident creation proves essential for integrating monitoring systems with PagerDuty. The MCP server enables you to create incidents from any data source or automated workflow.
 
@@ -86,7 +86,7 @@ Create a low-urgency incident titled "Weekly Backup Verification"
 for the backup-team service with the note "Automated weekly check"
 ```
 
-## Incident Lifecycle Automation
+Incident Lifecycle Automation
 
 Managing incident lifecycle transitions manually consumes significant time during high-severity events. Automating status updates, acknowledgments, and resolutions accelerates response workflows.
 
@@ -106,7 +106,7 @@ Resolve incident P12345 with note "Connection pool size increased from 50 to 100
 
 Resolution notes serve as documentation for post-incident reviews and help future responders understand what actions resolved the problem.
 
-## Building Automated Response Workflows
+Building Automated Response Workflows
 
 Combining the PagerDuty MCP server with other Claude skills creates powerful automated incident response systems. The key lies in composing multiple capabilities into coherent workflows.
 
@@ -128,7 +128,7 @@ with tags ["database", "connection-pool", "production"]
 
 Over time, this builds an searchable archive of institutional knowledge that accelerates future incident resolution.
 
-## Escalation Policy Management
+Escalation Policy Management
 
 Understanding and manipulating escalation policies through natural language simplifies on-call management. You can query policy details, temporarily reassign responsibilities, or modify schedules without accessing the PagerDuty dashboard.
 
@@ -149,7 +149,7 @@ for the next 7 days starting today
 
 This command handles the complexity of override scheduling, ensuring continuity during vacations or other absences.
 
-## Generating Incident Reports
+Generating Incident Reports
 
 Post-incident documentation often requires significant effort to compile. The PagerDuty MCP server can extract incident data for analysis and reporting.
 
@@ -170,7 +170,7 @@ formatting it with separate sheets for each severity level
 
 This automation transforms what traditionally required manual data gathering into a single command execution.
 
-## Best Practices and Security Considerations
+Best Practices and Security Considerations
 
 When implementing PagerDuty MCP server automation, follow security best practices to protect sensitive incident data and maintain appropriate access controls.
 
@@ -180,17 +180,17 @@ Implement appropriate rate limiting in your automation scripts to avoid triggeri
 
 Audit automation actions through PagerDuty's integration logs. All MCP-triggered actions appear in the integration event log, maintaining compliance with incident management policies.
 
-## Conclusion
+Conclusion
 
 The PagerDuty MCP server transforms incident management from reactive firefighting into proactive automation. By using Claude's natural language understanding and reasoning capabilities, teams can respond faster, document more thoroughly, and build institutional knowledge that improves over time.
 
 Start with simple automations like incident acknowledgment and resolution notes, then expand into more complex workflows as your confidence grows. The combination of PagerDuty's incident management with Claude's AI capabilities creates a powerful foundation for modern DevOps practices.
 
-## Related Reading
+Related Reading
 
 - [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)
 - [Datadog MCP Server Monitoring Automation with Claude](/datadog-mcp-server-monitoring-automation-claude/)
 - [MCP Server Logging Audit Trail Security Guide](/mcp-server-logging-audit-trail-security-guide/)
 - [Integrations Hub](/integrations-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

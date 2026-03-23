@@ -17,9 +17,9 @@ Generating PDFs programmatically is one of those tasks that sounds simple and tu
 
 This guide covers how to invoke the `/pdf` skill, what it produces, and how to use it across the most common document generation scenarios: invoices, reports, and technical specifications. It also covers how to integrate generated PDF code into automated workflows.
 
-## How to Invoke the PDF Skill
+How to Invoke the PDF Skill
 
-The `/pdf` skill is a purpose-built agent within Claude Code. You invoke it like any other skill — prefix your prompt with `/pdf` and describe what you want.
+The `/pdf` skill is a purpose-built agent within Claude Code. You invoke it like any other skill. prefix your prompt with `/pdf` and describe what you want.
 
 ```bash
 /pdf generate an invoice PDF for a freelance consulting engagement.
@@ -28,7 +28,7 @@ The `/pdf` skill is a purpose-built agent within Claude Code. You invoke it like
      Style: clean sans-serif, company logo placeholder at top right.
 ```
 
-Claude does not just answer conversationally — it reads your project context, identifies relevant files (existing templates, utility functions, package.json), and writes the implementation. If you have no prior PDF setup, it scaffolds one. If you already use a library like `pdfkit` or `puppeteer`, it integrates with your existing stack.
+Claude does not just answer conversationally. it reads your project context, identifies relevant files (existing templates, utility functions, package.json), and writes the implementation. If you have no prior PDF setup, it scaffolds one. If you already use a library like `pdfkit` or `puppeteer`, it integrates with your existing stack.
 
 The skill understands common document structures. You do not need to specify page margins, font hierarchies, or table rendering logic unless you have specific requirements. The defaults it chooses are publication-quality.
 
@@ -39,9 +39,9 @@ Output from the above invocation would include:
 - A `generateInvoice.test.js` file that asserts the output PDF contains expected strings
 - Installation instructions for any new dependencies
 
-## Generating Invoices
+Generating Invoices
 
-Invoices are the most frequent PDF generation use case for solo developers and small teams. The `/pdf` skill handles the layout complexity that makes invoice generation annoying by hand — specifically, dynamic line item tables that grow with the number of items and push the totals block to the correct position.
+Invoices are the most frequent PDF generation use case for solo developers and small teams. The `/pdf` skill handles the layout complexity that makes invoice generation annoying by hand. specifically, dynamic line item tables that grow with the number of items and push the totals block to the correct position.
 
 Invoke it with your data schema:
 
@@ -121,7 +121,7 @@ module.exports = { generateInvoice };
 
 Plugging this into an Express route requires three lines. You have a working invoice endpoint in under an hour including tests.
 
-## Generating Reports
+Generating Reports
 
 Reports differ from invoices because they involve narrative text, charts or tables from dynamic data, and often a cover page. The `/pdf` skill handles all of these when prompted with sufficient context about the data source.
 
@@ -160,9 +160,9 @@ async function generateSalesReport(salesData, dateRange) {
 
 The `buildReportHTML` function it generates produces a complete HTML document with embedded CSS. The benefit of this approach is that you can preview the report in a browser by opening the HTML directly, which makes layout iteration fast without a print-and-check cycle.
 
-## Generating Technical Specifications
+Generating Technical Specifications
 
-Technical specifications — API docs, architecture decision records, system design documents — benefit from consistent formatting and the ability to include code blocks, tables, and diagrams. The `/pdf` skill generates these well when given a structured input schema.
+Technical specifications. API docs, architecture decision records, system design documents. benefit from consistent formatting and the ability to include code blocks, tables, and diagrams. The `/pdf` skill generates these well when given a structured input schema.
 
 ```bash
 /pdf create a technical specification PDF generator.
@@ -209,7 +209,7 @@ function generateSpec(spec) {
   const docDefinition = {
     content: [
       { text: spec.title, style: 'h1' },
-      { text: `Version ${spec.version} — ${spec.author}`, style: 'meta', margin: [0, 4, 0, 24] },
+      { text: `Version ${spec.version}. ${spec.author}`, style: 'meta', margin: [0, 4, 0, 24] },
       { text: 'Table of Contents', style: 'h2' },
       ...tocEntries,
       ...sectionContent
@@ -231,9 +231,9 @@ function generateSpec(spec) {
 }
 ```
 
-## Automating Document Workflows
+Automating Document Workflows
 
-Once you have generator functions for invoices, reports, and specs, the next step is wiring them into automated workflows — scheduled report emails, webhook-triggered invoice delivery, CI-generated spec exports.
+Once you have generator functions for invoices, reports, and specs, the next step is wiring them into automated workflows. scheduled report emails, webhook-triggered invoice delivery, CI-generated spec exports.
 
 The `/pdf` skill can extend the generators it produces. A follow-up prompt:
 
@@ -244,15 +244,15 @@ The `/pdf` skill can extend the generators it produces. A follow-up prompt:
      addresses listed in REPORT_RECIPIENTS env variable using nodemailer
 ```
 
-Claude reads the existing `reportRenderer.js`, writes a `reportScheduler.js` using node-cron, and integrates nodemailer — no manual wiring required.
+Claude reads the existing `reportRenderer.js`, writes a `reportScheduler.js` using node-cron, and integrates nodemailer. no manual wiring required.
 
 The general pattern for automated PDF workflows is: trigger (cron/webhook/event) -> data fetch -> generator function -> delivery (email/S3/response stream). The `/pdf` skill understands all four stages and can implement any of them given sufficient context about your existing infrastructure.
 
 ---
 
-## Related Reading
+Related Reading
 
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -14,19 +14,19 @@ tags: [claude-code, claude-skills]
 
 
 {% raw %}
-# Chain of Agents Pattern for Sequential Task Processing
+Chain of Agents Pattern for Sequential Task Processing
 
 Large language models excel at individual tasks, but complex workflows often require multiple specialized operations that must execute in sequence. The chain of agents pattern addresses this challenge by coordinating multiple AI agents, each handling a specific stage of a workflow. This approach transforms Claude Code from a single conversational assistant into a powerful orchestration engine capable of executing sophisticated, multi-step processes.
 
-## Understanding the Chain of Agents Pattern
+Understanding the Chain of Agents Pattern
 
-The chain of agents pattern structures a workflow as a pipeline where each agent performs a dedicated task and passes its output to the next agent in the sequence. Unlike a single agent handling everything, this pattern enables specialization—each agent can be optimized for its specific function, whether that is data extraction, analysis, transformation, or validation.
+The chain of agents pattern structures a workflow as a pipeline where each agent performs a dedicated task and passes its output to the next agent in the sequence. Unlike a single agent handling everything, this pattern enables specialization, each agent can be optimized for its specific function, whether that is data extraction, analysis, transformation, or validation.
 
 This architecture proves particularly valuable for tasks like processing user-submitted content through multiple validation and enhancement stages, analyzing codebases by chaining together understanding, dependency mapping, and reporting agents, or orchestrating document workflows that move through drafting, review, refinement, and publishing phases.
 
 Claude Code's tool-calling capabilities and skill system provide the foundation for implementing this pattern effectively.
 
-### Why Not Use a Single Agent?
+Why Not Use a Single Agent?
 
 The temptation with a capable model like Claude is to hand it the entire problem and ask for a complete solution. For simple tasks, this works well. For complex multi-stage workflows, the single-agent approach runs into predictable problems.
 
@@ -36,40 +36,40 @@ Second, context contamination: early stages of a workflow can bias later stages 
 
 Third, debuggability: when a single agent produces a bad result, it is difficult to identify which part of the reasoning went wrong. With a chain, you can inspect the output at each stage and pinpoint exactly where quality degraded.
 
-## Core Architecture of an Agent Chain
+Core Architecture of an Agent Chain
 
 Every chain of agents implementation has four structural elements regardless of the specific domain.
 
-**The Orchestrator** coordinates the overall workflow. It knows the sequence of stages, routes output from one agent to the next, and handles exceptions when a stage fails or produces unexpected output. In Claude Code, the orchestrator is typically your own script or skill definition.
+The Orchestrator coordinates the overall workflow. It knows the sequence of stages, routes output from one agent to the next, and handles exceptions when a stage fails or produces unexpected output. In Claude Code, the orchestrator is typically your own script or skill definition.
 
-**Stage Agents** are the specialists. Each one has a narrow, well-defined job. It receives structured input from the previous stage, performs its specific function, and produces structured output for the next stage.
+Stage Agents are the specialists. Each one has a narrow, well-defined job. It receives structured input from the previous stage, performs its specific function, and produces structured output for the next stage.
 
-**Shared State** is the data store that persists information across the entire chain. In short chains, the Claude conversation context serves as shared state. In longer chains, you need external storage—a file, a database record, or a JSON blob written between stages.
+Shared State is the data store that persists information across the entire chain. In short chains, the Claude conversation context serves as shared state. In longer chains, you need external storage, a file, a database record, or a JSON blob written between stages.
 
-**Checkpoints** are validation steps between stages. Before passing output from Agent A to Agent B, a checkpoint verifies the output meets the schema and quality bar Agent B expects. Catching errors at the checkpoint is far cheaper than letting them propagate to the end of the chain.
+Checkpoints are validation steps between stages. Before passing output from Agent A to Agent B, a checkpoint verifies the output meets the schema and quality bar Agent B expects. Catching errors at the checkpoint is far cheaper than letting them propagate to the end of the chain.
 
-## Implementing the Pattern with Claude Code
+Implementing the Pattern with Claude Code
 
-### Defining Agent Responsibilities
+Defining Agent Responsibilities
 
 The first step involves breaking down your workflow into discrete stages with clear inputs and outputs. For instance, a content moderation pipeline might include an agent that identifies and flags sensitive content, followed by another that categorizes and tags acceptable content, a third that summarizes the content, and a final agent that generates metadata and prepares it for storage.
 
 Each stage should represent a single, well-defined responsibility. A useful test: can you write the stage's job description in one sentence? If you need two sentences, the stage is doing too much and should be split.
 
-### Passing Context Between Agents
+Passing Context Between Agents
 
 Claude Code handles sequential processing naturally through conversation context. When Agent A completes its task, its response becomes part of the shared context that Agent B references. The skill system amplifies this by allowing you to invoke specialized tools at each stage using the `get_skill()` function to load domain-specific capabilities when needed.
 
 For longer chains where context length is a concern, use structured handoff documents rather than relying on the full conversation history. A handoff document is a compact summary of what the previous stage determined, formatted specifically for the next stage's needs:
 
 ```bash
-# Stage 1: Extract and analyze
+Stage 1: Extract and analyze
 claude -p "Analyze this codebase and output a structured JSON report.
 Include: language breakdown, dependency list, entry points, and any obvious code smells.
 Output ONLY valid JSON, no prose." \
   --tools Read,Bash < codebase-manifest.txt > stage1-analysis.json
 
-# Stage 2: Security review using Stage 1 output
+Stage 2: Security review using Stage 1 output
 claude -p "You are a security reviewer. You have received the following analysis of a codebase:
 
 $(cat stage1-analysis.json)
@@ -82,7 +82,7 @@ Based on this analysis, identify the top security risks. For each risk, provide:
 
 Output as JSON array." > stage2-security.json
 
-# Stage 3: Remediation planning using both prior outputs
+Stage 3: Remediation planning using both prior outputs
 claude -p "You are a remediation planner. Given the security findings below, create a
 prioritized action plan with effort estimates.
 
@@ -97,13 +97,13 @@ Output a markdown action plan with a table of tasks sorted by priority." > stage
 
 This shell-script approach to chaining is simple, transparent, and debuggable. You can inspect each intermediate output file before proceeding to the next stage.
 
-### Example: Multi-Stage Code Review Pipeline
+Multi-Stage Code Review Pipeline
 
 Consider implementing a code review workflow with three sequential agents. The first agent performs static analysis to identify potential bugs, the second agent focuses on security vulnerabilities and recommendations, and the third agent compiles a comprehensive review report.
 
 ```bash
 #!/bin/bash
-# code-review-chain.sh
+code-review-chain.sh
 
 FILE=$1
 
@@ -141,19 +141,19 @@ Produce a final markdown report that:
 
 Claude Code orchestrates this pipeline through its conversation context management. Each agent receives the necessary context from previous stages and produces structured output for subsequent agents. The key is designing clear prompts that define each agent's role and expected output format.
 
-### Example: Content Processing Pipeline
+Content Processing Pipeline
 
 A content processing pipeline demonstrates another practical implementation. The first agent extracts and structures raw content from various input sources. The second agent enriches this content with relevant metadata, context, and cross-references. The third agent applies formatting rules and transforms the content into the desired output format. Finally, a validation agent verifies the processed content against predefined schemas and business rules.
 
 This pipeline uses different Claude Code skills at each stage. You might use the `docx` skill for document processing, the `pdf` skill for PDF generation, or specialized skills for data extraction and validation. The modular nature of the skill system allows you to assemble the exact capabilities needed for each pipeline stage.
 
-### Building a Reusable Chain Framework
+Building a Reusable Chain Framework
 
 Once you have implemented a few chains, common patterns emerge that are worth abstracting into a reusable framework. Here is a simple bash framework that handles logging, error checking, and stage output management:
 
 ```bash
 #!/bin/bash
-# chain-runner.sh - Generic chain of agents runner
+chain-runner.sh - Generic chain of agents runner
 
 CHAIN_NAME=$1
 INPUT=$2
@@ -179,16 +179,16 @@ run_stage() {
   fi
 }
 
-# Stage 1
+Stage 1
 S1=$(run_stage 1 "extract" "./prompts/stage1-extract.txt" "$INPUT")
 
-# Stage 2 uses Stage 1 output
+Stage 2 uses Stage 1 output
 S2=$(run_stage 2 "enrich" "./prompts/stage2-enrich.txt" "$S1")
 
-# Stage 3 uses Stage 2 output
+Stage 3 uses Stage 2 output
 S3=$(run_stage 3 "format" "./prompts/stage3-format.txt" "$S2")
 
-# Final validation
+Final validation
 run_stage 4 "validate" "./prompts/stage4-validate.txt" "$S3"
 
 echo "Chain complete. Results in $WORK_DIR"
@@ -196,12 +196,12 @@ echo "Chain complete. Results in $WORK_DIR"
 
 This framework creates a timestamped directory for each chain run, stores all intermediate outputs, and fails loudly on any stage error. The prompt files are separate from the runner, making it easy to update individual stage logic without touching the orchestration code.
 
-### Handling Branching and Parallelization
+Handling Branching and Parallelization
 
 The chain of agents pattern also supports more complex flow control. You can implement conditional branching where different agents handle different paths based on intermediate results. For example, a document processing pipeline might route technical documents to a code analysis agent while sending marketing content to a tone adjustment agent.
 
 ```bash
-# Conditional branching based on content classification
+Conditional branching based on content classification
 DOC_TYPE=$(claude -p "Classify this document. Output exactly one word:
 technical, marketing, legal, or financial." < "$INPUT")
 
@@ -224,18 +224,18 @@ esac
 For stages that are independent of each other, parallelization is straightforward. Run multiple agents simultaneously and collect their outputs before proceeding to a merge stage:
 
 ```bash
-# Run security and performance reviews in parallel
+Run security and performance reviews in parallel
 claude -p "$(cat ./prompts/security.txt)" < "$INPUT" > security-findings.json &
 PID_SECURITY=$!
 
 claude -p "$(cat ./prompts/performance.txt)" < "$INPUT" > performance-findings.json &
 PID_PERF=$!
 
-# Wait for both to complete
+Wait for both to complete
 wait $PID_SECURITY
 wait $PID_PERF
 
-# Merge stage uses both outputs
+Merge stage uses both outputs
 claude -p "Merge these two review reports into one consolidated report:
 
 Security: $(cat security-findings.json)
@@ -244,27 +244,27 @@ Performance: $(cat performance-findings.json)
 Remove any duplicates and sort by severity." > final-report.md
 ```
 
-Claude Code's conversational interface makes this straightforward—you write logic in your prompts that evaluates outputs and determines the next appropriate agent.
+Claude Code's conversational interface makes this straightforward, you write logic in your prompts that evaluates outputs and determines the next appropriate agent.
 
-## Practical Considerations
+Practical Considerations
 
 Several factors determine success when implementing chain of agents workflows in Claude Code.
 
-**Context Management**: Longer pipelines can exceed token limits. Consider summarizing intermediate results or using a dedicated skill like `supermemory` to store and retrieve context across stages. As a rule of thumb, if your chain has more than four stages, start using intermediate files rather than inline variable expansion. Passing `$(cat large-file.json)` into a prompt for the fifth stage in a row will balloon the context and degrade quality at later stages.
+Context Management: Longer pipelines can exceed token limits. Consider summarizing intermediate results or using a dedicated skill like `supermemory` to store and retrieve context across stages. As a rule of thumb, if your chain has more than four stages, start using intermediate files rather than inline variable expansion. Passing `$(cat large-file.json)` into a prompt for the fifth stage in a row will balloon the context and degrade quality at later stages.
 
-**Error Handling**: Each agent should validate its inputs and outputs. Build checkpoint logic that catches failures early rather than propagating them through the entire chain. A checkpoint prompt might be as simple as: "Verify that the following JSON matches this schema. If it does not, output the word INVALID and describe the mismatch. Otherwise output the word VALID."
+Error Handling: Each agent should validate its inputs and outputs. Build checkpoint logic that catches failures early rather than propagating them through the entire chain. A checkpoint prompt might be as simple as: "Verify that the following JSON matches this schema. If it does not, output the word INVALID and describe the mismatch. Otherwise output the word VALID."
 
-**State Persistence**: For complex workflows, use external storage for pipeline state. This enables recovery from interruptions and provides audit trails for debugging. A crashed chain that has written intermediate outputs to disk can be resumed from the last successful stage rather than restarted from scratch.
+State Persistence: For complex workflows, use external storage for pipeline state. This enables recovery from interruptions and provides audit trails for debugging. A crashed chain that has written intermediate outputs to disk can be resumed from the last successful stage rather than restarted from scratch.
 
-**Token Optimization**: The chain of agents pattern consumes more tokens than single-agent approaches because you're processing input multiple times. Use targeted prompts and focused skill invocations to minimize unnecessary context. Instruct each stage agent to output only what the next stage needs—not verbose explanations that will simply be discarded.
+Token Optimization: The chain of agents pattern consumes more tokens than single-agent approaches because you're processing input multiple times. Use targeted prompts and focused skill invocations to minimize unnecessary context. Instruct each stage agent to output only what the next stage needs, not verbose explanations that will simply be discarded.
 
-**Output Schema Consistency**: The single largest source of failures in agent chains is schema mismatch between stages. Stage 1 outputs a JSON object with a key called `issues`, Stage 2 expects a key called `findings`, and the chain silently produces bad results. Define and document your inter-stage schemas before writing any prompts, and validate against them at each checkpoint.
+Output Schema Consistency: The single largest source of failures in agent chains is schema mismatch between stages. Stage 1 outputs a JSON object with a key called `issues`, Stage 2 expects a key called `findings`, and the chain silently produces bad results. Define and document your inter-stage schemas before writing any prompts, and validate against them at each checkpoint.
 
-## Real-World Applications
+Real-World Applications
 
 The chain of agents pattern enables sophisticated automation scenarios that would be difficult or impossible for a single AI agent to handle.
 
-A software development workflow might chain agents that analyze requirements, generate initial code, run tests, identify failures, and then iteratively refine the code until tests pass. Each agent specializes in its specific task—code generation, test execution, or debugging—and passes quality artifacts forward.
+A software development workflow might chain agents that analyze requirements, generate initial code, run tests, identify failures, and then iteratively refine the code until tests pass. Each agent specializes in its specific task, code generation, test execution, or debugging, and passes quality artifacts forward.
 
 An automated reporting system could chain agents that gather data from multiple sources, perform statistical analysis, generate visualizations, compose narrative sections, and assemble everything into a final report document. The `xlsx` skill handles data work, while `pptx` or `pdf` skills produce the final output.
 
@@ -272,7 +272,7 @@ Customer service automation benefits from chaining agents that classify incoming
 
 A documentation generation workflow chains agents that read source code, extract public API signatures, generate usage examples, write explanatory prose, and assemble everything into a documentation site. Running this chain after every major release keeps documentation synchronized with the codebase without manual authoring effort.
 
-### Measuring Chain Quality
+Measuring Chain Quality
 
 As chains grow more complex, measuring their quality becomes important. For each chain, define at minimum:
 
@@ -286,19 +286,19 @@ As chains grow more complex, measuring their quality becomes important. For each
 
 Logging these metrics for every chain run creates a quality baseline. When you modify a stage prompt, you can immediately see whether the change improved or degraded the metrics.
 
-## Conclusion
+Conclusion
 
 The chain of agents pattern transforms Claude Code into a flexible workflow orchestration system. By breaking complex tasks into specialized stages and using Claude Code's skill system, you can build sophisticated pipelines that combine multiple AI capabilities into coherent, automated processes. Start with simple two-agent chains and progressively add complexity as you become comfortable with the pattern.
 
 The key is treating each agent as a focused specialist, passing clear outputs between stages, and using Claude Code's conversational context to maintain workflow state. Define your inter-stage schemas before writing prompts, validate at every checkpoint, and store intermediate outputs so failures are recoverable. These engineering practices lift a collection of chained prompts from a fragile script into a production-grade automation system.
 
-This pattern unlocks automation scenarios that go far beyond what any single AI assistant could achieve alone—and it scales cleanly as your workflows grow more complex.
+This pattern unlocks automation scenarios that go far beyond what any single AI assistant could achieve alone, and it scales cleanly as your workflows grow more complex.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

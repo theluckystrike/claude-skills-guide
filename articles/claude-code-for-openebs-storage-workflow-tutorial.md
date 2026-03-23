@@ -13,11 +13,11 @@ score: 7
 ---
 
 
-# Claude Code for OpenEBS Storage Workflow Tutorial
+Claude Code for OpenEBS Storage Workflow Tutorial
 
 OpenEBS is a powerful container-native storage solution that provides persistent storage for Kubernetes workloads. When combined with Claude Code, you can automate complex storage workflows, reduce manual errors, and accelerate your DevOps processes. This tutorial walks you through practical examples of using Claude Code to manage OpenEBS storage operations efficiently, from initial provisioning through long-term monitoring and recovery.
 
-## Understanding OpenEBS Architecture
+Understanding OpenEBS Architecture
 
 Before diving into workflows, it's essential to understand how OpenEBS works. OpenEBS uses a volume-based approach where each persistent volume is backed by a dedicated container. This architecture provides isolation, scalability, and flexibility that traditional storage solutions struggle to match in containerized environments.
 
@@ -34,36 +34,36 @@ Understanding these engines helps you choose the right storage backend for your 
 
 Claude Code can help you navigate these choices by explaining trade-offs and generating appropriate configurations based on your requirements. You can ask something like "which OpenEBS engine should I use for a PostgreSQL cluster that needs point-in-time recovery?" and receive a reasoned recommendation with the corresponding configuration.
 
-## Setting Up Claude Code for OpenEBS
+Setting Up Claude Code for OpenEBS
 
 To interact with OpenEBS, Claude Code needs access to your Kubernetes cluster. The most common approach uses the Kubernetes API through kubectl. Ensure your environment has proper authentication configured:
 
 ```bash
-# Verify kubectl connectivity to your cluster
+Verify kubectl connectivity to your cluster
 kubectl cluster-info
 
-# Check OpenEBS operator status
+Check OpenEBS operator status
 kubectl get pods -n openebs
 
-# List available OpenEBS storage classes
+List available OpenEBS storage classes
 kubectl get storageclass | grep openebs
 ```
 
 Installing OpenEBS is also a workflow Claude Code handles well. If your cluster does not have OpenEBS installed, you can ask Claude Code to walk through the installation process:
 
 ```bash
-# Install OpenEBS via Helm
+Install OpenEBS via Helm
 helm repo add openebs https://openebs.github.io/charts
 helm repo update
 helm install openebs --namespace openebs openebs/openebs --create-namespace
 
-# Verify installation
+Verify installation
 kubectl get pods -n openebs --watch
 ```
 
-When working with Claude Code, you can delegate cluster operations directly. Simply describe what you want to accomplish, and Claude Code can execute the appropriate kubectl commands, generate YAML manifests, and verify the results. Claude Code is particularly useful for diagnosing issues — paste in the output of `kubectl describe pvc` and it will interpret the events and suggest a fix.
+When working with Claude Code, you can delegate cluster operations directly. Simply describe what you want to accomplish, and Claude Code can execute the appropriate kubectl commands, generate YAML manifests, and verify the results. Claude Code is particularly useful for diagnosing issues. paste in the output of `kubectl describe pvc` and it will interpret the events and suggest a fix.
 
-## Creating PersistentVolumes with Claude Code
+Creating PersistentVolumes with Claude Code
 
 One of the most common storage workflows involves provisioning PersistentVolumes (PVs) for applications. Here's how Claude Code simplifies this process:
 
@@ -113,7 +113,7 @@ spec:
           claimName: app-data-pvc
 ```
 
-This example demonstrates how Claude Code translates your intent into ready-to-apply Kubernetes resources. You can take it further by asking Claude Code to add resource limits, liveness probes, or pod disruption budgets to the same deployment — it will update the full manifest rather than giving you isolated snippets.
+This example demonstrates how Claude Code translates your intent into ready-to-apply Kubernetes resources. You can take it further by asking Claude Code to add resource limits, liveness probes, or pod disruption budgets to the same deployment. it will update the full manifest rather than giving you isolated snippets.
 
 For production workloads, you often want ReadWriteMany access mode so multiple pods can mount the same volume. OpenEBS cStor supports this through NFS provisioners. Claude Code can generate the NFS PVC alongside the NFS server deployment:
 
@@ -132,7 +132,7 @@ spec:
       storage: 10Gi
 ```
 
-## Managing Storage Classes Dynamically
+Managing Storage Classes Dynamically
 
 Storage Classes define how storage is provisioned. OpenEBS provides several pre-configured storage classes, but you often need custom configurations for specific performance or redundancy requirements.
 
@@ -158,7 +158,7 @@ parameters:
 For teams running mixed workloads, it is common to define multiple storage classes with different SLAs. A practical approach is to define three tiers:
 
 ```yaml
-# Tier 1: High performance with 3 replicas (databases)
+Tier 1: High performance with 3 replicas (databases)
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
@@ -169,7 +169,7 @@ parameters:
   cstorPoolCluster: cspc-stripe
   replicaCount: "3"
 ---
-# Tier 2: Balanced with 2 replicas (application state)
+Tier 2: Balanced with 2 replicas (application state)
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
@@ -180,7 +180,7 @@ parameters:
   cstorPoolCluster: cspc-stripe
   replicaCount: "2"
 ---
-# Tier 3: Single replica (logs, caches)
+Tier 3: Single replica (logs, caches)
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
@@ -190,21 +190,21 @@ parameters:
   hostpath-type: "directory"
 ```
 
-When you need to modify storage settings across multiple PVCs, Claude Code can identify all affected resources and generate appropriate patch operations. For example, migrating all PVCs from an old storage class to a new one requires listing, snapshotting, and reprovisioning — a multi-step workflow Claude Code can script end-to-end.
+When you need to modify storage settings across multiple PVCs, Claude Code can identify all affected resources and generate appropriate patch operations. For example, migrating all PVCs from an old storage class to a new one requires listing, snapshotting, and reprovisioning. a multi-step workflow Claude Code can script end-to-end.
 
-## Automating Backup and Restore Workflows
+Automating Backup and Restore Workflows
 
 Data protection is critical for any storage strategy. OpenEBS provides snapshot and clone capabilities that integrate with Kubernetes' volume snapshot APIs. Claude Code can orchestrate these operations:
 
 First, ensure your cluster has the volume snapshot CRDs and the CSI snapshotter installed:
 
 ```bash
-# Install snapshot CRDs
+Install snapshot CRDs
 kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/master/client/config/crd/snapshot.storage.k8s.io_volumesnapshotclasses.yaml
 kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/master/client/config/crd/snapshot.storage.k8s.io_volumesnapshotcontents.yaml
 kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/master/client/config/crd/snapshot.storage.k8s.io_volumesnapshots.yaml
 
-# Create a VolumeSnapshotClass for OpenEBS cStor
+Create a VolumeSnapshotClass for OpenEBS cStor
 kubectl apply -f - <<EOF
 apiVersion: snapshot.storage.k8s.io/v1
 kind: VolumeSnapshotClass
@@ -285,21 +285,21 @@ spec:
           restartPolicy: OnFailure
 ```
 
-## Monitoring OpenEBS Volumes
+Monitoring OpenEBS Volumes
 
 Effective storage management requires monitoring. Claude Code can help you set up and interpret OpenEBS monitoring:
 
 ```bash
-# Get volume status
+Get volume status
 kubectl get pvc -n openebs
 
-# Check volume replica status
+Check volume replica status
 kubectl get cvr -n openebs
 
-# Check CStorPoolInstance status
+Check CStorPoolInstance status
 kubectl get cspi -n openebs
 
-# View detailed volume information
+View detailed volume information
 kubectl describe pvc app-data-pvc -n default
 ```
 
@@ -336,9 +336,9 @@ Key metrics to alert on in your Grafana dashboard:
 | `openebs_volume_write_latency` | > 10ms | Storage performance issue |
 | `openebs_replica_count` | < expected | Replica loss |
 
-When an alert fires, Claude Code can help you interpret the output. Paste in the Prometheus query result or `kubectl describe` output and ask "why is my cStor pool degraded and how do I fix it?" — Claude Code will diagnose the likely cause and generate the remediation steps.
+When an alert fires, Claude Code can help you interpret the output. Paste in the Prometheus query result or `kubectl describe` output and ask "why is my cStor pool degraded and how do I fix it?". Claude Code will diagnose the likely cause and generate the remediation steps.
 
-## Resizing PersistentVolumes
+Resizing PersistentVolumes
 
 Kubernetes supports volume expansion for supported CSI drivers, and OpenEBS cStor CSI supports it. To resize a PVC, first ensure the storage class has `allowVolumeExpansion: true`:
 
@@ -360,67 +360,67 @@ Then resize the PVC by patching it:
 ```bash
 kubectl patch pvc app-data-pvc -p '{"spec":{"resources":{"requests":{"storage":"20Gi"}}}}'
 
-# Verify the resize is in progress
+Verify the resize is in progress
 kubectl get pvc app-data-pvc -w
 ```
 
 Claude Code is helpful here because resize operations can sometimes stall. When a PVC stays in `FileSystemResizePending` state, Claude Code can diagnose whether the issue is a node-level filesystem resize that requires a pod restart, a pool capacity problem, or a CSI driver version mismatch.
 
-## Troubleshooting Common OpenEBS Issues with Claude Code
+Troubleshooting Common OpenEBS Issues with Claude Code
 
 One of the most practical uses of Claude Code in OpenEBS workflows is troubleshooting. The following patterns come up frequently:
 
-**PVC stuck in Pending state**: The most common cause is no matching storage class or insufficient pool capacity. Claude Code can run a diagnostic sequence:
+PVC stuck in Pending state: The most common cause is no matching storage class or insufficient pool capacity. Claude Code can run a diagnostic sequence:
 
 ```bash
-# Check if storage class exists
+Check if storage class exists
 kubectl get sc openebs-cstor-sparse
 
-# Check pool capacity
+Check pool capacity
 kubectl get cspi -n openebs -o custom-columns=NAME:.metadata.name,FREE:.status.capacity.free
 
-# Check for pending events on the PVC
+Check for pending events on the PVC
 kubectl describe pvc app-data-pvc | grep -A5 Events
 ```
 
-**Volume in read-only mode**: This usually indicates a replica loss event. Claude Code can guide you through the recovery:
+Volume in read-only mode: This usually indicates a replica loss event. Claude Code can guide you through the recovery:
 
 ```bash
-# Check replica status
+Check replica status
 kubectl get cvr -n openebs -l openebs.io/persistent-volume=<pv-name>
 
-# Force replica rebuild if needed
+Force replica rebuild if needed
 kubectl patch cvr <cvr-name> -n openebs -p '{"spec":{"targetIP":"<target-ip>","capacity":"5G","replicaID":"<id>"}}' --type merge
 ```
 
-**Pool disk failures**: When a disk fails, cStor degrades but stays available. Claude Code can generate the disk replacement workflow including uncordon, disk replacement, and pool rebuild commands.
+Pool disk failures: When a disk fails, cStor degrades but stays available. Claude Code can generate the disk replacement workflow including uncordon, disk replacement, and pool rebuild commands.
 
-## Best Practices for Claude Code with OpenEBS
+Best Practices for Claude Code with OpenEBS
 
 When using Claude Code for OpenEBS workflows, follow these actionable recommendations:
 
-**Always verify before applying**: Claude Code generates manifests, but review them carefully before applying to your cluster. Storage configurations are critical and mistakes can cause data loss. Use `kubectl diff` to compare what will change before running `kubectl apply`.
+Always verify before applying: Claude Code generates manifests, but review them carefully before applying to your cluster. Storage configurations are critical and mistakes can cause data loss. Use `kubectl diff` to compare what will change before running `kubectl apply`.
 
-**Use namespaces strategically**: Isolate your storage resources logically. Claude Code can help you organize resources across namespaces while maintaining clear separation of concerns. A common pattern is one namespace per application team with ResourceQuotas limiting total PVC capacity.
+Use namespaces strategically: Isolate your storage resources logically. Claude Code can help you organize resources across namespaces while maintaining clear separation of concerns. A common pattern is one namespace per application team with ResourceQuotas limiting total PVC capacity.
 
-**Implement proper capacity planning**: Before creating large volumes, consult with Claude Code about appropriate sizing based on your workload requirements and available storage capacity. Ask Claude Code to calculate total pool requirements given your planned PVC allocations, factoring in replication overhead (cStor 3-replica uses 3x the raw disk).
+Implement proper capacity planning: Before creating large volumes, consult with Claude Code about appropriate sizing based on your workload requirements and available storage capacity. Ask Claude Code to calculate total pool requirements given your planned PVC allocations, factoring in replication overhead (cStor 3-replica uses 3x the raw disk).
 
-**Document your workflows**: Use Claude Code to generate documentation for your storage workflows. This creates a reference for team members and supports audit requirements. Claude Code can generate runbook-style documentation from your YAML files and kubectl commands.
+Document your workflows: Use Claude Code to generate documentation for your storage workflows. This creates a reference for team members and supports audit requirements. Claude Code can generate runbook-style documentation from your YAML files and kubectl commands.
 
-**Test in non-production first**: When trying new OpenEBS features or configurations, always test in a staging environment. Claude Code can help you replicate production-like scenarios for testing, including chaos engineering scripts that simulate disk failure, node loss, and network partition.
+Test in non-production first: When trying new OpenEBS features or configurations, always test in a staging environment. Claude Code can help you replicate production-like scenarios for testing, including chaos engineering scripts that simulate disk failure, node loss, and network partition.
 
-**Pin your OpenEBS version**: Storage infrastructure should not change without planning. Use `helm upgrade --version` to control upgrades and ask Claude Code to summarize the release notes between your current and target versions before committing to an upgrade.
+Pin your OpenEBS version: Storage infrastructure should not change without planning. Use `helm upgrade --version` to control upgrades and ask Claude Code to summarize the release notes between your current and target versions before committing to an upgrade.
 
-## Conclusion
+Conclusion
 
 Claude Code transforms OpenEBS storage management from manual, error-prone processes into streamlined, automated workflows. By using Claude Code's capabilities, you can provision storage faster, manage configurations more consistently, and reduce the operational burden of persistent storage in Kubernetes. The combination of Claude Code's natural language understanding and OpenEBS's rich API surface means complex operations like tiered storage provisioning, cross-namespace snapshot scheduling, and pool capacity planning become conversational rather than requiring deep specialist knowledge.
 
 The key is starting with simple workflows and progressively adopting more advanced patterns as your comfort with the tooling grows. Whether you're managing a single development cluster or a multi-node production environment, Claude Code provides the intelligent assistance needed to make storage operations reliable and efficient.
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

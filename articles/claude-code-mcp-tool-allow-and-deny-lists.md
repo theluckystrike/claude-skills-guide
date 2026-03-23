@@ -13,9 +13,9 @@ permalink: /claude-code-mcp-tool-allow-and-deny-lists/
 
 # Claude Code MCP Tool Allow and Deny Lists
 
-[The Model Context Protocol (MCP) serves as the backbone for extending Claude Code's capabilities](/building-your-first-mcp-tool-integration-guide-2026/) through external tools and services. When you connect MCP servers to Claude Code, you gain access to a wide array of tools—from file system operations to database queries. However, with great power comes the need for careful access control. This is where tool allow and deny lists become essential for developers and power users who need granular control over their AI assistant's capabilities.
+[The Model Context Protocol (MCP) serves as the backbone for extending Claude Code's capabilities](/building-your-first-mcp-tool-integration-guide-2026/) through external tools and services. When you connect MCP servers to Claude Code, you gain access to a wide array of tools, from file system operations to database queries. However, with great power comes the need for careful access control. This is where tool allow and deny lists become essential for developers and power users who need granular control over their AI assistant's capabilities.
 
-## Understanding MCP Tool Access Control
+Understanding MCP Tool Access Control
 
 MCP tool allow and deny lists provide a mechanism to filter which tools are available when Claude Code interacts with your MCP servers. Rather than granting blanket access to all tools an MCP server offers, you can explicitly whitelist the tools you need or blacklist those that pose security risks or simply aren't relevant to your workflow.
 
@@ -23,9 +23,9 @@ This feature becomes particularly valuable in [enterprise environments where sec
 
 For example, [when using the `pdf` skill to work with PDF documents](/best-claude-code-skills-to-install-first-2026/), you might only need read and extraction capabilities rather than full document generation. Similarly, when using the `xlsx` skill for spreadsheet operations, you might want to restrict access to file deletion operations while allowing read, write, and formula operations.
 
-## Configuring Allow Lists
+Configuring Allow Lists
 
-The allow list approach explicitly specifies which tools are permitted. This is the recommended approach for security-sensitive environments because it follows the principle of least privilege—you only get access to exactly what you need.
+The allow list approach explicitly specifies which tools are permitted. This is the recommended approach for security-sensitive environments because it follows the principle of least privilege, you only get access to exactly what you need.
 
 Add the `allowedTools` field to your MCP server configuration in `claude.settings.json`:
 
@@ -50,9 +50,9 @@ In this configuration, the filesystem MCP server can only read and write files w
 
 This pattern works exceptionally well when combined with specialized skills. When using the `tdd` skill for test-driven development, you might configure your MCP servers to only allow test execution and code reading tools, preventing any accidental file deletions or system command executions.
 
-## Configuring Deny Lists
+Configuring Deny Lists
 
-Deny lists work in the opposite direction—they specify which tools should be blocked while allowing everything else. This approach is useful when you want to use most tools from an MCP server but need to exclude a few problematic ones.
+Deny lists work in the opposite direction, they specify which tools should be blocked while allowing everything else. This approach is useful when you want to use most tools from an MCP server but need to exclude a few problematic ones.
 
 Add the `deniedTools` field to your configuration:
 
@@ -77,7 +77,7 @@ The docker configuration prevents accidental removal of containers and images wh
 
 When using the `frontend-design` skill for UI development, you might want to deny tools that modify your source code directly, allowing only tools that read files and execute design-related commands.
 
-## Combining Allow and Deny Lists
+Combining Allow and Deny Lists
 
 For complex scenarios, you can use both allow and deny lists together. Claude Code evaluates the deny list after the allow list, so denied tools take precedence:
 
@@ -96,7 +96,7 @@ For complex scenarios, you can use both allow and deny lists together. Claude Co
 
 In this case, even though `search_files` appears in the allowed list, the deny list removes it from availability. This layered approach provides flexibility for fine-tuning tool access.
 
-## Practical Examples for Common Workflows
+Practical Examples for Common Workflows
 
 When working with the `supermemory` skill for persistent context management, you might configure your MCP servers to allow memory read and write operations while denying deletion operations to prevent accidental data loss:
 
@@ -128,7 +128,7 @@ For documentation workflows using skills like `pdf` and `docx`, restrict access 
 
 This ensures Claude Code can read and write documentation files but cannot execute system commands or access files outside the designated directory.
 
-## Security Best Practices
+Security Best Practices
 
 When configuring tool access control for MCP servers, consider these recommendations for maintaining security without sacrificing productivity.
 
@@ -140,7 +140,7 @@ Third, use environment-specific configurations. Your development environment mig
 
 Fourth, when using custom skills that interact with external services, restrict their MCP tool access to only what is necessary for the intended functionality.
 
-## Troubleshooting Tool Access Issues
+Troubleshooting Tool Access Issues
 
 If Claude Code refuses to use a tool you expect to be available, check your configuration for typos in tool names. Tool names are case-sensitive and must match exactly what the MCP server exposes.
 
@@ -148,11 +148,11 @@ You can verify which tools are available by running Claude Code with verbose log
 
 When tools you previously used suddenly become unavailable, you may have accidentally modified your configuration file. Restore a known-good configuration or review recent changes. For broader tool restriction at the session level, the [`disallowedTools` security configuration](/claude-code-disallowedtools-security-configuration/) offers a complementary approach to identify the issue.
 
-## Related Reading
+Related Reading
 
 - [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)
 - [MCP Server Permission Auditing Best Practices](/mcp-server-permission-auditing-best-practices/)
 - [Claude Code Skill Permission Scope Error Explained](/claude-code-skill-permission-denied-error-fix-2026/)
 - [Advanced Hub](/advanced-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -10,11 +10,11 @@ tags: [claude-code, claude-skills]
 ---
 
 {% raw %}
-# Claude Code for Claude SSO Integration Workflow Tutorial Guide
+Claude Code for Claude SSO Integration Workflow Tutorial Guide
 
 Single Sign-On (SSO) integration is a critical component for enterprise development teams looking to streamline authentication across multiple applications. This tutorial guide walks you through integrating Claude Code with your SSO workflow, providing practical examples and actionable advice for a secure implementation.
 
-## Understanding Claude Code and SSO Integration
+Understanding Claude Code and SSO Integration
 
 Claude Code is Anthropic's command-line interface for interacting with Claude AI models. When integrated with SSO, it allows developers to authenticate using their corporate identity providers (IdP) such as Okta, Azure AD, Google Workspace, or any SAML/OIDC-compatible service.
 
@@ -24,7 +24,7 @@ The integration enables:
 - Audit logging of Claude Code usage
 - Compliance with enterprise security policies
 
-## Prerequisites
+Prerequisites
 
 Before beginning the integration, ensure you have:
 - Claude Code installed on your system
@@ -32,11 +32,11 @@ Before beginning the integration, ensure you have:
 - A registered application in your IdP
 - Basic understanding of OAuth 2.0 and OpenID Connect
 
-## Setting Up Your Identity Provider
+Setting Up Your Identity Provider
 
 The first step involves configuring your identity provider to recognize Claude Code as a valid client application. This process varies by provider but follows a common pattern.
 
-### Configuring Okta as Your IdP
+Configuring Okta as Your IdP
 
 For Okta users, create a new application integration:
 
@@ -45,14 +45,14 @@ For Okta users, create a new application integration:
 3. Select "OIDC - OpenID Connect" as the sign-in method
 4. Choose "Native Application" as the application type
 5. Configure the following:
-   - **App name**: Claude Code
-   - **Login redirect URIs**: `http://localhost:8080/callback`
-   - **Grant type**: Authorization Code
-   - **Refresh token**: Enabled
+   - App name: Claude Code
+   - Login redirect URIs: `http://localhost:8080/callback`
+   - Grant type: Authorization Code
+   - Refresh token: Enabled
 
-After creation, note your Client ID and Client Secret—these will be needed for configuration.
+After creation, note your Client ID and Client Secret, these will be needed for configuration.
 
-### Configuring Azure Active Directory
+Configuring Azure Active Directory
 
 For Azure AD integration:
 1. Register a new application in Azure Portal
@@ -60,11 +60,11 @@ For Azure AD integration:
 3. Select API permissions for Microsoft Graph (if needed)
 4. Note the Application (client) ID and Directory (tenant) ID
 
-## Implementing the OAuth Flow
+Implementing the OAuth Flow
 
 With your IdP configured, you can now implement the OAuth 2.0 authorization code flow with Claude Code. Create a configuration file to store your SSO settings.
 
-### Configuration File Setup
+Configuration File Setup
 
 Create a `claude-sso-config.json` file:
 
@@ -80,7 +80,7 @@ Create a `claude-sso-config.json` file:
 }
 ```
 
-### Authentication Code Implementation
+Authentication Code Implementation
 
 Here's a practical implementation using Node.js:
 
@@ -138,7 +138,7 @@ class ClaudeSSOClient {
 }
 ```
 
-### Starting the Local Server
+Starting the Local Server
 
 Implement a simple callback server to handle the OAuth redirect:
 
@@ -168,20 +168,20 @@ server.listen(8080, () => {
 });
 ```
 
-## Configuring Claude Code for SSO
+Configuring Claude Code for SSO
 
 After obtaining the access token, configure Claude Code to use it:
 
 ```bash
-# Set SSO token for Claude Code
+Set SSO token for Claude Code
 export ANTHROPIC_API_KEY="your-sso-access-token"
 
-# Or configure in Claude Code settings
+Or configure in Claude Code settings
 claude config set auth.sso.enabled true
 claude config set auth.sso.provider "okta"
 ```
 
-### Environment Variables
+Environment Variables
 
 For production deployments, use environment variables:
 
@@ -192,20 +192,20 @@ export SSO_TENANT_URL="https://your-domain.okta.com"
 export ANTHROPIC_API_KEY="your-api-key"
 ```
 
-## Best Practices and Security Considerations
+Best Practices and Security Considerations
 
 When implementing SSO with Claude Code, follow these security guidelines:
 
-### Token Security
+Token Security
 
 - Store tokens in secure, encrypted storage
 - Implement token refresh logic to handle expired sessions
 - Use short-lived access tokens with refresh tokens
 - Never log or expose tokens in plain text
 
-### Error Handling
+Error Handling
 
-Implement robust error handling for common scenarios:
+Implement solid error handling for common scenarios:
 
 ```javascript
 async function handleAuthError(error) {
@@ -222,7 +222,7 @@ async function handleAuthError(error) {
 }
 ```
 
-### Session Management
+Session Management
 
 Implement proper session lifecycle management:
 
@@ -231,33 +231,33 @@ Implement proper session lifecycle management:
 - Use secure, HTTP-only cookies for web applications
 - Implement session invalidation on password change
 
-## Testing Your Integration
+Testing Your Integration
 
 Thorough testing ensures a reliable SSO implementation:
 
-1. **Unit Test**: Test each authentication function in isolation
-2. **Integration Test**: Verify the complete OAuth flow with your IdP
-3. **Error Test**: Test error handling for network failures, token expiration
-4. **Security Test**: Verify CSRF protection, token storage, and encryption
-5. **User Acceptance Test**: Have real users complete the authentication flow
+1. Unit Test: Test each authentication function in isolation
+2. Integration Test: Verify the complete OAuth flow with your IdP
+3. Error Test: Test error handling for network failures, token expiration
+4. Security Test: Verify CSRF protection, token storage, and encryption
+5. User Acceptance Test: Have real users complete the authentication flow
 
-## Troubleshooting Common Issues
+Troubleshooting Common Issues
 
-### Token Exchange Failures
+Token Exchange Failures
 
 If token exchange fails with "invalid_grant":
 - Verify the authorization code hasn't expired (typically 10 minutes)
 - Check that redirect_uri matches exactly what's registered in IdP
 - Ensure code_verifier matches the code_challenge sent initially
 
-### Callback Not Reaching Server
+Callback Not Reaching Server
 
 For redirect URI issues:
 - Verify the redirect URI is registered exactly in your IdP
 - Check firewall rules if running locally
 - Ensure your server binds to the correct interface
 
-## Conclusion
+Conclusion
 
 Integrating Claude Code with your SSO workflow provides secure, centralized authentication for your development team. By following this guide, you can implement a production-ready authentication system that leverages your existing identity infrastructure while maintaining the flexibility to work with Claude Code's capabilities.
 

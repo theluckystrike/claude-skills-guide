@@ -17,13 +17,13 @@ tags: [chrome-extension, claude-skills]
 {% raw %}
 Open box deals represent one of the best ways to save money on electronics, but manually checking multiple retailers for price drops quickly becomes tedious. A custom chrome extension deal tracker automates this process, notifying you the moment prices drop on items you're watching. This guide walks through building a functional open box deal tracker extension from scratch.
 
-## Understanding the Deal Tracker Architecture
+Understanding the Deal Tracker Architecture
 
 A deal tracker chrome extension consists of several interconnected components working together. The popup interface allows users to add products and configure alerts. Background scripts periodically fetch prices and check for changes. Storage synchronization keeps your watchlist accessible across devices through Chrome's sync storage API.
 
 The core workflow follows a simple pattern: you add a product URL, the extension periodically visits that page to extract current pricing, compares it against your target price, and sends a notification when conditions are met. This requires understanding HTML parsing, scheduled tasks, and the Chrome notifications API.
 
-## Setting Up the Manifest
+Setting Up the Manifest
 
 Every Chrome extension begins with the manifest file. For a deal tracker using Manifest V3, you'll configure permissions for storage, notifications, and the ability to run in the background:
 
@@ -62,7 +62,7 @@ Every Chrome extension begins with the manifest file. For a deal tracker using M
 
 The host_permissions array specifies which domains your extension can actively scrape for pricing data. Each retailer requires specific pattern matching to handle their unique URL structures.
 
-## Building the Popup Interface
+Building the Popup Interface
 
 The popup provides the user interface for managing your watchlist. Users need to add product URLs, set target prices, and see current status at a glance:
 
@@ -171,7 +171,7 @@ async function loadWatchlist() {
 }
 ```
 
-## Implementing Price Scraping
+Implementing Price Scraping
 
 The background service worker handles periodic price checks. This requires retailer-specific parsing logic since each site structures their pricing data differently:
 
@@ -258,13 +258,13 @@ function sendNotification(deal, currentPrice) {
 }
 ```
 
-## Handling Rate Limiting and Errors
+Handling Rate Limiting and Errors
 
-Production extensions need robust error handling. Retailers frequently block automated requests, requiring you to implement backoff strategies and respect robots.txt guidelines. Consider adding random delays between checks and rotating user agents to avoid detection.
+Production extensions need solid error handling. Retailers frequently block automated requests, requiring you to implement backoff strategies and respect robots.txt guidelines. Consider adding random delays between checks and rotating user agents to avoid detection.
 
 For more reliable scraping, you might integrate a scraping API service that handles the complexity of bypassing anti-bot measures. Services like ScraperAPI or ScrapingBee provide proxy rotation and JavaScript rendering, though they introduce ongoing costs.
 
-## Advanced Features to Consider
+Advanced Features to Consider
 
 Once you have the basics working, several enhancements improve the user experience. Price history tracking shows graphs of price changes over time, helping users identify the best buying moments. Multiple alert thresholds let you track both "buy now" and "watch for better" prices.
 
@@ -272,7 +272,7 @@ Open box specific filters help identify merchandise conditions. Many retailers t
 
 Email notifications extend reach beyond browser notifications. Using the Chrome identity API with OAuth, you can integrate with email services to send alerts when you're away from your computer.
 
-## Extension Deployment
+Extension Deployment
 
 Before publishing to the Chrome Web Store, test thoroughly across multiple retailers and price scenarios. Ensure your extension handles missing pricing data gracefully and doesn't spam notifications when prices fluctuate slightly around your target threshold.
 
@@ -281,11 +281,11 @@ Prepare store listing assets including screenshots showing the popup interface a
 Building your own open box deal tracker gives you complete control over which retailers to monitor, how often to check, and exactly when to receive alerts. The investment in building this tool pays dividends through years of automated savings on electronics purchases.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

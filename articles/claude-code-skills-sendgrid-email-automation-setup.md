@@ -17,7 +17,7 @@ Email automation is a fundamental requirement for modern applications. Whether y
 
 This guide walks you through [setting up SendGrid email automation](/can-claude-code-skills-call-external-apis-automatically/) using custom Claude skills. You will learn how to create skills that authenticate with SendGrid, send different types of emails, manage templates, and handle common automation scenarios without leaving your Claude Code session.
 
-## Prerequisites
+Prerequisites
 
 Before building SendGrid skills, ensure you have the necessary credentials and tools in place. First, create a SendGrid account and generate an API key from the SendGrid dashboard. The API key should have permissions for Mail Send and, optionally, Templates and Stats depending on your automation needs.
 
@@ -34,7 +34,7 @@ Install the SendGrid package locally:
 npm install @sendgrid/mail
 ```
 
-## Creating the SendGrid Skill Structure
+Creating the SendGrid Skill Structure
 
 Claude skills live in `~/.claude/skills/` as Markdown files. Create a new skill directory for SendGrid automation:
 
@@ -44,7 +44,7 @@ mkdir -p ~/.claude/skills/sendgrid-email
 
 The skill file structure follows the standard format. Create `skill.md` inside the directory with the necessary configuration and instructions.
 
-## Skill Configuration and Authentication
+Skill Configuration and Authentication
 
 The core of any SendGrid skill is authentication. Store your API key securely using environment variables rather than hardcoding credentials. Create a skill that sets up the SendGrid client properly:
 
@@ -54,30 +54,30 @@ name: sendgrid-email
 description: Send emails via SendGrid API. Supports transactional emails, templates, and batch sends.
 ---
 
-# SendGrid Email Automation Skill
+SendGrid Email Automation Skill
 
 This skill provides email sending capabilities through SendGrid's API. Use it for transactional emails, template-based messages, and batch operations.
 
-## Setup Required
+Setup Required
 
 Before sending emails, ensure you have:
 - A SendGrid API key with Mail Send permissions
 - Node.js 18+ installed
 - @sendgrid/mail package installed
 
-## Available Actions
+Available Actions
 
-### Send Single Email
+Send Single Email
 To send a single email, provide: to email, from email, subject, and body (text or HTML).
 
-### Send Template Email
+Send Template Email
 To send a template-based email, provide: to email, from email, and template ID.
 
-### Send Batch Emails
+Send Batch Emails
 To send multiple emails at once, provide an array of email objects.
 ```
 
-## Building the Email Sending Script
+Building the Email Sending Script
 
 The skill needs a companion script that actually executes the SendGrid API calls. Create `send-email.js` in your skill directory:
 
@@ -159,7 +159,7 @@ Make the script executable:
 chmod +x ~/.claude/skills/sendgrid-email/send-email.js
 ```
 
-## Creating a Reusable Email Skill
+Creating a Reusable Email Skill
 
 Now build the main skill file that provides a user-friendly interface for common email operations. This skill should handle the complexity of different email types while presenting simple prompts to the user:
 
@@ -169,11 +169,11 @@ name: sendgrid-email
 description: Send transactional and template emails via SendGrid
 ---
 
-# SendGrid Email Skill
+SendGrid Email Skill
 
 Send emails through SendGrid without leaving Claude Code.
 
-## Prerequisites
+Prerequisites
 
 Run this once to install dependencies:
 
@@ -189,9 +189,9 @@ Set your API key:
 export SENDGRID_API_KEY=your_api_key_here
 ```
 
-## Sending Emails
+Sending Emails
 
-### Simple Text Email
+Simple Text Email
 
 Provide these details:
 - Recipient email address
@@ -199,21 +199,21 @@ Provide these details:
 - Email subject line
 - Email body text
 
-### HTML Email
+HTML Email
 
 Provide:
 - Recipient and sender addresses
 - Subject line
 - HTML content for the email body
 
-### Template Email
+Template Email
 
 For dynamic templates:
 - Recipient and sender addresses
 - Template ID from your SendGrid dashboard
 - Dynamic data as JSON (name-value pairs for template variables)
 
-## Error Handling
+Error Handling
 
 The skill reports SendGrid API errors clearly. Common issues include:
 - Invalid API key (check SENDGRID_API_KEY)
@@ -222,15 +222,15 @@ The skill reports SendGrid API errors clearly. Common issues include:
 - Invalid recipient address (validate emails before sending)
 ```
 
-## Automating Common Email Scenarios
+Automating Common Email Scenarios
 
 With the skill in place, you can now handle several common automation scenarios. For welcome emails, create a skill that sends when new user accounts are created. Store the email template ID in SendGrid and pass user-specific data like name and activation link as dynamic template data.
 
 For order confirmations, build a workflow that receives order details and sends a formatted confirmation email with order number, items, and estimated delivery date. The skill can format this data into HTML and send via SendGrid.
 
-For scheduled digests, consider combining this skill with a cron job or another Claude skill that handles scheduling — learn more in the [Claude Skills automated social media content workflow](/claude-skills-automated-social-media-content-workflow/) guide for similar scheduled automation patterns. The email skill handles the sending portion while the scheduler triggers it at appropriate intervals.
+For scheduled digests, consider combining this skill with a cron job or another Claude skill that handles scheduling. learn more in the [Claude Skills automated social media content workflow](/claude-skills-automated-social-media-content-workflow/) guide for similar scheduled automation patterns. The email skill handles the sending portion while the scheduler triggers it at appropriate intervals.
 
-## Testing Your Setup
+Testing Your Setup
 
 Verify your setup works before deploying to production. First, test with a single email to your own address:
 
@@ -245,17 +245,17 @@ node ~/.claude/skills/sendgrid-email/send-email.js send \
 
 Check your inbox and the SendGrid dashboard for delivery status. Once confirmed working, extend the skill for your specific use cases.
 
-## Security Considerations
+Security Considerations
 
 Never commit API keys to version control. Use [environment variables for Claude skills](/how-do-i-set-environment-variables-for-a-claude-skill/) or a secrets management system. For production deployments, restrict the API key to only necessary permissions. Rotate keys periodically and monitor usage for anomalies.
 
 When handling recipient data, [comply with relevant regulations including GDPR](/claude-code-gdpr-data-privacy-implementation-checklist/) and CAN-SPAM. Provide unsubscribe mechanisms in commercial emails and honor opt-out requests promptly.
 
-## Related Reading
+Related Reading
 
-- [How to Connect Claude Skills to External APIs Guide](/how-to-connect-claude-skills-to-external-apis-guide/) — core patterns for authenticating and calling third-party services from skills
-- [Claude Code Skills + Zapier: Step-by-Step](/claude-code-skills-zapier-integration-step-by-step/) — connect email workflows to hundreds of other services via Zapier
-- [Claude Skills with Slack Bot Integration Tutorial](/claude-skills-with-slack-bot-integration-tutorial/) — complement email notifications with Slack messaging
-- [Claude Code Secret Scanning: Prevent Credential Leaks Guide](/claude-code-secret-scanning-prevent-credential-leaks-guide/) — protect your SendGrid API keys from accidental exposure
+- [How to Connect Claude Skills to External APIs Guide](/how-to-connect-claude-skills-to-external-apis-guide/). core patterns for authenticating and calling third-party services from skills
+- [Claude Code Skills + Zapier: Step-by-Step](/claude-code-skills-zapier-integration-step-by-step/). connect email workflows to hundreds of other services via Zapier
+- [Claude Skills with Slack Bot Integration Tutorial](/claude-skills-with-slack-bot-integration-tutorial/). complement email notifications with Slack messaging
+- [Claude Code Secret Scanning: Prevent Credential Leaks Guide](/claude-code-secret-scanning-prevent-credential-leaks-guide/). protect your SendGrid API keys from accidental exposure
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

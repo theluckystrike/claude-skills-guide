@@ -13,27 +13,27 @@ tags: [claude-code, claude-skills]
 ---
 
 
-# Claude Code Test Driven Refactoring Guide
+Claude Code Test Driven Refactoring Guide
 
 Test driven refactoring stands as one of the most effective techniques for improving code quality while maintaining confidence in existing functionality. When combined with Claude Code's capabilities, developers gain a powerful ally for transforming legacy systems without introducing regressions. This guide explores practical workflows for implementing test driven development principles during refactoring sessions with Claude Code.
 
-## Understanding the Refactoring Challenge
+Understanding the Refactoring Challenge
 
 Legacy codebases often suffer from tight coupling, missing test coverage, and unclear dependencies. These characteristics make manual refactoring risky and time-consuming. Claude Code addresses these challenges by helping you write comprehensive tests before making any changes, ensuring that each transformation preserves the original behavior.
 
 The key insight behind test driven refactoring is simple: you cannot safely change code you cannot observe. Tests serve as both documentation and safety nets, capturing the current behavior in executable form. When you refactor with tests in place, you receive immediate feedback when something breaks.
 
-## Setting Up Your Environment
+Setting Up Your Environment
 
-Before beginning a refactoring session, ensure your project has proper test infrastructure. If you are working with a JavaScript or TypeScript project, the tdd skill provides excellent patterns for structuring tests. For Python projects, pytest offers robust testing capabilities with clear assertion messages.
+Before beginning a refactoring session, ensure your project has proper test infrastructure. If you are working with a JavaScript or TypeScript project, the tdd skill provides excellent patterns for structuring tests. For Python projects, pytest offers solid testing capabilities with clear assertion messages.
 
 Initialize your test runner and verify it executes successfully against the current codebase. This step seems trivial but prevents wasted effort when tests fail due to configuration issues rather than actual code problems. Create a small test that validates a trivial function to confirm the entire testing pipeline works correctly.
 
-## The Three Phase Workflow
+The Three Phase Workflow
 
 Test driven refactoring follows a distinct three-phase cycle that differs slightly from traditional TDD. First, you observe and capture the current behavior through tests. Second, you make the smallest possible change to the code structure. Third, you verify all tests still pass.
 
-### Phase One: Behavior Capture
+Phase One: Behavior Capture
 
 Begin by identifying the smallest unit of code you want to refactor. This might be a function, a class, or a module. Write tests that exercise this code in isolation, capturing all visible behaviors including edge cases and error conditions.
 
@@ -70,7 +70,7 @@ describe('OrderCalculator', () => {
 
 Notice how these tests capture the current behavior exactly as it exists, not as you think it should work. This accuracy is crucial for successful refactoring.
 
-### Phase Two: Minimal Structural Change
+Phase Two: Minimal Structural Change
 
 Once you have comprehensive tests passing, make the smallest possible structural change. This might involve extracting a method, introducing a parameter object, or splitting a large function into smaller pieces. The goal is incremental improvement, not wholesale rewriting.
 
@@ -78,25 +78,25 @@ The pdf skill proves valuable here for generating documentation about the change
 
 Focus on one improvement at a time. Extract that single method. Rename that confusing variable. Add that missing abstraction. Each change should take less than five minutes to implement and verify. Smaller changes mean easier debugging when something goes wrong.
 
-### Phase Three: Verification
+Phase Three: Verification
 
 Run your test suite immediately after each change. If tests pass, you have successfully refactored while preserving behavior. If tests fail, you either captured the wrong behavior or introduced an actual bug. Revert the change and investigate.
 
 The supermemory skill helps maintain context across multiple refactoring sessions, tracking which areas of the codebase you have improved and which remain to be addressed. This persistent context prevents redundant work and helps you plan future refactoring efforts.
 
-## Common Refactoring Patterns
+Common Refactoring Patterns
 
 Several patterns appear frequently during test driven refactoring sessions. Understanding these patterns helps you work more efficiently with Claude Code.
 
-**Extract Method** is perhaps the most common refactoring. When a function exceeds twenty lines, identify logical sections and extract each into its own method. Write tests for the original function first, then extract and write additional tests for the new methods as needed.
+Extract Method is perhaps the most common refactoring. When a function exceeds twenty lines, identify logical sections and extract each into its own method. Write tests for the original function first, then extract and write additional tests for the new methods as needed.
 
-**Introduce Parameter Object** groups related parameters into cohesive objects. This reduces long parameter lists and makes function signatures more meaningful. Test the new object creation alongside the function that receives it.
+Introduce Parameter Object groups related parameters into cohesive objects. This reduces long parameter lists and makes function signatures more meaningful. Test the new object creation alongside the function that receives it.
 
-**Replace Conditional with Polymorphism** handles complex if-else chains by creating separate classes for each branch. This pattern requires careful test coverage but produces more maintainable code. Begin by writing tests for each branch, then create the polymorphic structure.
+Replace Conditional with Polymorphism handles complex if-else chains by creating separate classes for each branch. This pattern requires careful test coverage but produces more maintainable code. Begin by writing tests for each branch, then create the polymorphic structure.
 
-**Extract Interface** clarifies dependencies and enables easier testing. Identify the role a class plays in your system and extract an interface that captures that role. Update consumers to depend on the interface rather than the concrete implementation.
+Extract Interface clarifies dependencies and enables easier testing. Identify the role a class plays in your system and extract an interface that captures that role. Update consumers to depend on the interface rather than the concrete implementation.
 
-## Working With Difficult Code
+Working With Difficult Code
 
 Some code resists refactoring despite your best efforts. When encountering tangled dependencies or code with hidden side effects, consider a more gradual approach.
 
@@ -104,13 +104,13 @@ Write integration tests that verify high-level behavior even when unit testing p
 
 The frontend-design skill offers patterns for testing UI components, which often contain complex state management and side effects. These patterns help you build confidence before tackling refactoring of presentation logic.
 
-## Measuring Progress
+Measuring Progress
 
 Track refactoring progress through test coverage metrics and code complexity scores. As you refactor, you should see test coverage increase and complexity decrease. These metrics provide motivation and help you prioritize future work.
 
 Document refactored areas in a changelog or technical debt tracker. This record helps future developers understand why changes were made and what tradeoffs were considered. The memory skill enables you to maintain this documentation alongside your work.
 
-## Best Practices
+Best Practices
 
 Never refactor without tests in place, no matter how confident you feel about the change. The time spent writing tests always pays off in reduced debugging time and increased confidence. Start with the areas that cause the most bugs or require the most maintenance effort.
 
@@ -121,10 +121,10 @@ Communicate with your team about refactoring work. When multiple developers work
 ---
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [https://zovo.one](https://zovo.one)
+Built by theluckystrike. More at [https://zovo.one](https://zovo.one)

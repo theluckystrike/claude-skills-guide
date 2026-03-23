@@ -13,11 +13,11 @@ score: 7
 ---
 
 
-# Claude Code Git Workflow Best Practices Guide
+Claude Code Git Workflow Best Practices Guide
 
 Claude Code transforms how developers interact with Git by providing intelligent assistance throughout the version control lifecycle. This guide covers practical workflows, command patterns, and skill integrations that will make your Git experience smoother and more productive.
 
-## Setting Up Claude Code for Git Operations
+Setting Up Claude Code for Git Operations
 
 Before diving into workflows, ensure Claude Code has access to your repository context. When working in a Git repository, Claude automatically detects the environment and can assist with operations ranging from simple commits to complex rebases.
 
@@ -29,37 +29,37 @@ I'm working in ~/projects/myapp and need to create a feature branch for user aut
 
 Claude will then guide you through the process, suggest appropriate branch names following your team's conventions, and help set up the branch correctly.
 
-### What Claude Code Can and Cannot Do with Git
+What Claude Code Can and Cannot Do with Git
 
 Understanding the boundaries of Claude Code's Git capabilities prevents surprises:
 
 | Task | Claude Code Capability | Notes |
 |---|---|---|
-| Composing commit messages | Excellent — reads diffs, understands context | Works best when you describe the intent too |
-| Branch naming | Good — follows your stated conventions | Tell Claude your naming pattern once |
-| Merge conflict resolution | Good — understands both sides | Always review suggestions before accepting |
-| Interactive rebase planning | Moderate — can plan, you execute | `git rebase -i` requires your input |
-| Git bisect | Moderate — can guide the process | You run the test commands |
-| Force push protection | Passive — will warn if asked | Does not block you from doing it |
-| Gitignore generation | Excellent — knows common patterns | Specify your stack |
+| Composing commit messages | Excellent. reads diffs, understands context | Works best when you describe the intent too |
+| Branch naming | Good. follows your stated conventions | Tell Claude your naming pattern once |
+| Merge conflict resolution | Good. understands both sides | Always review suggestions before accepting |
+| Interactive rebase planning | Moderate. can plan, you execute | `git rebase -i` requires your input |
+| Git bisect | Moderate. can guide the process | You run the test commands |
+| Force push protection | Passive. will warn if asked | Does not block you from doing it |
+| Gitignore generation | Excellent. knows common patterns | Specify your stack |
 | Pre-commit hook setup | Excellent | Can write the hook script for you |
 
 The short version: Claude Code is excellent at the high-judgment tasks (what should this commit say? which files belong in this commit? what caused this conflict?) and comfortable guiding the procedural tasks. You remain in control of all destructive operations.
 
-## Commit Message Best Practices
+Commit Message Best Practices
 
 Writing clear, descriptive commit messages is crucial for project maintainability. Claude Code excels at helping craft messages that follow conventional commit formats while accurately describing changes.
 
-### Using Claude for Commit Composition
+Using Claude for Commit Composition
 
 Instead of generic messages like "fixed stuff," use Claude's understanding of your changes:
 
 ```bash
-# Stage your changes first
+Stage your changes first
 git add -A
 
-# Ask Claude to analyze and propose a commit message
-# In your Claude session, say:
+Ask Claude to analyze and propose a commit message
+In your Claude session, say:
 "Review the staged changes and suggest a conventional commit message"
 ```
 
@@ -74,7 +74,7 @@ feat(auth): add OAuth2 login flow with Google provider
 - Add login/logout endpoints
 ```
 
-### Understanding Conventional Commit Types
+Understanding Conventional Commit Types
 
 Conventional Commits is the format most tools (semantic-release, changelogen, release-please) use to automate versioning and changelogs. Claude Code knows these types and applies them correctly:
 
@@ -104,20 +104,20 @@ to destructure `data.users` instead of using the response directly.
 
 When you ask Claude to compose a commit message, mention whether the change breaks the public API and it will add the `!` and the `BREAKING CHANGE` footer accordingly.
 
-### A Practical Commit Workflow
+A Practical Commit Workflow
 
 Here is a concrete example of staging work and using Claude to write the commit message:
 
 ```bash
-# You've just fixed a null pointer in the payment module and added a test
+You've just fixed a null pointer in the payment module and added a test
 git status
-# modified: src/payments/processor.ts
-# modified: src/payments/processor.test.ts
+modified: src/payments/processor.ts
+modified: src/payments/processor.test.ts
 
 git diff src/payments/processor.ts
-# (shows the null check you added)
+(shows the null check you added)
 
-# Ask Claude:
+Ask Claude:
 "I just fixed a null pointer error in payments/processor.ts where
 chargeUser() would crash if the user had no payment method on file.
 I also added a test for that case. Write a conventional commit message."
@@ -137,14 +137,14 @@ Closes #312
 
 That message will be far more useful to your team six months from now than `fix: null error`.
 
-### Conventional Commits Integration
+Conventional Commits Integration
 
-For teams using automated releases, conventional commits enable semantic versioning. The **super memory** skill can help maintain a changelog by tracking these commits across your project history. When combined with GitHub Actions or similar CI systems, you get automatic version bumps and release notes.
+For teams using automated releases, conventional commits enable semantic versioning. The super memory skill can help maintain a changelog by tracking these commits across your project history. When combined with GitHub Actions or similar CI systems, you get automatic version bumps and release notes.
 
 Here is a minimal `release-please` configuration that works with conventional commits:
 
 ```yaml
-# .github/workflows/release.yml
+.github/workflows/release.yml
 on:
   push:
     branches:
@@ -162,11 +162,11 @@ jobs:
 
 With this in place, every merge to main that includes a `feat` or `fix` commit will automatically open a release PR with an updated `CHANGELOG.md` and bumped `package.json` version.
 
-## Branch Management Strategies
+Branch Management Strategies
 
 Effective branch management prevents integration nightmares. Claude Code helps enforce your team's branching strategy without requiring you to memorize every rule.
 
-### Comparing Common Branching Strategies
+Comparing Common Branching Strategies
 
 Before choosing a strategy, understand the tradeoffs:
 
@@ -179,7 +179,7 @@ Before choosing a strategy, understand the tradeoffs:
 
 For most web application teams deploying multiple times per day, GitHub Flow (main + short-lived feature branches) hits the best balance. Claude Code's assistance is especially effective here because the workflow is simple enough to describe conversationally.
 
-### Feature Branch Workflow
+Feature Branch Workflow
 
 When starting new work, describe your task to Claude:
 
@@ -196,23 +196,23 @@ Claude will:
 A concrete example showing the actual Git commands Claude would guide you through:
 
 ```bash
-# Claude checks your current state
+Claude checks your current state
 git status
 git log --oneline -5
 
-# Pulls latest main
+Pulls latest main
 git checkout main
 git pull origin main
 
-# Creates and switches to the feature branch
+Creates and switches to the feature branch
 git checkout -b feat/payment-processing
 
-# Confirms the branch
+Confirms the branch
 git branch --show-current
-# feat/payment-processing
+feat/payment-processing
 ```
 
-### Branch Naming Conventions
+Branch Naming Conventions
 
 Consistent branch names make `git branch -a` readable and enable CI rules (like requiring certain test suites only on `release/*` branches). Tell Claude your convention once:
 
@@ -234,7 +234,7 @@ hotfix/critical-payment-bug
 release/v2.3.0
 ```
 
-### Quick Branch Switching
+Quick Branch Switching
 
 For rapid navigation, simply tell Claude where you need to go:
 
@@ -251,9 +251,9 @@ git checkout bugfix/login-validation
 git log --oneline -10
 ```
 
-And then summarize what you're looking at—useful when returning to a branch after a few days away.
+And then summarize what you're looking at, useful when returning to a branch after a few days away.
 
-### Keeping Feature Branches Up to Date
+Keeping Feature Branches Up to Date
 
 Long-running feature branches accumulate drift. Ask Claude to help rebase:
 
@@ -265,28 +265,28 @@ Help me rebase it without losing my changes."
 Claude's approach:
 
 ```bash
-# Check the current state
+Check the current state
 git log --oneline main..feat/new-dashboard
 git log --oneline feat/new-dashboard..main
 
-# Rebase onto main
+Rebase onto main
 git checkout feat/new-dashboard
 git rebase main
 
-# If conflicts arise, Claude will explain each one
+If conflicts arise, Claude will explain each one
 git status   # shows conflicted files
 ```
 
-## Practical Examples with Claude Skills
+Practical Examples with Claude Skills
 
 The real power emerges when combining Git workflows with specialized Claude skills. Here are practical integrations:
 
-### PDF Documentation Generation
+PDF Documentation Generation
 
-After completing a feature, use the **pdf** skill to generate documentation:
+After completing a feature, use the pdf skill to generate documentation:
 
 ```bash
-# In your Claude session with pdf skill loaded:
+In your Claude session with pdf skill loaded:
 "Generate a PDF summary of all commits since v2.0.0 including author and date"
 ```
 
@@ -302,12 +302,12 @@ git log v2.0.0..HEAD \
 
 Combined with the pdf skill, this becomes a formatted document you can share with non-technical stakeholders without any manual formatting work.
 
-### Test-Driven Development Workflow
+Test-Driven Development Workflow
 
-The **tdd** skill transforms how you approach development:
+The tdd skill transforms how you approach development:
 
 ```bash
-# Start with a clear intent
+Start with a clear intent
 "Using tdd, implement user registration with email verification"
 ```
 
@@ -330,7 +330,7 @@ refactor(auth): extract token service to dedicated module
 
 Each commit is small, passes all tests, and the message explains the purpose. This is the kind of history that makes code review fast and `git blame` useful.
 
-### Code Review Assistance
+Code Review Assistance
 
 Before pushing, get Claude to review your changes:
 
@@ -338,7 +338,7 @@ Before pushing, get Claude to review your changes:
 "Review the staged changes for potential issues and suggest improvements"
 ```
 
-The **code-review** or **claude-skills** for code review will analyze your diff for:
+The code-review or claude-skills for code review will analyze your diff for:
 - Code style violations
 - Potential bugs
 - Missing error handling
@@ -348,7 +348,7 @@ The **code-review** or **claude-skills** for code review will analyze your diff 
 A more targeted review request:
 
 ```bash
-# Get the diff against main
+Get the diff against main
 git diff main...feat/payment-processing > /tmp/feature.diff
 
 "Review /tmp/feature.diff with a focus on:
@@ -359,7 +359,7 @@ git diff main...feat/payment-processing > /tmp/feature.diff
 
 Claude reads the actual diff content and gives specific, line-referenced feedback rather than generic advice.
 
-### Automated Changelog Generation
+Automated Changelog Generation
 
 Combine Git log with Claude Code to produce changelogs without a dedicated tool:
 
@@ -377,19 +377,19 @@ git log v1.5.0..HEAD --pretty=format:"%s" | grep -E "^(feat|fix)"
 And produce:
 
 ```markdown
-## What's Changed
+What's Changed
 
-### Features
-- **auth**: add OAuth2 login flow with Google provider
-- **payments**: support Apple Pay as a checkout option
-- **dashboard**: add export to CSV functionality
+Features
+- auth: add OAuth2 login flow with Google provider
+- payments: support Apple Pay as a checkout option
+- dashboard: add export to CSV functionality
 
-### Bug Fixes
-- **payments**: handle missing payment method in chargeUser
-- **auth**: fix session expiry not refreshing on activity
+Bug Fixes
+- payments: handle missing payment method in chargeUser
+- auth: fix session expiry not refreshing on activity
 ```
 
-## Handling Merge Conflicts
+Handling Merge Conflicts
 
 Merge conflicts are inevitable in collaborative projects. Claude Code makes resolution straightforward:
 
@@ -404,7 +404,7 @@ Merge conflicts are inevitable in collaborative projects. Claude Code makes reso
 
 Claude understands the context of both branches, making its suggestions more accurate than generic conflict markers.
 
-### Reading Conflict Markers
+Reading Conflict Markers
 
 When a file has conflicts, Git inserts markers that Claude can parse and explain:
 
@@ -424,7 +424,7 @@ Which version should we keep and why?"
 
 Claude will explain that the incoming version uses the new Mongoose model and async/await, while HEAD uses a legacy db object. It will recommend keeping the incoming version if the Mongoose migration is intended to replace the old db layer, and flag that the `deletedAt: null` filter from HEAD may need to be preserved.
 
-### Preventing Merge Conflicts
+Preventing Merge Conflicts
 
 The best merge conflicts are the ones you avoid. Claude Code can help identify high-contention files:
 
@@ -437,51 +437,51 @@ frequently by different authors? These are likely conflict hotspots."
 git log --since="30 days ago" --name-only --format="" | sort | uniq -c | sort -rn | head -20
 ```
 
-Files that appear often in this list are candidates for refactoring into smaller, more focused modules—reducing the surface area for conflicts.
+Files that appear often in this list are candidates for refactoring into smaller, more focused modules, reducing the surface area for conflicts.
 
-## Daily Git Workflow with Claude
+Daily Git Workflow with Claude
 
 Here's a practical daily workflow:
 
 ```bash
-# Morning: Sync with team
+Morning: Sync with team
 "Pull latest changes from main and show me what changed"
 
-# During development
+During development
 "Stage the changes in src/api/ and commit them with an appropriate message"
 
-# Before submitting
+Before submitting
 "Run git diff --stat and review what I'm about to push"
 
-# After code review feedback
+After code review feedback
 "Create a fix branch from main for addressing PR comments"
 ```
 
-### A Full Morning Routine
+A Full Morning Routine
 
 Here is a concrete version of that morning sync with the actual commands Claude would run:
 
 ```bash
-# Check where you left off
+Check where you left off
 git status
 git stash list
 
-# Sync with team
+Sync with team
 git checkout main
 git pull origin main --ff-only
 
-# Show what changed
+Show what changed
 git log --oneline ORIG_HEAD..HEAD
 git diff --stat ORIG_HEAD..HEAD
 
-# Return to your feature branch
+Return to your feature branch
 git checkout feat/current-task
 git rebase main   # or merge, depending on team preference
 ```
 
 Claude will show you a plain-English summary of what merged: "Two bug fixes and one new feature landed while you were away. The fix to auth/session.ts may be relevant to your current branch since you're also working in that area."
 
-### Stash Management
+Stash Management
 
 Stashes are easy to forget and lose. Claude Code helps you manage them:
 
@@ -509,9 +509,9 @@ for i in $(git stash list | awk -F: '{print $1}'); do
 done
 ```
 
-## Super Memory for Git History
+Super Memory for Git History
 
-The **super memory** skill complements Git perfectly by:
+The super memory skill complements Git perfectly by:
 - Remembering why certain decisions were made
 - Tracking context across branches
 - Helping you find relevant past commits
@@ -519,9 +519,9 @@ The **super memory** skill complements Git perfectly by:
 
 When combined with well-structured commits, your project becomes truly searchable and understandable.
 
-A practical use: you need to understand why a particular approach was chosen six months ago. The `git log` gives you the commit message; super memory gives you the surrounding context—the Slack thread, the architecture doc, the PR discussion—that explains the reasoning.
+A practical use: you need to understand why a particular approach was chosen six months ago. The `git log` gives you the commit message; super memory gives you the surrounding context, the Slack thread, the architecture doc, the PR discussion, that explains the reasoning.
 
-### Using Git Bisect with Claude
+Using Git Bisect with Claude
 
 When a bug appears and you don't know which commit introduced it, `git bisect` is the right tool. Claude Code can run the entire bisect session:
 
@@ -538,23 +538,23 @@ git bisect start
 git bisect bad HEAD                    # current commit has the bug
 git bisect good v2.1.0                 # this tag was before the bug appeared
 
-# Git checks out the midpoint
-# Claude asks: "Does the bug happen at this commit? Test the login flow."
+Git checks out the midpoint
+Claude asks: "Does the bug happen at this commit? Test the login flow."
 
 git bisect good   # or
 git bisect bad
 
-# Repeat until Git identifies the culprit commit
+Repeat until Git identifies the culprit commit
 git bisect reset
 ```
 
 After bisect completes, Claude reads the commit that introduced the bug and explains what changed, saving you from manual archaeology.
 
-## Automating Git Hygiene with Claude
+Automating Git Hygiene with Claude
 
 Over time, repositories accumulate cruft: merged branches that weren't deleted, stale remotes, large binary files that shouldn't be in version control. Claude Code can audit and clean these up.
 
-### Finding and Deleting Stale Branches
+Finding and Deleting Stale Branches
 
 ```bash
 "List all branches that have been merged into main
@@ -565,7 +565,7 @@ belong to me (author is theluckystrike)."
 Claude runs:
 
 ```bash
-# Find merged branches older than 30 days
+Find merged branches older than 30 days
 git branch --merged main | grep -v "^* main" | while read branch; do
   age=$(git log -1 --format="%ar" $branch);
   author=$(git log -1 --format="%an" $branch);
@@ -580,7 +580,7 @@ git branch -d feat/old-payment-work
 git push origin --delete feat/old-payment-work
 ```
 
-### Checking for Accidentally Committed Secrets
+Checking for Accidentally Committed Secrets
 
 Before pushing, verify that no secrets or credentials have been staged:
 
@@ -590,20 +590,20 @@ password, or secret. Look for patterns like sk-*, password=, secret=,
 API_KEY=, and PEM headers."
 ```
 
-Claude reads the diff and flags any suspicious patterns. This is a fast sanity check—not a replacement for a proper secrets scanner like `gitleaks` or `truffleHog`, but useful as a last-minute check before pushing.
+Claude reads the diff and flags any suspicious patterns. This is a fast sanity check, not a replacement for a proper secrets scanner like `gitleaks` or `truffleHog`, but useful as a last-minute check before pushing.
 
-## Conclusion
+Conclusion
 
 Claude Code transforms Git from a version control tool into an intelligent partner in your development workflow. By providing clear context, using specialized skills, and following consistent patterns, you create better commits, maintain cleaner history, and reduce cognitive overhead.
 
-The most valuable thing Claude Code does for Git workflows is raise the quality of the narrative your commits tell. Future contributors—including you in six months—will be able to understand what happened, why it happened, and what each change was trying to accomplish. That narrative lives in commit messages, branch names, and the structure of your history.
+The most valuable thing Claude Code does for Git workflows is raise the quality of the narrative your commits tell. Future contributors, including you in six months, will be able to understand what happened, why it happened, and what each change was trying to accomplish. That narrative lives in commit messages, branch names, and the structure of your history.
 
-Start with these practices: write descriptive commits, use branches intentionally, and let Claude skills like **tdd**, **pdf**, and **super memory** enhance your workflow. The investment in good Git habits pays dividends throughout your project's lifetime.
+Start with these practices: write descriptive commits, use branches intentionally, and let Claude skills like tdd, pdf, and super memory enhance your workflow. The investment in good Git habits pays dividends throughout your project's lifetime.
 
-## Related Reading
+Related Reading
 
-- [Claude Code Merge Conflict Resolution Guide](/claude-code-merge-conflict-resolution-guide/) — Conflict resolution is a core git workflow skill
-- [Claude Code Trunk Based Development Guide](/claude-code-trunk-based-development-guide/) — Trunk-based development is a key workflow pattern
-- [Claude Skills Workflows Hub](/workflows-hub/) — All git and development workflow automation
+- [Claude Code Merge Conflict Resolution Guide](/claude-code-merge-conflict-resolution-guide/). Conflict resolution is a core git workflow skill
+- [Claude Code Trunk Based Development Guide](/claude-code-trunk-based-development-guide/). Trunk-based development is a key workflow pattern
+- [Claude Skills Workflows Hub](/workflows-hub/). All git and development workflow automation
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

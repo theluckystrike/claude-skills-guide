@@ -14,26 +14,26 @@ score: 8
 ---
 
 
-# Claude Code for React Native Push Notifications Guide
+Claude Code for React Native Push Notifications Guide
 
 Push notifications are essential for React Native mobile apps, enabling you to re-engage users, deliver real-time updates, and drive user retention. This comprehensive guide shows you how to implement push notifications in React Native using Claude Code, covering both Expo-managed workflows and bare React Native projects.
 
-## Understanding Push Notifications in React Native
+Understanding Push Notifications in React Native
 
 Push notifications in React Native require coordination between multiple components. The device registers with Apple's Push Notification Service (APNs) for iOS or Firebase Cloud Messaging (FCM) for Android, receiving a unique device token. Your app sends this token to your backend server, which then uses it to send notifications through the respective push service.
 
 There are two primary approaches for implementing push notifications in React Native:
 
-1. **Expo Notifications** - Simplifies the entire process with a managed service
-2. **react-native-push-notification** - Gives you full control with native module integration
+1. Expo Notifications - Simplifies the entire process with a managed service
+2. react-native-push-notification - Gives you full control with native module integration
 
 Claude Code can help you set up both approaches, generate the necessary code, and troubleshoot any issues that arise during implementation.
 
-## Setting Up Expo Push Notifications
+Setting Up Expo Push Notifications
 
 If you're using Expo (recommended for most new projects), push notifications are remarkably straightforward. Expo handles all the native complexity behind the scenes.
 
-### Installing and Configuring Expo Notifications
+Installing and Configuring Expo Notifications
 
 Start by installing the Expo notification package:
 
@@ -81,7 +81,7 @@ export async function requestNotificationPermissions() {
 }
 ```
 
-### Handling Incoming Notifications
+Handling Incoming Notifications
 
 Set up notification handlers to respond when notifications arrive while the app is in the foreground:
 
@@ -127,18 +127,18 @@ export default function App() {
 
 Claude Code can help you integrate this with your existing navigation stack and state management.
 
-## Implementing Push Notifications in Bare React Native
+Implementing Push Notifications in Bare React Native
 
 For projects that require native module access or aren't using Expo, you'll need to set up react-native-push-notification manually.
 
-### Installing Dependencies
+Installing Dependencies
 
 ```bash
 npm install @react-native-community/push-notification-ios
 npm install react-native-push-notification
 ```
 
-### Configuring iOS (APNs)
+Configuring iOS (APNs)
 
 1. Enable Push Notifications in your Xcode project
 2. Create an APNs certificate or authentication key in the Apple Developer Portal
@@ -181,7 +181,7 @@ withCompletionHandler:(void (^)(void))completionHandler
 }
 ```
 
-### Configuring Android (FCM)
+Configuring Android (FCM)
 
 For Android, set up Firebase Cloud Messaging:
 
@@ -197,7 +197,7 @@ For Android, set up Firebase Cloud Messaging:
 <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
 ```
 
-### JavaScript Implementation
+JavaScript Implementation
 
 Create a notification service that works across platforms:
 
@@ -261,19 +261,19 @@ export class PushNotificationService {
 }
 ```
 
-## Best Practices for React Native Push Notifications
+Best Practices for React Native Push Notifications
 
 Implementing push notifications is only the beginning. Follow these best practices to ensure a great user experience:
 
-### Request Permissions Gracefully
+Request Permissions Gracefully
 
 Don't ask for notification permissions immediately when users open your app. Instead, explain the value of notifications first, then request permission when the user performs a relevant action. This improves both permission grant rates and user perception.
 
-### Handle Notification Data Carefully
+Handle Notification Data Carefully
 
 Always validate and sanitize notification payloads on your server and in your app. Never blindly trust notification data, especially when it affects app state or navigation.
 
-### Implement Notification Categories
+Implement Notification Categories
 
 For apps with multiple notification types (alerts, messages, reminders), implement notification categories that let users customize their preferences:
 
@@ -291,26 +291,26 @@ Notifications.setNotificationCategoryAsync('message', [
 ]);
 ```
 
-### Track Notification Metrics
+Track Notification Metrics
 
 Monitor key metrics including delivery rates, open rates, and opt-out rates. Use this data to iterate on your notification strategy and improve user engagement.
 
-## Troubleshooting Common Issues
+Troubleshooting Common Issues
 
 Claude Code can help you debug common push notification problems:
 
-- **Token not generating** - Check that your APNs/FCM credentials are correctly configured
-- **Notifications not showing** - Verify notification channel permissions on Android 8+
-- **App crashing on notification** - Ensure your notification handlers are properly set up before handling any notifications
+- Token not generating - Check that your APNs/FCM credentials are correctly configured
+- Notifications not showing - Verify notification channel permissions on Android 8+
+- App crashing on notification - Ensure your notification handlers are properly set up before handling any notifications
 
-## Conclusion
+Conclusion
 
 Push notifications are a powerful tool for React Native apps, but implementation requires careful attention to platform-specific requirements. Whether you choose Expo's managed approach or need full native control with bare React Native, this guide provides the foundation you need to deliver engaging push notifications that drive user retention and improve your app's success.
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

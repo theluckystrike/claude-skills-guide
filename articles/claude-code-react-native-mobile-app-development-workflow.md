@@ -13,15 +13,15 @@ tags: [claude-code, claude-skills]
 ---
 
 {% raw %}
-# Claude Code React Native Mobile App Development Workflow
+Claude Code React Native Mobile App Development Workflow
 
 Building React Native mobile applications with Claude Code combines the power of AI-assisted development with modern cross-platform workflows. This guide walks you through a practical development workflow that leverages Claude Code's capabilities to accelerate your mobile app development from initialization to deployment.
 
-## Setting Up Your React Native Project
+Setting Up Your React Native Project
 
 The first step in any React Native project is initialization. Claude Code can guide you through this process, helping you choose between Expo (recommended for most projects) and React Native CLI based on your requirements.
 
-### Initialize with Expo
+Initialize with Expo
 
 For new projects, Expo provides the smoothest development experience. Here's how to start:
 
@@ -37,24 +37,24 @@ When working with Claude Code, describe your app concept and let it suggest the 
 
 Claude Code will suggest appropriate folder structures, recommend libraries (like React Navigation for routing, AsyncStorage for data persistence, and charting libraries), and help configure your development environment.
 
-### Environment Configuration
+Environment Configuration
 
 Claude Code can help configure your development environment for both iOS and Android:
 
 ```bash
-# Install platform-specific dependencies
+Install platform-specific dependencies
 npx expo install expo-router expo-constants
 npx expo install react-native-safe-area-context react-native-screens
 
-# Configure TypeScript if not already done
+Configure TypeScript if not already done
 npx expo install typescript -- --config
 ```
 
 Request Claude Code to verify your environment setup by asking: "Check if my development environment is properly configured for building iOS and Android apps."
 
-## Development Workflow with Claude Code
+Development Workflow with Claude Code
 
-### Component Architecture
+Component Architecture
 
 When building React Native apps, Claude Code excels at generating component architectures. Provide clear specifications and receive well-structured code:
 
@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
 });
 ```
 
-### State Management Integration
+State Management Integration
 
 Claude Code helps implement state management patterns. For complex apps, request guidance on integrating Zustand, Redux Toolkit, or React Query:
 
@@ -136,15 +136,15 @@ Claude Code helps implement state management patterns. For complex apps, request
 // addWorkout, removeWorkout, and getWorkoutHistory actions"
 ```
 
-### Navigation Structure
+Navigation Structure
 
 React Navigation is the standard for routing. Ask Claude Code to scaffold your navigation:
 
 > "Create a tab-based navigation with screens for Home, Workouts, Progress, and Profile. Include a stack navigator for drill-down screens within each tab."
 
-## Testing and Debugging
+Testing and Debugging
 
-### Writing Tests with Claude Code
+Writing Tests with Claude Code
 
 Claude Code can generate test files for your components using Jest and React Native Testing Library:
 
@@ -153,34 +153,34 @@ Claude Code can generate test files for your components using Jest and React Nat
 // checking for correct rendering and onToggleComplete callback"
 ```
 
-### Debugging Common Issues
+Debugging Common Issues
 
 React Native has specific debugging challenges. Claude Code can help diagnose issues:
 
-- **Metro bundler issues**: Ask "Why is my Metro server failing to bundle?"
-- **Native module errors**: Request "Help debug this native module linking error"
-- **Performance problems**: Ask "How to optimize re-renders in my component tree?"
+- Metro bundler issues: Ask "Why is my Metro server failing to bundle?"
+- Native module errors: Request "Help debug this native module linking error"
+- Performance problems: Ask "How to optimize re-renders in my component tree?"
 
-## Building for Production
+Building for Production
 
-### Expo Build Commands
+Expo Build Commands
 
 When ready to build, Claude Code guides you through the build process:
 
 ```bash
-# Generate iOS native project
+Generate iOS native project
 npx expo prebuild --platform ios
 
-# Build iOS (requires Apple Developer account)
+Build iOS (requires Apple Developer account)
 npx expo run:ios --configuration release
 
-# Build Android APK
+Build Android APK
 npx expo run:android --variant release
 ```
 
 For production builds, request Claude Code to help configure app icons, splash screens, and build variants.
 
-### App Store Deployment
+App Store Deployment
 
 Claude Code can guide you through App Store and Google Play submission:
 
@@ -189,11 +189,11 @@ Claude Code can guide you through App Store and Google Play submission:
 3. Handle build signing and certificates
 4. Submit for review
 
-## Writing Effective Prompts for React Native
+Writing Effective Prompts for React Native
 
 Claude Code works best when your prompts include mobile-specific context. Here are practical prompt examples you can adapt directly.
 
-### Project Initialization Prompt
+Project Initialization Prompt
 
 ```
 I am building a fitness tracking mobile app with React Native.
@@ -213,7 +213,7 @@ Create the initial project structure with:
 Focus on setting up the navigation and folder structure first.
 ```
 
-### Native Module Integration Prompt
+Native Module Integration Prompt
 
 When you need to integrate device hardware, be explicit about platform details:
 
@@ -234,7 +234,7 @@ I am using a local CocoaPod for iOS. Generate:
 Use TurboModules if possible, fallback to legacy bridge if needed.
 ```
 
-### API Service Layer Prompt
+API Service Layer Prompt
 
 ```
 Create a service layer for fetching workout data from my REST API.
@@ -259,52 +259,52 @@ Requirements:
 Create the service file and a custom hook for using it in components.
 ```
 
-### Keys to Effective Mobile Prompts
+Keys to Effective Mobile Prompts
 
 Mobile development prompts succeed when they include these elements:
 
-- **Specify your stack explicitly**: Mention React Native version, navigation library, state management choice, and TypeScript preferences.
-- **Describe UX requirements**: Mobile users expect performance, smooth animations, and offline capability — say so.
-- **Request specific output files**: Mention folder locations so Claude Code generates properly organized code.
-- **Separate iOS and Android concerns**: Call out platform-specific requirements explicitly.
-- **Ask for TypeScript types**: Strong typing catches errors early, especially important when debugging on device is slower than web.
+- Specify your stack explicitly: Mention React Native version, navigation library, state management choice, and TypeScript preferences.
+- Describe UX requirements: Mobile users expect performance, smooth animations, and offline capability. say so.
+- Request specific output files: Mention folder locations so Claude Code generates properly organized code.
+- Separate iOS and Android concerns: Call out platform-specific requirements explicitly.
+- Ask for TypeScript types: Strong typing catches errors early, especially important when debugging on device is slower than web.
 
-## Best Practices
+Best Practices
 
-### Code Organization
+Code Organization
 
 - Use feature-based folder structure: `src/features/workouts/components/`
 - Keep components small and focused
 - Extract business logic into custom hooks
 - Use TypeScript for type safety
 
-### Performance Optimization
+Performance Optimization
 
 - Implement lazy loading for heavy screens
 - Use `React.memo` for pure components
 - Optimize list rendering with `FlatList` and `getItemLayout`
 - Avoid inline styles in frequently rendered components
 
-### Claude Code Tips for React Native
+Claude Code Tips for React Native
 
-1. **Provide context**: Tell Claude Code about your app's purpose and target users
-2. **Request incremental changes**: Instead of "build my app," ask for specific features
-3. **Verify platform-specific code**: Always test on both iOS and Android
-4. **Use Expo**: Prefer Expo SDK over bare React Native for faster development
-5. **Check dependencies**: Ask Claude Code to verify library compatibility before installing
-6. **Leverage specialized skills**: Use the `frontend-design` skill for consistent styling and component patterns, `tdd` for generating component tests, `pdf` for creating user documentation, and `supermemory` for maintaining context across long mobile development sessions
+1. Provide context: Tell Claude Code about your app's purpose and target users
+2. Request incremental changes: Instead of "build my app," ask for specific features
+3. Verify platform-specific code: Always test on both iOS and Android
+4. Use Expo: Prefer Expo SDK over bare React Native for faster development
+5. Check dependencies: Ask Claude Code to verify library compatibility before installing
+6. Use specialized skills: Use the `frontend-design` skill for consistent styling and component patterns, `tdd` for generating component tests, `pdf` for creating user documentation, and `supermemory` for maintaining context across long mobile development sessions
 
-## Conclusion
+Conclusion
 
 Claude Code transforms React Native development by providing intelligent assistance throughout the entire workflow. From project initialization to App Store deployment, leveraging AI help accelerates development while maintaining code quality. Start with Expo for the best developer experience, use TypeScript for type safety, and rely on Claude Code for architectural decisions and debugging support.
 
 Remember to test thoroughly on physical devices, as simulators don't catch all platform-specific issues. With Claude Code as your development partner, you can build production-ready React Native applications more efficiently than ever before.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

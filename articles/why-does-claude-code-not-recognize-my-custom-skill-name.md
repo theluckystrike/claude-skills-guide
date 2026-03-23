@@ -15,7 +15,7 @@ permalink: /why-does-claude-code-not-recognize-my-custom-skill-name/
 
 [You've created a custom skill, placed it in the right directory, but when you try to invoke it with /skill-name, Claude Code gives you a confused response](/claude-skill-md-format-complete-specification-guide/). Your skill isn't loading. This is a common issue with several potential causes. Let's walk through why this happens and how to fix it.
 
-## Where Claude Looks for Skills
+Where Claude Looks for Skills
 
 Claude Code searches for skills in specific locations depending on your setup. The most common locations are:
 
@@ -24,15 +24,15 @@ Claude Code searches for skills in specific locations depending on your setup. T
 
 If your skill file isn't in one of these locations, Claude simply won't find it. The skill must also be in a directory that Claude is configured to scan.
 
-## File Naming Matters
+File Naming Matters
 
 The skill filename directly determines the skill name Claude recognizes. If your file is named `my-custom-skill.md`, you invoke it with `/my-custom-skill`. However, there are nuances:
 
-- **Spaces in filenames**: Claude converts spaces to hyphens. A file named `frontend design skill.md` becomes `/frontend-design-skill`.
-- **Case sensitivity**: While some systems are case-insensitive, it's safest to use lowercase for skill names.
-- **File extension**: Only `.md` files are recognized as skills. `.txt`, `.markdown`, or other extensions won't work.
+- Spaces in filenames: Claude converts spaces to hyphens. A file named `frontend design skill.md` becomes `/frontend-design-skill`.
+- Case sensitivity: While some systems are case-insensitive, it's safest to use lowercase for skill names.
+- File extension: Only `.md` files are recognized as skills. `.txt`, `.markdown`, or other extensions won't work.
 
-## The YAML Front Matter Requirement
+The YAML Front Matter Requirement
 
 Every skill file must begin with valid YAML front matter. This metadata tells Claude Code how to handle your skill. Without it, the skill won't load:
 
@@ -43,21 +43,21 @@ description: Helps with frontend design decisions and code generation
 ---
 ```
 
-If your front matter is malformed—missing dashes, incorrect indentation, or invalid YAML—Claude skips the entire file. Common mistakes include:
+If your front matter is malformed, missing dashes, incorrect indentation, or invalid YAML, Claude skips the entire file. Common mistakes include:
 
 - Using tabs instead of spaces for indentation
 - Leaving colons without values
 - Including unsupported characters in the metadata
 
-## Directory Structure Problems
+Directory Structure Problems
 
 Claude expects a flat directory structure or a specific organizational pattern. Common issues include:
 
-**Nested directories**: If you place your skill in `~/.claude/skills/categories/frontend-design.md`, you might expect to invoke it as `/categories/frontend-design`. Instead, Claude flattens the structure or ignores nested files entirely.
+Nested directories: If you place your skill in `~/.claude/skills/categories/frontend-design.md`, you might expect to invoke it as `/categories/frontend-design`. Instead, Claude flattens the structure or ignores nested files entirely.
 
-**Wrong parent directory**: Skills must be in the root of the skills directory, not in subfolders (unless your specific setup uses a different configuration).
+Wrong parent directory: Skills must be in the root of the skills directory, not in subfolders (unless your specific setup uses a different configuration).
 
-## Skill Name Conflicts
+Skill Name Conflicts
 
 Sometimes your skill exists but gets overshadowed by a built-in skill or another custom skill with the same name. Built-in skills like `pdf`, `pptx`, `docx`, `xlsx`, [`tdd`](/claude-tdd-skill-test-driven-development-workflow/), and `supermemory` take precedence. If you create a skill named `pdf` expecting it to override the built-in, you may encounter unexpected behavior.
 
@@ -69,17 +69,17 @@ ls -la ~/.claude/skills/
 
 If you see duplicate names, rename one of them.
 
-## Cache and Refresh Issues
+Cache and Refresh Issues
 
 Claude Code caches skill metadata. After creating a new skill or making changes, you may need to restart your Claude session or explicitly trigger a refresh. The exact refresh mechanism depends on your interface:
 
-- **CLI users**: Restart the Claude process
-- **VS Code extension**: Reload the window
-- **Desktop app**: Quit and relaunch
+- CLI users: Restart the Claude process
+- VS Code extension: Reload the window
+- Desktop app: Quit and relaunch
 
-Simply editing the skill file isn't always enough—Claude needs to re-scan the directory.
+Simply editing the skill file isn't always enough, Claude needs to re-scan the directory.
 
-## Checking for Syntax Errors in Your Skill
+Checking for Syntax Errors in Your Skill
 
 Even if the skill loads, syntax errors in the skill body can prevent proper execution. A skill file is essentially a system prompt, so any confusing instructions or broken formatting can cause Claude to ignore or misinterpret the skill.
 
@@ -89,14 +89,14 @@ Validate your skill by:
 2. Avoiding nested bullet points that break YAML parsing
 3. Using consistent formatting throughout
 
-## Example: Fixing a Skill That Won't Load
+Fixing a Skill That Won't Load
 
 Let's say you created `~/.claude/skills/frontend-design.md` but `/frontend-design` doesn't work. Here's how to troubleshoot:
 
-1. **Check the file exists**: `ls ~/.claude/skills/frontend-design.md`
-2. **Verify front matter**: Open the file and ensure it starts with `---` and ends with `---`
-3. **Test the name**: Try invoking with the exact filename minus extension
-4. **Restart Claude**: Close and reopen your session
+1. Check the file exists: `ls ~/.claude/skills/frontend-design.md`
+2. Verify front matter: Open the file and ensure it starts with `---` and ends with `---`
+3. Test the name: Try invoking with the exact filename minus extension
+4. Restart Claude: Close and reopen your session
 
 A working skill file looks like this:
 
@@ -105,7 +105,7 @@ A working skill file looks like this:
 name: frontend-design
 description: Assists with React components, CSS styling, and design patterns
 ---
-# Frontend Design Skill
+Frontend Design Skill
 
 You are a frontend design expert. When asked about UI components:
 
@@ -116,21 +116,21 @@ You are a frontend design expert. When asked about UI components:
 Always consider performance and browser compatibility.
 ```
 
-## Special Characters and Encoding
+Special Characters and Encoding
 
 Avoid special characters in skill names. Stick to alphanumeric characters and hyphens. Characters like underscores, ampersands, or parentheses can cause recognition issues in certain environments.
 
-## How Claude Loads Skills: Progressive Disclosure
+How Claude Loads Skills: Progressive Disclosure
 
 Understanding the loading model helps explain why a skill that "exists" still won't work. Claude Code uses a three-level progressive disclosure approach:
 
-1. **Level 1 (Metadata)**: At startup, Claude Code loads only skill names and descriptions.
-2. **Level 2 (Full Content)**: The complete skill guidance loads only when you explicitly request it using `get_skill(skill_name)`.
-3. **Level 3 (Resources)**: Additional files and scripts referenced by the skill are loaded as needed.
+1. Level 1 (Metadata): At startup, Claude Code loads only skill names and descriptions.
+2. Level 2 (Full Content): The complete skill guidance loads only when you explicitly request it using `get_skill(skill_name)`.
+3. Level 3 (Resources): Additional files and scripts referenced by the skill are loaded as needed.
 
 This design keeps startup fast while allowing complex, resource-heavy skills to load on demand.
 
-## Not Explicitly Calling the Skill
+Not Explicitly Calling the Skill
 
 A common misunderstanding: having a skill file in the right place does not automatically activate it for relevant tasks. You must explicitly invoke it:
 
@@ -138,7 +138,7 @@ A common misunderstanding: having a skill file in the right place does not autom
 get_skill("your-skill-name")
 ```
 
-Without that call, Claude Code only has access to Level 1 metadata—the name and description—not the full skill guidance. If your skill isn't running its instructions, this is the most likely cause.
+Without that call, Claude Code only has access to Level 1 metadata, the name and description, not the full skill guidance. If your skill isn't running its instructions, this is the most likely cause.
 
 Here's what an explicit skill invocation looks like in practice:
 
@@ -149,29 +149,29 @@ get_skill("data-processing")
 Now can you help me clean this dataset?
 ```
 
-## Best Practices for Reliable Skills
+Best Practices for Reliable Skills
 
-**Write specific descriptions.** The Level 1 description is what Claude Code uses to decide whether a skill is relevant. "Helps with programming" is too broad. "Creates and edits Python scripts for data analysis, including pandas operations and matplotlib visualizations" is specific enough to be useful.
+Write specific descriptions. The Level 1 description is what Claude Code uses to decide whether a skill is relevant. "Helps with programming" is too broad. "Creates and edits Python scripts for data analysis, including pandas operations and matplotlib visualizations" is specific enough to be useful.
 
-**Keep skills focused.** Rather than one broad skill, consider breaking it into smaller, focused skills. Focused skills are more discoverable and more reliably invoked.
+Keep skills focused. Rather than one broad skill, consider breaking it into smaller, focused skills. Focused skills are more discoverable and more reliably invoked.
 
-**Document required resources.** If your skill depends on external files, scripts, or tools, document these in the skill file with setup instructions and prerequisites.
+Document required resources. If your skill depends on external files, scripts, or tools, document these in the skill file with setup instructions and prerequisites.
 
-**Test after creating.** After writing a skill:
+Test after creating. After writing a skill:
 
 1. Call `get_skill("your-skill-name")`
 2. Ask a question relevant to the skill
 3. Verify you get the expected guidance
 
-## Additional Debugging Checks
+Additional Debugging Checks
 
 If the steps above haven't resolved the issue, also check:
 
-- **File permissions**: Ensure the skill file is readable by the process running Claude Code.
-- **Logs**: Some loading failures are logged with helpful error messages—check your terminal output or the extension's output panel.
-- **Typos in the skill name**: Skill names are case-sensitive when passed to `get_skill()`.
+- File permissions: Ensure the skill file is readable by the process running Claude Code.
+- Logs: Some loading failures are logged with helpful error messages, check your terminal output or the extension's output panel.
+- Typos in the skill name: Skill names are case-sensitive when passed to `get_skill()`.
 
-## Conclusion
+Conclusion
 
 If Claude Code doesn't recognize your custom skill name, systematically check: file location, filename format, front matter validity, directory structure, and potential name conflicts. Most issues stem from these common pitfalls rather than complex configuration problems.
 
@@ -179,11 +179,11 @@ With your skill properly configured, you can invoke it with `/skill-name` and Cl
 
 ---
 
-## Related Reading
+Related Reading
 
-- [Why Is My Claude Skill Not Showing Up: Fix Guide](/claude-code-skill-not-found-in-skills-directory-how-to-fix/) — If the skill isn't recognized even after registration, this guide addresses the skill list display issues
-- [Claude Skill MD Format: Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/) — Ensure your skill name and metadata follow the correct format to guarantee recognition by Claude Code
-- [How Do I Debug a Claude Skill That Silently Fails](/how-do-i-debug-a-claude-skill-that-silently-fails/) — Use these debugging techniques when your skill is recognized but not behaving as expected
-- [Claude Skills: Getting Started Hub](/getting-started-hub/) — Explore skill registration, naming conventions, and troubleshooting patterns across the Claude ecosystem
+- [Why Is My Claude Skill Not Showing Up: Fix Guide](/claude-code-skill-not-found-in-skills-directory-how-to-fix/). If the skill isn't recognized even after registration, this guide addresses the skill list display issues
+- [Claude Skill MD Format: Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/). Ensure your skill name and metadata follow the correct format to guarantee recognition by Claude Code
+- [How Do I Debug a Claude Skill That Silently Fails](/how-do-i-debug-a-claude-skill-that-silently-fails/). Use these debugging techniques when your skill is recognized but not behaving as expected
+- [Claude Skills: Getting Started Hub](/getting-started-hub/). Explore skill registration, naming conventions, and troubleshooting patterns across the Claude ecosystem
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

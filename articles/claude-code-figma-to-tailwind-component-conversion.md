@@ -14,24 +14,24 @@ score: 7
 
 
 {% raw %}
-# Claude Code Figma to Tailwind Component Conversion
+Claude Code Figma to Tailwind Component Conversion
 
 Converting Figma designs to Tailwind CSS components is a common but time-consuming task in modern web development. With Claude Code and the right MCP (Model Context Protocol) tools, you can automate much of this workflow and generate production-ready components from your design files.
 
-**Scope:** This guide focuses on generating components that use Tailwind CSS utility classes — inline class names composed directly in JSX, with design tokens defined in `tailwind.config.js`. If your project uses CSS Modules or vanilla CSS for scoped styling instead, see the companion guide: [Claude Code Figma to Code Component Workflow](/claude-code-figma-to-code-component-workflow/).
+Scope: This guide focuses on generating components that use Tailwind CSS utility classes. inline class names composed directly in JSX, with design tokens defined in `tailwind.config.js`. If your project uses CSS Modules or vanilla CSS for scoped styling instead, see the companion guide: [Claude Code Figma to Code Component Workflow](/claude-code-figma-to-code-component-workflow/).
 
-## Prerequisites
+Prerequisites
 
 Before starting, ensure you have:
 - Claude Code installed and configured
 - Access to a Figma account with designs to convert
 - A Tailwind CSS project set up
 
-## Setting Up the Workflow
+Setting Up the Workflow
 
 Claude Code can interact with Figma through various approaches. The most reliable method involves using the Figma MCP server or reading Figma export files directly.
 
-### Step 1: Connect Claude to Figma
+Step 1: Connect Claude to Figma
 
 First, install the Figma MCP server to enable Claude to read your design files:
 
@@ -55,7 +55,7 @@ Configure your MCP settings to include Figma access:
 }
 ```
 
-### Step 2: Analyze Your Figma Design
+Step 2: Analyze Your Figma Design
 
 Once connected, ask Claude to analyze your Figma file:
 
@@ -70,11 +70,11 @@ Claude will parse the design and provide a structured breakdown of:
 - Spacing and padding values
 - Border radius and shadows
 
-## Converting to Tailwind Components
+Converting to Tailwind Components
 
 Now that you have the design analysis, here's how Claude converts each element to Tailwind:
 
-### Colors and Theme
+Colors and Theme
 
 Convert Figma color tokens to Tailwind's configuration:
 
@@ -108,7 +108,7 @@ module.exports = {
 }
 ```
 
-### Component Example: Button
+Component Example: Button
 
 Let's convert a Figma button design to Tailwind:
 
@@ -144,7 +144,7 @@ export function PrimaryButton({ children, onClick, disabled = false }) {
 }
 ```
 
-### Component Example: Card
+Component Example: Card
 
 A more complex card component with Figma-style properties:
 
@@ -194,9 +194,9 @@ export function FeatureCard({ title, description, icon, ctaText }) {
 }
 ```
 
-## Advanced Conversion Techniques
+Advanced Conversion Techniques
 
-### Responsive Design Conversion
+Responsive Design Conversion
 
 Claude can analyze Figma's responsive variants and generate appropriate Tailwind classes:
 
@@ -218,7 +218,7 @@ Generates:
 </div>
 ```
 
-### Using clsx for Variants
+Using clsx for Variants
 
 For complex component variants, Claude generates utility composition patterns:
 
@@ -261,9 +261,9 @@ export function Button({
 }
 ```
 
-### Converting Form Components
+Converting Form Components
 
-Forms are among the most complex Figma elements to convert accurately. Input fields carry states — default, focused, errored, disabled — that Figma designers represent across multiple frames. Prompt Claude to enumerate these states explicitly:
+Forms are among the most complex Figma elements to convert accurately. Input fields carry states. default, focused, errored, disabled. that Figma designers represent across multiple frames. Prompt Claude to enumerate these states explicitly:
 
 ```
 This Figma input component has four states: Default, Focused, Error, and Disabled.
@@ -311,7 +311,7 @@ export function TextInput({
 }
 ```
 
-### Handling Figma Auto-Layout
+Handling Figma Auto-Layout
 
 Figma's Auto Layout feature is the most direct mapping to Flexbox and CSS Grid. When Claude reads an Auto Layout frame, it extracts direction, gap, padding, and alignment into equivalent Tailwind utilities:
 
@@ -327,7 +327,7 @@ Figma's Auto Layout feature is the most direct mapping to Flexbox and CSS Grid. 
 | Fill Container (child) | `flex-1` |
 | Hug Contents (child) | `w-fit` |
 
-If your Figma frame uses nested Auto Layout — common in navigation bars and list items — Claude preserves the nesting in JSX and applies Tailwind at each level:
+If your Figma frame uses nested Auto Layout. common in navigation bars and list items. Claude preserves the nesting in JSX and applies Tailwind at each level:
 
 ```jsx
 // Figma: Navbar with horizontal auto-layout containing a logo group and nav links group
@@ -352,7 +352,7 @@ export function Navbar() {
 }
 ```
 
-## Tailwind vs CSS Modules: When to Use Each
+Tailwind vs CSS Modules: When to Use Each
 
 Not every project should use Tailwind for Figma conversions. This table helps you decide which approach fits your situation:
 
@@ -360,53 +360,53 @@ Not every project should use Tailwind for Figma conversions. This table helps yo
 |---|---|---|
 | Team size | Works well for small-to-mid teams | Scales better for large teams with strict style ownership |
 | Design token management | Centralized in `tailwind.config.js` | Distributed across module files |
-| Class name verbosity | High — long class strings in JSX | Low — semantic class names |
+| Class name verbosity | High. long class strings in JSX | Low. semantic class names |
 | Purge/tree-shaking | Built-in with Tailwind v3+ | Manual setup required |
 | IDE autocomplete | Excellent with Tailwind IntelliSense | Good with CSS Modules plugin |
-| Prototyping speed | Fast — no context switching | Slower — requires separate file edits |
+| Prototyping speed | Fast. no context switching | Slower. requires separate file edits |
 | Overriding third-party | `twMerge` handles conflicts | Cascade specificity can be tricky |
 
 If your Figma designs use a mature design system with named components and strict token usage, CSS Modules often produce cleaner output. If your team is iterating rapidly on layout, Tailwind's utility model keeps the design-to-code loop tight.
 
-## Validating the Output
+Validating the Output
 
-After Claude generates a component, validation is not optional — generated code should be reviewed against the original design at several checkpoints:
+After Claude generates a component, validation is not optional. generated code should be reviewed against the original design at several checkpoints:
 
-**Visual diff check.** Render the component in Storybook or a sandbox page alongside a screenshot of the Figma frame. Look for spacing discrepancies, incorrect font weights, and missing hover states.
+Visual diff check. Render the component in Storybook or a sandbox page alongside a screenshot of the Figma frame. Look for spacing discrepancies, incorrect font weights, and missing hover states.
 
-**Accessibility audit.** Generated components often lack ARIA attributes that are implied by Figma but not encoded in it. Ask Claude to audit the output explicitly:
+Accessibility audit. Generated components often lack ARIA attributes that are implied by Figma but not encoded in it. Ask Claude to audit the output explicitly:
 
 ```
 Review this component for accessibility issues. Add aria-label, role, and keyboard event
 handlers where the Figma design implies interactive behavior.
 ```
 
-**Responsive breakpoint test.** Use browser DevTools to test at Tailwind's standard breakpoints (`sm: 640px`, `md: 768px`, `lg: 1024px`, `xl: 1280px`). Compare against Figma's responsive variants.
+Responsive breakpoint test. Use browser DevTools to test at Tailwind's standard breakpoints (`sm: 640px`, `md: 768px`, `lg: 1024px`, `xl: 1280px`). Compare against Figma's responsive variants.
 
-**Token consistency check.** Verify that colors, spacing, and font values in the generated classes match the tokens in your `tailwind.config.js`. Mismatches appear when Claude falls back to raw Tailwind defaults (`blue-600`) instead of your custom tokens (`primary`).
+Token consistency check. Verify that colors, spacing, and font values in the generated classes match the tokens in your `tailwind.config.js`. Mismatches appear when Claude falls back to raw Tailwind defaults (`blue-600`) instead of your custom tokens (`primary`).
 
-## Best Practices
+Best Practices
 
-1. **Extract to Design Tokens**: Always convert repeated values to Tailwind config tokens
-2. **Preserve Figma Hierarchy**: Match Figma's component structure in your code
-3. **Add Interaction States**: Include hover, focus, and disabled states from Figma
-4. **Test Responsive Behavior**: Verify the generated code matches Figma's responsive variants
-5. **Be explicit about variants**: When your Figma component has multiple states or sizes, list them all in the prompt — Claude generates more complete output when it knows the full scope upfront
-6. **One component at a time**: Large Figma frames contain dozens of nested components. Convert leaf components first (buttons, inputs, badges), then compose them into containers. Claude's output quality degrades when the scope is too broad in a single prompt.
+1. Extract to Design Tokens: Always convert repeated values to Tailwind config tokens
+2. Preserve Figma Hierarchy: Match Figma's component structure in your code
+3. Add Interaction States: Include hover, focus, and disabled states from Figma
+4. Test Responsive Behavior: Verify the generated code matches Figma's responsive variants
+5. Be explicit about variants: When your Figma component has multiple states or sizes, list them all in the prompt. Claude generates more complete output when it knows the full scope upfront
+6. One component at a time: Large Figma frames contain dozens of nested components. Convert leaf components first (buttons, inputs, badges), then compose them into containers. Claude's output quality degrades when the scope is too broad in a single prompt.
 
-## Conclusion
+Conclusion
 
 Claude Code dramatically accelerates Figma to Tailwind conversion by analyzing designs, generating component code, and creating proper configuration tokens. The key is setting up the MCP connection and providing Claude with structured design analysis. With this workflow, you can convert complex designs into clean, maintainable Tailwind components in minutes instead of hours.
 
-The combination of Claude's understanding of both design principles and Tailwind's utility classes makes this workflow particularly powerful for development teams working with design-driven development processes. As your component library grows, the design tokens you define in `tailwind.config.js` become the shared language between designers and developers — and Claude helps you keep that language consistent across every new component you add.
+The combination of Claude's understanding of both design principles and Tailwind's utility classes makes this workflow particularly powerful for development teams working with design-driven development processes. As your component library grows, the design tokens you define in `tailwind.config.js` become the shared language between designers and developers. and Claude helps you keep that language consistent across every new component you add.
 {% endraw %}
 
 
-## Related Reading
+Related Reading
 
-- [Claude Code Figma to Code Component Workflow](/claude-code-figma-to-code-component-workflow/) — same workflow using CSS Modules / vanilla CSS
+- [Claude Code Figma to Code Component Workflow](/claude-code-figma-to-code-component-workflow/). same workflow using CSS Modules / vanilla CSS
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

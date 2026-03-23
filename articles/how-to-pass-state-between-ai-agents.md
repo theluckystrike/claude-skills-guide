@@ -15,28 +15,28 @@ score: 7
 
 
 {% raw %}
-# How to Pass State Between AI Agents: A Practical Guide
+How to Pass State Between AI Agents: A Practical Guide
 
 As AI agent systems grow more sophisticated, the need for multiple agents to collaborate and share information becomes essential. Whether you're building a code review pipeline, a data processing workflow, or a complex autonomous system, understanding how to pass state between AI agents is crucial for creating robust, interconnected applications.
 
-This guide covers framework-agnostic patterns for state sharing between AI agents — applicable to Claude, OpenAI, LangChain, CrewAI, and custom agent systems. The techniques here work regardless of which AI provider or orchestration library you use. If you are specifically working with Claude Code subagents, see the companion guide [Passing Context Between Claude Code Subagents](/passing-context-between-claude-code-subagents-guide/) for Claude-specific invocation patterns and skill integration.
+This guide covers framework-agnostic patterns for state sharing between AI agents. applicable to Claude, OpenAI, LangChain, CrewAI, and custom agent systems. The techniques here work regardless of which AI provider or orchestration library you use. If you are specifically working with Claude Code subagents, see the companion guide [Passing Context Between Claude Code Subagents](/passing-context-between-claude-code-subagents-guide/) for Claude-specific invocation patterns and skill integration.
 
-## Understanding State in Multi-Agent Systems
+Understanding State in Multi-Agent Systems
 
-When multiple AI agents work together, each agent typically maintains its own context — conversation history, learned preferences, and working memory. The challenge lies in effectively sharing relevant state information between agents without losing fidelity or creating conflicts. This problem appears across all multi-agent frameworks, from LangGraph and CrewAI to AutoGen and Claude Code.
+When multiple AI agents work together, each agent typically maintains its own context. conversation history, learned preferences, and working memory. The challenge lies in effectively sharing relevant state information between agents without losing fidelity or creating conflicts. This problem appears across all multi-agent frameworks, from LangGraph and CrewAI to AutoGen and Claude Code.
 
 State in multi-agent systems generally falls into several categories:
 
-- **Shared context** - Information all agents need access to
-- **Agent-specific state** - Local variables and session data
-- **Transient data** - Temporary information passed during handoffs
-- **Persistent knowledge** - Long-term information that persists across sessions
+- Shared context - Information all agents need access to
+- Agent-specific state - Local variables and session data
+- Transient data - Temporary information passed during handoffs
+- Persistent knowledge - Long-term information that persists across sessions
 
 The patterns below apply to any agent runtime. Where a pattern has a Claude Code-specific flavor, that is noted explicitly.
 
-## Techniques for Passing State Between Agents
+Techniques for Passing State Between Agents
 
-### 1. File-Based State Sharing
+1. File-Based State Sharing
 
 One of the most straightforward approaches to state sharing is using shared files. Claude Code can read and write to the filesystem, making it natural for agents to exchange information through structured files.
 
@@ -56,12 +56,12 @@ One of the most straightforward approaches to state sharing is using shared file
 
 In this pattern, Agent A writes state to a file, and Agent B reads it to continue the workflow. This approach works well for sequential handoffs where agents take turns processing information.
 
-### 2. Structured JSON Context Passing
+2. Structured JSON Context Passing
 
 For more dynamic scenarios, passing structured JSON context between agents provides flexibility. Claude Code can consume JSON data to initialize context, making it easy to pass complex state objects.
 
 ```python
-# Agent 1: Generate context for next agent
+Agent 1: Generate context for next agent
 def create_agent_context(task_data):
     return {
         "primary_objective": task_data["goal"],
@@ -74,7 +74,7 @@ def create_agent_context(task_data):
         }
     }
 
-# Agent 2: Receive and process context
+Agent 2: Receive and process context
 def process_with_context(context):
     # Access shared memory
     endpoints = context["shared_memory"]["api_endpoints"]
@@ -82,7 +82,7 @@ def process_with_context(context):
     return process_tasks(endpoints, context["primary_objective"])
 ```
 
-### 3. Using Claude Code Skills for State Management
+3. Using Claude Code Skills for State Management
 
 Claude Code's skill system provides another powerful mechanism for state sharing. Skills can encapsulate shared logic and maintain state across invocations.
 
@@ -96,7 +96,7 @@ description: Coordinates state between AI agents
 In the skill body (the markdown content after the front matter), describe how the coordinator should manage state:
 
 ```markdown
-# Multi-Agent Coordinator
+Multi-Agent Coordinator
 
 When coordinating agents:
 1. Generate a unique workflow_id for each run
@@ -105,22 +105,22 @@ When coordinating agents:
 4. Write intermediate state to a shared JSON file so agents can resume from checkpoints
 ```
 
-### 4. Environment Variables for Configuration State
+4. Environment Variables for Configuration State
 
 For configuration and environment-specific state, environment variables provide a simple mechanism for agents to access shared settings without explicit passing.
 
 ```bash
-# Agent A sets configuration
+Agent A sets configuration
 export AGENT_WORKFLOW_ID="analysis-2026-03"
 export SHARED_CONTEXT_PATH="./shared/context.json"
 export CURRENT_PHASE="data_collection"
 
-# Agent B reads configuration
+Agent B reads configuration
 echo "Working on workflow: $AGENT_WORKFLOW_ID"
 cat $SHARED_CONTEXT_PATH | jq '.data'
 ```
 
-### 5. Database-Backed State for Complex Workflows
+5. Database-Backed State for Complex Workflows
 
 For production systems requiring persistent state, database storage provides reliability and allows multiple agents to access shared information simultaneously.
 
@@ -147,31 +147,31 @@ WHERE workflow_id = 'workflow-123'
 AND state_type = 'context';
 ```
 
-## Best Practices for State Passing
+Best Practices for State Passing
 
 When implementing state passing between AI agents, consider these practical guidelines:
 
-**1. Define Clear State Contracts**
+1. Define Clear State Contracts
 
 Establish explicit schemas for shared state. When Agent A passes data to Agent B, both should understand the expected format. This prevents integration issues and makes debugging easier.
 
-**2. Use Idempotent Operations**
+2. Use Idempotent Operations
 
 Design state operations to be safely repeatable. If an agent restarts or receives the same state twice, the outcome should remain consistent.
 
-**3. Implement State Versioning**
+3. Implement State Versioning
 
 Include version information in your state objects. This helps agents handle format changes and ensures backward compatibility as your system evolves.
 
-**4. Keep State Minimal**
+4. Keep State Minimal
 
 Only pass necessary information. Large state objects increase memory usage and processing time. Extract relevant subsets for each agent rather than sharing entire contexts.
 
-**5. Handle State Conflicts**
+5. Handle State Conflicts
 
 In concurrent scenarios, implement conflict resolution strategies. Last-write-wins, merge strategies, or explicit resolution protocols help maintain data integrity.
 
-## Claude Code Integration Patterns
+Claude Code Integration Patterns
 
 Claude Code excels at multi-agent workflows through its tool use capabilities. Here's a practical pattern for coordinating agents:
 
@@ -210,19 +210,19 @@ async function coordinateAgents(agents, initialState) {
 }
 ```
 
-## Conclusion
+Conclusion
 
-Passing state between AI agents is a fundamental capability for building sophisticated multi-agent systems. The patterns covered here — file-based sharing, structured JSON context, environment variables, and database-backed state — apply broadly across agent frameworks and are not tied to any single provider.
+Passing state between AI agents is a fundamental capability for building sophisticated multi-agent systems. The patterns covered here. file-based sharing, structured JSON context, environment variables, and database-backed state. apply broadly across agent frameworks and are not tied to any single provider.
 
 Whether you're building a simple two-agent pipeline or a complex autonomous workflow, the key lies in choosing the right state passing mechanism for your specific requirements. Start with simpler approaches like file sharing, and evolve toward database-backed solutions as your needs grow more complex.
 
 If you are working specifically with Claude Code, the companion guide [Passing Context Between Claude Code Subagents](/passing-context-between-claude-code-subagents-guide/) covers the `/subagent:` invocation syntax, the `.claude/context/` file convention, and integration with Claude skills like tdd, pdf, and xlsx.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

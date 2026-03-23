@@ -13,11 +13,11 @@ score: 8
 
 Chrome's built-in password manager stores credentials locally with encryption, but there are legitimate reasons to export them: migrating to a dedicated password manager, backing up your data, or auditing stored credentials. This guide covers the official export method, security considerations, and programmatic approaches for developers and power users.
 
-## Official Chrome Password Export
+Official Chrome Password Export
 
 Chrome provides a built-in way to export passwords through the browser settings. This method exports credentials in an unencrypted CSV file, which you'll need to handle carefully.
 
-### Step-by-Step Export
+Step-by-Step Export
 
 1. Open Chrome and navigate to `chrome://settings/passwords`
 2. Locate the "Passwords" section and toggle "Offer to save passwords" if not already enabled
@@ -28,7 +28,7 @@ Chrome provides a built-in way to export passwords through the browser settings.
 
 The exported file contains: URL, username, and password in plain text. The filename typically includes a timestamp like `Chrome Passwords-2026-03-15.csv`.
 
-### What the CSV Looks Like
+What the CSV Looks Like
 
 The exported file has a straightforward structure with four columns:
 
@@ -38,44 +38,44 @@ Google,https://accounts.google.com,user@gmail.com,hunter2
 GitHub,https://github.com/login,devuser,mysecretpassword
 ```
 
-Every row is plaintext. There is no encryption, no obfuscation, and no password hint — just the raw credentials. Anyone who opens this file sees everything. That is the fundamental tension in Chrome's export feature: it is easy to use, but the output requires careful handling.
+Every row is plaintext. There is no encryption, no obfuscation, and no password hint. just the raw credentials. Anyone who opens this file sees everything. That is the fundamental tension in Chrome's export feature: it is easy to use, but the output requires careful handling.
 
-### Export via Chrome Password Manager on the Web
+Export via Chrome Password Manager on the Web
 
-If you use Chrome with a Google account, your passwords sync to your Google account and are accessible at `passwords.google.com`. This web interface also offers an export option, available under the settings menu in the top right. The output format is identical to the browser export — a plaintext CSV.
+If you use Chrome with a Google account, your passwords sync to your Google account and are accessible at `passwords.google.com`. This web interface also offers an export option, available under the settings menu in the top right. The output format is identical to the browser export. a plaintext CSV.
 
 The web export is useful if Chrome itself is unavailable, such as on a shared machine where you cannot install software.
 
-## Understanding Chrome's Encryption
+Understanding Chrome's Encryption
 
 When passwords are stored locally, Chrome encrypts them using OS-level keychain services:
 
-- **Windows**: Data Protection API (DPAPI)
-- **macOS**: Keychain Services
-- **Linux**: libsecret
+- Windows: Data Protection API (DPAPI)
+- macOS: Keychain Services
+- Linux: libsecret
 
-The exported CSV, however, contains plaintext passwords. This is the critical security gap—you're trading convenience for exposure during the export process.
+The exported CSV, however, contains plaintext passwords. This is the critical security gap, you're trading convenience for exposure during the export process.
 
 Understanding what this means in practice: when Chrome reads passwords to display them in settings or autofill them on a page, it decrypts them in memory using the OS keychain, uses them, then discards the plaintext. The export function does the same decryption but writes the result to disk as plaintext. The security model that protects stored passwords does not extend to the export file.
 
-On macOS, this means Chrome will prompt for your macOS login password or Touch ID before completing the export — Chrome needs to unlock the Keychain to decrypt the stored passwords. On Windows, DPAPI ties encryption to the current user account, so exports can only happen while logged in as that user. On Linux with libsecret, the behavior depends on your distribution's secret service implementation.
+On macOS, this means Chrome will prompt for your macOS login password or Touch ID before completing the export. Chrome needs to unlock the Keychain to decrypt the stored passwords. On Windows, DPAPI ties encryption to the current user account, so exports can only happen while logged in as that user. On Linux with libsecret, the behavior depends on your distribution's secret service implementation.
 
-## Command-Line Export Methods
+Command-Line Export Methods
 
 For automation and scripting, developers can interact with Chrome's data through several approaches.
 
-### Reading Chrome's SQLite Database
+Reading Chrome's SQLite Database
 
 Chrome stores passwords in a SQLite database. The location varies by OS:
 
 ```bash
-# macOS
+macOS
 ~/Library/Application Support/Google/Chrome/Default/Login Data
 
-# Linux
+Linux
 ~/.config/google-chrome/Default/Login Data
 
-# Windows
+Windows
 %LOCALAPPDATA%\Google\Chrome\User Data\Default\Login Data
 ```
 
@@ -88,7 +88,7 @@ sqlite3 "~/Library/Application Support/Google/Chrome/Default/Login Data" \
 
 The `password_value` field contains encrypted data that requires decryption using the operating system's keychain. This makes direct database extraction complex without additional tooling.
 
-### Why Direct Database Access Is Complicated
+Why Direct Database Access Is Complicated
 
 The SQLite approach retrieves the `password_value` field, but that field stores a binary blob, not plaintext. On macOS, it is an AES-GCM encrypted value. The encryption key is stored in the macOS Keychain under the entry "Chrome Safe Storage." On Windows, the encryption key is stored in a `Local State` file next to the profile directory, but the key itself is encrypted with DPAPI and tied to the current user session.
 
@@ -103,54 +103,54 @@ sqlite3 /tmp/chrome_login_data.db "SELECT origin_url, username_value FROM logins
 
 This at least lets you see URLs and usernames without decryption. The passwords remain encrypted binary blobs.
 
-## Secure Export Workflow
+Secure Export Workflow
 
 Follow these practices to minimize security risks when exporting Chrome passwords:
 
-### 1. Work in an Air-Gapped Environment
+1. Work in an Air-Gapped Environment
 
 Perform exports on a clean system without network connectivity. This prevents credential interception during the export process.
 
-### 2. Use Ephemeral Filesystems
+2. Use Ephemeral Filesystems
 
 Mount a tmpfs partition for temporary storage:
 
 ```bash
-# Linux
+Linux
 sudo mount -t tmpfs -o size=100M tmpfs /mnt/secure
 
-# Work in /mnt/secure directory
-# Unmount after use
+Work in /mnt/secure directory
+Unmount after use
 sudo umount /mnt/secure
 ```
 
 On macOS, you can create an encrypted disk image using Disk Utility or the command line:
 
 ```bash
-# Create an encrypted sparse disk image
+Create an encrypted sparse disk image
 hdiutil create -size 50m -encryption AES-256 -type SPARSE \
   -volname "SecureExport" -fs HFS+ ~/Desktop/secure_export.dmg
 
-# Mount it
+Mount it
 hdiutil attach ~/Desktop/secure_export.dmg
 
-# Export Chrome passwords to /Volumes/SecureExport/
-# When done, unmount
+Export Chrome passwords to /Volumes/SecureExport/
+When done, unmount
 hdiutil detach /Volumes/SecureExport
 ```
 
 This approach gives you an encrypted container that requires a password to mount. The exported CSV exists only within that encrypted space while you work with it.
 
-### 3. Encrypt Immediately After Export
+3. Encrypt Immediately After Export
 
 Apply strong encryption to the CSV immediately:
 
 ```bash
-# Using GPG for symmetric encryption
+Using GPG for symmetric encryption
 gpg --symmetric --cipher-algo AES256 Chrome-Passwords-2026-03-15.csv
 
-# This creates Chrome-Passwords-2026-03-15.csv.gpg
-# Delete the original plaintext file
+This creates Chrome-Passwords-2026-03-15.csv.gpg
+Delete the original plaintext file
 rm Chrome-Passwords-2026-03-15.csv
 ```
 
@@ -158,44 +158,44 @@ To decrypt later when you need access:
 
 ```bash
 gpg --decrypt Chrome-Passwords-2026-03-15.csv.gpg > Chrome-Passwords-decrypted.csv
-# Process the CSV, then delete it
+Process the CSV, then delete it
 shred -u -z Chrome-Passwords-decrypted.csv
 ```
 
-### 4. Verify File Deletion
+4. Verify File Deletion
 
 Overwrite deleted files to prevent recovery:
 
 ```bash
-# Overwrite file before deletion
+Overwrite file before deletion
 shred -u -z Chrome-Passwords-2026-03-15.csv
 ```
 
-On macOS, `shred` is not available by default, but you can install it via Homebrew (`brew install coreutils`) or use the built-in `srm` command if available on older macOS versions. On modern macOS with SSDs, secure deletion is complicated by wear-leveling — the filesystem may keep older blocks alive for SSD health even after "deletion." Using an encrypted disk image (as described above) is more reliable because you can simply destroy the encryption key by securely deleting the sparse image itself.
+On macOS, `shred` is not available by default, but you can install it via Homebrew (`brew install coreutils`) or use the built-in `srm` command if available on older macOS versions. On modern macOS with SSDs, secure deletion is complicated by wear-leveling. the filesystem may keep older blocks alive for SSD health even after "deletion." Using an encrypted disk image (as described above) is more reliable because you can simply destroy the encryption key by securely deleting the sparse image itself.
 
-### 5. Keep the Window of Exposure Short
+5. Keep the Window of Exposure Short
 
 The most effective security practice is minimizing time-to-import. Export the CSV, immediately import it into your password manager of choice, verify the import is complete, then delete the export file. The entire process should take under five minutes. Do not let the plaintext CSV sit on your desktop while you get distracted.
 
-## Importing to Password Managers
+Importing to Password Managers
 
 Most password managers accept CSV imports. Here are the expected formats:
 
-### Bitwarden Format
+Bitwarden Format
 
 ```csv
 name,login_uri,login_username,login_password,login_notes
 ,Github,user@example.com,supersecretpassword,Migrated from Chrome
 ```
 
-### 1Password Format
+1Password Format
 
 ```csv
 title,location,username,password,url,notes
 GitHub,github.com,user@example.com,supersecretpassword,https://github.com,Work account
 ```
 
-### CSV Header Requirements
+CSV Header Requirements
 
 Different managers require different headers. Common variants include:
 
@@ -206,7 +206,7 @@ Different managers require different headers. Common variants include:
 | 1Password | title, location, username, password, url, notes |
 | KeePass | Account, Login Name, Password, URL, Notes |
 
-### Converting Chrome's Export Format
+Converting Chrome's Export Format
 
 Chrome's export uses `name,url,username,password` as headers. Most password managers expect different header names, so you will need to either rename the headers manually in a text editor or use a script to reformat before importing.
 
@@ -216,7 +216,7 @@ A simple header conversion with Python:
 import csv
 import sys
 
-# Map Chrome headers to Bitwarden headers
+Map Chrome headers to Bitwarden headers
 CHROME_TO_BITWARDEN = {
     'name': 'name',
     'url': 'login_uri',
@@ -238,7 +238,7 @@ convert_chrome_to_bitwarden('chrome_export.csv', 'bitwarden_import.csv')
 
 Run this conversion on a secure system and delete both files promptly after the import completes.
 
-### Verifying Import Completeness
+Verifying Import Completeness
 
 Before deleting your Chrome export, verify the import worked correctly:
 
@@ -249,7 +249,7 @@ Before deleting your Chrome export, verify the import worked correctly:
 
 Only delete the export CSV after you are confident the import is complete and the credentials are accessible.
 
-## Automating Exports with Python
+Automating Exports with Python
 
 For recurring exports or batch processing, use Python with the `keyring` library:
 
@@ -284,7 +284,7 @@ def get_chrome_passwords():
 
     return passwords
 
-# Export to CSV
+Export to CSV
 def export_to_csv(passwords, output_file):
     with open(output_file, 'w', newline='') as f:
         writer = csv.writer(f)
@@ -297,7 +297,7 @@ export_to_csv(get_chrome_passwords(), 'chrome_passwords.csv')
 
 The actual decryption requires accessing the system's keychain, which adds complexity. For production automation, consider using existing libraries like `chrome-password-decryptor`.
 
-### A More Complete macOS Decryption Approach
+A More Complete macOS Decryption Approach
 
 On macOS, the decryption key for Chrome passwords is stored in the Keychain. Retrieving it and decrypting passwords programmatically looks like this:
 
@@ -338,16 +338,16 @@ def decrypt_chrome_password(encrypted_value, key):
 
 This requires the `pycryptodome` package (`pip install pycryptodome`) and only works on macOS. Windows has a different key retrieval path using DPAPI. In practice, unless you have a specific automation requirement, the built-in Chrome export is simpler and less error-prone.
 
-## Security Considerations
+Security Considerations
 
-### Risks of CSV Exports
+Risks of CSV Exports
 
-1. **Plaintext Storage**: Exported passwords are readable by anyone with file access
-2. **Unencrypted Transfer**: Moving the file across networks exposes credentials
-3. **Backup Exposure**: Cloud backups may contain unencrypted exports
-4. **Malware Target**: Password files are high-value targets for malware
+1. Plaintext Storage: Exported passwords are readable by anyone with file access
+2. Unencrypted Transfer: Moving the file across networks exposes credentials
+3. Backup Exposure: Cloud backups may contain unencrypted exports
+4. Malware Target: Password files are high-value targets for malware
 
-### Mitigation Strategies
+Mitigation Strategies
 
 - Always encrypt exports immediately after creation
 - Use strong, unique passwords for encryption (consider a password generator)
@@ -355,7 +355,7 @@ This requires the `pycryptodome` package (`pip install pycryptodome`) and only w
 - Never store exports in cloud-synced folders
 - Consider splitting exports into smaller batches to limit exposure
 
-### Understanding Your Threat Model
+Understanding Your Threat Model
 
 The right security precautions depend on what you are actually worried about. Most people exporting Chrome passwords are doing a one-time migration to a dedicated password manager. For this use case, the biggest risks are:
 
@@ -363,23 +363,23 @@ The right security precautions depend on what you are actually worried about. Mo
 - Leaving the CSV on a shared machine
 - Sending the CSV via email or messaging apps to yourself
 
-For typical users, the practical guidance is: export the file, move it somewhere not cloud-synced, import it, verify, delete immediately. The elaborate air-gapped environment setup described earlier is appropriate for security-sensitive contexts — corporate credential migrations, high-value personal accounts, or environments where you have reason to believe your network is monitored.
+For typical users, the practical guidance is: export the file, move it somewhere not cloud-synced, import it, verify, delete immediately. The elaborate air-gapped environment setup described earlier is appropriate for security-sensitive contexts. corporate credential migrations, high-value personal accounts, or environments where you have reason to believe your network is monitored.
 
 For developers building tooling that handles exported password files, the bar is higher. If you are writing a migration script that reads the CSV, it should never write decrypted passwords to additional files, should handle the data only in memory, and should log nothing that could contain credentials.
 
-## When to Use Dedicated Password Managers
+When to Use Dedicated Password Managers
 
 Chrome's built-in manager lacks features that developers and security-conscious users require:
 
-- **No Encryption Verification**: Cannot audit encryption strength
-- **Limited 2FA Integration**: No support for hardware security keys
-- **No Security Alerts**: Cannot warn about compromised passwords
-- **No Secure Sharing**: Cannot share credentials safely with team members
-- **Platform Lock-in**: Difficult migration to other platforms
+- No Encryption Verification: Cannot audit encryption strength
+- Limited 2FA Integration: No support for hardware security keys
+- No Security Alerts: Cannot warn about compromised passwords
+- No Secure Sharing: Cannot share credentials safely with team members
+- Platform Lock-in: Difficult migration to other platforms
 
 Dedicated managers like Bitwarden, 1Password, or KeePass offer better security postures, including zero-knowledge architecture, breach monitoring, and secure sharing features.
 
-### Comparing Options After Migration
+Comparing Options After Migration
 
 | Feature | Chrome | Bitwarden | 1Password | KeePass |
 |---------|--------|-----------|-----------|---------|
@@ -395,28 +395,28 @@ Dedicated managers like Bitwarden, 1Password, or KeePass offer better security p
 
 For most developers, Bitwarden strikes the best balance: open source, self-hostable, cross-platform, and free for individuals with paid tiers for teams. 1Password has a better user experience but requires a subscription. KeePass is the right choice if you want complete local control and are comfortable managing your own sync.
 
-## After the Migration
+After the Migration
 
 Once you have imported your passwords into a dedicated manager:
 
 1. Disable Chrome's password manager to prevent new credentials from accumulating there: navigate to `chrome://settings/autofill/passwords` and turn off "Offer to save passwords" and "Auto Sign-in"
 2. Configure your new password manager's browser extension to handle autofill
-3. Change passwords for high-value accounts (banking, email, work systems) immediately after migration — the export process itself is a good reminder to rotate important credentials
+3. Change passwords for high-value accounts (banking, email, work systems) immediately after migration. the export process itself is a good reminder to rotate important credentials
 4. Enable two-factor authentication on your password manager account if you have not already
 
 The goal is to make Chrome's password manager irrelevant going forward, not just to perform a one-time export.
 
-## Conclusion
+Conclusion
 
-Exporting passwords from Chrome is straightforward through the built-in feature, but handling the exported data requires careful security practices. For developers automating credential management, Python scripts can streamline the process — though you'll need to handle Chrome's encryption properly. Always encrypt exports immediately, work in secure environments, and consider migrating to dedicated password managers for improved long-term security.
+Exporting passwords from Chrome is straightforward through the built-in feature, but handling the exported data requires careful security practices. For developers automating credential management, Python scripts can streamline the process. though you'll need to handle Chrome's encryption properly. Always encrypt exports immediately, work in secure environments, and consider migrating to dedicated password managers for improved long-term security.
 
 The plaintext CSV is the weakest link. Every minute it exists unencrypted on a writable filesystem is a minute it could be copied, synced, or read by something it should not be. Treat the export workflow as a race: get in, import, verify, delete.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

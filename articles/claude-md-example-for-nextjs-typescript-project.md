@@ -14,11 +14,11 @@ tags: [claude-code, claude-skills]
 {% raw %}
 
 
-# Claude MD Example for Next.js TypeScript Project
+Claude MD Example for Next.js TypeScript Project
 
 Building modern web applications with Next.js and TypeScript requires efficient workflows and consistent code patterns. Claude Code, combined with well-structured skill files in Markdown format, transforms how developers approach full-stack development. This guide provides concrete examples of setting up and using Claude skills specifically designed for Next.js TypeScript projects.
 
-## Why Claude Skills Matter for Next.js Projects
+Why Claude Skills Matter for Next.js Projects
 
 Before diving into examples, it is worth understanding what makes Claude skills particularly valuable in a Next.js TypeScript context. Without a skill file, each prompt to Claude starts from scratch. You might get excellent TypeScript on one component and inconsistent patterns on the next. You might get a Client Component when you needed a Server Component. Skill files solve this by encoding your team's conventions once and reusing them across every interaction.
 
@@ -34,7 +34,7 @@ The difference between a project with and without Claude skills looks like this 
 
 The return on investment compounds as your project grows. A skill file written once pays dividends across hundreds of generated files.
 
-## Setting Up Your Next.js Project with Claude Skills
+Setting Up Your Next.js Project with Claude Skills
 
 Before creating skill files, initialize a Next.js project with TypeScript:
 
@@ -49,23 +49,23 @@ A recommended project layout that keeps skills close to the codebase they serve:
 
 ```
 my-app/
-├── .claude/
-│   └── skills/
-│       ├── nextjs-component.md
-│       ├── nextjs-api-route.md
-│       ├── nextjs-page-layout.md
-│       └── nextjs-tdd.md
-├── src/
-│   ├── app/
-│   ├── components/
-│   └── lib/
-├── tsconfig.json
-└── package.json
+ .claude/
+    skills/
+        nextjs-component.md
+        nextjs-api-route.md
+        nextjs-page-layout.md
+        nextjs-tdd.md
+ src/
+    app/
+    components/
+    lib/
+ tsconfig.json
+ package.json
 ```
 
 Storing skills inside `.claude/skills/` at the project root means every team member picks them up automatically when they open the repo in Claude Code. No manual installation, no documentation to follow.
 
-## Creating a Next.js Component Generation Skill
+Creating a Next.js Component Generation Skill
 
 The most practical starting point is a skill that generates components with proper TypeScript typing and Next.js best practices. Here is a complete example:
 
@@ -75,11 +75,11 @@ name: nextjs-component
 description: Generate TypeScript React components for Next.js with App Router
 ---
 
-# Next.js Component Generator
+Next.js Component Generator
 
 You generate type-safe React components following Next.js 14+ App Router conventions.
 
-## Component Structure
+Component Structure
 
 Every component must include:
 1. Proper TypeScript interface for props
@@ -87,7 +87,7 @@ Every component must include:
 3. Tailwind CSS classes for styling
 4. Proper export statement
 
-## Props Interface Pattern
+Props Interface Pattern
 
 Use explicit interfaces rather than inline types:
 
@@ -106,7 +106,7 @@ When I ask you to create a component, generate complete files with all imports, 
 
 This skill demonstrates several key patterns. The front matter declares the skill name and description. The body provides specific guidance on component structure that Claude will follow when generating code.
 
-When you invoke this skill and ask for a Button component, Claude produces something like the following every single time — no prompting variation, no missing types:
+When you invoke this skill and ask for a Button component, Claude produces something like the following every single time. no prompting variation, no missing types:
 
 ```typescript
 // src/components/Button.tsx
@@ -148,12 +148,12 @@ export function Button({
 
 Without the skill file, that same request might return an untyped component, miss the variant union, or omit the focus ring classes. The skill makes the output deterministic.
 
-### Server vs. Client Components: Encoding the Decision
+Server vs. Client Components: Encoding the Decision
 
 One of the most common mistakes in Next.js App Router projects is misusing Server and Client Components. Add a decision section to your component skill so Claude chooses correctly:
 
 ```markdown
-## Server vs. Client Decision
+Server vs. Client Decision
 
 Default to Server Components unless the component:
 - Uses React hooks (useState, useEffect, useReducer, etc.)
@@ -162,12 +162,12 @@ Default to Server Components unless the component:
 - Relies on third-party libraries that require client context
 
 For Client Components, add "use client"; as the very first line before imports.
-For Server Components, omit the directive entirely — do not add a comment.
+For Server Components, omit the directive entirely. do not add a comment.
 ```
 
 With this rule in the skill, a data display component stays as a Server Component and only interactive widgets get the `"use client"` directive. This keeps your bundle sizes optimal without requiring the developer to make the decision manually each time.
 
-## Generating API Routes with Type Safety
+Generating API Routes with Type Safety
 
 Next.js API routes benefit significantly from TypeScript. Create a skill focused on route handler generation:
 
@@ -177,11 +177,11 @@ name: nextjs-api-route
 description: Create Next.js 14 API routes with Zod validation and proper typing
 ---
 
-# API Route Generator
+API Route Generator
 
 Generate Next.js App Router route handlers with these requirements:
 
-## Route Handler Structure
+Route Handler Structure
 
 ```typescript
 import { NextRequest, NextResponse } from 'next/server';
@@ -283,7 +283,7 @@ export async function GET(
 
 The key improvement over the basic pattern is the generic `ApiResponse<T>` type on the return value. This gives you compile-time guarantees that every response shape is correct, and IDEs surface the type when callers use `fetch` with typed wrappers.
 
-### Skill Comparison: Basic vs. Enhanced API Route Skills
+Skill Comparison: Basic vs. Enhanced API Route Skills
 
 | Feature | Basic Skill | Enhanced Skill |
 |---|---|---|
@@ -297,7 +297,7 @@ The key improvement over the basic pattern is the generic `ApiResponse<T>` type 
 
 Building the enhanced version into your skill file from the start costs nothing but pays off during every code review.
 
-## Integrating Testing with the TDD Skill
+Integrating Testing with the TDD Skill
 
 Pair your Next.js skills with the tdd skill for test-driven development workflows. The tdd skill provides structured prompts for generating unit tests, integration tests, and end-to-end tests using Vitest and Playwright. When working on complex components, invoke both skills together to generate implementation and tests in parallel.
 
@@ -309,11 +309,11 @@ name: nextjs-tdd
 description: Generate Vitest unit tests and Playwright e2e tests for Next.js components and routes
 ---
 
-# Next.js TDD Helper
+Next.js TDD Helper
 
 When given a component or API route, generate corresponding test files.
 
-## Unit Test Pattern (Vitest + Testing Library)
+Unit Test Pattern (Vitest + Testing Library)
 
 ```typescript
 import { describe, it, expect, vi } from 'vitest';
@@ -340,7 +340,7 @@ describe('Button', () => {
 });
 ```
 
-## API Route Test Pattern
+API Route Test Pattern
 
 ```typescript
 import { describe, it, expect } from 'vitest';
@@ -375,7 +375,7 @@ Generate both unit tests and a brief Playwright spec when asked.
 
 Having a dedicated test skill means the testing standard travels with the team. Senior developers write the skill once; junior developers invoke it and produce tests that match the project's conventions without needing a mentor to review the approach.
 
-## Page Layouts and Frontend Design Patterns
+Page Layouts and Frontend Design Patterns
 
 The frontend-design skill complements Next.js development by providing guidance on responsive layouts, Tailwind configuration, and design system implementation. Combine these skills when building multi-page applications:
 
@@ -385,11 +385,11 @@ name: nextjs-page-layout
 description: Create Next.js page layouts with proper metadata and responsive design
 ---
 
-# Page Layout Generator
+Page Layout Generator
 
 Generate pages with these Next.js 14 App Router patterns:
 
-## Page with Metadata
+Page with Metadata
 
 ```typescript
 import type { Metadata } from 'next';
@@ -487,14 +487,14 @@ export default async function BlogPostPage({ params }: PageProps) {
 
 By encoding both the static and dynamic metadata patterns in the page layout skill, you ensure every page in the project ships SEO-ready without developers needing to remember the Next.js metadata API shape.
 
-## Managing Project Documentation
+Managing Project Documentation
 
 For larger Next.js projects, the supermemory skill helps maintain project context and documentation. Use it to track architectural decisions, component libraries, and API contracts across your codebase. When working with design teams, the pdf skill enables extracting requirements from design specifications and converting them to actionable development tasks.
 
 A practical supermemory entry for a Next.js project might capture decisions like this:
 
 ```markdown
-## Architecture Decision: Data Fetching Strategy
+Architecture Decision: Data Fetching Strategy
 
 Date: 2026-03-01
 Decision: Use React Server Components for all data fetching. No client-side
@@ -509,45 +509,45 @@ Components affected: ProductList, UserProfile, BlogPost, SearchResults
 
 Storing these decisions in supermemory means Claude can reference them in future sessions. When a developer asks why a component is a Server Component, Claude can surface the decision record rather than making a guess.
 
-## Real-World Workflow Example
+Real-World Workflow Example
 
 Consider a typical development session with Claude and these skills:
 
-1. **Initialize task**: Use nextjs-component to generate a new Card component with props interface
-2. **Add validation**: Apply nextjs-api-route to create the corresponding API endpoint
-3. **Write tests**: Invoke the nextjs-tdd skill to generate Vitest unit tests for both
-4. **Document**: Use supermemory to record the component API for future reference
-5. **Extract from designs**: If working from a PDF mockup, use the pdf skill to parse and generate layout code
+1. Initialize task: Use nextjs-component to generate a new Card component with props interface
+2. Add validation: Apply nextjs-api-route to create the corresponding API endpoint
+3. Write tests: Invoke the nextjs-tdd skill to generate Vitest unit tests for both
+4. Document: Use supermemory to record the component API for future reference
+5. Extract from designs: If working from a PDF mockup, use the pdf skill to parse and generate layout code
 
 This workflow demonstrates how multiple skills work together. Each skill handles a specific aspect of development while maintaining consistency across your project.
 
 Here is what an actual session sequence looks like in practice using the Claude Code CLI:
 
 ```bash
-# Step 1: Generate the Card component
+Step 1: Generate the Card component
 claude --skill nextjs-component "Create a Card component with title, description, image, and href props. Image should be optional."
 
-# Step 2: Generate the supporting API route
+Step 2: Generate the supporting API route
 claude --skill nextjs-api-route "Create a GET route at /api/cards that returns a paginated list of cards with optional category filter"
 
-# Step 3: Generate tests for both
+Step 3: Generate tests for both
 claude --skill nextjs-tdd "Generate Vitest tests for the Card component and the /api/cards GET route we just created"
 
-# Step 4: Document the pattern
+Step 4: Document the pattern
 claude --skill supermemory "Record: Card component accepts CardProps interface, GET /api/cards returns PaginatedResponse, added 2026-03-22"
 ```
 
 Each command is short, focused, and produces output that conforms to your project standards. Contrast this with an ad-hoc workflow where each prompt reinvents the conventions.
 
-## Common Pitfalls and How Skills Fix Them
+Common Pitfalls and How Skills Fix Them
 
 Several recurring mistakes in Next.js TypeScript projects are solved directly by well-written skills.
 
-**Missing `async` on Server Components that fetch data.** A skill can mandate: "All Server Components that call fetch or database functions must be declared async." Claude then produces `export default async function Page()` correctly every time.
+Missing `async` on Server Components that fetch data. A skill can mandate: "All Server Components that call fetch or database functions must be declared async." Claude then produces `export default async function Page()` correctly every time.
 
-**Forgetting `notFound()` in dynamic routes.** Add a rule to the page layout skill: "Every dynamic route must call `notFound()` when the resource does not exist. Never return null or an empty state instead." This prevents 200 responses on pages that should 404.
+Forgetting `notFound()` in dynamic routes. Add a rule to the page layout skill: "Every dynamic route must call `notFound()` when the resource does not exist. Never return null or an empty state instead." This prevents 200 responses on pages that should 404.
 
-**Untyped `params` and `searchParams` in pages.** The page layout skill can include the correct interface so Claude never generates a page without typed params:
+Untyped `params` and `searchParams` in pages. The page layout skill can include the correct interface so Claude never generates a page without typed params:
 
 ```typescript
 interface PageProps {
@@ -556,13 +556,13 @@ interface PageProps {
 }
 ```
 
-**Inline styles instead of Tailwind.** A simple rule in the component skill — "Never use the style prop. All styling must use Tailwind utility classes." — eliminates the entire class of inconsistency.
+Inline styles instead of Tailwind. A simple rule in the component skill. "Never use the style prop. All styling must use Tailwind utility classes.". eliminates the entire class of inconsistency.
 
-**Catching errors without differentiating types.** The API route skill's Zod error differentiation pattern (shown earlier) prevents generic 500 responses where a 422 would be more accurate and actionable for API consumers.
+Catching errors without differentiating types. The API route skill's Zod error differentiation pattern (shown earlier) prevents generic 500 responses where a 422 would be more accurate and actionable for API consumers.
 
-## Best Practices for Next.js Skill Development
+Best Practices for Next.js Skill Development
 
-Keep skill files focused on single responsibilities rather than combining too many patterns. Smaller, composable skills are easier to maintain and combine. Use the tools front matter to restrict available actions — this prevents accidental file modifications outside the intended scope.
+Keep skill files focused on single responsibilities rather than combining too many patterns. Smaller, composable skills are easier to maintain and combine. Use the tools front matter to restrict available actions. this prevents accidental file modifications outside the intended scope.
 
 Version control your skill files within your project repository. This ensures team members share consistent development patterns and simplifies onboarding new developers to your Next.js codebase.
 
@@ -580,18 +580,18 @@ A maintenance checklist for Next.js skills:
 
 Treat skill files as living documentation. A skill that reflects your current standards saves more review time than a skill that reflects how you worked six months ago.
 
-## Conclusion
+Conclusion
 
 Claude skills in Markdown format provide a powerful mechanism for standardizing Next.js TypeScript development workflows. By creating focused skills for components, API routes, pages, and tests, you establish consistent patterns across your entire codebase. The combination of specialized skills like the tdd skill, the frontend-design skill, and supermemory creates a comprehensive development environment that scales with your project complexity.
 
-The investment in writing a good skill file is small compared to the accumulated time saved across hundreds of code generation tasks. Start with the three core skills — component, API route, and page layout — then extend them as your project's conventions evolve. Every rule you encode in a skill is a convention that no longer needs to be communicated in a code review.
+The investment in writing a good skill file is small compared to the accumulated time saved across hundreds of code generation tasks. Start with the three core skills. component, API route, and page layout. then extend them as your project's conventions evolve. Every rule you encode in a skill is a convention that no longer needs to be communicated in a code review.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

@@ -15,30 +15,30 @@ permalink: /claude-code-mcp-server-penetration-testing-guide/
 
 Model Context Protocol (MCP) servers extend Claude Code's capabilities by connecting to external services, databases, and APIs. Since these servers often handle sensitive data and execute commands on your behalf, testing them for security vulnerabilities is essential. This guide walks you through penetration testing your MCP server implementations using Claude Code skills and practical testing methodologies.
 
-## Understanding Your MCP Server Attack Surface
+Understanding Your MCP Server Attack Surface
 
-Before testing, map out what your MCP server exposes. MCP servers typically provide tools that Claude Code can invoke—these tools may execute shell commands, query databases, call external APIs, or access file systems. Each tool represents a potential attack vector if input validation is insufficient.
+Before testing, map out what your MCP server exposes. MCP servers typically provide tools that Claude Code can invoke, these tools may execute shell commands, query databases, call external APIs, or access file systems. Each tool represents a potential attack vector if input validation is insufficient.
 
 Common vulnerability categories in MCP servers include:
 
-- **Command injection**: Tools that execute system commands without proper sanitization
-- **Path traversal**: File access tools that allow reading outside intended directories
-- **SQL injection**: Database tools that concatenate user input into queries
-- **Authentication bypass**: Servers that fail to verify credentials properly
-- **Excessive privilege**: Tools that perform operations beyond their stated purpose
+- Command injection: Tools that execute system commands without proper sanitization
+- Path traversal: File access tools that allow reading outside intended directories
+- SQL injection: Database tools that concatenate user input into queries
+- Authentication bypass: Servers that fail to verify credentials properly
+- Excessive privilege: Tools that perform operations beyond their stated purpose
 
-## Setting Up Your Testing Environment
+Setting Up Your Testing Environment
 
 Isolate your testing from production systems. Create a dedicated test environment that mirrors your production MCP server configuration without connecting to real services or containing sensitive data.
 
 ```bash
-# Clone your MCP server for testing
+Clone your MCP server for testing
 git clone git@github.com:your-org/your-mcp-server.git
 cd your-mcp-server
 
-# Create a test configuration
+Create a test configuration
 cp config/production.json config/test.json
-# Edit test.json to use mock services and test credentials
+Edit test.json to use mock services and test credentials
 ```
 
 The supermemory skill helps you maintain a testing checklist across sessions. Before starting a penetration test, create a comprehensive test plan:
@@ -53,16 +53,16 @@ Remember this testing checklist for MCP server penetration testing:
 5. Logging - review what gets logged and where
 ```
 
-## Testing Input Validation
+Testing Input Validation
 
 The most common vulnerability in MCP servers is insufficient input validation. Test each tool parameter with payloads designed to trigger unexpected behavior.
 
-### Command Injection Testing
+Command Injection Testing
 
 If your MCP server includes a tool that runs shell commands, test it with command separators:
 
 ```
-# Test input for command injection
+Test input for command injection
 "; ls -la /"
 "| cat /etc/passwd"
 "`whoami`"
@@ -95,12 +95,12 @@ for (const payload of testCases) {
 }
 ```
 
-### Path Traversal Testing
+Path Traversal Testing
 
 For file system tools, test whether users can access files outside intended directories:
 
 ```
-# Path traversal test payloads
+Path traversal test payloads
 ../../../etc/passwd
 ..%2F..%2F..%2Fetc%2Fpasswd
 /etc/../../etc/passwd
@@ -115,17 +115,17 @@ Add a "Run Tests" button that iterates through a predefined list of
 test payloads and displays pass/fail results for each.
 ```
 
-## Authentication and Authorization Testing
+Authentication and Authorization Testing
 
 Verify that your MCP server properly enforces authentication on all endpoints:
 
 ```bash
-# Test unauthenticated access
+Test unauthenticated access
 curl -X POST http://localhost:3000/mcp/tools \
   -H "Content-Type: application/json" \
   -d '{"name": "sensitive_tool"}'
 
-# Should return 401 Unauthorized, not tool results
+Should return 401 Unauthorized, not tool results
 ```
 
 Test authorization by creating multiple users with different privilege levels and verifying they can only access permitted tools:
@@ -148,7 +148,7 @@ async function testAuthorization() {
 }
 ```
 
-## Integration Testing with the TDD Skill
+Integration Testing with the TDD Skill
 
 Use the tdd skill to build a comprehensive test suite for your MCP server:
 
@@ -196,7 +196,7 @@ describe('Tool Input Validation', () => {
 });
 ```
 
-## Documenting Findings with the PDF Skill
+Documenting Findings with the PDF Skill
 
 After testing, use the pdf skill to generate a professional security report:
 
@@ -246,12 +246,12 @@ async function generateReport(findings) {
 }
 ```
 
-## Continuous Security Testing
+Continuous Security Testing
 
 Integrate security tests into your development workflow:
 
 ```yaml
-# .github/workflows/security-test.yml
+.github/workflows/security-test.yml
 name: MCP Server Security Tests
 
 on: [push, pull_request]
@@ -276,17 +276,17 @@ jobs:
 
 Run these tests on every commit to catch regressions early.
 
-## Conclusion
+Conclusion
 
-Penetration testing your MCP servers protects both your application and your users. Use the tdd skill to build comprehensive test suites, supermemory to maintain testing knowledge across sessions, and pdf to generate professional reports. Regular security testing—combined with input validation, proper authentication, and least-privilege tool design—keeps your MCP server implementations secure.
+Penetration testing your MCP servers protects both your application and your users. Use the tdd skill to build comprehensive test suites, supermemory to maintain testing knowledge across sessions, and pdf to generate professional reports. Regular security testing, combined with input validation, proper authentication, and least-privilege tool design, keeps your MCP server implementations secure.
 
 ---
 
-## Related Reading
+Related Reading
 
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Build a complete developer skill stack
-- [Claude Code Integration Testing Strategy Guide](/claude-code-integration-testing-strategy-guide/) — Comprehensive testing approaches
-- [Claude Skills Token Optimization](/claude-skills-token-optimization-reduce-api-costs/) — Optimize skill usage in your workflows
-- [MCP Server Configuration Management](/ansible-mcp-server-configuration-management/) — Secure deployment practices
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Build a complete developer skill stack
+- [Claude Code Integration Testing Strategy Guide](/claude-code-integration-testing-strategy-guide/). Comprehensive testing approaches
+- [Claude Skills Token Optimization](/claude-skills-token-optimization-reduce-api-costs/). Optimize skill usage in your workflows
+- [MCP Server Configuration Management](/ansible-mcp-server-configuration-management/). Secure deployment practices
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -17,63 +17,56 @@ score: 7
 
 Serverless architecture has revolutionized how developers build and deploy applications. When combined with Claude Code and the ARC (Architectural Runtime Components) pattern, you can create powerful, scalable serverless workflows that are both maintainable and efficient. This guide walks you through using Claude Code to architect ARC-based serverless workflows, complete with practical examples and actionable advice.
 
-## Understanding ARC Serverless Architecture
+Understanding ARC Serverless Architecture
 
 ARC (Architectural Runtime Components) is a framework for building serverless applications that emphasizes modularity, scalability, and operational excellence. It provides a structured approach to designing serverless systems by separating concerns into distinct runtime components that can be independently developed, deployed, and scaled.
 
 The core philosophy behind ARC is treating infrastructure as code while maintaining developer productivity. Each component in the ARC pattern serves a specific purpose:
 
-- **Handlers**: Process incoming events and orchestrate workflow execution
-- **Processes**: Execute business logic and data transformations
-- **Stores**: Manage state and persistence across function invocations
-- **Queues**: Handle asynchronous communication between components
+- Handlers: Process incoming events and orchestrate workflow execution
+- Processes: Execute business logic and data transformations
+- Stores: Manage state and persistence across function invocations
+- Queues: Handle asynchronous communication between components
 
 Claude Code excels at helping architects design and implement these patterns because it can understand the relationships between components, generate boilerplate code, and suggest optimizations based on best practices.
 
-## Setting Up Your Claude Code Environment for ARC Development
+Setting Up Your Claude Code Environment for ARC Development
 
 Before diving into serverless workflow design, ensure your Claude Code environment is properly configured for ARC development. You'll want to create a dedicated skill that understands your serverless stack and project conventions.
 
 ```bash
-# Create the .claude/ directory and add an arc-architect skill file
+Create the .claude/ directory and add an arc-architect skill file
 mkdir -p .claude/skills
-# Create arc-architect.md in .claude/skills/ with ARC-specific instructions
+Create arc-architect.md in .claude/skills/ with ARC-specific instructions
 ```
 
 Create a `CLAUDE.md` file in your project root that defines your ARC architecture preferences:
 
 ```markdown
-# Project: ARC Serverless Application
+Project: ARC Serverless Application
 
-## Architecture Pattern
+Architecture Pattern
 We use the ARC (Architectural Runtime Components) pattern with:
 - TypeScript for all handler and process functions
 - AWS Lambda as the compute runtime
 - DynamoDB for persistent storage
 - SQS for async queue processing
 
-## Code Conventions
+Code Conventions
 - All handlers must implement the Handler interface
 - Use dependency injection for testability
 - Include comprehensive TypeScript types
 - Follow the single-responsibility principle
 
-## Deployment
+Deployment
 - Use the serverless framework
 - Stage-based deployments (dev, staging, production)
 - Enable detailed CloudWatch logging
 ```
 
-## Designing Serverless Workflows with Claude Code
+Designing Serverless Workflows with Claude Code
 
-When architecting serverless workflows, Claude Code can help you design component interactions, generate implementation code, and ensure best practices are followed. Here's how to approach workflow design systematically.
-
-### Define Your Event Triggers
-
-Start by identifying what events trigger your serverless workflow. In ARC, triggers can come from HTTP requests, file uploads, scheduled cron jobs, message queue events, or database changes. Claude Code can help you scaffold the appropriate handler for each trigger type.
-
-```typescript
-// Example: HTTP API Handler for order processing
+When architecting serverless workflows, Claude Code can help you design component interactions, generate implementation code, and ensure best practices are followed. HTTP API Handler for order processing
 import { APIGatewayProxyHandler } from 'aws-lambda';
 import { OrderProcessor } from './processes/order-processor';
 import { OrderStore } from './stores/order-store';
@@ -100,7 +93,7 @@ export const handler: APIGatewayProxyHandler = async (event) => {
 
 Claude Code can generate this boilerplate and guide you through customizing it based on your specific requirements. Simply describe your workflow requirements and let Claude Code scaffold the initial structure.
 
-### Implement Async Processing Queues
+Implement Async Processing Queues
 
 One of ARC's strengths is handling asynchronous workloads through queues. When processing involves long-running operations or external API calls, queue-based processing prevents timeouts and improves reliability.
 
@@ -134,7 +127,7 @@ export class OrderQueueProducer {
 }
 ```
 
-### Handle Failed Operations with Dead Letter Queues
+Handle Failed Operations with Dead Letter Queues
 
 Robust serverless workflows must handle failures gracefully. ARC recommends implementing dead letter queues (DLQ) for failed messages that cannot be processed after maximum retry attempts.
 
@@ -165,22 +158,22 @@ export class OrderQueueConsumer {
 }
 ```
 
-## Practical Example: E-Commerce Order Processing Workflow
+Practical Example: E-Commerce Order Processing Workflow
 
 Let's walk through a complete ARC serverless workflow for processing e-commerce orders. This example demonstrates how different components work together to create a robust, scalable system.
 
-### Architecture Overview
+Architecture Overview
 
 The workflow consists of:
 
-1. **API Handler**: Receives order submissions via HTTP
-2. **Validation Process**: Validates order data and inventory
-3. **Order Store**: Persists order details to DynamoDB
-4. **Payment Queue**: Sends payment requests to async processing
-5. **Payment Process**: Handles payment processing asynchronously
-6. **Notification Process**: Sends confirmation emails
+1. API Handler: Receives order submissions via HTTP
+2. Validation Process: Validates order data and inventory
+3. Order Store: Persists order details to DynamoDB
+4. Payment Queue: Sends payment requests to async processing
+5. Payment Process: Handles payment processing asynchronously
+6. Notification Process: Sends confirmation emails
 
-### Implementation with Claude Code
+Implementation with Claude Code
 
 Describe your workflow to Claude Code and let it generate the implementation:
 
@@ -244,11 +237,11 @@ export class OrderWorkflow {
 }
 ```
 
-## Best Practices for ARC Serverless Workflows
+Best Practices for ARC Serverless Workflows
 
 Based on real-world implementations and lessons learned, here are actionable best practices when architecting serverless workflows with Claude Code.
 
-### Implement Idempotency
+Implement Idempotency
 
 Serverless functions can be invoked multiple times due to retries or duplicate events. Always design your processes to be idempotent:
 
@@ -279,7 +272,7 @@ export async function processPayment(
 }
 ```
 
-### Use Structured Logging
+Use Structured Logging
 
 Implement structured logging to make debugging serverless workflows easier:
 
@@ -310,12 +303,12 @@ export function createLogger(context: string) {
 }
 ```
 
-### Configure Proper Timeout and Memory
+Configure Proper Timeout and Memory
 
 Serverless functions need appropriate timeout and memory settings. Use Claude Code to analyze your workflow and recommend optimal configurations:
 
 ```yaml
-# serverless.yml - Generated with Claude Code guidance
+serverless.yml - Generated with Claude Code guidance
 service: ecommerce-orders
 
 provider:
@@ -345,11 +338,11 @@ functions:
     reservedConcurrency: 5
 ```
 
-## Optimizing Costs and Performance
+Optimizing Costs and Performance
 
 Serverless doesn't mean costless. Follow these strategies to optimize your ARC serverless workflows.
 
-### Implement Caching
+Implement Caching
 
 Use Redis or DynamoDB DAX for frequently accessed data:
 
@@ -384,7 +377,7 @@ export class CachedOrderStore implements OrderStore {
 }
 ```
 
-## Conclusion
+Conclusion
 
 Architecting ARC serverless workflows with Claude Code combines the structured approach of the ARC pattern with AI-assisted development. By using Claude Code's understanding of serverless patterns, you can rapidly scaffold components, implement best practices, and optimize for cost and performance.
 
@@ -394,10 +387,10 @@ Start by setting up your Claude Code environment with ARC-specific configuration
 
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

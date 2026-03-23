@@ -14,11 +14,11 @@ score: 7
 ---
 
 
-# Claude Code for Kong Mesh Workflow Tutorial
+Claude Code for Kong Mesh Workflow Tutorial
 
-Kong Mesh is an enterprise-grade service mesh built on top of Kubernetes and Envoy proxy. It provides zero-trust security, traffic management, and observability for distributed systems. While Kong Mesh offers powerful features, configuring and managing it effectively requires understanding its control plane, data plane proxies, and policies. This tutorial demonstrates how Claude Code streamlines Kong Mesh workflows—accelerating configuration, automating deployments, and simplifying day-two operations.
+Kong Mesh is an enterprise-grade service mesh built on top of Kubernetes and Envoy proxy. It provides zero-trust security, traffic management, and observability for distributed systems. While Kong Mesh offers powerful features, configuring and managing it effectively requires understanding its control plane, data plane proxies, and policies. This tutorial demonstrates how Claude Code streamlines Kong Mesh workflows, accelerating configuration, automating deployments, and simplifying day-two operations.
 
-## Getting Started with Kong Mesh and Claude Code
+Getting Started with Kong Mesh and Claude Code
 
 Before exploring Claude Code workflows, ensure you have access to a Kubernetes cluster with Kong Mesh installed. The quickest way to set up a development environment is using Kuma's quickstart guide or Kong's official installation docs.
 
@@ -34,11 +34,11 @@ You can now use Claude Code to understand your current Kong Mesh deployment. Sim
 
 Claude Code will query your Kubernetes cluster (if kubectl is configured) and provide a comprehensive overview of your service mesh topology.
 
-## Generating Kong Mesh Configurations
+Generating Kong Mesh Configurations
 
 One of the most valuable Claude Code workflows involves generating Kong Mesh resources tailored to your specific requirements. Instead of manually crafting YAML files, you describe your use case and receive production-ready configurations.
 
-### Creating a Mesh Resource
+Creating a Mesh Resource
 
 For a basic mesh configuration with mTLS enabled, Claude Code can generate the appropriate Kubernetes manifests:
 
@@ -64,7 +64,7 @@ spec:
 
 Ask Claude Code: "Generate a Kong Mesh resource with mTLS enabled using a builtin CA, with tracing configured to send to Jaeger."
 
-### Configuring Traffic Permissions
+Configuring Traffic Permissions
 
 Claude Code excels at generating proper traffic permissions for zero-trust security. Request a permission set for your microservices:
 
@@ -83,11 +83,11 @@ destinations:
       kuma.io/service: payment-db.default.svc:5432
 ```
 
-## Service Deployment with Kong Mesh
+Service Deployment with Kong Mesh
 
 Deploying services into Kong Mesh requires proper annotations and configuration. Claude Code helps generate deployment manifests that automatically integrate with the service mesh.
 
-### Kubernetes Deployment Example
+Kubernetes Deployment Example
 
 Request a complete deployment with sidecar injection:
 
@@ -137,11 +137,11 @@ spec:
       targetPort: 8000
 ```
 
-## Traffic Management Workflows
+Traffic Management Workflows
 
 Kong Mesh provides sophisticated traffic management capabilities including routing, retries, timeouts, and circuit breakers. Claude Code simplifies creating these policies.
 
-### Implementing Traffic Routes
+Implementing Traffic Routes
 
 Create sophisticated traffic routing with Claude Code:
 
@@ -169,7 +169,7 @@ conf:
 
 Request this with: "Create a TrafficRoute that splits 80% traffic to v1 and 20% to v2 for the api-service."
 
-### Configuring Circuit Breakers
+Configuring Circuit Breakers
 
 Claude Code helps implement resilience patterns:
 
@@ -190,11 +190,11 @@ spec:
         baseEjectionTime: 30s
 ```
 
-## Observability and Monitoring
+Observability and Monitoring
 
 Kong Mesh integrates with popular observability backends. Claude Code can generate configurations for metrics, logs, and traces.
 
-### Setting Up Metrics Collection
+Setting Up Metrics Collection
 
 Request metrics configuration:
 
@@ -202,7 +202,7 @@ Request metrics configuration:
 
 Claude Code produces the appropriate DataplaneInsight or MeshInsight configuration, helping you understand service-level metrics, traffic patterns, and resource utilization.
 
-### Distributed Tracing Setup
+Distributed Tracing Setup
 
 Configure distributed tracing for end-to-end visibility:
 
@@ -221,7 +221,7 @@ spec:
             endpoint: http://jaeger-collector:9411/api/v1/spans
 ```
 
-## Debugging and Troubleshooting
+Debugging and Troubleshooting
 
 Claude Code significantly accelerates Kong Mesh debugging. When issues arise, describe the symptoms and receive targeted troubleshooting guidance.
 
@@ -233,30 +233,30 @@ Common debugging workflows include:
 
 Claude Code can also help interpret Kong Mesh logs, analyze Envoy stats, and suggest remediation steps for common issues like mTLS problems, routing misconfigurations, or resource exhaustion.
 
-## Best Practices and Actionable Advice
+Best Practices and Actionable Advice
 
 When working with Kong Mesh and Claude Code, keep these recommendations in mind:
 
-**Start Simple**: Begin with basic mTLS and observability enabled, then incrementally add traffic management policies as your understanding grows.
+Start Simple: Begin with basic mTLS and observability enabled, then incrementally add traffic management policies as your understanding grows.
 
-**Use Labels Consistently**: Establish naming conventions for your services and meshes. Claude Code generates more accurate configurations when you provide consistent metadata.
+Use Labels Consistently: Establish naming conventions for your services and meshes. Claude Code generates more accurate configurations when you provide consistent metadata.
 
-**Test in Staging**: Always validate generated configurations in a non-production environment before applying them to production meshes.
+Test in Staging: Always validate generated configurations in a non-production environment before applying them to production meshes.
 
-**Leverage Claude Code's Context**: Provide Claude Code with your existing Kubernetes context, current mesh state, and specific requirements for the most accurate configurations.
+Leverage Claude Code's Context: Provide Claude Code with your existing Kubernetes context, current mesh state, and specific requirements for the most accurate configurations.
 
-**Version Control Configurations**: Store all Kong Mesh YAML files in git. Claude Code can help generate diffs and review changes before applying them.
+Version Control Configurations: Store all Kong Mesh YAML files in git. Claude Code can help generate diffs and review changes before applying them.
 
-## Conclusion
+Conclusion
 
 Claude Code transforms Kong Mesh workflows from complex manual configuration to collaborative, AI-assisted operations. From generating initial mesh resources to implementing sophisticated traffic management policies, Claude Code accelerates every step of the service mesh journey. By combining Claude Code's configuration generation with your domain expertise, you can deploy robust, secure, and observable microservices architectures with confidence.
 
-Start experimenting with Kong Mesh and Claude Code today—your future self will thank you for the time saved on configuration and debugging.
+Start experimenting with Kong Mesh and Claude Code today, your future self will thank you for the time saved on configuration and debugging.
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

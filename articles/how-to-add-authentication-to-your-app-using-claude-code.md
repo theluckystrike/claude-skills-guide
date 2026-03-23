@@ -13,13 +13,13 @@ tags: [claude-code, claude-skills]
 
 Adding authentication to your application is one of the most critical security decisions you'll make as a developer. Whether you're building a SaaS product, a consumer app, or an internal tool, getting authentication right from the start saves countless hours of refactoring later. Claude Code can significantly accelerate this process by generating secure boilerplate, validating your implementation, and helping you understand authentication patterns.
 
-## Setting Up Authentication with Claude Code
+Setting Up Authentication with Claude Code
 
 Claude Code works best with authentication when you provide clear context about your stack. Before prompting Claude, identify your technology choices: frontend framework, backend language, and preferred authentication strategy. This context allows Claude to generate relevant code rather than generic examples.
 
 When starting a new project, you can use the supermemory skill to persist authentication requirements across sessions. This skill maintains context about your security requirements, user roles, and compliance needs, ensuring Claude remembers your authentication constraints throughout development.
 
-## Choosing Your Authentication Strategy
+Choosing Your Authentication Strategy
 
 Modern authentication typically falls into a few categories: session-based auth, token-based auth (JWT), or OAuth/OIDC delegation. Each has trade-offs that affect your implementation.
 
@@ -44,21 +44,21 @@ const authMiddleware = session({
 });
 ```
 
-For JWT-based authentication, Claude can create token generation and validation utilities that handle refresh tokens properly—a detail many tutorials overlook.
+For JWT-based authentication, Claude can create token generation and validation utilities that handle refresh tokens properly, a detail many tutorials overlook.
 
-## Using Claude Skills for Authentication
+Using Claude Skills for Authentication
 
 Several specialized skills accelerate authentication development. The tdd skill is particularly valuable for authentication because it helps you write tests before implementation, ensuring your auth system works correctly from day one.
 
-The frontend-design skill can generate authentication UI components that follow security best practices—proper input validation, secure password fields, and accessible error messages. These components integrate with your chosen auth strategy.
+The frontend-design skill can generate authentication UI components that follow security best practices, proper input validation, secure password fields, and accessible error messages. These components integrate with your chosen auth strategy.
 
 For applications requiring OAuth integration, the skills for connecting to external APIs become essential. Claude can guide you through implementing OAuth 2.0 flows with providers like Google, GitHub, or custom identity providers.
 
-## Implementing Password Security
+Implementing Password Security
 
 Password handling requires careful attention. Claude Code emphasizes several non-negotiable practices:
 
-First, never store passwords in plaintext. Claude will generate code using bcrypt or Argon2 for password hashing. Second, implement proper password strength validation—minimum length, complexity requirements, and checks against common passwords.
+First, never store passwords in plaintext. Claude will generate code using bcrypt or Argon2 for password hashing. Second, implement proper password strength validation, minimum length, complexity requirements, and checks against common passwords.
 
 ```javascript
 // password-utils.js
@@ -84,7 +84,7 @@ function validatePasswordStrength(password) {
 
 Claude can also help you implement multi-factor authentication (MFA) using TOTP (Time-based One-Time Passwords) or backup codes. This adds significant security for sensitive applications.
 
-## Session Management and Token Handling
+Session Management and Token Handling
 
 Proper session management prevents common attack vectors. Claude helps you implement:
 
@@ -99,7 +99,7 @@ For API-based authentication, Claude generates proper JWT handling that includes
 - Token rotation after refresh
 - Proper error handling for expired or invalid tokens
 
-## Testing Authentication Systems
+Testing Authentication Systems
 
 Authentication systems require thorough testing. The tdd skill guides you through writing tests that verify:
 
@@ -132,11 +132,11 @@ describe('Authentication', () => {
 });
 ```
 
-## Security Considerations
+Security Considerations
 
 Claude Code emphasizes security best practices throughout the authentication implementation:
 
-- HTTPS everywhere—authentication over HTTP exposes credentials
+- HTTPS everywhere, authentication over HTTP exposes credentials
 - Secure cookie settings (HttpOnly, Secure, SameSite)
 - Rate limiting on login endpoints to prevent brute force
 - Input sanitization to prevent SQL injection and XSS
@@ -144,13 +144,13 @@ Claude Code emphasizes security best practices throughout the authentication imp
 
 For enterprise applications, consider integrating with the MCP OAuth 2.1 authentication implementation guide for standardized OAuth flows.
 
-## Documentation with Claude Skills
+Documentation with Claude Skills
 
 After implementing authentication, document your system properly. The skills for generating documentation help you create clear API documentation for your auth endpoints, including request/response formats, error codes, and example payloads.
 
 The pdf skill can generate printable security documentation for compliance purposes, including your authentication flow diagrams and security policies.
 
-## Common Pitfalls to Avoid
+Common Pitfalls to Avoid
 
 Through many authentication implementations, several common mistakes emerge:
 
@@ -163,18 +163,18 @@ Through many authentication implementations, several common mistakes emerge:
 
 Claude helps identify these issues during code review when you use skills focused on security review and code quality.
 
-## Conclusion
+Conclusion
 
 Adding authentication to your application using Claude Code is straightforward when you provide context about your stack and requirements. Use specialized skills like tdd for test-driven development, supermemory for persistent context, and frontend-design for secure UI components. Focus on password security, proper session management, and comprehensive testing to build authentication that protects your users.
 
 The initial investment in proper authentication pays dividends in security and user trust. Claude Code accelerates this process while helping you avoid common pitfalls that lead to security vulnerabilities.
 
 
-## Related Reading
+Related Reading
 
 - [How to Write Effective Prompts for Claude Code](/how-to-write-effective-prompts-for-claude-code/)
 - [Best Way to Scope Tasks for Claude Code Success](/best-way-to-scope-tasks-for-claude-code-success/)
 - [Claude Code Output Quality: How to Improve Results](/claude-code-output-quality-how-to-improve-results/)
 - [Claude Code Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

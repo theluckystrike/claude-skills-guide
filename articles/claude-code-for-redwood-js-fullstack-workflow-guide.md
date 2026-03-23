@@ -14,20 +14,20 @@ score: 7
 
 
 {% raw %}
-# Claude Code for Redwood JS Fullstack Workflow Guide
+Claude Code for Redwood JS Fullstack Workflow Guide
 
 RedwoodJS brings the elegance of React to the fullstack world, combining a React frontend with serverless functions and an ORM-backed API. When paired with Claude Code, you get an incredibly productive development experience that handles boilerplate, implements business logic, and guides you through complex architectural decisions. This guide walks through a complete workflow for building RedwoodJS applications with Claude Code as your development partner.
 
-## Setting Up Your RedwoodJS Project with Claude Code
+Setting Up Your RedwoodJS Project with Claude Code
 
 Before diving into code, ensure your environment is ready. Initialize a new Redwood project and set up Claude Code to work within it:
 
 ```bash
-# Create a new Redwood project
+Create a new Redwood project
 yarn create redwood-app my-redwood-app
 cd my-redwood-app
 
-# Create a CLAUDE.md file to configure Claude's project context
+Create a CLAUDE.md file to configure Claude's project context
 ```
 
 Create a `CLAUDE.md` file to configure Claude to understand your project structure. The key directories it should recognize are:
@@ -42,22 +42,22 @@ This setup enables Claude to navigate between frontend and backend contexts smoo
 A well-crafted `CLAUDE.md` file for a Redwood project might look like this:
 
 ```markdown
-# Project: My Redwood App
+Project: My Redwood App
 
-## Stack
+Stack
 - RedwoodJS (fullstack framework)
 - PostgreSQL via Prisma ORM
 - TypeScript throughout
 - Netlify for deployment
 
-## Conventions
+Conventions
 - Use TypeScript for all new files
 - Services handle all database logic; never query Prisma directly from resolvers
 - Use Cells for all data-fetching components on the frontend
 - All mutations should include optimistic updates where practical
 - Test files live alongside their source files
 
-## Key Files
+Key Files
 - api/db/schema.prisma - data model
 - api/src/graphql/ - SDL type definitions
 - api/src/services/ - business logic
@@ -67,7 +67,7 @@ A well-crafted `CLAUDE.md` file for a Redwood project might look like this:
 
 This investment in your CLAUDE.md pays off immediately. Claude will respect your naming conventions, avoid anti-patterns like querying Prisma from resolvers, and generate code that fits your existing style rather than a generic template.
 
-### Comparing Project Initialization Approaches
+Comparing Project Initialization Approaches
 
 When starting a new Redwood project with Claude Code, you have a few different strategies. Each has trade-offs depending on your team's experience and project complexity.
 
@@ -80,11 +80,11 @@ When starting a new Redwood project with Claude Code, you have a few different s
 
 The incremental approach is recommended when learning Redwood. Each Claude-generated chunk is small enough to read and understand before moving on. Once you are comfortable with the conventions, the upfront full-scaffold approach becomes viable.
 
-## Building Your First GraphQL API
+Building Your First GraphQL API
 
 RedwoodJS uses GraphQL as its API layer, and Claude Code excels at generating the boilerplate. Describe what you need, and let Claude scaffold the implementation:
 
-**Prompt Claude with:**
+Prompt Claude with:
 > "Create a Blog post model with title, content, and publishedAt fields. Set up the GraphQL schema, CRUD services, and a cell for fetching posts."
 
 Claude will generate the necessary files:
@@ -127,7 +127,7 @@ export const schema = gql`
 
 The corresponding service in `api/src/services/posts/posts.ts` handles the database logic. Claude generates the standard CRUD operations while you focus on business logic customization.
 
-### The Full Service Layer
+The Full Service Layer
 
 The service layer is where your business logic lives. Rather than accepting the minimal scaffolded version, prompt Claude to generate a richer service with validation, authorization hooks, and pagination built in:
 
@@ -169,12 +169,12 @@ export const deletePost: MutationResolvers['deletePost'] = ({ id }) => {
 
 Notice a few things here. The `requireAuth` calls gate mutations to users with appropriate roles. The `posts` query accepts pagination parameters rather than returning everything. These are real production concerns and Claude handles them when you ask explicitly.
 
-### Extending the SDL for Pagination
+Extending the SDL for Pagination
 
 When you add pagination to the service, the SDL needs to match. Prompt Claude: "Update the posts SDL to support pagination with a page and perPage argument and return a PaginatedPosts type with count and nodes."
 
 ```typescript
-// api/src/graphql/posts.sdl.ts — extended
+// api/src/graphql/posts.sdl.ts. extended
 export const schema = gql`
   type Post {
     id: Int!
@@ -219,7 +219,7 @@ export const schema = gql`
 
 This kind of iterative enhancement is where the Claude Code workflow shines. You describe the feature, Claude updates the correct layer, and you review the diff.
 
-## Integrating Frontend with Cells
+Integrating Frontend with Cells
 
 Redwood's Cell pattern is one of its most powerful features for data fetching. Here's how to work with it effectively:
 
@@ -263,7 +263,7 @@ export const Success = ({ posts }) => {
 
 When you need to add new queries or mutations, ask Claude to scaffold them while preserving your existing component logic.
 
-### Cells vs Traditional Data Fetching
+Cells vs Traditional Data Fetching
 
 Understanding why Redwood uses Cells helps you write better prompts for Claude. Here is a comparison of how you would handle data fetching in different React approaches:
 
@@ -276,7 +276,7 @@ Understanding why Redwood uses Cells helps you write better prompts for Claude. 
 
 The Cell pattern enforces consistency by making you explicitly define Loading, Empty, Failure, and Success states as named exports. Claude knows this pattern well and will always scaffold all four states. Resist the temptation to delete states you think you won't need; they matter during network degradation and for empty onboarding states.
 
-### Cells with Variables
+Cells with Variables
 
 Many real-world cells need dynamic variables. Prompt Claude: "Update the PostCell to accept a category prop and filter posts by that category."
 
@@ -319,7 +319,7 @@ export const Success = ({ postsByCategory }) => (
 
 The `beforeQuery` export is a Redwood-specific hook that Claude understands. It lets you derive GraphQL variables from component props and control fetch policy.
 
-## Working with Forms and Mutations
+Working with Forms and Mutations
 
 Redwood simplifies form handling with its form helpers. Here's a practical pattern for creating posts:
 
@@ -359,7 +359,7 @@ export default CreatePostPage
 
 Claude can help you extend this pattern with validation, file uploads, or multi-step forms.
 
-### Building the PostForm Component
+Building the PostForm Component
 
 The page component above delegates rendering to a `PostForm` component. Prompt Claude: "Create the PostForm component using Redwood's Form helpers with validation for required title and minimum content length of 100 characters."
 
@@ -442,7 +442,7 @@ export default PostForm
 
 Redwood's `Form` component family handles validation, error display, and serialization automatically. Claude knows the full API: `TextField`, `TextAreaField`, `DatetimeLocalField`, `SelectField`, `CheckboxField`, `RadioField`, and `FileField`. When you ask Claude to add a field, specify which type you need and what validation rules apply.
 
-### Optimistic Updates for Better UX
+Optimistic Updates for Better UX
 
 For a production-grade form experience, prompt Claude: "Add an optimistic update to the create post mutation so the new post appears immediately before the server responds."
 
@@ -467,7 +467,7 @@ const [createPost] = useMutation(CREATE_POST_MUTATION, {
 
 This cache update pattern is a common point of confusion in Apollo-based applications. Claude handles the boilerplate, but you need to understand the shape of your cached data to review it correctly.
 
-## Authentication and Authorization
+Authentication and Authorization
 
 Redwood provides built-in auth integration. Here's how to secure your routes:
 
@@ -497,7 +497,7 @@ const App = () => (
 
 Ask Claude to add role-based authorization or integrate third-party auth providers when your requirements grow beyond basic authentication.
 
-### Choosing an Auth Provider
+Choosing an Auth Provider
 
 Redwood supports a wide range of authentication backends. Claude can scaffold the setup code for any of them, but you need to pick the right one first. Here is a practical comparison:
 
@@ -519,7 +519,7 @@ yarn rw generate dbAuth
 
 Prompt Claude after setup: "Add a currentUser function to api/src/lib/auth.ts that includes the user's roles and subscription tier, and update the getCurrentUser query in the SDL."
 
-### Role-Based Access in Services
+Role-Based Access in Services
 
 Once auth is set up, add granular authorization to your service layer. Claude handles this pattern cleanly:
 
@@ -544,11 +544,11 @@ export const deletePost: MutationResolvers['deletePost'] = ({ id }) => {
 
 The `context.currentUser` object is automatically populated by Redwood from the decoded auth token. Claude knows this API and will use it correctly when you describe your authorization requirements in plain English.
 
-## Testing Your Redwood Application
+Testing Your Redwood Application
 
 Tests are one of the most valuable things Claude can help you write, because they are also one of the most tedious. Redwood has a well-defined testing structure: Jest for API services, Storybook for UI components, and integration tests using the Redwood testing utilities.
 
-### Service Tests
+Service Tests
 
 Prompt Claude: "Write Jest tests for the posts service covering the posts query with pagination, createPost requiring auth, and deletePost enforcing ownership."
 
@@ -620,7 +620,7 @@ describe('posts service', () => {
 
 The `mockCurrentUser` helper from `@redwoodjs/testing/api` is the key to testing auth-protected services. Claude knows to use it.
 
-### Cell Tests with Storybook
+Cell Tests with Storybook
 
 For frontend cells, Redwood integrates with Storybook for visual testing. Prompt Claude: "Create a Storybook story for PostCell showing Loading, Empty, and Success states."
 
@@ -664,15 +664,15 @@ export const success = () => (
 
 Stories serve as both visual documentation and regression tests. When Claude modifies a cell, these stories make it obvious whether the rendering changed in unexpected ways.
 
-## Deployment Workflow
+Deployment Workflow
 
 When you're ready to deploy, Claude helps navigate the deployment options. For serverless deployment:
 
 ```bash
-# Deploy to Netlify (most common for Redwood)
+Deploy to Netlify (most common for Redwood)
 yarn rw deploy netlify
 
-# Or deploy to Vercel
+Or deploy to Vercel
 yarn rw deploy vercel
 ```
 
@@ -683,7 +683,7 @@ Before deploying, have Claude review your configuration:
 - Ensure database migrations are ready
 - Review security headers and CORS settings
 
-### Comparing Deployment Targets
+Comparing Deployment Targets
 
 Different deployment targets have meaningfully different trade-offs for Redwood applications. The API side is serverless by default, which means the choice of platform affects cold start behavior, database connection handling, and cost at scale.
 
@@ -700,65 +700,65 @@ For serverless targets (Netlify, Vercel), you must add connection pooling betwee
 Claude will suggest using Prisma's `?pgbouncer=true` connection string parameter and the recommended pool size configuration for serverless environments:
 
 ```bash
-# .env for Netlify/Vercel deployment
+.env for Netlify/Vercel deployment
 DATABASE_URL="postgresql://user:pass@db.example.com:6543/mydb?pgbouncer=true&connection_limit=1"
 DIRECT_URL="postgresql://user:pass@db.example.com:5432/mydb"
 ```
 
 The `DIRECT_URL` is used by Prisma Migrate while `DATABASE_URL` goes through the connection pooler for runtime queries.
 
-### Pre-deployment Checklist
+Pre-deployment Checklist
 
 Have Claude generate a deployment checklist specific to your project. A typical prompt: "Generate a deployment checklist for my Redwood app on Netlify including database, environment variables, and security considerations."
 
 The resulting checklist might include:
 
 ```markdown
-## Pre-deployment Checklist
+Pre-deployment Checklist
 
-### Database
+Database
 - [ ] Run `yarn rw prisma migrate deploy` against production database
 - [ ] Verify DATABASE_URL uses PgBouncer endpoint (port 6543)
 - [ ] Verify DIRECT_URL points to direct connection (port 5432)
 - [ ] Confirm database allows connections from Netlify IP ranges
 
-### Environment Variables (set in Netlify UI)
+Environment Variables (set in Netlify UI)
 - [ ] DATABASE_URL
 - [ ] DIRECT_URL
 - [ ] SESSION_SECRET (min 32 random characters)
 - [ ] APP_DOMAIN (used for cookie domain)
 
-### Security
+Security
 - [ ] Confirm all mutations use requireAuth()
 - [ ] Verify CORS settings in api/src/functions/graphql.ts
 - [ ] Check rate limiting is configured for auth endpoints
 - [ ] Ensure no secrets are committed to the repository
 
-### Build
+Build
 - [ ] yarn rw build passes locally
 - [ ] All tests pass: yarn rw test
 - [ ] TypeScript compiles without errors: yarn rw type-check
 ```
 
-## Best Practices for Working with Claude on Redwood Projects
+Best Practices for Working with Claude on Redwood Projects
 
-1. **Be specific about layers**: When asking Claude to help, specify whether you want frontend, backend, or database changes. Redwood's clear separation makes this easy to communicate.
+1. Be specific about layers: When asking Claude to help, specify whether you want frontend, backend, or database changes. Redwood's clear separation makes this easy to communicate.
 
-2. **Use code generation wisely**: Let Claude scaffold boilerplate but review before accepting—Redwood has specific conventions that should match your project patterns.
+2. Use code generation wisely: Let Claude scaffold boilerplate but review before accepting, Redwood has specific conventions that should match your project patterns.
 
-3. **Leverage the type safety**: Redwood generates TypeScript types from your GraphQL schema. Ask Claude to use these types throughout your application for better developer experience.
+3. Use the type safety: Redwood generates TypeScript types from your GraphQL schema. Ask Claude to use these types throughout your application for better developer experience.
 
-4. **Test incrementally**: After each major feature, ask Claude to help write or update tests in the `web/src/components/*.test.js` and `api/src/services/**/*.test.js` directories.
+4. Test incrementally: After each major feature, ask Claude to help write or update tests in the `web/src/components/*.test.js` and `api/src/services//*.test.js` directories.
 
-5. **Prompt with context, not just intent**: Instead of "add auth," say "add dbAuth to my Redwood app that stores users in the existing User table in schema.prisma, with email/password login." The more context, the less back-and-forth.
+5. Prompt with context, not just intent: Instead of "add auth," say "add dbAuth to my Redwood app that stores users in the existing User table in schema.prisma, with email/password login." The more context, the less back-and-forth.
 
-6. **Review generated Prisma migrations**: Claude will suggest schema changes, but always inspect the migration SQL before applying it to a production database. Run `yarn rw prisma migrate dev --create-only` to generate the migration file without applying it, then review the SQL.
+6. Review generated Prisma migrations: Claude will suggest schema changes, but always inspect the migration SQL before applying it to a production database. Run `yarn rw prisma migrate dev --create-only` to generate the migration file without applying it, then review the SQL.
 
-7. **Use Claude for debugging Redwood-specific errors**: GraphQL schema mismatches, Cell subscription issues, and Prisma relation errors all have Redwood-specific solutions. Paste the error and ask Claude to diagnose it in the Redwood context.
+7. Use Claude for debugging Redwood-specific errors: GraphQL schema mismatches, Cell subscription issues, and Prisma relation errors all have Redwood-specific solutions. Paste the error and ask Claude to diagnose it in the Redwood context.
 
-8. **Keep sessions focused on one layer**: A session that spans schema design, service implementation, frontend cells, and deployment configuration tends to produce code with subtle inconsistencies. Split into separate Claude sessions per layer when building complex features.
+8. Keep sessions focused on one layer: A session that spans schema design, service implementation, frontend cells, and deployment configuration tends to produce code with subtle inconsistencies. Split into separate Claude sessions per layer when building complex features.
 
-### Effective Prompt Patterns for Redwood
+Effective Prompt Patterns for Redwood
 
 Here are concrete prompt patterns that produce the best results with Claude on Redwood projects:
 
@@ -769,17 +769,17 @@ Here are concrete prompt patterns that produce the best results with Claude on R
 | Add validation | "Add form validation" | "Add validation to PostForm: title required, max 200 chars; content required, min 100 chars; publishedAt must be in the future if set. Use Redwood's Form validation API." |
 | Auth check | "Add auth to posts" | "Make createPost and updatePost require the 'editor' or 'admin' role. Make deletePost require 'admin' only. Use requireAuth from src/lib/auth." |
 
-## Conclusion
+Conclusion
 
-Building with RedwoodJS and Claude Code combines the best of modern fullstack development: React's component model, GraphQL's data flexibility, and AI-assisted development speed. Start with a clear project structure, use Cells for data fetching, and use Claude to handle the boilerplate while you focus on your unique business logic. The workflow becomes iterative—describe what you need, review what Claude generates, refine, and continue building.
+Building with RedwoodJS and Claude Code combines the best of modern fullstack development: React's component model, GraphQL's data flexibility, and AI-assisted development speed. Start with a clear project structure, use Cells for data fetching, and use Claude to handle the boilerplate while you focus on your unique business logic. The workflow becomes iterative, describe what you need, review what Claude generates, refine, and continue building.
 
-The patterns in this guide—layered architecture, typed services, Cell-based data fetching, role-based auth, and staged deployment—form a foundation that scales from side project to production application. Claude Code is most powerful when you understand the framework well enough to evaluate what it generates. Invest in learning Redwood's conventions, and Claude becomes a force multiplier rather than a source of mystery code.
+The patterns in this guide, layered architecture, typed services, Cell-based data fetching, role-based auth, and staged deployment, form a foundation that scales from side project to production application. Claude Code is most powerful when you understand the framework well enough to evaluate what it generates. Invest in learning Redwood's conventions, and Claude becomes a force multiplier rather than a source of mystery code.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

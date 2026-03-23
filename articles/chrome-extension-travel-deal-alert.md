@@ -19,7 +19,7 @@ Travel deal alert extensions represent a practical intersection of web scraping,
 
 Whether you are building for personal use or shipping to the Chrome Web Store, the same core challenges appear: travel sites change their DOM frequently, prices need a reliable baseline to compare against, and users need notifications that are timely without being annoying. This guide covers each of those areas with working code you can adapt directly.
 
-## Core Architecture
+Core Architecture
 
 A travel deal alert extension typically consists of three main components: a scraper module that monitors travel sites, a notification system that alerts users, and a preference manager that handles user settings. This modular approach allows you to test each component independently and swap out implementations as needed.
 
@@ -35,7 +35,7 @@ Here is how the three components map to extension files:
 | Notification system | background.js | Compares prices, triggers alerts |
 | Preference manager | popup.js + storage | Stores user settings, destination list, thresholds |
 
-## Implementation Patterns
+Implementation Patterns
 
 Here's a practical example of how to structure a deal alert extension using Manifest V3:
 
@@ -130,7 +130,7 @@ chrome.alarms.onAlarm.addListener((alarm) => {
 
 Using `chrome.alarms` instead of `setInterval` is the key production difference. A user who leaves Chrome running overnight will still receive deal alerts in the morning because the alarm wakes the service worker even after it has been terminated.
 
-## User Preferences Management
+User Preferences Management
 
 Effective deal alerts require user-configurable parameters. Store preferences using the Chrome Storage API:
 
@@ -192,15 +192,15 @@ loadPreferences();
 
 Caching preferences in memory avoids an async storage read on every price check, which matters when you are running checks across multiple open travel tabs simultaneously.
 
-## Handling DOM Volatility
+Handling DOM Volatility
 
 Travel sites are among the most aggressively A/B-tested properties on the web. Expedia, Google Flights, Kayak, and similar sites change their DOM structure regularly, often without any announcement. A scraper that works today may break after a site redesign next week.
 
 Strategies to improve scraper resilience:
 
-1. **Prefer data attributes over class names.** Class names like `.price-display` change frequently; `data-price` and `data-route` attributes are more stable because they are used by the site's own JavaScript.
+1. Prefer data attributes over class names. Class names like `.price-display` change frequently; `data-price` and `data-route` attributes are more stable because they are used by the site's own JavaScript.
 
-2. **Use multiple selector fallbacks.** Try a primary selector first, then fall back to alternatives:
+2. Use multiple selector fallbacks. Try a primary selector first, then fall back to alternatives:
 
 ```javascript
 function getPriceFromElement(el) {
@@ -214,7 +214,7 @@ function getPriceFromElement(el) {
 }
 ```
 
-3. **Validate extracted values before storing them.** A price of 0 or a price of 99999 are both signs of a broken extraction, not a real deal:
+3. Validate extracted values before storing them. A price of 0 or a price of 99999 are both signs of a broken extraction, not a real deal:
 
 ```javascript
 function isReasonablePrice(price) {
@@ -222,7 +222,7 @@ function isReasonablePrice(price) {
 }
 ```
 
-4. **Log extraction failures to storage** so you can debug silently broken scrapers without relying on user reports:
+4. Log extraction failures to storage so you can debug silently broken scrapers without relying on user reports:
 
 ```javascript
 async function logExtractionFailure(url, reason) {
@@ -233,7 +233,7 @@ async function logExtractionFailure(url, reason) {
 }
 ```
 
-## Advanced Features
+Advanced Features
 
 For more sophisticated implementations, consider adding price history tracking. Store historical data in IndexedDB to enable charts showing price trends over time. This helps users make informed decisions about when to book.
 
@@ -278,9 +278,9 @@ Another valuable feature is multi-site aggregation. Instead of monitoring a sing
 
 Email notifications provide an alternative to browser notifications. Using a backend service, you can send deals to users who prefer checking email over browser alerts. However, this adds complexity and requires server-side infrastructure. For most solo developer projects, sticking to Chrome's native notification system is the right tradeoff until you have users requesting email delivery.
 
-## Testing Considerations
+Testing Considerations
 
-When developing travel deal extensions, testing presents unique challenges. Travel sites frequently change their DOM structure, which breaks scrapers. Implement robust selectors and consider using data attributes when possible. You should also add error handling for network failures and rate limiting by travel sites.
+When developing travel deal extensions, testing presents unique challenges. Travel sites frequently change their DOM structure, which breaks scrapers. Implement solid selectors and consider using data attributes when possible. You should also add error handling for network failures and rate limiting by travel sites.
 
 Automated testing with tools like Puppeteer helps catch regressions before deployment. Create test cases that verify your scraper correctly extracts prices from mock HTML structures.
 
@@ -305,7 +305,7 @@ test('extracts prices from Expedia search results', () => {
 
 Run these fixture tests in CI so you are notified when a site update breaks extraction, rather than discovering it days later through a missing notification.
 
-## Performance Optimization
+Performance Optimization
 
 Background service workers in Manifest V3 have limitations on execution time. Optimize your scraper to complete quickly and avoid blocking operations. Use `chrome.alarms` for scheduling instead of `setInterval` to comply with extension policies.
 
@@ -346,7 +346,7 @@ async function checkSiteWithRetry(site, retries) {
 
 Using `Promise.allSettled` rather than `Promise.all` ensures a single failing site does not cancel checks for the others.
 
-## Security Best Practices
+Security Best Practices
 
 Never store API keys or authentication tokens in extension code. Use the Identity API for OAuth flows when accessing travel APIs. Validate all scraped data before processing to prevent injection attacks from malicious page content.
 
@@ -367,11 +367,11 @@ Never use `innerHTML = scrapedValue` directly. Scraped page content can contain 
 Travel deal alert extensions demonstrate practical applications of browser extension development combined with web scraping and notification systems. The patterns shown here provide a foundation for building more sophisticated tools tailored to specific travel monitoring needs.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

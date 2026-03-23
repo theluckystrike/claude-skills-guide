@@ -13,13 +13,13 @@ permalink: /claude-skills-for-data-science-and-jupyter-notebooks/
 
 [Data science workflows involve repetitive tasks that drain productivity](/best-claude-code-skills-to-install-first-2026/): cleaning messy datasets, generating visualizations, building machine learning pipelines, and documenting findings. Claude Code skills transform these workflows by automating common operations and enabling AI-assisted development directly within Jupyter notebooks and Python environments.
 
-Claude skills are Markdown files stored in `~/.claude/skills/` and invoked with `/skill-name` inside a Claude Code session. They give Claude standing instructions for specialized tasks. There are no `from canvas_design import` or `from supermemory import` Python packages—skills are invoked conversationally, not imported.
+Claude skills are Markdown files stored in `~/.claude/skills/` and invoked with `/skill-name` inside a Claude Code session. They give Claude standing instructions for specialized tasks. There are no `from canvas_design import` or `from supermemory import` Python packages, skills are invoked conversationally, not imported.
 
 [This guide covers practical Claude skills that data scientists and developers use daily](/claude-skill-md-format-complete-specification-guide/)
 
-## Foundation Skills for Data Science
+Foundation Skills for Data Science
 
-### xlsx Skill for Data Import and Export
+xlsx Skill for Data Import and Export
 
 The xlsx skill handles spreadsheet operations essential to data science workflows. Loading datasets from Excel, applying transformations, and exporting results all benefit from programmatic guidance.
 
@@ -44,7 +44,7 @@ print(f"Removed {len(df) - len(df_cleaned)} rows with >50% null values")
 
 The skill knows how to handle merged cells, multiple sheets, and type inference edge cases without requiring you to specify every detail.
 
-### pdf Skill for Research Paper Extraction
+pdf Skill for Research Paper Extraction
 
 Extracting data from academic papers, financial reports, and industry studies is straightforward with the pdf skill:
 
@@ -55,9 +55,9 @@ Extract all tables from pages 3-5 of research_paper.pdf and convert them to CSV 
 
 Claude uses available tools to parse the PDF and output the tables as structured data you can load directly into pandas. This accelerates literature review and lets you integrate published data into analysis pipelines without manual transcription.
 
-## Jupyter Notebook Automation
+Jupyter Notebook Automation
 
-### Code Generation and Refactoring with tdd
+Code Generation and Refactoring with tdd
 
 The tdd skill promotes test-driven development practices even in notebook environments, ensuring reproducible results:
 
@@ -81,7 +81,7 @@ def calculate_metrics(predictions, actual):
         'recall': recall_score(actual, predictions, average='weighted')
     }
 
-# Tests
+Tests
 test_preds = [1, 0, 1, 1, 0]
 test_actual = [1, 0, 0, 1, 1]
 metrics = calculate_metrics(test_preds, test_actual)
@@ -91,7 +91,7 @@ assert 0 <= metrics['precision'] <= 1
 
 The tdd skill generates test cases alongside implementation, reducing errors in complex transformations.
 
-### Visualization and Reporting
+Visualization and Reporting
 
 For custom visualizations, describe what you need directly in a Claude Code session or invoke skills for specific output formats:
 
@@ -105,7 +105,7 @@ Generate a PDF report containing: title page, summary statistics table, and the 
 Create a presentation from today's model evaluation results. Include the confusion matrix, ROC curve, and a feature importance bar chart. Use a clean, minimal theme.
 ```
 
-The **supermemory** skill tracks experiment context across sessions:
+The supermemory skill tracks experiment context across sessions:
 
 ```
 /supermemory store: RandomForest with n_estimators=200, max_depth=10 achieved accuracy=0.92, f1=0.89 on customer_churn dataset 2026-03-13
@@ -114,9 +114,9 @@ The **supermemory** skill tracks experiment context across sessions:
 
 This replaces manual experiment logging in notebooks and makes it easy to recall configurations weeks later.
 
-## Machine Learning Pipeline Skills
+Machine Learning Pipeline Skills
 
-### Data Preprocessing Automation
+Data Preprocessing Automation
 
 Claude Code can generate and refine preprocessing pipelines through conversation. Describe your data characteristics and ask for appropriate transformations:
 
@@ -152,7 +152,7 @@ preprocessor = ColumnTransformer([
 ])
 ```
 
-### Model Evaluation Tracking
+Model Evaluation Tracking
 
 Use supermemory to maintain experiment history across notebook sessions:
 
@@ -168,9 +168,9 @@ Combine this with the xlsx skill to export your experiment log to a spreadsheet 
 Create a spreadsheet from these experiment results: [paste supermemory query output]. Include columns for model, hyperparameters, accuracy, f1, and date.
 ```
 
-## Production Deployment Considerations
+Production Deployment Considerations
 
-### Converting Notebooks to Scripts
+Converting Notebooks to Scripts
 
 When moving from exploration to production, use Claude Code to refactor notebook cells into modular Python scripts:
 
@@ -180,18 +180,18 @@ Review my Jupyter notebook attached here. Extract the training logic into src/mo
 
 Claude reads the notebook structure and produces clean, importable modules.
 
-### API Validation
+API Validation
 
-The **webapp-testing** skill validates that deployed models function correctly:
+The webapp-testing skill validates that deployed models function correctly:
 
 ```
 /webapp-testing
 Test the prediction API at http://localhost:8000/predict. Send POST requests with sample feature vectors and verify the response schema contains 'prediction' (float) and 'confidence' (float between 0 and 1).
 ```
 
-## Workflow Integration Strategies
+Workflow Integration Strategies
 
-### Version Control for Notebooks
+Version Control for Notebooks
 
 Track notebook changes effectively using nbdime:
 
@@ -206,7 +206,7 @@ This gives you readable diffs for notebook cells in git. Use it alongside Claude
 Review the git diff for analysis.ipynb and summarize what changed in the model training section
 ```
 
-### Environment Management
+Environment Management
 
 Reproducible environments ensure others can run your notebooks:
 
@@ -222,7 +222,7 @@ Ask Claude Code to verify your environment setup matches the notebook requiremen
 Check my requirements.txt against the imports in all .ipynb files in this directory and flag any missing dependencies
 ```
 
-## Practical Starting Point
+Practical Starting Point
 
 Select skills based on your primary workflow needs rather than trying to use all of them at once. For most data science workflows, start with:
 
@@ -237,11 +237,11 @@ Claude skills for data science and Jupyter notebooks eliminate friction between 
 
 ---
 
-## Related Reading
+Related Reading
 
-- [Best Claude Skills for Data Analysis](/best-claude-skills-for-data-analysis/) — Complete data analysis skill guide
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — Keep data workflows cost-efficient
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [Best Claude Skills for Data Analysis](/best-claude-skills-for-data-analysis/). Complete data analysis skill guide
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Keep data workflows cost-efficient
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate automatically
 
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

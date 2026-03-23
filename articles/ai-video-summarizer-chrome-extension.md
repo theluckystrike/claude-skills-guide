@@ -17,7 +17,7 @@ Building an AI-powered video summarizer as a Chrome extension opens up powerful 
 
 This guide walks you through creating a complete Chrome extension that detects video pages, extracts metadata, and generates concise summaries using OpenAI or Anthropic APIs. The extension architecture handles message passing between content scripts and background workers, manages API rate limits, and presents results through an intuitive overlay interface.
 
-## Extension Architecture Overview
+Extension Architecture Overview
 
 The AI video summarizer extension consists of three core components working together. Content scripts running on video pages detect playable media and extract metadata. Background workers handle API communication, caching, and storage. A floating overlay panel displays generated summaries directly on the video page.
 
@@ -42,7 +42,7 @@ The manifest configuration defines the extension permissions and entry points. Y
 
 This configuration limits the extension to major video platforms while enabling the necessary browser APIs for cross-component communication.
 
-## Video Detection and Metadata Extraction
+Video Detection and Metadata Extraction
 
 Content scripts run on matching video pages and use the Page Visibility API to detect when a video is playing. The script extracts video metadata including title, duration, and platform-specific information:
 
@@ -81,7 +81,7 @@ document.addEventListener('visibilitychange', () => {
 
 This metadata extraction approach handles the three primary video platforms while remaining extensible for additional sources. The visibility change listener ensures the extension responds when users navigate between tabs.
 
-## AI Integration Pattern
+AI Integration Pattern
 
 The background service worker manages all communication with AI APIs. This architecture keeps API keys secure and enables caching strategies. The worker receives video metadata from content scripts, checks for cached summaries, and calls the AI API when needed:
 
@@ -147,7 +147,7 @@ Provide the summary in ${format} format highlighting:
 
 The caching mechanism prevents redundant API calls for the same video, reducing costs and improving response times. The extension supports both OpenAI and Anthropic providers, letting users choose their preferred AI service.
 
-## Summary Display Overlay
+Summary Display Overlay
 
 The floating panel UI appears as an overlay on the video page, providing summary display without navigating away. Content scripts inject the overlay HTML and handle user interactions:
 
@@ -215,7 +215,7 @@ function createSummaryOverlay(summary, metadata) {
 
 The overlay styling uses a modern dark theme that complements video platform aesthetics. The close button and escape key handling provide intuitive dismissal.
 
-## Message Passing Between Components
+Message Passing Between Components
 
 Chrome extensions use message passing for communication between content scripts and background workers. This pattern enables secure inter-component communication while keeping sensitive operations in the service worker:
 
@@ -239,7 +239,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 The return value `true` signals that the response is asynchronous, allowing the background worker to complete API calls before responding.
 
-## Handling Long Videos with Transcript Chunking
+Handling Long Videos with Transcript Chunking
 
 Videos exceeding typical API context windows require transcript extraction and chunking. YouTube provides transcript APIs, while other platforms may require screen reader extraction:
 
@@ -287,7 +287,7 @@ async function chunkTranscript(transcript, maxChunkSize = 8000) {
 
 Chunking enables processing of full-length courses and lengthy presentations while staying within API token limits. Each chunk generates a partial summary that gets combined into a final overview.
 
-## Performance Optimization Through Caching
+Performance Optimization Through Caching
 
 Implementing browser storage caching dramatically improves perceived performance and reduces API costs. Cache invalidation strategies ensure summaries stay current:
 
@@ -316,7 +316,7 @@ async function getCachedSummary(url) {
 
 The caching layer respects API rate limits by storing results locally and checking timestamps before making new requests.
 
-## Configuration and User Preferences
+Configuration and User Preferences
 
 Allowing users to configure their preferred AI provider and API keys creates a flexible experience. Storage management handles secure key storage:
 
@@ -342,12 +342,12 @@ Extension settings pages let users input their API credentials without exposing 
 Building this extension requires balancing API costs, user experience, and platform compatibility. The architecture presented here provides a solid foundation that scales from personal use to broader distribution. With the foundation in place, you can extend support to additional video platforms, integrate different AI models, or add features like timestamped highlights and saved collections.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at https://zovo.one
+Built by theluckystrike. More at https://zovo.one
 
 {% endraw %}

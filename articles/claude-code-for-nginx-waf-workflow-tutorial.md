@@ -14,11 +14,11 @@ score: 8
 
 
 {% raw %}
-# Claude Code for NGINX WAF Workflow Tutorial
+Claude Code for NGINX WAF Workflow Tutorial
 
-Securing web applications against malicious traffic is a critical priority for any development team. NGINX WAF (Web Application Firewall) provides powerful protection against common attacks like SQL injection, cross-site scripting (XSS), and other OWASP Top 10 vulnerabilities. However, configuring and managing WAF rules manually can be complex and time-consuming. This tutorial demonstrates how to leverage Claude Code to automate and accelerate your NGINX WAF workflow from initial setup to ongoing management.
+Securing web applications against malicious traffic is a critical priority for any development team. NGINX WAF (Web Application Firewall) provides powerful protection against common attacks like SQL injection, cross-site scripting (XSS), and other OWASP Top 10 vulnerabilities. However, configuring and managing WAF rules manually can be complex and time-consuming. This tutorial demonstrates how to use Claude Code to automate and accelerate your NGINX WAF workflow from initial setup to ongoing management.
 
-## Prerequisites
+Prerequisites
 
 Before getting started, make sure you have the following:
 
@@ -27,7 +27,7 @@ Before getting started, make sure you have the following:
 - Basic understanding of WAF concepts and NGINX configuration
 - Access to your NGINX configuration files
 
-## Setting Up Your WAF Project
+Setting Up Your WAF Project
 
 Begin by creating a dedicated project directory for your NGINX WAF configuration:
 
@@ -39,22 +39,22 @@ Initialize your project with a CLAUDE.md file to guide Claude Code's behavior:
 
 ```bash
 cat > CLAUDE.md << 'EOF'
-# NGINX WAF Project
+NGINX WAF Project
 
 This project manages NGINX WAF configuration for our web application.
 
-## Key Files
+Key Files
 - `waf.conf`: Main WAF configuration
 - `rules/*.conf`: Custom security rules
 - `nginx.conf`: Main NGINX configuration
 
-## WAF Goals
+WAF Goals
 - Block SQL injection attempts
 - Prevent XSS attacks
 - Mitigate DDoS traffic
 - Log all blocked requests for analysis
 
-## Common Tasks
+Common Tasks
 1. Add new WAF rules
 2. Test rules before deployment
 3. Review blocked request logs
@@ -62,7 +62,7 @@ This project manages NGINX WAF configuration for our web application.
 EOF
 ```
 
-## Configuring ModSecurity for NGINX
+Configuring ModSecurity for NGINX
 
 Claude Code can help you generate a solid ModSecurity configuration. Ask Claude to create your base WAF configuration:
 
@@ -73,13 +73,13 @@ When working with Claude Code, describe your requirements clearly:
 Claude will generate configuration similar to this:
 
 ```nginx
-# /etc/nginx/modsec/main.conf
+/etc/nginx/modsec/main.conf
 
-# Load OWASP Core Rule Set
+Load OWASP Core Rule Set
 Include /etc/modsecurity/crs/crs-setup.conf
 Include /etc/modsecurity/crs/rules/*.conf
 
-# Custom configuration
+Custom configuration
 SecRuleEngine On
 SecRequestBodyAccess On
 SecResponseBodyAccess Off
@@ -89,18 +89,18 @@ SecRequestBodyLimitAction Reject
 SecPcreMatchLimit 1000
 SecPcreMatchLimitRecursion 1000
 
-# Audit logging configuration
+Audit logging configuration
 SecAuditEngine RelevantOnly
 SecAuditLogRelevantStatus "^(?:5|4(?!04))"
 SecAuditLogParts ABIJDEFHZ
 SecAuditLogType Serial
 
-# Error handling
+Error handling
 SecArgumentSeparator &
 SecCookieFormat 0
 ```
 
-## Creating Custom WAF Rules
+Creating Custom WAF Rules
 
 One of Claude Code's strengths is helping you write custom security rules tailored to your application. Here's how to request custom rules:
 
@@ -109,7 +109,7 @@ One of Claude Code's strengths is helping you write custom security rules tailor
 Claude might respond with:
 
 ```nginx
-# Block command injection attempts in URL parameters
+Block command injection attempts in URL parameters
 SecRule REQUEST_URI|ARGS "@rx [;&|`$()]|\b(cat|ls|echo|wget|curl)\b" \
     "id:1001,\
     phase:1,\
@@ -121,22 +121,22 @@ SecRule REQUEST_URI|ARGS "@rx [;&|`$()]|\b(cat|ls|echo|wget|curl)\b" \
     tag:'attack-command-injection'"
 ```
 
-## Managing Rulesets with Claude Code
+Managing Rulesets with Claude Code
 
 Organize your WAF rules logically. Claude can help you structure a rules directory:
 
 ```
 waf-project/
-├── nginx.conf
-├── modsec/
-│   ├── main.conf
-│   └── custom-rules/
-│       ├── sql-injection.conf
-│       ├── xss-protection.conf
-│       ├── command-injection.conf
-│       └── api-protection.conf
-└── tests/
-    └── rule-tests.yaml
+ nginx.conf
+ modsec/
+    main.conf
+    custom-rules/
+        sql-injection.conf
+        xss-protection.conf
+        command-injection.conf
+        api-protection.conf
+ tests/
+     rule-tests.yaml
 ```
 
 Ask Claude to create a ruleset for API protection:
@@ -146,9 +146,9 @@ Ask Claude to create a ruleset for API protection:
 Claude generates:
 
 ```nginx
-# /modsec/custom-rules/api-protection.conf
+/modsec/custom-rules/api-protection.conf
 
-# Rate limiting - block IPs making too many requests
+Rate limiting - block IPs making too many requests
 SecRule IP:REQUEST_COUNT "@gt 100" \
     "id:2001,\
     phase:1,\
@@ -158,7 +158,7 @@ SecRule IP:REQUEST_COUNT "@gt 100" \
     logdata:'Request count: %{IP:REQUEST_COUNT}',\
     tag:'rate-limit'"
 
-# Block unusual HTTP methods
+Block unusual HTTP methods
 SecRule REQUEST_METHOD "@rx ^(?:GET|POST|PUT|DELETE|OPTIONS)$" \
     "id:2002,\
     phase:1,\
@@ -173,7 +173,7 @@ SecRule REQUEST_METHOD "!@rx ^(?:GET|POST|PUT|DELETE|OPTIONS)$" \
     msg:'Method not allowed',\
     logdata:'Method: %{REQUEST_METHOD}'"
 
-# Protect against JSON-based attacks
+Protect against JSON-based attacks
 SecRule REQUEST_HEADERS:Content-Type "@rx application/json" \
     "id:2004,\
     phase:1,\
@@ -186,14 +186,14 @@ SecRule REQUEST_BODY "@rx <script|javascript:|onerror=|onload=" \
     msg:'XSS attempt in JSON body'"
 ```
 
-## Testing WAF Rules Before Deployment
+Testing WAF Rules Before Deployment
 
 Always test rules in a staging environment before production deployment. Claude can help you create test cases:
 
 > "Create a test file that verifies our SQL injection rules are working correctly, including both blocked and allowed requests."
 
 ```yaml
-# tests/sql-injection-test.yaml
+tests/sql-injection-test.yaml
 test_cases:
   - name: "SQL injection - OR 1=1"
     request:
@@ -220,7 +220,7 @@ test_cases:
       logged: false
 ```
 
-## Analyzing Blocked Requests
+Analyzing Blocked Requests
 
 When legitimate traffic gets blocked, you need to investigate quickly. Ask Claude:
 
@@ -229,15 +229,15 @@ When legitimate traffic gets blocked, you need to investigate quickly. Ask Claud
 Claude can parse log patterns and suggest rule tuning:
 
 ```bash
-# Example: Extract 403 errors from audit log
+Extract 403 errors from audit log
 grep "status:403" /var/log/modsec_audit.log | tail -100
 ```
 
 Claude might suggest adding exceptions:
 
 ```nginx
-# Add exceptions for false positives
-# Example: Allow specific user agent
+Add exceptions for false positives
+Allow specific user agent
 SecRule REQUEST_HEADERS:User-Agent "@rx ^MyCustomClient/1\.0$" \
     "id:9001,\
     phase:1,\
@@ -245,26 +245,26 @@ SecRule REQUEST_HEADERS:User-Agent "@rx ^MyCustomClient/1\.0$" \
     ctl:ruleEngine=Off"
 ```
 
-## Automating WAF Management
+Automating WAF Management
 
 You can create a Claude Code skill to standardize WAF operations. Create `skills/nginx-waf-skill.md`:
 
 ```markdown
-# NGINX WAF Skill
+NGINX WAF Skill
 
-## Triggers
+Triggers
 - Working with ModSecurity configuration
 - Creating or editing WAF rules
 - Analyzing security logs
 - Troubleshooting blocked requests
 
-## Capabilities
+Capabilities
 - Generate ModSecurity rules from description
 - Parse and summarize audit logs
 - Suggest rule optimizations
 - Create test cases for WAF rules
 
-## Guidelines
+Guidelines
 - Always test rules in staging before production
 - Include proper rule IDs (follow ModSecurity numbering)
 - Log all blocked requests for analysis
@@ -272,31 +272,31 @@ You can create a Claude Code skill to standardize WAF operations. Create `skills
 - Document custom rules with clear messages
 ```
 
-## Best Practices for NGINX WAF with Claude Code
+Best Practices for NGINX WAF with Claude Code
 
 Follow these recommendations when managing NGINX WAF with Claude Code:
 
-1. **Start with detection mode**: Enable SecRuleEngine to `DetectionOnly` initially to identify false positives before blocking.
+1. Start with detection mode: Enable SecRuleEngine to `DetectionOnly` initially to identify false positives before blocking.
 
-2. **Use proper rule IDs**: Assign unique IDs (1000-99999 for custom rules) to easily track and disable problematic rules.
+2. Use proper rule IDs: Assign unique IDs (1000-99999 for custom rules) to easily track and disable problematic rules.
 
-3. **Include comprehensive logging**: Always log matched variables and relevant data for troubleshooting.
+3. Include comprehensive logging: Always log matched variables and relevant data for troubleshooting.
 
-4. **Test extensively**: Create automated tests for each custom rule to prevent regressions.
+4. Test extensively: Create automated tests for each custom rule to prevent regressions.
 
-5. **Review regularly**: Schedule periodic reviews of blocked requests to tune rules and reduce false positives.
+5. Review regularly: Schedule periodic reviews of blocked requests to tune rules and reduce false positives.
 
-6. **Document everything**: Use clear `msg` and `tag` fields in rules for easier log analysis.
+6. Document everything: Use clear `msg` and `tag` fields in rules for easier log analysis.
 
-## Conclusion
+Conclusion
 
-Claude Code significantly simplifies NGINX WAF management by automating rule creation, testing, and analysis. By integrating Claude into your security workflow, you can deploy robust WAF protection faster while maintaining the flexibility to customize rules for your specific application needs. Start with the basics outlined in this tutorial, then gradually add custom rules as you identify unique threats to your application.
+Claude Code significantly simplifies NGINX WAF management by automating rule creation, testing, and analysis. By integrating Claude into your security workflow, you can deploy solid WAF protection faster while maintaining the flexibility to customize rules for your specific application needs. Start with the basics outlined in this tutorial, then gradually add custom rules as you identify unique threats to your application.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -13,11 +13,11 @@ tags: [claude-code, claude-skills]
 ---
 
 
-# Claude Code Laravel Eloquent ORM Guide
+Claude Code Laravel Eloquent ORM Guide
 
-Building robust Laravel applications requires mastering Eloquent ORM, and Claude Code can significantly accelerate your learning curve and development speed. This guide walks you through practical techniques for working with Eloquent, from basic model relationships to advanced query optimization.
+Building solid Laravel applications requires mastering Eloquent ORM, and Claude Code can significantly accelerate your learning curve and development speed. This guide walks you through practical techniques for working with Eloquent, from basic model relationships to advanced query optimization.
 
-## Setting Up Your Laravel Project with Claude Code
+Setting Up Your Laravel Project with Claude Code
 
 Before diving into Eloquent, ensure Claude Code understands your Laravel project structure. Create a CLAUDE.md file in your project root:
 
@@ -32,11 +32,11 @@ With this context, Claude Code will generate code that follows Laravel conventio
 
 Beyond the CLAUDE.md file, you can guide Claude Code at query time by referencing your schema. Paste in a migration file or describe your table structure, and Claude Code will produce correct column names, appropriate indexes, and sensible relationship definitions without you needing to correct basic mistakes repeatedly.
 
-## Defining Models and Relationships
+Defining Models and Relationships
 
 Eloquent's power lies in its relationship handling. Let's examine how Claude Code helps you define models with proper relationships.
 
-### One-to-Many Relationships
+One-to-Many Relationships
 
 A typical e-commerce application might have categories with multiple products:
 
@@ -78,7 +78,7 @@ class Product extends Model
 
 Asking Claude Code to generate both sides of a relationship at once keeps your models consistent and reduces back-and-forth prompting.
 
-### Many-to-Many Relationships
+Many-to-Many Relationships
 
 For roles and permissions in an application:
 
@@ -125,7 +125,7 @@ class UserRole extends Pivot
 }
 ```
 
-### Polymorphic Relationships
+Polymorphic Relationships
 
 Polymorphic relationships are one of the trickier Eloquent concepts to set up correctly. Claude Code handles them well when you describe the scenario clearly:
 
@@ -161,7 +161,7 @@ class Video extends Model
 
 The migration for a polymorphic relationship needs `commentable_id` and `commentable_type` columns. Prompt Claude Code: "Generate a migration for a polymorphic comments table that can belong to posts or videos." It will produce the correct column definitions and index.
 
-## Query Scopes for Reusable Logic
+Query Scopes for Reusable Logic
 
 Query scopes keep your code DRY by encapsulating frequently used query conditions. Here's how to implement them effectively:
 
@@ -195,7 +195,7 @@ $affordableProducts = Product::priceRange(10, 100)->active()->get();
 
 When working with scopes, ask Claude Code to convert repetitive where conditions into scopes. This makes your code more maintainable and testable.
 
-### Global Scopes
+Global Scopes
 
 Global scopes apply to every query on a model automatically. A common use case is soft deletes, but you can build your own for tenant isolation in multi-tenant applications:
 
@@ -222,7 +222,7 @@ protected static function booted(): void
 
 Ask Claude Code: "Add a global scope to the Product model that filters by the authenticated user's tenant_id." It will generate both the scope class and the `booted` method registration.
 
-### Scope Comparison Table
+Scope Comparison Table
 
 | Scope Type | Applies To | Removable? | Best Use Case |
 |---|---|---|---|
@@ -230,7 +230,7 @@ Ask Claude Code: "Add a global scope to the Product model that filters by the au
 | Global scope | Every query | Yes, with `withoutGlobalScope()` | Tenant isolation, soft deletes |
 | Dynamic scope | Explicit calls with args | N/A | Parameterized filters |
 
-## Eager Loading to Prevent N+1 Queries
+Eager Loading to Prevent N+1 Queries
 
 The N+1 query problem occurs when you fetch records and access relationships in loops. Eager loading solves this by loading related records in a single query:
 
@@ -254,7 +254,7 @@ foreach ($categories as $category) {
 
 Claude Code can analyze your code and suggest where to add eager loading. Use prompts like "Find and fix N+1 queries in this controller" to get targeted improvements.
 
-### Nested Eager Loading
+Nested Eager Loading
 
 For deeper relationships:
 
@@ -264,7 +264,7 @@ $categories = Category::with('products.reviews.user')->get();
 
 This loads categories, their products, product reviews, and the user who created each review in just three queries instead of hundreds.
 
-### Conditional Eager Loading
+Conditional Eager Loading
 
 You can filter the eagerly loaded relationship using a closure, which keeps your query results focused:
 
@@ -282,7 +282,7 @@ $categories = Category::with([
 
 Ask Claude Code: "Eager load only active products with approved reviews for the Category model." It will structure the nested closure correctly.
 
-### Lazy Eager Loading
+Lazy Eager Loading
 
 When you have a collection already loaded and realize you need relationships, use `loadMissing()` to avoid redundant queries:
 
@@ -295,7 +295,7 @@ $categories->loadMissing('products');
 
 This is safer than `load()` because it will not re-query relationships that are already present on the collection.
 
-### Counting Relations Without Loading
+Counting Relations Without Loading
 
 To display a product count per category without loading the products themselves:
 
@@ -307,7 +307,7 @@ foreach ($categories as $category) {
 }
 ```
 
-## Using Query Builder for Complex Queries
+Using Query Builder for Complex Queries
 
 Eloquent pairs perfectly with Laravel's query builder for complex operations:
 
@@ -323,7 +323,7 @@ $products = Product::query()
 
 The `when()` method conditionally adds query clauses, keeping your code clean and readable.
 
-### Subqueries and Raw Expressions
+Subqueries and Raw Expressions
 
 For more advanced requirements, Eloquent supports subqueries directly:
 
@@ -339,7 +339,7 @@ $users = User::addSelect([
 
 Claude Code handles subquery patterns well when you describe the goal in plain language: "For each user, add a column showing their most recent order date without a separate query."
 
-### Aggregates in Queries
+Aggregates in Queries
 
 ```php
 // Products with average review score
@@ -350,7 +350,7 @@ $products = Product::withAvg('reviews', 'score')
     ->get();
 ```
 
-## Accessors and Mutators
+Accessors and Mutators
 
 Transform data when reading or writing to the database:
 
@@ -378,7 +378,7 @@ class User extends Model
 }
 ```
 
-### Laravel 9+ Casts API
+Laravel 9+ Casts API
 
 Laravel 9 introduced a cleaner unified accessor/mutator API using `Attribute`:
 
@@ -405,7 +405,7 @@ class User extends Model
 
 When asking Claude Code to generate accessors, specify which Laravel version you are using. With Laravel 9+, Claude Code will default to the `Attribute` class-based syntax. With Laravel 8, it will use the older `get{Name}Attribute` convention.
 
-### Custom Cast Classes
+Custom Cast Classes
 
 For complex transformations shared across multiple models, create a custom cast:
 
@@ -434,7 +434,7 @@ protected $casts = [
 
 Storing prices as integers (cents) and casting them to floats on read is a standard pattern that avoids floating-point rounding errors. Ask Claude Code to generate a `Money` cast for your project and it will produce a complete implementation.
 
-## Model Events and Observers
+Model Events and Observers
 
 Eloquent fires events during the model lifecycle: `creating`, `created`, `updating`, `updated`, `deleting`, `deleted`, and more. Observers consolidate event listeners for a model into a single class:
 
@@ -466,20 +466,20 @@ public function boot(): void
 
 Prompt Claude Code: "Create an observer for the Product model that generates a slug on create and cleans up storage files on delete." It will produce the full observer class and the registration in `AppServiceProvider`.
 
-## Working with the TDD Skill
+Working with the TDD Skill
 
 When building Eloquent models and relationships, the TDD skill helps you write tests first:
 
 ```bash
-# Install the tdd skill
-# Place tdd skill in ~/.claude/skills/tdd.md
+Install the tdd skill
+Place tdd skill in ~/.claude/skills/tdd.md
 ```
 
 With TDD, you define expected behavior before implementation:
 
 ```php
 // tests/Unit/ProductTest.php
-/** @test */
+/ @test */
 public function it_can_calculate_discounted_price()
 {
     $product = new Product(['price' => 100]);
@@ -497,7 +497,7 @@ public function getDiscountedPriceAttribute()
 }
 ```
 
-### Testing Eloquent Relationships
+Testing Eloquent Relationships
 
 Use factories to generate test data for relationship tests:
 
@@ -511,7 +511,7 @@ class CategoryTest extends TestCase
 {
     use RefreshDatabase;
 
-    /** @test */
+    / @test */
     public function it_has_many_products()
     {
         $category = Category::factory()
@@ -521,7 +521,7 @@ class CategoryTest extends TestCase
         $this->assertCount(3, $category->products);
     }
 
-    /** @test */
+    / @test */
     public function it_only_returns_active_products_through_scope()
     {
         $category = Category::factory()->create();
@@ -535,22 +535,22 @@ class CategoryTest extends TestCase
 
 Ask Claude Code: "Write relationship tests for the Category model using factories and RefreshDatabase." It will produce tests covering both the relationship existence and scope behavior.
 
-## Generating Documentation with PDF Skills
+Generating Documentation with PDF Skills
 
 For team documentation, use the pdf skill to generate comprehensive API documentation:
 
 ```
-# Place pdf skill in ~/.claude/skills/pdf.md
+Place pdf skill in ~/.claude/skills/pdf.md
 ```
 
 This helps you create printable documentation of your Eloquent models and their relationships, useful for onboarding new team members.
 
-## Performance Optimization Tips
+Performance Optimization Tips
 
-1. **Index foreign keys**: Always add database indexes to foreign key columns
-2. **Use select()**: Only fetch required columns when you don't need the full model
-3. **Chunk results**: For large datasets, use `chunk()` or `cursor()` to process records in batches
-4. **Cache relationships**: For frequently accessed but rarely changed data, use relationship caching
+1. Index foreign keys: Always add database indexes to foreign key columns
+2. Use select(): Only fetch required columns when you don't need the full model
+3. Chunk results: For large datasets, use `chunk()` or `cursor()` to process records in batches
+4. Cache relationships: For frequently accessed but rarely changed data, use relationship caching
 
 ```php
 // Only fetch needed columns
@@ -564,7 +564,7 @@ Product::chunk(100, function ($products) {
 });
 ```
 
-### Using cursor() for Memory Efficiency
+Using cursor() for Memory Efficiency
 
 When you only need to iterate through records without modifying them in bulk, `cursor()` uses a PHP generator and keeps only one model in memory at a time:
 
@@ -577,7 +577,7 @@ foreach (Product::cursor() as $product) {
 
 Compare this with `chunk()`, which loads 100 records at once but allows you to use collection methods, and `all()`, which loads the entire result set into memory.
 
-### Caching Expensive Queries
+Caching Expensive Queries
 
 For queries that are expensive and rarely change, wrap them in a cache call:
 
@@ -592,7 +592,7 @@ $topCategories = Cache::remember('top_categories', 3600, function () {
 
 Prompt Claude Code: "Wrap this query in a cache call with a 1-hour TTL and a descriptive cache key." It will produce correctly structured cache code and suggest appropriate TTL values based on data volatility.
 
-### Query Performance Comparison
+Query Performance Comparison
 
 | Method | Memory Usage | Query Count | Best For |
 |---|---|---|---|
@@ -601,7 +601,7 @@ Prompt Claude Code: "Wrap this query in a cache call with a 1-hour TTL and a des
 | `cursor()` | Very low | 1 (streaming) | Read-only iteration |
 | `lazy()` | Low | 1 (streaming) | Lazy collections with filtering |
 
-### Identifying Slow Queries
+Identifying Slow Queries
 
 Claude Code can help you instrument your application for slow query detection. Ask it to add a query log listener to your `AppServiceProvider`:
 
@@ -625,7 +625,7 @@ public function boot(): void
 
 This listener is invaluable during development for catching performance regressions before they reach production.
 
-## Soft Deletes and Data Retention
+Soft Deletes and Data Retention
 
 Soft deletes allow you to mark records as deleted without physically removing them from the database, which is important for audit trails and data recovery:
 
@@ -649,17 +649,17 @@ Once soft deletes are enabled, `Product::all()` automatically excludes deleted r
 
 Ask Claude Code: "Add soft deletes to the Product model and generate the migration change." It will handle both the trait addition and the correct `addColumn` migration syntax.
 
-## Conclusion
+Conclusion
 
 Claude Code transforms Laravel Eloquent ORM development by generating correct relationship definitions, identifying performance bottlenecks, and suggesting best practices. The key is providing clear context about your Laravel version, database type, and specific use cases in your prompts.
 
 Combine Claude Code with Laravel's built-in features like scopes, accessors, eager loading, observers, and soft deletes to build performant, maintainable applications. Use it to catch N+1 problems early, generate factory-based tests, and produce cast classes that keep your data layer consistent. Remember to test your Eloquent models thoroughly using the TDD skill to ensure your data layer remains reliable as your application grows.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

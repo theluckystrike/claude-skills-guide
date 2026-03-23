@@ -13,11 +13,11 @@ permalink: /claude-code-supabase-storage-signed-url-workflow-guide/
 ---
 
 
-# Claude Code Supabase Storage Signed URL Workflow Guide
+Claude Code Supabase Storage Signed URL Workflow Guide
 
 Supabase Storage provides a powerful, secure way to handle file uploads and downloads in your applications. When combined with Claude Code, you can build intelligent file management systems that understand context, validate content, and automate complex workflows. This guide walks you through creating signed URL workflows that keep your files secure while enabling powerful AI-driven interactions.
 
-## Understanding Signed URLs in Supabase Storage
+Understanding Signed URLs in Supabase Storage
 
 Supabase Storage uses signed URLs to provide temporary, secure access to private files. Unlike public buckets where anyone with the URL can access files, signed URLs include cryptographic tokens that expire after a specified time. This approach is essential for:
 
@@ -28,7 +28,7 @@ Supabase Storage uses signed URLs to provide temporary, secure access to private
 
 When you create a signed URL, Supabase generates a unique token embedded in the URL that validates the requester's identity and permissions. The URL typically expires in 60 seconds to 3,600 seconds (1 hour), giving you fine-grained control over access duration.
 
-## Setting Up Your Supabase Client
+Setting Up Your Supabase Client
 
 Before creating signed URL workflows, you'll need to configure your Supabase client. Install the Supabase JavaScript client and set up authentication:
 
@@ -52,7 +52,7 @@ description: Manage Supabase Storage with signed URLs
 You are a storage manager that helps users upload, download, and manage files in Supabase Storage using signed URLs.
 ```
 
-## Creating Signed URLs for Downloads
+Creating Signed URLs for Downloads
 
 The most common use case for signed URLs is enabling temporary access to private files. Here's a practical function to generate download signed URLs:
 
@@ -79,7 +79,7 @@ For Claude Code skills, you can wrap this in a bash call to the Supabase CLI:
 supabase storage sign my-bucket/documents/report.pdf --expires-in 3600
 ```
 
-## Building Upload Workflows with Signed URLs
+Building Upload Workflows with Signed URLs
 
 Upload workflows require a two-step process: first, generate a signed URL that allows uploading to a specific path, then use that URL to perform the actual upload. This separation keeps your service role keys secure while enabling direct uploads from clients.
 
@@ -103,7 +103,7 @@ async function getSignedUploadUrl(bucketName, filePath, contentType) {
 
 The signed upload URL allows PUT requests to the specific file path, preventing users from uploading to arbitrary locations in your bucket.
 
-## Integrating with Claude Code Skills
+Integrating with Claude Code Skills
 
 Claude Code can orchestrate complex file workflows by combining signed URLs with its understanding capabilities. Here's a skill that processes uploaded documents:
 
@@ -119,7 +119,7 @@ You help users process documents by downloading them via signed URLs, analyzing 
 When Claude Code needs to download a file, it can call your signed URL endpoint:
 
 ```bash
-# Pseudocode for Claude Code skill action
+Pseudocode for Claude Code skill action
 DOWNLOAD_URL=$(getSignedDownloadUrl "user-documents" "uploads/$FILE_ID")
 curl -o "$LOCAL_PATH" "$DOWNLOAD_URL"
 ```
@@ -130,13 +130,13 @@ This enables Claude Code to:
 - Generate summaries or extractions
 - Create new files based on processed content
 
-## Handling Edge Cases and Errors
+Handling Edge Cases and Errors
 
 Robust signed URL workflows need proper error handling. Common issues include:
 
-**Expired URLs**: If a signed URL expires before use, regenerate a new one and retry the operation.
+Expired URLs: If a signed URL expires before use, regenerate a new one and retry the operation.
 
-**Invalid Paths**: Validate file paths to prevent path traversal attacks. Always sanitize user input:
+Invalid Paths: Validate file paths to prevent path traversal attacks. Always sanitize user input:
 
 ```javascript
 function validateFilePath(filePath) {
@@ -148,23 +148,23 @@ function validateFilePath(filePath) {
 }
 ```
 
-**Bucket Permissions**: Ensure your Supabase RLS policies allow the appropriate operations. Test signed URLs with different user contexts to verify access control.
+Bucket Permissions: Ensure your Supabase RLS policies allow the appropriate operations. Test signed URLs with different user contexts to verify access control.
 
-## Security Best Practices
+Security Best Practices
 
 When implementing signed URL workflows, follow these security guidelines:
 
-1. **Use Short Expiration Times**: For sensitive operations, use URLs that expire in 60-300 seconds rather than the maximum 1 hour.
+1. Use Short Expiration Times: For sensitive operations, use URLs that expire in 60-300 seconds rather than the maximum 1 hour.
 
-2. **Validate Content Types**: Specify content-type restrictions in your upload signed URLs to prevent malicious file uploads.
+2. Validate Content Types: Specify content-type restrictions in your upload signed URLs to prevent malicious file uploads.
 
-3. **Implement Rate Limiting**: Prevent abuse by limiting signed URL requests per user or IP address.
+3. Implement Rate Limiting: Prevent abuse by limiting signed URL requests per user or IP address.
 
-4. **Audit Access Logs**: Track signed URL generation and usage to identify suspicious patterns.
+4. Audit Access Logs: Track signed URL generation and usage to identify suspicious patterns.
 
-5. **Rotate Service Keys Regularly**: If using service role keys for signed URL generation, rotate them periodically.
+5. Rotate Service Keys Regularly: If using service role keys for signed URL generation, rotate them periodically.
 
-## Complete Workflow Example
+Complete Workflow Example
 
 Here's a complete example combining all elements into a practical workflow:
 
@@ -222,16 +222,16 @@ class SupabaseStorageWorkflow {
 }
 ```
 
-## Conclusion
+Conclusion
 
-Signed URLs provide the foundation for secure, flexible file handling in Supabase-powered applications. By integrating these workflows with Claude Code, you can build intelligent systems that understand context, automate document processing, and create dynamic file management experiences. Start with the basics—creating download and upload URLs—then layer in more complex workflows as your needs grow.
+Signed URLs provide the foundation for secure, flexible file handling in Supabase-powered applications. By integrating these workflows with Claude Code, you can build intelligent systems that understand context, automate document processing, and create dynamic file management experiences. Start with the basics, creating download and upload URLs, then layer in more complex workflows as your needs grow.
 
 The key is maintaining security through short expirations and proper validation while using Claude Code's AI capabilities to add intelligence to your file operations.
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

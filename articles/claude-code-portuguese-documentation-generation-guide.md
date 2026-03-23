@@ -17,7 +17,7 @@ Generating documentation in Portuguese opens your projects to Brazilian and Port
 
 This guide walks through setting up a Portuguese [documentation generation workflow](/automated-code-documentation-workflow-with-claude-skills/) using Claude skills, covering language configuration, skill selection, and practical examples you can apply immediately. If you need to handle multiple languages, see the [i18n localization workflow automation guide](/claude-skills-for-localization-i18n-workflow-automation/).
 
-## Prerequisites
+Prerequisites
 
 Before starting, ensure you have:
 
@@ -29,7 +29,7 @@ Before starting, ensure you have:
 
 No additional language models or translation services required. Claude Code generates Portuguese directly from your codebase context.
 
-## Configuring Portuguese as the Output Language
+Configuring Portuguese as the Output Language
 
 The first step is establishing Portuguese as the default output language for documentation tasks. Store this preference in supermemory so every Claude session knows your documentation language:
 
@@ -50,7 +50,7 @@ Retrieve this preference at the start of each documentation session:
 Retrieve documentation language preference before generating any docs.
 ```
 
-## Generating Inline Documentation in Portuguese
+Generating Inline Documentation in Portuguese
 
 For inline comments and function documentation, specify the language explicitly in your prompt. Claude scans your code and generates Portuguese comments that accurately describe functionality.
 
@@ -81,7 +81,7 @@ Use the Google Python docstring format translated to Portuguese:
 Base all descriptions on the actual code implementation.
 ```
 
-## Creating README Files in Portuguese
+Creating README Files in Portuguese
 
 Generate complete README documentation in Portuguese by providing the project context:
 
@@ -103,7 +103,7 @@ Base everything on the actual code. Do not invent features.
 
 Claude produces a README with headers like "Instalação", "Configuração", "Uso", and "Contribuindo" that matches Brazilian developer expectations.
 
-## Generating API Documentation in Portuguese
+Generating API Documentation in Portuguese
 
 For REST API projects, the `pdf` skill creates formatted, professional documentation in Portuguese. Use it after Claude generates the content:
 
@@ -123,7 +123,7 @@ Format headers in Portuguese: "Referência da API", "Autenticação", "Endpoints
 
 The [pdf skill](/what-is-the-best-claude-skill-for-generating-documentation/) handles all formatting automatically, producing a document ready for distribution.
 
-## Documenting Test Cases in Portuguese
+Documenting Test Cases in Portuguese
 
 If you use the `tdd` skill, generate test documentation alongside your test cases:
 
@@ -140,12 +140,12 @@ Include tests for happy path and error cases.
 
 This produces tests that serve as executable documentation, useful for onboarding Brazilian developers to your codebase. For multilingual projects, also consider the [translate code comments between languages guide](/claude-code-translate-code-comments-between-languages/).
 
-## Automating Documentation Updates
+Automating Documentation Updates
 
 Set up a documentation update workflow that runs after code commits. Create a skill at `~/.claude/skills/doc-pt-update.md`:
 
 ```markdown
-# doc-pt-update
+doc-pt-update
 
 You are a documentation updater for Portuguese documentation. When invoked:
 1. Review the changed files provided
@@ -166,7 +166,7 @@ Changed files from last commit:
 - src/models/produto.js (added campo desconto)
 ```
 
-## Persisting Documentation Standards
+Persisting Documentation Standards
 
 Maintain consistent documentation standards across sessions using supermemory:
 
@@ -177,12 +177,12 @@ Store Portuguese documentation standards:
 - Use Google-style docstrings for Python in Portuguese
 - README uses H2 headers only, all text in Portuguese
 - API docs regenerated monthly and committed to docs/referencia-api.md
-- Changelog format: "DD/MM/YYYY — breve resumo das alterações"
+- Changelog format: "DD/MM/YYYY. breve resumo das alterações"
 - Never document private methods (underscore prefix)
 - Code comments: Portuguese explanations, English for variable/function names
 ```
 
-## Quality Verification
+Quality Verification
 
 After generating Portuguese documentation, verify quality:
 
@@ -200,25 +200,25 @@ Report any issues found.
 
 Common issues to watch for: mixing European and Brazilian Portuguese, incorrect gender assignment, or machine-translated-sounding phrases that feel unnatural.
 
-## Workflow Summary
+Workflow Summary
 
 Your Portuguese documentation generation workflow:
 
-1. **Session start**: Retrieve language preferences from supermemory
-2. **Code changes**: Generate inline comments in Portuguese immediately
-3. **API updates**: Use `/pdf` to create formatted API reference
-4. **Commits**: Run `/doc-pt-update` to keep docs synchronized
-5. **Reviews**: Verify Portuguese quality before committing
-6. **Sprints**: Run documentation coverage audit, address gaps
+1. Session start: Retrieve language preferences from supermemory
+2. Code changes: Generate inline comments in Portuguese immediately
+3. API updates: Use `/pdf` to create formatted API reference
+4. Commits: Run `/doc-pt-update` to keep docs synchronized
+5. Reviews: Verify Portuguese quality before committing
+6. Sprints: Run documentation coverage audit, address gaps
 
 This workflow produces consistent, high-quality Portuguese documentation that serves Brazilian developers effectively. The time investment is minimal compared to manual documentation, and the results are more accurate because Claude generates descriptions directly from your actual code.
 
 ---
 
-## Related Reading
+Related Reading
 
-- [Automated Code Documentation Workflow with Claude Skills](/automated-code-documentation-workflow-with-claude-skills/) — Core documentation workflow patterns
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Full developer skill stack
-- [Claude Code Skills for Technical Writing](/what-is-the-best-claude-skill-for-generating-documentation/) — Technical writing with Claude skills
+- [Automated Code Documentation Workflow with Claude Skills](/automated-code-documentation-workflow-with-claude-skills/). Core documentation workflow patterns
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Full developer skill stack
+- [Claude Code Skills for Technical Writing](/what-is-the-best-claude-skill-for-generating-documentation/). Technical writing with Claude skills
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

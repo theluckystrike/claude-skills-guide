@@ -14,13 +14,13 @@ tags: [chrome, claude-skills]
 
 
 {% raw %}
-# Chrome Referrer Blocking Extension: A Developer's Guide
+Chrome Referrer Blocking Extension: A Developer's Guide
 
 The HTTP Referrer header has been a staple of web analytics since the early days of the internet. However, it also poses significant privacy concerns and can leak sensitive URL information across domains. For developers and power users, understanding how to control or block the Referrer header in Chrome becomes essential for building privacy-respecting applications and protecting user data.
 
 This guide covers the technical implementation of referrer blocking in Chrome extensions, providing practical code examples and real-world use cases. By the end, you will have a complete, deployable extension and a solid understanding of when and why to apply different referrer policies.
 
-## Understanding the Referrer Header
+Understanding the Referrer Header
 
 When you click a link on website A that takes you to website B, the browser automatically sends a `Referer` header (note the historical misspelling) indicating where the user came from. This header can contain:
 
@@ -37,21 +37,21 @@ Referer: https://previous-site.com/user/profile?id=12345&token=abc
 
 That request exposes the user's ID and a token to the destination server. The destination server logs this, third-party analytics scripts on that page log it, and if the page is served over HTTP, every network hop between the client and server sees it.
 
-### Real-World Leakage Scenarios
+Real-World Leakage Scenarios
 
 Consider these practical situations where referrer leakage causes real problems:
 
-**Healthcare dashboards.** A hospital patient portal includes the patient's record ID in its URL. When a patient clicks an external link on that page (say, a link to a drug information website), the drug site now knows that record ID came from the hospital's domain.
+Healthcare dashboards. A hospital patient portal includes the patient's record ID in its URL. When a patient clicks an external link on that page (say, a link to a drug information website), the drug site now knows that record ID came from the hospital's domain.
 
-**Internal tooling.** A developer working inside a corporate intranet clicks a StackOverflow link from an internal ticket tracker. The full internal URL — including ticket numbers, project names, and any embedded tokens — goes to StackOverflow.
+Internal tooling. A developer working inside a corporate intranet clicks a StackOverflow link from an internal ticket tracker. The full internal URL. including ticket numbers, project names, and any embedded tokens. goes to StackOverflow.
 
-**E-commerce checkout flows.** A checkout page URL often contains cart identifiers or promo codes. Clicking any outbound link from that page leaks those details to the destination.
+E-commerce checkout flows. A checkout page URL often contains cart identifiers or promo codes. Clicking any outbound link from that page leaks those details to the destination.
 
-**SaaS admin panels.** Admin pages typically include resource identifiers in the URL. Clicking documentation links from an admin page can reveal your infrastructure topology to the docs provider.
+SaaS admin panels. Admin pages typically include resource identifiers in the URL. Clicking documentation links from an admin page can reveal your infrastructure topology to the docs provider.
 
 Chrome extensions can intercept and modify this behavior using the `declarativeNetRequest` API, which provides a performant way to modify network requests without requiring broad host permissions or heavyweight content scripts.
 
-## Referrer Policy Values: What Your Options Are
+Referrer Policy Values: What Your Options Are
 
 Before building an extension, understand the full spectrum of `Referrer-Policy` values available. This table summarizes each value and when to use it:
 
@@ -68,21 +68,21 @@ Before building an extension, understand the full spectrum of `Referrer-Policy` 
 
 For most privacy-focused extensions, `no-referrer` or `same-origin` are the right choices.
 
-## Setting Up Your Extension
+Setting Up Your Extension
 
 Create a new Chrome extension project with the following structure:
 
 ```
 referrer-blocker/
-├── manifest.json
-├── rules.json
-├── background.js
-├── content-script.js
-├── popup.html
-└── popup.js
+ manifest.json
+ rules.json
+ background.js
+ content-script.js
+ popup.html
+ popup.js
 ```
 
-### Manifest Configuration
+Manifest Configuration
 
 Your manifest must declare the `declarativeNetRequest` permission:
 
@@ -118,11 +118,11 @@ Your manifest must declare the `declarativeNetRequest` permission:
 
 The `storage` permission lets you persist the user's enabled/disabled state across browser sessions.
 
-## Implementing Referrer Blocking Rules
+Implementing Referrer Blocking Rules
 
-The declarativeNetRequest API uses JSON rules to define how headers should be modified. Rules are evaluated in the browser's network stack — not in JavaScript — which makes them fast and reliable.
+The declarativeNetRequest API uses JSON rules to define how headers should be modified. Rules are evaluated in the browser's network stack. not in JavaScript. which makes them fast and reliable.
 
-### Basic Referrer Removal
+Basic Referrer Removal
 
 ```javascript
 // background.js
@@ -151,9 +151,9 @@ chrome.runtime.onInstalled.addListener(() => {
 });
 ```
 
-This rule removes the Referrer header entirely for all main frame and iframe navigations. The `set` operation with an empty string value causes the header to be sent with no content. Some servers treat an empty string differently from an absent header — if you want the header completely absent, check whether the Chrome version you are targeting supports the `remove` operation instead.
+This rule removes the Referrer header entirely for all main frame and iframe navigations. The `set` operation with an empty string value causes the header to be sent with no content. Some servers treat an empty string differently from an absent header. if you want the header completely absent, check whether the Chrome version you are targeting supports the `remove` operation instead.
 
-### Selective Referrer Blocking
+Selective Referrer Blocking
 
 You may want to block referrers only for specific domains or allow them for trusted sites:
 
@@ -198,7 +198,7 @@ chrome.declarativeNetRequest.updateDynamicRules({
 
 Rule priority matters here. A higher priority number wins when two rules match the same request. In the example above, any request to `analytics.example.com` is allowed (priority 2 beats priority 1) while everything else from your domain gets stripped.
 
-### Domain Allowlist Pattern
+Domain Allowlist Pattern
 
 For enterprise deployments where you need to whitelist a set of trusted domains, structure your rules as an array and register them together:
 
@@ -249,7 +249,7 @@ chrome.runtime.onInstalled.addListener(async () => {
 });
 ```
 
-### Using referrerPolicy on Links
+Using referrerPolicy on Links
 
 Modern browsers support the `referrerPolicy` attribute directly on anchor elements. You can inject this attribute into all links via a content script, providing a second layer of protection that works even when header-level rules are not active:
 
@@ -316,7 +316,7 @@ observer.observe(document.body, {
 
 The MutationObserver is critical for single-page applications (React, Vue, Angular) where links are injected after the initial DOM load.
 
-## Building a Complete Extension with Toggle UI
+Building a Complete Extension with Toggle UI
 
 Here's a complete implementation that includes a popup UI for toggling blocking on and off, with state persisted to storage:
 
@@ -433,11 +433,11 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 });
 ```
 
-## Testing Your Extension
+Testing Your Extension
 
 Load your extension in Chrome by navigating to `chrome://extensions/`, enabling Developer mode, and clicking "Load unpacked". Test the following scenarios:
 
-1. Click links on various websites and verify no referrer is sent — check the Network tab in DevTools and inspect request headers
+1. Click links on various websites and verify no referrer is sent. check the Network tab in DevTools and inspect request headers
 2. Confirm that the `Referer` header is absent or empty in outbound requests
 3. Test with different resource types: images, scripts, XHR calls, and fetch requests
 4. Navigate from a URL with query parameters to an external site and confirm those parameters do not appear in the destination's logs
@@ -446,28 +446,28 @@ Load your extension in Chrome by navigating to `chrome://extensions/`, enabling 
 
 Use `chrome://net-internals/#events` for lower-level request inspection when DevTools does not show the headers you expect.
 
-## Debugging Common Issues
+Debugging Common Issues
 
-**Rules not applying.** Double-check your `host_permissions` in the manifest. Without `<all_urls>` or the specific domain you are targeting, rules will silently fail to match.
+Rules not applying. Double-check your `host_permissions` in the manifest. Without `<all_urls>` or the specific domain you are targeting, rules will silently fail to match.
 
-**Server-set Referrer-Policy overrides your extension.** When a server sends a `Referrer-Policy` response header with a restrictive value, that takes precedence over what the browser would otherwise send — but your extension's header modification happens before the browser processes response headers, so your rule still wins for outbound requests. The response header governs what subsequent navigations from that page send.
+Server-set Referrer-Policy overrides your extension. When a server sends a `Referrer-Policy` response header with a restrictive value, that takes precedence over what the browser would otherwise send. but your extension's header modification happens before the browser processes response headers, so your rule still wins for outbound requests. The response header governs what subsequent navigations from that page send.
 
-**Empty string vs. absent header.** Some web applications behave differently when `Referer: ` (empty) is present versus when it is absent entirely. If you see unexpected behavior, try using `operation: "remove"` (available in Chrome 102+) instead of `set` with an empty value.
+Empty string vs. absent header. Some web applications behave differently when `Referer: ` (empty) is present versus when it is absent entirely. If you see unexpected behavior, try using `operation: "remove"` (available in Chrome 102+) instead of `set` with an empty value.
 
-**Iframe content.** Sub-frame navigations require explicit inclusion in your rule's `resourceTypes` array. The `sub_frame` type covers iframes; omitting it means nested frames still leak referrers.
+Iframe content. Sub-frame navigations require explicit inclusion in your rule's `resourceTypes` array. The `sub_frame` type covers iframes; omitting it means nested frames still leak referrers.
 
-## Performance Considerations
+Performance Considerations
 
 The declarativeNetRequest API runs efficiently because:
 
 - Rules are evaluated in the browser's network stack, not JavaScript
 - No content scripts are required for basic header modification
 - Rules can be updated dynamically without reloading the extension
-- The rule evaluation is O(1) per request — it does not scale with the number of rules the way older approaches did
+- The rule evaluation is O(1) per request. it does not scale with the number of rules the way older approaches did
 
 For extensions with complex rule sets, consider using static rule sets stored in `rules.json` declared in the manifest. Static rules are compiled at install time and are marginally faster than dynamic rules, but dynamic rules are flexible enough for most use cases.
 
-## Comparison: Extension Approaches
+Comparison: Extension Approaches
 
 | Approach | Performance | Flexibility | Privacy |
 |---|---|---|---|
@@ -478,18 +478,18 @@ For extensions with complex rule sets, consider using static rule sets stored in
 
 For Manifest V3, the `declarativeNetRequest` approach combined with content script link patching gives you the best coverage.
 
-## Conclusion
+Conclusion
 
 Building a Chrome referrer blocking extension requires understanding the declarativeNetRequest API, proper manifest configuration, and thoughtful rule design. The examples provided here give you a foundation for creating privacy-respecting extensions that protect user data without breaking legitimate use cases.
 
 For production deployments, consider adding user controls for different blocking modes (no-referrer vs. origin vs. same-origin), a logging panel for debugging, and compatibility testing across different Chrome versions. The combination of header-level rules and content script link patching provides defense in depth that handles both standard navigation and dynamically generated content in modern SPAs.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

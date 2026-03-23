@@ -13,17 +13,17 @@ permalink: /claude-code-skills-websocket-real-time-app-development/
 
 # Claude Code Skills for WebSocket Real-Time App Development
 
-Real-time applications demand a different mindset than standard request-response web development. WebSocket connections are persistent, stateful, and unforgiving of race conditions. Claude Code's skill system — particularly the `tdd` and `frontend-design` skills — compresses the feedback loop on these tricky problems, letting you prototype connection logic, write targeted tests, and iterate on UI state fast.
+Real-time applications demand a different mindset than standard request-response web development. WebSocket connections are persistent, stateful, and unforgiving of race conditions. Claude Code's skill system. particularly the `tdd` and `frontend-design` skills. compresses the feedback loop on these tricky problems, letting you prototype connection logic, write targeted tests, and iterate on UI state fast.
 
 This guide walks through how to use Claude Code skills to build a production-ready WebSocket application, from initial connection management through event routing, state synchronization, and horizontal scaling.
 
-## Why Claude Code Skills Matter for WebSocket Development
+Why Claude Code Skills Matter for WebSocket Development
 
-WebSocket code has a few properties that make it painful to build without structured assistance. First, you're managing state across multiple concurrent connections. Second, error handling is non-trivial — network drops, reconnect loops, and backoff strategies have to be explicit. Third, the front-end and back-end are tightly coupled in ways that break easily.
+WebSocket code has a few properties that make it painful to build without structured assistance. First, you're managing state across multiple concurrent connections. Second, error handling is non-trivial. network drops, reconnect loops, and backoff strategies have to be explicit. Third, the front-end and back-end are tightly coupled in ways that break easily.
 
 The `tdd` skill is your best friend here. Rather than spinning up a full server to test a message handler, you ask Claude to write the test first, confirm the interface, then implement. The cycle is fast and catches contract mismatches before they become runtime surprises.
 
-The `frontend-design` skill helps when you're thinking through how UI components react to stream events — what renders optimistically, what waits for server acknowledgment, how you show connection status without cluttering the interface.
+The `frontend-design` skill helps when you're thinking through how UI components react to stream events. what renders optimistically, what waits for server acknowledgment, how you show connection status without cluttering the interface.
 
 Typical invocation pattern:
 
@@ -34,7 +34,7 @@ Typical invocation pattern:
 
 Claude generates a Jest test suite with mock WebSocket instances, dispatch assertions, and edge case coverage. You then implement the router to match.
 
-## Setting Up the Server-Side WebSocket Layer
+Setting Up the Server-Side WebSocket Layer
 
 Start with a Node.js server using the `ws` library. The architecture that scales well is a message router pattern: each incoming message carries a `type` field, and the server dispatches to a registered handler.
 
@@ -79,9 +79,9 @@ function createSocketServer(httpServer) {
 
 When you prompt Claude with `/tdd` on this module, it produces tests that mock `ws` at the network level, inject malformed payloads, and assert that unknown event types return the error response. That test suite becomes the contract you maintain as the codebase grows.
 
-## Client-Side Connection Management with Reconnect Logic
+Client-Side Connection Management with Reconnect Logic
 
-The client side of a WebSocket app needs robust reconnect handling. Flaky networks, server restarts, and load balancer timeouts all cause disconnects. A naive implementation that just calls `new WebSocket(url)` once will leave users with a silent broken connection.
+The client side of a WebSocket app needs solid reconnect handling. Flaky networks, server restarts, and load balancer timeouts all cause disconnects. A naive implementation that just calls `new WebSocket(url)` once will leave users with a silent broken connection.
 
 Ask Claude with `/frontend-design` to sketch the connection manager interface before you write it. Something like:
 
@@ -157,9 +157,9 @@ class ConnectionManager {
 
 This class is fully testable in isolation. The `tdd` skill generates a test suite that replaces the global `WebSocket` constructor with a mock and exercises reconnect timing.
 
-## Event Handling and State Synchronization
+Event Handling and State Synchronization
 
-One of the most common pitfalls in real-time apps is state drift — the server and client having different views of the world after a reconnect or a missed message. A good pattern is to treat the WebSocket stream as an event log and replay state on reconnect.
+One of the most common pitfalls in real-time apps is state drift. the server and client having different views of the world after a reconnect or a missed message. A good pattern is to treat the WebSocket stream as an event log and replay state on reconnect.
 
 Prompt Claude directly:
 
@@ -201,7 +201,7 @@ function createStateSyncReducer(initialState) {
 
 This pattern handles the gap-filling problem that causes phantom data or lost updates in collaborative tools and live dashboards.
 
-## Scaling Patterns: Pub/Sub and Redis Adapter
+Scaling Patterns: Pub/Sub and Redis Adapter
 
 A single Node.js process handles WebSocket connections fine up to a few thousand concurrent clients. Beyond that, you need multiple processes, and your event routing needs a shared message bus.
 
@@ -239,7 +239,7 @@ async function createRedisAdapter(wss) {
 
 Ask Claude with `/tdd` to generate integration tests that mock Redis clients and verify that a message published on one adapter instance is delivered by a subscriber on another. This confirms the adapter contract without running actual Redis in CI.
 
-## Putting It Together: A Live Collaboration Example
+Putting It Together: A Live Collaboration Example
 
 A concrete example ties the patterns together. Consider a collaborative markdown editor where multiple users see each other's cursors and edits in real time.
 
@@ -247,15 +247,15 @@ The server registers handlers for `cursor_move`, `text_insert`, and `text_delete
 
 The client connection manager subscribes to these event types, feeds them into the state sync reducer, and triggers a React re-render. The `frontend-design` skill is useful here for working through the optimistic update pattern: the editor applies the local change immediately and reconciles when the server confirmation arrives.
 
-This architecture — handler registry, state sync reducer, Redis pub/sub for multi-process — covers most real-time application requirements. Claude Code skills accelerate each layer: `tdd` for reliable handler and reducer tests, `frontend-design` for thinking through UI state transitions, and direct prompting for the adapter and scaling concerns.
+This architecture. handler registry, state sync reducer, Redis pub/sub for multi-process. covers most real-time application requirements. Claude Code skills accelerate each layer: `tdd` for reliable handler and reducer tests, `frontend-design` for thinking through UI state transitions, and direct prompting for the adapter and scaling concerns.
 
 The result is a codebase where the real-time layer is tested, the reconnect logic is explicit, and state drift is handled at the architecture level rather than patched in hotfixes.
 
 ---
 
-## Related Reading
+Related Reading
 
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

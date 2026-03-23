@@ -14,13 +14,13 @@ tags: [claude-code, claude-skills]
 
 
 {% raw %}
-# How to Compare Sources Side by Side in Chrome Extensions
+How to Compare Sources Side by Side in Chrome Extensions
 
 Comparing two sources side by side is a common task for developers reviewing code changes, writers checking document revisions, or anyone needing to spot differences between two pieces of text. Chrome extensions offer powerful ways to bring this capability directly into your browser, eliminating the need to copy-paste content into external tools.
 
 This guide covers how to build a Chrome extension that compares sources side by side, existing extensions you can use today, and practical implementation details for developers. By the end, you will have a working extension with real diff highlighting and enough understanding to extend it for your own workflow.
 
-## Why Compare Sources in Your Browser
+Why Compare Sources in Your Browser
 
 Browser-based comparison tools save time when working with web content. Instead of downloading files or opening separate applications, you can compare sources while browsing documentation, reviewing pull requests, or analyzing competing websites.
 
@@ -34,27 +34,27 @@ The side-by-side view presents two panels showing the original and modified cont
 
 Beyond convenience, keeping comparisons inside the browser reduces the risk of accidentally pasting sensitive content into an online third-party tool. A local extension processes everything client-side, which matters for legal documents, internal specs, or user data.
 
-### When a Browser Extension Beats a Desktop Tool
+When a Browser Extension Beats a Desktop Tool
 
-Desktop diff tools like FileMerge, WinMerge, or VS Code's built-in diff are excellent for file-based comparisons. But they require you to save the text first, which adds friction when your sources live on web pages. An extension lets you grab content from a rendered page — after JavaScript has executed and templates have resolved — and compare it instantly. That is especially useful when reviewing live documentation against a draft, or checking whether a deployed webpage matches a staging version.
+Desktop diff tools like FileMerge, WinMerge, or VS Code's built-in diff are excellent for file-based comparisons. But they require you to save the text first, which adds friction when your sources live on web pages. An extension lets you grab content from a rendered page. after JavaScript has executed and templates have resolved. and compare it instantly. That is especially useful when reviewing live documentation against a draft, or checking whether a deployed webpage matches a staging version.
 
-## Building a Basic Comparison Extension
+Building a Basic Comparison Extension
 
 Creating a Chrome extension for side-by-side comparison involves three main components: a popup for user input, a content script for page interaction, and a diff library for the comparison logic.
 
-### Project Structure
+Project Structure
 
 ```
 compare-sources/
-├── manifest.json
-├── popup.html
-├── popup.js
-├── content.js
-├── diff-worker.js
-└── icon.png
+ manifest.json
+ popup.html
+ popup.js
+ content.js
+ diff-worker.js
+ icon.png
 ```
 
-### manifest.json
+manifest.json
 
 ```json
 {
@@ -78,7 +78,7 @@ compare-sources/
 
 Note that `content_scripts` is declared in the manifest here so the content script is ready when the popup sends a message. Alternatively, you can inject it dynamically using `chrome.scripting.executeScript`, which is cleaner if you only need the script on demand.
 
-### popup.html
+popup.html
 
 ```html
 <!DOCTYPE html>
@@ -112,7 +112,7 @@ Note that `content_scripts` is declared in the manifest here so the content scri
 
 The "Grab Page" button is a practical addition: it pulls the current page's text content into the first textarea, so you can quickly compare the live page against a clipboard paste without leaving the browser.
 
-### popup.js
+popup.js
 
 ```javascript
 document.getElementById('compareBtn').addEventListener('click', async () => {
@@ -149,7 +149,7 @@ document.getElementById('grabBtn').addEventListener('click', async () => {
 });
 ```
 
-### Content Script for Display
+Content Script for Display
 
 ```javascript
 // content.js
@@ -297,9 +297,9 @@ function createComparisonView(source1, source2) {
 
 This implementation adds synchronized scrolling between the two panels, a stats bar showing how many lines changed, and keyboard support to close with Escape. The diff algorithm is a built-in LCS implementation that avoids any external dependency, making the extension self-contained and simpler to distribute.
 
-## Integrating a Full Diff Library for Production Use
+Integrating a Full Diff Library for Production Use
 
-The built-in LCS diff above handles line-level changes well. For character-level highlighting within changed lines — showing exactly which words changed — integrate the `diff-match-patch` library from Google. It is small (about 35KB), has no dependencies, and works well in extensions.
+The built-in LCS diff above handles line-level changes well. For character-level highlighting within changed lines. showing exactly which words changed. integrate the `diff-match-patch` library from Google. It is small (about 35KB), has no dependencies, and works well in extensions.
 
 Add the library file to your project, then update the content script:
 
@@ -332,15 +332,15 @@ function buildInlineSpans(diffs, side) {
 
 Word-level diffs are particularly useful for documentation and prose comparison, where the meaning of a sentence can change with a single word swap that a line-level diff would only show as a full line replacement.
 
-## Using Existing Comparison Extensions
+Using Existing Comparison Extensions
 
 Several established extensions handle side-by-side comparison without requiring custom development:
 
-**Diff Checker** offers a straightforward interface where you paste or load content from URLs. It highlights additions in green and deletions in red, with options for character-level or word-level comparison. The free tier handles most use cases.
+Diff Checker offers a straightforward interface where you paste or load content from URLs. It highlights additions in green and deletions in red, with options for character-level or word-level comparison. The free tier handles most use cases.
 
-**Text Compare** works well for comparing selected text from any webpage. Right-click to select "Compare Selected Text" and it opens a comparison view with your selections. It is fast for ad-hoc comparisons.
+Text Compare works well for comparing selected text from any webpage. Right-click to select "Compare Selected Text" and it opens a comparison view with your selections. It is fast for ad-hoc comparisons.
 
-**CodeMirror-based extensions** provide syntax highlighting during comparison, which is essential when reviewing code changes. These preserve formatting and indentation, making them suitable for developers comparing JavaScript, JSON, or HTML.
+CodeMirror-based extensions provide syntax highlighting during comparison, which is essential when reviewing code changes. These preserve formatting and indentation, making them suitable for developers comparing JavaScript, JSON, or HTML.
 
 | Extension | Best For | Diff Level | Offline |
 |---|---|---|---|
@@ -351,11 +351,11 @@ Several established extensions handle side-by-side comparison without requiring 
 
 Building your own gives you full control over what the tool does: you can add integrations, store history, or pre-process text (stripping HTML tags, normalizing whitespace) before diffing.
 
-## Performance Considerations
+Performance Considerations
 
 When comparing large sources, keep these issues in mind:
 
-**Web Workers for heavy diffs.** The LCS algorithm is O(m*n) in the worst case. Comparing two 10,000-line files will block the main thread for hundreds of milliseconds. Move the diff computation into a Web Worker:
+Web Workers for heavy diffs. The LCS algorithm is O(m*n) in the worst case. Comparing two 10,000-line files will block the main thread for hundreds of milliseconds. Move the diff computation into a Web Worker:
 
 ```javascript
 // diff-worker.js
@@ -376,59 +376,59 @@ function runDiffAsync(source1, source2, callback) {
 }
 ```
 
-**Virtual scrolling.** For documents with thousands of lines, rendering all diff rows at once strains the browser. A virtual scroller renders only the visible rows, reducing DOM node count dramatically. Libraries like `virtual-scroller` or a simple manual implementation based on `IntersectionObserver` work well here.
+Virtual scrolling. For documents with thousands of lines, rendering all diff rows at once strains the browser. A virtual scroller renders only the visible rows, reducing DOM node count dramatically. Libraries like `virtual-scroller` or a simple manual implementation based on `IntersectionObserver` work well here.
 
-**Debounce on live input.** If you add a live comparison mode (updating as the user types), debounce the diff computation by 300-500ms so you are not running it on every keystroke.
+Debounce on live input. If you add a live comparison mode (updating as the user types), debounce the diff computation by 300-500ms so you are not running it on every keystroke.
 
-**Lazy-load the diff library.** If your extension is used for other tasks too, only load the diff library when the comparison view is actually opened. Use dynamic `import()` or inject the script tag at that point.
+Lazy-load the diff library. If your extension is used for other tasks too, only load the diff library when the comparison view is actually opened. Use dynamic `import()` or inject the script tag at that point.
 
-## Security and Privacy
+Security and Privacy
 
 When building comparison extensions that handle sensitive content, the default should be client-side-only processing:
 
 - Do not send either source to an external server. All diffing should happen in the extension context.
 - If you cache previous comparisons using `chrome.storage.local`, be explicit in your privacy policy about what is stored and for how long.
 - Avoid requesting permissions beyond `activeTab` and `scripting`. Both are sufficient for the extension described here.
-- Be cautious with `all_urls` in content script matches — it grants the extension access to every page the user visits. If you only need the comparison view to appear on demand, inject the content script dynamically instead of registering it globally.
+- Be cautious with `all_urls` in content script matches. it grants the extension access to every page the user visits. If you only need the comparison view to appear on demand, inject the content script dynamically instead of registering it globally.
 
 For enterprise teams building internal comparison tools, consider packaging the extension as an unpacked extension loaded via Chrome's developer mode rather than publishing it to the store. This keeps sensitive internal tooling off public channels.
 
-## Common Mistakes and How to Avoid Them
+Common Mistakes and How to Avoid Them
 
-**Forgetting to declare content scripts.** If `content.js` is not listed in the manifest or injected dynamically, `chrome.tabs.sendMessage` will fail silently. Always check the console in the target tab for errors.
+Forgetting to declare content scripts. If `content.js` is not listed in the manifest or injected dynamically, `chrome.tabs.sendMessage` will fail silently. Always check the console in the target tab for errors.
 
-**Assuming same-origin access.** Content scripts run in the tab's context but cannot directly read `window` variables set by the page. Use `chrome.scripting.executeScript` with `world: 'MAIN'` if you need access to the page's JavaScript scope.
+Assuming same-origin access. Content scripts run in the tab's context but cannot directly read `window` variables set by the page. Use `chrome.scripting.executeScript` with `world: 'MAIN'` if you need access to the page's JavaScript scope.
 
-**Not handling large inputs gracefully.** Pasting a 50,000-word document into a textarea is slow. Add an input size warning and consider limiting the popup textarea to a reasonable character count, directing users to a full-page options UI for large comparisons.
+Not handling large inputs gracefully. Pasting a 50,000-word document into a textarea is slow. Add an input size warning and consider limiting the popup textarea to a reasonable character count, directing users to a full-page options UI for large comparisons.
 
-**Breaking keyboard accessibility.** When your comparison view covers the whole page, the user's focus context is lost. Set `tabindex="0"` on the container and call `container.focus()` after mounting it, so keyboard users can navigate the view immediately.
+Breaking keyboard accessibility. When your comparison view covers the whole page, the user's focus context is lost. Set `tabindex="0"` on the container and call `container.focus()` after mounting it, so keyboard users can navigate the view immediately.
 
-## Extending the Extension Further
+Extending the Extension Further
 
 Once the core comparison view works, several additions make it substantially more useful:
 
-**URL comparison mode.** Add a second input mode where users enter two URLs. The extension fetches both (using the background service worker to avoid CORS restrictions) and compares their text content. Useful for checking live vs. staging pages.
+URL comparison mode. Add a second input mode where users enter two URLs. The extension fetches both (using the background service worker to avoid CORS restrictions) and compares their text content. Useful for checking live vs. staging pages.
 
-**History panel.** Store the last five comparisons in `chrome.storage.local` and show them in the popup. Developers frequently need to re-check the same pair of sources after making a change.
+History panel. Store the last five comparisons in `chrome.storage.local` and show them in the popup. Developers frequently need to re-check the same pair of sources after making a change.
 
-**Export as unified diff.** Add a "Copy Diff" button that formats the result as a standard unified diff patch, suitable for pasting into a bug report or code review comment.
+Export as unified diff. Add a "Copy Diff" button that formats the result as a standard unified diff patch, suitable for pasting into a bug report or code review comment.
 
-**Regex filter.** Let users filter the diff view to show only lines matching a pattern. This is invaluable when comparing large configuration files where you only care about a subset of keys.
+Regex filter. Let users filter the diff view to show only lines matching a pattern. This is invaluable when comparing large configuration files where you only care about a subset of keys.
 
-## Conclusion
+Conclusion
 
-Chrome extensions provide a flexible way to compare sources side by side without leaving your browser. Whether you build a custom solution or use existing tools, the key is choosing an approach that fits your specific workflow. The implementation in this guide — with synchronized scrolling, LCS-based line diffs, and a clean stats bar — is a solid foundation for daily use.
+Chrome extensions provide a flexible way to compare sources side by side without leaving your browser. Whether you build a custom solution or use existing tools, the key is choosing an approach that fits your specific workflow. The implementation in this guide. with synchronized scrolling, LCS-based line diffs, and a clean stats bar. is a solid foundation for daily use.
 
 For simple text comparisons, the basic implementation works immediately. For code review or detailed analysis, integrate `diff-match-patch` for word-level highlighting and add a Web Worker to keep the UI responsive on large inputs. For teams with privacy requirements, keep everything client-side and avoid publishing to the Web Store when internal distribution is sufficient.
 
 Start with the manifest and content script above, verify the diff output in the browser console, and extend from there based on what your actual workflow demands.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Code Comparisons Hub](/comparisons-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

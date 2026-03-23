@@ -13,19 +13,19 @@ permalink: /claude-code-segfault-core-dump-analysis-workflow-guide/
 
 # Claude Code Segfault Core Dump Analysis Workflow Guide
 
-Segmentation faults remain one of the most frustrating runtime errors in native applications. When your program crashes with a segfault, you get minimal information—just a signal and an exit code. The actual debugging work begins with the core dump, and this is where Claude Code becomes invaluable.
+Segmentation faults remain one of the most frustrating runtime errors in native applications. When your program crashes with a segfault, you get minimal information, just a signal and an exit code. The actual debugging work begins with the core dump, and this is where Claude Code becomes invaluable.
 
 This guide walks you through a practical workflow for analyzing segfault core dumps using Claude Code and command-line tools. You'll learn to configure core dump capture, extract meaningful stack traces, and identify root causes efficiently.
 
-## Configuring Core Dump Capture
+Configuring Core Dump Capture
 
 Before you can analyze anything, you need core dumps to exist. On Linux systems, the `ulimit` command controls core dump generation. Add this to your shell profile for persistent configuration:
 
 ```bash
-# Enable unlimited core dump size
+Enable unlimited core dump size
 ulimit -c unlimited
 
-# Set the core dump pattern (includes PID and timestamp)
+Set the core dump pattern (includes PID and timestamp)
 echo 'core.%e.%p' | sudo tee /proc/sys/kernel/core_pattern
 ```
 
@@ -37,17 +37,17 @@ sudo launchctl limit core 0 0
 
 Once configured, run your crashing program. The core dump file appears in the working directory or the location specified by your core pattern.
 
-## Generating a Minimal Reproducible Case
+Generating a Minimal Reproducible Case
 
-When debugging segfaults, having a reproducible case speeds up analysis dramatically. If you're developing with the [**tdd** skill](/best-claude-skills-for-developers-2026/), create a test case that triggers the crash:
+When debugging segfaults, having a reproducible case speeds up analysis dramatically. If you're developing with the [tdd skill](/best-claude-skills-for-developers-2026/), create a test case that triggers the crash:
 
 ```
 /tdd write a C test case that reproduces a null pointer dereference in a linked list traversal
 ```
 
-The **tdd** skill generates focused test cases that isolate the problematic code path. This approach works well when combined with the **frontend-design** skill for building test harnesses that display crash states visually.
+The tdd skill generates focused test cases that isolate the problematic code path. This approach works well when combined with the frontend-design skill for building test harnesses that display crash states visually.
 
-## Loading and Analyzing Core Dumps with GDB
+Loading and Analyzing Core Dumps with GDB
 
 The GNU Debugger (GDB) remains the primary tool for core dump analysis. Start a debugging session with your core file:
 
@@ -58,16 +58,16 @@ gdb ./your-program core. program.pid
 Once loaded, these commands extract the essential information:
 
 ```gdb
-# Show the crash location
+Show the crash location
 bt
 
-# Examine the instruction that caused the crash
+Examine the instruction that caused the crash
 x/i $pc
 
-# Print local variables
+Print local variables
 info locals
 
-# Examine the faulting memory address
+Examine the faulting memory address
 x/10x $rsp - 0x20
 ```
 
@@ -79,15 +79,15 @@ The stack shows: main -> process_list -> delete_node -> free()
 The faulting address was 0x0 (null pointer).
 ```
 
-## Automating Analysis with Claude Code Skills
+Automating Analysis with Claude Code Skills
 
-Several Claude skills accelerate core dump analysis workflows. The **pdf** skill helps when you need to document findings in reports:
+Several Claude skills accelerate core dump analysis workflows. The pdf skill helps when you need to document findings in reports:
 
 ```
 /pdf create a crash analysis report with the stack trace and memory dump details
 ```
 
-The [**supermemory** skill](/claude-skills-token-optimization-reduce-api-costs/) stores patterns from your previous debugging sessions. If you've encountered similar crashes before, query your memory:
+The [supermemory skill](/claude-skills-token-optimization-reduce-api-costs/) stores patterns from your previous debugging sessions. If you've encountered similar crashes before, query your memory:
 
 ```
 /supermemory Have you seen segfaults in linked list delete operations before?
@@ -95,24 +95,24 @@ The [**supermemory** skill](/claude-skills-token-optimization-reduce-api-costs/)
 
 This is particularly useful when debugging recurring issues across a codebase.
 
-## Interpreting Common Segfault Patterns
+Interpreting Common Segfault Patterns
 
 Most segfaults fall into recognizable categories. Here's how to identify each:
 
-**Null pointer dereference**: The crash address is near zero. Check the register that held the pointer:
+Null pointer dereference: The crash address is near zero. Check the register that held the pointer:
 
 ```gdb
 print (char*)$rdi
 ```
 
-**Use-after-free**: The address points to freed memory. Use GDB's heap examination:
+Use-after-free: The address points to freed memory. Use GDB's heap examination:
 
 ```gdb
 heap
 info breakpoints
 ```
 
-**Stack overflow**: The crash occurs near stack boundaries. Check the stack pointer:
+Stack overflow: The crash occurs near stack boundaries. Check the stack pointer:
 
 ```gdb
 print $rsp
@@ -126,14 +126,14 @@ The backtrace shows use-after-free in the string handler.
 What memory management patterns in C typically cause this?
 ```
 
-## Practical Example: Debugging a C++ Application
+Practical Example: Debugging a C++ Application
 
 Consider a C++ application crashing during file processing. Here's the complete workflow:
 
-1. **Capture the core**: Configure ulimit, run the program, reproduce the crash
-2. **Load in GDB**: `gdb ./processor core.processor.12345`
-3. **Extract information**: Run `bt full` to get complete context
-4. **Analyze with Claude**: Paste the output and ask for root cause analysis
+1. Capture the core: Configure ulimit, run the program, reproduce the crash
+2. Load in GDB: `gdb ./processor core.processor.12345`
+3. Extract information: Run `bt full` to get complete context
+4. Analyze with Claude: Paste the output and ask for root cause analysis
 
 A typical backtrace might reveal:
 
@@ -146,21 +146,21 @@ A typical backtrace might reveal:
 
 Claude Code identifies that the crash occurred in `handle_file()`, likely due to an unhandled error condition. The abort call suggests an assertion failure or failed invariant check.
 
-## Using AddressSanitizer and Valgrind Before GDB
+Using AddressSanitizer and Valgrind Before GDB
 
 When GDB backtrace analysis leaves you unsure of the root cause, compile-time sanitizers provide a deeper level of detail. AddressSanitizer (ASan) instruments your binary to detect memory errors at runtime before they manifest as opaque segfaults.
 
 Enable ASan during development builds:
 
 ```bash
-# GCC / Clang
+GCC / Clang
 gcc -fsanitize=address -fsanitize=undefined -g -O1 -fno-omit-frame-pointer -o myapp src/*.c
 
-# CMake projects
+CMake projects
 cmake -DCMAKE_C_FLAGS="-fsanitize=address -g" -DCMAKE_BUILD_TYPE=Debug ..
 ```
 
-Run the instrumented binary and ASan reports the precise location and cause of memory errors immediately on access—not at the eventual crash site:
+Run the instrumented binary and ASan reports the precise location and cause of memory errors immediately on access, not at the eventual crash site:
 
 ```
 ==12345==ERROR: AddressSanitizer: heap-use-after-free on address 0x60b000000010
@@ -180,18 +180,18 @@ valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./myapp
 
 Use both tools in tandem: ASan for speed during rapid development cycles, Valgrind when you need comprehensive memory reporting before releases.
 
-## Scripting Reproducible Analysis Sessions
+Scripting Reproducible Analysis Sessions
 
 Repeating the same GDB commands across multiple debugging sessions wastes time. Create a GDB initialization script that automates the most common analysis steps:
 
 ```bash
-# debug_session.gdb
+debug_session.gdb
 set pagination off
 set print pretty on
 set print array on
 
-# Load the core dump (pass as argument)
-# gdb ./program -x debug_session.gdb core.12345
+Load the core dump (pass as argument)
+gdb ./program -x debug_session.gdb core.12345
 
 bt full
 info registers
@@ -199,7 +199,7 @@ info locals
 x/20x $rsp
 thread apply all bt
 
-# Save output to file
+Save output to file
 set logging enabled on
 set logging file analysis_output.txt
 bt full
@@ -214,24 +214,24 @@ gdb ./myapp core.myapp.12345 -batch -x debug_session.gdb 2>&1 | tee crash_report
 
 Feed the resulting `crash_report.txt` to Claude Code for analysis. This workflow works particularly well in CI/CD environments where automated crash reporting is required. Ask Claude Code to classify the crash type, estimate root cause probability, and suggest remediation steps based on the full diagnostic output.
 
-## Reading Register State and Memory Maps
+Reading Register State and Memory Maps
 
 When GDB backtrace output alone doesn't explain the crash, reading CPU register state and the process memory map provides the additional context needed to reconstruct what happened.
 
 After loading a core dump, inspect all registers with `info registers`. The key registers for crash diagnosis are:
 
-- `rip` (instruction pointer) — where the crash occurred
-- `rsp` (stack pointer) — current stack position
-- `rbp` (frame pointer) — current stack frame base
-- `rdi`, `rsi` — first two function arguments (x86-64 ABI)
+- `rip` (instruction pointer). where the crash occurred
+- `rsp` (stack pointer). current stack position
+- `rbp` (frame pointer). current stack frame base
+- `rdi`, `rsi`. first two function arguments (x86-64 ABI)
 
-If `rip` points to an unmapped address, the program jumped to a garbage location—often indicating stack corruption or a function pointer overwrite. Cross-reference the address against the memory map:
+If `rip` points to an unmapped address, the program jumped to a garbage location, often indicating stack corruption or a function pointer overwrite. Cross-reference the address against the memory map:
 
 ```gdb
-# Show memory map (virtual memory regions)
+Show memory map (virtual memory regions)
 info proc mappings
 
-# Or read /proc/self/maps directly
+Or read /proc/self/maps directly
 shell cat /proc/<pid>/maps
 ```
 
@@ -253,36 +253,36 @@ The crash occurred at instruction pointer 0x0. The previous frame
 in bt shows: free() called from cleanup_resources() in main.c:87
 ```
 
-Claude Code can reason about the sequence of events leading to the null instruction pointer—in this case likely a function pointer that was freed along with its containing struct before being called.
+Claude Code can reason about the sequence of events leading to the null instruction pointer, in this case likely a function pointer that was freed along with its containing struct before being called.
 
-## Preventing Future Crashes
+Preventing Future Crashes
 
 After identifying the root cause, implement fixes systematically:
 
 - Add null checks before pointer dereferences
-- Use smart pointers in C++ code (the **tdd** skill can generate tests for these)
+- Use smart pointers in C++ code (the tdd skill can generate tests for these)
 - Implement bounds checking on array access
 - Enable AddressSanitizer during development: `gcc -fsanitize=address -g`
 
-The **xlsx** skill helps track crash history and patterns across versions:
+The xlsx skill helps track crash history and patterns across versions:
 
 ```
 /xlsx create a bug tracking spreadsheet with columns for crash type, root cause, and fix date
 ```
 
-## Conclusion
+Conclusion
 
 Core dump analysis doesn't have to be a tedious manual process. By combining GDB's raw analysis power with Claude Code's contextual understanding, you can identify root causes faster and document your findings more thoroughly.
 
-The key is having core dumps configured before crashes happen, extracting actionable information through targeted GDB commands, and using Claude skills like **supermemory** for pattern recognition across debugging sessions.
+The key is having core dumps configured before crashes happen, extracting actionable information through targeted GDB commands, and using Claude skills like supermemory for pattern recognition across debugging sessions.
 
 When segfaults occur, this workflow transforms a cryptic crash into a solvable problem.
 ---
 
-## Related Reading
+Related Reading
 
-- [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/) — Core developer skills for debugging and crash analysis workflows
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — Skills activate during debugging sessions to provide relevant context
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — Manage token usage during intensive core dump analysis sessions
+- [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/). Core developer skills for debugging and crash analysis workflows
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). Skills activate during debugging sessions to provide relevant context
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Manage token usage during intensive core dump analysis sessions
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

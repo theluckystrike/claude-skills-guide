@@ -13,22 +13,22 @@ score: 7
 ---
 
 
-# Claude Code Emotion CSS-in-JS Guide
+Claude Code Emotion CSS-in-JS Guide
 
 Emotion has become one of the most popular CSS-in-JS libraries for React applications, offering both performance and developer experience benefits. This guide shows you how to use Claude Code to work with Emotion effectively, from basic component styling to advanced theming patterns.
 
-## Why Use Emotion with React
+Why Use Emotion with React
 
 Emotion provides two primary approaches for styling: the `css` prop with `@emotion/react` and the `styled` API with `@emotion/styled`. Both approaches offer critical advantages over traditional CSS:
 
-- **Scoped styles** that don't leak across components
-- **Dynamic theming** based on React context
-- **Dead code elimination** through extraction (in production builds)
-- **Server-side rendering** support with consistent hydration
+- Scoped styles that don't leak across components
+- Dynamic theming based on React context
+- Dead code elimination through extraction (in production builds)
+- Server-side rendering support with consistent hydration
 
 Claude Code can help you set up Emotion quickly and generate idiomatic patterns that follow current best practices.
 
-## Setting Up Emotion in Your Project
+Setting Up Emotion in Your Project
 
 Before styling, install the required packages:
 
@@ -44,7 +44,7 @@ npm install -D @types/@emotion/react @types/@emotion/styled
 
 When configuring your build system, ensure the Babel or SWC plugin for Emotion is present. For Next.js projects, this typically means adding `@emotion/babel-plugin` to your configuration.
 
-## Basic Component Styling with the css Prop
+Basic Component Styling with the css Prop
 
 The simplest approach uses the `css` prop from `@emotion/react`. This works directly on any element:
 
@@ -76,9 +76,9 @@ function SubmitButton({ disabled }) {
 }
 ```
 
-The css prop accepts a template literal that compiles to optimized CSS. Notice how you can use JavaScript expressions inside the template for dynamic values—this is where Emotion shines for conditional styling.
+The css prop accepts a template literal that compiles to optimized CSS. Notice how you can use JavaScript expressions inside the template for dynamic values, this is where Emotion shines for conditional styling.
 
-## Using the Styled API
+Using the Styled API
 
 For more complex components, the `styled` API provides a cleaner separation:
 
@@ -116,7 +116,7 @@ const PrimaryButton = styled.button`
 
 The styled API creates reusable components that encapsulate their styling. This makes your components more readable and maintains a clear boundary between structure and presentation.
 
-## Dynamic Props and Variants
+Dynamic Props and Variants
 
 One of Emotion's powerful features is passing props to styled components:
 
@@ -154,7 +154,7 @@ const StatusBadge = styled.span`
 
 This pattern eliminates the need for utility classes or conditional rendering of different components based on props.
 
-## Theming with Emotion
+Theming with Emotion
 
 Emotion integrates smoothly with React's theming. First, wrap your application with the ThemeProvider:
 
@@ -210,9 +210,9 @@ const Heading = styled.h1`
 `;
 ```
 
-This approach centralizes design tokens and makes redesigns straightforward—you update the theme object and all components reflect the changes.
+This approach centralizes design tokens and makes redesigns straightforward, you update the theme object and all components reflect the changes.
 
-## Global Styles
+Global Styles
 
 For base styles, reset CSS, or font imports, use global styles:
 
@@ -251,21 +251,21 @@ function GlobalStyles() {
 
 Place this component once at the root of your application.
 
-## Combining with Claude Skills
+Combining with Claude Skills
 
-When building Emotion-based components, several Claude skills accelerate your workflow. The **frontend-design** skill helps generate design-system-compliant tokens and patterns. For testing styled components, the **tdd** skill guides you through writing component tests that verify both functionality and visual behavior.
+When building Emotion-based components, several Claude skills accelerate your workflow. The frontend-design skill helps generate design-system-compliant tokens and patterns. For testing styled components, the tdd skill guides you through writing component tests that verify both functionality and visual behavior.
 
-If you need to generate visual assets that complement your Emotion styling, the **canvas-design** skill creates matching graphics and icons. For documentation, the **pdf** skill produces styled PDF exports of your component library.
+If you need to generate visual assets that complement your Emotion styling, the canvas-design skill creates matching graphics and icons. For documentation, the pdf skill produces styled PDF exports of your component library.
 
-The **supermemory** skill proves invaluable when maintaining design systems—it remembers previous design decisions and helps maintain consistency across your codebase.
+The supermemory skill proves invaluable when maintaining design systems, it remembers previous design decisions and helps maintain consistency across your codebase.
 
-## Performance Considerations
+Performance Considerations
 
 Emotion excels in production because it extracts static styles into a separate CSS file during the build process. However, keep these points in mind:
 
-- Avoid creating styled components inside render loops—define them outside the component
+- Avoid creating styled components inside render loops, define them outside the component
 - Use the `css` prop for one-off styles to reduce component count
-- Leverage the `shouldForwardProp` option to control which props pass to the DOM element
+- Use the `shouldForwardProp` option to control which props pass to the DOM element
 
 ```jsx
 const InteractiveBox = styled.div`
@@ -282,15 +282,15 @@ const CustomComponent = styled(Box, {
 
 This prevents styled components from receiving internal props they don't need, reducing unnecessary re-renders.
 
-## Conclusion
+Conclusion
 
 Emotion provides a flexible, performant approach to styling React applications. Whether you prefer the `css` prop for simplicity or the styled API for component encapsulation, Claude Code helps you implement these patterns effectively. Start with basic styling, progressively adopt theming and global styles, and optimize for production as your application grows.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

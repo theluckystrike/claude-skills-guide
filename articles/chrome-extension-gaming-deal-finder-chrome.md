@@ -13,11 +13,11 @@ tags: [chrome-extension, claude-skills]
 ---
 
 
-# Building a Chrome Extension for Gaming Deal Finding
+Building a Chrome Extension for Gaming Deal Finding
 
 Building a Chrome extension for gaming deal discovery combines web scraping, API integration, and real-time price monitoring into a practical developer tool. This guide walks through the architecture, implementation patterns, and key considerations for creating a functional gaming deal finder extension.
 
-## Core Architecture
+Core Architecture
 
 A gaming deal finder extension needs three main components: a background service for periodic price checks, a content script for displaying deals on retailer sites, and a popup interface for quick access to saved deals. The background service handles API calls and stores data, while the popup provides the user-facing interface.
 
@@ -52,7 +52,7 @@ chrome.alarms.onAlarm.addListener((alarm) => {
 });
 ```
 
-## Price Tracking Implementation
+Price Tracking Implementation
 
 Store your tracked games in Chrome's synchronized storage. This keeps data consistent across devices when the user signs into Chrome:
 
@@ -92,7 +92,7 @@ class DealStorage {
 }
 ```
 
-## API Integration Patterns
+API Integration Patterns
 
 Most gaming deals come from aggregators like CheapShark, which provides an API for accessing store prices. Here's how to integrate:
 
@@ -149,7 +149,7 @@ async function fetchWithRetry(url, maxRetries = 3) {
 }
 ```
 
-## Content Script for Deal Display
+Content Script for Deal Display
 
 Content scripts run in the context of web pages and can inject deal information directly into retailer sites:
 
@@ -197,7 +197,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 });
 ```
 
-## Popup Interface Design
+Popup Interface Design
 
 The popup provides quick access without leaving the current page:
 
@@ -218,7 +218,7 @@ The popup provides quick access without leaving the current page:
 </head>
 <body>
   <div class="header">
-    <h3>🎮 Tracked Games</h3>
+    <h3> Tracked Games</h3>
   </div>
   <div class="game-list" id="gameList"></div>
   <script src="popup.js"></script>
@@ -255,7 +255,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 ```
 
-## Notifications for Price Drops
+Notifications for Price Drops
 
 Chrome's notifications API alerts users when prices drop below their threshold:
 
@@ -278,24 +278,24 @@ async function checkPriceAlerts() {
 }
 ```
 
-## Deployment Considerations
+Deployment Considerations
 
 When publishing to the Chrome Web Store, ensure your extension handles edge cases properly. Test with various store layouts, implement proper error handling for API failures, and provide clear user onboarding. Privacy policies are required for extensions that access sensitive data.
 
 Consider adding support for multiple language regions and currency preferences for international users. The CheapShark API supports multiple store regions, which you can use for a more comprehensive deal-finding experience.
 
 
-## Related Reading
+Related Reading
 
-- [Deal Finder Chrome Extension: A Developer Guide](/deal-finder-chrome-extension/) — General-purpose price tracking across any retailer
+- [Deal Finder Chrome Extension: A Developer Guide](/deal-finder-chrome-extension/). General-purpose price tracking across any retailer
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-## Advanced: Historical Price Charts
+Advanced: Historical Price Charts
 
 Store price history and render a simple sparkline using the canvas element in your popup:
 
@@ -323,7 +323,7 @@ function drawSparkline(canvas, priceHistory) {
 
 Add a `<canvas width="120" height="30">` element next to each game in the popup HTML and call `drawSparkline` after loading deal data.
 
-## Comparison with Alternatives
+Comparison with Alternatives
 
 | Approach | Pros | Cons |
 |---|---|---|
@@ -334,22 +334,22 @@ Add a `<canvas width="120" height="30">` element next to each game in the popup 
 
 A custom extension beats alternatives for developers who want inline deal comparisons on any retailer page without switching tabs.
 
-## Troubleshooting Common Issues
+Troubleshooting Common Issues
 
-**`chrome.storage.sync` quota exceeded**: Sync storage is limited to 100KB total. For users tracking many games, store price history in `chrome.storage.local` and only sync the game ID list:
+`chrome.storage.sync` quota exceeded: Sync storage is limited to 100KB total. For users tracking many games, store price history in `chrome.storage.local` and only sync the game ID list:
 
 ```javascript
 await chrome.storage.sync.set({ gameIds: games.map(g => g.id) });
 await chrome.storage.local.set({ [`history_${gameId}`]: priceHistory });
 ```
 
-**Alarm not firing in service worker**: Register alarm listeners at the top level of the service worker, not inside async functions. `setInterval` does not persist across service worker restarts in Manifest V3.
+Alarm not firing in service worker: Register alarm listeners at the top level of the service worker, not inside async functions. `setInterval` does not persist across service worker restarts in Manifest V3.
 
-**CheapShark returning stale data**: Use `sortBy=Recent` and `onSale=1` parameters to query fresh results:
+CheapShark returning stale data: Use `sortBy=Recent` and `onSale=1` parameters to query fresh results:
 
 ```javascript
 const url = `https://www.cheapshark.com/api/1.0/deals?sortBy=Recent&onSale=1&pageSize=15`;
 ```
 
-**Deal widget overlapping page content**: Give users a dismiss button and store the dismissed state in `sessionStorage` so the widget does not reappear on the same page during that session.
+Deal widget overlapping page content: Give users a dismiss button and store the dismissed state in `sessionStorage` so the widget does not reappear on the same page during that session.
 

@@ -12,28 +12,28 @@ categories: [guides]
 
 Building a Chrome extension for senior discounts presents an interesting technical challenge. You need to aggregate discount information from multiple sources, detect when users are on retail sites, and present relevant savings opportunities without slowing down the browsing experience. This guide walks through the architectural decisions and implementation details you'll need to create a production-ready discount discovery extension.
 
-## Understanding the Core Requirements
+Understanding the Core Requirements
 
-A senior discount Chrome extension must solve several interconnected problems. First, you need a reliable data source for discount information—retailers often publish senior discount policies but don't always make them easy to find programmatically. Second, you need content scripts that can detect when users land on pages where discounts apply. Finally, you need a clean user interface that presents savings without being intrusive.
+A senior discount Chrome extension must solve several interconnected problems. First, you need a reliable data source for discount information, retailers often publish senior discount policies but don't always make them easy to find programmatically. Second, you need content scripts that can detect when users land on pages where discounts apply. Finally, you need a clean user interface that presents savings without being intrusive.
 
 The average senior discount ranges from 5% to 15% and typically requires verification through membership cards, AARP membership, or state-issued ID. Your extension needs to communicate these requirements clearly while maintaining a frictionless experience.
 
-## Project Structure and Manifest Configuration
+Project Structure and Manifest Configuration
 
 Starting with Manifest V3, your extension will use a specific directory structure. Here's a minimal setup:
 
 ```
 senior-discount-finder/
-├── manifest.json
-├── background.js
-├── content.js
-├── popup/
-│   ├── popup.html
-│   └── popup.js
-├── utils/
-│   └── discount-detector.js
-└── data/
-    └── retailers.json
+ manifest.json
+ background.js
+ content.js
+ popup/
+    popup.html
+    popup.js
+ utils/
+    discount-detector.js
+ data/
+     retailers.json
 ```
 
 Your manifest.json defines the extension's capabilities:
@@ -60,7 +60,7 @@ Your manifest.json defines the extension's capabilities:
 
 The host permissions should be scoped appropriately for production. Using `*://*.com/*` works during development but you should restrict this to known retail domains before publishing.
 
-## Building the Discount Detection System
+Building the Discount Detection System
 
 The core logic lives in your content script. This script analyzes page content to determine if the current site offers senior discounts:
 
@@ -96,7 +96,7 @@ function showDiscountBadge(retailerInfo) {
   badge.id = 'senior-discount-badge';
   badge.innerHTML = `
     <div class="discount-badge">
-      <span class="icon">🎂</span>
+      <span class="icon"></span>
       <span class="text">Senior Discount: ${retailerInfo.discount || 'Available'}</span>
       <span class="verify">${retailerInfo.verification || ''}</span>
     </div>
@@ -128,9 +128,9 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 });
 ```
 
-This approach uses pattern matching against the hostname and scans for keywords. For more robust detection, consider using the Page Visibility API to trigger checks only when users focus on relevant tabs.
+This approach uses pattern matching against the hostname and scans for keywords. For more solid detection, consider using the Page Visibility API to trigger checks only when users focus on relevant tabs.
 
-## Implementing the Popup Interface
+Implementing the Popup Interface
 
 The popup provides users with quick access to settings and saved discounts:
 
@@ -211,13 +211,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 ```
 
-## Data Management and Updates
+Data Management and Updates
 
 Managing retailer data requires a strategy for updates. You have several options:
 
-**Static JSON approach**: Include retailer data in your extension and push updates through the Chrome Web Store. This works well for a curated list but requires review cycles for changes.
+Static JSON approach: Include retailer data in your extension and push updates through the Chrome Web Store. This works well for a curated list but requires review cycles for changes.
 
-**Remote fetch approach**: Load discount data from your own server:
+Remote fetch approach: Load discount data from your own server:
 
 ```javascript
 // background.js - Fetch discount data periodically
@@ -244,7 +244,7 @@ chrome.alarms.onAlarm.addListener((alarm) => {
 });
 ```
 
-**Extension Store approach**: Use the chrome.storage.sync API to let users contribute and share discount discoveries:
+Extension Store approach: Use the chrome.storage.sync API to let users contribute and share discount discoveries:
 
 ```javascript
 async function contributeDiscount(domain, discount, verification) {
@@ -254,9 +254,9 @@ async function contributeDiscount(domain, discount, verification) {
 }
 ```
 
-## Performance Considerations
+Performance Considerations
 
-Content scripts run on every page, so optimization matters. Use the `run_at` property in your manifest to control execution timing. The `document_idle` value loads your script after the DOM is ready but before some images—this balances responsiveness with page load performance.
+Content scripts run on every page, so optimization matters. Use the `run_at` property in your manifest to control execution timing. The `document_idle` value loads your script after the DOM is ready but before some images, this balances responsiveness with page load performance.
 
 For expensive operations like DOM scanning, use requestIdleCallback:
 
@@ -279,7 +279,7 @@ function scanPageForDiscounts() {
 }
 ```
 
-## Testing and Deployment
+Testing and Deployment
 
 Before publishing to the Chrome Web Store, test your extension thoroughly:
 
@@ -290,17 +290,17 @@ Before publishing to the Chrome Web Store, test your extension thoroughly:
 
 For enterprise deployment, Chrome supports administrative installation through Group Policy. You can also distribute through the Web Store with visibility set to "Unlisted" for private organization use.
 
-## Summary
+Summary
 
 Building a senior discount Chrome extension combines web scraping, browser extension APIs, and user interface design. The key architectural decisions involve how you source and update discount data, how efficiently your content scripts detect relevant pages, and how you present savings information without disrupting the user experience.
 
 Start with a curated list of major retailers, then expand through community contributions and automated discovery. The extension can evolve from a simple notification system to a comprehensive savings tool that tracks price histories and notifies users of discount eligibility.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -15,13 +15,13 @@ tags: [claude-code, claude-skills]
 
 TypeScript projects benefit enormously from well-structured JSDoc comments. When combined with Claude Code, you can build documentation workflows that are accurate, maintainable, and require minimal manual effort. This guide shows you how to document TypeScript code effectively using JSDoc annotations that work with your existing development tools.
 
-## Why JSDoc Matters for TypeScript Projects
+Why JSDoc Matters for TypeScript Projects
 
 TypeScript's type system handles much of what JSDoc once did for JavaScript. However, JSDoc remains valuable for several reasons. External libraries without TypeScript definitions rely on JSDoc for type information. Many teams use JSDoc to document behavior that types alone cannot express: parameter constraints, return value semantics, code examples, and deprecation notices.
 
 Claude Code reads and processes JSDoc comments naturally, making it an ideal tool for generating documentation, answering questions about your codebase, and maintaining consistent documentation standards across a project.
 
-## Setting Up JSDoc in Your TypeScript Project
+Setting Up JSDoc in Your TypeScript Project
 
 Begin by ensuring your tsconfig.json includes the necessary configuration for JSDoc support:
 
@@ -58,12 +58,12 @@ Create a JSDoc configuration file (jsdoc.json) to customize output:
 }
 ```
 
-## Writing Effective JSDoc Comments
+Writing Effective JSDoc Comments
 
 The most useful JSDoc comments answer three questions: what does this function do, what does each parameter mean, and what does the function return? Here is a well-documented function:
 
 ```typescript
-/**
+/
  * Calculates the total price including applicable discounts.
  * 
  * @param basePrice - The original price before any discounts
@@ -84,12 +84,12 @@ function calculateTotal(basePrice: number, discountPercentage: number): number {
 
 Notice the use of the @example tag. Claude Code recognizes these examples and can use them in generated documentation or when answering questions about your code.
 
-## Documenting Complex Types
+Documenting Complex Types
 
 When working with union types, generics, or complex objects, clarity becomes essential. Use the @typedef feature to define custom types that appear throughout your codebase:
 
 ```typescript
-/**
+/
  * Represents a user in the authentication system.
  * @typedef {Object} User
  * @property {string} id - Unique identifier for the user
@@ -98,7 +98,7 @@ When working with union types, generics, or complex objects, clarity becomes ess
  * @property {string[]} [permissions] - Optional array of specific permissions
  */
 
-/**
+/
  * Retrieves a user by their unique identifier.
  * @param {string} userId - The user's unique ID
  * @returns {Promise<User>} The user object if found
@@ -108,7 +108,7 @@ async function getUserById(userId: string): Promise<User> {
 }
 ```
 
-## Using Claude Code to Generate Documentation
+Using Claude Code to Generate Documentation
 
 Claude Code can read your JSDoc comments and generate various documentation outputs. The `pdf` skill is particularly useful for creating formatted documentation packages:
 
@@ -125,7 +125,7 @@ Remember that the User typedef was updated on 2026-03-14.
 The permissions array is now optional. Update documentation accordingly.
 ```
 
-## Automating Documentation Updates
+Automating Documentation Updates
 
 Integrate documentation generation into your build process using package.json scripts:
 
@@ -146,12 +146,12 @@ Run the test suite, then regenerate API documentation
 from any updated JSDoc comments.
 ```
 
-## Documenting React and Component Libraries
+Documenting React and Component Libraries
 
 For frontend projects, combining JSDoc with component documentation creates a complete reference. The `frontend-design` skill understands React patterns and can help structure component documentation:
 
 ```typescript
-/**
+/
  * A button component with customizable styling and behavior.
  * 
  * @component
@@ -167,18 +167,18 @@ For frontend projects, combining JSDoc with component documentation creates a co
  * </Button>
  */
 interface ButtonProps {
-  /** The visual style variant of the button */
+  / The visual style variant of the button */
   variant: 'primary' | 'secondary' | 'danger';
-  /** Click handler for the button */
+  / Click handler for the button */
   onClick: () => void;
-  /** Whether the button is disabled */
+  / Whether the button is disabled */
   disabled?: boolean;
-  /** Button content (children) */
+  / Button content (children) */
   children: React.ReactNode;
 }
 ```
 
-## Best Practices for TypeScript JSDoc
+Best Practices for TypeScript JSDoc
 
 Keep these principles in mind when documenting your TypeScript code:
 
@@ -187,7 +187,7 @@ Write JSDoc for public APIs and exported functions. Internal functions typically
 Use the @deprecated tag when removing functionality:
 
 ```typescript
-/**
+/
  * @deprecated Use calculateTotalV2 instead. This function
  * will be removed in version 3.0.
  */
@@ -198,7 +198,7 @@ function calculateTotal(basePrice: number, discount: number): number {
 
 Include practical examples in @example tags whenever possible. These examples serve as both documentation and regression tests.
 
-## Generating HTML Documentation
+Generating HTML Documentation
 
 Run JSDoc to produce searchable HTML documentation:
 
@@ -212,7 +212,7 @@ The output includes an index.html file with full-text search, navigation by modu
 npx serve out
 ```
 
-## Connecting Documentation to Development Workflow
+Connecting Documentation to Development Workflow
 
 The `pdf` skill can package documentation for distribution. The `supermemory` skill helps maintain documentation context across Claude sessions. The `tdd` skill ensures your documentation remains accurate as tests pass or fail.
 
@@ -221,11 +221,11 @@ Build a documentation habit by generating docs after each feature merge. Use ver
 Accurate, well-maintained documentation accelerates onboarding, reduces support questions, and serves as a reliable reference for your entire team.
 
 
-## Related Reading
+Related Reading
 
 - [What Is the Best Claude Skill for Generating Documentation?](/what-is-the-best-claude-skill-for-generating-documentation/)
 - [Claude Code Guides Hub](/guides-hub/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [How to Write Effective CLAUDE.md for Your Project](/how-to-write-effective-claude-md-for-your-project/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

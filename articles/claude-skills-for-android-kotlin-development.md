@@ -13,11 +13,11 @@ permalink: /claude-skills-for-android-kotlin-development/
 
 # Claude Skills for Android and Kotlin Development
 
-Android development involves a lot of boilerplate. Jetpack Compose components, Room DAO interfaces, Retrofit service definitions, Hilt modules, test setup — these are well-structured, predictable patterns that Claude handles well. A few targeted Claude Code skills can eliminate the repetitive scaffolding work and let you focus on product logic.
+Android development involves a lot of boilerplate. Jetpack Compose components, Room DAO interfaces, Retrofit service definitions, Hilt modules, test setup. these are well-structured, predictable patterns that Claude handles well. A few targeted Claude Code skills can eliminate the repetitive scaffolding work and let you focus on product logic.
 
 This guide covers five practical skill areas for Android/Kotlin development, with working examples and guidance on what to include in your skill `.md` files.
 
-## Jetpack Compose UI Generation
+Jetpack Compose UI Generation
 
 Compose's declarative model is a good fit for Claude. The component structure is predictable, the theming system is well-defined, and the patterns for state hoisting are consistent. A `compose` skill can generate complete, functional screen components from a description.
 
@@ -31,7 +31,7 @@ When generating Compose UI:
   MyScreen() as the stateful wrapper that provides ViewModel
 - Use string resources (stringResource) not hardcoded strings
 - Include a @Preview for each composable
-- Use Modifier.fillMaxWidth() and proper padding — never hardcode pixel dimensions
+- Use Modifier.fillMaxWidth() and proper padding. never hardcode pixel dimensions
 ```
 
 Example of what a well-formed skill output looks like for a product detail screen:
@@ -104,7 +104,7 @@ private fun ProductDetailContentPreview() {
 }
 ```
 
-## Room Database Setup
+Room Database Setup
 
 Room has a specific structure: entities, DAOs, the database class, and type converters. Claude generates all of these correctly when the skill gives it a schema description. The key is telling the skill what to produce and in what order.
 
@@ -179,7 +179,7 @@ abstract class AppDatabase : RoomDatabase() {
 }
 ```
 
-## Retrofit API Clients
+Retrofit API Clients
 
 Retrofit service interfaces are highly formulaic. A Claude skill that understands your API conventions can generate a complete service interface, data classes, and a Hilt module in one pass.
 
@@ -233,7 +233,7 @@ class UserRepository @Inject constructor(
 }
 ```
 
-## Testing with Espresso and Robolectric
+Testing with Espresso and Robolectric
 
 UI testing in Android is where developers lose the most time. Claude can generate test scaffolding reliably when you constrain the output format.
 
@@ -306,9 +306,9 @@ class ProductViewModelTest {
 
 The skill instruction for testing should include: "Always use a Fake implementation of repositories rather than Mockito mocks in ViewModel tests. Use runTest and advanceUntilIdle for coroutine testing."
 
-## Gradle Build Optimization
+Gradle Build Optimization
 
-Gradle build times are a recurring pain point. Claude can audit your `build.gradle.kts` files and apply specific optimizations. A skill for this is more useful than a general prompt because it can be scoped to your project's setup.
+Gradle build times are a recurring problem. Claude can audit your `build.gradle.kts` files and apply specific optimizations. A skill for this is more useful than a general prompt because it can be scoped to your project's setup.
 
 Skill instruction:
 
@@ -324,20 +324,20 @@ When optimizing Gradle builds:
 A properly optimized `gradle.properties`:
 
 ```properties
-# Build performance
+Build performance
 org.gradle.jvmargs=-Xmx4g -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8
 org.gradle.parallel=true
 org.gradle.caching=true
 org.gradle.configuration-cache=true
 org.gradle.configuration-cache.problems=warn
 
-# Android specific
+Android specific
 android.useAndroidX=true
 android.enableJetifier=false
 android.nonTransitiveRClass=true
 android.nonFinalResIds=true
 
-# Kotlin
+Kotlin
 kotlin.incremental=true
 kotlin.incremental.useClasspathSnapshot=true
 kapt.incremental.apt=true
@@ -346,7 +346,7 @@ kapt.incremental.apt=true
 KSP migration from kapt for Room and Hilt cuts incremental build time significantly:
 
 ```kotlin
-// build.gradle.kts — replace kapt with ksp
+// build.gradle.kts. replace kapt with ksp
 plugins {
     id("com.google.devtools.ksp") version "2.0.0-1.0.22"
 }
@@ -363,16 +363,16 @@ dependencies {
 }
 ```
 
-## Writing the Skill Files
+Writing the Skill Files
 
 Each of these areas benefits from a dedicated skill `.md` file. Keep each skill focused: a `compose` skill for UI, a `room` skill for database setup, a `retrofit` skill for API clients. Mixing them into a single "android" skill produces lower-quality output because the instructions compete.
 
 Your skill files should live in `.claude/skills/` and include: the specific file naming conventions for your project, your package structure, which Hilt scopes to use, and your target API level constraints. Claude performs significantly better when it knows `minSdk=26` than when it has to guess.
 
-## Related Reading
+Related Reading
 
 - [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/)
 - [Full Stack Web App with Claude Skills Step by Step](/full-stack-web-app-with-claude-skills-step-by-step/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

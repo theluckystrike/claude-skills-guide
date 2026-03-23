@@ -14,17 +14,17 @@ permalink: /claude-code-lighthouse-score-improvement-automation-guide/
 {% raw %}
 
 
-# Claude Code Lighthouse Score Improvement Automation Guide
+Claude Code Lighthouse Score Improvement Automation Guide
 
 [Performance optimization is a continuous process, not a one-time fix](/best-claude-code-skills-to-install-first-2026/) Automating Lighthouse score improvements with Claude Code skills transforms reactive debugging into proactive performance management. This guide covers practical workflows for identifying bottlenecks, applying fixes automatically, and maintaining high scores over time.
 
-## Understanding the Lighthouse Automation Challenge
+Understanding the Lighthouse Automation Challenge
 
 [Lighthouse measures five core categories: Performance, Accessibility, Best Practices, SEO, and Progressive Web App compliance](/best-claude-code-skills-to-install-first-2026/) Each category requires specific attention, and manually checking these metrics after every code change quickly becomes tedious. The solution lies in automating both the detection and remediation of performance issues.
 
-Claude Code skills provide the building blocks for this automation. The [**frontend-design** skill](/best-claude-code-skills-for-frontend-development/) offers initial site audits, while the **tdd** skill helps ensure performance tests pass before deployment. For persistent memory across sessions, the [**supermemory** skill](/claude-skills-token-optimization-reduce-api-costs/) stores historical scores and tracks trends.
+Claude Code skills provide the building blocks for this automation. The [frontend-design skill](/best-claude-code-skills-for-frontend-development/) offers initial site audits, while the tdd skill helps ensure performance tests pass before deployment. For persistent memory across sessions, the [supermemory skill](/claude-skills-token-optimization-reduce-api-costs/) stores historical scores and tracks trends.
 
-## Setting Up Automated Lighthouse Audits
+Setting Up Automated Lighthouse Audits
 
 The first step involves creating a reliable audit pipeline. Rather than running Lighthouse manually, integrate it directly into your development workflow. A simple Node.js script handles the core functionality:
 
@@ -59,11 +59,11 @@ async function runAudit(url, outputPath) {
 
 This script runs audits programmatically and stores results for comparison. Schedule it to run after deployments or integrate it into pull request checks.
 
-## Automating Performance Fixes
+Automating Performance Fixes
 
 Once you have baseline scores, focus on the highest-impact improvements. Common automation targets include image optimization, JavaScript bundle reduction, and critical CSS extraction.
 
-### Image Optimization Pipeline
+Image Optimization Pipeline
 
 Large images often cause the biggest performance hits. Automate image processing with a build-step integration:
 
@@ -73,7 +73,7 @@ import sharp from 'sharp';
 import glob from 'fast-glob';
 
 async function optimizeImages() {
-  const images = await glob('src/**/*.{png,jpg,jpeg,webp}');
+  const images = await glob('src//*.{png,jpg,jpeg,webp}');
   
   for (const image of images) {
     const output = image.replace(/src\//, 'dist/').replace(/\.(png|jpg|jpeg)$/, '.webp');
@@ -89,9 +89,9 @@ async function optimizeImages() {
 
 This converts images to WebP format and resizes them appropriately. Run this as part of your build process to ensure all images meet modern standards.
 
-### JavaScript Bundle Analysis
+JavaScript Bundle Analysis
 
-The **frontend-design** skill excels at analyzing bundle composition. Create a workflow that identifies large dependencies and suggests alternatives:
+The frontend-design skill excels at analyzing bundle composition. Create a workflow that identifies large dependencies and suggests alternatives:
 
 ```javascript
 // analyze-bundle.js
@@ -111,7 +111,7 @@ export async function analyzeBundle(bundlePath) {
 
 This reveals exactly which modules contribute to bundle size, enabling targeted optimization efforts.
 
-## Integrating with Continuous Integration
+Integrating with Continuous Integration
 
 Automating Lighthouse scores means integrating checks into your CI pipeline. GitHub Actions provides a straightforward implementation:
 
@@ -140,7 +140,7 @@ jobs:
 
 Set thresholds in your configuration to fail builds when scores drop below acceptable levels. This prevents performance regressions from reaching production.
 
-### Lighthouse CI Configuration File
+Lighthouse CI Configuration File
 
 Install `@lhci/cli` and create a `lighthouserc.js` with metric-specific assertions and resource budgets:
 
@@ -180,7 +180,7 @@ module.exports = {
 
 These budgets catch issues before they become severe. When a JavaScript bundle exceeds 170KB or third-party scripts load too slowly, your build fails.
 
-### Local Server CI Pattern
+Local Server CI Pattern
 
 For testing against a locally built server rather than a live URL, start the server in the background:
 
@@ -197,7 +197,7 @@ For testing against a locally built server rather than a live URL, start the ser
     LHCI_TOKEN: ${{ secrets.LHCI_TOKEN }}
 ```
 
-### Custom Claude Skill for Lighthouse CI
+Custom Claude Skill for Lighthouse CI
 
 Create a dedicated skill that gives Claude context for interpreting Lighthouse CI failures:
 
@@ -216,9 +216,9 @@ You are a performance optimization expert. When provided with Lighthouse CI resu
 
 When a CI build fails, pass the results directly: "Claude, the Lighthouse CI build failed with a 0.7 performance score. The first-contentful-paint is 3.2s and largest-contentful-paint is 4.8s. Can you analyze this and suggest fixes?"
 
-## Tracking Performance Over Time
+Tracking Performance Over Time
 
-The **supermemory** skill proves invaluable for historical tracking. Store scores in a time-series format:
+The supermemory skill proves invaluable for historical tracking. Store scores in a time-series format:
 
 ```javascript
 // track-scores.js
@@ -243,9 +243,9 @@ async function trackScore(category, score) {
 
 Over time, this data reveals patterns: certain code changes consistently impact performance, or specific pages require ongoing attention.
 
-## Accessibility Automation
+Accessibility Automation
 
-The **frontend-design** skill includes accessibility auditing capabilities. Automate remediation by catching issues early:
+The frontend-design skill includes accessibility auditing capabilities. Automate remediation by catching issues early:
 
 ```javascript
 // accessibility-check.js
@@ -268,9 +268,9 @@ async function checkAccessibility(url) {
 
 This runs axe-core audits against any page, identifying accessibility violations that impact both user experience and SEO scores.
 
-## Best Practices and SEO Checks
+Best Practices and SEO Checks
 
-Beyond performance, Lighthouse evaluates best practices and SEO. Automate these checks alongside performance metrics. The **pdf** skill helps generate reports for stakeholders who need visual documentation of improvements.
+Beyond performance, Lighthouse evaluates best practices and SEO. Automate these checks alongside performance metrics. The pdf skill helps generate reports for stakeholders who need visual documentation of improvements.
 
 A comprehensive workflow processes all categories:
 
@@ -295,30 +295,30 @@ async function fullAudit() {
 }
 ```
 
-## Maintaining High Scores
+Maintaining High Scores
 
 Automation solves the initial optimization problem, but maintenance requires ongoing attention. Implement these practices:
 
-**Set score thresholds** — Define minimum acceptable scores (typically 90+) and fail builds that fall below them.
+Set score thresholds. Define minimum acceptable scores (typically 90+) and fail builds that fall below them.
 
-**Monitor trends** — Use the **supermemory** skill to track scores over time and alert on downward trends before they become critical.
+Monitor trends. Use the supermemory skill to track scores over time and alert on downward trends before they become critical.
 
-**Automate remediation** — Some fixes lend themselves to automation (image optimization, minification), while others require human review (content quality, complex accessibility issues).
+Automate remediation. Some fixes lend themselves to automation (image optimization, minification), while others require human review (content quality, complex accessibility issues).
 
-**Test in production-like environments** — Staging environments should mirror production to ensure accurate Lighthouse results.
+Test in production-like environments. Staging environments should mirror production to ensure accurate Lighthouse results.
 
-## Conclusion
+Conclusion
 
-Automating Lighthouse score improvement with Claude Code skills transforms performance from a manual, sporadic task into a systematic process. The **frontend-design**, **tdd**, **supermemory**, and **pdf** skills work together to audit, test, track, and report on performance metrics.
+Automating Lighthouse score improvement with Claude Code skills transforms performance from a manual, sporadic task into a systematic process. The frontend-design, tdd, supermemory, and pdf skills work together to audit, test, track, and report on performance metrics.
 
 Start with automated audits, then layer in optimization scripts for the highest-impact fixes. Integrate everything into your CI pipeline to catch regressions before they reach production. With proper automation, maintaining Lighthouse scores of 90+ becomes achievable without dedicated performance teams.
 ---
 
-## Related Reading
+Related Reading
 
-- [Best Claude Skills for Frontend and UI Development](/best-claude-code-skills-for-frontend-development/) — Frontend skills for performance optimization and building high-scoring production UIs
-- [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/) — The tdd and pdf skills power automated performance testing and reporting workflows
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — Keep automated Lighthouse audit sessions economical
+- [Best Claude Skills for Frontend and UI Development](/best-claude-code-skills-for-frontend-development/). Frontend skills for performance optimization and building high-scoring production UIs
+- [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/). The tdd and pdf skills power automated performance testing and reporting workflows
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Keep automated Lighthouse audit sessions economical
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

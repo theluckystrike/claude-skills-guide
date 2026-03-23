@@ -12,22 +12,22 @@ reviewed: true
 ---
 
 {% raw %}
-# Claude Code for Claude Issue Triage Workflow Tutorial Guide
+Claude Code for Claude Issue Triage Workflow Tutorial Guide
 
 Issue triage is one of the most time-consuming tasks in software development. Every day, teams receive bug reports, feature requests, and support tickets that need to be categorized, prioritized, and routed to the right people. While Claude Code excels at writing code and explaining concepts, it can also serve as the backbone of an intelligent issue triage system. This guide walks you through building a complete issue triage workflow using Claude Code skills.
 
-## Why Automate Issue Triage with Claude Code?
+Why Automate Issue Triage with Claude Code?
 
 Manual issue triage consumes hours each week. Developers switch context to read through new issues, categorize them by type, assign severity levels, and determine who should handle each one. Claude Code can automate much of this process by:
 
-- **Reading and analyzing** issue content using file and web fetch tools
-- **Classifying issues** based on keywords, templates, and patterns
-- **Routing issues** to appropriate repositories, labels, or team members
-- **Generating responses** to common issue types
+- Reading and analyzing issue content using file and web fetch tools
+- Classifying issues based on keywords, templates, and patterns
+- Routing issues to appropriate repositories, labels, or team members
+- Generating responses to common issue types
 
 The key advantage is that Claude Code operates within your existing workflow. It can interact with GitHub's API, read from your issue tracker, and make decisions based on criteria you define.
 
-## Setting Up Your Issue Triage Skill
+Setting Up Your Issue Triage Skill
 
 The foundation of your triage system is a Claude Code skill that analyzes incoming issues. Create a new skill file called `issue-trier.md` in your skills directory:
 
@@ -40,39 +40,39 @@ tools: [Read, Write, Bash, WebFetch]
 
 You are an expert issue triage assistant. Your role is to analyze incoming issues, classify them, and prepare them for assignment to the appropriate team member.
 
-## Classification Criteria
+Classification Criteria
 
 Use these guidelines to categorize issues:
 
-**By Type:**
+By Type:
 - bug: Something isn't working as expected
 - feature: Request for new functionality
 - documentation: Improvements to docs
 - question: User needs help or clarification
 
-**By Severity:**
+By Severity:
 - critical: Data loss, security vulnerability, complete breakage
 - high: Major feature broken, workaround exists
 - medium: Feature partially working, minor issues
 - low: Cosmetic, enhancement, minor inconvenience
 
-## Output Format
+Output Format
 
 For each issue, output your analysis in this format:
 
 ```
-## Triage Result
-- **Type:** [bug|feature|documentation|question]
-- **Severity:** [critical|high|medium|low]
-- **Suggested Assignee:** [team-member-or-team]
-- **Recommended Labels:** [comma-separated labels]
-- **Summary:** [2-3 sentence summary]
+Triage Result
+- Type: [bug|feature|documentation|question]
+- Severity: [critical|high|medium|low]
+- Suggested Assignee: [team-member-or-team]
+- Recommended Labels: [comma-separated labels]
+- [2-3 sentence summary]
 ```
 
 Always provide a confidence score (1-10) for your classification.
 ```
 
-## Integrating with GitHub Issues
+Integrating with GitHub Issues
 
 To make your triage skill functional, you need to connect it to your actual issue tracker. The most straightforward approach uses GitHub's CLI tool `gh` combined with Claude Code:
 
@@ -90,7 +90,7 @@ Create a helper script that fetches new issues and passes them to Claude for ana
 
 ```bash
 #!/bin/bash
-# fetch-issues.sh - Fetch un triaged issues for review
+fetch-issues.sh - Fetch un triaged issues for review
 
 REPO="${1:-owner/repo}"
 ISSUES=$(gh issue list --state open --label "needs-triage" --limit 10 --json number,title,body,author --jq '.[]')
@@ -105,16 +105,16 @@ echo "$ISSUES" | while read issue; do
 done
 ```
 
-## Building an Automated Triage Pipeline
+Building an Automated Triage Pipeline
 
 The real power of Claude Code for issue triage emerges when you chain multiple skills together into a pipeline. Here's a practical architecture:
 
-### Step 1: Issue Ingestion
+Step 1: Issue Ingestion
 
 When a new issue is created (triggered via webhook or scheduled job), Claude Code reads the issue content:
 
 ```python
-# ingestion.py
+ingestion.py
 import subprocess
 import json
 
@@ -126,12 +126,12 @@ def fetch_new_issue(issue_number, repo):
     return json.loads(result.stdout)
 ```
 
-### Step 2: Classification
+Step 2: Classification
 
 Pass the issue to your triage skill for analysis. The skill evaluates the content against your classification criteria and outputs its assessment:
 
 ```yaml
-# The actual prompt sent to Claude
+The actual prompt sent to Claude
 Analyze this GitHub issue and provide triage classification:
 
 Title: {issue_title}
@@ -141,24 +141,24 @@ Author: {issue_author}
 Provide your classification using the format defined in your skill.
 ```
 
-### Step 3: Action Execution
+Step 3: Action Execution
 
 Based on the classification, Claude Code can take automated actions:
 
 ```bash
-# Add labels based on classification
+Add labels based on classification
 gh issue edit {issue_number} --add-label "type:bug,severity:high"
 
-# Assign to team member
+Assign to team member
 gh issue edit {issue_number} --assignee developer-username
 
-# Add triage comment
+Add triage comment
 gh issue comment {issue_number} --body "Thank you for reporting! This issue has been triaged as a [severity] [type]. We'll look into it shortly."
 ```
 
-## Advanced Patterns for Issue Triage
+Advanced Patterns for Issue Triage
 
-### Using Claude Code with MCP Servers
+Using Claude Code with MCP Servers
 
 If your issue tracker supports the Model Context Protocol, you can create more sophisticated integrations. An MCP server for your issue tracker enables Claude Code to:
 
@@ -166,53 +166,53 @@ If your issue tracker supports the Model Context Protocol, you can create more s
 - Update issue metadata directly
 - Listen for new issue events in real-time
 
-### Handling Ambiguous Issues
+Handling Ambiguous Issues
 
 Not every issue is clear-cut. Your triage skill should flag uncertain classifications for human review:
 
 ```yaml
-## Confidence Threshold
+Confidence Threshold
 
 If your classification confidence is below 7/10, output:
 ```
-**Action Required:** Human review recommended
-**Reason:** [explain what makes this issue difficult to classify]
+Action Required: Human review recommended
+Reason: [explain what makes this issue difficult to classify]
 ```
 
 This prevents Claude from misclassifying edge cases while still automating the majority of issues.
 
-### Learning from Feedback
+Learning from Feedback
 
 Build a feedback loop into your triage system. When a human reassigns or changes labels, record that decision:
 
 ```bash
-# Log triage corrections for improvement
+Log triage corrections for improvement
 echo "$(date),$issue_number,$original_type,$corrected_type,$reason" >> triage-corrections.log
 ```
 
 Periodically review these corrections to refine your classification criteria.
 
-## Best Practices for Issue Triage Automation
+Best Practices for Issue Triage Automation
 
-1. **Start conservatively** - Begin with just labeling and commenting before attempting automatic assignment
-2. **Keep humans in the loop** - At minimum, have Claude suggest actions that humans approve
-3. **Monitor accuracy** - Track how often Claude's classifications are changed by humans
-4. **Iterate on prompts** - Treat your triage skill as a living document that improves over time
-5. **Handle edge cases** - Create specific guidance for common ambiguous patterns
+1. Start conservatively - Begin with just labeling and commenting before attempting automatic assignment
+2. Keep humans in the loop - At minimum, have Claude suggest actions that humans approve
+3. Monitor accuracy - Track how often Claude's classifications are changed by humans
+4. Iterate on prompts - Treat your triage skill as a living document that improves over time
+5. Handle edge cases - Create specific guidance for common ambiguous patterns
 
-## Conclusion
+Conclusion
 
 Claude Code transforms issue triage from a manual chore into an automated workflow that scales with your project. By combining carefully crafted skills with GitHub's CLI and API, you can automatically classify, label, and route issues while maintaining human oversight for complex cases. Start with simple label automation, then gradually expand to more sophisticated classification as your triage skill improves.
 
-The key is treating your triage system as a collaborative effort between Claude and your team—automating the routine while keeping humans available for nuanced decisions that require domain expertise or contextual judgment.
+The key is treating your triage system as a collaborative effort between Claude and your team, automating the routine while keeping humans available for nuanced decisions that require domain expertise or contextual judgment.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 ```
 {% endraw %}

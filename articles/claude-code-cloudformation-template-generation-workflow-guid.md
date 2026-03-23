@@ -17,7 +17,7 @@ permalink: /claude-code-cloudformation-template-generation-workflow-guid/
 
 [This guide walks through practical workflows for generating CloudFormation templates](/best-claude-code-skills-to-install-first-2026/), integrating with Claude skills, and building reusable patterns for your team.
 
-## Starting a CloudFormation Generation Session
+Starting a CloudFormation Generation Session
 
 Begin by invoking Claude Code with your infrastructure requirements. A clear, structured prompt yields better results than vague requests. Specify the AWS services, the architecture pattern, and any constraints you have.
 
@@ -31,20 +31,20 @@ Generate a CloudFormation template for an ECS Fargate service with:
 
 Claude parses this and generates a complete template with resources, parameters, mappings, and outputs. The quality depends on how precisely you communicate requirements. Include VPC CIDR ranges, instance types, desired capacity, and any tagging strategies your organization uses.
 
-## Configuring Claude Code for AWS Infrastructure
+Configuring Claude Code for AWS Infrastructure
 
 Before generating templates, configure Claude Code to understand your AWS environment and naming conventions. Create a `CLAUDE.md` file in your infrastructure project with your organizational standards:
 
 ```markdown
-# Infrastructure Project Context
+Infrastructure Project Context
 
-## AWS Standards
+AWS Standards
 - All resource names use PascalCase
 - Environment tags: Environment=dev|staging|prod
 - Cost center tagging required on all resources
 - Stack naming: {Project}-{Environment}-{Resource}
 
-## Common Patterns
+Common Patterns
 - Use VPC templates from /templates/vpc/
 - RDS instances always use provisioned IOPS
 - ALB always redirects HTTP to HTTPS
@@ -52,7 +52,7 @@ Before generating templates, configure Claude Code to understand your AWS enviro
 
 This context helps Claude Code generate templates that match your existing infrastructure patterns and naming conventions across all generated resources.
 
-## Working with Generated Templates
+Working with Generated Templates
 
 The first output rarely represents production-ready infrastructure. Treat generated templates as a starting point that you refine through iteration.
 
@@ -68,27 +68,27 @@ Claude modifies the template while maintaining valid CloudFormation syntax. This
 
 For larger templates, break generation into logical sections. Generate the VPC networking layer first, then the compute layer, then the data layer. This modular approach makes templates easier to review and maintain.
 
-## Integrating Claude Skills for CloudFormation Work
+Integrating Claude Skills for CloudFormation Work
 
 Several Claude skills enhance CloudFormation generation workflows. These specialized capabilities handle specific aspects of infrastructure automation.
 
-The **pdf** skill extracts existing CloudFormation templates from documentation or architecture decision records. If you have paper documentation describing your current infrastructure, load the PDF and ask Claude to convert the diagrams into template sections.
+The pdf skill extracts existing CloudFormation templates from documentation or architecture decision records. If you have paper documentation describing your current infrastructure, load the PDF and ask Claude to convert the diagrams into template sections.
 
 ```
 Use the pdf skill to read architecture-diagram.pdf and generate the 
 corresponding VPC and subnet resources for our CloudFormation template.
 ```
 
-The **tdd** skill applies [test-driven development principles](/claude-tdd-skill-test-driven-development-workflow/) to infrastructure. Define the expected behavior of your stack—health checks passing, scaling triggers firing, failover working—then generate templates that satisfy those test conditions.
+The tdd skill applies [test-driven development principles](/claude-tdd-skill-test-driven-development-workflow/) to infrastructure. Define the expected behavior of your stack, health checks passing, scaling triggers firing, failover working, then generate templates that satisfy those test conditions.
 
-The [**supermemory** skill](/claude-supermemory-skill-persistent-context-explained/) maintains context across sessions. Store your organization's standard VPC patterns, approved instance types, and common resource configurations. When generating new templates, reference these stored patterns to ensure consistency across projects.
+The [supermemory skill](/claude-supermemory-skill-persistent-context-explained/) maintains context across sessions. Store your organization's standard VPC patterns, approved instance types, and common resource configurations. When generating new templates, reference these stored patterns to ensure consistency across projects.
 
-## Practical Code Examples
+Practical Code Examples
 
 Here is a complete example of a prompt sequence for generating a production-ready ECS stack:
 
 ```yaml
-# Initial request
+Initial request
 AWSTemplateFormatVersion: '2010-09-09'
 Description: 'ECS Fargate with ALB and RDS'
 
@@ -146,7 +146,7 @@ protection for production.
 
 Each iteration produces valid CloudFormation syntax that builds on previous sections.
 
-## Validation and Deployment
+Validation and Deployment
 
 After generation, validate your template before deployment. Use the AWS CLI:
 
@@ -162,9 +162,9 @@ CloudFormation returned: "Value for property /Resources/ECSService/
 Properties/Cluster/Ref is invalid." Fix this in the template.
 ```
 
-For complex stacks, consider using the **frontend-design** skill to generate infrastructure diagrams from your templates. Visual representations help team reviews and documentation.
+For complex stacks, consider using the frontend-design skill to generate infrastructure diagrams from your templates. Visual representations help team reviews and documentation.
 
-## Generating IAM Roles and Policies
+Generating IAM Roles and Policies
 
 IAM resources require precise policy documents. Prompt Claude Code with the required permissions to generate least-privilege roles:
 
@@ -202,7 +202,7 @@ Resources:
 
 The generated policies specify exact actions and resource ARNs, following least-privilege principles.
 
-## Template Validation Script
+Template Validation Script
 
 Automate validation before deployment with a reusable script:
 
@@ -210,14 +210,14 @@ Automate validation before deployment with a reusable script:
 #!/bin/bash
 TEMPLATE_FILE=$1
 
-# Syntax check
+Syntax check
 python3 -c "import yaml; yaml.safe_load(open('$TEMPLATE_FILE'))"
 
-# Validate template
+Validate template
 aws cloudformation validate-template \
   --template-body file://$TEMPLATE_FILE
 
-# Preview changes without executing
+Preview changes without executing
 aws cloudformation deploy \
   --stack-name ${TEMPLATE_FILE%.*}-test \
   --template-file $TEMPLATE_FILE \
@@ -227,7 +227,7 @@ aws cloudformation deploy \
 
 Run periodic template audits by asking Claude to review all CloudFormation templates for deprecated resource types, missing tags for cost allocation, overly permissive security group rules, and missing logging configurations.
 
-## Building Reusable Patterns
+Building Reusable Patterns
 
 As you develop CloudFormation expertise, create prompt templates for common patterns. Store these in a [skills directory](/claude-skills-directory-where-to-find-skills/) or documentation system:
 
@@ -238,17 +238,17 @@ As you develop CloudFormation expertise, create prompt templates for common patt
 
 Each pattern becomes a starting point that you customize for specific projects. This approach reduces repetition and ensures consistent best practices across your infrastructure codebase.
 
-## Conclusion
+Conclusion
 
 Claude Code accelerates CloudFormation template development through conversational generation, iterative refinement, and integration with specialized skills. The workflow works best when you provide structured requirements, review outputs carefully, and build reusable patterns over time.
 
 Start with simple templates and progressively tackle more complex architectures. Combine CloudFormation generation with validation, testing, and documentation skills for a complete infrastructure-as-code pipeline.
 
-## Related Reading
+Related Reading
 
-- [Claude Code Skills for Terraform IaC: Complete Guide](/claude-code-skills-for-infrastructure-as-code-terraform/) — Apply the same iterative generation approach to Terraform modules and provider configurations.
-- [Claude Skills with GitHub Actions CI/CD Pipeline 2026](/claude-skills-with-github-actions-ci-cd-pipeline/) — Automate CloudFormation deployments by integrating Claude skills into your GitHub Actions pipeline.
-- [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/) — The full toolkit of DevOps skills for infrastructure work.
-- [Claude Skills Workflow Guide](/workflows-hub/) — See how CloudFormation generation fits into broader multi-skill automation pipelines.
+- [Claude Code Skills for Terraform IaC: Complete Guide](/claude-code-skills-for-infrastructure-as-code-terraform/). Apply the same iterative generation approach to Terraform modules and provider configurations.
+- [Claude Skills with GitHub Actions CI/CD Pipeline 2026](/claude-skills-with-github-actions-ci-cd-pipeline/). Automate CloudFormation deployments by integrating Claude skills into your GitHub Actions pipeline.
+- [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/). The full toolkit of DevOps skills for infrastructure work.
+- [Claude Skills Workflow Guide](/workflows-hub/). See how CloudFormation generation fits into broader multi-skill automation pipelines.
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -14,17 +14,17 @@ score: 7
 
 
 {% raw %}
-# Claude Code Backbone.js to Vue Migration Guide
+Claude Code Backbone.js to Vue Migration Guide
 
 Migrating a Backbone.js application to Vue represents one of the most common modernization journeys in frontend development. Backbone.js served as a lightweight MVC framework that dominated single-page applications for years, but Vue's reactive data binding and component-based architecture offer significant improvements in developer experience and application maintainability. This guide demonstrates how to use Claude Code skills to streamline your migration workflow, providing practical patterns for transforming Backbone models, views, and collections into their Vue equivalents.
 
-## Understanding the Migration Challenge
+Understanding the Migration Challenge
 
 Backbone.js applications typically organize code around Models, Views, Collections, and Routers. Each of these architectural pieces requires thoughtful translation to Vue's composition API or options API. The complexity arises not from conceptual differences but from the paradigm shift between imperative DOM manipulation and Vue's reactive data binding.
 
 Claude Code provides several skills that accelerate this transformation. The `read_file` and `write_file` tools allow systematic analysis and modification of your codebase, while `bash` enables running migration scripts and build commands. Understanding which skill to apply at each migration phase determines your overall efficiency.
 
-## Converting Backbone Models to Vue Reactive Data
+Converting Backbone Models to Vue Reactive Data
 
 Backbone models encapsulate data and business logic with getter/setter methods and change events. In Vue, you replace this pattern with reactive `ref` or `reactive` objects. Consider this Backbone model:
 
@@ -83,7 +83,7 @@ function useUser(initialData = {}) {
 
 This transformation maintains the same validation logic while gaining Vue's automatic reactivity. The computed property replaces the method call, and the validation function explicitly triggers rather than relying on Backbone's built-in validation.
 
-## Transforming Backbone Views to Vue Components
+Transforming Backbone Views to Vue Components
 
 Backbone views manipulate the DOM imperatively through jQuery selectors. Vue components replace this with declarative templates that automatically update when data changes. Here's a typical Backbone view pattern:
 
@@ -152,7 +152,7 @@ function selectUser(user) {
 
 This transformation dramatically reduces boilerplate code. The `v-for` directive handles iteration declaratively, event handlers bind directly to methods, and Vue manages the DOM updates automatically.
 
-## Migrating Collections to Vue Reactive Arrays
+Migrating Collections to Vue Reactive Arrays
 
 Backbone collections group models and provide utility methods like `fetch`, `filter`, and `sort`. Vue handles similar functionality through reactive arrays and computed properties. Your migration strategy should map collection methods to Vue equivalents:
 
@@ -186,7 +186,7 @@ const adminUsers = computed(() =>
 );
 ```
 
-## Leveraging Claude Code for Batch Migration
+Leveraging Claude Code for Batch Migration
 
 When migrating large applications, systematic analysis becomes crucial. Create a Claude Code skill that analyzes your Backbone codebase and generates a migration report:
 
@@ -200,9 +200,9 @@ function analyzeBackboneCodebase() {
 }
 ```
 
-This analysis enables incremental migration rather than dangerous big-bang rewrites. Prioritize leaf components—those without dependencies—first, then progressively migrate components that depend on them.
+This analysis enables incremental migration rather than dangerous big-bang rewrites. Prioritize leaf components, those without dependencies, first, then progressively migrate components that depend on them.
 
-## Routing Translation Strategies
+Routing Translation Strategies
 
 Backbone router translates URL changes to JavaScript function calls:
 
@@ -234,24 +234,24 @@ const routes = [
 ];
 ```
 
-## Practical Migration Workflow
+Practical Migration Workflow
 
 Execute your migration using this proven approach:
 
-1. **Audit your Backbone application** using Claude Code's file reading capabilities to map all models, views, collections, and routers
-2. **Create Vue component stubs** for each Backbone view, maintaining the same prop interface
-3. **Migrate models first** as they typically have no UI dependencies
-4. **Migrate views incrementally** testing each component in isolation
-5. **Implement routing last** once individual components function correctly
+1. Audit your Backbone application using Claude Code's file reading capabilities to map all models, views, collections, and routers
+2. Create Vue component stubs for each Backbone view, maintaining the same prop interface
+3. Migrate models first as they typically have no UI dependencies
+4. Migrate views incrementally testing each component in isolation
+5. Implement routing last once individual components function correctly
 
 The migration from Backbone.js to Vue represents moving from an era of manual DOM manipulation to reactive, component-based architecture. Claude Code skills accelerate this journey by automating repetitive transformations and enabling systematic analysis of your existing codebase. Start with isolated components, maintain backward compatibility during the transition, and progressively modernize your application one feature at a time.
 {% endraw %}
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

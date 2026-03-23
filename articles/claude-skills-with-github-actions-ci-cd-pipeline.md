@@ -14,11 +14,11 @@ permalink: /claude-skills-with-github-actions-ci-cd-pipeline/
 
 
 
-# Claude Skills with GitHub Actions CI/CD Pipeline
+Claude Skills with GitHub Actions CI/CD Pipeline
 
-[Integrating Claude Code with a GitHub Actions CI/CD pipeline](/claude-code-github-actions-workflow-matrix-strategy-guide/) gives development teams an automated assistant that participates directly in their build, test, and deployment workflows. This guide covers practical patterns for wiring Claude intelligence into your existing pipelines — from triggering AI-powered code review on pull requests to generating PDF reports from test results.
+[Integrating Claude Code with a GitHub Actions CI/CD pipeline](/claude-code-github-actions-workflow-matrix-strategy-guide/) gives development teams an automated assistant that participates directly in their build, test, and deployment workflows. This guide covers practical patterns for wiring Claude intelligence into your existing pipelines. from triggering AI-powered code review on pull requests to generating PDF reports from test results.
 
-## Why Combine Claude with GitHub Actions
+Why Combine Claude with GitHub Actions
 
 GitHub Actions handles orchestration. Claude handles intelligence. Together they let you run contextual, AI-powered steps at any point in your delivery pipeline without maintaining a separate AI service.
 
@@ -29,15 +29,15 @@ Common use cases include:
 - Accessibility and design checks on front-end PRs
 - Security analysis of infrastructure diffs before deployment
 
-## Prerequisites
+Prerequisites
 
 - A GitHub repository with Actions enabled
 - Claude API key (store as `ANTHROPIC_API_KEY` in repo secrets)
 - Node.js 20+ in your runner environment
 
-## Step 1: Store Your API Key
+Step 1: Store Your API Key
 
-In your GitHub repository, go to **Settings > Secrets and variables > Actions** and add:
+In your GitHub repository, go to Settings > Secrets and variables > Actions and add:
 
 ```
 ANTHROPIC_API_KEY=your_api_key_here
@@ -45,7 +45,7 @@ ANTHROPIC_API_KEY=your_api_key_here
 
 [Never hardcode credentials in your workflow files](/claude-code-permissions-model-security-guide-2026/).
 
-## Step 2: Call Claude via the Anthropic API
+Step 2: Call Claude via the Anthropic API
 
 The correct way to call Claude in CI is via the Anthropic API directly using `curl` or the Node.js SDK. Claude Code's interactive CLI (`claude`) is for interactive sessions, not headless CI automation.
 
@@ -85,7 +85,7 @@ async function main() {
 main().catch(err => { console.error(err); process.exit(1); });
 ```
 
-## Step 3: Create the Workflow File
+Step 3: Create the Workflow File
 
 Create `.github/workflows/claude-review.yml`:
 
@@ -141,7 +141,7 @@ jobs:
             });
 ```
 
-## Step 4: Add a Deployment Gate
+Step 4: Add a Deployment Gate
 
 Use Claude to validate infrastructure changes before deployment. Add this job after your test suite passes:
 
@@ -189,7 +189,7 @@ Use Claude to validate infrastructure changes before deployment. Add this job af
           fi
 ```
 
-## Step 5: Generate PDF Reports for Stakeholders
+Step 5: Generate PDF Reports for Stakeholders
 
 After a successful release, use the Anthropic API to generate a release summary, then convert it to PDF:
 
@@ -221,7 +221,7 @@ After a successful release, use the Anthropic API to generate a release summary,
           path: /tmp/release_summary.md
 ```
 
-## Caching Node Modules Between Runs
+Caching Node Modules Between Runs
 
 Cache the Anthropic SDK installation to reduce workflow time:
 
@@ -233,7 +233,7 @@ Cache the Anthropic SDK installation to reduce workflow time:
           key: ${{ runner.os }}-anthropic-sdk-v1
 ```
 
-## Handling Rate Limits
+Handling Rate Limits
 
 [Claude API calls in CI can hit rate limits](/claude-code-skill-timeout-error-how-to-increase-the-limit/) if many PRs open simultaneously. Implement retry logic in your Node.js scripts:
 
@@ -255,40 +255,40 @@ async function callClaudeWithRetry(params, maxRetries = 3) {
 }
 ```
 
-## Security Considerations
+Security Considerations
 
 - Always use `ANTHROPIC_API_KEY` from GitHub Secrets, never hardcoded
 - Set `permissions` on jobs to the minimum required
 - Review AI-generated comments before enabling auto-merge gates based on them
 - Use branch protection rules to require the `claude-review` job to pass before merging
 
-## Conclusion
+Conclusion
 
 Wiring Claude intelligence into GitHub Actions CI/CD [bridges the gap between automated testing](/integrations-hub/). The key is calling the Anthropic API directly via the SDK in Node.js scripts rather than attempting to use Claude Code's interactive CLI in headless environments. Start with the PR review workflow and expand to deployment gates once you trust the output quality.
 
 ---
 
-## Related Reading
+Related Reading
 
-- [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/) — Skills that integrate with CI/CD workflows
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Full developer skill stack
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — Keep CI/CD API costs under control
+- [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/). Skills that integrate with CI/CD workflows
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Full developer skill stack
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Keep CI/CD API costs under control
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-## Step-by-Step: Integrating Claude Skills into CI/CD
+Step-by-Step: Integrating Claude Skills into CI/CD
 
-1. **Add the Claude API key as a GitHub Actions secret**: navigate to Settings > Secrets and Variables > Actions and add `CLAUDE_API_KEY`.
-2. **Create a workflow trigger**: choose when Claude analysis runs — on every pull request, failed tests, or production deployments.
-3. **Fetch the diff**: use `git diff` between the PR base SHA and head SHA to get the exact changed lines.
-4. **Call the Claude API**: use a Python script in a `run` step to send the diff to Claude and write the response to a file.
-5. **Post results back to the PR**: use the GitHub CLI to post Claude's review as a PR comment with actionable file names and line numbers.
-6. **Gate deployments**: for sensitive changes, require Claude to return a "LGTM" signal before the deploy job runs.
+1. Add the Claude API key as a GitHub Actions secret: navigate to Settings > Secrets and Variables > Actions and add `CLAUDE_API_KEY`.
+2. Create a workflow trigger: choose when Claude analysis runs. on every pull request, failed tests, or production deployments.
+3. Fetch the diff: use `git diff` between the PR base SHA and head SHA to get the exact changed lines.
+4. Call the Claude API: use a Python script in a `run` step to send the diff to Claude and write the response to a file.
+5. Post results back to the PR: use the GitHub CLI to post Claude's review as a PR comment with actionable file names and line numbers.
+6. Gate deployments: for sensitive changes, require Claude to return a "LGTM" signal before the deploy job runs.
 
-## Example: Claude Review Script
+Claude Review Script
 
 ```python
-# scripts/claude_review.py
+scripts/claude_review.py
 import anthropic, sys
 
 diff = sys.argv[1] if len(sys.argv) > 1 else ""
@@ -310,7 +310,7 @@ with open("review.md", "w") as f:
     f.write(message.content[0].text)
 ```
 
-## CI/CD Integration Points
+CI/CD Integration Points
 
 | Integration point | What Claude analyzes | Value |
 |---|---|---|
@@ -320,16 +320,16 @@ with open("review.md", "w") as f:
 | Post-deploy verification | Health check results | Rollback recommendation |
 | Dependency updates | Changelog + breaking changes | Impact assessment |
 
-## Advanced: Automatic Test Generation
+Advanced: Automatic Test Generation
 
 When a PR adds new functions without tests, trigger Claude to generate the missing tests. Parse the diff to find new function signatures, ask Claude to write unit tests, and commit them back to the PR branch automatically.
 
-## Troubleshooting
+Troubleshooting
 
-**Workflow timing out on large diffs**: Only pass diffs from `src/` directories — not `dist/` or `node_modules/`. A 4,000-token diff is usually enough for meaningful feedback.
+Workflow timing out on large diffs: Only pass diffs from `src/` directories. not `dist/` or `node_modules/`. A 4,000-token diff is usually enough for meaningful feedback.
 
-**Review comments not appearing**: The workflow needs `pull-requests: write` in the `permissions` block. Organization policies may also need to allow write permissions for external contributors.
+Review comments not appearing: The workflow needs `pull-requests: write` in the `permissions` block. Organization policies may also need to allow write permissions for external contributors.
 
-**Inconsistent review quality**: Use a structured prompt template specifying what to look for: security vulnerabilities, missing error handling, type safety, and performance. Checklists produce more consistent results than open-ended prompts.
+Inconsistent review quality: Use a structured prompt template specifying what to look for: security vulnerabilities, missing error handling, type safety, and performance. Checklists produce more consistent results than open-ended prompts.
 
 {% endraw %}

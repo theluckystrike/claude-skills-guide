@@ -17,35 +17,35 @@ Markdown has become the de facto standard for technical writing, documentation, 
 
 This guide walks you through creating a functional markdown editor Chrome extension, covering the architecture, key implementation details, and code examples you can adapt for your own projects.
 
-## Understanding the Extension Architecture
+Understanding the Extension Architecture
 
-A Chrome extension markdown editor consists of several interconnected components that work together to provide a seamless writing experience. The core files include the manifest, popup HTML, content scripts, and background service workers. Each serves a specific purpose in delivering the editor functionality.
+A Chrome extension markdown editor consists of several interconnected components that work together to provide a smooth writing experience. The core files include the manifest, popup HTML, content scripts, and background service workers. Each serves a specific purpose in delivering the editor functionality.
 
-The manifest file defines the extension's capabilities and permissions. For a markdown editor, you need minimal permissions—primarily access to storage for saving drafts and the ability to open a dedicated page or tab for the full editor interface.
+The manifest file defines the extension's capabilities and permissions. For a markdown editor, you need minimal permissions, primarily access to storage for saving drafts and the ability to open a dedicated page or tab for the full editor interface.
 
-The extension operates in two modes: a quick-access popup for brief edits and a full-page editor for intensive writing sessions. The popup provides immediate access to a text area where you can type markdown and see a live preview, while the full page offers a more robust editing environment with additional features like file import and export.
+The extension operates in two modes: a quick-access popup for brief edits and a full-page editor for intensive writing sessions. The popup provides immediate access to a text area where you can type markdown and see a live preview, while the full page offers a more solid editing environment with additional features like file import and export.
 
-## Setting Up the Project Structure
+Setting Up the Project Structure
 
 Create a new directory for your extension project and organize it with the following structure:
 
 ```
 markdown-editor/
-├── manifest.json
-├── popup.html
-├── popup.js
-├── editor.html
-├── editor.js
-├── styles.css
-└── icons/
-    ├── icon16.png
-    ├── icon48.png
-    └── icon128.png
+ manifest.json
+ popup.html
+ popup.js
+ editor.html
+ editor.js
+ styles.css
+ icons/
+     icon16.png
+     icon48.png
+     icon128.png
 ```
 
 This structure separates the popup experience from the full editor page, allowing users to choose their preferred workflow.
 
-## The Manifest File
+The Manifest File
 
 The manifest defines how Chrome loads and interacts with your extension. Here is a manifest configured for a markdown editor:
 
@@ -72,7 +72,7 @@ The manifest defines how Chrome loads and interacts with your extension. Here is
 
 This manifest uses Manifest V3, the current standard for Chrome extensions. The storage permission enables saving your markdown drafts locally, so you never lose work unexpectedly.
 
-## Building the Popup Editor
+Building the Popup Editor
 
 The popup provides quick access to the editor without leaving your current tab. It contains a textarea for input and a preview area that renders the markdown in real time.
 
@@ -125,9 +125,9 @@ document.getElementById('save-draft').addEventListener('click', () => {
 });
 ```
 
-This code demonstrates the core functionality:实时markdown渲染和草稿保存。通过使用chrome.storage API，你的草稿会在浏览器中持久化存储。
+This code demonstrates the core functionality:markdownchrome.storage API
 
-## Creating the Full-Page Editor
+Creating the Full-Page Editor
 
 For extended writing sessions, a full-page editor provides more space and features. The editor.html file opens in a new tab when users click "Open Full Editor" from the popup.
 
@@ -155,7 +155,7 @@ For extended writing sessions, a full-page editor provides more space and featur
 
 The full editor uses a split-pane layout with the markdown input on one side and rendered HTML on the other. This mirrors the experience of popular desktop markdown editors.
 
-## Implementing Export Functionality
+Implementing Export Functionality
 
 A practical markdown editor needs export capabilities. The export functions convert your markdown to downloadable files:
 
@@ -185,7 +185,7 @@ function downloadFile(content, filename, type) {
 
 These export functions create blob URLs and trigger browser downloads, giving users their content in the format they need.
 
-## Styling the Editor
+Styling the Editor
 
 CSS transforms a basic textarea into a polished writing environment. Focus on readability and a distraction-free aesthetic:
 
@@ -239,23 +239,23 @@ code {
 
 This stylesheet creates a dark editor pane with syntax-appropriate colors and a light preview pane, mirroring the split-view approach found in desktop applications.
 
-## Testing and Loading Your Extension
+Testing and Loading Your Extension
 
 Before testing, ensure all files are in place. Open Chrome and navigate to `chrome://extensions/`. Enable Developer mode in the top right corner, then click "Load unpacked" and select your extension directory.
 
 The extension icon appears in your Chrome toolbar. Click it to open the popup editor, or click "Open Full Editor" for the complete experience. Any drafts you save persist across browser sessions.
 
-## Extending the Editor
+Extending the Editor
 
 Once the basic editor functions, consider adding features like syntax highlighting for code blocks, keyboard shortcuts for common formatting, integration with cloud storage services, or support for markdown extensions like tables and task lists. Each enhancement builds on the foundation established here.
 
-Building a Chrome extension markdown editor combines familiar web technologies with Chrome's unique APIs. The skills you develop—working with service workers, managing browser storage, and creating polished user interfaces—transfer directly to other extension projects and browser-based applications.
+Building a Chrome extension markdown editor combines familiar web technologies with Chrome's unique APIs. The skills you develop, working with service workers, managing browser storage, and creating polished user interfaces, transfer directly to other extension projects and browser-based applications.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

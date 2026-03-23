@@ -17,20 +17,20 @@ Competitive analysis is one of the most time-consuming tasks for developers and 
 
 Claude skills are Markdown files stored in `~/.claude/skills/` and invoked with `/skill-name` inside a Claude Code session. This guide walks through building an automated competitive analysis pipeline using skills that handle document processing, data extraction, memory management, and reporting.
 
-## The Core Skill Combination
+The Core Skill Combination
 
 A competitive analysis workflow requires several specialized skills working together:
 
-- **pdf** — Processes competitor documentation, whitepapers, and annual reports
-- **xlsx** — Manages competitive data spreadsheets and generates analysis structures
-- **supermemory** — Maintains an organized knowledge base of competitor information across sessions
-- **pptx** — Creates presentation-ready reports for stakeholder communication
+- pdf. Processes competitor documentation, whitepapers, and annual reports
+- xlsx. Manages competitive data spreadsheets and generates analysis structures
+- supermemory. Maintains an organized knowledge base of competitor information across sessions
+- pptx. Creates presentation-ready reports for stakeholder communication
 
-Each skill handles a specific stage of the workflow, and when chained together, they reduce manual effort significantly. The key insight is that no single skill does everything—the power comes from how they compose. You process raw documents with pdf, structure the extracted data with xlsx, persist key insights with supermemory, and communicate findings with pptx. Treat them as pipeline stages, not isolated tools.
+Each skill handles a specific stage of the workflow, and when chained together, they reduce manual effort significantly. The key insight is that no single skill does everything, the power comes from how they compose. You process raw documents with pdf, structure the extracted data with xlsx, persist key insights with supermemory, and communicate findings with pptx. Treat them as pipeline stages, not isolated tools.
 
-## Stage 1: Gathering and Processing Competitor Documents
+Stage 1: Gathering and Processing Competitor Documents
 
-Start by collecting publicly available competitor materials—pricing pages, feature comparison sheets, annual reports, and technical documentation. Store these as PDF files in a designated directory, then invoke the [pdf skill](/best-claude-skills-for-data-analysis/) to extract structured data:
+Start by collecting publicly available competitor materials, pricing pages, feature comparison sheets, annual reports, and technical documentation. Store these as PDF files in a designated directory, then invoke the [pdf skill](/best-claude-skills-for-data-analysis/) to extract structured data:
 
 ```
 /pdf
@@ -41,7 +41,7 @@ Claude will read the file and return organized content you can copy into your tr
 
 This approach scales to dozens of competitor documents. Work through them one at a time or batch them by pasting multiple documents in sequence.
 
-For more complex PDFs—like annual reports that mix financial tables, narrative text, and graphics—be explicit about what you want extracted:
+For more complex PDFs, like annual reports that mix financial tables, narrative text, and graphics, be explicit about what you want extracted:
 
 ```
 /pdf
@@ -55,23 +55,23 @@ Output each section separately with the page number where you found it
 
 Specificity matters here. A vague prompt like "summarize this PDF" returns a narrative summary. A structured extraction prompt returns data you can drop directly into a comparison matrix.
 
-### Building a Document Collection System
+Building a Document Collection System
 
 Before running analysis, organize your inputs. A flat directory works for small collections; for ongoing competitive tracking, use a date-stamped structure:
 
 ```bash
 mkdir -p ~/competitive-intel/{pdfs,snapshots,reports}
-# pdfs/acme-pricing-2026-03.pdf
-# pdfs/beta-annual-report-2025.pdf
-# snapshots/acme-homepage-20260313.html
-# reports/weekly-2026-03-13.pptx
+pdfs/acme-pricing-2026-03.pdf
+pdfs/beta-annual-report-2025.pdf
+snapshots/acme-homepage-20260313.html
+reports/weekly-2026-03-13.pptx
 ```
 
 This structure makes it easy to reference specific documents in your Claude Code sessions and to track when information was captured.
 
-## Stage 2: Processing Web Content
+Stage 2: Processing Web Content
 
-For competitor websites, you can use Claude Code's built-in ability to read content you paste or fetch via shell commands. The **webapp-testing** skill helps when you need to verify what's actually rendering on a competitor's page:
+For competitor websites, you can use Claude Code's built-in ability to read content you paste or fetch via shell commands. The webapp-testing skill helps when you need to verify what's actually rendering on a competitor's page:
 
 ```
 /webapp-testing
@@ -84,7 +84,7 @@ For richer web monitoring, build a script that captures multiple pages and flags
 
 ```bash
 #!/bin/bash
-# weekly-capture.sh
+weekly-capture.sh
 SNAPSHOT_DIR="$HOME/competitive-intel/snapshots"
 DATE=$(date +%Y%m%d)
 
@@ -113,11 +113,11 @@ List any pricing changes, new plan additions, or removed features.
 Flag anything that looks like a promotional price vs. a permanent change.
 ```
 
-This diff-style analysis is where automation saves the most time. You would need to read both pages manually and note differences by hand—the skill does it in seconds.
+This diff-style analysis is where automation saves the most time. You would need to read both pages manually and note differences by hand, the skill does it in seconds.
 
-## Stage 3: Building the Competitive Intelligence Database
+Stage 3: Building the Competitive Intelligence Database
 
-The [**supermemory** skill](/claude-skills-token-optimization-reduce-api-costs/) serves as your long-term memory layer. Use it to store competitor profiles with key attributes so context persists across sessions:
+The [supermemory skill](/claude-skills-token-optimization-reduce-api-costs/) serves as your long-term memory layer. Use it to store competitor profiles with key attributes so context persists across sessions:
 
 ```
 /supermemory store:
@@ -136,7 +136,7 @@ Query it later to recall specific details without re-reading all your notes:
 /supermemory Which competitors offer on-premise deployment?
 ```
 
-The supermemory skill is especially valuable for competitive analysis because competitor information changes incrementally. You don't want to rebuild context from scratch each week—you want to update what changed and query against the full history. Use consistent schema when storing entries so queries return coherent results:
+The supermemory skill is especially valuable for competitive analysis because competitor information changes incrementally. You don't want to rebuild context from scratch each week, you want to update what changed and query against the full history. Use consistent schema when storing entries so queries return coherent results:
 
 ```
 /supermemory store:
@@ -156,16 +156,16 @@ When you tag entries with `CHANGE:` markers, you can later query:
 
 This returns a consolidated view of pricing movement across your entire tracked set, which is exactly what you need for a quarterly competitive review.
 
-## Stage 4: Data Analysis and Visualization
+Stage 4: Data Analysis and Visualization
 
-The **xlsx** skill transforms raw competitive data into analyzable formats. Create a feature comparison matrix:
+The xlsx skill transforms raw competitive data into analyzable formats. Create a feature comparison matrix:
 
 ```
 /xlsx
 Create a competitive analysis workbook with a Feature Comparison sheet. Columns: Feature, Our Product, Acme Corp, Beta Inc, Gamma LLC. Rows: API Access, SSO, Custom Branding, 24/7 Support, On-Premise. Mark each cell TRUE or FALSE. Add a second sheet called Pricing with monthly and annual prices for each competitor.
 ```
 
-Claude generates the spreadsheet structure, which you can open in Excel or Google Sheets for further manipulation. The skill also supports adding charts—ask for a bar chart comparing feature coverage percentages per competitor.
+Claude generates the spreadsheet structure, which you can open in Excel or Google Sheets for further manipulation. The skill also supports adding charts, ask for a bar chart comparing feature coverage percentages per competitor.
 
 For a more sophisticated analysis workbook, include scoring and weighting:
 
@@ -196,9 +196,9 @@ Sheet 3 - Gap Analysis:
 
 This turns qualitative competitive impressions into a defensible quantitative model. When a stakeholder asks why you're prioritizing a particular feature, you can point to the gap analysis sheet.
 
-## Stage 5: Automated Reporting
+Stage 5: Automated Reporting
 
-Use the **pptx** skill to generate stakeholder-ready presentations from your stored competitive intelligence:
+Use the pptx skill to generate stakeholder-ready presentations from your stored competitive intelligence:
 
 ```
 /pptx
@@ -241,13 +241,13 @@ Slide 5 - Recommended Actions
 
 A templated approach ensures your reports are comparable month over month, which is essential for tracking whether your competitive position is improving.
 
-## Workflow Automation Tips
+Workflow Automation Tips
 
 Chain these stages using a regular workflow. A basic shell script triggers data collection, and you run the Claude Code analysis in a dedicated session:
 
 ```bash
 #!/bin/bash
-# Weekly competitive intelligence data collection
+Weekly competitive intelligence data collection
 
 echo "Capturing competitor web snapshots..."
 curl -s https://acmecorp.com/pricing > snapshots/acme-pricing-$(date +%Y%m%d).html
@@ -260,16 +260,16 @@ Run this weekly or monthly depending on how quickly your market changes. The sup
 
 A practical weekly rhythm looks like this:
 
-1. **Monday morning** — Run data collection script, capture fresh snapshots
-2. **Monday midday** — Claude Code session: run pdf/webapp-testing on new material, update supermemory
-3. **Wednesday** — Claude Code session: refresh xlsx scorecard with any new data points
-4. **Thursday** — Claude Code session: generate pptx report for Friday team review
+1. Monday morning. Run data collection script, capture fresh snapshots
+2. Monday midday. Claude Code session: run pdf/webapp-testing on new material, update supermemory
+3. Wednesday. Claude Code session: refresh xlsx scorecard with any new data points
+4. Thursday. Claude Code session: generate pptx report for Friday team review
 
 This schedule keeps the work distributed and prevents the "12-hour competitive review marathon" that teams often fall into. Small automated sessions beat a single exhausting manual effort every time.
 
-### Handling Rate Limits and Data Freshness
+Handling Rate Limits and Data Freshness
 
-Some competitor sites block automated scraping. For those, rely on manual capture—take a screenshot or copy the page content manually once per cycle, then paste it into your session. The automation handles the majority of sources; don't let edge cases derail the whole system.
+Some competitor sites block automated scraping. For those, rely on manual capture, take a screenshot or copy the page content manually once per cycle, then paste it into your session. The automation handles the majority of sources; don't let edge cases derail the whole system.
 
 Mark data freshness explicitly when storing to supermemory:
 
@@ -283,25 +283,25 @@ Action needed: Manual verification before next quarterly report
 
 This prevents you from presenting outdated information confidently. Stale data labeled as stale is far less dangerous than stale data that looks current.
 
-## When to Use Manual Review
+When to Use Manual Review
 
-Automation handles data collection and formatting, but human judgment is essential for strategic interpretation. Use automated outputs as a starting point, then apply domain expertise to identify implications the system cannot assess—market positioning, brand perception, and emerging competitive threats require contextual understanding beyond data extraction.
+Automation handles data collection and formatting, but human judgment is essential for strategic interpretation. Use automated outputs as a starting point, then apply domain expertise to identify implications the system cannot assess, market positioning, brand perception, and emerging competitive threats require contextual understanding beyond data extraction.
 
 Specifically, manual review should cover:
 
-- **Interpreting pricing psychology**: Is a competitor's 15% price cut a sign of weakness or a land-grab strategy? The data shows the number; you supply the context.
-- **Reading between the lines in job postings**: A competitor hiring ten ML engineers signals a product pivot that no pricing page will reveal. The automation doesn't monitor job boards by default—you need to bring that signal in manually.
-- **Evaluating product quality claims**: Feature presence in a comparison matrix doesn't reflect feature quality. Manual testing or community research fills that gap.
-- **Assessing customer sentiment**: Review sites, developer forums, and social media provide signal that structured data sources miss entirely.
+- Interpreting pricing psychology: Is a competitor's 15% price cut a sign of weakness or a land-grab strategy? The data shows the number; you supply the context.
+- Reading between the lines in job postings: A competitor hiring ten ML engineers signals a product pivot that no pricing page will reveal. The automation doesn't monitor job boards by default, you need to bring that signal in manually.
+- Evaluating product quality claims: Feature presence in a comparison matrix doesn't reflect feature quality. Manual testing or community research fills that gap.
+- Assessing customer sentiment: Review sites, developer forums, and social media provide signal that structured data sources miss entirely.
 
 The automated pipeline produces a solid foundation. Strategic insight is what you add on top of it.
 
 ---
 
-## Related Reading
+Related Reading
 
-- [Best Claude Skills for Data Analysis](/best-claude-skills-for-data-analysis/) — Complete data analysis skill guide
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — Keep data workflows cost-efficient
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [Best Claude Skills for Data Analysis](/best-claude-skills-for-data-analysis/). Complete data analysis skill guide
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Keep data workflows cost-efficient
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate automatically
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

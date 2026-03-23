@@ -17,19 +17,19 @@ Building a price history Chrome extension gives you the power to track and visua
 
 This guide covers the technical implementation for developers and power users who want to build custom price tracking solutions.
 
-## Core Architecture
+Core Architecture
 
 A price history extension consists of three main components:
 
-1. **Content Script** - Extracts price data from web pages
-2. **Background Service Worker** - Handles data storage and notifications
-3. **Popup UI** - Displays price history charts and configuration
+1. Content Script - Extracts price data from web pages
+2. Background Service Worker - Handles data storage and notifications
+3. Popup UI - Displays price history charts and configuration
 
 The extension uses Chrome's storage API to persist price data locally. For larger datasets, consider IndexedDB for better query performance.
 
-## Extracting Price Data
+Extracting Price Data
 
-Price extraction varies significantly across e-commerce platforms. A robust implementation handles multiple price formats and selectors. Here is a content script pattern for extracting prices:
+Price extraction varies significantly across e-commerce platforms. A solid implementation handles multiple price formats and selectors. Here is a content script pattern for extracting prices:
 
 ```javascript
 // content-script.js
@@ -111,7 +111,7 @@ class PriceExtractor {
 }
 ```
 
-## Data Storage Strategy
+Data Storage Strategy
 
 Chrome Extensions offer multiple storage options. For price history, you need to balance storage limits with query performance:
 
@@ -213,7 +213,7 @@ class PriceStore {
 }
 ```
 
-## Message Passing System
+Message Passing System
 
 Content scripts communicate with the background script using message passing:
 
@@ -265,7 +265,7 @@ async function handleGetHistory(url) {
 }
 ```
 
-## Price History Visualization
+Price History Visualization
 
 The popup UI should display historical data as a chart. Using a lightweight charting library:
 
@@ -311,7 +311,7 @@ function renderPriceChart(prices, containerId) {
 }
 ```
 
-## Extension Manifest Configuration
+Extension Manifest Configuration
 
 Your manifest.json needs proper permissions:
 
@@ -345,7 +345,7 @@ Your manifest.json needs proper permissions:
 }
 ```
 
-## Privacy Considerations
+Privacy Considerations
 
 When building price tracking extensions, respect user privacy:
 
@@ -355,16 +355,16 @@ When building price tracking extensions, respect user privacy:
 - Use HTTPS for any network requests
 - Consider adding a "do not track" mode
 
-## Deployment and Testing
+Deployment and Testing
 
 Test your extension thoroughly across different e-commerce sites. Use Chrome's built-in testing features:
 
 ```bash
-# Load unpacked extension for testing
-# 1. Navigate to chrome://extensions
-# 2. Enable "Developer mode"
-# 3. Click "Load unpacked"
-# 4. Select your extension directory
+Load unpacked extension for testing
+1. Navigate to chrome://extensions
+2. Enable "Developer mode"
+3. Click "Load unpacked"
+4. Select your extension directory
 ```
 
 Monitor console logs in both the popup and service worker for debugging. Use Chrome's Storage Inspector to view persisted price data during development.
@@ -372,24 +372,24 @@ Monitor console logs in both the popup and service worker for debugging. Use Chr
 Building a price history extension requires handling diverse price formats, managing storage efficiently, and creating useful visualizations. The implementation above provides a solid foundation that you can customize for specific retailers or add features like price drop alerts and shopping lists.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-## Step-by-Step: Tracking Your First Product
+Step-by-Step: Tracking Your First Product
 
 1. Navigate to any product page on a supported retailer
-2. Click the extension icon — the popup detects the product from URL and page metadata
+2. Click the extension icon. the popup detects the product from URL and page metadata
 3. Click "Track Price" to save the current price to local storage
 4. The background alarm checks prices every 6-12 hours and adds new data points
 5. When the price drops below your alert threshold, a Chrome notification fires
 6. View the price history chart in the popup at any time
 
-## Advanced: Cross-Retailer Price Comparison
+Advanced: Cross-Retailer Price Comparison
 
 Show prices from multiple retailers side by side:
 
@@ -402,7 +402,7 @@ async function findCrossRetailerPrices(productTitle) {
 }
 ```
 
-## Comparison with Established Price Tools
+Comparison with Established Price Tools
 
 | Tool | Retailers | Price history | Integration | Cost |
 |---|---|---|---|---|
@@ -411,9 +411,9 @@ async function findCrossRetailerPrices(productTitle) {
 | CamelCamelCamel | Amazon only | Excellent charts | Website only | Free |
 | Keepa | Amazon only | Excellent | Extension available | Free/Premium |
 
-## Troubleshooting Common Issues
+Troubleshooting Common Issues
 
-**Price not extracting correctly**: Build a robust parser for varied price formats:
+Price not extracting correctly: Build a solid parser for varied price formats:
 
 ```javascript
 function parsePrice(text) {
@@ -424,9 +424,9 @@ function parsePrice(text) {
 }
 ```
 
-**Storage quota hit**: Use IndexedDB for price history and keep only the last 90 days by default. Let users configure the retention period in settings.
+Storage quota hit: Use IndexedDB for price history and keep only the last 90 days by default. Let users configure the retention period in settings.
 
-**Chart not rendering**: Chart.js requires the canvas element to be in the DOM when instantiated. Verify the canvas exists before calling `new Chart()`.
+Chart not rendering: Chart.js requires the canvas element to be in the DOM when instantiated. Verify the canvas exists before calling `new Chart()`.
 
 Building a price history extension requires handling diverse price formats, managing storage efficiently, and creating useful visualizations.
 

@@ -17,7 +17,7 @@ Building a reliable SDK requires excellent documentation. A well-documented SDK 
 
 This guide shows you how to create an efficient SDK documentation workflow using Claude skills. You will learn to automate API reference generation, maintain code examples, and keep documentation synchronized with your codebase.
 
-## Prerequisites
+Prerequisites
 
 Before starting, ensure you have:
 
@@ -29,7 +29,7 @@ Before starting, ensure you have:
 
 These tools work together to create a documentation pipeline that runs locally without external services.
 
-## Step 1: Structure Your SDK Documentation
+Step 1: Structure Your SDK Documentation
 
 Organize your documentation before generating content. A well-structured SDK documentation system includes:
 
@@ -42,19 +42,19 @@ Create a `docs/` directory in your SDK repository:
 
 ```
 my-sdk/
-├── src/
-│   ├── client.ts
-│   └── types.ts
-├── docs/
-│   ├── api/
-│   ├── guides/
-│   └── examples/
-└── README.md
+ src/
+    client.ts
+    types.ts
+ docs/
+    api/
+    guides/
+    examples/
+ README.md
 ```
 
 This structure separates generated content from manual documentation, making automation straightforward.
 
-## Step 2: Generate API Reference Automatically
+Step 2: Generate API Reference Automatically
 
 The core of SDK documentation is the API reference. Use Claude to scan your source files and generate reference documentation.
 
@@ -89,7 +89,7 @@ export class APIClient {
 
 This generates reference docs that developers can browse immediately.
 
-## Step 3: Maintain Code Examples
+Step 3: Maintain Code Examples
 
 Static code examples become outdated quickly. The solution is maintaining executable examples that double as tests.
 
@@ -124,7 +124,7 @@ describe('SDK Examples', () => {
 
 Run these tests in your CI pipeline to ensure examples never break.
 
-## Step 4: Generate PDF Documentation
+Step 4: Generate PDF Documentation
 
 For release packages and offline reading, generate PDF documentation using the `pdf` skill:
 
@@ -138,7 +138,7 @@ Using the pdf skill, generate a comprehensive PDF document:
 
 The `pdf` skill converts your markdown documentation into professionally formatted PDFs suitable for distribution.
 
-## Step 5: Track Documentation Changes
+Step 5: Track Documentation Changes
 
 Documentation drift happens when code changes without updating docs. Use the `supermemory` skill to track documentation decisions and flag changes that need attention:
 
@@ -154,13 +154,13 @@ documentation files need updates.
 
 The `supermemory` skill persists this context across Claude sessions, creating institutional memory for your SDK documentation.
 
-## Step 6: Automate Documentation Updates
+Step 6: Automate Documentation Updates
 
 Set up a documentation update workflow that triggers on code changes. Create a script that runs Claude to update docs:
 
 ```bash
 #!/bin/bash
-# update-docs.sh
+update-docs.sh
 
 claude "Run the documentation update workflow:
 1. Check src/ for changes since last documentation update
@@ -173,7 +173,7 @@ echo "Documentation update complete"
 
 Add this to your CI pipeline or run manually before releases.
 
-## Optional: Add UI Documentation
+Optional: Add UI Documentation
 
 If your SDK includes frontend components, use the `frontend-design` skill to document UI props and usage:
 
@@ -186,7 +186,7 @@ Output to: docs/guides/components.md
 
 This creates visual documentation that complements your API reference.
 
-## Workflow Summary
+Workflow Summary
 
 | Step | Action | Claude Skill |
 |------|--------|--------------|
@@ -199,29 +199,29 @@ This creates visual documentation that complements your API reference.
 
 This workflow reduces documentation overhead significantly. Your SDK documentation stays current because it derives from actual source code and tested examples.
 
-## Common Pitfalls
+Common Pitfalls
 
 Avoid these mistakes when building SDK documentation:
 
-- **No executable examples**: Static examples break. Always use tested code.
-- **Missing version tracking**: Document which SDK version each doc applies to.
-- **Outdated API reference**: Regenerate reference documentation before each release.
-- **No feedback loop**: Add a mechanism for users to report documentation issues.
+- No executable examples: Static examples break. Always use tested code.
+- Missing version tracking: Document which SDK version each doc applies to.
+- Outdated API reference: Regenerate reference documentation before each release.
+- No feedback loop: Add a mechanism for users to report documentation issues.
 
-## Conclusion
+Conclusion
 
 An automated SDK documentation workflow saves time and improves developer experience. By generating API references from source, maintaining tested examples, and tracking documentation state, you ensure your SDK documentation stays accurate and useful.
 
-The combination of Claude Code skills—`pdf` for output generation, `tdd` for verified examples, and `supermemory` for context tracking—creates a powerful documentation system that requires minimal manual maintenance.
+The combination of Claude Code skills, `pdf` for output generation, `tdd` for verified examples, and `supermemory` for context tracking, creates a powerful documentation system that requires minimal manual maintenance.
 
 Start with the structure, automate generation, and add tracking. Your SDK users will thank you.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code Tutorials Hub](/tutorials-hub/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Skill MD File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/)
 - [Claude Code Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

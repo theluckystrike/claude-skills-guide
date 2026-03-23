@@ -17,13 +17,13 @@ Event streaming has transformed how modern applications handle real-time data. A
 
 This [build and integrate an Apache Kafka MCP server for event streaming automation](/how-do-i-combine-two-claude-skills-in-one-workflow/) for event streaming automation. You'll find practical code examples and patterns that work well with Claude Code and other AI assistants.
 
-## Why Kafka with MCP Server
+Why Kafka with MCP Server
 
 Kafka provides durable, fault-tolerant message storage through its distributed log architecture. Topics partition across brokers, enabling horizontal scaling. The consumer group model allows multiple workers to process streams independently. MCP servers extend this capability by exposing Kafka operations through a standardized protocol that AI tools can invoke programmatically.
 
 The combination proves valuable in several scenarios. You might need AI-assisted monitoring of stream health, automated response to specific event patterns, or dynamic reconfiguration of consumer groups based on workload. The MCP server acts as a programmable interface layer between your streaming infrastructure and external automation systems.
 
-## Building Your Kafka MCP Server
+Building Your Kafka MCP Server
 
 Start by setting up a Node.js project with the required Kafka client. The kafkajs library provides a modern, Promise-based API:
 
@@ -96,9 +96,9 @@ class KafkaMCPServer {
 
 This server exposes fundamental Kafka operations through MCP tool definitions. The `produceMessage` function handles event publishing, while `consumeFromTopic` sets up streaming consumers with custom message handlers.
 
-## Event Streaming Patterns
+Event Streaming Patterns
 
-When building streaming workflows, several patterns emerge as particularly useful. The **event filtering pattern** processes incoming streams and routes messages to different handlers based on content or metadata:
+When building streaming workflows, several patterns emerge as particularly useful. The event filtering pattern processes incoming streams and routes messages to different handlers based on content or metadata:
 
 ```javascript
 async function filterAndRoute(server, rules) {
@@ -125,7 +125,7 @@ await filterAndRoute(kafkaServer, [
 ]);
 ```
 
-The **aggregation pattern** collects events over windows and produces summarized output:
+The aggregation pattern collects events over windows and produces summarized output:
 
 ```javascript
 class WindowedAggregator {
@@ -159,7 +159,7 @@ class WindowedAggregator {
 }
 ```
 
-## Connecting to Claude Code
+Connecting to Claude Code
 
 Your Kafka MCP server becomes truly powerful when integrated with Claude Code. The supermemory skill helps maintain context across streaming sessions, while the tdd skill enables test-driven development of your streaming logic.
 
@@ -172,7 +172,7 @@ description: Event streaming automation with Apache Kafka
 
 When Claude Code loads this skill, it can autonomously manage your event streams. You might ask Claude to "monitor the user-events topic and alert when consumer lag exceeds 1000 messages" or "redistribute events from the legacy topic to the new partition scheme."
 
-## Production Considerations
+Production Considerations
 
 Running Kafka MCP servers in production requires attention to several operational details. Configure appropriate retry policies for transient failures. The kafkajs library handles this well with exponential backoff:
 
@@ -229,19 +229,19 @@ async function getConsumerLag(admin, groupId, topic) {
 }
 ```
 
-## Extending Your Setup
+Extending Your Setup
 
 The foundation you build here opens doors to more sophisticated architectures. Consider adding the pdf skill for automated report generation from stream analytics. The frontend-design skill helps build dashboards visualizing your streaming metrics. For complex event processing, the tdd skill ensures your logic remains reliable as you iterate.
 
 Your Kafka MCP server can also integrate with other MCP servers in your ecosystem. Connect it with cloud provider servers for automated infrastructure scaling based on stream volume, or pair it with notification servers to alert teams about streaming anomalies.
 
-Start with the basic producer and consumer patterns shown here, then evolve toward windowed aggregations, complex event processing, and multi-cluster federation as your requirements mature. The MCP abstraction makes this evolution straightforward—you add new tools without restructuring your core integration.
+Start with the basic producer and consumer patterns shown here, then evolve toward windowed aggregations, complex event processing, and multi-cluster federation as your requirements mature. The MCP abstraction makes this evolution straightforward, you add new tools without restructuring your core integration.
 
-## Related Reading
+Related Reading
 
 - [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)
 - [RabbitMQ MCP Server Message Queue Automation](/rabbitmq-mcp-server-message-queue-automation/)
 - [AWS MCP Server Cloud Automation with Claude Code](/aws-mcp-server-cloud-automation-with-claude-code/)
 - [Integrations Hub](/integrations-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

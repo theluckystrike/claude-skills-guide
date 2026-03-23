@@ -15,17 +15,17 @@ permalink: /how-to-make-claude-code-follow-team-style-guide/
 
 Getting Claude Code to consistently generate code that matches your team's style guide requires a strategic approach. Rather than relying on manual corrections, you can configure Claude to understand and apply your standards from the first response. This guide walks through practical methods for achieving [style guide compliance](/how-to-make-claude-code-follow-team-style-guide/) at scale.
 
-## Understanding the Style Guide Challenge
+Understanding the Style Guide Challenge
 
 Claude Code generates high-quality code by default, but every team has specific conventions. Your organization might use different naming patterns, import ordering, testing frameworks, or architectural decisions than what Claude assumes. The challenge is establishing your style guide as the baseline for all AI-generated code.
 
 The solution involves multiple layers: configuration files, skill-based prompts, and verification mechanisms. Each layer reinforces the others, creating a system where style compliance becomes automatic rather than an afterthought.
 
-## Project-Level Configuration Files
+Project-Level Configuration Files
 
 The most direct approach starts with configuration files that Claude recognizes and respects during code generation.
 
-### .claude.json Settings
+.claude.json Settings
 
 Create a `.claude.json` file in your project root to establish baseline expectations:
 
@@ -54,7 +54,7 @@ Create a `.claude.json` file in your project root to establish baseline expectat
 
 This file signals your preferences before any conversation begins. Claude reads this configuration and incorporates it into generated code automatically.
 
-### EditorConfig Integration
+EditorConfig Integration
 
 For projects needing broader tooling support, EditorConfig provides a standardized format:
 
@@ -78,11 +78,11 @@ indent_size = 4
 
 Claude respects EditorConfig when generating files, making this approach effective for multi-language projects.
 
-## Skill-Based Style Enforcement
+Skill-Based Style Enforcement
 
 Claude skills provide a powerful mechanism for enforcing team-specific patterns. Skills act as persistent instruction sets that shape Claude's behavior across sessions.
 
-### Creating a Style Guide Skill
+Creating a Style Guide Skill
 
 Develop a dedicated skill that encapsulates your team's conventions:
 
@@ -96,7 +96,7 @@ description: Enforces team-specific code style and conventions
 Within this skill, define specific prompts that Claude references during code generation. For instance, your skill might include:
 
 ```markdown
-# Naming Conventions
+Naming Conventions
 
 - React components: PascalCase (e.g., UserProfile, OrderSummary)
 - Hooks: camelCase with "use" prefix (e.g., useUserData, useCartTotal)
@@ -104,7 +104,7 @@ Within this skill, define specific prompts that Claude references during code ge
 - Constants: UPPER_SNAKE_CASE (e.g., MAX_RETRY_COUNT, API_BASE_URL)
 - Files: kebab-case (e.g., user-profile.tsx, api-client.ts)
 
-# Import Order
+Import Order
 
 1. React/Next.js imports
 2. External libraries (npm packages)
@@ -114,13 +114,13 @@ Within this skill, define specific prompts that Claude references during code ge
 6. Style imports
 ```
 
-### Integrating Domain-Specific Skills
+Integrating Domain-Specific Skills
 
 Your style guide skill works alongside domain-specific skills for better results. The frontend-design skill generates component architecture, but your style enforcer ensures the output matches team patterns. Similarly, the pdf skill might handle documentation generation, while your style rules govern documentation formatting. When implementing tests, the tdd skill can drive your test-first workflow, but your style guide should specify exact assertion patterns and test structure conventions. For teams using the supermemory skill to maintain persistent context across sessions, your style guide rules can be stored there for immediate retrieval on every project. See the [automated code documentation workflow](/automated-code-documentation-workflow-with-claude-skills/) for how to keep documentation in sync with evolving style standards.
 
 This layered approach lets you maintain a single source of truth for style while using specialized skills for their core functionality.
 
-## Learning Patterns from Reference Files
+Learning Patterns from Reference Files
 
 One of the most effective techniques is pointing Claude at existing files before generating new code. Instead of describing patterns abstractly, show them:
 
@@ -133,13 +133,13 @@ I'm adding a new service module. Before writing anything, read these three exist
 Then create src/services/analytics-service.js following the same patterns.
 ```
 
-Claude examines the reference files, extracts shared patterns (import style, error handling approach, dependency injection, method signatures), and applies them to the new file. This works especially well when generating multiple related files — establish patterns in the first file and reference them for subsequent files.
+Claude examines the reference files, extracts shared patterns (import style, error handling approach, dependency injection, method signatures), and applies them to the new file. This works especially well when generating multiple related files. establish patterns in the first file and reference them for subsequent files.
 
-## Inline Context and Conversation Prompts
+Inline Context and Conversation Prompts
 
 Beyond configuration files, direct prompts within your conversations guide Claude's output effectively.
 
-### Style Guide Prompts
+Style Guide Prompts
 
 Include explicit instructions at conversation start:
 
@@ -152,7 +152,7 @@ Generate all code following these rules:
 - Follow our component folder structure: components/{Feature}/{Component}.tsx
 ```
 
-### Pattern Libraries Reference
+Pattern Libraries Reference
 
 Reference your existing codebase for Claude to learn from:
 
@@ -168,16 +168,16 @@ Generate new code matching these established patterns.
 
 Claude analyzes the referenced files and applies similar patterns to new code.
 
-## Automated Verification and Correction
+Automated Verification and Correction
 
 Even with configuration and prompts, verification ensures consistency. Integrate style checking into your workflow.
 
-### Pre-Commit Hooks
+Pre-Commit Hooks
 
 Set up pre-commit hooks using tools like prettier, eslint, or stylelint. You can also use [automated code review skills](/best-claude-skills-for-code-review-automation/) to catch style violations before they land in PRs:
 
 ```bash
-# .husky/pre-commit
+.husky/pre-commit
 npm run lint
 npm run format
 npm run type-check
@@ -185,7 +185,7 @@ npm run type-check
 
 These hooks catch style violations before they enter your codebase, creating a feedback loop that trains Claude over time. When Claude sees consistent violations rejected, it adjusts its output patterns.
 
-### Claude Skill Feedback
+Claude Skill Feedback
 
 Create a skill that reviews generated code for compliance:
 
@@ -202,7 +202,7 @@ Report any violations with specific corrections needed.
 
 Running this review skill after major generations catches issues early.
 
-## Best Practices for Implementation
+Best Practices for Implementation
 
 Start with configuration files for universal rules, then layer skills for team-specific patterns. Keep your style guide documentation in version control so it evolves alongside your codebase. When introducing new conventions, update your configuration and skill prompts simultaneously.
 
@@ -210,13 +210,13 @@ The key is consistency. Every team member should reference the same style guide,
 
 Remember that style guides evolve. Build feedback mechanisms that identify when Claude consistently generates certain patterns that conflict with your current standards. Update your configuration accordingly, and the changes propagate to all future generations.
 
-## Related Reading
+Related Reading
 
 - For an in-depth guide to naming convention enforcement specifically, see [How to Make Claude Code Follow My Naming Conventions](/how-to-make-claude-code-follow-my-naming-conventions/)
-- [How to Make Claude Code Match Existing Code Patterns](/how-to-make-claude-code-follow-team-style-guide/) — Provide representative code samples to anchor Claude's output to your project's style
-- [Automated Code Documentation Workflow with Claude Skills](/automated-code-documentation-workflow-with-claude-skills/) — Keep docs consistent with your style guide as code evolves
-- [Best Claude Skills for Code Review Automation](/best-claude-skills-for-code-review-automation/) — Automate style violation detection in your PR review workflow
+- [How to Make Claude Code Match Existing Code Patterns](/how-to-make-claude-code-follow-team-style-guide/). Provide representative code samples to anchor Claude's output to your project's style
+- [Automated Code Documentation Workflow with Claude Skills](/automated-code-documentation-workflow-with-claude-skills/). Keep docs consistent with your style guide as code evolves
+- [Best Claude Skills for Code Review Automation](/best-claude-skills-for-code-review-automation/). Automate style violation detection in your PR review workflow
 
 ---
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

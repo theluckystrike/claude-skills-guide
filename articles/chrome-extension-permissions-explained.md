@@ -16,13 +16,13 @@ tags: [chrome, extensions, security, browser]
 
 Chrome extensions add powerful functionality to your browser, but every extension needs specific permissions to work. Understanding these permissions helps you make informed decisions about what you install and how extensions interact with your data.
 
-This guide breaks down Chrome extension permissions, explains what each one means, and shows you how to review and manage them effectively—whether you are a developer designing an extension from scratch or a power user deciding what to install.
+This guide breaks down Chrome extension permissions, explains what each one means, and shows you how to review and manage them effectively, whether you are a developer designing an extension from scratch or a power user deciding what to install.
 
-## What Are Chrome Extension Permissions?
+What Are Chrome Extension Permissions?
 
 When you install a Chrome extension, it requests permission to access certain browser features or data. These permissions are defined in the extension's manifest file (manifest.json) and determine what the extension can read or modify.
 
-Think of permissions as a security gate—each one represents a specific capability the extension needs. The more permissions an extension requests, the more access it has to your browsing data. Chrome's permission model is intentionally explicit: extensions cannot access capabilities they have not declared in their manifest, and for many sensitive permissions, users see a prompt before granting access.
+Think of permissions as a security gate, each one represents a specific capability the extension needs. The more permissions an extension requests, the more access it has to your browsing data. Chrome's permission model is intentionally explicit: extensions cannot access capabilities they have not declared in their manifest, and for many sensitive permissions, users see a prompt before granting access.
 
 The manifest file serves as the contract between the extension and the browser. Here is what a minimal but realistic manifest looks like for a Manifest V3 extension:
 
@@ -45,9 +45,9 @@ The manifest file serves as the contract between the extension and the browser. 
 
 Every permission listed in that manifest was a deliberate choice with a security tradeoff. Understanding those tradeoffs is what this guide is about.
 
-## Common Permission Types and What They Mean
+Common Permission Types and What They Mean
 
-### Host Permissions
+Host Permissions
 
 Host permissions allow extensions to access content on specific websites or all websites:
 
@@ -60,8 +60,8 @@ Host permissions allow extensions to access content on specific websites or all 
 }
 ```
 
-- **Specific domains** (like `https://*.google.com/*`): The extension can only access pages on those domains
-- **All URLs** (`<all_urls>`): The extension can read and modify content on every website you visit. This is the most powerful permission.
+- Specific domains (like `https://*.google.com/*`): The extension can only access pages on those domains
+- All URLs (`<all_urls>`): The extension can read and modify content on every website you visit. This is the most powerful permission.
 
 Extensions with host permissions can:
 - Read the content of web pages
@@ -69,11 +69,11 @@ Extensions with host permissions can:
 - Capture form data
 - Read cookies and session data
 
-The scope of host permissions deserves emphasis. An extension with `<all_urls>` access and a content script that runs on every page has the technical ability to read every form field you type into—including passwords, credit card numbers, and authentication tokens—before the data is encrypted and sent. Most extensions with broad host permissions are not doing anything malicious, but the permission grants the capability whether or not the developer uses it.
+The scope of host permissions deserves emphasis. An extension with `<all_urls>` access and a content script that runs on every page has the technical ability to read every form field you type into, including passwords, credit card numbers, and authentication tokens, before the data is encrypted and sent. Most extensions with broad host permissions are not doing anything malicious, but the permission grants the capability whether or not the developer uses it.
 
 For developers, the best practice is to be as specific as possible. If your extension only needs to work on GitHub, declare `https://github.com/*` rather than `<all_urls>`. Users see what sites you are accessing, and a narrower scope builds trust.
 
-### API Permissions
+API Permissions
 
 These permissions grant access to specific Chrome APIs:
 
@@ -92,17 +92,17 @@ These permissions grant access to specific Chrome APIs:
 
 A few of these deserve expanded explanation:
 
-**`tabs`**: Sounds benign but exposes more than tab management. With `tabs`, an extension can read the URL and title of every tab you have open, even tabs on sites it does not have host permission for. A tab with a sensitive document title or URL in a corporate environment could expose information the developer did not intend to share.
+`tabs`: Sounds benign but exposes more than tab management. With `tabs`, an extension can read the URL and title of every tab you have open, even tabs on sites it does not have host permission for. A tab with a sensitive document title or URL in a corporate environment could expose information the developer did not intend to share.
 
-**`webRequest`**: The legacy network interception API (deprecated in Manifest V3 for most use cases). Extensions using this permission can see the full contents of every network request and response going through your browser, including API keys sent in headers, authentication tokens, and raw response data. This is why ad blockers were historically powerful—and why this permission is high-risk in untrusted extensions.
+`webRequest`: The legacy network interception API (deprecated in Manifest V3 for most use cases). Extensions using this permission can see the full contents of every network request and response going through your browser, including API keys sent in headers, authentication tokens, and raw response data. This is why ad blockers were historically powerful, and why this permission is high-risk in untrusted extensions.
 
-**`declarativeNetRequest`**: The Manifest V3 replacement for `webRequest`. Instead of letting the extension see and modify traffic directly, you declare a ruleset of what to block or redirect. The browser engine applies the rules without giving the extension access to the actual request contents. It is meaningfully safer, which is why the Chrome team pushed for this migration.
+`declarativeNetRequest`: The Manifest V3 replacement for `webRequest`. Instead of letting the extension see and modify traffic directly, you declare a ruleset of what to block or redirect. The browser engine applies the rules without giving the extension access to the actual request contents. It is meaningfully safer, which is why the Chrome team pushed for this migration.
 
-**`cookies`**: Read and modify cookies for any site. This includes session cookies that authenticate you to web applications. An extension with cookie access and `<all_urls>` host permission can read your session cookies and, in theory, use them to access your accounts.
+`cookies`: Read and modify cookies for any site. This includes session cookies that authenticate you to web applications. An extension with cookie access and `<all_urls>` host permission can read your session cookies and, in theory, use them to access your accounts.
 
-### The Tabs Permission Nuance
+The Tabs Permission Nuance
 
-The `tabs` permission interacts with host permissions in a way that surprises many developers. Without host permissions, `tabs` gives you access to tab IDs but not to the URL or title of those tabs. With host permissions added, those fields become readable for matching hosts. This means you sometimes see extensions that appear to only need `tabs` but also request `<all_urls>` host permissions—the combined set enables them to see the URLs of every open tab.
+The `tabs` permission interacts with host permissions in a way that surprises many developers. Without host permissions, `tabs` gives you access to tab IDs but not to the URL or title of those tabs. With host permissions added, those fields become readable for matching hosts. This means you sometimes see extensions that appear to only need `tabs` but also request `<all_urls>` host permissions, the combined set enables them to see the URLs of every open tab.
 
 ```javascript
 // With tabs permission but no host permissions:
@@ -116,7 +116,7 @@ chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
 });
 ```
 
-## Manifest V2 vs. Manifest V3: Permissions Changes
+Manifest V2 vs. Manifest V3: Permissions Changes
 
 If you are maintaining an older extension or evaluating one, understanding the MV2 to MV3 migration matters. The key permission changes:
 
@@ -132,17 +132,17 @@ Extensions still on MV2 are being phased out. Chrome began showing warnings for 
 
 For users: an MV2 extension requesting `webRequest` with blocking capability had significantly more power over your browser traffic than the MV3 equivalent. The migration is a genuine security improvement, not just a platform change.
 
-## How to Check Extension Permissions
+How to Check Extension Permissions
 
-### Before Installing
+Before Installing
 
 1. Visit the extension's Chrome Web Store page
 2. Look for the "Permissions" section on the right side
 3. Review what data the extension can access
 
-The Chrome Web Store does not always show the full permission list in the visible UI—some permissions are disclosed only in the privacy practices section or within the extension's own privacy policy link. For a complete view, look at the extension's source code if it is available on GitHub, or use the extension's manifest directly.
+The Chrome Web Store does not always show the full permission list in the visible UI, some permissions are disclosed only in the privacy practices section or within the extension's own privacy policy link. For a complete view, look at the extension's source code if it is available on GitHub, or use the extension's manifest directly.
 
-### After Installation
+After Installation
 
 1. Click the puzzle piece icon in Chrome's toolbar
 2. Click the three dots next to any extension
@@ -151,11 +151,11 @@ The Chrome Web Store does not always show the full permission list in the visibl
 
 You can also navigate directly to `chrome://extensions` and click "Details" on any installed extension. The details page shows declared permissions in plain language, site access level, and whether the extension can run in Incognito mode.
 
-### Using Chrome's Safety Check
+Using Chrome's Safety Check
 
 Chrome's built-in Safety Check (Settings > Privacy and security > Safety Check) can identify potentially harmful extensions. Run it regularly to stay secure.
 
-### Inspecting the Raw Manifest
+Inspecting the Raw Manifest
 
 For a developer-level view, you can read the extension's manifest directly from your filesystem. On macOS, installed extensions live at:
 
@@ -166,12 +166,12 @@ For a developer-level view, you can read the extension's manifest directly from 
 Each extension has its own directory named by its extension ID. Inside you will find versioned subdirectories with the manifest.json:
 
 ```bash
-# Find all installed extension manifests
+Find all installed extension manifests
 find ~/Library/Application\ Support/Google/Chrome/Default/Extensions/ \
   -name "manifest.json" -maxdepth 3
 ```
 
-Reading the raw manifest shows you exactly what the extension declared, with no UI abstraction in the way. Pay particular attention to `content_scripts` entries—these define when and where JavaScript runs in page context:
+Reading the raw manifest shows you exactly what the extension declared, with no UI abstraction in the way. Pay particular attention to `content_scripts` entries, these define when and where JavaScript runs in page context:
 
 ```json
 {
@@ -185,11 +185,11 @@ Reading the raw manifest shows you exactly what the extension declared, with no 
 }
 ```
 
-`run_at: "document_start"` means the script executes before any page content loads—this is the most powerful timing, giving the script access to the page before any user interaction or data entry has occurred.
+`run_at: "document_start"` means the script executes before any page content loads, this is the most powerful timing, giving the script access to the page before any user interaction or data entry has occurred.
 
-## Permission Categories by Risk Level
+Permission Categories by Risk Level
 
-### Low Risk Permissions
+Low Risk Permissions
 
 These permissions generally don't expose sensitive data:
 
@@ -200,9 +200,9 @@ These permissions generally don't expose sensitive data:
 - `notifications` - Display desktop notifications
 - `contextMenus` - Add items to right-click context menu
 
-Low-risk permissions typically interact with browser features in isolation—scheduling tasks or showing notifications does not require reading your data.
+Low-risk permissions typically interact with browser features in isolation, scheduling tasks or showing notifications does not require reading your data.
 
-### Medium Risk Permissions
+Medium Risk Permissions
 
 These can access some user data but are commonly needed:
 
@@ -211,9 +211,9 @@ These can access some user data but are commonly needed:
 - `downloads` - Manage downloads
 - `contextMenus` - Add menu items
 
-Medium-risk permissions expose data that is less sensitive in isolation—your bookmarks and download history reveal browsing habits but are less immediately exploitable than authentication data. That said, an extension that harvests your bookmarks and sends them to a remote server is still a meaningful privacy violation.
+Medium-risk permissions expose data that is less sensitive in isolation, your bookmarks and download history reveal browsing habits but are less immediately exploitable than authentication data. That said, an extension that harvests your bookmarks and sends them to a remote server is still a meaningful privacy violation.
 
-### High Risk Permissions
+High Risk Permissions
 
 These provide extensive access and warrant extra scrutiny:
 
@@ -223,9 +223,9 @@ These provide extensive access and warrant extra scrutiny:
 - `webRequest` - Intercept network traffic
 - `nativeMessaging` - Communicate with native applications installed on your system
 
-The `nativeMessaging` permission deserves particular attention—it allows an extension to communicate with a native application on your computer, bypassing the browser sandbox entirely. A malicious extension with `nativeMessaging` and a corresponding native host installed could execute arbitrary code on your system.
+The `nativeMessaging` permission deserves particular attention, it allows an extension to communicate with a native application on your computer, bypassing the browser sandbox entirely. A malicious extension with `nativeMessaging` and a corresponding native host installed could execute arbitrary code on your system.
 
-### Risk Assessment Matrix
+Risk Assessment Matrix
 
 | Permission | Data Exposed | Reversible If Abused | Justifiable For |
 |---|---|---|---|
@@ -238,9 +238,9 @@ The `nativeMessaging` permission deserves particular attention—it allows an ex
 | `storage` | Extension-stored data only | Yes | Most extensions |
 | `notifications` | No user data read | Yes | Alert and reminder tools |
 
-## Best Practices for Developers
+Best Practices for Developers
 
-### Request Minimal Permissions
+Request Minimal Permissions
 
 Only ask for permissions your extension actually needs:
 
@@ -255,7 +255,7 @@ Chrome Web Store reviewers flag extensions that request permissions beyond what 
 
 A practical approach: implement the extension first with minimal permissions, then add permissions only when you actually write the code that needs them. This prevents the common pattern of cargo-culting permissions from other extensions' manifests.
 
-### Use Optional Permissions
+Use Optional Permissions
 
 Split required and optional permissions:
 
@@ -283,9 +283,9 @@ document.getElementById('enable-history-sync').addEventListener('click', () => {
 });
 ```
 
-This pattern aligns permission grants with user intent—the user asked for history sync, Chrome prompts for the history permission, the connection between the feature and the permission is obvious. Compare that to requesting history permission at install time with no context, and it is clear why optional permissions improve both trust and conversion rates.
+This pattern aligns permission grants with user intent, the user asked for history sync, Chrome prompts for the history permission, the connection between the feature and the permission is obvious. Compare that to requesting history permission at install time with no context, and it is clear why optional permissions improve both trust and conversion rates.
 
-### Explain Why You Need Each Permission
+Explain Why You Need Each Permission
 
 Add a permission rationale in your extension's description:
 
@@ -293,9 +293,9 @@ Add a permission rationale in your extension's description:
 
 For extensions submitted to the Chrome Web Store, the policy now requires a privacy disclosure for extensions that handle user data. But even for permissions that do not technically require disclosure, explaining your permission usage in the store listing builds user confidence and reduces support questions about why you need certain access.
 
-### Use Declarative Net Request Instead of WebRequest
+Use Declarative Net Request Instead of WebRequest
 
-For network filtering, use `declarativeNetRequest` instead of `webRequest`—it doesn't require access to read request content:
+For network filtering, use `declarativeNetRequest` instead of `webRequest`, it doesn't require access to read request content:
 
 ```json
 {
@@ -322,18 +322,18 @@ With `declarativeNetRequest`, you define your filtering rules as a static JSON r
 
 The browser applies these rules without your extension ever seeing the actual request data. For ad blockers, tracker blockers, and content filters, this covers the vast majority of use cases with a substantially smaller attack surface.
 
-## How to Revoke Permissions
+How to Revoke Permissions
 
-### Method 1: Extension Settings
+Method 1: Extension Settings
 
 1. Go to `chrome://extensions`
 2. Find the extension
 3. Click "Details"
 4. Under "Permissions," click "Remove" next to any permission
 
-Note: not all permissions can be individually revoked from this UI. Some are all-or-nothing—you either have the extension installed with its declared permissions or you do not.
+not all permissions can be individually revoked from this UI. Some are all-or-nothing, you either have the extension installed with its declared permissions or you do not.
 
-### Method 2: Manage Site Access
+Method 2: Manage Site Access
 
 Chrome lets you control which sites an extension can access on a per-site basis, even if the extension declared `<all_urls>`:
 
@@ -343,7 +343,7 @@ Chrome lets you control which sites an extension can access on a per-site basis,
 
 The "On click" option is particularly useful for powerful extensions you trust but want to use deliberately rather than have running passively on every page.
 
-### Method 3: Disable Problematic Extensions
+Method 3: Disable Problematic Extensions
 
 If an extension behaves suspiciously, disable it entirely:
 - Go to `chrome://extensions`
@@ -351,13 +351,13 @@ If an extension behaves suspiciously, disable it entirely:
 
 Disabling rather than removing lets you preserve the extension's stored data in case you decide to re-enable it after investigation. If you determine the extension is definitively problematic, remove it entirely.
 
-### Method 4: Use Incognito Mode
+Method 4: Use Incognito Mode
 
 Extensions don't run in Incognito by default. Only enable trusted extensions for Incognito when necessary.
 
-To check which extensions are allowed in Incognito: go to `chrome://extensions`, click Details on any extension, and look for the "Allow in Incognito" toggle. Be conservative here—an extension with broad permissions running in Incognito can read browsing that you specifically chose to do in a private session.
+To check which extensions are allowed in Incognito: go to `chrome://extensions`, click Details on any extension, and look for the "Allow in Incognito" toggle. Be conservative here, an extension with broad permissions running in Incognito can read browsing that you specifically chose to do in a private session.
 
-## Signs of Problematic Extensions
+Signs of Problematic Extensions
 
 Watch for these red flags:
 
@@ -369,12 +369,12 @@ Watch for these red flags:
 
 Additional signals worth checking:
 
-- **Updates that add new permissions**: A legitimate extension should not suddenly need new sensitive permissions after months of use. If Chrome prompts you to approve new permissions for an existing extension, read carefully before accepting.
-- **Obfuscated JavaScript**: While minification is normal, heavily obfuscated code in an open-source or consumer extension is a warning sign. Legitimate extensions generally do not need to hide what they are doing.
-- **Remote code loading**: MV3 blocks this, but for MV2 extensions or side-loaded extensions, check if the background script fetches and executes code from a remote URL. This lets the extension's behavior change after install without triggering another review.
-- **Mismatch between description and permissions**: A currency converter that requests `history`, `cookies`, and `webRequest` has no obvious reason for that access. The gap between stated functionality and requested permissions is the clearest signal.
+- Updates that add new permissions: A legitimate extension should not suddenly need new sensitive permissions after months of use. If Chrome prompts you to approve new permissions for an existing extension, read carefully before accepting.
+- Obfuscated JavaScript: While minification is normal, heavily obfuscated code in an open-source or consumer extension is a warning sign. Legitimate extensions generally do not need to hide what they are doing.
+- Remote code loading: MV3 blocks this, but for MV2 extensions or side-loaded extensions, check if the background script fetches and executes code from a remote URL. This lets the extension's behavior change after install without triggering another review.
+- Mismatch between description and permissions: A currency converter that requests `history`, `cookies`, and `webRequest` has no obvious reason for that access. The gap between stated functionality and requested permissions is the clearest signal.
 
-## The Bottom Line
+The Bottom Line
 
 Chrome extension permissions exist to protect your privacy and security. As a developer, request only what you need and explain why. As a user, review permissions before installing and regularly audit your extensions.
 
@@ -387,10 +387,10 @@ A good rule of thumb: if an extension requests access to "all data on all websit
 ---
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at https://zovo.one
+Built by theluckystrike. More at https://zovo.one

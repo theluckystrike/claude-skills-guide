@@ -14,17 +14,17 @@ score: 7
 
 
 {% raw %}
-# Claude Code for Resend Email Workflow Tutorial
+Claude Code for Resend Email Workflow Tutorial
 
-Email automation is a critical component of modern web applications. Whether you're sending welcome emails, order confirmations, or password reset links, having a reliable workflow is essential. In this tutorial, we'll explore how to use Claude Code to build robust email workflows using Resend, one of the most popular email API services today.
+Email automation is a critical component of modern web applications. Whether you're sending welcome emails, order confirmations, or password reset links, having a reliable workflow is essential. In this tutorial, we'll explore how to use Claude Code to build solid email workflows using Resend, one of the most popular email API services today.
 
-## Understanding Resend and Its Integration with Claude Code
+Understanding Resend and Its Integration with Claude Code
 
 Resend provides a developer-friendly API for sending transactional emails. When combined with Claude Code's AI-assisted development capabilities, you can rapidly prototype, implement, and debug email workflows without the usual friction. Claude Code can help you generate boilerplate code, debug issues, and even suggest improvements to your email delivery strategy.
 
 The integration works smoothly because both tools are designed with developers in mind. Resend offers a clean REST API, while Claude Code understands context and can generate appropriate code snippets based on your requirements.
 
-## Setting Up Your Project
+Setting Up Your Project
 
 Before building your email workflow, you'll need to install the Resend SDK and configure your environment. Here's how to get started:
 
@@ -67,7 +67,7 @@ export async function sendEmail(options: EmailOptions) {
 
 This basic setup gives you a reusable function that Claude Code can help you expand based on specific use cases.
 
-## Building a Welcome Email Workflow
+Building a Welcome Email Workflow
 
 A common pattern in web applications is sending welcome emails when users sign up. Let's build a complete workflow that Claude Code can help you implement and customize.
 
@@ -128,7 +128,7 @@ export const WelcomeEmail = ({ userName, verificationLink }: WelcomeEmailProps) 
 
 This template demonstrates several best practices: responsive design, inline styles for email client compatibility, and clear call-to-action buttons. Claude Code can help you customize this template to match your brand colors and add additional sections as needed.
 
-## Implementing the Workflow Logic
+Implementing the Workflow Logic
 
 Now let's create the workflow that ties everything together:
 
@@ -169,9 +169,9 @@ export async function onUserSignup(user: User) {
 
 The workflow handles the complete signup-to-email journey, including generating verification links and rendering the React Email component to HTML.
 
-## Adding Error Handling and Retries
+Adding Error Handling and Retries
 
-Production email workflows need robust error handling. Here's how you can implement retry logic:
+Production email workflows need solid error handling. Here's how you can implement retry logic:
 
 ```typescript
 import { RateLimitError, ValidationError } from 'resend';
@@ -202,7 +202,7 @@ async function sendEmailWithRetry(options: EmailOptions, attempt = 1): Promise<a
 
 This retry mechanism handles rate limiting gracefully, which is crucial when sending emails at scale.
 
-## Testing Your Email Workflow
+Testing Your Email Workflow
 
 Testing email workflows requires a different approach than regular unit tests. Resend provides a test mode that you can use during development:
 
@@ -234,7 +234,7 @@ async function testWelcomeEmail() {
 
 You can also use tools like Mailtrap or Ethereal Email for local development and testing without any external dependencies.
 
-## Monitoring and Analytics
+Monitoring and Analytics
 
 Once your workflow is live, monitoring becomes essential. Resend provides webhooks that you can use to track email events:
 
@@ -274,26 +274,26 @@ app.post('/webhooks/resend', express.raw({ type: 'application/json' }), async (r
 
 This webhook handler processes all the important email events, allowing you to maintain accurate delivery stats and handle bounce complaints automatically.
 
-## Best Practices for Production Workflows
+Best Practices for Production Workflows
 
 When deploying your email workflow to production, consider these recommendations:
 
-- **Use dedicated sending domains**: Configure proper DNS records (SPF, DKIM, DMARC) to improve deliverability and protect your sender reputation.
-- **Implement unsubscribe handling**: Always include working unsubscribe links in your emails to comply with regulations like CAN-SPAM and GDPR.
-- **Warm up your sending account**: Start with low volumes and gradually increase to build a positive sender reputation.
-- **Use templating variables wisely**: When storing user data for personalization, ensure proper escaping to prevent injection issues.
+- Use dedicated sending domains: Configure proper DNS records (SPF, DKIM, DMARC) to improve deliverability and protect your sender reputation.
+- Implement unsubscribe handling: Always include working unsubscribe links in your emails to comply with regulations like CAN-SPAM and GDPR.
+- Warm up your sending account: Start with low volumes and gradually increase to build a positive sender reputation.
+- Use templating variables wisely: When storing user data for personalization, ensure proper escaping to prevent injection issues.
 
-## Conclusion
+Conclusion
 
-Building email workflows with Resend and Claude Code doesn't have to be complicated. By following this tutorial, you now have a solid foundation for implementing transactional emails in your application. Claude Code can help you extend these patterns further—whether you need complex multi-step email sequences, template customization, or integration with other services.
+Building email workflows with Resend and Claude Code doesn't have to be complicated. By following this tutorial, you now have a solid foundation for implementing transactional emails in your application. Claude Code can help you extend these patterns further, whether you need complex multi-step email sequences, template customization, or integration with other services.
 
 Start with the basics outlined here, then iterate based on your specific use cases. With proper error handling, testing, and monitoring, your email workflows will be reliable and scalable.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -15,37 +15,37 @@ tags: [claude-code, claude-skills]
 
 A Chrome extension meta tag viewer gives developers and power users a streamlined way to inspect HTML metadata directly in the browser. Instead of viewing page source code or using external tools, you can analyze Open Graph tags, Twitter Card metadata, and custom meta properties with a single click. This guide walks you through building your own meta tag viewer extension and explores practical use cases for web development, SEO analysis, and content verification.
 
-## Why Inspect Meta Tags in a Chrome Extension
+Why Inspect Meta Tags in a Chrome Extension
 
 Meta tags live in the `<head>` section of HTML documents. They communicate essential information to browsers, search engines, and social media platforms. Common meta tags include:
 
-- **Title tags** — Display in browser tabs and search results
-- **Meta descriptions** — Summarize page content for search engines
-- **Open Graph tags** — Control how links appear when shared on Facebook, LinkedIn, and other platforms
-- **Twitter Card tags** — Customize link previews on Twitter
-- **Viewport settings** — Define responsive design behavior
-- **Canonical URLs** — Prevent duplicate content issues
+- Title tags. Display in browser tabs and search results
+- Meta descriptions. Summarize page content for search engines
+- Open Graph tags. Control how links appear when shared on Facebook, LinkedIn, and other platforms
+- Twitter Card tags. Customize link previews on Twitter
+- Viewport settings. Define responsive design behavior
+- Canonical URLs. Prevent duplicate content issues
 
 When building web applications or auditing existing sites, you frequently need to verify these values. Opening Developer Tools, locating the `<head>` section, and scanning through markup becomes tedious with repeated use. A dedicated Chrome extension eliminates this friction.
 
-## Building a Chrome Extension Meta Tag Viewer
+Building a Chrome Extension Meta Tag Viewer
 
 A Chrome extension consists of a manifest file, background scripts or service workers, and popup or content scripts. For a meta tag viewer, the architecture stays straightforward.
 
-### Project Structure
+Project Structure
 
 ```
 meta-tag-viewer/
-├── manifest.json
-├── popup.html
-├── popup.js
-└── icons/
-    ├── icon16.png
-    ├── icon48.png
-    └── icon128.png
+ manifest.json
+ popup.html
+ popup.js
+ icons/
+     icon16.png
+     icon48.png
+     icon128.png
 ```
 
-### Manifest Configuration
+Manifest Configuration
 
 The manifest declares permissions and defines the extension's behavior:
 
@@ -69,7 +69,7 @@ The manifest declares permissions and defines the extension's behavior:
 
 Version 3 of the manifest format replaced background pages with service workers. This example uses the `scripting` permission to execute code within the active tab.
 
-### Popup HTML Structure
+Popup HTML Structure
 
 The popup interface displays the extracted meta information:
 
@@ -94,7 +94,7 @@ The popup interface displays the extracted meta information:
 </html>
 ```
 
-### JavaScript Logic
+JavaScript Logic
 
 The popup script injects code into the active tab to extract meta tags:
 
@@ -187,9 +187,9 @@ function renderResults(tags) {
 
 The `executeScript` method runs the extraction function directly in the page context, giving it access to the full DOM.
 
-## Practical Use Cases
+Practical Use Cases
 
-### Verifying Social Media Previews
+Verifying Social Media Previews
 
 Before publishing a new blog post or product page, check how it will appear when shared. Navigate to your page, click the extension icon, and verify:
 
@@ -200,7 +200,7 @@ Before publishing a new blog post or product page, check how it will appear when
 
 Missing or incorrect Open Graph tags cause poor link previews, reducing click-through rates from social media traffic.
 
-### Debugging SEO Issues
+Debugging SEO Issues
 
 Search Console and other SEO tools report meta tag problems, but they don't always explain the cause. Use the extension to compare what you intended versus what the page actually renders. Common issues include:
 
@@ -209,11 +209,11 @@ Search Console and other SEO tools report meta tag problems, but they don't alwa
 - Missing viewport meta tags breaking mobile display
 - Canonical URLs pointing to incorrect domains
 
-### Auditing Third-Party Integrations
+Auditing Third-Party Integrations
 
 Many third-party services inject meta tags for tracking and verification. Analytics platforms add conversion tracking pixels. Social login providers insert OpenID connect tags. Payment gateways include transaction confirmation meta tags. A meta tag viewer helps you verify these integrations without searching through page source.
 
-### Building Meta Tag Management Tools
+Building Meta Tag Management Tools
 
 If you develop CMS plugins or website builders, testing your meta tag generation requires constant verification. Running a custom meta tag viewer during development catches problems early. You can extend the basic viewer to:
 
@@ -222,7 +222,7 @@ If you develop CMS plugins or website builders, testing your meta tag generation
 - Compare tags across staging and production environments
 - Export metadata as JSON for documentation
 
-## Loading Your Extension
+Loading Your Extension
 
 Chrome provides developer mode for testing unsigned extensions:
 
@@ -233,17 +233,17 @@ Chrome provides developer mode for testing unsigned extensions:
 
 The extension icon appears in your toolbar. Visit any webpage and click it to view all associated meta tags.
 
-## Summary
+Summary
 
 A Chrome extension meta tag viewer transforms metadata inspection from a multi-step process into a single click. The manifest, popup interface, and injection script combine to extract structured data from any webpage. Developers use these tools daily for SEO audits, social sharing verification, and integration debugging. Building your own gives you full control over the presentation and can be customized for specific workflows.
 
 The complete code above provides a functional foundation. From here, you can add features like tag filtering, export capabilities, or integration with APIs for automated testing. Metadata affects how your content appears across the web, and having the right tools to inspect it quickly saves development time.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

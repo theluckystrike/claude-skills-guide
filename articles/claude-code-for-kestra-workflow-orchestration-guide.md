@@ -14,24 +14,24 @@ score: 7
 
 
 {% raw %}
-# Claude Code for Kestra Workflow Orchestration Guide
+Claude Code for Kestra Workflow Orchestration Guide
 
 Kestra is a powerful open-source workflow orchestration platform that enables developers to build complex data pipelines, automate business processes, and coordinate distributed systems. When combined with Claude Code, you gain an intelligent assistant that can help you design, debug, and optimize your Kestra workflows efficiently. This guide provides practical examples and actionable advice for integrating Claude Code into your Kestra workflow development process.
 
-## Understanding Kestra Fundamentals
+Understanding Kestra Fundamentals
 
 Kestra uses a declarative approach to workflow definition, where each workflow is defined in a YAML file that describes tasks, dependencies, and execution flow. The platform supports multiple trigger types, conditional logic, and parallel execution, making it suitable for scenarios ranging from simple batch jobs to complex event-driven architectures.
 
 At its core, a Kestra workflow consists of:
 
-- **Flows**: The top-level definition containing the workflow logic
-- **Tasks**: Individual units of work that perform specific actions
-- **Triggers**: Events that initiate workflow execution
-- **Outputs**: Data passed between tasks via inputs and outputs
+- Flows: The top-level definition containing the workflow logic
+- Tasks: Individual units of work that perform specific actions
+- Triggers: Events that initiate workflow execution
+- Outputs: Data passed between tasks via inputs and outputs
 
 Claude Code can assist you in understanding these concepts, generating boilerplate code, and helping you troubleshoot issues in your workflows.
 
-## Setting Up Claude Code for Kestra Development
+Setting Up Claude Code for Kestra Development
 
 Before integrating Claude Code with Kestra, ensure you have both tools properly configured. Kestra can run either as a standalone application or within a Docker container, while Claude Code operates as a command-line assistant accessible through your terminal.
 
@@ -62,9 +62,9 @@ tasks:
       - {{ taskrun.id }}
 ```
 
-## Practical Examples: Building Workflows with Claude Code
+Practical Examples: Building Workflows with Claude Code
 
-### Example 1: Data ETL Pipeline
+Example 1: Data ETL Pipeline
 
 Let's walk through creating a complete ETL (Extract, Transform, Load) pipeline using Claude Code assistance. When you describe your requirements to Claude Code, it can generate the appropriate YAML structure:
 
@@ -113,7 +113,7 @@ tasks:
 
 Claude Code can help you customize this template for your specific data sources, add error handling, and optimize the execution flow.
 
-### Example 2: Event-Driven Workflow
+Example 2: Event-Driven Workflow
 
 Kestra excels at handling event-driven architectures. Here's how Claude Code might help you set up a workflow triggered by file changes:
 
@@ -153,13 +153,13 @@ tasks:
       - {{ taskrun.id }}
 ```
 
-## Actionable Advice for Kestra Development
+Actionable Advice for Kestra Development
 
-### 1. Use Descriptive Task IDs
+1. Use Descriptive Task IDs
 
 Always give your tasks meaningful IDs that describe their purpose. This improves readability and makes debugging easier when workflows fail. Instead of `task1`, use `extract-customer-data` or `validate-input-schema`.
 
-### 2. Leverage Conditional Execution
+2. Use Conditional Execution
 
 Kestra supports conditional task execution using the `disabled` and `condition` properties. Use these to create workflows that adapt to different scenarios:
 
@@ -173,7 +173,7 @@ tasks:
       print("Running expensive operation")
 ```
 
-### 3. Implement Proper Error Handling
+3. Implement Proper Error Handling
 
 Always include error handling in your workflows. Kestra provides several mechanisms:
 
@@ -192,16 +192,16 @@ tasks:
       - {{ taskrun.id }}
 ```
 
-### 4. Optimize for Performance
+4. Optimize for Performance
 
 When designing large-scale workflows, consider:
 
-- **Parallel execution**: Use `allowFailure: true` to run independent tasks simultaneously
-- **Resource management**: Specify CPU and memory limits for resource-intensive tasks
-- **Caching**: Utilize Kestra's caching capabilities for reusable outputs
-- **Task retry logic**: Configure appropriate retry policies for transient failures
+- Parallel execution: Use `allowFailure: true` to run independent tasks simultaneously
+- Resource management: Specify CPU and memory limits for resource-intensive tasks
+- Caching: Use Kestra's caching capabilities for reusable outputs
+- Task retry logic: Configure appropriate retry policies for transient failures
 
-### 5. Organize with Namespaces
+5. Organize with Namespaces
 
 Use namespaces to organize your flows logically:
 
@@ -211,7 +211,7 @@ namespace: company.team.project
 
 This helps with permission management and keeps related workflows together.
 
-## Debugging Kestra Workflows with Claude Code
+Debugging Kestra Workflows with Claude Code
 
 When your workflows fail, Claude Code can help you diagnose issues by:
 
@@ -222,17 +222,17 @@ When your workflows fail, Claude Code can help you diagnose issues by:
 
 Provide Claude Code with the error details and relevant workflow sections, and it can guide you through the debugging process step by step.
 
-## Conclusion
+Conclusion
 
 Integrating Claude Code with Kestra workflow orchestration dramatically improves your development productivity. By using Claude Code's understanding of Kestra's architecture and best practices, you can create robust, efficient, and maintainable workflows faster than ever. Start by defining your workflow requirements clearly, use the practical examples in this guide as templates, and apply the actionable advice to optimize your Kestra implementations.
 
 Remember to keep your workflows modular, well-documented, and properly tested. With Claude Code as your development partner, you'll be building production-ready Kestra orchestrations with confidence and efficiency.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

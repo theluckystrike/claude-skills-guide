@@ -15,7 +15,7 @@ permalink: /claude-code-for-trigger-dev-workflow-automation-tutorial/
 
 Trigger.dev has become a powerful platform for building event-driven workflows, and Claude Code skills can dramatically accelerate your development process. This guide walks through practical patterns for automating Trigger.dev workflow creation, testing, and documentation using Claude Code skills. For more event-driven automation patterns, see the [integrations hub](/integrations-hub/).
 
-## Setting Up Your Trigger.dev Project with Claude Code
+Setting Up Your Trigger.dev Project with Claude Code
 
 Before automating workflows, ensure your Trigger.dev project is properly initialized. Create a new Trigger.dev project and install the necessary dependencies:
 
@@ -27,11 +27,11 @@ npm install @trigger.dev/core @trigger.dev/github
 
 With your project ready, invoke Claude Code and load relevant skills for this workflow-heavy development environment. The [tdd skill](/claude-tdd-skill-test-driven-development-workflow/) proves invaluable for writing tests alongside your workflow definitions.
 
-## Automating Workflow Creation
+Automating Workflow Creation
 
 [When building Trigger.dev workflows, you'll often create similar patterns: triggers, jobs, and error handlers](/best-claude-code-skills-to-install-first-2026/) Claude Code can generate boilerplate faster than manually typing each file.
 
-### Example: Generating a GitHub Webhook Workflow
+Generating a GitHub Webhook Workflow
 
 ```typescript
 // Trigger.dev workflow for handling GitHub issue events
@@ -82,7 +82,7 @@ name: trigger-workflow-generator
 description: Generates Trigger.dev workflow boilerplate
 ---
 
-# Trigger.dev Workflow Generator
+Trigger.dev Workflow Generator
 
 [You help developers create Trigger.dev workflows quickly](/claude-skill-md-format-complete-specification-guide/). When asked to generate a workflow, produce complete, type-safe code that follows these patterns:
 
@@ -93,9 +93,9 @@ description: Generates Trigger.dev workflow boilerplate
 5. Export the workflow with clear naming conventions
 ```
 
-## Integrating Testing with the tdd Skill
+Integrating Testing with the tdd Skill
 
-The **tdd** skill transforms how you test Trigger.dev workflows. Instead of writing tests after implementation, invoke the skill to guide test-first development:
+The tdd skill transforms how you test Trigger.dev workflows. Instead of writing tests after implementation, invoke the skill to guide test-first development:
 
 ```bash
 /tdd
@@ -146,9 +146,9 @@ Running tests becomes straightforward:
 npm test -- --run
 ```
 
-## Automating Documentation with pdf and docx Skills
+Automating Documentation with pdf and docx Skills
 
-Documentation often lags behind workflow implementation. The **pdf** and **docx** skills help you generate comprehensive docs automatically.
+Documentation often lags behind workflow implementation. The pdf and docx skills help you generate comprehensive docs automatically.
 
 When you need to document your Trigger.dev workflows, invoke:
 
@@ -163,11 +163,11 @@ This skill can extract your workflow definitions and create formatted documentat
 - Error handling strategies
 - API endpoint mappings
 
-The **docx** skill works similarly for Word documents, useful when sharing workflow documentation with stakeholders who prefer traditional document formats.
+The docx skill works similarly for Word documents, useful when sharing workflow documentation with stakeholders who prefer traditional document formats.
 
-## Maintaining Context with supermemory
+Maintaining Context with supermemory
 
-Complex Trigger.dev projects involve numerous workflows, secrets, and configurations. [The **supermemory** skill provides persistent context across sessions](/claude-supermemory-skill-persistent-context-explained/):
+Complex Trigger.dev projects involve numerous workflows, secrets, and configurations. [The supermemory skill provides persistent context across sessions](/claude-supermemory-skill-persistent-context-explained/):
 
 ```bash
 /supermemory
@@ -182,7 +182,7 @@ This skill tracks:
 
 When returning to a project after weeks, supermemory helps Claude Code understand your entire Trigger.dev setup without requiring lengthy re-explanations.
 
-## Complete Workflow Example: Automated PR Reviews
+Complete Workflow Example: Automated PR Reviews
 
 Here's how multiple skills combine in a real Trigger.dev project:
 
@@ -193,7 +193,7 @@ name: trigger-pr-review
 description: Trigger.dev workflow for automated PR reviews
 ---
 
-# PR Review Workflow Generator
+PR Review Workflow Generator
 
 Create Trigger.dev workflows that:
 1. Listen for GitHub pull request events
@@ -257,25 +257,25 @@ export const prReviewTrigger = createTrigger({
 });
 ```
 
-## Best Practices for Trigger.dev + Claude Code
+Best Practices for Trigger.dev + Claude Code
 
 When combining these tools, keep these recommendations in mind:
 
-- **Version control your skills**: Store custom skills in the same repository as your Trigger.dev workflows
-- **Use type-safe schemas**: Always define Zod schemas for event payloads—Claude Code respects these types
-- **Test in isolation**: Use the tdd skill to write tests for each workflow component before deployment
-- **Document incrementally**: Generate docs with pdf or docx skills after completing each workflow
-- **Initialize supermemory early**: Initialize persistent context at project start for maximum benefit
+- Version control your skills: Store custom skills in the same repository as your Trigger.dev workflows
+- Use type-safe schemas: Always define Zod schemas for event payloads, Claude Code respects these types
+- Test in isolation: Use the tdd skill to write tests for each workflow component before deployment
+- Document incrementally: Generate docs with pdf or docx skills after completing each workflow
+- Initialize supermemory early: Initialize persistent context at project start for maximum benefit
 
-## Conclusion
+Conclusion
 
 Claude Code skills significantly enhance Trigger.dev development through automation, testing, and documentation generation. The combination of tdd for test-first development, pdf and docx for documentation, and supermemory for persistent context creates a powerful development environment. Custom skills tailored to your Trigger.dev patterns multiply these benefits, enabling rapid workflow creation while maintaining code quality.
 
-## Related Reading
+Related Reading
 
 - [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/)
 - [Claude Skill MD Format: Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/)
 - [Claude Skills Serverless Function Development Workflow](/claude-skills-serverless-function-development-workflow/)
 - [Integrations Hub](/integrations-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

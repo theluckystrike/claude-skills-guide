@@ -15,38 +15,38 @@ permalink: /claude-skills-automated-dependency-update-workflow/
 
 Keeping dependencies current is essential for security and feature access, yet manually tracking updates across multiple projects quickly becomes overwhelming. An automated [dependency update](/claude-skills-with-github-actions-ci-cd-pipeline/) workflow powered by Claude skills transforms this tedious task into a streamlined process that runs with minimal intervention.
 
-## Why Automate Dependency Updates?
+Why Automate Dependency Updates?
 
 Dependency management involves more than simply running `npm update` or `pip install --upgrade`. You need to review changelogs, test for breaking changes, update lockfiles, and verify that your entire project still functions correctly. Doing this manually for multiple repositories consumes significant time and introduces human error.
 
-Claude skills provide a structured approach to automation. By chaining together skills like **supermemory** for tracking dependency states, **tdd** for running test suites, and **webapp-testing** for validating functionality, you create a comprehensive workflow that handles the entire update lifecycle.
+Claude skills provide a structured approach to automation. By chaining together skills like supermemory for tracking dependency states, tdd for running test suites, and webapp-testing for validating functionality, you create a comprehensive workflow that handles the entire update lifecycle.
 
 Each skill is a Markdown file stored in `~/.claude/skills/` and invoked during a Claude Code session by typing `/skill-name`. For example, you invoke the tdd skill with `/tdd`, which prompts Claude to apply test-driven [workflows](/workflows-hub/) to your current task.
 
-## Understanding Semantic Versioning Before Automating
+Understanding Semantic Versioning Before Automating
 
 Before writing any automation, it pays to be precise about what you are updating. Every dependency version follows the `MAJOR.MINOR.PATCH` pattern defined by semver:
 
 | Version segment | When it changes | Automation risk |
 |---|---|---|
-| PATCH (e.g. 4.17.15 → 4.17.21) | Bug fixes, no API changes | Low — auto-merge safe |
-| MINOR (e.g. 18.2.0 → 18.3.0) | New features, backwards-compatible | Medium — test before merging |
-| MAJOR (e.g. 4.x → 5.x) | Breaking API changes | High — manual review required |
+| PATCH (e.g. 4.17.15 → 4.17.21) | Bug fixes, no API changes | Low. auto-merge safe |
+| MINOR (e.g. 18.2.0 → 18.3.0) | New features, backwards-compatible | Medium. test before merging |
+| MAJOR (e.g. 4.x → 5.x) | Breaking API changes | High. manual review required |
 
 Your workflow should behave differently depending on which segment changed. Automatically merging a PATCH update is generally safe. Auto-merging a MAJOR update without reading the migration guide is asking for a 2 AM incident.
 
-## Building the Core Workflow
+Building the Core Workflow
 
 The foundation of an automated dependency update workflow requires three main components: detection of outdated packages, execution of updates, and verification of results. Each component maps to specific Claude skills that handle the complexity.
 
 Start by creating a custom `dep-scanner` skill at `~/.claude/skills/dep-scanner.md`:
 
 ```markdown
-# Dependency Scanner
+Dependency Scanner
 
 Scan project dependencies and identify available updates.
 
-## Steps
+Steps
 
 1. Read package.json, package-lock.json, or requirements.txt
 2. Run `npm outdated --json` or `pip list --outdated --format=json`
@@ -71,16 +71,16 @@ Found 12 outdated packages:
 - typescript: 5.0.4 → 5.3.0 (minor)
 ```
 
-### Extending the Scanner for Python Projects
+Extending the Scanner for Python Projects
 
 The same skill pattern applies to Python projects using pip. Create `~/.claude/skills/pip-dep-scanner.md`:
 
 ```markdown
-# Python Dependency Scanner
+Python Dependency Scanner
 
 Scan pip dependencies and identify available updates.
 
-## Steps
+Steps
 
 1. Run `pip list --outdated --format=json` and parse the output
 2. Check requirements.txt or pyproject.toml for pinned versions
@@ -92,7 +92,7 @@ Scan pip dependencies and identify available updates.
 For a pyproject.toml-based project, Claude will inspect your `[tool.poetry.dependencies]` or `[project.dependencies]` section and map each declared constraint against the available versions:
 
 ```bash
-# Claude runs this inside the skill
+Claude runs this inside the skill
 pip list --outdated --format=json | python3 -c "
 import json, sys
 data = json.load(sys.stdin)
@@ -109,12 +109,12 @@ for pkg in sorted(data, key=lambda x: x['name']):
 "
 ```
 
-## Integrating with Version Control
+Integrating with Version Control
 
 After identifying updates, the workflow should create branches, commit changes, and open pull requests automatically. You can do this directly from Claude Code using shell tools:
 
 ```bash
-# Automated update script
+Automated update script
 git checkout -b dependency-updates/$(date +%Y%m%d)
 npm install
 npm update
@@ -129,27 +129,27 @@ This ensures every dependency change goes through code review, maintaining your 
 A well-structured PR template (`pr-template.md`) makes the review process faster. Include the following sections:
 
 ```markdown
-## Summary
-Automated dependency update — $(date +%Y-%m-%d)
+Summary
+Automated dependency update. $(date +%Y-%m-%d)
 
-## Changes
+Changes
 <!-- Populated automatically by dep-scanner output -->
 
-## Test results
+Test results
 - [ ] Unit tests passing
 - [ ] Integration tests passing
 - [ ] No new security advisories
 
-## Major updates requiring manual review
+Major updates requiring manual review
 <!-- List any MAJOR version bumps here with migration notes -->
 ```
 
-## Handling Breaking Changes with a Tiered Strategy
+Handling Breaking Changes with a Tiered Strategy
 
 Despite careful planning, major version updates sometimes introduce breaking changes. Configure your workflow to auto-apply only patch and minor updates, and flag major updates for manual review:
 
 ```bash
-# Check for major updates only
+Check for major updates only
 npm outdated --json | jq '[to_entries[] | select(.value.wanted != .value.latest and (.value.latest | split(".")[0]) != (.value.current | split(".")[0]))]'
 ```
 
@@ -159,11 +159,11 @@ A tiered approach looks like this in practice:
 
 ```bash
 #!/usr/bin/env bash
-# update-deps.sh — tiered update strategy
+update-deps.sh. tiered update strategy
 
 OUTDATED=$(npm outdated --json)
 
-# Apply patch updates immediately
+Apply patch updates immediately
 PATCHES=$(echo "$OUTDATED" | jq -r '
   to_entries[] |
   select(
@@ -173,7 +173,7 @@ PATCHES=$(echo "$OUTDATED" | jq -r '
   .key
 ')
 
-# Apply minor updates to a separate branch for testing
+Apply minor updates to a separate branch for testing
 MINORS=$(echo "$OUTDATED" | jq -r '
   to_entries[] |
   select(
@@ -183,7 +183,7 @@ MINORS=$(echo "$OUTDATED" | jq -r '
   .key
 ')
 
-# Flag major updates for human review
+Flag major updates for human review
 MAJORS=$(echo "$OUTDATED" | jq -r '
   to_entries[] |
   select(
@@ -197,7 +197,7 @@ echo "MINORS (test then merge): $MINORS"
 echo "MAJORS (human review): $MAJORS"
 ```
 
-## Testing and Verification
+Testing and Verification
 
 Updating dependencies without testing is a recipe for production issues. Invoke the `/tdd` skill after applying updates to validate that nothing regressed:
 
@@ -205,52 +205,52 @@ Updating dependencies without testing is a recipe for production issues. Invoke 
 /tdd run full suite after dependency update
 ```
 
-The tdd skill prompts Claude to identify your test runner, execute the test suite, and surface any failures with context. For frontend projects, add `/webapp-testing` to catch runtime issues that unit tests miss—this skill drives a browser against your local dev server and checks that key flows still work.
+The tdd skill prompts Claude to identify your test runner, execute the test suite, and surface any failures with context. For frontend projects, add `/webapp-testing` to catch runtime issues that unit tests miss, this skill drives a browser against your local dev server and checks that key flows still work.
 
 A useful pattern is to run tests in layers, from fastest to slowest:
 
 ```bash
-# Layer 1: Type checking (fastest feedback)
+Layer 1: Type checking (fastest feedback)
 npx tsc --noEmit
 
-# Layer 2: Unit tests
+Layer 2: Unit tests
 npm run test:unit
 
-# Layer 3: Integration tests
+Layer 3: Integration tests
 npm run test:integration
 
-# Layer 4: E2E (only if layers 1-3 pass)
+Layer 4: E2E (only if layers 1-3 pass)
 npm run test:e2e
 ```
 
 If any layer fails, stop and investigate before proceeding. The `/tdd` skill will surface the failure context and suggest whether it stems from the dependency change or pre-existing issues.
 
-## Rollback Strategy
+Rollback Strategy
 
 Every automated workflow needs a rollback plan. When a dependency update causes failures that are not immediately fixable, reverting to the known-good state should take seconds, not minutes.
 
 For npm projects, `package-lock.json` is your safety net:
 
 ```bash
-# Rollback a single package
+Rollback a single package
 npm install express@4.18.2
 
-# Rollback everything to the last known-good lockfile
+Rollback everything to the last known-good lockfile
 git checkout HEAD~1 -- package-lock.json
 npm ci
 
-# Confirm the rollback worked
+Confirm the rollback worked
 npm test
 ```
 
 For Python, pin the previous version explicitly in your requirements file:
 
 ```bash
-# Rollback a specific package
+Rollback a specific package
 pip install "django==4.2.9"
 pip freeze > requirements.txt
 
-# Or restore the entire requirements snapshot
+Or restore the entire requirements snapshot
 git checkout HEAD~1 -- requirements.txt
 pip install -r requirements.txt
 ```
@@ -258,11 +258,11 @@ pip install -r requirements.txt
 Store your rollback commands in supermemory so Claude can execute them without you having to remember the exact syntax under pressure:
 
 ```
-/supermemory store: npm rollback command — git checkout HEAD~1 -- package-lock.json && npm ci
-/supermemory store: pip rollback command — git checkout HEAD~1 -- requirements.txt && pip install -r requirements.txt
+/supermemory store: npm rollback command. git checkout HEAD~1 -- package-lock.json && npm ci
+/supermemory store: pip rollback command. git checkout HEAD~1 -- requirements.txt && pip install -r requirements.txt
 ```
 
-## Tracking with supermemory
+Tracking with supermemory
 
 Dependency updates are not one-time events. Use `/supermemory` to log each update run and any issues encountered:
 
@@ -283,17 +283,17 @@ Consider structuring your supermemory entries consistently:
 
 For example:
 ```
-/supermemory store: [pydantic] [1.10.13]->[2.6.1] [2026-02-28] [BROKEN] model validator syntax changed, all validators needed rewrite — blocked 3 hours
+/supermemory store: [pydantic] [1.10.13]->[2.6.1] [2026-02-28] [BROKEN] model validator syntax changed, all validators needed rewrite. blocked 3 hours
 /supermemory store: [axios] [1.6.7]->[1.7.2] [2026-03-01] [CLEAN] no changes needed
 ```
 
-## Multi-Repo Workflow
+Multi-Repo Workflow
 
 If you maintain multiple repositories, the single-repo workflow scales by looping over a list of project paths:
 
 ```bash
 #!/usr/bin/env bash
-# multi-repo-update.sh
+multi-repo-update.sh
 
 REPOS=(
   "/home/user/projects/api-server"
@@ -309,18 +309,18 @@ for REPO in "${REPOS[@]}"; do
   if [ -f "package.json" ]; then
     npm outdated --json > /tmp/outdated-report.json
     npm update
-    npm test && echo "PASS: $REPO" || echo "FAIL: $REPO — check /tmp/outdated-report.json"
+    npm test && echo "PASS: $REPO" || echo "FAIL: $REPO. check /tmp/outdated-report.json"
   elif [ -f "requirements.txt" ]; then
     pip list --outdated --format=json > /tmp/outdated-report.json
     pip install --upgrade -r requirements.txt
-    python -m pytest && echo "PASS: $REPO" || echo "FAIL: $REPO — check /tmp/outdated-report.json"
+    python -m pytest && echo "PASS: $REPO" || echo "FAIL: $REPO. check /tmp/outdated-report.json"
   fi
 done
 ```
 
 Run this from a Claude Code session with `/dep-scanner` active, and Claude will monitor the output, highlight failures, and suggest targeted fixes without interrupting the successful repos.
 
-## Comparison: Manual vs. Automated Dependency Management
+Comparison: Manual vs. Automated Dependency Management
 
 | Concern | Manual process | Claude skills workflow |
 |---|---|---|
@@ -332,12 +332,12 @@ Run this from a Claude Code session with `/dep-scanner` active, and Claude will 
 | Scheduling | Ad hoc, when remembered | GitHub Actions cron every Monday |
 | Breaking changes | Discovered in production | Caught by CI before merge |
 
-## Scheduling and CI Integration
+Scheduling and CI Integration
 
 Schedule the workflow using GitHub Actions to run every Monday morning:
 
 ```yaml
-# .github/workflows/dependency-update.yml
+.github/workflows/dependency-update.yml
 name: Weekly Dependency Update
 on:
   schedule:
@@ -364,12 +364,12 @@ jobs:
           commit-message: "chore: weekly dependency update"
 ```
 
-Note that GitHub Actions runs shell commands directly—Claude skills are for your local Claude Code session. The CI pipeline runs the same steps (update, test, PR) without Claude in the loop.
+Note that GitHub Actions runs shell commands directly, Claude skills are for your local Claude Code session. The CI pipeline runs the same steps (update, test, PR) without Claude in the loop.
 
 For Python projects, adapt the workflow to use pip or Poetry:
 
 ```yaml
-# .github/workflows/python-dependency-update.yml
+.github/workflows/python-dependency-update.yml
 name: Weekly Python Dependency Update
 on:
   schedule:
@@ -399,21 +399,21 @@ jobs:
           commit-message: "chore: weekly python dependency update"
 ```
 
-## Best Practices
+Best Practices
 
-**Test in isolation** before merging updates. Use feature branches and CI pipelines to verify changes work correctly.
+Test in isolation before merging updates. Use feature branches and CI pipelines to verify changes work correctly.
 
-**Lock versions for production** while allowing flexibility in development. Your lockfile should reflect exact versions deployed to production.
+Lock versions for production while allowing flexibility in development. Your lockfile should reflect exact versions deployed to production.
 
-**Monitor security advisories** separately from regular updates. Use GitHub Dependabot or Snyk alongside your Claude workflow for critical security patches. Security CVEs should not wait for the Monday morning cron job — configure Dependabot to open immediate PRs for any package with a known vulnerability.
+Monitor security advisories separately from regular updates. Use GitHub Dependabot or Snyk alongside your Claude workflow for critical security patches. Security CVEs should not wait for the Monday morning cron job. configure Dependabot to open immediate PRs for any package with a known vulnerability.
 
-**Document manual steps** required for complex updates. Store these in supermemory so they can be referenced in future iterations.
+Document manual steps required for complex updates. Store these in supermemory so they can be referenced in future iterations.
 
-**Separate security updates from routine updates.** A security patch should merge within hours. A minor feature update can wait for the weekly cycle. Conflating the two slows down your security response time.
+Separate security updates from routine updates. A security patch should merge within hours. A minor feature update can wait for the weekly cycle. Conflating the two slows down your security response time.
 
-**Review transitive dependencies.** Your direct dependencies often pull in their own dependencies. Use `npm ls` or `pip show --files` to understand the full dependency tree before applying updates that could affect it.
+Review transitive dependencies. Your direct dependencies often pull in their own dependencies. Use `npm ls` or `pip show --files` to understand the full dependency tree before applying updates that could affect it.
 
-## Putting It Together
+Putting It Together
 
 An automated dependency update workflow using Claude skills eliminates the manual overhead while keeping your projects current. Use `/dep-scanner` to identify what needs updating, `/tdd` to verify nothing broke, and `/supermemory` to build a knowledge base of past issues. Apply the tiered PATCH/MINOR/MAJOR strategy to let safe changes flow through automatically while routing risky updates to human review. Pair this with a CI pipeline for scheduled automation, and dependency hygiene becomes a background process rather than a recurring chore.
 
@@ -421,11 +421,11 @@ The long-term payoff is compounding: the supermemory log grows more valuable eac
 
 ---
 
-## Related Reading
+Related Reading
 
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Full developer skill stack including tdd
-- [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/) — Automate deployments with Claude skills
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Full developer skill stack including tdd
+- [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/). Automate deployments with Claude skills
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate automatically
 
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -17,34 +17,34 @@ API versioning stands as one of the most critical decisions when building extens
 
 Choosing the right versioning strategy impacts maintainability, backward compatibility, and developer experience. This guide examines practical versioning approaches with concrete Python examples you can apply directly to your Claude Skills projects.
 
-## Why API Versioning Matters for Claude Skills
+Why API Versioning Matters for Claude Skills
 
 When your skill communicates with external APIs, you're often dealing with services that evolve over time. A payment integration you built last year might break when the provider deprecates v1 endpoints. Similarly, if you expose your own skill as an API for other tools to consume, callers need stability while you add features.
 
-Proper versioning lets you iterate on your skill's backend without disrupting existing integrations. It also gives API consumers clear signals about what behavior to expect. The three main approaches—URL path, header-based, and query string versioning—each have distinct trade-offs worth understanding before you commit to one.
+Proper versioning lets you iterate on your skill's backend without disrupting existing integrations. It also gives API consumers clear signals about what behavior to expect. The three main approaches, URL path, header-based, and query string versioning, each have distinct trade-offs worth understanding before you commit to one.
 
 Consider what happens without a versioning strategy: a third-party API silently changes its response schema, your skill breaks at runtime, and users have no warning. Proper versioning surfaces these changes as explicit events rather than silent failures. API providers typically deprecate old versions over a well-publicized timeline, giving you time to migrate rather than scrambling when production goes down.
 
 From the consumer side, versioning discipline also makes your skill's dependencies auditable. When you pin to `v2` of a service, another developer reading your code immediately understands which feature set you rely on, without hunting through changelogs to determine when a particular field was introduced.
 
-## Comparing the Three Core Strategies
+Comparing the Three Core Strategies
 
 Before diving into implementation, here is a quick reference for the trade-offs each approach brings:
 
 | Strategy | URL Appearance | Caching | Browser Testing | Typical Use Case |
 |---|---|---|---|---|
-| URL Path (`/v2/resource`) | Version visible in path | Easy — CDNs cache normally | Simple — change path segment | Public APIs, Stripe, GitHub |
-| Accept Header | Clean URLs | Harder — Vary header required | Requires curl or Postman | Internal APIs, content negotiation |
-| Query String (`?version=v2`) | Version as parameter | Moderate — cache key includes param | Very easy — edit URL bar | Exploratory APIs, admin tools |
+| URL Path (`/v2/resource`) | Version visible in path | Easy. CDNs cache normally | Simple. change path segment | Public APIs, Stripe, GitHub |
+| Accept Header | Clean URLs | Harder. Vary header required | Requires curl or Postman | Internal APIs, content negotiation |
+| Query String (`?version=v2`) | Version as parameter | Moderate. cache key includes param | Very easy. edit URL bar | Exploratory APIs, admin tools |
 
 None of these is universally best. The right choice depends on who your consumers are, whether you control both sides of the wire, and what caching infrastructure sits between your skill and the API.
 
-## URL Path Versioning
+URL Path Versioning
 
 URL path versioning embeds the version identifier directly in the endpoint path. This approach offers clear visibility: consumers always know which version they're calling.
 
 ```yaml
-# Skill configuration for URL-path-based API calls
+Skill configuration for URL-path-based API calls
 name: payment-integration
 description: Process payments through the Stripe API
 ```
@@ -64,9 +64,9 @@ def call_stripe_api(endpoint, api_key, version="v1"):
     return requests.get(url, headers=headers)
 ```
 
-This pattern works well when you want explicit control over which API version gets invoked. Many popular APIs, including Stripe, GitHub, and Slack, use this approach. The main drawback involves URL proliferation as versions accumulate—your skill might need to maintain logic for multiple paths.
+This pattern works well when you want explicit control over which API version gets invoked. Many popular APIs, including Stripe, GitHub, and Slack, use this approach. The main drawback involves URL proliferation as versions accumulate, your skill might need to maintain logic for multiple paths.
 
-For more robust path versioning, you can wrap the version logic in a dedicated client class that centralizes configuration and makes the call sites cleaner:
+For more solid path versioning, you can wrap the version logic in a dedicated client class that centralizes configuration and makes the call sites cleaner:
 
 ```python
 import requests
@@ -106,12 +106,12 @@ With this structure, migrating from v1 to v2 is a one-line change in your skill'
 
 A real-world scenario: when GitHub released their REST API v3 and later began moving features to the GraphQL API, skills that used path versioning cleanly (`/v3/repos/{owner}/{repo}`) could be migrated systematically. Skills that had version strings scattered as inline literals required a much broader refactor.
 
-## Header-Based Versioning
+Header-Based Versioning
 
 Header versioning keeps the URL clean while specifying the version through HTTP headers. This approach suits scenarios where the same endpoint URL should behave differently based on client preference.
 
 ```yaml
-# Using Accept header for version negotiation
+Using Accept header for version negotiation
 name: document-processor
 description: Process documents using the pdf skill with API version control
 ```
@@ -129,9 +129,9 @@ def fetch_document_metadata(doc_id, api_version="2024-01"):
     return response.json()
 ```
 
-Header versioning keeps your URLs stable while giving callers fine-grained control. This approach pairs well with skills that aggregate multiple API sources—you can maintain version preferences per service without polluting your URL structures. The **supermemory** skill, for example, might use header versioning when querying different memory backends that evolve at different rates.
+Header versioning keeps your URLs stable while giving callers fine-grained control. This approach pairs well with skills that aggregate multiple API sources, you can maintain version preferences per service without polluting your URL structures. The supermemory skill, for example, might use header versioning when querying different memory backends that evolve at different rates.
 
-A more complete implementation using `Accept` header content negotiation—the RFC-compliant approach used by services like GitHub's API:
+A more complete implementation using `Accept` header content negotiation, the RFC-compliant approach used by services like GitHub's API:
 
 ```python
 import requests
@@ -155,30 +155,30 @@ class HeaderVersionedClient:
             headers.update(extra_headers)
         return headers
 
-    def request(self, method: str, path: str, version: str, **kwargs) -> dict:
+    def request(self, method: str, path: str, version: str, kwargs) -> dict:
         url = f"{self.base_url}/{path.lstrip('/')}"
         headers = self._build_headers(version, kwargs.pop("headers", {}))
-        response = requests.request(method, url, headers=headers, **kwargs)
+        response = requests.request(method, url, headers=headers, kwargs)
         response.raise_for_status()
         return response.json()
 
-    def get(self, path: str, version: str = "2024-01", **kwargs) -> dict:
-        return self.request("GET", path, version, **kwargs)
+    def get(self, path: str, version: str = "2024-01", kwargs) -> dict:
+        return self.request("GET", path, version, kwargs)
 
-    def post(self, path: str, version: str = "2024-01", **kwargs) -> dict:
-        return self.request("POST", path, version, **kwargs)
+    def post(self, path: str, version: str = "2024-01", kwargs) -> dict:
+        return self.request("POST", path, version, kwargs)
 ```
 
 One practical consideration: when using header versioning, your HTTP cache (Varnish, CloudFront, etc.) must include the `Vary: Accept` or `Vary: Accept-Version` header in its cache key. Without this, a cache might serve a v1 response to a caller expecting v2. Always verify that the API server returns the appropriate `Vary` header, and configure your caching infrastructure accordingly.
 
 Header versioning also fits naturally with API gateways that route traffic based on header values, letting you run v1 and v2 backends simultaneously behind the same domain without path conflicts.
 
-## Query String Versioning
+Query String Versioning
 
 Query string versioning adds the version as a URL parameter. This approach offers simplicity: callers modify one parameter without changing headers or URL paths.
 
 ```yaml
-# Query-based version selection
+Query-based version selection
 name: analytics-reporter
 description: Generate analytics reports through the tdd skill
 ```
@@ -200,7 +200,7 @@ def generate_report(report_type, api_version="v2"):
 
 Query string versioning works intuitively with browser-based testing and curl commands. Developers can quickly experiment with different versions by modifying a single parameter. However, caching becomes more complex because the same resource might exist at multiple URLs depending on the version parameter.
 
-Here is a more complete query-string client that also handles pagination—a common pattern for analytics APIs that return versioned, paginated results:
+Here is a more complete query-string client that also handles pagination, a common pattern for analytics APIs that return versioned, paginated results:
 
 ```python
 import requests
@@ -245,7 +245,7 @@ class QueryVersionedClient:
 
 This pattern is especially useful for skills that pull large datasets and need to iterate across all pages while maintaining version consistency throughout the paginated sequence.
 
-## Version Negotiation Patterns
+Version Negotiation Patterns
 
 Advanced skills often implement automatic version negotiation, where the skill detects available versions and selects the optimal one:
 
@@ -264,7 +264,7 @@ class APIVersionManager:
             self.preferred_version = self.supported_versions[-1]
         return self.supported_versions
 
-    def make_request(self, endpoint, **kwargs):
+    def make_request(self, endpoint, kwargs):
         """Make a request using the preferred version."""
         if not self.preferred_version:
             self.discover_versions()
@@ -273,10 +273,10 @@ class APIVersionManager:
         headers["Accept-Version"] = self.preferred_version
         kwargs["headers"] = headers
 
-        return requests.get(f"{self.base_url}/{endpoint}", **kwargs)
+        return requests.get(f"{self.base_url}/{endpoint}", kwargs)
 ```
 
-This pattern shines when building skills that work across multiple API environments. The **frontend-design** skill might use version negotiation to adapt to different design tool APIs that expose varying capability levels.
+This pattern shines when building skills that work across multiple API environments. The frontend-design skill might use version negotiation to adapt to different design tool APIs that expose varying capability levels.
 
 You can extend version negotiation to handle deprecation warnings gracefully. Many APIs include deprecation hints in response headers:
 
@@ -338,11 +338,11 @@ class SmartVersionClient:
 
 This implementation logs warnings when the API signals deprecation through standard headers, giving your skill operators early notice to upgrade before the old version is sunset.
 
-## Practical Considerations for Claude Skills
+Practical Considerations for Claude Skills
 
 When implementing API versioning in your skills, consider these practical guidelines:
 
-**Default to the most stable version.** Your skill should handle version fallback gracefully. If v2 fails, attempt v1 before surfacing an error.
+Default to the most stable version. Your skill should handle version fallback gracefully. If v2 fails, attempt v1 before surfacing an error.
 
 ```python
 def robust_api_call(endpoint, preferred_version="v2", fallback_version="v1"):
@@ -356,21 +356,21 @@ def robust_api_call(endpoint, preferred_version="v2", fallback_version="v1"):
     raise AllVersionsFailedError()
 ```
 
-**Document version dependencies.** If your skill requires specific API versions, state this clearly in the skill's description. The **tdd** skill, for instance, might document which testing framework API versions it supports.
+Document version dependencies. If your skill requires specific API versions, state this clearly in the skill's description. The tdd skill, for instance, might document which testing framework API versions it supports.
 
-**Use environment variables for version configuration.** This lets users override defaults without modifying skill code:
+Use environment variables for version configuration. This lets users override defaults without modifying skill code:
 
 ```yaml
-# In skill.md
-## Configuration
+In skill.md
+Configuration
 - `API_VERSION`: Override the default API version (default: v2)
 - `API_BASE_URL`: Base URL for the API endpoint
 ```
 
-**Pin versions in your skill configuration, not in runtime logic.** Version selection buried in conditional branches is harder to audit than a single top-level constant. Consider a dedicated configuration section:
+Pin versions in your skill configuration, not in runtime logic. Version selection buried in conditional branches is harder to audit than a single top-level constant. Consider a dedicated configuration section:
 
 ```python
-# config.py — version configuration lives in one place
+config.py. version configuration lives in one place
 API_CONFIG = {
     "stripe": {
         "version": "v1",
@@ -385,7 +385,7 @@ API_CONFIG = {
 }
 ```
 
-**Write integration tests for each supported version.** When an API provider announces deprecation, your tests will immediately confirm whether the new version requires changes to your skill logic. Without version-specific tests, you may discover incompatibilities only after the old endpoint is removed.
+Write integration tests for each supported version. When an API provider announces deprecation, your tests will immediately confirm whether the new version requires changes to your skill logic. Without version-specific tests, you may discover incompatibilities only after the old endpoint is removed.
 
 ```python
 import pytest
@@ -400,9 +400,9 @@ def test_payment_endpoint_returns_charge_id(api_version, stripe_test_client):
 
 Running tests across versions surfaces breaking changes before they reach production and gives you confidence when migrating from a deprecated version to its successor.
 
-## Handling Versioning Errors Gracefully
+Handling Versioning Errors Gracefully
 
-When version-related failures occur—a version is removed, a version header is rejected, or a discovery endpoint is unreachable—your skill should produce actionable error messages rather than generic HTTP exceptions.
+When version-related failures occur, a version is removed, a version header is rejected, or a discovery endpoint is unreachable, your skill should produce actionable error messages rather than generic HTTP exceptions.
 
 ```python
 class VersionError(Exception):
@@ -434,21 +434,21 @@ def safe_versioned_request(client, endpoint, version):
         raise
 ```
 
-Clear error messages tell the skill operator exactly where to look—the version configuration—rather than leaving them to interpret raw HTTP status codes.
+Clear error messages tell the skill operator exactly where to look, the version configuration, rather than leaving them to interpret raw HTTP status codes.
 
-## Conclusion
+Conclusion
 
 API versioning directly impacts how maintainable and extensible your Claude Skills become over time. URL path versioning offers clarity and simplicity. Header-based versioning keeps URLs clean while enabling sophisticated client preferences. Query string versioning provides quick experimentation without header manipulation.
 
-Choose based on your specific use case: external APIs you consume may mandate certain approaches, while your own skill endpoints benefit from thoughtful selection. Regardless of strategy, centralize version configuration, log deprecation warnings, write parametrized tests, and implement fallback logic. The **pdf** skill for document generation and **supermemory** for persistent storage both demonstrate how version-aware design prevents integration rot as services evolve. Applied consistently, these practices mean version migrations become deliberate, testable events rather than emergency hotfixes.
+Choose based on your specific use case: external APIs you consume may mandate certain approaches, while your own skill endpoints benefit from thoughtful selection. Regardless of strategy, centralize version configuration, log deprecation warnings, write parametrized tests, and implement fallback logic. The pdf skill for document generation and supermemory for persistent storage both demonstrate how version-aware design prevents integration rot as services evolve. Applied consistently, these practices mean version migrations become deliberate, testable events rather than emergency hotfixes.
 
 
-## Related Reading
+Related Reading
 
-- [Claude Code REST API Versioning Strategy Workflow Tips](/claude-code-rest-api-versioning-strategy-workflow-tips/) — building your own versioned REST API with Express.js, contract testing, and deployment
+- [Claude Code REST API Versioning Strategy Workflow Tips](/claude-code-rest-api-versioning-strategy-workflow-tips/). building your own versioned REST API with Express.js, contract testing, and deployment
 - [What Is the Best Claude Skill for REST API Development?](/what-is-the-best-claude-skill-for-rest-api-development/)
 - [Claude Code Tutorials Hub](/tutorials-hub/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Code Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

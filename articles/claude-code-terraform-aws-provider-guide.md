@@ -13,24 +13,24 @@ tags: [claude-code, claude-skills]
 ---
 
 
-# Claude Code Terraform AWS Provider Guide
+Claude Code Terraform AWS Provider Guide
 
 Infrastructure as code has become essential for managing cloud resources at scale. Terraform remains the industry standard for defining infrastructure, and when combined with Claude Code's AI capabilities, you can dramatically accelerate your AWS provisioning workflows. This guide shows you how to use Claude skills to write, review, and manage Terraform configurations more effectively.
 
-This article focuses specifically on **AWS provider patterns**: `assume_role` configuration, provider aliases for multi-account deployments, multi-region setups, and AWS-specific authentication strategies. If you are looking for a broader survey of Claude skills across general Terraform workflows — including multi-workspace scripting, terraform-docs integration, and Infracost — see the companion article [Claude Code Skills for Infrastructure as Code with Terraform](/claude-code-skills-for-infrastructure-as-code-terraform/).
+This article focuses specifically on AWS provider patterns: `assume_role` configuration, provider aliases for multi-account deployments, multi-region setups, and AWS-specific authentication strategies. If you are looking for a broader survey of Claude skills across general Terraform workflows. including multi-workspace scripting, terraform-docs integration, and Infracost. see the companion article [Claude Code Skills for Infrastructure as Code with Terraform](/claude-code-skills-for-infrastructure-as-code-terraform/).
 
-## Setting Up Claude for Terraform Development
+Setting Up Claude for Terraform Development
 
 Before diving into advanced patterns, ensure your Claude environment is configured for infrastructure work. While Claude Code comes with general coding capabilities, pairing it with the right skills transforms it into an infrastructure powerhouse.
 
 The most effective approach combines multiple skills: the `tdd` skill for test-driven infrastructure development, the `pdf` skill for analyzing AWS documentation, and the `supermemory` skill to retain context across complex Terraform projects. Install these through your preferred skill management approach before proceeding.
 
-## Creating Terraform Modules with Claude Assistance
+Creating Terraform Modules with Claude Assistance
 
 When building reusable Terraform modules, Claude can generate boilerplate, suggest best practices, and catch common mistakes. Here's a practical pattern for AWS VPC modules:
 
 ```hcl
-# modules/vpc/main.tf
+modules/vpc/main.tf
 variable "environment" {
   description = "Environment name (dev/staging/prod)"
   type        = string
@@ -68,7 +68,7 @@ resource "aws_subnet" "public" {
 
 Claude can help you generate this structure by providing clear prompts about your requirements. Specify the AWS service, the number of resources needed, and any naming conventions you follow.
 
-## AWS Provider Configuration and Best Practices
+AWS Provider Configuration and Best Practices
 
 Proper AWS provider configuration is critical for secure and maintainable Terraform code. Claude can help you implement the recommended patterns for authentication and backend state management.
 
@@ -110,7 +110,7 @@ provider "aws" {
 
 The default tags configuration ensures every resource receives consistent tagging without repetitive declarations in each resource block. This pattern significantly reduces maintenance overhead as your infrastructure grows.
 
-## State Management and Remote Execution
+State Management and Remote Execution
 
 One of Claude's strengths is understanding complex state dependencies. When working with Terraform state, describe your infrastructure setup and ask Claude to help you plan modifications that won't cause conflicts.
 
@@ -125,7 +125,7 @@ Previous infrastructure decisions recorded in supermemory:
 
 This context helps Claude provide more relevant suggestions when you ask about scaling decisions orcost optimization opportunities.
 
-## Testing Infrastructure with Terratest Patterns
+Testing Infrastructure with Terratest Patterns
 
 The `tdd` skill applies beautifully to infrastructure testing. Write tests before provisioning to establish the expected behavior of your Terraform modules:
 
@@ -159,7 +159,7 @@ func TestVPC(t *testing.T) {
 
 Integrating the tdd skill with your Terraform workflow creates a cycle of rapid iteration and reliable deployments. Claude can suggest test coverage areas based on the resources you're provisioning.
 
-## Documenting Infrastructure with PDF Generation
+Documenting Infrastructure with PDF Generation
 
 After creating infrastructure, documentation often lags behind. The `pdf` skill enables you to generate infrastructure documentation automatically:
 
@@ -169,19 +169,19 @@ After creating infrastructure, documentation often lags behind. The `pdf` skill 
 
 This approach ensures your documentation stays current with your actual infrastructure, a common challenge in fast-moving projects.
 
-## Common AWS Resource Patterns
+Common AWS Resource Patterns
 
 Claude excels at suggesting appropriate AWS resources for specific use cases. Here are patterns that frequently appear in production infrastructure:
 
-**EC2 Auto Scaling Groups** combine with launch templates and load balancers for resilient application hosting. Claude can generate the complete configuration including health checks, scaling policies, and instance refresh automation.
+EC2 Auto Scaling Groups combine with launch templates and load balancers for resilient application hosting. Claude can generate the complete configuration including health checks, scaling policies, and instance refresh automation.
 
-**RDS Database provisioning** requires careful attention to parameter groups, option groups, and subnet group configuration. Describe your database requirements and Claude will produce the appropriate Terraform configuration.
+RDS Database provisioning requires careful attention to parameter groups, option groups, and subnet group configuration. Describe your database requirements and Claude will produce the appropriate Terraform configuration.
 
-**S3 bucket configurations** often need lifecycle rules, replication, and server-side encryption. Claude can apply security best practices automatically, ensuring buckets aren't accidentally exposed.
+S3 bucket configurations often need lifecycle rules, replication, and server-side encryption. Claude can apply security best practices automatically, ensuring buckets aren't accidentally exposed.
 
-**IAM role and policy generation** becomes much easier when you describe the required permissions. Claude translates business requirements into least-privilege IAM policies.
+IAM role and policy generation becomes much easier when you describe the required permissions. Claude translates business requirements into least-privilege IAM policies.
 
-## Workflow Integration Tips
+Workflow Integration Tips
 
 To get the most from Claude in your Terraform workflow:
 
@@ -194,11 +194,11 @@ To get the most from Claude in your Terraform workflow:
 The combination of Claude's understanding of Terraform syntax and AWS services creates a powerful pair programming experience. Whether you're bootstrapping new projects or managing complex existing infrastructure, these patterns will help you work more efficiently.
 
 
-## Related Reading
+Related Reading
 
-- [Claude Code Skills for Infrastructure as Code with Terraform](/claude-code-skills-for-infrastructure-as-code-terraform/) — General Terraform workflows: multi-workspace, terraform-docs, Infracost, and skill survey
+- [Claude Code Skills for Infrastructure as Code with Terraform](/claude-code-skills-for-infrastructure-as-code-terraform/). General Terraform workflows: multi-workspace, terraform-docs, Infracost, and skill survey
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

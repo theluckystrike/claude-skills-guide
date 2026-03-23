@@ -13,11 +13,11 @@ score: 8
 
 {% raw %}
 
-# Claude Code for AWS WAF Workflow: A Practical Guide
+Claude Code for AWS WAF Workflow: A Practical Guide
 
-AWS Web Application Firewall (WAF) is a critical security service that protects web applications from common web exploits and bots. However, configuring and managing AWS WAF rules can be complex and time-consuming. This guide shows you how to leverage Claude Code to automate AWS WAF workflows, from initial setup to ongoing management.
+AWS Web Application Firewall (WAF) is a critical security service that protects web applications from common web exploits and bots. However, configuring and managing AWS WAF rules can be complex and time-consuming. This guide shows you how to use Claude Code to automate AWS WAF workflows, from initial setup to ongoing management.
 
-## Why Use Claude Code for AWS WAF?
+Why Use Claude Code for AWS WAF?
 
 Managing AWS WAF manually through the AWS Console is error-prone and doesn't scale well. You need to track multiple rules, web ACLs, and rule groups across different environments. Claude Code can help you:
 
@@ -29,7 +29,7 @@ Managing AWS WAF manually through the AWS Console is error-prone and doesn't sca
 
 The combination of Claude Code's code generation capabilities and AWS's infrastructure-as-code approach makes for a powerful security automation workflow.
 
-## Setting Up Your AWS WAF Project
+Setting Up Your AWS WAF Project
 
 Before you start, ensure you have the AWS CLI configured and appropriate credentials. Create a new directory for your WAF project:
 
@@ -41,25 +41,25 @@ claude
 Initialize your project with a CLAUDE.md file that defines your WAF configuration approach:
 
 ```markdown
-# AWS WAF Project Context
+AWS WAF Project Context
 
-## Project Overview
+Project Overview
 Manage AWS WAFv2 configurations using CloudFormation templates.
 
-## AWS WAF Structure
+AWS WAF Structure
 - Web ACLs: Top-level container for WAF rules
 - Rule Groups: Reusable collections of rules
 - Rules: Individual matching conditions and actions
 - Scope: REGIONAL or CLOUDFRONT
 
-## Standards
+Standards
 - Use WAFv2 (not classic WAF)
 - All configs in YAML format
 - Environment-specific prefixes (dev-, staging-, prod-)
 - Include logging configuration
 ```
 
-## Creating Your First WAF Web ACL
+Creating Your First WAF Web ACL
 
 Let me generate a CloudFormation template for a basic WAF Web ACL with common security rules:
 
@@ -179,18 +179,18 @@ Outputs:
       Name: !Sub '${Environment}-WebACLArn'
 ```
 
-## Automating WAF Rule Reviews
+Automating WAF Rule Reviews
 
 One of the most valuable Claude Code workflows is auditing existing WAF configurations. Create a skill that analyzes your WAF rules:
 
-### Creating a WAF Audit Skill
+Creating a WAF Audit Skill
 
 ```yaml
 name: "waf-audit"
 description: "Audit AWS WAF configurations for security and best practices"
 ```
 
-### Running the Audit
+Running the Audit
 
 Ask Claude Code to analyze your WAF setup:
 
@@ -205,14 +205,14 @@ Audit the WAF configuration in this project. Check for:
 Generate a detailed audit report with remediation steps.
 ```
 
-## Implementing Custom WAF Rules
+Implementing Custom WAF Rules
 
 AWS Managed Rules are great, but you often need custom rules for specific threats. Here's how to create custom rules with Claude Code:
 
-### Geo-Blocking Rule
+Geo-Blocking Rule
 
 ```yaml
-# Custom Geo-Blocking Rule
+Custom Geo-Blocking Rule
 - Name: GeoBlockingRule
   Priority: 5
   Action:
@@ -231,10 +231,10 @@ AWS Managed Rules are great, but you often need custom rules for specific threat
     MetricName: GeoBlockingRule
 ```
 
-### Bot Control Rule
+Bot Control Rule
 
 ```yaml
-# AWS WAF Bot Control
+AWS WAF Bot Control
 - Name: BotControlRule
   Priority: 2
   OverrideAction:
@@ -251,18 +251,18 @@ AWS Managed Rules are great, but you often need custom rules for specific threat
     MetricName: BotControlRule
 ```
 
-## Integrating WAF with Application Deployment
+Integrating WAF with Application Deployment
 
 A complete security workflow integrates WAF with your CI/CD pipeline. Here's how to automate WAF deployments:
 
-### GitHub Actions Workflow
+GitHub Actions Workflow
 
 ```yaml
 name: Deploy WAF
 on:
   push:
     paths:
-      - 'waf/**/*.yaml'
+      - 'waf//*.yaml'
     branches:
       - main
 
@@ -298,11 +298,11 @@ Create a GitHub Actions workflow that:
 5. Sends deployment notifications to Slack
 ```
 
-## Monitoring WAF with CloudWatch
+Monitoring WAF with CloudWatch
 
 Effective WAF management requires monitoring. Claude Code can help create comprehensive dashboards:
 
-### CloudWatch Dashboard Configuration
+CloudWatch Dashboard Configuration
 
 ```json
 {
@@ -333,11 +333,11 @@ Effective WAF management requires monitoring. Claude Code can help create compre
 }
 ```
 
-## Best Practices for Claude Code WAF Workflows
+Best Practices for Claude Code WAF Workflows
 
 Based on real-world implementations, here are actionable tips:
 
-### 1. Use Rule Priorities Wisely
+1. Use Rule Priorities Wisely
 
 Always order your rules from most specific to least specific. Rate limiting should come before complex matching rules to reduce compute costs:
 
@@ -349,7 +349,7 @@ Rules:
   - Priority: 30  # Managed rule groups (expensive)
 ```
 
-### 2. Start with Count Mode
+2. Start with Count Mode
 
 Never deploy blocking rules directly to production. Use override actions to count first:
 
@@ -361,12 +361,12 @@ Never deploy blocking rules directly to production. Use override actions to coun
     # ... your rule statement
 ```
 
-### 3. Implement Staged Rollouts
+3. Implement Staged Rollouts
 
 Use WAF's label matching to gradually enable rules:
 
 ```yaml
-# Initial rule - labels requests but allows all
+Initial rule - labels requests but allows all
 - Name: ShadowModeRule
   Action:
     Allow: {}  # Also adds labels via RuleGroup
@@ -374,41 +374,41 @@ Use WAF's label matching to gradually enable rules:
     # ... complex matching
 ```
 
-### 4. Document Everything
+4. Document Everything
 
 Create a WAF rule catalog:
 
 ```markdown
-## Rule Catalog
+Rule Catalog
 
-### AWSManagedRulesCommonRuleSet
+AWSManagedRulesCommonRuleSet
 - Purpose: General OWASP protections
 - Action: Override to Count in dev, Block in prod
 - Review: Monthly
 
-### RateLimitRule
+RateLimitRule
 - Purpose: Prevent DDoS/Brute force
 - Threshold: 1000 req/5min per IP
 - Review: Quarterly
 
-### SQLInjectionRule
+SQLInjectionRule
 - Purpose: Block SQL injection attacks
 - Action: Block (production)
 - Review: After any WAF incident
 ```
 
-## Conclusion
+Conclusion
 
-Claude Code transforms AWS WAF management from a manual, error-prone process into an automated, repeatable workflow. By generating CloudFormation templates, auditing configurations, and creating documentation, you can establish robust WAF governance across your infrastructure.
+Claude Code transforms AWS WAF management from a manual, error-prone process into an automated, repeatable workflow. By generating CloudFormation templates, auditing configurations, and creating documentation, you can establish solid WAF governance across your infrastructure.
 
-Start with the basic Web ACL template, then gradually add custom rules and automation. Remember to always test in non-production environments first, and leverage WAF's logging and metrics to continuously improve your security posture.
+Start with the basic Web ACL template, then gradually add custom rules and automation. Remember to always test in non-production environments first, and use WAF's logging and metrics to continuously improve your security posture.
 
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -13,13 +13,13 @@ tags: [claude-code, claude-skills]
 ---
 
 {% raw %}
-# Claude Code Next.js Performance Optimization
+Claude Code Next.js Performance Optimization
 
 Next.js performance optimization requires a systematic approach covering bundle analysis, runtime efficiency, and runtime performance. Claude Code combined with specialized skills can accelerate this process significantly.
 
 Getting a Next.js application to feel fast involves multiple distinct layers. A page can have a perfect Lighthouse score in isolation and still feel sluggish in production if caching is misconfigured, if too much JavaScript ships to the browser, or if images load without proper prioritization. This guide walks through each layer methodically, with the kind of code-level detail that lets you take action immediately.
 
-## Understanding the Performance Layers
+Understanding the Performance Layers
 
 Before diving into specific techniques, it helps to have a mental model of where performance is lost. Next.js applications typically suffer in one or more of these areas:
 
@@ -31,9 +31,9 @@ Before diving into specific techniques, it helps to have a mental model of where
 | Runtime rendering | Total Blocking Time (TBT) | Too many Client Components, missing memoization |
 | Client navigation | Perceived speed | No prefetching, excessive client-side state |
 
-Claude Code is useful at every layer because it can read your entire codebase at once and identify patterns that human reviewers often miss—like a `'use client'` directive added unnecessarily three levels up a component tree, causing an entire subtree to ship as client JavaScript.
+Claude Code is useful at every layer because it can read your entire codebase at once and identify patterns that human reviewers often miss, like a `'use client'` directive added unnecessarily three levels up a component tree, causing an entire subtree to ship as client JavaScript.
 
-## Analyzing Bundle Size
+Analyzing Bundle Size
 
 Large JavaScript bundles directly impact initial load times and Time to Interactive (TTI). The first step is understanding what's actually in your bundle.
 
@@ -45,7 +45,7 @@ npx next build && npx @next/bundle-analyzer
 
 This generates a visual report showing which modules contribute most to bundle size. Claude Code can then help you interpret these results and identify optimization targets.
 
-The `frontend-design` skill is particularly useful here—it understands component patterns and can suggest code splitting strategies specific to Next.js App Router. When you describe your page structure, it can recommend which components should use dynamic imports versus static imports.
+The `frontend-design` skill is particularly useful here, it understands component patterns and can suggest code splitting strategies specific to Next.js App Router. When you describe your page structure, it can recommend which components should use dynamic imports versus static imports.
 
 To enable the bundle analyzer permanently in your project, configure it in `next.config.js`:
 
@@ -61,13 +61,13 @@ module.exports = withBundleAnalyzer({
 
 Then run `ANALYZE=true npm run build` whenever you want a fresh bundle report. Looking at the output, focus on:
 
-- **Chunks over 100 kB** — these are candidates for dynamic imports
-- **Duplicated packages** — multiple versions of the same library inflate bundles silently
-- **Packages you don't recognize** — often transitive dependencies that could be replaced with lighter alternatives
+- Chunks over 100 kB. these are candidates for dynamic imports
+- Duplicated packages. multiple versions of the same library inflate bundles silently
+- Packages you don't recognize. often transitive dependencies that could be replaced with lighter alternatives
 
 A common discovery is that a single component importing a full charting library (like Recharts or Chart.js) causes every page in the app to download that library. Dynamic imports solve this directly.
 
-## Implementing Dynamic Imports
+Implementing Dynamic Imports
 
 Code splitting at the component level reduces initial JavaScript payload. Next.js supports dynamic imports natively:
 
@@ -112,7 +112,7 @@ export function Dashboard() {
 
 The analytics bundle only downloads when the user clicks the button. For a 200 kB analytics module, this can cut initial page weight in half.
 
-**When to use dynamic imports vs. static imports:**
+When to use dynamic imports vs. static imports:
 
 | Scenario | Use dynamic import? |
 |---|---|
@@ -123,7 +123,7 @@ The analytics bundle only downloads when the user clicks the button. For a 200 k
 | Small utility component (< 5 kB) | No |
 | Shared layout component | No |
 
-## Image Optimization Strategies
+Image Optimization Strategies
 
 Images typically account for the largest portion of page weight. Next.js provides the `next/image` component, but proper configuration matters:
 
@@ -146,11 +146,11 @@ export function HeroSection() {
 
 The `priority` prop preloads above-the-fold images, improving Largest Contentful Paint (LCP). The `sizes` attribute helps the browser select the appropriate image variant.
 
-Only use `priority` on the single image that is the LCP element—typically the hero image. Marking multiple images as `priority` defeats the purpose; the browser downloads them all simultaneously and gains nothing.
+Only use `priority` on the single image that is the LCP element, typically the hero image. Marking multiple images as `priority` defeats the purpose; the browser downloads them all simultaneously and gains nothing.
 
-For images below the fold, Next.js applies lazy loading automatically. You can confirm this is working by checking the Network tab in DevTools—below-fold images should not appear in the initial request waterfall.
+For images below the fold, Next.js applies lazy loading automatically. You can confirm this is working by checking the Network tab in DevTools, below-fold images should not appear in the initial request waterfall.
 
-**Common image mistakes and fixes:**
+Common image mistakes and fixes:
 
 ```tsx
 // Wrong: no sizes attribute, browser guesses
@@ -175,7 +175,7 @@ module.exports = {
       {
         protocol: 'https',
         hostname: 'images.yourdomain.com',
-        pathname: '/uploads/**',
+        pathname: '/uploads/',
       },
     ],
     formats: ['image/avif', 'image/webp'],
@@ -185,24 +185,24 @@ module.exports = {
 
 Enabling AVIF format can reduce image sizes by 20-50% compared to WebP, at the cost of slightly longer encoding time during the build. For most production sites the tradeoff is worthwhile.
 
-## Route-Based Code Splitting
+Route-Based Code Splitting
 
 Next.js automatically splits code by route, but you can optimize further with Route Groups:
 
 ```
 app/
-├── (marketing)/
-│   ├── page.tsx
-│   └── layout.tsx
-├── (app)/
-│   ├── dashboard/
-│   │   └── page.tsx
-│   └── layout.tsx
+ (marketing)/
+    page.tsx
+    layout.tsx
+ (app)/
+    dashboard/
+       page.tsx
+    layout.tsx
 ```
 
 Route Groups let you share layouts without bundling marketing code with dashboard code. This is especially valuable when the two sections have different dependency needs.
 
-The `tdd` skill can help you write tests that verify route-based splitting works correctly—ensuring that code intended for one route doesn't leak into another.
+The `tdd` skill can help you write tests that verify route-based splitting works correctly, ensuring that code intended for one route doesn't leak into another.
 
 A practical way to verify your route splitting is working: after running `next build`, check the `.next/static/chunks` directory. Each route should have its own chunk file. If you see a single large chunk shared across routes that have nothing in common, there may be a dependency being inadvertently shared through a module that should be split.
 
@@ -214,12 +214,12 @@ NEXT_PRIVATE_DEBUG_CACHE=1 npm run build 2>&1 | grep "shared"
 
 This surfaces modules being marked as shared across routes, letting you decide whether that sharing is intentional.
 
-## Reducing Client-Side JavaScript
+Reducing Client-Side JavaScript
 
 Server Components in Next.js App Router reduce client-side JavaScript by default. The key is understanding which components truly need interactivity:
 
-- **Server Components** (default): Data fetching, rendering, no interactivity
-- **Client Components** (`'use client'`): Event handlers, hooks, browser APIs
+- Server Components (default): Data fetching, rendering, no interactivity
+- Client Components (`'use client'`): Event handlers, hooks, browser APIs
 
 Audit your components with this pattern:
 
@@ -281,13 +281,13 @@ export function SaveButton() {
 }
 ```
 
-The second pattern ships significantly less JavaScript because the product name, description, and image are rendered on the server and sent as HTML—no JavaScript required.
+The second pattern ships significantly less JavaScript because the product name, description, and image are rendered on the server and sent as HTML, no JavaScript required.
 
-## Runtime Performance
+Runtime Performance
 
 Bundle size affects load time, but runtime performance affects perceived responsiveness. Key areas include:
 
-### Memoization Strategy
+Memoization Strategy
 
 React.memo, useMemo, and useCallback prevent unnecessary re-renders, but overusing them adds complexity without benefit:
 
@@ -315,9 +315,9 @@ const ExpensiveList = memo(function ExpensiveList({ items }) {
 
 A practical rule: only add `useMemo` when you can measure a render time over 1ms for the computation. Memoizing a `.filter()` over a 10-item array adds overhead without benefit. Memoizing a sort-and-group operation over 10,000 items can cut a 50ms computation to near zero on subsequent renders.
 
-Use React DevTools Profiler to identify components that re-render unexpectedly. The "highlight updates" feature in React DevTools makes wasteful re-renders visible at a glance—components flash when they render, so you can spot when a parent re-render is cascading into children unnecessarily.
+Use React DevTools Profiler to identify components that re-render unexpectedly. The "highlight updates" feature in React DevTools makes wasteful re-renders visible at a glance, components flash when they render, so you can spot when a parent re-render is cascading into children unnecessarily.
 
-### Virtualization for Large Lists
+Virtualization for Large Lists
 
 Rendering thousands of items tanks performance. Use windowing libraries:
 
@@ -366,14 +366,14 @@ const virtualizer = useVirtualizer({
 })
 ```
 
-## Caching Strategies
+Caching Strategies
 
 Next.js provides multiple caching layers:
 
-1. **Request Memoization**: Automatic within React
-2. **Data Cache**: Persisted across builds
-3. **Full Route Cache**: Prerendered pages
-4. **Router Cache**: Client-side navigation
+1. Request Memoization: Automatic within React
+2. Data Cache: Persisted across builds
+3. Full Route Cache: Prerendered pages
+4. Router Cache: Client-side navigation
 
 For dynamic data, use `revalidate`:
 
@@ -413,7 +413,7 @@ export async function POST(request: NextRequest) {
 
 Your backend can call this endpoint (with appropriate authentication) whenever a product is updated, invalidating only the affected cache entries rather than the entire data cache.
 
-**Caching decision matrix:**
+Caching decision matrix:
 
 | Data type | Recommended strategy | Revalidate interval |
 |---|---|---|
@@ -423,12 +423,12 @@ Your backend can call this endpoint (with appropriate authentication) whenever a
 | User-specific data | `no-store` | N/A |
 | Real-time data (prices, inventory) | `no-store` | N/A |
 
-## Server-Side Data Fetching Patterns
+Server-Side Data Fetching Patterns
 
-One of the most impactful optimizations available in Next.js App Router is moving data fetching out of Client Components entirely. Fetching data in Server Components eliminates client-server waterfalls—the pattern where the browser downloads JavaScript, executes it, discovers it needs data, makes an API request, then renders.
+One of the most impactful optimizations available in Next.js App Router is moving data fetching out of Client Components entirely. Fetching data in Server Components eliminates client-server waterfalls, the pattern where the browser downloads JavaScript, executes it, discovers it needs data, makes an API request, then renders.
 
 ```tsx
-// Server Component — no waterfall, data arrives with the HTML
+// Server Component. no waterfall, data arrives with the HTML
 async function ProductPage({ params }) {
   // These two fetches happen in parallel on the server
   const [product, reviews] = await Promise.all([
@@ -447,14 +447,14 @@ async function ProductPage({ params }) {
 
 By using `Promise.all`, both fetches happen simultaneously on the server. The client receives a fully rendered page without making any additional API requests after hydration.
 
-## Measuring Performance
+Measuring Performance
 
 Use the `supermemory` skill to track performance metrics over time. The skill can organize your benchmarks and help you correlate changes with performance improvements:
 
-- **Lighthouse**: Overall scores
-- **Web Vitals**: Core Web Vitals metrics
-- **Bundle Analyzer**: Size trends
-- **React DevTools**: Component render counts
+- Lighthouse: Overall scores
+- Web Vitals: Core Web Vitals metrics
+- Bundle Analyzer: Size trends
+- React DevTools: Component render counts
 
 Run Lighthouse in CI to catch regressions:
 
@@ -489,12 +489,12 @@ module.exports = {
 
 These assertions fail the CI pipeline if any page regresses below your defined thresholds, preventing performance regressions from shipping unnoticed.
 
-## Automating Optimization Workflows
+Automating Optimization Workflows
 
 Combine Claude Code with your existing tooling. Create a skill that runs a performance audit:
 
 ```bash
-# Performance audit script
+Performance audit script
 npm run build
 npx next build --analyze
 lighthouse https://localhost:3000 --output json --output-path lighthouse-results.json
@@ -505,7 +505,7 @@ Claude Code can interpret these results and prioritize fixes based on impact.
 A useful pattern is to add performance audit as a pre-deployment step in your CI pipeline. Using GitHub Actions:
 
 ```yaml
-# .github/workflows/performance.yml
+.github/workflows/performance.yml
 name: Performance Audit
 on: [pull_request]
 
@@ -528,36 +528,36 @@ jobs:
 
 This posts Lighthouse results directly to each pull request, making performance impact visible before merging.
 
-## A Prioritized Optimization Checklist
+A Prioritized Optimization Checklist
 
 Not all optimizations are equal. Start with the ones that move metrics the most:
 
-1. **Run bundle analyzer** — identify and eliminate large unused dependencies
-2. **Audit `'use client'` directives** — push them down to leaf components
-3. **Add `priority` to LCP images** — immediate LCP improvement
-4. **Add `sizes` attribute to all images** — prevents oversized image downloads
-5. **Implement dynamic imports for below-fold features** — reduces TTI
-6. **Enable Route Groups** — prevents marketing code from loading in app routes
-7. **Add `revalidate` to frequently-fetched data** — reduces API and database load
-8. **Add virtualization to lists over 200 items** — eliminates render blocking
-9. **Set up Lighthouse CI** — prevents future regressions
-10. **Profile with React DevTools** — find and fix unexpected re-renders
+1. Run bundle analyzer. identify and eliminate large unused dependencies
+2. Audit `'use client'` directives. push them down to leaf components
+3. Add `priority` to LCP images. immediate LCP improvement
+4. Add `sizes` attribute to all images. prevents oversized image downloads
+5. Implement dynamic imports for below-fold features. reduces TTI
+6. Enable Route Groups. prevents marketing code from loading in app routes
+7. Add `revalidate` to frequently-fetched data. reduces API and database load
+8. Add virtualization to lists over 200 items. eliminates render blocking
+9. Set up Lighthouse CI. prevents future regressions
+10. Profile with React DevTools. find and fix unexpected re-renders
 
-## Summary
+Summary
 
 Next.js performance optimization involves multiple layers: bundle size through code splitting, runtime performance through proper component architecture, and caching strategies for data fetching. Claude Code accelerates this process by analyzing your codebase, suggesting targeted optimizations, and helping you implement patterns like dynamic imports and virtualization.
 
-The specialized skills like `frontend-design`, `tdd`, and `supermemory` each contribute to a comprehensive performance workflow—from design patterns that prevent performance issues, to tests that catch regressions, to memory systems that track improvements over time.
+The specialized skills like `frontend-design`, `tdd`, and `supermemory` each contribute to a comprehensive performance workflow, from design patterns that prevent performance issues, to tests that catch regressions, to memory systems that track improvements over time.
 
-Start with bundle analysis, implement route-based and component-based code splitting, add image optimization, and layer on runtime optimizations as needed. Measure continuously to ensure your optimizations actually move the metrics that matter. The checklist above gives you a prioritized starting point that works for most Next.js applications—work through it top-to-bottom, measure after each change, and stop when your Core Web Vitals reach acceptable thresholds.
+Start with bundle analysis, implement route-based and component-based code splitting, add image optimization, and layer on runtime optimizations as needed. Measure continuously to ensure your optimizations actually move the metrics that matter. The checklist above gives you a prioritized starting point that works for most Next.js applications, work through it top-to-bottom, measure after each change, and stop when your Core Web Vitals reach acceptable thresholds.
 
 
-## Related Reading
+Related Reading
 
-- [Claude Code Next.js Deployment Optimization](/claude-code-nextjs-deployment-optimization/) — CI/CD, Docker, environment config, and production release workflows (complements this performance guide)
+- [Claude Code Next.js Deployment Optimization](/claude-code-nextjs-deployment-optimization/). CI/CD, Docker, environment config, and production release workflows (complements this performance guide)
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

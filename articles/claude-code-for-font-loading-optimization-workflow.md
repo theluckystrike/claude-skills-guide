@@ -14,11 +14,11 @@ score: 7
 
 
 {% raw %}
-# Claude Code for Font Loading Optimization Workflow
+Claude Code for Font Loading Optimization Workflow
 
-Font loading optimization is a critical yet often overlooked aspect of web performance. Poorly optimized fonts can block rendering, cause layout shifts, and frustrate users. Building an automated workflow with Claude Code can streamline the entire process—from analyzing font files to implementing advanced loading strategies. This guide walks you through creating a comprehensive font optimization workflow that you can invoke whenever you need to audit or improve your project's font delivery.
+Font loading optimization is a critical yet often overlooked aspect of web performance. Poorly optimized fonts can block rendering, cause layout shifts, and frustrate users. Building an automated workflow with Claude Code can streamline the entire process, from analyzing font files to implementing advanced loading strategies. This guide walks you through creating a comprehensive font optimization workflow that you can invoke whenever you need to audit or improve your project's font delivery.
 
-## Understanding the Font Loading Problem
+Understanding the Font Loading Problem
 
 Web fonts introduce several performance challenges that traditional optimization techniques don't address. A typical font file ranges from 20KB to 200KB, and blocking font loads can delay text visibility by seconds on slow connections. The Cumulative Layout Shift (CLS) metric penalizes websites where fonts cause content to jump around as they load, making font optimization essential for both user experience and Core Web Vitals scores.
 
@@ -35,7 +35,7 @@ Here's a quick overview of how font loading performance issues map to real user 
 | WOFF instead of WOFF2 | LCP | 25-35% larger file size |
 | Unused font weights | TTI | Unnecessary bytes downloaded |
 
-## Creating the Font Optimization Skill
+Creating the Font Optimization Skill
 
 Start by creating a dedicated skill for font optimization. This skill will encapsulate all the analysis and transformation logic in one place:
 
@@ -51,28 +51,28 @@ The skill should begin by scanning your project for font files and their usage p
 Create a `CLAUDE.md` file in your project root to give Claude Code the context it needs to be useful immediately:
 
 ```markdown
-# Font Optimization Project
+Font Optimization Project
 
-## Project Type
+Project Type
 Static marketing site with custom brand fonts.
 
-## Font Stack
-- Primary: BrandSans (woff2, woff) — used for headings and body
-- Accent: BrandSerif (woff2) — used for pull quotes only
+Font Stack
+- Primary: BrandSans (woff2, woff). used for headings and body
+- Accent: BrandSerif (woff2). used for pull quotes only
 
-## Goals
+Goals
 - Reduce CLS to below 0.05
 - Achieve FCP under 1.5s on 3G
 - Pass all Core Web Vitals in PageSpeed Insights
 
-## Constraints
+Constraints
 - Cannot change font to system fonts
 - Must support IE11 (requires woff fallback)
 ```
 
 This context lets Claude Code give you targeted recommendations rather than generic advice.
 
-## Analyzing Font Files and Usage
+Analyzing Font Files and Usage
 
 Your workflow should first gather comprehensive information about the current font situation. Here's how to structure the analysis phase:
 
@@ -123,7 +123,7 @@ Ask Claude Code to run this audit and interpret the results:
 
 Claude Code will cross-reference the font inventory with your actual HTML content and give you a prioritized action list, not just raw numbers.
 
-## Implementing Font Display Strategies
+Implementing Font Display Strategies
 
 The `font-display` CSS property is the single most impactful change you can make for perceived performance. It controls how fonts render while loading:
 
@@ -146,7 +146,7 @@ Your Claude Code workflow should audit all `@font-face` declarations and ensure 
 | `optional` | Use font only if already cached | Decorative, non-critical |
 | `fallback` | 100ms block, then swap if loads fast | Balance of flash vs shift |
 | `block` | Block render up to 3s | Icon fonts where text meaning matters |
-| `auto` | Browser decides (usually block) | Avoid — unpredictable |
+| `auto` | Browser decides (usually block) | Avoid. unpredictable |
 
 For most projects, `swap` is the right default for body and heading fonts. Icon fonts that use Unicode Private Use Area characters need `block` to avoid showing unstyled characters.
 
@@ -154,7 +154,7 @@ To automate the audit, ask Claude Code:
 
 > "Check every @font-face rule in ./src/styles and flag any missing font-display. Generate the corrected CSS with font-display: swap added, and also flag any that use font-display: block where swap would work."
 
-## Automating Preload Generation
+Automating Preload Generation
 
 Preloading critical fonts dramatically improves First Contentful Paint. Your workflow should generate the appropriate preload directives:
 
@@ -164,9 +164,9 @@ Preloading critical fonts dramatically improves First Contentful Paint. Your wor
 <link rel="preload" href="/fonts/primary-bold.woff2" as="font" type="font/woff2" crossorigin>
 ```
 
-The `crossorigin` attribute is required even for same-origin fonts—without it, the browser fetches the font twice. This is one of the most common mistakes Claude Code can help you catch automatically.
+The `crossorigin` attribute is required even for same-origin fonts, without it, the browser fetches the font twice. This is one of the most common mistakes Claude Code can help you catch automatically.
 
-Build this into your workflow so it analyzes which fonts are used above the fold and automatically generates the correct preload tags. The key is identifying fonts used in your hero section, navigation, and initial content—fonts that block meaningful rendering.
+Build this into your workflow so it analyzes which fonts are used above the fold and automatically generates the correct preload tags. The key is identifying fonts used in your hero section, navigation, and initial content, fonts that block meaningful rendering.
 
 Here's a script you can ask Claude Code to generate and refine:
 
@@ -209,12 +209,12 @@ def find_above_fold_fonts(html_file, css_file, viewport_height=800):
     return list(set(preloads))
 ```
 
-## Setting Up Fallback Font Stacks
+Setting Up Fallback Font Stacks
 
 Proper fallback fonts make the font swap invisible to users. Your workflow should audit fallback declarations and ensure they match the metrics of your custom fonts:
 
 ```css
-/* Poor fallback stack — large visual shift on swap */
+/* Poor fallback stack. large visual shift on swap */
 body {
   font-family: 'BrandSans', Arial, sans-serif;
 }
@@ -242,7 +242,7 @@ Ask Claude Code to help you find the right override values:
 
 Claude Code will compute the percentages and generate the complete `@font-face` fallback declaration for you.
 
-## Building the Complete Workflow
+Building the Complete Workflow
 
 Put all these pieces together into an actionable Claude Code workflow. The complete process should:
 
@@ -255,7 +255,7 @@ Put all these pieces together into an actionable Claude Code workflow. The compl
 7. Generate a report with specific, actionable fixes
 
 ```bash
-# Example workflow invocation
+Example workflow invocation
 claude --print "optimize fonts --project ./src --output report.md"
 ```
 
@@ -264,22 +264,22 @@ This should produce a comprehensive report showing current issues, their impact,
 A practical report structure from the workflow looks like:
 
 ```markdown
-## Font Optimization Audit Report — 2026-03-15
+Font Optimization Audit Report. 2026-03-15
 
-### Critical Issues (fix immediately)
+Critical Issues (fix immediately)
 - [ ] fonts/brand.woff2: No font-display on @font-face (estimated FCP impact: +400ms)
 - [ ] Missing crossorigin on preload tag in index.html line 12 (causes double fetch)
 
-### High Priority
-- [ ] fonts/brand.ttf: 148KB — convert to WOFF2 (estimated savings: 42KB)
+High Priority
+- [ ] fonts/brand.ttf: 148KB. convert to WOFF2 (estimated savings: 42KB)
 - [ ] Fallback stack for BrandSans has no metric overrides (estimated CLS: 0.12)
 
-### Quick Wins
-- [ ] brand-italic.woff2: Only used on /blog — remove preload from homepage
-- [ ] brand-bold.woff2: Not used on any page — delete file and @font-face rule
+Quick Wins
+- [ ] brand-italic.woff2: Only used on /blog. remove preload from homepage
+- [ ] brand-bold.woff2: Not used on any page. delete file and @font-face rule
 ```
 
-## Variable Fonts: Consolidation for Performance
+Variable Fonts: Consolidation for Performance
 
 Variable fonts combine multiple weights and styles into a single file, which can dramatically reduce the total number of font requests. If your project uses more than two weights of the same typeface, switching to a variable font almost always wins:
 
@@ -302,7 +302,7 @@ Variable fonts combine multiple weights and styles into a single file, which can
 
 Ask Claude Code to audit your font stack for variable font opportunities and estimate the request count reduction.
 
-## Continuous Font Optimization
+Continuous Font Optimization
 
 Font optimization isn't a one-time task. As your site evolves, new fonts get added and content changes. Consider integrating this workflow into your CI/CD pipeline to catch performance regressions before they reach production.
 
@@ -323,10 +323,10 @@ You can also extend the workflow to handle self-hosted versus CDN-hosted font de
 By automating font optimization through Claude Code, you transform a complex, often-neglected performance task into a reproducible workflow that keeps your fonts fast without manual effort.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

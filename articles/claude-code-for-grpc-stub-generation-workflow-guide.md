@@ -13,11 +13,11 @@ tags: [claude-code, claude-skills]
 ---
 
 {% raw %}
-# Claude Code for gRPC Stub Generation Workflow Guide
+Claude Code for gRPC Stub Generation Workflow Guide
 
-gRPC stub generation is a critical part of building microservices that communicate efficiently. While Protocol Buffers and gRPC tools are powerful, manually managing the generation workflow can be tedious and error-prone. This guide shows you how to leverage Claude Code to automate and streamline your gRPC stub generation process, saving time and reducing mistakes.
+gRPC stub generation is a critical part of building microservices that communicate efficiently. While Protocol Buffers and gRPC tools are powerful, manually managing the generation workflow can be tedious and error-prone. This guide shows you how to use Claude Code to automate and streamline your gRPC stub generation process, saving time and reducing mistakes.
 
-## Why Automate gRPC Stub Generation?
+Why Automate gRPC Stub Generation?
 
 gRPC developers often face repetitive tasks when working with Protocol Buffers. Every time you modify a `.proto` file, you need to regenerate stubs in multiple languages, verify the output, and ensure compatibility across your codebase. This workflow involves several commands:
 
@@ -28,28 +28,28 @@ gRPC developers often face repetitive tasks when working with Protocol Buffers. 
 
 Doing this manually is time-consuming and prone to errors. Claude Code can help you create reusable workflows, generate the right commands automatically, and catch issues before they become problems.
 
-## Setting Up Your gRPC Project Structure
+Setting Up Your gRPC Project Structure
 
 Before diving into automation, establish a clean project structure. Claude Code works best when your project follows consistent conventions. Here's a recommended setup:
 
 ```
 my-grpc-project/
-├── proto/
-│   ├── v1/
-│   │   ├── service.proto
-│   │   └── message.proto
-│   └── v2/
-├── generated/
-│   ├── go/
-│   ├── python/
-│   └── java/
-├── buf.gen.yaml
-└── buf.yaml
+ proto/
+    v1/
+       service.proto
+       message.proto
+    v2/
+ generated/
+    go/
+    python/
+    java/
+ buf.gen.yaml
+ buf.yaml
 ```
 
 The key insight is separating your proto definitions from generated code. This makes it easier for Claude Code to understand what needs to be regenerated and where to place the output.
 
-## Using Claude Code for Proto File Development
+Using Claude Code for Proto File Development
 
 When you're ready to write or modify a proto file, engage Claude Code early. Describe your service and message definitions in plain language, then let Claude help you translate them into valid Protocol Buffer syntax.
 
@@ -90,11 +90,11 @@ service UserService {
 }
 ```
 
-## Generating Stubs with Claude Code
+Generating Stubs with Claude Code
 
 Once your proto files are ready, Claude Code can generate the appropriate commands for your specific technology stack. Here's how to approach this:
 
-### For Go Projects
+For Go Projects
 
 Ask Claude Code: "Generate gRPC stubs for Go from our proto files. We use buf for code generation."
 
@@ -113,7 +113,7 @@ plugins:
 
 Then run: `buf generate`
 
-### For Python Projects
+For Python Projects
 
 Python requires a different approach. Claude Code can set up your Python proto generation:
 
@@ -126,13 +126,13 @@ plugins:
     out: generated/python
 ```
 
-### Multi-Language Workflows
+Multi-Language Workflows
 
 For projects requiring stubs in multiple languages, create a comprehensive generation script that Claude Code can help maintain:
 
 ```bash
 #!/bin/bash
-# generate-all.sh - Generate stubs for all languages
+generate-all.sh - Generate stubs for all languages
 
 set -e
 
@@ -152,7 +152,7 @@ python -c "import generated.python.user_pb2_grpc"
 echo "All stubs generated successfully!"
 ```
 
-## Verifying Generated Code
+Verifying Generated Code
 
 Claude Code excels at verification. After generating stubs, ask it to review the output for common issues:
 
@@ -198,21 +198,21 @@ func TestUserMessageSerialization(t *testing.T) {
 }
 ```
 
-## Best Practices for Claude-Assisted gRPC Development
+Best Practices for Claude-Assisted gRPC Development
 
-### 1. Use buf Instead of Direct protoc Calls
+1. Use buf Instead of Direct protoc Calls
 
 Buf provides a more modern, configurable approach to proto code generation. Claude Code understands buf configurations and can help you maintain them.
 
-### 2. Version Your Proto Files
+2. Version Your Proto Files
 
 Create separate directories for different API versions (v1, v2, etc.). This allows Claude Code to generate the right stubs for each version and helps you plan migrations.
 
-### 3. Document Breaking Changes
+3. Document Breaking Changes
 
 When modifying proto files, clearly document any breaking changes. Claude Code can help you track these changes and generate migration guides.
 
-### 4. Automate CI/CD Integration
+4. Automate CI/CD Integration
 
 Ask Claude Code to create GitHub Actions or similar CI workflows that automatically regenerate stubs on proto file changes:
 
@@ -221,7 +221,7 @@ name: Generate gRPC Stubs
 on:
   push:
     paths:
-      - '**.proto'
+      - '.proto'
 jobs:
   generate:
     runs-on: ubuntu-latest
@@ -234,21 +234,21 @@ jobs:
           git diff --exit-code || (echo "Stubs need updating!" && exit 1)
 ```
 
-### 5. Leverage Claude for Debugging
+5. Use Claude for Debugging
 
-When gRPC stubs fail to compile or have runtime errors, share the error messages with Claude Code. It can often identify the root cause—whether it's a missing import, version mismatch, or incorrect proto syntax.
+When gRPC stubs fail to compile or have runtime errors, share the error messages with Claude Code. It can often identify the root cause, whether it's a missing import, version mismatch, or incorrect proto syntax.
 
-## Conclusion
+Conclusion
 
 Claude Code transforms gRPC stub generation from a manual, error-prone process into an automated, reliable workflow. By setting up proper project structure, using buf for generation, and leveraging Claude's verification capabilities, you can significantly reduce the time spent on boilerplate code while improving code quality.
 
 Start by defining clear proto file conventions, create reusable generation templates, and let Claude Code handle the repetitive tasks. Your future self will thank you when maintaining microservices becomes noticeably smoother.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

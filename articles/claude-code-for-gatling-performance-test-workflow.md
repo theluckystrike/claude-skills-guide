@@ -14,28 +14,28 @@ score: 7
 
 
 {% raw %}
-# Claude Code for Gatling Performance Test Workflow
+Claude Code for Gatling Performance Test Workflow
 
 Performance testing is a critical part of software development, yet many teams struggle to create comprehensive load tests efficiently. Gatling is a powerful open-source load testing tool that, when combined with Claude Code's capabilities, becomes an even more formidable asset for identifying performance bottlenecks and ensuring your application can handle real-world traffic.
 
-This guide explores how to integrate Claude Code into your Gatling performance test workflow to write simulations faster, analyze results more effectively, and maintain robust test suites over time.
+This guide explores how to integrate Claude Code into your Gatling performance test workflow to write simulations faster, analyze results more effectively, and maintain solid test suites over time.
 
-## Why Combine Claude Code with Gatling?
+Why Combine Claude Code with Gatling?
 
 Claude Code brings several advantages to your Gatling testing workflow:
 
-- **Faster test creation**: Describe your test scenario in plain English, and Claude can generate Gatling simulation code
-- **Better test maintenance**: Claude understands Gatling DSL and can help refactor existing tests
-- **Result analysis**: Paste your Gatling reports, and Claude can help interpret metrics and suggest improvements
-- **CI/CD integration guidance**: Claude can help you set up automated performance testing in your deployment pipeline
+- Faster test creation: Describe your test scenario in plain English, and Claude can generate Gatling simulation code
+- Better test maintenance: Claude understands Gatling DSL and can help refactor existing tests
+- Result analysis: Paste your Gatling reports, and Claude can help interpret metrics and suggest improvements
+- CI/CD integration guidance: Claude can help you set up automated performance testing in your deployment pipeline
 
 Whether you're new to Gatling or an experienced load tester looking to boost productivity, Claude Code can streamline your workflow significantly.
 
-## Setting Up Your Gatling Environment
+Setting Up Your Gatling Environment
 
 Before diving into test creation, ensure your environment is properly configured. Here's a quick setup guide:
 
-### Installing Gatling
+Installing Gatling
 
 You can download Gatling from the official website or use a build tool integration. For Maven projects, add the Gatling plugin:
 
@@ -54,30 +54,30 @@ libraryDependencies += "io.gatling" % "gatling-core" % "4.10.0"
 libraryDependencies += "io.gatling" % "gatling-http" % "4.10.0"
 ```
 
-### Project Structure
+Project Structure
 
 Organize your Gatling tests for maintainability:
 
 ```
 src/test/scala/
-├── simulations/
-│   ├── BasicSimulation.scala
-│   ├── ApiSimulation.scala
-│   └── E2eSimulation.scala
-├── requests/
-│   ├── AuthRequests.scala
-│   └── DataRequests.scala
-└── config/
-    └── SimulationConfig.scala
+ simulations/
+    BasicSimulation.scala
+    ApiSimulation.scala
+    E2eSimulation.scala
+ requests/
+    AuthRequests.scala
+    DataRequests.scala
+ config/
+     SimulationConfig.scala
 ```
 
 Claude can help you create this structure and populate it with initial test files.
 
-## Writing Gatling Simulations with Claude Code
+Writing Gatling Simulations with Claude Code
 
 Here's where Claude Code truly shines. You can describe your testing requirements conversationally, and Claude will generate the appropriate Gatling DSL code.
 
-### Example: API Load Test
+API Load Test
 
 Imagine you need to test a REST API endpoint. Tell Claude what you need:
 
@@ -126,22 +126,22 @@ class LoginSimulation extends Simulation {
 }
 ```
 
-### Customizing for Your Application
+Customizing for Your Application
 
 Claude can adapt the simulation to your specific API:
 
-- **Modify endpoints**: Replace `/api/v1/auth/login` with your actual authentication endpoint
-- **Adjust load patterns**: Change from rampUsers to constantUsersPerSec or stressPeakUsers based on your testing goals
-- **Add data feeders**: Claude can help implement CSV or JDBC feeders for realistic test data
-- **Chain requests**: Build realistic user journeys with multiple API calls
+- Modify endpoints: Replace `/api/v1/auth/login` with your actual authentication endpoint
+- Adjust load patterns: Change from rampUsers to constantUsersPerSec or stressPeakUsers based on your testing goals
+- Add data feeders: Claude can help implement CSV or JDBC feeders for realistic test data
+- Chain requests: Build realistic user journeys with multiple API calls
 
-## Advanced Patterns with Claude Code
+Advanced Patterns with Claude Code
 
-### Load Test Design Patterns
+Load Test Design Patterns
 
 Claude can help you implement sophisticated testing patterns:
 
-**Scenario-based testing** models realistic user behavior:
+Scenario-based testing models realistic user behavior:
 
 ```scala
 val browseScenario = scenario("Browse and Purchase")
@@ -155,7 +155,7 @@ val browseScenario = scenario("Browse and Purchase")
   .exec(Checkout.submit)
 ```
 
-**Session management** handles authentication tokens:
+Session management handles authentication tokens:
 
 ```scala
 val authenticatedSession = exec(http("Login")
@@ -170,7 +170,7 @@ val authenticatedSession = exec(http("Login")
 })
 ```
 
-### Think Time and Pacing
+Think Time and Pacing
 
 Real users don't click continuously. Claude can help you add realistic delays:
 
@@ -182,18 +182,18 @@ Real users don't click continuously. Claude can help you add realistic delays:
 .pause(2.seconds)
 ```
 
-## Analyzing Results
+Analyzing Results
 
 When your Gatling test completes, you'll receive detailed metrics. Claude can help interpret these results:
 
-### Key Metrics to Monitor
+Key Metrics to Monitor
 
-1. **Response Time Percentiles**: p50, p95, p99 reveal latency distribution
-2. **Throughput**: Requests per second your system can handle
-3. **Error Rate**: Percentage of failed requests
-4. **Active Users**: Concurrent users during the test
+1. Response Time Percentiles: p50, p95, p99 reveal latency distribution
+2. Throughput: Requests per second your system can handle
+3. Error Rate: Percentage of failed requests
+4. Active Users: Concurrent users during the test
 
-### Interpreting Gatling Reports
+Interpreting Gatling Reports
 
 Paste your console output or HTML report summary to Claude and ask for analysis:
 
@@ -205,11 +205,11 @@ Claude can help identify:
 - Potential bottlenecks based on response time patterns
 - Recommendations for optimization
 
-## CI/CD Integration
+CI/CD Integration
 
 Integrating Gatling into your continuous integration pipeline ensures performance tests run with every deployment:
 
-### GitHub Actions Example
+GitHub Actions Example
 
 ```yaml
 name: Performance Tests
@@ -238,27 +238,27 @@ Claude can help you:
 - Create notifications for performance regression alerts
 - Generate trend reports comparing runs over time
 
-## Best Practices
+Best Practices
 
 Follow these recommendations for effective performance testing with Claude:
 
-1. **Start simple**: Begin with basic load tests before adding complexity
-2. **Test in production-like environments**: Ensure your test environment mirrors production
-3. **Use realistic data**: Feed test data that resembles actual user behavior
-4. **Monitor system resources**: Track CPU, memory, and network during tests
-5. **Iterate and improve**: Use Claude to continuously refine your test scenarios
+1. Start simple: Begin with basic load tests before adding complexity
+2. Test in production-like environments: Ensure your test environment mirrors production
+3. Use realistic data: Feed test data that resembles actual user behavior
+4. Monitor system resources: Track CPU, memory, and network during tests
+5. Iterate and improve: Use Claude to continuously refine your test scenarios
 
-## Conclusion
+Conclusion
 
 Claude Code transforms Gatling performance testing from a technical chore into a more accessible and efficient process. By using Claude's code generation capabilities, you can rapidly create comprehensive load tests, while its analytical abilities help you interpret results and optimize your application's performance.
 
 Start small, iterate quickly, and let Claude handle the boilerplate while you focus on designing meaningful test scenarios that reveal how your system performs under real-world conditions.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -11,17 +11,17 @@ score: 7
 permalink: /claude-code-first-project-tutorial-hello-world/
 ---
 
-# Claude Code First Project Tutorial — Hello World
+# Claude Code First Project Tutorial. Hello World
 
 Getting started with Claude Code takes less than ten minutes. This tutorial walks you through creating your first project from scratch, configuring Claude Code for your development environment, and running a simple hello world task to verify everything works. See the [getting started hub](/getting-started-hub/) for more beginner resources.
 
-## Prerequisites
+Prerequisites
 
 [Before you begin, ensure you have the prerequisites installed](/best-claude-code-skills-to-install-first-2026/)
 
-- **Node.js 18+** installed on your machine
-- **A Claude Code account** with API access
-- **Terminal access** with your preferred shell
+- Node.js 18+ installed on your machine
+- A Claude Code account with API access
+- Terminal access with your preferred shell
 
 [Check your Node.js version before starting](/claude-skill-md-format-complete-specification-guide/)
 
@@ -34,18 +34,18 @@ If you see a version number below 18, upgrade Node.js first. Claude Code require
 On macOS, the easiest way to manage Node.js versions is with `nvm` (Node Version Manager). If you do not have it:
 
 ```bash
-# Install nvm
+Install nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 
-# Reload your shell profile, then install and use Node 20
+Reload your shell profile, then install and use Node 20
 nvm install 20
 nvm use 20
 nvm alias default 20
 ```
 
-On Linux the same `nvm` steps apply. On Windows, use the official Node.js installer from nodejs.org or install WSL (Windows Subsystem for Linux) and follow the Linux path — Claude Code works best in a Unix-like shell environment.
+On Linux the same `nvm` steps apply. On Windows, use the official Node.js installer from nodejs.org or install WSL (Windows Subsystem for Linux) and follow the Linux path. Claude Code works best in a Unix-like shell environment.
 
-## Installing Claude Code
+Installing Claude Code
 
 The installation process varies slightly depending on your operating system. On macOS and Linux, use npm:
 
@@ -70,13 +70,13 @@ npm config get prefix
 Then add `<prefix>/bin` to your `PATH` in your shell profile. For example, if the prefix is `/usr/local`:
 
 ```bash
-# In ~/.zshrc or ~/.bashrc
+In ~/.zshrc or ~/.bashrc
 export PATH="/usr/local/bin:$PATH"
 ```
 
 Restart your terminal and `claude --version` should resolve.
 
-## Configuring Your API Key
+Configuring Your API Key
 
 Claude Code requires authentication via an API key from Anthropic. If you do not have an API key yet, obtain one from the Anthropic console. Set the environment variable before running Claude:
 
@@ -89,13 +89,13 @@ Add this line to your shell profile (`~/.bashrc`, `~/.zshrc`, or equivalent) to 
 For a cleaner setup, use a `.env` file at the project level and load it with a tool like `direnv`, which automatically exports variables when you enter the directory:
 
 ```bash
-# Install direnv (macOS)
+Install direnv (macOS)
 brew install direnv
 
-# Add to your shell profile
+Add to your shell profile
 eval "$(direnv hook zsh)"   # or bash
 
-# In your project directory
+In your project directory
 echo 'export ANTHROPIC_API_KEY="your-api-key-here"' > .env
 echo '.env' >> .gitignore   # Critical: never commit your API key
 direnv allow
@@ -103,9 +103,9 @@ direnv allow
 
 After this, every time you `cd` into the project directory, your API key is available automatically. This is safer than setting it globally and avoids accidentally using a development key in production contexts.
 
-Claude Code also supports the key being set via a `claude auth` command if you prefer not to manage the environment variable manually — check `claude --help` for current authentication options in your installed version.
+Claude Code also supports the key being set via a `claude auth` command if you prefer not to manage the environment variable manually. check `claude --help` for current authentication options in your installed version.
 
-## Creating Your First Project
+Creating Your First Project
 
 [Create a new directory for your hello world project](/claude-code-project-initialization-best-practices/):
 
@@ -127,9 +127,9 @@ It is worth understanding what `npm init -y` creates before you start modifying 
 claude "Create a tsconfig.json for a Node.js TypeScript project targeting ES2022 with strict mode enabled"
 ```
 
-Claude Code will produce a sensible configuration and explain the key settings. That pattern — asking Claude Code to generate configuration files with a plain-language description of what you need — is one of the fastest ways to bootstrap a new project correctly.
+Claude Code will produce a sensible configuration and explain the key settings. That pattern. asking Claude Code to generate configuration files with a plain-language description of what you need. is one of the fastest ways to bootstrap a new project correctly.
 
-## Running Your First Claude Code Command
+Running Your First Claude Code Command
 
 Now invoke Claude Code to assist with a basic task. The CLI uses natural language prompts rather than strict command flags:
 
@@ -151,11 +151,11 @@ node hello.js
 
 Output displays the expected message. Your first Claude Code task completed successfully.
 
-Claude Code shows you what it plans to do before making changes. You will see a diff or a description of the file it intends to create, and you can approve or reject the action. This approval workflow is intentional — it keeps you in control of your codebase. For simple tasks you will approve quickly; for larger changes you will want to review the diff before accepting.
+Claude Code shows you what it plans to do before making changes. You will see a diff or a description of the file it intends to create, and you can approve or reject the action. This approval workflow is intentional. it keeps you in control of your codebase. For simple tasks you will approve quickly; for larger changes you will want to review the diff before accepting.
 
 You can also run Claude Code in a non-interactive mode for scripting by passing the `--yes` flag to auto-approve all actions, but for a first project it is worth going through the approval flow manually a few times to understand what Claude Code is actually doing.
 
-## Understanding Claude Code Sessions
+Understanding Claude Code Sessions
 
 Claude Code operates within interactive sessions. Each session maintains context across multiple commands, allowing Claude to understand your project structure and development goals. Start an interactive session within your project directory:
 
@@ -171,13 +171,13 @@ Add a function that takes a name parameter and returns a personalized greeting
 
 Claude Code reads your existing files, understands the context, and generates appropriate code modifications. This contextual awareness distinguishes Claude Code from standalone code generators.
 
-Sessions are powerful because Claude Code builds up a mental model of your project as you work. Early in the session, Claude Code reads your files to understand the structure. As the session progresses, it tracks changes it has made and uses that context to keep subsequent changes consistent. If you create a utility function in one file, Claude Code knows about it when you ask it to use that function elsewhere — you do not have to explain it again.
+Sessions are powerful because Claude Code builds up a mental model of your project as you work. Early in the session, Claude Code reads your files to understand the structure. As the session progresses, it tracks changes it has made and uses that context to keep subsequent changes consistent. If you create a utility function in one file, Claude Code knows about it when you ask it to use that function elsewhere. you do not have to explain it again.
 
 Session context does have limits. Very long sessions with many file changes can cause Claude Code to lose track of earlier context. For large projects, it is a good habit to start a fresh session when switching between distinct areas of the codebase, or to give Claude Code a brief recap: "We've been working on the auth module. Now let's move to the user profile endpoints."
 
-You can also give Claude Code a `CLAUDE.md` file at the root of your project containing persistent instructions it should follow throughout every session — things like your code style preferences, testing requirements, or project-specific conventions. This is the fastest way to make Claude Code behave consistently across multiple work sessions.
+You can also give Claude Code a `CLAUDE.md` file at the root of your project containing persistent instructions it should follow throughout every session. things like your code style preferences, testing requirements, or project-specific conventions. This is the fastest way to make Claude Code behave consistently across multiple work sessions.
 
-## Working with Project Files
+Working with Project Files
 
 Claude Code excels at understanding and modifying existing codebases. Create a more complex example to test this capability:
 
@@ -245,9 +245,9 @@ Run the tests with:
 node --test greeting.test.js
 ```
 
-Now ask Claude Code to add a validation check to `greet` that throws if the name is not a string. Claude Code will update both the implementation and the test file to cover the new behavior, keeping them in sync — which is something most standalone code generators cannot do because they lack the session context to know the test file exists.
+Now ask Claude Code to add a validation check to `greet` that throws if the name is not a string. Claude Code will update both the implementation and the test file to cover the new behavior, keeping them in sync. which is something most standalone code generators cannot do because they lack the session context to know the test file exists.
 
-## Using Claude Code for Code Review
+Using Claude Code for Code Review
 
 Beyond generating code, Claude Code helps review existing implementations. Create a file with intentional issues:
 
@@ -273,21 +273,21 @@ Claude Code identifies the off-by-one error in the loop condition (`i <= prices.
 For a real project, the code review workflow becomes even more valuable. You can ask Claude Code to review a specific function, a whole file, or a git diff of changes you are about to commit:
 
 ```bash
-# Review staged changes before committing
+Review staged changes before committing
 git diff --cached | claude "Review these changes for bugs, security issues, and style problems"
 ```
 
 Claude Code is thorough about edge cases that are easy to miss in self-review. Common catches include: missing null checks on function arguments, async functions that catch errors silently without re-throwing or logging, SQL queries that concatenate user input instead of using parameterized queries, and resource leaks where file handles or database connections are not closed in error paths.
 
-Think of this as a lightweight code review from a collaborator who has read every file in your project and has time for thorough feedback on every change. The quality of the review improves the more context Claude Code has — make sure it has read the relevant files before asking for a review.
+Think of this as a lightweight code review from a collaborator who has read every file in your project and has time for thorough feedback on every change. The quality of the review improves the more context Claude Code has. make sure it has read the relevant files before asking for a review.
 
-## Scripting and Automation
+Scripting and Automation
 
 For repetitive tasks, create Claude Code scripts that automate common workflows. You can pair this with [Claude Code skills](/claude-skill-md-format-complete-specification-guide/) to make recurring automations repeatable. A simple script might look like:
 
 ```bash
 #!/bin/bash
-# run-tests.sh
+run-tests.sh
 claude "Run the test suite and summarize any failures"
 ```
 
@@ -304,7 +304,7 @@ More sophisticated automation uses Claude Code's `--print` flag to capture its o
 
 ```bash
 #!/bin/bash
-# .git/hooks/post-commit
+.git/hooks/post-commit
 SUMMARY=$(git diff HEAD~1 HEAD | claude --print "Summarize these changes in one sentence for a changelog entry")
 echo "$SUMMARY" >> CHANGELOG.md
 git add CHANGELOG.md
@@ -315,33 +315,33 @@ Or a script that generates a PR description from a branch diff:
 
 ```bash
 #!/bin/bash
-# generate-pr-description.sh
+generate-pr-description.sh
 BASE_BRANCH=${1:-main}
 git diff "$BASE_BRANCH"...HEAD | claude --print "Write a clear pull request description summarizing these changes, including what was changed and why"
 ```
 
 Claude Code also supports reading from stdin, which makes it composable with standard Unix tooling. The combination of natural language prompting and Unix pipes gives you a flexible automation toolkit that can handle tasks a traditional bash script would struggle with.
 
-## Next Steps
+Next Steps
 
 With your first project complete, explore more advanced capabilities:
 
-- **Multi-file generation**: Ask Claude Code to scaffold entire features with multiple related files
-- **Debugging assistance**: Paste error messages and let Claude Code trace through stack traces
-- **Documentation generation**: Request docstrings and README updates
-- **Refactoring**: Describe structural changes and let Claude Code implement them
+- Multi-file generation: Ask Claude Code to scaffold entire features with multiple related files
+- Debugging assistance: Paste error messages and let Claude Code trace through stack traces
+- Documentation generation: Request docstrings and README updates
+- Refactoring: Describe structural changes and let Claude Code implement them
 
 The hello world project you created demonstrates the fundamentals. From here, integrate Claude Code into your actual development workflow, using it for code generation, review, debugging, and documentation tasks as they arise.
 
-A practical way to deepen your Claude Code skills is to pick one recurring pain point in your current project — maybe it is writing boilerplate for new API endpoints, or keeping test files in sync with implementation changes — and spend a week using Claude Code for that specific task. Repetition with a focused use case builds intuition for how to prompt effectively and where Claude Code saves the most time versus where it still needs human guidance.
+A practical way to deepen your Claude Code skills is to pick one recurring problem in your current project. maybe it is writing boilerplate for new API endpoints, or keeping test files in sync with implementation changes. and spend a week using Claude Code for that specific task. Repetition with a focused use case builds intuition for how to prompt effectively and where Claude Code saves the most time versus where it still needs human guidance.
 
 The developers who get the most out of Claude Code treat it as a collaborative partner rather than an autocomplete tool. That means reviewing what it produces, correcting mistakes, and giving it feedback within the session. The more precisely you describe what you want and why, the more accurately Claude Code delivers it.
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started 2026](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Way to Scope Tasks for Claude Code Success](/best-way-to-scope-tasks-for-claude-code-success/)
 - [How to Write Effective Prompts for Claude Code](/how-to-write-effective-prompts-for-claude-code/)
 - [Getting Started Hub](/getting-started-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

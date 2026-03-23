@@ -15,13 +15,13 @@ permalink: /claude-skills-feature-flag-implementation-workflow/
 
 Feature flags provide a powerful mechanism for controlling feature availability in Claude skills without deploying new code. This guide shows you how to implement a feature flag system that enables gradual rollouts, A/B testing, and kill switches for your [custom skills](/how-to-write-a-skill-md-file-for-claude-code/).
 
-## Why Feature Flags Matter in Claude Skills
+Why Feature Flags Matter in Claude Skills
 
-When you build custom Claude skills, you often want to test new functionality with a subset of users before full release. Traditional deployment requires code changes and redeployment—processes that introduce risk and delay iteration cycles. Feature flags solve this by decoupling feature release from deployment.
+When you build custom Claude skills, you often want to test new functionality with a subset of users before full release. Traditional deployment requires code changes and redeployment, processes that introduce risk and delay iteration cycles. Feature flags solve this by decoupling feature release from deployment.
 
 The implementation involves three core components: a flag configuration system, conditional logic within your skill code, and an external control mechanism. Let me walk you through each layer with practical examples.
 
-## Implementing the Flag Configuration System
+Implementing the Flag Configuration System
 
 [The foundation of any feature flag system is a configuration source](/claude-skill-md-format-complete-specification-guide/). For Claude skills, you have several options: environment variables, JSON configuration files, or external services. Here's a practical approach using a local configuration file:
 
@@ -50,12 +50,12 @@ The implementation involves three core components: a flag configuration system, 
 
 This configuration supports multiple flag strategies. The `enabled` field provides a simple kill switch. The `rollout_percentage` enables gradual rollouts using deterministic hashing. The `whitelist` allows specific users or sessions to receive the feature regardless of percentage.
 
-## Building the Flag Evaluation Logic
+Building the Flag Evaluation Logic
 
 Create a utility skill that handles flag evaluation across your other skills. Save this as `~/.claude/skills/feature-flags.md`:
 
 ```markdown
-# Feature Flag Evaluator
+Feature Flag Evaluator
 
 You are a feature flag evaluation system. When asked to check a feature flag:
 
@@ -80,23 +80,23 @@ else:
 Never silently skip flag checks. Always report whether flags are enabled or disabled in your responses.
 ```
 
-## Integrating Flags into Your Custom Skills
+Integrating Flags into Your Custom Skills
 
 Now apply the flag system to a real skill. Here's a skill that processes data with two implementations:
 
 ```markdown
-# Data Processor Skill
+Data Processor Skill
 
 You process and analyze user data according to specified formats. 
 
-## Core Functionality
+Core Functionality
 
 When users ask you to process data:
 1. Load the input data
 2. Determine which processing engine to use
 3. Execute processing and return results
 
-## Feature: Enhanced Analysis Engine
+Feature: Enhanced Analysis Engine
 
 Before using the enhanced analysis engine (flag: "new-analysis-engine"):
 
@@ -114,7 +114,7 @@ If disabled, use the legacy engine with standard processing.
 Always mention in your response which engine was used and the flag evaluation result.
 ```
 
-## Controlled Rollout Workflow
+Controlled Rollout Workflow
 
 Executing a controlled rollout follows a predictable pattern. For version control and safe deployment of skills, see [Claude Skill Versioning: Semver Best Practices](/claude-skill-versioning-semver-best-practices/). Start by enabling the flag for your internal team through the whitelist:
 
@@ -126,11 +126,11 @@ Executing a controlled rollout follows a predictable pattern. For version contro
 }
 ```
 
-Monitor behavior and logs for 24-48 hours. When confident, increase the rollout percentage incrementally—25%, then 50%, then 75%—with observation periods between each step. The deterministic hashing ensures the same users consistently receive the same experience.
+Monitor behavior and logs for 24-48 hours. When confident, increase the rollout percentage incrementally, 25%, then 50%, then 75%, with observation periods between each step. The deterministic hashing ensures the same users consistently receive the same experience.
 
 To complete a rollout, set the percentage to 100 and remove the conditional code path after confirming stability.
 
-## Handling Flag Dependencies
+Handling Flag Dependencies
 
 Complex skills often have features that depend on other features. Model these dependencies explicitly in your configuration:
 
@@ -148,7 +148,7 @@ Complex skills often have features that depend on other features. Model these de
 
 Your evaluation logic should check dependencies before enabling a feature. If a dependency is disabled, the dependent feature is also disabled regardless of its own configuration.
 
-## Observability and Monitoring
+Observability and Monitoring
 
 Feature flags provide value only when you can observe their impact. Add logging to your flag checks:
 
@@ -173,23 +173,23 @@ def evaluate_flag(skill_name, flag_name, user_id=None):
     }
     
     if not flag_config.get('enabled', False):
-        return {**result, 'reason': 'disabled'}
+        return {result, 'reason': 'disabled'}
     
     if user_id and user_id in flag_config.get('whitelist', []):
-        return {**result, 'enabled': True, 'reason': 'whitelist'}
+        return {result, 'enabled': True, 'reason': 'whitelist'}
     
     if user_id:
         hash_input = f"{flag_name}:{user_id}"
         hash_value = int(hashlib.md5(hash_input.encode()).hexdigest(), 16) % 100
         enabled = hash_value < flag_config.get('rollout_percentage', 0)
-        return {**result, 'enabled': enabled, 'reason': 'rollout', 'hash_value': hash_value}
+        return {result, 'enabled': enabled, 'reason': 'rollout', 'hash_value': hash_value}
     
-    return {**result, 'reason': 'no_user_id'}
+    return {result, 'reason': 'no_user_id'}
 ```
 
 This logging captures the evaluation reason, enabling you to analyze rollout distribution and troubleshoot issues.
 
-## Kill Switches and Emergency Rollback
+Kill Switches and Emergency Rollback
 
 The most critical feature flag capability is the kill switch. When a feature causes issues in production, disable it immediately without deploying code:
 
@@ -204,17 +204,17 @@ The most critical feature flag capability is the kill switch. When a feature cau
 
 Your skill code should check for emergency disable and log prominently when triggered. This ensures your team knows exactly why a feature became unavailable.
 
-## Conclusion
+Conclusion
 
 Feature flags transform how you develop and ship Claude skills. By implementing this workflow, you gain fine-grained control over feature availability, reduce deployment risk, and enable rapid iteration. Start with simple kill switches, gradually adopt percentage rollouts, and build toward sophisticated A/B testing as your skill portfolio matures.
 
 The key is consistency: check flags consistently, log evaluations thoroughly, and maintain your configuration as version-controlled infrastructure. This discipline pays dividends as your skill ecosystem grows. Explore related workflows at the [workflows hub](/workflows-hub/).
 
-## Related Reading
+Related Reading
 
-- [Claude Skill Versioning: Semver Best Practices](/claude-skill-versioning-semver-best-practices/) — version control strategies for skill releases
-- [How to Write a Skill MD File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/) — create the custom skills that feature flags control
-- [Claude Skills Change Management: Rolling Out to Teams](/claude-skills-change-management-rolling-out-to-teams/) — gradual rollout strategies for team-wide skill adoption
-- [Building Production AI Agents with Claude Skills in 2026](/building-production-ai-agents-with-claude-skills-2026/) — production considerations for skill deployment
+- [Claude Skill Versioning: Semver Best Practices](/claude-skill-versioning-semver-best-practices/). version control strategies for skill releases
+- [How to Write a Skill MD File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/). create the custom skills that feature flags control
+- [Claude Skills Change Management: Rolling Out to Teams](/claude-skills-change-management-rolling-out-to-teams/). gradual rollout strategies for team-wide skill adoption
+- [Building Production AI Agents with Claude Skills in 2026](/building-production-ai-agents-with-claude-skills-2026/). production considerations for skill deployment
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

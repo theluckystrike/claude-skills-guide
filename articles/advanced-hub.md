@@ -15,7 +15,7 @@ permalink: /advanced-hub/
 
 Once you've mastered the basics of Claude skills, the next frontier is efficiency and scale. This hub covers advanced topics: keeping token costs low, chaining skills intelligently, and building workflows that hold up in production.
 
-## Table of Contents
+Table of Contents
 
 1. [Token Optimization](#token-optimization)
 2. [Skill Chaining Strategies](#skill-chaining-strategies)
@@ -24,34 +24,34 @@ Once you've mastered the basics of Claude skills, the next frontier is efficienc
 
 ---
 
-## Token Optimization
+Token Optimization
 
 Every skill invocation costs tokens. The skill definition itself, your system prompt, and the conversation history all count. Advanced users think carefully about which skills load when, and trim unnecessary context aggressively.
 
-**The five core strategies:**
+The five core strategies:
 
-1. **Specific prompts** — Replace "review my codebase" with "find SQL injection vulnerabilities in `src/auth/`"
-2. **Skill-specific patterns** — Use supermemory to avoid re-explaining context each session
-3. **Strategic context windows** — Load specific file ranges, not full files
-4. **Staged skill chains** — Complete one skill's work before starting another to prevent context bleed
-5. **Usage monitoring** — Track which sessions burn disproportionate tokens and audit their prompts
+1. Specific prompts. Replace "review my codebase" with "find SQL injection vulnerabilities in `src/auth/`"
+2. Skill-specific patterns. Use supermemory to avoid re-explaining context each session
+3. Strategic context windows. Load specific file ranges, not full files
+4. Staged skill chains. Complete one skill's work before starting another to prevent context bleed
+5. Usage monitoring. Track which sessions burn disproportionate tokens and audit their prompts
 
-**Real-world result:** Teams applying these strategies consistently cut per-request token usage by 30–40%. A team using `frontend-design` for every component request dropped from 8,000 to 4,800 tokens per call just by passing targeted component specs instead of full design system docs.
+Real-world result: Teams applying these strategies consistently cut per-request token usage by 30–40%. A team using `frontend-design` for every component request dropped from 8,000 to 4,800 tokens per call just by passing targeted component specs instead of full design system docs.
 
-**Full guide:** [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/)
+Full guide: [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/)
 
 ---
 
-## Skill Chaining Strategies
+Skill Chaining Strategies
 
-Skill chains—where one skill's output feeds another—are where Claude skills deliver the most value. A well-designed chain eliminates entire categories of manual work.
+Skill chains, where one skill's output feeds another, are where Claude skills deliver the most value. A well-designed chain eliminates entire categories of manual work.
 
-**Example: monthly analytics chain**
+monthly analytics chain
 ```
 pdf (extract invoices) → tdd-verified Python (clean/transform) → xlsx (analyze) → docx (report) → pptx (deck)
 ```
 
-**Principles for reliable chains:**
+Principles for reliable chains:
 - Complete each stage before starting the next
 - Use tdd to validate transformations at each step
 - Keep context clean between stages (don't let pdf context pollute xlsx work)
@@ -61,18 +61,18 @@ For data-heavy chains, see [Best Claude Skills for Data Analysis](/best-claude-s
 
 ---
 
-## Cost Reduction in Practice
+Cost Reduction in Practice
 
 Advanced optimization isn't just about prompts. It's about workflow design:
 
-- **Don't reload context you've already established.** If you've explained your project structure once, use supermemory to store it.
-- **Batch similar skill operations.** Process 10 PDFs in one session rather than starting fresh each time.
-- **Know which skills are expensive.** Skills with large context windows (supermemory, frontend-design with full design systems) cost more per call. Use them deliberately.
-- **Match skill to task granularity.** Don't invoke the full tdd skill to write a single assertion.
+- Don't reload context you've already established. If you've explained your project structure once, use supermemory to store it.
+- Batch similar skill operations. Process 10 PDFs in one session rather than starting fresh each time.
+- Know which skills are expensive. Skills with large context windows (supermemory, frontend-design with full design systems) cost more per call. Use them deliberately.
+- Match skill to task granularity. Don't invoke the full tdd skill to write a single assertion.
 
 ---
 
-## Full Guide Index: Advanced Cluster
+Full Guide Index: Advanced Cluster
 
 | Article | What You'll Learn |
 |---------|-------------------|
@@ -81,7 +81,7 @@ Advanced optimization isn't just about prompts. It's about workflow design:
 | [Claude Code Skills: Context Window Exceeded Error Fix](/claude-code-skills-context-window-exceeded-error-fix/) | Fixing and preventing context overflow errors in skill use |
 | [Claude Skills Memory and Context Architecture Explained](/claude-skills-memory-and-context-architecture-explained/) | How Claude manages memory and context in skills |
 | [Claude SuperMemory Skill: Persistent Context Explained](/claude-supermemory-skill-persistent-context-explained/) | How the supermemory skill stores and retrieves session knowledge |
-| [Claude Memory Feature vs SuperMemory Skill Comparison](/claude-memory-feature-vs-supermemory-skill-comparison/) | Native memory feature vs the supermemory skill — differences and tradeoffs |
+| [Claude Memory Feature vs SuperMemory Skill Comparison](/claude-memory-feature-vs-supermemory-skill-comparison/) | Native memory feature vs the supermemory skill. differences and tradeoffs |
 | [Building Your First MCP Tool Integration Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/) | Setting up Model Context Protocol servers for advanced integrations |
 | [MCP Servers vs Claude Skills: What's the Difference?](/mcp-servers-vs-claude-skills-what-is-the-difference/) | Understanding where MCP ends and skills begin |
 | [Multi-Agent Orchestration with Claude Subagents Guide](/multi-agent-orchestration-with-claude-subagents-guide/) | Patterns for coordinating multiple Claude agents in production |
@@ -104,16 +104,16 @@ Advanced optimization isn't just about prompts. It's about workflow design:
 
 ---
 
-### Related Reading
+Related Reading
 
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — Understanding auto-loading is key to controlling token spend
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — The skill investments worth the token cost
-- [Understanding Claude Code Hooks System: Complete Guide](/understanding-claude-code-hooks-system-complete-guide/) — Hooks are the advanced complement to skills—essential for power users
-- [Multi-Agent Orchestration with Claude Subagents Guide](/multi-agent-orchestration-with-claude-subagents-guide/) — The logical next step after mastering single-skill optimization
-- [Claude Skills Memory and Context Architecture Explained](/claude-skills-memory-and-context-architecture-explained/) — Foundational knowledge for any advanced optimization strategy
-- [Best Claude Code Skills 2026 Rankings Hub](/best-of-hub/) — Know which skills deserve your advanced optimization effort
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). Understanding auto-loading is key to controlling token spend
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). The skill investments worth the token cost
+- [Understanding Claude Code Hooks System: Complete Guide](/understanding-claude-code-hooks-system-complete-guide/). Hooks are the advanced complement to skills, essential for power users
+- [Multi-Agent Orchestration with Claude Subagents Guide](/multi-agent-orchestration-with-claude-subagents-guide/). The logical next step after mastering single-skill optimization
+- [Claude Skills Memory and Context Architecture Explained](/claude-skills-memory-and-context-architecture-explained/). Foundational knowledge for any advanced optimization strategy
+- [Best Claude Code Skills 2026 Rankings Hub](/best-of-hub/). Know which skills deserve your advanced optimization effort
 
 ---
 
-*Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*Built by theluckystrike. More at [zovo.one](https://zovo.one)
 *

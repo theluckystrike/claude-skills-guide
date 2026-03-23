@@ -13,11 +13,11 @@ score: 7
 ---
 
 
-# Claude Code ARIA Labels Implementation Guide
+Claude Code ARIA Labels Implementation Guide
 
-Accessibility in web development requires more than semantic HTML. ARIA (Accessible Rich Internet Applications) labels bridge the gap between complex UI components and assistive technologies. This guide shows you how to implement ARIA labels effectively using Claude Code and complementary skills — with enough depth to handle real production scenarios where the naive approach breaks down.
+Accessibility in web development requires more than semantic HTML. ARIA (Accessible Rich Internet Applications) labels bridge the gap between complex UI components and assistive technologies. This guide shows you how to implement ARIA labels effectively using Claude Code and complementary skills. with enough depth to handle real production scenarios where the naive approach breaks down.
 
-## Understanding ARIA Labels
+Understanding ARIA Labels
 
 ARIA labels provide accessible names for interactive elements that lack visible text. They help screen readers convey meaning to users who cannot see visual labels. Understanding the distinction between the three primary labeling attributes is essential before writing a single line:
 
@@ -27,31 +27,31 @@ ARIA labels provide accessible names for interactive elements that lack visible 
 | `aria-labelledby` | References another element by ID to borrow its text | When visible text already exists nearby |
 | `aria-describedby` | Points to supplementary descriptive text | Error messages, hints, additional context |
 
-The key rule: `aria-label` and `aria-labelledby` both set the *accessible name* of an element. If both are present, `aria-labelledby` wins. `aria-describedby` is additive — it supplements the name rather than replacing it. Screen readers typically announce the accessible name first, then the description.
+The key rule: `aria-label` and `aria-labelledby` both set the *accessible name* of an element. If both are present, `aria-labelledby` wins. `aria-describedby` is additive. it supplements the name rather than replacing it. Screen readers typically announce the accessible name first, then the description.
 
 ```html
-<button aria-label="Close dialog">✕</button>
+<button aria-label="Close dialog"></button>
 <input aria-label="Search" type="text" placeholder="Search...">
 <div role="alert" aria-live="polite">Changes saved</div>
 ```
 
 The `role="alert"` on the last element implicitly sets `aria-live="assertive"`, so specifying `polite` overrides that default. This is the kind of subtle conflict that Claude Code can help you catch during code review.
 
-## Setting Up Your Environment
+Setting Up Your Environment
 
-Before implementing ARIA labels at scale, configure Claude Code with skills that support accessible development. The **frontend-design** skill provides templates and patterns for accessible components. Install it first:
-
-```bash
-# Place frontend-design.md in .claude/ then invoke: /frontend-design
-```
-
-For testing your implementation, the **tdd** skill helps create automated accessibility tests:
+Before implementing ARIA labels at scale, configure Claude Code with skills that support accessible development. The frontend-design skill provides templates and patterns for accessible components. Install it first:
 
 ```bash
-# Place tdd.md in .claude/ then invoke: /tdd
+Place frontend-design.md in .claude/ then invoke: /frontend-design
 ```
 
-These skills work together — the frontend-design skill generates markup with proper ARIA attributes, while tdd skill tests verify they function correctly. When you prompt Claude Code with `/frontend-design` before asking it to scaffold a modal or dropdown, you get markup that includes ARIA roles and relationships from the start rather than retrofitting them later.
+For testing your implementation, the tdd skill helps create automated accessibility tests:
+
+```bash
+Place tdd.md in .claude/ then invoke: /tdd
+```
+
+These skills work together. the frontend-design skill generates markup with proper ARIA attributes, while tdd skill tests verify they function correctly. When you prompt Claude Code with `/frontend-design` before asking it to scaffold a modal or dropdown, you get markup that includes ARIA roles and relationships from the start rather than retrofitting them later.
 
 A practical workflow using Claude Code looks like this:
 
@@ -61,11 +61,11 @@ A practical workflow using Claude Code looks like this:
 4. Invoke `/tdd` to scaffold unit tests that assert on ARIA attribute presence
 5. Run the tests in CI to prevent regressions
 
-## Implementing ARIA Labels in Practice
+Implementing ARIA Labels in Practice
 
-### Form Elements
+Form Elements
 
-Forms often contain inputs without visible labels. Always pair each input with an accessible name. The most common mistake is relying on `placeholder` as the only label — screen readers do not consistently read placeholder text as a label, and it disappears once the user starts typing.
+Forms often contain inputs without visible labels. Always pair each input with an accessible name. The most common mistake is relying on `placeholder` as the only label. screen readers do not consistently read placeholder text as a label, and it disappears once the user starts typing.
 
 ```html
 <!-- Without ARIA - problematic for screen readers -->
@@ -86,7 +86,7 @@ Forms often contain inputs without visible labels. Always pair each input with a
 <p id="password-hint">Must be at least 12 characters with one symbol.</p>
 ```
 
-The third example — explicit `<label>` with `aria-labelledby` — is redundant in cases where you can use a proper `<label for="...">` association. Use `aria-labelledby` when the label and input are structurally separated in the DOM and `for` cannot bridge the gap (e.g., inside a web component shadow root).
+The third example. explicit `<label>` with `aria-labelledby`. is redundant in cases where you can use a proper `<label for="...">` association. Use `aria-labelledby` when the label and input are structurally separated in the DOM and `for` cannot bridge the gap (e.g., inside a web component shadow root).
 
 When working with complex form validation, `aria-invalid` and `aria-errormessage` complete the accessibility picture:
 
@@ -100,9 +100,9 @@ When working with complex form validation, `aria-invalid` and `aria-errormessage
 
 Setting `aria-invalid="true"` signals to screen readers that this field has a problem. The `role="alert"` on the error paragraph ensures it is announced immediately when it appears in the DOM.
 
-The **pdf** skill can generate accessibility reports from your HTML, helping you verify form labels are correctly implemented across your application.
+The pdf skill can generate accessibility reports from your HTML, helping you verify form labels are correctly implemented across your application.
 
-### Icon Buttons
+Icon Buttons
 
 Buttons that use only icons confuse screen reader users. This pattern shows up constantly in dashboards, toolbars, and media players. Add `aria-label` to icon buttons and remember to hide the SVG from the accessibility tree:
 
@@ -138,9 +138,9 @@ A common real-world scenario: toolbar buttons with tooltips. You might be tempte
 
 Both the SVG and the tooltip span carry `aria-hidden="true"`. The button's `aria-label` is the single source of truth for assistive technology.
 
-### Modal Dialogs
+Modal Dialogs
 
-Modals require careful ARIA implementation. Setting roles and labels is the easy part — managing focus is where most implementations fall short. When a modal opens, focus must move into the modal. When it closes, focus must return to the trigger that opened it.
+Modals require careful ARIA implementation. Setting roles and labels is the easy part. managing focus is where most implementations fall short. When a modal opens, focus must move into the modal. When it closes, focus must return to the trigger that opened it.
 
 ```html
 <div role="dialog"
@@ -200,11 +200,11 @@ function trapFocus(event) {
 }
 ```
 
-The **supermemory** skill can help you recall patterns for modal accessibility you've used in previous projects, maintaining consistency across your codebase.
+The supermemory skill can help you recall patterns for modal accessibility you've used in previous projects, maintaining consistency across your codebase.
 
-## Testing ARIA Implementation
+Testing ARIA Implementation
 
-Automated testing catches many ARIA issues early. Use the tdd skill to write tests that assert structural requirements — not just that elements exist, but that they are correctly associated:
+Automated testing catches many ARIA issues early. Use the tdd skill to write tests that assert structural requirements. not just that elements exist, but that they are correctly associated:
 
 ```javascript
 // accessibility.test.js
@@ -241,18 +241,18 @@ test('form inputs have associated labels', () => {
 });
 ```
 
-The third test is particularly valuable — it catches inputs that rely on `<label for="...">` association, which is fine from an ARIA standpoint but often breaks when input IDs are auto-generated or duplicated in dynamically rendered lists.
+The third test is particularly valuable. it catches inputs that rely on `<label for="...">` association, which is fine from an ARIA standpoint but often breaks when input IDs are auto-generated or duplicated in dynamically rendered lists.
 
-Run these tests as part of your CI pipeline to catch regressions. The **canvas-design** skill can help create visual accessibility documentation for your team.
+Run these tests as part of your CI pipeline to catch regressions. The canvas-design skill can help create visual accessibility documentation for your team.
 
-## Common Mistakes to Avoid
+Common Mistakes to Avoid
 
 Several patterns undermine accessibility efforts:
 
-1. **Redundant labels**: Using both `aria-label` and a visible text child creates confusing announcements where the label is read twice
-2. **Missing associations**: Inputs without any label connection fail WCAG compliance at Level A, the baseline
-3. **Overusing roles**: Native HTML elements like `<button>` already have correct roles — adding `role="button"` to a `<button>` is harmless but signals a misunderstanding; adding `role="button"` to a `<div>` requires you to also handle keyboard events manually
-4. **Hiding content that should be visible**: `aria-hidden="true"` on focusable elements creates keyboard traps where focus lands on elements screen readers cannot announce
+1. Redundant labels: Using both `aria-label` and a visible text child creates confusing announcements where the label is read twice
+2. Missing associations: Inputs without any label connection fail WCAG compliance at Level A, the baseline
+3. Overusing roles: Native HTML elements like `<button>` already have correct roles. adding `role="button"` to a `<button>` is harmless but signals a misunderstanding; adding `role="button"` to a `<div>` requires you to also handle keyboard events manually
+4. Hiding content that should be visible: `aria-hidden="true"` on focusable elements creates keyboard traps where focus lands on elements screen readers cannot announce
 
 ```html
 <!-- Wrong: redundant label creates double-announcement -->
@@ -279,9 +279,9 @@ Several patterns undermine accessibility efforts:
 
 The ARIA authoring practices document from W3C (WAI-ARIA Authoring Practices 1.2) is the definitive reference for which roles require which keyboard interaction patterns. Bookmark it, and prompt Claude Code to reference it when generating complex widget implementations.
 
-## Generating Accessibility Documentation
+Generating Accessibility Documentation
 
-After implementing ARIA labels, document your components for other developers. The **pdf** skill generates formatted documentation:
+After implementing ARIA labels, document your components for other developers. The pdf skill generates formatted documentation:
 
 ```bash
 claude --print "/pdf"
@@ -291,20 +291,20 @@ claude "Generate accessibility documentation for components in components/"
 This creates a reference guide showing which ARIA attributes each component uses, making maintenance easier for your team. A useful structure for component-level accessibility docs:
 
 ```markdown
-## MyDropdown Component
+MyDropdown Component
 
-**ARIA Role:** combobox (input), listbox (options panel)
-**Keyboard Interactions:** Arrow keys navigate options, Enter selects, Escape closes
-**Required ARIA Attributes:**
+ARIA Role: combobox (input), listbox (options panel)
+Keyboard Interactions: Arrow keys navigate options, Enter selects, Escape closes
+Required ARIA Attributes:
 - aria-expanded (on trigger)
 - aria-controls pointing to listbox ID
 - aria-activedescendant updated as selection changes
-**Screen Reader Announcement:** "[label] combobox, [selected value], collapsed/expanded"
+Screen Reader Announcement: "[label] combobox, [selected value], collapsed/expanded"
 ```
 
-## Advanced Patterns
+Advanced Patterns
 
-### Dynamic Content
+Dynamic Content
 
 For content that updates dynamically, use aria-live regions. The choice between `polite` and `assertive` has real UX consequences:
 
@@ -320,7 +320,7 @@ For content that updates dynamically, use aria-live regions. The choice between 
 </div>
 ```
 
-The `polite` setting announces changes without interrupting, while `atomic` ensures the entire region is re-announced when content changes rather than just the changed node. Use `aria-atomic="false"` (the default) when you want only the changed portion announced — useful for chat messages or log feeds where announcing the whole history on each update would be disruptive.
+The `polite` setting announces changes without interrupting, while `atomic` ensures the entire region is re-announced when content changes rather than just the changed node. Use `aria-atomic="false"` (the default) when you want only the changed portion announced. useful for chat messages or log feeds where announcing the whole history on each update would be disruptive.
 
 A practical loading state pattern:
 
@@ -331,7 +331,7 @@ function setLoadingState(isLoading) {
 }
 ```
 
-### Compound Components
+Compound Components
 
 When building compound components like tabs or accordions, coordinate ARIA attributes across elements. The relationship between trigger and panel must be bidirectional:
 
@@ -367,7 +367,7 @@ When building compound components like tabs or accordions, coordinate ARIA attri
 </div>
 ```
 
-Notice `tabindex="-1"` on inactive tabs and `tabindex="0"` on the active tab. This implements the roving tabindex pattern — users Tab into the tablist, then use Arrow keys to move between tabs. Only the active tab is in the natural tab order.
+Notice `tabindex="-1"` on inactive tabs and `tabindex="0"` on the active tab. This implements the roving tabindex pattern. users Tab into the tablist, then use Arrow keys to move between tabs. Only the active tab is in the natural tab order.
 
 For accordions, the pattern is similar but uses `aria-expanded` instead of `aria-selected`:
 
@@ -385,17 +385,17 @@ For accordions, the pattern is similar but uses `aria-expanded` instead of `aria
 </div>
 ```
 
-## Conclusion
+Conclusion
 
 Implementing ARIA labels correctly requires understanding both the attributes available and the assistive technology patterns they support. Start with semantic HTML, add ARIA labels where visual text is absent, and test with both automated tools and manual screen reader testing. The automated tests in this guide catch structural issues; manual testing with VoiceOver, NVDA, or Narrator catches announcement quality and interaction flow issues that no linter can detect.
 
 The combination of skills like frontend-design for component patterns, tdd for verification, and pdf for documentation creates a workflow that maintains accessibility as your project grows. Remember: accessible interfaces benefit everyone, not just screen reader users. Form labels improve usability for all users. Clear error messages help everyone understand what went wrong. Good focus management makes keyboard power users faster. ARIA done right is good product design.
 
-## Related Reading
+Related Reading
 
-- [Claude Code WCAG Accessibility Audit Workflow](/claude-code-wcag-accessibility-audit-workflow/) — WCAG audits identify missing ARIA labels
-- [Claude Code Keyboard Navigation Testing Guide](/claude-code-keyboard-navigation-testing-guide/) — Keyboard nav and ARIA labels work together
-- [Claude Code Axe Accessibility Testing Guide](/claude-code-axe-accessibility-testing-guide/) — Axe catches ARIA label violations automatically
-- [Best Way to Use Claude Code for Frontend Styling](/best-way-to-use-claude-code-for-frontend-styling/) — Styling and accessibility go together in frontend work
+- [Claude Code WCAG Accessibility Audit Workflow](/claude-code-wcag-accessibility-audit-workflow/). WCAG audits identify missing ARIA labels
+- [Claude Code Keyboard Navigation Testing Guide](/claude-code-keyboard-navigation-testing-guide/). Keyboard nav and ARIA labels work together
+- [Claude Code Axe Accessibility Testing Guide](/claude-code-axe-accessibility-testing-guide/). Axe catches ARIA label violations automatically
+- [Best Way to Use Claude Code for Frontend Styling](/best-way-to-use-claude-code-for-frontend-styling/). Styling and accessibility go together in frontend work
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

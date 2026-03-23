@@ -18,13 +18,13 @@ tags: [chrome-extension, claude-skills]
 
 Sneaker release alerts have become essential tools for collectors, resellers, and enthusiasts who need real-time notifications when limited editions drop. Building a Chrome extension for sneaker release alerts requires understanding browser extension architecture, web scraping fundamentals, and notification systems. This guide walks through the technical implementation for developers and power users.
 
-## Core Architecture
+Core Architecture
 
 A sneaker release alert Chrome extension operates through three primary components: a background service worker for continuous monitoring, content scripts for parsing retail sites, and a notification system for alerting users.
 
 The extension architecture follows Chrome's Manifest V3 specifications, which require asynchronous operations and use service workers instead of persistent background pages.
 
-### Manifest Configuration
+Manifest Configuration
 
 Your extension begins with the manifest file that defines permissions and capabilities:
 
@@ -57,7 +57,7 @@ Your extension begins with the manifest file that defines permissions and capabi
 
 The host permissions array specifies which retail domains your extension can access for monitoring.
 
-## Implementing the Monitoring Service
+Implementing the Monitoring Service
 
 The background service worker handles periodic checks against configured retailer endpoints. You need to implement rate limiting and respect each site's terms of service.
 
@@ -128,7 +128,7 @@ async function sendNotifications(releases) {
 setInterval(checkReleases, CHECK_INTERVAL);
 ```
 
-## User Interface Implementation
+User Interface Implementation
 
 The popup interface allows users to configure their alert preferences and view tracked releases:
 
@@ -218,13 +218,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 ```
 
-## Advanced Features
+Advanced Features
 
 For production extensions, implement these advanced patterns:
 
-**Dynamic Refresh Rates**: Adjust checking frequency based on known release calendars. Increase frequency during major drop events like Jordan releases or Yeezy drops.
+Dynamic Refresh Rates: Adjust checking frequency based on known release calendars. Increase frequency during major drop events like Jordan releases or Yeezy drops.
 
-**Authentication Handling**: Some retailers require login for release access. Implement OAuth flow within the extension using the identity API:
+Authentication Handling: Some retailers require login for release access. Implement OAuth flow within the extension using the identity API:
 
 ```javascript
 // Handle retailer authentication
@@ -246,7 +246,7 @@ async function authenticateRetailer(retailer) {
 }
 ```
 
-**Data Persistence**: Use IndexedDB for storing historical release data, enabling features like price tracking and release history:
+Data Persistence: Use IndexedDB for storing historical release data, enabling features like price tracking and release history:
 
 ```javascript
 import { openDB } from 'idb';
@@ -269,7 +269,7 @@ async function getReleaseHistory(sneakerId) {
 }
 ```
 
-## Deployment Considerations
+Deployment Considerations
 
 When publishing to the Chrome Web Store, ensure your extension complies with store policies. Sneaker automation tools often face scrutiny, so frame your extension as a notification utility rather than an automated purchase tool.
 
@@ -278,32 +278,32 @@ Include clear privacy policies explaining data usage, implement proper CORS hand
 The implementation above provides a foundation that you can customize based on specific retailer targets and feature requirements. Focus on reliability and respect for retailer terms of service when building release monitoring tools.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-## Step-by-Step: Setting Up Your First Alert
+Step-by-Step: Setting Up Your First Alert
 
 1. Load the extension via `chrome://extensions` > "Load unpacked"
 2. Click the extension icon and check the retailers you want to monitor
 3. Enable desktop notifications when prompted
-4. Click "Save Settings" — the service worker starts checking on a 1-minute interval
+4. Click "Save Settings". the service worker starts checking on a 1-minute interval
 5. When a new release appears, a Chrome notification fires with name, price, and release date
 6. Click the notification to open the product page directly
 
-## Common Use Cases
+Common Use Cases
 
-**Jordan Retro drops**: Nike.com's `/launch` URL surfaces upcoming releases before the SNKRS queue opens. Monitoring it provides advance visibility.
+Jordan Retro drops: Nike.com's `/launch` URL surfaces upcoming releases before the SNKRS queue opens. Monitoring it provides advance visibility.
 
-**Yeezy restocks**: Adidas restocks appear briefly before selling out. A 1-minute check interval often catches restock windows.
+Yeezy restocks: Adidas restocks appear briefly before selling out. A 1-minute check interval often catches restock windows.
 
-**Footlocker exclusive colorways**: Chain retailer exclusives often go live with minimal marketing. Monitoring multiple retailer domains catches drops that filter-based tools miss.
+Footlocker exclusive colorways: Chain retailer exclusives often go live with minimal marketing. Monitoring multiple retailer domains catches drops that filter-based tools miss.
 
-## Comparison with Existing Alert Tools
+Comparison with Existing Alert Tools
 
 | Tool | Retailers | Setup | Alert speed | Cost |
 |---|---|---|---|---|
@@ -313,9 +313,9 @@ Built by theluckystrike — More at [zovo.one](https://zovo.one)
 
 The extension is unique in that you control the check interval, selector logic, and notification format. Discord bots are faster for hyped releases but require community infrastructure you do not control.
 
-## Troubleshooting Common Issues
+Troubleshooting Common Issues
 
-**Selector no longer matching**: Build fallback selectors and log misses for debugging:
+Selector no longer matching: Build fallback selectors and log misses for debugging:
 
 ```javascript
 async function fetchReleases(retailer) {
@@ -328,11 +328,11 @@ async function fetchReleases(retailer) {
 }
 ```
 
-**Service worker terminating between checks**: Use the `alarms` API instead of `setInterval`. Alarms persist across service worker restarts in Manifest V3.
+Service worker terminating between checks: Use the `alarms` API instead of `setInterval`. Alarms persist across service worker restarts in Manifest V3.
 
-**False positives from restocked items**: Track seen products by ASIN or ID to avoid re-alerting on items already seen. Store seen IDs in `chrome.storage.local`.
+False positives from restocked items: Track seen products by ASIN or ID to avoid re-alerting on items already seen. Store seen IDs in `chrome.storage.local`.
 
-**Notifications not appearing**: Add `"notifications"` to the manifest `permissions` array and prompt for permission on first run:
+Notifications not appearing: Add `"notifications"` to the manifest `permissions` array and prompt for permission on first run:
 
 ```javascript
 chrome.permissions.request({ permissions: ['notifications'] }, (granted) => {
@@ -340,7 +340,7 @@ chrome.permissions.request({ permissions: ['notifications'] }, (granted) => {
 });
 ```
 
-When publishing to the Chrome Web Store, frame your extension as a notification utility rather than an automated purchase tool — the latter violates store policies and retailer terms. Include a clear privacy policy and test thoroughly across each target retailer.
+When publishing to the Chrome Web Store, frame your extension as a notification utility rather than an automated purchase tool. the latter violates store policies and retailer terms. Include a clear privacy policy and test thoroughly across each target retailer.
 
 
 {% endraw %}

@@ -18,29 +18,29 @@ score: 7
 
 Claude Code combined with Tooljet creates a powerful low-code development environment where AI assists in building applications faster. This guide shows you how to integrate Claude Code with Tooljet to streamline your workflow automation, build internal tools, and create sophisticated applications without writing extensive code.
 
-## Understanding Tooljet and Claude Code Integration
+Understanding Tooljet and Claude Code Integration
 
 Tooljet is an open-source low-code platform that enables rapid application development through a visual drag-and-drop interface. It connects to various data sources, APIs, and services to build internal tools, dashboards, and automation workflows. Claude Code enhances Tooljet by providing intelligent assistance in query generation, workflow logic, and troubleshooting.
 
 The integration works by having Claude Code help you write JavaScript queries, create complex SQL statements, design database schemas, and debug issues within your Tooljet applications. This combination significantly reduces the learning curve for new Tooljet users and accelerates development for experienced builders.
 
-## Setting Up Claude Code for Tooljet Development
+Setting Up Claude Code for Tooljet Development
 
 Before integrating Claude Code with Tooljet, ensure you have both tools properly configured. Tooljet can run either as a cloud service or self-hosted solution. For development purposes, the self-hosted option provides more flexibility.
 
 Start by installing Claude Code on your development machine if you haven't already. Then, create a dedicated skill for Tooljet interactions that understands platform-specific syntax and best practices.
 
 ```bash
-# Create a CLAUDE.md file to give Claude context about the Tooljet project
+Create a CLAUDE.md file to give Claude context about the Tooljet project
 touch CLAUDE.md
 
-# Create a Tooljet-specific skill directory
+Create a Tooljet-specific skill directory
 mkdir -p .claude/skills
 ```
 
 Configure your Tooljet skill with essential references to the platform's query syntax, component library, and common patterns. This preparation enables Claude Code to provide context-aware suggestions when working on your applications.
 
-## Building Your First AI-Assisted Tooljet Workflow
+Building Your First AI-Assisted Tooljet Workflow
 
 Let's walk through creating a data retrieval workflow that demonstrates the power of Claude Code assistance. Suppose you need to build an employee directory with search functionality.
 
@@ -77,11 +77,11 @@ LIMIT 50;
 
 The query uses parameterized queries to prevent SQL injection while enabling flexible search across multiple fields. Claude Code explains the importance of parameter binding and suggests indexing strategies for optimal performance.
 
-## Advanced Workflow Patterns
+Advanced Workflow Patterns
 
 As your Tooljet applications grow in complexity, Claude Code becomes invaluable for managing sophisticated logic. Consider a workflow that processes form submissions and triggers multi-step actions.
 
-### Multi-Step Data Processing
+Multi-Step Data Processing
 
 ```javascript
 // Form submission handler with validation and notifications
@@ -114,7 +114,7 @@ if (isValid) {
 
 This pattern demonstrates how Claude Code structures workflows with clear separation of concerns, proper error handling, and appropriate feedback mechanisms.
 
-### Connecting External APIs
+Connecting External APIs
 
 Tooljet excels at API integrations. Claude Code simplifies the process of configuring REST API queries and handling authentication:
 
@@ -151,13 +151,13 @@ async function refreshToken() {
 }
 ```
 
-## Best Practices for Claude Code and Tooljet Development
+Best Practices for Claude Code and Tooljet Development
 
-### Organize Your Queries
+Organize Your Queries
 
 Group related queries into logical categories within your Tooljet application. Use consistent naming conventions like `get_`, `insert_`, `update_`, and `delete_` prefixes. Claude Code can help refactor existing queries into more maintainable structures.
 
-### Implement Error Handling
+Implement Error Handling
 
 Always wrap critical operations in try-catch blocks and provide meaningful error messages to users:
 
@@ -171,31 +171,31 @@ try {
 }
 ```
 
-### Leverage Component Library
+Leverage Component Library
 
-Tooljet provides extensive component options. Claude Code recommends appropriate components based on your use case—for example, suggesting the Table component for data display, Modal for complex forms, and Tabs for organizing related content.
+Tooljet provides extensive component options. Claude Code recommends appropriate components based on your use case, for example, suggesting the Table component for data display, Modal for complex forms, and Tabs for organizing related content.
 
-### Version Control Your Applications
+Version Control Your Applications
 
 Export your Tooljet applications to JSON and store them in version control. This practice enables collaboration and rollback capabilities. Claude Code can help generate diff-friendly representations and identify changes between versions.
 
-## Troubleshooting Common Issues
+Troubleshooting Common Issues
 
 When building Tooljet applications, you may encounter query timeouts, data binding issues, or authentication errors. Claude Code assists in diagnosing these problems by analyzing your configuration and suggesting specific fixes.
 
 For query timeout issues, review your database indexes and consider adding pagination to large result sets. For data binding problems, verify that your component references match the query response structure exactly. Claude Code can generate validation scripts to check these configurations automatically.
 
-## Conclusion
+Conclusion
 
 Integrating Claude Code with Tooljet transforms low-code development from a visual-only experience into an intelligent partnership. Claude Code handles the technical complexity while Tooljet provides the visual interface, enabling developers to build sophisticated applications more efficiently. Start with simple workflows, progressively incorporate more complex patterns, and use Claude Code's assistance for debugging and optimization.
 
-The combination of AI-assisted development and visual low-code platforms represents the future of internal tool development—faster builds, fewer errors, and more maintainable applications.
+The combination of AI-assisted development and visual low-code platforms represents the future of internal tool development, faster builds, fewer errors, and more maintainable applications.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

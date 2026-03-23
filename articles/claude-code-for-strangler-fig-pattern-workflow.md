@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Strangler Fig Pattern Workflow"
-description: "Learn how to use Claude Code to implement the strangler fig pattern for seamless legacy system migration. Practical workflows, code examples, and."
+description: "Learn how to use Claude Code to implement the strangler fig pattern for smooth legacy system migration. Practical workflows, code examples, and."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-strangler-fig-pattern-workflow/
@@ -14,23 +14,23 @@ score: 7
 
 
 {% raw %}
-# Claude Code for Strangler Fig Pattern Workflow
+Claude Code for Strangler Fig Pattern Workflow
 
-The strangler fig pattern represents one of the most elegant approaches to modernizing legacy systems without the风险 of massive "big bang" rewrites. Named after the strangler fig tree that slowly envelops and replaces its host, this pattern allows you to incrementally migrate functionality from a legacy system to a modern architecture while keeping everything running smoothly. Claude Code becomes an invaluable partner in executing this migration strategy, providing intelligent assistance from initial analysis through final decommissioning.
+The strangler fig pattern represents one of the most elegant approaches to modernizing legacy systems without the of massive "big bang" rewrites. Named after the strangler fig tree that slowly envelops and replaces its host, this pattern allows you to incrementally migrate functionality from a legacy system to a modern architecture while keeping everything running smoothly. Claude Code becomes an invaluable partner in executing this migration strategy, providing intelligent assistance from initial analysis through final decommissioning.
 
-## Understanding the Strangler Fig Pattern
+Understanding the Strangler Fig Pattern
 
 Before diving into implementation, you need to grasp the core principles that make this pattern so effective. The strangler fig pattern operates on three fundamental phases that run concurrently rather than sequentially.
 
-**Phase One: Facade Deployment** involves placing a new interface in front of your existing legacy system. This facade acts as a proxy, routing requests to either the old system or new services based on which functionality has been migrated. Users and external systems continue interacting with a single endpoint without noticing any changes.
+Phase One: Facade Deployment involves placing a new interface in front of your existing legacy system. This facade acts as a proxy, routing requests to either the old system or new services based on which functionality has been migrated. Users and external systems continue interacting with a single endpoint without noticing any changes.
 
-**Phase Two: Incremental Migration** is where the real work happens. You systematically identify features in the legacy system, build new implementations, and redirect traffic one feature at a time. Each migration is small, testable, and reversible if problems arise.
+Phase Two: Incremental Migration is where the real work happens. You systematically identify features in the legacy system, build new implementations, and redirect traffic one feature at a time. Each migration is small, testable, and reversible if problems arise.
 
-**Phase Three: Decommissioning** occurs when all functionality has been migrated. The facade is either removed entirely or simplified to point to the new system, and the legacy code can be archived or deleted.
+Phase Three: Decommissioning occurs when all functionality has been migrated. The facade is either removed entirely or simplified to point to the new system, and the legacy code can be archived or deleted.
 
 Claude Code excels at each phase by helping you analyze the existing codebase, generate migration code, maintain test coverage, and verify behavior parity throughout the process.
 
-## Analyzing Your Legacy System
+Analyzing Your Legacy System
 
 Every successful strangler fig migration begins with thorough understanding of what you're migrating. Claude Code can accelerate this discovery phase significantly.
 
@@ -45,9 +45,9 @@ claude "Analyze this legacy codebase and create a comprehensive inventory:
 Output this as a structured markdown document that I can use for migration planning."
 ```
 
-This analysis reveals your migration candidates. Look for standalone features with clear boundaries—these become your first targets. Complex, tightly coupled functionality should wait until you've established a rhythm with simpler migrations.
+This analysis reveals your migration candidates. Look for standalone features with clear boundaries, these become your first targets. Complex, tightly coupled functionality should wait until you've established a rhythm with simpler migrations.
 
-## Setting Up the Migration Facade
+Setting Up the Migration Facade
 
 The facade serves as the traffic router between your legacy and new systems. Claude Code can help you generate an appropriate facade based on your tech stack.
 
@@ -105,7 +105,7 @@ claude "Create an API Gateway facade in [your-language/framework] that:
 Use environment variables for configuration and include proper TypeScript types."
 ```
 
-## Implementing Incremental Feature Migration
+Implementing Incremental Feature Migration
 
 With your facade in place, you can begin migrating features one at a time. This is where Claude Code demonstrates its value by helping you replicate functionality in the new system while maintaining parity with the old.
 
@@ -138,7 +138,7 @@ claude "Create a verification test script that:
 This will help me verify behavior parity before switching traffic."
 ```
 
-## Managing Traffic Switches
+Managing Traffic Switches
 
 Once a feature is migrated and verified, you update the facade configuration to route traffic to the new implementation. Claude Code can help you manage this systematically.
 
@@ -172,15 +172,15 @@ function resolveTarget(feature: string): 'legacy' | 'modern' {
 
 This allows instant rollback by simply changing environment variables without code deployment.
 
-## Best Practices for Strangler Fig Success
+Best Practices for Strangler Fig Success
 
 The strangler fig pattern rewards patience and discipline. These practices ensure your migrations succeed.
 
-**Start with read operations.** Query endpoints are easier to migrate because they're idempotent and don't modify state. Migration confidence builds before tackling writes.
+Start with read operations. Query endpoints are easier to migrate because they're idempotent and don't modify state. Migration confidence builds before tackling writes.
 
-**Migrate related features together.** If the user profile and user settings share significant code, migrate both simultaneously to avoid splitting shared logic awkwardly.
+Migrate related features together. If the user profile and user settings share significant code, migrate both simultaneously to avoid splitting shared logic awkwardly.
 
-**Maintain comprehensive logging.** Every request through the facade should include headers identifying which system handled it. This becomes essential for debugging production issues.
+Maintain comprehensive logging. Every request through the facade should include headers identifying which system handled it. This becomes essential for debugging production issues.
 
 ```bash
 claude "Add structured logging to the facade that captures:
@@ -193,11 +193,11 @@ claude "Add structured logging to the facade that captures:
 Use JSON format for easy log aggregation and alerting."
 ```
 
-**Plan for parallel operation.** Your legacy and new systems will run simultaneously for months. Budget for the infrastructure costs and maintenance burden during this period.
+Plan for parallel operation. Your legacy and new systems will run simultaneously for months. Budget for the infrastructure costs and maintenance burden during this period.
 
-**Document everything.** As features migrate, update your API documentation to reflect which system handles each endpoint. Mark deprecated endpoints clearly.
+Document everything. As features migrate, update your API documentation to reflect which system handles each endpoint. Mark deprecated endpoints clearly.
 
-## When to Use the Strangler Fig Pattern
+When to Use the Strangler Fig Pattern
 
 This pattern shines in scenarios where you cannot afford downtime or risky deployments. Consider it when migrating from monoliths to microservices, upgrading legacy frameworks (PHP to Node.js, Java to Kotlin), moving from on-premise to cloud, or consolidating multiple legacy systems into one platform.
 
@@ -206,10 +206,10 @@ The incremental nature of the strangler fig pattern means you deliver value cont
 Start small, verify frequently, and let the strangler fig pattern gradually transform your system one feature at a time.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

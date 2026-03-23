@@ -14,13 +14,13 @@ permalink: /claude-code-aws-ecs-fargate-setup-deployment-tutorial/
 
 
 
-# Claude Code AWS ECS Fargate Setup Deployment Tutorial
+Claude Code AWS ECS Fargate Setup Deployment Tutorial
 
 [AWS ECS Fargate provides serverless container orchestration](/aws-mcp-server-cloud-automation-with-claude-code/), eliminating the need to manage underlying EC2 instances. This guide walks through setting up and deploying containerized applications to ECS Fargate using Claude Code.
 
-[Skills referenced here are `.md` files in `~/.claude/skills/`](/claude-skill-md-format-complete-specification-guide/) and invoked with `/skill-name`. There are no `shell-expert`, `docker-expert`, or `terraform-expert` skills — those do not exist. Real built-in skills for this workflow are `/tdd`, `/pdf`, and `/supermemory`.
+[Skills referenced here are `.md` files in `~/.claude/skills/`](/claude-skill-md-format-complete-specification-guide/) and invoked with `/skill-name`. There are no `shell-expert`, `docker-expert`, or `terraform-expert` skills. those do not exist. Real built-in skills for this workflow are `/tdd`, `/pdf`, and `/supermemory`.
 
-## Prerequisites and Environment Setup
+Prerequisites and Environment Setup
 
 Before deploying to ECS Fargate, configure the AWS CLI with appropriate credentials. Docker is required for building container images.
 
@@ -28,7 +28,7 @@ Install and configure the AWS CLI:
 
 ```bash
 aws configure
-# Enter your Access Key ID, Secret Access Key, Region, and Output format
+Enter your Access Key ID, Secret Access Key, Region, and Output format
 ```
 
 Verify your configuration:
@@ -37,9 +37,9 @@ Verify your configuration:
 aws sts get-caller-identity
 ```
 
-Use Claude Code directly to troubleshoot container and CLI issues — describe the error in your session and Claude will diagnose it.
+Use Claude Code directly to troubleshoot container and CLI issues. describe the error in your session and Claude will diagnose it.
 
-## Creating Your Container Image
+Creating Your Container Image
 
 Create a simple Node.js Express application to deploy:
 
@@ -82,10 +82,10 @@ The [`/tdd` skill](/claude-tdd-skill-test-driven-development-workflow/) helps wr
 ```
 /tdd
 Write Jest integration tests for the Express app in index.js.
-Test the GET / endpoint — verify status 200 and response shape.
+Test the GET / endpoint. verify status 200 and response shape.
 ```
 
-## Setting Up ECS Fargate Infrastructure
+Setting Up ECS Fargate Infrastructure
 
 Create an ECS cluster:
 
@@ -107,7 +107,7 @@ Write Terraform for an ECS Fargate service:
 
 Claude will generate the Terraform configuration. The [Claude Code Skills for Terraform](/claude-code-skills-for-infrastructure-as-code-terraform/) guide covers more complex IaC patterns.
 
-## Creating ECS Task Definitions
+Creating ECS Task Definitions
 
 Task definitions specify how your containers run. Create a JSON task definition:
 
@@ -150,7 +150,7 @@ aws ecs register-task-definition \
   --cli-input-json file://task-definition.json
 ```
 
-## Deploying the Application
+Deploying the Application
 
 Create an ECS service to run your tasks:
 
@@ -173,7 +173,7 @@ aws ecs describe-services \
   --query 'services[0].deployments'
 ```
 
-## Automating Deployments with CI/CD
+Automating Deployments with CI/CD
 
 Set up automated deployments using AWS CodePipeline or [GitHub Actions](/claude-skills-with-github-actions-ci-cd-pipeline/). Here's a GitHub Actions workflow:
 
@@ -218,17 +218,17 @@ jobs:
             --force-new-deployment
 ```
 
-## Managing Environment Variables and Secrets
+Managing Environment Variables and Secrets
 
 For production applications, store sensitive configuration using AWS Secrets Manager or Parameter Store:
 
 ```bash
-# Store a secret
+Store a secret
 aws secretsmanager create-secret \
   --name myapp/db-password \
   --secret-string '{"password":"your-secret-password"}'
 
-# Retrieve in task definition
+Retrieve in task definition
 aws ssm get-parameter --name /myapp/api-key
 ```
 
@@ -251,9 +251,9 @@ task cpu=256/mem=512, secrets in Secrets Manager at myapp/*,
 auto-scaling min=2 max=10 target=70% CPU
 ```
 
-## Scaling and Monitoring
+Scaling and Monitoring
 
-ECS Fargate supports automatic scaling based on CPU utilization or custom metrics:
+ECS Fargate supports automatic scaling based on CPU usage or custom metrics:
 
 ```bash
 aws application-autoscaling register-scalable-target \
@@ -287,23 +287,23 @@ Generate a deployment health report from these CloudWatch metrics:
 Include: uptime percentage, p95 latency, error rate, and scaling events.
 ```
 
-## Summary
+Summary
 
-ECS Fargate combines serverless convenience with container control. The workflow covered here — cluster setup, task definitions, CI/CD integration, secrets management, and auto-scaling — applies to most production containerized workloads.
+ECS Fargate combines serverless convenience with container control. The workflow covered here. cluster setup, task definitions, CI/CD integration, secrets management, and auto-scaling. applies to most production containerized workloads.
 
 Claude Code accelerates each phase: generating Terraform and task definitions, writing tests with `/tdd`, tracking configuration with `/supermemory`, and producing reports with `/pdf`. Start with a single-task deployment and add complexity incrementally.
 
 ---
 
-## Related Reading
+Related Reading
 
-- [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-with-github-actions-ci-cd-pipeline/) — Integrating Claude Code into automated deployment pipelines
-- [Claude Code Skills for Terraform Infrastructure as Code](/claude-code-skills-for-infrastructure-as-code-terraform/) — IaC patterns for reproducible cloud infrastructure
-- [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/) — Skills for deployment workflows
+- [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-with-github-actions-ci-cd-pipeline/). Integrating Claude Code into automated deployment pipelines
+- [Claude Code Skills for Terraform Infrastructure as Code](/claude-code-skills-for-infrastructure-as-code-terraform/). IaC patterns for reproducible cloud infrastructure
+- [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/). Skills for deployment workflows
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-## Advanced: Auto-Scaling Based on Custom Metrics
+Advanced: Auto-Scaling Based on Custom Metrics
 
 Default ECS auto-scaling uses CPU and memory. For web services, request count per target is often a better signal:
 
@@ -330,17 +330,17 @@ Default ECS auto-scaling uses CPU and memory. For web services, request count pe
 
 Claude Code generates the full Application Auto Scaling policy configuration from a description of your target metric and scaling behavior.
 
-## Step-by-Step: Zero-Downtime Deployment
+Step-by-Step: Zero-Downtime Deployment
 
 1. Push your new Docker image to ECR: `docker push $ECR_REPO:$COMMIT_SHA`
 2. Update the task definition with the new image tag using AWS CLI or Terraform
 3. Trigger a new deployment: `aws ecs update-service --cluster my-cluster --service my-service --force-new-deployment`
-4. ECS performs a rolling update — new tasks start before old ones drain
+4. ECS performs a rolling update. new tasks start before old ones drain
 5. The ALB health check ensures traffic only routes to healthy new tasks
 6. Monitor the deployment in the ECS console until all tasks are running the new revision
 7. Roll back with `aws ecs update-service --task-definition previous-revision` if health checks fail
 
-## Comparison with Alternative Deployment Approaches
+Comparison with Alternative Deployment Approaches
 
 | Platform | Setup complexity | Serverless | Auto-scaling | Cost |
 |---|---|---|---|---|
@@ -352,17 +352,17 @@ Claude Code generates the full Application Auto Scaling policy configuration fro
 
 ECS Fargate hits the sweet spot for teams that want container portability without managing EC2 instances. Lambda containers win for event-driven workloads with highly variable traffic.
 
-## Troubleshooting Common Issues
+Troubleshooting Common Issues
 
-**Task stopping with exit code 1**: Check CloudWatch Logs for the task's log group (`/ecs/service-name`). Increase the log retention period during debugging so you can access logs from stopped tasks.
+Task stopping with exit code 1: Check CloudWatch Logs for the task's log group (`/ecs/service-name`). Increase the log retention period during debugging so you can access logs from stopped tasks.
 
-**ECS service stuck in "pending" state**: Usually means the task cannot pull the image from ECR. Verify the task execution role has `ecr:GetAuthorizationToken` and `ecr:BatchGetImage` permissions.
+ECS service stuck in "pending" state: Usually means the task cannot pull the image from ECR. Verify the task execution role has `ecr:GetAuthorizationToken` and `ecr:BatchGetImage` permissions.
 
-**Health check failing on new tasks**: If the application takes more than 30 seconds to start, increase the `healthCheckGracePeriodSeconds` on the ECS service to give the app time to initialize before ELB starts checking.
+Health check failing on new tasks: If the application takes more than 30 seconds to start, increase the `healthCheckGracePeriodSeconds` on the ECS service to give the app time to initialize before ELB starts checking.
 
-**Secrets Manager not injecting into container environment**: Ensure the task execution role has `secretsmanager:GetSecretValue` and that the secret ARN in the task definition matches exactly (including the version suffix if used).
+Secrets Manager not injecting into container environment: Ensure the task execution role has `secretsmanager:GetSecretValue` and that the secret ARN in the task definition matches exactly (including the version suffix if used).
 
-Claude Code accelerates each phase of ECS Fargate deployment — generating Terraform and task definitions, writing tests, and producing deployment runbooks. Start with a single-task deployment and add complexity incrementally.
+Claude Code accelerates each phase of ECS Fargate deployment. generating Terraform and task definitions, writing tests, and producing deployment runbooks. Start with a single-task deployment and add complexity incrementally.
 
 
 {% endraw %}

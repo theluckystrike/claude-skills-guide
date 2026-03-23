@@ -14,11 +14,11 @@ score: 7
 
 
 {% raw %}
-# Claude Code for Varnish Cache Workflow Tutorial
+Claude Code for Varnish Cache Workflow Tutorial
 
 Varnish Cache is a powerful HTTP reverse proxy and caching server used by thousands of websites to accelerate content delivery. Managing Varnish configurations, testing cache behavior, and deploying updates can be complex tasks. This tutorial shows how Claude Code CLI can streamline your Varnish workflows with intelligent automation and practical examples.
 
-## Setting Up Claude Code for Varnish Projects
+Setting Up Claude Code for Varnish Projects
 
 Before diving into workflows, ensure Claude Code is installed and configured for your Varnish project. Create a project directory with your Varnish configuration files:
 
@@ -34,25 +34,25 @@ mkdir -p {backend,acl,vcl_scripts,templates,tests}
 ```
 
 The typical Varnish project structure includes:
-- **backend/** — Backend server definitions
-- **acl/** — Access control lists for purging
-- **vcl_scripts/** — Modular VCL (Varnish Configuration Language) snippets
-- **templates/** — Variable-driven VCL templates
-- **tests/** — Integration and unit tests
+- backend/. Backend server definitions
+- acl/. Access control lists for purging
+- vcl_scripts/. Modular VCL (Varnish Configuration Language) snippets
+- templates/. Variable-driven VCL templates
+- tests/. Integration and unit tests
 
-## Creating Varnish Configuration Skills
+Creating Varnish Configuration Skills
 
 Claude Code works best when you create custom skills for your Varnish workflows. Create a skill file (`varnish-workflow.md`) in your project's `.claude/skills` directory:
 
 ```markdown
-# Varnish Cache Workflow Skill
+Varnish Cache Workflow Skill
 
-## Tools
+Tools
 - read_file: Read Varnish configuration files
 - write_file: Create or modify VCL files
 - bash: Execute Varnish commands and tests
 
-## Pattern
+Pattern
 
 When working with Varnish Cache configurations:
 
@@ -61,9 +61,9 @@ When working with Varnish Cache configurations:
 3. Validate VCL syntax using `varnishd -C` before applying changes
 4. Test cache behavior with appropriate HTTP requests
 
-## Example VCL Patterns
+Example VCL Patterns
 
-### Basic Backend Definition
+Basic Backend Definition
 
 vcl_recv {
     # Normalize host headers
@@ -81,13 +81,13 @@ sub vcl_backend_response {
 }
 ```
 
-## Automated VCL Validation Workflow
+Automated VCL Validation Workflow
 
 One of the most practical workflows is automated VCL validation. Create a validation script that Claude Code can use:
 
 ```bash
 #!/bin/bash
-# validate-vcl.sh
+validate-vcl.sh
 
 VCL_FILE="${1:-default.vcl}"
 varnishd -C -f "$VCL_FILE" > /dev/null 2>&1
@@ -109,13 +109,13 @@ chmod +x validate-vcl.sh
 
 Claude Code can then validate any VCL file by running this script, catching syntax errors before deployment.
 
-## Testing Cache Behavior
+Testing Cache Behavior
 
 Testing Varnish cache behavior requires making HTTP requests and inspecting headers. Create a test helper script:
 
 ```bash
 #!/bin/bash
-# cache-test.sh
+cache-test.sh
 
 URL="${1:-http://localhost:6081/}"
 HEADERS=$(curl -sI "$URL")
@@ -125,11 +125,11 @@ echo "---"
 echo "$HEADERS"
 echo "---"
 
-# Check for cache hits
+Check for cache hits
 if echo "$HEADERS" | grep -q "X-Cache: HIT"; then
-    echo "✓ Cache HIT detected"
+    echo " Cache HIT detected"
 elif echo "$HEADERS" | grep -q "X-Cache: MISS"; then
-    echo "✓ Cache MISS - first request"
+    echo " Cache MISS - first request"
 else
     echo "? Cache status unknown"
 fi
@@ -137,11 +137,11 @@ fi
 
 This script helps verify that Varnish is properly caching responses.
 
-## Practical Workflow: Adding Cache Rules
+Practical Workflow: Adding Cache Rules
 
 Here's a typical workflow for adding new cache rules using Claude Code:
 
-### Step 1: Analyze Existing Configuration
+Step 1: Analyze Existing Configuration
 
 Ask Claude to review your current VCL:
 
@@ -149,7 +149,7 @@ Ask Claude to review your current VCL:
 
 Claude will read your VCL files and provide insights about current caching policies.
 
-### Step 2: Propose Changes
+Step 2: Propose Changes
 
 Based on the analysis, ask Claude to generate new rules:
 
@@ -168,7 +168,7 @@ sub vcl_backend_response {
 }
 ```
 
-### Step 3: Validate and Test
+Step 3: Validate and Test
 
 Run validation:
 
@@ -176,7 +176,7 @@ Run validation:
 ./validate-vcl.sh new-rules.vcl
 ```
 
-### Step 4: Deploy
+Step 4: Deploy
 
 Apply the configuration (on your Varnish server):
 
@@ -185,22 +185,22 @@ varnishadm -T localhost:6082 vcl.load new_config /path/to/new-rules.vcl
 varnishadm -T localhost:6082 vcl.use new_config
 ```
 
-## Managing Multiple Environments
+Managing Multiple Environments
 
 For projects with development, staging, and production environments, create environment-specific configurations:
 
 ```bash
-# Directory structure
+Directory structure
 configs/
-├── dev.vcl
-├── staging.vcl
-└── prod.vcl
+ dev.vcl
+ staging.vcl
+ prod.vcl
 ```
 
 Use environment variables or config files to manage differences:
 
 ```vcl
-# backend definition with conditional logic
+backend definition with conditional logic
 backend default {
     .host = "{{BACKEND_HOST}}";
     .port = "{{BACKEND_PORT}}";
@@ -215,12 +215,12 @@ Replace placeholders during deployment:
 envsubst < templates/backend.vcl > configs/prod.vcl
 ```
 
-## Cache Purging Workflows
+Cache Purging Workflows
 
 Implementing cache purging is essential for content updates. Here's a complete purge ACL and procedure:
 
 ```vcl
-# Define purge ACL
+Define purge ACL
 acl purge {
     "localhost";
     "192.168.1.0"/24;
@@ -242,7 +242,7 @@ Create a purge script for easy invalidation:
 
 ```bash
 #!/bin/bash
-# purge-url.sh
+purge-url.sh
 
 URL="$1"
 [ -z "$URL" ] && echo "Usage: $0 <url>" && exit 1
@@ -251,7 +251,7 @@ curl -XPURGE "$URL" -H "Host: example.com"
 echo "Purge requested for: $URL"
 ```
 
-## Monitoring and Debugging
+Monitoring and Debugging
 
 Varnish provides valuable debugging headers. Enable them in your VCL:
 
@@ -268,7 +268,7 @@ Create a monitoring script:
 
 ```bash
 #!/bin/bash
-# monitor-cache.sh
+monitor-cache.sh
 
 ENDPOINTS=(
     "http://localhost:6081/"
@@ -283,21 +283,21 @@ for endpoint in "${ENDPOINTS[@]}"; do
 done
 ```
 
-## Actionable Tips for Varnish Workflows
+Actionable Tips for Varnish Workflows
 
-1. **Modularize Your VCL**: Break configurations into reusable snippets (backends.vcl, cache.vcl, purging.vcl) and include them using VCL's `include` directive.
+1. Modularize Your VCL: Break configurations into reusable snippets (backends.vcl, cache.vcl, purging.vcl) and include them using VCL's `include` directive.
 
-2. **Version Control All Configs**: Store VCL files in git with meaningful commit messages describing what changed and why.
+2. Version Control All Configs: Store VCL files in git with meaningful commit messages describing what changed and why.
 
-3. **Test Before Production**: Always validate and test new VCL in development before deploying to production.
+3. Test Before Production: Always validate and test new VCL in development before deploying to production.
 
-4. **Use Health Checks**: Configure backend health probes to automatically remove failing backends from the pool.
+4. Use Health Checks: Configure backend health probes to automatically remove failing backends from the pool.
 
-5. **Monitor Cache Hit Ratio**: A healthy Varnish setup typically achieves 80%+ cache hit ratio. Monitor this metric and investigate when it drops.
+5. Monitor Cache Hit Ratio: A healthy Varnish setup typically achieves 80%+ cache hit ratio. Monitor this metric and investigate when it drops.
 
-6. **Document Your Policies**: Add comments in VCL explaining why certain TTLs or caching decisions were made.
+6. Document Your Policies: Add comments in VCL explaining why certain TTLs or caching decisions were made.
 
-## Conclusion
+Conclusion
 
 Claude Code transforms Varnish Cache management from manual, error-prone processes into automated, reliable workflows. By creating custom skills, validation scripts, and test helpers, you can use Claude's capabilities to handle configuration generation, syntax validation, testing, and deployment tasks efficiently.
 
@@ -310,10 +310,10 @@ Start by creating your project structure, building basic validation scripts, and
 *This tutorial covers practical Varnish Cache workflows using Claude Code CLI. For more advanced topics like Varnish Enterprise features, ESI (Edge Side Includes), or VMOD development, explore our additional guides.*
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -14,11 +14,11 @@ permalink: /claude-code-weights-and-biases-experiment-tracking/
 
 
 {% raw %}
-# Claude Code Weights and Biases Experiment Tracking
+Claude Code Weights and Biases Experiment Tracking
 
-Machine learning experimentation requires careful tracking of hyperparameters, metrics, and artifacts. Weights & Biases (W&B) has become the standard for experiment tracking, and when combined with Claude Code's CLI capabilities, you get a powerful workflow for automating your ML development pipeline. This guide shows you how to integrate Claude Code with Weights & Biases for seamless experiment tracking.
+Machine learning experimentation requires careful tracking of hyperparameters, metrics, and artifacts. Weights & Biases (W&B) has become the standard for experiment tracking, and when combined with Claude Code's CLI capabilities, you get a powerful workflow for automating your ML development pipeline. This guide shows you how to integrate Claude Code with Weights & Biases for smooth experiment tracking.
 
-## Setting Up W&B with Claude Code
+Setting Up W&B with Claude Code
 
 Before integrating with Claude Code, ensure you have W&B installed and authenticated:
 
@@ -33,39 +33,39 @@ It is also worth installing the full ecosystem of packages you will likely use t
 
 ```bash
 pip install wandb torch torchvision scikit-learn pandas matplotlib
-# Verify wandb is reachable
+Verify wandb is reachable
 wandb status
 ```
 
-### Configuring a CLAUDE.md for ML Projects
+Configuring a CLAUDE.md for ML Projects
 
 Create a `CLAUDE.md` at your project root so Claude Code understands your ML setup without needing repeated context:
 
 ```markdown
-# ML Project: Image Classifier
+ML Project: Image Classifier
 
-## Environment
+Environment
 - Python 3.11, PyTorch 2.2, CUDA 12.1
 - W&B project: theluckystrike/image-classification
 
-## Key Commands
-- `python train.py --config configs/baseline.yaml` — run training
-- `wandb sweep configs/sweep.yaml --project image-classification` — launch sweep
-- `wandb agent <sweep-id>` — start a sweep agent
-- `python evaluate.py --run-id <id>` — evaluate a specific run
+Key Commands
+- `python train.py --config configs/baseline.yaml`. run training
+- `wandb sweep configs/sweep.yaml --project image-classification`. launch sweep
+- `wandb agent <sweep-id>`. start a sweep agent
+- `python evaluate.py --run-id <id>`. evaluate a specific run
 
-## Experiment Naming Convention
+Experiment Naming Convention
 - Format: `{model}-{dataset}-{notes}` e.g. `resnet50-cifar10-aug-v2`
 - Groups: use dataset name as group for related ablations
 
-## Artifact Naming
+Artifact Naming
 - Models: `{model-name}-epoch{n}` stored as type "model"
 - Datasets: `{dataset-name}-{split}` stored as type "dataset"
 ```
 
 This file removes ambiguity when you ask Claude Code to "start a new experiment" or "compare the last three runs."
 
-## Creating a Claude Skill for Experiment Tracking
+Creating a Claude Skill for Experiment Tracking
 
 Build a dedicated skill for managing W&B experiments. Create `skills/wandb-experiment.md`:
 
@@ -75,11 +75,11 @@ name: wandb-exp
 description: "Track ML experiments with Weights & Biases"
 ---
 
-# Weights & Biases Experiment Tracking
+Weights & Biases Experiment Tracking
 
 This skill helps initialize runs, log metrics, and track experiments in W&B.
 
-## Initialize a New Experiment Run
+Initialize a New Experiment Run
 
 To start a new experiment:
 1. Run `wandb init` to configure the project
@@ -87,7 +87,7 @@ To start a new experiment:
 3. Log parameters, metrics, and artifacts as needed
 ```
 
-## Logging Metrics from Training Scripts
+Logging Metrics from Training Scripts
 
 When Claude Code runs your training scripts, it can capture W&B output and help you analyze results. Here's a practical example using a simple training script:
 
@@ -96,7 +96,7 @@ import wandb
 import torch
 import torch.nn as nn
 
-# Initialize W&B run with parameters
+Initialize W&B run with parameters
 wandb.init(
     project="image-classification",
     config={
@@ -107,7 +107,7 @@ wandb.init(
     }
 )
 
-# Simple training loop
+Simple training loop
 model = nn.Linear(784, 10)
 optimizer = torch.optim.Adam(model.parameters(), lr=wandb.config.learning_rate)
 
@@ -137,7 +137,7 @@ wandb.finish()
 
 Claude Code can execute this script and monitor the W&B output in real-time, giving you visibility into training progress without leaving your terminal.
 
-### Structured Training Script with W&B Best Practices
+Structured Training Script with W&B Best Practices
 
 A more production-ready training script makes better use of W&B's features and gives Claude Code more to work with when analyzing results:
 
@@ -285,12 +285,12 @@ if __name__ == "__main__":
 
 When you ask Claude Code to run this script and report on it, it can monitor the W&B run URL, check metrics as they stream in, and flag early if the validation loss diverges from the training loss (a sign of overfitting).
 
-## Using Claude Code to Compare Experiments
+Using Claude Code to Compare Experiments
 
 One of W&B's strongest features is comparing runs. Claude Code can help you query and analyze experiment results:
 
 ```bash
-# List recent experiments in your project
+List recent experiments in your project
 wandb sweep create --project image-classification config.yaml
 wandb agent image-classification/<sweep-id>
 ```
@@ -302,10 +302,10 @@ import wandb
 
 api = wandb.Api()
 
-# Fetch all runs from a project
+Fetch all runs from a project
 runs = api.runs("theluckystrike/image-classification")
 
-# Find best performing run
+Find best performing run
 best_run = min(runs, key=lambda r: r.summary.get("val_loss", float("inf")))
 
 print(f"Best run: {best_run.name}")
@@ -315,7 +315,7 @@ print(f"Test accuracy: {best_run.summary['accuracy']}")
 
 This approach lets Claude Code analyze your experiment history and help you identify optimal hyperparameters.
 
-### Building a Richer Comparison Table
+Building a Richer Comparison Table
 
 You can ask Claude Code to generate a comparison across multiple runs with a structured output:
 
@@ -356,7 +356,7 @@ resnet50-no-pretrain         resnet50  0.0003          64    adamw         87.12
 
 From this table, Claude Code can immediately identify the key findings: cosine scheduling with AdamW outperforms plain Adam, pretraining makes a large difference, and EfficientNet-B0 is competitive with fewer training minutes.
 
-## Automating Experiment Tracking with Claude Code
+Automating Experiment Tracking with Claude Code
 
 You can create custom Claude commands that automatically log information to W&B. For instance, a skill that tracks dataset information:
 
@@ -366,7 +366,7 @@ name: track-data
 description: "Log dataset statistics to W&B"
 ---
 
-# Dataset Tracking
+Dataset Tracking
 
 Track dataset versions and statistics:
 - Run dataset profiling scripts
@@ -376,7 +376,7 @@ Track dataset versions and statistics:
 
 Use this skill to ensure reproducibility by automatically attaching dataset metadata to every experiment.
 
-### Dataset Artifact Logging
+Dataset Artifact Logging
 
 Reproducibility depends on knowing exactly which data was used to train each model. Claude Code can help you implement dataset versioning through W&B artifacts:
 
@@ -431,23 +431,23 @@ def log_dataset_artifact(data_dir: str, split: str, project: str) -> wandb.Artif
     return artifact
 
 
-# Call from Claude Code prompt: "version the CIFAR-10 train split"
+Call from Claude Code prompt: "version the CIFAR-10 train split"
 artifact = log_dataset_artifact("data/cifar10/train", "train", "image-classification")
 print(f"Artifact version: {artifact.version}")
 ```
 
 Once the dataset is versioned as an artifact, you can pin any training run to a specific dataset version, making results fully reproducible even after the underlying data changes.
 
-## Hyperparameter Sweep Automation
+Hyperparameter Sweep Automation
 
 W&B sweeps let you search hyperparameter space systematically. Claude Code can generate sweep configs and manage agents for you.
 
-### Generating a Sweep Configuration
+Generating a Sweep Configuration
 
 Ask Claude Code: "Create a Bayesian sweep config for learning rate, batch size, and optimizer type":
 
 ```yaml
-# configs/sweep.yaml
+configs/sweep.yaml
 program: train.py
 method: bayes
 metric:
@@ -476,12 +476,12 @@ parameters:
 Launch the sweep and agents with Claude Code executing the commands:
 
 ```bash
-# Claude Code runs these in sequence
+Claude Code runs these in sequence
 wandb sweep configs/sweep.yaml --project image-classification
-# Returns: sweep ID, e.g., abc123
+Returns: sweep ID, e.g., abc123
 
 wandb agent theluckystrike/image-classification/abc123 --count 20
-# Runs 20 trials, logging all results to W&B
+Runs 20 trials, logging all results to W&B
 ```
 
 After the sweep completes, ask Claude Code to analyze results:
@@ -490,16 +490,16 @@ After the sweep completes, ask Claude Code to analyze results:
 
 Claude Code queries the W&B API, computes correlations between config values and the target metric, and summarizes findings like: "Learning rate had the strongest correlation (r=0.72). Batch size 64 outperformed 128 by an average of 1.3%. AdamW beat Adam in 18/20 trials."
 
-## Integrating with Existing W&B Workflows
+Integrating with Existing W&B Workflows
 
 Claude Code complements your existing W&B setup:
 
-1. **Sweep Automation**: Let Claude Code manage hyperparameter sweeps by generating sweep configurations and launching agents
-2. **Artifact Management**: Use Claude Code to version and track model artifacts in W&B
-3. **Report Generation**: Pull W&B metrics and generate summary reports using Claude Code
+1. Sweep Automation: Let Claude Code manage hyperparameter sweeps by generating sweep configurations and launching agents
+2. Artifact Management: Use Claude Code to version and track model artifacts in W&B
+3. Report Generation: Pull W&B metrics and generate summary reports using Claude Code
 
 ```python
-# Log model artifacts
+Log model artifacts
 artifact = wandb.Artifact(
     name="trained-model",
     type="model",
@@ -509,40 +509,40 @@ artifact.add_file("model.pt")
 run.log_artifact(artifact)
 ```
 
-### Comparison: W&B Experiment Management Approaches
+Comparison: W&B Experiment Management Approaches
 
 | Approach | Setup Effort | Collaboration | Reproducibility | Claude Code Integration |
 |---|---|---|---|---|
-| W&B manual logging only | Low | Good (shared dashboard) | Medium | Basic — run scripts, view URLs |
-| W&B + structured config files | Medium | Good | High | Strong — reads configs, suggests changes |
-| W&B + artifacts for data + models | Medium-High | Excellent | Very High | Excellent — full lineage tracking |
-| W&B sweeps + agents | Medium | Excellent | Very High | Best — automates launch and analysis |
-| W&B + custom skills in CLAUDE.md | Low additional | Excellent | Very High | Optimal — context-aware automation |
+| W&B manual logging only | Low | Good (shared dashboard) | Medium | Basic. run scripts, view URLs |
+| W&B + structured config files | Medium | Good | High | Strong. reads configs, suggests changes |
+| W&B + artifacts for data + models | Medium-High | Excellent | Very High | Excellent. full lineage tracking |
+| W&B sweeps + agents | Medium | Excellent | Very High | Best. automates launch and analysis |
+| W&B + custom skills in CLAUDE.md | Low additional | Excellent | Very High | Optimal. context-aware automation |
 
 The highest-value integration point is combining W&B artifacts (for data and model versioning) with Claude Code skills (for automating the workflow around them). This combination gives you reproducible experiments without manual bookkeeping.
 
-## Best Practices for Claude Code + W&B Integration
+Best Practices for Claude Code + W&B Integration
 
-- **Consistent Naming**: Use clear, descriptive names for runs and experiments
-- **Parameter Tracking**: Always log all hyperparameters to W&B config
-- **Metric Logging**: Log both training and validation metrics at appropriate intervals
-- **Artifact Versioning**: Use W&B artifacts to version models, datasets, and preprocessing code
-- **Early Stopping**: Monitor validation metrics and implement early stopping to prevent overfitting
-- **Grouping Experiments**: Use W&B groups to organize related experiments (e.g., different seeds, augmentation strategies)
-- **Step vs. Epoch Logging**: Log step-level loss for detailed curves and epoch-level accuracy for summaries — do both, they serve different diagnostic purposes
-- **Tags for Filtering**: Add tags like `baseline`, `ablation`, `production` so Claude Code can filter runs intelligently when you ask for comparisons
-- **Use wandb.watch() Sparingly**: Gradient tracking is useful for debugging but adds overhead — enable it for debug runs, disable for production sweeps
+- Consistent Naming: Use clear, descriptive names for runs and experiments
+- Parameter Tracking: Always log all hyperparameters to W&B config
+- Metric Logging: Log both training and validation metrics at appropriate intervals
+- Artifact Versioning: Use W&B artifacts to version models, datasets, and preprocessing code
+- Early Stopping: Monitor validation metrics and implement early stopping to prevent overfitting
+- Grouping Experiments: Use W&B groups to organize related experiments (e.g., different seeds, augmentation strategies)
+- Step vs. Epoch Logging: Log step-level loss for detailed curves and epoch-level accuracy for summaries. do both, they serve different diagnostic purposes
+- Tags for Filtering: Add tags like `baseline`, `ablation`, `production` so Claude Code can filter runs intelligently when you ask for comparisons
+- Use wandb.watch() Sparingly: Gradient tracking is useful for debugging but adds overhead. enable it for debug runs, disable for production sweeps
 
-## Advanced: Creating a Complete Training Workflow
+Advanced: Creating a Complete Training Workflow
 
 Here's how you might structure a complete training workflow with Claude Code orchestrating the process:
 
-1. **Pre-training**: Claude Code checks dataset availability, validates data integrity, and logs dataset version to W&B
-2. **Training**: Execute training script with W&B logging enabled, monitoring progress in real-time
-3. **Post-training**: Analyze results, compare with previous runs, and log model artifacts
+1. Pre-training: Claude Code checks dataset availability, validates data integrity, and logs dataset version to W&B
+2. Training: Execute training script with W&B logging enabled, monitoring progress in real-time
+3. Post-training: Analyze results, compare with previous runs, and log model artifacts
 
 ```python
-# Complete workflow example
+Complete workflow example
 import wandb
 import hashlib
 import os
@@ -556,19 +556,19 @@ def log_dataset_info(data_path):
         "dataset_size": os.path.getsize(data_path)
     })
 
-# Pre-training
+Pre-training
 log_dataset_info("train_data.pt")
 
-# Training (simplified)
+Training (simplified)
 wandb.init(project="my-project", name="experiment-001")
-# ... training code ...
+... training code ...
 
-# Post-training
+Post-training
 best_model = find_best_model()
 wandb.log_artifact(best_model, name="best-model")
 ```
 
-### Automating the Full Cycle with Claude Code
+Automating the Full Cycle with Claude Code
 
 The workflow above becomes fully automated when you give Claude Code a prompt like:
 
@@ -582,14 +582,14 @@ Claude Code will:
 4. Query the API for the last 5 completed runs
 5. Print a comparison table and a one-sentence verdict
 
-This loop—version, train, compare, decide—is the core of modern ML experimentation, and Claude Code handles the mechanical parts so you can focus on the modeling decisions.
+This loop, version, train, compare, decide, is the core of modern ML experimentation, and Claude Code handles the mechanical parts so you can focus on the modeling decisions.
 
-## Debugging Failed Experiments
+Debugging Failed Experiments
 
 When experiments fail, Claude Code can help you investigate:
 
 ```python
-# Fetch failed runs and their error logs
+Fetch failed runs and their error logs
 api = wandb.Api()
 failed_runs = [r for r in api.runs("project") if r.state == "failed"]
 
@@ -601,7 +601,7 @@ for run in failed_runs:
 
 This debugging capability helps you quickly identify and fix issues in your training pipeline.
 
-### Common Failure Patterns and Fixes
+Common Failure Patterns and Fixes
 
 | Failure Type | W&B Signal | Claude Code Action |
 |---|---|---|
@@ -612,18 +612,18 @@ This debugging capability helps you quickly identify and fix issues in your trai
 | Data leak | `val/accuracy` suspiciously high (>99%) | Checks dataset split logic for overlap |
 | Slow convergence | Loss barely moves for first 5 epochs | Checks if pretrained weights are frozen or LR is too small |
 
-Ask Claude Code: "Look at run `resnet50-baseline` in W&B — does the loss curve indicate overfitting?" and it will fetch the metrics, plot them conceptually, and give you a diagnosis with specific recommendations.
+Ask Claude Code: "Look at run `resnet50-baseline` in W&B. does the loss curve indicate overfitting?" and it will fetch the metrics, plot them conceptually, and give you a diagnosis with specific recommendations.
 
-## Conclusion
+Conclusion
 
 Combining Claude Code with Weights & Biases gives you powerful experiment tracking capabilities. Claude Code can execute training scripts, analyze results, and help you manage your ML workflow while W&B handles the heavy lifting of metrics logging and comparison. Start by creating dedicated skills for your experiment tracking needs, and progressively add more automation as your workflow matures. The integration enables reproducible research, easier debugging, and faster iteration cycles for your machine learning projects.
 {% endraw %}
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

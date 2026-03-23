@@ -13,56 +13,56 @@ tags: [claude-code, claude-skills]
 ---
 
 {% raw %}
-# Chrome Extension Diff Checker: A Developer Guide
+Chrome Extension Diff Checker: A Developer Guide
 
 Diff checking is a fundamental skill for developers. Whether you're reviewing pull requests, comparing configuration files, or tracking changes across versions, knowing how to identify differences quickly saves hours of frustration. Chrome extensions that perform diff checking bring this capability directly into your browser, eliminating the need to switch between tools or open terminal commands.
 
-This guide covers everything you need to know about Chrome extension diff checkers—from using existing extensions effectively to building your own custom solution.
+This guide covers everything you need to know about Chrome extension diff checkers, from using existing extensions effectively to building your own custom solution.
 
-## What Is a Diff Checker?
+What Is a Diff Checker?
 
 A diff checker analyzes two pieces of text or code and highlights the differences between them. The output typically shows additions (lines present in the second version but not the first), deletions (lines removed), and sometimes modifications (lines that changed). Modern diff algorithms go beyond simple line-by-line comparison to detect moved blocks, semantic changes, and even syntactic differences in code.
 
 Chrome extensions that function as diff checkers operate in several ways:
 
-- **Text comparison**: Paste or load two texts and see differences highlighted
-- **Code review**: Compare versions of code files in repository views
-- **Visual diff**: Compare rendered web pages or screenshots
-- **API response comparison**: Diff JSON responses from different API versions
+- Text comparison: Paste or load two texts and see differences highlighted
+- Code review: Compare versions of code files in repository views
+- Visual diff: Compare rendered web pages or screenshots
+- API response comparison: Diff JSON responses from different API versions
 
-## Popular Chrome Extension Diff Checkers
+Popular Chrome Extension Diff Checkers
 
 Several established extensions handle diff checking well. Understanding what each offers helps you choose the right tool or inspires features for your own implementation.
 
-### Diff Checkers Worth Knowing
+Diff Checkers Worth Knowing
 
-**GitHub's built-in diff viewer** works directly in the browser when viewing pull requests and commits. It supports syntax highlighting, collapsible sections, and keyboard navigation. The `?w=1` parameter removes whitespace-only changes, and `?diff=split` gives you a side-by-side view.
+GitHub's built-in diff viewer works directly in the browser when viewing pull requests and commits. It supports syntax highlighting, collapsible sections, and keyboard navigation. The `?w=1` parameter removes whitespace-only changes, and `?diff=split` gives you a side-by-side view.
 
-**Chrome DevTools** includes a native diff feature. Open DevTools (F12), go to the Console or Network tab, right-click, and select "Compare..." to diff two JSON or text inputs. This works offline and integrates with your existing workflow.
+Chrome DevTools includes a native diff feature. Open DevTools (F12), go to the Console or Network tab, right-click, and select "Compare..." to diff two JSON or text inputs. This works offline and integrates with your existing workflow.
 
-**Online diff tools with browser extensions** like Diffchecker and Draftable offer one-click comparison of selected text, clipboard contents, or file comparisons directly from the browser context menu.
+Online diff tools with browser extensions like Diffchecker and Draftable offer one-click comparison of selected text, clipboard contents, or file comparisons directly from the browser context menu.
 
-## Building a Custom Diff Checker Extension
+Building a Custom Diff Checker Extension
 
 When existing tools don't fit your workflow, building a custom Chrome extension gives you complete control. Here's how to implement a functional diff checker extension from scratch.
 
-### Project Structure
+Project Structure
 
 Create a directory with these files:
 
 ```
 diff-checker/
-├── manifest.json
-├── popup.html
-├── popup.js
-├── diff-worker.js
-└── icons/
-    ├── icon16.png
-    ├── icon48.png
-    └── icon128.png
+ manifest.json
+ popup.html
+ popup.js
+ diff-worker.js
+ icons/
+     icon16.png
+     icon48.png
+     icon128.png
 ```
 
-### Manifest Configuration
+Manifest Configuration
 
 Your manifest.json defines the extension's capabilities:
 
@@ -93,7 +93,7 @@ Your manifest.json defines the extension's capabilities:
 }
 ```
 
-### Popup Interface
+Popup Interface
 
 The popup provides your user interface:
 
@@ -130,7 +130,7 @@ The popup provides your user interface:
 </html>
 ```
 
-### Core Diff Logic
+Core Diff Logic
 
 The popup.js handles the comparison using the Myers diff algorithm or a library:
 
@@ -208,7 +208,7 @@ function escapeHtml(text) {
 }
 ```
 
-### Loading Your Extension
+Loading Your Extension
 
 To test your extension:
 
@@ -217,42 +217,42 @@ To test your extension:
 3. Click "Load unpacked" and select your diff-checker directory
 4. Pin the extension to your toolbar and click to test
 
-## Advanced Diff Techniques
+Advanced Diff Techniques
 
 For production-grade diff checking, consider these enhancements:
 
-**Semantic diff** uses Abstract Syntax Tree (AST) comparison rather than line-by-line matching. This catches refactorings where code moved but functionality remained identical. Libraries like `diff` on npm or `jsdiff` provide semantic-aware comparison.
+Semantic diff uses Abstract Syntax Tree (AST) comparison rather than line-by-line matching. This catches refactorings where code moved but functionality remained identical. Libraries like `diff` on npm or `jsdiff` provide semantic-aware comparison.
 
-**Unified versus side-by-side** views serve different needs. Unified views (like GitHub's default) show changes inline—additions in green, deletions in red. Side-by-side views make spotting moved blocks easier but require more screen real estate.
+Unified versus side-by-side views serve different needs. Unified views (like GitHub's default) show changes inline, additions in green, deletions in red. Side-by-side views make spotting moved blocks easier but require more screen real estate.
 
-**Three-way merge** handles conflict resolution when comparing a common ancestor to two different versions. This is essential for git merge conflict handling within your extension.
+Three-way merge handles conflict resolution when comparing a common ancestor to two different versions. This is essential for git merge conflict handling within your extension.
 
-## Practical Use Cases
+Practical Use Cases
 
 Diff checker extensions shine in specific scenarios:
 
-- **Code review**: Quickly compare before/after code in pull requests without leaving the browser
-- **Configuration management**: Compare YAML or JSON config files between environments
-- **Documentation updates**: Track changes in README or API documentation
-- **API testing**: Diff JSON responses between API versions to identify breaking changes
-- **Student/learning**: Compare your solution to reference implementations
+- Code review: Quickly compare before/after code in pull requests without leaving the browser
+- Configuration management: Compare YAML or JSON config files between environments
+- Documentation updates: Track changes in README or API documentation
+- API testing: Diff JSON responses between API versions to identify breaking changes
+- Student/learning: Compare your solution to reference implementations
 
-## Key Takeaways
+Key Takeaways
 
 Chrome extension diff checkers bring version comparison directly into your browser workflow. Existing extensions handle most common cases, but building a custom solution gives you tailored functionality. The implementation requires understanding Chrome's extension APIs, diff algorithms, and user interface design for displaying changes clearly.
 
-The foundation you build here—manifest configuration, popup interfaces, and diff logic—applies to many other extension types. Once you understand how to compare text programmatically, you can extend your extension to handle file uploads, integrate with version control APIs, or add syntax highlighting for specific languages.
+The foundation you build here, manifest configuration, popup interfaces, and diff logic, applies to many other extension types. Once you understand how to compare text programmatically, you can extend your extension to handle file uploads, integrate with version control APIs, or add syntax highlighting for specific languages.
 
 Start with the simple implementation above, test it with real code, then progressively add features like keyboard shortcuts, export options, and integration with your development tools.
 
 ---
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

@@ -13,11 +13,11 @@ permalink: /how-to-write-effective-prompts-for-claude-code/
 
 # How to Write Effective Prompts for Claude Code
 
-Claude Code responds dramatically better to well-structured prompts than to casual messages. For foundational knowledge visit the [getting-started hub](/getting-started-hub/). The difference between a prompt that produces mediocre results and one that unlocks precise, actionable output — similar to [how prompt optimization improves skill accuracy](/how-to-optimize-claude-skill-prompts-for-accuracy/) often comes down to how you frame the task, provide context, and specify expectations. Clear prompts also help you [make Claude Code write secure code](/how-to-make-claude-code-write-secure-code-always/) by default.
+Claude Code responds dramatically better to well-structured prompts than to casual messages. For foundational knowledge visit the [getting-started hub](/getting-started-hub/). The difference between a prompt that produces mediocre results and one that unlocks precise, actionable output. similar to [how prompt optimization improves skill accuracy](/how-to-optimize-claude-skill-prompts-for-accuracy/) often comes down to how you frame the task, provide context, and specify expectations. Clear prompts also help you [make Claude Code write secure code](/how-to-make-claude-code-write-secure-code-always/) by default.
 
 This guide provides practical techniques for writing prompts that get results.
 
-## Start with Clear Task Framing
+Start with Clear Task Framing
 
 The first sentence of your prompt should define what you want Claude to do. Avoid ambiguity in the opening.
 
@@ -47,11 +47,11 @@ Constraints:
 - Keep all existing unit tests passing
 ```
 
-## Provide Relevant Context
+Provide Relevant Context
 
 Claude performs better when it has the right context. Include the information Claude needs to make good decisions.
 
-### Include Code Context
+Include Code Context
 
 When asking Claude to modify code, provide relevant surrounding code:
 
@@ -71,7 +71,7 @@ async function handlePayment(req: Request): Promise<Response> {
 ```
 ```
 
-### Set the Environment
+Set the Environment
 
 Tell Claude about your project structure, dependencies, and constraints:
 
@@ -82,7 +82,7 @@ We use Prisma with PostgreSQL and follow the repository pattern for data access.
 
 This context prevents Claude from suggesting solutions that don't fit your stack.
 
-## Break Down Complex Tasks
+Break Down Complex Tasks
 
 Large, undifferentiated requests produce shallow results. [Break complex tasks into explicit steps](/best-way-to-scope-tasks-for-claude-code-success/):
 
@@ -98,7 +98,7 @@ I need to add user authentication to our API. Please:
 
 The numbered approach gives Claude a clear roadmap and lets you verify progress at each stage.
 
-## Use Skills for Domain-Specific Prompts
+Use Skills for Domain-Specific Prompts
 
 Claude Code's skill system provides specialized knowledge for particular domains. Invoking the right skill dramatically improves output quality:
 
@@ -111,11 +111,11 @@ Claude Code's skill system provides specialized knowledge for particular domains
 
 For complex features, break them into phases with checkpoints. Instead of "build an analytics dashboard," start with the data layer, verify it works, then prompt for the visualization layer. This incremental approach prevents massive code dumps that don't integrate cleanly.
 
-## Specify Output Format
+Specify Output Format
 
 Define exactly what you want the output to look like. This reduces back-and-forth and produces more useful results.
 
-### Code Output Examples
+Code Output Examples
 
 ```
 Generate a React component for displaying a todo list. Output should include:
@@ -125,7 +125,7 @@ Generate a React component for displaying a todo list. Output should include:
 - Export statement as named export
 ```
 
-### Structured Text Output
+Structured Text Output
 
 For non-code outputs, specify the format:
 
@@ -137,7 +137,7 @@ Analyze the API response times from the logs and provide:
 Use bullet points for the recommendations section.
 ```
 
-## Use Constraints to Guide Behavior
+Use Constraints to Guide Behavior
 
 Explicit constraints prevent unwanted behavior and keep Claude focused:
 
@@ -154,7 +154,7 @@ Constraints are especially useful for avoiding common pitfalls:
 - "Preserve all existing comments in the refactored code"
 - "Do not create new files; modify only the ones I specify"
 
-## Using Claude Code's Skill System
+Using Claude Code's Skill System
 
 [Claude Code's skill system lets you package effective prompts into reusable tools](/claude-skill-md-format-complete-specification-guide/). A well-written skill combines all the techniques above into a reusable format.
 
@@ -166,83 +166,83 @@ name: code-review
 description: Perform a focused code review on provided code
 ---
 
-# Code Review Skill
+Code Review Skill
 
 You are a senior software engineer conducting a focused code review.
 
-## Input Format
+Input Format
 You will receive:
 - A code snippet to review
 - Optional: specific concerns to address
 
-## Review Areas
+Review Areas
 For each snippet, assess:
-1. **Correctness**: Does the code do what it's supposed to?
-2. **Security**: Are there potential vulnerabilities?
-3. **Performance**: Are there obvious inefficiencies?
-4. **Readability**: Is the code maintainable?
+1. Correctness: Does the code do what it's supposed to?
+2. Security: Are there potential vulnerabilities?
+3. Performance: Are there obvious inefficiencies?
+4. Readability: Is the code maintainable?
 
-## Output Format
+Output Format
 Provide your review in this structure:
 ```
-## Summary
+Summary
 [2-3 sentence overview]
 
-## Issues Found
+Issues Found
 | Severity | Location | Description | Recommendation |
 |----------|----------|-------------|-----------------|
 | ...      | ...      | ...         | ...             |
 
-## Strengths
+Strengths
 [What works well in this code]
 ```
 
-## Iterative Refinement
+Iterative Refinement
 
 Your first prompt rarely produces perfect results. Use follow-up prompts to refine:
 
-1. **Clarify**: "Can you be more specific about the security issue in line 15?"
-2. **Expand**: "Now add error handling to the function you just wrote."
-3. **Narrow**: "That's too complex. Simplify it to use only native JavaScript, no libraries."
-4. **Verify**: "Does this implementation handle the case where the API returns a 429 status?"
+1. Clarify: "Can you be more specific about the security issue in line 15?"
+2. Expand: "Now add error handling to the function you just wrote."
+3. Narrow: "That's too complex. Simplify it to use only native JavaScript, no libraries."
+4. Verify: "Does this implementation handle the case where the API returns a 429 status?"
 
 Each refinement teaches Claude your preferences and produces better subsequent output. Combining iterative prompting with [Claude's skill system](/how-to-write-a-skill-md-file-for-claude-code/) lets you make your best prompts permanent and reusable.
 
-## Practical Prompt Template
+Practical Prompt Template
 
 For repetitive tasks, create a template you can reuse:
 
 ```
-## Task
+Task
 [What to do]
 
-## Context
+Context
 - Project: [name/type]
 - Tech stack: [relevant technologies]
 - Code location: [files/paths]
 
-## Requirements
+Requirements
 - [Specific requirement 1]
 - [Specific requirement 2]
 
-## Constraints
+Constraints
 - [What to avoid]
 - [Boundaries to respect]
 
-## Output
+Output
 [Expected format]
 ```
 
-## Summary
+Summary
 
 Effective prompts for Claude Code share common characteristics: clear task framing upfront, relevant context, broken-down steps for complex work, explicit output formats, and well-defined constraints. Practice these techniques and refine based on results. The better your prompts, the more precise and useful Claude Code's responses become.
 
-## Related Reading
+Related Reading
 
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — understand how skills auto-invoke so you can prompt more effectively
-- [How to Make Claude Code Make Smaller Focused Changes](/how-to-make-claude-code-make-smaller-focused-changes/) — prompt techniques for scoping Claude to precise changes
-- [How to Make Claude Code Not Over Engineer Solutions](/how-to-make-claude-code-not-over-engineer-solutions/) — prompt patterns that keep Claude solutions lean and maintainable
-- [How to Optimize Claude Skill Prompts for Accuracy](/how-to-optimize-claude-skill-prompts-for-accuracy/) — advanced prompt optimization to improve skill output quality
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). understand how skills auto-invoke so you can prompt more effectively
+- [How to Make Claude Code Make Smaller Focused Changes](/how-to-make-claude-code-make-smaller-focused-changes/). prompt techniques for scoping Claude to precise changes
+- [How to Make Claude Code Not Over Engineer Solutions](/how-to-make-claude-code-not-over-engineer-solutions/). prompt patterns that keep Claude solutions lean and maintainable
+- [How to Optimize Claude Skill Prompts for Accuracy](/how-to-optimize-claude-skill-prompts-for-accuracy/). advanced prompt optimization to improve skill output quality
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 ```

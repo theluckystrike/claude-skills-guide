@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for MITRE ATT&CK Workflow Guide"
-description: "Learn how to leverage Claude Code to streamline your MITRE ATT&CK workflow—from technique mapping to detection rule creation and security automation."
+description: "Learn how to use Claude Code to streamline your MITRE ATT&CK workflow, from technique mapping to detection rule creation and security automation."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-mitre-attck-workflow-guide/
@@ -14,13 +14,13 @@ score: 7
 
 
 {% raw %}
-# Claude Code for MITRE ATT&CK Workflow Guide
+Claude Code for MITRE ATT&CK Workflow Guide
 
 Security teams face a persistent challenge: translating raw threat intelligence into actionable detections, mitigations, and compliance documentation. The MITRE ATT&CK framework provides the taxonomy, but the manual effort required to map techniques, write detection rules, and maintain coverage is substantial. This is where Claude Code transforms your workflow.
 
 This guide demonstrates how to build Claude skills that automate and accelerate MITRE ATT&CK-related tasks, enabling your team to move from reactive threat response to proactive defense engineering.
 
-## Understanding the MITRE ATT&CK Integration Challenge
+Understanding the MITRE ATT&CK Integration Challenge
 
 The MITRE ATT&CK framework contains over 190+ techniques across 14 tactic categories. When analyzing a new threat or conducting a purple team exercise, you typically need to:
 
@@ -35,7 +35,7 @@ Doing this manually for each incident or assessment is time-consuming. A well-de
 
 The scale of the challenge becomes clear when you consider that a mature security program might track hundreds of active threat groups, each with their own technique preferences. APT29 (Cozy Bear), for example, is associated with over 30 distinct ATT&CK techniques spanning initial access through exfiltration. Mapping a single threat report against that catalogue manually takes hours. With Claude Code, that same analysis takes minutes.
 
-## ATT&CK Framework Quick Reference
+ATT&CK Framework Quick Reference
 
 Before automating, it helps to understand the tactic categories you'll be working with most often:
 
@@ -56,7 +56,7 @@ Before automating, it helps to understand the tactic categories you'll be workin
 
 Claude can reference this taxonomy instantly during analysis, which is a key reason AI-assisted ATT&CK work is faster than manual lookup-based approaches.
 
-## Building a MITRE ATT&CK Skill
+Building a MITRE ATT&CK Skill
 
 The foundation of your workflow automation is a Claude skill specifically designed for ATT&CK tasks. Here's a practical skill structure:
 
@@ -73,7 +73,7 @@ You are a MITRE ATT&CK expert assistant. When provided with:
 
 Analyze the technique, identify relevant sub-techniques, suggest detection approaches, and generate initial detection rules.
 
-## Available Resources
+Available Resources
 - ATT&CK Navigator for coverage visualization
 - Sigma rules repository for detection patterns
 - Your organization's detection engineering standards
@@ -83,11 +83,11 @@ This skill provides Claude with context about the ATT&CK framework and establish
 
 You can extend this basic skill with organization-specific context. Add sections describing your SIEM platform (Splunk, Sentinel, Elastic), your log sources (Windows Event Logs, Sysmon, EDR telemetry), and any internal naming conventions your team uses for detection rules. The more context you provide, the more targeted Claude's output will be.
 
-## Practical Workflow: Incident Response to Detection
+Practical Workflow: Incident Response to Detection
 
 When a new incident arrives, you can use this workflow:
 
-### Step 1: Technique Extraction
+Step 1: Technique Extraction
 
 Provide Claude with your incident details (threat report, sandbox analysis, or SIEM alerts). The skill analyzes the behavior and maps it to relevant ATT&CK techniques:
 
@@ -111,7 +111,7 @@ Would you like me to:
 
 This extraction workflow scales well. You can paste in an entire CISA advisory, a sandbox report from Any.run or VirusTotal, or a log snippet from your SIEM and get structured technique mappings back within seconds. Claude handles the natural-language-to-taxonomy translation that previously required an analyst with deep ATT&CK familiarity.
 
-### Step 2: Detection Rule Generation
+Step 2: Detection Rule Generation
 
 Once you've identified techniques, Claude can generate initial detection rules. Here's a Sigma rule generated for detecting the scheduled task persistence:
 
@@ -183,9 +183,9 @@ index=windows EventCode=4698
 | sort -risk_score
 ```
 
-Being able to ask Claude to translate a rule from Sigma into your specific SIEM's query language eliminates one of the most tedious parts of detection engineering—format conversion.
+Being able to ask Claude to translate a rule from Sigma into your specific SIEM's query language eliminates one of the most tedious parts of detection engineering, format conversion.
 
-### Step 3: Coverage Gap Analysis
+Step 3: Coverage Gap Analysis
 
 Integrate your detection rules with the ATT&CK Navigator to visualize coverage:
 
@@ -194,7 +194,7 @@ Integrate your detection rules with the ATT&CK Navigator to visualize coverage:
 import json
 import csv
 
-# Load your detection rules and map to techniques
+Load your detection rules and map to techniques
 def analyze_coverage(rules_file, technique_coverage_file):
     with open(rules_file) as f:
         rules = json.load(f)
@@ -254,7 +254,7 @@ generate_navigator_layer(covered_techniques)
 
 Sharing this layer file with leadership and compliance teams gives you a visual representation of coverage that is far more compelling than a spreadsheet of rule names.
 
-## Comparing Detection Approaches by Technique Category
+Comparing Detection Approaches by Technique Category
 
 Not every ATT&CK technique is equally detectable at the same layer. Understanding where you have good telemetry versus where you are blind is critical for prioritization:
 
@@ -271,38 +271,38 @@ Not every ATT&CK technique is equally detectable at the same layer. Understandin
 
 Claude can help you reason through this table for your specific environment. Ask which techniques you can realistically detect given your current log sources, and you'll get a prioritized roadmap that accounts for your actual telemetry gaps rather than an aspirational wishlist.
 
-## Actionable Advice for Implementation
+Actionable Advice for Implementation
 
-### Start with High-Impact Techniques
+Start with High-Impact Techniques
 
 Don't try to cover everything at once. Prioritize techniques relevant to your threat model:
 
-1. **External-facing services** (T1190, T1133) - often initial access vectors
-2. **Credential access** (T1110, T1555) - high-value targets for attackers
-3. **Lateral movement** (T1021, T1082) - critical for incident scope
+1. External-facing services (T1190, T1133) - often initial access vectors
+2. Credential access (T1110, T1555) - high-value targets for attackers
+3. Lateral movement (T1021, T1082) - critical for incident scope
 
 A useful approach is to cross-reference your prioritization against the CISA Known Exploited Vulnerabilities catalog and recent threat actor reports from your industry's ISAC. Claude can help you build a scoring matrix that weighs technique frequency in the wild against your environment's specific exposure.
 
-### Maintain a Technique Knowledge Base
+Maintain a Technique Knowledge Base
 
 Create a shared repository of technique documentation that your team can reference:
 
 ```
 /mitre-techniques/
-├── T1566-phishing/
-│   ├── detection-sigma.md
-│   ├── detection-kql.md
-│   ├── detection-spl.md
-│   ├── mitigation.md
-│   ├── logsources.md
-│   └── coverage-status.yaml
-├── T1003-credential-dumping/
-│   ├── detection-sigma.md
-│   ├── mitigation.md
-│   ├── logsources.md
-│   └── coverage-status.yaml
-├── T1486-data-encrypted-for-impact/
-│   └── ...
+ T1566-phishing/
+    detection-sigma.md
+    detection-kql.md
+    detection-spl.md
+    mitigation.md
+    logsources.md
+    coverage-status.yaml
+ T1003-credential-dumping/
+    detection-sigma.md
+    mitigation.md
+    logsources.md
+    coverage-status.yaml
+ T1486-data-encrypted-for-impact/
+    ...
 ```
 
 The `coverage-status.yaml` file for each technique becomes a machine-readable record that your coverage analysis script can parse. A minimal format looks like this:
@@ -323,7 +323,7 @@ gaps:
   - No detection for ISO-based attachments delivered via link
 ```
 
-### Version Control Your Detection Rules
+Version Control Your Detection Rules
 
 Track detection rules in Git with clear commit messages:
 
@@ -336,7 +336,7 @@ git commit -m "Add detection for T1566.001 - Phishing with malicious attachment
 
 Structure your detection repository so that each technique has its own directory, and use git tags to mark coverage snapshots that correspond to quarterly compliance reviews. This makes it straightforward to produce a diff showing what improved between assessment periods.
 
-### Use Claude for Threat Actor Profiling
+Use Claude for Threat Actor Profiling
 
 Beyond individual technique analysis, Claude excels at synthesizing threat actor profiles. You can ask it to summarize a threat group's typical technique chain and output a prioritized detection checklist:
 
@@ -360,12 +360,12 @@ HIGH PRIORITY (confirmed in recent campaigns):
 
 This kind of synthesized, actionable output would take an analyst 30-60 minutes to produce from raw threat intelligence. With Claude Code, it takes under a minute.
 
-## Advanced: Automating the Full Pipeline
+Advanced: Automating the Full Pipeline
 
 For mature security teams, consider integrating Claude with your SIEM or SOAR platform:
 
 ```python
-# Example: Automated detection deployment workflow
+Automated detection deployment workflow
 def deploy_detection(rule_name, technique_id, environment):
     # 1. Validate rule syntax
     validate_sigma_rule(rule_name)
@@ -388,13 +388,13 @@ You can extend this pipeline to include automatic tuning based on false positive
 A complete CI/CD pipeline for detection rules might look like this:
 
 ```yaml
-# .github/workflows/detection-ci.yml
+.github/workflows/detection-ci.yml
 name: Detection Rule CI
 
 on:
   pull_request:
     paths:
-      - 'detections/**/*.yaml'
+      - 'detections//*.yaml'
 
 jobs:
   validate:
@@ -423,7 +423,7 @@ jobs:
 
 This kind of automated validation ensures that every rule merged into your detection library is syntactically valid, properly tagged to ATT&CK techniques, and tested against known-good and known-bad samples.
 
-## Practical Tip: Using Claude for Red Team Exercise Preparation
+Practical Tip: Using Claude for Red Team Exercise Preparation
 
 Purple team exercises benefit enormously from Claude-assisted preparation. Before an exercise, you can ask Claude to:
 
@@ -434,21 +434,21 @@ Purple team exercises benefit enormously from Claude-assisted preparation. Befor
 
 This preparation work previously required a dedicated purple team engineer. With Claude Code, a single analyst can prepare a comprehensive exercise in an afternoon rather than a week.
 
-## Conclusion
+Conclusion
 
 Claude Code transforms MITRE ATT&CK workflows from manual, time-intensive processes into accelerated, repeatable operations. By building specialized skills, generating detection rules across multiple SIEM platforms, automating coverage analysis, and synthesizing threat actor profiles, your team can focus on high-value security work rather than documentation and mapping.
 
 The comparison tables in this guide highlight a key insight: detection difficulty varies enormously by technique category and log source availability. Claude helps you navigate those tradeoffs intelligently, ensuring your limited detection engineering resources go toward techniques where you can actually succeed rather than chasing coverage metrics for techniques where your telemetry is too thin to be reliable.
 
-Start small—build one skill for your most common use case—and expand as your detection engineering practice matures. The key is consistency in how you document techniques, version your rules, and track coverage over time.
+Start small, build one skill for your most common use case, and expand as your detection engineering practice matures. The key is consistency in how you document techniques, version your rules, and track coverage over time.
 
 Remember: the goal isn't perfect coverage of all 190+ techniques, but rather meaningful detection of the techniques most relevant to your organization's threat landscape. A well-tuned detection for T1059.001 (PowerShell) that fires reliably with low false positives is worth more than ten noisy rules that analysts learn to ignore.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

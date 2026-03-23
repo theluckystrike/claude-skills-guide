@@ -17,7 +17,7 @@ Canvas LMS is a widely-used learning management system in educational institutio
 
 This guide covers the architecture, implementation patterns, and practical examples for creating a Chrome extension that enhances Canvas LMS functionality.
 
-## Understanding the Canvas LMS Architecture
+Understanding the Canvas LMS Architecture
 
 Canvas provides a RESTful API that supports authentication via OAuth 2.0 or access tokens. The API covers courses, assignments, submissions, grades, and user data. Your extension can interact with Canvas in two ways: through the official API using server-side requests, or directly through the Canvas web interface using content scripts.
 
@@ -35,16 +35,16 @@ const currentUserId = canvasEnv?.current_user?.id;
 const userRoles = canvasEnv?.current_user_roles;
 ```
 
-This `ENV` object varies by page type — the gradebook page includes student roster data, while assignment pages include submission metadata. Learning which properties are available on each page type saves significant debugging time.
+This `ENV` object varies by page type. the gradebook page includes student roster data, while assignment pages include submission metadata. Learning which properties are available on each page type saves significant debugging time.
 
-## Extension Architecture for Canvas
+Extension Architecture for Canvas
 
 A Canvas-focused Chrome extension typically includes these components:
 
-- **Popup**: Quick actions and status overview
-- **Content Script**: Injected into Canvas pages to add UI elements or capture data
-- **Background Script**: Handles long-running tasks, API calls, and storage
-- **Options Page**: Configuration for API keys, preferences, and feature toggles
+- Popup: Quick actions and status overview
+- Content Script: Injected into Canvas pages to add UI elements or capture data
+- Background Script: Handles long-running tasks, API calls, and storage
+- Options Page: Configuration for API keys, preferences, and feature toggles
 
 Here's a basic manifest structure:
 
@@ -77,7 +77,7 @@ Here's a basic manifest structure:
 
 The host permissions pattern `*://*.instructure.com/*` ensures your extension works across all Canvas instances, including institutional deployments on different domains.
 
-### Handling Self-Hosted Canvas Installations
+Handling Self-Hosted Canvas Installations
 
 Many universities and schools host Canvas on their own domains rather than on instructure.com. Your manifest should accommodate both patterns:
 
@@ -116,9 +116,9 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 });
 ```
 
-## Practical Implementation Examples
+Practical Implementation Examples
 
-### Example 1: Quick Grade Navigation
+Example 1: Quick Grade Navigation
 
 One of the most useful features for instructors is rapid navigation between student submissions. This content script adds keyboard shortcuts for jumping between graded items:
 
@@ -165,7 +165,7 @@ One of the most useful features for instructors is rapid navigation between stud
 
 This script listens for Alt+J and Alt+K combinations to move between submissions, significantly speeding up the grading workflow.
 
-A keyboard shortcut overlay — a small tooltip showing available shortcuts — improves discoverability for users who are not aware of all available commands:
+A keyboard shortcut overlay. a small tooltip showing available shortcuts. improves discoverability for users who are not aware of all available commands:
 
 ```javascript
 // Add a help overlay toggled by Alt+?
@@ -188,7 +188,7 @@ function createShortcutOverlay() {
 }
 ```
 
-### Example 2: Assignment Deadline Highlighting
+Example 2: Assignment Deadline Highlighting
 
 Visual deadline management helps both instructors and students. This content script highlights upcoming assignments based on due dates:
 
@@ -247,7 +247,7 @@ The corresponding CSS provides visual distinction:
 
 The `MutationObserver` approach is important here because Canvas is a Single Page Application. Page content updates without full navigation events, so DOMContentLoaded alone will not catch assignments loaded after initial render. Observing `document.body` with `subtree: true` catches all dynamic updates.
 
-### Example 3: API Integration for Bulk Operations
+Example 3: API Integration for Bulk Operations
 
 For more advanced features, integrate with the Canvas API directly from the background script:
 
@@ -303,7 +303,7 @@ chrome.storage.local.get(['canvasUrl', 'apiToken'], (result) => {
 });
 ```
 
-### Example 4: Paginated API Requests
+Example 4: Paginated API Requests
 
 The Canvas API returns paginated results using Link headers. Most non-trivial integrations need to handle pagination to retrieve complete data sets:
 
@@ -354,7 +354,7 @@ const allStudents = await fetchAllPages(
 );
 ```
 
-### Example 5: Bulk Feedback Templates
+Example 5: Bulk Feedback Templates
 
 Instructors who grade many similar assignments benefit from reusable feedback templates. This feature stores templates in `chrome.storage.sync` and injects a template selector into the Canvas comment box:
 
@@ -419,7 +419,7 @@ document.getElementById('save-template').addEventListener('click', () => {
 });
 ```
 
-## Handling Canvas Single Page Application Navigation
+Handling Canvas Single Page Application Navigation
 
 Canvas uses React Router internally, which means URL changes often do not trigger full page reloads. Your content scripts must account for this to avoid injecting duplicate UI elements or missing new page content.
 
@@ -451,11 +451,11 @@ setInterval(onNavigation, 500);
 
 The 500ms polling interval is a practical compromise. Canvas does not consistently fire `popstate` or `hashchange` events on all navigation types, making polling the most reliable cross-version approach. For pages you know fire proper navigation events, `window.addEventListener('popstate', onNavigation)` is cleaner, but the polling fallback ensures your extension continues working after Canvas UI updates.
 
-## Best Practices for Canvas Extensions
+Best Practices for Canvas Extensions
 
 When building extensions for Canvas LMS, consider these development practices:
 
-**Respect Rate Limits**: Canvas APIs impose rate limits. Implement exponential backoff for failed requests and cache responses when appropriate.
+Respect Rate Limits: Canvas APIs impose rate limits. Implement exponential backoff for failed requests and cache responses when appropriate.
 
 ```javascript
 async function requestWithRetry(client, endpoint, maxRetries = 3) {
@@ -475,11 +475,11 @@ async function requestWithRetry(client, endpoint, maxRetries = 3) {
 }
 ```
 
-**Handle Multiple Instances**: Institutions may use different Canvas deployments (canvas.instructure.com, canvas.uml.edu, etc.). Your extension should work across instances without modification.
+Handle Multiple Instances: Institutions may use different Canvas deployments (canvas.instructure.com, canvas.uml.edu, etc.). Your extension should work across instances without modification.
 
-**Security Considerations**: Never store API tokens in plain text. Use chrome.storage for secure storage and implement proper OAuth flows when possible. Avoid logging tokens to the console, and clear tokens from memory after use.
+Security Considerations: Never store API tokens in plain text. Use chrome.storage for secure storage and implement proper OAuth flows when possible. Avoid logging tokens to the console, and clear tokens from memory after use.
 
-**Graceful Degradation**: Canvas frequently updates its interface. Build in fallback logic and provide clear error messages when your extension cannot find expected elements.
+Graceful Degradation: Canvas frequently updates its interface. Build in fallback logic and provide clear error messages when your extension cannot find expected elements.
 
 ```javascript
 function safeQuerySelector(selector, context = document) {
@@ -492,9 +492,9 @@ function safeQuerySelector(selector, context = document) {
 }
 ```
 
-**Version Compatibility**: Canvas undergoes regular updates. Pin your CSS selectors to stable attributes like `data-testid` attributes when they exist, rather than implementation-specific class names that change with redesigns.
+Version Compatibility: Canvas undergoes regular updates. Pin your CSS selectors to stable attributes like `data-testid` attributes when they exist, rather than implementation-specific class names that change with redesigns.
 
-## Feature Comparison: Extension Approaches
+Feature Comparison: Extension Approaches
 
 | Approach | Setup Complexity | Canvas Version Sensitivity | Capabilities |
 |----------|-----------------|---------------------------|--------------|
@@ -505,13 +505,13 @@ function safeQuerySelector(selector, context = document) {
 
 For most developer-built extensions, combining content scripts for UI work with REST API calls for data operations covers the majority of use cases. LTI integration requires server-side infrastructure and is better suited to official institutional tools than personal productivity extensions.
 
-## Testing Your Canvas Extension
+Testing Your Canvas Extension
 
 Testing Canvas extensions presents unique challenges because you need an actual Canvas instance with real data. Options include:
 
-- **Free Canvas account**: Canvas offers free accounts at canvas.instructure.com for self-learners. Create test courses to validate your extension logic.
-- **Canvas Docker installation**: The Canvas LMS source is on GitHub with Docker Compose support for local development instances.
-- **Institutional test environment**: Many universities maintain separate test/staging Canvas instances — check with your IT department.
+- Free Canvas account: Canvas offers free accounts at canvas.instructure.com for self-learners. Create test courses to validate your extension logic.
+- Canvas Docker installation: The Canvas LMS source is on GitHub with Docker Compose support for local development instances.
+- Institutional test environment: Many universities maintain separate test/staging Canvas instances. check with your IT department.
 
 For automated testing, use Playwright or Puppeteer to simulate Canvas workflows:
 
@@ -531,20 +531,20 @@ test('grade navigation shortcuts work', async ({ page, context }) => {
 });
 ```
 
-## Conclusion
+Conclusion
 
 Chrome extensions for Canvas LMS open up significant productivity opportunities for educators and developers. The combination of content script manipulation for UI enhancements and API integration for data operations creates a powerful toolkit for customizing the learning management experience.
 
 Start with simple quality-of-life features like keyboard shortcuts or visual indicators, then expand into more complex integrations as you understand the Canvas interface patterns. Key patterns to internalize early: use `window.ENV` for page context rather than scraping the DOM, use `MutationObserver` rather than DOMContentLoaded for dynamic content, and build in resilience against Canvas UI updates by using stable selectors and graceful fallbacks.
 
-The extensions you build can significantly reduce the time spent on repetitive course management tasks — instructors who grade 30 assignments a week at 2 minutes each save over an hour per week with well-designed keyboard navigation and templated feedback alone.
+The extensions you build can significantly reduce the time spent on repetitive course management tasks. instructors who grade 30 assignments a week at 2 minutes each save over an hour per week with well-designed keyboard navigation and templated feedback alone.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

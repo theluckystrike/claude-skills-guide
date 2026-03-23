@@ -15,7 +15,7 @@ score: 7
 {% raw %}
 The Node.js `vm` module is a powerful built-in module that provides APIs for compiling and executing code in isolated contexts. Whether you need to run user-provided scripts, create sandboxed environments, or implement template rendering engines, the vm module offers essential capabilities for secure code execution. This guide shows you how to use Claude Code to work effectively with the Node.js vm module, from basic script compilation to advanced sandboxing patterns.
 
-## Understanding the VM Module Fundamentals
+Understanding the VM Module Fundamentals
 
 The vm module allows you to compile and run JavaScript code within specific contexts, providing isolation from the main Node.js environment. This isolation is crucial when executing untrusted code or when you need to create separate execution contexts with different global variables.
 
@@ -37,7 +37,7 @@ console.log(context.count); // Access variables from isolated context
 
 Claude Code excels at explaining how these different methods behave and when to use each one. Ask Claude to generate variations that demonstrate context isolation, variable leakage prevention, and timeout handling.
 
-## Secure Sandbox Execution Patterns
+Secure Sandbox Execution Patterns
 
 Creating secure sandboxed environments is one of the most common use cases for the vm module. However, implementing proper security requires careful consideration of potential escape vulnerabilities and resource constraints.
 
@@ -80,7 +80,7 @@ executeSafely('console.log("Hello from sandbox!");', sandbox);
 
 Claude Code can help you extend this pattern with additional security measures, such as restricting access to filesystem and network APIs, implementing memory limits, and adding comprehensive error handling for different types of sandbox escapes.
 
-## Dynamic Template Rendering with VM
+Dynamic Template Rendering with VM
 
 The vm module serves as an excellent foundation for building dynamic template rendering systems. By creating custom contexts with available variables, you can render templates with controlled access to JavaScript functionality.
 
@@ -115,7 +115,7 @@ console.log(renderTemplate(template, data));
 
 This pattern is particularly useful when building CMS systems, email templates, or configuration generators where users need to inject dynamic values into text templates. Claude Code can help you extend this with more sophisticated template syntax, loops, and conditionals.
 
-## Code Compilation and Caching Strategies
+Code Compilation and Caching Strategies
 
 For applications that repeatedly execute similar code, compiling scripts once and running them multiple times provides significant performance benefits. Understanding when and how to cache compiled scripts is essential for optimization.
 
@@ -172,9 +172,9 @@ console.log('Cached run:', Date.now() - start2, 'ms');
 
 Claude Code can help you implement more sophisticated caching strategies, including context reuse, precompilation of common patterns, and memory management for large-scale applications.
 
-## Handling Timeouts and Resource Limits
+Handling Timeouts and Resource Limits
 
-When executing untrusted or potentially infinite code, implementing proper timeout and resource management is critical. The vm module provides built-in timeout functionality, but combining it with other safeguards creates more robust execution environments.
+When executing untrusted or potentially infinite code, implementing proper timeout and resource management is critical. The vm module provides built-in timeout functionality, but combining it with other safeguards creates more solid execution environments.
 
 ```javascript
 const vm = require('vm');
@@ -237,7 +237,7 @@ async function main() {
 main();
 ```
 
-## Best Practices and Common Pitfalls
+Best Practices and Common Pitfalls
 
 Working with the vm module requires awareness of several important considerations. Claude Code can help you avoid common mistakes and implement security best practices.
 
@@ -247,15 +247,15 @@ Second, be mindful of resource consumption. Even simple-looking code can consume
 
 Third, prefer `vm.runInNewContext()` over modifying the global object directly when you need isolation. This approach is more explicit and less prone to accidental data leakage.
 
-## Conclusion
+Conclusion
 
 The Node.js vm module is an essential tool for scenarios requiring code compilation, sandboxing, or dynamic execution. By combining Claude Code's assistance with these patterns, you can build secure, performant systems for template rendering, plugin systems, and user code execution. Remember to always prioritize security when executing untrusted code, and use Claude Code to explore edge cases and advanced patterns as your requirements evolve.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

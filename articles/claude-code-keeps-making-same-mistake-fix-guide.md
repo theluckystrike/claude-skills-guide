@@ -13,17 +13,17 @@ score: 7
 ---
 
 
-# Claude Code Keeps Making Same Mistake: Fix Guide
+Claude Code Keeps Making Same Mistake: Fix Guide
 
 Every developer who works extensively with Claude Code encounters the same frustrating pattern: the AI keeps repeating the same mistake despite corrections. This behavior stems from context management, token budget pressures, and how Claude processes feedback. This guide provides concrete solutions to break the repetition loop.
 
-## Why Claude Code Repeats the Same Mistake
+Why Claude Code Repeats the Same Mistake
 
 Before fixing the problem, understand why it happens. Claude Code operates within a finite context window, and when that window fills up, earlier corrections get dropped. The model also has a tendency to generalize from limited examples, so if you corrected it once but didn't reinforce the correction, it may revert to the old pattern.
 
 Another common cause is ambiguous feedback. Telling Claude "don't do that again" without specifying what it should do instead leaves room for the model to make the same mistake in a slightly different form.
 
-## Solution 1: Be Explicit About What Changed
+Solution 1: Be Explicit About What Changed
 
 When you catch Claude making a mistake, state clearly what went wrong and what the correct approach should be. Vague corrections don't work as well as specific instructions.
 
@@ -39,7 +39,7 @@ When working with the requests library, always use session objects for multiple 
 
 This pattern works because Claude processes each correction as a new instruction. Adding context about why the correct approach matters helps the model generalize the lesson to similar situations.
 
-## Solution 2: Create a Correction Skill
+Solution 2: Create a Correction Skill
 
 The skill system in Claude Code allows you to define reusable instructions. Creating a dedicated correction skill reinforces patterns you want Claude to remember across sessions.
 
@@ -62,7 +62,7 @@ Before implementing anything new, check for patterns from previous corrections i
 
 Load this skill using the skill loader. It won't prevent all mistakes, but it changes how Claude processes corrections, making them more likely to stick.
 
-## Solution 3: Use Context Management Techniques
+Solution 3: Use Context Management Techniques
 
 When working on long tasks, Claude's context fills with earlier code and decisions. Mistakes from the beginning of the session can reappear near the end because they're no longer in the active context window.
 
@@ -80,7 +80,7 @@ Remember these constraints as we continue.
 
 This works better than hoping Claude remembers everything. The explicit summary gets processed as current context.
 
-## Solution 4: Use the Right Skills for the Job
+Solution 4: Use the Right Skills for the Job
 
 Using inappropriate skills contributes to mistakes. If you're using a general-purpose skill for specialized tasks, Claude makes errors due to missing domain context. Claude Code's skill system includes specialized skills designed for specific workflows.
 
@@ -94,7 +94,7 @@ For knowledge management, the `supermemory` skill helps organize project context
 
 The pattern is clear: matching your task to the right skill reduces mistake frequency significantly.
 
-## Solution 5: Break Down Complex Tasks
+Solution 5: Break Down Complex Tasks
 
 When tasks contain many steps, Claude loses track of which steps it's completed correctly and which need attention. Breaking tasks into smaller, verifiable chunks gives you more checkpoints to catch mistakes early.
 
@@ -114,7 +114,7 @@ Step 5: Build the login endpoint with token generation.
 
 After each phase, verify the output before moving to the next. This creates natural correction points.
 
-## Solution 6: Use the Bash Tool for Verification
+Solution 6: Use the Bash Tool for Verification
 
 One of the most effective ways to catch repeated mistakes is running code immediately rather than waiting until the end of a session. The bash tool integration lets Claude execute code and see actual results.
 
@@ -126,7 +126,7 @@ cd /path/to/project && python -m pytest tests/test_auth.py -v
 
 When tests fail, the error message provides concrete feedback that Claude processes as a correction. This feedback loop is harder to ignore than verbal corrections.
 
-## Solution 7: Set Up Pre-Implementation Checkpoints
+Solution 7: Set Up Pre-Implementation Checkpoints
 
 For critical code sections, establish checkpoints before Claude writes anything. Describe what correct output looks like, and have Claude verify its work against that description before showing it to you.
 
@@ -141,17 +141,17 @@ Before writing the schema, confirm that each table has:
 
 This forces Claude to think through the implementation before producing output, reducing mistakes from jumping ahead.
 
-## Building Better Workflows
+Building Better Workflows
 
 The repetition mistake problem isn't about Claude being broken. It's about how feedback integrates with the model's context processing. Using explicit corrections, appropriate skills, context management, and verification tools creates a system where mistakes become single occurrences rather than patterns.
 
 Start by implementing one or two of these solutions. The skill-based approach works well as an initial step because it requires setup only once but provides ongoing benefits across all your Claude Code sessions.
 
-## Related Reading
+Related Reading
 
-- [Claude Code Output Quality How to Improve Results](/claude-code-output-quality-how-to-improve-results/) — Broader guide on improving Claude Code output
-- [Best Way to Scope Tasks for Claude Code Success](/best-way-to-scope-tasks-for-claude-code-success/) — Scoping prevents recurring mistakes
-- [Claude Code Gives Incorrect Imports How to Fix](/claude-code-gives-incorrect-imports-how-to-fix/) — A specific recurring mistake and its fix
-- [Claude Skills Troubleshooting Hub](/troubleshooting-hub/) — More behavioral issue fixes
+- [Claude Code Output Quality How to Improve Results](/claude-code-output-quality-how-to-improve-results/). Broader guide on improving Claude Code output
+- [Best Way to Scope Tasks for Claude Code Success](/best-way-to-scope-tasks-for-claude-code-success/). Scoping prevents recurring mistakes
+- [Claude Code Gives Incorrect Imports How to Fix](/claude-code-gives-incorrect-imports-how-to-fix/). A specific recurring mistake and its fix
+- [Claude Skills Troubleshooting Hub](/troubleshooting-hub/). More behavioral issue fixes
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

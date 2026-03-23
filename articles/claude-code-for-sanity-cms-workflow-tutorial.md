@@ -14,11 +14,11 @@ score: 7
 
 
 {% raw %}
-# Claude Code for Sanity CMS Workflow Tutorial
+Claude Code for Sanity CMS Workflow Tutorial
 
-Sanity CMS is a powerful headless CMS that offers incredible flexibility through its real-time datastore and customizable schema. However, managing content at scale—migrations, batch edits, schema validation—can become tedious without automation. This tutorial shows you how to use Claude Code to streamline Sanity CMS workflows, reducing manual effort and preventing errors.
+Sanity CMS is a powerful headless CMS that offers incredible flexibility through its real-time datastore and customizable schema. However, managing content at scale, migrations, batch edits, schema validation, can become tedious without automation. This tutorial shows you how to use Claude Code to streamline Sanity CMS workflows, reducing manual effort and preventing errors.
 
-## Prerequisites
+Prerequisites
 
 Before diving in, ensure you have:
 
@@ -27,7 +27,7 @@ Before diving in, ensure you have:
 - Claude Code installed (`npm install -g @anthropic-ai/claude-code`)
 - Basic familiarity with the Sanity CLI
 
-## Setting Up Your Sanity Project
+Setting Up Your Sanity Project
 
 First, create a new Sanity project if you haven't already:
 
@@ -42,17 +42,17 @@ Initialize Claude Code in your project by creating a CLAUDE.md file in your proj
 Create a dedicated skill for Sanity operations. Save this as `CLAUDE.md` in your project root:
 
 ```markdown
-# Sanity CMS Workflow Skill
+Sanity CMS Workflow Skill
 
 This skill helps automate Sanity CMS operations including content queries, mutations, schema validation, and migration scripts.
 
-## Available Tools
+Available Tools
 
 - `bash`: Execute Sanity CLI commands
 - `read_file`: Read schema files and content
 - `write_file`: Generate migration scripts and schema files
 
-## Guidelines
+Guidelines
 
 - Always use the Sanity client for content operations
 - Validate schema changes before applying them
@@ -60,11 +60,11 @@ This skill helps automate Sanity CMS operations including content queries, mutat
 - Log all migration operations for auditing
 ```
 
-## Querying Content with Claude
+Querying Content with Claude
 
 One of the most common tasks is querying your Sanity content. Claude can help you construct and execute GROQ queries efficiently.
 
-### Example: Finding Unpublished Content
+Finding Unpublished Content
 
 Ask Claude to find all documents that haven't been published:
 
@@ -94,11 +94,11 @@ const unpublishedPosts = await sanityClient.fetch(query)
 console.log(`Found ${unpublishedPosts.length} unpublished posts`)
 ```
 
-## Batch Content Operations
+Batch Content Operations
 
-Claude excels at automating repetitive bulk operations. Let's explore a practical scenario: updating a field across multiple documents.
+Claude excels at automating repetitive bulk operations.  a practical scenario: updating a field across multiple documents.
 
-### Example: Adding Categories to Posts
+Adding Categories to Posts
 
 Suppose you need to add a default category to all posts missing one:
 
@@ -142,11 +142,11 @@ async function addDefaultCategory() {
 addDefaultCategory()
 ```
 
-## Schema Validation Workflows
+Schema Validation Workflows
 
 Before making schema changes in production, validate them thoroughly. Claude can help you create validation scripts.
 
-### Example: Schema Consistency Checker
+Schema Consistency Checker
 
 Create a script to check for inconsistent field usage across document types:
 
@@ -211,11 +211,11 @@ if (issues.length > 0) {
 }
 ```
 
-## Migration Workflows
+Migration Workflows
 
 When your schema evolves, content migrations become essential. Claude can help generate migration scripts.
 
-### Example: Renaming a Field
+Renaming a Field
 
 Here's a migration script to rename a field across all documents:
 
@@ -264,11 +264,11 @@ async function migrateFieldRename() {
 migrateFieldRename()
 ```
 
-## Publishing Workflows
+Publishing Workflows
 
 Automate your publishing pipeline with Claude by creating scripts that handle draft-to-published transitions.
 
-### Example: Scheduled Publishing
+Scheduled Publishing
 
 Set up automated publishing based on a `publishAt` timestamp:
 
@@ -287,7 +287,7 @@ async function processScheduledPublishing() {
   
   // Find documents ready to publish
   const toPublish = await sanityClient.fetch(
-    `*[_type == "post" && publishAt <= $now && !(_id in path("drafts.**"))]{
+    `*[_type == "post" && publishAt <= $now && !(_id in path("drafts."))]{
       _id,
       title,
       publishAt
@@ -311,27 +311,27 @@ async function processScheduledPublishing() {
 setInterval(processScheduledPublishing, 60000)
 ```
 
-## Best Practices for Sanity Automation
+Best Practices for Sanity Automation
 
 When automating Sanity workflows with Claude, keep these tips in mind:
 
-1. **Always use transactions**: Group related mutations into transactions for atomicity and performance
-2. **Implement retry logic**: Network issues happen; wrap API calls with retry mechanisms
-3. **Log everything**: Maintain audit trails for all automated operations
-4. **Test in staging**: Never run migration scripts against production without testing
-5. **Use projections wisely**: Request only needed fields to reduce payload size
+1. Always use transactions: Group related mutations into transactions for atomicity and performance
+2. Implement retry logic: Network issues happen; wrap API calls with retry mechanisms
+3. Log everything: Maintain audit trails for all automated operations
+4. Test in staging: Never run migration scripts against production without testing
+5. Use projections wisely: Request only needed fields to reduce payload size
 
-## Conclusion
+Conclusion
 
-Claude Code transforms Sanity CMS management from manual drudgery into efficient, automated workflows. By combining Claude's natural language processing with Sanity's powerful API, you can query content, perform batch operations, validate schemas, and execute migrations with minimal effort. Start small—automate one repetitive task—and gradually expand your automation library.
+Claude Code transforms Sanity CMS management from manual drudgery into efficient, automated workflows. By combining Claude's natural language processing with Sanity's powerful API, you can query content, perform batch operations, validate schemas, and execute migrations with minimal effort. Start small, automate one repetitive task, and gradually expand your automation library.
 
 The key is treating your CMS operations as code: version-controlled, tested, and reproducible. With these patterns, you'll spend less time on maintenance and more time building great content experiences.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

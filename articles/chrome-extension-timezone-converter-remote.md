@@ -13,42 +13,42 @@ tags: [claude-code, claude-skills]
 ---
 
 
-Building a Chrome extension for timezone conversion solves a real pain point for remote teams. When you're coordinating across time zones, manually calculating meeting times or checking multiple time conversion websites becomes tedious. A well-designed Chrome extension puts timezone conversion directly in your browser, making it accessible whenever you need it.
+Building a Chrome extension for timezone conversion solves a real problem for remote teams. When you're coordinating across time zones, manually calculating meeting times or checking multiple time conversion websites becomes tedious. A well-designed Chrome extension puts timezone conversion directly in your browser, making it accessible whenever you need it.
 
 This guide walks through building a Chrome extension that converts timezones, with a focus on remote team workflows. You'll find practical code examples that you can adapt for your own use cases.
 
-## Understanding the Core Requirements
+Understanding the Core Requirements
 
 A timezone converter Chrome extension needs several key capabilities:
 
-1. **Detect or accept input times** in various formats
-2. **Store multiple timezone preferences** for quick access
-3. **Convert between timezones accurately**, accounting for daylight saving time
-4. **Display results clearly** in the extension popup or on web pages
-5. **Handle edge cases** like invalid inputs and timezone boundary issues
+1. Detect or accept input times in various formats
+2. Store multiple timezone preferences for quick access
+3. Convert between timezones accurately, accounting for daylight saving time
+4. Display results clearly in the extension popup or on web pages
+5. Handle edge cases like invalid inputs and timezone boundary issues
 
-Modern JavaScript provides robust date handling through the `Intl` API and `Date` object, reducing the need for external libraries.
+Modern JavaScript provides solid date handling through the `Intl` API and `Date` object, reducing the need for external libraries.
 
-## Project Structure
+Project Structure
 
 A typical Chrome extension for timezone conversion includes these files:
 
 ```
 timezone-converter/
-├── manifest.json
-├── popup.html
-├── popup.js
-├── content.js
-├── styles.css
-└── icons/
-    ├── icon16.png
-    ├── icon48.png
-    └── icon128.png
+ manifest.json
+ popup.html
+ popup.js
+ content.js
+ styles.css
+ icons/
+     icon16.png
+     icon48.png
+     icon128.png
 ```
 
 The manifest file defines the extension's capabilities and permissions.
 
-## Implementing the Manifest
+Implementing the Manifest
 
 The manifest version 3 format provides the foundation for your extension:
 
@@ -75,7 +75,7 @@ The manifest version 3 format provides the foundation for your extension:
 }
 ```
 
-## Building the Popup Interface
+Building the Popup Interface
 
 The popup provides the main user interface for quick conversions. Keep it lightweight and focused on the primary use case.
 
@@ -119,7 +119,7 @@ The popup provides the main user interface for quick conversions. Keep it lightw
 </html>
 ```
 
-## JavaScript Implementation
+JavaScript Implementation
 
 The core conversion logic uses JavaScript's `Intl` API for accurate timezone handling:
 
@@ -185,7 +185,7 @@ function populateTimezones() {
 }
 ```
 
-## Adding Remote Team Features
+Adding Remote Team Features
 
 For remote teams, storing common team timezones makes the extension more useful:
 
@@ -215,7 +215,7 @@ function renderQuickZones() {
 }
 ```
 
-## Content Script for Page Analysis
+Content Script for Page Analysis
 
 For power users, you can add a content script that detects times on web pages and offers conversion:
 
@@ -247,7 +247,7 @@ function showConversionPopup(originalText) {
 }
 ```
 
-## Styling for Usability
+Styling for Usability
 
 Clean styling makes the extension pleasant to use:
 
@@ -304,7 +304,7 @@ Clean styling makes the extension pleasant to use:
 }
 ```
 
-## Deployment and Testing
+Deployment and Testing
 
 To test your extension locally:
 
@@ -315,29 +315,29 @@ To test your extension locally:
 
 For distribution through the Chrome Web Store, you'll need to create a developer account and package your extension as a ZIP file.
 
-## Extensions for Common Remote Team Scenarios
+Extensions for Common Remote Team Scenarios
 
 Consider adding these features based on your team's needs:
 
-- **Meeting planner**: Visual timeline showing overlap working hours across timezones
-- **World clock dashboard**: Display multiple clocks in the popup
-- **Meeting link generator**: Create calendar links with converted times
-- **Notification system**: Alert when meeting times approach in any timezone
+- Meeting planner: Visual timeline showing overlap working hours across timezones
+- World clock dashboard: Display multiple clocks in the popup
+- Meeting link generator: Create calendar links with converted times
+- Notification system: Alert when meeting times approach in any timezone
 
-## Conclusion
+Conclusion
 
 Building a timezone converter Chrome extension combines web development skills with practical utility for remote teams. The extension uses JavaScript's native `Intl` API for accurate conversions without heavy dependencies. Start with the core conversion functionality, then add features like saved timezones and page-level detection as your users request them.
 
-## Step-by-Step: Building the Timezone Converter
+Step-by-Step: Building the Timezone Converter
 
-1. **Set up your extension** with `storage` and `contextMenus` permissions. The `storage` permission saves the user's team timezones across sessions.
-2. **Build the timezone selector**: use `Intl.supportedValuesOf('timeZone')` to generate a complete list of IANA timezone names. Group them by continent for easier navigation.
-3. **Create the converter popup**: display a digital time display for each saved timezone. Update every second using `setInterval` — `new Date().toLocaleTimeString('en-US', { timeZone })` handles conversion.
-4. **Add a context menu converter**: right-click on a time string shows "Convert to your timezones". Parse the selected text with a regex and convert it to all saved zones.
-5. **Highlight business hours**: mark timezones outside 9 AM to 6 PM with a yellow indicator so users can instantly see who is available.
-6. **Add meeting planner**: let users input a target meeting time and highlight which slots work for all saved timezones.
+1. Set up your extension with `storage` and `contextMenus` permissions. The `storage` permission saves the user's team timezones across sessions.
+2. Build the timezone selector: use `Intl.supportedValuesOf('timeZone')` to generate a complete list of IANA timezone names. Group them by continent for easier navigation.
+3. Create the converter popup: display a digital time display for each saved timezone. Update every second using `setInterval`. `new Date().toLocaleTimeString('en-US', { timeZone })` handles conversion.
+4. Add a context menu converter: right-click on a time string shows "Convert to your timezones". Parse the selected text with a regex and convert it to all saved zones.
+5. Highlight business hours: mark timezones outside 9 AM to 6 PM with a yellow indicator so users can instantly see who is available.
+6. Add meeting planner: let users input a target meeting time and highlight which slots work for all saved timezones.
 
-## Working with the Intl API
+Working with the Intl API
 
 ```javascript
 function convertTime(date, targetTimezone) {
@@ -354,9 +354,9 @@ const zones = ['America/New_York', 'Europe/London', 'Asia/Tokyo', 'Australia/Syd
 zones.forEach(tz => console.log(tz + ': ' + convertTime(new Date(), tz)));
 ```
 
-No external library needed — `Intl` handles DST transitions, UTC offsets, and locale-specific formatting automatically.
+No external library needed. `Intl` handles DST transitions, UTC offsets, and locale-specific formatting automatically.
 
-## Comparison with Standalone Timezone Tools
+Comparison with Standalone Timezone Tools
 
 | Tool | Browser-native | Team presets | Context menu | Offline | Cost |
 |---|---|---|---|---|---|
@@ -365,7 +365,7 @@ No external library needed — `Intl` handles DST transitions, UTC offsets, and 
 | World Time Buddy | No | Yes | No | No | Free/Pro |
 | Clockwise | Calendar integration | Yes | No | No | Free/Pro |
 
-## Advanced: Calendar Event Timezone Detection
+Advanced: Calendar Event Timezone Detection
 
 ```javascript
 const timeRegex = /(\d{1,2}:\d{2}\s*(?:AM|PM)?)\s*([A-Z]{2,4}T|UTC[+-]\d+)/gi;
@@ -375,18 +375,18 @@ document.querySelectorAll('[data-eventid]').forEach(event => {
 });
 ```
 
-## Troubleshooting
+Troubleshooting
 
-**Times off by one hour during DST**: Store IANA names like `America/New_York`, never fixed offsets like `UTC-5`. Fixed offsets are wrong for half the year in DST regions.
+Times off by one hour during DST: Store IANA names like `America/New_York`, never fixed offsets like `UTC-5`. Fixed offsets are wrong for half the year in DST regions.
 
-**Context menu creating duplicates on reload**: Call `chrome.contextMenus.create` inside `chrome.runtime.onInstalled` only — not on every message listener invocation.
+Context menu creating duplicates on reload: Call `chrome.contextMenus.create` inside `chrome.runtime.onInstalled` only. not on every message listener invocation.
 
-**Timezone list not syncing across devices**: Use `chrome.storage.sync` instead of `chrome.storage.local`. The 100 KB sync limit is more than enough for a list of timezone names.
+Timezone list not syncing across devices: Use `chrome.storage.sync` instead of `chrome.storage.local`. The 100 KB sync limit is more than enough for a list of timezone names.
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -14,13 +14,13 @@ score: 7
 
 
 {% raw %}
-# Claude Code Cypress Intercept Network Requests Workflow
+Claude Code Cypress Intercept Network Requests Workflow
 
-Modern web applications rely heavily on API calls, and testing them effectively is crucial for building reliable software. Cypress has become the go-to solution for end-to-end testing in JavaScript ecosystems, and its `cy.intercept()` command is a powerful feature for mocking and stubbing network requests. When combined with Claude Code, the AI coding assistant, you can dramatically accelerate your Cypress intercept workflow—from writing initial stubs to debugging complex network scenarios.
+Modern web applications rely heavily on API calls, and testing them effectively is crucial for building reliable software. Cypress has become the go-to solution for end-to-end testing in JavaScript ecosystems, and its `cy.intercept()` command is a powerful feature for mocking and stubbing network requests. When combined with Claude Code, the AI coding assistant, you can dramatically accelerate your Cypress intercept workflow, from writing initial stubs to debugging complex network scenarios.
 
 This guide walks you through using Claude Code to enhance your Cypress intercept workflow with practical examples, code snippets, and actionable advice you can apply immediately to your projects.
 
-## Understanding Cypress Intercept Basics
+Understanding Cypress Intercept Basics
 
 Before diving into the Claude Code integration, let's establish a solid foundation of how `cy.intercept()` works. Cypress intercept allows you to:
 
@@ -39,7 +39,7 @@ cy.wait('@getUsers');
 
 This pattern is straightforward, but as your application grows, managing multiple intercepts becomes complex. This is where Claude Code shines.
 
-### The Three Modes of cy.intercept()
+The Three Modes of cy.intercept()
 
 Understanding which mode to use in each situation is the difference between a clean test suite and a confusing mess of nested handlers. Cypress intercept operates in three distinct modes:
 
@@ -49,13 +49,13 @@ Understanding which mode to use in each situation is the difference between a cl
 | Inline body | `cy.intercept(method, url, { statusCode, body })` | Error states, edge cases |
 | Request handler | `cy.intercept(method, url, (req) => { ... })` | Dynamic responses, request inspection |
 
-Choosing the wrong mode leads to tests that are harder to maintain. Static fixtures are fast to write but become a liability when the API schema changes — you have to update every fixture file. Request handlers give you full control but add complexity. Inline bodies are best reserved for error-state testing where you want a quick `{ statusCode: 500 }` without creating a fixture.
+Choosing the wrong mode leads to tests that are harder to maintain. Static fixtures are fast to write but become a liability when the API schema changes. you have to update every fixture file. Request handlers give you full control but add complexity. Inline bodies are best reserved for error-state testing where you want a quick `{ statusCode: 500 }` without creating a fixture.
 
-## How Claude Code Enhances Your Intercept Workflow
+How Claude Code Enhances Your Intercept Workflow
 
 Claude Code excels at understanding context across your entire project. When working with Cypress intercepts, it can analyze your existing API structure, identify patterns, and generate appropriate mocks. Here's how to use this capability effectively.
 
-### Generating Route Mocks from API Documentation
+Generating Route Mocks from API Documentation
 
 Instead of manually writing intercepts for every endpoint, ask Claude Code to analyze your OpenAPI spec or API documentation and generate the necessary stubs. Provide Claude with your API documentation and request:
 
@@ -82,7 +82,7 @@ userEndpoints.forEach(({ method, path, fixture, alias }) => {
 
 This approach saves hours of manual typing and ensures consistency across your test suite.
 
-### Scaffolding Fixture Files Automatically
+Scaffolding Fixture Files Automatically
 
 Claude Code can go a step further and generate the actual fixture JSON files that match your OpenAPI schema. Rather than hand-crafting every fixture, give Claude a sample API response and ask it to produce a set of fixtures covering common test scenarios:
 
@@ -94,23 +94,23 @@ A well-organized fixture directory looks like this:
 
 ```
 cypress/
-└── fixtures/
-    ├── users/
-    │   ├── users-list.json
-    │   ├── user-single.json
-    │   └── users-empty.json
-    ├── products/
-    │   ├── products-list.json
-    │   └── product-single.json
-    └── errors/
-        ├── 401-unauthorized.json
-        ├── 403-forbidden.json
-        └── 500-server-error.json
+ fixtures/
+     users/
+        users-list.json
+        user-single.json
+        users-empty.json
+     products/
+        products-list.json
+        product-single.json
+     errors/
+         401-unauthorized.json
+         403-forbidden.json
+         500-server-error.json
 ```
 
 Grouping fixtures by domain and having a dedicated `errors/` directory makes it easy to compose tests that simulate failure paths without duplicating boilerplate.
 
-### Creating Dynamic Response Handlers
+Creating Dynamic Response Handlers
 
 Static fixtures work well for simple cases, but sometimes you need dynamic responses. Claude Code can help you write custom handlers that modify responses based on request parameters:
 
@@ -133,7 +133,7 @@ cy.intercept('GET', '/api/products/*', (req) => {
 
 Ask Claude Code to generate these handlers by providing sample request/response pairs from your API logs.
 
-### Building a Reusable Intercept Helper Layer
+Building a Reusable Intercept Helper Layer
 
 As your test suite grows, copy-pasting `cy.intercept()` calls into every test file creates a maintenance nightmare. A better pattern is a centralized command module. Ask Claude Code to generate one:
 
@@ -155,7 +155,7 @@ Cypress.Commands.add('mockApi', (scenario = 'default') => {
       cy.intercept('GET', '/api/products', { statusCode: 500, fixture: 'errors/500-server-error.json' }).as('getProducts');
     },
     unauthorized: () => {
-      cy.intercept('GET', '/api/**', { statusCode: 401, fixture: 'errors/401-unauthorized.json' }).as('anyApiCall');
+      cy.intercept('GET', '/api/', { statusCode: 401, fixture: 'errors/401-unauthorized.json' }).as('anyApiCall');
     }
   };
 
@@ -196,7 +196,7 @@ describe('User list page', () => {
 
 Claude Code is especially good at generating this kind of structured abstraction because it can read your entire test directory, identify repeated patterns, and suggest consolidations you might not notice when you are inside a single file.
 
-## Debugging Network Issues with Claude Code
+Debugging Network Issues with Claude Code
 
 When tests fail due to network issues, Claude Code becomes invaluable for diagnosis. Share your test failure output and Cypress console logs, then ask Claude to:
 
@@ -208,7 +208,7 @@ Here's a debugging pattern Claude might suggest:
 
 ```javascript
 // Debug intercept - logs all unmatched requests
-cy.intercept('**/*', (req) => {
+cy.intercept('/*', (req) => {
   console.log('Request captured:', req.method, req.url);
 
   // Check if request matches your expected pattern
@@ -223,7 +223,7 @@ cy.intercept('**/*', (req) => {
 });
 ```
 
-### Diagnosing Route Matching Failures
+Diagnosing Route Matching Failures
 
 One of the most confusing Cypress problems is an intercept that simply does not fire. Cypress uses exact string matching and glob patterns, and there are several ways to get tripped up:
 
@@ -253,22 +253,22 @@ cy.intercept('GET', '/api/users', handler);
 cy.intercept('GET', 'https://api.yourapp.com/api/users', handler);
 
 // ALSO WORKS: glob with wildcard origin
-cy.intercept('GET', '**/api/users', handler);
+cy.intercept('GET', '/api/users', handler);
 ```
 
-Ask Claude Code: "My intercept is not matching — here is the network request URL from the Cypress log and here is my intercept definition. What is wrong?" Claude will spot the mismatch immediately and suggest the correct pattern.
+Ask Claude Code: "My intercept is not matching. here is the network request URL from the Cypress log and here is my intercept definition. What is wrong?" Claude will spot the mismatch immediately and suggest the correct pattern.
 
-## Best Practices for Claude Code + Cypress Intercept
+Best Practices for Claude Code + Cypress Intercept
 
-Following these practices will help you maintain a robust intercept workflow:
+Following these practices will help you maintain a solid intercept workflow:
 
-### Organization and Maintainability
+Organization and Maintainability
 
-- **Centralize intercept definitions** in a dedicated `cypress/support/api-mocks.js` file rather than scattering them across tests
-- **Use descriptive aliases** that clearly indicate what each intercept does (`@getUserProfile` instead of `@user`)
-- **Group intercepts by feature** using comments and logical separation
+- Centralize intercept definitions in a dedicated `cypress/support/api-mocks.js` file rather than scattering them across tests
+- Use descriptive aliases that clearly indicate what each intercept does (`@getUserProfile` instead of `@user`)
+- Group intercepts by feature using comments and logical separation
 
-### Handling Dynamic Data
+Handling Dynamic Data
 
 When your API returns dynamic data like timestamps or IDs, use intercept handlers that generate consistent test data:
 
@@ -288,7 +288,7 @@ cy.intercept('POST', '/api/users', (req) => {
 });
 ```
 
-### Dealing with Timing Issues
+Dealing with Timing Issues
 
 Network timing can cause flaky tests. Claude Code can help implement proper wait strategies:
 
@@ -305,7 +305,7 @@ cy.wait('@loadDashboard').then((interception) => {
 });
 ```
 
-### Simulating Network Conditions
+Simulating Network Conditions
 
 Testing what happens when the API is slow or returns errors is as important as testing the happy path. Cypress lets you simulate delays and force specific status codes:
 
@@ -332,7 +332,7 @@ cy.intercept('GET', '/api/data', (req) => {
 
 Claude Code is particularly useful for generating the "failure" test variants. Ask it: "Write Cypress intercepts and tests that verify my app handles 401, 403, 500, 503, and network timeout errors gracefully for the /api/users endpoint."
 
-## Comparing Intercept Strategies
+Comparing Intercept Strategies
 
 Different testing scenarios call for different intercept strategies. Here is a decision guide:
 
@@ -347,7 +347,7 @@ Different testing scenarios call for different intercept strategies. Here is a d
 
 Claude Code can help you choose the right strategy for each test when you describe what behavior you are trying to verify.
 
-## Automating Intercept Generation from Real Requests
+Automating Intercept Generation from Real Requests
 
 A powerful workflow is capturing real API traffic and converting it to intercepts. Here's how Claude Code can help:
 
@@ -357,7 +357,7 @@ A powerful workflow is capturing real API traffic and converting it to intercept
 
 This approach ensures your mocks accurately reflect your actual API behavior.
 
-### Processing HAR Files Programmatically
+Processing HAR Files Programmatically
 
 If you want to automate HAR conversion as part of your CI pipeline, here is a Node.js script skeleton Claude Code can help you complete:
 
@@ -415,14 +415,14 @@ intercepts.forEach(({ method, url, fixture, alias }) => {
 
 Hand this skeleton to Claude Code with your actual HAR file structure, and it will complete the transformation logic to match your project's conventions.
 
-## Integrating with CI/CD
+Integrating with CI/CD
 
-One advantage of a well-structured Cypress intercept layer is that your tests become entirely self-contained — they do not need a running backend to execute. This makes them fast to run in CI and eliminates environment-specific failures caused by test data or API downtime.
+One advantage of a well-structured Cypress intercept layer is that your tests become entirely self-contained. they do not need a running backend to execute. This makes them fast to run in CI and eliminates environment-specific failures caused by test data or API downtime.
 
 A minimal GitHub Actions workflow for running Cypress tests with mocked APIs looks like this:
 
 ```yaml
-# .github/workflows/cypress.yml
+.github/workflows/cypress.yml
 name: Cypress Tests
 
 on: [push, pull_request]
@@ -436,28 +436,28 @@ jobs:
         with:
           node-version: '20'
       - run: npm ci
-      - run: npx cypress run --spec "cypress/e2e/**/*.cy.js"
+      - run: npx cypress run --spec "cypress/e2e//*.cy.js"
         env:
           CYPRESS_BASE_URL: http://localhost:3000
 ```
 
 Because all network calls are intercepted by `cy.intercept()`, there is no need for a running API server or database in the CI environment. The tests run in under 2 minutes even for a large suite.
 
-## Conclusion
+Conclusion
 
 Claude Code transforms Cypress intercept from a manual, repetitive task into an automated workflow. By using Claude's ability to understand your codebase and API structure, you can generate intercepts faster, debug network issues more effectively, and maintain a more reliable test suite.
 
 Start by identifying the API endpoints in your application, then use Claude to generate baseline intercepts. Gradually refine these with dynamic handlers as your testing needs become more sophisticated. The time investment pays dividends in reduced test maintenance and faster development cycles.
 
-The workflow that delivers the most value day-to-day is the centralized command pattern: a single `cy.mockApi('scenario')` call in your test setup, backed by a scenario map that Claude Code helps you build and expand. When a new feature ships, open the support file and ask Claude to add a scenario for it — that is usually a 30-second task rather than a 30-minute one.
+The workflow that delivers the most value day-to-day is the centralized command pattern: a single `cy.mockApi('scenario')` call in your test setup, backed by a scenario map that Claude Code helps you build and expand. When a new feature ships, open the support file and ask Claude to add a scenario for it. that is usually a 30-second task rather than a 30-minute one.
 
-Remember: the goal isn't to mock everything, but to mock strategically — controlling external dependencies while keeping your tests close to real-world behavior.
+Remember: the goal isn't to mock everything, but to mock strategically. controlling external dependencies while keeping your tests close to real-world behavior.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -15,21 +15,21 @@ permalink: /claude-skill-permissions-what-can-skills-access/
 
 [When you create or use a Claude skill, understanding what that skill can and cannot access is critical](/claude-skill-md-format-complete-specification-guide/) for security, reliability, and predictable behavior. This guide breaks down the permission model for Claude skills, showing developers and power users exactly what capabilities are available and how to control them.
 
-## The Permission Model Overview
+The Permission Model Overview
 
 [Claude skills operate within a defined permission boundary](/best-claude-code-skills-to-install-first-2026/) This boundary determines three key things:
 
-1. **Tool access**: Which tools the skill can call (Read, Write, Bash, etc.)
-2. **Resource access**: Which files, directories, and external services the skill can interact with
-3. **Capability limits**: Constraints on execution time, token usage, and turn count
+1. Tool access: Which tools the skill can call (Read, Write, Bash, etc.)
+2. Resource access: Which files, directories, and external services the skill can interact with
+3. Capability limits: Constraints on execution time, token usage, and turn count
 
 When a skill runs, it does not automatically get access to everything in your environment. Instead, it operates with the exact permissions you define.
 
-## Tool Access: The Primary Permission Control
+Tool Access: The Primary Permission Control
 
 The most direct way to control what a skill can do is through the `tools` field in the skill's front matter. This field explicitly lists which tools are available to that skill.
 
-### Declaring Allowed Tools
+Declaring Allowed Tools
 
 ```yaml
 ---
@@ -40,16 +40,16 @@ description: Converts markdown documents to formatted PDF files
 
 In this example, the `pdf-generator` skill can only use three specific tools. Even if your Claude session has additional tools enabled (like `WebFetch` or database connectors), this skill cannot access them. This is a fundamental security feature.
 
-### Why Tool Restriction Matters
+Why Tool Restriction Matters
 
 Limiting tool access serves several practical purposes:
 
-- **Security**: A skill with narrow tool access cannot accidentally perform actions outside its intended scope
-- **Predictability**: You can reason about what a skill will do by examining its tool list
-- **Auditability**: When debugging, you know exactly which capabilities were available
-- **Cost control**: Skills that cannot call expensive tools won't generate unexpected API costs
+- Security: A skill with narrow tool access cannot accidentally perform actions outside its intended scope
+- Predictability: You can reason about what a skill will do by examining its tool list
+- Auditability: When debugging, you know exactly which capabilities were available
+- Cost control: Skills that cannot call expensive tools won't generate unexpected API costs
 
-### The Default: Inheriting All Tools
+The Default: Inheriting All Tools
 
 If you omit the `tools` field entirely, the skill inherits all tools available in the current session:
 
@@ -57,17 +57,17 @@ If you omit the `tools` field entirely, the skill inherits all tools available i
 ---
 name: general-assistant
 description: A general-purpose helper skill
-# No tools field means: inherits all session tools
+No tools field means: inherits all session tools
 ---
 ```
 
 This default is convenient but should be used carefully. For production skills, explicitly declaring tools is the recommended practice.
 
-## File System Access
+File System Access
 
 Skills access the file system through the `Read` and `Write` tools. However, there are practical constraints and patterns you should understand.
 
-### Path Restrictions
+Path Restrictions
 
 Skills can access any file path that the underlying Claude session has access to. If your session is running in a specific directory context, the skill operates within that context. There's no per-skill file system sandboxing at the directory level.
 
@@ -78,12 +78,12 @@ To restrict file access, combine tool restrictions with explicit instructions in
 name: config-editor
 description: Edits configuration files safely
 ---
-# Skill body
+Skill body
 You may only read and write files in the ./config/ directory.
 Do not access any other directories.
 ```
 
-### Reading Before Writing
+Reading Before Writing
 
 A common pattern for file operations is the read-modify-write sequence:
 
@@ -92,7 +92,7 @@ A common pattern for file operations is the read-modify-write sequence:
 name: code-formatter
 description: Formats code files according to project standards
 ---
-# Skill body
+Skill body
 Before modifying any file:
 1. Read the current content
 2. Identify the file type and applicable formatting rules
@@ -101,11 +101,11 @@ Before modifying any file:
 After writing, run: npx prettier --write {file_path}
 ```
 
-## Bash and Command Execution
+Bash and Command Execution
 
 The `Bash` tool provides the most powerful capability but also carries the highest risk. When a skill has Bash access, it can execute any command your user environment permits.
 
-### Limiting Command Scope
+Limiting Command Scope
 
 You cannot restrict which specific bash commands a skill runs through front matter. Instead, provide explicit guidance in the skill body:
 
@@ -114,7 +114,7 @@ You cannot restrict which specific bash commands a skill runs through front matt
 name: test-runner
 description: Runs project test suites
 ---
-# Skill body
+Skill body
 You may only run the following commands:
 - npm test (or yarn test)
 - npx jest (for Jest-based projects)
@@ -124,7 +124,7 @@ Do not run any other bash commands. Do not install packages.
 Do not modify git state or run git commands.
 ```
 
-### Dangerous Combinations to Avoid
+Dangerous Combinations to Avoid
 
 Certain tool combinations require extra scrutiny:
 
@@ -134,7 +134,7 @@ Certain tool combinations require extra scrutiny:
 
 Always audit skills that combine powerful tools.
 
-## Turn Limits and Execution Constraints
+Turn Limits and Execution Constraints
 
 The `max_turns` field controls how long a skill can run:
 
@@ -147,7 +147,7 @@ description: Performs large-scale code refactoring
 
 Each "turn" represents one model response, which may include multiple tool calls. A skill that needs to read 10 files, write 5 files, and run tests 3 times might consume 20+ turns. Set this number based on realistic task estimates.
 
-## Environment Variables and Secrets
+Environment Variables and Secrets
 
 Skills access environment variables from the parent Claude session. There's no per-skill secret isolation. If your session has `API_KEY` in the environment, any skill with `Bash` access can read it.
 
@@ -157,7 +157,7 @@ For sensitive workflows, consider:
 2. Using MCP servers that handle authentication separately
 3. Passing sensitive data as explicit parameters rather than environment variables
 
-## Practical Example: Building a Restricted Skill
+Practical Example: Building a Restricted Skill
 
 Here's a complete example of a well-structured, restricted skill:
 
@@ -166,7 +166,7 @@ Here's a complete example of a well-structured, restricted skill:
 name: logger
 description: Adds structured logging to JavaScript functions
 ---
-# Skill body
+Skill body
 You help developers add consistent logging to their JavaScript code.
 
 Process:
@@ -187,7 +187,7 @@ If the file already has logging, report that and stop.
 
 This skill demonstrates good permission hygiene: it has exactly the tools it needs, a reasonable turn limit, and clear behavioral constraints in the body.
 
-## Verifying Skill Permissions
+Verifying Skill Permissions
 
 To audit what a skill can do, examine its front matter:
 
@@ -197,7 +197,7 @@ To audit what a skill can do, examine its front matter:
 
 You can enable verbose mode when running Claude Code to see tool calls in real time, which helps you verify a skill behaves as expected.
 
-## Summary
+Summary
 
 Claude skill permissions control what capabilities a skill has within your development environment. The primary mechanism is the `tools` front matter field, which explicitly lists allowed tools. Without this field, skills inherit all session tools.
 
@@ -209,14 +209,14 @@ Key principles:
 - Understand that environment variables and file access are shared with the parent session
 - Audit skills that combine powerful tools like `Bash` + `Write`
 
-By understanding and properly configuring these permissions, you can build reliable, secure skills that do exactly what you intend—no more, no less.
+By understanding and properly configuring these permissions, you can build reliable, secure skills that do exactly what you intend, no more, no less.
 
 ---
 
-## Related Reading
+Related Reading
 
-- [Skill .md File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/) — Complete reference for skill front matter fields including `tools` and `max_turns`
-- [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/) — Guide to building skills that orchestrate multiple tool calls effectively
-- [How to Write a Skill .md File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/) — Step-by-step guide for creating well-structured skills with proper permission boundaries
+- [Skill .md File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/). Complete reference for skill front matter fields including `tools` and `max_turns`
+- [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/). Guide to building skills that orchestrate multiple tool calls effectively
+- [How to Write a Skill .md File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/). Step-by-step guide for creating well-structured skills with proper permission boundaries
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

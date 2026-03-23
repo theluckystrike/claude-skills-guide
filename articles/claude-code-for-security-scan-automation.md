@@ -13,13 +13,13 @@ tags: [claude-code, claude-skills]
 ---
 
 {% raw %}
-# Claude Code for Security Scan Automation
+Claude Code for Security Scan Automation
 
-Security scanning automation has become essential for teams shipping code frequently. Claude Code provides a powerful foundation for building automated security workflows that catch vulnerabilities before they reach production. This guide shows you how to use Claude Code skills and hooks to create robust security scan pipelines — from dependency audits and secret detection through container scanning and full CI/CD integration.
+Security scanning automation has become essential for teams shipping code frequently. Claude Code provides a powerful foundation for building automated security workflows that catch vulnerabilities before they reach production. This guide shows you how to use Claude Code skills and hooks to create solid security scan pipelines. from dependency audits and secret detection through container scanning and full CI/CD integration.
 
-## Why Automate Security Scanning with Claude Code
+Why Automate Security Scanning with Claude Code
 
-Manual security reviews are slow and inconsistent. The same engineer who writes a feature rarely catches the subtle vulnerability they just introduced. Automated scanning solves the consistency problem, but most teams bolt it on as an afterthought — a GitHub Action that runs and whose results nobody reads.
+Manual security reviews are slow and inconsistent. The same engineer who writes a feature rarely catches the subtle vulnerability they just introduced. Automated scanning solves the consistency problem, but most teams bolt it on as an afterthought. a GitHub Action that runs and whose results nobody reads.
 
 Claude Code changes the equation by acting as an interpreter layer between raw scanner output and actionable decisions. Instead of reading a 200-line JSON blob from `npm audit`, you ask Claude to summarize the critical findings, identify which ones are exploitable in your specific context, and draft the remediation plan. The scan runs automatically; Claude Code makes the results useful.
 
@@ -32,9 +32,9 @@ The combination works particularly well across four scanning domains:
 | Static code analysis (SAST) | Semgrep, Bandit, ESLint | Maps findings to fix patterns in your codebase |
 | Container scanning | Trivy, Grype | Prioritizes base image upgrades vs package fixes |
 
-## Setting Up Security Scan Skills
+Setting Up Security Scan Skills
 
-Claude Code works best for security automation when you configure dedicated skills for different scanning tasks. The tdd skill proves surprisingly useful here — while designed for test-driven development, its structured approach to running commands and validating outputs maps directly to security scan execution.
+Claude Code works best for security automation when you configure dedicated skills for different scanning tasks. The tdd skill proves surprisingly useful here. while designed for test-driven development, its structured approach to running commands and validating outputs maps directly to security scan execution.
 
 Start by creating a security scanning skill:
 
@@ -56,7 +56,7 @@ Start by creating a security scanning skill:
 }
 ```
 
-This skill structure lets you run dependency audits and secret detection as discrete operations. The key advantage is consistency — each scan produces structured output you can parse and act upon.
+This skill structure lets you run dependency audits and secret detection as discrete operations. The key advantage is consistency. each scan produces structured output you can parse and act upon.
 
 For Python projects, extend the skill to cover multiple package managers:
 
@@ -86,7 +86,7 @@ For Python projects, extend the skill to cover multiple package managers:
 
 Once these skills are in place, you can trigger a full security sweep from a single Claude Code prompt: "Run the security-scanner skill and tell me which findings need immediate attention."
 
-## Automating Dependency Vulnerability Scans
+Automating Dependency Vulnerability Scans
 
 Dependency scanning represents one of the highest-ROI security automations. Tools like npm audit, pip-audit, and OWASP Dependency-Check all produce machine-readable output that Claude Code can process.
 
@@ -94,8 +94,8 @@ Here's a practical approach using a Claude hook:
 
 ```bash
 #!/bin/bash
-# Pre-commit security hook
-# Place at .git/hooks/pre-commit or register via Claude Code hooks
+Pre-commit security hook
+Place at .git/hooks/pre-commit or register via Claude Code hooks
 
 echo "Running dependency vulnerability scan..."
 
@@ -126,7 +126,7 @@ For Python projects, the equivalent pip-audit hook:
 
 ```bash
 #!/bin/bash
-# pip-audit pre-commit hook
+pip-audit pre-commit hook
 
 echo "Running pip-audit..."
 
@@ -148,7 +148,7 @@ echo "pip-audit passed"
 exit 0
 ```
 
-### Filtering Vulnerability Noise
+Filtering Vulnerability Noise
 
 Raw `npm audit` output often contains dozens of findings, most of which are transitive dependencies you cannot directly fix. Claude Code helps here by filtering to what matters:
 
@@ -177,14 +177,14 @@ export function filterActionableVulns(auditJson) {
 
 Pass this to Claude Code and ask: "Which of these should I fix this sprint versus track in the backlog?"
 
-## Secret Detection in Codebases
+Secret Detection in Codebases
 
-Detecting secrets committed accidentally happens more often than teams realize. The supermemory skill offers an interesting approach — its document indexing capabilities can be adapted to track sensitive patterns across your codebase.
+Detecting secrets committed accidentally happens more often than teams realize. The supermemory skill offers an interesting approach. its document indexing capabilities can be adapted to track sensitive patterns across your codebase.
 
 A practical secret detection setup uses gitleaks:
 
 ```yaml
-# .gitleaks.toml
+.gitleaks.toml
 [rules]
   [[rules.BasicAuth]]
     description = "Basic Authorization Header"
@@ -241,7 +241,7 @@ export async function runSecretScan(repoPath) {
         file: f.File,
         rule: f.RuleID,
         line: f.StartLine,
-        secret: f.Secret ? f.Secret.slice(0, 4) + "****" : "redacted"
+        secret: f.Secret ? f.Secret.slice(0, 4) + "" : "redacted"
       }))
     };
   }
@@ -250,34 +250,34 @@ export async function runSecretScan(repoPath) {
 }
 ```
 
-### What to Do When a Secret Is Found in History
+What to Do When a Secret Is Found in History
 
-Finding a secret in the current working tree is straightforward — remove it and rotate the credential. Finding one in git history is harder. Claude Code can guide you through the remediation:
+Finding a secret in the current working tree is straightforward. remove it and rotate the credential. Finding one in git history is harder. Claude Code can guide you through the remediation:
 
 ```bash
-# Find the commit that introduced the secret
+Find the commit that introduced the secret
 git log --all --oneline -S "AKIA" -- .
 
-# Identify all files it touched
+Identify all files it touched
 git show <commit-sha> --stat
 
-# Use git-filter-repo to purge it from history (safer than filter-branch)
+Use git-filter-repo to purge it from history (safer than filter-branch)
 pip install git-filter-repo
-git filter-repo --path-glob '**/*.env' --invert-paths
+git filter-repo --path-glob '/*.env' --invert-paths
 git filter-repo --replace-text <(echo "AKIAXXXXXXXXXXXXXXXX==>REDACTED")
 
-# Force push all branches (coordinate with team first)
+Force push all branches (coordinate with team first)
 git push origin --force --all
 git push origin --force --tags
 ```
 
-Ask Claude Code to walk through this sequence with you — it can verify each step's output and flag if the secret is still present in any branch before you push.
+Ask Claude Code to walk through this sequence with you. it can verify each step's output and flag if the secret is still present in any branch before you push.
 
-## SAST Integration for Code Analysis
+SAST Integration for Code Analysis
 
 Static Application Security Testing (SAST) tools analyze source code for vulnerabilities. Tools like Semgrep, Bandit (Python), and ESLint (with security rules) fit well into Claude Code workflows.
 
-The pdf skill — typically used for PDF manipulation — can actually help here. Many security reports come as PDF documents from commercial scanners. You can automate the extraction of vulnerability data from these reports:
+The pdf skill. typically used for PDF manipulation. can actually help here. Many security reports come as PDF documents from commercial scanners. You can automate the extraction of vulnerability data from these reports:
 
 ```javascript
 // Extract findings from security PDF reports
@@ -297,14 +297,14 @@ export async function parseSecurityReport(pdfPath) {
 }
 ```
 
-This becomes valuable when integrating with commercial scanners that produce PDF reports — Claude Code can parse these and extract actionable data.
+This becomes valuable when integrating with commercial scanners that produce PDF reports. Claude Code can parse these and extract actionable data.
 
-### Semgrep for Custom Rule Writing
+Semgrep for Custom Rule Writing
 
 Semgrep is exceptional for codebases with custom security requirements. Unlike generic SAST tools, you write rules in the same language as your source code:
 
 ```yaml
-# .semgrep/no-hardcoded-hosts.yml
+.semgrep/no-hardcoded-hosts.yml
 rules:
   - id: no-hardcoded-production-host
     patterns:
@@ -330,15 +330,15 @@ semgrep --config .semgrep/ --json --output semgrep-results.json .
 
 Then use Claude Code to analyze the results file: "Read semgrep-results.json and group findings by severity. For the ERROR-level findings, show me the file and line, and suggest a fix for each one."
 
-### Bandit for Python Security Analysis
+Bandit for Python Security Analysis
 
 Bandit integrates tightly with Python workflows:
 
 ```bash
-# Run Bandit and save structured output
+Run Bandit and save structured output
 bandit -r ./src -f json -o bandit-report.json -ll
 
-# Show summary
+Show summary
 python3 - <<'EOF'
 import json, sys
 report = json.load(open("bandit-report.json"))
@@ -352,7 +352,7 @@ for sev in ["HIGH", "MEDIUM", "LOW"]:
     items = by_severity.get(sev, [])
     print(f"{sev}: {len(items)} issues")
     for item in items[:3]:
-        print(f"  {item['filename']}:{item['line_number']} — {item['issue_text']}")
+        print(f"  {item['filename']}:{item['line_number']}. {item['issue_text']}")
 EOF
 ```
 
@@ -367,13 +367,13 @@ The most common Bandit findings and their fixes:
 | B501 | TLS verification disabled | Remove `verify=False` from requests |
 | B602 | `subprocess` with `shell=True` | Use list args, set `shell=False` |
 
-## Container Security Scanning
+Container Security Scanning
 
 Containerized applications require their own scanning layer. Trivy and Grype are popular open-source tools that integrate easily:
 
 ```bash
 #!/bin/bash
-# Scan container image for vulnerabilities
+Scan container image for vulnerabilities
 
 IMAGE=$1
 if [ -z "$IMAGE" ]; then
@@ -428,7 +428,7 @@ export async function scanContainer(imageName) {
 }
 ```
 
-### Base Image Strategy
+Base Image Strategy
 
 The single highest-leverage container security decision is your base image. Most container vulnerabilities come from the OS layer, not your application code:
 
@@ -443,12 +443,12 @@ The single highest-leverage container security decision is your base image. Most
 
 Claude Code can help you evaluate base image tradeoffs for your specific application. Share your Trivy output and ask: "Which of these vulnerabilities are in the base image versus my application dependencies? What base image change would eliminate the most critical findings?"
 
-## CI/CD Pipeline Integration
+CI/CD Pipeline Integration
 
 Putting it all together, your CI/CD pipeline benefits from layered security scanning:
 
 ```yaml
-# .github/workflows/security-scan.yml
+.github/workflows/security-scan.yml
 name: Security Scans
 
 on: [push, pull_request]
@@ -490,7 +490,7 @@ jobs:
         with:
           config: p/owasp-top-ten
       - name: Run Bandit (Python)
-        if: hashFiles('**/*.py') != ''
+        if: hashFiles('/*.py') != ''
         run: |
           pip install bandit
           bandit -r . -f json -o bandit.json -ll || true
@@ -520,24 +520,24 @@ jobs:
 
 Each stage runs in parallel where possible, giving you fast feedback. Claude Code hooks can trigger these scans automatically, ensuring security checks happen consistently without manual intervention.
 
-### Handling Pipeline Failures Gracefully
+Handling Pipeline Failures Gracefully
 
 A common mistake is making all security findings pipeline-blocking from day one. Teams push back, start bypassing hooks, and the automation erodes. A graduated approach works better:
 
 ```yaml
-# Phase 1: Warn only (week 1-2)
+Phase 1: Warn only (week 1-2)
 - run: npm audit --audit-level=critical || echo "::warning::Vulnerabilities found"
 
-# Phase 2: Block on critical (week 3-4)
+Phase 2: Block on critical (week 3-4)
 - run: npm audit --audit-level=critical
 
-# Phase 3: Block on high (ongoing)
+Phase 3: Block on high (ongoing)
 - run: npm audit --audit-level=high
 ```
 
 Claude Code helps enforce this policy by tracking which findings existed before the policy change. Ask Claude to "compare this week's audit output against last week's baseline and show me only new findings."
 
-## Building Custom Security Workflows
+Building Custom Security Workflows
 
 The real power of Claude Code for security automation comes from combining these tools into custom workflows. You can create skills that:
 
@@ -576,7 +576,7 @@ def load_npm_audit(path: str) -> List[Finding]:
             findings.append(Finding(
                 tool="npm-audit",
                 severity=vuln["severity"].upper(),
-                title=f"{name} — {', '.join(v.get('title', '') for v in vuln.get('via', []) if isinstance(v, dict))}",
+                title=f"{name}. {', '.join(v.get('title', '') for v in vuln.get('via', []) if isinstance(v, dict))}",
                 location=f"package: {name}@{vuln.get('range', 'unknown')}",
                 remediation="Run: npm audit fix" if vuln.get("fixAvailable") else "No automatic fix available"
             ))
@@ -631,7 +631,7 @@ if __name__ == "__main__":
 
 For teams using the frontend-design skill to build React applications, adding security scanning to the component generation workflow catches issues like unsafe DOM manipulation or missing CSRF protections early. Ask Claude Code to run the SAST scan immediately after generating a new component, before the code is committed.
 
-## Measuring Security Posture Over Time
+Measuring Security Posture Over Time
 
 Automation without measurement is incomplete. Track these metrics sprint over sprint:
 
@@ -646,8 +646,8 @@ Automation without measurement is incomplete. Track these metrics sprint over sp
 Claude Code can generate a weekly security posture report from your scan artifacts:
 
 ```bash
-# Generate weekly delta report
-# Compare this week's aggregated findings against last week's snapshot
+Generate weekly delta report
+Compare this week's aggregated findings against last week's snapshot
 python3 aggregate-security.py \
   --npm npm-audit-this-week.json \
   --gitleaks gl-this-week.json \
@@ -659,14 +659,14 @@ diff last-week.txt this-week.txt | grep "^[<>]"
 
 Pass the diff output to Claude Code with the prompt: "Summarize what's new and what's been resolved compared to last week. Flag anything that's been open for more than two weeks."
 
-The key is treating security scanning as code — version controlled, automated, and integrated into your development workflow. Claude Code provides the automation layer that makes this practical without adding friction to your development process.
+The key is treating security scanning as code. version controlled, automated, and integrated into your development workflow. Claude Code provides the automation layer that makes this practical without adding friction to your development process.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

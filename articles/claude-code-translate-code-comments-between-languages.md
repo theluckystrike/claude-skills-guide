@@ -17,7 +17,7 @@ When you inherit a codebase written in a language you don't fully understand, co
 
 Claude Code provides several approaches to translate code comments between languages. This guide covers practical methods ranging from simple one-off translations to systematic translation workflows.
 
-## Using Claude Code Directly for Comment Translation
+Using Claude Code Directly for Comment Translation
 
 The most straightforward approach uses Claude Code's built-in capabilities. When you share a code file with Claude, you can request translation of all comments:
 
@@ -35,16 +35,16 @@ Extract all Chinese comments from this Python file and provide English translati
 
 This approach works with any programming language since Claude recognizes comment syntax across dozens of languages.
 
-## Systematic Translation Workflow for Large Codebases
+Systematic Translation Workflow for Large Codebases
 
 [For projects with hundreds of files](/claude-md-too-long-context-window-optimization/), a systematic approach saves time. Create a dedicated translation skill to handle recurring translation tasks.
 
-### Step 1: Create a Translation Skill
+Step 1: Create a Translation Skill
 
 Store this in `~/.claude/skills/translate-comments.md`:
 
 ```markdown
-# Translate Code Comments
+Translate Code Comments
 
 You help translate code comments between languages while preserving code integrity.
 
@@ -61,7 +61,7 @@ For multi-file projects:
 - Note any ambiguous terms requiring human review
 ```
 
-### Step 2: Apply to Multiple Files
+Step 2: Apply to Multiple Files
 
 With the skill active, process entire directories:
 
@@ -71,11 +71,11 @@ Translate all Japanese comments in the /src directory to English. Output a summa
 
 Claude processes each file systematically, maintaining the translation skill's guidelines for consistency.
 
-## Handling Documentation Comments
+Handling Documentation Comments
 
 Documentation comments (Javadoc, JSDoc, docstrings) require special attention since they often contain more detailed explanations than inline comments.
 
-### Python Docstring Translation Example
+Python Docstring Translation Example
 
 Original:
 ```python
@@ -96,7 +96,6 @@ Translation request:
 Translate this docstring from Italian to English, maintaining the parameter documentation format.
 ```
 
-Result:
 ```python
 def calculate_metrics(data: list[float]) -> dict:
     """
@@ -110,11 +109,11 @@ def calculate_metrics(data: list[float]) -> dict:
     """
 ```
 
-## Combining with Other Claude Skills
+Combining with Other Claude Skills
 
 The translation workflow becomes more powerful when combined with [other Claude skills](/how-do-i-combine-two-claude-skills-in-one-workflow/).
 
-### Pair with the `docx` Skill for Documentation
+Pair with the `docx` Skill for Documentation
 
 When translating comments reveals the need for updated documentation, the `docx` skill helps maintain external docs:
 
@@ -122,7 +121,7 @@ When translating comments reveals the need for updated documentation, the `docx`
 Use the docx skill to update the API documentation with the new English comments from the codebase.
 ```
 
-### Pair with the `frontend-design` Skill for UI Comments
+Pair with the `frontend-design` Skill for UI Comments
 
 If your codebase contains UI-related comments (button labels, error messages, tooltips), the `frontend-design` skill ensures translated strings are properly integrated into your interface:
 
@@ -130,7 +129,7 @@ If your codebase contains UI-related comments (button labels, error messages, to
 The frontend-design skill should review the translated strings to ensure they're suitable for display in the user interface.
 ```
 
-### Pair with the `pdf` Skill for Legacy Documentation
+Pair with the `pdf` Skill for Legacy Documentation
 
 When translating code reveals references to legacy PDF documentation, the `pdf` skill helps cross-reference:
 
@@ -138,9 +137,9 @@ When translating code reveals references to legacy PDF documentation, the `pdf` 
 The pdf skill should check if the referenced documentation still exists and update links accordingly.
 ```
 
-## Best Practices for Code Comment Translation
+Best Practices for Code Comment Translation
 
-### Preserve Technical Terms
+Preserve Technical Terms
 
 Technical terms should remain in their original form when universally understood:
 
@@ -154,15 +153,15 @@ Technical terms should remain in their original form when universally understood
 
 Terms like "HTTP," "timeout," "callback," and "API" stay in English even when translating surrounding comments.
 
-### Handle Ambiguous Terms
+Handle Ambiguous Terms
 
 When translation might alter meaning, flag for human review:
 
 ```
-Note: The term "Zeiger" could mean "pointer" (C programming) or "hand" (UI). Interpreted as "pointer" based on context.
+The term "Zeiger" could mean "pointer" (C programming) or "hand" (UI). Interpreted as "pointer" based on context.
 ```
 
-### Maintain Comment Position
+Maintain Comment Position
 
 Always keep comments in their original positions relative to code:
 
@@ -175,15 +174,15 @@ int result = calculate(); // Calculate the result first
 int result = calculate();
 ```
 
-## Automating Translation with Claude Code Hooks
+Automating Translation with Claude Code Hooks
 
 For ongoing projects with multilingual contributors, consider using Claude Code hooks to standardize comment language.
 
 Create a pre-commit hook that identifies non-English comments:
 
 ```bash
-# .git/hooks/pre-commit
-# Check for non-English comments (example for Python)
+.git/hooks/pre-commit
+Check for non-English comments (example for Python)
 grep -n "#" --include="*.py" *.py | grep -v "^[0-9]*:.*#" | head -20
 ```
 
@@ -193,9 +192,9 @@ Trigger Claude to translate when new non-English comments are detected:
 Run translate-comments skill on recently modified files to ensure all new comments are in English.
 ```
 
-## Common Challenges and Solutions
+Common Challenges and Solutions
 
-### Multi-line Block Comments
+Multi-line Block Comments
 
 Block comments spanning multiple lines require careful handling:
 
@@ -209,20 +208,20 @@ Block comments spanning multiple lines require careful handling:
 
 Claude handles these by translating each line while preserving the comment structure.
 
-### Comment-Embedded Code Examples
+Comment-Embedded Code Examples
 
 When comments contain code examples, translate explanations but preserve the code:
 
 ```python
-# Example: loop through items
-# 示例：循环遍历所有项目
+loop through items
+
 for item in items:
     process(item)
 ```
 
 The code stays unchanged; only the surrounding explanation translates.
 
-### Cultural References and Idioms
+Cultural References and Idioms
 
 Idioms don't translate directly. Claude provides contextually appropriate equivalents:
 
@@ -231,19 +230,19 @@ Idioms don't translate directly. Claude provides contextually appropriate equiva
 // Translation: "This is a piece of cake" (not "This is a children's game")
 ```
 
-## Conclusion
+Conclusion
 
 Translating code comments with Claude Code transforms unreadable code into maintainable assets. Whether you need one-time translations or systematic workflows, Claude adapts to your project's needs.
 
 For quick translations, direct interaction works best. For ongoing projects, create dedicated skills and consider hook automation. Combine with other skills like `docx`, `pdf`, and `frontend-design` for comprehensive documentation workflows.
 
-Start with a single file to establish your translation pattern, then scale to entire codebases. The key is consistency—establish conventions for technical terms, maintain comment positions, and flag ambiguous translations for human review.
+Start with a single file to establish your translation pattern, then scale to entire codebases. The key is consistency, establish conventions for technical terms, maintain comment positions, and flag ambiguous translations for human review.
 
-## Related Reading
+Related Reading
 
-- [Claude Skills for Localization i18n Workflow Automation](/claude-skills-for-localization-i18n-workflow-automation/) — automate i18n workflows across your codebase
-- [How Do I Combine Two Claude Skills in One Workflow](/how-do-i-combine-two-claude-skills-in-one-workflow/) — chain translation with documentation and design skills
-- [Claude Code Multilingual Codebase Management Guide](/claude-code-multilingual-codebase-management-guide/) — broader strategies for managing multilingual projects
-- [Claude Code Hooks System: Complete Guide](/understanding-claude-code-hooks-system-complete-guide/) — automate comment translation using pre-commit hooks
+- [Claude Skills for Localization i18n Workflow Automation](/claude-skills-for-localization-i18n-workflow-automation/). automate i18n workflows across your codebase
+- [How Do I Combine Two Claude Skills in One Workflow](/how-do-i-combine-two-claude-skills-in-one-workflow/). chain translation with documentation and design skills
+- [Claude Code Multilingual Codebase Management Guide](/claude-code-multilingual-codebase-management-guide/). broader strategies for managing multilingual projects
+- [Claude Code Hooks System: Complete Guide](/understanding-claude-code-hooks-system-complete-guide/). automate comment translation using pre-commit hooks
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

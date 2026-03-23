@@ -14,20 +14,20 @@ score: 8
 
 
 {% raw %}
-# Claude Code for Incident Escalation Workflow Tutorial
+Claude Code for Incident Escalation Workflow Tutorial
 
 Incident management is a critical part of any production system. When something goes wrong, you need a clear path from detection to resolution, with the right people notified at the right time. In this tutorial, you'll learn how to build an incident escalation workflow system using Claude Code skills.
 
-## Why Build Escalation Workflows with Claude Code?
+Why Build Escalation Workflows with Claude Code?
 
 Traditional incident management tools require extensive configuration, custom integrations, and often come with steep learning curves. Claude Code skills offer a different approach:
 
-- **Natural language configuration**: Define escalation rules in readable YAML or Markdown
-- **Flexible integrations**: Connect to any notification system through custom tools
-- **Contextual awareness**: Claude understands your incident context and can make smart routing decisions
-- **Learning capability**: The system improves over time based on resolution patterns
+- Natural language configuration: Define escalation rules in readable YAML or Markdown
+- Flexible integrations: Connect to any notification system through custom tools
+- Contextual awareness: Claude understands your incident context and can make smart routing decisions
+- Learning capability: The system improves over time based on resolution patterns
 
-## Prerequisites
+Prerequisites
 
 Before building your escalation workflow, ensure you have:
 
@@ -36,11 +36,11 @@ Before building your escalation workflow, ensure you have:
 - Access to notification channels (Slack, email, PagerDuty, etc.)
 - A Claude skill for reading configuration files
 
-## Building Your First Escalation Skill
+Building Your First Escalation Skill
 
 Let's create a skill that handles incident escalation from detection through resolution.
 
-### Step 1: Define the Skill Structure
+Step 1: Define the Skill Structure
 
 Create a new skill file called `incident-escalation.md`:
 
@@ -50,20 +50,20 @@ name: incident-escalation
 description: Handles incident escalation workflows with tiered response times
 ---
 
-# Incident Escalation Handler
+Incident Escalation Handler
 
 You help manage the full lifecycle of incidents from initial detection through resolution.
 
-## Detecting and Classifying Incidents
+Detecting and Classifying Incidents
 
 When a new incident is reported, you must first classify its severity:
 
-- **SEV1 (Critical)**: Complete service outage, data loss, security breach
-- **SEV2 (High)**: Major feature broken, significant performance degradation
-- **SEV3 (Medium)**: Minor feature issue, workaround available
-- **SEV4 (Low)**: Cosmetic issues, minor inconveniences
+- SEV1 (Critical): Complete service outage, data loss, security breach
+- SEV2 (High): Major feature broken, significant performance degradation
+- SEV3 (Medium): Minor feature issue, workaround available
+- SEV4 (Low): Cosmetic issues, minor inconveniences
 
-## Escalation Timeline Rules
+Escalation Timeline Rules
 
 Follow these escalation timelines:
 
@@ -75,12 +75,12 @@ Follow these escalation timelines:
 | SEV4 | 24 hours | 48 hours | Ticket Queue |
 ```
 
-### Step 2: Create Escalation Configuration
+Step 2: Create Escalation Configuration
 
 Create a YAML configuration file that defines your escalation rules:
 
 ```yaml
-# incident-config.yaml
+incident-config.yaml
 escalation:
   tiers:
     - name: on_call
@@ -128,7 +128,7 @@ severity_rules:
     notify_stakeholders: false
 ```
 
-### Step 3: Implement the Escalation Logic
+Step 3: Implement the Escalation Logic
 
 Now let's build the core escalation handling. Create a skill that processes incidents:
 
@@ -184,7 +184,7 @@ class EscalationEngine:
         return incident
 ```
 
-### Step 4: Integration with Notification Systems
+Step 4: Integration with Notification Systems
 
 Here's how to integrate with Slack for notifications:
 
@@ -200,13 +200,13 @@ class SlackNotifier:
     def send_incident_alert(self, incident: Incident, tier: dict) -> bool:
         """Send incident alert to appropriate channel"""
         message = {
-            "text": f"🚨 *INCIDENT ESCALATED*",
+            "text": f" *INCIDENT ESCALATED*",
             "blocks": [
                 {
                     "type": "header",
                     "text": {
                         "type": "plain_text",
-                        "text": f"🚨 {incident.severity}: {incident.title}"
+                        "text": f" {incident.severity}: {incident.title}"
                     }
                 },
                 {
@@ -230,19 +230,19 @@ class SlackNotifier:
         return response.status_code == 200
 ```
 
-## Practical Example: End-to-End Workflow
+Practical Example: End-to-End Workflow
 
 Here's how a complete incident workflow operates:
 
-1. **Incident Detection**: A monitoring system or team member reports an issue
-2. **Classification**: Claude determines severity based on description and system impact
-3. **Initial Response**: Appropriate on-call personnel are notified immediately
-4. **Monitoring**: Claude tracks response times and escalation thresholds
-5. **Auto-Escalation**: If no acknowledgment within threshold, automatically escalate
-6. **Resolution**: Once resolved, generate post-incident report
+1. Incident Detection: A monitoring system or team member reports an issue
+2. Classification: Claude determines severity based on description and system impact
+3. Initial Response: Appropriate on-call personnel are notified immediately
+4. Monitoring: Claude tracks response times and escalation thresholds
+5. Auto-Escalation: If no acknowledgment within threshold, automatically escalate
+6. Resolution: Once resolved, generate post-incident report
 
 ```markdown
-## Example Interaction
+Example Interaction
 
 User: "We're seeing elevated error rates on the payment service"
 
@@ -260,13 +260,13 @@ Once you provide these details, I'll:
 4. Begin the incident timeline
 ```
 
-## Best Practices for Incident Escalation
+Best Practices for Incident Escalation
 
-### Always Define Clear Severity Levels
+Always Define Clear Severity Levels
 
 Ambiguous severity classifications lead to under- or over-escalation. Create explicit criteria for each level and train your team to use them consistently.
 
-### Automate the Mundane
+Automate the Mundane
 
 Use Claude Code to handle routine tasks:
 - Initial incident triage
@@ -274,7 +274,7 @@ Use Claude Code to handle routine tasks:
 - Escalation timing checks
 - Post-incident report generation
 
-### Maintain an Audit Trail
+Maintain an Audit Trail
 
 Every action should be logged:
 - When incidents are created
@@ -282,14 +282,14 @@ Every action should be logged:
 - All status changes
 - Resolution details
 
-### Regular Review and Tuning
+Regular Review and Tuning
 
 Periodically review your escalation patterns:
 - Are response times improving?
 - Are escalations appropriate?
 - Are the right people being notified?
 
-## Conclusion
+Conclusion
 
 Building an incident escalation workflow with Claude Code gives you flexibility, context-awareness, and continuous improvement capabilities. Start with simple rules, add complexity as your team matures, and always prioritize clear communication over clever automation.
 
@@ -297,10 +297,10 @@ The key is to balance automation with human judgment - let Claude handle the tim
 
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

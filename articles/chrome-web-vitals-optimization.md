@@ -14,17 +14,17 @@ tags: [claude-code, claude-skills]
 ---
 
 
-# Chrome Web Vitals Optimization: A Practical Guide for Developers
+Chrome Web Vitals Optimization: A Practical Guide for Developers
 
 Google's Core Web Vitals have become essential metrics for anyone building web applications. These metrics directly impact search rankings and, more importantly, user experience. This guide covers practical techniques for optimizing LCP, FID, and CLS with concrete code examples you can apply today.
 
-## Understanding the Core Web Vitals
+Understanding the Core Web Vitals
 
 Chrome Web Vitals consist of three main metrics that measure different aspects of user experience:
 
-- **Largest Contentful Paint (LCP)** measures loading performance. It marks the point when the largest content element becomes visible.
-- **First Input Delay (FID)** and its successor **Interaction to Next Paint (INP)** measure interactivity. They capture how quickly the page responds to user input.
-- **Cumulative Layout Shift (CLS)** measures visual stability. It quantifies how much page content shifts unexpectedly during loading.
+- Largest Contentful Paint (LCP) measures loading performance. It marks the point when the largest content element becomes visible.
+- First Input Delay (FID) and its successor Interaction to Next Paint (INP) measure interactivity. They capture how quickly the page responds to user input.
+- Cumulative Layout Shift (CLS) measures visual stability. It quantifies how much page content shifts unexpectedly during loading.
 
 Each metric has specific thresholds you should target:
 
@@ -34,11 +34,11 @@ Each metric has specific thresholds you should target:
 | INP | ≤ 200ms | 200ms - 500ms | > 500ms |
 | CLS | ≤ 0.1 | 0.1 - 0.25 | > 0.25 |
 
-## Optimizing Largest Contentful Paint (LCP)
+Optimizing Largest Contentful Paint (LCP)
 
 LCP typically occurs with large images, hero elements, or block-level text. The key to optimizing LCP is ensuring the largest content renders as quickly as possible.
 
-### Optimize Image Delivery
+Optimize Image Delivery
 
 Images are the most common cause of poor LCP scores. Use modern formats and proper sizing:
 
@@ -59,7 +59,7 @@ Images are the most common cause of poor LCP scores. Use modern formats and prop
 
 The `fetchpriority="high"` attribute tells the browser to prioritize this image above other resources. Use `loading="eager"` for above-the-fold content and `loading="lazy"` for everything below the fold.
 
-### Monitor Server Response Time
+Monitor Server Response Time
 
 Before optimizing, measure your Time to First Byte (TTFB) to establish a baseline:
 
@@ -72,7 +72,7 @@ perfEntries.forEach((entry) => {
 
 If TTFB exceeds 600ms, prioritize server-side improvements: enable caching, use a CDN, and optimize database queries.
 
-### Implement Effective Caching
+Implement Effective Caching
 
 Server-side caching dramatically improves repeat visits. Enable compression and set cache headers in Express.js:
 
@@ -106,7 +106,7 @@ res.set('Cache-Control', 'public, max-age=60, stale-while-revalidate=300');
 
 This serves fresh content for 60 seconds while allowing stale content for 5 additional minutes during revalidation.
 
-### Eliminate Render-Blocking Resources
+Eliminate Render-Blocking Resources
 
 CSS and JavaScript that blocks rendering directly impacts LCP:
 
@@ -129,11 +129,11 @@ For CSS, identify critical styles and inline them in the HTML head. Load non-cri
 <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 ```
 
-## Optimizing Interaction to Next Paint (INP)
+Optimizing Interaction to Next Paint (INP)
 
 INP measures the entire duration from user interaction to the next frame paint. High INP values indicate the main thread is blocked.
 
-### Break Up Long Tasks
+Break Up Long Tasks
 
 JavaScript execution that exceeds 50ms blocks the main thread. Break long tasks into smaller chunks:
 
@@ -159,7 +159,7 @@ function processLargeDataset(data) {
 
 Using `requestIdleCallback` or `setTimeout` allows the browser to handle user interactions between chunks.
 
-### Use Web Workers for Heavy Computation
+Use Web Workers for Heavy Computation
 
 Offload intensive calculations to a Web Worker:
 
@@ -180,7 +180,7 @@ self.onmessage = (e) => {
 
 This keeps the main thread free for user interactions.
 
-### Defer Third-Party Scripts
+Defer Third-Party Scripts
 
 Third-party scripts often cause interactivity problems. Load non-essential scripts dynamically after the page becomes interactive:
 
@@ -206,7 +206,7 @@ if (document.readyState === 'complete') {
 }
 ```
 
-### Optimize Event Handlers
+Optimize Event Handlers
 
 Avoid expensive operations in event handlers:
 
@@ -226,11 +226,11 @@ window.addEventListener('resize', debounce(handleResize, 150));
 
 For frequently firing events like scroll and resize, debouncing prevents excessive execution.
 
-## Optimizing Cumulative Layout Shift (CLS)
+Optimizing Cumulative Layout Shift (CLS)
 
 CLS measures visual stability. Unexpected layout shifts frustrate users and damage engagement.
 
-### Reserve Space for Images
+Reserve Space for Images
 
 Always specify dimensions for images and embedded content:
 
@@ -246,7 +246,7 @@ Always specify dimensions for images and embedded content:
 
 The `aspect-ratio` CSS property reserves space before the image loads, preventing layout shifts.
 
-### Reserve Space for Dynamic Content
+Reserve Space for Dynamic Content
 
 When loading dynamic content like ads or lazy-loaded components, allocate fixed heights:
 
@@ -263,7 +263,7 @@ When loading dynamic content like ads or lazy-loaded components, allocate fixed 
 
 Alternatively, use skeleton loaders that match expected content dimensions.
 
-### Avoid Inserting Content Above Existing Content
+Avoid Inserting Content Above Existing Content
 
 Do not insert new content above existing content unless triggered by user interaction. If you must insert content dynamically, use placeholders with fixed dimensions so the layout does not shift:
 
@@ -282,7 +282,7 @@ function insertBanner() {
 
 Reserving the 60px height before content loads prevents a sudden layout shift when the banner appears.
 
-### Use Font Display Strategies
+Use Font Display Strategies
 
 Web fonts can cause layout shifts when they swap. Use `font-display: optional` or preload fonts:
 
@@ -301,12 +301,12 @@ For critical fonts, preload them in the HTML head:
 <link rel="preload" href="/fonts/custom-font.woff2" as="font" type="font/woff2" crossorigin>
 ```
 
-## Measuring Your Progress
+Measuring Your Progress
 
 Use Chrome DevTools to measure Web Vitals during development:
 
 1. Open DevTools (F12)
-2. Go to the **Lighthouse** tab
+2. Go to the Lighthouse tab
 3. Select "Navigation" mode
 4. Choose "Web Vitals" category
 5. Run the audit
@@ -326,11 +326,11 @@ onCLS((metric) => {
 });
 ```
 
-## Continuous Monitoring
+Continuous Monitoring
 
 Fixing Core Web Vitals is not a one-time task. Run Lighthouse audits during development and monitor real-user metrics in production using the `web-vitals` library or the PageSpeed Insights API to catch regressions early. Set up alerts when scores drop below your target thresholds so problems are caught before they affect search rankings or user experience.
 
-## Quick Wins Checklist
+Quick Wins Checklist
 
 - Serve images in WebP or AVIF format with appropriate sizing
 - Add `width` and `height` attributes to all images
@@ -343,10 +343,10 @@ Fixing Core Web Vitals is not a one-time task. Run Lighthouse audits during deve
 These optimizations compound. Start with the issues affecting your worst-performing metric, then address the others. Most sites can achieve "Good" ratings with focused effort on these areas.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

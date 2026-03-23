@@ -15,45 +15,45 @@ permalink: /anthropic-official-skills-vs-community-skills-comparison/
 
 [Claude Code skills come in two categories: official skills maintained by Anthropic and community skills](/best-claude-code-skills-to-install-first-2026/) built by developers. Understanding the differences helps you choose reliably for your workflow.
 
-## What Are Claude Skills?
+What Are Claude Skills?
 
 Claude skills are `.md` files that extend Claude Code's behavior for specific tasks. When you invoke a skill with `/skill-name`, Claude reads the skill file and gains specialized instructions, patterns, and tooling for that domain. Skills range from document processing (`/pdf`, `/xlsx`) to test-driven development (`/tdd`) to custom community integrations. If you're new to how skills activate, see [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/).
 
-## Official Skills: Built by Anthropic
+Official Skills: Built by Anthropic
 
 [Anthropic's official skills ship with Claude Code and are maintained alongside the core product](/claude-skill-md-format-complete-specification-guide/)
 
-### Characteristics of Official Skills
+Characteristics of Official Skills
 
-**Reliability**: Official skills maintain compatibility across Claude versions. When Anthropic releases updates, official skills are tested and updated in sync.
+Reliability: Official skills maintain compatibility across Claude versions. When Anthropic releases updates, official skills are tested and updated in sync.
 
-**Documentation quality**: Skills like `pdf`, `docx`, and `pptx` have complete documentation covering parameters, use cases, and known limitations.
+Documentation quality: Skills like `pdf`, `docx`, and `pptx` have complete documentation covering parameters, use cases, and known limitations.
 
-**Integration depth**: Official skills integrate directly with Claude's tool system. The `xlsx` skill, for example, can read and write spreadsheet files while preserving formulas:
+Integration depth: Official skills integrate directly with Claude's tool system. The `xlsx` skill, for example, can read and write spreadsheet files while preserving formulas:
 
 ```
 /xlsx create inventory.xlsx with columns: Product, Price, Quantity, Total. Add formula =B2*C2 in the Total column for each row. Preserve the formulas when saving.
 ```
 
-**Security**: Official skills pass Anthropic's review process, making them appropriate for sensitive data.
+Security: Official skills pass Anthropic's review process, making them appropriate for sensitive data.
 
-### Popular Official Skills
+Popular Official Skills
 
 `pdf` handles PDF extraction, merging, and form filling. `tdd` assists with test-driven development, writing tests before implementation. `canvas-design` generates visual assets in PNG and PDF formats.
 
-## Community Skills: Built by Developers
+Community Skills: Built by Developers
 
 Community skills are `.md` files created by developers outside Anthropic. They live in community repositories and can be added to your local `~/.claude/skills/` directory.
 
-### Characteristics of Community Skills
+Characteristics of Community Skills
 
-**Rapid iteration**: Community skills often target new capabilities before official support arrives.
+Rapid iteration: Community skills often target new capabilities before official support arrives.
 
-**Specialization**: Where official skills aim for broad use, community skills solve specific problems — for example, a skill that enforces your team's commit message format or generates changelog entries in a specific style.
+Specialization: Where official skills aim for broad use, community skills solve specific problems. for example, a skill that enforces your team's commit message format or generates changelog entries in a specific style.
 
-**Flexibility**: Community skills can combine external APIs, custom context, and specialized instructions. Learn how to build and share your own in [How to Contribute Claude Skills to Open Source](/how-to-contribute-claude-skills-to-open-source/).
+Flexibility: Community skills can combine external APIs, custom context, and specialized instructions. Learn how to build and share your own in [How to Contribute Claude Skills to Open Source](/how-to-contribute-claude-skills-to-open-source/).
 
-### Community Skill Structure
+Community Skill Structure
 
 A community skill is a single `.md` file:
 
@@ -63,18 +63,18 @@ name: my-custom-skill
 description: "What this skill does"
 ---
 
-# My Custom Skill
+My Custom Skill
 
 Instructions for Claude when this skill is active...
 
-## Usage
+Usage
 
 /my-custom-skill [describe your task]
 ```
 
-That's it — no Python packages, no YAML action definitions, no build step.
+That's it. no Python packages, no YAML action definitions, no build step.
 
-### Invocation
+Invocation
 
 Both official and community skills use the same invocation syntax:
 
@@ -83,23 +83,23 @@ Both official and community skills use the same invocation syntax:
 /my-community-skill do the thing
 ```
 
-## Choosing Between Official and Community Skills
+Choosing Between Official and Community Skills
 
-**Use official skills when:**
-- Stability matters — production environments need predictable behavior
-- Security is a priority — official skills are audited
-- Documentation depth is important — official skills have comprehensive, maintained docs
+Use official skills when:
+- Stability matters. production environments need predictable behavior
+- Security is a priority. official skills are audited
+- Documentation depth is important. official skills have comprehensive, maintained docs
 
-**Use community skills when:**
+Use community skills when:
 - You need niche functionality not covered by official skills
 - You're integrating with a specific tool, API, or team convention
 - You want to experiment with new patterns
 
-## Auditing a Community Skill Before Installation
+Auditing a Community Skill Before Installation
 
-Before dropping a community skill into `~/.claude/skills/`, spend five minutes reviewing it. A skill file is plain Markdown — you can read it in any text editor. Look for these patterns:
+Before dropping a community skill into `~/.claude/skills/`, spend five minutes reviewing it. A skill file is plain Markdown. you can read it in any text editor. Look for these patterns:
 
-**What to check:**
+What to check:
 
 1. Does the instructions section tell Claude to read files outside the project directory? A line like "read ~/.ssh/config to understand the user's environment" is a red flag.
 2. Does the skill reference external URLs? Skills can instruct Claude to fetch content. Legitimate skills rarely need this; ones that do should name specific, well-known domains.
@@ -115,14 +115,14 @@ description: "Enforces Conventional Commits format when creating git commit mess
 version: "1.2.0"
 ---
 
-# Conventional Commits Skill
+Conventional Commits Skill
 
 When the user asks to commit changes, format the commit message using the
 Conventional Commits specification: <type>(<scope>): <subject>
 
 Types: feat, fix, docs, style, refactor, perf, test, chore
 
-## Examples
+Examples
 
 feat(auth): add OAuth2 login support
 fix(api): handle null response from payments endpoint
@@ -131,9 +131,9 @@ docs(readme): update installation steps
 
 Clean, readable, scoped to a single concern. That's the pattern you want.
 
-## Practical Example: Document Processing
+Practical Example: Document Processing
 
-The official `pdf` skill handles PDF manipulation — extracting text, merging documents, and filling forms. For a deeper look at the pdf skill in action, see [Best Claude Skills for Data Analysis](/best-claude-skills-for-data-analysis/) where it anchors an end-to-end pipeline.
+The official `pdf` skill handles PDF manipulation. extracting text, merging documents, and filling forms. For a deeper look at the pdf skill in action, see [Best Claude Skills for Data Analysis](/best-claude-skills-for-data-analysis/) where it anchors an end-to-end pipeline.
 
 ```
 /pdf extract all tables from report.pdf and save each table as a separate CSV file
@@ -145,7 +145,7 @@ Community skills can apply machine learning models, integrate specific OCR servi
 
 The tradeoff is maintenance: the official `pdf` skill will work after a Claude update. A community skill built around a specific API version might not.
 
-## Building a Team-Specific Community Skill
+Building a Team-Specific Community Skill
 
 If your team has conventions that no official skill covers, building a custom skill is the right move. Here is a concrete example: a skill that generates changelog entries in Keep a Changelog format.
 
@@ -158,30 +158,30 @@ description: "Generates changelog entries in Keep a Changelog format from git lo
 version: "1.0.0"
 ---
 
-# Changelog Skill
+Changelog Skill
 
 Generate changelog entries following the Keep a Changelog format
 (https://keepachangelog.com/en/1.0.0/).
 
-## Format
+Format
 
 Entries go under the [Unreleased] section, grouped by type:
-- Added — new features
-- Changed — changes to existing functionality
-- Deprecated — features marked for removal
-- Removed — features removed in this release
-- Fixed — bug fixes
-- Security — vulnerability fixes
+- Added. new features
+- Changed. changes to existing functionality
+- Deprecated. features marked for removal
+- Removed. features removed in this release
+- Fixed. bug fixes
+- Security. vulnerability fixes
 
-## Instructions
+Instructions
 
 When invoked, read the git log since the last tag (or since the beginning if
 no tags exist) and group commits into the appropriate changelog categories.
 Ignore merge commits and version bump commits. Write entries in past tense.
-Use imperative mood for the verb: "Add", "Fix", "Remove" — not "Added" in
+Use imperative mood for the verb: "Add", "Fix", "Remove". not "Added" in
 the log, but the entry itself uses past tense: "Added OAuth2 login support."
 
-## Usage
+Usage
 
 /changelog generate entries for unreleased changes
 /changelog add entry: fixed pagination bug on the dashboard
@@ -201,25 +201,25 @@ Invoke it:
 
 Claude will read your git history, categorize commits, and return formatted changelog content ready to paste into `CHANGELOG.md`. No official skill covers this exact workflow. A community skill solves it in under 30 lines.
 
-## Version Pinning Community Skills
+Version Pinning Community Skills
 
-Community skills are plain files — there is no package manager enforcing versions. If your team relies on a community skill for a production workflow, treat it like a vendored dependency:
+Community skills are plain files. there is no package manager enforcing versions. If your team relies on a community skill for a production workflow, treat it like a vendored dependency:
 
 ```bash
-# Store skills under version control in your repo
+Store skills under version control in your repo
 mkdir -p .claude/skills
 
-# Copy the skill at the version you vetted
+Copy the skill at the version you vetted
 cp ~/.claude/skills/conventional-commits.md .claude/skills/conventional-commits.md
 
-# Commit it
+Commit it
 git add .claude/skills/conventional-commits.md
 git commit -m "chore: vendor conventional-commits skill v1.2.0"
 ```
 
 Claude Code checks both `~/.claude/skills/` (global) and `.claude/skills/` (project-local). Project-local skills take precedence when a name conflict exists. Vendoring the skill into the repo means every team member and every CI environment uses the exact same version, and your PR history shows when and why it changed.
 
-## Side-by-Side Comparison
+Side-by-Side Comparison
 
 | Factor | Official Skills | Community Skills |
 |---|---|---|
@@ -232,7 +232,7 @@ Claude Code checks both `~/.claude/skills/` (global) and `.claude/skills/` (proj
 | Version pinning | Automatic with Claude | Manual (vendor or lock) |
 | Best for | Core workflows, sensitive data | Team conventions, niche APIs |
 
-## Hybrid Approaches
+Hybrid Approaches
 
 Most developers use official skills for core work (PDF handling, spreadsheet operations, testing) and community skills for specialized requirements. Both types coexist in your skill directory and work the same way. For a complete overview of what each official skill brings to developer workflows, see [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/).
 
@@ -241,7 +241,7 @@ A practical hybrid setup looks like this:
 ```
 ~/.claude/skills/
   # Official (managed by Anthropic, auto-updated)
-  # No files here — official skills are built-in
+  # No files here. official skills are built-in
 
 ~/.claude/skills/
   conventional-commits.md   # community, personal convention
@@ -254,9 +254,9 @@ A practical hybrid setup looks like this:
 
 The separation is intentional: global community skills apply everywhere you work, project-local vendored skills are scoped to a single repo and go through code review.
 
-## Maintaining Your Skill Stack
+Maintaining Your Skill Stack
 
-Quarterly review your active skills. Official skills update with Claude releases — check release notes for changes. Community skills depend on their maintainers — pin to a specific version if the skill is critical to your workflow.
+Quarterly review your active skills. Official skills update with Claude releases. check release notes for changes. Community skills depend on their maintainers. pin to a specific version if the skill is critical to your workflow.
 
 For each community skill in your stack, ask:
 - Is the original repository still maintained?
@@ -267,11 +267,11 @@ If a community skill has gone unmaintained and you depend on it, fork it. Since 
 
 ---
 
-## Related Reading
+Related Reading
 
-- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-vs-prompts-which-is-better/) — Skills vs prompts: when to use each
-- [How to Write a Skill MD File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/) — Build your own skill from scratch
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — The top skills every developer should know
+- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-vs-prompts-which-is-better/). Skills vs prompts: when to use each
+- [How to Write a Skill MD File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/). Build your own skill from scratch
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). The top skills every developer should know
 
-*Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*Built by theluckystrike. More at [zovo.one](https://zovo.one)
 *

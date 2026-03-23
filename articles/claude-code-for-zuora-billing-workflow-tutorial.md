@@ -14,15 +14,15 @@ score: 7
 
 
 {% raw %}
-# Claude Code for Zuora Billing Workflow Tutorial
+Claude Code for Zuora Billing Workflow Tutorial
 
 Automating billing operations is essential for scaling SaaS businesses, and Zuora is one of the most widely-used billing platforms in the enterprise space. This tutorial shows you how to use Claude Code to streamline Zuora billing workflows, reduce manual errors, and build reliable automation for subscription management, invoicing, and payment processing.
 
-## What is Claude Code?
+What is Claude Code?
 
 [Claude Code](https://claude.com/claude-code) is Anthropic's command-line interface for interacting with Claude AI. It provides a structured way to build AI-assisted workflows that can read files, execute commands, call APIs, and manage complex development tasks. Unlike traditional scripting, Claude Code brings intelligent context-awareness to automation, making it ideal for handling nuanced business logic like billing operations.
 
-## Prerequisites
+Prerequisites
 
 Before building Zuora workflows with Claude Code, ensure you have:
 
@@ -31,11 +31,11 @@ Before building Zuora workflows with Claude Code, ensure you have:
 - API credentials (OAuth client ID and secret)
 - Node.js or Python environment for API calls
 
-## Setting Up Your Environment
+Setting Up Your Environment
 
 First, create a dedicated skill for Zuora operations. Skills in Claude Code allow you to define reusable workflows with specific tools and instructions.
 
-### Creating the Zuora Skill
+Creating the Zuora Skill
 
 Create a new skill file at `~/.claude/skills/zSkill.md`:
 
@@ -47,7 +47,7 @@ description: Automate Zuora billing operations including subscriptions, invoices
 
 You are an expert in Zuora billing operations. Help users manage subscriptions, generate invoices, process payments, and handle common billing workflows via the Zuora REST API.
 
-## Available Actions
+Available Actions
 
 When users request billing operations:
 1. First check for required environment variables (ZUORA_BASE_URL, ZUORA_CLIENT_ID, ZUORA_CLIENT_SECRET)
@@ -55,20 +55,20 @@ When users request billing operations:
 3. Validate all input parameters before making changes
 4. Log all operations for audit trails
 
-## Safety Guidelines
+Safety Guidelines
 
 - Never expose API credentials in logs or outputs
 - Confirm destructive operations before execution
 - Use sandbox environment for testing
 ```
 
-### Authentication Helper
+Authentication Helper
 
 Create a helper script for obtaining OAuth tokens:
 
 ```bash
 #!/bin/bash
-# ~/.claude/scripts/zuora-auth.sh
+~/.claude/scripts/zuora-auth.sh
 
 ZUORA_BASE_URL="${ZUORA_BASE_URL:-https://apisandbox.zuora.com}"
 CLIENT_ID="${ZUORA_CLIENT_ID}"
@@ -89,15 +89,15 @@ fi
 echo $ACCESS_TOKEN
 ```
 
-## Common Billing Workflows
+Common Billing Workflows
 
-### Creating a New Subscription
+Creating a New Subscription
 
 The most frequent billing operation is creating a new customer subscription. Here's how to automate this with Claude Code:
 
 ```bash
 #!/bin/bash
-# create-subscription.sh
+create-subscription.sh
 
 ACCESS_TOKEN=$(~/.claude/scripts/zuora-auth.sh)
 ZUORA_BASE_URL="${ZUORA_BASE_URL:-https://apisandbox.zuora.com}"
@@ -131,7 +131,7 @@ claude -p "Create a new subscription for account A-123456 using the Enterprise p
 
 Claude will parse your intent, gather required parameters, and execute the appropriate API calls.
 
-### Generating and Retrieving Invoices
+Generating and Retrieving Invoices
 
 Invoice management is critical for financial operations. Here's a workflow for generating invoices on demand:
 
@@ -162,12 +162,12 @@ async function generateInvoice(accountId, invoiceDate) {
 }
 ```
 
-### Processing Payments
+Processing Payments
 
-Payment processing requires careful error handling. Here's a robust approach:
+Payment processing requires careful error handling. Here's a solid approach:
 
 ```python
-# process-payment.py
+process-payment.py
 import requests
 import os
 
@@ -198,7 +198,7 @@ def process_payment(invoice_id, payment_method_id):
         return {"success": False, "error": response.json()}
 ```
 
-## Building Composite Workflows
+Building Composite Workflows
 
 Real-world billing often involves multiple operations. Claude Code excels at orchestrating these sequences. Here's a complete new customer onboarding workflow:
 
@@ -216,12 +216,12 @@ Claude Code execution:
 
 Each step builds on the previous one, with Claude handling the sequencing and error handling.
 
-## Error Handling and Retry Logic
+Error Handling and Retry Logic
 
 Production billing workflows must handle failures gracefully:
 
 ```bash
-# zuora-api-call.sh with retry logic
+zuora-api-call.sh with retry logic
 MAX_RETRIES=3
 RETRY_DELAY=5
 
@@ -257,29 +257,29 @@ make_api_call() {
 }
 ```
 
-## Best Practices
+Best Practices
 
 When building Zuora workflows with Claude Code, follow these guidelines:
 
-1. **Always use the sandbox environment for testing** before production deployment
-2. **Implement idempotency keys** for critical operations to prevent duplicate charges
-3. **Log all operations** for audit trails and troubleshooting
-4. **Use environment variables** for credentials rather than hardcoding
-5. **Handle rate limits** with exponential backoff strategies
-6. **Validate webhooks** to ensure request authenticity
+1. Always use the sandbox environment for testing before production deployment
+2. Implement idempotency keys for critical operations to prevent duplicate charges
+3. Log all operations for audit trails and troubleshooting
+4. Use environment variables for credentials rather than hardcoding
+5. Handle rate limits with exponential backoff strategies
+6. Validate webhooks to ensure request authenticity
 
-## Conclusion
+Conclusion
 
 Claude Code transforms Zuora billing from manual, error-prone processes into reliable, repeatable workflows. By combining Claude's intelligent context-handling with Zuora's comprehensive API, you can automate subscription management, invoicing, and payment processing while maintaining strict operational controls.
 
-Start with simple workflows like account creation, then gradually build toward complex multi-step processes as you gain confidence. The investment in building robust billing automation pays dividends in reduced errors, faster operations, and better customer experiences.
+Start with simple workflows like account creation, then gradually build toward complex multi-step processes as you gain confidence. The investment in building solid billing automation pays dividends in reduced errors, faster operations, and better customer experiences.
 
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

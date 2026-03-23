@@ -15,17 +15,17 @@ A chrome extension performance monitor helps developers identify memory leaks, e
 
 This guide covers the tools and techniques you need to monitor your Chrome extension's performance effectively.
 
-## Why Chrome Extension Performance Matters
+Why Chrome Extension Performance Matters
 
 Chrome extensions run in the browser's background process and can consume significant resources. Extensions with poor performance affect page load times, increase memory usage, and drain battery on portable devices. Users often uninstall extensions that cause noticeable slowdowns, regardless of how useful the extension functionality might be.
 
 Performance monitoring becomes especially critical when your extension interacts with many tabs, makes frequent network requests, or processes large amounts of data. A well-monitored extension allows you to catch issues before they impact your user base.
 
-## Using Chrome's Built-in Performance Monitor
+Using Chrome's Built-in Performance Monitor
 
 Chrome provides several built-in tools for monitoring extension performance directly from the browser.
 
-### Task Manager for Quick Checks
+Task Manager for Quick Checks
 
 The Chrome Task Manager shows memory and CPU usage for each extension:
 
@@ -35,7 +35,7 @@ The Chrome Task Manager shows memory and CPU usage for each extension:
 
 This gives you a quick overview of which extensions are consuming the most resources. Extensions using over 200MB of memory or consistently high CPU warrant investigation.
 
-### Chrome DevTools Performance Panel
+Chrome DevTools Performance Panel
 
 The Performance panel in DevTools provides detailed timing information:
 
@@ -47,7 +47,7 @@ The Performance panel in DevTools provides detailed timing information:
 
 The resulting flame chart shows function call timing, JavaScript execution time, and rendering performance. Look for long tasks (tasks taking over 50ms) that could block the main thread.
 
-### Memory Profiling
+Memory Profiling
 
 Memory leaks are common in Chrome extensions due to the persistent nature of background scripts. Use the Memory panel to identify leaks:
 
@@ -59,7 +59,7 @@ Memory leaks are common in Chrome extensions due to the persistent nature of bac
 
 Focus on finding objects that grow between snapshots without being released. These often indicate listeners or closures that aren't being cleaned up properly.
 
-## Monitoring with the chrome.performance API
+Monitoring with the chrome.performance API
 
 Chrome provides the `chrome.performance` API specifically for measuring timing in extensions. This API gives you access to navigation timing and resource timing data:
 
@@ -85,11 +85,11 @@ chrome.performance.setPerformanceFeatures({
 
 This API allows you to collect performance metrics programmatically and send them to your analytics service for aggregated analysis.
 
-## Code-Level Performance Monitoring
+Code-Level Performance Monitoring
 
 Adding custom performance monitoring to your extension code helps you track specific operations that matter to your users.
 
-### Timing Decorators
+Timing Decorators
 
 Create reusable timing utilities for measuring function execution:
 
@@ -145,7 +145,7 @@ async function fetchAndProcessData(url) {
 }
 ```
 
-### Custom Metrics Collection
+Custom Metrics Collection
 
 Build a metrics system that tracks operations specific to your extension:
 
@@ -193,7 +193,7 @@ class ExtensionMetrics {
 const metrics = new ExtensionMetrics();
 ```
 
-## Network Request Monitoring
+Network Request Monitoring
 
 Extensions often make numerous network requests. Monitoring these helps identify slow endpoints and optimize data fetching:
 
@@ -218,11 +218,11 @@ chrome.webRequest.onBeforeRequest.addListener((details) => {
 }, { urls: ['<all_urls>'] });
 ```
 
-## Best Practices for Extension Performance
+Best Practices for Extension Performance
 
 Implementing monitoring is only part of the solution. Use these practices to maintain good performance:
 
-**Lazy load functionality**: Only load code and resources when needed. Use dynamic imports and defer non-critical features:
+Lazy load functionality: Only load code and resources when needed. Use dynamic imports and defer non-critical features:
 
 ```javascript
 // Instead of importing everything at once
@@ -230,14 +230,14 @@ Implementing monitoring is only part of the solution. Use these practices to mai
 
 // Use tabs.onUpdated to trigger lazy loading
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-  if (changeInfo.status === 'complete' && tab.url?.includes('特定网站')) {
+  if (changeInfo.status === 'complete' && tab.url?.includes('')) {
     // Load extension features only when needed
     initializeFeatureForTab(tabId);
   }
 });
 ```
 
-**Clean up event listeners**: Remove listeners when they're no longer needed:
+Clean up event listeners: Remove listeners when they're no longer needed:
 
 ```javascript
 // Good: Remove listener when done
@@ -254,9 +254,9 @@ const cleanup = setupTabListener();
 // cleanup();
 ```
 
-**Use efficient data structures**: For large datasets, use Maps instead of arrays for O(1) lookups, and consider using IndexedDB for persistent storage rather than keeping everything in memory.
+Use efficient data structures: For large datasets, use Maps instead of arrays for O(1) lookups, and consider using IndexedDB for persistent storage rather than keeping everything in memory.
 
-## Continuous Performance Monitoring
+Continuous Performance Monitoring
 
 Set up automated performance tracking in your development workflow:
 
@@ -267,15 +267,15 @@ Set up automated performance tracking in your development workflow:
 
 Tools like Lighthouse can be integrated into your build process to catch performance regressions automatically.
 
-## Summary
+Summary
 
 Monitoring Chrome extension performance requires a combination of built-in browser tools, custom instrumentation, and ongoing attention to resource usage. Start with Chrome Task Manager and DevTools for quick diagnostics, then add custom metrics to track operations specific to your extension. Regular monitoring catches issues before they affect your users and helps you maintain a performant extension that users keep installed.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

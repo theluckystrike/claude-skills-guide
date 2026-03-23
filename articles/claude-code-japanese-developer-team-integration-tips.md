@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Japanese Developer Team Integration Tips"
-description: "Practical tips for integrating Claude Code into Japanese developer teams. Learn about skills, workflows, and best practices for seamless adoption."
+description: "Practical tips for integrating Claude Code into Japanese developer teams. Learn about skills, workflows, and best practices for smooth adoption."
 date: 2026-03-14
 categories: [guides]
 tags: [claude-code, japanese-developers, team-integration, workflow, best-practices]
@@ -13,72 +13,72 @@ permalink: /claude-code-japanese-developer-team-integration-tips/
 
 {% raw %}
 
-# Claude Code Japanese Developer Team Integration Tips
+Claude Code Japanese Developer Team Integration Tips
 
 Integrating Claude Code into Japanese developer teams requires understanding both technical implementation and cultural workflow patterns. Japanese development teams are known for their meticulous documentation standards, collaborative code review processes, and emphasis on knowledge sharing. This guide provides practical strategies to successfully integrate Claude Code into these environments while respecting team conventions.
 
-## Understanding Japanese Development Team Culture
+Understanding Japanese Development Team Culture
 
 Japanese software development teams typically emphasize several key practices that directly impact how you should introduce Claude Code:
 
-**Documentation Standards**: Japanese teams often maintain comprehensive documentation in both Japanese and English. This creates an ideal environment for Claude Code's documentation generation capabilities, but requires careful setup to ensure output matches team expectations.
+Documentation Standards: Japanese teams often maintain comprehensive documentation in both Japanese and English. This creates an ideal environment for Claude Code's documentation generation capabilities, but requires careful setup to ensure output matches team expectations.
 
-**Code Review Culture**: The extensive code review process in Japanese companies means Claude Code should be configured to generate review-ready code with clear explanations and inline comments that facilitate collaborative feedback.
+Code Review Culture: The extensive code review process in Japanese companies means Claude Code should be configured to generate review-ready code with clear explanations and inline comments that help collaborative feedback.
 
-**Knowledge Transfer**: Senior developers frequently mentor juniors through pair programming and detailed code walkthroughs. Claude Code can enhance this by generating explanatory content in Japanese or English as needed.
+Knowledge Transfer: Senior developers frequently mentor juniors through pair programming and detailed code walkthroughs. Claude Code can enhance this by generating explanatory content in Japanese or English as needed.
 
-**Nemawashi and Consensus**: Japanese teams often practice nemawashi — building consensus before formal decisions. Introducing Claude Code works best when you run a quiet pilot first, gather concrete evidence of value, and let team members form their own opinions before a formal rollout proposal.
+Nemawashi and Consensus: Japanese teams often practice nemawashi. building consensus before formal decisions. Introducing Claude Code works best when you run a quiet pilot first, gather concrete evidence of value, and let team members form their own opinions before a formal rollout proposal.
 
-**Kaizen Mindset**: Continuous small improvement is deeply embedded in Japanese engineering culture. Frame Claude Code not as a disruption, but as the next incremental improvement to the existing workflow — another tool in the team's kaizen toolkit.
+Kaizen Mindset: Continuous small improvement is deeply embedded in Japanese engineering culture. Frame Claude Code not as a disruption, but as the next incremental improvement to the existing workflow. another tool in the team's kaizen toolkit.
 
-## Setting Up Your CLAUDE.md File
+Setting Up Your CLAUDE.md File
 
 The CLAUDE.md file in your project root is the single most important configuration step for any team deployment of Claude Code. For Japanese teams, it needs to encode both technical conventions and language expectations explicitly.
 
 Here is a detailed example suited to a typical Japanese enterprise web project:
 
 ```markdown
-# Project Context
+Project Context
 
-## Language Conventions
+Language Conventions
 - Code: English identifiers (functions, variables, classes)
 - Comments: Japanese primary, English secondary where ambiguous
 - Error messages in the UI: Japanese
 - Error codes and log entries: English
 - Git commit messages: English (imperative mood)
 - PR descriptions: Japanese summary + English detail section
-- Documentation: Bilingual — Japanese for functional specs, English for API docs
+- Documentation: Bilingual. Japanese for functional specs, English for API docs
 
-## Coding Standards
+Coding Standards
 - React components: PascalCase
 - Utility functions: camelCase
 - Constants: UPPER_SNAKE_CASE
 - File naming: kebab-case
 - CSS class names: BEM methodology
 
-## Comment Style
+Comment Style
 Use the following pattern for function documentation:
-/**
+/
  * [Japanese description of what the function does]
  * [English description for international collaborators]
  * @param {type} paramName - [Japanese label] / [English label]
  * @returns {type} [Japanese description] / [English description]
  */
 
-## Review Requirements
+Review Requirements
 - All PRs require 2 approvals minimum
-- One approver must be a senior developer (レベル3以上)
+- One approver must be a senior developer (3)
 - Documentation must accompany all new features
 - Tests must achieve 80% line coverage, 70% branch coverage
 - No PR merges on Friday afternoons (team convention)
 
-## Architecture Notes
+Architecture Notes
 - Backend: Java Spring Boot, deployed on AWS ECS
 - Frontend: React 18 + TypeScript, deployed on CloudFront
 - Database: Aurora PostgreSQL
 - Auth: AWS Cognito
 
-## Prohibited Patterns
+Prohibited Patterns
 - No direct DOM manipulation in React components
 - No console.log in production code (use the Logger utility)
 - No hardcoded strings in UI components (use i18n keys)
@@ -86,11 +86,11 @@ Use the following pattern for function documentation:
 
 Save this file at the root of every repository. Claude Code reads it at the start of each session and uses it to shape all generated output. The more precise your CLAUDE.md, the less post-generation editing teams need to do.
 
-## Essential Claude Code Skills for Japanese Teams
+Essential Claude Code Skills for Japanese Teams
 
 Several skills are particularly valuable for Japanese development environments:
 
-### tdd (Test-Driven Development)
+tdd (Test-Driven Development)
 
 The tdd skill enforces test-first development, which aligns well with Japanese teams' emphasis on quality assurance:
 
@@ -99,7 +99,7 @@ The tdd skill enforces test-first development, which aligns well with Japanese t
 "Create a user registration module with email validation following our company's error handling patterns"
 ```
 
-This generates test cases first, ensuring all edge cases are considered before implementation begins — a practice that resonates with Japanese quality standards. In practice, you can make the prompt more specific to get output that passes review directly:
+This generates test cases first, ensuring all edge cases are considered before implementation begins. a practice that resonates with Japanese quality standards. In practice, you can make the prompt more specific to get output that passes review directly:
 
 ```bash
 /tdd
@@ -112,7 +112,7 @@ email format, and disposable domain cases."
 
 The resulting test file serves double duty: it documents expected behavior in a form that passes code review, and it gives junior developers a concrete specification written in runnable code rather than a prose document that can drift from reality.
 
-### pdf and docx Skills
+pdf and docx Skills
 
 These skills enable automated documentation generation:
 
@@ -126,20 +126,20 @@ These skills enable automated documentation generation:
 "Create a technical specification document with diagrams for the new microservice architecture"
 ```
 
-For Japanese teams, documentation quality is often evaluated as seriously as code quality. Use the docx skill to generate 機能仕様書 (functional specification documents) and 設計書 (design documents) in a format that matches the team's existing templates. Provide a sample document structure in your prompt:
+For Japanese teams, documentation quality is often evaluated as seriously as code quality. Use the docx skill to generate  (functional specification documents) and  (design documents) in a format that matches the team's existing templates. Provide a sample document structure in your prompt:
 
 ```bash
 /docx
-"Generate a 機能仕様書 for the user notification feature. Use this structure:
-1. 概要 (Overview)
-2. 背景と目的 (Background and Purpose)
-3. 機能要件 (Functional Requirements) — numbered list
-4. 非機能要件 (Non-Functional Requirements) — performance, security, availability
-5. 画面仕様 (Screen Specifications)
-6. API仕様 (API Specifications) — table format
-7. データフロー (Data Flow)
-8. エラーハンドリング (Error Handling)
-9. 変更履歴 (Revision History)
+"Generate a  for the user notification feature. Use this structure:
+1.  (Overview)
+2.  (Background and Purpose)
+3.  (Functional Requirements). numbered list
+4.  (Non-Functional Requirements). performance, security, availability
+5.  (Screen Specifications)
+6. API (API Specifications). table format
+7.  (Data Flow)
+8.  (Error Handling)
+9.  (Revision History)
 
 Write section headers in Japanese with English in parentheses.
 Write body text primarily in Japanese with English technical terms preserved."
@@ -147,7 +147,7 @@ Write body text primarily in Japanese with English technical terms preserved."
 
 This level of specificity produces output that can go directly to a technical review meeting with minimal editing.
 
-### supermemory Skill
+supermemory Skill
 
 The supermemory skill maintains context across sessions, crucial for long-term projects with evolving requirements:
 
@@ -170,27 +170,27 @@ For larger projects, build up memory incrementally at the start of each signific
 
 This means every prompt in the session benefits from accumulated context, and you avoid re-explaining the same background in each interaction.
 
-## Practical Integration Examples
+Practical Integration Examples
 
-### Setting Up Team-Specific Context
+Setting Up Team-Specific Context
 
 Create a CLAUDE.md file in your project root to establish team conventions (full example shown in the section above). This ensures Claude Code generates output matching team expectations from the start.
 
-### Bilingual Comment Generation
+Bilingual Comment Generation
 
 One of the highest-value use cases is generating properly formatted bilingual JSDoc comments. Here is a pattern that works well in practice:
 
 ```javascript
-/**
- * ユーザー認証を行う関数
+/
+ * 
  * Performs user authentication against the Cognito user pool.
  *
- * @param {string} email - メールアドレス / Email address (RFC 5321 format)
- * @param {string} password - パスワード / Password (min 8 chars, 1 uppercase, 1 number)
- * @returns {Promise<AuthResult>} 認証結果 / Authentication result containing JWT tokens
- * @throws {AppError} AUTH_INVALID_CREDENTIALS - 認証情報が不正 / Invalid email or password
- * @throws {AppError} AUTH_ACCOUNT_LOCKED - アカウントがロック中 / Account locked after 5 failed attempts
- * @throws {AppError} AUTH_NETWORK_ERROR - ネットワークエラー / Cognito unreachable
+ * @param {string} email -  / Email address (RFC 5321 format)
+ * @param {string} password -  / Password (min 8 chars, 1 uppercase, 1 number)
+ * @returns {Promise<AuthResult>}  / Authentication result containing JWT tokens
+ * @throws {AppError} AUTH_INVALID_CREDENTIALS -  / Invalid email or password
+ * @throws {AppError} AUTH_ACCOUNT_LOCKED -  / Account locked after 5 failed attempts
+ * @throws {AppError} AUTH_NETWORK_ERROR -  / Cognito unreachable
  */
 async function authenticateUser(email: string, password: string): Promise<AuthResult> {
   // Implementation
@@ -199,7 +199,7 @@ async function authenticateUser(email: string, password: string): Promise<AuthRe
 
 Ask Claude Code to generate this pattern by including it in your CLAUDE.md and then prompting: `Write the authenticateUser function with full bilingual JSDoc.`
 
-### i18n Structure for Japanese Applications
+i18n Structure for Japanese Applications
 
 Japanese applications almost always require at minimum Japanese and English locale support. Here is a structure Claude Code can generate for you:
 
@@ -207,28 +207,28 @@ Japanese applications almost always require at minimum Japanese and English loca
 // src/i18n/locales/ja.ts
 export const ja = {
   common: {
-    save: '保存',
-    cancel: 'キャンセル',
-    delete: '削除',
-    confirm: '確認',
-    loading: '読み込み中...',
-    error: 'エラーが発生しました',
+    save: '',
+    cancel: '',
+    delete: '',
+    confirm: '',
+    loading: '...',
+    error: '',
   },
   auth: {
-    login: 'ログイン',
-    logout: 'ログアウト',
-    email: 'メールアドレス',
-    password: 'パスワード',
-    forgotPassword: 'パスワードを忘れた場合',
-    invalidCredentials: 'メールアドレスまたはパスワードが正しくありません',
-    accountLocked: 'アカウントがロックされています。しばらくしてから再試行してください',
+    login: '',
+    logout: '',
+    email: '',
+    password: '',
+    forgotPassword: '',
+    invalidCredentials: '',
+    accountLocked: '',
   },
   profile: {
-    title: 'プロフィール',
-    avatar: 'アバター',
-    displayName: '表示名',
-    updateSuccess: 'プロフィールを更新しました',
-    updateFailed: 'プロフィールの更新に失敗しました',
+    title: '',
+    avatar: '',
+    displayName: '',
+    updateSuccess: '',
+    updateFailed: '',
   },
 };
 
@@ -261,53 +261,53 @@ export const en = {
 };
 ```
 
-Prompt Claude Code with: `Generate the Japanese and English i18n locale files for the auth, profile, and common namespaces. Follow the key structure in src/i18n/locales/en.ts. Use polite Japanese (敬体) for user-facing strings.`
+Prompt Claude Code with: `Generate the Japanese and English i18n locale files for the auth, profile, and common namespaces. Follow the key structure in src/i18n/locales/en.ts. Use polite Japanese () for user-facing strings.`
 
-### Workflow Integration Example
+Workflow Integration Example
 
 Here is a complete workflow for feature development with Claude Code in a Japanese team context:
 
 ```bash
-# 1. Start with supermemory to establish sprint context
+1. Start with supermemory to establish sprint context
 /supermemory
 "Sprint 47 context: building user profile management with avatar upload.
 GMO Payment work is paused. Yamada-san is sprint lead."
 
-# 2. Use tdd for new features
+2. Use tdd for new features
 /tdd
 "Implement user profile management with avatar upload,
 including validation for file size (max 5MB) and image formats (JPEG, PNG, WebP).
 Use our AppError hierarchy. Japanese comments."
 
-# 3. Generate the functional spec document
+3. Generate the functional spec document
 /docx
-"Create 機能仕様書 for the profile management feature using our standard template.
+"Create  for the profile management feature using our standard template.
 Reference the tests generated in step 2 as the source of truth for functional requirements."
 
-# 4. Create API documentation
+4. Create API documentation
 /pdf
 "Generate REST API documentation for the profile endpoints in English.
 Include request/response examples and error code tables."
 ```
 
-This sequence produces test-first code, a Japanese specification document ready for internal review, and an English API document suitable for external or cross-team consumption — all in a single focused session.
+This sequence produces test-first code, a Japanese specification document ready for internal review, and an English API document suitable for external or cross-team consumption. all in a single focused session.
 
-### Code Review Preparation
+Code Review Preparation
 
 Japanese teams conduct thorough code reviews, and Claude Code can help prepare code for review in a way that reduces back-and-forth:
 
 ```bash
 "Review this pull request diff and generate a PR description in the following format:
-## 変更内容 (What Changed)
+ (What Changed)
 [Japanese summary of what was changed and why]
 
-## 技術的詳細 (Technical Details)
+ (Technical Details)
 [English details of implementation approach, tradeoffs considered, and alternatives rejected]
 
-## テスト (Testing)
+ (Testing)
 [Description of what was tested and how to verify]
 
-## レビューポイント (Review Focus)
+ (Review Focus)
 [Specific areas where you want reviewer attention]
 
 [paste diff here]"
@@ -315,16 +315,16 @@ Japanese teams conduct thorough code reviews, and Claude Code can help prepare c
 
 This format is well-received in Japanese enterprise environments because it separates the business-facing summary (Japanese) from the technical implementation notes (English), accommodating reviewers who read primarily in one language.
 
-## Team Deployment Strategies
+Team Deployment Strategies
 
-### Phase 1: Pilot Program
+Phase 1: Pilot Program
 
 Start with a small team or single project:
 
 1. Identify one project with clearly defined requirements and a receptive team lead
 2. Configure Claude Code with a comprehensive CLAUDE.md covering language, coding standards, and architecture
 3. Run a two-week pilot with two or three developers, collecting before/after metrics on documentation time and PR iteration cycles
-4. Hold a brief retrospective using concrete examples of generated output — show actual code and docs, not abstract claims
+4. Hold a brief retrospective using concrete examples of generated output. show actual code and docs, not abstract claims
 
 Metrics to collect during the pilot:
 
@@ -335,16 +335,16 @@ Metrics to collect during the pilot:
 | Test coverage at first submission | Codecov or similar |
 | Onboarding time for new team members | Time from join date to first merged PR |
 
-### Phase 2: Standardization
+Phase 2: Standardization
 
 After successful pilots, establish team-wide standards:
 
 - Create shared CLAUDE.md templates for your organization's common project types (Spring Boot API, React SPA, mobile app, data pipeline)
-- Document effective prompt patterns in a team wiki — especially prompts that reliably produce review-ready output for your specific codebase
+- Document effective prompt patterns in a team wiki. especially prompts that reliably produce review-ready output for your specific codebase
 - Set up a `/.claude/` directory in each repository with project-specific prompt templates the team can reuse
 - Define which Claude Code skills are approved for which types of tasks; some teams restrict docx/pdf usage to specific roles to maintain documentation ownership
 
-### Phase 3: Full Integration
+Phase 3: Full Integration
 
 Expand to all teams:
 
@@ -353,20 +353,20 @@ Expand to all teams:
 - Use documentation skills for bilingual requirements and quarterly architecture review documents
 - Track aggregate metrics across teams to demonstrate value to management
 
-## Common Challenges and Solutions
+Common Challenges and Solutions
 
-### Challenge: Language Mixing in Code
+Challenge: Language Mixing in Code
 
 Japanese teams often need both Japanese comments and English function names. The solution is to configure this explicitly rather than leaving it to chance:
 
 ```javascript
 // Solution: Configure Claude Code appropriately
-/**
- * ユーザー認証を行う関数
+/
+ * 
  * Performs user authentication
- * @param {string} email - メールアドレス / Email address
- * @param {string} password - パスワード / Password
- * @returns {Promise<AuthResult>} 認証結果 / Authentication result
+ * @param {string} email -  / Email address
+ * @param {string} password -  / Password
+ * @returns {Promise<AuthResult>}  / Authentication result
  */
 async function authenticateUser(email, password) {
   // Implementation
@@ -375,20 +375,20 @@ async function authenticateUser(email, password) {
 
 Add this exact comment format as an example in your CLAUDE.md under a `## Comment Style` section. Claude Code will mirror the pattern without further instruction.
 
-### Challenge: Documentation Consistency
+Challenge: Documentation Consistency
 
 Ensure documentation matches team standards by providing a concrete template in the prompt rather than describing the template abstractly:
 
 ```bash
 /docx
 "Create technical specification for the billing module using our
-company's template. Include: 機能要件, 非機能要件, API仕様,
-データフロー図"
+company's template. Include: , , API,
+"
 ```
 
 If the team has an existing Google Doc or Confluence template, paste its section headers directly into the prompt so Claude Code can match the structure exactly.
 
-### Challenge: Knowledge Transfer
+Challenge: Knowledge Transfer
 
 Use Claude Code to create onboarding materials that would otherwise take a senior developer several days to write:
 
@@ -413,43 +413,43 @@ Primary language: Japanese. Code examples and command-line instructions: English
 
 This produces a document that passes directly to a new hire on day one.
 
-### Challenge: Resistance to AI-Assisted Development
+Challenge: Resistance to AI-Assisted Development
 
 Some senior developers in Japanese teams may be skeptical of AI-assisted development, particularly around code quality. Address this directly by demonstrating the workflow rather than arguing about it:
 
 - Run a live demonstration using an actual feature from the current sprint
 - Show the full cycle: CLAUDE.md setup, tdd output, manual review, and what was changed before merging
-- Emphasize that Claude Code is reviewed, not blindly accepted — it reduces boilerplate and documentation burden, it does not replace judgment
+- Emphasize that Claude Code is reviewed, not blindly accepted. it reduces boilerplate and documentation burden, it does not replace judgment
 - Let skeptical senior developers set the quality bar in CLAUDE.md; this gives them ownership of the tool's behavior
 
-### Challenge: Prompt Reuse Across the Team
+Challenge: Prompt Reuse Across the Team
 
 Individual developers who find effective prompts tend to keep them to themselves. Build a shared prompt library:
 
 ```markdown
-# Team Prompt Library
-## Stored at: /.claude/prompts/
+Team Prompt Library
+Stored at: /.claude/prompts/
 
-### spec-document.md
-Use for generating 機能仕様書 for new features.
+spec-document.md
+Use for generating  for new features.
 [Full prompt template here]
 
-### api-docs.md
+api-docs.md
 Use for generating REST API documentation.
 [Full prompt template here]
 
-### tdd-component.md
+tdd-component.md
 Use for generating test-first React component implementation.
 [Full prompt template here]
 
-### onboarding-guide.md
+onboarding-guide.md
 Use for generating new team member onboarding documents.
 [Full prompt template here]
 ```
 
-Commit this directory to every repository. When developers find a better version of a prompt, they submit a PR to update the library — making prompt quality a team-level concern just like code quality.
+Commit this directory to every repository. When developers find a better version of a prompt, they submit a PR to update the library. making prompt quality a team-level concern just like code quality.
 
-## Comparison: Claude Code Integration Approaches
+Comparison: Claude Code Integration Approaches
 
 Different teams integrate at different depths. Here is a guide to choosing the right level:
 
@@ -462,36 +462,36 @@ Different teams integrate at different depths. Here is a guide to choosing the r
 
 Start at Minimal for any pilot. Move to Standard after the first successful sprint. Only invest in Full or Documented integration after you have concrete evidence from the Standard level.
 
-## Best Practices Summary
+Best Practices Summary
 
-1. **Start with Documentation Skills**: Japanese teams appreciate thorough documentation, making pdf and docx skills immediately valuable. This creates visible wins that build trust in the tool.
+1. Start with Documentation Skills: Japanese teams appreciate thorough documentation, making pdf and docx skills immediately valuable. This creates visible wins that build trust in the tool.
 
-2. **Configure supermemory Early**: Building project context from the start ensures consistent output across sessions. Update it at the beginning of every sprint with current goals and known constraints.
+2. Configure supermemory Early: Building project context from the start ensures consistent output across sessions. Update it at the beginning of every sprint with current goals and known constraints.
 
-3. **Use tdd for Quality**: The test-driven development skill aligns perfectly with Japanese quality standards. Test files are also excellent specification documents for code review.
+3. Use tdd for Quality: The test-driven development skill aligns perfectly with Japanese quality standards. Test files are also excellent specification documents for code review.
 
-4. **Support Bilingual Workflows**: Configure prompts to generate both Japanese and English content where needed. Be explicit about which language is primary in each context rather than leaving it ambiguous.
+4. Support Bilingual Workflows: Configure prompts to generate both Japanese and English content where needed. Be explicit about which language is primary in each context rather than leaving it ambiguous.
 
-5. **Build a Shared Prompt Library**: Effective prompts are team assets. Store them in version control at `/.claude/prompts/` so the whole team benefits from improvements.
+5. Build a Shared Prompt Library: Effective prompts are team assets. Store them in version control at `/.claude/prompts/` so the whole team benefits from improvements.
 
-6. **Use Nemawashi**: Run quiet pilots and gather concrete evidence before proposing a formal team-wide rollout. Let the work speak rather than advocating in the abstract.
+6. Use Nemawashi: Run quiet pilots and gather concrete evidence before proposing a formal team-wide rollout. Let the work speak rather than advocating in the abstract.
 
-7. **Give Senior Developers Ownership of CLAUDE.md**: Senior engineers are the guardians of code quality. Letting them define the CLAUDE.md conventions turns potential skeptics into advocates.
+7. Give Senior Developers Ownership of CLAUDE.md: Senior engineers are the guardians of code quality. Letting them define the CLAUDE.md conventions turns potential skeptics into advocates.
 
-8. **Maintain Human Oversight**: Claude Code enhances productivity but should augment, not replace, the collaborative decision-making valued in Japanese teams. Every generated output should pass through the same review process as human-written code.
+8. Maintain Human Oversight: Claude Code enhances productivity but should augment, not replace, the collaborative decision-making valued in Japanese teams. Every generated output should pass through the same review process as human-written code.
 
-## Running Retrospectives and Knowledge Capture
+Running Retrospectives and Knowledge Capture
 
-Japanese development teams often conduct structured retrospectives (振り返り) after each sprint. Claude Code can assist with both running and documenting these sessions, producing artifacts in a format suitable for archiving in your team wiki.
+Japanese development teams often conduct structured retrospectives () after each sprint. Claude Code can assist with both running and documenting these sessions, producing artifacts in a format suitable for archiving in your team wiki.
 
 A useful pattern for retrospective documentation:
 
 ```bash
 /docx
 "Create a sprint retrospective document in Japanese with sections:
-- 良かったこと (What went well)
-- 改善点 (Areas for improvement)
-- 次のアクション (Action items)
+-  (What went well)
+-  (Areas for improvement)
+-  (Action items)
 
 Use our company's document template structure.
 Sprint: [Sprint Number]
@@ -517,29 +517,29 @@ The `supermemory` skill helps here by retaining recurring improvement themes acr
 and highlight any issues that appeared multiple times"
 ```
 
-This longitudinal view — which is difficult to maintain manually — helps teams recognize systemic issues rather than treating each sprint's problems in isolation. The combination of careful documentation culture and AI-assisted pattern recognition gives Japanese teams a structured way to continuously improve over time.
+This longitudinal view. which is difficult to maintain manually. helps teams recognize systemic issues rather than treating each sprint's problems in isolation. The combination of careful documentation culture and AI-assisted pattern recognition gives Japanese teams a structured way to continuously improve over time.
 
-## Conclusion
+Conclusion
 
 Successfully integrating Claude Code into Japanese developer teams requires respecting established workflows while using automation where it adds value. The key is starting with documentation and quality assurance skills, then expanding to other areas as teams become comfortable with the technology. A comprehensive CLAUDE.md file, a shared prompt library, and a phased rollout aligned with the nemawashi principle will give you the smoothest path from pilot to full integration. By following these integration tips, your team can achieve the productivity benefits of AI-assisted development while maintaining the quality standards and collaborative culture that define Japanese software development.
 
 {% endraw %}
 
 
-## Measuring Adoption Across the Team
+Measuring Adoption Across the Team
 
 After rolling out Claude Code, tracking adoption helps identify which team members are struggling and which workflows are delivering the most value. Rather than relying on anecdotal feedback, collect structured data during the integration period.
 
 A lightweight measurement approach: create a shared spreadsheet where team members log the Claude Code tasks they completed each day, along with a rough time estimate for how long the same task would have taken manually. After one sprint, aggregate the data to identify the highest-impact use cases for your specific team.
 
-Common patterns in Japanese development teams show that documentation generation and bilingual comment writing tend to show the clearest time savings — tasks that previously required context-switching between Japanese and English now complete in a single session. Code review assistance shows more variable results depending on project complexity, and typically delivers more value on established codebases with complex business logic than on greenfield projects where the team knows the code well.
+Common patterns in Japanese development teams show that documentation generation and bilingual comment writing tend to show the clearest time savings. tasks that previously required context-switching between Japanese and English now complete in a single session. Code review assistance shows more variable results depending on project complexity, and typically delivers more value on established codebases with complex business logic than on greenfield projects where the team knows the code well.
 
 Use this data to prioritize which skill workflows to document and share in your team wiki. Japanese teams' emphasis on knowledge sharing means documented, reproducible Claude Code workflows spread effectively once the initial adoption friction is overcome. Pairing the measurement data with a short demo session where experienced users show the workflow to the team tends to accelerate adoption significantly in collaborative Japanese team cultures.
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

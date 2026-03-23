@@ -14,11 +14,11 @@ score: 7
 
 
 {% raw %}
-# Claude Code for Amplitude Analytics Workflow
+Claude Code for Amplitude Analytics Workflow
 
 Integrating Claude Code with Amplitude analytics empowers developers to track events, analyze user behavior, and derive actionable insights directly from their development workflow. This guide walks you through building Claude skills that interact with Amplitude's API, enabling automated analytics operations without leaving your coding environment.
 
-## Why Integrate Claude Code with Amplitude?
+Why Integrate Claude Code with Amplitude?
 
 Amplitude is a product analytics platform that helps teams understand how users interact with applications. By combining Claude Code's natural language processing with Amplitude's analytics capabilities, you can:
 
@@ -30,14 +30,14 @@ Amplitude is a product analytics platform that helps teams understand how users 
 
 This integration bridges the gap between development and product analytics, enabling developers to work more efficiently with data.
 
-## Setting Up Amplitude API Access
+Setting Up Amplitude API Access
 
 Before building Claude skills for Amplitude, ensure you have proper API credentials. Amplitude provides two types of API keys:
 
-1. **Analytics API Key** - For sending events (use in your mobile/web apps)
-2. **Management API Key** - For administrative operations via the Management API
+1. Analytics API Key - For sending events (use in your mobile/web apps)
+2. Management API Key - For administrative operations via the Management API
 
-### Creating a Claude Skill for Amplitude Event Tracking
+Creating a Claude Skill for Amplitude Event Tracking
 
 Here's a skill that tracks custom events to Amplitude:
 
@@ -47,7 +47,7 @@ name: track-event
 description: "Track a custom event to Amplitude analytics"
 ---
 
-# Track Event to Amplitude
+Track Event to Amplitude
 
 Track a custom analytics event to Amplitude. Provide:
 - Event name (required)
@@ -55,7 +55,7 @@ Track a custom analytics event to Amplitude. Provide:
 - Event properties (optional)
 - Timestamp (optional, defaults to now)
 
-## Usage
+Usage
 
 Simply describe the event you want to track:
 - "Track a 'button_click' event for user 'user123'"
@@ -103,11 +103,11 @@ if __name__ == "__main__":
     print(f"Event tracked: {success}")
 ```
 
-## Querying Amplitude Data with Claude Skills
+Querying Amplitude Data with Claude Skills
 
 Beyond tracking events, you can query Amplitude to retrieve analytics insights. The Management API allows you to run queries and fetch results.
 
-### Building an Analytics Query Skill
+Building an Analytics Query Skill
 
 ```yaml
 ---
@@ -115,16 +115,16 @@ name: amplitude-query
 description: "Query Amplitude analytics data"
 ---
 
-# Query Amplitude Analytics
+Query Amplitude Analytics
 
 Run queries against your Amplitude data. Supported query types:
-- **Active Users** - Count of unique users in a time range
-- **Event Counts** - Number of times specific events occurred
-- **User Segments** - Breakdown of users by property
-- **Funnels** - Conversion rates between event sequences
-- **Retention** - User return rates over time
+- Active Users - Count of unique users in a time range
+- Event Counts - Number of times specific events occurred
+- User Segments - Breakdown of users by property
+- Funnels - Conversion rates between event sequences
+- Retention - User return rates over time
 
-## Examples
+Examples
 
 - "How many users active in the last 7 days?"
 - "Show purchase event counts for last month"
@@ -133,7 +133,7 @@ Run queries against your Amplitude data. Supported query types:
 Provide the metric you want and the time range, and I'll query Amplitude and present the results.
 ```
 
-### Python Query Implementation
+Python Query Implementation
 
 ```python
 #!/usr/bin/env python3
@@ -169,7 +169,7 @@ def query_active_users(start_date, end_date):
         return data.get("results", [{}])[0].get("series", [[]])[0][0]
     return None
 
-# Calculate date range
+Calculate date range
 end_date = datetime.now().strftime("%Y-%m-%d")
 start_date = (datetime.now() - timedelta(days=7)).strftime("%Y-%m-%d")
 
@@ -177,19 +177,13 @@ active_users = query_active_users(start_date, end_date)
 print(f"Active users: {active_users}")
 ```
 
-## Creating Automated Reporting Workflows
+Creating Automated Reporting Workflows
 
-Combine multiple skills to build comprehensive reporting workflows. Here's how to create a daily analytics summary skill.
-
-### Daily Summary Skill Structure
-
-```yaml
----
-name: daily-analytics-summary
+Combine multiple skills to build comprehensive reporting workflows. daily-analytics-summary
 description: "Generate daily Amplitude analytics summary"
 ---
 
-# Daily Analytics Summary
+Daily Analytics Summary
 
 Generate a comprehensive daily analytics report including:
 - Daily active users (DAU)
@@ -200,7 +194,7 @@ Generate a comprehensive daily analytics report including:
 The skill runs queries against Amplitude and formats the results into a readable markdown report.
 ```
 
-### Automated Report Generation Script
+Automated Report Generation Script
 
 ```python
 #!/usr/bin/env python3
@@ -220,13 +214,13 @@ def generate_summary():
     
     report = f"""# Analytics Summary - {yesterday}
 
-## Daily Active Users
+Daily Active Users
 {metrics['dau']:,}
 
-## Top Events
+Top Events
 {format_events(metrics['events'])}
 
-## Revenue
+Revenue
 ${metrics['revenue']:,.2f}
 
 ---
@@ -242,11 +236,11 @@ def query_metric(metric, start, end):
 print(generate_summary())
 ```
 
-## Best Practices for Amplitude Integration
+Best Practices for Amplitude Integration
 
 When building Claude skills for Amplitude, follow these best practices:
 
-### 1. Secure Your API Keys
+1. Secure Your API Keys
 
 Never hardcode API keys in skill files. Use environment variables or a secure credential manager:
 
@@ -257,7 +251,7 @@ if not AMPLITUDE_KEY:
     raise ValueError("AMPLITUDE_API_KEY environment variable not set")
 ```
 
-### 2. Handle Rate Limits
+2. Handle Rate Limits
 
 Amplitude enforces rate limits. Implement exponential backoff for retries:
 
@@ -270,11 +264,11 @@ def send_with_retry(event_data, max_retries=3):
         if response.status_code == 200:
             return True
         if response.status_code == 429:  # Rate limited
-            time.sleep(2 ** attempt)  # Exponential backoff
+            time.sleep(2  attempt)  # Exponential backoff
     return False
 ```
 
-### 3. Validate Event Schemas
+3. Validate Event Schemas
 
 Define expected event properties in your skill to catch errors early:
 
@@ -292,9 +286,9 @@ def validate_event(event_name, properties):
         raise ValueError(f"Missing properties: {missing}")
 ```
 
-## Troubleshooting Common Issues
+Troubleshooting Common Issues
 
-### Events Not Appearing
+Events Not Appearing
 
 If events aren't showing in Amplitude:
 
@@ -303,7 +297,7 @@ If events aren't showing in Amplitude:
 3. Ensure user_id or device_id is provided
 4. Confirm project ID matches
 
-### Query Timeouts
+Query Timeouts
 
 Large queries may timeout. Optimize by:
 
@@ -311,7 +305,7 @@ Large queries may timeout. Optimize by:
 - Using sampling for historical data
 - Breaking complex queries into smaller parts
 
-### Authentication Errors
+Authentication Errors
 
 Management API failures usually indicate:
 
@@ -319,7 +313,7 @@ Management API failures usually indicate:
 - Insufficient permissions
 - Wrong API endpoint (check region)
 
-## Conclusion
+Conclusion
 
 Building Claude skills for Amplitude analytics transforms how developers interact with product data. By automating event tracking, enabling natural language queries, and generating reports on demand, you integrate analytics directly into your development workflow.
 
@@ -328,10 +322,10 @@ Start with simple event tracking, then expand to querying and reporting as you b
 Remember to secure your credentials, handle rate limits gracefully, and validate event schemas to ensure reliable analytics integration.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

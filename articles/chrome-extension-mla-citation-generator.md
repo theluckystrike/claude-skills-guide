@@ -16,29 +16,29 @@ score: 8
 
 Academic writing requires accurate citations, and the Modern Language Association (MLA) format remains one of the most common citation styles in humanities and liberal arts. Building a Chrome extension for MLA citation generation gives you instant, reliable citations without leaving your browser. This guide covers implementation strategies, code patterns, and practical considerations for developers and power users who want their own customized citation solution.
 
-## Understanding MLA Citation Requirements
+Understanding MLA Citation Requirements
 
 The MLA Handbook (9th edition) specifies precise formatting rules for different source types. A proper MLA citation for a website includes the author name (if available), page title, website name, publication date, URL, and access date. The core challenge for any citation generator is extracting these components reliably from diverse web page structures.
 
 Most websites expose metadata through standard tags, but the implementation varies significantly. Some sites use proper meta tags, others rely on structured data, and some provide no machine-readable information at all. Your extension needs fallback strategies for each scenario.
 
-## Extension Architecture
+Extension Architecture
 
 A functional MLA citation generator Chrome extension requires three core components: a content script for metadata extraction, a background script for processing and formatting, and a popup interface for user interaction. The content script runs on web pages and collects available information, then passes it to the background script for formatting according to MLA rules.
 
-### Project Structure
+Project Structure
 
 ```
 mla-citation-generator/
-├── manifest.json
-├── content-script.js
-├── background.js
-├── popup.html
-├── popup.js
-└── styles.css
+ manifest.json
+ content-script.js
+ background.js
+ popup.html
+ popup.js
+ styles.css
 ```
 
-### Manifest Configuration
+Manifest Configuration
 
 Your manifest.json defines permissions and declares the extension's capabilities:
 
@@ -59,9 +59,9 @@ Your manifest.json defines permissions and declares the extension's capabilities
 }
 ```
 
-## Implementing Metadata Extraction
+Implementing Metadata Extraction
 
-The content script extracts relevant information from the current page. A robust extraction function tries multiple strategies in sequence, falling back to less reliable methods when preferred options fail.
+The content script extracts relevant information from the current page. A solid extraction function tries multiple strategies in sequence, falling back to less reliable methods when preferred options fail.
 
 ```javascript
 // content-script.js
@@ -137,7 +137,7 @@ function extractPublishDate() {
 chrome.runtime.sendMessage({ type: 'EXTRACT_DATA', data: extractPageData() });
 ```
 
-## MLA Formatting Logic
+MLA Formatting Logic
 
 The background script receives extracted data and formats it according to MLA 9th edition guidelines. Handle each source type with its specific rules:
 
@@ -205,7 +205,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 });
 ```
 
-## Building the Popup Interface
+Building the Popup Interface
 
 The popup provides users with generated citations and copy functionality:
 
@@ -256,19 +256,19 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 ```
 
-## Handling Edge Cases
+Handling Edge Cases
 
 Real-world websites present various challenges. When metadata is missing, you need intelligent fallbacks:
 
-1. **Missing author**: Start with the page title
-2. **Missing date**: Use access date and note it in the citation
-3. **Missing title**: Use the URL path or domain name
-4. **Dynamic content**: Wait for page load completion before extracting
-5. **AMP pages**: Check for AMP-specific meta tags
+1. Missing author: Start with the page title
+2. Missing date: Use access date and note it in the citation
+3. Missing title: Use the URL path or domain name
+4. Dynamic content: Wait for page load completion before extracting
+5. AMP pages: Check for AMP-specific meta tags
 
 Consider adding a manual edit feature that lets users correct extraction errors before copying. The formatting function should also validate output to ensure required MLA components are present.
 
-## Testing Your Extension
+Testing Your Extension
 
 Load your extension in Chrome by navigating to `chrome://extensions/`, enabling Developer mode, and clicking "Load unpacked". Test with various source types:
 
@@ -280,23 +280,23 @@ Load your extension in Chrome by navigating to `chrome://extensions/`, enabling 
 
 Verify that citations match MLA 9th edition format by cross-referencing the MLA Handbook or Purdue OWL guidelines.
 
-## Power User Features
+Power User Features
 
 Beyond basic citation generation, consider adding these enhancements:
 
-- **Format switching**: Toggle between MLA, APA, and Chicago styles
-- **Citation history**: Store previous citations in local storage
-- **Bulk export**: Generate multiple citations for a research session
-- **Keyboard shortcuts**: Trigger citation generation without mouse interaction
-- **Integration**: Export to reference managers like Zotero or BibTeX
+- Format switching: Toggle between MLA, APA, and Chicago styles
+- Citation history: Store previous citations in local storage
+- Bulk export: Generate multiple citations for a research session
+- Keyboard shortcuts: Trigger citation generation without mouse interaction
+- Integration: Export to reference managers like Zotero or BibTeX
 
 Building your own MLA citation generator gives you complete control over formatting preferences and eliminates dependence on third-party services. The extension runs entirely in your browser, keeping your research data private while providing instant citations whenever you need them.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

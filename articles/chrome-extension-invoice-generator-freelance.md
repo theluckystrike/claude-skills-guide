@@ -14,21 +14,21 @@ tags: [claude-code, claude-skills]
 
 
 {% raw %}
-# Building a Chrome Extension Invoice Generator for Freelance Work
+Building a Chrome Extension Invoice Generator for Freelance Work
 
 Freelancers often juggle multiple tools to manage their business. Between project management, communication, and billing, the administrative overhead can quickly eat into productive hours. A custom Chrome extension that generates invoices directly from your browser can streamline this workflow significantly.
 
 This guide walks you through building a Chrome extension tailored for freelance invoicing. You'll learn the architecture, implementation details, and how to customize it for your specific needs. By the end, you'll have a working extension that stores client data locally, supports multiple line items, calculates tax, and outputs print-ready PDF invoices.
 
-## Why Build a Custom Invoice Generator?
+Why Build a Custom Invoice Generator?
 
 Browser-based invoice tools exist, but they often come with subscription fees or require you to export data to their platform. A custom Chrome extension gives you complete control over your data and workflow. Here's what makes this approach valuable:
 
-- **Zero recurring costs** — Your extension runs locally in Chrome
-- **Full data ownership** — Invoices generate and store on your machine
-- **Custom templates** — Design invoices that match your brand
-- **Quick access** — Launch directly from your browser toolbar
-- **No account required** — No login, no email confirmation, no SaaS dependency
+- Zero recurring costs. Your extension runs locally in Chrome
+- Full data ownership. Invoices generate and store on your machine
+- Custom templates. Design invoices that match your brand
+- Quick access. Launch directly from your browser toolbar
+- No account required. No login, no email confirmation, no SaaS dependency
 
 The alternative is paying $15–$40/month for tools like FreshBooks or QuickBooks just to send occasional invoices. For solo freelancers with a handful of recurring clients, that cost rarely makes sense.
 
@@ -39,15 +39,15 @@ The alternative is paying $15–$40/month for tools like FreshBooks or QuickBook
 | Custom Extension | $0 | Local machine | Full control |
 | Google Docs template | $0 | Google Drive | Manual process |
 
-A custom extension sits in a unique position: free, local, and fast—with the automation of a paid tool.
+A custom extension sits in a unique position: free, local, and fast, with the automation of a paid tool.
 
-## Extension Architecture
+Extension Architecture
 
 A Chrome extension for invoice generation consists of three core components:
 
-1. **Manifest file** — Defines permissions and extension behavior
-2. **Popup HTML/JS** — The user interface for entering invoice data
-3. **Background script** — Handles data processing and storage
+1. Manifest file. Defines permissions and extension behavior
+2. Popup HTML/JS. The user interface for entering invoice data
+3. Background script. Handles data processing and storage
 
 The extension uses Chrome's `storage` API to persist client information and invoice history locally. When you're ready to generate an invoice, the extension compiles the data into a clean HTML template that you can print to PDF.
 
@@ -71,9 +71,9 @@ User saves as PDF
 
 Understanding this flow helps when you need to debug or add features later. Each step is independent and testable.
 
-## Implementation Guide
+Implementation Guide
 
-### Step 1: Create the Manifest
+Step 1: Create the Manifest
 
 Every Chrome extension requires a `manifest.json` file. Here's a minimal configuration for an invoice generator:
 
@@ -95,7 +95,7 @@ This manifest declares the permissions needed to store client data and interact 
 
 For a production extension, you'd also add `"icons"` with multiple sizes (16, 48, 128px) to ensure the toolbar icon looks sharp at every display density.
 
-### Step 2: Build the Popup Interface
+Step 2: Build the Popup Interface
 
 The popup serves as your invoice form. Create `popup.html` with fields for client details, line items, and tax calculations:
 
@@ -154,7 +154,7 @@ The popup serves as your invoice form. Create `popup.html` with fields for clien
 
 The `datalist` element on the client name field will be populated from saved clients, giving you autocomplete as you type. The line items section uses CSS grid for a compact, readable layout.
 
-### Step 3: Handle Invoice Generation
+Step 3: Handle Invoice Generation
 
 The popup JavaScript processes form data, manages line items, and generates the invoice. Create `popup.js`:
 
@@ -381,7 +381,7 @@ renderLineItems();
 
 This implementation handles the full lifecycle: client autocomplete from history, dynamic line item management, live tax calculation, and a professional invoice layout that prints cleanly.
 
-### Step 4: Invoice History View
+Step 4: Invoice History View
 
 Add a simple history view so you can retrieve past invoice numbers or check what you've sent. Create `history.html`:
 
@@ -441,7 +441,7 @@ Add `history.html` to the manifest's `web_accessible_resources`:
 }]
 ```
 
-## Storage Design Considerations
+Storage Design Considerations
 
 Chrome's `storage.local` can hold up to 10MB by default. Each invoice object is typically 500–2KB depending on how many line items you include. At that rate, you can store thousands of invoices before approaching the limit.
 
@@ -449,7 +449,7 @@ If you need more headroom, call `chrome.storage.local.getBytesInUse()` to monito
 
 For sensitive billing data, consider encrypting client names and amounts with the Web Crypto API before writing to storage. This isn't strictly necessary for a local-only tool, but it's worth adding if you share the machine.
 
-## Loading Your Extension
+Loading Your Extension
 
 To test your extension in Chrome:
 
@@ -460,31 +460,31 @@ To test your extension in Chrome:
 
 After making code changes during development, click the refresh icon on the extension card at `chrome://extensions/` and close/reopen the popup. Chrome caches popup HTML aggressively, so a simple page reload won't pick up changes.
 
-## Advanced Features to Consider
+Advanced Features to Consider
 
 Once you have the basics working, consider adding these enhancements:
 
-- **Recurring invoice templates** — Save common project types with pre-filled line items and rates, then clone them for new invoices
-- **Export to CSV/JSON** — Pull your full invoice history into a format your accountant's spreadsheet can read
-- **Currency selector** — Add a dropdown for USD, EUR, GBP, etc., and format amounts accordingly
-- **Your business details** — Add a settings page where you enter your name, address, and bank details once, then have them appear on every invoice automatically
-- **Payment status** — Tag invoices as paid/unpaid and filter history by status
-- **Due date reminders** — Use Chrome's notifications API to alert you when an invoice passes its due date
+- Recurring invoice templates. Save common project types with pre-filled line items and rates, then clone them for new invoices
+- Export to CSV/JSON. Pull your full invoice history into a format your accountant's spreadsheet can read
+- Currency selector. Add a dropdown for USD, EUR, GBP, etc., and format amounts accordingly
+- Your business details. Add a settings page where you enter your name, address, and bank details once, then have them appear on every invoice automatically
+- Payment status. Tag invoices as paid/unpaid and filter history by status
+- Due date reminders. Use Chrome's notifications API to alert you when an invoice passes its due date
 
-## Conclusion
+Conclusion
 
-A custom Chrome extension invoice generator gives freelancers full control over their billing workflow without recurring software costs. The implementation above provides a production-ready foundation with multi-line items, tax support, client autocomplete, and invoice history—all stored locally on your machine.
+A custom Chrome extension invoice generator gives freelancers full control over their billing workflow without recurring software costs. The implementation above provides a production-ready foundation with multi-line items, tax support, client autocomplete, and invoice history, all stored locally on your machine.
 
 The print-to-PDF approach produces professional-looking invoices with zero dependencies. No third-party server sees your client names or billing amounts. No subscription expires. The extension stays in your browser toolbar, ready to invoice in under a minute whenever a project wraps up.
 
 From here, the natural next step is adding your own business details to the invoice template and tweaking the CSS to match your brand colors. The HTML template is entirely self-contained, making visual customization straightforward.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

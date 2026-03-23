@@ -14,11 +14,11 @@ score: 7
 
 
 {% raw %}
-# Claude Code for Ant Design Workflow Guide
+Claude Code for Ant Design Workflow Guide
 
-Ant Design (AntD) is one of the most popular React UI component libraries in the enterprise development space. Its comprehensive component library, robust design system, and extensive customization capabilities make it a top choice for building complex business applications. However, the learning curve and boilerplate code can be overwhelming. This guide shows you how to use Claude Code to streamline your Ant Design development workflow.
+Ant Design (AntD) is one of the most popular React UI component libraries in the enterprise development space. Its comprehensive component library, solid design system, and extensive customization capabilities make it a top choice for building complex business applications. However, the learning curve and boilerplate code can be overwhelming. This guide shows you how to use Claude Code to streamline your Ant Design development workflow.
 
-## Why Combine Claude Code with Ant Design?
+Why Combine Claude Code with Ant Design?
 
 Ant Design components are powerful but often require verbose configuration. A simple button might need multiple props for loading states, icons, and accessibility. A data table can require hundreds of lines of code for columns, pagination, and filtering. Claude Code understands both the React ecosystem and Ant Design's component APIs, making it an ideal companion for:
 
@@ -27,7 +27,7 @@ Ant Design components are powerful but often require verbose configuration. A si
 - Refactoring existing AntD code for better maintainability
 - Handling complex component compositions
 
-## Setting Up Your Development Environment
+Setting Up Your Development Environment
 
 Before integrating Claude Code with Ant Design, ensure your project is properly configured. Create a new React project with Ant Design installed:
 
@@ -43,11 +43,11 @@ If you're using TypeScript (recommended for enterprise projects), add the proper
 npm install @types/react @types/node --save-dev
 ```
 
-## Generating Ant Design Components
+Generating Ant Design Components
 
 One of the most powerful applications of Claude Code is generating Ant Design components from descriptions. Instead of manually writing every prop, you can describe what you need and let Claude Code build the component.
 
-### Basic Component Generation
+Basic Component Generation
 
 When you need a form with multiple input types, describe the requirements to Claude Code:
 
@@ -146,11 +146,11 @@ const RegistrationForm = () => {
 export default RegistrationForm;
 ```
 
-## Working with Complex Data Tables
+Working with Complex Data Tables
 
 Ant Design's Table component is incredibly powerful but can become complex quickly. Claude Code excels at generating well-structured table implementations with sorting, filtering, and pagination.
 
-### Data Table with CRUD Operations
+Data Table with CRUD Operations
 
 Request a complete data table with inline editing:
 
@@ -166,7 +166,7 @@ Create an Ant Design Table for managing products with:
 
 Claude Code will provide a comprehensive implementation including state management, modal forms for editing, and proper event handlers.
 
-## Integrating with Ant Design Pro Components
+Integrating with Ant Design Pro Components
 
 For enterprise applications, Ant Design Pro offers additional components like ProTable, ProForm, and ProLayout. These advanced components can further accelerate development:
 
@@ -202,7 +202,7 @@ const AdvancedTable = () => {
 };
 ```
 
-## Customizing Ant Design Theme
+Customizing Ant Design Theme
 
 Claude Code can help you configure the Ant Design theme to match your brand requirements. Request theme customization:
 
@@ -237,13 +237,13 @@ function App() {
 }
 ```
 
-## Best Practices for Claude Code with Ant Design
+Best Practices for Claude Code with Ant Design
 
-### 1. Be Specific About Component Requirements
+1. Be Specific About Component Requirements
 
 The more details you provide, the better the generated code. Include prop requirements, validation rules, and interaction behaviors in your prompts.
 
-### 2. Request TypeScript Interfaces
+2. Request TypeScript Interfaces
 
 For maintainable code, always ask Claude Code to generate TypeScript interfaces alongside your components:
 
@@ -251,25 +251,25 @@ For maintainable code, always ask Claude Code to generate TypeScript interfaces 
 Create a Product interface and an Ant Design Table component using TypeScript.
 ```
 
-### 3. Use Pro Components for Enterprise Features
+3. Use Pro Components for Enterprise Features
 
 When building administrative dashboards, use Ant Design Pro components for built-in features like advanced filtering, column settings, and export functionality.
 
-### 4. Separate Concerns in Large Applications
+4. Separate Concerns in Large Applications
 
 Request that Claude Code organize your code with separate files for components, hooks, and types. This improves maintainability as your application grows.
 
-## Conclusion
+Conclusion
 
 Integrating Claude Code with Ant Design dramatically improves development velocity while maintaining code quality. By using Claude Code's understanding of React patterns and Ant Design's API, you can generate complex components in seconds rather than hours. The key is providing detailed requirements and using TypeScript for type safety in larger projects.
 
-Start by generating simple components, then progressively tackle more complex implementations like data tables with CRUD operations. With practice, you'll discover that Claude Code becomes an invaluable partner in building robust Ant Design applications.
+Start by generating simple components, then progressively tackle more complex implementations like data tables with CRUD operations. With practice, you'll discover that Claude Code becomes an invaluable partner in building solid Ant Design applications.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

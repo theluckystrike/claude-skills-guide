@@ -14,11 +14,11 @@ score: 7
 
 
 {% raw %}
-# Claude Code for Metabase Analytics Workflow Guide
+Claude Code for Metabase Analytics Workflow Guide
 
 Metabase is an open-source business intelligence tool that makes data querying accessible to teams without deep SQL expertise. When combined with Claude Code, you can create powerful analytics workflows that automate data exploration, generate insights, and streamline reporting. This guide shows you how to integrate Claude Code with Metabase effectively.
 
-## Understanding the Metabase-Code Integration
+Understanding the Metabase-Code Integration
 
 Claude Code can interact with Metabase through its REST API, enabling you to programmatically:
 
@@ -29,7 +29,7 @@ Claude Code can interact with Metabase through its REST API, enabling you to pro
 
 The integration works by having Claude Code make HTTP requests to your Metabase instance, passing queries and processing the returned data. This approach keeps your analytics infrastructure secure while giving you the power of natural language to drive data workflows.
 
-## Setting Up Your Metabase Connection
+Setting Up Your Metabase Connection
 
 Before building workflows, configure Claude Code to communicate with your Metabase instance. You'll need your Metabase URL and an API key.
 
@@ -56,16 +56,16 @@ curl -X GET "${METABASE_URL}/api/card/{card_id}/query" \
 
 This skill template gives Claude Code the context it needs to make appropriate API calls when you request analytics data.
 
-## Querying Data with Claude Code
+Querying Data with Claude Code
 
 The most common workflow is asking Claude Code to retrieve specific data from Metabase. Here's how to structure your queries effectively.
 
-### Direct Question Queries
+Direct Question Queries
 
 When you know the question ID in Metabase, you can retrieve results directly:
 
 ```bash
-# Get results from a specific question
+Get results from a specific question
 curl -X GET "https://your-metabase.com/api/card/123/query" \
   -H "X-Api-Key: your-api-key" \
   -H "Content-Type: application/json"
@@ -73,12 +73,12 @@ curl -X GET "https://your-metabase.com/api/card/123/query" \
 
 Claude Code can then process these results, filter them, or transform them for specific needs. For example, you might ask Claude to "get last month's sales data and calculate the week-over-week growth percentage."
 
-### Native SQL Queries
+Native SQL Queries
 
 For complex analyses, use Metabase's native query functionality:
 
 ```bash
-# Execute a native SQL query
+Execute a native SQL query
 curl -X POST "https://your-metabase.com/api/dataset" \
   -H "X-Api-Key: your-api-key" \
   -H "Content-Type: application/json" \
@@ -93,22 +93,22 @@ curl -X POST "https://your-metabase.com/api/dataset" \
 
 This approach lets you use Metabase's database connections while using Claude Code to construct and execute sophisticated queries.
 
-## Automating Recurring Analytics
+Automating Recurring Analytics
 
 One of the most valuable use cases is automating recurring analytical tasks. Set up scheduled queries that Claude Code can execute and process.
 
-### Daily Report Generation
+Daily Report Generation
 
 Create a workflow that pulls key metrics each morning:
 
 ```bash
 #!/bin/bash
-# daily-metrics.sh - Run daily analytics
+daily-metrics.sh - Run daily analytics
 
 METABASE_URL="https://your-metabase.com"
 METABASE_API_KEY="your-key"
 
-# Get key metrics
+Get key metrics
 revenue=$(curl -s -X GET "${METABASE_URL}/api/card/456/query" \
   -H "X-Api-Key: ${METABASE_API_KEY}" | jq -r '.data.rows[0][0]')
 
@@ -121,12 +121,12 @@ echo "New Users: $new_users"
 
 Schedule this with cron, and Claude Code can further process the output, comparing against benchmarks or formatting for team notifications.
 
-### Alert Detection
+Alert Detection
 
 You can also build detection workflows that check for anomalies:
 
 ```bash
-# Check if today's orders exceed threshold
+Check if today's orders exceed threshold
 orders_today=$(curl -s "${METABASE_URL}/api/card/111/query" \
   -H "X-Api-Key: ${METABASE_API_KEY}" | jq '.data.rows[0][0]')
 
@@ -137,14 +137,14 @@ if [ "$orders_today" -gt "$threshold" ]; then
 fi
 ```
 
-## Building Interactive Dashboards
+Building Interactive Dashboards
 
 Claude Code can help you construct Metabase dashboards programmatically. While the visual builder is intuitive, using the API allows for template-based dashboard creation.
 
-### Creating Questions via API
+Creating Questions via API
 
 ```bash
-# Create a new question
+Create a new question
 curl -X POST "https://your-metabase.com/api/card" \
   -H "X-Api-Key: ${METABASE_API_KEY}" \
   -H "Content-Type: application/json" \
@@ -168,16 +168,16 @@ curl -X POST "https://your-metabase.com/api/card" \
 
 This enables you to generate questions from templates, useful when you need consistent metrics across different segments or time periods.
 
-## Best Practices for Production Workflows
+Best Practices for Production Workflows
 
 When deploying Metabase-Claude integrations in production, follow these guidelines:
 
-**Security First**: Never expose API keys in code repositories. Use environment variables or secret management systems. Rotate keys periodically and restrict API access to specific IP addresses when possible.
+Security First: Never expose API keys in code repositories. Use environment variables or secret management systems. Rotate keys periodically and restrict API access to specific IP addresses when possible.
 
-**Error Handling**: Implement retry logic for API calls, as network issues can occur. Set appropriate timeouts and log failures for debugging:
+Error Handling: Implement retry logic for API calls, as network issues can occur. Set appropriate timeouts and log failures for debugging:
 
 ```bash
-# With retry logic
+With retry logic
 for i in 1 2 3; do
   response=$(curl -s -w "%{http_code}" -o /tmp/result.json \
     "${METABASE_URL}/api/card/123/query" \
@@ -190,11 +190,11 @@ for i in 1 2 3; do
 done
 ```
 
-**Rate Limiting**: Metabase's API has rate limits. Space out your requests and cache results when appropriate. For frequently accessed data, consider implementing a caching layer.
+Rate Limiting: Metabase's API has rate limits. Space out your requests and cache results when appropriate. For frequently accessed data, consider implementing a caching layer.
 
-**Version Compatibility**: Metabase updates can change API endpoints. Test your integrations after upgrades and pin your automation to specific Metabase versions when stability is critical.
+Version Compatibility: Metabase updates can change API endpoints. Test your integrations after upgrades and pin your automation to specific Metabase versions when stability is critical.
 
-## Advanced: Chaining Multiple Data Sources
+Advanced: Chaining Multiple Data Sources
 
 For complex analytical workflows, you can pull from multiple Metabase questions or databases in sequence. Claude Code excels at this by processing intermediate results:
 
@@ -205,17 +205,17 @@ For complex analytical workflows, you can pull from multiple Metabase questions 
 
 This chaining approach lets you build sophisticated analytical pipelines that adapt based on the data encountered.
 
-## Conclusion
+Conclusion
 
 Integrating Claude Code with Metabase transforms your analytics workflow from manual exploration to automated, intelligent data processing. Start with simple query workflows, then build toward complex automated pipelines that deliver insights directly to your team. The combination of Metabase's visual analytics and Claude Code's natural language processing creates a powerful analytics stack accessible to the whole organization.
 
 Remember to secure your API credentials, implement proper error handling, and gradually expand your automation as your workflows mature. With these practices in place, you'll have a scalable analytics infrastructure that grows with your team's needs.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

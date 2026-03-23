@@ -15,32 +15,32 @@ permalink: /claude-code-skills-for-kubernetes-operator-development/
 
 Building Kubernetes operators requires deep understanding of the Operator SDK, controller patterns, custom resource definitions, and reconciliation loops. Claude Code skills can significantly accelerate this development workflow by automating boilerplate generation, assisting with Go code, running tests, and handling documentation. This guide explores practical ways to integrate Claude skills into your operator development pipeline. For broader DevOps use cases, the [best Claude skills for DevOps and deployment](/best-claude-skills-for-devops-and-deployment/) guide covers CI/CD integration and infrastructure automation.
 
-## Setting Up Your Operator Project
+Setting Up Your Operator Project
 
 When starting a new Kubernetes operator, the initial project setup involves multiple components: defining the API, generating CRDs, implementing controllers, and configuring RBAC. Using Claude skills in combination with your terminal reduces the cognitive load of remembering all the flags and configurations.
 
 The `/tdd` skill proves particularly valuable when setting up operator projects. By invoking it early, you establish test patterns before writing implementation code:
 
 ```bash
-# Initialize a new operator project
+Initialize a new operator project
 operator-sdk init --domain example.com --project-name memcached-operator
 
-# Create the Memcached API
+Create the Memcached API
 operator-sdk create api --resource --controller
 
-# Now use tdd skill to generate test scaffolding
-# /tdd "generate table-driven tests for reconcile logic"
+Now use tdd skill to generate test scaffolding
+/tdd "generate table-driven tests for reconcile logic"
 ```
 
 This approach ensures your controller logic remains testable from the first line of code you write.
 
-## Generating Custom Resource Definitions
+Generating Custom Resource Definitions
 
-Custom Resource Definitions (CRDs) form the API surface of your operator. Getting the OpenAPI schema right is critical—incorrect validation rules cause unexpected runtime behavior. The `/pdf` skill can help process existing documentation or API specs that you need to convert into CRD schemas:
+Custom Resource Definitions (CRDs) form the API surface of your operator. Getting the OpenAPI schema right is critical, incorrect validation rules cause unexpected runtime behavior. The `/pdf` skill can help process existing documentation or API specs that you need to convert into CRD schemas:
 
 ```
-# Extract API requirements from documentation
-# /pdf "extract API field requirements from this K8s extension guide"
+Extract API requirements from documentation
+/pdf "extract API field requirements from this K8s extension guide"
 ```
 
 For generating the actual Go types for your CRDs, combine Claude skills with the operator-sdk CLI:
@@ -64,9 +64,9 @@ type MemcachedSpec struct {
 
 The `/frontend-design` skill, while designed for UI work, offers unexpected value when you need to visualize your CRD structure or generate documentation diagrams showing how your custom resources relate to built-in Kubernetes types.
 
-## Implementing the Reconciliation Loop
+Implementing the Reconciliation Loop
 
-The controller reconciliation loop is where your operator's logic lives. This is where Claude skills provide the most value—assisting with Go code generation, explaining patterns, and helping debug reconciliation issues.
+The controller reconciliation loop is where your operator's logic lives. This is where Claude skills provide the most value, assisting with Go code generation, explaining patterns, and helping debug reconciliation issues.
 
 When implementing a typical reconciliation flow:
 
@@ -109,9 +109,9 @@ func (r *MemcachedReconciler) Reconcile(ctx context.Context, req ctrl.Request) (
 }
 ```
 
-Claude can help generate this boilerplate, explain why certain patterns are used, and suggest improvements. Use the skill in an iterative manner—ask it to explain specific sections, then request refactoring suggestions.
+Claude can help generate this boilerplate, explain why certain patterns are used, and suggest improvements. Use the skill in an iterative manner, ask it to explain specific sections, then request refactoring suggestions.
 
-## Testing Strategies with Claude Skills
+Testing Strategies with Claude Skills
 
 Operator testing involves multiple layers: unit tests for the controller logic, integration tests against a real Kubernetes cluster, and end-to-end tests that verify the entire operator lifecycle. The `/tdd` skill excels at generating comprehensive test coverage.
 
@@ -157,14 +157,14 @@ func TestMemcachedReconciler_Reconcile(t *testing.T) {
 
 The [supermemory skill helps maintain test patterns](/claude-supermemory-skill-persistent-context-explained/) across sessions, storing your testing conventions and reusable test utilities so they're available in every operator project.
 
-## Automating Documentation
+Automating Documentation
 
 Operator documentation spans multiple audiences: users who need to understand the CRD API, operators who need to extend your controller, and operators who need to install and configure your operator. Claude skills can generate and maintain this documentation automatically.
 
 Use Claude to generate CRD documentation from Go type annotations:
 
 ```markdown
-## MemcachedSpec
+MemcachedSpec
 
 | Field | Type | Description | Validation |
 |-------|------|-------------|------------|
@@ -174,9 +174,9 @@ Use Claude to generate CRD documentation from Go type annotations:
 
 The `/docx` skill can help create formatted documentation packages for enterprise deployments, including installation guides and troubleshooting manuals.
 
-## Building Deployment Manifests
+Building Deployment Manifests
 
-Operators typically ship with Kubernetes manifests for deployment, RBAC, and webhooks. Generating these manifests requires attention to detail—incorrect service accounts or missing permissions cause installation failures.
+Operators typically ship with Kubernetes manifests for deployment, RBAC, and webhooks. Generating these manifests requires attention to detail, incorrect service accounts or missing permissions cause installation failures.
 
 Claude skills can verify your manifests before deployment:
 
@@ -199,20 +199,20 @@ rules:
     verbs: ["create", "delete", "get", "list", "patch", "update", "watch"]
 ```
 
-Use Claude to cross-check your RBAC rules against the actual API calls your controller makes—missing permissions are a common source of operator failures that are difficult to debug.
+Use Claude to cross-check your RBAC rules against the actual API calls your controller makes, missing permissions are a common source of operator failures that are difficult to debug.
 
-## Conclusion
+Conclusion
 
 Claude Code skills transform Kubernetes operator development from a manually intensive process into an assisted workflow. The `/tdd` skill ensures testability from project start, the `/pdf` skill processes API documentation, supermemory preserves project conventions, and Claude's code generation capabilities reduce boilerplate overhead. For multi-service infrastructure, understanding [multi-agent orchestration patterns](/claude-code-multi-agent-orchestration-patterns-guide/) helps you coordinate Claude across parallel operator workflows.
 
 By integrating these skills into your development pipeline, you ship operators faster with better test coverage and cleaner code. The key is treating Claude as a pair programmer that remembers the boilerplate so you can focus on the business logic that makes your operator valuable.
 
-## Related Reading
+Related Reading
 
-- [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/) — Top skills for CI/CD, infrastructure management, and cloud deployments
-- [Claude SuperMemory Skill: Persistent Context Guide](/claude-supermemory-skill-persistent-context-explained/) — Preserve testing conventions and project context across operator development sessions
-- [Multi-Agent Orchestration with Claude Subagents Guide](/multi-agent-orchestration-with-claude-subagents-guide/) — Coordinate parallel Claude workflows for complex Kubernetes environments
-- [Claude Code Skills for Infrastructure as Code Terraform](/claude-code-skills-for-infrastructure-as-code-terraform/) — Pair operator development with Terraform for complete infrastructure automation
+- [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/). Top skills for CI/CD, infrastructure management, and cloud deployments
+- [Claude SuperMemory Skill: Persistent Context Guide](/claude-supermemory-skill-persistent-context-explained/). Preserve testing conventions and project context across operator development sessions
+- [Multi-Agent Orchestration with Claude Subagents Guide](/multi-agent-orchestration-with-claude-subagents-guide/). Coordinate parallel Claude workflows for complex Kubernetes environments
+- [Claude Code Skills for Infrastructure as Code Terraform](/claude-code-skills-for-infrastructure-as-code-terraform/). Pair operator development with Terraform for complete infrastructure automation
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -14,17 +14,17 @@ score: 8
 
 
 {% raw %}
-# Claude Code for Custom LSP Diagnostics Workflow
+Claude Code for Custom LSP Diagnostics Workflow
 
-The Language Server Protocol (LSP) has revolutionized how we approach code analysis and diagnostics. By combining Claude Code with custom LSP diagnostics workflows, developers can create powerful automated systems that catch errors, enforce coding standards, and provide intelligent feedback—all without leaving their development environment.
+The Language Server Protocol (LSP) has revolutionized how we approach code analysis and diagnostics. By combining Claude Code with custom LSP diagnostics workflows, developers can create powerful automated systems that catch errors, enforce coding standards, and provide intelligent feedback, all without leaving their development environment.
 
 This guide walks you through building a custom LSP diagnostics workflow using Claude Code, with practical examples you can adapt for your own projects.
 
-## Understanding LSP Diagnostics in Claude Code
+Understanding LSP Diagnostics in Claude Code
 
 LSP diagnostics are standardized messages that language servers send to clients to report errors, warnings, and other issues in your code. Claude Code can interact with these diagnostics to help you build workflows that automatically detect, categorize, and respond to code issues.
 
-When you work with LSP-enabled editors, diagnostics appear as squiggly lines under problematic code. But with Claude Code, you can go beyond visual indicators—you can capture, filter, and act on these diagnostics programmatically.
+When you work with LSP-enabled editors, diagnostics appear as squiggly lines under problematic code. But with Claude Code, you can go beyond visual indicators, you can capture, filter, and act on these diagnostics programmatically.
 
 The LSP specification defines four severity levels:
 
@@ -37,7 +37,7 @@ The LSP specification defines four severity levels:
 
 Claude Code can consume all four levels and apply different automations to each, giving you fine-grained control over how your pipeline responds.
 
-## Setting Up Your Diagnostic Collection
+Setting Up Your Diagnostic Collection
 
 The first step in building a custom diagnostics workflow is capturing LSP messages. Here's a basic setup using Claude Code's tools:
 
@@ -175,11 +175,11 @@ class LSPClient:
 
 This client manages the full LSP lifecycle: initialization, file opening, and asynchronous diagnostic collection from the server's push notifications.
 
-## Building a Custom Diagnostics Pipeline
+Building a Custom Diagnostics Pipeline
 
 A well-designed diagnostics pipeline has three main stages: collection, analysis, and action. Let's build each component.
 
-### Stage 1: Collection
+Stage 1: Collection
 
 Create a Claude Code skill that intercepts diagnostics from your language server:
 
@@ -231,7 +231,7 @@ def collect_project_diagnostics(lsp_client, source_root, extensions=None):
     return all_diagnostics
 ```
 
-### Stage 2: Analysis
+Stage 2: Analysis
 
 Once collected, diagnostics need categorization. Here's a pattern for analyzing and grouping issues:
 
@@ -301,9 +301,9 @@ def record_diagnostics_snapshot(analyzed, db_path="diagnostics.db"):
     conn.close()
 ```
 
-Running this on every CI build gives you a historical error trend chart—you can spot if a refactor branch is quietly accumulating warnings that will become errors later.
+Running this on every CI build gives you a historical error trend chart, you can spot if a refactor branch is quietly accumulating warnings that will become errors later.
 
-### Stage 3: Action
+Stage 3: Action
 
 The final stage is taking action based on your analysis. This could mean generating reports, triggering notifications, or automatically creating fix suggestions:
 
@@ -321,7 +321,7 @@ def generate_diagnostic_report(analyzed, output_path):
     if analyzed['errors']:
         report.append("## Critical Errors\n")
         for error in analyzed['errors']:
-            report.append(f"- **{error['source']}**: {error['message']}")
+            report.append(f"- {error['source']}: {error['message']}")
             if 'range' in error:
                 report.append(f"  Location: {error['range']}")
             report.append("")
@@ -360,15 +360,15 @@ def evaluate_quality_gate(analyzed, config):
     return (len(violations) == 0, violations)
 ```
 
-## Practical Example: Git Pre-Commit Diagnostics
+Practical Example: Git Pre-Commit Diagnostics
 
 One powerful use case is running diagnostics before commits. Here's how to integrate with git hooks:
 
 ```bash
 #!/bin/bash
-# .git/hooks/pre-commit
+.git/hooks/pre-commit
 
-# Run diagnostics on staged files
+Run diagnostics on staged files
 STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACM)
 
 for file in $STAGED_FILES; do
@@ -376,7 +376,7 @@ for file in $STAGED_FILES; do
     claude-code run-diagnostics --file "$file" --format json
 done
 
-# Exit with error if critical issues found
+Exit with error if critical issues found
 if [ $? -ne 0 ]; then
     echo "Critical diagnostics found. Commit aborted."
     exit 1
@@ -385,11 +385,11 @@ fi
 
 This workflow ensures code quality before it enters your repository, catching issues early in the development cycle.
 
-A more robust pre-commit hook that collects all staged file diagnostics in one pass and gives structured output:
+A more solid pre-commit hook that collects all staged file diagnostics in one pass and gives structured output:
 
 ```bash
 #!/bin/bash
-# .git/hooks/pre-commit — LSP diagnostics gate
+.git/hooks/pre-commit. LSP diagnostics gate
 
 set -euo pipefail
 
@@ -403,19 +403,19 @@ fi
 TMPDIR=$(mktemp -d)
 trap "rm -rf $TMPDIR" EXIT
 
-# Collect pyright diagnostics for Python files
+Collect pyright diagnostics for Python files
 if [ -n "$STAGED_PY" ]; then
     echo "$STAGED_PY" | xargs pyright --outputjson 2>/dev/null \
         > "$TMPDIR/pyright.json" || true
 fi
 
-# Collect typescript compiler diagnostics for TS files
+Collect typescript compiler diagnostics for TS files
 if [ -n "$STAGED_TS" ]; then
     npx tsc --noEmit --pretty false 2>&1 \
         > "$TMPDIR/tsc.txt" || true
 fi
 
-# Feed to Claude for assessment
+Feed to Claude for assessment
 ASSESSMENT=$(claude --print "
 I am running a pre-commit quality gate.
 Here are LSP diagnostics for staged files.
@@ -436,7 +436,7 @@ fi
 exit 0
 ```
 
-## Advanced: Custom Diagnostic Rules
+Advanced: Custom Diagnostic Rules
 
 Beyond standard LSP diagnostics, you can create custom rules specific to your project:
 
@@ -478,10 +478,10 @@ function applyCustomRules(sourceCode, lspDiagnostics) {
 
 Custom rules are particularly valuable for domain-specific constraints that generic LSP servers cannot know about. Common use cases include:
 
-- **Security rules**: flag direct SQL string concatenation, hard-coded credentials, or missing input sanitization
-- **Architecture rules**: ensure services only import from their allowed dependency layer
-- **API contract rules**: verify every public endpoint has an OpenAPI annotation
-- **Compliance rules**: catch use of deprecated internal APIs before they cause runtime failures
+- Security rules: flag direct SQL string concatenation, hard-coded credentials, or missing input sanitization
+- Architecture rules: ensure services only import from their allowed dependency layer
+- API contract rules: verify every public endpoint has an OpenAPI annotation
+- Compliance rules: catch use of deprecated internal APIs before they cause runtime failures
 
 Here is a Python equivalent that integrates cleanly with the analysis pipeline:
 
@@ -496,7 +496,7 @@ class CustomRule:
     pattern: str
     severity: int          # LSP severity: 1=error, 2=warning
     message: str
-    file_glob: str = "**/*"
+    file_glob: str = "/*"
     requires_absence: Optional[str] = None  # Another pattern that must NOT match
 
 CUSTOM_RULES = [
@@ -505,14 +505,14 @@ CUSTOM_RULES = [
         pattern=r'execute\s*\(\s*["\']SELECT',
         severity=2,
         message="Use parameterized queries or an ORM instead of raw SQL strings",
-        file_glob="**/*.py"
+        file_glob="/*.py"
     ),
     CustomRule(
         name="no-hardcoded-secrets",
         pattern=r'(password|secret|api_key)\s*=\s*["\'][^"\']{8,}["\']',
         severity=1,
-        message="Hard-coded secret detected — use environment variables",
-        file_glob="**/*.py"
+        message="Hard-coded secret detected. use environment variables",
+        file_glob="/*.py"
     ),
     CustomRule(
         name="require-type-hints",
@@ -549,7 +549,7 @@ def run_custom_rules(file_path, source_code):
     return findings
 ```
 
-## Integrating with Claude Code for AI-Powered Fix Suggestions
+Integrating with Claude Code for AI-Powered Fix Suggestions
 
 The most powerful use of this pipeline is feeding diagnostics back to Claude Code to generate fix suggestions automatically. Once you have structured diagnostic output, you can prompt Claude with the affected code context:
 
@@ -601,19 +601,19 @@ def generate_fix_suggestions(diagnostics, source_code_map):
     return suggestions
 ```
 
-## Best Practices for Diagnostic Workflows
+Best Practices for Diagnostic Workflows
 
 When building your custom LSP diagnostics workflow, keep these principles in mind:
 
-1. **Prioritize by severity**: Not all diagnostics are equal. Focus on errors first, then warnings, and finally informational messages.
+1. Prioritize by severity: Not all diagnostics are equal. Focus on errors first, then warnings, and finally informational messages.
 
-2. **Aggregate strategically**: Instead of treating each diagnostic in isolation, look for patterns. A hundred similar warnings might indicate a systemic issue worth addressing holistically.
+2. Aggregate strategically: Instead of treating each diagnostic in isolation, look for patterns. A hundred similar warnings might indicate a systemic issue worth addressing holistically.
 
-3. **Integrate with your tooling**: Your diagnostics workflow should play well with existing tools—linters, formatters, and CI/CD pipelines.
+3. Integrate with your tooling: Your diagnostics workflow should play well with existing tools, linters, formatters, and CI/CD pipelines.
 
-4. **Provide actionable feedback**: When diagnostics are detected, the action should be clear. Don't just say "there's an error"; explain what to do about it.
+4. Provide actionable feedback: When diagnostics are detected, the action should be clear. Don't just say "there's an error"; explain what to do about it.
 
-5. **Cache intelligently**: Running full diagnostics on every keystroke is expensive. Implement debouncing and caching to balance responsiveness with accuracy.
+5. Cache intelligently: Running full diagnostics on every keystroke is expensive. Implement debouncing and caching to balance responsiveness with accuracy.
 
 Here is how these principles map to implementation decisions:
 
@@ -655,22 +655,22 @@ def get_diagnostics_with_cache(lsp_client, file_path, cache):
     return diags
 ```
 
-This makes large-project diagnostic runs fast on incremental changes—only modified files get re-analyzed.
+This makes large-project diagnostic runs fast on incremental changes, only modified files get re-analyzed.
 
-## Conclusion
+Conclusion
 
-Building custom LSP diagnostics workflows with Claude Code opens up powerful possibilities for automated code quality assurance. By collecting diagnostics, analyzing patterns, and taking targeted actions, you can catch issues early, enforce standards consistently, and focus your attention on what matters most—writing great code.
+Building custom LSP diagnostics workflows with Claude Code opens up powerful possibilities for automated code quality assurance. By collecting diagnostics, analyzing patterns, and taking targeted actions, you can catch issues early, enforce standards consistently, and focus your attention on what matters most, writing great code.
 
-The combination of standard LSP diagnostics, custom domain-specific rules, and Claude-generated fix suggestions creates a quality layer that scales from individual developer machines to full CI/CD pipelines. You get the precision of a language server, the flexibility of custom rules, and the reasoning power of an AI—all feeding into a single, coherent feedback loop.
+The combination of standard LSP diagnostics, custom domain-specific rules, and Claude-generated fix suggestions creates a quality layer that scales from individual developer machines to full CI/CD pipelines. You get the precision of a language server, the flexibility of custom rules, and the reasoning power of an AI, all feeding into a single, coherent feedback loop.
 
 Start with the pre-commit hook and a basic collection pipeline. Add custom rules for your most frequent error patterns. Then layer in Claude fix suggestions once you have the pipeline stable. The key is finding the right balance between thoroughness and performance, ensuring your diagnostics enhance rather than hinder your development process.
 
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

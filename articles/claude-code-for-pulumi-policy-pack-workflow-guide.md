@@ -14,43 +14,43 @@ score: 8
 
 
 {% raw %}
-# Claude Code for Pulumi Policy Pack Workflow Guide
+Claude Code for Pulumi Policy Pack Workflow Guide
 
-Infrastructure as Code (IaC) has revolutionized how teams manage cloud resources, but with great power comes great responsibility. Ensuring compliance, security, and best practices across your infrastructure becomes increasingly challenging as your deployments scale. Pulumi Policy Packs offer a powerful solution by letting you enforce rules programmatically before resources are deployed. When combined with Claude Code, you can automate the entire policy lifecycle—from creation to enforcement—making governance seamless and developer-friendly.
+Infrastructure as Code (IaC) has revolutionized how teams manage cloud resources, but with great power comes great responsibility. Ensuring compliance, security, and best practices across your infrastructure becomes increasingly challenging as your deployments scale. Pulumi Policy Packs offer a powerful solution by letting you enforce rules programmatically before resources are deployed. When combined with Claude Code, you can automate the entire policy lifecycle, from creation to enforcement, making governance smooth and developer-friendly.
 
 This guide walks you through building an effective Pulumi Policy Pack workflow using Claude Code, with practical examples you can adapt to your infrastructure needs.
 
-## Understanding Pulumi Policy Packs
+Understanding Pulumi Policy Packs
 
 Pulumi Policy Packs enable you to write policies in TypeScript, JavaScript, or Python that validate infrastructure before it's deployed. Unlike traditional policy-as-code solutions that run after deployment, Pulumi policies intercept the deployment process, preventing non-compliant resources from ever being created.
 
-A policy pack consists of one or more policy rules that evaluate stack resources. Each policy can either warn about issues or block deployment entirely. This proactive approach catches problems early—when they're easiest to fix.
+A policy pack consists of one or more policy rules that evaluate stack resources. Each policy can either warn about issues or block deployment entirely. This proactive approach catches problems early, when they're easiest to fix.
 
-### Key Components of a Policy Pack
+Key Components of a Policy Pack
 
 Every Pulumi Policy Pack contains these essential elements:
 
-1. **Policy Manager** - The entry point that registers your policies
-2. **Individual Policies** - Rules that evaluate specific resource types or conditions
-3. **Enforcement Level** - Determines whether violations are warnings or hard failures
+1. Policy Manager - The entry point that registers your policies
+2. Individual Policies - Rules that evaluate specific resource types or conditions
+3. Enforcement Level - Determines whether violations are warnings or hard failures
 
-## Setting Up Your Development Environment
+Setting Up Your Development Environment
 
 Before creating policies with Claude Code, ensure you have the necessary tools installed:
 
 ```bash
-# Install Pulumi CLI
+Install Pulumi CLI
 curl -fsSL https://get.pulumi.com | sh
 
-# Initialize a new TypeScript project
+Initialize a new TypeScript project
 mkdir pulumi-policy-guide && cd pulumi-policy-guide
 pulumi new typescript
 
-# Install Policy Pack dependencies
-npm install @pulumi/policy @pulumi/policy题型
+Install Policy Pack dependencies
+npm install @pulumi/policy @pulumi/policy
 ```
 
-## Creating Your First Policy with Claude Code
+Creating Your First Policy with Claude Code
 
 Claude Code can help you generate policy code efficiently. Here's a practical example of a policy that ensures all S3 buckets have encryption enabled:
 
@@ -81,20 +81,20 @@ export const policyPack = new pulumi.policy.PolicyPack("security-policies", {
 });
 ```
 
-## Automating Policy Creation Workflow
+Automating Policy Creation Workflow
 
 One of Claude Code's strengths is helping you generate consistent, well-structured policy code. Here's a workflow pattern for creating policies at scale:
 
-### Step 1: Define Policy Requirements
+Step 1: Define Policy Requirements
 
 Before writing code, document what each policy should enforce. For example:
 
-- **Resource naming conventions** - Ensure consistent naming across environments
-- **Tag enforcement** - Require cost center, environment, and owner tags
-- **Security baseline** - Block public access, require encryption, enforce VPC settings
-- **Cost optimization** - Warn on oversized instances or unused resources
+- Resource naming conventions - Ensure consistent naming across environments
+- Tag enforcement - Require cost center, environment, and owner tags
+- Security baseline - Block public access, require encryption, enforce VPC settings
+- Cost optimization - Warn on oversized instances or unused resources
 
-### Step 2: Generate Policy Templates
+Step 2: Generate Policy Templates
 
 Use Claude Code to generate policy templates based on your requirements:
 
@@ -121,33 +121,33 @@ const taggingPolicy: pulumi.policy.Policy = {
 };
 ```
 
-### Step 3: Organize Policies by Category
+Step 3: Organize Policies by Category
 
 For maintainability, organize policies into logical groups:
 
 ```
 policy-pack/
-├── index.ts                 # Main entry point
-├── policies/
-│   ├── security/
-│   │   ├── encryption.ts
-│   │   ├── access-controls.ts
-│   │   └── network-security.ts
-│   ├── compliance/
-│   │   ├── tagging.ts
-│   │   └── naming-conventions.ts
-│   └── cost/
-│       ├── instance-sizing.ts
-│       └── idle-resources.ts
-└── Pulumi.yaml
+ index.ts                 # Main entry point
+ policies/
+    security/
+       encryption.ts
+       access-controls.ts
+       network-security.ts
+    compliance/
+       tagging.ts
+       naming-conventions.ts
+    cost/
+        instance-sizing.ts
+        idle-resources.ts
+ Pulumi.yaml
 ```
 
-## Integrating Policies into CI/CD
+Integrating Policies into CI/CD
 
-A robust policy workflow includes CI/CD integration. Here's how to enforce policies in your deployment pipeline:
+A solid policy workflow includes CI/CD integration. Here's how to enforce policies in your deployment pipeline:
 
 ```yaml
-# .github/workflows/policy-check.yml
+.github/workflows/policy-check.yml
 name: Pulumi Policy Check
 
 on: [push, pull_request]
@@ -171,13 +171,13 @@ jobs:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
 ```
 
-## Best Practices for Policy Development
+Best Practices for Policy Development
 
 Follow these guidelines for maintainable and effective policies:
 
-**Start with warnings, then enforce.** Deploy new policies with `enforcementLevel: "advisory"` initially. This lets teams adapt gradually without blocking deployments. Once compliance improves, upgrade to `mandatory`.
+Start with warnings, then enforce. Deploy new policies with `enforcementLevel: "advisory"` initially. This lets teams adapt gradually without blocking deployments. Once compliance improves, upgrade to `mandatory`.
 
-**Write clear violation messages.** Your `reportViolation` messages should tell developers exactly what's wrong and how to fix it:
+Write clear violation messages. Your `reportViolation` messages should tell developers exactly what's wrong and how to fix it:
 
 ```typescript
 reportViolation(
@@ -187,7 +187,7 @@ reportViolation(
 );
 ```
 
-**Test policies thoroughly.** Use Pulumi's test framework to validate policy behavior:
+Test policies thoroughly. Use Pulumi's test framework to validate policy behavior:
 
 ```typescript
 import * as assert from "assert";
@@ -209,9 +209,9 @@ describe("S3 Encryption Policy", () => {
 });
 ```
 
-**Version control your policies.** Store policy packs in a dedicated repository, use semantic versioning, and review policy changes through pull requests just like infrastructure code.
+Version control your policies. Store policy packs in a dedicated repository, use semantic versioning, and review policy changes through pull requests just like infrastructure code.
 
-## Advanced: Custom Policy SDKs
+Advanced: Custom Policy SDKs
 
 For organizations with complex requirements, consider building a custom policy SDK that encapsulates your organization's standards. This reduces duplication and ensures consistency:
 
@@ -238,17 +238,17 @@ export function createResourcePolicy(
 }
 ```
 
-## Conclusion
+Conclusion
 
 Pulumi Policy Packs combined with Claude Code create a powerful governance workflow. By automating policy creation, enforcing checks in CI/CD, and following best practices for policy development, you can ensure your infrastructure remains secure, compliant, and well-managed without slowing down development teams.
 
-Start small—implement a few critical policies—and expand gradually. The key is balancing enforcement with developer experience, providing clear guidance when policies are violated so teams can self-correct efficiently.
+Start small, implement a few critical policies, and expand gradually. The key is balancing enforcement with developer experience, providing clear guidance when policies are violated so teams can self-correct efficiently.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

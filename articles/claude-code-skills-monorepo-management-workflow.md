@@ -17,7 +17,7 @@ Managing a monorepo presents unique challenges: coordinating builds across packa
 
 [This guide shows you how to build a monorepo management system](/shared-claude-skills-across-monorepo-multiple-packages/) using Claude Code skills, with practical examples you can adapt to your own repository structure.
 
-## Setting Up Your Monorepo Skills Foundation
+Setting Up Your Monorepo Skills Foundation
 
 Before creating custom skills, establish the directory structure where your skills will live. Claude Code reads skills from `~/.claude/skills/` by default. For organizing skills across packages, see [Shared Claude Skills Across Monorepo Multiple Packages](/shared-claude-skills-across-monorepo-multiple-packages/). Create a dedicated skill for monorepo operations:
 
@@ -33,7 +33,7 @@ name: monorepo
 description: Monorepo management and build automation for multi-package repositories
 ---
 
-# Monorepo Management
+Monorepo Management
 
 You are helping manage a monorepo with the following structure:
 - /packages/* - Individual packages
@@ -47,7 +47,7 @@ When working with this monorepo:
 3. Verify cross-package dependencies before making changes
 4. Run affected package tests, not the entire test suite
 
-## Build Commands
+Build Commands
 
 Use these commands based on the task:
 - Build all: `npm run build` or `turbo run build`
@@ -55,7 +55,7 @@ Use these commands based on the task:
 - Add dependency: `npm install <package> -w @myorg/package-name`
 ```
 
-## Invoking Skills for Common Monorepo Tasks
+Invoking Skills for Common Monorepo Tasks
 
 Once your skill is in place, invoke it during Claude Code sessions to activate monorepo-aware behavior:
 
@@ -70,9 +70,9 @@ Claude now understands your monorepo structure and will:
 - Check if the ui-kit has peer dependencies on React
 - Run only the ui-kit tests afterward
 
-## Practical Workflow Examples
+Practical Workflow Examples
 
-### Cross-Package Refactoring
+Cross-Package Refactoring
 
 [When you need to update a shared component used across multiple packages](/how-do-i-combine-two-claude-skills-in-one-workflow/), the monorepo skill ensures you don't miss any consumers:
 
@@ -90,12 +90,12 @@ The skill instructs Claude to:
 
 [This prevents the common monorepo problem](/claude-code-skills-for-golang-microservices/) breaks downstream packages.
 
-### Managing Workspace Dependencies
+Managing Workspace Dependencies
 
 Adding dependencies in a monorepo requires workspace-aware commands. Your skill should encode this knowledge:
 
 ```markdown
-## Dependency Management
+Dependency Management
 
 When adding dependencies:
 - Regular dependency: `npm install lodash -w @myorg/ui-kit`
@@ -105,12 +105,12 @@ When adding dependencies:
 Never install packages directly in package root unless it's a workspace-level tool.
 ```
 
-### Running Targeted Tests
+Running Targeted Tests
 
-Full test suites in monorepos are slow. A well-crafted skill teaches Claude to run only affected tests — for broader testing automation patterns see the [automated testing pipeline guide](/claude-tdd-skill-test-driven-development-workflow/):
+Full test suites in monorepos are slow. A well-crafted skill teaches Claude to run only affected tests. for broader testing automation patterns see the [automated testing pipeline guide](/claude-tdd-skill-test-driven-development-workflow/):
 
 ```markdown
-## Testing Strategy
+Testing Strategy
 
 Run tests strategically:
 1. After isolated changes: `npm run test --workspace=@myorg/changed-package`
@@ -120,12 +120,12 @@ Run tests strategically:
 Always check turbo.json or package.json for the correct test commands.
 ```
 
-## Automating Release Workflows
+Automating Release Workflows
 
 Monorepo releases involve coordinating version bumps across packages. Create a dedicated release skill or extend your monorepo skill with release commands:
 
 ```markdown
-## Publishing Packages
+Publishing Packages
 
 For publishing:
 1. Build all packages: `npm run build`
@@ -149,9 +149,9 @@ Claude will:
 - Generate changelog entries
 - Handle the release process according to your configured strategy
 
-## Skill Composition for Complex Operations
+Skill Composition for Complex Operations
 
-Claude Code skills compose well. You can layer specialized custom skills on top of your base monorepo skill — a pattern also covered in [how to combine two Claude skills in one workflow](/how-do-i-combine-two-claude-skills-in-one-workflow/). Create additional custom skills like:
+Claude Code skills compose well. You can layer specialized custom skills on top of your base monorepo skill. a pattern also covered in [how to combine two Claude skills in one workflow](/how-do-i-combine-two-claude-skills-in-one-workflow/). Create additional custom skills like:
 
 - `lint.md` - Enforces code quality across all packages
 - `api-docs.md` - Generates API documentation for each package
@@ -169,9 +169,9 @@ Fix all linting errors in the newly added authentication module.
 Verify the changes pass CI before we merge.
 ```
 
-## Strategic Skill Loading and Workspace Context
+Strategic Skill Loading and Workspace Context
 
-In a monorepo, don't load all skills at once. Each skill adds context that may not be relevant to your current package. Load language-specific skills selectively—don't load Python skills when working in a Node.js package.
+In a monorepo, don't load all skills at once. Each skill adds context that may not be relevant to your current package. Load language-specific skills selectively, don't load Python skills when working in a Node.js package.
 
 Navigate to the specific package directory rather than the repo root before starting a session:
 
@@ -182,31 +182,31 @@ claude
 
 This targeted approach keeps Claude Code's analysis faster and more relevant. The context window stays focused on the package you're modifying rather than scanning the entire repository.
 
-**Universal skills** (always useful): `skill-creator` for building custom patterns, `internal-comms` for changelogs and commit messages. **Package-specific skills**: load `tdd` only when writing tests, `frontend-design` only in UI packages, `pdf` only for documentation generation.
+Universal skills (always useful): `skill-creator` for building custom patterns, `internal-comms` for changelogs and commit messages. Package-specific skills: load `tdd` only when writing tests, `frontend-design` only in UI packages, `pdf` only for documentation generation.
 
-## Best Practices for Monorepo Skills
+Best Practices for Monorepo Skills
 
 Keep your monorepo skills maintainable by following these principles:
 
-**Be Specific About Structure**: Replace the example paths in the skill with your actual repository layout. The more accurate the skill description, the more useful Claude's suggestions become.
+Be Specific About Structure: Replace the example paths in the skill with your actual repository layout. The more accurate the skill description, the more useful Claude's suggestions become.
 
-**Document Package Relationships**: Include which packages depend on which. This helps Claude understand impact when making changes.
+Document Package Relationships: Include which packages depend on which. This helps Claude understand impact when making changes.
 
-**Include Common Gotchas**: Monorepos have specific pitfalls — lockfile conflicts, hoisting issues, duplicate peer dependencies. Encode these in your skill to avoid repeated mistakes.
+Include Common Gotchas: Monorepos have specific pitfalls. lockfile conflicts, hoisting issues, duplicate peer dependencies. Encode these in your skill to avoid repeated mistakes.
 
-**Version Your Skills**: As your monorepo evolves, update your skill file. A skill that accurately describes a v1 monorepo may cause confusion in a v2 architecture.
+Version Your Skills: As your monorepo evolves, update your skill file. A skill that accurately describes a v1 monorepo may cause confusion in a v2 architecture.
 
-## Conclusion
+Conclusion
 
 Claude Code skills transform monorepo management from a complex, error-prone process into a guided workflow. By encoding your repository's structure, build commands, and best practices into a skill, you get consistent, efficient assistance for every development task.
 
 Start with a basic skill that describes your monorepo structure, then iterate as you discover patterns worth automating. The investment pays off quickly in reduced context-switching and fewer integration errors.
 
-## Related Reading
+Related Reading
 
-- [Shared Claude Skills Across Monorepo Multiple Packages](/shared-claude-skills-across-monorepo-multiple-packages/) — organize skills so every package in your monorepo can access them
-- [What Is the Best Way to Organize Claude Skills in a Monorepo](/what-is-the-best-way-to-organize-claude-skills-in-a-monorepo/) — directory layout and naming conventions for monorepo skills
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/) — run targeted test suites across affected packages automatically
-- [Claude Skills Automated Dependency Update Workflow](/claude-skills-automated-dependency-update-workflow/) — keep packages in sync with automated version management
+- [Shared Claude Skills Across Monorepo Multiple Packages](/shared-claude-skills-across-monorepo-multiple-packages/). organize skills so every package in your monorepo can access them
+- [What Is the Best Way to Organize Claude Skills in a Monorepo](/what-is-the-best-way-to-organize-claude-skills-in-a-monorepo/). directory layout and naming conventions for monorepo skills
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/). run targeted test suites across affected packages automatically
+- [Claude Skills Automated Dependency Update Workflow](/claude-skills-automated-dependency-update-workflow/). keep packages in sync with automated version management
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

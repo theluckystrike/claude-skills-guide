@@ -13,19 +13,19 @@ score: 7
 ---
 
 
-# Color Contrast Checking Workflow with Claude Code
+Color Contrast Checking Workflow with Claude Code
 
 Color contrast checking is a critical yet often overlooked aspect of web accessibility. Ensuring your text meets WCAG guidelines protects users with visual impairments and keeps your project legally compliant. This guide walks you through a practical workflow using Claude Code skills to systematically check and verify color contrast across your entire project.
 
-## Why Color Contrast Checking Matters
+Why Color Contrast Checking Matters
 
 Web Content Accessibility Guidelines (WCAG) 2.1 specify minimum contrast ratios: 4.5:1 for normal text and 3:1 for large text. Failure to meet these standards excludes users with low vision, color blindness, or those viewing content on poorly calibrated displays. Many development teams treat accessibility as an afterthought, discovering issues only during expensive audits or, worse, after legal complaints.
 
 The business case for accessible color contrast is substantial. Approximately 8% of men and 0.5% of women have some form of color vision deficiency. Users with cataracts, glaucoma, or diabetic retinopathy also depend on sufficient contrast. Beyond individual users, Section 508 compliance is mandatory for US federal agency contracts, and the European Accessibility Act (EAA) extends similar requirements across the EU. Lawsuits under the Americans with Disabilities Act have targeted major brands including Netflix, Domino's, and Target.
 
-Integrating color contrast checking into your regular development workflow catches problems early. The key is automation — manual checking becomes impractical as codebases grow. Claude Code skills provide the tooling to make contrast checking a seamless part of your development process.
+Integrating color contrast checking into your regular development workflow catches problems early. The key is automation. manual checking becomes impractical as codebases grow. Claude Code skills provide the tooling to make contrast checking a smooth part of your development process.
 
-## Understanding WCAG Contrast Requirements
+Understanding WCAG Contrast Requirements
 
 Before automating checks, you need to understand what you're testing for. WCAG 2.1 defines two conformance levels for contrast:
 
@@ -34,24 +34,24 @@ Before automating checks, you need to understand what you're testing for. WCAG 2
 | WCAG AA (Level AA) | 4.5:1 | 3:1 | 3:1 |
 | WCAG AAA (Level AAA) | 7:1 | 4.5:1 | n/a |
 
-"Large text" means 18pt (24px) or 14pt bold (approximately 18.67px bold). UI components include form inputs, focus indicators, and interactive controls — these only need 3:1 against adjacent colors.
+"Large text" means 18pt (24px) or 14pt bold (approximately 18.67px bold). UI components include form inputs, focus indicators, and interactive controls. these only need 3:1 against adjacent colors.
 
-There are notable exceptions. Decorative text, logos, and text that is part of a brand's inactive UI (like disabled button labels) are exempt. However, exempt does not mean invisible — a disabled button showing 1.2:1 contrast still creates a confusing experience.
+There are notable exceptions. Decorative text, logos, and text that is part of a brand's inactive UI (like disabled button labels) are exempt. However, exempt does not mean invisible. a disabled button showing 1.2:1 contrast still creates a confusing experience.
 
 WCAG 3.0 (in draft) introduces APCA (Advanced Perceptual Contrast Algorithm), which replaces the current luminance-ratio formula with a more nuanced perceptual model. Building automation now that is easy to update will save you from scrambling when that standard matures.
 
-## Prerequisites and Skill Setup
+Prerequisites and Skill Setup
 
 Before implementing this workflow, ensure Claude Code is installed and configured. You will need several skills available in the Claude Skills ecosystem:
 
-- **frontend-design** skill: Provides accessibility-aware component generation and design pattern recommendations
-- **axe-accessibility** skill: Integrates axe-core accessibility testing into your workflow
-- **tdd** skill: Helps write automated tests that verify contrast requirements
-- **pdf** skill: Useful when generating accessibility audit reports
+- frontend-design skill: Provides accessibility-aware component generation and design pattern recommendations
+- axe-accessibility skill: Integrates axe-core accessibility testing into your workflow
+- tdd skill: Helps write automated tests that verify contrast requirements
+- pdf skill: Useful when generating accessibility audit reports
 
 To install skills, clone community skill repositories from GitHub and place the `.md` files in `~/.claude/skills/`. Skills activate automatically when their trigger patterns match your prompts.
 
-## Step 1: Audit Existing Color Values
+Step 1: Audit Existing Color Values
 
 Begin by cataloging all color values used throughout your project. Create a dedicated file to track these values and their usage contexts. This inventory becomes your reference point for systematic checking.
 
@@ -64,7 +64,7 @@ grep -rE "#[0-9A-Fa-f]{3,6}|rgb\(|rgba\(|hsl\(" --include="*.css" --include="*.s
 For projects using CSS custom properties or design tokens, extend the scan:
 
 ```bash
-# Capture CSS variables and design tokens alongside hardcoded values
+Capture CSS variables and design tokens alongside hardcoded values
 grep -rE "var\(--[a-z-]+\)|#[0-9A-Fa-f]{3,6}|rgb\(|rgba\(|hsl\(" \
   --include="*.css" --include="*.scss" --include="*.json" \
   --include="*.ts" --include="*.tsx" src/ tokens/
@@ -90,7 +90,7 @@ Token                    | Hex Value | Used On        | Context
 
 This table becomes the input for your contrast ratio calculations and makes it easy to spot which tokens are risky at a glance.
 
-## Step 2: Calculate Contrast Ratios
+Step 2: Calculate Contrast Ratios
 
 Once you have your color inventory, calculate contrast ratios for each text-on-background combination. Claude Code can perform these calculations directly:
 
@@ -151,7 +151,7 @@ const results = colorPairs.map(pair => {
 
 results.forEach(r => {
   const status = r.passesAA ? 'PASS' : 'FAIL';
-  console.log(`${status} [${r.ratio}:1] ${r.context} — ${r.fg} on ${r.bg}`);
+  console.log(`${status} [${r.ratio}:1] ${r.context}. ${r.fg} on ${r.bg}`);
 });
 ```
 
@@ -160,19 +160,19 @@ Ask Claude to evaluate each color pair against WCAG requirements and flag combin
 A typical output helps you triage instantly:
 
 ```
-PASS [14.73:1] Body text — #1a1a1a on #ffffff
-FAIL [4.18:1]  Muted text — #6b7280 on #ffffff  ← fails AA normal text
-PASS [8.59:1]  Links — #2563eb on #ffffff
-PASS [4.52:1]  Button label — #ffffff on #2563eb
-FAIL [3.96:1]  Error messages — #dc2626 on #fff7f7  ← fails AA normal text
-FAIL [2.42:1]  Placeholders — #9ca3af on #ffffff  ← critical failure
+PASS [14.73:1] Body text. #1a1a1a on #ffffff
+FAIL [4.18:1]  Muted text. #6b7280 on #ffffff  ← fails AA normal text
+PASS [8.59:1]  Links. #2563eb on #ffffff
+PASS [4.52:1]  Button label. #ffffff on #2563eb
+FAIL [3.96:1]  Error messages. #dc2626 on #fff7f7  ← fails AA normal text
+FAIL [2.42:1]  Placeholders. #9ca3af on #ffffff  ← critical failure
 ```
 
-For each failure, prompt Claude to suggest alternative hex values that preserve the visual intent while reaching the required threshold. A muted gray that fails at 4.18:1 can often be darkened by a single step — for example, `#6b7280` to `#5a6475` — to clear the 4.5:1 bar without visually disrupting the design.
+For each failure, prompt Claude to suggest alternative hex values that preserve the visual intent while reaching the required threshold. A muted gray that fails at 4.18:1 can often be darkened by a single step. for example, `#6b7280` to `#5a6475`. to clear the 4.5:1 bar without visually disrupting the design.
 
-## Step 3: Integrate Automated Testing
+Step 3: Integrate Automated Testing
 
-Incorporate contrast checking into your test suite using the **tdd** skill. Create visual regression tests that capture contrast failures:
+Incorporate contrast checking into your test suite using the tdd skill. Create visual regression tests that capture contrast failures:
 
 ```javascript
 import { checkContrast } from 'axe-core';
@@ -213,30 +213,30 @@ test('login form passes contrast checks', async ({ page }) => {
 
 This gives you component-scoped failures with CSS selectors pointing to the exact elements that fail. When the test output reads `button.btn-secondary > span` you know exactly what to fix without hunting through markup.
 
-Run these tests in your CI pipeline to prevent accessibility regressions. The **super-memory** skill can track historical contrast test results, helping you identify patterns in where violations typically occur.
+Run these tests in your CI pipeline to prevent accessibility regressions. The super-memory skill can track historical contrast test results, helping you identify patterns in where violations typically occur.
 
-## Step 4: Generate Comprehensive Reports
+Step 4: Generate Comprehensive Reports
 
-For stakeholder communication and documentation, generate detailed contrast audit reports. Use the **pdf** skill to create professional documents:
+For stakeholder communication and documentation, generate detailed contrast audit reports. Use the pdf skill to create professional documents:
 
 ```markdown
-# Color Contrast Audit Report
+Color Contrast Audit Report
 
-## Executive Summary
+Executive Summary
 Total color pairs checked: 47
 Passing: 38 (81%)
 Failing: 9 (19%)
 
-## Critical Failures
+Critical Failures
 [Detailed table of failing combinations with suggested fixes]
 
-## Recommendations
+Recommendations
 [Prioritized list of remediation steps]
 ```
 
 Claude Code can generate these reports automatically after running contrast analysis, saving hours of manual documentation work.
 
-When presenting to design teams, include before/after hex swatches alongside the numeric ratios. Designers respond better to seeing the proposed fix visually than to a raw number. Ask Claude to format the audit table with columns for current value, proposed value, and the visual difference in plain language — for example, "3% darker, perceptually similar."
+When presenting to design teams, include before/after hex swatches alongside the numeric ratios. Designers respond better to seeing the proposed fix visually than to a raw number. Ask Claude to format the audit table with columns for current value, proposed value, and the visual difference in plain language. for example, "3% darker, perceptually similar."
 
 A complete report table might look like:
 
@@ -246,12 +246,12 @@ A complete report table might look like:
 | Error label | #dc2626 on #fff7f7 | 3.96:1 | #b91c1c on #fff7f7 | 5.08:1 | Slightly darker red |
 | Placeholder | #9ca3af on #fff | 2.42:1 | #6b7280 on #fff | 4.18:1 | Noticeable darkening |
 
-## Step 5: Continuous Monitoring
+Step 5: Continuous Monitoring
 
 Implement pre-commit hooks that block code with obvious contrast violations:
 
 ```bash
-# .git/hooks/pre-commit
+.git/hooks/pre-commit
 npx @axe-core/cli https://localhost:3000 --exit
 ```
 
@@ -268,38 +268,38 @@ For more targeted pre-commit checks scoped to changed CSS files, use a lint-stag
 
 The `check-contrast.js` script can parse the changed files for new color values and run them through your contrast calculator before allowing the commit to proceed. This is faster than spinning up a full browser for every save and catches hardcoded color errors at the source.
 
-For design systems, create living documentation that specifies approved color combinations. The **frontend-design** skill can generate these guidelines automatically based on your project's color palette and WCAG requirements.
+For design systems, create living documentation that specifies approved color combinations. The frontend-design skill can generate these guidelines automatically based on your project's color palette and WCAG requirements.
 
 A well-maintained design system documents approved pairs explicitly:
 
 ```css
-/* APPROVED — 14.73:1 — body text */
+/* APPROVED. 14.73:1. body text */
 .text-primary { color: #1a1a1a; }
 
-/* APPROVED — 8.59:1 — inline links */
+/* APPROVED. 8.59:1. inline links */
 .text-link { color: #2563eb; }
 
-/* APPROVED — 4.71:1 — secondary/muted text (minimum compliant) */
+/* APPROVED. 4.71:1. secondary/muted text (minimum compliant) */
 .text-muted { color: #5a6475; }
 
-/* DO NOT USE on white backgrounds — fails AA */
+/* DO NOT USE on white backgrounds. fails AA */
 /* .text-placeholder-old { color: #9ca3af; } */
 ```
 
 Keeping deprecated token aliases in comments (with clear warnings) prevents regressions when developers copy old code snippets.
 
-## Handling Dynamic Content
+Handling Dynamic Content
 
 Color contrast checking becomes more complex with dynamic content. User-generated content, dark mode switches, and theme variations multiply the number of color combinations to verify. Address this through:
 
-1. **Theme matrices**: Test all color scheme combinations (light/dark, high contrast modes)
-2. **Content sampling**: Check representative samples of user content types
-3. **Runtime validation**: Implement client-side contrast checking that alerts users to problematic combinations
+1. Theme matrices: Test all color scheme combinations (light/dark, high contrast modes)
+2. Content sampling: Check representative samples of user content types
+3. Runtime validation: Implement client-side contrast checking that alerts users to problematic combinations
 
 For dark mode specifically, many teams check light mode exhaustively and forget to re-audit the dark theme. Create a separate inventory pass for each theme:
 
 ```bash
-# Run axe against both themes in CI
+Run axe against both themes in CI
 playwright test --project=chromium contrast.spec.ts -- --theme=light
 playwright test --project=chromium contrast.spec.ts -- --theme=dark
 ```
@@ -324,7 +324,7 @@ colorPicker.addEventListener('input', (e) => {
 });
 ```
 
-## Common Pitfalls to Avoid
+Common Pitfalls to Avoid
 
 Several mistakes weaken color contrast checking workflows:
 
@@ -335,13 +335,13 @@ Several mistakes weaken color contrast checking workflows:
 
 A few less-obvious traps are worth calling out explicitly. Transparent backgrounds compound: `rgba(0, 0, 0, 0.5)` over white computes differently than over a light gray card. Always resolve alpha-composited colors to their actual rendered value before running the ratio calculation.
 
-Font rendering differs by OS. macOS renders fonts with subpixel antialiasing that makes thin text look lighter than it actually is. Windows ClearType and Linux font hinting produce different perceived weights. For borderline ratios — anything between 4.5:1 and 5:1 — budget extra margin rather than assuming the calculation perfectly matches perception on every platform.
+Font rendering differs by OS. macOS renders fonts with subpixel antialiasing that makes thin text look lighter than it actually is. Windows ClearType and Linux font hinting produce different perceived weights. For borderline ratios. anything between 4.5:1 and 5:1. budget extra margin rather than assuming the calculation perfectly matches perception on every platform.
 
 Animated content introduces contrast windows. An entrance animation fading text from transparent to full opacity passes through low-contrast intermediate states. If the animation is slower than about 400ms and the intermediate state is visible, users with vestibular disorders or slow processing may try to read it mid-fade. Aim for contrast compliance throughout the entire keyframe sequence, not just the final state.
 
 Addressing these gaps requires expanding your testing matrix and automating checks across environments.
 
-## Measuring Success
+Measuring Success
 
 Track your accessibility metrics over time. Aim for zero critical contrast failures in automated tests. Use Lighthouse accessibility scores as a baseline metric:
 
@@ -364,16 +364,16 @@ Supplement Lighthouse with a dedicated contrast dashboard. Store results from ea
 
 Graphing these numbers over time reveals whether accessibility holds steady as new features ship. A single spike in failures on a release branch is an early warning that a design change broke something before it reaches production.
 
-Teams that treat color contrast as a first-class quality metric — tracked in dashboards, blocked in CI, audited in design reviews — eliminate accessibility debt gradually rather than paying it back in panic before audits. Claude Code makes the automation lightweight enough that there is no reason to defer it.
+Teams that treat color contrast as a first-class quality metric. tracked in dashboards, blocked in CI, audited in design reviews. eliminate accessibility debt gradually rather than paying it back in panic before audits. Claude Code makes the automation lightweight enough that there is no reason to defer it.
 
 ---
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code WCAG Accessibility Audit Workflow](/claude-code-wcag-accessibility-audit-workflow/)
 - [Claude Code Axe Accessibility Testing Guide](/claude-code-axe-accessibility-testing-guide/)
 - [Claude Code Screen Reader Testing Workflow](/claude-code-screen-reader-testing-workflow/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

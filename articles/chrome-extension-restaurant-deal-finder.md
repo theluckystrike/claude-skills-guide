@@ -19,7 +19,7 @@ Finding the best restaurant deals often requires checking multiple platforms, co
 
 This guide covers the technical architecture, implementation patterns, and key considerations for building a restaurant deal finder extension.
 
-## Extension Architecture Overview
+Extension Architecture Overview
 
 A restaurant deal finder extension typically consists of three main components: a background script for data fetching, a content script for page interaction, and a popup interface for displaying results. Understanding how these components communicate forms the foundation of your implementation.
 
@@ -42,9 +42,9 @@ The manifest file defines your extension's capabilities:
 
 Manifest V3 represents the current standard, requiring service workers instead of background pages. This change improves memory efficiency but requires handling asynchronous operations differently than older extension versions.
 
-## Core Features for Deal Detection
+Core Features for Deal Detection
 
-### Restaurant Website Integration
+Restaurant Website Integration
 
 Many restaurants publish special offers directly on their websites. Your extension needs to detect these offers by scanning page content for common deal patterns. Here's a practical approach using content scripts:
 
@@ -91,7 +91,7 @@ function getContext(text) {
 }
 ```
 
-### Deal Aggregation from Multiple Sources
+Deal Aggregation from Multiple Sources
 
 Beyond scanning individual restaurant sites, aggregating deals from deal aggregators provides more comprehensive coverage. You can inject content scripts into supported platforms or use the Extension API to fetch data from APIs.
 
@@ -122,7 +122,7 @@ async function fetchDealsFromSources(location) {
 }
 ```
 
-## Data Storage and User Preferences
+Data Storage and User Preferences
 
 Extensions need to store user preferences, saved deals, and location data. Chrome's storage API provides synchronized storage that works across devices:
 
@@ -162,7 +162,7 @@ const StorageManager = {
 };
 ```
 
-## Popup Interface Design
+Popup Interface Design
 
 The popup serves as your extension's primary user interface. Keep it lightweight and responsive since users expect quick interactions:
 
@@ -238,7 +238,7 @@ function displayDeals(deals) {
 }
 ```
 
-## Extension Deployment Considerations
+Extension Deployment Considerations
 
 Testing Chrome extensions requires understanding the loading process. During development, use "Load unpacked" in chrome://extensions to test changes immediately. For distribution through the Chrome Web Store, ensure your extension meets their policies regarding data handling and user privacy.
 
@@ -249,24 +249,24 @@ Building a restaurant deal finder extension teaches practical skills in browser 
 The restaurant deal space remains fragmented, with many independent restaurants lacking sophisticated online presence. A well-built extension that aggregates deals across multiple sources fills a genuine gap in the market while providing developers with portfolio-worthy implementation experience.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-## Step-by-Step: Finding Deals at a Local Restaurant
+Step-by-Step: Finding Deals at a Local Restaurant
 
 1. Navigate to a restaurant's website or a deal aggregator like Yelp or OpenTable
-2. Click the extension icon — the popup detects the restaurant name and location from page metadata
+2. Click the extension icon. the popup detects the restaurant name and location from page metadata
 3. The content script scans for on-page promotions (happy hour banners, coupon codes)
 4. The background script simultaneously queries configured deal APIs for the same location
 5. All deals are merged, deduplicated, and displayed sorted by discount percentage
 6. Click any deal to view the original offer or copy the promo code to clipboard
 
-## Advanced: Location-Aware Deal Sorting
+Advanced: Location-Aware Deal Sorting
 
 Use the browser's Geolocation API to prioritize nearby restaurants:
 
@@ -277,7 +277,7 @@ function getNearbyDeals(deals, userLocation, radiusMiles = 5) {
     const R = 3958.8; // Earth radius in miles
     const dLat = toRad(b.lat - a.lat);
     const dLon = toRad(b.lng - a.lng);
-    const h = Math.sin(dLat/2)**2 + Math.cos(toRad(a.lat)) * Math.cos(toRad(b.lat)) * Math.sin(dLon/2)**2;
+    const h = Math.sin(dLat/2)2 + Math.cos(toRad(a.lat)) * Math.cos(toRad(b.lat)) * Math.sin(dLon/2)2;
     return R * 2 * Math.asin(Math.sqrt(h));
   }
 
@@ -293,7 +293,7 @@ navigator.geolocation.getCurrentPosition(({ coords }) => {
 });
 ```
 
-## Comparison with Existing Restaurant Deal Apps
+Comparison with Existing Restaurant Deal Apps
 
 | Tool | Coverage | Browser integration | Notification support | Cost |
 |---|---|---|---|---|
@@ -304,11 +304,11 @@ navigator.geolocation.getCurrentPosition(({ coords }) => {
 
 The extension wins for users who browse restaurant websites directly and want deals surfaced inline without switching apps.
 
-## Troubleshooting Common Issues
+Troubleshooting Common Issues
 
-**Geolocation permission denied**: Provide a manual zip code entry fallback. Not all users are comfortable granting location access to browser extensions.
+Geolocation permission denied: Provide a manual zip code entry fallback. Not all users are comfortable granting location access to browser extensions.
 
-**Deal API returning empty results for smaller cities**: Most deal APIs have better coverage in major metros. Add a "Check restaurant website directly" fallback that scans the current page for any promotion-related text patterns:
+Deal API returning empty results for smaller cities: Most deal APIs have better coverage in major metros. Add a "Check restaurant website directly" fallback that scans the current page for any promotion-related text patterns:
 
 ```javascript
 const PROMO_PATTERNS = [/(\d+)%\s*off/i, /happy hour/i, /buy one get one/i, /free\s+\w+\s+with/i];
@@ -322,7 +322,7 @@ function scanPageForDeals(doc) {
 }
 ```
 
-**Duplicate deals from multiple sources**: Deduplicate using a normalized key (restaurant name + offer type + discount amount):
+Duplicate deals from multiple sources: Deduplicate using a normalized key (restaurant name + offer type + discount amount):
 
 ```javascript
 function deduplicateDeals(deals) {

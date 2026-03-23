@@ -16,11 +16,11 @@ score: 7
 
 {% raw %}
 
-# Claude Code for Twilio SMS Workflow Guide
+Claude Code for Twilio SMS Workflow Guide
 
 SMS remains one of the most effective communication channels for businesses, with open rates exceeding 90%. Combining Claude Code with Twilio's SMS API enables you to build sophisticated messaging automation that handles appointment reminders, notifications, two-factor authentication, and customer support workflows. This comprehensive guide walks you through creating production-ready Twilio SMS workflows using Claude Code skills.
 
-## Understanding the Twilio SMS Integration
+Understanding the Twilio SMS Integration
 
 Before diving into implementation, it's essential to understand how Twilio's SMS API works and how Claude Code can orchestrate messaging workflows effectively. Twilio provides a RESTful API for sending and receiving SMS messages, with support for bulk messaging, scheduled sends, and automated responses through webhooks.
 
@@ -32,13 +32,13 @@ To get started, you'll need a Twilio account with SMS capabilities, your account
 npm install twilio
 ```
 
-## Setting Up Your Claude Code SMS Skill
+Setting Up Your Claude Code SMS Skill
 
 Create a dedicated Claude Code skill for Twilio SMS operations to encapsulate all messaging-related functionality. Copy the skill file manually to your `.claude/skills/` directory:
 
 ```bash
 mkdir -p .claude/skills
-# Then create your skill file at .claude/skills/twilio-sms-workflow.md
+Then create your skill file at .claude/skills/twilio-sms-workflow.md
 ```
 
 This creates a skill structure with proper organization for handling different SMS scenarios. Now let's build the core functionality for sending messages:
@@ -89,11 +89,11 @@ class TwilioSMSService {
 module.exports = TwilioSMSService;
 ```
 
-## Building Practical SMS Workflows
+Building Practical SMS Workflows
 
-Let's explore three common SMS use cases that demonstrate Claude Code's capabilities for Twilio integration.
+ three common SMS use cases that demonstrate Claude Code's capabilities for Twilio integration.
 
-### Appointment Reminder System
+Appointment Reminder System
 
 Automated appointment reminders dramatically reduce no-shows. Here's how to build a reminder system:
 
@@ -146,7 +146,7 @@ class AppointmentReminder {
 }
 ```
 
-### Two-Factor Authentication (2FA)
+Two-Factor Authentication (2FA)
 
 SMS-based 2FA adds a critical security layer to user authentication. Implement it securely:
 
@@ -198,7 +198,7 @@ class TwoFactorAuth {
 }
 ```
 
-### Customer Support Ticket Notifications
+Customer Support Ticket Notifications
 
 Keep customers informed about their support requests with automated status updates:
 
@@ -235,7 +235,7 @@ class SupportNotificationService {
 }
 ```
 
-## Handling Inbound SMS Messages
+Handling Inbound SMS Messages
 
 Processing incoming SMS requires a webhook endpoint that Twilio calls when messages arrive:
 
@@ -261,13 +261,13 @@ app.post('/webhooks/twilio/inbound', async (req, res) => {
 });
 ```
 
-## Best Practices for Production SMS Workflows
+Best Practices for Production SMS Workflows
 
 When deploying SMS workflows to production, consider these critical best practices:
 
-**Rate Limiting and Throttling**: Twilio imposes rate limits on SMS sends. Implement exponential backoff and queue messages to avoid failures. The `sendBulkSMS` example above demonstrates a simple 100ms delay between messages.
+Rate Limiting and Throttling: Twilio imposes rate limits on SMS sends. Implement exponential backoff and queue messages to avoid failures. The `sendBulkSMS` example above demonstrates a simple 100ms delay between messages.
 
-**Phone Number Validation**: Always validate phone numbers before sending. Use Twilio's Lookup API to verify numbers are valid and capable of receiving SMS:
+Phone Number Validation: Always validate phone numbers before sending. Use Twilio's Lookup API to verify numbers are valid and capable of receiving SMS:
 
 ```javascript
 async function validatePhoneNumber(phoneNumber) {
@@ -281,11 +281,11 @@ async function validatePhoneNumber(phoneNumber) {
 }
 ```
 
-**Error Handling and Logging**: Implement comprehensive error handling to capture delivery failures, invalid numbers, and API errors. Store message history for auditing and debugging.
+Error Handling and Logging: Implement comprehensive error handling to capture delivery failures, invalid numbers, and API errors. Store message history for auditing and debugging.
 
-**Compliance with Regulations**: Ensure your SMS workflows comply with TCPA (in the US), GDPR (in Europe), and other relevant regulations. Always include opt-out instructions and honor opt-out requests immediately.
+Compliance with Regulations: Ensure your SMS workflows comply with TCPA (in the US), GDPR (in Europe), and other relevant regulations. Always include opt-out instructions and honor opt-out requests immediately.
 
-## Conclusion
+Conclusion
 
 Claude Code provides an excellent framework for building sophisticated Twilio SMS workflows. By encapsulating messaging logic in skills, you create reusable, testable components that can handle appointment reminders, authentication, support notifications, and more. Start with the examples in this guide, adapt them to your specific use cases, and gradually add more advanced features like message templates, personalization, and analytics tracking.
 
@@ -293,10 +293,10 @@ The combination of Claude Code's orchestration capabilities and Twilio's reliabl
 
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

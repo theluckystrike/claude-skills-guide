@@ -15,26 +15,26 @@ permalink: /claude-code-batch-processing-with-skills-guide/
 
 Claude Code skills transform how developers handle repetitive tasks. Instead of processing files one at a time, you can chain skills together to handle batch operations across entire directories. This guide shows you how to build efficient batch processing workflows using Claude skills. For multi-agent approaches to parallel workloads, see [fan-out fan-in pattern with Claude Code subagents](/fan-out-fan-in-pattern-claude-code-subagents/).
 
-## How Batch Processing Works with Skills
+How Batch Processing Works with Skills
 
 Skills in Claude Code are Markdown files containing specialized instructions. When you invoke a skill, Claude loads its context and applies that expertise to your current task. For batch processing, you combine skill invocation with shell commands or scripting to iterate over multiple files.
 
-The key is understanding that skills don't execute loops themselves — they guide Claude's behavior while you provide the iteration mechanism through bash or scripts. This separation keeps your workflows flexible and debuggable.
+The key is understanding that skills don't execute loops themselves. they guide Claude's behavior while you provide the iteration mechanism through bash or scripts. This separation keeps your workflows flexible and debuggable.
 
-Think of it like a chef and a kitchen assistant. The skill is the chef's expertise — knowledge of technique, what good output looks like, what mistakes to avoid. The shell script is the assistant who hands files to the chef one at a time. Neither can do the other's job well, but together they produce consistent, high-quality results at scale.
+Think of it like a chef and a kitchen assistant. The skill is the chef's expertise. knowledge of technique, what good output looks like, what mistakes to avoid. The shell script is the assistant who hands files to the chef one at a time. Neither can do the other's job well, but together they produce consistent, high-quality results at scale.
 
 This architecture also makes debugging straightforward. When a batch job produces unexpected output for a specific file, you can reproduce the failure by running the claude invocation for just that file in isolation, without the loop. You see exactly what Claude received as input and can trace the issue without rerunning the entire batch.
 
-## Setting Up Batch Processing
+Setting Up Batch Processing
 
 Create a working directory for your batch operations:
 
 ```
 ~/batch-projects/
-├── process/
-│   ├── input/
-│   └── output/
-└── scripts/
+ process/
+    input/
+    output/
+ scripts/
 ```
 
 Initialize your Claude session with the skills you need. For example, if processing design files, load the frontend-design skill alongside your processing script:
@@ -47,7 +47,7 @@ Before running any batch job, it's worth writing a dry-run mode into your script
 
 ```bash
 #!/bin/bash
-# Add --dry-run flag support to any batch script
+Add --dry-run flag support to any batch script
 DRY_RUN=false
 [[ "$1" == "--dry-run" ]] && DRY_RUN=true
 
@@ -63,13 +63,13 @@ done
 
 Running `./batch-process.sh --dry-run` before the real job catches 90% of configuration mistakes with zero cost.
 
-## Processing Multiple Files with Skill Chains
+Processing Multiple Files with Skill Chains
 
 The most common batch pattern involves iterating through files and applying skill-guided transformations. Here's a practical example processing markdown files for a documentation site:
 
 ```bash
 #!/bin/bash
-# batch-process-docs.sh
+batch-process-docs.sh
 
 INPUT_DIR="./docs"
 OUTPUT_DIR="./processed"
@@ -103,13 +103,13 @@ Read the file contents yourself and write the improved version."
 
 This avoids shell argument length limits and keeps the prompt readable.
 
-## PDF Batch Processing Example
+PDF Batch Processing Example
 
 The pdf skill handles batch document operations efficiently. Process multiple PDFs for extraction or conversion:
 
 ```bash
 #!/bin/bash
-# batch-extract-pdf.sh
+batch-extract-pdf.sh
 
 PDF_DIR="./invoices"
 OUTPUT_DIR="./extracted"
@@ -130,7 +130,7 @@ However, piping all output to a single file the way this script does concatenate
 
 ```bash
 #!/bin/bash
-# batch-extract-pdf-fixed.sh
+batch-extract-pdf-fixed.sh
 
 PDF_DIR="./invoices"
 OUTPUT_DIR="./extracted"
@@ -152,7 +152,7 @@ Return ONLY valid JSON with keys: invoice_number, date, total, line_items.
 No markdown, no explanation, just the JSON object." > "$output_file"
 done
 
-# Merge all JSON files into an array
+Merge all JSON files into an array
 echo "[" > "$OUTPUT_DIR/all_invoices.json"
 first=true
 for f in "$OUTPUT_DIR"/*.json; do
@@ -167,13 +167,13 @@ echo "Merged all invoices into all_invoices.json"
 
 The skip logic (`if [[ -f "$output_file" ]]`) is valuable for large batch jobs that may need to be interrupted and resumed without reprocessing completed files.
 
-## Code Transformation with Multiple Skills
+Code Transformation with Multiple Skills
 
 Combine skills for complex batch transformations. This example uses the tdd skill together with a refactoring prompt:
 
 ```bash
 #!/bin/bash
-# batch-add-tests.sh
+batch-add-tests.sh
 
 SRC_DIR="./src"
 TEST_DIR="./tests"
@@ -201,7 +201,7 @@ For TypeScript codebases, extend this pattern to also generate type declarations
 
 ```bash
 #!/bin/bash
-# batch-add-types.sh
+batch-add-types.sh
 
 SRC_DIR="./src"
 
@@ -213,7 +213,7 @@ for file in "$SRC_DIR"/*.js; do
 
   claude -p "Convert this JavaScript file to TypeScript.
 Add proper type annotations to all function parameters, return types, and variables.
-Preserve all existing logic exactly — change only the types, not the behavior.
+Preserve all existing logic exactly. change only the types, not the behavior.
 
 $(cat "$file")
 
@@ -223,13 +223,13 @@ done
 
 Running the type-generation pass before the test-generation pass means your tdd invocations work with typed files, which produces more accurate test signatures.
 
-## Automating Documentation Generation
+Automating Documentation Generation
 
 The docs skill paired with batch scripts automates documentation across codebases:
 
 ```bash
 #!/bin/bash
-# generate-docs.sh
+generate-docs.sh
 
 COMPONENTS=(
   "Button"
@@ -252,7 +252,7 @@ For larger projects, generating a table of contents entry alongside each compone
 
 ```bash
 #!/bin/bash
-# generate-full-docs.sh
+generate-full-docs.sh
 
 COMPONENTS_DIR="./components"
 DOCS_FILE="./docs/components.md"
@@ -280,14 +280,14 @@ Format:
 $(cat "$file")" >> "$DOCS_FILE"
 done
 
-# Prepend TOC to the docs file
+Prepend TOC to the docs file
 cat "$TOC_FILE" "$DOCS_FILE" > "$DOCS_FILE.tmp" && mv "$DOCS_FILE.tmp" "$DOCS_FILE"
 echo "Documentation generated: $DOCS_FILE"
 ```
 
 The result is a single-file component reference that's ready to publish without manual assembly.
 
-## Memory-Augmented Batch Processing
+Memory-Augmented Batch Processing
 
 The [supermemory skill enhances batch processing](/claude-supermemory-skill-persistent-context-explained/) by maintaining context across iterations. When processing related files, this prevents redundant work:
 
@@ -299,13 +299,13 @@ The skill tracks what has been processed and what still needs attention, making 
 
 Memory augmentation becomes particularly valuable when batch jobs span multiple Claude sessions. If you stop a batch job midway and resume it the next day, the supermemory skill can recall which files were already processed, what patterns appeared frequently, and which edge cases needed special handling. Without this, you either reprocess everything or maintain a separate tracking file.
 
-## Progress Tracking for Long Batch Jobs
+Progress Tracking for Long Batch Jobs
 
 For batch jobs with hundreds of files, progress visibility matters. A simple progress tracker adds minimal overhead:
 
 ```bash
 #!/bin/bash
-# batch-with-progress.sh
+batch-with-progress.sh
 
 FILES=(./input/*.md)
 TOTAL=${#FILES[@]}
@@ -334,21 +334,21 @@ echo "Done. $DONE processed, $FAILED failed."
 
 The ETA calculation gives you a realistic sense of when to come back, which is useful for overnight runs where you want to know if the job will finish before your morning standup.
 
-## Performance Optimization Tips
+Performance Optimization Tips
 
 Batch processing with skills runs faster when you optimize the workflow:
 
-**Parallel processing**: Use GNU parallel or xargs for concurrent operations:
+Parallel processing: Use GNU parallel or xargs for concurrent operations:
 
 ```bash
 ls *.json | xargs -P 4 -I {} bash process-one.sh {}
 ```
 
-With `xargs -P 4`, four Claude invocations run simultaneously. The optimal parallelism depends on your API rate limits — if you're on a plan that allows 10 requests per minute, running 4 concurrent workers with a modest file count may finish faster than running 1 at a time but still stay under limits.
+With `xargs -P 4`, four Claude invocations run simultaneously. The optimal parallelism depends on your API rate limits. if you're on a plan that allows 10 requests per minute, running 4 concurrent workers with a modest file count may finish faster than running 1 at a time but still stay under limits.
 
-**Reduce skill reloads**: Group similar files together to minimize context switching between different skills. If your batch job processes both JavaScript and Python files, process all the JavaScript files first (under one skill context) then all the Python files, rather than alternating between them.
+Reduce skill reloads: Group similar files together to minimize context switching between different skills. If your batch job processes both JavaScript and Python files, process all the JavaScript files first (under one skill context) then all the Python files, rather than alternating between them.
 
-**Pre-filter files**: Use find or glob patterns to process only relevant files:
+Pre-filter files: Use find or glob patterns to process only relevant files:
 
 ```bash
 find . -name "*.ts" -newer last-run.txt -exec process.sh {} \;
@@ -356,7 +356,7 @@ find . -name "*.ts" -newer last-run.txt -exec process.sh {} \;
 
 The `-newer last-run.txt` flag processes only files modified after your last run. Combine this with `touch last-run.txt` at the end of each successful batch run to make incremental processing automatic.
 
-**Checkpoint frequently**: For long-running batches, write a checkpoint file after every N files:
+Checkpoint frequently: For long-running batches, write a checkpoint file after every N files:
 
 ```bash
 CHECKPOINT_FILE="./batch-checkpoint.txt"
@@ -390,7 +390,7 @@ for file in ./input/*.md; do
 done
 ```
 
-## Error Handling in Batch Jobs
+Error Handling in Batch Jobs
 
 Always implement proper error handling:
 
@@ -425,7 +425,7 @@ Beyond logging, consider categorizing failures. Some failures are transient (rat
 
 ```bash
 #!/bin/bash
-# process-with-retry.sh
+process-with-retry.sh
 
 MAX_RETRIES=3
 file="$1"
@@ -446,36 +446,36 @@ exit 1
 
 Call this script from your outer loop instead of calling claude directly. It absorbs transient failures transparently and only escalates genuinely broken files.
 
-## Real-World Use Cases
+Real-World Use Cases
 
 Batch processing with skills excels in several scenarios:
 
-- **Legacy code modernization**: Process hundreds of files to add TypeScript types using the tdd skill with type-checking prompts
-- **Content migration**: Transform CMS exports using docs and formatting skills
-- **Test coverage expansion**: Apply tdd skill across entire codebases
-- **Design system updates**: Batch update component props with frontend-design guidance
+- Legacy code modernization: Process hundreds of files to add TypeScript types using the tdd skill with type-checking prompts
+- Content migration: Transform CMS exports using docs and formatting skills
+- Test coverage expansion: Apply tdd skill across entire codebases
+- Design system updates: Batch update component props with frontend-design guidance
 
 A few additional scenarios worth highlighting for developer teams:
 
-**API contract generation**: Given a directory of controller files, generate OpenAPI spec entries for each endpoint. Skills trained on API documentation formats produce consistent, accurate specs that align with the actual implementation rather than drifting out of sync.
+API contract generation: Given a directory of controller files, generate OpenAPI spec entries for each endpoint. Skills trained on API documentation formats produce consistent, accurate specs that align with the actual implementation rather than drifting out of sync.
 
-**Commit message standardization**: For repos with inconsistent commit history, batch-process git log output through a skill that rewrites messages to follow Conventional Commits format. Useful before publishing an open-source project or generating changelogs.
+Commit message standardization: For repos with inconsistent commit history, batch-process git log output through a skill that rewrites messages to follow Conventional Commits format. Useful before publishing an open-source project or generating changelogs.
 
-**Localization string extraction**: Scan source files for hardcoded UI strings, extract them with their context, and generate the initial entries for a localization file. A skill that understands your UI framework produces better extraction than a naive regex approach.
+Localization string extraction: Scan source files for hardcoded UI strings, extract them with their context, and generate the initial entries for a localization file. A skill that understands your UI framework produces better extraction than a naive regex approach.
 
-**Security audit triage**: Pass source files through a skill trained on OWASP patterns to flag potential vulnerabilities for human review. This doesn't replace a proper security audit, but it catches common patterns quickly across large codebases.
+Security audit triage: Pass source files through a skill trained on OWASP patterns to flag potential vulnerabilities for human review. This doesn't replace a proper security audit, but it catches common patterns quickly across large codebases.
 
-## Conclusion
+Conclusion
 
-Claude Code skills combined with shell scripting create powerful batch processing capabilities. Start with simple single-skill workflows, then combine multiple skills for complex transformations. The key is separating iteration logic (bash) from transformation expertise (skills) — this keeps your pipelines maintainable and scalable.
+Claude Code skills combined with shell scripting create powerful batch processing capabilities. Start with simple single-skill workflows, then combine multiple skills for complex transformations. The key is separating iteration logic (bash) from transformation expertise (skills). this keeps your pipelines maintainable and scalable.
 
 Invest time in dry-run modes, progress tracking, and retry logic early. These patterns add maybe 20 lines to your script but eliminate the frustration of discovering a batch job failed silently halfway through. With solid infrastructure around the Claude invocation, batch processing scales from a handful of files to thousands without changing your core approach.
 
-## Related Reading
+Related Reading
 
-- [Claude Code Agent Pipeline: Sequential vs Parallel Execution](/claude-code-agent-pipeline-sequential-vs-parallel/) — Understand when to run batch jobs sequentially versus in parallel for maximum throughput
-- [Rate Limit Management for Claude Code Skill-Intensive Workflows](/rate-limit-management-claude-code-skill-intensive-workflows/) — Avoid hitting API rate limits when running large batch processing jobs
-- [Fan-Out Fan-In Pattern with Claude Code Subagents](/fan-out-fan-in-pattern-claude-code-subagents/) — Distribute batch workloads across multiple subagents and collect results
-- [Claude Skills Hub](/workflows-hub/) — Explore automation workflows and batch processing patterns with Claude Code
+- [Claude Code Agent Pipeline: Sequential vs Parallel Execution](/claude-code-agent-pipeline-sequential-vs-parallel/). Understand when to run batch jobs sequentially versus in parallel for maximum throughput
+- [Rate Limit Management for Claude Code Skill-Intensive Workflows](/rate-limit-management-claude-code-skill-intensive-workflows/). Avoid hitting API rate limits when running large batch processing jobs
+- [Fan-Out Fan-In Pattern with Claude Code Subagents](/fan-out-fan-in-pattern-claude-code-subagents/). Distribute batch workloads across multiple subagents and collect results
+- [Claude Skills Hub](/workflows-hub/). Explore automation workflows and batch processing patterns with Claude Code
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

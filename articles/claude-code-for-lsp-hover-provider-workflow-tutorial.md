@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for LSP Hover Provider Workflow Tutorial"
-description: "Learn how to build LSP hover provider workflows with Claude Code. Create custom skills that leverage language server protocol for intelligent code."
+description: "Learn how to build LSP hover provider workflows with Claude Code. Create custom skills that use language server protocol for intelligent code."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-lsp-hover-provider-workflow-tutorial/
@@ -12,11 +12,11 @@ score: 8
 ---
 
 {% raw %}
-# Claude Code for LSP Hover Provider Workflow Tutorial
+Claude Code for LSP Hover Provider Workflow Tutorial
 
 The Language Server Protocol (LSP) has revolutionized how development tools understand and interact with code. LSP hover providers are one of the most valuable features, displaying contextual information when developers hover over code symbols. This tutorial shows you how to create Claude Code skills that implement LSP-style hover provider workflows, bringing rich contextual information directly into your AI-assisted development workflow.
 
-## Understanding LSP Hover in the Claude Code Context
+Understanding LSP Hover in the Claude Code Context
 
 Traditional LSP hover providers work within code editors like VS Code, displaying type information, documentation, and symbol details when you hover over code. While Claude Code doesn't have a native hover UI, you can replicate this functionality by creating skills that:
 
@@ -26,7 +26,7 @@ Traditional LSP hover providers work within code editors like VS Code, displayin
 
 This workflow becomes particularly powerful when combined with MCP (Model Context Protocol) servers that understand your codebase's structure.
 
-## Setting Up Your First Hover Provider Skill
+Setting Up Your First Hover Provider Skill
 
 Create a new skill file at `~/.claude/skills/hover-provider-skill/skill.md`:
 
@@ -37,11 +37,11 @@ description: Analyze code symbols and provide contextual information similar to 
 tools: [Read, Bash, Glob]
 ---
 
-# Hover Provider Skill
+Hover Provider Skill
 
 You are an expert at analyzing code and providing contextual information about symbols, types, and documentation.
 
-## Analyzing Symbols
+Analyzing Symbols
 
 When asked about a code symbol, you will:
 
@@ -55,21 +55,21 @@ When asked about a code symbol, you will:
    - Usage examples from the codebase
    - Related documentation
 
-## Response Format
+Response Format
 
 Present your findings in a structured format:
 
-**Symbol**: `<symbol-name>`
-**Type**: `<type-description>`
-**Defined in**: `<file>:<line-number>`
-**Summary**: `<brief-description>
+Symbol: `<symbol-name>`
+Type: `<type-description>`
+Defined in: `<file>:<line-number>`
+`<brief-description>
 
-## Examples
+Examples
 
 Example query: "What is this function doing?"
 Example response: "The `processUserData` function is a handler that..."
 
-## Usage
+Usage
 
 To use this skill, simply ask questions like:
 - "What does this function do?"
@@ -80,7 +80,7 @@ To use this skill, simply ask questions like:
 
 This skill provides the foundation for hover-like functionality. Now let's enhance it with MCP integration.
 
-## Integrating MCP Servers for Enhanced Hover Information
+Integrating MCP Servers for Enhanced Hover Information
 
 MCP servers can provide rich contextual information about your codebase. Here's how to create an enhanced hover provider that uses MCP:
 
@@ -92,19 +92,19 @@ tools: [Read, Bash, Glob, MCP-Tools]
 mcp_servers: [your-codebase-server]
 ---
 
-# Enhanced Hover Provider
+Enhanced Hover Provider
 
 This skill combines Claude Code's analysis capabilities with MCP-powered code understanding.
 
-## Symbol Resolution Flow
+Symbol Resolution Flow
 
-1. **Receive Query**: User asks about a symbol (function, class, variable)
-2. **Query MCP Server**: Use the codebase server to find symbol definitions
-3. **Analyze Context**: Read surrounding code to understand usage
-4. **Fetch Documentation**: Search for related docs and comments
-5. **Synthesize Response**: Combine all sources into comprehensive information
+1. Receive Query: User asks about a symbol (function, class, variable)
+2. Query MCP Server: Use the codebase server to find symbol definitions
+3. Analyze Context: Read surrounding code to understand usage
+4. Fetch Documentation: Search for related docs and comments
+5. Synthesize Response: Combine all sources into comprehensive information
 
-## MCP Tool Usage
+MCP Tool Usage
 
 When available, use these MCP tools:
 
@@ -112,7 +112,7 @@ When available, use these MCP tools:
 - `codebase-symbols`: Get symbol definitions and types
 - `codebase-docs`: Retrieve documentation for symbols
 
-## Practical Example
+Practical Example
 
 User asks: "What is `calculateTotal` in this file?"
 
@@ -125,26 +125,26 @@ Your workflow:
 4. Combine findings into response
 ```
 
-## Response Template
+Response Template
 
 Provide responses using this structure:
 
 ```
-📍 Symbol: <name>
-🏷️ Type: <type>
-📁 Location: <file>:<line>
-📝 Definition: <code-snippet>
-📚 Documentation: <docstring/comment>
-🔍 Usage: <example-from-codebase>
-👥 Related: <related-symbols>
+ Symbol: <name>
+ Type: <type>
+ Location: <file>:<line>
+ <code-snippet>
+ Documentation: <docstring/comment>
+ Usage: <example-from-codebase>
+ Related: <related-symbols>
 ```
 ```
 
-## Creating a Practical Workflow for Code Review
+Creating a Practical Workflow for Code Review
 
 Beyond basic symbol information, you can create hover provider skills that serve specific workflows:
 
-### The Code Review Hover Skill
+The Code Review Hover Skill
 
 ```markdown
 ---
@@ -153,18 +153,18 @@ description: Provide instant code review feedback on hover
 tools: [Read, Bash, Glob]
 ---
 
-# Code Review Hover Provider
+Code Review Hover Provider
 
 When asked to review or explain code, focus on:
 
-## Quality Indicators
+Quality Indicators
 
-- **Correctness**: Does the code do what it's supposed to?
-- **Performance**: Any obvious inefficiencies?
-- **Security**: Potential vulnerabilities?
-- **Readability**: Clear naming and structure?
+- Correctness: Does the code do what it's supposed to?
+- Performance: Any obvious inefficiencies?
+- Security: Potential vulnerabilities?
+- Readability: Clear naming and structure?
 
-## Common Patterns to Flag
+Common Patterns to Flag
 
 1. Missing error handling
 2. Unused variables
@@ -172,16 +172,16 @@ When asked to review or explain code, focus on:
 4. Inefficient algorithms
 5. Missing type hints (Python) or type annotations (TypeScript)
 
-## Example Interaction
+Example Interaction
 
 > User hovers over: `user_input = request.params.get('id')`
 
 > Response:
-> - **Issue**: No validation on user input
-> - **Risk**: Potential injection attack
-> - **Fix**: Add input sanitization or use ORM with parameterized queries
+> - Issue: No validation on user input
+> - Risk: Potential injection attack
+> - Fix: Add input sanitization or use ORM with parameterized queries
 
-## Actionable Advice
+Actionable Advice
 
 Always provide concrete suggestions:
 - Specific code changes
@@ -189,34 +189,34 @@ Always provide concrete suggestions:
 - Alternative implementations
 ```
 
-## Testing Your Hover Provider Skills
+Testing Your Hover Provider Skills
 
 After creating your skills, test them with various scenarios:
 
 ```bash
-# Test basic symbol analysis
+Test basic symbol analysis
 claude -p "What does the authenticateUser function do in auth.py?"
 
-# Test enhanced MCP integration
+Test enhanced MCP integration
 claude -p "Find all uses of the User class and explain its structure"
 
-# Test code review mode
+Test code review mode
 claude -p "Review this code for security issues: [paste code]"
 ```
 
-### Test Cases to Validate
+Test Cases to Validate
 
-1. **Function analysis**: Can you identify what a function does, its parameters, and return type?
-2. **Class understanding**: Can you explain class structure, methods, and relationships?
-3. **Error detection**: Can you spot common issues like missing null checks?
-4. **Documentation lookup**: Can you find and present relevant docs?
-5. **Cross-file references**: Can you trace symbols across multiple files?
+1. Function analysis: Can you identify what a function does, its parameters, and return type?
+2. Class understanding: Can you explain class structure, methods, and relationships?
+3. Error detection: Can you spot common issues like missing null checks?
+4. Documentation lookup: Can you find and present relevant docs?
+5. Cross-file references: Can you trace symbols across multiple files?
 
-## Advanced: Building a Context-Aware Hover System
+Advanced: Building a Context-Aware Hover System
 
 For more sophisticated implementations, consider building a multi-step hover workflow:
 
-### Step 1: Symbol Detection
+Step 1: Symbol Detection
 
 Create a skill that automatically detects what the user is asking about:
 
@@ -227,7 +227,7 @@ description: Automatically detect and analyze hovered symbols
 tools: [Read, Glob]
 ---
 
-# Auto-Detection Logic
+Auto-Detection Logic
 
 When the user asks about code, first determine:
 1. Is it a function/method call?
@@ -238,7 +238,7 @@ When the user asks about code, first determine:
 Based on detection, route to appropriate analysis routine.
 ```
 
-### Step 2: Intelligent Caching
+Step 2: Intelligent Caching
 
 For large codebases, implement caching to avoid repeated analysis:
 
@@ -246,7 +246,7 @@ For large codebases, implement caching to avoid repeated analysis:
 - Invalidate cache on file changes
 - Use incremental updates
 
-### Step 3: Contextual Recommendations
+Step 3: Contextual Recommendations
 
 Beyond static analysis, provide contextual suggestions:
 
@@ -254,29 +254,29 @@ Beyond static analysis, provide contextual suggestions:
 - "Consider using the existing utility in utils/"
 - "This pattern is used X times in your codebase"
 
-## Best Practices for Hover Provider Skills
+Best Practices for Hover Provider Skills
 
-1. **Keep responses focused**: Don't overwhelm users with too much information
-2. **Provide actionable advice**: Always include concrete next steps
-3. **Handle errors gracefully**: When you can't find information, say so
-4. **Learn from interactions**: Track which queries are most common
-5. **Integrate with existing tools**: Use MCP servers for richer data
+1. Keep responses focused: Don't overwhelm users with too much information
+2. Provide actionable advice: Always include concrete next steps
+3. Handle errors gracefully: When you can't find information, say so
+4. Learn from interactions: Track which queries are most common
+5. Integrate with existing tools: Use MCP servers for richer data
 
-## Conclusion
+Conclusion
 
 Building LSP hover provider workflows with Claude Code brings the power of intelligent code analysis to your AI-assisted development process. Start with a basic skill that can identify and explain symbols, then gradually add MCP integration, code review capabilities, and contextual awareness.
 
 The key is to iterate: begin simple, test with real workflows, and expand capabilities as you discover new use cases. Your hover provider skills will become invaluable tools for understanding unfamiliar code, reviewing changes, and learning new APIs.
 
-Remember, the goal isn't to replicate a visual hover UI—it's to provide the same rich, contextual information through a conversational interface that uses Claude Code's strengths in understanding and explaining code.
+Remember, the goal isn't to replicate a visual hover UI, it's to provide the same rich, contextual information through a conversational interface that uses Claude Code's strengths in understanding and explaining code.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 {% endraw %}

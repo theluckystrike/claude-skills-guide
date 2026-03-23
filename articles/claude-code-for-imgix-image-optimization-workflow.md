@@ -14,11 +14,11 @@ score: 7
 
 
 {% raw %}
-# Claude Code for Imgix Image Optimization Workflow
+Claude Code for Imgix Image Optimization Workflow
 
 [Imgix](https://imgix.com/) is a real-time image processing service that transforms images on the fly through URL parameters. When combined with Claude Code's automation capabilities, you can build powerful workflows that automate image optimization, generate responsive image sets, and enforce performance standards across your entire image pipeline. This guide shows you how to create Claude skills that handle Imgix integration smoothly.
 
-## Understanding Imgix URL Structure
+Understanding Imgix URL Structure
 
 Before building Claude skills, you need to understand how Imgix generates transformed images. An Imgix URL consists of three parts: the base URL, the source path, and the query parameters for transformations.
 
@@ -27,15 +27,15 @@ https://your-source.imgix.net/image-name.jpg?w=800&h=600&fit=crop&auto=format,co
 ```
 
 The key parameters include:
-- **w** and **h**: Output dimensions in pixels
-- **fit**: How the image is resized (crop, clamp, max, clip, stretch)
-- **auto**: Automatic optimizations (format, compress, enhance)
-- **q**: Quality level (1-100)
-- **crop**: Focal point for smart cropping (faces, edges, entropy)
+- w and h: Output dimensions in pixels
+- fit: How the image is resized (crop, clamp, max, clip, stretch)
+- auto: Automatic optimizations (format, compress, enhance)
+- q: Quality level (1-100)
+- crop: Focal point for smart cropping (faces, edges, entropy)
 
 Claude can generate these URLs programmatically based on your requirements, making it ideal for batch processing and systematic optimization.
 
-### The `fit` Parameter Explained
+The `fit` Parameter Explained
 
 The `fit` parameter controls how Imgix handles the relationship between the source image and the requested dimensions. Choosing the wrong value is one of the most common causes of stretched or poorly-cropped images:
 
@@ -50,7 +50,7 @@ The `fit` parameter controls how Imgix handles the relationship between the sour
 
 For product images where you cannot afford to lose content at the edges, `fit=clip` combined with a background color (`bg=ffffff`) is usually the right call. For user avatars and thumbnails where uniform size matters more than showing the full image, `fit=crop` with `crop=faces` gives the best results.
 
-## Building a Claude Skill for Imgix URL Generation
+Building a Claude Skill for Imgix URL Generation
 
 Create a skill that generates Imgix URLs based on specifications. Save this as `skills/imgix-url-generator.md`:
 
@@ -62,21 +62,21 @@ description: Generate Imgix URLs with optimal parameters for image transformatio
 
 You are an Imgix URL generator. Given source information and transformation parameters, generate optimized Imgix URLs.
 
-## URL Generation Rules
+URL Generation Rules
 
 1. Always include `auto=format,compress` for automatic format selection and compression
 2. Use `fit=crop` with `crop=faces` when both width and height are specified
 3. Set quality to 75 by default, adjust based on use case
 4. URL-encode special characters in the image path
 
-## Output Format
+Output Format
 
 Provide the generated URL and explain the parameters used.
 ```
 
 This skill gives Claude context for generating URLs correctly every time.
 
-### Extending the Skill with Context-Aware Defaults
+Extending the Skill with Context-Aware Defaults
 
 A more sophisticated version of this skill encodes the different optimization profiles your application needs and lets Claude select the right one based on context:
 
@@ -88,37 +88,37 @@ description: Generate context-aware Imgix URLs for hero images, thumbnails, soci
 
 You are an Imgix URL generator with knowledge of our application's image usage patterns.
 
-## Optimization Profiles
+Optimization Profiles
 
-### Hero Images
+Hero Images
 - Sizes: 1920w, 1440w, 1024w
 - Parameters: auto=format,compress, fit=clamp, q=80
 - Use when: Full-width banner images, landing page headers
 
-### Product Thumbnails
+Product Thumbnails
 - Sizes: 400x400, 200x200, 100x100
 - Parameters: fit=clip, bg=ffffff, auto=format,compress, q=75
 - Use when: E-commerce product grids, search results
 
-### User Avatars
+User Avatars
 - Sizes: 128x128, 64x64, 32x32
 - Parameters: fit=crop, crop=faces, auto=format,compress, q=70
 - Use when: Profile pictures, comment author images
 
-### Social Sharing
+Social Sharing
 - OG Image: 1200x630
 - Twitter Card: 1024x512
 - Parameters: fit=crop, auto=format,compress, q=85
 - Use when: Open Graph meta tags, Twitter Card meta tags
 
-## Output Format
+Output Format
 
 Provide all necessary URLs for the context, explain why each parameter was chosen, and flag any potential issues with the source image path.
 ```
 
 Using context-aware profiles instead of always specifying parameters manually eliminates a large category of inconsistencies across a codebase.
 
-## Automating Responsive Image Generation
+Automating Responsive Image Generation
 
 One of the most practical Imgix workflows is generating responsive image srcsets. Create a skill that generates complete responsive image markup:
 
@@ -162,9 +162,9 @@ When you provide an image path like `/products/hero-banner.jpg`, Claude generate
 
 This approach ensures browsers load the optimal image size for each viewport, dramatically reducing bandwidth and improving Core Web Vitals.
 
-### The `picture` Element for Art Direction
+The `picture` Element for Art Direction
 
-For situations where you need different aspect ratios at different breakpoints—not just different sizes of the same crop—use the `picture` element. Ask Claude to generate art-directed markup:
+For situations where you need different aspect ratios at different breakpoints, not just different sizes of the same crop, use the `picture` element. Ask Claude to generate art-directed markup:
 
 ```bash
 claude "Generate a picture element for /articles/landscape-hero.jpg that:
@@ -211,7 +211,7 @@ Claude generates:
 
 The explicit `width` and `height` attributes on the fallback `img` tag are critical for preventing layout shift (CLS). They give browsers the information to reserve space before the image loads.
 
-## Batch Processing Images with Claude
+Batch Processing Images with Claude
 
 For large-scale image optimization, create a skill that processes multiple images:
 
@@ -223,9 +223,9 @@ description: Process multiple images through Imgix with consistent optimization 
 
 Process images through Imgix with the following optimization profiles:
 
-- **fast**: w=800, q=60, auto=format,compress
-- **balanced**: w=1200, q=75, auto=format,compress,enhance
-- **quality**: w=1920, q=85, auto=format,compress,enhance
+- fast: w=800, q=60, auto=format,compress
+- balanced: w=1200, q=75, auto=format,compress,enhance
+- quality: w=1920, q=85, auto=format,compress,enhance
 
 For each image, generate:
 1. Optimized URL
@@ -235,7 +235,7 @@ For each image, generate:
 Output as a JSON configuration file ready for use in your application.
 ```
 
-### Generating a JSON Image Manifest
+Generating a JSON Image Manifest
 
 For applications that render image URLs from data rather than hardcoding them in templates, ask Claude to produce a complete manifest file:
 
@@ -266,7 +266,7 @@ The resulting manifest drives your application's image rendering without any tem
 
 This JSON-first approach makes it easy to validate all image URLs in CI before deploying, and it decouples your rendering layer from your Imgix configuration.
 
-### Auditing Existing Images for Optimization Gaps
+Auditing Existing Images for Optimization Gaps
 
 One of the highest-value uses of Claude in an Imgix workflow is auditing existing code for images that are not using Imgix at all, or that are using suboptimal parameters:
 
@@ -281,7 +281,7 @@ for img tags and background-image CSS. For each one:
 
 This audit surfaces images that are bypassing Imgix entirely (loading from S3 directly, for example) and images that are missing the `auto=format` parameter and therefore always serving JPEG instead of WebP or AVIF.
 
-## Implementing Smart Image Caching
+Implementing Smart Image Caching
 
 Imgix provides excellent caching, but you can optimize further with proper cache headers and URL strategies. Create a skill that adds cache-busting parameters correctly:
 
@@ -303,7 +303,7 @@ For versioning, use format: `?v={hash}&w={width}&auto=format,compress`
 
 This ensures your images cache effectively at the CDN edge while allowing updates when necessary.
 
-### Format Selection: WebP vs AVIF vs JPEG
+Format Selection: WebP vs AVIF vs JPEG
 
 The `auto=format` parameter is convenient but it is worth understanding what Imgix actually selects:
 
@@ -316,7 +316,7 @@ The `auto=format` parameter is convenient but it is worth understanding what Img
 | Safari 16.4+ | WebP or AVIF | 25-55% smaller |
 | IE 11 | JPEG or PNG (original format) | Baseline |
 
-For most production sites in 2026, `auto=format,compress` is the right default because it serves AVIF to browsers that support it, WebP to those that support WebP but not AVIF, and falls back to JPEG for legacy browsers—all without any JavaScript detection code.
+For most production sites in 2026, `auto=format,compress` is the right default because it serves AVIF to browsers that support it, WebP to those that support WebP but not AVIF, and falls back to JPEG for legacy browsers, all without any JavaScript detection code.
 
 If you need to force a specific format for predictable testing or for use cases where AVIF is too slow to encode on demand, explicitly set `fm=webp`:
 
@@ -326,7 +326,7 @@ instead of auto=format for the thumbnail profile. Keep auto=format
 for the hero and large profiles."
 ```
 
-### Low-Quality Image Placeholders (LQIP)
+Low-Quality Image Placeholders (LQIP)
 
 Implement progressive loading. Generate low-quality image placeholders (LQIP) using `w=20&q=10` for immediate visual feedback while the full image loads. This dramatically improves perceived performance.
 
@@ -359,9 +359,9 @@ function LazyImage({ src, alt, width, height }) {
 }
 ```
 
-The LQIP approach with Imgix requires no additional storage—the `w=20&q=10` variant is generated on-demand and cached at the CDN edge exactly like any other transformation.
+The LQIP approach with Imgix requires no additional storage, the `w=20&q=10` variant is generated on-demand and cached at the CDN edge exactly like any other transformation.
 
-## Validating Imgix URLs in CI
+Validating Imgix URLs in CI
 
 A broken Imgix URL silently returns a 400 or 404, which browsers display as a broken image. Add Claude-driven URL validation to your CI pipeline:
 
@@ -410,13 +410,13 @@ main();
 
 Run this as a CI step before deployment to catch image issues in the same pipeline that catches code issues.
 
-## Best Practices for Imgix with Claude
+Best Practices for Imgix with Claude
 
 When building Imgix workflows with Claude Code, follow these actionable guidelines:
 
-**Always use automatic format selection.** The `auto=format` parameter detects browser support and serves WebP, AVIF, or JPEG accordingly. Combined with `auto=compress`, you get optimal file sizes without manual tuning.
+Always use automatic format selection. The `auto=format` parameter detects browser support and serves WebP, AVIF, or JPEG accordingly. Combined with `auto=compress`, you get optimal file sizes without manual tuning.
 
-**Set explicit width and height attributes.** Browsers use these to reserve space before images load, preventing Cumulative Layout Shift (CLS). Ask Claude to add them when generating image markup:
+Set explicit width and height attributes. Browsers use these to reserve space before images load, preventing Cumulative Layout Shift (CLS). Ask Claude to add them when generating image markup:
 
 ```bash
 claude "Update all img tags in src/components/ to include explicit
@@ -424,17 +424,17 @@ width and height attributes. Use the Imgix intrinsic dimensions
 API endpoint to determine the original dimensions for each image."
 ```
 
-**Implement progressive loading.** Generate low-quality image placeholders (LQIP) using `w=20&q=10` for immediate visual feedback while the full image loads. This dramatically improves perceived performance.
+Implement progressive loading. Generate low-quality image placeholders (LQIP) using `w=20&q=10` for immediate visual feedback while the full image loads. This dramatically improves perceived performance.
 
-**Use focal point cropping intelligently.** When cropping images, specify `crop=faces` or `crop=edges` to maintain visual interest. For content images where the important subject is not a face, `crop=entropy` uses an algorithm to find the most visually complex region of the image to preserve.
+Use focal point cropping intelligently. When cropping images, specify `crop=faces` or `crop=edges` to maintain visual interest. For content images where the important subject is not a face, `crop=entropy` uses an algorithm to find the most visually complex region of the image to preserve.
 
-**Monitor with Imgix analytics.** Add Claude skills that query Imgix statistics weekly and report on image performance, popular transformations, and potential optimization opportunities. Use the Imgix stats API endpoint with your API key.
+Monitor with Imgix analytics. Add Claude skills that query Imgix statistics weekly and report on image performance, popular transformations, and potential optimization opportunities. Use the Imgix stats API endpoint with your API key.
 
-**Version static assets.** For images that rarely change (logos, icons, hero backgrounds), append a version hash to enable infinite caching. This offloads traffic from your origin and speeds up page loads. Use the content hash of the source file as the version string, not a timestamp.
+Version static assets. For images that rarely change (logos, icons, hero backgrounds), append a version hash to enable infinite caching. This offloads traffic from your origin and speeds up page loads. Use the content hash of the source file as the version string, not a timestamp.
 
-**Avoid over-transforming.** Each unique set of parameters creates a separate cached variant at Imgix. If you need five sizes, use five canonical size values rather than letting user-facing code calculate arbitrary pixel values. This keeps your CDN cache efficient and your Imgix bandwidth predictable.
+Avoid over-transforming. Each unique set of parameters creates a separate cached variant at Imgix. If you need five sizes, use five canonical size values rather than letting user-facing code calculate arbitrary pixel values. This keeps your CDN cache efficient and your Imgix bandwidth predictable.
 
-## Comparing Image Delivery Approaches
+Comparing Image Delivery Approaches
 
 When deciding how much of your image workflow to route through Imgix versus handling server-side or at build time, this comparison helps frame the decision:
 
@@ -448,7 +448,7 @@ When deciding how much of your image workflow to route through Imgix versus hand
 
 Imgix's advantage over build-time approaches is that you can add new size variants or change crop parameters without rebuilding and redeploying your site. This is essential for A/B testing image presentations or for content teams that need to adjust image display without engineering involvement.
 
-## Putting It All Together
+Putting It All Together
 
 The real power of Claude Code with Imgix comes from combining these patterns. A complete workflow might:
 
@@ -477,10 +477,10 @@ claude "Run our complete image optimization workflow:
 Start with the URL generator skill, then add responsive image generation, and finally layer in batch processing as your needs grow. Claude handles the complexity, Imgix delivers the performance.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

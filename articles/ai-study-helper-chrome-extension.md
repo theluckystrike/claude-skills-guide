@@ -14,19 +14,19 @@ tags: [chrome-extension, claude-skills]
 
 
 {% raw %}
-# AI Study Helper Chrome Extension: A Developer's Guide
+AI Study Helper Chrome Extension: A Developer's Guide
 
 Chrome extensions have become powerful tools for enhancing productivity, and AI-powered study helpers represent one of the most impactful categories. Whether you're building your own extension or customizing an existing one, understanding the architecture and implementation patterns helps you create something truly useful for learners.
 
 This guide covers the technical foundations of building an AI study helper Chrome extension, with practical code examples you can adapt for your own projects.
 
-## Core Architecture
+Core Architecture
 
 An AI study helper extension typically consists of three main components:
 
-1. **Content script** - Injected into web pages to capture content and interact with the DOM
-2. **Background service worker** - Handles long-running tasks, API calls, and state management
-3. **Popup interface** - Provides user controls and displays results
+1. Content script - Injected into web pages to capture content and interact with the DOM
+2. Background service worker - Handles long-running tasks, API calls, and state management
+3. Popup interface - Provides user controls and displays results
 
 Here's a minimal manifest.json structure:
 
@@ -50,7 +50,7 @@ Here's a minimal manifest.json structure:
 }
 ```
 
-## Content Script Implementation
+Content Script Implementation
 
 The content script acts as your bridge between the web page and your AI functionality. For a study helper, you'll likely want to extract selected text, article content, or form inputs.
 
@@ -95,7 +95,7 @@ class ContentBridge {
 new ContentBridge();
 ```
 
-## Background Worker and AI Integration
+Background Worker and AI Integration
 
 The background service worker handles API calls to AI providers. This separation keeps your API keys secure and prevents blocking the UI during AI processing.
 
@@ -155,7 +155,7 @@ async function getApiKey() {
 }
 ```
 
-## Storage and Settings Management
+Storage and Settings Management
 
 Users need to configure their AI API keys and preferences. Use Chrome's storage API for persistent settings:
 
@@ -174,11 +174,11 @@ document.getElementById('saveSettings').addEventListener('click', async () => {
 });
 ```
 
-## Practical Features for Study Helpers
+Practical Features for Study Helpers
 
 Beyond basic text analysis, consider implementing these features:
 
-### Flashcard Generation
+Flashcard Generation
 Parse content and create spaced repetition cards using APIs:
 
 ```javascript
@@ -193,7 +193,7 @@ Content: ${text}`;
 }
 ```
 
-### Quiz Mode
+Quiz Mode
 Create interactive quizzes from reading material:
 
 ```javascript
@@ -216,7 +216,7 @@ function createQuizMode(questions) {
 }
 ```
 
-### Highlight and Annotations
+Highlight and Annotations
 Let users highlight text and add personal notes:
 
 ```javascript
@@ -236,25 +236,25 @@ function enableHighlighting() {
 }
 ```
 
-## Security Considerations
+Security Considerations
 
 When building AI study helpers, keep these security practices in mind:
 
-- **Never expose API keys in client-side code** - Use background workers and storage API
-- **Validate all content** - Sanitize user inputs before sending to AI APIs
-- **Respect rate limits** - Implement queuing and caching to avoid API throttling
-- **Handle PII carefully** - Be mindful that users might process sensitive educational materials
+- Never expose API keys in client-side code - Use background workers and storage API
+- Validate all content - Sanitize user inputs before sending to AI APIs
+- Respect rate limits - Implement queuing and caching to avoid API throttling
+- Handle PII carefully - Be mindful that users might process sensitive educational materials
 
-## Performance Optimization
+Performance Optimization
 
 For extensions that process large amounts of content:
 
-1. **Chunk long content** - Break articles into smaller segments before API calls
-2. **Cache responses** - Store previous analyses in chrome.storage to avoid redundant calls
-3. **Use web workers** - Offload computational tasks from the main thread
-4. **Implement debouncing** - Prevent excessive API calls during rapid user interactions
+1. Chunk long content - Break articles into smaller segments before API calls
+2. Cache responses - Store previous analyses in chrome.storage to avoid redundant calls
+3. Use web workers - Offload computational tasks from the main thread
+4. Implement debouncing - Prevent excessive API calls during rapid user interactions
 
-## Deployment and Distribution
+Deployment and Distribution
 
 Once your extension is ready:
 
@@ -266,24 +266,24 @@ Once your extension is ready:
 Building an AI study helper Chrome extension combines web development skills with AI integration, creating a genuinely useful tool for learners. Start with the basics - text selection and analysis - then iterate based on user feedback.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-## Step-by-Step: Building the AI Study Helper
+Step-by-Step: Building the AI Study Helper
 
-1. **Set up Manifest V3** with `storage`, `contextMenus`, and `sidePanel` permissions. The side panel keeps the study assistant visible while the student reads.
-2. **Implement text selection to flashcard**: right-click on selected text and choose "Create flashcard". The background script extracts the term and sends it to the AI API to generate a definition and example sentence.
-3. **Build the flashcard storage**: store flashcards as `{ id, term, definition, example, source_url, created_at, next_review }` in `chrome.storage.local`. The `next_review` field supports spaced repetition scheduling.
-4. **Implement spaced repetition**: after each review, update `next_review` using the SM-2 algorithm. Cards rated "easy" get a longer interval; cards rated "hard" reset to a short interval.
-5. **Add quiz mode**: in the side panel, show the term and ask the student to recall the definition. Show the answer on button click. Record the result and update the card's next_review.
-6. **Export study sets**: let students export their flashcards as CSV for import into Anki, Quizlet, or a printable sheet.
+1. Set up Manifest V3 with `storage`, `contextMenus`, and `sidePanel` permissions. The side panel keeps the study assistant visible while the student reads.
+2. Implement text selection to flashcard: right-click on selected text and choose "Create flashcard". The background script extracts the term and sends it to the AI API to generate a definition and example sentence.
+3. Build the flashcard storage: store flashcards as `{ id, term, definition, example, source_url, created_at, next_review }` in `chrome.storage.local`. The `next_review` field supports spaced repetition scheduling.
+4. Implement spaced repetition: after each review, update `next_review` using the SM-2 algorithm. Cards rated "easy" get a longer interval; cards rated "hard" reset to a short interval.
+5. Add quiz mode: in the side panel, show the term and ask the student to recall the definition. Show the answer on button click. Record the result and update the card's next_review.
+6. Export study sets: let students export their flashcards as CSV for import into Anki, Quizlet, or a printable sheet.
 
-## Spaced Repetition Implementation
+Spaced Repetition Implementation
 
 ```javascript
 // SM-2 simplified implementation
@@ -310,7 +310,7 @@ function updateCardSchedule(card, quality) {
 }
 ```
 
-## Comparison with Existing Study Tools
+Comparison with Existing Study Tools
 
 | Tool | Browser integration | AI generation | Spaced repetition | Export | Cost |
 |---|---|---|---|---|---|
@@ -320,9 +320,9 @@ function updateCardSchedule(card, quality) {
 | Readwise | Extension + app | Yes | Yes | Yes | $7.99/mo |
 | RemNote | No | Limited | Yes | Yes | Free/Pro |
 
-The key advantage is zero friction — flashcards are created from any web page without switching context, and the side panel keeps the review queue always accessible.
+The key advantage is zero friction. flashcards are created from any web page without switching context, and the side panel keeps the review queue always accessible.
 
-## Advanced: Concept Map Generation
+Advanced: Concept Map Generation
 
 After a student creates 10+ flashcards from a single page, offer to generate a concept map that shows how the terms relate:
 
@@ -340,12 +340,12 @@ async function generateConceptMap(flashcards) {
 
 Render the concept map as an SVG in the side panel using D3.js bundled with the extension.
 
-## Troubleshooting
+Troubleshooting
 
-**Flashcard generation producing incorrect definitions**: Add the source text snippet to the AI prompt so it generates the definition in context rather than from general knowledge. A term means different things in different domains — "recursion" in computer science versus linguistics.
+Flashcard generation producing incorrect definitions: Add the source text snippet to the AI prompt so it generates the definition in context rather than from general knowledge. A term means different things in different domains. "recursion" in computer science versus linguistics.
 
-**Side panel closing when navigating to a new page**: The side panel persists across navigations within the same tab by default when you use `chrome.sidePanel.setPanelBehavior({ openPanelOnActionClick: true })`. Ensure this call is in the background service worker on install.
+Side panel closing when navigating to a new page: The side panel persists across navigations within the same tab by default when you use `chrome.sidePanel.setPanelBehavior({ openPanelOnActionClick: true })`. Ensure this call is in the background service worker on install.
 
-**Storage filling up with large study sets**: Compress the flashcard JSON using `CompressionStream` (Chrome 80+) before storing. A study set of 500 flashcards compresses from ~50 KB to under 5 KB.
+Storage filling up with large study sets: Compress the flashcard JSON using `CompressionStream` (Chrome 80+) before storing. A study set of 500 flashcards compresses from ~50 KB to under 5 KB.
 
 {% endraw %}

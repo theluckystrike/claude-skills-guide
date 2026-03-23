@@ -18,13 +18,13 @@ API contract testing ensures that services communicate reliably without integrat
 
 This guide covers practical approaches to API contract testing using Claude Code, focusing on real-world implementation patterns you can apply immediately.
 
-## Understanding Contract Testing Fundamentals
+Understanding Contract Testing Fundamentals
 
 Contract testing operates on a simple principle: define what a service provides, then verify implementations match that specification. Unlike traditional integration testing that requires all services running simultaneously, contract tests validate interfaces independently.
 
 Two primary approaches exist: consumer-driven contracts and provider-driven contracts. Consumer-driven contracts, where the consuming service defines expected behavior, work well when you control both ends of an integration. Provider-driven contracts suit situations where external services define the API specification.
 
-### Contract Testing vs. Integration Testing vs. E2E Testing
+Contract Testing vs. Integration Testing vs. E2E Testing
 
 Before diving into implementation, it helps to understand where contract testing fits in the testing pyramid:
 
@@ -37,28 +37,28 @@ Before diving into implementation, it helps to understand where contract testing
 
 Contract tests occupy a valuable middle ground. They run without requiring live dependencies (making them fast and reliable in CI), yet they catch the specific category of bugs that unit tests miss: mismatches at service boundaries. A function that perfectly transforms data internally can still break when the upstream API changes its field names or response shape.
 
-Claude Code skills like the **tdd** skill help structure your testing workflow, while **supermemory** enables tracking of contract changes across your projects.
+Claude Code skills like the tdd skill help structure your testing workflow, while supermemory enables tracking of contract changes across your projects.
 
-## Setting Up Contract Testing with Claude Code
+Setting Up Contract Testing with Claude Code
 
-Begin by using the essential skills for contract testing workflows. In Claude Code, skills are invoked directly in conversation — reference the **tdd** skill, **pdf** skill, or **api-testing** skill by name when describing your task to Claude Code.
+Begin by using the essential skills for contract testing workflows. In Claude Code, skills are invoked directly in conversation. reference the tdd skill, pdf skill, or api-testing skill by name when describing your task to Claude Code.
 
-The **tdd** skill provides test scaffolding and organization patterns. The **api-testing** skill offers HTTP request utilities. For documentation, the **pdf** skill helps generate contract specification documents.
+The tdd skill provides test scaffolding and organization patterns. The api-testing skill offers HTTP request utilities. For documentation, the pdf skill helps generate contract specification documents.
 
 Create a dedicated test directory structure:
 
 ```
 tests/
-├── contracts/
-│   ├── schemas/
-│   └── expectations/
-├── consumer-tests/
-└── provider-tests/
+ contracts/
+    schemas/
+    expectations/
+ consumer-tests/
+ provider-tests/
 ```
 
-This separation matters for several reasons. Schemas live in one place and are shared between consumer and provider test suites. Expectations files capture the consumer's view of what the provider must deliver. Keeping consumer and provider tests in separate directories makes it easy to run them independently in CI — for example, running only consumer tests when a consuming service changes, and only provider tests when the API implementation changes.
+This separation matters for several reasons. Schemas live in one place and are shared between consumer and provider test suites. Expectations files capture the consumer's view of what the provider must deliver. Keeping consumer and provider tests in separate directories makes it easy to run them independently in CI. for example, running only consumer tests when a consuming service changes, and only provider tests when the API implementation changes.
 
-### Installing Dependencies
+Installing Dependencies
 
 For a JavaScript/Node.js project, set up a typical contract testing stack:
 
@@ -78,12 +78,12 @@ pip install responses  # HTTP mocking
 pip install pact-python  # If using Pact framework
 ```
 
-## Writing Your First Contract Test
+Writing Your First Contract Test
 
 Define your API contract using OpenAPI specifications or a simpler JSON schema approach. Here's an example contract for a user service endpoint:
 
 ```yaml
-# contracts/user-service.yaml
+contracts/user-service.yaml
 openapi: 3.0.0
 info:
   title: User Service API
@@ -126,9 +126,9 @@ paths:
                     type: string
 ```
 
-Notice the addition of `required` arrays to the schema. This is a critical detail that most tutorial contracts omit. A schema without `required` constraints will pass even when fields are missing entirely. Contract testing that doesn't enforce required fields is not testing the contract — it's just checking that the response is valid JSON.
+Notice the addition of `required` arrays to the schema. This is a critical detail that most tutorial contracts omit. A schema without `required` constraints will pass even when fields are missing entirely. Contract testing that doesn't enforce required fields is not testing the contract. it's just checking that the response is valid JSON.
 
-Using the **tdd** skill, generate test scaffolding. Open the Claude REPL and invoke:
+Using the tdd skill, generate test scaffolding. Open the Claude REPL and invoke:
 
 ```
 /tdd Generate test scaffolding from contracts/user-service.yaml and place tests in tests/consumer-tests/
@@ -136,9 +136,9 @@ Using the **tdd** skill, generate test scaffolding. Open the Claude REPL and inv
 
 This creates test files that verify your consumer handles the contract correctly.
 
-## Consumer-Side Contract Testing
+Consumer-Side Contract Testing
 
-Consumer tests validate that your application correctly handles API responses according to the contract. The consumer owns these tests — they express what the consumer needs from the provider, not what the provider happens to deliver today.
+Consumer tests validate that your application correctly handles API responses according to the contract. The consumer owns these tests. they express what the consumer needs from the provider, not what the provider happens to deliver today.
 
 This distinction matters when contracts evolve. If you're a consumer and the provider adds optional fields to a response, your consumer tests should continue passing. If the provider removes a required field or changes a field type, your consumer tests should immediately fail.
 
@@ -208,9 +208,9 @@ describe('User Service Consumer Contract', () => {
 
 The schema validation step is the most important part. Rather than manually asserting individual field names, compiling and running the OpenAPI schema as a validator catches any deviation from the contract shape automatically. As the contract evolves, you update the schema file and all downstream assertions update with it.
 
-The **tdd** skill organizes these tests and provides clear output when contract violations occur.
+The tdd skill organizes these tests and provides clear output when contract violations occur.
 
-## Provider-Side Contract Validation
+Provider-Side Contract Validation
 
 Provider tests ensure your API implementation matches the declared contract. These tests run against a live instance of your service (typically in CI against a test environment) and make real HTTP requests.
 
@@ -274,14 +274,14 @@ describe('User Service Provider Contract', () => {
 });
 ```
 
-The final test — verifying the response ID matches the requested ID — catches a subtle but common bug: services that return valid-shaped responses for the wrong resource. Schema validation ensures structure; this test ensures correctness.
+The final test. verifying the response ID matches the requested ID. catches a subtle but common bug: services that return valid-shaped responses for the wrong resource. Schema validation ensures structure; this test ensures correctness.
 
-## Automating Contract Validation
+Automating Contract Validation
 
-Integrate contract tests into your CI/CD pipeline. The **supermemory** skill tracks contract versions and notifies you when changes require test updates:
+Integrate contract tests into your CI/CD pipeline. The supermemory skill tracks contract versions and notifies you when changes require test updates:
 
 ```yaml
-# .github/workflows/contract-tests.yml
+.github/workflows/contract-tests.yml
 name: Contract Tests
 
 on:
@@ -329,14 +329,14 @@ jobs:
 
 Running consumer and provider tests as separate jobs is intentional. Consumer tests can pass even when the provider service isn't available (because they mock the HTTP layer). Provider tests require a live service but don't depend on the consumer codebase. This separation lets both teams work independently and merge changes with confidence.
 
-## Handling Contract Evolution
+Handling Contract Evolution
 
 APIs evolve over time. Establish a process for managing breaking changes:
 
-1. **Version your contracts**: Include version numbers in file names or OpenAPI info section
-2. **Document changes**: Use the **pdf** skill to generate changelogs
-3. **Implement backward compatibility**: Support both old and new contract versions during transitions
-4. **Automate notifications**: Set up alerts when contract tests fail
+1. Version your contracts: Include version numbers in file names or OpenAPI info section
+2. Document changes: Use the pdf skill to generate changelogs
+3. Implement backward compatibility: Support both old and new contract versions during transitions
+4. Automate notifications: Set up alerts when contract tests fail
 
 ```javascript
 // Contract version checking utility
@@ -351,17 +351,17 @@ function checkContractVersion(response, expectedVersion) {
 }
 ```
 
-### Classifying Changes as Breaking vs. Non-Breaking
+Classifying Changes as Breaking vs. Non-Breaking
 
 Not all API changes break consumers. Understanding the distinction saves unnecessary coordination overhead:
 
-**Non-breaking changes (safe to deploy without consumer coordination):**
+Non-breaking changes (safe to deploy without consumer coordination):
 - Adding optional fields to responses
 - Adding new endpoints
 - Relaxing validation constraints (e.g., increasing max string length)
 - Adding new enum values to fields consumers don't switch on
 
-**Breaking changes (require consumer coordination):**
+Breaking changes (require consumer coordination):
 - Removing fields from responses
 - Changing field types (string to number, etc.)
 - Renaming fields
@@ -386,7 +386,7 @@ function validateAgainstVersion(data, version) {
 }
 ```
 
-### Contract Pinning for External APIs
+Contract Pinning for External APIs
 
 When consuming external APIs you don't control, pin your contract to the version you tested against. Save a snapshot of the actual API response and use it as your contract baseline:
 
@@ -404,7 +404,7 @@ fs.writeFileSync(
 
 Commit these snapshots to version control. When the external API changes and starts returning different shapes, your snapshot comparison tests immediately flag the drift before it causes production bugs.
 
-## Testing Error Contracts
+Testing Error Contracts
 
 Error responses are contracts too. Many teams thoroughly test success paths but leave error handling unspecified. This leads to consumers that work under normal conditions but fail unpredictably when errors occur.
 
@@ -446,31 +446,31 @@ describe('User Service Error Contracts', () => {
 
 Error contract tests serve a second purpose beyond correctness: they document expected failure behavior for other developers. A test named `401 Unauthorized returns WWW-Authenticate header` is better documentation than any comment.
 
-## Best Practices for Contract Testing
+Best Practices for Contract Testing
 
 Keep these principles in mind when implementing contract testing:
 
-- **Test contracts, not implementation**: Focus on the interface, not internal logic
-- **Keep contracts versioned**: Never overwrite contracts without preserving history
-- **Run tests frequently**: Execute contract tests on every commit
-- **Use clear naming**: Name test files to indicate which contract they validate
-- **Document assumptions**: Note any implicit expectations not captured in the schema
-- **Test error contracts**: Happy path coverage is not enough
-- **Use schema validation libraries**: Don't hand-write field assertions — compile the schema and validate against it
-- **Mock at the HTTP layer, not the function layer**: Consumer tests should mock HTTP calls, not function stubs, to ensure transport-layer behavior is correct
+- Test contracts, not implementation: Focus on the interface, not internal logic
+- Keep contracts versioned: Never overwrite contracts without preserving history
+- Run tests frequently: Execute contract tests on every commit
+- Use clear naming: Name test files to indicate which contract they validate
+- Document assumptions: Note any implicit expectations not captured in the schema
+- Test error contracts: Happy path coverage is not enough
+- Use schema validation libraries: Don't hand-write field assertions. compile the schema and validate against it
+- Mock at the HTTP layer, not the function layer: Consumer tests should mock HTTP calls, not function stubs, to ensure transport-layer behavior is correct
 
-The **tdd** skill encourages test-first development, which naturally aligns with contract testing workflows. Define the contract first, write consumer tests against that contract, then implement the provider to satisfy those tests. The **frontend-design** skill can help if you're building test dashboards or reporting interfaces to display contract validation results across your system.
+The tdd skill encourages test-first development, which naturally aligns with contract testing workflows. Define the contract first, write consumer tests against that contract, then implement the provider to satisfy those tests. The frontend-design skill can help if you're building test dashboards or reporting interfaces to display contract validation results across your system.
 
-## Conclusion
+Conclusion
 
-API contract testing with Claude Code skills provides a robust framework for maintaining reliable service integrations. By implementing consumer and provider tests, validating both success and error shapes with schema validation, versioning your contracts, and automating validation in your CI/CD pipeline, you catch interface mismatches before they cause production issues.
+API contract testing with Claude Code skills provides a solid framework for maintaining reliable service integrations. By implementing consumer and provider tests, validating both success and error shapes with schema validation, versioning your contracts, and automating validation in your CI/CD pipeline, you catch interface mismatches before they cause production issues.
 
 The key mindset shift: treat every API boundary as a formal contract, not an informal agreement. Formal contracts are written down, versioned, and mechanically verified. Informal agreements drift silently until something breaks in production at an inconvenient time.
 
-Start with a single service endpoint, establish your contract testing patterns with schema-based validation, then expand coverage across your system. Add error contract tests as a second pass. The investment pays dividends in reduced debugging time, fewer late-night incidents, and increased confidence during deployments — especially when multiple teams are delivering changes simultaneously.
+Start with a single service endpoint, establish your contract testing patterns with schema-based validation, then expand coverage across your system. Add error contract tests as a second pass. The investment pays dividends in reduced debugging time, fewer late-night incidents, and increased confidence during deployments. especially when multiple teams are delivering changes simultaneously.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)
 - [Claude Code Permissions Model Security Guide 2026](/claude-code-permissions-model-security-guide-2026/)
@@ -478,5 +478,5 @@ Start with a single service endpoint, establish your contract testing patterns w
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Advanced Claude Skills Hub](/advanced-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

@@ -14,11 +14,11 @@ score: 8
 ---
 
 
-# Chrome Extension Linear Issue Tracker: A Developer's Guide
+Chrome Extension Linear Issue Tracker: A Developer's Guide
 
 Linear is a popular issue tracking tool among development teams. Integrating Linear directly into your Chrome browser through a custom extension can significantly streamline your workflow. This guide covers everything you need to know about building and using Chrome extensions for Linear issue tracking.
 
-## Why Build a Linear Chrome Extension?
+Why Build a Linear Chrome Extension?
 
 Linear's web interface works well, but a dedicated Chrome extension provides faster access to common actions without switching tabs. You can create quick shortcuts for:
 
@@ -29,11 +29,11 @@ Linear's web interface works well, but a dedicated Chrome extension provides fas
 
 For developers who frequently reference Linear throughout the day, these small time savings accumulate quickly.
 
-## Core Components of a Linear Chrome Extension
+Core Components of a Linear Chrome Extension
 
 A functional Linear Chrome extension requires several key components:
 
-### Manifest File (manifest.json)
+Manifest File (manifest.json)
 
 Every Chrome extension starts with a manifest file that defines permissions and capabilities:
 
@@ -64,7 +64,7 @@ Every Chrome extension starts with a manifest file that defines permissions and 
 
 The OAuth2 configuration allows users to authenticate with their Linear account securely.
 
-### Popup Interface (popup.html)
+Popup Interface (popup.html)
 
 The popup provides the main user interface when clicking the extension icon:
 
@@ -102,11 +102,11 @@ The popup provides the main user interface when clicking the extension icon:
 </html>
 ```
 
-## Linear API Integration
+Linear API Integration
 
 The Linear API uses GraphQL, which gives you precise control over what data you fetch and modify. You'll need an API key from Linear's developer settings.
 
-### Authentication
+Authentication
 
 Store your API key securely using Chrome's storage API:
 
@@ -125,7 +125,7 @@ async function setApiKey(apiKey) {
 }
 ```
 
-### Creating Issues via GraphQL
+Creating Issues via GraphQL
 
 The core functionality involves creating issues through Linear's GraphQL API:
 
@@ -175,7 +175,7 @@ async function createLinearIssue(title, description, teamId, priority) {
 }
 ```
 
-### Fetching Assigned Issues
+Fetching Assigned Issues
 
 Retrieve issues assigned to the current user:
 
@@ -215,7 +215,7 @@ async function getAssignedIssues() {
 }
 ```
 
-## Building the Popup Logic
+Building the Popup Logic
 
 Connect the UI components with your API functions:
 
@@ -278,19 +278,19 @@ async function loadTeams() {
 }
 ```
 
-## Advanced Features to Consider
+Advanced Features to Consider
 
 Once you have the basics working, consider adding these enhancements:
 
-**Keyboard Shortcuts**: Define commands in your manifest for quick actions without opening the popup.
+Keyboard Shortcuts: Define commands in your manifest for quick actions without opening the popup.
 
-**Context Menus**: Add items to the right-click menu to create issues from selected text on any webpage.
+Context Menus: Add items to the right-click menu to create issues from selected text on any webpage.
 
-**Desktop Notifications**: Use the Chrome Notifications API to alert users when they're assigned new issues.
+Desktop Notifications: Use the Chrome Notifications API to alert users when they're assigned new issues.
 
-**Background Sync**: Periodically check for new assigned issues and display badge counts on the extension icon.
+Background Sync: Periodically check for new assigned issues and display badge counts on the extension icon.
 
-## Security Best Practices
+Security Best Practices
 
 When building extensions that handle API keys and sensitive data:
 
@@ -300,7 +300,7 @@ When building extensions that handle API keys and sensitive data:
 - Implement proper error handling for API failures
 - Consider using Linear's OAuth flow instead of API keys for production extensions
 
-## Testing Your Extension
+Testing Your Extension
 
 Load your extension in Chrome by navigating to `chrome://extensions/`, enabling Developer mode, and clicking "Load unpacked". Select your extension's directory.
 
@@ -310,7 +310,7 @@ Test thoroughly:
 - Check that error states display appropriately
 - Test with invalid and expired API keys
 
-## Conclusion
+Conclusion
 
 Building a Chrome extension for Linear issue tracking gives you instant access to your workflow without browser tab switching. The GraphQL API provides flexible data access, and Chrome's extension APIs enable rich integration with the browser itself.
 
@@ -319,10 +319,10 @@ Start with the basic issue creation flow, then add features like assigned issue 
 ---
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

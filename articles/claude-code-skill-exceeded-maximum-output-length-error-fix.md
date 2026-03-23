@@ -17,7 +17,7 @@ permalink: /claude-code-skill-exceeded-maximum-output-length-error-fix/
 
 This guide provides practical solutions for fixing and preventing this error across different skill use cases.
 
-## Understanding the Output Length Limit
+Understanding the Output Length Limit
 
 Claude Code imposes output length limits to ensure responsive interactions and prevent runaway token consumption. When a skill generates more tokens than the limit allows, you receive an error indicating the maximum output length has been exceeded. The exact limit depends on your Claude Code configuration and subscription tier.
 
@@ -30,12 +30,12 @@ For most developers, this limit manifests when working with skills that handle:
 - Multiple file generation in a single invocation
 - Complex test suite generation with the `tdd` skill
 
-## Solution 1: Implement Chunked Output
+Solution 1: Implement Chunked Output
 
 The most effective fix for output length issues is breaking your skill's output into smaller chunks. This approach aligns with [context window management best practices](/claude-md-too-long-context-window-optimization/) for keeping skill sessions efficient. Instead of generating everything at once, process data in segments and provide clear instructions for continuing the operation.
 
 ```
-## Chunking Strategy
+Chunking Strategy
 
 When generating content longer than 2000 tokens:
 1. Output the first portion with a clear completion marker
@@ -48,12 +48,12 @@ Example marker format:
 
 This pattern works exceptionally well with skills like `frontend-design` that might generate multiple component files, or the `canvas-design` skill that outputs complex visual specifications.
 
-## Solution 2: Stream Output to Files
+Solution 2: Stream Output to Files
 
 Rather than returning all content as direct output, write results directly to files. This bypasses the output length restriction entirely and produces persistent artifacts.
 
 ```python
-# Example: Writing output to file instead of returning
+Writing output to file instead of returning
 def generate_large_report(data):
     output_parts = []
     for section in data:
@@ -70,28 +70,28 @@ def generate_large_report(data):
 
 Skills like `docx` and `pptx` naturally use this approach by writing to files, which is why they rarely encounter output length problems even with substantial content generation.
 
-## Solution 3: Configure Skill Output Preferences
+Solution 3: Configure Skill Output Preferences
 
 You can modify your skill definition to optimize output behavior. Add explicit guidance in your skill's system prompt:
 
 ```
-## Output Optimization
+Output Optimization
 
 - Use bullet points and concise formatting
 - Prefer code blocks over inline examples
 - When output exceeds 1500 tokens, write to files and provide file paths
-- Use tables sparingly—convert to lists when possible
+- Use tables sparingly, convert to lists when possible
 - Link to external resources instead of embedding full content
 ```
 
 This approach helps when using skills like `supermemory` that might generate lengthy recall results, or `webapp-testing` skills that produce detailed test reports.
 
-## Solution 4: Use Pagination Patterns
+Solution 4: Use Pagination Patterns
 
 Implement a pagination system that allows users to request specific portions of output:
 
 ```
-## Pagination Support
+Pagination Support
 
 When responding, structure content as follows:
 - Maximum 3 substantial sections per response
@@ -102,21 +102,21 @@ When responding, structure content as follows:
 
 This pattern is particularly useful for the `xlsx` skill when generating complex workbooks with multiple sheets, as users can request specific sheets rather than receiving the entire workbook description at once.
 
-## Solution 5: Split Complex Skills into Subskills
+Solution 5: Split Complex Skills into Subskills
 
 Rather than building one skill to handle everything, create a skill composition where a parent skill orchestrates multiple child skills:
 
 ```
 Skill: project-generator
-├── skill: create-project-structure
-├── skill: generate-components  
-├── skill: write-tests
-└── skill: setup-deployment
+ skill: create-project-structure
+ skill: generate-components  
+ skill: write-tests
+ skill: setup-deployment
 ```
 
 Each subskill handles a smaller output scope, preventing any single invocation from hitting the limit. This architecture scales well and maintains separation of concerns.
 
-## Solution 6: Use External Storage for Large Outputs
+Solution 6: Use External Storage for Large Outputs
 
 For skills that genuinely need to produce large amounts of content, store the output externally and provide links:
 
@@ -136,21 +136,21 @@ async function storeLargeOutput(content, filename) {
 
 Custom skill files can include instructions to use external storage services that handle these transfers reliably.
 
-## Prevention Best Practices
+Prevention Best Practices
 
 The most reliable fix is preventing the error before it occurs:
 
-1. **Estimate token usage** before generating content. A rough formula: 1 token ≈ 4 characters for English text.
+1. Estimate token usage before generating content. A rough formula: 1 token ≈ 4 characters for English text.
 
-2. **Set explicit limits** in your skill's output expectations. Tell users what to expect and what triggers the error.
+2. Set explicit limits in your skill's output expectations. Tell users what to expect and what triggers the error.
 
-3. **Use streaming patterns** for real-time feedback during long operations. Skills like `/pdf` that generate long documents often benefit from this approach.
+3. Use streaming patterns for real-time feedback during long operations. Skills like `/pdf` that generate long documents often benefit from this approach.
 
-4. **Test with boundary cases** by deliberately creating scenarios that approach your output limits during skill development.
+4. Test with boundary cases by deliberately creating scenarios that approach your output limits during skill development.
 
-5. **Provide clear error recovery** so users know exactly what to do when output is truncated.
+5. Provide clear error recovery so users know exactly what to do when output is truncated.
 
-## Common Scenarios and Fixes
+Common Scenarios and Fixes
 
 | Scenario | Recommended Solution |
 |----------|---------------------|
@@ -160,17 +160,17 @@ The most reliable fix is preventing the error before it occurs:
 | Documentation build | Split into chapter-level chunks |
 | Component library generation | Use `frontend-design` with per-component invocation |
 
-## Conclusion
+Conclusion
 
-The "exceeded maximum output length" error doesn't mean your skill concept is invalid—it means you need to restructure how output is delivered. By implementing chunking, file-based output, pagination, or skill decomposition, you can create skills that handle substantial content generation without hitting Claude Code's output limits.
+The "exceeded maximum output length" error doesn't mean your skill concept is invalid, it means you need to restructure how output is delivered. By implementing chunking, file-based output, pagination, or skill decomposition, you can create skills that handle substantial content generation without hitting Claude Code's output limits.
 
 Remember that the goal is not just avoiding errors, but providing a smooth user experience. When users invoke your skill, they should receive clear, actionable output regardless of how much content their request generates.
 
-## Related Reading
+Related Reading
 
-- [Claude Skills Context Window Management Best Practices](/claude-md-too-long-context-window-optimization/) — Manage the context window strategically to prevent output length errors before they occur
-- [Claude Code Skills Context Window Exceeded Error Fix](/claude-code-skills-context-window-exceeded-error-fix/) — Address the related context window exceeded error that appears when loading multiple skills simultaneously
-- [Optimal Skill File Size and Complexity Guidelines](/optimal-skill-file-size-and-complexity-guidelines/) — Right-size your skills so individual invocations stay within reasonable output bounds
-- [Claude Skills: Getting Started Hub](/getting-started-hub/) — Explore foundational skill design patterns that prevent common errors like output length overflows
+- [Claude Skills Context Window Management Best Practices](/claude-md-too-long-context-window-optimization/). Manage the context window strategically to prevent output length errors before they occur
+- [Claude Code Skills Context Window Exceeded Error Fix](/claude-code-skills-context-window-exceeded-error-fix/). Address the related context window exceeded error that appears when loading multiple skills simultaneously
+- [Optimal Skill File Size and Complexity Guidelines](/optimal-skill-file-size-and-complexity-guidelines/). Right-size your skills so individual invocations stay within reasonable output bounds
+- [Claude Skills: Getting Started Hub](/getting-started-hub/). Explore foundational skill design patterns that prevent common errors like output length overflows
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

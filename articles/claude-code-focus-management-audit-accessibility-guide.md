@@ -15,7 +15,7 @@ permalink: /claude-code-focus-management-audit-accessibility-guide/
 
 Focus management is one of the most critical yet overlooked aspects of web accessibility. When users navigate your application using keyboards or assistive technologies, the focus indicator must clearly show their current position, and focus must logically move through interactive elements. This guide shows you how to use Claude Code skills to audit and improve focus management across your projects.
 
-## Understanding Focus Management in Web Applications
+Understanding Focus Management in Web Applications
 
 Focus management refers to how your application controls which element receives keyboard input at any given time. Proper focus management ensures that:
 
@@ -27,24 +27,24 @@ Focus management refers to how your application controls which element receives 
 
 Modern JavaScript frameworks make focus management challenging because content often loads dynamically. Single-page applications must carefully track focus state as users navigate between views.
 
-## Setting Up Claude Code for Accessibility Auditing
+Setting Up Claude Code for Accessibility Auditing
 
 Claude Code provides several skills that help with accessibility auditing. First, ensure you have the necessary skills installed in your environment:
 
 ```
 ~/.claude/skills/
-├── frontend-design.md
-├── accessibility-audit.md
-└── axe.md
+ frontend-design.md
+ accessibility-audit.md
+ axe.md
 ```
 
 The `/frontend-design` skill includes accessibility-first patterns when generating components. The dedicated accessibility audit skill provides comprehensive checklists for WCAG compliance verification.
 
-## Creating a Focus Management Audit Workflow
+Creating a Focus Management Audit Workflow
 
 When auditing focus management, you'll want to verify several key areas. Let's create a practical workflow using Claude Code:
 
-### Step 1: Audit Focus Indicator Visibility
+Step 1: Audit Focus Indicator Visibility
 
 The first thing to check is whether focus indicators are visible. Claude Code can help you identify CSS that might be removing or hiding focus rings:
 
@@ -68,7 +68,7 @@ button:focus {
 }
 ```
 
-### Step 2: Verify Tab Order
+Step 2: Verify Tab Order
 
 Logical tab order is essential for keyboard navigation. Claude Code can analyze your HTML structure to identify tab order issues:
 
@@ -76,7 +76,7 @@ Logical tab order is essential for keyboard navigation. Claude Code can analyze 
 - Tabindex values should be 0 (natural order) or -1 (programmatically focusable only)
 - Positive tabindex values create unpredictable tab orders
 
-### Step 3: Test Modal and Dialog Focus Management
+Step 3: Test Modal and Dialog Focus Management
 
 Modals present unique focus management challenges. When a modal opens, focus should:
 
@@ -94,9 +94,9 @@ const focusIssues = accessibilityResults.violations.filter(
 );
 ```
 
-## Practical Examples: Fixing Common Focus Issues
+Practical Examples: Fixing Common Focus Issues
 
-### Example 1: Adding Focus Management to a React Modal
+Example 1: Adding Focus Management to a React Modal
 
 Here's how Claude Code helps you implement proper modal focus management:
 
@@ -160,7 +160,7 @@ function Modal({ isOpen, onClose, children }) {
 }
 ```
 
-### Example 2: Implementing Skip Links
+Example 2: Implementing Skip Links
 
 Skip links help keyboard users bypass repetitive navigation. Claude Code can generate the HTML and CSS:
 
@@ -189,7 +189,7 @@ Skip links help keyboard users bypass repetitive navigation. Claude Code can gen
 }
 ```
 
-## Automating Focus Audits with Claude Code Skills
+Automating Focus Audits with Claude Code Skills
 
 You can automate focus management testing using the axe skill with Claude Code. Here's a comprehensive audit command:
 
@@ -205,7 +205,7 @@ You can automate focus management testing using the axe skill with Claude Code. 
 
 Claude Code will analyze your codebase and provide specific recommendations for each issue found.
 
-## WCAG Success Criteria for Focus Management
+WCAG Success Criteria for Focus Management
 
 When auditing focus management, verify compliance with these WCAG 2.1 criteria:
 
@@ -217,17 +217,17 @@ When auditing focus management, verify compliance with these WCAG 2.1 criteria:
 | 2.4.3 Focus Order | Focus order is logical | Observe tab sequence |
 | 2.4.7 Focus Visible | Focus indicator always visible | Visual inspection |
 
-## Conclusion
+Conclusion
 
-Focus management is fundamental to web accessibility. By leveraging Claude Code skills and automation tools like axe-core, you can systematically audit and improve focus handling in your applications. Start with the basics—visible focus indicators and logical tab order—then address more complex scenarios like modal focus traps and dynamic content focus management.
+Focus management is fundamental to web accessibility. By leveraging Claude Code skills and automation tools like axe-core, you can systematically audit and improve focus handling in your applications. Start with the basics, visible focus indicators and logical tab order, then address more complex scenarios like modal focus traps and dynamic content focus management.
 
 Remember: accessible focus management isn't just about compliance; it improves usability for all keyboard users, creating a better experience for everyone.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

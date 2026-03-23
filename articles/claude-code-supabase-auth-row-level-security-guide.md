@@ -12,17 +12,17 @@ tags: [claude-code, claude-skills, supabase, security]
 ---
 {% raw %}
 
-# Claude Code Supabase Auth Row Level Security Guide
+Claude Code Supabase Auth Row Level Security Guide
 
-Supabase's Row Level Security (RLS) combined with their authentication system provides a powerful, declarative way to secure your database at the row level. When paired with Claude Code, you can rapidly implement robust security policies that protect user data while maintaining flexibility. This guide focuses specifically on RLS policy design — team-based access, role-based access, and Edge Function integration. For a broader overview of Supabase backend integration with database operations, authentication, and Edge Functions, see the [Supabase Backend Integration Guide](/claude-code-with-supabase-backend-integration-guide/).
+Supabase's Row Level Security (RLS) combined with their authentication system provides a powerful, declarative way to secure your database at the row level. When paired with Claude Code, you can rapidly implement solid security policies that protect user data while maintaining flexibility. This guide focuses specifically on RLS policy design. team-based access, role-based access, and Edge Function integration. For a broader overview of Supabase backend integration with database operations, authentication, and Edge Functions, see the [Supabase Backend Integration Guide](/claude-code-with-supabase-backend-integration-guide/).
 
-## Understanding Supabase Auth and RLS
+Understanding Supabase Auth and RLS
 
 Supabase Auth provides multiple authentication methods including email/password, OAuth providers, magic links, and phone authentication. RLS then uses the `auth.uid()` function to identify the authenticated user and apply granular access policies. This separation of concerns means your authentication logic stays separate from your data access rules, making security easier to reason about and maintain.
 
 When a user authenticates, Supabase sets a JWT token that includes their user ID. RLS policies can then reference this ID to grant or deny access to specific rows. The key insight is that RLS runs after authentication but before any query executes, providing security at the database level rather than application level.
 
-### How Auth and RLS Work Together
+How Auth and RLS Work Together
 
 The authentication flow integrates with RLS through the `auth` schema:
 
@@ -39,7 +39,7 @@ CREATE POLICY "Users can see their own data"
 
 Claude Code can help you write these policies, test them with different user contexts, and iterate quickly until your security model works correctly.
 
-## Setting Up Supabase Auth
+Setting Up Supabase Auth
 
 Before implementing RLS, set up your Supabase project with authentication. Install the Supabase client and configure it with your project credentials:
 
@@ -59,9 +59,9 @@ const supabaseAnonKey = process.env.SUPABASE_ANON_KEY!
 export const supabase = createClient(supabaseUrl, supabaseAnonKey)
 ```
 
-For operations requiring elevated privileges, use the service role key—but never expose this in client-side code. Claude Code can help you set up proper environment configurations and keep secrets secure.
+For operations requiring elevated privileges, use the service role key, but never expose this in client-side code. Claude Code can help you set up proper environment configurations and keep secrets secure.
 
-### Implementing Sign Up and Sign In
+Implementing Sign Up and Sign In
 
 Create authentication functions that integrate with your frontend:
 
@@ -98,11 +98,11 @@ export async function signOut() {
 }
 ```
 
-## Enabling and Configuring Row Level Security
+Enabling and Configuring Row Level Security
 
 Once authentication is working, enable RLS on your tables and create policies. Always enable RLS one table at a time, testing each policy before moving to the next.
 
-### Enabling RLS on Tables
+Enabling RLS on Tables
 
 Enable RLS on each table that needs protection:
 
@@ -119,7 +119,7 @@ ALTER TABLE public.comments ENABLE ROW LEVEL SECURITY;
 
 Claude Code can help you audit your schema and identify which tables contain sensitive data that requires RLS protection.
 
-### Creating User-Specific Policies
+Creating User-Specific Policies
 
 The most common pattern is restricting access to the authenticated user's own data:
 
@@ -152,7 +152,7 @@ CREATE POLICY "Users can delete own profile"
 
 The USING clause controls SELECT, UPDATE, and DELETE operations, while WITH CHECK controls INSERT operations. Both should validate that the authenticated user owns the data.
 
-### Creating Owner-Based Policies
+Creating Owner-Based Policies
 
 For hierarchical data where users own resources through a foreign key:
 
@@ -185,11 +185,11 @@ CREATE POLICY "Users can delete own posts"
 
 This pattern works for any table with an `owner_id` column that references `auth.users.id`.
 
-## Implementing Team-Based Access Control
+Implementing Team-Based Access Control
 
 Beyond individual user data, many applications need team or organization-based access. Supabase RLS supports this through custom claims and separate access tables.
 
-### Using Organization Membership Tables
+Using Organization Membership Tables
 
 Create a membership table to track team relationships:
 
@@ -234,7 +234,7 @@ CREATE POLICY "Members can view membership"
   USING (auth.uid() = user_id);
 ```
 
-### Creating Team-Scoped Policies
+Creating Team-Scoped Policies
 
 Apply team-based access to any resource:
 
@@ -266,7 +266,7 @@ CREATE POLICY "Team members can insert documents"
 
 Claude Code can help you design the right data model for your team's access control needs and generate the necessary SQL policies.
 
-## Implementing Role-Based Access Control
+Implementing Role-Based Access Control
 
 For more complex applications, implement role-based access control (RBAC) with Supabase:
 
@@ -310,7 +310,7 @@ CREATE POLICY "Members can read"
   );
 ```
 
-## Using Auth Context in Edge Functions
+Using Auth Context in Edge Functions
 
 Edge Functions run with elevated privileges but can still access the authenticated user's context:
 
@@ -358,7 +358,7 @@ serve(async (req) => {
 })
 ```
 
-## Testing RLS Policies
+Testing RLS Policies
 
 Always test your RLS policies thoroughly. Use the Supabase dashboard or SQL editor to verify each policy works correctly:
 
@@ -377,27 +377,27 @@ VALUES ('different-user-uuid', 'other_user');  -- Should fail
 
 Claude Code can help you write test scripts that verify your RLS policies work correctly across different scenarios.
 
-## Security Best Practices
+Security Best Practices
 
 Follow these practices when implementing Supabase Auth with RLS:
 
-- **Always enable RLS** on tables containing user data or sensitive information
-- **Use the principle of least privilege** — grant minimum necessary access
-- **Test policies with different user contexts** before deploying to production
-- **Keep service role keys secure** — never expose them in client-side code
-- **Use separate policies** for different operations rather than broad ALL policies
-- **Monitor query performance** — complex RLS policies can impact query speed
+- Always enable RLS on tables containing user data or sensitive information
+- Use the principle of least privilege. grant minimum necessary access
+- Test policies with different user contexts before deploying to production
+- Keep service role keys secure. never expose them in client-side code
+- Use separate policies for different operations rather than broad ALL policies
+- Monitor query performance. complex RLS policies can impact query speed
 
-## Conclusion
+Conclusion
 
 Supabase Auth combined with Row Level Security provides a robust, scalable approach to data security. By defining policies at the database level, you ensure consistent enforcement regardless of how your data is accessed. Claude Code can accelerate your implementation, helping you write policies, test them thoroughly, and iterate quickly as your application evolves.
 
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -16,11 +16,11 @@ score: 7
 
 {% raw %}
 
-# Claude Code for Hybrids Web Components Workflow
+Claude Code for Hybrids Web Components Workflow
 
 Hybrids is a unique web components library that uses a proxy-based approach to create lightweight, reactive custom elements. Unlike traditional web component libraries, Hybrids embraces a declarative syntax combined with a powerful descriptor system. When you combine this with Claude Code's AI capabilities, you get a streamlined development workflow for building modern, framework-agnostic web components. This guide walks you through an effective workflow for creating, testing, and maintaining Hybrids web components using Claude Code.
 
-## Setting Up Your Hybrids Project with Claude Code
+Setting Up Your Hybrids Project with Claude Code
 
 Before diving into component development, ensure your project is properly configured. Claude Code works best with Hybrids when you provide clear context about your component architecture and build setup. Start by creating a well-structured project layout that Claude Code can understand and navigate efficiently.
 
@@ -40,9 +40,9 @@ export const config = {
 };
 ```
 
-## Creating Your First Hybrids Component
+Creating Your First Hybrids Component
 
-When generating Hybrids components with Claude Code, the descriptor pattern is central to the workflow. Hybrids uses descriptors—special objects that define how properties behave—to create reactive components. Claude Code understands this pattern and can help you generate components that use Hybrids' full capabilities.
+When generating Hybrids components with Claude Code, the descriptor pattern is central to the workflow. Hybrids uses descriptors, special objects that define how properties behave, to create reactive components. Claude Code understands this pattern and can help you generate components that use Hybrids' full capabilities.
 
 A typical component creation workflow starts with defining the component structure. Ask Claude Code to generate a component with specific properties, and it will create the appropriate descriptor definitions. The key is being explicit about property types, default values, and any custom getters or setters you need.
 
@@ -75,7 +75,7 @@ const ButtonComponent = define({
 });
 ```
 
-## Working with Hybrids Store and Data Binding
+Working with Hybrids Store and Data Binding
 
 One of Hybrids' most powerful features is its store system for managing shared state across components. Claude Code can help you set up stores correctly and connect them to your components. The store provides a simple way to share reactive data between unrelated components without prop drilling.
 
@@ -106,7 +106,7 @@ const UserProfile = define({
 });
 ```
 
-## Template Rendering and Conditional Logic
+Template Rendering and Conditional Logic
 
 Hybrids uses a template system inspired by lit-html, allowing you to write expressive templates with conditional rendering and loops. Claude Code can help you build complex templates by generating the correct syntax for various scenarios. The key is understanding how Hybrids handles conditional content and list rendering.
 
@@ -140,7 +140,7 @@ const ItemList = define({
 });
 ```
 
-## Styling and Shadow DOM Management
+Styling and Shadow DOM Management
 
 Styling in Hybrids works similarly to Shadow DOM styling in other libraries, but with some unique features. You can define scoped styles using the `css` template tag, and these styles are automatically processed for optimal performance. Claude Code can help you structure your styles efficiently and implement theming systems.
 
@@ -178,7 +178,7 @@ const StyledCard = define({
 });
 ```
 
-## Testing Your Hybrids Components
+Testing Your Hybrids Components
 
 Testing web components requires special considerations, and Hybrids provides utilities to make this easier. Use the built-in `html` fixture function to create test fixtures for your components. Claude Code can help you write comprehensive tests that cover property changes, event dispatching, and rendering behavior.
 
@@ -210,7 +210,7 @@ describe('app-button', () => {
 });
 ```
 
-## Best Practices for Claude Code with Hybrids
+Best Practices for Claude Code with Hybrids
 
 When working with Claude Code to generate Hybrids components, maintain consistency by establishing clear conventions. Document your component patterns in your `CLAUDE.md` file, including naming conventions, property definitions, and styling approaches. This helps Claude Code produce code that matches your team's style.
 
@@ -220,10 +220,10 @@ Finally, review generated code carefully, especially around descriptor definitio
 
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

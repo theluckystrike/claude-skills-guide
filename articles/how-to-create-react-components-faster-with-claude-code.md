@@ -13,9 +13,9 @@ tags: [claude-code, claude-skills]
 
 # How to Create React Components Faster with Claude Code
 
-React component development often involves repetitive patterns—forms, lists, modals, and data display components. Claude Code transforms this workflow by understanding your intent and generating production-ready code instantly. This guide shows you practical methods to build React components faster using Claude Code and related skills.
+React component development often involves repetitive patterns, forms, lists, modals, and data display components. Claude Code transforms this workflow by understanding your intent and generating production-ready code instantly. This guide shows you practical methods to build React components faster using Claude Code and related skills.
 
-## Prompting Claude Code for Component Generation
+Prompting Claude Code for Component Generation
 
 The key to rapid component creation lies in providing clear, structured prompts. Instead of writing every line manually, describe what you need and let Claude Code handle the implementation.
 
@@ -33,7 +33,7 @@ Create a React Card component with the following specifications:
 
 Claude Code generates the complete component with proper typing, styling, and best practices built in.
 
-## Building Component Libraries Faster
+Building Component Libraries Faster
 
 When creating multiple related components, batch your requests to maintain consistency across your library. Ask Claude Code to generate entire component families at once:
 
@@ -49,7 +49,7 @@ Generate a button component suite for our design system:
 
 This approach ensures visual consistency while saving hours of repetitive coding.
 
-## Integrating TypeScript and Prop Types
+Integrating TypeScript and Prop Types
 
 Modern React development benefits strongly from TypeScript integration. Claude Code excels at generating fully typed components:
 
@@ -78,9 +78,9 @@ export const UserCard: React.FC<UserCardProps> = ({
 
 Request TypeScript interfaces alongside your component to avoid typing overhead later.
 
-## Automating Test Creation with the TDD Skill
+Automating Test Creation with the TDD Skill
 
-Testing often becomes a bottleneck in component development. The **tdd** skill accelerates this by generating tests alongside your components. When you request a component, add:
+Testing often becomes a bottleneck in component development. The tdd skill accelerates this by generating tests alongside your components. When you request a component, add:
 
 ```
 Include Jest tests for:
@@ -92,9 +92,9 @@ Include Jest tests for:
 
 The tdd skill understands React testing library patterns and generates meaningful test cases that cover actual functionality rather than trivial cases.
 
-## Generating Documentation with the PDF Skill
+Generating Documentation with the PDF Skill
 
-Component documentation frequently lags behind implementation. Use the **pdf** skill to generate living documentation:
+Component documentation frequently lags behind implementation. Use the pdf skill to generate living documentation:
 
 ```
 Create a component documentation page that includes:
@@ -106,9 +106,9 @@ Create a component documentation page that includes:
 
 This keeps your component library self-documenting without manual effort.
 
-## Using the Frontend-Design Skill
+Using the Frontend-Design Skill
 
-The **frontend-design** skill brings design-system awareness to component generation. It understands color tokens, spacing scales, typography rules, and accessibility standards:
+The frontend-design skill brings design-system awareness to component generation. It understands color tokens, spacing scales, typography rules, and accessibility standards:
 
 ```
 Using our design tokens, create a FormField component that:
@@ -121,11 +121,11 @@ Using our design tokens, create a FormField component that:
 
 This produces components that fit your design system immediately, reducing revision cycles.
 
-## State Management Patterns
+State Management Patterns
 
 Claude Code generates components with appropriate state management based on your requirements:
 
-**Local State (useState):**
+Local State (useState):
 ```
 ContactForm component with:
 - Name, email, message fields
@@ -134,7 +134,7 @@ ContactForm component with:
 - Success/error feedback
 ```
 
-**Complex State (useReducer):**
+Complex State (useReducer):
 ```
 InventoryManager component that:
 - Handles bulk selection
@@ -143,7 +143,7 @@ InventoryManager component that:
 - Syncs with localStorage
 ```
 
-**Shared State (Context):**
+Shared State (Context):
 ```
 ThemeProvider component that:
 - Manages light/dark mode
@@ -154,7 +154,7 @@ ThemeProvider component that:
 
 Specify your state needs in the prompt to receive appropriately scoped code.
 
-## Component Composition Patterns
+Component Composition Patterns
 
 Rather than building monolithic components, ask Claude Code to create composable pieces:
 
@@ -169,7 +169,7 @@ Create a Modal system with:
 
 This produces flexible, reusable code that scales better than a single large component.
 
-## Performance Optimization
+Performance Optimization
 
 Include performance requirements in your prompts for optimized output:
 
@@ -183,9 +183,9 @@ Build a VirtualList component that:
 
 Claude Code implements virtualization, memoization, and other optimizations without additional prompting.
 
-## Maintaining Context with Supermemory
+Maintaining Context with Supermemory
 
-For larger projects, the **supermemory** skill maintains context across sessions. It remembers your component patterns, coding conventions, and project structure:
+For larger projects, the supermemory skill maintains context across sessions. It remembers your component patterns, coding conventions, and project structure:
 
 ```
 Remember these patterns for our component library:
@@ -197,13 +197,13 @@ Remember these patterns for our component library:
 
 Supermemory applies these conventions automatically in future component generations.
 
-## Solving Prop Drilling with Claude Code
+Solving Prop Drilling with Claude Code
 
-One of React's common pain points is prop drilling. When Claude Code analyzes your component tree, it can suggest and implement better patterns to eliminate it:
+One of React's common problems is prop drilling. When Claude Code analyzes your component tree, it can suggest and implement better patterns to eliminate it:
 
-- **Compound Components**: Transform verbose prop configurations into readable component composition
-- **Context API**: Identify shared state that should use React Context instead of passing through intermediate components
-- **State Management Integration**: Suggest Redux Toolkit slices or Zustand stores when the shared state warrants a dedicated store
+- Compound Components: Transform verbose prop configurations into readable component composition
+- Context API: Identify shared state that should use React Context instead of passing through intermediate components
+- State Management Integration: Suggest Redux Toolkit slices or Zustand stores when the shared state warrants a dedicated store
 
 Ask Claude to refactor prop drilling into a proper context pattern:
 
@@ -215,22 +215,22 @@ Consolidate the auth state into a context provider.
 
 Claude Code will generate the context provider, the custom hook, and update all consumers in one pass.
 
-## Practical Workflow
+Practical Workflow
 
-1. **Describe your need**: Write a clear prompt with component requirements
-2. **Review generated code**: Check for proper types, accessibility, and edge cases
-3. **Request tests**: Use the tdd skill to generate corresponding tests
-4. **Generate docs**: Create documentation with the pdf skill
-5. **Iterate**: Provide feedback to refine future generations
+1. Describe your need: Write a clear prompt with component requirements
+2. Review generated code: Check for proper types, accessibility, and edge cases
+3. Request tests: Use the tdd skill to generate corresponding tests
+4. Generate docs: Create documentation with the pdf skill
+5. Iterate: Provide feedback to refine future generations
 
 This workflow reduces component development from hours to minutes while maintaining quality standards.
 
 
-## Related Reading
+Related Reading
 
 - [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/)
 - [Claude Code React Router v7 Navigation Guide](/claude-code-react-router-v7-navigation-guide/)
 - [Claude Code i18n Workflow for React Applications Guide](/claude-code-i18n-workflow-for-react-applications-guide/)
 - [Claude Code Tutorials Hub](/tutorials-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

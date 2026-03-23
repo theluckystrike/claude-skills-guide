@@ -16,31 +16,31 @@ score: 8
 
 {% raw %}
 
-Managing code review comments efficiently is one of the biggest challenges development teams face at scale. When you're juggling dozens of pull requests per day, manually tracking, categorizing, and responding to feedback becomes a significant time sink. This is where Claude Code shines—it can automate the entire review comment lifecycle, from detection to resolution.
+Managing code review comments efficiently is one of the biggest challenges development teams face at scale. When you're juggling dozens of pull requests per day, manually tracking, categorizing, and responding to feedback becomes a significant time sink. This is where Claude Code shines, it can automate the entire review comment lifecycle, from detection to resolution.
 
-In this guide, you'll learn how to build a practical review comment automation workflow using Claude Code that will save hours each week and ensure nothing falls through the cracks.
+you'll learn how to build a practical review comment automation workflow using Claude Code that will save hours each week and ensure nothing falls through the cracks.
 
-## Understanding the Review Comment Challenge
+Understanding the Review Comment Challenge
 
 Before diving into automation, let's identify the core problems that make manual review comment management painful:
 
-First, there's the **volume problem**. Large teams often generate hundreds of review comments per day across multiple PRs. Manually tracking which comments require action, which are resolved, and which need follow-up becomes overwhelming.
+First, there's the volume problem. Large teams often generate hundreds of review comments per day across multiple PRs. Manually tracking which comments require action, which are resolved, and which need follow-up becomes overwhelming.
 
-Second, there's the **consistency problem**. Different reviewers may use different terminology, urgency levels, or formatting styles. This makes it hard to prioritize feedback and creates confusion for PR authors.
+Second, there's the consistency problem. Different reviewers may use different terminology, urgency levels, or formatting styles. This makes it hard to prioritize feedback and creates confusion for PR authors.
 
-Third, there's the **follow-up problem**. It's easy for comments to get lost, especially in active discussions. A question asked on Day 1 might not get a clear answer until Day 5, delaying merges.
+Third, there's the follow-up problem. It's easy for comments to get lost, especially in active discussions. A question asked on Day 1 might not get a clear answer until Day 5, delaying merges.
 
 Claude Code can address all three problems by implementing a structured automation workflow that standardizes how review comments are handled.
 
-## Building Your Review Comment Automation Skill
+Building Your Review Comment Automation Skill
 
 The foundation of your automation workflow is a well-designed Claude Code skill. Here's a practical implementation you can adapt:
 
 ```python
-# review-comment-automation-skill.md
-# Claude Code skill for managing review comments
+review-comment-automation-skill.md
+Claude Code skill for managing review comments
 
-## Instructions
+Instructions
 
 You are a review comment automation assistant. Your role is to help manage,
 categorize, and track review comments across pull requests.
@@ -51,7 +51,7 @@ When analyzing review comments:
 3. Track resolution status for each comment
 4. Generate summary reports for team visibility
 
-## Available Tools
+Available Tools
 
 Use these functions to process review comments:
 - categorize_comment(comment_text) -> comment_type
@@ -59,7 +59,7 @@ Use these functions to process review comments:
 - check_related_comments(comment_id) -> list[related_comment]
 - update_tracking_status(comment_id, status) -> confirmation
 
-## Output Format
+Output Format
 
 Always format your response with:
 - Summary statistics at the top
@@ -69,7 +69,7 @@ Always format your response with:
 
 This skill provides the framework for consistent comment handling. The key is defining clear categories that match your team's workflow.
 
-## Implementing Comment Categorization
+Implementing Comment Categorization
 
 The first automation step is categorizing incoming review comments. This helps prioritize what needs immediate attention versus what can wait. Here's how to implement it:
 
@@ -79,25 +79,25 @@ const CATEGORIES = {
   BLOCKING: {
     priority: 1,
     requires_action: true,
-    label: '🔴 Blocking',
+    label: ' Blocking',
     description: 'Must be resolved before merge'
   },
   QUESTION: {
     priority: 2,
     requires_action: false,
-    label: '🔵 Question',
+    label: ' Question',
     description: 'Needs clarification or discussion'
   },
   SUGGESTION: {
     priority: 3,
     requires_action: false,
-    label: '💡 Suggestion',
+    label: ' Suggestion',
     description: 'Improvement opportunity, not required'
   },
   NITPICK: {
     priority: 4,
     requires_action: false,
-    label: '⚪ Nitpick',
+    label: ' Nitpick',
     description: 'Minor preference, optional to address'
   }
 };
@@ -134,12 +134,12 @@ function categorizeComment(commentText, hasChangesRequested) {
 
 This categorization system transforms chaos into structure. Every comment gets a clear priority, making it easy for PR authors to know what truly matters.
 
-## Automating Response Generation
+Automating Response Generation
 
 Once comments are categorized, the next automation opportunity is response generation. Claude Code can suggest appropriate responses based on comment type and context:
 
 ```yaml
-# comment-response-templates.yaml
+comment-response-templates.yaml
 templates:
   blocking:
     - "Acknowledged. I'll fix this before requesting another review."
@@ -164,43 +164,43 @@ templates:
 
 Using templates ensures consistent, professional responses while saving time on boilerplate text. The key is customizing templates to match your team's communication style.
 
-## Creating Summary Reports
+Creating Summary Reports
 
 Automation is most valuable when it provides visibility. A good review comment workflow generates useful summaries for team leads and project managers:
 
 ```markdown
-## PR Review Summary: #423 - User Authentication Refactor
+PR Review Summary: #423 - User Authentication Refactor
 
-### Statistics
+Statistics
 - Total Comments: 12
 - Blocking: 2 (resolved: 2)
 - Questions: 4 (resolved: 3)
 - Suggestions: 4 (resolved: 2)
 - Nitpicks: 2 (resolved: 2)
 
-### Unresolved Items
-1. 🔴 BLOCKING: "JWT token expiration needs to be configurable" - @security-team
-2. 🔵 QUESTION: "Why use Redis instead of the existing Memcached?" - @arch-lead
+Unresolved Items
+1.  BLOCKING: "JWT token expiration needs to be configurable" - @security-team
+2.  QUESTION: "Why use Redis instead of the existing Memcached?" - @arch-lead
 
-### Time Metrics
+Time Metrics
 - First review requested: Mon 9:00 AM
 - All comments addressed: Mon 2:30 PM
 - Total review cycle: 5.5 hours
 - Average response time: 23 minutes
 
-### Recommendations
+Recommendations
 - Consider documenting the Redis vs Memcached decision
 - Add configuration validation in the auth module
 ```
 
 These summaries help identify bottlenecks, track review velocity, and maintain accountability.
 
-## Integrating with Your CI Pipeline
+Integrating with Your CI Pipeline
 
 To fully automate the workflow, integrate it with your continuous integration system. Here's a practical example using GitHub Actions:
 
 ```yaml
-# .github/workflows/review-automation.yml
+.github/workflows/review-automation.yml
 name: Review Comment Automation
 
 on:
@@ -233,19 +233,19 @@ jobs:
 
 This integration ensures every comment is immediately categorized, tracked, and routed to the right people without manual intervention.
 
-## Best Practices for Implementation
+Best Practices for Implementation
 
 When building your review comment automation workflow, keep these tips in mind:
 
-**Start simple.** Don't try to automate everything at once. Begin with categorization, then add response suggestions, then build reporting. Each phase delivers value independently.
+Start simple. Don't try to automate everything at once. Begin with categorization, then add response suggestions, then build reporting. Each phase delivers value independently.
 
-**Involve your team.** Get feedback on the categorization system and response templates. A system that doesn't match your team's terminology will be ignored.
+Involve your team. Get feedback on the categorization system and response templates. A system that doesn't match your team's terminology will be ignored.
 
-**Review and iterate.** Check your automation's effectiveness monthly. Are comments being categorized correctly? Are response templates being used? Adjust based on real usage patterns.
+Review and iterate. Check your automation's effectiveness monthly. Are comments being categorized correctly? Are response templates being used? Adjust based on real usage patterns.
 
-**Maintain human oversight.** Automation should assist, not replace, human judgment. Keep the ability to override automated categorizations and responses when needed.
+Maintain human oversight. Automation should assist, not replace, human judgment. Keep the ability to override automated categorizations and responses when needed.
 
-## Conclusion
+Conclusion
 
 Building a review comment automation workflow with Claude Code transforms an chaotic process into a structured, efficient system. By categorizing comments consistently, generating appropriate responses, and creating visibility through summaries, your team can significantly reduce the time spent managing feedback while improving overall code review quality.
 
@@ -253,10 +253,10 @@ Start with the basic skill structure outlined here, customize it to your team's 
 
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

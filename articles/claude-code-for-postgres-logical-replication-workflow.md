@@ -16,7 +16,7 @@ score: 7
 
 PostgreSQL logical replication is a powerful feature that allows you to replicate data between databases selectively, making it ideal for building distributed systems, read replicas, and data migration pipelines. This guide shows you how to implement and manage PostgreSQL logical replication workflows using Claude Code, with practical examples and actionable advice for production environments.
 
-## Understanding PostgreSQL Logical Replication
+Understanding PostgreSQL Logical Replication
 
 Logical replication in PostgreSQL differs from physical replication in that it replicates data based on logical changes, not raw binary data. This means you can replicate specific tables, filter rows, and even transform data during replication. Unlike physical replication which requires identical PostgreSQL versions, logical replication offers more flexibility in heterogeneous environments.
 
@@ -24,7 +24,7 @@ The core components of logical replication include the publisher (source databas
 
 Logical replication uses a wal sender process on the publisher and wal receiver on the subscriber, communicating through the streaming protocol. Changes are transmitted as logical change records (LCRs), providing fine-grained control over what gets replicated.
 
-## Setting Up Logical Replication
+Setting Up Logical Replication
 
 Before configuring logical replication, ensure your PostgreSQL instance has appropriate settings. The `wal_level` must be set to `logical`, and you need sufficient `max_replication_slots` and `max_wal_senders`. Here's how to configure these parameters:
 
@@ -77,7 +77,7 @@ CREATE PUBLICATION orders_pub FOR TABLE orders
     WITH (publish = 'insert, update, delete');
 ```
 
-## Configuring the Subscriber
+Configuring the Subscriber
 
 On the subscriber database, you need to create the matching table structures. The tables must have the same columns and data types, though they can have different names if you use column mapping:
 
@@ -109,7 +109,7 @@ CREATE SUBSCRIPTION my_subscription
     PUBLICATION my_publication;
 ```
 
-## Monitoring and Managing Replication
+Monitoring and Managing Replication
 
 Monitoring is crucial for production environments. PostgreSQL provides system views to track replication status and identify issues:
 
@@ -148,7 +148,7 @@ JOIN pg_roles r ON s.subowner = r.oid;
 SELECT * FROM pg_replication_origin_status;
 ```
 
-## Handling Schema Changes
+Handling Schema Changes
 
 Schema changes require careful handling in logical replication. PostgreSQL has limitations on what schema changes are automatically replicated:
 
@@ -171,11 +171,11 @@ CREATE SUBSCRIPTION my_subscription
 
 For complex schema migrations, consider using tools like pgloader or custom scripts that handle the migration while maintaining replication integrity.
 
-## Troubleshooting Common Issues
+Troubleshooting Common Issues
 
 Logical replication can encounter several common issues. Here's how to diagnose and resolve them:
 
-**Replication lag:** Monitor lag using the views above. High lag may indicate network issues or the subscriber can't keep up with the publisher:
+Replication lag: Monitor lag using the views above. High lag may indicate network issues or the subscriber can't keep up with the publisher:
 
 ```sql
 -- Check for conflicts
@@ -184,7 +184,7 @@ WHERE state = 'active'
   AND query LIKE '%logical replication%';
 ```
 
-**Subscription errors:** View detailed error information:
+Subscription errors: View detailed error information:
 
 ```sql
 -- Get last error details
@@ -193,7 +193,7 @@ FROM pg_stat_subscription
 WHERE lasterror IS NOT NULL;
 ```
 
-**Slot exhaustion:** Ensure replication slots are being properly consumed:
+Slot exhaustion: Ensure replication slots are being properly consumed:
 
 ```sql
 -- Check active slots
@@ -202,22 +202,22 @@ FROM pg_replication_slots
 WHERE active = true;
 ```
 
-## Best Practices for Production
+Best Practices for Production
 
 When implementing logical replication in production environments, follow these best practices:
 
 First, use dedicated replication users with minimal permissions. The replication role should only have replication permissions, not superuser access. Second, always use SSL connections for replication to protect data in transit. Third, implement proper monitoring and alerting for replication lag and failures. Fourth, test your failover procedures regularly to ensure you can recover quickly when issues occur.
 
-For high availability, consider implementing a cascading replication topology where one subscriber replicates to others, reducing load on the publisher. Additionally, use the `synchronous_commit` parameter wisely—setting it to `on` ensures durability but adds latency, while `off` improves performance at the cost of potential data loss.
+For high availability, consider implementing a cascading replication topology where one subscriber replicates to others, reducing load on the publisher. Additionally, use the `synchronous_commit` parameter wisely, setting it to `on` ensures durability but adds latency, while `off` improves performance at the cost of potential data loss.
 
-## Conclusion
+Conclusion
 
-PostgreSQL logical replication is an essential tool for building resilient, distributed database architectures. By leveraging Claude Code to generate SQL configurations, create monitoring scripts, and troubleshoot issues, you can streamline the implementation and maintenance of replication workflows. The combination of PostgreSQL's powerful replication features and AI-assisted development makes it easier than ever to build robust data distribution systems that scale with your application's needs.
+PostgreSQL logical replication is an essential tool for building resilient, distributed database architectures. By leveraging Claude Code to generate SQL configurations, create monitoring scripts, and troubleshoot issues, you can streamline the implementation and maintenance of replication workflows. The combination of PostgreSQL's powerful replication features and AI-assisted development makes it easier than ever to build solid data distribution systems that scale with your application's needs.
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

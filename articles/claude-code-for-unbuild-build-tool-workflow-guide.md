@@ -14,13 +14,13 @@ score: 7
 
 
 {% raw %}
-# Claude Code for Unbuild Build Tool Workflow Guide
+Claude Code for Unbuild Build Tool Workflow Guide
 
 [Unbuild](https://unbuild.io) is a modern, modular build system designed for JavaScript and TypeScript libraries. It provides a standardized way to create builds with automatic entry point generation, TypeScript support, and plugin-based extensibility. When combined with Claude Code, you can automate the entire build configuration process, from initial setup to publishing готовые пакеты.
 
 This guide shows you how to use Claude Code to work with Unbuild efficiently, automate repetitive tasks, and create maintainable build configurations.
 
-## Understanding Unbuild Fundamentals
+Understanding Unbuild Fundamentals
 
 Unbuild uses a convention-over-configuration approach where your build behavior is defined through a `build.config.ts` file in your project root. The tool automatically handles:
 
@@ -31,7 +31,7 @@ Unbuild uses a convention-over-configuration approach where your build behavior 
 
 Claude Code can help you scaffold new Unbuild projects, generate configuration files, and maintain build configurations over time.
 
-### Why Unbuild Over Other Build Tools?
+Why Unbuild Over Other Build Tools?
 
 Before diving into the workflow, it helps to understand what makes Unbuild the right choice for library authors. Unlike bundlers such as Rollup or Vite configured manually, Unbuild wraps Rollup with sensible defaults that cover 90% of library use cases without extra configuration.
 
@@ -44,18 +44,18 @@ Before diving into the workflow, it helps to understand what makes Unbuild the r
 | Monorepo ready | Partial | Partial | Yes |
 | Stub mode (dev) | No | No | Yes |
 
-The "stub mode" row deserves extra attention. Unbuild's `--stub` flag generates a thin shim that points directly to your TypeScript source during development. This means you can link your library into a consuming app and get instant feedback without a rebuild step — a workflow that dramatically speeds up local development cycles.
+The "stub mode" row deserves extra attention. Unbuild's `--stub` flag generates a thin shim that points directly to your TypeScript source during development. This means you can link your library into a consuming app and get instant feedback without a rebuild step. a workflow that dramatically speeds up local development cycles.
 
-## Setting Up Unbuild with Claude Code
+Setting Up Unbuild with Claude Code
 
 The fastest way to start a new Unbuild project is to let Claude Code scaffold it for you. Here's a practical workflow:
 
 ```bash
-# Create a new directory for your library
+Create a new directory for your library
 mkdir my-awesome-library
 cd my-awesome-library
 
-# Initialize with npm and install Unbuild
+Initialize with npm and install Unbuild
 npm init -y
 npm install -D unbuild
 ```
@@ -80,38 +80,38 @@ export default defineBuildConfig({
 
 Claude Code can generate this configuration automatically based on your project's requirements. Simply describe your needs, and the AI will create the appropriate configuration.
 
-### Prompting Claude Code Effectively for Unbuild
+Prompting Claude Code Effectively for Unbuild
 
 The quality of what Claude generates depends heavily on how you phrase your request. Vague prompts produce generic configurations; specific prompts produce ready-to-ship files. Here are prompts that work well:
 
-**For a utility library:**
+For a utility library:
 > "Create a build.config.ts for a zero-dependency utility library that needs ESM and CJS dual output, TypeScript declarations, and tree-shakable named exports. The main entry is src/index.ts and there is a separate src/cli.ts entry for a CLI tool."
 
-**For a monorepo package:**
+For a monorepo package:
 > "Generate an Unbuild config for a monorepo package at packages/core. It has peer dependencies on react and react-dom that should not be bundled. Enable strict declarations and rollup type rollup."
 
-**For debugging a broken build:**
+For debugging a broken build:
 > "Here is my build.config.ts and the error output from `npx unbuild`. Diagnose what's wrong and provide a corrected config."
 
 Pasting the error output directly into the Claude Code chat gives it the context needed to produce accurate fixes rather than generic advice.
 
-## Automating Entry Point Generation
+Automating Entry Point Generation
 
 One of Unbuild's most powerful features is automatic entry point discovery. When you structure your project correctly, Unbuild automatically generates multiple entry points from your source files.
 
-### Recommended Project Structure
+Recommended Project Structure
 
 ```text
 my-library/
-├── src/
-│   ├── index.ts        # Main entry
-│   ├── utils/
-│   │   ├── format.ts   # Becomes /utils/format
-│   │   └── parse.ts    # Becomes /utils/parse
-│   └── core/
-│       └── engine.ts   # Becomes /core/engine
-├── build.config.ts
-└── package.json
+ src/
+    index.ts        # Main entry
+    utils/
+       format.ts   # Becomes /utils/format
+       parse.ts    # Becomes /utils/parse
+    core/
+        engine.ts   # Becomes /core/engine
+ build.config.ts
+ package.json
 ```
 
 With this structure, Unbuild automatically generates:
@@ -124,10 +124,10 @@ With this structure, Unbuild automatically generates:
 You can ask Claude Code to create this structure for you:
 
 ```bash
-# Tell Claude: "Create a new Unbuild project with src/index.ts, src/utils/ folder, and src/core/ folder with example files"
+Tell Claude: "Create a new Unbuild project with src/index.ts, src/utils/ folder, and src/core/ folder with example files"
 ```
 
-### Configuring package.json Exports Correctly
+Configuring package.json Exports Correctly
 
 The generated dist files are only useful if `package.json` points to them correctly. Modern bundler resolution depends on the `exports` field, and getting it wrong means consumers get the wrong format or missing types. Ask Claude Code to generate the exports map alongside the build config:
 
@@ -165,13 +165,13 @@ The generated dist files are only useful if `package.json` points to them correc
 }
 ```
 
-This pattern — generating `package.json` exports alongside `build.config.ts` — is one of the most valuable things Claude Code can do for library authors. The dual-format exports map is tedious to write manually but critical for compatibility with both ESM-first tools like Vite and CJS-only runtimes like older Jest configs.
+This pattern. generating `package.json` exports alongside `build.config.ts`. is one of the most valuable things Claude Code can do for library authors. The dual-format exports map is tedious to write manually but critical for compatibility with both ESM-first tools like Vite and CJS-only runtimes like older Jest configs.
 
-## Using Claude Code to Maintain Build Configurations
+Using Claude Code to Maintain Build Configurations
 
 As your library grows, your build configuration needs to evolve. Claude Code can help you:
 
-### Adding New Entry Points
+Adding New Entry Points
 
 When you add new modules to your library, update the build config:
 
@@ -194,7 +194,7 @@ export default defineBuildConfig({
 })
 ```
 
-### Configuring TypeScript Strictly
+Configuring TypeScript Strictly
 
 For production libraries, you want strict TypeScript settings:
 
@@ -219,9 +219,9 @@ export default defineBuildConfig({
 })
 ```
 
-The `rollupTypes: true` option merges all `.d.ts` files into a single declaration file per entry. This is important for library consumers who use "go to definition" in their editors — without type rollup, they end up jumping through intermediate generated files rather than your authored source.
+The `rollupTypes: true` option merges all `.d.ts` files into a single declaration file per entry. This is important for library consumers who use "go to definition" in their editors. without type rollup, they end up jumping through intermediate generated files rather than your authored source.
 
-### Handling External Dependencies
+Handling External Dependencies
 
 One of the most common mistakes in library builds is accidentally bundling peer dependencies. If you bundle `react` into your library, consumers end up with two copies of React at runtime. Ask Claude Code to audit your config:
 
@@ -244,15 +244,15 @@ export default defineBuildConfig({
 })
 ```
 
-Claude Code can scan your `package.json` `peerDependencies` field and automatically populate the `externals` array for you — a tedious but critical task that's easy to get wrong manually.
+Claude Code can scan your `package.json` `peerDependencies` field and automatically populate the `externals` array for you. a tedious but critical task that's easy to get wrong manually.
 
-## Integrating with TypeScript Projects
+Integrating with TypeScript Projects
 
 When your Unbuild project is part of a larger monorepo or TypeScript workspace, Claude Code can help configure proper TypeScript integration:
 
-1. **Ensure tsconfig.json is properly configured** - Set `declaration: true` and `declarationMap: true`
-2. **Configure path mappings** - Use `paths` in tsconfig for clean imports
-3. **Set up references** - Use TypeScript project references for faster builds
+1. Ensure tsconfig.json is properly configured - Set `declaration: true` and `declarationMap: true`
+2. Configure path mappings - Use `paths` in tsconfig for clean imports
+3. Set up references - Use TypeScript project references for faster builds
 
 A well-structured `tsconfig.json` for an Unbuild library looks like this:
 
@@ -271,20 +271,20 @@ A well-structured `tsconfig.json` for an Unbuild library looks like this:
     "lib": ["ES2020"],
     "skipLibCheck": true
   },
-  "include": ["src/**/*"],
+  "include": ["src//*"],
   "exclude": ["node_modules", "dist"]
 }
 ```
 
-Note the `"moduleResolution": "bundler"` setting — this is the correct choice for Unbuild projects in 2026. It enables importing without file extensions and resolves `exports` maps in `package.json`, which is how most modern libraries ship.
+Note the `"moduleResolution": "bundler"` setting. this is the correct choice for Unbuild projects in 2026. It enables importing without file extensions and resolves `exports` maps in `package.json`, which is how most modern libraries ship.
 
 Claude Code can audit your configuration and suggest improvements:
 
 ```bash
-# Ask Claude: "Audit my build.config.ts and suggest improvements for a production library"
+Ask Claude: "Audit my build.config.ts and suggest improvements for a production library"
 ```
 
-### Stub Mode for Development
+Stub Mode for Development
 
 One workflow improvement Claude Code can set up is a development script that uses Unbuild's stub mode:
 
@@ -300,15 +300,15 @@ One workflow improvement Claude Code can set up is a development script that use
 
 With stub mode active, you can `npm link` your library into a consuming project and edit source files without running a full build. The stub shim re-exports from your TypeScript source via `jiti` (a TypeScript runtime) at development time. Claude Code can explain this workflow and set it up for your specific project structure.
 
-## Publishing Your Unbuild Package
+Publishing Your Unbuild Package
 
 Once your build is configured, publishing is straightforward:
 
 ```bash
-# Build the package
+Build the package
 npx unbuild
 
-# Publish to npm
+Publish to npm
 npm publish
 ```
 
@@ -324,7 +324,7 @@ Claude Code can create a release script in your `package.json`:
 }
 ```
 
-### Pre-publish Checklist with Claude Code
+Pre-publish Checklist with Claude Code
 
 Before publishing, ask Claude Code to run through a pre-publish checklist. A good prompt is: "Check my package.json, build.config.ts, and dist/ output and tell me if anything looks wrong before I publish."
 
@@ -336,22 +336,22 @@ Claude will look for common issues:
 - `files` array that accidentally excludes `dist/`
 - Source files accidentally included in `files` (exposing your TypeScript source when you only want to ship compiled output)
 
-## Best Practices for Unbuild with Claude Code
+Best Practices for Unbuild with Claude Code
 
-### 1. Version Management
+1. Version Management
 
 Always keep your dependencies updated. Ask Claude Code periodically to check for updates:
 
 ```bash
-# Tell Claude: "Check for outdated dependencies in this Unbuild project"
+Tell Claude: "Check for outdated dependencies in this Unbuild project"
 ```
 
-### 2. Test Your Build Output
+2. Test Your Build Output
 
 Before publishing, verify your build works:
 
 ```bash
-# Build and test locally
+Build and test locally
 npm run build
 npm pack
 npm install ./your-package-*.tgz
@@ -360,18 +360,18 @@ npm install ./your-package-*.tgz
 A more thorough approach is to write a small consuming script and run it with both `node` (which uses the CJS output) and a bundler like Vite (which uses the ESM output). Claude Code can generate this test harness for you:
 
 ```javascript
-// test-consumer/index.mjs  — tests ESM output
+// test-consumer/index.mjs . tests ESM output
 import { myFunction } from 'my-awesome-library'
 console.assert(typeof myFunction === 'function', 'ESM export works')
 console.log('ESM import OK')
 
-// test-consumer/index.cjs  — tests CJS output
+// test-consumer/index.cjs . tests CJS output
 const { myFunction } = require('my-awesome-library')
 console.assert(typeof myFunction === 'function', 'CJS export works')
 console.log('CJS require OK')
 ```
 
-### 3. Use GitHub Actions
+3. Use GitHub Actions
 
 Automate your CI/CD with GitHub Actions:
 
@@ -393,7 +393,7 @@ jobs:
 
 Claude Code can generate this workflow file for you automatically. For more advanced scenarios, ask Claude to add a matrix build that tests across Node 18, 20, and 22, or to add a separate job that publishes to npm only when a version tag is pushed.
 
-### 4. Document Your Build Configuration
+4. Document Your Build Configuration
 
 As build configurations grow, comments become essential. Claude Code excels at adding explanatory comments to existing configs:
 
@@ -401,7 +401,7 @@ As build configurations grow, comments become essential. Claude Code excels at a
 import { defineBuildConfig } from 'unbuild'
 
 export default defineBuildConfig({
-  // Each entry generates a separate output chunk — useful for
+  // Each entry generates a separate output chunk. useful for
   // tree-shaking in consuming apps that only import parts of the library
   entries: ['src/index', 'src/utils', 'src/core'],
 
@@ -419,25 +419,25 @@ export default defineBuildConfig({
     // Required for Jest (without experimental VM modules) and older tooling
     emitCJS: true,
 
-    // Keep peer deps out of the bundle — consumers provide their own copy
+    // Keep peer deps out of the bundle. consumers provide their own copy
     inlineDependencies: false,
   },
 })
 ```
 
-## Conclusion
+Conclusion
 
-Combining Claude Code with Unbuild creates a powerful workflow for JavaScript and TypeScript library development. Claude Code can scaffold projects, generate configurations, maintain build settings, and even create CI/CD workflows — allowing you to focus on writing code rather than managing build tooling.
+Combining Claude Code with Unbuild creates a powerful workflow for JavaScript and TypeScript library development. Claude Code can scaffold projects, generate configurations, maintain build settings, and even create CI/CD workflows. allowing you to focus on writing code rather than managing build tooling.
 
 The key insight is that Unbuild eliminates most of the manual Rollup configuration that library authors used to manage, and Claude Code eliminates the remaining friction: generating the correct `package.json` exports map, auditing for bundled peer dependencies, setting up stub-mode development scripts, and writing pre-publish test harnesses. Together they reduce the time from "I want to publish a library" to a correctly configured, CI-protected npm package from hours to minutes.
 
 Start small: create a new Unbuild project, let Claude generate the initial configuration, then iterate as your library grows. The combination of AI assistance and modern tooling makes library development more accessible than ever.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

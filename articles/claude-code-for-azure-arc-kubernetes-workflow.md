@@ -13,11 +13,11 @@ score: 8
 ---
 
 
-# Claude Code for Azure Arc Kubernetes Workflow
+Claude Code for Azure Arc Kubernetes Workflow
 
-Azure Arc-enabled Kubernetes extends Azure's management capabilities to Kubernetes clusters running anywhere—on-premises, on other cloud providers, or at the edge. Managing these hybrid Kubernetes environments can be complex, but Claude Code can significantly streamline your workflow. This guide shows you how to use Claude Code effectively for Azure Arc Kubernetes operations.
+Azure Arc-enabled Kubernetes extends Azure's management capabilities to Kubernetes clusters running anywhere, on-premises, on other cloud providers, or at the edge. Managing these hybrid Kubernetes environments can be complex, but Claude Code can significantly streamline your workflow. This guide shows you how to use Claude Code effectively for Azure Arc Kubernetes operations.
 
-## Understanding Azure Arc Kubernetes Architecture
+Understanding Azure Arc Kubernetes Architecture
 
 Before diving into workflows, it's essential to understand what you're managing. Azure Arc-enabled Kubernetes allows you to attach Kubernetes clusters to Azure for consistent management, monitoring, and policy enforcement regardless of where they run.
 
@@ -27,19 +27,19 @@ Claude Code can help you navigate this architecture by:
 - Writing scripts for cluster lifecycle management
 - Troubleshooting connectivity and configuration issues
 
-## Setting Up Claude Code for Azure Arc
+Setting Up Claude Code for Azure Arc
 
 First, ensure Claude Code has the necessary context about your Azure environment. Create a `CLAUDE.md` file in your project directory with relevant Azure Arc information:
 
 ```markdown
-# Azure Arc Kubernetes Project
+Azure Arc Kubernetes Project
 
-## Environment
+Environment
 - Azure subscription: production-sub-001
 - Resource group: arc-clusters-rg
 - Connected clusters: 3 (prod-aks, staging-k3s, edge-cluster)
 
-## Common Tasks
+Common Tasks
 - Deploy workloads to Arc-enabled clusters
 - Check cluster health and connectivity
 - Troubleshoot Arc agent issues
@@ -48,21 +48,21 @@ First, ensure Claude Code has the necessary context about your Azure environment
 
 This context helps Claude understand your specific setup and provide more relevant assistance.
 
-## Connecting Clusters to Azure Arc
+Connecting Clusters to Azure Arc
 
 One of the first tasks you'll encounter is connecting an existing Kubernetes cluster to Azure Arc. Here's how Claude Code can help you generate the necessary configuration:
 
 Claude can help you create a service principal for authentication:
 
 ```bash
-# Generate Azure service principal for Arc registration
+Generate Azure service principal for Arc registration
 az ad sp create-for-rbac --name "arc-cluster-sp" --role "Azure Connected Kubernetes Role"
 ```
 
 Once you have the credentials, Claude can generate the appropriate `az connectedk8s connect` command with your specific parameters:
 
 ```bash
-# Connect a cluster to Azure Arc
+Connect a cluster to Azure Arc
 az connectedk8s connect --name my-cluster \
   --resource-group arc-clusters-rg \
   --location eastus \
@@ -72,23 +72,23 @@ az connectedk8s connect --name my-cluster \
 Claude Code can also help you verify the connection status and check that the Arc agents are running correctly on your cluster:
 
 ```bash
-# Check Arc agent pods
+Check Arc agent pods
 kubectl get pods -n azure-arc
 
-# Verify cluster connection status
+Verify cluster connection status
 az connectedk8s show --name my-cluster --resource-group arc-clusters-rg
 ```
 
-## Deploying Applications with GitOps
+Deploying Applications with GitOps
 
 Azure Arc Kubernetes supports GitOps-based configuration management through Azure Flux. Claude Code excels at generating Flux configurations and helping you set up automated deployments.
 
-### Creating a GitOps Configuration
+Creating a GitOps Configuration
 
 Here's how you can use Claude to generate a GitOps configuration:
 
 ```bash
-# Enable GitOps on your Arc-enabled cluster
+Enable GitOps on your Arc-enabled cluster
 az k8s-configuration flux create \
   --name cluster-config \
   --cluster-name my-cluster \
@@ -102,12 +102,12 @@ az k8s-configuration flux create \
 
 Claude can help you understand the structure of your GitOps repository and generate appropriate Kustomize overlays for different environments.
 
-### Managing Multiple Environments
+Managing Multiple Environments
 
 When managing multiple clusters (production, staging, development), Claude can help you create organized configurations:
 
 ```yaml
-# kustomization.yaml for production
+kustomization.yaml for production
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: production
@@ -119,58 +119,58 @@ patches:
   - path: patches/production-values.yaml
 ```
 
-## Monitoring and Troubleshooting
+Monitoring and Troubleshooting
 
 Azure Arc provides monitoring through Azure Monitor Container Insights. Claude Code can help you set up monitoring and diagnose issues.
 
-### Viewing Logs and Metrics
+Viewing Logs and Metrics
 
 ```bash
-# Get logs from Arc agents
+Get logs from Arc agents
 kubectl logs -n azure-arc \
   -l app.kubernetes.io/name=azure-arc-agent \
   --tail=100
 
-# Check agent health
+Check agent health
 az connectedk8s show -n my-cluster -g arc-clusters-rg \
   --query "agentVersion"
 ```
 
-### Troubleshooting Common Issues
+Troubleshooting Common Issues
 
 Claude can guide you through common Azure Arc Kubernetes problems:
 
-1. **Cluster shows as disconnected**: Check network connectivity and ensure the Arc agents can reach Azure endpoints
-2. **Configuration sync failures**: Review Flux logs and verify Git repository accessibility
-3. **Permission issues**: Verify the service principal has the correct role assignments
+1. Cluster shows as disconnected: Check network connectivity and ensure the Arc agents can reach Azure endpoints
+2. Configuration sync failures: Review Flux logs and verify Git repository accessibility
+3. Permission issues: Verify the service principal has the correct role assignments
 
 Here's a diagnostic script Claude can help generate:
 
 ```bash
 #!/bin/bash
-# Azure Arc cluster diagnostic script
+Azure Arc cluster diagnostic script
 
 CLUSTER_NAME="my-cluster"
 RG="arc-clusters-rg"
 
 echo "=== Azure Arc Cluster Diagnostics ==="
 
-# Check cluster connection status
+Check cluster connection status
 echo -e "\n1. Cluster Connection Status:"
 az connectedk8s show -n $CLUSTER_NAME -g $RG \
   --query "{name:name, state:provisioningState, location:location}"
 
-# Check Arc agents
+Check Arc agents
 echo -e "\n2. Arc Agents Status:"
 kubectl get pods -n azure-arc -o wide
 
-# Check for errors
+Check for errors
 echo -e "\n3. Recent Agent Logs:"
 kubectl logs -n azure-arc \
   -l app.kubernetes.io/component=hub-agent \
   --tail=50
 
-# Check Flux configurations
+Check Flux configurations
 echo -e "\n4. GitOps Configurations:"
 az k8s-configuration flux show \
   -n cluster-config \
@@ -178,12 +178,12 @@ az k8s-configuration flux show \
   -g $RG
 ```
 
-## Policy Enforcement with Azure Policy
+Policy Enforcement with Azure Policy
 
 Azure Arc Kubernetes supports Azure Policy for cluster governance. Claude can help you create and apply policies:
 
 ```bash
-# List available built-in policies for Kubernetes
+List available built-in policies for Kubernetes
 az policy definition list \
   --query "[?contains(displayName, 'Kubernetes')].{name:displayName, mode:mode}"
 ```
@@ -191,30 +191,30 @@ az policy definition list \
 You can then assign policies to your Arc-enabled cluster:
 
 ```bash
-# Enable Kubernetes cluster pod security policy
+Enable Kubernetes cluster pod security policy
 az policy assignment create \
   --name "pod-security-policy" \
   --policy "Kubernetes cluster containers should only use allowed capabilities" \
   --scope "/subscriptions/xxx/resourceGroups/arc-clusters-rg/providers/Microsoft.Kubernetes/connectedClusters/my-cluster"
 ```
 
-## Best Practices for Claude Code with Azure Arc
+Best Practices for Claude Code with Azure Arc
 
 To get the most out of Claude Code when working with Azure Arc Kubernetes:
 
-1. **Provide specific context**: Include your cluster names, namespaces, and Azure resource details in your prompts
-2. **Ask for explanations**: When Claude generates commands, ask it to explain what each part does
-3. **Iterate on configurations**: Use Claude to generate initial configurations, then refine them based on your requirements
-4. **Verify before applying**: Always review generated manifests before applying them to production clusters
-5. **Use version-specific help**: Specify your Kubernetes version and Azure CLI version when asking for help
+1. Provide specific context: Include your cluster names, namespaces, and Azure resource details in your prompts
+2. Ask for explanations: When Claude generates commands, ask it to explain what each part does
+3. Iterate on configurations: Use Claude to generate initial configurations, then refine them based on your requirements
+4. Verify before applying: Always review generated manifests before applying them to production clusters
+5. Use version-specific help: Specify your Kubernetes version and Azure CLI version when asking for help
 
-## Automating Routine Tasks
+Automating Routine Tasks
 
 Claude Code can help you create automation scripts for common Azure Arc operations. For example, a script to check all connected clusters:
 
 ```bash
 #!/bin/bash
-# Check health of all Arc-enabled clusters
+Check health of all Arc-enabled clusters
 
 SUBSCRIPTION="your-subscription-id"
 az account set --subscription $SUBSCRIPTION
@@ -233,7 +233,7 @@ for cluster in $(az connectedk8s list --query "[].name" -o tsv); do
 done
 ```
 
-## Conclusion
+Conclusion
 
 Claude Code is a powerful assistant for Azure Arc Kubernetes management. By providing the right context about your environment and asking specific questions, you can use Claude to:
 
@@ -249,10 +249,10 @@ The key is to be specific about your cluster names, namespaces, and requirements
 
 Remember to always verify commands and configurations before applying them to production environments. Azure Arc Kubernetes management requires careful attention to security and network configuration.
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

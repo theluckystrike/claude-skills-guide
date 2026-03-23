@@ -12,13 +12,13 @@ reviewed: true
 ---
 
 {% raw %}
-# Claude Code for Performance Budget Workflow Tutorial
+Claude Code for Performance Budget Workflow Tutorial
 
-Performance budgets are one of the most effective ways to prevent web applications from degrading over time. By setting concrete limits on metrics like bundle size, First Contentful Paint (FCP), and Time to Interactive (TTI), you create automated guardrails that catch performance regressions before they reach production. In this tutorial, you'll learn how to leverage Claude Code to create a performance budget workflow that integrates seamlessly with your development process.
+Performance budgets are one of the most effective ways to prevent web applications from degrading over time. By setting concrete limits on metrics like bundle size, First Contentful Paint (FCP), and Time to Interactive (TTI), you create automated guardrails that catch performance regressions before they reach production. In this tutorial, you'll learn how to use Claude Code to create a performance budget workflow that integrates smoothly with your development process.
 
-## Why Use Claude Code for Performance Automation?
+Why Use Claude Code for Performance Automation?
 
-Claude Code isn't just for code completion—it's a programmable AI assistant that can execute shell commands, read and write files, and make decisions based on results. This makes it ideal for automating performance workflows because you can create custom skills that:
+Claude Code isn't just for code completion, it's a programmable AI assistant that can execute shell commands, read and write files, and make decisions based on results. This makes it ideal for automating performance workflows because you can create custom skills that:
 
 1. Run performance audits on demand
 2. Compare results against defined budgets
@@ -27,7 +27,7 @@ Claude Code isn't just for code completion—it's a programmable AI assistant th
 
 Unlike traditional CI/CD scripts that only pass or fail, Claude Code can analyze the results and provide intelligent suggestions for improvement.
 
-## Setting Up Your Performance Budget Skill
+Setting Up Your Performance Budget Skill
 
 The first step is to create a Claude Code skill that handles performance auditing. Create a new skill file in your project's `.claude/settings/` directory:
 
@@ -106,7 +106,7 @@ if __name__ == '__main__':
 
 This script forms the core of your performance audit. It loads budget thresholds from a configuration file, runs Lighthouse, and compares the results.
 
-## Creating the Budget Configuration
+Creating the Budget Configuration
 
 Next, create a `.claude/performance-budget.json` file in your project root:
 
@@ -122,11 +122,11 @@ Next, create a `.claude/performance-budget.json` file in your project root:
 
 Each value represents milliseconds (for timing metrics) or bytes (for size metrics). Adjust these based on your application's requirements and your team's performance goals.
 
-## Integrating with Your Development Workflow
+Integrating with Your Development Workflow
 
 The real power of using Claude Code for performance budgets comes from integrating it into your daily workflow. Here are three practical ways to do this:
 
-### 1. Pre-commit Hooks
+1. Pre-commit Hooks
 
 Add a performance check before every commit by creating a `.git/hooks/pre-commit` script:
 
@@ -138,12 +138,12 @@ claude -p "Run the performance-budget skill to check if the current code meets p
 
 This ensures that every code change passes performance validation before being committed.
 
-### 2. Pull Request Comments
+2. Pull Request Comments
 
 Configure your CI pipeline to have Claude Code analyze performance changes and leave comments on pull requests:
 
 ```yaml
-# .github/workflows/performance.yml
+.github/workflows/performance.yml
 name: Performance Budget
 on: [pull_request]
 jobs:
@@ -163,20 +163,20 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 ```
 
-### 3. Continuous Monitoring
+3. Continuous Monitoring
 
 For production applications, create a scheduled task that runs nightly:
 
 ```bash
-# Run performance audit every night at 2 AM
+Run performance audit every night at 2 AM
 0 2 * * * cd /path/to/project && claude -p "Run performance-budget skill and save report to logs/"
 ```
 
 This gives you a historical record of performance trends.
 
-## Interpreting Results and Taking Action
+Interpreting Results and Taking Action
 
-When Claude Code detects a budget violation, it doesn't just fail the build—it can provide actionable guidance. Here's how to enhance your skill for better remediation advice:
+When Claude Code detects a budget violation, it doesn't just fail the build, it can provide actionable guidance. Here's how to enhance your skill for better remediation advice:
 
 ```python
 def suggest_improvements(failed_metrics):
@@ -212,35 +212,35 @@ def suggest_improvements(failed_metrics):
 
 This transforms a simple pass/fail check into an intelligent code review assistant.
 
-## Best Practices for Performance Budgets
+Best Practices for Performance Budgets
 
 When implementing performance budgets with Claude Code, keep these tips in mind:
 
-1. **Start lenient and tighten gradually** – Begin with achievable thresholds and decrease them over time as your team improves performance.
+1. Start lenient and tighten gradually – Begin with achievable thresholds and decrease them over time as your team improves performance.
 
-2. **Set different budgets for different environments** – Production should have stricter budgets than staging.
+2. Set different budgets for different environments – Production should have stricter budgets than staging.
 
-3. **Track trends, not just snapshots** – Use Claude Code to generate trend reports showing performance over time.
+3. Track trends, not just snapshots – Use Claude Code to generate trend reports showing performance over time.
 
-4. **Involve the whole team** – Make performance part of your code review process by having Claude Code comment on PRs.
+4. Involve the whole team – Make performance part of your code review process by having Claude Code comment on PRs.
 
-5. **Balance metrics holistically** – Don't optimize for a single metric at the expense of others.
+5. Balance metrics holistically – Don't optimize for a single metric at the expense of others.
 
-## Conclusion
+Conclusion
 
 Claude Code transforms performance budgeting from a manual, error-prone process into an automated, intelligent workflow. By creating custom skills that run audits, compare results against budgets, and provide actionable suggestions, you give your team superpowers for maintaining fast applications.
 
 Start small: create the basic audit skill, run it locally, and gradually integrate it into your CI/CD pipeline. As your team grows accustomed to performance budgets, you can add more sophisticated analysis and remediation capabilities.
 
-Remember, the goal isn't to make development slower—it's to make fast applications a sustainable reality.
+Remember, the goal isn't to make development slower, it's to make fast applications a sustainable reality.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 {% endraw %}

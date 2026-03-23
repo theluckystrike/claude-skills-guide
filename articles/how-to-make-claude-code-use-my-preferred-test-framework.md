@@ -17,25 +17,25 @@ permalink: /how-to-make-claude-code-use-my-preferred-test-framework/
 
 
 
-# How to Make Claude Code Use My Preferred Test Framework
+How to Make Claude Code Use My Preferred Test Framework
 
-One of the most common questions developers have when working with Claude Code is: "How can I make Claude use my preferred test framework instead of the default?" Whether you're team Jest, pytest, RSpec, or any other testing framework, Claude Code is flexible enough to adapt to your workflow. This guide walks you through multiple methods to configure Claude Code to use your preferred test framework—covering everything from one-off inline instructions to persistent global skills that apply across every project you work on.
+One of the most common questions developers have when working with Claude Code is: "How can I make Claude use my preferred test framework instead of the default?" Whether you're team Jest, pytest, RSpec, or any other testing framework, Claude Code is flexible enough to adapt to your workflow. This guide walks you through multiple methods to configure Claude Code to use your preferred test framework, covering everything from one-off inline instructions to persistent global skills that apply across every project you work on.
 
-## Understanding How Claude Code Selects Test Frameworks
+Understanding How Claude Code Selects Test Frameworks
 
 Claude Code automatically detects test frameworks based on your project's dependencies and configuration files. When you ask Claude to write tests, it scans for:
 
-- `package.json` — looks for Jest, Vitest, or Mocha in `devDependencies`
-- `pyproject.toml` or `requirements.txt` — looks for pytest or unittest
-- `Gemfile` — looks for RSpec
-- `go.mod` — looks for the standard `testing` package or `testify`
+- `package.json`. looks for Jest, Vitest, or Mocha in `devDependencies`
+- `pyproject.toml` or `requirements.txt`. looks for pytest or unittest
+- `Gemfile`. looks for RSpec
+- `go.mod`. looks for the standard `testing` package or `testify`
 - Framework-specific config files (`jest.config.js`, `vitest.config.ts`, `pytest.ini`, `.rspec`, etc.)
 
-Claude uses this detected context to make a best-guess choice. If your project has both `jest` and `vitest` in `package.json`, Claude may pick the wrong one. If there is no config file at all—say, you're starting a new service from scratch—Claude will fall back to whatever framework it considers standard for the language.
+Claude uses this detected context to make a best-guess choice. If your project has both `jest` and `vitest` in `package.json`, Claude may pick the wrong one. If there is no config file at all, say, you're starting a new service from scratch, Claude will fall back to whatever framework it considers standard for the language.
 
 The good news is that you can override this detection at several levels, from global preferences to per-project rules to single-prompt instructions. Understanding which level to use for which situation is the key to a smooth workflow.
 
-## Method 1: Using Custom Skills to Set Your Preferred Framework
+Method 1: Using Custom Skills to Set Your Preferred Framework
 
 The most powerful and persistent approach is creating a custom skill that tells Claude exactly which test framework to use. Skills are Markdown files placed in `~/.claude/skills/` (or `~/.claude/` directly) that guide Claude's behavior whenever they are active.
 
@@ -44,13 +44,13 @@ A skill file for pytest might look like this:
 Create `~/.claude/skills/pytest-preferred.md`:
 
 ```markdown
-# Test Framework Preference Skill
+Test Framework Preference Skill
 
 When asked to write tests, ALWAYS use pytest unless explicitly told otherwise.
 Never default to unittest.TestCase. Never write tests without fixtures if shared
 state is needed.
 
-## Preferred Test Framework: pytest
+Preferred Test Framework: pytest
 
 - Use pytest for all Python testing
 - Use pytest fixtures for test setup and teardown, defined in conftest.py
@@ -59,7 +59,7 @@ state is needed.
 - Follow the test_*.py naming convention for all test files
 - Use pytest-asyncio for async tests with @pytest.mark.asyncio
 
-## Example Test Structure
+Example Test Structure
 
 ```python
 import pytest
@@ -96,7 +96,7 @@ Activate this skill at the start of any Claude Code session:
 
 From that point forward, Claude will use pytest for every test-writing task in the session, regardless of what it detects in your project files. The skill acts as a persistent preference that overrides Claude's automatic detection.
 
-### Stacking Skills
+Stacking Skills
 
 You can combine skills. If your project uses FastAPI with pytest and you want Claude to follow async testing patterns, activate both skills:
 
@@ -107,18 +107,18 @@ You can combine skills. If your project uses FastAPI with pytest and you want Cl
 
 Claude merges the context from all active skills, so you can build a layered preference system without duplicating content across skill files.
 
-## Method 2: Project-Specific Configuration with CLAUDE.md
+Method 2: Project-Specific Configuration with CLAUDE.md
 
-For project-specific test framework preferences, create a `CLAUDE.md` file in your project root. Claude Code reads this file automatically whenever it is working within that directory tree—no manual activation required.
+For project-specific test framework preferences, create a `CLAUDE.md` file in your project root. Claude Code reads this file automatically whenever it is working within that directory tree, no manual activation required.
 
 ```markdown
-# Project Context — payments-service
+Project Context. payments-service
 
-## Test Framework
-This project uses **Vitest** for all testing, NOT Jest.
+Test Framework
+This project uses Vitest for all testing, NOT Jest.
 Do not generate Jest-style tests. Do not import from `jest` or use `jest.fn()`.
 
-## Testing Rules
+Testing Rules
 - Write unit tests in `src/__tests__/`
 - Write integration tests in `tests/integration/`
 - Use Vitest's `describe`, `it`, and `expect` syntax
@@ -128,19 +128,19 @@ Do not generate Jest-style tests. Do not import from `jest` or use `jest.fn()`.
 - Include coverage reports with `npx vitest --coverage`
 - Target 80% line coverage for all new modules
 
-## Test File Naming
+Test File Naming
 - Unit tests: `ComponentName.test.ts`
 - Integration tests: `feature.integration.test.ts`
 - E2E tests: `flow.e2e.test.ts` (Playwright, not Vitest)
 ```
 
-Now whenever Claude Code works in this project, it reads `CLAUDE.md` and automatically uses Vitest for all unit and integration testing tasks. Team members who clone the repository get the same behavior—the `CLAUDE.md` file commits to version control along with the rest of the codebase, making test framework preferences part of the project's documented standards.
+Now whenever Claude Code works in this project, it reads `CLAUDE.md` and automatically uses Vitest for all unit and integration testing tasks. Team members who clone the repository get the same behavior, the `CLAUDE.md` file commits to version control along with the rest of the codebase, making test framework preferences part of the project's documented standards.
 
-### CLAUDE.md vs Skills: Which Wins?
+CLAUDE.md vs Skills: Which Wins?
 
 When both a `CLAUDE.md` file and an active skill specify a test framework, the `CLAUDE.md` file takes precedence for project-specific concerns. Think of it this way: your global skill says "I generally prefer pytest," but the project's `CLAUDE.md` says "this specific project uses unittest for legacy reasons." Claude respects the project-level override.
 
-## Method 3: Inline Instructions for One-Off Testing
+Method 3: Inline Instructions for One-Off Testing
 
 Sometimes you just need to override the default for a single request without changing any configuration. Simply specify your preferred framework in the prompt:
 
@@ -161,11 +161,11 @@ pytest-bdd plugin. Use Gherkin-style Given/When/Then structure.
 
 Claude will maintain this preference across subsequent messages in the same conversation.
 
-## Method 4: Configuring Test Framework in Project Files
+Method 4: Configuring Test Framework in Project Files
 
 Many testing frameworks can be configured in project files that Claude will automatically detect. Establishing an explicit configuration file serves two purposes: it configures the framework's runtime behavior, and it signals to Claude which framework the project uses.
 
-### For JavaScript/TypeScript Projects (Vitest)
+For JavaScript/TypeScript Projects (Vitest)
 
 ```javascript
 // vitest.config.ts
@@ -183,7 +183,7 @@ export default defineConfig({
         branches: 70,
       }
     },
-    include: ['src/**/*.test.ts'],
+    include: ['src//*.test.ts'],
     exclude: ['node_modules', 'dist'],
     globals: false,
   }
@@ -192,10 +192,10 @@ export default defineConfig({
 
 When Claude sees `vitest.config.ts`, it will default to Vitest for all test generation in that project without needing any explicit instruction.
 
-### For Python Projects (pytest)
+For Python Projects (pytest)
 
 ```toml
-# pyproject.toml
+pyproject.toml
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 python_files = ["test_*.py", "*_test.py"]
@@ -212,16 +212,16 @@ asyncio_mode = "auto"
 
 Claude reads `pyproject.toml` to understand the project's testing conventions. The presence of `[tool.pytest.ini_options]` is a strong signal to use pytest.
 
-### For Ruby Projects (RSpec)
+For Ruby Projects (RSpec)
 
 ```ruby
-# .rspec
+.rspec
 --require spec_helper
 --format documentation
 --color
 --order random
 
-# spec/spec_helper.rb
+spec/spec_helper.rb
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_types = true
@@ -233,25 +233,25 @@ RSpec.configure do |config|
 end
 ```
 
-### For Go Projects (testify)
+For Go Projects (testify)
 
 If you prefer `testify` over the standard `testing` package assertions, add a comment to your `CLAUDE.md` and Claude will adapt:
 
 ```markdown
-## Testing (Go)
+Testing (Go)
 Use `github.com/stretchr/testify/assert` and `testify/require` for all assertions.
 Do not use raw `t.Error` or `t.Fatal` calls directly.
 Structure tests as table-driven tests where multiple scenarios exist.
 ```
 
-## Practical Examples
+Practical Examples
 
-### Example 1: Switching from Jest to Vitest
+Example 1: Switching from Jest to Vitest
 
 You have a JavaScript project but prefer Vitest's faster performance and native ESM support. Create `~/.claude/skills/vitest.md`:
 
 ```markdown
-# Vitest Preference Skill
+Vitest Preference Skill
 
 Always use Vitest for JavaScript/TypeScript testing in this project.
 Never import from `@jest/globals` or use Jest-specific APIs.
@@ -264,7 +264,6 @@ When writing tests:
 5. Run tests with `npx vitest` (watch mode) or `npx vitest run` (CI mode)
 6. For async tests, use `async/await` with `expect(promise).resolves` or `rejects`
 
-Example:
 ```typescript
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { fetchUser } from './api'
@@ -289,12 +288,12 @@ describe('fetchUser', () => {
 ```
 ```
 
-### Example 2: Using Playwright for E2E Testing
+Example 2: Using Playwright for E2E Testing
 
 If you want Claude to use Playwright instead of Cypress for end-to-end testing, add to your `CLAUDE.md` or a dedicated skill:
 
 ```markdown
-# Playwright E2E Testing
+Playwright E2E Testing
 
 For end-to-end testing, ALWAYS use Playwright. Do not suggest Cypress.
 
@@ -332,12 +331,12 @@ test.describe('authentication flow', () => {
 ```
 ```
 
-### Example 3: pytest-bdd for Behavior-Driven Development
+Example 3: pytest-bdd for Behavior-Driven Development
 
 If your team uses BDD and wants Claude to write tests in Gherkin format with pytest-bdd:
 
 ```markdown
-# pytest-bdd Preference
+pytest-bdd Preference
 
 Write all acceptance tests using pytest-bdd with Gherkin feature files.
 
@@ -377,7 +376,7 @@ def submit_registration(client, email, password):
 ```
 ```
 
-## Framework Comparison: When to Use What
+Framework Comparison: When to Use What
 
 | Framework | Language | Best For | Claude Activation |
 |-----------|----------|----------|-------------------|
@@ -392,35 +391,35 @@ def submit_registration(client, email, password):
 | Go testing | Go | Standard Go | Inline or CLAUDE.md |
 | testify | Go | Go with assertions | `go.mod` + CLAUDE.md |
 
-## Troubleshooting: When Claude Picks the Wrong Framework
+Troubleshooting: When Claude Picks the Wrong Framework
 
 If Claude is still generating tests with the wrong framework despite your configuration, work through this checklist:
 
-**1. Check for conflicting config files.** If both `jest.config.js` and `vitest.config.ts` exist in the project root, Claude may be confused. Remove the unused one.
+1. Check for conflicting config files. If both `jest.config.js` and `vitest.config.ts` exist in the project root, Claude may be confused. Remove the unused one.
 
-**2. Verify skill activation.** Skills are not automatically active—they must be invoked. Run `/skill-name` at the start of each session.
+2. Verify skill activation. Skills are not automatically active, they must be invoked. Run `/skill-name` at the start of each session.
 
-**3. Be explicit in the first message.** Start your conversation with "For all tests in this session, use [framework]" before asking Claude to write any code.
+3. Be explicit in the first message. Start your conversation with "For all tests in this session, use [framework]" before asking Claude to write any code.
 
-**4. Check CLAUDE.md location.** The file must be in the project root (the directory where you started Claude Code), not a subdirectory.
+4. Check CLAUDE.md location. The file must be in the project root (the directory where you started Claude Code), not a subdirectory.
 
-**5. Inspect your CLAUDE.md content.** Make sure the framework preference is stated clearly and without ambiguity. "We use Vitest" is clearer than "We have Vitest installed."
+5. Inspect your CLAUDE.md content. Make sure the framework preference is stated clearly and without ambiguity. "We use Vitest" is clearer than "We have Vitest installed."
 
-## Best Practices
+Best Practices
 
-1. **Create a global test framework skill** for your primary language and keep it in `~/.claude/skills/`. This is your default across all projects unless overridden.
+1. Create a global test framework skill for your primary language and keep it in `~/.claude/skills/`. This is your default across all projects unless overridden.
 
-2. **Use CLAUDE.md for project-specific preferences** and commit it to version control. This ensures consistent behavior for every team member and every CI run that invokes Claude Code.
+2. Use CLAUDE.md for project-specific preferences and commit it to version control. This ensures consistent behavior for every team member and every CI run that invokes Claude Code.
 
-3. **Document your framework in README.md** alongside setup instructions. Claude can reference README content as supplementary context.
+3. Document your framework in README.md alongside setup instructions. Claude can reference README content as supplementary context.
 
-4. **Be explicit when it matters.** For one-off tasks or unfamiliar repos, state your framework preference directly in the prompt rather than relying on detection.
+4. Be explicit when it matters. For one-off tasks or unfamiliar repos, state your framework preference directly in the prompt rather than relying on detection.
 
-5. **Test the configuration early.** At the start of a new project or after adding a `CLAUDE.md`, ask Claude: "Which test framework will you use for this project?" to confirm it has picked up the right context before writing hundreds of lines of tests.
+5. Test the configuration early. At the start of a new project or after adding a `CLAUDE.md`, ask Claude: "Which test framework will you use for this project?" to confirm it has picked up the right context before writing hundreds of lines of tests.
 
-6. **Keep skill files focused.** A skill for pytest should cover pytest-specific conventions, not general Python style. Smaller, focused skills compose more reliably than large monolithic ones.
+6. Keep skill files focused. A skill for pytest should cover pytest-specific conventions, not general Python style. Smaller, focused skills compose more reliably than large monolithic ones.
 
-## Conclusion
+Conclusion
 
 Claude Code is highly configurable when it comes to test frameworks. Whether you prefer Jest, Vitest, pytest, RSpec, Playwright, or any other framework, you can ensure Claude uses your choice through custom skills, project-specific `CLAUDE.md` files, or explicit inline instructions. The layered configuration system means your global preferences apply everywhere unless a project-level override exists, and project-level overrides apply everywhere unless you override them per-prompt.
 
@@ -429,10 +428,10 @@ The most reliable setup is: a global skill file for your preferred framework per
 Start by creating a custom skill for your preferred test framework, and you'll never have to specify it again.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

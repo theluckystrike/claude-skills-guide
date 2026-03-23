@@ -13,13 +13,13 @@ tags: [claude-code, claude-skills]
 ---
 
 
-# Claude Code TestContainers Integration Testing
+Claude Code TestContainers Integration Testing
 
 Integration testing with real dependencies is essential for validating Claude Code skills that interact with databases, message queues, or external services. TestContainers provides Docker-based test fixtures that spin up actual services instead of mocks, giving you confidence that your skills work in production-like environments. This guide shows you how to integrate TestContainers into your Claude Code testing workflow, from basic setup through advanced multi-service orchestration.
 
-## Why TestContainers for Claude Code Skills
+Why TestContainers for Claude Code Skills
 
-When your skill needs to work with PostgreSQL, Redis, Kafka, or any containerized service, unit tests with mocks only get you so far. The real behavior of these services—connection pooling, timeouts, transaction semantics, index behavior, message ordering guarantees—only reveals itself in integration tests. TestContainers handles the lifecycle of these dependencies, creating fresh containers for each test and cleaning up afterward.
+When your skill needs to work with PostgreSQL, Redis, Kafka, or any containerized service, unit tests with mocks only get you so far. The real behavior of these services, connection pooling, timeouts, transaction semantics, index behavior, message ordering guarantees, only reveals itself in integration tests. TestContainers handles the lifecycle of these dependencies, creating fresh containers for each test and cleaning up afterward.
 
 For Claude Code skills that use the `pdf` skill to process documents or the `xlsx` skill to generate spreadsheets, you often need a real database to validate the complete workflow. TestContainers makes this practical by automating container orchestration.
 
@@ -37,7 +37,7 @@ Here is a comparison of testing approaches for database-dependent code:
 
 TestContainers hits a practical sweet spot: production-accurate behavior with minimal infrastructure overhead and no shared-state flakiness.
 
-## Setting Up TestContainers
+Setting Up TestContainers
 
 First, add the TestContainers dependency to your project. For a Python project, install the library:
 
@@ -105,7 +105,7 @@ class TestContainerFixture:
 
 Note the use of Alpine-based images (`postgres:15-alpine`, `redis:7-alpine`). These are smaller than the full Debian-based variants and start faster in CI. For a test that runs hundreds of times, startup time compounds into meaningful wall-clock overhead.
 
-## Testing Database Interactions
+Testing Database Interactions
 
 If your Claude Code skill uses a database, TestContainers lets you test actual SQL queries and migrations. Here's how to structure these tests:
 
@@ -129,9 +129,9 @@ def test_user_creation_integration(db_fixture):
     assert result["name"] == "Test User"
 ```
 
-The `tdd` skill pairs well here—you can write your tests first following test-driven development principles, then use TestContainers to verify the implementation works with real database behavior.
+The `tdd` skill pairs well here, you can write your tests first following test-driven development principles, then use TestContainers to verify the implementation works with real database behavior.
 
-You can extend this to test database migrations as part of the integration test. This is one of the most valuable uses of TestContainers—verifying that your migration scripts apply cleanly to an empty schema:
+You can extend this to test database migrations as part of the integration test. This is one of the most valuable uses of TestContainers, verifying that your migration scripts apply cleanly to an empty schema:
 
 ```python
 import pytest
@@ -176,7 +176,7 @@ def test_user_table_exists(migrated_db):
 
 Using `scope="session"` on the fixture creates the container once and shares it across all tests in the module, reducing startup overhead when many tests need the same empty schema.
 
-## Testing Message Queue Interactions
+Testing Message Queue Interactions
 
 Skills that process async messages via Kafka or RabbitMQ need integration tests with actual message brokers. TestContainers supports both:
 
@@ -251,7 +251,7 @@ def test_rabbitmq_message_routing():
         rabbitmq.stop()
 ```
 
-## Testing External API Clients
+Testing External API Clients
 
 When your skill calls external APIs, you can use TestContainers with service simulators like WireMock:
 
@@ -281,9 +281,9 @@ def test_api_client_integration():
         wiremock.stop()
 ```
 
-This approach works particularly well with the `supermemory` skill, which might query external memory services—you can test those interactions without depending on production services.
+This approach works particularly well with the `supermemory` skill, which might query external memory services, you can test those interactions without depending on production services.
 
-WireMock is especially useful for testing error handling. You can configure stubs that simulate rate limiting (429 responses), server errors (503), and slow responses (fixed delays). Testing that your skill retries correctly and respects backoff policies requires a controllable server—WireMock in TestContainers gives you exactly that:
+WireMock is especially useful for testing error handling. You can configure stubs that simulate rate limiting (429 responses), server errors (503), and slow responses (fixed delays). Testing that your skill retries correctly and respects backoff policies requires a controllable server, WireMock in TestContainers gives you exactly that:
 
 ```python
 def test_api_client_handles_rate_limiting():
@@ -320,7 +320,7 @@ def test_api_client_handles_rate_limiting():
         wiremock.stop()
 ```
 
-## CI/CD Integration
+CI/CD Integration
 
 Running TestContainers in CI requires Docker access. GitHub Actions provides this by default on standard runners. Here is a complete workflow that runs integration tests with TestContainers:
 
@@ -336,7 +336,7 @@ on:
 jobs:
   integration-test:
     runs-on: ubuntu-latest
-    # No special services configuration needed — TestContainers
+    # No special services configuration needed. TestContainers
     # launches its own Docker containers via the Docker socket
     steps:
       - uses: actions/checkout@v4
@@ -373,7 +373,7 @@ jobs:
           path: reports/
 ```
 
-The `frontend-design` skill might trigger visual regression tests that require a running browser environment—TestContainers can provide this via Selenium containers:
+The `frontend-design` skill might trigger visual regression tests that require a running browser environment, TestContainers can provide this via Selenium containers:
 
 ```python
 from selenium import webdriver
@@ -398,7 +398,7 @@ def test_visual_workflow():
         selenium.stop()
 ```
 
-## Best Practices
+Best Practices
 
 Keep container images lightweight to speed up test execution. Use Alpine-based images when available and specific version tags rather than `latest` for reproducibility. Tag your containers with unique identifiers to avoid conflicts when running parallel tests.
 
@@ -407,7 +407,7 @@ Isolate each test with a fresh container. While TestContainers reuses containers
 Clean up containers in `finally` blocks or use context managers. Failing to stop containers leads to resource leaks and flaky tests:
 
 ```python
-# Preferred: context manager guarantees cleanup
+Preferred: context manager guarantees cleanup
 from testcontainers.postgres import PostgresContainer
 
 def test_with_context_manager():
@@ -418,7 +418,7 @@ def test_with_context_manager():
     # Container is stopped and removed automatically here
 ```
 
-Track container startup time in your test reports. If startup exceeds a few seconds, consider using Ryuk—a sidecar container that cleans up orphaned containers—combined with container image pre-caching in your CI pipeline.
+Track container startup time in your test reports. If startup exceeds a few seconds, consider using Ryuk, a sidecar container that cleans up orphaned containers, combined with container image pre-caching in your CI pipeline.
 
 Follow a clear naming convention for integration test files to make it easy to run them separately from unit tests:
 
@@ -435,7 +435,7 @@ tests/
 
 With pytest, you can run only unit tests in pre-commit hooks (`pytest tests/unit/`) and run full integration tests in CI (`pytest tests/`).
 
-## Advanced: Multi-Container Setups
+Advanced: Multi-Container Setups
 
 Real-world applications often require multiple services running together. TestContainers supports docker-compose-style setups for testing complete stacks:
 
@@ -506,14 +506,14 @@ class FullStackIntegrationTest {
 }
 ```
 
-The `@Container` annotation manages the full container lifecycle—start before tests, stop after. Declaring containers as `static` means they are shared across all test methods in the class, which reduces startup overhead when you have many tests against the same stack.
+The `@Container` annotation manages the full container lifecycle, start before tests, stop after. Declaring containers as `static` means they are shared across all test methods in the class, which reduces startup overhead when you have many tests against the same stack.
 
-## Handling Container Networking
+Handling Container Networking
 
 TestContainers creates an isolated network for each container or compose stack. When testing services that communicate between containers, ensure they join the same network:
 
 ```python
-# Explicit network configuration
+Explicit network configuration
 postgres = testcontainers.postgres.PostgresContainer(
     "postgres:15",
     network="test-network",
@@ -526,11 +526,11 @@ redis = testcontainers.redis.RedisContainer(
 )
 ```
 
-Your skill connects using the container names as hostnames—just as services would in production. This catches DNS resolution issues and connection string problems early.
+Your skill connects using the container names as hostnames, just as services would in production. This catches DNS resolution issues and connection string problems early.
 
 A subtle networking issue with TestContainers is port mapping. The container's internal port (e.g., 5432 for Postgres) is mapped to a random host port. Always use the container's `get_exposed_port()` or `get_connection_url()` methods rather than hardcoding port numbers in test configuration. Hardcoded ports cause spurious failures when another process is using the same port on the host.
 
-## Performance Considerations
+Performance Considerations
 
 Integration tests with TestContainers run slower than unit tests. A typical Postgres container takes 2-5 seconds to start; a Kafka container can take 10-15 seconds. Optimize your test suite by separating concerns: keep unit tests fast with mocks, reserve TestContainers for critical paths that require real dependencies.
 
@@ -538,7 +538,7 @@ Practical strategies for keeping integration test time manageable:
 
 - Use `scope="session"` fixtures to share containers across all tests that need the same service version
 - Pre-pull images in CI before test execution to eliminate pull time from test time
-- Use health checks and `wait_for_logs` instead of fixed `time.sleep()` calls—containers are ready faster than a fixed sleep assumes
+- Use health checks and `wait_for_logs` instead of fixed `time.sleep()` calls, containers are ready faster than a fixed sleep assumes
 - Run integration tests in parallel using `pytest-xdist` with separate containers per worker
 
 Use test organization to run quick tests in continuous integration while running full integration suites on schedule or before releases. A typical configuration runs unit tests on every commit (under 30 seconds), integration tests on every pull request (under 5 minutes), and full stack tests nightly or before releases.
@@ -546,10 +546,10 @@ Use test organization to run quick tests in continuous integration while running
 ---
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

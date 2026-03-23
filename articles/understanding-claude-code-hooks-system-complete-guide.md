@@ -15,7 +15,7 @@ permalink: /understanding-claude-code-hooks-system-complete-guide/
 
 [Claude Code's hooks system gives you programmatic control over Claude's behavior at defined points in its execution lifecycle](/best-claude-code-skills-to-install-first-2026/) Hooks let you log tool calls for auditing, block dangerous commands, inject context at session start, and enforce project rules without modifying skill files or prompts.
 
-## What Are Hooks?
+What Are Hooks?
 
 Hooks are executable scripts or commands that Claude Code calls at specific lifecycle events. They run as separate shell processes outside of Claude's context.
 
@@ -26,21 +26,21 @@ A hook receives event data via stdin as JSON and can:
 
 Hooks never interact with the Claude model directly. They are a CLI-level interception layer. This is a crucial distinction: hooks operate on the tool calls that Claude issues, not on Claude's reasoning or outputs. You cannot use hooks to rewrite Claude's prose responses, but you can intercept every file it reads, every command it runs, and every file it writes.
 
-This design has important implications for how you think about hooks. They are not middleware in a request/response pipeline — they are gatekeepers and observers at the tool execution boundary. Claude decides it wants to run `rm -rf ./dist`, but before that command reaches the shell, your hook has the opportunity to allow, block, or modify it.
+This design has important implications for how you think about hooks. They are not middleware in a request/response pipeline. they are gatekeepers and observers at the tool execution boundary. Claude decides it wants to run `rm -rf ./dist`, but before that command reaches the shell, your hook has the opportunity to allow, block, or modify it.
 
-## Hook Types
+Hook Types
 
 Claude Code defines three primary hook types.
 
-### `pre-tool`
+`pre-tool`
 
 Fires before Claude executes any tool call. This is the most commonly used hook type.
 
 Event data includes:
-- `tool_name` — the tool being called (e.g., `Bash`, `Read`, `Write`)
-- `tool_input` — the arguments Claude is passing to the tool
-- `session_id` — current session identifier
-- `project_root` — path to the project root
+- `tool_name`. the tool being called (e.g., `Bash`, `Read`, `Write`)
+- `tool_input`. the arguments Claude is passing to the tool
+- `session_id`. current session identifier
+- `project_root`. path to the project root
 
 Use cases: logging, blocking dangerous commands, enforcing project standards before file writes.
 
@@ -58,14 +58,14 @@ Use cases: logging, blocking dangerous commands, enforcing project standards bef
 
 The `pre-tool` hook is where you enforce policy. If your project prohibits certain shell commands, disallows writes to protected directories, or requires that every file modification is associated with an open task, this is the hook type you want. Because it fires before the tool executes, you can prevent damage rather than reacting to it.
 
-### `post-tool`
+`post-tool`
 
 Fires after a tool call completes, regardless of success or failure.
 
 Event data includes everything from `pre-tool`, plus:
-- `tool_output` — what the tool returned
-- `tool_error` — error message if the tool failed (null otherwise)
-- `duration_ms` — how long the tool call took
+- `tool_output`. what the tool returned
+- `tool_error`. error message if the tool failed (null otherwise)
+- `duration_ms`. how long the tool call took
 
 Use cases: logging outcomes, triggering external notifications, updating audit trails.
 
@@ -73,7 +73,7 @@ The `post-tool` hook is valuable for observability. You can record that a file w
 
 One practical pattern: write all `post-tool` events to an append-only JSONL file during a session, then analyze it afterward to understand where Claude spent time, what commands it ran, and where it got stuck.
 
-### `session`
+`session`
 
 Two sub-events: `session.start` and `session.end`.
 
@@ -83,7 +83,7 @@ Two sub-events: `session.start` and `session.end`.
 
 Session hooks are often overlooked but are among the most powerful. A well-crafted `session.start` hook can give Claude a precise picture of what work is in progress before it reads a single file. Instead of relying on Claude to discover state by exploring directories, you hand it a structured summary the moment it starts. This is particularly useful for long-running projects where Claude operates in many short sessions.
 
-## Hook Configuration
+Hook Configuration
 
 Hooks are defined in `.claude/settings.json` under the `"hooks"` key:
 
@@ -116,7 +116,7 @@ Hooks are defined in `.claude/settings.json` under the `"hooks"` key:
 }
 ```
 
-### Matchers
+Matchers
 
 The `matcher` object filters which events trigger the hook command. An empty matcher `{}` matches all events of that type.
 
@@ -128,15 +128,15 @@ For `session`:
 
 Multiple hooks of the same type run in order. If any hook exits non-zero, subsequent hooks do not run for that event.
 
-Understanding matcher specificity matters when you have multiple hooks. A hook matching only `["Bash"]` will not fire for `Write` calls. An empty matcher fires for everything. Order them so that the broadest hooks come last and specific blocking hooks come first — this keeps your security-critical checks fast because they short-circuit before logging hooks run.
+Understanding matcher specificity matters when you have multiple hooks. A hook matching only `["Bash"]` will not fire for `Write` calls. An empty matcher fires for everything. Order them so that the broadest hooks come last and specific blocking hooks come first. this keeps your security-critical checks fast because they short-circuit before logging hooks run.
 
-## Writing a Hook Script
+Writing a Hook Script
 
 A complete Python hook that blocks `bash` commands containing `rm -rf`:
 
 ```python
 #!/usr/bin/env python3
-# .claude/hooks/no-dangerous-rm.py
+.claude/hooks/no-dangerous-rm.py
 
 import sys
 import json
@@ -149,7 +149,7 @@ if data.get("tool_name") == "bash":
         print("Blocked: rm -rf is not allowed in this project", file=sys.stderr)
         sys.exit(1)
 
-# Pass through: output the original data unchanged
+Pass through: output the original data unchanged
 print(json.dumps(data))
 sys.exit(0)
 ```
@@ -169,13 +169,13 @@ Register it in `.claude/settings.json`:
 }
 ```
 
-A few things worth noting about this script. First, it reads from stdin exactly once — do not read stdin in a loop or you will hang. Second, on the pass-through path it outputs the original JSON to stdout. If you forget to output JSON on the pass-through path and just exit 0, the hook chain may behave unexpectedly. Third, the error message on stderr is surfaced to Claude Code's output, so make it informative. Claude may see it and adjust its approach.
+A few things worth noting about this script. First, it reads from stdin exactly once. do not read stdin in a loop or you will hang. Second, on the pass-through path it outputs the original JSON to stdout. If you forget to output JSON on the pass-through path and just exit 0, the hook chain may behave unexpectedly. Third, the error message on stderr is surfaced to Claude Code's output, so make it informative. Claude may see it and adjust its approach.
 
-## Modifying Tool Input
+Modifying Tool Input
 
 A hook can modify the event data before it is processed. Output modified JSON to stdout and exit 0.
 
-Example: a hook that appends `--dry-run` to all `npm publish` commands:
+a hook that appends `--dry-run` to all `npm publish` commands:
 
 ```python
 #!/usr/bin/env python3
@@ -199,7 +199,7 @@ A more complex modification pattern: rewriting file paths. If your project has a
 
 ```python
 #!/usr/bin/env python3
-# .claude/hooks/redirect-to-staging.py
+.claude/hooks/redirect-to-staging.py
 import sys
 import json
 
@@ -219,9 +219,9 @@ print(json.dumps(data))
 sys.exit(0)
 ```
 
-## Hook Performance
+Hook Performance
 
-Hooks are synchronous — Claude Code waits for each hook to complete before proceeding. Slow hooks slow down every relevant operation.
+Hooks are synchronous. Claude Code waits for each hook to complete before proceeding. Slow hooks slow down every relevant operation.
 
 Keep hooks fast. If you need to do heavy async work such as sending data to a logging service, write to a local queue file and process it separately rather than doing network I/O synchronously in the hook.
 
@@ -229,7 +229,7 @@ Here is a practical pattern for async logging without blocking Claude:
 
 ```python
 #!/usr/bin/env python3
-# .claude/hooks/async-audit.py
+.claude/hooks/async-audit.py
 import sys
 import json
 import os
@@ -237,7 +237,7 @@ import time
 
 data = json.load(sys.stdin)
 
-# Write to a local JSONL file — fast, non-blocking
+Write to a local JSONL file. fast, non-blocking
 log_path = os.path.join(
     os.environ.get("PROJECT_ROOT", "."),
     ".claude/logs/audit.jsonl"
@@ -256,9 +256,9 @@ sys.exit(0)
 
 A separate process (cron job, background daemon, or post-session script) can then ship those entries to your logging infrastructure without any impact on Claude's response time.
 
-## Global vs Project Hooks
+Global vs Project Hooks
 
-Like skills, hooks can be configured globally (`~/.claude/settings.json`) or per project (`.claude/settings.json`). Both sets are loaded. Global hooks run first, then project hooks. This is different from [auto-invocation](/claude-skills-auto-invocation-how-it-works/), which is skill-level behavior. They stack — there is no override mechanism that prevents a global hook from running.
+Like skills, hooks can be configured globally (`~/.claude/settings.json`) or per project (`.claude/settings.json`). Both sets are loaded. Global hooks run first, then project hooks. This is different from [auto-invocation](/claude-skills-auto-invocation-how-it-works/), which is skill-level behavior. They stack. there is no override mechanism that prevents a global hook from running.
 
 This lets you have a global audit hook that logs all tool calls, plus project-specific hooks that enforce project-specific rules, without conflict.
 
@@ -274,13 +274,13 @@ A practical layered setup might look like this:
 
 The global hooks give you a consistent baseline of observability and safety. The project hooks give you fine-grained control for that project's specific needs. Neither interferes with the other.
 
-## Example: Session Start Context Injection
+Session Start Context Injection
 
 A session start hook that prints a summary of active tasks in `.claude/state/`:
 
 ```python
 #!/usr/bin/env python3
-# .claude/hooks/session-start.py
+.claude/hooks/session-start.py
 import sys, json, glob
 
 event = json.load(sys.stdin) if not sys.stdin.isatty() else {}
@@ -321,7 +321,7 @@ Register it:
 }
 ```
 
-## Debugging Hooks
+Debugging Hooks
 
 When a hook behaves unexpectedly, the first step is to test it in isolation. Because hooks read from stdin and write to stdout, you can pipe test JSON directly:
 
@@ -335,10 +335,10 @@ If the hook exits non-zero, check the exit code and stderr output. If it passes 
 Common mistakes:
 - Forgetting to `print(json.dumps(data))` on the pass-through path
 - Reading stdin twice (the second read returns empty)
-- Assuming `tool_name` casing — check whether it is `"bash"` or `"Bash"` for your version
-- Slow hooks caused by imports that take time to initialize — pre-import heavy libraries at the top of the file
+- Assuming `tool_name` casing. check whether it is `"bash"` or `"Bash"` for your version
+- Slow hooks caused by imports that take time to initialize. pre-import heavy libraries at the top of the file
 
-## Comparing Hook Types: When to Use Each
+Comparing Hook Types: When to Use Each
 
 | Scenario | Hook Type |
 |---|---|
@@ -355,11 +355,11 @@ The hooks system rewards incremental adoption. Start with a simple `post-tool` l
 
 ---
 
-## Related Reading
+Related Reading
 
-- [Building Stateful Agents with Claude Skills](/building-stateful-agents-with-claude-skills-guide/) — Hooks are core to stateful agent design
-- [Claude Skill .md File Format: Full Specification](/claude-skill-md-format-complete-specification-guide/) — Skill file format reference
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Top developer skills that work well with hooks
+- [Building Stateful Agents with Claude Skills](/building-stateful-agents-with-claude-skills-guide/). Hooks are core to stateful agent design
+- [Claude Skill .md File Format: Full Specification](/claude-skill-md-format-complete-specification-guide/). Skill file format reference
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Top developer skills that work well with hooks
 
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

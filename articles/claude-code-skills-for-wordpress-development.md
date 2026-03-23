@@ -15,18 +15,18 @@ permalink: /claude-code-skills-for-wordpress-development/
 
 WordPress development involves repetitive tasks that drain productivity: scaffolding plugins, creating custom post types, setting up theme boilerplates, and debugging the occasional white screen of death. Claude Code skills can automate these workflows, turning hours of setup into seconds of execution. This guide shows you how to build skills tailored specifically for WordPress development.
 
-## Why WordPress Needs Custom Skills
+Why WordPress Needs Custom Skills
 
 [WordPress follows conventions that Claude cannot guess](/claude-skill-md-format-complete-specification-guide/). The file structure for themes and plugins is predictable, but the boilerplate code required differs from project to project. A well-crafted skill understands these conventions and generates correct code the first time.
 
 Consider what happens without a skill: you create a new plugin folder, write the header comment, create the main PHP file, add activation hooks, register scripts, and set up custom post types. Each step requires referencing documentation or copying from previous projects. A WordPress-specific skill handles this entire sequence in one interaction.
 
-## Building a WordPress Plugin Scaffolding Skill
+Building a WordPress Plugin Scaffolding Skill
 
 The foundation of any WordPress skill is understanding the plugin directory structure. Here's a skill that scaffolds a complete plugin with standard best practices:
 
 ```markdown
-## Skill: wp-plugin-create
+Skill: wp-plugin-create
 
 When asked to create a new WordPress plugin, follow this workflow:
 
@@ -55,12 +55,12 @@ After creating the plugin, output the file structure and next steps.
 
 This skill produces consistent, production-ready plugin boilerplate. The key is specifying exactly what Claude should generate rather than hoping it guesses correctly.
 
-## Creating Custom Post Types Efficiently
+Creating Custom Post Types Efficiently
 
 Custom post types are ubiquitous in WordPress development but require precise code to register correctly. A dedicated skill ensures you never miss a required argument:
 
 ```markdown
-## Skill: wp-register-cpt
+Skill: wp-register-cpt
 
 When asked to register a custom post type:
 
@@ -80,14 +80,14 @@ When asked to register a custom post type:
 Generate complete code that can be dropped into functions.php or a plugin file.
 ```
 
-This skill eliminates the common mistake of registering post types without archive support or REST API visibility—issues that cause problems later in development.
+This skill eliminates the common mistake of registering post types without archive support or REST API visibility, issues that cause problems later in development.
 
-## Theme Development Skills
+Theme Development Skills
 
 WordPress theme development benefits even more from automation because themes involve more files and more complex relationships between them. A theme scaffolding skill should create the complete directory structure:
 
 ```markdown
-## Skill: wp-theme-create
+Skill: wp-theme-create
 
 Create a WordPress theme with this structure:
 - style.css with proper theme header
@@ -110,9 +110,9 @@ In functions.php include:
 Output all file paths created and suggest next customization steps.
 ```
 
-## Debugging WordPress Issues
+Debugging WordPress Issues
 
-WordPress debugging requires a different approach—diagnostic skills that help identify problems rather than generate code:
+WordPress debugging requires a different approach, diagnostic skills that help identify problems rather than generate code:
 
 ```markdown## Skill: wp-debug
 
@@ -136,7 +136,7 @@ Always recommend backing up the site before making changes.
 
 This skill transforms debugging from guesswork into a systematic process. It also serves as a teaching tool for developers learning WordPress.
 
-## Combining Skills for Complex Workflows
+Combining Skills for Complex Workflows
 
 [Individual skills become powerful when chained together](/how-do-i-combine-two-claude-skills-in-one-workflow/). A complete WordPress development workflow might use:
 
@@ -147,19 +147,19 @@ This skill transforms debugging from guesswork into a systematic process. It als
 
 Each skill handles one domain but integrates cleanly with others. This separation keeps skills maintainable and reusable.
 
-## Skill Design Principles for WordPress
+Skill Design Principles for WordPress
 
 The most effective WordPress skills share common characteristics:
 
-**Be specific about WordPress conventions.** Don't assume Claude knows WordPress coding standards. Include explicit instructions about escaping functions, naming conventions, and hook priorities.
+Be specific about WordPress conventions. Don't assume Claude knows WordPress coding standards. Include explicit instructions about escaping functions, naming conventions, and hook priorities.
 
-**Generate complete, working code.** Partial code snippets frustrate users. [Skills should output code ready to copy and paste](/best-claude-code-skills-to-install-first-2026/) without modification.
+Generate complete, working code. Partial code snippets frustrate users. [Skills should output code ready to copy and paste](/best-claude-code-skills-to-install-first-2026/) without modification.
 
-**Include best practices automatically.** Security considerations like nonces, capability checks, and input sanitization should be part of every generated file, not afterthoughts.
+Include best practices automatically. Security considerations like nonces, capability checks, and input sanitization should be part of every generated file, not afterthoughts.
 
-**Ask for required information.** WordPress development requires specific names, labels, and configurations. Good skills ask for these details rather than making assumptions.
+Ask for required information. WordPress development requires specific names, labels, and configurations. Good skills ask for these details rather than making assumptions.
 
-## Practical Example: Portfolio Plugin
+Practical Example: Portfolio Plugin
 
 Here's what a complete interaction looks like:
 
@@ -177,23 +177,23 @@ Skill: wp-register-cpt
 Skill: wp-register-taxonomy
 → Registers 'portfolio_category' taxonomy
 
-Result: Complete plugin with custom post type and categories, ready to activate
+Complete plugin with custom post type and categories, ready to activate
 ```
 
-## Conclusion
+Conclusion
 
 Claude Code skills transform WordPress development from repetitive manual work into efficient, consistent automation. The skills above cover the most common development scenarios, but you can extend this pattern to any WordPress task: widget creation, shortcode generation, REST API endpoints, or WooCommerce customization.
 
-The key is specificity—tell Claude exactly what WordPress conventions to follow, and it will generate code that works the first time. Build skills around your specific workflow, combine them for complex projects, and watch your development speed increase dramatically.
+The key is specificity, tell Claude exactly what WordPress conventions to follow, and it will generate code that works the first time. Build skills around your specific workflow, combine them for complex projects, and watch your development speed increase dramatically.
 
 ---
 
 
-## Related Reading
+Related Reading
 
-- [Claude Skill MD Format Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/) — create proper skill file structure for WordPress development
-- [How Do I Combine Two Claude Skills in One Workflow](/how-do-i-combine-two-claude-skills-in-one-workflow/) — chain plugin, theme, and debug skills into complete workflows
-- [Best Claude Code Skills to Install First in 2026](/best-claude-code-skills-to-install-first-2026/) — overview of skills most useful for WordPress developers
-- [Use Cases Hub](/use-cases-hub/) — discover Claude Code skills for CMS and web development
+- [Claude Skill MD Format Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/). create proper skill file structure for WordPress development
+- [How Do I Combine Two Claude Skills in One Workflow](/how-do-i-combine-two-claude-skills-in-one-workflow/). chain plugin, theme, and debug skills into complete workflows
+- [Best Claude Code Skills to Install First in 2026](/best-claude-code-skills-to-install-first-2026/). overview of skills most useful for WordPress developers
+- [Use Cases Hub](/use-cases-hub/). discover Claude Code skills for CMS and web development
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

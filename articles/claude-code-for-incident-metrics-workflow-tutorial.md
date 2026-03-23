@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code for Incident Metrics Workflow Tutorial"
-description: "Learn how to leverage Claude Code to automate incident metrics tracking, analysis, and reporting workflows. A practical guide for developers."
+description: "Learn how to use Claude Code to automate incident metrics tracking, analysis, and reporting workflows. A practical guide for developers."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-incident-metrics-workflow-tutorial/
@@ -12,31 +12,31 @@ reviewed: true
 ---
 
 {% raw %}
-# Claude Code for Incident Metrics Workflow Tutorial
+Claude Code for Incident Metrics Workflow Tutorial
 
 Incident management is a critical aspect of DevOps and Site Reliability Engineering (SRE). Tracking metrics like Mean Time to Detect (MTTD), Mean Time to Resolve (MTTR), and incident frequency helps teams improve their response capabilities. In this tutorial, you'll learn how to use Claude Code to automate and streamline your incident metrics workflow.
 
-## What is Claude Code?
+What is Claude Code?
 
 Claude Code is an AI-powered coding assistant that can interact with your development environment through a Model Context Protocol (MCP) server. It can execute commands, read and write files, and integrate with various tools in your workflow. For incident metrics, Claude Code can help you collect data, generate reports, and even trigger automated responses based on your metrics.
 
-## Setting Up Your Incident Metrics Environment
+Setting Up Your Incident Metrics Environment
 
 Before diving into the workflow, you need to set up your environment. Claude Code needs access to your incident management tools and metrics storage.
 
-### Prerequisites
+Prerequisites
 
 - Claude Code installed and configured
 - Access to your incident management system (PagerDuty, OpsGenie, etc.)
 - Metrics storage (Prometheus, Datadog, or a custom solution)
 - Basic understanding of your incident data structure
 
-### Configuration Steps
+Configuration Steps
 
 First, create a configuration file for your incident metrics:
 
 ```python
-# incident_metrics_config.py
+incident_metrics_config.py
 
 INCIDENT_SOURCES = {
     "pagerduty": {
@@ -56,11 +56,11 @@ METRICS_CONFIG = {
 }
 ```
 
-## Building the Incident Metrics Collector
+Building the Incident Metrics Collector
 
 The core of your workflow is an incident metrics collector. This script gathers data from your incident management tools and computes key metrics.
 
-### Creating the Collector Script
+Creating the Collector Script
 
 ```python
 #!/usr/bin/env python3
@@ -142,37 +142,37 @@ class IncidentMetricsCollector:
         return breakdown
 ```
 
-## Automating Metrics Collection with Claude Code
+Automating Metrics Collection with Claude Code
 
 Now that you have the collector, let's integrate it with Claude Code to create an automated workflow.
 
-### Using Claude Code for Daily Metrics
+Using Claude Code for Daily Metrics
 
 You can create a Claude Code skill that runs your metrics collection on a schedule:
 
 ```yaml
-# .claude/skills/incident-metrics-skill.md
-# Skill: Incident Metrics Automation
+.claude/skills/incident-metrics-skill.md
+Skill: Incident Metrics Automation
 
-## Triggers
+Triggers
 - Run daily at 9:00 AM
 - On demand via "/incident-metrics"
 
-## Actions
+Actions
 
-### Daily Metrics Collection
+Daily Metrics Collection
 1. Execute incident_metrics_collector.py
 2. Compare metrics against SLAs
 3. If metrics exceed thresholds, create alert
 4. Generate and save report to /reports/
 
-### Alert Conditions
+Alert Conditions
 - MTTD exceeds {{MTTD_THRESHOLD}} seconds
 - MTTR exceeds {{MTTR_THRESHOLD}} seconds
 - Critical incidents increase by >20% from previous week
 ```
 
-### Running Metrics Analysis
+Running Metrics Analysis
 
 To run your metrics collection with Claude Code:
 
@@ -182,9 +182,9 @@ claude --dangerously-skip-permissions \
   "Run the incident metrics collector and generate today's report"
 ```
 
-## Practical Examples and Use Cases
+Practical Examples and Use Cases
 
-### Example 1: Weekly Incident Review
+Example 1: Weekly Incident Review
 
 Here's how to set up a weekly incident review workflow:
 
@@ -217,7 +217,7 @@ def weekly_review_workflow():
     return formatted
 ```
 
-### Example 2: Post-Incident Analysis
+Example 2: Post-Incident Analysis
 
 After each major incident, use Claude Code to perform a quick analysis:
 
@@ -247,9 +247,9 @@ def post_incident_analysis(incident_id: str):
     return analysis, improvements
 ```
 
-## Actionable Advice for Implementation
+Actionable Advice for Implementation
 
-### Start Small and Iterate
+Start Small and Iterate
 
 Begin with simple metrics like total incident count and MTTR. As your workflow matures, add more sophisticated metrics like:
 - Time to first response
@@ -257,7 +257,7 @@ Begin with simple metrics like total incident count and MTTR. As your workflow m
 - Incident recurrence rate
 - Customer impact duration
 
-### Automate Gradually
+Automate Gradually
 
 Don't try to automate everything at once. Start with:
 1. Automated data collection
@@ -265,16 +265,16 @@ Don't try to automate everything at once. Start with:
 3. Threshold-based alerts
 4. Advanced analytics
 
-### Integrate with Your Existing Tools
+Integrate with Your Existing Tools
 
 Claude Code works best when integrated with your existing workflow:
 
-- **Slack**: Send reports and alerts to your #incidents channel
-- **Jira**: Create tickets for identified improvements
-- **PagerDuty**: Enrich incidents with metrics context
-- **Grafana**: Push metrics to existing dashboards
+- Slack: Send reports and alerts to your #incidents channel
+- Jira: Create tickets for identified improvements
+- PagerDuty: Enrich incidents with metrics context
+- Grafana: Push metrics to existing dashboards
 
-### Set Meaningful Targets
+Set Meaningful Targets
 
 Define realistic targets based on your team's historical performance:
 
@@ -293,15 +293,15 @@ SLA_TARGETS = {
 }
 ```
 
-## Conclusion
+Conclusion
 
 Claude Code can significantly streamline your incident metrics workflow by automating data collection, analysis, and reporting. Start with the basic collector script, integrate it with your incident management tools, and gradually add more automation as you see value.
 
-Remember that the goal isn't just to collect metrics—it's to use them to improve your incident response process. Let Claude Code handle the routine work so your team can focus on what matters: resolving incidents quickly and preventing future occurrences.
+Remember that the goal isn't just to collect metrics, it's to use them to improve your incident response process. Let Claude Code handle the routine work so your team can focus on what matters: resolving incidents quickly and preventing future occurrences.
 
 ---
 
-**Next Steps:**
+Next Steps:
 - Customize the collector for your specific incident management system
 - Set up scheduled runs with Claude Code
 - Integrate with your team's communication tools
@@ -310,12 +310,12 @@ Remember that the goal isn't just to collect metrics—it's to use them to impro
 Happy incident managing!
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 {% endraw %}

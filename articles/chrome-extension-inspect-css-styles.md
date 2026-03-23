@@ -12,17 +12,17 @@ categories: [guides]
 ---
 
 {% raw %}
-# How to Inspect CSS Styles in Chrome Extensions
+How to Inspect CSS Styles in Chrome Extensions
 
-Debugging CSS in Chrome extensions presents unique challenges that differ from standard web development. When you're building or debugging a Chrome extension, styles live in multiple contexts—content scripts, injected stylesheets, and the extension's own UI. Understanding how to inspect and modify these styles effectively is essential for creating polished extension experiences.
+Debugging CSS in Chrome extensions presents unique challenges that differ from standard web development. When you're building or debugging a Chrome extension, styles live in multiple contexts, content scripts, injected stylesheets, and the extension's own UI. Understanding how to inspect and modify these styles effectively is essential for creating polished extension experiences.
 
-## The Challenge of Extension CSS Inspection
+The Challenge of Extension CSS Inspection
 
 Chrome extensions run in an isolated world within web pages. This isolation means that styles applied by your extension's content scripts might not appear exactly as you'd expect in the standard DevTools view. The DevTools Elements panel shows the computed styles, but tracking down which rule came from your extension versus the host page requires specific techniques.
 
 Content scripts share the DOM with the page but maintain their own JavaScript execution context. When you inject CSS through a content script or a separate stylesheet file, those styles interact with the page's existing CSS in complex ways. Understanding this interaction is key to debugging style issues.
 
-## Using DevTools Effectively
+Using DevTools Effectively
 
 Open DevTools on any page running your extension by pressing `Cmd+Option+I` (Mac) or `F12` (Windows). The Elements panel shows the full DOM tree, and the Styles pane displays all applied styles in cascade order.
 
@@ -30,7 +30,7 @@ When inspecting elements injected by your extension, look for the `ext-` prefix 
 
 The Computed panel is particularly useful for understanding the final rendered style. It shows the resolved value for each property after all cascading and specificity calculations. If a style isn't applying as expected, check here first to see what final value the browser is using.
 
-## Inspecting Styles Injected via Content Scripts
+Inspecting Styles Injected via Content Scripts
 
 When you inject styles programmatically using JavaScript, finding them in DevTools requires a different approach. Here's a common pattern:
 
@@ -62,7 +62,7 @@ A more maintainable approach uses a separate CSS file declared in your manifest:
 
 With this approach, DevTools shows the actual filename, making debugging significantly easier. The styles appear in the Styles pane with a clickable link to your `content.css` file.
 
-## Debugging Style Isolation Issues
+Debugging Style Isolation Issues
 
 Extension styles sometimes leak into or get affected by page styles unintentionally. The shadow DOM provides encapsulation, but it's not always the right solution for extension UIs embedded in page content.
 
@@ -70,13 +70,13 @@ Use DevTools' Force Element State feature to debug hover, focus, and active stat
 
 When your extension's styles conflict with page styles, use more specific selectors. Rather than `.button`, use `.my-extension-container .button` or `[data-extension-id="my-extension"] .button`. The computed styles panel shows exactly which rule is winning and from what source.
 
-## Inspecting Extension Popup Styles
+Inspecting Extension Popup Styles
 
 The browser action popup runs in its own render process, separate from web pages. Inspect these styles by right-clicking your extension's icon and selecting "Inspect Popup," or navigate to `chrome://extensions` and click the "service worker" or "inspect views" link for your extension.
 
 Popup styles follow standard web development debugging. The DevTools window that opens is dedicated to your popup, making it straightforward to inspect and modify styles in real-time.
 
-## Practical Example: Debugging a Content Script Style
+Practical Example: Debugging a Content Script Style
 
 Suppose you've created a floating toolbar that appears on certain pages, but the close button style isn't rendering correctly:
 
@@ -112,13 +112,13 @@ Add `!important` temporarily to identify if specificity is the issue:
 
 If this fixes it, remove the `!important` and increase your selector specificity instead. This diagnostic technique quickly narrows down whether you're dealing with a specificity conflict or a missing rule.
 
-## Using Chrome Flags for Extension Development
+Using Chrome Flags for Extension Development
 
 Chrome provides developer flags that assist with extension debugging. Navigate to `chrome://flags/#extension-active-script-permission-toggle` to enable the permission warnings for content scripts. This helps identify when your extension gains access to additional pages, which can affect which styles apply.
 
 The `#extension-manifest-v3` flag enables debugging features specific to Manifest V3 extensions, including better DevTools integration for service worker-based extensions.
 
-## Best Practices for Maintainable Extension Styles
+Best Practices for Maintainable Extension Styles
 
 Organize your extension's CSS with clear naming conventions that avoid conflicts with page styles. Using a consistent prefix like `ext-` or wrapping your UI in a shadow DOM provides natural isolation.
 
@@ -129,11 +129,11 @@ Test your extension on pages with aggressive styling, like heavily styled framew
 Finally, use the Computed panel extensively. It shows you exactly what the browser is rendering, removing any ambiguity about which styles are actually applying.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

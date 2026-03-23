@@ -14,32 +14,32 @@ permalink: /claude-skills-aws-lambda-serverless-integration/
 
 
 
-# Claude Code Skills + AWS Lambda: Serverless Integration
+Claude Code Skills + AWS Lambda: Serverless Integration
 
-Claude Code skills run locally in your terminal. AWS Lambda runs your code in the cloud. Connecting them means invoking Claude Code — including skill-augmented sessions — from within a Lambda function, then routing the output into your broader AWS infrastructure.
+Claude Code skills run locally in your terminal. AWS Lambda runs your code in the cloud. Connecting them means invoking Claude Code. including skill-augmented sessions. from within a Lambda function, then routing the output into your broader AWS infrastructure.
 
 This guide covers practical patterns for this integration: document processing, test generation triggers, and event-driven workflows.
 
-## How the Architecture Works
+How the Architecture Works
 
 Claude Code can run in print mode (`claude -p "..."`) which accepts a prompt, runs the session non-interactively, and returns output to stdout. A Lambda function can shell out to `claude -p` the same way any process can call a subprocess.
 
 The setup requires bundling the Claude Code binary in your Lambda container image. Lambda's managed runtimes do not include Claude Code by default, so a custom Docker image is the practical path.
 
-## Building the Container Image
+Building the Container Image
 
 Create a `Dockerfile` that installs Claude Code alongside your runtime:
 
 ```dockerfile
 FROM public.ecr.aws/lambda/python:3.12
 
-# Install Node.js (Claude Code requires it)
+Install Node.js (Claude Code requires it)
 RUN dnf install -y nodejs npm
 
-# Install Claude Code globally
+Install Claude Code globally
 RUN npm install -g @anthropic-ai/claude-code
 
-# Copy your function code
+Copy your function code
 COPY handler.py ${LAMBDA_TASK_ROOT}/
 
 CMD ["handler.handler"]
@@ -56,7 +56,7 @@ docker tag claude-skills-lambda:latest YOUR_ACCOUNT.dkr.ecr.us-east-1.amazonaws.
 docker push YOUR_ACCOUNT.dkr.ecr.us-east-1.amazonaws.com/claude-skills-lambda:latest
 ```
 
-## Writing the Lambda Handler
+Writing the Lambda Handler
 
 The handler invokes Claude Code in print mode and returns the output:
 
@@ -100,7 +100,7 @@ def handler(event, context):
         return {"statusCode": 500, "body": json.dumps({"error": str(exc)})}
 ```
 
-## Practical Pattern 1: Document Processing with /pdf
+Practical Pattern 1: Document Processing with /pdf
 
 Trigger this Lambda from an S3 `ObjectCreated` event. When a PDF lands in your uploads bucket, the function processes it using the [pdf skill](/best-claude-skills-for-data-analysis/):
 
@@ -165,7 +165,7 @@ Resources:
                     Value: ".pdf"
 ```
 
-## Practical Pattern 2: Test Generation in CI/CD
+Practical Pattern 2: Test Generation in CI/CD
 
 Trigger the [tdd skill](/best-claude-skills-for-developers-2026/) when a developer opens a pull request. A GitHub Actions webhook posts to API Gateway, which invokes Lambda:
 
@@ -199,7 +199,7 @@ def handler(event, context):
     gh_token = os.environ["GITHUB_TOKEN"]
 
     comment_url = f"https://api.github.com/repos/{repo_full_name}/issues/{pr_number}/comments"
-    comment_body = json.dumps({"body": f"**TDD Analysis**\n\n{result.stdout.strip()}"}).encode()
+    comment_body = json.dumps({"body": f"TDD Analysis\n\n{result.stdout.strip()}"}).encode()
 
     req = urllib.request.Request(
         comment_url,
@@ -212,9 +212,9 @@ def handler(event, context):
     return {"statusCode": 200, "body": "comment posted"}
 ```
 
-## Managing State Across Invocations
+Managing State Across Invocations
 
-Lambda functions are ephemeral — each invocation starts fresh. The [supermemory skill](/claude-skills-token-optimization-reduce-api-costs/) stores context in `~/.claude/`, which does not persist between Lambda invocations by default.
+Lambda functions are ephemeral. each invocation starts fresh. The [supermemory skill](/claude-skills-token-optimization-reduce-api-costs/) stores context in `~/.claude/`, which does not persist between Lambda invocations by default.
 
 To persist memory, sync the skill's storage directory to S3 before and after each run:
 
@@ -250,39 +250,39 @@ def handler(event, context):
     save_memory()
 ```
 
-## Deployment Best Practices
+Deployment Best Practices
 
-**API key security**: Store your `ANTHROPIC_API_KEY` in AWS Secrets Manager. Reference it in your SAM/CloudFormation template with `{{resolve:secretsmanager:...}}`. Never hard-code it in environment variables directly in source control.
+API key security: Store your `ANTHROPIC_API_KEY` in AWS Secrets Manager. Reference it in your SAM/CloudFormation template with `{{resolve:secretsmanager:...}}`. Never hard-code it in environment variables directly in source control.
 
-**Timeout configuration**: The `/pdf` skill on a large document can take 2-3 minutes. Set Lambda timeout to 300 seconds (5 minutes) for document-heavy workloads. For quick prompts, 60 seconds is sufficient.
+Timeout configuration: The `/pdf` skill on a large document can take 2-3 minutes. Set Lambda timeout to 300 seconds (5 minutes) for document-heavy workloads. For quick prompts, 60 seconds is sufficient.
 
-**Cold start reduction**: Claude Code's Node.js runtime adds cold start latency. Use provisioned concurrency for latency-sensitive API Gateway integrations. For batch or async workflows triggered by SQS or S3, cold starts are acceptable.
+Cold start reduction: Claude Code's Node.js runtime adds cold start latency. Use provisioned concurrency for latency-sensitive API Gateway integrations. For batch or async workflows triggered by SQS or S3, cold starts are acceptable.
 
-**Error handling**: Always check `result.returncode` before using stdout. Log `result.stderr` to CloudWatch for debugging. Wrap the subprocess call in a try/except for `TimeoutExpired` and `OSError`.
+Error handling: Always check `result.returncode` before using stdout. Log `result.stderr` to CloudWatch for debugging. Wrap the subprocess call in a try/except for `TimeoutExpired` and `OSError`.
 
-**Cost management**: Lambda charges per invocation and duration. Long-running Claude Code sessions (processing large PDFs, generating extensive tests) will cost more. Use SQS to queue requests and process them at a controlled rate rather than allowing unbounded concurrency.
+Cost management: Lambda charges per invocation and duration. Long-running Claude Code sessions (processing large PDFs, generating extensive tests) will cost more. Use SQS to queue requests and process them at a controlled rate rather than allowing unbounded concurrency.
 
 ---
 
-## Related Reading
+Related Reading
 
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Full developer skill stack
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — How Claude decides when to load skills
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — Keep API costs down as you scale
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Full developer skill stack
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How Claude decides when to load skills
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Keep API costs down as you scale
 
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-## Step-by-Step: Integrating Claude Skills with AWS Lambda
+Step-by-Step: Integrating Claude Skills with AWS Lambda
 
-1. **Create the Lambda function**: ask Claude Code to scaffold a Python or Node.js Lambda handler that accepts a Claude skill invocation payload and returns a structured response.
-2. **Package the Anthropic SDK**: bundle the `anthropic` Python package (or `@anthropic-ai/sdk` for Node.js) with your Lambda deployment package, or use a Lambda Layer to share it across functions.
-3. **Store credentials securely**: put the Claude API key in AWS Secrets Manager or Parameter Store. Retrieve it at function startup using the AWS SDK — never hard-code it in the function code.
-4. **Configure the function URL or API Gateway**: expose the Lambda function as an HTTPS endpoint. A Lambda Function URL is the simplest option for development; API Gateway gives you rate limiting and authentication for production.
-5. **Connect the skill**: register the Lambda endpoint URL as the skill's action endpoint. Claude will POST the user's request to this URL and render the response.
-6. **Add error handling and logging**: wrap the handler in a try/catch that returns structured error responses. Use CloudWatch Logs with structured JSON logging so failures are easy to diagnose.
+1. Create the Lambda function: ask Claude Code to scaffold a Python or Node.js Lambda handler that accepts a Claude skill invocation payload and returns a structured response.
+2. Package the Anthropic SDK: bundle the `anthropic` Python package (or `@anthropic-ai/sdk` for Node.js) with your Lambda deployment package, or use a Lambda Layer to share it across functions.
+3. Store credentials securely: put the Claude API key in AWS Secrets Manager or Parameter Store. Retrieve it at function startup using the AWS SDK. never hard-code it in the function code.
+4. Configure the function URL or API Gateway: expose the Lambda function as an HTTPS endpoint. A Lambda Function URL is the simplest option for development; API Gateway gives you rate limiting and authentication for production.
+5. Connect the skill: register the Lambda endpoint URL as the skill's action endpoint. Claude will POST the user's request to this URL and render the response.
+6. Add error handling and logging: wrap the handler in a try/catch that returns structured error responses. Use CloudWatch Logs with structured JSON logging so failures are easy to diagnose.
 
-## Lambda Handler for Claude Skill
+Lambda Handler for Claude Skill
 
 ```python
 import json
@@ -319,7 +319,7 @@ def handler(event, context):
         }
 ```
 
-## AWS Lambda + Claude Skill Architecture Options
+AWS Lambda + Claude Skill Architecture Options
 
 | Approach | Latency | Cost | Complexity | Scalability |
 |---|---|---|---|---|
@@ -329,9 +329,9 @@ def handler(event, context):
 | ECS Fargate (persistent) | Very low (no cold start) | Higher (always-on) | High | Manual |
 | EC2 (always-on) | Very low | Higher | High | Manual |
 
-Lambda + Function URL is the right starting point for most skills — zero infrastructure overhead, automatic scaling, and costs nothing during periods of no usage.
+Lambda + Function URL is the right starting point for most skills. zero infrastructure overhead, automatic scaling, and costs nothing during periods of no usage.
 
-## Advanced: Caching Skill Responses with ElastiCache
+Advanced: Caching Skill Responses with ElastiCache
 
 For skills that call expensive external APIs (database queries, web searches), add Redis caching via ElastiCache to reduce latency and cost:
 
@@ -351,12 +351,12 @@ def cached_claude_call(message, ttl=300):
     return result
 ```
 
-## Troubleshooting
+Troubleshooting
 
-**Cold start latency making the skill feel slow**: Pre-warm the Lambda function by invoking it on a scheduled EventBridge rule every 5 minutes. This keeps the execution environment warm and eliminates the 1-3 second cold start for Python functions with large dependencies.
+Cold start latency making the skill feel slow: Pre-warm the Lambda function by invoking it on a scheduled EventBridge rule every 5 minutes. This keeps the execution environment warm and eliminates the 1-3 second cold start for Python functions with large dependencies.
 
-**Lambda timing out on long Claude responses**: The default Lambda timeout is 3 seconds. Increase it to 30-60 seconds for Claude skill calls. Set `max_tokens` in the Anthropic API call appropriately — `max_tokens=4096` can take 10-20 seconds for complex responses.
+Lambda timing out on long Claude responses: The default Lambda timeout is 3 seconds. Increase it to 30-60 seconds for Claude skill calls. Set `max_tokens` in the Anthropic API call appropriately. `max_tokens=4096` can take 10-20 seconds for complex responses.
 
-**Secrets Manager adding latency**: Cache the API key in a module-level variable after the first retrieval. AWS Lambda reuses execution environments between invocations — the cached key persists across warm invocations without repeated Secrets Manager calls.
+Secrets Manager adding latency: Cache the API key in a module-level variable after the first retrieval. AWS Lambda reuses execution environments between invocations. the cached key persists across warm invocations without repeated Secrets Manager calls.
 
 {% endraw %}

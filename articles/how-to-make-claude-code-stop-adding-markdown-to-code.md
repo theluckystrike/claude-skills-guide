@@ -13,17 +13,17 @@ tags: [claude-code, claude-skills, output-formatting]
 {% raw %}
 One of the most common frustrations developers face when working with Claude Code is its tendency to wrap code in markdown code blocks. While this is useful for readability in chat interfaces, it becomes cumbersome when you need to copy and paste code directly into your files. This guide provides practical solutions to stop Claude Code from adding markdown formatting to code output.
 
-## Understanding Why Claude Code Adds Markdown
+Understanding Why Claude Code Adds Markdown
 
 Claude Code automatically wraps code in triple backticks (```) because its primary design is for conversational interaction. The markdown formatting helps users distinguish code from regular text in the chat interface. However, this behavior can interfere with workflows where you want immediate, paste-ready code output.
 
 The good news is that you can control this behavior through various methods, from simple prompt modifications to skill-level configurations.
 
-## Method 1: Direct Prompt Instructions
+Method 1: Direct Prompt Instructions
 
 The simplest approach is to explicitly tell Claude Code not to use markdown code blocks in your prompts.
 
-### Basic Prompt Modification
+Basic Prompt Modification
 
 Instead of:
 ```markdown
@@ -37,14 +37,14 @@ Write a function to sort an array in JavaScript. Output the code without markdow
 
 This approach works well for single interactions but requires repetitive instruction for every code request.
 
-### Using CLAUDE.md for Persistent Instructions
+Using CLAUDE.md for Persistent Instructions
 
 Create a CLAUDE.md file in your project root with explicit instructions about code output formatting:
 
 ```markdown
-# Claude Code Project Instructions
+Claude Code Project Instructions
 
-## Code Output Preferences
+Code Output Preferences
 - When outputting code, never wrap it in markdown code blocks (```)
 - Output code as plain text that can be directly copied and pasted
 - If explaining code, separate explanations from the code itself
@@ -52,11 +52,11 @@ Create a CLAUDE.md file in your project root with explicit instructions about co
 
 This file acts as persistent instructions that Claude Code will follow across all sessions in that project.
 
-## Method 2: Creating a Custom Skill
+Method 2: Creating a Custom Skill
 
 For more control, create a custom skill that handles code output without markdown formatting.
 
-### Skill Definition Structure
+Skill Definition Structure
 
 Create a skill file (e.g., `skills/plain-code.md`) with the following structure:
 
@@ -66,7 +66,7 @@ name: plain-code-output
 description: Output code without markdown formatting
 ---
 
-# Plain Code Output Skill
+Plain Code Output Skill
 
 When asked to write or modify code:
 1. Output the code as plain text without any markdown formatting
@@ -75,7 +75,7 @@ When asked to write or modify code:
 4. Maintain proper indentation and formatting
 5. Include necessary imports and dependencies
 
-## Example Output Format
+Example Output Format
 
 Instead of:
 
@@ -92,20 +92,20 @@ function hello() {
 }
 ```
 
-### Loading the Skill
+Loading the Skill
 
 Reference the skill in your project's CLAUDE.md:
 
 ```markdown
-## Active Skills
+Active Skills
 - ./skills/plain-code.md
 ```
 
-## Method 3: Using the Edit Tool Strategically
+Method 3: Using the Edit Tool Strategically
 
 Claude Code's edit tool can sometimes bypass markdown formatting. When you use the `edit_file` tool directly, the code is written to files without markdown wrappers.
 
-### Direct File Editing Workflow
+Direct File Editing Workflow
 
 Instead of asking Claude to output code that you then copy:
 
@@ -118,42 +118,42 @@ Example prompt:
 Create a new file called 'utils.js' with a function that sorts arrays. Use the write_file tool to create the file directly - don't output the code in markdown blocks.
 ```
 
-## Method 4: Configuring Claude.md for Code-First Projects
+Method 4: Configuring Claude.md for Code-First Projects
 
 For projects where you frequently work with code, enhance your CLAUDE.md with detailed formatting instructions:
 
 ```markdown
-# Project Context
+Project Context
 
-## Code Output Requirements
+Code Output Requirements
 - Always prefer direct file operations over code output
 - When code must be displayed, use plain text format
 - Separate file paths from content with clear labels
 - Avoid any markdown formatting in code blocks
 
-## Preferred Workflows
+Preferred Workflows
 1. Use read_file tool to understand existing code
 2. Use edit_file/write_file tools to modify files
 3. Use bash tools to execute code and verify functionality
 ```
 
-## Method 5: Post-Processing Code Output
+Method 5: Post-Processing Code Output
 
 If you receive code with markdown formatting, you can quickly clean it up:
 
-### Using Command Line Tools
+Using Command Line Tools
 
 Strip markdown code blocks from Claude's output:
 
 ```bash
-# Remove triple backticks and language identifiers
+Remove triple backticks and language identifiers
 sed -i '' 's/```[a-z]*//g' output.txt
 
-# Remove single backticks around inline code
+Remove single backticks around inline code
 sed -i '' 's/`//g' output.txt
 ```
 
-### Using a Simple Script
+Using a Simple Script
 
 Create a helper script in your project:
 
@@ -178,7 +178,7 @@ if (args[0]) {
 
 Run it with: `node strip-markdown.js input.txt`
 
-## Handling Jekyll and Template Syntax
+Handling Jekyll and Template Syntax
 
 If you work with Jekyll sites, GitHub Pages, or any content containing `{{` or `{%` patterns, markdown backtick issues become more complex. These characters trigger Liquid template processing, so Claude Code sometimes over-escapes or double-wraps code blocks to protect them.
 
@@ -191,7 +191,7 @@ This content is for a Jekyll site. Wrap any code blocks containing double-curly-
 Add this guidance to your CLAUDE.md file for Jekyll projects:
 
 ```markdown
-# Code Block Guidelines
+Code Block Guidelines
 
 - Always use exactly three backticks for code blocks
 - Include language identifiers when applicable
@@ -201,48 +201,48 @@ Add this guidance to your CLAUDE.md file for Jekyll projects:
 
 This proactive approach prevents the most common backtick formatting failures in static site workflows.
 
-## Best Practices for Markdown-Free Workflows
+Best Practices for Markdown-Free Workflows
 
-### 1. Establish Conventions Early
+1. Establish Conventions Early
 
 Set up your CLAUDE.md file at the beginning of each project with clear code output preferences.
 
-### 2. Combine Multiple Methods
+2. Combine Multiple Methods
 
 Use both CLAUDE.md instructions and explicit prompts for best results. Redundancy ensures consistent behavior.
 
-### 3. Provide Feedback
+3. Provide Feedback
 
 When Claude Code incorrectly formats code, explicitly correct it:
 ```markdown
 Please don't use markdown code blocks. Just output the plain code.
 ```
 
-### 4. Create Reusable Skills
+4. Create Reusable Skills
 
 For team projects, create and share skills that enforce your preferred code output format.
 
-## Troubleshooting Common Issues
+Troubleshooting Common Issues
 
-### Issue: Claude Code Forgets Instructions
+Issue: Claude Code Forgets Instructions
 
 If Claude Code reverts to markdown formatting:
 - Re-state the instruction explicitly
 - Check if your CLAUDE.md file is properly formatted
 - Verify the skill is correctly loaded
 
-### Issue: Some Code Still Gets Formatted
+Issue: Some Code Still Gets Formatted
 
 Complex outputs with explanations may still include formatted code. Minimize this by requesting specific file operations rather than code display.
 
-### Issue: Mixed Output
+Issue: Mixed Output
 
 When you need both explanation and code:
 ```markdown
 Explain what this code does, then create the file without markdown formatting.
 ```
 
-## Conclusion
+Conclusion
 
 Preventing Claude Code from adding markdown to code output is achievable through a combination of prompt engineering, skill configuration, and workflow optimization. Start with simple prompt modifications for quick results, then establish persistent configurations through CLAUDE.md files and custom skills for long-term solutions.
 
@@ -251,11 +251,11 @@ The key is to shift Claude Code's behavior from "chat partner" to "direct file o
 Remember that these methods work best when combined - use explicit instructions for important tasks while maintaining persistent configurations for consistent behavior across all your development sessions.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Claude Code Not Working After Update: How to Fix](/claude-code-not-working-after-update-how-to-fix/)
 - [Claude Code Troubleshooting Hub](/troubleshooting-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

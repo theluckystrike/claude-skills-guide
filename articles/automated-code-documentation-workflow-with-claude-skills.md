@@ -17,7 +17,7 @@ permalink: /automated-code-documentation-workflow-with-claude-skills/
 
 [This guide walks through building that workflow from scratch](/claude-skill-md-format-complete-specification-guide/), README files, API references, and change-log summaries.
 
-## What You Need
+What You Need
 
 - Claude Code installed and running
 - A project with source code (JavaScript, TypeScript, Python, or similar)
@@ -27,7 +27,7 @@ permalink: /automated-code-documentation-workflow-with-claude-skills/
 
 No additional packages or CI setup required to start. You can layer in CI automation once the local workflow is solid.
 
-## Step 1: Audit Your Current Documentation State
+Step 1: Audit Your Current Documentation State
 
 Before generating docs, understand what you have and what is missing. Start a Claude Code session in your project root:
 
@@ -61,7 +61,7 @@ Store documentation audit for this project:
 - Goal: full JSDoc coverage + updated README by end of sprint
 ```
 
-## Step 2: Generate Inline Documentation with JSDoc or Docstrings
+Step 2: Generate Inline Documentation with JSDoc or Docstrings
 
 For each undocumented file, use Claude to generate inline comments. The key is providing context about the file's purpose, not just asking Claude to "add comments."
 
@@ -75,7 +75,7 @@ For each function document:
 - @returns type and description
 - @example showing a real usage case
 - @throws if the function can raise errors
-Keep comments accurate to the actual code — do not add functionality that is not there.
+Keep comments accurate to the actual code. do not add functionality that is not there.
 ```
 
 For a Python module:
@@ -88,7 +88,7 @@ Include Args, Returns, Raises, and Example sections where applicable.
 
 Run this for each undocumented file. With a 100-line utility file, Claude generates complete JSDoc coverage in under 30 seconds.
 
-## Step 3: Generate or Refresh the README
+Step 3: Generate or Refresh the README
 
 A well-structured README covers installation, configuration, usage, and contribution. Instead of writing it from scratch, let Claude generate it from your actual codebase:
 
@@ -108,9 +108,9 @@ Structure it with these sections:
 Base everything on the actual code. Do not invent features.
 ```
 
-Review the output before committing. Claude occasionally assumes defaults that differ from your setup — the review step takes two minutes and prevents incorrect docs going to production.
+Review the output before committing. Claude occasionally assumes defaults that differ from your setup. the review step takes two minutes and prevents incorrect docs going to production.
 
-## Step 4: Generate API Reference Documentation with the pdf Skill
+Step 4: Generate API Reference Documentation with the pdf Skill
 
 For projects with REST APIs, the `pdf` skill creates formatted, shareable API reference documents. After Claude generates the documentation content, use the skill to package it:
 
@@ -128,15 +128,15 @@ Output as a well-formatted document suitable for sharing with API consumers.
 
 The pdf skill handles formatting, headers, code blocks, and table of contents automatically. The output is ready to attach to a Notion page, share via Slack, or commit to a docs/ folder as an HTML or Markdown file.
 
-## Step 5: Automate Change Documentation on Commit
+Step 5: Automate Change Documentation on Commit
 
-The most powerful part of the workflow is generating documentation diffs alongside code diffs. When you commit changes, Claude generates a human-readable summary of what changed and why — useful for changelogs, pull request descriptions, and release notes.
+The most powerful part of the workflow is generating documentation diffs alongside code diffs. When you commit changes, Claude generates a human-readable summary of what changed and why. useful for changelogs, pull request descriptions, and release notes.
 
 Create a shell script `scripts/doc-update.sh`:
 
 ```bash
 #!/bin/bash
-# doc-update.sh — Run after commits to update documentation
+doc-update.sh. Run after commits to update documentation
 
 CHANGED_FILES=$(git diff HEAD~1 --name-only --diff-filter=AM | grep -E '\.(js|ts|py|go)$')
 
@@ -155,7 +155,7 @@ echo "Changed files: $CHANGED_FILES"
 Then in Claude Code, create a skill at `~/.claude/skills/doc-update.md`:
 
 ```markdown
-# doc-update
+doc-update
 
 You are a documentation updater. When invoked, you will:
 1. Review the changed files provided
@@ -176,7 +176,7 @@ Changed files from last commit:
 - src/models/user.js (added softDelete method)
 ```
 
-## Step 6: Keep Documentation Decisions Persistent
+Step 6: Keep Documentation Decisions Persistent
 
 Documentation standards drift across a long project. Use supermemory to lock in your conventions:
 
@@ -187,7 +187,7 @@ Store these documentation conventions for this project:
 - Use Google-style docstrings for Python
 - README uses H2 headers only (no H3 or deeper)
 - API docs get regenerated every sprint and committed to docs/api-reference.md
-- Changelog format: "YYYY-MM-DD — brief summary of changes"
+- Changelog format: "YYYY-MM-DD. brief summary of changes"
 - Never document private methods (underscore prefix)
 ```
 
@@ -198,7 +198,7 @@ In future sessions, reference this:
 Retrieve documentation conventions for this project before starting any doc work.
 ```
 
-## Step 7: Validate Documentation Coverage
+Step 7: Validate Documentation Coverage
 
 At the end of each sprint, run a coverage check:
 
@@ -216,18 +216,18 @@ Format output as a checklist I can copy into our sprint retrospective.
 This produces a checklist like:
 
 ```
-Documentation Coverage Audit — 2026-03-13
+Documentation Coverage Audit. 2026-03-13
 
-[x] src/utils/helpers.js — 100% coverage
-[x] src/api/routes.js — 100% coverage
-[ ] src/workers/email.js — 0% coverage (added last week)
-[ ] README Installation section — refers to Node 16, project now requires Node 20
-[ ] CHANGELOG — last entry was 2025-11-10
+[x] src/utils/helpers.js. 100% coverage
+[x] src/api/routes.js. 100% coverage
+[ ] src/workers/email.js. 0% coverage (added last week)
+[ ] README Installation section. refers to Node 16, project now requires Node 20
+[ ] CHANGELOG. last entry was 2025-11-10
 ```
 
 Address the open items before the sprint ends.
 
-## Test-Driven Documentation
+Test-Driven Documentation
 
 Tests can serve as executable documentation that never goes out of date. When properly written, test files describe expected behavior in code, making them a reliable complement to traditional docs.
 
@@ -248,16 +248,16 @@ describe('User Authentication', () => {
 });
 ```
 
-Any developer reading the test understands exactly how the authentication system works—inputs, outputs, and error handling. Use the `tdd` skill to generate tests that double as living documentation for your most critical code paths.
+Any developer reading the test understands exactly how the authentication system works, inputs, outputs, and error handling. Use the `tdd` skill to generate tests that double as living documentation for your most critical code paths.
 
-## Measuring Documentation Quality
+Measuring Documentation Quality
 
 Documentation quality matters as much as quantity. Track these metrics to ensure your automated output stays useful:
 
-- **Coverage percentage**: What portion of public APIs have documentation?
-- **Staleness**: When was each doc last updated relative to its source code?
-- **Example presence**: Do docs include working code examples?
-- **Formatting consistency**: Are all files using the same doc style (JSDoc, Google-style, NumPy)?
+- Coverage percentage: What portion of public APIs have documentation?
+- Staleness: When was each doc last updated relative to its source code?
+- Example presence: Do docs include working code examples?
+- Formatting consistency: Are all files using the same doc style (JSDoc, Google-style, NumPy)?
 
 Use Claude to audit documentation quality periodically:
 
@@ -271,27 +271,27 @@ Audit the documentation in this project. Report:
 
 This periodic audit catches drift before it becomes a maintenance burden.
 
-## Putting It Together
+Putting It Together
 
 The full automated code documentation workflow looks like this:
 
-1. **Sprint start**: run the documentation audit prompt, store results in supermemory
-2. **During development**: after writing new functions, generate JSDoc immediately rather than at the end
-3. **On commit**: run `doc-update.sh` and invoke `/doc-update` to keep docs in sync
-4. **API changes**: regenerate API reference with `/pdf` and commit to `docs/`
-5. **Sprint end**: run the coverage audit, fix gaps, update README if needed
+1. Sprint start: run the documentation audit prompt, store results in supermemory
+2. During development: after writing new functions, generate JSDoc immediately rather than at the end
+3. On commit: run `doc-update.sh` and invoke `/doc-update` to keep docs in sync
+4. API changes: regenerate API reference with `/pdf` and commit to `docs/`
+5. Sprint end: run the coverage audit, fix gaps, update README if needed
 
-This workflow turns documentation from a quarterly cleanup task into a continuous, mostly automated process. The total time investment per sprint is under an hour — compared to a full day of manual doc writing that most teams skip entirely.
+This workflow turns documentation from a quarterly cleanup task into a continuous, mostly automated process. The total time investment per sprint is under an hour. compared to a full day of manual doc writing that most teams skip entirely.
 
 ---
 
-## Related Reading
+Related Reading
 
-- [Full Stack Web App with Claude Skills Step by Step](/full-stack-web-app-with-claude-skills-step-by-step/) — Skills applied across the full development lifecycle
-- [Claude Skills Automated Blog Post Workflow Tutorial](/claude-skills-automated-blog-post-workflow-tutorial/) — Automate content creation with Claude skills
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Full developer skill stack
+- [Full Stack Web App with Claude Skills Step by Step](/full-stack-web-app-with-claude-skills-step-by-step/). Skills applied across the full development lifecycle
+- [Claude Skills Automated Blog Post Workflow Tutorial](/claude-skills-automated-blog-post-workflow-tutorial/). Automate content creation with Claude skills
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Full developer skill stack
 
 
-**Related guides:** [Best Way to Use Claude Code for Database Migrations](/best-way-to-use-claude-code-for-database-migrations/)
+Related guides: [Best Way to Use Claude Code for Database Migrations](/best-way-to-use-claude-code-for-database-migrations/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

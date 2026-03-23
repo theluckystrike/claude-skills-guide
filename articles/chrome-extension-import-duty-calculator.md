@@ -12,20 +12,20 @@ score: 8
 ---
 
 {% raw %}
-# Chrome Extension Import Duty Calculator: A Practical Guide
+Chrome Extension Import Duty Calculator: A Practical Guide
 
 International shipping costs involve more than just freight charges. Import duties, customs taxes, and border fees can significantly impact the total landed cost of goods. A well-built chrome extension import duty calculator helps e-commerce sellers, procurement teams, and developers accurately estimate these costs before making purchasing decisions.
 
 This guide covers the technical implementation of an import duty calculator extension, including the underlying calculations, data sources, and practical code examples.
 
-## Understanding Import Duty Calculations
+Understanding Import Duty Calculations
 
 Import duties depend on several factors that vary by country and product type. The primary components include:
 
-- **Customs Value (CVD)**: The total value of imported goods, typically including purchase price, freight, and insurance
-- **Tariff Classification**: Harmonized System (HS) codes that categorize products and determine applicable duty rates
-- **Country of Origin**: Trade agreements between countries can reduce or eliminate duties
-- **De Minimis Thresholds**: Value thresholds below which no duties are charged
+- Customs Value (CVD): The total value of imported goods, typically including purchase price, freight, and insurance
+- Tariff Classification: Harmonized System (HS) codes that categorize products and determine applicable duty rates
+- Country of Origin: Trade agreements between countries can reduce or eliminate duties
+- De Minimis Thresholds: Value thresholds below which no duties are charged
 
 The basic duty calculation follows this formula:
 
@@ -35,15 +35,15 @@ Duty = (CIF Value) × (Duty Rate)
 
 Where CIF represents Cost, Insurance, and Freight added to the original product value.
 
-## Core Architecture for the Extension
+Core Architecture for the Extension
 
 A chrome extension import duty calculator requires three main components:
 
-1. **Popup Interface**: User input for product value, origin country, destination country, and HS code
-2. **Calculation Engine**: Logic to determine applicable duties based on current tariff rates
-3. **Data Storage**: Cached tariff rates and trade agreement data
+1. Popup Interface: User input for product value, origin country, destination country, and HS code
+2. Calculation Engine: Logic to determine applicable duties based on current tariff rates
+3. Data Storage: Cached tariff rates and trade agreement data
 
-### Manifest Configuration
+Manifest Configuration
 
 Your extension needs Manifest V3 configuration with appropriate permissions:
 
@@ -60,7 +60,7 @@ Your extension needs Manifest V3 configuration with appropriate permissions:
 }
 ```
 
-### Popup HTML Structure
+Popup HTML Structure
 
 The popup provides the user interface for entering shipment details:
 
@@ -126,7 +126,7 @@ The popup provides the user interface for entering shipment details:
 </html>
 ```
 
-### Calculation Logic in JavaScript
+Calculation Logic in JavaScript
 
 The popup script handles the actual duty calculations:
 
@@ -217,18 +217,18 @@ function calculateDuties() {
 document.getElementById('calculateBtn').addEventListener('click', calculateDuties);
 ```
 
-## Data Sources for Accurate Calculations
+Data Sources for Accurate Calculations
 
 Production-grade duty calculators require reliable tariff data:
 
-### Free Data Sources
+Free Data Sources
 
-- **World Bank Trade Data**: Provides basic tariff information by country
-- **WTO Tariff Data**: Official tariff rates by HS code
-- **EU TARIC**: Comprehensive EU tariff database
-- **US HTS Database**: US International Trade Commission provides searchable rates
+- World Bank Trade Data: Provides basic tariff information by country
+- WTO Tariff Data: Official tariff rates by HS code
+- EU TARIC: Comprehensive EU tariff database
+- US HTS Database: US International Trade Commission provides searchable rates
 
-### API Options for Real-Time Data
+API Options for Real-Time Data
 
 For more accurate rates, consider integrating with commercial APIs:
 
@@ -248,15 +248,15 @@ async function fetchTariffRate(hsCode, country) {
 ```
 
 Popular options include:
-- **CBP (Customs and Border Protection)** for US rates
-- **Ebury API** for multi-country calculations
-- **Freightos** for comprehensive landed cost estimates
+- CBP (Customs and Border Protection) for US rates
+- Ebury API for multi-country calculations
+- Freightos for comprehensive landed cost estimates
 
-## Handling Edge Cases
+Handling Edge Cases
 
 Robust duty calculators must handle several edge cases:
 
-### De Minimis Thresholds
+De Minimis Thresholds
 
 Many countries have value thresholds below which no duties apply:
 
@@ -283,32 +283,32 @@ function checkDeMinimis(cifValue, destCountry) {
 }
 ```
 
-### Special Product Categories
+Special Product Categories
 
 Certain products have unique duty calculations:
 
-- **Textiles**: Often subject to specific duty rates based on fiber content
-- **Alcohol/Tobacco**: Excise taxes in addition to standard duties
-- **Electronics**: May qualify for duty-free treatment under trade agreements
-- **Food Products**: May require additional inspections and fees
+- Textiles: Often subject to specific duty rates based on fiber content
+- Alcohol/Tobacco: Excise taxes in addition to standard duties
+- Electronics: May qualify for duty-free treatment under trade agreements
+- Food Products: May require additional inspections and fees
 
-## Enhancing the Extension
+Enhancing the Extension
 
 Beyond basic calculations, consider adding these features:
 
-### Price Conversion
+Price Conversion
 Integrate currency conversion for multi-currency support using exchange rate APIs.
 
-### Historical Rate Tracking
+Historical Rate Tracking
 Store calculation history to track how duties change over time.
 
-### Landed Cost Calculator
+Landed Cost Calculator
 Combine duties with shipping costs, insurance, and fulfillment fees for complete cost visibility.
 
-### Multi-Item Support
+Multi-Item Support
 Allow users to calculate duties for multiple products in a single shipment.
 
-## Conclusion
+Conclusion
 
 Building a chrome extension import duty calculator requires understanding international trade rules, handling complex tariff schedules, and presenting results clearly. The foundation outlined here provides a starting point that you can extend based on your specific use case.
 
@@ -317,11 +317,11 @@ For e-commerce sellers, accurate duty estimates prevent unexpected costs and hel
 Start with the basic calculation logic, then progressively add features like real-time API data, trade agreement handling, and multi-currency support as your extension matures.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

@@ -13,11 +13,11 @@ score: 7
 ---
 
 
-# How to Make Claude Code Write Performant SQL Queries
+How to Make Claude Code Write Performant SQL Queries
 
 Getting Claude to generate efficient SQL requires understanding how to communicate performance requirements effectively. This guide shows you concrete patterns for prompting Claude to write queries that scale.
 
-## The Foundation: Express Performance Intent
+The Foundation: Express Performance Intent
 
 Claude responds to clear performance signals. When you need performant queries, state your requirements explicitly rather than hoping Claude guesses.
 
@@ -25,7 +25,7 @@ Instead of asking "Write a query to get user orders," try: "Write a query to get
 
 This approach works because Claude's training included countless Stack Overflow threads where developers complained about slow queries. The model recognizes performance-oriented language and adjusts its output accordingly.
 
-## Indexing Strategies That Claude Understands
+Indexing Strategies That Claude Understands
 
 Effective SQL performance starts with proper indexing. When working with Claude, explicitly mention which columns need indexing and why.
 
@@ -45,15 +45,15 @@ AND status != 'cancelled';
 
 The second version specifies columns explicitly, avoiding SELECT *, and includes a status filter that could use a composite index.
 
-## Avoiding the N+1 Query Problem
+Avoiding the N+1 Query Problem
 
 The N+1 query pattern trips up many AI-generated queries. When retrieving related data, Claude might write separate queries for each related record instead of joining efficiently.
 
 Here's how to prevent it:
 
-**Bad prompt:** "Get all users and their posts"
+Bad prompt: "Get all users and their posts"
 
-**Good prompt:** "Get all users and their posts using a single query with a JOIN, not separate queries"
+Good prompt: "Get all users and their posts using a single query with a JOIN, not separate queries"
 
 ```sql
 -- What Claude might write with vague instructions
@@ -83,9 +83,9 @@ HAVING COUNT(p.id) > 0
 ORDER BY post_count DESC;
 ```
 
-## Optimizing Aggregate Queries
+Optimizing Aggregate Queries
 
-Aggregation queries often become slow as data grows. Correlated subqueries are a frequent performance killer—they execute once per row in the outer query:
+Aggregation queries often become slow as data grows. Correlated subqueries are a frequent performance killer, they execute once per row in the outer query:
 
 ```sql
 -- Slow: Correlated subquery runs once per user
@@ -112,7 +112,7 @@ GROUP BY u.id, u.name;
 
 When prompting Claude, be specific: "Rewrite this correlated subquery as a JOIN with GROUP BY to eliminate per-row execution." Claude recognizes the pattern and generates the optimized version while preserving result correctness.
 
-### Composite Index Strategy
+Composite Index Strategy
 
 Beyond rewriting queries, ask Claude to recommend indexes that support your actual query patterns. A well-designed composite index can cover the JOIN, WHERE, and ORDER BY in a single structure:
 
@@ -122,9 +122,9 @@ CREATE INDEX idx_orders_user_status
 ON orders(user_id, status, total DESC);
 ```
 
-This index serves queries that filter by user and status while sorting by total—all without touching the underlying table rows.
+This index serves queries that filter by user and status while sorting by total, all without touching the underlying table rows.
 
-## Using Claude Skills for SQL Tasks
+Using Claude Skills for SQL Tasks
 
 Several Claude skills enhance SQL query writing and optimization. The tdd skill helps you write tests first, then implement queries that pass those tests. This approach catches performance regressions before deployment.
 
@@ -132,11 +132,11 @@ For generating documentation, the pdf skill can create formatted schema document
 
 When working with frontend-design projects that connect to databases, combining with supermemory helps maintain context about your existing schema across sessions.
 
-## Query Patterns That Scale
+Query Patterns That Scale
 
 Certain patterns consistently produce faster queries. Here are techniques to request from Claude:
 
-**Use covering indexes:** "Write a query that can be satisfied entirely from the index without touching the table."
+Use covering indexes: "Write a query that can be satisfied entirely from the index without touching the table."
 
 ```sql
 -- Index: (status, created_at) INCLUDE (user_id, total)
@@ -147,9 +147,9 @@ AND created_at >= NOW() - INTERVAL '30 days'
 GROUP BY user_id;
 ```
 
-**Prefer WHERE over HAVING:** "Filter data in WHERE clause, not HAVING, since HAVING filters after aggregation."
+Prefer WHERE over HAVING: "Filter data in WHERE clause, not HAVING, since HAVING filters after aggregation."
 
-**Batch operations instead of loops:** "Insert 1000 records in a single INSERT statement, not 1000 individual inserts."
+Batch operations instead of loops: "Insert 1000 records in a single INSERT statement, not 1000 individual inserts."
 
 ```sql
 -- Single bulk insert
@@ -159,7 +159,7 @@ INSERT INTO order_items (order_id, product_id, quantity, price) VALUES
 (2, 101, 1, 29.99);
 ```
 
-**Use EXISTS for presence checks:** When you only need to know if related records exist, EXISTS outperforms COUNT:
+Use EXISTS for presence checks: When you only need to know if related records exist, EXISTS outperforms COUNT:
 
 ```sql
 -- Instead of: SELECT COUNT(*) FROM orders WHERE user_id = 1 HAVING COUNT(*) > 0
@@ -167,7 +167,7 @@ INSERT INTO order_items (order_id, product_id, quantity, price) VALUES
 SELECT EXISTS(SELECT 1 FROM orders WHERE user_id = 1) AS has_orders;
 ```
 
-## Database-Specific Optimizations
+Database-Specific Optimizations
 
 Different databases have unique performance features. Specify your database when prompting Claude:
 
@@ -189,7 +189,7 @@ FROM employees
 ORDER BY department, salary DESC;
 ```
 
-## Testing Query Performance
+Testing Query Performance
 
 Always verify that generated queries perform as expected. Ask Claude to include EXPLAIN plans in comments, then run them against realistic data volumes.
 
@@ -205,17 +205,17 @@ AND created_at > NOW() - INTERVAL '7 days';
 
 If tests fail, use Claude's supermemory to log the slow queries and their EXPLAIN outputs for future reference.
 
-## Summary
+Summary
 
 Making Claude write performant SQL comes down to clear communication. State your performance requirements explicitly, specify indexing needs, avoid N+1 patterns through JOINs, and test with EXPLAIN. Use skills like tdd for regression testing and supermemory for tracking query performance over time.
 
 With these patterns, you can confidently delegate SQL writing to Claude while maintaining the performance standards your applications require.
 
-## Related Reading
+Related Reading
 
-- [Claude Code Profiler Integration Guide](/claude-code-profiler-integration-guide/) — Profile SQL queries to identify bottlenecks
-- [Claude Code Memory Leak Detection Workflow](/claude-code-memory-leak-detection-workflow/) — Database connections can cause memory leaks
-- [Claude Code Technical Debt Tracking Workflow](/claude-code-technical-debt-tracking-workflow/) — Slow queries are a form of technical debt
-- [Advanced Claude Skills Hub](/advanced-hub/) — Advanced database and performance patterns
+- [Claude Code Profiler Integration Guide](/claude-code-profiler-integration-guide/). Profile SQL queries to identify bottlenecks
+- [Claude Code Memory Leak Detection Workflow](/claude-code-memory-leak-detection-workflow/). Database connections can cause memory leaks
+- [Claude Code Technical Debt Tracking Workflow](/claude-code-technical-debt-tracking-workflow/). Slow queries are a form of technical debt
+- [Advanced Claude Skills Hub](/advanced-hub/). Advanced database and performance patterns
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

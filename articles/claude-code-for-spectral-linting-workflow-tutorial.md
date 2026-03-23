@@ -15,7 +15,7 @@ score: 7
 {% raw %}
 Spectral is a powerful JSON/YAML linting tool that helps teams maintain API quality and consistency. When combined with Claude Code, it becomes an even more potent pair for API development workflows. This tutorial will show you how to integrate Spectral into your Claude Code projects and use its capabilities for better API governance.
 
-## Understanding Spectral and Its Role in API Development
+Understanding Spectral and Its Role in API Development
 
 Spectral is an open-source linting tool designed specifically for JSON and YAML documents, with special focus on API specifications like OpenAPI, AsyncAPI, and JSON Schema. Unlike generic linters, Spectral understands the structure of API definitions and can enforce organization-specific rules beyond basic syntax validation.
 
@@ -23,7 +23,7 @@ When working with Claude Code, Spectral acts as a domain-specific expert that va
 
 The integration works particularly well because Claude Code can understand both your business logic and the linting rules, making it possible to receive contextual suggestions that align with your organization's standards.
 
-## Setting Up Spectral in Your Project
+Setting Up Spectral in Your Project
 
 Getting started with Spectral in a Claude Code project is straightforward. First, you'll need to install Spectral as a development dependency in your project. The recommended approach is to use npm or yarn for JavaScript/TypeScript projects, or pip for Python projects.
 
@@ -53,7 +53,7 @@ rules:
 
 This configuration extends the built-in OpenAPI ruleset and customizes several rule severities. The `extends` property pulls in Spectral's official OpenAPI style guide, which provides comprehensive validation out of the box.
 
-## Creating Custom Rules for Your Organization
+Creating Custom Rules for Your Organization
 
 One of Spectral's most powerful features is the ability to create custom rules that enforce your organization's specific standards. These rules can validate naming conventions, require certain fields, or enforce architectural decisions.
 
@@ -82,7 +82,7 @@ This custom rule checks that all version references in your API follow a consist
 
 When Claude Code assists you with API development, it can reference these rules to provide context-aware suggestions that automatically align with your standards.
 
-## Integrating Spectral with Claude Code Workflows
+Integrating Spectral with Claude Code Workflows
 
 Integrating Spectral with Claude Code involves creating custom skills that run linting as part of your development workflow. Claude Code can execute Spectral commands and interpret the results to provide actionable feedback.
 
@@ -111,7 +111,7 @@ jobs:
 
 This ensures that any changes to your API specifications are validated before merging, preventing bad definitions from reaching production.
 
-## Practical Examples: Linting Real-World APIs
+Practical Examples: Linting Real-World APIs
 
 Let's walk through a practical example of using Spectral with Claude Code to improve an API specification. Imagine you're developing a user management API and want to ensure consistency across all endpoints.
 
@@ -147,7 +147,7 @@ These rules ensure every operation has an explicit operationId and that you docu
 
 When Claude Code assists you in adding a new endpoint, it can proactively check these rules and warn you about missing required fields or generic response codes. This makes the development process more efficient by catching issues before you even run the linter.
 
-## Best Practices for Spectral with Claude Code
+Best Practices for Spectral with Claude Code
 
 To get the most out of Spectral and Claude Code working together, follow these best practices:
 
@@ -161,11 +161,11 @@ Document your custom rules so that developers understand what standards they're 
 
 Integrate Spectral early in your development workflow. The earlier you catch issues, the less expensive they are to fix. Consider adding pre-commit hooks that run Spectral on staged files.
 
-## Actionable Advice for Getting Started
+Actionable Advice for Getting Started
 
 Begin by installing Spectral in one of your API projects and running it against your existing OpenAPI specification. Review the results and identify which issues are most important to address.
 
-Create a `.spectral.yaml` file with rules that match your current API design standards. Don't try to enforce everything at once—start with the most critical rules and add more over time.
+Create a `.spectral.yaml` file with rules that match your current API design standards. Don't try to enforce everything at once, start with the most critical rules and add more over time.
 
 Integrate Spectral into your Claude Code workflow by creating a custom skill that runs linting. This allows you to receive real-time feedback as you develop your APIs.
 
@@ -174,10 +174,10 @@ Finally, add Spectral to your CI/CD pipeline to ensure all API changes are valid
 By combining Spectral's powerful linting capabilities with Claude Code's assistance, you can build APIs that are consistent, well-documented, and aligned with your organization's standards from day one.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

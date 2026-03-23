@@ -13,36 +13,36 @@ score: 7
 ---
 
 
-# Claude Code Coupling and Cohesion Improvement
+Claude Code Coupling and Cohesion Improvement
 
 Building Claude Code skills that work well together requires the same software engineering principles you'd apply to any codebase. Coupling and cohesion directly impact how maintainable, extensible, and reliable your skill interactions become. This guide covers practical strategies for improving both in your Claude Code workflows, with concrete examples drawn from real skill compositions.
 
-## Understanding Coupling in Claude Code Skills
+Understanding Coupling in Claude Code Skills
 
 Coupling refers to how dependent one skill is on another. When skills are tightly coupled, changes in one skill cascade into failures in others. Loose coupling keeps skills independent while still enabling collaboration.
 
 In Claude Code, coupling appears in several forms:
 
-- **Skill invocation chains** where one skill assumes another will execute
-- **Shared state** that multiple skills modify without coordination
-- **Prompt dependencies** where output from one skill directly feeds into another without transformation
-- **Implicit assumptions** about execution environment, file paths, or tool availability
+- Skill invocation chains where one skill assumes another will execute
+- Shared state that multiple skills modify without coordination
+- Prompt dependencies where output from one skill directly feeds into another without transformation
+- Implicit assumptions about execution environment, file paths, or tool availability
 
-Consider a workflow that uses **frontend-design** to generate components, then passes the output directly to **tdd** for test generation. If the frontend-design skill changes its output format, tdd breaks immediately. This is tight coupling. The failure is not obvious at authoring time — it only surfaces when the upstream skill changes, often weeks or months later.
+Consider a workflow that uses frontend-design to generate components, then passes the output directly to tdd for test generation. If the frontend-design skill changes its output format, tdd breaks immediately. This is tight coupling. The failure is not obvious at authoring time. it only surfaces when the upstream skill changes, often weeks or months later.
 
 Coupling in skill ecosystems differs from coupling in traditional software because skills communicate through natural language and file system artifacts rather than typed function signatures. This makes implicit coupling especially dangerous: two skills can be tightly coupled without either skill author being aware of it.
 
-### Types of Coupling to Watch For
+Types of Coupling to Watch For
 
-**Content coupling** occurs when one skill reads internal details of another skill's prompt or configuration. If skill B assumes skill A always writes output to `./output/result.json`, that assumption couples B to A's internal implementation.
+Content coupling occurs when one skill reads internal details of another skill's prompt or configuration. If skill B assumes skill A always writes output to `./output/result.json`, that assumption couples B to A's internal implementation.
 
-**Control coupling** occurs when one skill passes flags or parameters that control the behavior of another skill. The downstream skill's behavior depends on the upstream skill knowing exactly how to invoke it.
+Control coupling occurs when one skill passes flags or parameters that control the behavior of another skill. The downstream skill's behavior depends on the upstream skill knowing exactly how to invoke it.
 
-**Data coupling** — the least harmful type — occurs when skills share only the data they need, through defined interfaces. A component generator that outputs a JSON file with a documented schema, which a test generator reads, is data coupled in a healthy way.
+Data coupling. the least harmful type. occurs when skills share only the data they need, through defined interfaces. A component generator that outputs a JSON file with a documented schema, which a test generator reads, is data coupled in a healthy way.
 
-**Common environment coupling** occurs when multiple skills depend on the same environment state: the same working directory, the same environment variables, or the same tool installations. Changes to the environment break all coupled skills simultaneously.
+Common environment coupling occurs when multiple skills depend on the same environment state: the same working directory, the same environment variables, or the same tool installations. Changes to the environment break all coupled skills simultaneously.
 
-### Example: Tight vs Loose Coupling
+Tight vs Loose Coupling
 
 ```javascript
 // Tight coupling - fragile when output format changes
@@ -52,7 +52,7 @@ Coupling in skill ecosystems differs from coupling in traditional software becau
 "Generate a React button component" → normalize output → tdd skill receives consistent format
 ```
 
-The loose coupling approach adds a transformation step but prevents cascading failures. The transformation layer is where you absorb changes — when frontend-design updates its output, you update the transformation layer once rather than updating every downstream skill.
+The loose coupling approach adds a transformation step but prevents cascading failures. The transformation layer is where you absorb changes. when frontend-design updates its output, you update the transformation layer once rather than updating every downstream skill.
 
 Here is a more concrete example. Suppose frontend-design generates components with this structure in v1:
 
@@ -98,11 +98,11 @@ function normalizeComponentSpec(rawOutput) {
 }
 ```
 
-## Achieving High Cohesion Within Skills
+Achieving High Cohesion Within Skills
 
 Cohesion measures how closely related the responsibilities of a single skill are. Highly cohesive skills do one thing well. Low cohesion spreads functionality across unrelated areas, making skills harder to maintain and test.
 
-The **pdf** skill demonstrates high cohesion — it generates PDFs. The **supermemory** skill focuses on knowledge retrieval. Each has a clear, singular purpose. You can reason about what they do, test them in isolation, and replace them without affecting unrelated parts of your workflow.
+The pdf skill demonstrates high cohesion. it generates PDFs. The supermemory skill focuses on knowledge retrieval. Each has a clear, singular purpose. You can reason about what they do, test them in isolation, and replace them without affecting unrelated parts of your workflow.
 
 When building custom skills, avoid the trap of creating "god skills" that handle documentation, testing, generation, and deployment. This trap is easy to fall into because adding a new capability to an existing skill feels faster than creating a new one. Resist it. The short-term convenience of a monolithic skill becomes a long-term maintenance burden.
 
@@ -114,32 +114,32 @@ A god skill creates several problems:
 
 Instead, decompose into focused skills:
 
-- **tdd** handles test creation
-- **docgen** handles documentation generation
-- **frontend-design** handles component creation
+- tdd handles test creation
+- docgen handles documentation generation
+- frontend-design handles component creation
 
-### Measuring Cohesion
+Measuring Cohesion
 
 You can informally assess a skill's cohesion by writing a one-sentence description of what it does. If you need more than one sentence, or if your description contains "and," the skill probably has low cohesion.
 
 | One-sentence description | Cohesion level |
 |---|---|
 | "Generates Jest unit tests from a component specification" | High |
-| "Generates tests and documentation and deploys to staging" | Low — three distinct responsibilities |
+| "Generates tests and documentation and deploys to staging" | Low. three distinct responsibilities |
 | "Formats API responses for display" | High |
-| "Handles all API-related operations" | Low — vague and broad |
+| "Handles all API-related operations" | Low. vague and broad |
 
-### Practical Cohesion Example
+Practical Cohesion Example
 
 ```yaml
-# Instead of one monolithic skill
+Instead of one monolithic skill
 skill: project-automation
   - generates code
   - writes tests
   - deploys
   - creates documentation
 
-# Decompose into cohesive skills
+Decompose into cohesive skills
 skill: code-generator
   responsibility: generate code from specifications
 
@@ -155,19 +155,19 @@ skill: deploy-manager
 
 The decomposed set of skills is more lines of configuration but dramatically easier to reason about. Each skill's behavior is predictable. If the test generation logic needs to change, you modify only `tdd-companion` with no risk to the deployment or documentation behavior.
 
-## Strategies for Improvement
+Strategies for Improvement
 
-### 1. Use Explicit Interfaces
+1. Use Explicit Interfaces
 
-Define clear input and output formats between skills. When **canvas-design** generates visual assets and **pdf** includes them in documentation, establish a contract: canvas-design outputs SVG paths at a specific location, pdf reads from that location.
+Define clear input and output formats between skills. When canvas-design generates visual assets and pdf includes them in documentation, establish a contract: canvas-design outputs SVG paths at a specific location, pdf reads from that location.
 
 ```bash
-# Define the interface contract
+Define the interface contract
 "canvas-design: output SVG files to /assets/designs/"
 "pdf: read SVG files from /assets/designs/ for inclusion"
 ```
 
-Document these contracts in a shared location that all skill authors can reference. A simple markdown file listing each skill's inputs and outputs is sufficient. Treat this documentation as code — update it when interfaces change, and review it when skills are modified.
+Document these contracts in a shared location that all skill authors can reference. A simple markdown file listing each skill's inputs and outputs is sufficient. Treat this documentation as code. update it when interfaces change, and review it when skills are modified.
 
 For skills that communicate through file system artifacts, use a consistent directory convention:
 
@@ -181,9 +181,9 @@ For skills that communicate through file system artifacts, use a consistent dire
 
 This prevents two skills from accidentally writing to the same location and overwriting each other's output.
 
-### 2. Implement Error Boundaries
+2. Implement Error Boundaries
 
-Skills should handle failures gracefully rather than propagating errors. The **tdd** skill should provide meaningful feedback when it cannot generate tests, rather than passing invalid output downstream.
+Skills should handle failures gracefully rather than propagating errors. The tdd skill should provide meaningful feedback when it cannot generate tests, rather than passing invalid output downstream.
 
 ```javascript
 // Skill error handling pattern
@@ -246,9 +246,9 @@ class SkillCircuitBreaker {
 }
 ```
 
-### 3. Version Your Skill Outputs
+3. Version Your Skill Outputs
 
-When skills communicate, version the output format. This allows **frontend-design** to produce v2 output while **tdd** still understands v1, providing migration time.
+When skills communicate, version the output format. This allows frontend-design to produce v2 output while tdd still understands v1, providing migration time.
 
 ```yaml
 output_version: "2.0"
@@ -259,9 +259,9 @@ Version numbers in skill output serve as a communication contract. When you chan
 
 Semantic versioning applies here: patch versions for bug fixes that don't change the format, minor versions for additive changes (new fields), major versions for breaking changes (removed or renamed fields). Communicate major version changes to all skill consumers before shipping.
 
-### 4. Prefer Event-Based Communication
+4. Prefer Event-Based Communication
 
-Instead of direct skill invocation chains, use event-based patterns where skills publish capabilities and subscribe to relevant events. The **supermemory** skill can index events from other skills without direct coupling.
+Instead of direct skill invocation chains, use event-based patterns where skills publish capabilities and subscribe to relevant events. The supermemory skill can index events from other skills without direct coupling.
 
 ```javascript
 // Event-based pattern
@@ -283,7 +283,7 @@ This has practical implications for extensibility. Adding a new skill that react
 For Claude Code workflows, you can approximate event-based communication using a shared event log file:
 
 ```json
-// /workspace/events.jsonl — append-only event log
+// /workspace/events.jsonl. append-only event log
 {"timestamp": "2026-03-14T10:00:00Z", "event": "component-created", "data": {"name": "Button", "framework": "react"}}
 {"timestamp": "2026-03-14T10:01:00Z", "event": "tests-generated", "data": {"component": "Button", "count": 5}}
 {"timestamp": "2026-03-14T10:02:00Z", "event": "docs-generated", "data": {"component": "Button", "pages": 2}}
@@ -291,9 +291,9 @@ For Claude Code workflows, you can approximate event-based communication using a
 
 Skills write to this log when they complete work, and other skills can read from it to understand what has already happened.
 
-### 5. Extract Shared Logic
+5. Extract Shared Logic
 
-When multiple skills share functionality — file parsing, API calls, formatting — extract to shared utilities. This reduces duplication and ensures consistent behavior.
+When multiple skills share functionality. file parsing, API calls, formatting. extract to shared utilities. This reduces duplication and ensures consistent behavior.
 
 ```javascript
 // shared/utils.js - used by multiple skills
@@ -306,7 +306,7 @@ export function formatOutput(data, type) {
 }
 ```
 
-Shared utilities become a dependency that all consuming skills must coordinate on. Update them carefully. A change to `parseSpecification` affects every skill that calls it. This sounds like coupling, and it is — but it is explicit, documented coupling that is easier to manage than hidden duplication.
+Shared utilities become a dependency that all consuming skills must coordinate on. Update them carefully. A change to `parseSpecification` affects every skill that calls it. This sounds like coupling, and it is. but it is explicit, documented coupling that is easier to manage than hidden duplication.
 
 Track which skills use each shared utility. This dependency graph tells you the blast radius of a utility change. A utility used by 10 skills requires more careful versioning than one used by 2.
 
@@ -321,9 +321,9 @@ export function parseSpecification(input, options = {}) {
 }
 ```
 
-## Testing Coupled Systems
+Testing Coupled Systems
 
-Testing skills in isolation differs from testing their interactions. The **tdd** skill helps write unit tests for individual skill logic, but you also need integration tests for skill chains.
+Testing skills in isolation differs from testing their interactions. The tdd skill helps write unit tests for individual skill logic, but you also need integration tests for skill chains.
 
 ```javascript
 // Integration test for skill chain
@@ -339,9 +339,9 @@ test("frontend-design → tdd → pdf pipeline", async () => {
 
 Integration tests for skill chains expose coupling problems that unit tests miss. A unit test for `tdd.generate` might pass because the test mocks the input. The integration test fails because the real output from `frontendDesign.generate` has a different format than the mock assumed.
 
-Use **supermemory** to maintain test cases and expected behaviors as living documentation. Store example inputs and outputs for each skill. When a skill changes, compare its new output to the stored examples to detect interface changes before they propagate.
+Use supermemory to maintain test cases and expected behaviors as living documentation. Store example inputs and outputs for each skill. When a skill changes, compare its new output to the stored examples to detect interface changes before they propagate.
 
-### Contract Tests
+Contract Tests
 
 For skills that communicate through defined interfaces, write contract tests that validate both sides of the interface:
 
@@ -364,14 +364,14 @@ test("tdd handles minimum required input fields", async () => {
 
 Contract tests give you confidence that interface changes will be caught before they cause runtime failures. They are faster than full integration tests and can be run on every commit.
 
-## Measuring Success
+Measuring Success
 
 Track these metrics to gauge improvement:
 
-- **Change propagation**: How many skills must change when one skill modifies its output?
-- **Reusability**: Can skills be used independently of each other?
-- **Test coverage**: What percentage of skill interactions have test coverage?
-- **Onboarding time**: How quickly can new developers understand skill responsibilities?
+- Change propagation: How many skills must change when one skill modifies its output?
+- Reusability: Can skills be used independently of each other?
+- Test coverage: What percentage of skill interactions have test coverage?
+- Onboarding time: How quickly can new developers understand skill responsibilities?
 
 A useful target: any single skill should be replaceable without modifying more than one other skill. If replacing skill A requires changes to skills B, C, and D, you have a coupling problem. Reducing this "replacement surface" is a concrete, measurable goal.
 
@@ -384,19 +384,19 @@ Track change propagation by keeping a log of which skills were modified together
 | Skill interaction test coverage | <30% | 50% | 80%+ |
 | Onboarding time to new skill | Days | Hours | <1 hour |
 
-## Common Pitfalls to Avoid
+Common Pitfalls to Avoid
 
-Over-modularization creates its own problems. If you split skills too finely, you introduce management overhead and complex invocation chains. Aim for a balance where each skill has clear ownership and reasonable scope. A skill that does five lines of work is probably too small — it adds coordination overhead without adding clarity.
+Over-modularization creates its own problems. If you split skills too finely, you introduce management overhead and complex invocation chains. Aim for a balance where each skill has clear ownership and reasonable scope. A skill that does five lines of work is probably too small. it adds coordination overhead without adding clarity.
 
-Avoid hidden dependencies — document exactly what each skill requires from others. The **alg** skill helps analyze dependencies and identify potential issues before they cause failures. Undocumented dependencies are worse than documented ones of the same severity, because they are invisible until they break.
+Avoid hidden dependencies. document exactly what each skill requires from others. The alg skill helps analyze dependencies and identify potential issues before they cause failures. Undocumented dependencies are worse than documented ones of the same severity, because they are invisible until they break.
 
 Temporal coupling is a subtle problem worth naming explicitly. Temporal coupling occurs when skills must execute in a specific order, and the dependency is not expressed in the interface but only enforced by convention. If skill B assumes that skill A has already written its output file, and nothing enforces that A runs before B, you have temporal coupling. Make this explicit by having B check for A's output file and fail with a clear error if it is not present, rather than silently producing incorrect results.
 
-Finally, do not conflate coupling with communication. Skills must communicate to collaborate. The goal is not zero coupling — it is coupling that is explicit, documented, versioned, and minimal. Well-structured coupling is better than hidden coupling at any intensity level.
+Finally, do not conflate coupling with communication. Skills must communicate to collaborate. The goal is not zero coupling. it is coupling that is explicit, documented, versioned, and minimal. Well-structured coupling is better than hidden coupling at any intensity level.
 
-## Final Recommendations
+Final Recommendations
 
-Start by auditing your existing skill set. Identify tightly coupled pairs and introduce transformation layers. Look for low-cohesion skills and refactor them into focused components. Use **tdd** to validate changes without introducing regressions.
+Start by auditing your existing skill set. Identify tightly coupled pairs and introduce transformation layers. Look for low-cohesion skills and refactor them into focused components. Use tdd to validate changes without introducing regressions.
 
 When auditing, ask these questions for each skill:
 1. Can you describe what this skill does in one sentence?
@@ -406,13 +406,13 @@ When auditing, ask these questions for each skill:
 
 The answers reveal your highest-priority refactoring targets. Skills that fail multiple questions are the ones that will cause the most maintenance pain as your workflow grows.
 
-The goal is a skill ecosystem where individual skills remain maintainable, interchangeable, and testable — mirroring the best practices you'd apply to any software project. A well-designed skill ecosystem lets you swap out implementations, add new capabilities, and debug failures efficiently. These properties become more valuable as the ecosystem grows, which is exactly when you will be glad you invested in them early.
+The goal is a skill ecosystem where individual skills remain maintainable, interchangeable, and testable. mirroring the best practices you'd apply to any software project. A well-designed skill ecosystem lets you swap out implementations, add new capabilities, and debug failures efficiently. These properties become more valuable as the ecosystem grows, which is exactly when you will be glad you invested in them early.
 
-## Related Reading
+Related Reading
 
-- [Claude Code Code Complexity Reduction Guide](/claude-code-code-complexity-reduction-guide/) — Complexity and coupling/cohesion are related metrics
-- [How to Make Claude Code Follow DRY and SOLID Principles](/how-to-make-claude-code-follow-dry-solid-principles/) — SOLID principles directly address coupling
-- [Claude Code Cyclomatic Complexity Reduction](/claude-code-cyclomatic-complexity-reduction/) — Cyclomatic complexity reduction often improves cohesion
-- [Claude Code Technical Debt Tracking Workflow](/claude-code-technical-debt-tracking-workflow/) — High coupling is a technical debt indicator
+- [Claude Code Code Complexity Reduction Guide](/claude-code-code-complexity-reduction-guide/). Complexity and coupling/cohesion are related metrics
+- [How to Make Claude Code Follow DRY and SOLID Principles](/how-to-make-claude-code-follow-dry-solid-principles/). SOLID principles directly address coupling
+- [Claude Code Cyclomatic Complexity Reduction](/claude-code-cyclomatic-complexity-reduction/). Cyclomatic complexity reduction often improves cohesion
+- [Claude Code Technical Debt Tracking Workflow](/claude-code-technical-debt-tracking-workflow/). High coupling is a technical debt indicator
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

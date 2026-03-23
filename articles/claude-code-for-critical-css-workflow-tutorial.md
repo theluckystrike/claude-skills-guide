@@ -16,34 +16,34 @@ score: 7
 {% raw %}
 Critical CSS is one of the most impactful optimizations you can make for your website's performance. By inlining the CSS needed to render above-the-fold content and deferring the rest, you can dramatically reduce render-blocking resources and improve First Contentful Paint (FCP). In this tutorial, we'll explore how to use Claude Code to automate and streamline your critical CSS workflow.
 
-## What is Critical CSS?
+What is Critical CSS?
 
 Critical CSS is the subset of CSS rules that the browser needs to render the initial viewport of your page. Instead of loading your entire stylesheet (which can be hundreds of kilobytes), the browser only downloads and processes the essential styles needed for above-the-fold content. This approach significantly improves perceived load time and Core Web Vitals.
 
-### Why Critical CSS Matters
+Why Critical CSS Matters
 
-- **Faster First Contentful Paint**: Users see content sooner
-- **Reduced Render Blocking**: Fewer resources blocking initial render
-- **Better Core Web Vitals**: Improves LCP and FCP scores
-- **Improved User Experience**: Pages feel more responsive
+- Faster First Contentful Paint: Users see content sooner
+- Reduced Render Blocking: Fewer resources blocking initial render
+- Better Core Web Vitals: Improves LCP and FCP scores
+- Improved User Experience: Pages feel more responsive
 
-## Setting Up Your Critical CSS Workflow
+Setting Up Your Critical CSS Workflow
 
 Before we dive into Claude Code integration, let's set up a basic project structure. We'll assume you have a modern web project with a CSS build process.
 
-### Project Structure
+Project Structure
 
 ```javascript
 // critical-css-project/
-// ├── src/
-// │   ├── styles/
-// │   │   ├── main.css
-// │   │   └── components.css
-// ├── dist/
-// └── critical.config.js
+//  src/
+//     styles/
+//        main.css
+//        components.css
+//  dist/
+//  critical.config.js
 ```
 
-### Installing Required Tools
+Installing Required Tools
 
 You'll need a few tools to generate critical CSS effectively:
 
@@ -51,11 +51,11 @@ You'll need a few tools to generate critical CSS effectively:
 npm install --save-dev critical penthouse inline-critical
 ```
 
-## Automating Critical CSS with Claude Code
+Automating Critical CSS with Claude Code
 
 Claude Code excels at automating repetitive tasks. Let's create a comprehensive workflow that generates, inlines, and optimizes critical CSS automatically.
 
-### Creating Your First Claude Code Script
+Creating Your First Claude Code Script
 
 Create a file named `critical-workflow.js` in your project:
 
@@ -99,9 +99,9 @@ async function generateCriticalCSS() {
 
   try {
     await critical.generate(options);
-    console.log('✅ Critical CSS generated successfully!');
+    console.log(' Critical CSS generated successfully!');
   } catch (error) {
-    console.error('❌ Error generating critical CSS:', error);
+    console.error(' Error generating critical CSS:', error);
     throw error;
   }
 }
@@ -109,7 +109,7 @@ async function generateCriticalCSS() {
 generateCriticalCSS();
 ```
 
-### Running the Workflow
+Running the Workflow
 
 Execute the script with Node.js:
 
@@ -117,7 +117,7 @@ Execute the script with Node.js:
 node critical-workflow.js
 ```
 
-## Integrating with Your Build Process
+Integrating with Your Build Process
 
 For a fully automated workflow, integrate the critical CSS generation into your build pipeline. Here's how to add it to your `package.json`:
 
@@ -132,7 +132,7 @@ For a fully automated workflow, integrate the critical CSS generation into your 
 }
 ```
 
-### Advanced: Multi-Page Critical CSS
+Advanced: Multi-Page Critical CSS
 
 For larger sites, you'll want to generate critical CSS for multiple pages:
 
@@ -161,14 +161,14 @@ async function generateAllCriticalCSS() {
       ],
       minify: true
     });
-    console.log(`✅ Processed: ${page.src}`);
+    console.log(` Processed: ${page.src}`);
   }
 }
 
 generateAllCriticalCSS();
 ```
 
-## Optimizing Your Workflow with Claude Code Prompts
+Optimizing Your Workflow with Claude Code Prompts
 
 Claude Code can help you generate optimized prompts for your critical CSS workflow. Here's a sample prompt you can use:
 
@@ -181,7 +181,7 @@ Create a Node.js script that:
 5. Includes error handling and logging
 ```
 
-### Handling Dynamic Content
+Handling Dynamic Content
 
 Critical CSS becomes challenging with dynamic content. Here are strategies to handle this:
 
@@ -211,15 +211,15 @@ const contentConfigs = {
 };
 ```
 
-## Best Practices for Critical CSS
+Best Practices for Critical CSS
 
 Follow these best practices to maximize the effectiveness of your critical CSS implementation:
 
-### 1. Keep Critical CSS Small
+1. Keep Critical CSS Small
 
 Aim for under 10KB of critical CSS. Larger files defeat the purpose of the optimization. Use CSS purging and minification to keep sizes down.
 
-### 2. Inline Strategically
+2. Inline Strategically
 
 Only inline critical CSS in the `<head>`. Non-critical CSS should be loaded asynchronously or deferred:
 
@@ -234,36 +234,36 @@ Only inline critical CSS in the `<head>`. Non-critical CSS should be loaded asyn
 <noscript><link rel="stylesheet" href="styles.css"></noscript>
 ```
 
-### 3. Test Across Devices
+3. Test Across Devices
 
 Always test critical CSS across multiple viewport sizes. What works on desktop may not work on mobile and vice versa.
 
-### 4. Automate the Workflow
+4. Automate the Workflow
 
 Integrate critical CSS generation into your CI/CD pipeline to ensure every deployment includes optimized CSS:
 
 ```bash
-# Example CI/CD command
+Example CI/CD command
 npm run build && npx critical css/dist/index.html --inline --minify
 ```
 
-## Troubleshooting Common Issues
+Troubleshooting Common Issues
 
-### CSS Not Inlining
+CSS Not Inlining
 
 If your CSS isn't inlining, check:
 - Is the CSS file being generated correctly?
 - Are your selectors matching the HTML?
 - Is the HTML file accessible at the specified path?
 
-### Incorrect Critical Path
+Incorrect Critical Path
 
 If above-the-fold content looks wrong:
 - Verify your `include` array matches your actual DOM selectors
 - Check if dynamic content affects initial render
 - Test with actual device dimensions, not just responsive presets
 
-## Conclusion
+Conclusion
 
 Automating your critical CSS workflow with Claude Code can significantly improve your site's performance while reducing manual effort. By following this tutorial, you've learned how to:
 
@@ -277,10 +277,10 @@ Remember, critical CSS is just one piece of the performance puzzle. Combine it w
 Start implementing critical CSS in your projects today and watch your Core Web Vitals improve!
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

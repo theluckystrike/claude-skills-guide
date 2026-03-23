@@ -14,15 +14,15 @@ score: 7
 
 
 {% raw %}
-# Claude Code vLLM Inference Server Deployment Workflow
+Claude Code vLLM Inference Server Deployment Workflow
 
 Deploying large language model inference servers has become a critical skill for AI engineering teams. vLLM, the high-performance inference framework, offers exceptional throughput but requires careful orchestration for production deployments. Claude Code provides powerful skills that can automate virtually every step of the vLLM deployment pipeline, from environment setup to Kubernetes scaling.
 
-This guide focuses on the **deployment automation workflow**: using Claude Code slash-command skills to generate Dockerfiles, Kubernetes manifests, CI/CD pipelines, security audits, and monitoring dashboards. If you are looking for help writing the vLLM Python server code itself — setting up the inference engine, building a FastAPI layer, or instrumenting metrics — see the companion guide [Claude Code for vLLM Inference Server Workflow](/claude-code-for-vllm-inference-server-workflow/).
+This guide focuses on the deployment automation workflow: using Claude Code slash-command skills to generate Dockerfiles, Kubernetes manifests, CI/CD pipelines, security audits, and monitoring dashboards. If you are looking for help writing the vLLM Python server code itself. setting up the inference engine, building a FastAPI layer, or instrumenting metrics. see the companion guide [Claude Code for vLLM Inference Server Workflow](/claude-code-for-vllm-inference-server-workflow/).
 
 This guide walks you through a complete deployment workflow using Claude Code skills, showing practical examples you can adapt for your infrastructure.
 
-## Setting Up Your Development Environment
+Setting Up Your Development Environment
 
 Before deploying vLLM, ensure your development environment is properly configured. Claude Code can handle this automatically with the right skills loaded.
 
@@ -42,7 +42,7 @@ Create a Dockerfile optimized for vLLM:
 
 The generated Dockerfile will include proper GPU access configuration, volume mounts for model caching, and health check endpoints that Kubernetes can use for readiness probes.
 
-## Building the vLLM Container
+Building the vLLM Container
 
 With your Dockerfile ready, build and test the container locally:
 
@@ -64,7 +64,7 @@ docker run --gpus all -p 8000:8000 \
 
 Claude Code can generate this command with the appropriate model and resource allocations based on your hardware specifications. It understands GPU memory requirements and will suggest appropriate values based on the model size you specify.
 
-## Kubernetes Deployment Configuration
+Kubernetes Deployment Configuration
 
 For production deployments, Kubernetes is the standard orchestration platform. Claude Code excels at generating Kubernetes manifests tailored to vLLM's requirements.
 
@@ -85,7 +85,7 @@ resources:
     memory: "16Gi"
 ```
 
-Second, a HorizontalPodAutoscaler that scales based on GPU utilization or request latency:
+Second, a HorizontalPodAutoscaler that scales based on GPU usage or request latency:
 
 ```yaml
 metrics:
@@ -110,7 +110,7 @@ readinessProbe:
 
 Claude Code understands that vLLM needs warm-up time before serving requests and configures appropriate probe delays accordingly.
 
-## Environment Variables and Configuration
+Environment Variables and Configuration
 
 vLLM relies on numerous environment variables for optimal performance. Claude Code can generate secure configuration files:
 
@@ -131,7 +131,7 @@ env:
       key: huggingface-token
 ```
 
-## Continuous Deployment with GitHub Actions
+Continuous Deployment with GitHub Actions
 
 Automate your deployment pipeline with Claude Code generating GitHub Actions workflows:
 
@@ -156,7 +156,7 @@ deploy-staging:
 
 Claude Code ensures the pipeline follows best practices including image signing, vulnerability scanning, and proper secret management.
 
-## Monitoring and Observability
+Monitoring and Observability
 
 Production inference servers require comprehensive monitoring. Claude Code can set up Prometheus metrics collection and Grafana dashboards:
 
@@ -176,9 +176,9 @@ vLLM exposes metrics at the `/metrics` endpoint in Prometheus format. Claude Cod
     regex: vllm-inference
 ```
 
-The generated Grafana dashboard includes key performance indicators: requests per second, latency percentiles (p50, p95, p99), GPU memory usage, GPU utilization percentage, and error rates by type.
+The generated Grafana dashboard includes key performance indicators: requests per second, latency percentiles (p50, p95, p99), GPU memory usage, GPU usage percentage, and error rates by type.
 
-## Handling Model Updates
+Handling Model Updates
 
 When you need to update the model or change configurations, Claude Code can generate rollback procedures and update strategies:
 
@@ -188,7 +188,7 @@ When you need to update the model or change configurations, Claude Code can gene
 
 The strategy ensures zero-downtime updates by using vLLM's ability to hot-reload models while serving requests. Claude Code generates the necessary Kubernetes resources for canary deployments using Istio or similar service meshes.
 
-## Security Hardening
+Security Hardening
 
 Production deployments require security hardening. Claude Code can audit and improve your deployment:
 
@@ -198,7 +198,7 @@ Production deployments require security hardening. Claude Code can audit and imp
 
 Common security improvements include restricting the metrics endpoint to internal networks, adding authentication middleware, running vLLM as a non-root user, and implementing network policies to restrict communication.
 
-## Conclusion
+Conclusion
 
 Claude Code transforms vLLM inference server deployment from a manual, error-prone process into an automated, repeatable workflow. By using skills for Docker, Kubernetes, GitHub Actions, and monitoring, you can deploy production-grade inference infrastructure in minutes rather than days.
 
@@ -208,10 +208,10 @@ If you have not yet written the vLLM inference server itself, the companion guid
 {% endraw %}
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

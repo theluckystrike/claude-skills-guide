@@ -12,15 +12,15 @@ categories: [guides]
 
 {% raw %}
 
-Developing Chrome extensions with TypeScript requires a solid development environment that supports hot reloading, type checking, and seamless debugging. A well-configured TypeScript playground for Chrome extension development can significantly accelerate your workflow and catch errors before they reach production.
+Developing Chrome extensions with TypeScript requires a solid development environment that supports hot reloading, type checking, and smooth debugging. A well-configured TypeScript playground for Chrome extension development can significantly accelerate your workflow and catch errors before they reach production.
 
-## Why Use TypeScript for Chrome Extensions
+Why Use TypeScript for Chrome Extensions
 
 TypeScript brings static typing to your extension development, making it easier to work with the Chrome Extensions API, content scripts, and background workers. The type definitions for Chrome APIs help you understand available methods and catch mistakes at compile time rather than runtime.
 
 Modern Chrome extension development often involves complex build processes with bundlers like Vite, Rollup, or Webpack. Setting up a playground environment lets you experiment with different configurations without affecting your production build.
 
-## Setting Up Your Development Environment
+Setting Up Your Development Environment
 
 The foundation of any TypeScript Chrome extension project starts with proper configuration. Create a new directory and initialize your project with the necessary dependencies:
 
@@ -42,7 +42,7 @@ Your `tsconfig.json` should enable strict mode and configure the output for brow
     "lib": ["ES2020", "DOM"],
     "outDir": "./dist"
   },
-  "include": ["src/**/*"]
+  "include": ["src//*"]
 }
 ```
 
@@ -73,7 +73,7 @@ export default defineConfig({
 });
 ```
 
-## Working with Manifest V3
+Working with Manifest V3
 
 Chrome now requires Manifest V3 for all extensions, which changes how background scripts operate. Instead of persistent background pages, you now use service workers. Here's how to structure your background service worker:
 
@@ -94,7 +94,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 });
 ```
 
-## Content Script Types
+Content Script Types
 
 Content scripts run in the context of web pages and need careful type handling. Create a typesafe wrapper:
 
@@ -122,7 +122,7 @@ export function injectScript(fn: () => void): void {
 }
 ```
 
-## Popup Development
+Popup Development
 
 The popup UI uses HTML, CSS, and TypeScript. Here's a simple popup structure:
 
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 ```
 
-## Loading Your Extension
+Loading Your Extension
 
 After building your extension, load it into Chrome:
 
@@ -152,13 +152,13 @@ After building your extension, load it into Chrome:
 
 For development, use Chrome's auto-reload feature or install an extension like "Extension Reloader" to refresh without manually reloading.
 
-## Debugging Techniques
+Debugging Techniques
 
 The Chrome DevTools work with your extension components. Access debugging through:
 
-- **Background service worker**: Find it in `chrome://extensions/` under "Service Worker" 
-- **Popup**: Right-click the extension icon and choose "Inspect popup"
-- **Content scripts**: Use the regular DevTools console for the page you're viewing
+- Background service worker: Find it in `chrome://extensions/` under "Service Worker" 
+- Popup: Right-click the extension icon and choose "Inspect popup"
+- Content scripts: Use the regular DevTools console for the page you're viewing
 
 Add logging throughout your code:
 
@@ -168,7 +168,7 @@ console.info('[Content] Page elements found:', document.body.children.length);
 console.warn('[Popup] Action button not found');
 ```
 
-## Testing Your Extension
+Testing Your Extension
 
 Write tests for your extension logic using Vitest or Jest:
 
@@ -189,16 +189,16 @@ describe('Content Script Utilities', () => {
 
 Run tests with the jsdom environment or use Puppeteer for integration testing with a real browser context.
 
-## Common Pitfalls
+Common Pitfalls
 
 Avoid these frequent issues when developing Chrome extensions with TypeScript:
 
-- **Missing permissions**: Always declare required permissions in your manifest
-- **Content script isolation**: Remember content scripts run in an isolated world
-- **Service worker timeouts**: Service workers can terminate after 30 seconds of inactivity
-- **Cross-origin requests**: Use the Chrome API for network requests from background scripts
+- Missing permissions: Always declare required permissions in your manifest
+- Content script isolation: Remember content scripts run in an isolated world
+- Service worker timeouts: Service workers can terminate after 30 seconds of inactivity
+- Cross-origin requests: Use the Chrome API for network requests from background scripts
 
-## Hot Reload Without Manual Refresh
+Hot Reload Without Manual Refresh
 
 One of the most frustrating parts of Chrome extension development is the constant cycle of building, reloading the extension in `chrome://extensions/`, and refreshing the test page. You can eliminate most of this friction with a watch script combined with a small reload helper.
 
@@ -226,9 +226,9 @@ npm run dev &
 npx web-ext run --target=chromium --source-dir=dist
 ```
 
-For projects where `web-ext` is overkill, you can write a lightweight background script that polls for file changes using the `chrome.runtime.reload()` API. The key insight is that the service worker can call `chrome.runtime.reload()` programmatically, so any reload trigger you can inject—whether through a WebSocket connection to a dev server or a simple polling interval—works cleanly.
+For projects where `web-ext` is overkill, you can write a lightweight background script that polls for file changes using the `chrome.runtime.reload()` API. The key insight is that the service worker can call `chrome.runtime.reload()` programmatically, so any reload trigger you can inject, whether through a WebSocket connection to a dev server or a simple polling interval, works cleanly.
 
-## Structuring Message Passing with Types
+Structuring Message Passing with Types
 
 The Chrome message passing system is a frequent source of runtime bugs because messages are untyped by default. A typed message bus prevents an entire class of errors where the sender and receiver disagree on message shape.
 
@@ -303,7 +303,7 @@ chrome.runtime.onMessage.addListener(
 
 This pattern catches mismatches at compile time rather than during a frustrating debugging session at 11pm.
 
-## Storage Abstraction with TypeScript
+Storage Abstraction with TypeScript
 
 Chrome's `storage.local` and `storage.sync` APIs are weakly typed. Wrapping them in a typed storage layer makes your code far easier to maintain and refactor.
 
@@ -361,7 +361,7 @@ if (prefs) {
 
 This pattern also makes it straightforward to add storage migrations later when your schema changes between extension versions.
 
-## Handling Permissions at Runtime
+Handling Permissions at Runtime
 
 Manifest V3 encourages requesting permissions at runtime rather than bundling everything in the manifest upfront. TypeScript makes it easy to build a safe permissions helper:
 
@@ -411,7 +411,7 @@ async function readClipboard(): Promise<string | null> {
 }
 ```
 
-## Production Build
+Production Build
 
 When ready to publish, create a production build:
 
@@ -429,15 +429,15 @@ cd dist && zip -r ../extension.zip . && cd ..
 
 This creates a clean package ready for the Chrome Web Store upload form.
 
-A well-configured TypeScript playground for Chrome extension development gives you confidence in your code quality and speeds up iteration. The typed message passing, storage abstraction, and permission helpers described here prevent the most common runtime errors while making your codebase easier for collaborators to navigate. The setup described here provides a solid foundation for building robust extensions with modern JavaScript tooling.
+A well-configured TypeScript playground for Chrome extension development gives you confidence in your code quality and speeds up iteration. The typed message passing, storage abstraction, and permission helpers described here prevent the most common runtime errors while making your codebase easier for collaborators to navigate. The setup described here provides a solid foundation for building solid extensions with modern JavaScript tooling.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 {% endraw %}

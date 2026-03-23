@@ -18,28 +18,28 @@ score: 7
 
 Flamegraphs are an essential tool for understanding application performance, showing how CPU time or memory is distributed across function calls. When combined with Claude Code, you can automate flamegraph generation, analyze results more efficiently, and integrate profiling into your development workflow. This guide covers practical approaches to using Claude Code for flamegraph visualization, from setup to interpretation.
 
-## Understanding Flamegraphs and Their Role in Performance Analysis
+Understanding Flamegraphs and Their Role in Performance Analysis
 
-A flamegraph represents a stack trace where each function call appears as a horizontal bar. The width of each bar indicates how much time or memory that function consumed. The vertical axis shows the call hierarchy, with the bottom representing the entry point and the top showing leaf functions. This visualization makes it easy to spot which code paths are hot—consuming the most resources.
+A flamegraph represents a stack trace where each function call appears as a horizontal bar. The width of each bar indicates how much time or memory that function consumed. The vertical axis shows the call hierarchy, with the bottom representing the entry point and the top showing leaf functions. This visualization makes it easy to spot which code paths are hot, consuming the most resources.
 
 Flamegraphs help you answer critical performance questions: Which functions dominate execution time? Where are the bottlenecks? Are there unexpected allocations in frequently called code? Unlike traditional profiling outputs, flamegraphs let you see the full context of your call stack at a glance.
 
 Most flamegraph tools work with sampling profilers. You collect profile data over a period, then transform it into the flamegraph format. Popular tools include `perf` on Linux, ` Instruments` on macOS, and `py-spy` for Python applications.
 
-## Setting Up Flamegraph Generation with Claude Code
+Setting Up Flamegraph Generation with Claude Code
 
 Claude Code can help you set up automated profiling pipelines. The key is integrating data collection with your existing development workflow. Here's a practical setup for a Node.js application:
 
 First, install the necessary profiling tools:
 
 ```bash
-# Install py-spy for Python profiling
+Install py-spy for Python profiling
 pip install py-spy
 
-# Install flamegraph tool
+Install flamegraph tool
 pip install flamegraph
 
-# For Node.js applications
+For Node.js applications
 npm install --save-dev 0x
 ```
 
@@ -47,18 +47,18 @@ Create a Claude Code skill to automate the profiling workflow. This skill should
 
 ```javascript
 // Save as .claude/flamegraph-profiler.md
-# Flamegraph Profiler Skill
+Flamegraph Profiler Skill
 
 This skill automates flamegraph generation for Node.js and Python applications.
 
-## Usage
+Usage
 
 Generate a flamegraph for your application:
 - Language: node|python
 - Duration: profiling duration in seconds
 - Output: output file path
 
-## Workflow
+Workflow
 
 1. Start the application with profiling enabled
 2. Run representative workload
@@ -69,18 +69,18 @@ Generate a flamegraph for your application:
 The skill then executes the appropriate profiler based on your language choice. For Node.js, use the `0x` package which generates flamegraphs automatically:
 
 ```bash
-# Generate flamegraph for Node.js application
+Generate flamegraph for Node.js application
 0x --output-dir ./flamegraphs node server.js
 ```
 
 For Python applications, use `py-spy` with `flamegraph`:
 
 ```bash
-# Profile Python application and generate flamegraph
+Profile Python application and generate flamegraph
 py-spy record -o flamegraph.svg -- python app.py
 ```
 
-## Automating Flamegraph Collection in CI/CD
+Automating Flamegraph Collection in CI/CD
 
 Integrating flamegraph generation into your CI pipeline helps catch performance regressions before they reach production. Create a workflow that runs profiling on key code paths and compares results against baselines.
 
@@ -112,7 +112,7 @@ jobs:
 
 This workflow runs on every pull request, comparing flamegraphs between the baseline and new code. You can configure thresholds to fail the build if certain functions exceed time allocations.
 
-## Interpreting Flamegraphs with Claude Code
+Interpreting Flamegraphs with Claude Code
 
 Once you have a flamegraph, the challenge is interpretation. Claude Code can help analyze the SVG and explain what you're seeing. Describe your flamegraph and ask for insights:
 
@@ -124,26 +124,26 @@ Claude Code can help you understand complex flamegraphs by:
 - Suggesting optimization strategies based on the profile data
 - Comparing multiple flamegraphs to track improvements
 
-For JavaScript applications, pay attention to functions marked with `idle` or `GC`—these indicate time spent in garbage collection or waiting. Reducing allocations in hot paths often provides significant performance gains.
+For JavaScript applications, pay attention to functions marked with `idle` or `GC`, these indicate time spent in garbage collection or waiting. Reducing allocations in hot paths often provides significant performance gains.
 
-## Practical Example: Optimizing a Node.js API Server
+Practical Example: Optimizing a Node.js API Server
 
 Consider a typical scenario: your API server is experiencing high latency. Here's how to use Claude Code with flamegraphs to identify the problem:
 
 First, generate a flamegraph during a load test:
 
 ```bash
-# Run load test while profiling
+Run load test while profiling
 0x --output-dir ./profile node server.js &
-# Run load test
+Run load test
 hey -c 50 -n 10000 http://localhost:3000/api
 ```
 
 Open the generated flamegraph and describe it to Claude Code. A typical analysis reveals patterns like:
 
-1. **JSON serialization bottlenecks** — large objects being serialized repeatedly
-2. **Database query overhead** — N+1 query patterns in ORM code
-3. **Unnecessary computation** — redundant calculations in request handlers
+1. JSON serialization bottlenecks. large objects being serialized repeatedly
+2. Database query overhead. N+1 query patterns in ORM code
+3. Unnecessary computation. redundant calculations in request handlers
 
 For example, if your flamegraph shows a wide bar for `JSON.stringify` at the top of a hot path, you might optimize by:
 - Caching serialized results for immutable data
@@ -152,25 +152,25 @@ For example, if your flamegraph shows a wide bar for `JSON.stringify` at the top
 
 Claude Code can suggest specific optimizations based on the patterns in your flamegraph, helping you prioritize changes that have the biggest impact.
 
-## Integrating Flamegraphs into Daily Development
+Integrating Flamegraphs into Daily Development
 
 Make flamegraph analysis part of your regular workflow rather than a reactive process. Here are actionable steps:
 
-- **Profile before optimization** — Always generate a flamegraph before making performance changes. This establishes a baseline and confirms the fix actually works.
-- **Profile in realistic conditions** — Use production-like data and traffic patterns. Profiling with trivial inputs won't reveal real bottlenecks.
-- **Compare systematically** — Save flamegraphs before and after changes. Claude Code can help compare two flamegraphs and quantify the differences.
-- **Automate collection** — Set up scheduled profiling in staging environments. Store results to track performance trends over time.
+- Profile before optimization. Always generate a flamegraph before making performance changes. This establishes a baseline and confirms the fix actually works.
+- Profile in realistic conditions. Use production-like data and traffic patterns. Profiling with trivial inputs won't reveal real bottlenecks.
+- Compare systematically. Save flamegraphs before and after changes. Claude Code can help compare two flamegraphs and quantify the differences.
+- Automate collection. Set up scheduled profiling in staging environments. Store results to track performance trends over time.
 
-## Conclusion
+Conclusion
 
 Flamegraph visualization combined with Claude Code creates a powerful workflow for performance optimization. By automating profile collection, integrating with CI/CD, and using Claude Code for analysis, you can systematically identify and fix performance bottlenecks. Start by setting up basic profiling for your application, then gradually integrate these practices into your development process. The insights you gain will directly translate to faster applications and better user experiences.
 
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

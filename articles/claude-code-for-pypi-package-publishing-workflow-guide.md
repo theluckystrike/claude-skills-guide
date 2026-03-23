@@ -15,26 +15,26 @@ score: 8
 
 {% raw %}
 
-# Claude Code for PyPI Package Publishing Workflow Guide
+Claude Code for PyPI Package Publishing Workflow Guide
 
 Publishing Python packages to PyPI (Python Package Index) is a fundamental skill for any Python developer. Whether you're sharing a utility library, a framework, or a tool with the community, having a streamlined workflow saves time and reduces errors. This guide shows you how to use Claude Code to automate and simplify your PyPI publishing workflow, from initial project scaffolding through to automated CI/CD releases.
 
-## Setting Up Your Project Structure
+Setting Up Your Project Structure
 
 Before publishing to PyPI, your project needs a proper structure. Claude Code can help you set this up correctly from the start. A standard Python package structure includes:
 
 ```
 my_package/
-├── my_package/
-│   ├── __init__.py
-│   └── core.py
-├── tests/
-│   ├── __init__.py
-│   └── test_core.py
-├── pyproject.toml
-├── README.md
-├── LICENSE
-└── CHANGELOG.md
+ my_package/
+    __init__.py
+    core.py
+ tests/
+    __init__.py
+    test_core.py
+ pyproject.toml
+ README.md
+ LICENSE
+ CHANGELOG.md
 ```
 
 The essential file is `pyproject.toml`, which defines your package metadata. Here's a minimal example:
@@ -62,7 +62,7 @@ dependencies = [
 Homepage = "https://github.com/yourusername/my-package"
 ```
 
-### Choosing a Build Backend
+Choosing a Build Backend
 
 The `pyproject.toml` `[build-system]` section tells pip which tool to use to build your package. Three backends dominate the ecosystem today:
 
@@ -100,7 +100,7 @@ path = "my_package/__init__.py"
 
 With `tool.hatch.version`, Hatch reads the version directly from your `__init__.py`, so you maintain one canonical source of truth.
 
-### Exposing Console Scripts
+Exposing Console Scripts
 
 If your package includes a command-line tool, declare it in `pyproject.toml` so pip installs it automatically:
 
@@ -111,7 +111,7 @@ my-tool = "my_package.cli:main"
 
 After `pip install my-package`, users can run `my-tool` directly from their shell. Claude Code can help you scaffold the `cli.py` module and wire up argument parsing with `argparse` or `click`.
 
-## Creating a Claude Skill for PyPI Publishing
+Creating a Claude Skill for PyPI Publishing
 
 You can create a custom Claude Skill that encapsulates your PyPI publishing workflow. This skill will guide you through each step and ensure consistency. Here's how to structure it:
 
@@ -121,11 +121,11 @@ name: "Publish to PyPI"
 description: "Guide through the complete PyPI package publishing workflow"
 ---
 
-# PyPI Publishing Workflow
+PyPI Publishing Workflow
 
 This skill will help you publish your Python package to PyPI.
 
-## Step 1: Verify Package Structure
+Step 1: Verify Package Structure
 
 Before building, ensure your package has:
 - A proper pyproject.toml
@@ -133,25 +133,25 @@ Before building, ensure your package has:
 - A LICENSE file
 - All dependencies correctly specified
 
-## Step 2: Build the Package
+Step 2: Build the Package
 
 Run the build command:
 
     python -m build
 
-## Step 3: Upload to Test PyPI
+Step 3: Upload to Test PyPI
 
 First, test your upload on Test PyPI:
 
     python -m twine upload --repository testpypi dist/*
 
-## Step 4: Verify the Test Install
+Step 4: Verify the Test Install
 
 Test that the package installs correctly:
 
     pip install --index-url https://test.pypi.org/simple/ your-package
 
-## Step 5: Upload to Production PyPI
+Step 5: Upload to Production PyPI
 
 Once verified, upload to the real PyPI:
 
@@ -160,21 +160,21 @@ Once verified, upload to the real PyPI:
 
 This skill gives Claude Code a reusable playbook it can follow every time you ask it to publish a release. Instead of remembering every step yourself, you invoke the skill and let the automation handle it.
 
-## Automating the Build and Upload Process
+Automating the Build and Upload Process
 
 Claude Code can execute the entire publishing workflow for you. Here's a practical example of how to automate this:
 
 ```bash
-# Install required build tools
+Install required build tools
 pip install build twine
 
-# Clean previous builds
+Clean previous builds
 rm -rf build/ dist/ *.egg-info
 
-# Build the package
+Build the package
 python -m build
 
-# Upload to PyPI (using Twine)
+Upload to PyPI (using Twine)
 python -m twine upload dist/*
 ```
 
@@ -182,7 +182,7 @@ You can create a shell script that Claude Code executes, making the process repe
 
 ```bash
 #!/bin/bash
-# publish.sh - PyPI Publishing Script
+publish.sh - PyPI Publishing Script
 
 set -e
 
@@ -196,32 +196,32 @@ python -m twine upload dist/*
 echo "Done! Package published successfully."
 ```
 
-For a more robust script that validates the package before uploading, add a Twine check step:
+For a more solid script that validates the package before uploading, add a Twine check step:
 
 ```bash
 #!/bin/bash
-# publish.sh - PyPI Publishing Script with validation
+publish.sh - PyPI Publishing Script with validation
 
 set -euo pipefail
 
 VERSION=$(python -c "import my_package; print(my_package.__version__)")
 echo "Publishing version $VERSION..."
 
-# Clean
+Clean
 rm -rf build dist *.egg-info
 
-# Build source distribution and wheel
+Build source distribution and wheel
 python -m build
 
-# Validate the distributions before uploading
+Validate the distributions before uploading
 echo "Validating distributions..."
 python -m twine check dist/*
 
-# Check for common issues
+Check for common issues
 echo "Running package checks..."
 python -m pip install --quiet dist/*.whl --dry-run
 
-# Upload
+Upload
 echo "Uploading to PyPI..."
 python -m twine upload dist/*
 
@@ -231,33 +231,33 @@ echo "View at: https://pypi.org/project/my-package/$VERSION/"
 
 `twine check` catches malformed metadata, missing fields, and README rendering issues before they become visible to users on the PyPI page. It is one of the most under-used steps in the Python publishing workflow.
 
-## Managing Version Numbers
+Managing Version Numbers
 
 Version management is crucial for package publishing. Semantic versioning (SemVer) is the standard approach:
 
-- **Major** (1.0.0 → 2.0.0): Breaking changes
-- **Minor** (1.0.0 → 1.1.0): New features, backward compatible
-- **Patch** (1.0.0 → 1.0.1): Bug fixes
+- Major (1.0.0 → 2.0.0): Breaking changes
+- Minor (1.0.0 → 1.1.0): New features, backward compatible
+- Patch (1.0.0 → 1.0.1): Bug fixes
 
 You can use Python's `bump2version` or `bumpver` tools to automate version increments:
 
 ```bash
-# Install bump2version
+Install bump2version
 pip install bump2version
 
-# Bump patch version
+Bump patch version
 bumpversion patch
 
-# Bump minor version
+Bump minor version
 bumpversion minor
 
-# Bump major version
+Bump major version
 bumpversion major
 ```
 
 Claude Code can help you update version numbers across all files in your project, including `pyproject.toml`, `__init__.py`, and documentation.
 
-### Using bumpver for Multi-File Version Management
+Using bumpver for Multi-File Version Management
 
 `bumpver` is a more modern alternative that handles complex version strings and multi-file updates cleanly. Configure it in `pyproject.toml`:
 
@@ -289,15 +289,15 @@ Now a single command updates all version references, commits the change, and cre
 
 ```bash
 bumpver update --patch
-# or
+or
 bumpver update --minor
-# or
+or
 bumpver update --major
 ```
 
 Claude Code can run this for you and then immediately trigger the publishing workflow, keeping the version bump and the PyPI upload as one atomic step.
 
-### Dynamic Versioning from Git Tags
+Dynamic Versioning from Git Tags
 
 An alternative approach eliminates version numbers in source files entirely by deriving the version from git tags at build time:
 
@@ -311,13 +311,13 @@ write_to = "my_package/_version.py"
 ```
 
 ```python
-# my_package/__init__.py
+my_package/__init__.py
 from ._version import version as __version__
 ```
 
 With this setup, `python -m build` reads the current git tag (e.g., `v1.2.3`) and writes it into the distribution. You never manually edit a version number again. You just tag the commit and build.
 
-## Using API Tokens for Secure Authentication
+Using API Tokens for Secure Authentication
 
 Never use your PyPI password directly. Instead, use API tokens for secure authentication:
 
@@ -336,17 +336,17 @@ password = pypi-AgEIcHlwaS5vcmc...
 
 Claude Code can help you set this up securely using environment variables or a secrets manager.
 
-### Scoped Tokens Are Safer Than Account Tokens
+Scoped Tokens Are Safer Than Account Tokens
 
 PyPI supports project-scoped tokens that only have permission to upload to a specific package. Use these in preference to account-wide tokens:
 
-1. Go to **pypi.org → Your Projects → Manage → Settings → API tokens**
+1. Go to pypi.org → Your Projects → Manage → Settings → API tokens
 2. Select "Scope: Project: my-package"
 3. Copy the token and store it as a CI secret named `PYPI_TOKEN`
 
 If a project-scoped token is ever compromised, the attacker can only upload new versions of that one package. An account-wide token would let them tamper with every package in your account.
 
-### Trusted Publishers: Eliminating Token Secrets Entirely
+Trusted Publishers: Eliminating Token Secrets Entirely
 
 PyPI now supports "Trusted Publishers" via OpenID Connect (OIDC), which means GitHub Actions workflows can publish without storing any secret token at all:
 
@@ -384,49 +384,49 @@ jobs:
 
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
-        # No secrets needed — OIDC handles authentication
+        # No secrets needed. OIDC handles authentication
 ```
 
 This is now the recommended approach for new packages. It removes the operational burden of rotating API tokens and eliminates an entire category of secret-leakage risk.
 
-## Publishing to Test PyPI First
+Publishing to Test PyPI First
 
 Always test your package on Test PyPI before releasing to production:
 
 ```bash
-# Upload to Test PyPI
+Upload to Test PyPI
 python -m twine upload --repository testpypi dist/*
 
-# Install and test locally
+Install and test locally
 pip install --index-url https://test.pypi.org/simple/ your-package
 
-# Verify imports work
+Verify imports work
 python -c "import your_package; print(your_package.__version__)"
 ```
 
 This workflow prevents embarrassing mistakes from reaching production.
 
-### What to Check on Test PyPI
+What to Check on Test PyPI
 
 After installing from Test PyPI, run a quick smoke test checklist before promoting to production:
 
 ```bash
-# 1. Version matches what you expect
+1. Version matches what you expect
 python -c "import my_package; print(my_package.__version__)"
 
-# 2. Entry points work (if your package has CLI tools)
+2. Entry points work (if your package has CLI tools)
 my-tool --version
 
-# 3. Core imports succeed
+3. Core imports succeed
 python -c "from my_package import MyMainClass; print('OK')"
 
-# 4. Dependencies are all present
+4. Dependencies are all present
 python -c "import my_package; my_package.run_diagnostics()"
 ```
 
 If any of these fail on Test PyPI, you catch the issue before it affects the thousands of developers who might install from production PyPI.
 
-## Continuous Integration for Automated Publishing
+Continuous Integration for Automated Publishing
 
 You can set up GitHub Actions to automate PyPI publishing on tags:
 
@@ -459,9 +459,9 @@ jobs:
         run: twine upload dist/*
 ```
 
-### Adding a Test Gate Before Publishing
+Adding a Test Gate Before Publishing
 
-A more robust pipeline runs your test suite before allowing the release to proceed:
+A more solid pipeline runs your test suite before allowing the release to proceed:
 
 ```yaml
 name: Test and Publish
@@ -509,20 +509,20 @@ jobs:
 
 The `needs: test` line is the critical gate. The publish job cannot start unless tests pass on all Python versions in the matrix.
 
-## Writing a Good README for PyPI
+Writing a Good README for PyPI
 
 The README is the first thing potential users see on your PyPI package page. PyPI renders `README.md` as the long description, so invest time in making it clear. Essential sections:
 
 ```markdown
-# my-package
+my-package
 
 One-sentence description of what the package does.
 
-## Installation
+Installation
 
     pip install my-package
 
-## Quick Start
+Quick Start
 
     from my_package import MyMainClass
 
@@ -530,22 +530,22 @@ One-sentence description of what the package does.
     result = obj.process("input")
     print(result)
 
-## Documentation
+Documentation
 
 Full docs at https://my-package.readthedocs.io
 
-## Contributing
+Contributing
 
 Issues and PRs welcome. See CONTRIBUTING.md.
 
-## License
+License
 
 MIT
 ```
 
 Claude Code can draft this README for you based on your package's source code, inferring the purpose from module docstrings and function signatures.
 
-## Handling Package Classifiers
+Handling Package Classifiers
 
 Classifiers help users find your package in PyPI search. Add them to `pyproject.toml`:
 
@@ -568,18 +568,18 @@ classifiers = [
 
 The Development Status classifier is especially important: it tells users whether the API is stable. Use `3 - Alpha` for early releases, `4 - Beta` for mostly-stable packages still gaining features, and `5 - Production/Stable` for packages you are ready to support long-term.
 
-## Best Practices for Package Publishing
+Best Practices for Package Publishing
 
 Follow these guidelines for successful package publishing:
 
-1. **Choose a unique package name**: Check PyPI to ensure your name isn't taken
-2. **Write a clear description**: This appears in PyPI search results
-3. **Include dependencies correctly**: Only list actual dependencies
-4. **Add classifiers**: Help users find your package with proper classifiers
-5. **Write a good README**: Include installation instructions and usage examples
-6. **Use version control tags**: Tag releases for traceability
+1. Choose a unique package name: Check PyPI to ensure your name isn't taken
+2. Write a clear description: This appears in PyPI search results
+3. Include dependencies correctly: Only list actual dependencies
+4. Add classifiers: Help users find your package with proper classifiers
+5. Write a good README: Include installation instructions and usage examples
+6. Use version control tags: Tag releases for traceability
 
-### Include Type Hints and a py.typed Marker
+Include Type Hints and a py.typed Marker
 
 Modern Python packages should include type hints so users get IDE autocompletion and mypy integration. Add an empty `py.typed` file to your package to signal that types are available:
 
@@ -596,61 +596,61 @@ my_package = ["py.typed"]
 
 This is a one-line change that dramatically improves the developer experience for anyone using your library.
 
-### Maintain a Changelog
+Maintain a Changelog
 
 A CHANGELOG.md following the Keep a Changelog format makes it easy for users to understand what changed between versions:
 
 ```markdown
-# Changelog
+Changelog
 
-## [Unreleased]
+[Unreleased]
 
-## [1.2.0] - 2026-03-15
-### Added
+[1.2.0] - 2026-03-15
+Added
 - Support for async context managers
 - New `batch_process` method
 
-### Fixed
+Fixed
 - Memory leak when processing large inputs (#42)
 
-## [1.1.0] - 2026-01-10
-### Added
+[1.1.0] - 2026-01-10
+Added
 - Initial public API
 ```
 
 Claude Code can help you maintain this file by summarizing git commits since the last release and formatting them into the correct CHANGELOG sections.
 
-## Common Pitfalls to Avoid
+Common Pitfalls to Avoid
 
-**Publishing without testing the install** — Always install and smoke-test from Test PyPI before the production upload. Issues like missing package data or wrong entry points only appear at install time.
+Publishing without testing the install. Always install and smoke-test from Test PyPI before the production upload. Issues like missing package data or wrong entry points only appear at install time.
 
-**Forgetting to include non-Python files** — If your package includes data files (JSON configs, templates, static assets), you must explicitly include them:
+Forgetting to include non-Python files. If your package includes data files (JSON configs, templates, static assets), you must explicitly include them:
 
 ```toml
 [tool.setuptools.package-data]
 my_package = ["data/*.json", "templates/*.html"]
 ```
 
-**Using relative imports inconsistently** — Test your package both by running it directly and by installing it via pip. Relative imports that work when running `python my_package/core.py` may fail when the package is installed.
+Using relative imports inconsistently. Test your package both by running it directly and by installing it via pip. Relative imports that work when running `python my_package/core.py` may fail when the package is installed.
 
-**Not pinning the minimum Python version** — If your code uses f-strings, walrus operators, or match statements, set `requires-python` to the earliest version that supports those features. Users on older Python will get a clear error rather than a confusing import failure.
+Not pinning the minimum Python version. If your code uses f-strings, walrus operators, or match statements, set `requires-python` to the earliest version that supports those features. Users on older Python will get a clear error rather than a confusing import failure.
 
-**Uploading the same version twice** — PyPI does not allow re-uploading a version. If you discover a bug in a just-published release, you must bump to a new patch version. Always run `twine check dist/*` before uploading and test locally first.
+Uploading the same version twice. PyPI does not allow re-uploading a version. If you discover a bug in a just-published release, you must bump to a new patch version. Always run `twine check dist/*` before uploading and test locally first.
 
-**Leaving debug code in the package** — Run `grep -r "breakpoint\|pdb\|ipdb" my_package/` before building to catch any leftover debug statements. Claude Code can add this as a pre-build check in your publishing script.
+Leaving debug code in the package. Run `grep -r "breakpoint\|pdb\|ipdb" my_package/` before building to catch any leftover debug statements. Claude Code can add this as a pre-build check in your publishing script.
 
-## Conclusion
+Conclusion
 
 Claude Code makes PyPI package publishing straightforward by guiding you through each step, executing build commands, and helping you maintain proper project structure. By creating a reusable skill for publishing, you can standardize your workflow and reduce the chance of errors.
 
-Remember to always test on Test PyPI before production, use API tokens or Trusted Publishers for authentication, maintain a proper CHANGELOG, and consider setting up CI/CD for automated releases. With these practices in place, sharing your Python packages with the world becomes a reliable and repeatable process. The investment in a solid publishing workflow pays dividends every release cycle — and with Claude Code orchestrating the steps, each release takes minutes rather than the careful manual work that tripped up developers before good tooling existed.
+Remember to always test on Test PyPI before production, use API tokens or Trusted Publishers for authentication, maintain a proper CHANGELOG, and consider setting up CI/CD for automated releases. With these practices in place, sharing your Python packages with the world becomes a reliable and repeatable process. The investment in a solid publishing workflow pays dividends every release cycle. and with Claude Code orchestrating the steps, each release takes minutes rather than the careful manual work that tripped up developers before good tooling existed.
 
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

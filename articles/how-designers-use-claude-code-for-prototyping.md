@@ -15,13 +15,13 @@ permalink: /how-designers-use-claude-code-for-prototyping/
 
 Prototyping sits at the intersection of design intent and technical implementation. Designers who embrace Claude Code gain a powerful ally that transforms abstract concepts into functional prototypes faster than traditional workflows allow. This guide explores practical approaches designers use to accelerate their prototyping process using Claude Code and its growing ecosystem of skills.
 
-## The Design-to-Code Gap
+The Design-to-Code Gap
 
 Traditional design workflows often involve multiple handoffs between designers and developers. A Figma mockup travels to a developer who interprets the design, writes the code, and returns something that rarely matches the original vision perfectly. This back-and-forth consumes time and often frustrates both parties.
 
 Claude Code addresses this gap differently. Instead of treating code generation as a separate phase, [designers can engage with code directly through natural language conversations](/claude-skill-md-format-complete-specification-guide/) The system understands design terminology and translates it into working implementations.
 
-## Getting Started with Design Prototyping
+Getting Started with Design Prototyping
 
 Before diving into specific workflows, ensure Claude Code is installed and you have a few essential skills loaded. [The `frontend-design` skill provides specialized guidance for creating responsive layouts](/best-claude-code-skills-to-install-first-2026/), component structures, and styling decisions. Install it alongside `pdf` for generating design documentation and `tdd` if you want test coverage alongside your prototype.
 
@@ -34,7 +34,7 @@ npm init -y
 
 Now launch Claude Code and load your desired skills. The combination of skills determines what Claude Code can help you accomplish.
 
-## Rapid Component Creation
+Rapid Component Creation
 
 Designers often need to verify how specific UI patterns work before committing to a full implementation. Claude Code excels at generating individual components based on descriptive prompts.
 
@@ -52,7 +52,7 @@ Make the CTA button a gradient purple-to-blue instead of solid color, and add a 
 
 This conversational approach to code modification feels natural for designers accustomed to iterative design processes in Figma or Sketch.
 
-## Working with Design Systems
+Working with Design Systems
 
 Consistency across prototypes requires a solid design system foundation. Claude Code can help establish these foundations or work within existing ones.
 
@@ -87,7 +87,7 @@ Use our design tokens for colors and spacing. Create a card component with the s
 
 The `frontend-design` skill understands these constraints and generates consistent code accordingly.
 
-## Prototype Validation with Real Data
+Prototype Validation with Real Data
 
 Static mockups often look convincing but fail when exposed to real-world data. Designers can use Claude Code to test their prototypes with actual content.
 
@@ -116,7 +116,7 @@ describe('ProductGrid', () => {
 });
 ```
 
-## Generating Design Documentation
+Generating Design Documentation
 
 Prototypes need documentation for stakeholder reviews and developer handoffs. The `pdf` skill enables Claude Code to generate professional design documentation directly from your prototype files.
 
@@ -128,34 +128,34 @@ Generate a PDF document that includes component specifications, prop tables, usa
 
 This creates artifacts useful for design system maintenance and developer onboarding.
 
-## Rapid Prototyping Workflow Example
+Rapid Prototyping Workflow Example
 
 A practical design-to-prototype workflow using Claude Code follows these stages:
 
-**Stage 1: Sketch Translation**
+Stage 1: Sketch Translation
 Describe your design to Claude Code in plain language. Reference existing design files if available. Get an initial implementation within minutes rather than hours.
 
-**Stage 2: Iterative Refinement**
+Stage 2: Iterative Refinement
 Provide specific feedback on colors, spacing, typography, and behavior. Claude Code applies changes without requiring you to understand the underlying code.
 
-**Stage 3: Responsive Verification**
+Stage 3: Responsive Verification
 Request viewport variations:
 
 ```
 Show me how this layout adapts at 320px, 768px, and 1440px widths. Identify any breaking points.
 ```
 
-**Stage 4: Interaction Testing**
+Stage 4: Interaction Testing
 Add micro-interactions and animations:
 
 ```
 When the card is hovered, scale it to 1.02 with a 200ms ease-out transition. Add a subtle glow effect using our primary color.
 ```
 
-**Stage 5: Documentation Generation**
+Stage 5: Documentation Generation
 Create handover materials automatically using the `pdf` skill. This ensures developers receive complete specifications.
 
-## Advanced Techniques
+Advanced Techniques
 
 Designers with some code familiarity can push prototyping further by combining multiple skills. The `supermemory` skill helps maintain design decisions and rationale across sessions, creating a knowledge base that improves future prototype consistency.
 
@@ -167,23 +167,23 @@ Review this prototype for common UX issues: contrast problems, touch target size
 
 Claude Code identifies issues that might require multiple design review cycles to catch manually.
 
-## When Traditional Tools Still Matter
+When Traditional Tools Still Matter
 
 Claude Code excels at translating design intent into functional code, but it complements rather than replaces design tools like Figma. Use Figma for initial exploration, complex visual composition, and design team collaboration. Use Claude Code when you need to validate ideas through actual code or prepare prototypes for stakeholder demos.
 
 The most effective workflow moves designs through both tools: rapid exploration in Figma, followed by code-based prototyping in Claude Code to validate technical feasibility early.
 
-## Conclusion
+Conclusion
 
 Designers using Claude Code for prototyping report significant time savings and fewer translation errors between design and development. The ability to iterate on code through natural language conversation makes technical implementation accessible without requiring deep coding expertise.
 
 Start with the `frontend-design` skill, describe your component needs, and iterate from there. The learning curve is minimal compared to traditional frontend development, and the productivity gains compound over time.
 
-## Related Reading
+Related Reading
 
 - [Best Claude Code Skills to Install First (2026)](/best-claude-code-skills-to-install-first-2026/)
 - [Claude Skills for SEO Content Generation Workflow](/claude-skills-for-seo-content-generation-workflow/)
 - [Vibe Coding with Claude Code: Complete Guide 2026](/vibe-coding-productivity-tips-and-best-practices/)
 - [Use Cases Hub](/use-cases-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

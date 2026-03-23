@@ -16,22 +16,22 @@ score: 8
 
 {% raw %}
 
-# Claude Code for OpenTofu Registry Workflow Guide
+Claude Code for OpenTofu Registry Workflow Guide
 
 OpenTofu is a powerful infrastructure-as-code tool that lets you define, provision, and manage cloud infrastructure using declarative configuration files. When combined with Claude Code, you can significantly accelerate your infrastructure development workflow, reduce errors, and maintain better documentation. This guide walks you through practical strategies for integrating Claude Code into your OpenTofu registry operations.
 
-## Understanding OpenTofu Registry Basics
+Understanding OpenTofu Registry Basics
 
 The OpenTofu registry serves as the central repository for modules, providers, and state management. Before diving into the Claude Code integration, ensure you understand the core components: providers that interface with cloud APIs, modules that package reusable infrastructure patterns, and the state backend that tracks your infrastructure.
 
 OpenTofu maintains a registry of officially verified modules at registry.opentofu.org. These modules cover common infrastructure patterns like VPC creation, Kubernetes clusters, and database setups. When you use Claude Code, you can use its understanding of these modules to generate appropriate configuration, explain provider behaviors, and troubleshoot issues.
 
-## Setting Up Claude Code for OpenTofu Projects
+Setting Up Claude Code for OpenTofu Projects
 
 Begin by ensuring Claude Code has access to your project context. Create a `CLAUDE.md` file in your project root to provide Claude with background information about your infrastructure setup:
 
 ```markdown
-# Project Context
+Project Context
 
 This project uses OpenTofu for AWS infrastructure.
 - Provider: aws (version ~> 5.0)
@@ -42,11 +42,11 @@ This project uses OpenTofu for AWS infrastructure.
 
 This context helps Claude generate more accurate configurations and understand your specific setup when answering questions or troubleshooting issues.
 
-## Generating Module Configurations
+Generating Module Configurations
 
 One of the most valuable Claude Code capabilities is generating OpenTofu configuration from natural language descriptions. When you need a new module configuration, describe your requirements clearly:
 
-**Example prompt to Claude Code:**
+Example prompt to Claude Code:
 ```
 I need an OpenTofu configuration for an ECS Fargate service behind an Application Load Balancer. Include:
 - ALB with HTTPS listener
@@ -57,9 +57,9 @@ I need an OpenTofu configuration for an ECS Fargate service behind an Applicatio
 
 Claude Code can generate the foundational configuration, which you then customize for your specific needs. This approach saves significant time compared to writing configuration from scratch while ensuring you start with proven patterns.
 
-## Working with the OpenTofu Registry
+Working with the OpenTofu Registry
 
-### Discovering Modules
+Discovering Modules
 
 When you need a specific module but aren't sure which one fits your requirements, ask Claude Code for recommendations:
 
@@ -69,7 +69,7 @@ What OpenTofu registry modules would you recommend for setting up a Kubernetes c
 
 Claude Code can search available modules, explain their differences, and help you choose based on your specific requirements like cost, maintenance burden, and feature set.
 
-### Version Management
+Version Management
 
 Provider and module version management is crucial for stability. Claude Code helps you specify appropriate versions and understand breaking changes:
 
@@ -86,11 +86,11 @@ terraform {
 
 Ask Claude Code to explain version constraints and help you understand when upgrades are safe versus when they might introduce breaking changes.
 
-## State Management Strategies
+State Management Strategies
 
 Effective state management determines your workflow's reliability. Claude Code can help you design and implement appropriate state strategies.
 
-### Remote State Configuration
+Remote State Configuration
 
 For team workflows, configure remote state with appropriate locking:
 
@@ -108,44 +108,44 @@ terraform {
 
 Ask Claude Code to explain the tradeoffs between different backends (S3, GCS, Azure Blob, etc.) and help you choose based on your cloud provider and team requirements.
 
-### State Manipulation Safely
+State Manipulation Safely
 
 Sometimes you need to inspect or modify state directly. Always use caution and prefer OpenTofu commands over direct state manipulation. When you must interact with state:
 
 ```bash
-# List resources in state
+List resources in state
 tofu state list
 
-# Show specific resource details
+Show specific resource details
 tofu state show aws_instance.example
 
-# Pull state for inspection
+Pull state for inspection
 tofu state pull > state.json
 ```
 
 Consult Claude Code before making state changes to understand the implications and ensure you have a recovery plan.
 
-## Module Development Workflow
+Module Development Workflow
 
 When creating reusable modules for your organization's registry, follow a structured development workflow.
 
-### Module Structure
+Module Structure
 
 A well-structured module separates variables, outputs, and main configuration:
 
 ```
 modules/
-├── networking/
-│   ├── main.tf          # Resource definitions
-│   ├── variables.tf    # Input variable declarations
-│   ├── outputs.tf      # Output value definitions
-│   ├── versions.tf     # Provider version requirements
-│   └── README.md       # Module documentation
+ networking/
+    main.tf          # Resource definitions
+    variables.tf    # Input variable declarations
+    outputs.tf      # Output value definitions
+    versions.tf     # Provider version requirements
+    README.md       # Module documentation
 ```
 
 Claude Code can generate this structure and populate it with sensible defaults. Ask for a template that matches your organization's standards.
 
-### Testing Modules
+Testing Modules
 
 Validate your modules using the OpenTofu testing framework:
 
@@ -162,23 +162,23 @@ run "test_case" {
 
 Claude Code can help you write comprehensive tests that validate your module behavior and prevent regressions.
 
-## CI/CD Integration
+CI/CD Integration
 
 Automating your OpenTofu workflows through CI/CD ensures consistency and reduces human error.
 
-### Pipeline Example
+Pipeline Example
 
 A typical pipeline includes plan, review, and apply stages:
 
 ```yaml
-# .github/workflows/terraform.yml
+.github/workflows/terraform.yml
 name: OpenTofu CI
 
 on:
   pull_request:
     paths:
-      - '**.tf'
-      - '**.tfvars'
+      - '.tf'
+      - '.tfvars'
 
 jobs:
   plan:
@@ -206,23 +206,23 @@ jobs:
 
 Claude Code can help you customize this pipeline for your specific needs, add drift detection, or integrate with tools like Atlantis for pull request automation.
 
-## Best Practices Summary
+Best Practices Summary
 
-- **Use modules**: use registry modules for common patterns rather than writing custom configurations
-- **Version pinning**: Always specify provider and module versions for reproducibility
-- **Remote state**: Use remote backends with state locking for team workflows
-- **CI/CD automation**: Automate plan and apply steps through pipelines
-- **Testing**: Write tests for custom modules to ensure reliability
-- **Documentation**: Keep module READMEs current with usage examples
+- Use modules: use registry modules for common patterns rather than writing custom configurations
+- Version pinning: Always specify provider and module versions for reproducibility
+- Remote state: Use remote backends with state locking for team workflows
+- CI/CD automation: Automate plan and apply steps through pipelines
+- Testing: Write tests for custom modules to ensure reliability
+- Documentation: Keep module READMEs current with usage examples
 
 By integrating Claude Code into your OpenTofu workflow, you gain an intelligent assistant that helps generate configurations, explains provider behaviors, troubleshoots issues, and accelerates your infrastructure development cycle. The combination of declarative infrastructure as code with AI-assisted development creates a powerful workflow for modern DevOps teams.
 
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

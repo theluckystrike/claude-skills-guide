@@ -13,17 +13,17 @@ score: 7
 ---
 
 
-# Claude Code for WezTerm Terminal Workflow Guide
+Claude Code for WezTerm Terminal Workflow Guide
 
 WezTerm (Wez's Terminal) is a modern, GPU-accelerated terminal emulator written in Rust that has gained significant popularity among developers for its performance, flexibility, and rich feature set. When combined with Claude Code, it creates a powerful development environment that can dramatically improve your coding workflow. This guide explores practical strategies for integrating these two tools effectively.
 
-## Why WezTerm for Claude Code Workflows
+Why WezTerm for Claude Code Workflows
 
-WezTerm offers several advantages that make it particularly well-suited for Claude Code integration. First, its native support for [Neovim](https://neovim.io/) and other terminal-based editors provides a seamless experience when Claude Code needs to interact with your code. Second, WezTerm's multiplexing capability allows you to run persistent terminal sessions that maintain state even when disconnected—essential for long-running Claude Code tasks.
+WezTerm offers several advantages that make it particularly well-suited for Claude Code integration. First, its native support for [Neovim](https://neovim.io/) and other terminal-based editors provides a smooth experience when Claude Code needs to interact with your code. Second, WezTerm's multiplexing capability allows you to run persistent terminal sessions that maintain state even when disconnected, essential for long-running Claude Code tasks.
 
 The terminal's Lua configuration system gives you fine-grained control over keybindings, appearance, and behavior. This extensibility means you can tailor your environment specifically for Claude Code interactions, creating custom workflows that match your mental model and daily tasks.
 
-## Setting Up WezTerm for Claude Code
+Setting Up WezTerm for Claude Code
 
 Before integrating with Claude Code, ensure your WezTerm installation is properly configured. On macOS, you can install WezTerm via Homebrew:
 
@@ -33,7 +33,7 @@ brew install wezterm
 
 On Linux, use your package manager or download releases from the [WezTerm GitHub repository](https://github.com/wez/wezterm). Windows users can install via winget or download the installer directly.
 
-### Essential WezTerm Configuration
+Essential WezTerm Configuration
 
 Create or edit your WezTerm configuration file (typically located at `~/.wezterm.lua`) with settings that optimize the environment for Claude Code:
 
@@ -70,9 +70,9 @@ return config
 
 This configuration provides a comfortable base environment with adequate scrollback for reviewing Claude Code conversations and a monospace font that supports coding tasks.
 
-## Creating Claude Code Workflows in WezTerm
+Creating Claude Code Workflows in WezTerm
 
-### The Spawn Command Pattern
+The Spawn Command Pattern
 
 WezTerm's spawn command functionality allows you to launch Claude Code in specific ways. Add these keybindings to your configuration to quickly start Claude Code sessions:
 
@@ -91,24 +91,24 @@ config.keybindings = {
 
 The first binding (Cmd+Shift+C) opens Claude Code in a new tab, ideal for quick questions or code reviews. The second (Cmd+Shift+V) opens a new window for a fresh Claude Code session.
 
-### Terminal Multiplexing for Persistent Sessions
+Terminal Multiplexing for Persistent Sessions
 
 WezTerm's built-in multiplexer lets you attach to running sessions from different locations. This is invaluable for Claude Code workflows where you might start a complex task on one machine and continue on another:
 
 ```bash
-# Start a named session
+Start a named session
 wezterm cli spawn --session-name "claude-dev" -- claude code
 
-# List running sessions
+List running sessions
 wezterm cli list-sessions
 
-# Attach to an existing session
+Attach to an existing session
 wezterm cli attach --session-name "claude-dev"
 ```
 
 This approach maintains your Claude Code conversation state, files being edited, and any running processes across connections.
 
-## Integrating with Claude Code Skills
+Integrating with Claude Code Skills
 
 Claude Code's skill system pairs exceptionally well with WezTerm's automation capabilities. You can create skills that use WezTerm's CLI for terminal management, enabling sophisticated workflows that span Claude Code's reasoning and WezTerm's execution environment.
 
@@ -134,18 +134,18 @@ end
 
 This pattern allows Claude Code to orchestrate entire development environments with a single command.
 
-## Practical Workflow Examples
+Practical Workflow Examples
 
-### Code Review Workflow
+Code Review Workflow
 
 When reviewing code with Claude Code in WezTerm:
 
 1. Open your target repository in WezTerm
 2. Launch Claude Code with the relevant context using `/review` or specific file paths
 3. Use WezTerm's split panes to view code and Claude Code's responses simultaneously
-4. Leverage WezTerm's search functionality to quickly navigate between issues Claude Code identifies
+4. Use WezTerm's search functionality to quickly navigate between issues Claude Code identifies
 
-### Pair Programming Session
+Pair Programming Session
 
 For collaborative coding sessions:
 
@@ -154,7 +154,7 @@ For collaborative coding sessions:
 3. Open your editor in another pane
 4. Share the multiplexer connection with team members for collaborative debugging
 
-### Documentation Generation
+Documentation Generation
 
 Generate documentation efficiently:
 
@@ -163,29 +163,29 @@ Generate documentation efficiently:
 3. Review and edit output in adjacent panes
 4. Push changes directly from the terminal
 
-## Optimization Tips for Claude Code in WezTerm
+Optimization Tips for Claude Code in WezTerm
 
-**Performance tuning**: If you notice lag when Claude Code produces large outputs, increase the scrollback buffer in your configuration and enable lazy scroll:
+Performance tuning: If you notice lag when Claude Code produces large outputs, increase the scrollback buffer in your configuration and enable lazy scroll:
 
 ```lua
 config.enable_scroll_bar = true
 config.animation_fps = 30
 ```
 
-**Color scheme compatibility**: Many Claude Code outputs use ANSI colors. Ensure your WezTerm color scheme interprets these correctly by using the built-in color schemes or configuring explicit ANSI color mappings.
+Color scheme compatibility: Many Claude Code outputs use ANSI colors. Ensure your WezTerm color scheme interprets these correctly by using the built-in color schemes or configuring explicit ANSI color mappings.
 
-**Shell integration**: For the best experience, configure your shell's prompt to include useful information without cluttering Claude Code's output. Tools like Starship provide minimal, informative prompts that work well in this context.
+Shell integration: For the best experience, configure your shell's prompt to include useful information without cluttering Claude Code's output. Tools like Starship provide minimal, informative prompts that work well in this context.
 
-## Conclusion
+Conclusion
 
-WezTerm and Claude Code together form a highly productive development environment. By using WezTerm's performance, multiplexing, and configuration flexibility, you can create workflows that make Claude Code interactions more seamless and effective. Start with the basic configurations in this guide, then customize based on your specific needs and workflow patterns.
+WezTerm and Claude Code together form a highly productive development environment. By using WezTerm's performance, multiplexing, and configuration flexibility, you can create workflows that make Claude Code interactions more smooth and effective. Start with the basic configurations in this guide, then customize based on your specific needs and workflow patterns.
 
-The key is experimentation—tailor your setup to match how you actually work, and both tools will become indispensable parts of your development toolkit.
+The key is experimentation, tailor your setup to match how you actually work, and both tools will become indispensable parts of your development toolkit.
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

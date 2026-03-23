@@ -13,23 +13,23 @@ tags: [chrome-extension, claude-skills]
 ---
 
 
-Building a Chrome extension that integrates with Anki opens up powerful possibilities for automated learning. Whether you want to capture vocabulary from foreign language websites, save technical documentation highlights, or create flashcards from research articles, combining Chrome's web access with Anki's spaced repetition system creates a seamless learning pipeline.
+Building a Chrome extension that integrates with Anki opens up powerful possibilities for automated learning. Whether you want to capture vocabulary from foreign language websites, save technical documentation highlights, or create flashcards from research articles, combining Chrome's web access with Anki's spaced repetition system creates a smooth learning pipeline.
 
 This guide walks through the architecture, implementation patterns, and practical code examples for building Chrome extension Anki integrations that developers and power users can customize for their specific needs.
 
-## Understanding the Integration Architecture
+Understanding the Integration Architecture
 
 Chrome extensions communicate with Anki through two primary mechanisms: the AnkiConnect API (for Anki desktop) or direct file-based import. The AnkiConnect approach is more flexible and provides real-time feedback, while import files work across all Anki versions including AnkiMobile.
 
 Your extension will need three core components:
 
-1. **Content Script** - Runs on web pages to extract and analyze content
-2. **Background Script** - Handles communication between content scripts and external services
-3. **Popup/Options Page** - Provides user configuration and manual card creation
+1. Content Script - Runs on web pages to extract and analyze content
+2. Background Script - Handles communication between content scripts and external services
+3. Popup/Options Page - Provides user configuration and manual card creation
 
 The data flow typically looks like this: User selects text on a webpage → Content script extracts the selection and surrounding context → Background script processes the data and sends to AnkiConnect → Anki creates the new card.
 
-## Setting Up AnkiConnect
+Setting Up AnkiConnect
 
 Before building your extension, you need the AnkiConnect plugin installed in Anki. Install it from the Anki add-ons repository, then configure it to accept connections from your extension.
 
@@ -51,7 +51,7 @@ Here's a minimal manifest.json for your Chrome extension:
 }
 ```
 
-## Implementing the Content Script
+Implementing the Content Script
 
 The content script handles text extraction and preparation. For a vocabulary learning use case, you'll want to capture the selected word, its definition, and example sentences from the surrounding context.
 
@@ -108,7 +108,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 });
 ```
 
-## Building the Background Communication Layer
+Building the Background Communication Layer
 
 The background script acts as a bridge between your content script and AnkiConnect. It handles the API communication and error management.
 
@@ -159,7 +159,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 });
 ```
 
-## Creating the User Interface
+Creating the User Interface
 
 The popup provides the interface for reviewing and confirming card creation. This is where users configure their card format and deck preferences.
 
@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 ```
 
-## Advanced: Adding Dictionary Lookups
+Advanced: Adding Dictionary Lookups
 
 For vocabulary learning, you typically want to fetch definitions automatically. You can extend the background script to call a dictionary API:
 
@@ -261,7 +261,7 @@ async function fetchDefinition(word) {
 
 Call this function in your background script before sending to Anki, then populate the back field with the definition.
 
-## Deployment and Testing Considerations
+Deployment and Testing Considerations
 
 When distributing your extension, keep these practical notes in mind:
 
@@ -270,17 +270,17 @@ When distributing your extension, keep these practical notes in mind:
 - Consider adding a sync mechanism for offline use where cards queue locally
 - Respect rate limits if calling external APIs for definitions
 
-## Extending the Integration
+Extending the Integration
 
 This foundation supports many extensions: language learning from news sites, technical term capture from documentation, research paper highlights, and more. The key is defining clear extraction rules for your specific use case and handling the data transformation between web content and Anki's card format.
 
 The AnkiConnect API supports additional operations like searching existing cards, updating notes, and managing decks. These enable features like duplicate detection before adding new cards, automatic deck routing based on content source, and bulk import from saved collections.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

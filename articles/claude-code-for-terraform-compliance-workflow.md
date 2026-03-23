@@ -14,11 +14,11 @@ score: 7
 ---
 
 
-# Claude Code for Terraform Compliance Workflow
+Claude Code for Terraform Compliance Workflow
 
-Infrastructure compliance is no longer optional in modern cloud deployments. As organizations scale their Terraform usage, ensuring that every infrastructure change meets security, regulatory, and organizational standards becomes critical. This guide shows you how to use Claude Code to build robust Terraform compliance workflows that catch issues early, automate policy enforcement, and maintain audit trails.
+Infrastructure compliance is no longer optional in modern cloud deployments. As organizations scale their Terraform usage, ensuring that every infrastructure change meets security, regulatory, and organizational standards becomes critical. This guide shows you how to use Claude Code to build solid Terraform compliance workflows that catch issues early, automate policy enforcement, and maintain audit trails.
 
-## Understanding Terraform Compliance Challenges
+Understanding Terraform Compliance Challenges
 
 Terraform compliance involves several moving parts: security scanning, policy enforcement, drift detection, and audit logging. Traditional approaches often rely on manual reviews or disconnected tools that create friction in the development workflow. Developers push changes, wait for security approval, and occasionally bypass controls to meet deadlines.
 
@@ -26,12 +26,12 @@ Claude Code transforms this paradigm by bringing compliance awareness directly i
 
 The key benefits include catching compliance violations during development rather than in production, generating compliance documentation automatically, and maintaining consistent policy enforcement across all teams.
 
-## Setting Up Claude for Compliance-Aware Infrastructure Development
+Setting Up Claude for Compliance-Aware Infrastructure Development
 
 To get started with compliance-focused Terraform development, you need to configure Claude with the right context. Create a CLAUDE.md file in your infrastructure repository that establishes compliance expectations:
 
 ```markdown
-# Infrastructure Compliance Context
+Infrastructure Compliance Context
 
 All Terraform configurations must follow these standards:
 - No hardcoded credentials; use vault or secrets management
@@ -49,14 +49,14 @@ Before committing any Terraform changes:
 
 This context file ensures Claude Code understands your compliance requirements and can proactively flag violations as you work.
 
-## Implementing Real-Time Compliance Checking
+Implementing Real-Time Compliance Checking
 
 One of the most powerful patterns is to have Claude Code check compliance as you write infrastructure code. Here's a practical workflow for detecting issues before they reach version control.
 
 When working with AWS resources, you can prompt Claude to audit your Terraform for common compliance gaps:
 
 ```hcl
-# Example: AWS S3 bucket with compliance issues
+AWS S3 bucket with compliance issues
 resource "aws_s3_bucket" "data_bucket" {
   bucket = "my-data-bucket"
   
@@ -70,7 +70,7 @@ resource "aws_s3_bucket" "data_bucket" {
 When you share this with Claude Code, it can suggest improvements:
 
 ```hcl
-# Compliant S3 bucket configuration
+Compliant S3 bucket configuration
 resource "aws_s3_bucket" "data_bucket" {
   bucket = "my-data-bucket"
   
@@ -111,7 +111,7 @@ resource "aws_s3_bucket_tagging" "data_bucket" {
 
 This demonstrates how Claude can transform non-compliant configurations into secure, policy-compliant versions.
 
-## Policy-as-Code Integration with Open Policy Agent
+Policy-as-Code Integration with Open Policy Agent
 
 For organizations requiring formal policy enforcement, integrating Open Policy Agent (OPA) with your Terraform workflow provides enterprise-grade compliance control. Claude Code can help you write and test OPA policies that govern your infrastructure.
 
@@ -141,7 +141,7 @@ deny[msg] {
 
 Claude Code can generate these policies based on your organization's requirements, making it easier to maintain comprehensive compliance coverage.
 
-## Automating Compliance in CI/CD Pipelines
+Automating Compliance in CI/CD Pipelines
 
 Integrating compliance checks into your continuous integration pipeline ensures that no non-compliant infrastructure reaches production. Here's how to structure your GitHub Actions workflow:
 
@@ -151,8 +151,8 @@ name: Terraform Compliance Check
 on:
   pull_request:
     paths:
-      - '**.tf'
-      - '**.tfvars'
+      - '.tf'
+      - '.tfvars'
 
 jobs:
   compliance:
@@ -187,7 +187,7 @@ jobs:
 
 Claude Code can help you generate these pipeline configurations and explain what each compliance tool does.
 
-## Database Compliance Patterns
+Database Compliance Patterns
 
 When managing databases through Terraform, compliance requirements become especially critical. Here's a pattern for compliant RDS configurations:
 
@@ -225,26 +225,26 @@ resource "aws_db_instance" "production" {
 
 Claude Code can audit existing database configurations and suggest the necessary changes to meet compliance standards like HIPAA, SOC 2, or PCI-DSS.
 
-## Generating Compliance Documentation
+Generating Compliance Documentation
 
 Beyond preventing non-compliant infrastructure, organizations need to demonstrate compliance to auditors. Claude Code can automatically generate compliance documentation based on your Terraform state:
 
 ```markdown
-# Infrastructure Compliance Report
+Infrastructure Compliance Report
 
-## S3 Buckets
+S3 Buckets
 | Bucket Name | Encryption | Versioning | Tags | Status |
 |------------|------------|------------|------|--------|
 | data-archive | AES256 | Enabled | Yes | Compliant |
 | logs-bucket | AES256 | Enabled | Yes | Compliant |
 
-## RDS Instances
+RDS Instances
 | Instance | Encrypted | Backup Retention | Deletion Protection | Status |
 |----------|-----------|------------------|---------------------|--------|
 | production-db | Yes | 30 days | Enabled | Compliant |
 | staging-db | Yes | 7 days | Enabled | Compliant |
 
-## Security Groups
+Security Groups
 | Group Name | Inbound Rules | Outbound Rules | Status |
 |------------|---------------|----------------|--------|
 | web-sg | 443 from ALB | Any | Compliant |
@@ -253,7 +253,7 @@ Beyond preventing non-compliant infrastructure, organizations need to demonstrat
 
 This documentation can be automatically generated and updated as your infrastructure changes.
 
-## Best Practices for Terraform Compliance Workflows
+Best Practices for Terraform Compliance Workflows
 
 Implementing effective Terraform compliance requires balancing security with developer productivity. Here are actionable best practices to follow:
 
@@ -271,16 +271,16 @@ Document exceptions formally. When compliance requirements can't be met, establi
 
 Maintain audit trails. Keep historical records of compliance checks, policy decisions, and any exceptions granted. This documentation proves invaluable during security audits.
 
-## Conclusion
+Conclusion
 
-Claude Code transforms Terraform compliance from a bottleneck into a seamless part of your infrastructure development workflow. By bringing compliance awareness directly into the development process, you can catch issues early, maintain consistent policy enforcement, and generate the documentation needed for audits.
+Claude Code transforms Terraform compliance from a bottleneck into a smooth part of your infrastructure development workflow. By bringing compliance awareness directly into the development process, you can catch issues early, maintain consistent policy enforcement, and generate the documentation needed for audits.
 
 The key is starting simple: set up a compliance context, add basic checks to your workflow, and gradually expand coverage as your team builds confidence. With Claude Code as your compliance partner, maintaining secure, compliant infrastructure becomes sustainable even at scale.
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

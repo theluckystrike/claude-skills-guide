@@ -16,19 +16,19 @@ score: 8
 
 On-call rotations are a critical part of maintaining reliable software systems, but they often come with stress, sleep interruptions, and manual toil. What if you could automate significant portions of your incident response workflow? This tutorial shows you how to use Claude Code to transform your on-call experience from reactive firefighting into a more manageable, automated process.
 
-## Understanding the On-Call Challenge
+Understanding the On-Call Challenge
 
-Traditional on-call workflows suffer from several pain points:
+Traditional on-call workflows suffer from several problems:
 
-- **Information overload**: Sifting through alerts to find the real issues
-- **Manual triage**: Investigating each alert manually before taking action
-- **Context switching**: Rapidly switching between systems to gather information
-- **Runbook fatigue**: Searching through documentation during incidents
-- **Post-incident burden**: Manually documenting what happened and why
+- Information overload: Sifting through alerts to find the real issues
+- Manual triage: Investigating each alert manually before taking action
+- Context switching: Rapidly switching between systems to gather information
+- Runbook fatigue: Searching through documentation during incidents
+- Post-incident burden: Manually documenting what happened and why
 
 Claude Code can help address each of these challenges through intelligent automation and natural language interaction.
 
-## Setting Up Claude Code for On-Call
+Setting Up Claude Code for On-Call
 
 Before diving into specific workflows, you need to configure Claude Code for on-call duties. Start by installing relevant skills that extend Claude's capabilities:
 
@@ -40,7 +40,7 @@ claude install github
 
 These integrations enable Claude to interact with your monitoring systems, communication platforms, and code repositories.
 
-### Creating an On-Call Skill
+Creating an On-Call Skill
 
 Create a dedicated skill for on-call operations. This skill should understand your infrastructure and provide quick access to common on-call tasks:
 
@@ -67,16 +67,16 @@ Create a dedicated skill for on-call operations. This skill should understand yo
 
 Save this as `~/.claude/skills/oncall-assistant.json` to make it available in your on-call sessions.
 
-## Automating Incident Triage
+Automating Incident Triage
 
 One of the most valuable applications of Claude Code in on-call workflows is automated triage. Instead of manually investigating every alert, you can delegate the initial investigation to Claude.
 
-### Building a Triage Workflow
+Building a Triage Workflow
 
 Create a skill that connects to your monitoring systems (Datadog, PagerDuty, Prometheus, etc.) and performs initial investigation:
 
 ```python
-# triage_alert.py
+triage_alert.py
 import subprocess
 import json
 
@@ -112,7 +112,7 @@ def triage_alert(alert_id: str) -> dict:
 
 This script fetches all the context needed to make an informed decision about an alert. You can then invoke this from Claude Code to get instant triage information.
 
-### Using Claude for Triage
+Using Claude for Triage
 
 When you receive an alert, simply ask Claude:
 
@@ -122,27 +122,27 @@ When you receive an alert, simply ask Claude:
 
 Claude will run your triage workflow and provide a clear recommendation:
 
-- **False positive**: "This is a known issue; the threshold is too sensitive"
-- **Can wait**: "Elevated but not critical; handle during business hours"
-- **Action required**: "Real incident; you need to respond now"
+- False positive: "This is a known issue; the threshold is too sensitive"
+- Can wait: "Elevated but not critical; handle during business hours"
+- Action required: "Real incident; you need to respond now"
 
-## Creating Interactive Runbooks as Code
+Creating Interactive Runbooks as Code
 
 Static documentation often fails when you need it most. Claude Code lets you create executable runbooks that guide you through remediation steps interactively.
 
-### Structure Your Runbooks
+Structure Your Runbooks
 
 Store runbooks in your repository with clear, executable steps:
 
 ```markdown
-# Runbook: High Memory Usage on API Service
+Runbook: High Memory Usage on API Service
 
-## Symptoms
+Symptoms
 - Memory usage above 90%
 - Increased latency on API responses
 - OOM killer logs appearing
 
-## Investigation
+Investigation
 1. Check current memory usage:
    ```bash
    kubectl top pods -n api
@@ -160,17 +160,17 @@ Store runbooks in your repository with clear, executable steps:
    top -b -n 1
    ```
 
-## Remediation
+Remediation
 1. If memory leak: Rollback to previous version
 2. If scaling needed: `kubectl scale deployment api --replicas=5`
 3. If transient: Wait for natural cooldown
 
-## Escalation
+Escalation
 - If unresolved after 30 minutes: @senior-oncall
 - Severity: SEV2
 ```
 
-### Running Runbooks with Claude
+Running Runbooks with Claude
 
 Ask Claude to execute the relevant runbook:
 
@@ -180,14 +180,14 @@ Ask Claude to execute the relevant runbook:
 
 Claude will guide you through each step, running commands and explaining the output.
 
-## Automating Post-Incident Tasks
+Automating Post-Incident Tasks
 
 After resolving an incident, there's always administrative work: updating status pages, documenting the issue, creating post-mortems. Claude Code can automate much of this.
 
-### Post-Incident Workflow
+Post-Incident Workflow
 
 ```python
-# post_incident.py
+post_incident.py
 def create_postmortem(incident_id: str) -> dict:
     """Generate post-mortem from incident data."""
     # Gather all incident data
@@ -220,48 +220,48 @@ With this automation, you can ask Claude to handle post-incident documentation:
 @claude Can you generate a post-mortem for incident #456 and create the action items?
 ```
 
-## Best Practices for On-Call with Claude Code
+Best Practices for On-Call with Claude Code
 
-### 1. Start Small
+1. Start Small
 
 Don't try to automate everything at once. Begin with the alerts that wake you up most frequently. Automate their triage first, then expand to other scenarios.
 
-### 2. Maintain Human Oversight
+2. Maintain Human Oversight
 
 Claude Code augments your capabilities but shouldn't make autonomous decisions for critical incidents. Keep humans in the loop for severity determination and remediation actions.
 
-### 3. Keep Skills Updated
+3. Keep Skills Updated
 
 Your on-call workflows evolve. Regularly review and update your Claude Code skills to reflect new services, changed thresholds, and lessons learned from incidents.
 
-### 4. Test During Calm Periods
+4. Test During Calm Periods
 
 Before going on-call with new Claude Code automations, test them during less stressful times. Verify that triage workflows produce accurate results and runbooks are complete.
 
-### 5. Document Edge Cases
+5. Document Edge Cases
 
 When Claude Code encounters situations it can't handle, make sure there's a clear escalation path. Document these edge cases so you can improve your automations over time.
 
-## Measuring Success
+Measuring Success
 
 Track these metrics to understand how Claude Code improves your on-call experience:
 
-- **MTTR (Mean Time to Resolution)**: Should decrease as triage and remediation become faster
-- **False positive rate**: Should drop as triage becomes more accurate
-- **On-call hours recovered**: Measure time saved on manual tasks
-- **Alert fatigue**: Self-reported reduction in stress during on-call
+- MTTR (Mean Time to Resolution): Should decrease as triage and remediation become faster
+- False positive rate: Should drop as triage becomes more accurate
+- On-call hours recovered: Measure time saved on manual tasks
+- Alert fatigue: Self-reported reduction in stress during on-call
 
-## Conclusion
+Conclusion
 
 Claude Code transforms on-call from a painful necessity into a more manageable, automated process. By investing time in setting up triage workflows, executable runbooks, and post-incident automation, you can significantly reduce the burden on your on-call engineers.
 
-Start with one painful alert type, automate its triage, and expand from there. Your future self—and your sleep schedule—will thank you.
+Start with one painful alert type, automate its triage, and expand from there. Your future self, and your sleep schedule, will thank you.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

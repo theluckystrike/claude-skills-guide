@@ -17,7 +17,7 @@ Claude Code has expanded significantly in 2026. [The skills ecosystem now covers
 
 [Skills are `.md` files in `~/.claude/skills/`, invoked with `/skill-name`](/claude-skill-md-format-complete-specification-guide/) Hooks are shell commands configured in `~/.claude/settings.json` that fire before and after Claude's actions.
 
-## Skills Overview
+Skills Overview
 
 The table below summarizes the key skills added or significantly expanded in 2026. Each section below goes deeper on invocation patterns and practical use.
 
@@ -30,7 +30,7 @@ The table below summarizes the key skills added or significantly expanded in 202
 | `webapp-testing` | Playwright-driven E2E testing and visual regression |
 | `xlsx` | Generate and modify spreadsheets with charts and formulas |
 
-## PDF Processing with the pdf Skill
+PDF Processing with the pdf Skill
 
 The [`pdf` skill](/best-claude-skills-for-data-analysis/) handles technical documentation, contracts, and data extraction. It supports batch processing and encrypted documents:
 
@@ -46,9 +46,9 @@ The [`pdf` skill](/best-claude-skills-for-data-analysis/) handles technical docu
 /pdf merge cover-letter.pdf and portfolio.pdf into application-packet.pdf
 ```
 
-The skill integrates into documentation pipelines by pulling code examples, API signatures, and configuration blocks from PDF-based resources — technical docs distributed as PDFs are no longer a dead end.
+The skill integrates into documentation pipelines by pulling code examples, API signatures, and configuration blocks from PDF-based resources. technical docs distributed as PDFs are no longer a dead end.
 
-## Frontend Design with the frontend-design Skill
+Frontend Design with the frontend-design Skill
 
 The `frontend-design` skill generates component code and validates UI implementations:
 
@@ -57,7 +57,7 @@ The `frontend-design` skill generates component code and validates UI implementa
 ```
 
 ```
-/frontend-design audit this component for WCAG 2.1 AA violations — check contrast ratios, aria labels, and keyboard navigation: [paste component]
+/frontend-design audit this component for WCAG 2.1 AA violations. check contrast ratios, aria labels, and keyboard navigation: [paste component]
 ```
 
 ```
@@ -66,12 +66,12 @@ The `frontend-design` skill generates component code and validates UI implementa
 
 The skill's Figma integration (paste spec, receive code) is the most-used new capability in 2026 for frontend teams.
 
-## Test-Driven Development with the tdd Skill
+Test-Driven Development with the tdd Skill
 
 The [`tdd` skill](/best-claude-skills-for-developers-2026/) guides test-first development and generates meaningful test cases:
 
 ```
-/tdd write Jest tests for UserService.authenticate() — include valid credential tests, invalid credential tests, and network timeout handling
+/tdd write Jest tests for UserService.authenticate(). include valid credential tests, invalid credential tests, and network timeout handling
 ```
 
 ```
@@ -82,9 +82,9 @@ The [`tdd` skill](/best-claude-skills-for-developers-2026/) guides test-first de
 /tdd add property-based tests for this pure function using fast-check: [paste function]
 ```
 
-Property-based testing support and fuzz input generation are new in 2026 — the skill can now generate randomized inputs to find edge cases that manually written tests miss.
+Property-based testing support and fuzz input generation are new in 2026. the skill can now generate randomized inputs to find edge cases that manually written tests miss.
 
-## Memory Management with the supermemory Skill
+Memory Management with the supermemory Skill
 
 The [`supermemory` skill](/claude-skills-token-optimization-reduce-api-costs/) provides persistent context across sessions:
 
@@ -108,7 +108,7 @@ The semantic search capability added in 2026 makes retrieval more flexible:
 
 Previously this required remembering exact key names. Now the skill searches stored context by meaning.
 
-## Web Testing with the webapp-testing Skill
+Web Testing with the webapp-testing Skill
 
 The `webapp-testing` skill provides Playwright integration for frontend testing:
 
@@ -124,9 +124,9 @@ The `webapp-testing` skill provides Playwright integration for frontend testing:
 /webapp-testing compare the current /dashboard against dashboard-baseline.png and report visual differences above 5%
 ```
 
-Visual regression testing is the most impactful new capability — screenshot comparisons catch layout regressions without manual inspection.
+Visual regression testing is the most impactful new capability. screenshot comparisons catch layout regressions without manual inspection.
 
-## Spreadsheet Automation with the xlsx Skill
+Spreadsheet Automation with the xlsx Skill
 
 The `xlsx` skill generates and modifies Excel spreadsheets programmatically, including chart types that are cumbersome to configure manually:
 
@@ -142,9 +142,9 @@ The `xlsx` skill generates and modifies Excel spreadsheets programmatically, inc
 /xlsx build a pivot table in sales-data.xlsx grouped by region and product line, showing total revenue and unit count
 ```
 
-Waterfall charts, treemaps, and sparklines were added in 2026 — chart types previously requiring manual steps in Excel are now one-command operations.
+Waterfall charts, treemaps, and sparklines were added in 2026. chart types previously requiring manual steps in Excel are now one-command operations.
 
-## Hook System
+Hook System
 
 Claude Code's hook system lets you intercept and modify behavior at key decision points. Hooks are shell commands, not JavaScript functions. Configure them in `~/.claude/settings.json`:
 
@@ -177,23 +177,23 @@ Claude Code's hook system lets you intercept and modify behavior at key decision
 }
 ```
 
-### Available Hook Types
+Available Hook Types
 
-- **PreToolUse** — fires before Claude executes a tool (Bash, Write, Edit, etc.)
-- **PostToolUse** — fires after tool execution with access to the output
-- **Notification** — fires when Claude sends a notification
+- PreToolUse. fires before Claude executes a tool (Bash, Write, Edit, etc.)
+- PostToolUse. fires after tool execution with access to the output
+- Notification. fires when Claude sends a notification
 
 Hooks receive context about the current operation as environment variables. `CLAUDE_TOOL_NAME`, `CLAUDE_TOOL_INPUT`, and `CLAUDE_TOOL_OUTPUT_PATH` are available depending on the hook type.
 
-### Practical Hook Uses
+Practical Hook Uses
 
-**Auto-format writes:** Run Prettier after every file write.
+Auto-format writes: Run Prettier after every file write.
 
-**Audit logging:** Log every bash command to a file for review.
+Audit logging: Log every bash command to a file for review.
 
-**Enforce commit hooks:** Run lint-staged before any git commit the agent makes.
+Enforce commit hooks: Run lint-staged before any git commit the agent makes.
 
-**Block dangerous operations:** Exit with a non-zero code in a PreToolUse hook to block a specific operation and surface an error to Claude.
+Block dangerous operations: Exit with a non-zero code in a PreToolUse hook to block a specific operation and surface an error to Claude.
 
 ```json
 {
@@ -213,7 +213,7 @@ Hooks receive context about the current operation as environment variables. `CLA
 }
 ```
 
-## Combining Skills with Hooks
+Combining Skills with Hooks
 
 The real use comes from combining skills with hooks in automation pipelines. For example, a documentation-to-test workflow:
 
@@ -246,14 +246,14 @@ This gives you immediate feedback on generated tests without manually switching 
 
 ---
 
-## Related Reading
+Related Reading
 
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Top skills every developer should know
-- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-vs-prompts-which-is-better/) — Decide when skills beat plain prompts
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — How skills activate automatically
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Top skills every developer should know
+- [Claude Skills vs Prompts: Which Is Better?](/claude-skills-vs-prompts-which-is-better/). Decide when skills beat plain prompts
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate automatically
 
 
 ---
 
-*Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*Built by theluckystrike. More at [zovo.one](https://zovo.one)
 *

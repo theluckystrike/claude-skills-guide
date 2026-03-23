@@ -17,7 +17,7 @@ Handling personally identifiable information (PII) responsibly has become essent
 
 Claude Code provides several approaches to handle PII detection and masking in your projects. This guide walks through practical strategies for identifying sensitive data, implementing masking pipelines, and integrating these practices into your development workflow.
 
-## Understanding PII in Your Data
+Understanding PII in Your Data
 
 Before implementing any masking solution, you need to understand what constitutes PII in your context. Common PII types include email addresses, phone numbers, social security numbers, credit card information, physical addresses, and full names. Some fields like IP addresses and account IDs may also count as PII depending on your jurisdiction and use case.
 
@@ -32,7 +32,7 @@ Track the following PII locations in our system:
 - Logs: error logs occasionally contain email addresses
 ```
 
-## Building a PII Detection Pipeline
+Building a PII Detection Pipeline
 
 Creating an effective PII detection pipeline requires combining pattern matching with context-aware analysis. For straightforward cases like email addresses and phone numbers, regular expressions provide reliable detection. Claude Code can generate appropriate regex patterns for your specific requirements:
 
@@ -47,27 +47,27 @@ Create a TypeScript utility that detects the following PII types using regex:
 Return the detection functions with TypeScript types.
 ```
 
-For more complex scenarios where simple pattern matching falls short, consider using named entity recognition (NER) libraries. Claude Code can help integrate libraries like Compromise or natural alternatives into your detection pipeline. The key is layering multiple detection methods—regex for structured formats, NER for unstructured text like customer support tickets.
+For more complex scenarios where simple pattern matching falls short, consider using named entity recognition (NER) libraries. Claude Code can help integrate libraries like Compromise or natural alternatives into your detection pipeline. The key is layering multiple detection methods, regex for structured formats, NER for unstructured text like customer support tickets.
 
-## Implementing Data Masking Strategies
+Implementing Data Masking Strategies
 
-Once you've detected PII, the next step is applying appropriate masking transformations. The right masking strategy depends on your use case—whether you need complete redaction, partial masking, or synthetic replacement.
+Once you've detected PII, the next step is applying appropriate masking transformations. The right masking strategy depends on your use case, whether you need complete redaction, partial masking, or synthetic replacement.
 
-### Email Address Masking
+Email Address Masking
 
 Email addresses typically mask all but the first character and domain:
 
 ```typescript
 function maskEmail(email: string): string {
   const [local, domain] = email.split('@');
-  const maskedLocal = local.charAt(0) + '***';
+  const maskedLocal = local.charAt(0) + '*';
   return `${maskedLocal}@${domain}`;
 }
 
-// john.doe@example.com → j***@example.com
+// john.doe@example.com → j*@example.com
 ```
 
-### Phone Number Masking
+Phone Number Masking
 
 Phone numbers often require preserving area code while masking the rest:
 
@@ -75,24 +75,24 @@ Phone numbers often require preserving area code while masking the rest:
 function maskPhone(phone: string): string {
   const digits = phone.replace(/\D/g, '');
   if (digits.length === 10) {
-    return `(${digits.slice(0, 3)}) ***-${digits.slice(6)}`;
+    return `(${digits.slice(0, 3)}) *-${digits.slice(6)}`;
   }
-  return '***-***-****';
+  return '*-*-';
 }
 ```
 
-### Credit Card Masking
+Credit Card Masking
 
 Financial data requires the most stringent handling. Always mask all but the last four digits:
 
 ```typescript
 function maskCreditCard(cardNumber: string): string {
   const digits = cardNumber.replace(/\D/g, '');
-  return `****-****-****-${digits.slice(-4)}`;
+  return `---${digits.slice(-4)}`;
 }
 ```
 
-## Integrating with Claude Code Workflows
+Integrating with Claude Code Workflows
 
 The frontend-design skill helps ensure your user interfaces properly handle PII display. When building admin dashboards or data export features, use this skill to implement proper data masking at the presentation layer:
 
@@ -114,7 +114,7 @@ matching PII (SSN, phone numbers), and applies redaction
 annotations to those regions.
 ```
 
-## Automating PII Detection in CI/CD
+Automating PII Detection in CI/CD
 
 Production systems benefit from automated PII scanning integrated into your deployment pipeline. Claude Code can help configure pre-commit hooks or CI pipeline stages that scan code and data for inadvertent PII exposure.
 
@@ -122,7 +122,7 @@ Create a `.git/hooks/pre-commit` script that runs basic PII detection on staged 
 
 ```bash
 #!/bin/bash
-# Scan staged files for potential PII leaks
+Scan staged files for potential PII leaks
 
 STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACM)
 
@@ -136,7 +136,7 @@ for file in $STAGED_FILES; do
 done
 ```
 
-## Maintaining Compliance with Data Handling Policies
+Maintaining Compliance with Data Handling Policies
 
 Beyond technical implementation, successful PII handling requires clear policies and procedures. Document your data classification scheme, define retention periods, and establish access control rules. The supermemory skill serves as an excellent knowledge base for tracking these policies across your organization:
 
@@ -151,7 +151,7 @@ Store our data handling policy:
   and user ID
 ```
 
-## Testing Your PII Handling
+Testing Your PII Handling
 
 Any PII detection and masking implementation requires thorough testing. Use the tdd skill to build comprehensive test coverage:
 
@@ -167,18 +167,18 @@ Create unit tests for the PII masking utility covering:
 
 Your test suite should verify that masked data cannot be reversed, that detection doesn't produce false negatives on valid PII, and that legitimate non-PII data isn't incorrectly flagged.
 
-## Conclusion
+Conclusion
 
 Implementing PII detection and masking in your Claude Code projects involves understanding your data, building reliable detection pipelines, applying appropriate transformations, and maintaining clear policies. The combination of Claude Code's coding capabilities with specialized skills like frontend-design, pdf, tdd, and supermemory creates a comprehensive toolkit for handling sensitive data responsibly.
 
-Start with a data audit to map where PII appears in your system, then implement layered detection using regex for structured data and NER for unstructured content. Build reusable masking utilities and integrate them at every layer—databases, APIs, logs, and user interfaces. Automated testing ensures your implementation remains reliable as your system evolves.
+Start with a data audit to map where PII appears in your system, then implement layered detection using regex for structured data and NER for unstructured content. Build reusable masking utilities and integrate them at every layer, databases, APIs, logs, and user interfaces. Automated testing ensures your implementation remains reliable as your system evolves.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code GDPR Compliance Implementation](/claude-code-gdpr-compliance-implementation/)
 - [Claude Code CCPA Privacy Compliance Guide](/claude-code-ccpa-privacy-compliance-guide/)
 
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

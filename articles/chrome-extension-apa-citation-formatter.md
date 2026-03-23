@@ -15,11 +15,11 @@ tags: [chrome-extension, apa-citation, academic-writing, reference-management, c
 
 
 {% raw %}
-Building a Chrome extension for APA citation formatting addresses a real pain point for researchers, students, and academics who frequently need to cite web sources. Rather than manually formatting each reference according to the Publication Manual of the American Psychological Association, a well-designed extension can extract metadata from the current page and generate properly formatted citations in seconds.
+Building a Chrome extension for APA citation formatting addresses a real problem for researchers, students, and academics who frequently need to cite web sources. Rather than manually formatting each reference according to the Publication Manual of the American Psychological Association, a well-designed extension can extract metadata from the current page and generate properly formatted citations in seconds.
 
 This guide covers the technical implementation of an APA citation formatter extension, from architecture decisions to specific code patterns that handle the nuances of APA style requirements.
 
-## Core Functionality Requirements
+Core Functionality Requirements
 
 An effective APA citation formatter extension needs to handle several citation types: journal articles, web pages, books, and conference proceedings. The APA 7th edition format specifies different elements for each type, but most web citations follow this structure:
 
@@ -29,23 +29,23 @@ Author, A. A. (Year, Month Day). Title of page. Site Name. URL
 
 The extension must extract at minimum: page title, publication date (if available), URL, and attempt to identify the author or organization. This requires careful use of the Chrome APIs and sometimes fallback logic when metadata is incomplete.
 
-## Project Structure
+Project Structure
 
 A typical extension project follows this layout:
 
 ```
 apa-citation-formatter/
-├── manifest.json
-├── popup/
-│   ├── popup.html
-│   ├── popup.css
-│   └── popup.js
-├── content/
-│   └── content.js
-├── background/
-│   └── background.js
-└── utils/
-    └── metadata.js
+ manifest.json
+ popup/
+    popup.html
+    popup.css
+    popup.js
+ content/
+    content.js
+ background/
+    background.js
+ utils/
+     metadata.js
 ```
 
 The manifest declares the extension's capabilities. For a citation formatter, you'll need the `activeTab` permission to read page content and potentially `scripting` to extract metadata from dynamic pages.
@@ -63,7 +63,7 @@ The manifest declares the extension's capabilities. For a citation formatter, yo
 }
 ```
 
-## Extracting Page Metadata
+Extracting Page Metadata
 
 The content script runs in the context of the active tab and extracts metadata using multiple strategies. Start with the standard meta tags that most websites use:
 
@@ -101,9 +101,9 @@ function extractMetadata() {
 }
 ```
 
-This function provides a foundation. Real-world implementations should include fallback logic that scrapes common patterns when meta tags are unavailable—looking for bylines in article headers, checking for schema.org JSON-LD data, and handling cases where no author is listed (using the organization name or omitting the author segment).
+This function provides a foundation. Real-world implementations should include fallback logic that scrapes common patterns when meta tags are unavailable, looking for bylines in article headers, checking for schema.org JSON-LD data, and handling cases where no author is listed (using the organization name or omitting the author segment).
 
-## Formatting Citations According to APA 7th Edition
+Formatting Citations According to APA 7th Edition
 
 The citation formatting logic handles different scenarios based on available data. APA style has specific rules for missing information:
 
@@ -169,7 +169,7 @@ function formatSingleAuthor(name) {
 
 These functions demonstrate the logic required, but you'll need to handle edge cases: corporate authors without personal names, dates in different formats, and titles with special characters that require encoding.
 
-## Building the Popup Interface
+Building the Popup Interface
 
 The popup provides the user interface for generating and copying citations. Keep it minimal and focused on the core workflow:
 
@@ -219,23 +219,23 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 ```
 
-## Advanced Features for Power Users
+Advanced Features for Power Users
 
 Beyond basic citation generation, several features differentiate a professional extension:
 
-**Multiple Output Formats**: Support for BibTeX, RIS, and plain text formats. BibTeX is particularly useful for integration with reference managers like Zotero or Mendeley.
+Multiple Output Formats: Support for BibTeX, RIS, and plain text formats. BibTeX is particularly useful for integration with reference managers like Zotero or Mendeley.
 
-**Batch Citation**: Allow users to select multiple tabs and generate a bibliography for all of them. This requires the `tabs` permission and careful state management.
+Batch Citation: Allow users to select multiple tabs and generate a bibliography for all of them. This requires the `tabs` permission and careful state management.
 
-**Custom Formatting Rules**: Let users define preferences for how missing information is handled, whether to include DOIs, and URL shortening preferences.
+Custom Formatting Rules: Let users define preferences for how missing information is handled, whether to include DOIs, and URL shortening preferences.
 
-**Reference Library Integration**: Direct export to services like Zotero, Mendeley, or CiteULike through their respective APIs.
+Reference Library Integration: Direct export to services like Zotero, Mendeley, or CiteULike through their respective APIs.
 
-## Handling Dynamic Content
+Handling Dynamic Content
 
 Single-page applications and dynamically loaded content present challenges for metadata extraction. The current implementation runs immediately when the popup opens, which may be too early for content that loads via JavaScript.
 
-A robust solution implements retry logic or listens for DOM mutations:
+A solid solution implements retry logic or listens for DOM mutations:
 
 ```javascript
 async function waitForContent(timeout = 3000) {
@@ -253,7 +253,7 @@ async function waitForContent(timeout = 3000) {
 }
 ```
 
-## Testing and Validation
+Testing and Validation
 
 Test your extension across various page types: news articles, academic papers, blog posts, corporate pages, and social media. Each has different metadata patterns and edge cases. Create test cases for:
 
@@ -264,20 +264,20 @@ Test your extension across various page types: news articles, academic papers, b
 - Single-page applications with delayed content
 - Pages requiring authentication
 
-## Security Considerations
+Security Considerations
 
 When building citation extensions, handle user data responsibly. The extension accesses page URLs and titles, which may include sensitive information in query parameters. Avoid sending this data to external servers unless explicitly requested by the user. Store preferences locally using `chrome.storage.local` rather than tracking usage.
 
 Building a functional APA citation formatter requires attention to both the technical implementation details and the nuanced formatting rules that academics expect. The patterns outlined here provide a foundation, but the real work comes from testing against diverse real-world sources and refining the extraction logic based on edge cases.
 
-The Chrome extension platform offers sufficient capabilities to build a professional-grade citation tool that integrates smoothly into research workflows. With careful attention to APA formatting rules and robust metadata extraction, you can significantly reduce the time researchers spend on citation management.
+The Chrome extension platform offers sufficient capabilities to build a professional-grade citation tool that integrates smoothly into research workflows. With careful attention to APA formatting rules and solid metadata extraction, you can significantly reduce the time researchers spend on citation management.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

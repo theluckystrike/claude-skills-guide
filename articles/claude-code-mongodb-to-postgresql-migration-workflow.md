@@ -15,13 +15,13 @@ permalink: /claude-code-mongodb-to-postgresql-migration-workflow/
 
 [Migrating from MongoDB to PostgreSQL represents a significant architectural shift that many development teams face](/best-claude-code-skills-to-install-first-2026/) as their applications mature. This guide walks through a practical workflow using Claude Code to automate and streamline the migration process, reducing manual effort and potential errors.
 
-## Understanding the Migration Challenge
+Understanding the Migration Challenge
 
-MongoDB's document-oriented model and PostgreSQL's relational structure serve different use cases. [When your application outgrows MongoDB's flexibility or when you need stronger ACID guarantees](/claude-tdd-skill-test-driven-development-workflow/), foreign key constraints, or complex reporting capabilities, PostgreSQL becomes the natural choice. The migration involves more than just moving data—it requires rethinking schema design, query patterns, and application logic.
+MongoDB's document-oriented model and PostgreSQL's relational structure serve different use cases. [When your application outgrows MongoDB's flexibility or when you need stronger ACID guarantees](/claude-tdd-skill-test-driven-development-workflow/), foreign key constraints, or complex reporting capabilities, PostgreSQL becomes the natural choice. The migration involves more than just moving data, it requires rethinking schema design, query patterns, and application logic.
 
 Claude Code accelerates this process by generating migration scripts, validating data transformations, and helping you refactor application code to work with the new database model.
 
-## Schema Analysis and Design
+Schema Analysis and Design
 
 Begin by analyzing your existing MongoDB collections to understand the data patterns. Extract your MongoDB schema information and feed it to Claude Code for analysis.
 
@@ -36,7 +36,7 @@ db.getCollectionNames().forEach(function(collectionName) {
 
 Claude Code can then suggest PostgreSQL table structures based on the document patterns it discovers. Look for repeating subdocuments that warrant their own tables, arrays that could become relation tables, and embedded data that fits naturally into JSONB columns when normalization proves impractical.
 
-## Data Migration Script Generation
+Data Migration Script Generation
 
 Create a Python migration script that Claude Code helps you construct. The script reads from MongoDB and inserts into PostgreSQL with proper type conversions.
 
@@ -80,7 +80,7 @@ def migrate_users():
 
 This pattern uses PostgreSQL's JSONB for flexible fields while maintaining proper relational structures for core entities. Adjust field mappings based on your specific MongoDB document structure.
 
-## Validating Data Integrity
+Validating Data Integrity
 
 After migration, verify data integrity using validation queries that compare record counts and check for data corruption.
 
@@ -101,21 +101,21 @@ JOIN postgresql_users p ON m._id::text = p.id
 WHERE m.email != p.email;
 ```
 
-You can automate these checks using the [**tdd** skill](/best-claude-skills-for-developers-2026/) to create test suites that validate migration correctness. Write tests that verify record counts, sample data accuracy, and referential integrity across related tables.
+You can automate these checks using the [tdd skill](/best-claude-skills-for-developers-2026/) to create test suites that validate migration correctness. Write tests that verify record counts, sample data accuracy, and referential integrity across related tables.
 
-## Application Code Refactoring
+Application Code Refactoring
 
 With data migrated, update your application layer to use the PostgreSQL driver. This typically involves changing connection strings, updating query builders, and modifying ORM configurations.
 
 ```python
-# Before: MongoDB connection (Motor)
+Before: MongoDB connection (Motor)
 from motor.motor_asyncio import AsyncIOMotorClient
 
 client = AsyncIOMotorClient('mongodb://localhost:27017')
 db = client['your_database']
 user = await db.users.find_one({'email': email})
 
-# After: PostgreSQL connection (asyncpg)
+After: PostgreSQL connection (asyncpg)
 import asyncpg
 
 pool = await asyncpg.create_pool(
@@ -133,15 +133,15 @@ async with pool.acquire() as conn:
 
 Claude Code assists with these refactoring tasks by identifying MongoDB-specific patterns in your codebase and suggesting equivalent PostgreSQL implementations. Focus on replacing aggregation pipelines with SQL queries, document lookups with JOIN operations, and `$set` updates with standard UPDATE statements.
 
-## Using Claude Skills for Testing
+Using Claude Skills for Testing
 
-Use the **pdf** skill to generate migration reports documenting the schema mapping decisions, data transformation rules, and any manual cleanup steps required. Create comprehensive documentation that future developers can reference.
+Use the pdf skill to generate migration reports documenting the schema mapping decisions, data transformation rules, and any manual cleanup steps required. Create comprehensive documentation that future developers can reference.
 
-Implement regression tests using the **tdd** skill to ensure your application behaves identically after the migration. Test critical user paths that involve database operations—authentication flows, data retrieval, and update operations should produce identical results.
+Implement regression tests using the tdd skill to ensure your application behaves identically after the migration. Test critical user paths that involve database operations, authentication flows, data retrieval, and update operations should produce identical results.
 
-The [**supermemory** skill](/claude-skills-token-optimization-reduce-api-costs/) helps you maintain institutional knowledge about migration decisions. Record why certain collections were denormalized, which fields use JSONB, and any performance considerations discovered during testing.
+The [supermemory skill](/claude-skills-token-optimization-reduce-api-costs/) helps you maintain institutional knowledge about migration decisions. Record why certain collections were denormalized, which fields use JSONB, and any performance considerations discovered during testing.
 
-## Performance Optimization
+Performance Optimization
 
 PostgreSQL offers different optimization strategies than MongoDB. Create appropriate indexes based on your query patterns.
 
@@ -162,12 +162,12 @@ CREATE INDEX idx_users_settings_gin
 
 Analyze query performance using EXPLAIN ANALYZE and adjust indexes accordingly. PostgreSQL's query planner handles complex JOIN operations efficiently, but proper indexing remains essential for read-heavy workloads.
 
-## Deployment Strategy
+Deployment Strategy
 
 Deploy the migration incrementally using a blue-green approach. Maintain both databases temporarily, with application code that can write to either or both.
 
 ```python
-# Dual-write pattern during migration period
+Dual-write pattern during migration period
 async def create_user(user_data):
     # Write to PostgreSQL (primary)
     user_id = await pg_create_user(user_data)
@@ -175,7 +175,7 @@ async def create_user(user_data):
     # Write to MongoDB (legacy) during transition
     await mongo_db.users.insert_one({
         '_id': user_id,
-        **user_data,
+        user_data,
         'migrated': True
     })
     
@@ -184,15 +184,15 @@ async def create_user(user_data):
 
 This dual-write pattern lets you migrate data gradually while maintaining consistency. Once all legacy data transfers and application code updates complete, remove the MongoDB dependencies and decommission the old database.
 
-## Conclusion
+Conclusion
 
-Migrating from MongoDB to PostgreSQL requires careful planning and execution, but Claude Code significantly reduces the manual effort involved. By generating migration scripts, validating data integrity, and assisting with application refactoring, you can complete the transition with confidence. Document your decisions using skills like **pdf** for reports and **supermemory** for institutional knowledge, ensuring your team can maintain and evolve the new database architecture effectively.
+Migrating from MongoDB to PostgreSQL requires careful planning and execution, but Claude Code significantly reduces the manual effort involved. By generating migration scripts, validating data integrity, and assisting with application refactoring, you can complete the transition with confidence. Document your decisions using skills like pdf for reports and supermemory for institutional knowledge, ensuring your team can maintain and evolve the new database architecture effectively.
 ---
 
-## Related Reading
+Related Reading
 
-- [Best Claude Skills for Data Analysis](/best-claude-skills-for-data-analysis/) — Data skills for validating, transforming, and reporting on database migration results
-- [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/) — The tdd and supermemory skills drive test-driven migration and progress tracking
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — Manage token usage during long database migration sessions
+- [Best Claude Skills for Data Analysis](/best-claude-skills-for-data-analysis/). Data skills for validating, transforming, and reporting on database migration results
+- [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/). The tdd and supermemory skills drive test-driven migration and progress tracking
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Manage token usage during long database migration sessions
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -13,17 +13,17 @@ score: 7
 ---
 
 
-# Claude Code for GraphQL Federation Workflow Guide
+Claude Code for GraphQL Federation Workflow Guide
 
-GraphQL Federation allows you to compose multiple GraphQL services into a unified supergraph, enabling teams to build independent services that expose a seamless API. However, managing federated schemas, coordinating between subgraphs, and debugging federated queries can quickly become complex. This guide shows you how to use Claude Code to automate and accelerate your GraphQL Federation workflow — from initial schema design through to production debugging.
+GraphQL Federation allows you to compose multiple GraphQL services into a unified supergraph, enabling teams to build independent services that expose a smooth API. However, managing federated schemas, coordinating between subgraphs, and debugging federated queries can quickly become complex. This guide shows you how to use Claude Code to automate and accelerate your GraphQL Federation workflow. from initial schema design through to production debugging.
 
-## Why Federation Development Gets Complicated
+Why Federation Development Gets Complicated
 
 GraphQL Federation is powerful precisely because it distributes schema ownership across teams. But distributed ownership introduces coordination problems that compound as your graph grows. The `@key`, `@external`, `@requires`, and `@provides` directives need to be applied consistently across multiple repositories. A field added in one subgraph may break composition in another. Entity reference resolution depends on correct type definitions in both the defining and consuming service.
 
-Teams typically encounter the same pain points repeatedly: composition errors with cryptic messages, confusion about which subgraph owns an entity field, and difficulty constructing queries that test cross-service resolution paths. Claude Code can help at each of these friction points by serving as a knowledgeable collaborator who understands your schema structure and can reason about federation-specific patterns.
+Teams typically encounter the same problems repeatedly: composition errors with cryptic messages, confusion about which subgraph owns an entity field, and difficulty constructing queries that test cross-service resolution paths. Claude Code can help at each of these friction points by serving as a knowledgeable collaborator who understands your schema structure and can reason about federation-specific patterns.
 
-## Setting Up Claude Code for GraphQL Projects
+Setting Up Claude Code for GraphQL Projects
 
 Before diving into federation-specific workflows, ensure Claude Code has the right context for your GraphQL project. Create a skill that understands your federation setup:
 
@@ -33,7 +33,7 @@ name: graphql-federation
 description: "Assists with GraphQL Federation development workflows"
 ---
 
-# GraphQL Federation Development Assistant
+GraphQL Federation Development Assistant
 
 You help with:
 - Designing federated schemas and entity definitions
@@ -53,23 +53,23 @@ name: graphql-federation
 description: "Assists with GraphQL Federation development for the commerce platform"
 ---
 
-# Commerce Platform Federation Assistant
+Commerce Platform Federation Assistant
 
-## Our Subgraphs
-- **users** (port 4001): Authentication, user profiles, addresses
-- **products** (port 4002): Product catalog, categories, pricing
-- **orders** (port 4003): Order processing, fulfillment status
-- **inventory** (port 4004): Stock levels, warehouse locations
+Our Subgraphs
+- users (port 4001): Authentication, user profiles, addresses
+- products (port 4002): Product catalog, categories, pricing
+- orders (port 4003): Order processing, fulfillment status
+- inventory (port 4004): Stock levels, warehouse locations
 
-## Entity Ownership
+Entity Ownership
 - User entity owned by: users subgraph
 - Product entity owned by: products subgraph
 - Order entity owned by: orders subgraph
 
-## Federation Version
+Federation Version
 We use Apollo Federation 2.x with the @apollo/subgraph package.
 
-## Key Directives in Use
+Key Directives in Use
 - @key for entity primary keys
 - @shareable for fields defined in multiple subgraphs
 - @requires for computed fields needing data from another subgraph
@@ -78,7 +78,7 @@ We use Apollo Federation 2.x with the @apollo/subgraph package.
 
 The extra specificity means Claude can give you answers calibrated to your actual setup rather than generic federation guidance.
 
-## Designing Federated Schemas with Claude
+Designing Federated Schemas with Claude
 
 One of the most valuable workflows is using Claude to design federated schemas. When defining entities that span multiple subgraphs, clarity is essential. Describe your domain requirements, and Claude can generate proper entity definitions with the `@key` directive:
 
@@ -105,7 +105,7 @@ extend type Product @key(fields: "id") {
 
 The `@external` directive marks fields provided by another subgraph, while `@key` defines the primary entity identifier that enables reference resolution across services.
 
-### Designing Entity Relationships Across Subgraphs
+Designing Entity Relationships Across Subgraphs
 
 A more nuanced pattern involves entities that need fields from sibling subgraphs to compute their own fields. The `@requires` directive handles this, but the setup is easy to get wrong. Here is a concrete example: the orders service needs the product's weight to calculate shipping cost.
 
@@ -120,7 +120,7 @@ Product weight lives in the products subgraph. How should I model this with
 Claude generates both sides of the relationship:
 
 ```graphql
-# In products subgraph
+In products subgraph
 type Product @key(fields: "id") {
   id: ID!
   name: String!
@@ -130,7 +130,7 @@ type Product @key(fields: "id") {
 ```
 
 ```graphql
-# In orders subgraph
+In orders subgraph
 type Product @key(fields: "id") {
   id: ID! @external
   weight: Float! @external   # referenced from products subgraph
@@ -150,7 +150,7 @@ type OrderItemResolver {
 
 This pattern frequently causes composition errors when the `@external` declaration in the consuming subgraph doesn't exactly match the type in the owning subgraph. Claude can check both schemas simultaneously and flag discrepancies before you push.
 
-## Automating Subgraph Configuration
+Automating Subgraph Configuration
 
 Each subgraph in your federation needs its own schema with federation-specific directives. Claude can generate these configurations automatically based on your service structure. Here's a typical workflow:
 
@@ -167,7 +167,7 @@ Our architecture:
 Claude can then generate a comprehensive federation configuration:
 
 ```yaml
-# federation-config.yaml
+federation-config.yaml
 services:
   users:
     schema: ./schemas/users.graphql
@@ -190,28 +190,28 @@ services:
     subgraph: true
 ```
 
-### Rover CLI Configuration
+Rover CLI Configuration
 
 The Apollo Rover CLI is the standard tool for managing federated schemas. Claude can help you set up your `rover.yaml` and automate common operations:
 
 ```yaml
-# rover.yaml
+rover.yaml
 federation_version: =2.4.0
 ```
 
 ```bash
-# Publish a subgraph schema to Apollo Studio
+Publish a subgraph schema to Apollo Studio
 rover subgraph publish my-graph@production \
   --name products \
   --schema ./schemas/products.graphql \
   --routing-url https://products.example.com/graphql
 
-# Check composition locally before publishing
+Check composition locally before publishing
 rover subgraph check my-graph@production \
   --name products \
   --schema ./schemas/products.graphql
 
-# Fetch the composed supergraph schema
+Fetch the composed supergraph schema
 rover supergraph fetch my-graph@production > supergraph.graphql
 ```
 
@@ -224,7 +224,7 @@ for checking, publishing, and fetching schemas for each of our four subgraphs.
 
 Claude generates reusable targets with proper error handling and environment variable support, saving the Rover command boilerplate from living in scattered shell scripts.
 
-## Resolving Composition Errors
+Resolving Composition Errors
 
 Schema composition failures are common in federated development. When your gateway fails to compose, Claude can analyze the errors and suggest fixes. Share the composition error output and ask:
 
@@ -238,14 +238,14 @@ Fix these composition errors:
 Claude will explain each issue and provide corrected schema snippets. For the `@shareable` error, it might suggest:
 
 ```graphql
-# In users subgraph - mark as shareable if needed in multiple services
+In users subgraph - mark as shareable if needed in multiple services
 extend type User @key(fields: "id") {
   id: ID! @external
   email: String! @shareable
 }
 ```
 
-### Common Composition Error Patterns
+Common Composition Error Patterns
 
 Understanding which errors indicate which underlying problems saves significant debugging time:
 
@@ -259,7 +259,7 @@ Understanding which errors indicate which underlying problems saves significant 
 
 Paste any of these errors into Claude with your schema context and it can pinpoint the exact lines that need changing.
 
-## Testing Federated Queries
+Testing Federated Queries
 
 Once your schema composes successfully, test federated queries across subgraphs. Claude can help construct queries that exercise multiple services:
 
@@ -298,7 +298,7 @@ query GetUserWithRecentOrders($userId: ID!, $since: DateTime!) {
 }
 ```
 
-### Writing Query Plan Tests
+Writing Query Plan Tests
 
 Beyond constructing queries, you can ask Claude to write tests that verify the federation query planner routes correctly. Using Apollo Gateway's `buildQueryPlan` API:
 
@@ -331,9 +331,9 @@ describe('User order query plan', () => {
 });
 ```
 
-Ask Claude to generate a full suite of query plan tests for your critical paths. This is especially valuable before you migrate field ownership between subgraphs — tests catch cases where the query plan changes in unexpected ways.
+Ask Claude to generate a full suite of query plan tests for your critical paths. This is especially valuable before you migrate field ownership between subgraphs. tests catch cases where the query plan changes in unexpected ways.
 
-### Integration Testing with Subgraph Mocking
+Integration Testing with Subgraph Mocking
 
 End-to-end federation tests that spin up all four services are slow and brittle. Claude can help you write integration tests that mock individual subgraphs while letting others run real:
 
@@ -358,13 +358,13 @@ const mockInventorySubgraph = new ApolloServer({
 
 This pattern isolates test failures to the subgraph under test rather than requiring all services to be healthy.
 
-## Generating TypeScript Types
+Generating TypeScript Types
 
 Maintain type safety across your federated application by generating TypeScript types from your composed schema. Claude can create a script that uses the Apollo CLI:
 
 ```bash
 #!/bin/bash
-# generate-federated-types.sh
+generate-federated-types.sh
 
 APOLLO_GRAPH_REF=my-graph@variant
 SCHEMA_PATH=./schema.graphql
@@ -378,12 +378,12 @@ npx @apollo/federation-types generate \
 
 Run this script after any schema changes to keep your client types in sync. Claude can also help you set up a pre-commit hook that validates schema changes don't break composition.
 
-### GraphQL Code Generator Setup
+GraphQL Code Generator Setup
 
 The `graphql-code-generator` ecosystem has first-class support for federation. Claude can configure the codegen setup across all your subgraphs:
 
 ```yaml
-# codegen.yml (in the products subgraph)
+codegen.yml (in the products subgraph)
 overwrite: true
 schema: "http://localhost:4002/graphql"
 generates:
@@ -400,7 +400,7 @@ generates:
 
 Ask Claude to generate the full codegen configuration for all four subgraphs in your project, and it will produce consistent configurations with appropriate mappers for each service's domain model.
 
-## Debugging Federation in Production
+Debugging Federation in Production
 
 When a federated query fails in production, diagnosing whether the problem is in the gateway, a specific subgraph, or the query plan itself requires a systematic approach. Claude can help structure your debugging workflow.
 
@@ -429,30 +429,30 @@ const gateway = new ApolloGateway({
 
 Paste your trace output or gateway logs to Claude and ask it to identify where in the query plan the failure occurs. Claude can read the structured trace data and tell you which subgraph call failed and what the entity reference looked like at that point.
 
-## Best Practices for Federation Workflows
+Best Practices for Federation Workflows
 
 Follow these practices to maintain a healthy federated architecture:
 
-**Define clear ownership boundaries**: Each subgraph should have a single team responsible for its schema. Use the `@tag` directive to mark fields as internal or experimental before promoting them to stable.
+Define clear ownership boundaries: Each subgraph should have a single team responsible for its schema. Use the `@tag` directive to mark fields as internal or experimental before promoting them to stable.
 
-**Version your subgraphs carefully**: When making breaking changes, introduce new fields rather than removing existing ones. Use deprecation marks and communicate changes through your federation's changelog.
+Version your subgraphs carefully: When making breaking changes, introduce new fields rather than removing existing ones. Use deprecation marks and communicate changes through your federation's changelog.
 
-**Test composition locally**: Run `rover subgraph check` before pushing schema changes to catch composition errors early. Integrate this check into your CI pipeline.
+Test composition locally: Run `rover subgraph check` before pushing schema changes to catch composition errors early. Integrate this check into your CI pipeline.
 
-**Document entity relationships**: Maintain a living diagram of how entities reference each other across subgraphs. This helps new team members understand the data graph architecture.
+Document entity relationships: Maintain a living diagram of how entities reference each other across subgraphs. This helps new team members understand the data graph architecture.
 
-**Validate before publish**: Set up a CI job that runs `rover supergraph compose` against your local schema changes before any subgraph publish reaches production. A failing composition in CI is far less painful than a failing gateway in production.
+Validate before publish: Set up a CI job that runs `rover supergraph compose` against your local schema changes before any subgraph publish reaches production. A failing composition in CI is far less painful than a failing gateway in production.
 
-**Use @override for migrations**: When moving a field from one subgraph to another, use `@override` to manage the transition period rather than trying to do it atomically. The progressive migration path gives you time to verify the new resolver before removing the old one.
+Use @override for migrations: When moving a field from one subgraph to another, use `@override` to manage the transition period rather than trying to do it atomically. The progressive migration path gives you time to verify the new resolver before removing the old one.
 
-## Conclusion
+Conclusion
 
-Claude Code transforms GraphQL Federation development from manual schema coordination into an assisted workflow. By defining federation-specific skills, you get intelligent help with schema design, configuration, debugging, and testing. Start by creating a GraphQL Federation skill tailored to your architecture, and watch your development velocity increase as Claude handles the boilerplate and helps troubleshoot complex composition issues. The biggest gains come from schema design reviews before changes are published, and from composition error diagnosis — both tasks where having an assistant that can read multiple schema files simultaneously and reason about their relationships saves substantial time.
+Claude Code transforms GraphQL Federation development from manual schema coordination into an assisted workflow. By defining federation-specific skills, you get intelligent help with schema design, configuration, debugging, and testing. Start by creating a GraphQL Federation skill tailored to your architecture, and watch your development velocity increase as Claude handles the boilerplate and helps troubleshoot complex composition issues. The biggest gains come from schema design reviews before changes are published, and from composition error diagnosis. both tasks where having an assistant that can read multiple schema files simultaneously and reason about their relationships saves substantial time.
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

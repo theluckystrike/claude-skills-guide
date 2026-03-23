@@ -17,15 +17,15 @@ Language learning through immersion is one of the most effective methods for acq
 
 This guide covers the technical architecture, implementation patterns, and practical considerations for building Chrome extensions that enhance language learning through web content immersion. By the end you will have a clear picture of how every piece fits together and enough working code to build a functional prototype.
 
-## Understanding the Immersion Approach
+Understanding the Immersion Approach
 
-Traditional language learning often focuses on isolated study—vocabulary flashcards, grammar exercises, and scripted conversations. Immersion flips this paradigm by placing the learner within an environment where the target language is the primary medium of interaction. The challenge with web-based immersion is that most content exists in languages you may not yet understand, creating a barrier that feels insurmountable.
+Traditional language learning often focuses on isolated study, vocabulary flashcards, grammar exercises, and scripted conversations. Immersion flips this paradigm by placing the learner within an environment where the target language is the primary medium of interaction. The challenge with web-based immersion is that most content exists in languages you may not yet understand, creating a barrier that feels insurmountable.
 
 Chrome extensions solve this problem by providing contextual support: instant translations, vocabulary highlighting, pronunciation guides, and comprehension aids that appear exactly when needed. The key is providing enough assistance to make content accessible without removing the immersion benefit entirely.
 
-This balance—sometimes called "assisted immersion" or "comprehensible input plus one (i+1)" in second language acquisition literature—is the design target for any serious immersion tool. The extension should lower barriers just enough that the learner can keep reading, not so much that they stop engaging with the foreign text at all.
+This balance, sometimes called "assisted immersion" or "comprehensible input plus one (i+1)" in second language acquisition literature, is the design target for any serious immersion tool. The extension should lower barriers just enough that the learner can keep reading, not so much that they stop engaging with the foreign text at all.
 
-### Immersion Extension Features by Difficulty Level
+Immersion Extension Features by Difficulty Level
 
 Before writing a single line of code, map out how your extension should behave at different learner stages:
 
@@ -38,11 +38,11 @@ Before writing a single line of code, map out how your extension should behave a
 
 Designing this progression up front keeps the codebase clean because each level maps to a distinct set of DOM mutations and API calls rather than a tangle of conditionals.
 
-## Core Extension Architecture
+Core Extension Architecture
 
 A language learning immersion extension typically consists of three main components:
 
-### 1. Content Script (Injected into Pages)
+1. Content Script (Injected into Pages)
 
 The content script runs in the context of web pages you visit, enabling direct manipulation of page content:
 
@@ -80,7 +80,7 @@ function highlightVocabulary(textNodes, vocabularyList) {
 A critical performance consideration: the TreeWalker approach above traverses the entire DOM on every page load. For large pages with thousands of text nodes, this can cause a noticeable freeze. A better production approach is to debounce the traversal and process nodes in idle chunks:
 
 ```javascript
-// content-script.js — performant chunked processing
+// content-script.js. performant chunked processing
 function highlightVocabularyAsync(vocabularySet) {
   const walker = document.createTreeWalker(
     document.body,
@@ -111,7 +111,7 @@ function highlightVocabularyAsync(vocabularySet) {
 
 Using `requestIdleCallback` keeps the extension from blocking the main thread during page rendering, which is essential for a tool users will run on every page they visit.
 
-### 2. Background Service Worker
+2. Background Service Worker
 
 The background script handles long-running tasks, manages storage, and coordinates communication between components:
 
@@ -147,7 +147,7 @@ The `return true` on line 9 is easy to forget and causes a subtle bug: without i
 For production extensions that make many word lookup requests, add a simple in-memory cache in the service worker to avoid hammering the dictionary API:
 
 ```javascript
-// background.js — cached word lookups
+// background.js. cached word lookups
 const lookupCache = new Map();
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
@@ -173,7 +173,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 This cache lives in memory and is cleared when the service worker is terminated. For persistent caching across browser sessions, write through to `chrome.storage.local` instead.
 
-### 3. Popup Interface
+3. Popup Interface
 
 The popup provides quick access to settings and statistics without leaving the current page:
 
@@ -201,7 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
 A minimal but useful addition is a word count display showing how many words from your vocabulary list appeared on the current page. Wire this up by sending a message from the popup to the content script after the DOM is ready:
 
 ```javascript
-// popup.js — request page stats from content script
+// popup.js. request page stats from content script
 chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
   chrome.tabs.sendMessage(tabs[0].id, { type: 'GET_PAGE_STATS' }, (response) => {
     if (response) {
@@ -212,9 +212,9 @@ chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
 });
 ```
 
-## Key Implementation Patterns
+Key Implementation Patterns
 
-### Dynamic Content Handling
+Dynamic Content Handling
 
 Single-page applications and dynamically loaded content require additional handling:
 
@@ -255,7 +255,7 @@ const observer = new MutationObserver((mutations) => {
 });
 ```
 
-### Context Menu Integration
+Context Menu Integration
 
 Adding right-click options for quick lookups:
 
@@ -279,12 +279,12 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
 });
 ```
 
-### Tooltip Definition Display
+Tooltip Definition Display
 
 When the background worker returns a definition, the content script needs to display it without disrupting the reading flow. A fixed-position tooltip anchored to the selected word works well:
 
 ```javascript
-// content-script.js — tooltip display
+// content-script.js. tooltip display
 function showDefinitionTooltip(word, definition, anchorRect) {
   // Remove any existing tooltip
   const existing = document.getElementById('immersion-tooltip');
@@ -317,13 +317,13 @@ function showDefinitionTooltip(word, definition, anchorRect) {
 }
 ```
 
-## Privacy and Performance Considerations
+Privacy and Performance Considerations
 
 When building immersion extensions, consider these important factors:
 
-**Local Processing**: Where possible, perform language processing locally rather than sending user data to external APIs. This improves response times and protects privacy. Libraries like Compromise.js provide basic NLP capabilities entirely in the browser.
+Local Processing: Where possible, perform language processing locally rather than sending user data to external APIs. This improves response times and protects privacy. Libraries like Compromise.js provide basic NLP capabilities entirely in the browser.
 
-**Storage Management**: Vocabulary lists and user progress can grow substantial. Use IndexedDB for larger datasets rather than chrome.storage.sync, which has quotas:
+Storage Management: Vocabulary lists and user progress can grow substantial. Use IndexedDB for larger datasets rather than chrome.storage.sync, which has quotas:
 
 ```javascript
 // Using IndexedDB for vocabulary storage
@@ -339,7 +339,7 @@ dbRequest.onupgradeneeded = (event) => {
 
 `chrome.storage.sync` has a hard limit of 100 KB total and 8 KB per item. For a serious vocabulary database covering even one language, you will exceed this quickly. `chrome.storage.local` offers 10 MB by default and can be extended with the `unlimitedStorage` permission. IndexedDB goes further still and is the right choice when you need queryable indexes (for example, finding all words last reviewed more than 7 days ago for spaced repetition).
 
-**Content Script Optimization**: Inject content scripts only where needed using match patterns in your manifest:
+Content Script Optimization: Inject content scripts only where needed using match patterns in your manifest:
 
 ```json
 {
@@ -355,7 +355,7 @@ dbRequest.onupgradeneeded = (event) => {
 
 Using `document_idle` rather than `document_start` means the script runs after the DOM is ready, which avoids competing with page rendering. If your extension does not need to intercept very early page events, always prefer `document_idle`.
 
-### Manifest V3 Permissions to Request
+Manifest V3 Permissions to Request
 
 A minimal but functional immersion extension needs the following permissions:
 
@@ -383,11 +383,11 @@ A minimal but functional immersion extension needs the following permissions:
 
 Request only what you need. Extensions that ask for broad host permissions during Chrome Web Store review face additional scrutiny and slower approval times.
 
-## Practical Applications
+Practical Applications
 
 Beyond basic vocabulary highlighting, immersion extensions can provide:
 
-**Sentence Mining**: Automatically capture sentences containing known vocabulary, creating a corpus of comprehensible input. This supports the i+1 hypothesis from second language acquisition theory—content slightly above your current level. A sentence miner captures the full sentence, the target word, and the source URL, then exports this data to Anki via its connect API:
+Sentence Mining: Automatically capture sentences containing known vocabulary, creating a corpus of comprehensible input. This supports the i+1 hypothesis from second language acquisition theory, content slightly above your current level. A sentence miner captures the full sentence, the target word, and the source URL, then exports this data to Anki via its connect API:
 
 ```javascript
 // Export captured sentence to Anki via AnkiConnect
@@ -415,9 +415,9 @@ async function exportToAnki(sentence, targetWord, translation) {
 }
 ```
 
-**Dual-Language Display**: Show translations alongside original content in a non-intrusive sidebar, allowing readers to compare structures without constant context switching.
+Dual-Language Display: Show translations alongside original content in a non-intrusive sidebar, allowing readers to compare structures without constant context switching.
 
-**Progress Tracking**: Track which words you've encountered, how often, and your retention rate. This data enables spaced repetition system (SRS) integration for efficient memorization. A simple encounter tracker stored in IndexedDB looks like this:
+Progress Tracking: Track which words you've encountered, how often, and your retention rate. This data enables spaced repetition system (SRS) integration for efficient memorization. A simple encounter tracker stored in IndexedDB looks like this:
 
 ```javascript
 // Record a word encounter with timestamp
@@ -440,7 +440,7 @@ function recordEncounter(word, language, sentence) {
 
 Feeding this encounter log into a spaced repetition algorithm gives you a review schedule grounded in your real reading history rather than arbitrary frequency lists.
 
-## Comparing Existing Tools vs. Building Your Own
+Comparing Existing Tools vs. Building Your Own
 
 If you are evaluating whether to build versus use an existing extension, here is a quick comparison:
 
@@ -453,19 +453,19 @@ If you are evaluating whether to build versus use an existing extension, here is
 
 Building your own makes the most sense when you are targeting a language pair or learning workflow that existing tools do not support, or when you need tight control over how your vocabulary data is stored and synced.
 
-## Conclusion
+Conclusion
 
-Chrome extensions offer a unique opportunity to transform your web browsing into a continuous language learning session. The key is building tools that provide support without breaking immersion—offering assistance that fades into the background until needed.
+Chrome extensions offer a unique opportunity to transform your web browsing into a continuous language learning session. The key is building tools that provide support without breaking immersion, offering assistance that fades into the background until needed.
 
-Start with simple vocabulary highlighting, then progressively add features based on your learning needs. Wire up a MutationObserver early so your extension handles SPAs correctly from the start—retrofitting that later is more painful than doing it upfront. Use IndexedDB for vocabulary storage rather than `chrome.storage.sync` so you are not fighting quota limits as your word list grows.
+Start with simple vocabulary highlighting, then progressively add features based on your learning needs. Wire up a MutationObserver early so your extension handles SPAs correctly from the start, retrofitting that later is more painful than doing it upfront. Use IndexedDB for vocabulary storage rather than `chrome.storage.sync` so you are not fighting quota limits as your word list grows.
 
 The most effective immersion tools are those you will actually use, so prioritize reliability and minimal disruption to your browsing flow. A tooltip that appears in under 100 milliseconds on hover will be used constantly; one that takes 800 milliseconds will be ignored after the first week.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

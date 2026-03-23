@@ -13,23 +13,23 @@ permalink: /claude-code-opentelemetry-tracing-instrumentation-guide/
 ---
 
 
-# Claude Code OpenTelemetry Tracing Instrumentation Guide
+Claude Code OpenTelemetry Tracing Instrumentation Guide
 
 OpenTelemetry has become the industry standard for observability, providing vendor-neutral APIs, SDKs, and tools for collecting distributed traces, metrics, and logs. When combined with Claude Code's AI assistance, you can rapidly implement comprehensive tracing in your applications without deep prior knowledge of OpenTelemetry internals.
 
 This guide walks you through setting up OpenTelemetry tracing instrumentation using Claude Code as your coding partner.
 
-## Why OpenTelemetry Matters for Modern Applications
+Why OpenTelemetry Matters for Modern Applications
 
-Modern applications often consist of multiple microservices communicating across networks. When something goes wrong, pinpointing the exact location of a failure can feel like finding a needle in a haystack. OpenTelemetry solves this by providing distributed tracing—a way to follow a request as it travels through your entire system.
+Modern applications often consist of multiple microservices communicating across networks. When something goes wrong, pinpointing the exact location of a failure can feel like finding a needle in a haystack. OpenTelemetry solves this by providing distributed tracing, a way to follow a request as it travels through your entire system.
 
 Traditional debugging often involves adding log statements, restarting services, and hoping you captured enough information. With OpenTelemetry, every request gets a unique trace ID that follows it through all services, making it trivial to see exactly where time is being spent and where errors occur.
 
 Claude Code accelerates your OpenTelemetry journey by generating boilerplate code, explaining complex concepts, and helping you debug tracing issues when they arise.
 
-## Setting Up OpenTelemetry with Claude Code
+Setting Up OpenTelemetry with Claude Code
 
-### Initial Project Configuration
+Initial Project Configuration
 
 Start by describing your tracing needs to Claude. Be specific about your language, framework, and what you want to achieve:
 
@@ -43,7 +43,7 @@ Claude will generate the initial setup, typically including package installation
 npm install @opentelemetry/api @opentelemetry/sdk-node @opentelemetry/auto-instrumentations-node @opentelemetry/exporter-trace-otlp-http
 ```
 
-### Creating the Tracing Setup File
+Creating the Tracing Setup File
 
 Claude can generate a proper tracing initialization file tailored to your needs:
 
@@ -76,11 +76,11 @@ process.on('SIGTERM', () => {
 
 Notice that this code uses standard JavaScript, not Liquid template syntax, so no raw tag is needed.
 
-## Manual Instrumentation with Custom Spans
+Manual Instrumentation with Custom Spans
 
 While auto-instrumentation covers many common frameworks, you'll often need to create custom spans for business logic that frameworks don't automatically capture.
 
-### Creating Spans for Business Logic
+Creating Spans for Business Logic
 
 Describe your business operations to Claude and ask for custom span creation:
 
@@ -169,7 +169,7 @@ async function processOrder(orderData) {
 }
 ```
 
-### Adding Custom Attributes
+Adding Custom Attributes
 
 Make your traces more useful by adding relevant attributes:
 
@@ -188,11 +188,11 @@ function addRequestContext(span, request) {
 }
 ```
 
-## Tracing Database Operations
+Tracing Database Operations
 
 Database queries are often the biggest source of latency. OpenTelemetry auto-instrumentation captures many queries automatically, but custom spans provide more context.
 
-### Tracing with Detailed Query Information
+Tracing with Detailed Query Information
 
 ```
 /opentelemetry Add detailed tracing for PostgreSQL queries including query text, execution time, and row counts.
@@ -232,11 +232,11 @@ async function tracedQuery(pool, text, params) {
 }
 ```
 
-## Context Propagation
+Context Propagation
 
 When requests span multiple services, trace context must propagate through headers.
 
-### W3C Trace Context
+W3C Trace Context
 
 The W3C Trace Context standard is now the default:
 
@@ -277,7 +277,7 @@ async function callDownstreamService(url, data) {
 }
 ```
 
-### Custom Propagators
+Custom Propagators
 
 For systems using custom headers:
 
@@ -310,11 +310,11 @@ class CustomTracePropagator extends TextMapPropagator {
 }
 ```
 
-## Sampling Strategies
+Sampling Strategies
 
 High-throughput applications may need sampling to control trace volume.
 
-### Common Sampling Strategies
+Common Sampling Strategies
 
 ```javascript
 const { AlwaysSample, AlwaysOffSampler, ParentBasedSampler } = require('@opentelemetry/sdk-trace-base');
@@ -344,11 +344,11 @@ const customSampler = new ParentBasedSampler({
 });
 ```
 
-## Integration with Claude Code for Debugging
+Integration with Claude Code for Debugging
 
 When traces reveal performance issues, Claude can help analyze and resolve them.
 
-### Analyzing Trace Data
+Analyzing Trace Data
 
 Share your trace data with Claude for analysis:
 
@@ -358,18 +358,18 @@ Share your trace data with Claude for analysis:
 
 Claude will identify that checkInventory is the bottleneck and suggest optimizations like caching inventory data or using asynchronous processing.
 
-### Troubleshooting Common Issues
+Troubleshooting Common Issues
 
 Common problems Claude can help debug:
 
-- **Missing traces**: Check if sampling is too aggressive or if span export is failing
-- **Incomplete context**: Verify propagator configuration across services
-- **Performance overhead**: Reduce attribute cardinality, adjust sampling rate
-- **Export failures**: Verify OTLP endpoint connectivity and authentication
+- Missing traces: Check if sampling is too aggressive or if span export is failing
+- Incomplete context: Verify propagator configuration across services
+- Performance overhead: Reduce attribute cardinality, adjust sampling rate
+- Export failures: Verify OTLP endpoint connectivity and authentication
 
-## Best Practices
+Best Practices
 
-### Naming Conventions
+Naming Conventions
 
 Use consistent, meaningful span names:
 
@@ -384,7 +384,7 @@ Use consistent, meaningful span names:
 `query-${Math.random()}`    // Absolutely forbidden
 ```
 
-### Attribute Guidelines
+Attribute Guidelines
 
 ```javascript
 // Use semantic conventions for standard attributes
@@ -400,7 +400,7 @@ span.setAttribute(SemanticAttributes.HTTP_URL, 'https://api.example.com/users');
 // Good: span.setAttribute('user.id', user.id);
 ```
 
-### Performance Considerations
+Performance Considerations
 
 ```javascript
 // Don't create spans in tight loops
@@ -425,16 +425,16 @@ span.addEvent('Processing item', {
 });
 ```
 
-## Conclusion
+Conclusion
 
 OpenTelemetry tracing provides visibility into your application's behavior across service boundaries. With Claude Code as your partner, you can rapidly implement comprehensive instrumentation without becoming an OpenTelemetry expert. The key is starting simple with auto-instrumentation, then adding custom spans for your specific business logic.
 
 Remember to iterate: start with basic setup, add meaningful attributes, implement proper context propagation, and refine with sampling strategies as your observability needs grow.
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

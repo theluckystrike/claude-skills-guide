@@ -12,19 +12,19 @@ score: 8
 ---
 
 {% raw %}
-# Claude Code for Load Test Results Analysis Workflow
+Claude Code for Load Test Results Analysis Workflow
 
 Load testing is essential for understanding how your application performs under stress, but analyzing the results can be time-consuming and error-prone. A well-designed Claude Code skill can transform raw load test data into actionable insights, helping you identify bottlenecks, compare performance across builds, and generate reports without manual effort.
 
 This guide shows you how to create a skill that automates load test results analysis using Claude Code, with practical examples for popular load testing tools like JMeter, k6, and Gatling.
 
-## Why Use Claude Code for Load Test Analysis?
+Why Use Claude Code for Load Test Analysis?
 
 Traditional load test analysis requires opening multiple files, importing data into spreadsheets, and manually calculating percentiles. This process is:
 
-- **Time-consuming**: Manual analysis takes 30+ minutes per test run
-- **Error-prone**: Easy to miss anomalies when scanning hundreds of metrics
-- **Inconsistent**: Different team members may interpret results differently
+- Time-consuming: Manual analysis takes 30+ minutes per test run
+- Error-prone: Easy to miss anomalies when scanning hundreds of metrics
+- Inconsistent: Different team members may interpret results differently
 
 A Claude Code skill can:
 1. Parse multiple load test output formats automatically
@@ -33,9 +33,9 @@ A Claude Code skill can:
 4. Generate human-readable summaries and recommendations
 5. Identify regressions or improvements across test runs
 
-## Building Your Load Test Analysis Skill
+Building Your Load Test Analysis Skill
 
-### Skill Structure
+Skill Structure
 
 Create a new skill file at `skills/load-test-analyzer.md` with this structure:
 
@@ -51,21 +51,21 @@ patterns:
   - "load test bottlenecks"
 ---
 
-# Load Test Results Analyzer
+Load Test Results Analyzer
 
 You analyze load test results to identify performance issues and provide actionable recommendations. You work with JMeter CSV/XML, k6 JSON, and Gatling reports.
 
-## Available Analysis Modes
+Available Analysis Modes
 
 When the user asks to analyze load test results:
 
-1. **Quick Summary**: Show key metrics at a glance
-2. **Detailed Analysis**: Deep dive into response times, error rates, throughput
-3. **Comparison**: Compare current vs. baseline results
-4. **Trend Analysis**: Track metrics across multiple test runs
+1. Quick Summary: Show key metrics at a glance
+2. Detailed Analysis: Detailed look into response times, error rates, throughput
+3. Comparison: Compare current vs. baseline results
+4. Trend Analysis: Track metrics across multiple test runs
 ```
 
-### Parsing Different Load Test Formats
+Parsing Different Load Test Formats
 
 Your skill needs to handle various output formats. Here's how to implement parsers for common tools:
 
@@ -111,16 +111,16 @@ def parse_jmeter_csv(csv_file):
     return results
 ```
 
-## Practical Analysis Examples
+Practical Analysis Examples
 
-### Example 1: Quick Bottleneck Identification
+Example 1: Quick Bottleneck Identification
 
 When analyzing results, focus on these key indicators:
 
-1. **Response Time Degradation**: Compare p95/p99 across test runs
-2. **Error Rate Spikes**: Look for HTTP 5xx errors or timeouts
-3. **Throughput Limits**: Identify when requests start queuing
-4. **Resource Saturation**: Correlate with CPU/memory metrics
+1. Response Time Degradation: Compare p95/p99 across test runs
+2. Error Rate Spikes: Look for HTTP 5xx errors or timeouts
+3. Throughput Limits: Identify when requests start queuing
+4. Resource Saturation: Correlate with CPU/memory metrics
 
 A Claude prompt for quick analysis:
 
@@ -132,7 +132,7 @@ Analyze the load test results in results/k6-summary.json. Identify:
 - Recommendations for improvement
 ```
 
-### Example 2: Automated Regression Detection
+Example 2: Automated Regression Detection
 
 Compare current results against a baseline:
 
@@ -159,24 +159,24 @@ def detect_regression(current, baseline, threshold=0.2):
     return regressions
 ```
 
-### Example 3: Generating Performance Reports
+Example 3: Generating Performance Reports
 
 Create automated reports that teams can act on:
 
 ```markdown
-## Load Test Report - Build #1247
+Load Test Report - Build #1247
 
-**Test Date**: 2026-03-15
-**Environment**: staging
-**Duration**: 30 minutes
-**Virtual Users**: 500
+Test Date: 2026-03-15
+Environment: staging
+Duration: 30 minutes
+Virtual Users: 500
 
-### Summary
-- ✅ All critical endpoints below 2s p95
-- ⚠️ /api/search showing 15% degradation vs baseline
-- ✅ Error rate: 0.03% (below 1% threshold)
+Summary
+-  All critical endpoints below 2s p95
+-  /api/search showing 15% degradation vs baseline
+-  Error rate: 0.03% (below 1% threshold)
 
-### Detailed Metrics
+Detailed Metrics
 
 | Endpoint | p50 | p95 | p99 | Error Rate |
 |----------|-----|-----|-----|------------|
@@ -184,17 +184,17 @@ Create automated reports that teams can act on:
 | /api/search | 380ms | 2100ms | 3500ms | 0.08% |
 | /api/checkout | 210ms | 780ms | 1200ms | 0.02% |
 
-### Recommendations
-1. **High Priority**: Investigate /api/search degradation
-2. **Medium Priority**: Consider caching /api/home responses
-3. **Low Priority**: Monitor /api/checkout under higher load
+Recommendations
+1. High Priority: Investigate /api/search degradation
+2. Medium Priority: Consider caching /api/home responses
+3. Low Priority: Monitor /api/checkout under higher load
 ```
 
-## Best Practices for Load Test Skills
+Best Practices for Load Test Skills
 
-### 1. Define Clear Thresholds
+1. Define Clear Thresholds
 
-Don't just report metrics—provide context:
+Don't just report metrics, provide context:
 
 ```python
 THRESHOLDS = {
@@ -205,14 +205,14 @@ THRESHOLDS = {
 }
 ```
 
-### 2. Handle Multiple Test Runs
+2. Handle Multiple Test Runs
 
 Organize results by timestamp for trend analysis:
 
 ```python
 def analyze_trends(results_dir):
     """Analyze performance trends across multiple test runs"""
-    runs = sorted(Path(results_dir).glob('**/summary.json'))
+    runs = sorted(Path(results_dir).glob('/summary.json'))
     
     trends = []
     for run in runs:
@@ -226,12 +226,12 @@ def analyze_trends(results_dir):
     return trends
 ```
 
-### 3. Integrate with CI/CD
+3. Integrate with CI/CD
 
 Use Claude Code skills in your pipeline:
 
 ```yaml
-# GitHub Actions example
+GitHub Actions example
 - name: Analyze Load Test
   run: |
     claude --skill load-test-analyzer \
@@ -240,7 +240,7 @@ Use Claude Code skills in your pipeline:
       --output report.md
 ```
 
-### 4. Maintain Historical Baselines
+4. Maintain Historical Baselines
 
 Store baseline results for regression detection:
 
@@ -251,7 +251,7 @@ baselines/
   2026-03-15-staging.json
 ```
 
-## Conclusion
+Conclusion
 
 A Claude Code skill for load test analysis transforms raw performance data into actionable insights. By automating metric calculation, regression detection, and report generation, you save time while ensuring consistent, thorough analysis.
 
@@ -260,24 +260,24 @@ Start with the quick summary mode, then expand to comparison and trend analysis 
 With the right skill design, your team can make data-driven performance decisions faster and more reliably than ever before.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-## Step-by-Step: Load Test Analysis Workflow
+Step-by-Step: Load Test Analysis Workflow
 
-1. **Run your load test**: use k6, Locust, JMeter, or Artillery to generate load. Output results to a JSON or CSV file — all major tools support structured output formats.
-2. **Feed results to Claude Code**: pass the results file path to Claude Code: `claude> analyze the load test results in results.json and identify bottlenecks`. Claude reads the file and produces a prioritized list of findings.
-3. **Identify the critical path**: ask Claude to identify which endpoint or service accounts for the most latency. Usually one or two endpoints dominate the 95th percentile response time.
-4. **Compare against baseline**: if you have a previous results file, ask Claude to diff the two runs and explain what changed and why performance improved or degraded.
-5. **Generate fix recommendations**: for each bottleneck Claude identifies, ask for specific code-level recommendations. Claude can suggest database query optimizations, caching strategies, or connection pool sizing changes.
-6. **Draft a performance report**: ask Claude to write a structured report with executive summary, methodology, findings, and recommendations. This report can be shared with stakeholders without requiring them to interpret raw numbers.
+1. Run your load test: use k6, Locust, JMeter, or Artillery to generate load. Output results to a JSON or CSV file. all major tools support structured output formats.
+2. Feed results to Claude Code: pass the results file path to Claude Code: `claude> analyze the load test results in results.json and identify bottlenecks`. Claude reads the file and produces a prioritized list of findings.
+3. Identify the critical path: ask Claude to identify which endpoint or service accounts for the most latency. Usually one or two endpoints dominate the 95th percentile response time.
+4. Compare against baseline: if you have a previous results file, ask Claude to diff the two runs and explain what changed and why performance improved or degraded.
+5. Generate fix recommendations: for each bottleneck Claude identifies, ask for specific code-level recommendations. Claude can suggest database query optimizations, caching strategies, or connection pool sizing changes.
+6. Draft a performance report: ask Claude to write a structured report with executive summary, methodology, findings, and recommendations. This report can be shared with stakeholders without requiring them to interpret raw numbers.
 
-## Parsing k6 Results with Claude Code
+Parsing k6 Results with Claude Code
 
 k6 outputs a summary JSON with all key metrics. Claude Code can parse this directly:
 
@@ -303,7 +303,7 @@ export default function() {
 
 Pass `k6 run --summary-export=results.json test.js` and then ask Claude Code to analyze `results.json`.
 
-## Load Test Analysis Comparison
+Load Test Analysis Comparison
 
 | Analysis method | Speed | Depth | Actionability | Repeatability |
 |---|---|---|---|---|
@@ -315,7 +315,7 @@ Pass `k6 run --summary-export=results.json test.js` and then ask Claude Code to 
 
 Claude Code analysis sits in a valuable middle ground: faster than manual review, cheaper than APM tools for one-off analysis, and more actionable than simple threshold alerts.
 
-## Advanced: Automated Regression Detection
+Advanced: Automated Regression Detection
 
 Add Claude Code to your CI/CD pipeline to automatically compare load test results against a stored baseline:
 
@@ -339,12 +339,12 @@ if p95_delta > 50 or error_delta > 0.01:
     sys.exit(1)  # Fail the CI pipeline
 ```
 
-## Troubleshooting
+Troubleshooting
 
-**Claude Code output too verbose for CI use**: Add "Respond in 5 bullet points maximum" to your analysis prompt. Long reports are valuable for investigation but not for CI gate decisions where a concise pass/fail with a reason is more actionable.
+Claude Code output too verbose for CI use: Add "Respond in 5 bullet points maximum" to your analysis prompt. Long reports are valuable for investigation but not for CI gate decisions where a concise pass/fail with a reason is more actionable.
 
-**Load test results file too large for Claude's context**: Pre-aggregate the results before passing them. Instead of sending 100,000 raw response time measurements, compute the p50/p90/p95/p99 percentiles and error rates per endpoint yourself and pass only the aggregated table.
+Load test results file too large for Claude's context: Pre-aggregate the results before passing them. Instead of sending 100,000 raw response time measurements, compute the p50/p90/p95/p99 percentiles and error rates per endpoint yourself and pass only the aggregated table.
 
-**Inconsistent findings across repeated analysis runs**: Use Claude's temperature 0 setting for analysis tasks. Add "Be consistent and deterministic in your analysis" to the prompt. For CI regression detection, define explicit thresholds in your prompt rather than asking Claude to judge whether a regression is "significant".
+Inconsistent findings across repeated analysis runs: Use Claude's temperature 0 setting for analysis tasks. Add "Be consistent and deterministic in your analysis" to the prompt. For CI regression detection, define explicit thresholds in your prompt rather than asking Claude to judge whether a regression is "significant".
 
 {% endraw %}

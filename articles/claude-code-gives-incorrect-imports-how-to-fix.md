@@ -13,23 +13,23 @@ score: 7
 ---
 
 
-# Claude Code Gives Incorrect Imports: How to Fix
+Claude Code Gives Incorrect Imports: How to Fix
 
 Import errors rank among the most common issues developers face when working with Claude Code. When Claude Code generates code for your project, incorrect import statements can range from wrong file paths to mismatched module systems, derailing your workflow quickly. This guide provides practical solutions for diagnosing and fixing these import problems across JavaScript, Python, and TypeScript projects.
 
-## Why Claude Code Generates Incorrect Imports
+Why Claude Code Generates Incorrect Imports
 
 Claude Code attempts to generate imports based on its understanding of your project structure, but several factors can cause it to miss the mark.
 
-**Missing context about your project setup.** Claude Code may not have full visibility into your project's directory structure, especially when working with monorepos or non-standard layouts. The tool relies on file reads and project context you provide during the session.
+Missing context about your project setup. Claude Code may not have full visibility into your project's directory structure, especially when working with monorepos or non-standard layouts. The tool relies on file reads and project context you provide during the session.
 
-**Misunderstanding module resolution rules.** Different frameworks and bundlers use different import resolution strategies. A project using Next.js, Vue with Vite, or a custom Webpack configuration will have different import rules that Claude Code might not infer correctly without explicit configuration details.
+Misunderstanding module resolution rules. Different frameworks and bundlers use different import resolution strategies. A project using Next.js, Vue with Vite, or a custom Webpack configuration will have different import rules that Claude Code might not infer correctly without explicit configuration details.
 
-**Stale information from previous sessions.** If your project structure changed but Claude Code hasn't re-read the relevant files, it may generate imports based on outdated assumptions.
+Stale information from previous sessions. If your project structure changed but Claude Code hasn't re-read the relevant files, it may generate imports based on outdated assumptions.
 
-## Fixing JavaScript and TypeScript Import Issues
+Fixing JavaScript and TypeScript Import Issues
 
-### Wrong File Path Imports
+Wrong File Path Imports
 
 The most common issue involves incorrect relative paths. Claude Code might generate:
 
@@ -47,7 +47,7 @@ To fix this, ensure Claude Code understands your path aliases. Add an explicit n
 My project uses @/ as an alias for src/. For example, @/components/Button points to src/components/Button.tsx
 ```
 
-### Named vs Default Import Confusion
+Named vs Default Import Confusion
 
 TypeScript and ES modules distinguish between named and default imports. Incorrect usage causes runtime errors:
 
@@ -70,7 +70,7 @@ When Claude Code gets this wrong, respond with a correction that includes the co
 Use named imports like `import { useState } from 'react'` instead of default imports for React hooks.
 ```
 
-### Missing File Extensions
+Missing File Extensions
 
 TypeScript and bundlers often require explicit file extensions:
 
@@ -84,22 +84,22 @@ import { helper } from './utils/helper.ts';
 
 Check your `tsconfig.json` and `vite.config.ts` or `webpack.config.js` to understand what your build system expects, then share those details with Claude Code.
 
-## Fixing Python Import Issues
+Fixing Python Import Issues
 
 Python imports trip up Claude Code frequently, especially in Django, Flask, or complex package structures.
 
-### Relative vs Absolute Import Errors
+Relative vs Absolute Import Errors
 
 ```python
-# What Claude Code might generate (incorrect for all cases)
+What Claude Code might generate (incorrect for all cases)
 import utils.helpers
 from models import User
 
-# Correct absolute imports
+Correct absolute imports
 from myapp.utils import helpers
 from myapp.models import User
 
-# Correct relative imports (within same package)
+Correct relative imports (within same package)
 from . import helpers
 from ..models import User
 ```
@@ -110,24 +110,24 @@ Specify your import convention at the start of your session:
 I'm using absolute imports in this project. All imports should start from the project root package.
 ```
 
-### Missing __init__.py Issues
+Missing __init__.py Issues
 
 Python packages require `__init__.py` files for proper imports:
 
 ```bash
-# Ensure your directory structure is recognized
+Ensure your directory structure is recognized
 myapp/
-├── __init__.py      # Makes myapp a package
-├── models/
-│   ├── __init__.py  # Required for from myapp.models import ...
-│   └── user.py
+ __init__.py      # Makes myapp a package
+ models/
+    __init__.py  # Required for from myapp.models import ...
+    user.py
 ```
 
 If Claude Code generates imports that fail due to missing `__init__.py` files, create those files or clarify your package structure.
 
-## Preventing Import Errors Before They Happen
+Preventing Import Errors Before They Happen
 
-### Provide Project Context Proactively
+Provide Project Context Proactively
 
 Before asking Claude Code to generate substantial code, share key files:
 
@@ -136,65 +136,65 @@ Before asking Claude Code to generate substantial code, share key files:
 - Key directory structure
 - Any custom path aliases
 
-This context helps Claude Code generate correct imports from the start. Skills like the **frontend-design** skill are particularly helpful because they prompt you for necessary configuration details before generating code.
+This context helps Claude Code generate correct imports from the start. Skills like the frontend-design skill are particularly helpful because they prompt you for necessary configuration details before generating code.
 
-### Use Import Fixing Skills
+Use Import Fixing Skills
 
 Several Claude skills focus specifically on code quality and can help fix import issues:
 
-- The **tdd** skill enforces proper module organization during test-driven development
-- The **pdf** skill generates correct imports for document processing code
-- The **supermemory** skill can remember your project's import conventions across sessions
+- The tdd skill enforces proper module organization during test-driven development
+- The pdf skill generates correct imports for document processing code
+- The supermemory skill can remember your project's import conventions across sessions
 
-### Create a Project Reference Document
+Create a Project Reference Document
 
 Maintain a simple reference your project can share with Claude Code:
 
 ```markdown
-# Project Import Conventions
+Project Import Conventions
 
-## Path Aliases
+Path Aliases
 - @/ → src/
 - @components/ → src/components/
 - @lib/ → src/lib/
 
-## Import Style
+Import Style
 - Use named imports for React hooks: `import { useState } from 'react'`
 - Use absolute imports, no relative paths beyond 2 levels
 - Include file extensions in TypeScript: `.tsx`, `.ts`
 
-## Python
+Python
 - Use absolute imports from project root
 - Never use implicit relative imports (always explicit: from .module import)
 ```
 
-## Quick Fix Checklist
+Quick Fix Checklist
 
 When you encounter incorrect imports from Claude Code:
 
-1. **Check the error message** — it usually reveals whether the module can't be found or the export doesn't exist
-2. **Verify your actual file structure** — use `find` or your IDE's project view
-3. **Confirm your module system** — CommonJS, ES modules, or TypeScript have different requirements
-4. **Note the correction** — tell Claude Code what the correct import should be
-5. **Update your project context** — add relevant config files to your conversation context
+1. Check the error message. it usually reveals whether the module can't be found or the export doesn't exist
+2. Verify your actual file structure. use `find` or your IDE's project view
+3. Confirm your module system. CommonJS, ES modules, or TypeScript have different requirements
+4. Note the correction. tell Claude Code what the correct import should be
+5. Update your project context. add relevant config files to your conversation context
 
-## When to Rebuild Instead of Fix
+When to Rebuild Instead of Fix
 
 Sometimes imports are so wrong that fixing them individually wastes time. Consider asking Claude Code to regenerate the entire file with correct imports. This works well when:
 
 - The generated code is mostly correct but imports are scattered throughout
 - You've already clarified your project structure
-- You're working with a skill like **algorithmic-art** that generates multiple files at once
+- You're working with a skill like algorithmic-art that generates multiple files at once
 
-## Conclusion
+Conclusion
 
 Incorrect imports from Claude Code usually stem from missing context about your project's module system and directory structure. The fix involves three strategies: providing better upfront context about your project setup, correcting imports immediately when they appear wrong, and maintaining reference documentation Claude Code can access. Most import errors are preventable with proper configuration sharing, and the small effort to set this up pays dividends in cleaner, working code from the start.
 
-## Related Reading
+Related Reading
 
-- [Claude Code Keeps Making the Same Mistake Fix Guide](/claude-code-keeps-making-same-mistake-fix-guide/) — Systematic approach to fixing repeated generation errors
-- [Claude Code Output Quality How to Improve Results](/claude-code-output-quality-how-to-improve-results/) — Improving accuracy of generated code broadly
-- [How to Write Effective CLAUDE.md for Your Project](/how-to-write-effective-claude-md-for-your-project/) — CLAUDE.md can specify import style and module conventions
-- [Claude Skills Troubleshooting Hub](/troubleshooting-hub/) — Related code generation issue fixes
+- [Claude Code Keeps Making the Same Mistake Fix Guide](/claude-code-keeps-making-same-mistake-fix-guide/). Systematic approach to fixing repeated generation errors
+- [Claude Code Output Quality How to Improve Results](/claude-code-output-quality-how-to-improve-results/). Improving accuracy of generated code broadly
+- [How to Write Effective CLAUDE.md for Your Project](/how-to-write-effective-claude-md-for-your-project/). CLAUDE.md can specify import style and module conventions
+- [Claude Skills Troubleshooting Hub](/troubleshooting-hub/). Related code generation issue fixes
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -13,33 +13,33 @@ tags: [claude-code, claude-skills]
 ---
 
 
-# Citation Generator Chrome Extension Free: Build Your Own
+Citation Generator Chrome Extension Free: Build Your Own
 
 Building your own citation generator Chrome extension gives you complete control over bibliography creation without relying on paid services or account-based platforms. This guide walks developers and power users through creating a functional extension that extracts page metadata and formats citations in multiple academic styles.
 
-## Why Build a Custom Citation Generator
+Why Build a Custom Citation Generator
 
 Most citation tools require subscriptions, impose usage limits, or export your research data to third-party servers. A custom Chrome extension processes everything locally in your browser, generates citations instantly as you browse, and supports any citation format you define. The extension becomes part of your workflow whether you are researching academic papers, collecting technical documentation, or gathering web resources for projects.
 
 For developers, this project covers essential Chrome extension patterns including content script injection, cross-origin metadata fetching, and local storage management. For power users, you gain a tool tailored to your specific citation needs without compromises.
 
-## Project Structure
+Project Structure
 
 Create a new directory for your extension with the following structure:
 
 ```
 citation-generator/
-├── manifest.json
-├── popup.html
-├── popup.js
-├── content.js
-├── background.js
-└── styles.css
+ manifest.json
+ popup.html
+ popup.js
+ content.js
+ background.js
+ styles.css
 ```
 
 Each file serves a specific purpose in the extension architecture. The manifest declares permissions and entry points, popup.html provides the user interface, content.js extracts page metadata, and background.js handles communication between components.
 
-## Manifest Configuration
+Manifest Configuration
 
 The manifest.json file defines your extension capabilities and permissions:
 
@@ -63,7 +63,7 @@ The manifest.json file defines your extension capabilities and permissions:
 
 This configuration requests permission to access the active tab and store citation history locally. The content script runs on all URLs to extract metadata when needed.
 
-## Extracting Page Metadata
+Extracting Page Metadata
 
 The content script runs on web pages and extracts citation-relevant information using the Page Metadata API and Open Graph tags:
 
@@ -101,7 +101,7 @@ The content script runs on web pages and extracts citation-relevant information 
 
 This script extracts common citation fields including title, URL, publisher, author, and publication date. It listens for messages from the popup and returns the extracted data in a structured format.
 
-## Citation Formatting Logic
+Citation Formatting Logic
 
 The popup script formats extracted metadata into proper citations. Here is an APA-style formatter:
 
@@ -141,7 +141,7 @@ function formatChicago(metadata) {
 
 Each format function takes metadata object and returns a formatted citation string. You can extend this pattern to support additional styles like Harvard, IEEE, or custom formats.
 
-## Building the Popup Interface
+Building the Popup Interface
 
 The popup provides the user interface for generating and copying citations:
 
@@ -174,7 +174,7 @@ The popup provides the user interface for generating and copying citations:
 
 The interface allows users to select citation format, preview the result, copy to clipboard, and view recent citations stored locally.
 
-## Connecting Components
+Connecting Components
 
 The popup script orchestrates metadata extraction and citation generation:
 
@@ -220,7 +220,7 @@ function saveToHistory(citation, format) {
 
 This code connects the generate button to metadata extraction, formats the result based on user selection, and stores recent citations in local storage for quick access.
 
-## Loading Your Extension
+Loading Your Extension
 
 To test the extension in Chrome:
 
@@ -232,13 +232,13 @@ To test the extension in Chrome:
 
 The extension works immediately without configuration or account creation.
 
-## Handling Edge Cases
+Handling Edge Cases
 
 Real-world web pages present challenges that require additional handling. Some sites use JavaScript frameworks that delay metadata availability, requiring wait logic in your content script. Others may have incomplete metadata, so your formatter should provide sensible defaults for missing fields.
 
 For pages behind authentication or with dynamic content loaded via APIs, consider adding a bookmarklet approach that users trigger after page load completes. This gives flexibility for sites that cannot be crawled through standard content scripts.
 
-## Extending Functionality
+Extending Functionality
 
 Once the core citation generator works, consider adding features like batch citation generation for multiple open tabs, export to BibTeX or RIS format for reference managers, custom field editing before citation finalization, and keyboard shortcuts for power users who prefer keyboard navigation.
 
@@ -247,10 +247,10 @@ The local storage approach means you can implement history search, duplicate det
 Building your own citation generator provides a free, private, and customizable alternative to commercial tools. Every feature serves your specific workflow whether you work in academic research, technical documentation, or content creation.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

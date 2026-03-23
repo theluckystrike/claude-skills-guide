@@ -15,7 +15,7 @@ tags: [claude-code, claude-skills]
 
 Go modules have become the standard for dependency management in Go projects. When paired with Claude Code's AI capabilities, you can accelerate module development while maintaining code quality through automated testing and documentation workflows. This guide walks you through building production-ready Go modules with Claude Code, from initial setup through versioning, using specialized skills for testing, documentation, and project management.
 
-## Initializing Your Go Module
+Initializing Your Go Module
 
 Start by creating a new Go module with proper initialization. The foundation of any Go module begins with a well-structured `go.mod` file:
 
@@ -47,33 +47,33 @@ go work init ./moduleA ./moduleB
 
 This is especially useful when you're developing a shared library alongside the application that consumes it.
 
-## Structuring Your Module Architecture
+Structuring Your Module Architecture
 
 A well-organized Go module follows Go conventions while maintaining clear separation of concerns. Here's a practical project structure for a service-style module:
 
 ```
 myproject/
-├── cmd/
-│   └── myproject/
-│       └── main.go
-├── internal/
-│   ├── handlers/
-│   │   └── handler.go
-│   ├── models/
-│   │   └── model.go
-│   └── services/
-│       └── service.go
-├── pkg/
-│   └── utils/
-│       └── utils.go
-├── go.mod
-├── go.sum
-└── Makefile
+ cmd/
+    myproject/
+        main.go
+ internal/
+    handlers/
+       handler.go
+    models/
+       model.go
+    services/
+        service.go
+ pkg/
+    utils/
+        utils.go
+ go.mod
+ go.sum
+ Makefile
 ```
 
 The `cmd/` directory houses your application entry points, `internal/` contains private application code that other modules cannot import, and `pkg/` holds reusable packages others can import. This structure scales well for modules of any size.
 
-The distinction between `internal/` and `pkg/` matters a great deal. Anything under `internal/` is protected by Go's toolchain—only code within the parent of the `internal/` directory can import it. Use this to enforce architectural boundaries. For example, your HTTP handlers should not directly instantiate database connections; route that through a service layer in `internal/services/`.
+The distinction between `internal/` and `pkg/` matters a great deal. Anything under `internal/` is protected by Go's toolchain, only code within the parent of the `internal/` directory can import it. Use this to enforce architectural boundaries. For example, your HTTP handlers should not directly instantiate database connections; route that through a service layer in `internal/services/`.
 
 When designing module APIs, think about backward compatibility. Use interfaces to define contracts between components, allowing internal implementations to change without breaking external consumers:
 
@@ -87,9 +87,9 @@ type OrderRepository interface {
 }
 ```
 
-Keep interfaces small and focused. The Go community idiom—accept interfaces, return structs—means your public functions should accept interface parameters but return concrete types. This keeps code flexible for callers without hiding useful type information.
+Keep interfaces small and focused. The Go community idiom, accept interfaces, return structs, means your public functions should accept interface parameters but return concrete types. This keeps code flexible for callers without hiding useful type information.
 
-## Writing Testable Code
+Writing Testable Code
 
 Go's testing package provides everything needed for unit testing. Write tests alongside your code using table-driven patterns:
 
@@ -169,9 +169,9 @@ func TestOrderService_Integration(t *testing.T) {
 
 Run integration tests explicitly with `go test -tags integration ./...` so they don't slow down normal development cycles.
 
-## Documenting Your Module
+Documenting Your Module
 
-Good documentation makes your module usable by others—and by your future self. Go provides documentation tooling built directly into the language through `godoc`:
+Good documentation makes your module usable by others, and by your future self. Go provides documentation tooling built directly into the language through `godoc`:
 
 ```go
 // Package mathutil provides arithmetic utilities for financial calculations.
@@ -198,7 +198,7 @@ func Sum(values []float64) float64 {
 }
 ```
 
-Notice the example in the package doc comment—Go's `go test` tool will execute any `Example` functions you write in test files and verify their output, making examples a form of tested documentation:
+Notice the example in the package doc comment, Go's `go test` tool will execute any `Example` functions you write in test files and verify their output, making examples a form of tested documentation:
 
 ```go
 func ExampleSum() {
@@ -210,25 +210,25 @@ func ExampleSum() {
 
 Run `go doc ./...` to see rendered documentation for all packages. For more comprehensive documentation, the pdf skill can help generate formatted documentation files for distribution to teams that prefer static documents over browsing `pkg.go.dev`.
 
-## Managing Dependencies Effectively
+Managing Dependencies Effectively
 
 Go modules handle dependency versions through `go.mod` and `go.sum`. Keep dependencies minimal and audit them regularly:
 
 ```bash
-# Check for outdated dependencies
+Check for outdated dependencies
 go list -m -u all
 
-# Remove unused dependencies
+Remove unused dependencies
 go mod tidy
 
-# Verify checksums match the go.sum file
+Verify checksums match the go.sum file
 go mod verify
 
-# View the dependency graph
+View the dependency graph
 go mod graph | head -20
 ```
 
-A common mistake is accumulating dependencies without justification. Before adding a new package, ask: could this be solved with the standard library? Go's standard library is comprehensive—`net/http`, `encoding/json`, `database/sql`, `crypto`, and `sync` cover a significant percentage of real-world needs without pulling in external dependencies.
+A common mistake is accumulating dependencies without justification. Before adding a new package, ask: could this be solved with the standard library? Go's standard library is comprehensive, `net/http`, `encoding/json`, `database/sql`, `crypto`, and `sync` cover a significant percentage of real-world needs without pulling in external dependencies.
 
 When you do need external packages, prefer modules that themselves have minimal transitive dependencies. Use `go mod graph` to understand the full closure of what you're importing.
 
@@ -241,7 +241,7 @@ go mod vendor
 go build -mod=vendor ./...
 ```
 
-## Building CLI Tools
+Building CLI Tools
 
 Many Go modules expose command-line interfaces. Use the standard library's `flag` package for simple CLIs or `spf13/cobra` for more complex multi-command tools:
 
@@ -280,7 +280,7 @@ func run(configPath, outputDest string, verbose bool) error {
 }
 ```
 
-Notice the use of `fmt.Errorf` with `%w` to wrap errors. This is idiomatic Go—it preserves the original error while adding context, and allows callers to use `errors.Is` and `errors.As` for type-checked error handling.
+Notice the use of `fmt.Errorf` with `%w` to wrap errors. This is idiomatic Go, it preserves the original error while adding context, and allows callers to use `errors.Is` and `errors.As` for type-checked error handling.
 
 For cobra-based CLIs, the structure becomes more organized:
 
@@ -308,7 +308,7 @@ func init() {
 
 When building CLIs, always return meaningful exit codes. Exit 0 for success, exit 1 for general errors, and exit 2 for usage errors (wrong flags, missing arguments). This matters for shell scripts that call your tool.
 
-## Comparing Dependency Management Approaches
+Comparing Dependency Management Approaches
 
 Understanding the tradeoffs between Go module strategies helps you make better architectural decisions:
 
@@ -320,22 +320,22 @@ Understanding the tradeoffs between Go module strategies helps you make better a
 | Replace directives | Forking a dependency temporarily | Must remove before release |
 | Minimal version selection | Libraries others will import | Avoids version conflicts downstream |
 
-Go's minimal version selection (MVS) algorithm means you always get the minimum version that satisfies all requirements—unlike npm's behavior of installing the latest compatible version. This predictability is a significant advantage for long-running projects.
+Go's minimal version selection (MVS) algorithm means you always get the minimum version that satisfies all requirements, unlike npm's behavior of installing the latest compatible version. This predictability is a significant advantage for long-running projects.
 
-## Versioning and Releases
+Versioning and Releases
 
 Follow semantic versioning for Go modules. Use Git tags to mark releases:
 
 ```bash
-# Tag a release
+Tag a release
 git tag v1.2.3
 git push origin v1.2.3
 
-# List available versions for a module
+List available versions for a module
 go list -m -versions github.com/example/pkg
 ```
 
-Go's module proxy at `proxy.golang.org` automatically caches module versions once they're tagged. This means deleted or altered tags won't affect consumers who already downloaded your module—a guarantee of stability.
+Go's module proxy at `proxy.golang.org` automatically caches module versions once they're tagged. This means deleted or altered tags won't affect consumers who already downloaded your module, a guarantee of stability.
 
 For modules that have reached v2 or beyond, you must include the major version in the module path:
 
@@ -352,7 +352,7 @@ And importers must use the versioned import path:
 import "github.com/yourusername/myproject/v2/pkg/utils"
 ```
 
-This feels verbose but prevents silent breaking changes—consumers explicitly opt into major versions.
+This feels verbose but prevents silent breaking changes, consumers explicitly opt into major versions.
 
 For pre-release versions, use the standard semver pre-release syntax:
 
@@ -362,7 +362,7 @@ git tag v1.3.0-rc.1
 git tag v1.3.0
 ```
 
-## Automating Workflows
+Automating Workflows
 
 Combine Claude Code skills for automated development workflows. Create a Makefile for common tasks:
 
@@ -393,11 +393,11 @@ clean:
 	rm -rf bin/ coverage.out coverage.html
 ```
 
-Notice the `-ldflags="-X main.version=..."` in the build target—this embeds the git tag as the version string in the binary at compile time, so `myproject --version` can report the exact release without reading a file at runtime.
+Notice the `-ldflags="-X main.version=..."` in the build target, this embeds the git tag as the version string in the binary at compile time, so `myproject --version` can report the exact release without reading a file at runtime.
 
 The tdd skill can suggest improvements to your test coverage by analyzing which code paths are exercised. For documentation generation, the pdf skill converts Go docs into shareable formats suitable for team distribution or client handoffs.
 
-## Error Handling Patterns
+Error Handling Patterns
 
 Good Go modules handle errors consistently. Establish patterns early:
 
@@ -430,16 +430,16 @@ func (s *OrderService) GetOrder(ctx context.Context, id string) (Order, error) {
 
 Callers can then use `errors.Is` to check for sentinel errors and `errors.As` to extract typed errors, maintaining the full error chain for logging while still enabling programmatic error handling.
 
-## Conclusion
+Conclusion
 
-Building Go modules with Claude Code combines Go's simplicity and performance with AI-assisted development. Focus on clean package design, comprehensive testing, and clear documentation from the start. Lean on interfaces to create architectural boundaries, use table-driven tests to cover edge cases thoroughly, and establish consistent error handling patterns before your codebase grows large enough to make refactoring painful. The skills ecosystem—including tdd, pdf, and supermemory—provides targeted assistance for different aspects of module development. Start with a solid foundation, ship working code quickly, and iterate based on actual usage patterns rather than speculation.
+Building Go modules with Claude Code combines Go's simplicity and performance with AI-assisted development. Focus on clean package design, comprehensive testing, and clear documentation from the start. Lean on interfaces to create architectural boundaries, use table-driven tests to cover edge cases thoroughly, and establish consistent error handling patterns before your codebase grows large enough to make refactoring painful. The skills ecosystem, including tdd, pdf, and supermemory, provides targeted assistance for different aspects of module development. Start with a solid foundation, ship working code quickly, and iterate based on actual usage patterns rather than speculation.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code Tutorials Hub](/tutorials-hub/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Skill MD File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/)
 - [Claude Code Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

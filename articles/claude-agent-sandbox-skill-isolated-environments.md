@@ -18,22 +18,22 @@ permalink: /claude-agent-sandbox-skill-isolated-environments/
 [Skills are `.md` files in `~/.claude/skills/`](/claude-skill-md-format-complete-specification-guide/). The `agent` skill is invoked like any other:
 
 ```
-/agent refactor the authentication module in src/auth/ — do not touch anything outside that directory
+/agent refactor the authentication module in src/auth/. do not touch anything outside that directory
 ```
 
 [The sandbox behavior defines what that agent can and cannot do](/claude-skill-md-format-complete-specification-guide/) when Claude executes bash commands or file operations in response to the task.
 
-## What Sandbox Isolation Does
+What Sandbox Isolation Does
 
 A sandbox is a restricted execution context. When the `agent` skill operates in sandboxed mode, Claude's file operations, shell commands, and network requests are constrained to explicitly permitted paths and actions.
 
 This follows least-privilege: the agent receives only the permissions necessary for the current task. If you're refactoring a module, there's no reason for the agent to read your SSH keys or call external APIs.
 
-The practical benefit: you can run agentic workflows without reviewing every individual action, because the scope of possible actions is bounded by configuration. This is qualitatively different from simply trusting that Claude will behave — the sandbox enforces limits at the tool permission level, so even unexpected behavior or a confused model state cannot breach the defined perimeter.
+The practical benefit: you can run agentic workflows without reviewing every individual action, because the scope of possible actions is bounded by configuration. This is qualitatively different from simply trusting that Claude will behave. the sandbox enforces limits at the tool permission level, so even unexpected behavior or a confused model state cannot breach the defined perimeter.
 
 Think of it as the difference between asking a contractor to work in your kitchen and telling them not to enter the bedroom versus giving them a key only to the kitchen and deadbolting the bedroom. The second approach removes the need for trust.
 
-## Setting Up Filesystem Isolation
+Setting Up Filesystem Isolation
 
 The most common sandbox configuration constrains filesystem access. Claude Code's permission system lets you define which paths are allowed for reads and writes using `~/.claude/settings.json`:
 
@@ -41,14 +41,14 @@ The most common sandbox configuration constrains filesystem access. Claude Code'
 {
   "permissions": {
     "allow": [
-      "Read(./src/**)",
-      "Read(./tests/**)",
-      "Write(./src/**)",
-      "Write(./build/**)"
+      "Read(./src/)",
+      "Read(./tests/)",
+      "Write(./src/)",
+      "Write(./build/)"
     ],
     "deny": [
-      "Read(~/.ssh/**)",
-      "Write(./config/**)"
+      "Read(~/.ssh/)",
+      "Write(./config/)"
     ]
   }
 }
@@ -60,57 +60,57 @@ With this in place, a `/agent` invocation that tries to modify `./config/secrets
 
 ```
 /project/
-  ├── sandbox/          ← agent can modify
-  │   └── test-files/
-  ├── production/       ← agent cannot access
-  │   └── real-app/
-  └── .claude/
-      └── skills/
+   sandbox/          ← agent can modify
+      test-files/
+   production/       ← agent cannot access
+      real-app/
+   .claude/
+       skills/
 ```
 
 Then invoke:
 
 ```
-/agent test the new pdf skill on sandbox/test-files/ — generate a sample PDF and verify extraction works
+/agent test the new pdf skill on sandbox/test-files/. generate a sample PDF and verify extraction works
 ```
 
 Even if the community skill behaves unexpectedly, it cannot reach `production/`.
 
-### Understanding Allow and Deny Precedence
+Understanding Allow and Deny Precedence
 
-When both allow and deny rules match a path, deny takes precedence. This is deliberate — it means you can create a broad allow rule and then carve out exceptions without having to enumerate every protected path individually:
+When both allow and deny rules match a path, deny takes precedence. This is deliberate. it means you can create a broad allow rule and then carve out exceptions without having to enumerate every protected path individually:
 
 ```json
 {
   "permissions": {
     "allow": [
-      "Read(./src/**)",
-      "Write(./src/**)"
+      "Read(./src/)",
+      "Write(./src/)"
     ],
     "deny": [
-      "Read(./src/secrets/**)",
-      "Write(./src/migrations/**)"
+      "Read(./src/secrets/)",
+      "Write(./src/migrations/)"
     ]
   }
 }
 ```
 
-Here the agent can read and write most of `src/`, but migration files and secrets remain protected even though they fall under the broad `src/**` allow rule. This pattern is easier to maintain than an exhaustive allowlist that you update every time you add a new file.
+Here the agent can read and write most of `src/`, but migration files and secrets remain protected even though they fall under the broad `src/` allow rule. This pattern is easier to maintain than an exhaustive allowlist that you update every time you add a new file.
 
-### Path Specificity Matters
+Path Specificity Matters
 
 Vague paths undermine sandbox effectiveness. Compare these two configurations:
 
 | Configuration | What it Means |
 |---|---|
 | `Write(~/)` | Agent can write anywhere in your home directory |
-| `Write(~/projects/myapp/src/**)` | Agent can only write inside that specific source directory |
+| `Write(~/projects/myapp/src/)` | Agent can only write inside that specific source directory |
 | `Write(./)` | Agent can write anywhere in the current directory tree |
-| `Write(./src/components/**)` | Agent limited to that one subdirectory |
+| `Write(./src/components/)` | Agent limited to that one subdirectory |
 
-The difference between `Write(./)` and `Write(./src/components/**)` is the difference between "can modify everything" and "can only modify React components." Always specify exact directories.
+The difference between `Write(./)` and `Write(./src/components/)` is the difference between "can modify everything" and "can only modify React components." Always specify exact directories.
 
-## Network Isolation
+Network Isolation
 
 Network isolation controls outbound calls. For workflows that should be purely local, use a `PreToolUse` hook in `~/.claude/settings.json` to block `WebFetch` and `WebSearch` tools:
 
@@ -138,34 +138,34 @@ A more nuanced network policy allows internal tooling but blocks external calls.
 
 ```bash
 #!/bin/bash
-# ~/.claude/hooks/network-policy.sh
+~/.claude/hooks/network-policy.sh
 URL=$(cat /dev/stdin | jq -r '.tool_input.url // empty')
 
-# Allow calls to internal services
+Allow calls to internal services
 if echo "$URL" | grep -qE "^https?://(localhost|10\.|192\.168\.|internal\.)"; then
   exit 0
 fi
 
-# Block all external URLs
+Block all external URLs
 echo "Network policy: only internal URLs permitted. Blocked: $URL"
 exit 1
 ```
 
 Register this as a `PreToolUse` hook matching `WebFetch`. The agent can now call your internal API at `http://localhost:3000` or `http://internal.company.com` but cannot reach external domains.
 
-### Why Network Isolation Matters Beyond Security
+Why Network Isolation Matters Beyond Security
 
-The security argument for network isolation is obvious — you don't want an agent exfiltrating data or calling external APIs with your credentials. But there's a subtler reason: reproducibility.
+The security argument for network isolation is obvious. you don't want an agent exfiltrating data or calling external APIs with your credentials. But there's a subtler reason: reproducibility.
 
 An agent that can make outbound HTTP calls during a refactor might silently pull in different behavior based on whatever remote resource it contacts. An isolated agent produces the same output regardless of network state. For CI/CD pipelines and automated workflows where you need consistent, auditable results, network isolation is as much about reliability as security.
 
-## Process Isolation
+Process Isolation
 
 Process isolation limits which shell commands the agent can execute. Use a `PreToolUse` hook to intercept `Bash` tool calls and validate commands:
 
 ```bash
 #!/bin/bash
-# ~/.claude/hooks/validate-bash.sh
+~/.claude/hooks/validate-bash.sh
 COMMAND=$(cat /dev/stdin | jq -r '.tool_input.command')
 ALLOWED="npm|git|python|pytest"
 if ! echo "$COMMAND" | grep -qE "^($ALLOWED)\b"; then
@@ -180,7 +180,7 @@ A more structured version of this hook also logs every command attempt, giving y
 
 ```bash
 #!/bin/bash
-# ~/.claude/hooks/validate-bash-audit.sh
+~/.claude/hooks/validate-bash-audit.sh
 COMMAND=$(cat /dev/stdin | jq -r '.tool_input.command')
 TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 LOGFILE="$HOME/.claude/agent-audit.log"
@@ -197,9 +197,9 @@ else
 fi
 ```
 
-The audit log becomes useful when debugging why a workflow failed — you can see exactly which commands the agent attempted and which were blocked, letting you adjust the allowlist precisely rather than guessing.
+The audit log becomes useful when debugging why a workflow failed. you can see exactly which commands the agent attempted and which were blocked, letting you adjust the allowlist precisely rather than guessing.
 
-### Comparing Isolation Levels
+Comparing Isolation Levels
 
 Not every workflow needs the same level of restriction. Here is a practical framework for matching isolation level to workflow type:
 
@@ -214,12 +214,12 @@ Not every workflow needs the same level of restriction. Here is a practical fram
 
 Starting from this table and tightening based on your specific setup is faster than starting from scratch and easier to audit than a single catch-all configuration.
 
-## Practical Use Case: Running Tests Safely
+Practical Use Case: Running Tests Safely
 
 The [`tdd` skill](/best-claude-skills-for-developers-2026/) generates tests that may include third-party dependencies. Running those tests in a sandboxed context prevents buggy or malicious packages from accessing your environment variables or SSH keys.
 
 ```
-/agent run the test suite in tests/ using the tdd skill — only read from tests/ and src/, write only to build/test-results/, no network access
+/agent run the test suite in tests/ using the tdd skill. only read from tests/ and src/, write only to build/test-results/, no network access
 ```
 
 If you need more isolation than the settings file provides, combine the agent skill with Docker:
@@ -237,7 +237,7 @@ docker run --rm \
 
 This gives you OS-level isolation on top of Claude's built-in sandbox controls.
 
-The Docker approach is worth elaborating on. Claude Code's permission system is a soft boundary — it constrains what Claude will attempt. Docker's `--network none` and `--read-only` flags are hard boundaries enforced by the kernel. Combining both means: Claude won't try to breach the perimeter (soft), and even if it did, the kernel would reject it (hard). For production automation or any workflow where the stakes of a breach are high, layered controls are the right approach.
+The Docker approach is worth elaborating on. Claude Code's permission system is a soft boundary. it constrains what Claude will attempt. Docker's `--network none` and `--read-only` flags are hard boundaries enforced by the kernel. Combining both means: Claude won't try to breach the perimeter (soft), and even if it did, the kernel would reject it (hard). For production automation or any workflow where the stakes of a breach are high, layered controls are the right approach.
 
 A more complete Docker setup that includes environment variable isolation:
 
@@ -259,7 +259,7 @@ docker run --rm \
 
 The `--env-file .env.sandbox` passes only the specific variables the workflow needs, rather than inheriting your full shell environment. Your `AWS_ACCESS_KEY_ID`, `DATABASE_URL`, and other sensitive variables never enter the container.
 
-## Environment-Specific Configuration
+Environment-Specific Configuration
 
 Development and production sandboxes should have different permission levels. Your local development box can be more permissive; your CI/CD environment should mirror production restrictions.
 
@@ -269,13 +269,13 @@ Keep environment-specific settings in separate files. Claude Code loads `~/.clau
 {
   "permissions": {
     "allow": [
-      "Read(./src/**)",
-      "Read(./tests/**)",
-      "Write(./build/**)"
+      "Read(./src/)",
+      "Read(./tests/)",
+      "Write(./build/)"
     ],
     "deny": [
-      "Write(./config/**)",
-      "Write(./src/**)"
+      "Write(./config/)",
+      "Write(./src/)"
     ]
   }
 }
@@ -289,11 +289,11 @@ A practical team configuration separates read-only reviewers from contributors w
 {
   "permissions": {
     "allow": [
-      "Read(**)"
+      "Read()"
     ],
     "deny": [
-      "Write(**)",
-      "Read(./secrets/**)",
+      "Write()",
+      "Read(./secrets/)",
       "Read(./.env*)"
     ]
   },
@@ -313,42 +313,42 @@ A practical team configuration separates read-only reviewers from contributors w
 }
 ```
 
-This project-level config creates a read-only agent by default — suitable for code review workflows. Developers who need write access override it locally or use a separate settings profile for development tasks.
+This project-level config creates a read-only agent by default. suitable for code review workflows. Developers who need write access override it locally or use a separate settings profile for development tasks.
 
-## Common Pitfalls
+Common Pitfalls
 
-**Overly broad filesystem permissions.** Granting write access to `~/` or `/` rather than specific paths removes the protection entirely. Specify exact directories.
+Overly broad filesystem permissions. Granting write access to `~/` or `/` rather than specific paths removes the protection entirely. Specify exact directories.
 
-**Disabling sandboxing for convenience.** Some developers disable sandbox controls because a workflow is failing and they want to unblock quickly. This removes a critical safety layer. Instead, identify the specific permission the workflow needs and add only that.
+Disabling sandboxing for convenience. Some developers disable sandbox controls because a workflow is failing and they want to unblock quickly. This removes a critical safety layer. Instead, identify the specific permission the workflow needs and add only that.
 
-**Stale allowlists.** As workflows evolve, you accumulate permissions that are no longer needed. Audit your sandbox configuration periodically and remove unused allowances.
+Stale allowlists. As workflows evolve, you accumulate permissions that are no longer needed. Audit your sandbox configuration periodically and remove unused allowances.
 
-**Testing sandbox config only in development.** Your CI configuration should be tested in a staging environment that mirrors production before it's relied on. A permission that works locally may interact differently in CI due to path differences or file ownership.
+Testing sandbox config only in development. Your CI configuration should be tested in a staging environment that mirrors production before it's relied on. A permission that works locally may interact differently in CI due to path differences or file ownership.
 
-**Missing deny rules for sensitive files.** An allow rule for `Read(./src/**)` does not automatically exclude `./src/.env.local` if that file exists in your source tree. Be explicit about denying environment files and credentials even within otherwise-permitted directories:
+Missing deny rules for sensitive files. An allow rule for `Read(./src/)` does not automatically exclude `./src/.env.local` if that file exists in your source tree. Be explicit about denying environment files and credentials even within otherwise-permitted directories:
 
 ```json
 {
   "permissions": {
-    "allow": ["Read(./src/**)"],
+    "allow": ["Read(./src/)"],
     "deny": [
-      "Read(./src/**/.env*)",
-      "Read(./src/**/secrets*)",
-      "Read(./src/**/*credentials*)"
+      "Read(./src//.env*)",
+      "Read(./src//secrets*)",
+      "Read(./src//*credentials*)"
     ]
   }
 }
 ```
 
-**Treating hooks as the only enforcement mechanism.** Hooks running shell scripts can fail if `jq` is not installed, if the script has a syntax error, or if the shell exits with an unexpected code. Always pair hook-based controls with permission rules so there is a second layer if the hook fails.
+Treating hooks as the only enforcement mechanism. Hooks running shell scripts can fail if `jq` is not installed, if the script has a syntax error, or if the shell exits with an unexpected code. Always pair hook-based controls with permission rules so there is a second layer if the hook fails.
 
-## Auditing and Monitoring Sandbox Behavior
+Auditing and Monitoring Sandbox Behavior
 
 Once sandboxing is in place, periodic review of what the agent actually does is as important as the configuration itself. Claude Code's `PostToolUse` hook provides a lightweight monitoring mechanism:
 
 ```bash
 #!/bin/bash
-# ~/.claude/hooks/audit-tool-use.sh
+~/.claude/hooks/audit-tool-use.sh
 TOOL_NAME=$(cat /dev/stdin | jq -r '.tool_name')
 TOOL_INPUT=$(cat /dev/stdin | jq -c '.tool_input')
 TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
@@ -358,22 +358,22 @@ echo "$TIMESTAMP $TOOL_NAME $TOOL_INPUT" >> ~/.claude/tool-use-audit.log
 
 Register this as a `PostToolUse` hook with a universal matcher. The resulting log shows you every tool invocation the agent made, which files it read and wrote, which commands it ran, and which URLs it fetched. Reviewing this log after a few agent runs quickly reveals whether your permissions are appropriately scoped or whether you have unnecessary allowances.
 
-## Moving Forward
+Moving Forward
 
 Start with the strictest isolation level that still allows your workflow to function. Gradually relax restrictions only after identifying specific needed permissions. This "deny by default" approach minimizes your exposure from the start and keeps your configuration easy to audit over time.
 
-The goal is not to prevent Claude from being useful — it is to make Claude useful within a defined, reviewable boundary. Well-configured sandboxing lets you run more ambitious automated workflows with confidence, because the blast radius of any unexpected behavior is bounded before the workflow starts.
+The goal is not to prevent Claude from being useful. it is to make Claude useful within a defined, reviewable boundary. Well-configured sandboxing lets you run more ambitious automated workflows with confidence, because the blast radius of any unexpected behavior is bounded before the workflow starts.
 
 ---
 
-## Related Reading
+Related Reading
 
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Overview of essential Claude Code skills for developers
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — How Claude decides when to load skills
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — Keep API costs down as you scale
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Overview of essential Claude Code skills for developers
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How Claude decides when to load skills
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Keep API costs down as you scale
 
 
 ---
 
-*Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*Built by theluckystrike. More at [zovo.one](https://zovo.one)
 *

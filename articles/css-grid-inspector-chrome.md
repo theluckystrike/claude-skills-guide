@@ -17,23 +17,23 @@ CSS Grid has become one of the most powerful layout systems in modern web develo
 
 This guide covers both using the available tools and building your own custom grid inspector extension from scratch. Whether you want to debug existing layouts faster or create a specialized tool for your team, you'll find everything you need here.
 
-## Understanding CSS Grid Inspector Tools
+Understanding CSS Grid Inspector Tools
 
 CSS Grid inspector tools integrate directly into Chrome's developer tools or as standalone extensions, providing developers with real-time visualization of grid containers, tracks, areas, and gaps. These tools parse your CSS Grid declarations and render an interactive overlay showing exactly how the browser interprets your layout.
 
 The key features most CSS Grid inspectors offer include visual grid line numbering, track size indicators, gap visualization, named area highlighting, and the ability to toggle grid overlays on and off. Understanding how these tools work helps you choose the right extension for your workflow and implement debugging strategies effectively.
 
-At their core, grid inspectors work by calling `window.getComputedStyle()` on DOM elements and checking the `display` property. When the computed value is `grid` or `inline-grid`, the tool reads the resolved track sizes from `gridTemplateColumns` and `gridTemplateRows`, then draws an SVG or canvas overlay aligned to the element's bounding rectangle. The difference between what you wrote in CSS and what appears in computed styles is often the first clue to a layout bug—`auto` resolves to a pixel value, `fr` units resolve to computed sizes, and `minmax()` resolves to the actual constrained size.
+At their core, grid inspectors work by calling `window.getComputedStyle()` on DOM elements and checking the `display` property. When the computed value is `grid` or `inline-grid`, the tool reads the resolved track sizes from `gridTemplateColumns` and `gridTemplateRows`, then draws an SVG or canvas overlay aligned to the element's bounding rectangle. The difference between what you wrote in CSS and what appears in computed styles is often the first clue to a layout bug, `auto` resolves to a pixel value, `fr` units resolve to computed sizes, and `minmax()` resolves to the actual constrained size.
 
-## Top CSS Grid Inspector Extensions for Chrome
+Top CSS Grid Inspector Extensions for Chrome
 
-Several excellent Chrome extensions specialize in CSS Grid visualization and debugging. The most popular options integrate seamlessly with Chrome DevTools, adding dedicated panels for grid inspection.
+Several excellent Chrome extensions specialize in CSS Grid visualization and debugging. The most popular options integrate smoothly with Chrome DevTools, adding dedicated panels for grid inspection.
 
-**CSS Grid Inspector (built into Chrome DevTools)** is the most reliable option since Chrome 61. Access it through DevTools > Layout tab > Grid section. This native tool shows grid line numbers, area names, and track sizes without requiring any external extension. In Chrome 88 and later, the Layout panel was significantly improved to show persistent overlays, color-coded grid badges on elements in the DOM tree, and the ability to display multiple overlapping grids simultaneously.
+CSS Grid Inspector (built into Chrome DevTools) is the most reliable option since Chrome 61. Access it through DevTools > Layout tab > Grid section. This native tool shows grid line numbers, area names, and track sizes without requiring any external extension. In Chrome 88 and later, the Layout panel was significantly improved to show persistent overlays, color-coded grid badges on elements in the DOM tree, and the ability to display multiple overlapping grids simultaneously.
 
-**Grid Analyzer** extensions available in the Chrome Web Store provide additional features like automatic grid detection, measurement tools, and export capabilities. These are particularly useful for complex grid systems with multiple nested containers.
+Grid Analyzer extensions available in the Chrome Web Store provide additional features like automatic grid detection, measurement tools, and export capabilities. These are particularly useful for complex grid systems with multiple nested containers.
 
-**CSS DevTools Pro** includes Grid Inspector alongside other layout debugging tools, making it a comprehensive solution for developers working with multiple layout systems including Flexbox and Grid.
+CSS DevTools Pro includes Grid Inspector alongside other layout debugging tools, making it a comprehensive solution for developers working with multiple layout systems including Flexbox and Grid.
 
 Here's a quick comparison of the inspection approaches available:
 
@@ -46,7 +46,7 @@ Here's a quick comparison of the inspection approaches available:
 
 For most day-to-day debugging, the native Chrome DevTools grid inspector is sufficient. Third-party extensions and custom tools become worth the investment when you need export functionality, automated checks in CI, or deeply project-specific visualization conventions.
 
-## Using Chrome DevTools Grid Inspector Effectively
+Using Chrome DevTools Grid Inspector Effectively
 
 Before building anything custom, you should know the full capabilities of the native tool. The Chrome DevTools grid inspector is more powerful than most developers realize.
 
@@ -58,13 +58,13 @@ To enable a grid overlay:
 
 The Layout panel lets you control exactly what the overlay shows:
 
-- **Show track sizes** — displays computed pixel values for each track
-- **Show area names** — labels named grid areas directly on the overlay
-- **Extend grid lines** — extends lines to the edge of the viewport, useful for aligning multiple elements to the same grid
+- Show track sizes. displays computed pixel values for each track
+- Show area names. labels named grid areas directly on the overlay
+- Extend grid lines. extends lines to the edge of the viewport, useful for aligning multiple elements to the same grid
 
 A lesser-known feature: you can inspect a grid's computed properties directly in the Styles panel by clicking on the layout icon next to `display: grid`. This opens an interactive diagram of the grid structure that updates in real time as you edit track definitions.
 
-## Building Your Own CSS Grid Inspector
+Building Your Own CSS Grid Inspector
 
 Creating a custom CSS Grid inspector extension gives you complete control over visualization features. Here's a foundation for building one.
 
@@ -194,9 +194,9 @@ function showTrackInfo(container) {
 }
 ```
 
-Note the `window.scrollY` and `window.scrollX` offset added to the overlay positioning—this is a common bug in naive implementations that causes overlays to drift when the page is scrolled.
+Note the `window.scrollY` and `window.scrollX` offset added to the overlay positioning, this is a common bug in naive implementations that causes overlays to drift when the page is scrolled.
 
-## Advanced Grid Inspection Techniques
+Advanced Grid Inspection Techniques
 
 For complex grid layouts, understanding the relationship between parent containers and child items is crucial. Here's how to inspect grid item positioning:
 
@@ -246,9 +246,9 @@ function detectGridAreas(container) {
 }
 ```
 
-The `console.table()` call on grid item data is particularly useful—it formats the position information as a table in DevTools, making it easy to scan all items at once and spot gaps or overlaps in placement.
+The `console.table()` call on grid item data is particularly useful, it formats the position information as a table in DevTools, making it easy to scan all items at once and spot gaps or overlaps in placement.
 
-## Drawing Grid Lines with SVG
+Drawing Grid Lines with SVG
 
 A more precise approach to grid line visualization uses SVG rather than `div` overlays. SVG scales correctly at any device pixel ratio and handles fractional pixel sizes accurately:
 
@@ -305,9 +305,9 @@ function createSVGOverlay(container) {
 }
 ```
 
-This approach renders gap regions in orange and grid lines in blue dashes, making it immediately clear where track space ends and gap space begins—a distinction that's easy to lose when eyeballing a layout.
+This approach renders gap regions in orange and grid lines in blue dashes, making it immediately clear where track space ends and gap space begins, a distinction that's easy to lose when eyeballing a layout.
 
-## Using Grid Inspector for Responsive Design
+Using Grid Inspector for Responsive Design
 
 CSS Grid inspectors are particularly valuable for responsive design debugging. You can test how your grid adapts across viewport sizes:
 
@@ -345,7 +345,7 @@ function setupResizeObserver() {
 }
 ```
 
-The `ResizeObserver` is the right API for this—it fires when an element's size changes, not just when the window resizes. That's important for grids inside flex containers, modals, or other dynamic contexts where the viewport size stays the same but the container size changes.
+The `ResizeObserver` is the right API for this, it fires when an element's size changes, not just when the window resizes. That's important for grids inside flex containers, modals, or other dynamic contexts where the viewport size stays the same but the container size changes.
 
 For responsive debugging, add a small HUD that stays visible while you resize:
 
@@ -377,22 +377,22 @@ function updateHUD(hud, container) {
   const rows = container.styles.gridTemplateRows.split(' ');
   hud.textContent = [
     `Grid: ${getSelector(container.element)}`,
-    `Cols: ${cols.length} — ${container.styles.gridTemplateColumns}`,
-    `Rows: ${rows.length} — ${container.styles.gridTemplateRows}`,
+    `Cols: ${cols.length}. ${container.styles.gridTemplateColumns}`,
+    `Rows: ${rows.length}. ${container.styles.gridTemplateRows}`,
     `Gap: ${container.styles.gap}`
   ].join('\n');
 }
 ```
 
-## Best Practices for Grid Debugging
+Best Practices for Grid Debugging
 
 When debugging CSS Grid layouts, a systematic approach saves significant time.
 
-**Start with the container, not the items.** Most grid bugs stem from the container's track definitions, not from how individual items are placed. Open DevTools, click the grid badge, and verify that the number of columns and rows matches your intent before looking at any child element.
+Start with the container, not the items. Most grid bugs stem from the container's track definitions, not from how individual items are placed. Open DevTools, click the grid badge, and verify that the number of columns and rows matches your intent before looking at any child element.
 
-**Check computed values versus authored values.** The most common source of confusion is the gap between what you wrote in CSS and what the browser resolved. `auto` columns, `fr` fractions, and `minmax()` constraints all resolve differently depending on available space. The computed value panel shows the actual pixel sizes—that's your ground truth.
+Check computed values versus authored values. The most common source of confusion is the gap between what you wrote in CSS and what the browser resolved. `auto` columns, `fr` fractions, and `minmax()` constraints all resolve differently depending on available space. The computed value panel shows the actual pixel sizes, that's your ground truth.
 
-**Use named areas for complex layouts.** When a grid has more than four columns or involves irregular item placement, named areas make the layout legible:
+Use named areas for complex layouts. When a grid has more than four columns or involves irregular item placement, named areas make the layout legible:
 
 ```css
 .layout {
@@ -406,9 +406,9 @@ When debugging CSS Grid layouts, a systematic approach saves significant time.
 }
 ```
 
-Named areas show up directly in the DevTools overlay, and any item with `grid-area: main` snaps to the right region visually—no more counting track numbers.
+Named areas show up directly in the DevTools overlay, and any item with `grid-area: main` snaps to the right region visually, no more counting track numbers.
 
-**Common issues and their inspector signatures:**
+Common issues and their inspector signatures:
 
 | Symptom | What to look for in inspector |
 |---|---|
@@ -418,7 +418,7 @@ Named areas show up directly in the DevTools overlay, and any item with `grid-ar
 | Grid doesn't fill available width | Container may not have explicit width; check parent layout context |
 | Items stack in a single column | `display: grid` may not be applying; verify specificity and check for `!important` overrides |
 
-## Integration with Development Workflow
+Integration with Development Workflow
 
 Incorporate CSS Grid inspection into your regular development process. Run your grid inspector before considering a layout complete, checking that all tracks are properly sized, gaps are consistent, and items align as intended. This proactive approach catches layout bugs early.
 
@@ -448,10 +448,10 @@ Strip the `data-grid-debug` attributes before deploying with a build step or a p
 
 For team projects, consider documenting your grid conventions and sharing inspector screenshots in pull requests. A screenshot of the grid overlay alongside the rendered output gives reviewers immediate insight into the layout structure without requiring them to check out the branch and open DevTools locally. This reduces layout-related review cycles significantly and makes it easier for designers to verify implementation against their original specs.
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Chrome Extension Development Guide](/chrome-extension-development-2026/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

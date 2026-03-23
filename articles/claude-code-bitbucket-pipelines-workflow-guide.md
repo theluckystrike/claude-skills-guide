@@ -16,17 +16,17 @@ score: 7
 
 {% raw %}
 
-# Claude Code Bitbucket Pipelines Workflow Guide
+Claude Code Bitbucket Pipelines Workflow Guide
 
 Bitbucket Pipelines provides a powerful CI/CD solution for teams using Atlassian's ecosystem. When combined with Claude Code, you can automate code generation, enforce quality standards, and streamline development workflows without manual intervention. This guide walks through practical configurations to integrate Claude Code into your Bitbucket Pipelines setup.
 
-## Why Integrate Claude Code with Bitbucket Pipelines
+Why Integrate Claude Code with Bitbucket Pipelines
 
 Claude Code brings AI-assisted development directly into your automated workflows. Rather than relying solely on local developer sessions, you can trigger Claude Code commands during pipeline execution to handle repetitive tasks, generate boilerplate, run tests, and perform code reviews automatically.
 
 This integration works particularly well for teams adopting AI-augmented development practices. You can maintain consistency across pull requests, ensure code quality checks run on every commit, and reduce the burden on human reviewers.
 
-## Setting Up Claude Code in Your Pipeline
+Setting Up Claude Code in Your Pipeline
 
 The first step involves configuring your Bitbucket repository to use Claude Code. Create a `bitbucket-pipelines.yml` file in your repository root with the following configuration:
 
@@ -52,7 +52,7 @@ pipelines:
 
 This basic setup installs Claude Code as a global npm package and runs an analysis on your source files. The analysis results are saved as artifacts for later review.
 
-## Automating Code Generation Tasks
+Automating Code Generation Tasks
 
 One of the most valuable use cases involves using Claude Code to generate code automatically during pipeline execution. For instance, you can create a pipeline step that generates component files based on specifications.
 
@@ -69,13 +69,13 @@ Consider a frontend project using React. You might want Claude Code to generate 
           COMPONENT_NAME: "UserCard"
 ```
 
-The **frontend-design** skill enhances this workflow by providing specialized templates for common UI patterns. Skills are Markdown files placed in your `.claude/skills/` directory — commit a `frontend-design.md` skill file to your repository so it is available in the pipeline.
+The frontend-design skill enhances this workflow by providing specialized templates for common UI patterns. Skills are Markdown files placed in your `.claude/skills/` directory. commit a `frontend-design.md` skill file to your repository so it is available in the pipeline.
 
 This skill understands modern design systems and can generate components that follow established patterns.
 
-## Running Automated Tests with Claude Code
+Running Automated Tests with Claude Code
 
-Testing represents another area where Claude Code adds significant value. The **tdd** skill provides test-driven development workflows that integrate smoothly with Bitbucket Pipelines. Add a `tdd.md` skill file to your `.claude/skills/` directory and commit it to your repository.
+Testing represents another area where Claude Code adds significant value. The tdd skill provides test-driven development workflows that integrate smoothly with Bitbucket Pipelines. Add a `tdd.md` skill file to your `.claude/skills/` directory and commit it to your repository.
 
 Configure a pipeline step to generate and run tests:
 
@@ -92,9 +92,9 @@ Configure a pipeline step to generate and run tests:
 
 The TDD skill can analyze your source code and generate relevant test cases, including unit tests, integration tests, and edge case coverage. This automated approach ensures your codebase maintains adequate test coverage without manual test writing effort.
 
-## Document Generation Pipeline
+Document Generation Pipeline
 
-Documentation often falls behind code changes in fast-moving projects. Integrate the **pdf** skill to automatically generate documentation during your pipeline:
+Documentation often falls behind code changes in fast-moving projects. Integrate the pdf skill to automatically generate documentation during your pipeline:
 
 ```yaml
     - step:
@@ -107,9 +107,9 @@ Documentation often falls behind code changes in fast-moving projects. Integrate
 
 This step runs after your build completes, generating a PDF documentation file from your code comments and API specifications. The PDF skill supports various output formats and can be customized to match your team's documentation standards.
 
-## Memory and Context Management
+Memory and Context Management
 
-For teams working across multiple repositories or long-lived projects, maintaining context becomes challenging. The **supermemory** skill addresses this by enabling persistent memory across Claude Code sessions. Place a `supermemory.md` skill file in your `.claude/skills/` directory and commit it to your repository.
+For teams working across multiple repositories or long-lived projects, maintaining context becomes challenging. The supermemory skill addresses this by enabling persistent memory across Claude Code sessions. Place a `supermemory.md` skill file in your `.claude/skills/` directory and commit it to your repository.
 
 Configure your pipeline to load project context before running tasks:
 
@@ -122,7 +122,7 @@ Configure your pipeline to load project context before running tasks:
 
 This ensures Claude Code understands your project's history, coding conventions, and architectural decisions when generating or reviewing code.
 
-## Complete Example Workflow
+Complete Example Workflow
 
 A comprehensive pipeline combining these elements might look like:
 
@@ -171,9 +171,9 @@ pipelines:
 
 This configuration runs comprehensive checks on pull requests, including test generation, quality analysis, and documentation creation. The main branch triggers deployment to your staging environment.
 
-## Advanced Pipeline Patterns
+Advanced Pipeline Patterns
 
-### Intelligent Code Review with PR Context
+Intelligent Code Review with PR Context
 
 Use Claude Code to analyze code changes in the context of pull requests, identifying issues that static analyzers miss:
 
@@ -187,7 +187,7 @@ Use Claude Code to analyze code changes in the context of pull requests, identif
           - review-results.json
 ```
 
-### Smart Deployment with Health Checks
+Smart Deployment with Health Checks
 
 Implement intelligent deployments that evaluate health metrics and make rollback decisions:
 
@@ -208,7 +208,7 @@ Implement intelligent deployments that evaluate health metrics and make rollback
             fi
 ```
 
-### Version Pinning
+Version Pinning
 
 Ensure reproducible builds by pinning Claude Code versions in your pipeline:
 
@@ -217,7 +217,7 @@ Ensure reproducible builds by pinning Claude Code versions in your pipeline:
       - npm install -g @anthropic-ai/claude-code@1.2.3
 ```
 
-## Best Practices for Pipeline Integration
+Best Practices for Pipeline Integration
 
 When integrating Claude Code into Bitbucket Pipelines, consider these practical recommendations:
 
@@ -229,19 +229,19 @@ Third, store Claude Code configuration in a dedicated file such as `.claude.yaml
 
 Finally, monitor your pipeline logs to understand how Claude Code interprets your code and generates outputs. This feedback helps you refine prompts and configuration for better results over time.
 
-## Conclusion
+Conclusion
 
-Integrating Claude Code with Bitbucket Pipelines transforms your CI/CD workflow into an AI-assisted development pipeline. By automating code generation, test creation, quality analysis, and documentation, your team can move faster while maintaining high standards. The combination of Claude Code skills like **tdd**, **frontend-design**, **pdf**, and **supermemory** provides comprehensive coverage for modern development workflows.
+Integrating Claude Code with Bitbucket Pipelines transforms your CI/CD workflow into an AI-assisted development pipeline. By automating code generation, test creation, quality analysis, and documentation, your team can move faster while maintaining high standards. The combination of Claude Code skills like tdd, frontend-design, pdf, and supermemory provides comprehensive coverage for modern development workflows.
 
 Start with a single pipeline step, measure the results, and gradually expand your automation. The initial investment in configuration pays dividends in developer time saved and consistent code quality across your project.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 {% endraw %}

@@ -15,15 +15,15 @@ permalink: /heroku-mcp-server-application-deployment-guide/
 
 [Deploying a Model Context Protocol (MCP) server on Heroku provides a reliable, scalable way](/building-your-first-mcp-tool-integration-guide-2026/) to expose AI capabilities to your applications. This guide walks through the complete deployment process, from local development to production-ready infrastructure.
 
-## Understanding MCP Servers
+Understanding MCP Servers
 
 [MCP servers act as intermediaries between Claude and external tools or data sources](/how-do-i-combine-two-claude-skills-in-one-workflow/) They enable Claude to interact with APIs, databases, and services that aren't natively integrated. Whether you're building a custom integration with your internal systems or exposing specialized AI capabilities, hosting your MCP server on Heroku simplifies deployment and maintenance.
 
-When you run an MCP server locally, it communicates with Claude over stdio on the same machine. Heroku deployment changes that model: your server becomes a persistent HTTP endpoint reachable over the network, which means Claude Desktop — or any other MCP client — can connect from anywhere without requiring a local process. This is the key architectural shift this guide addresses.
+When you run an MCP server locally, it communicates with Claude over stdio on the same machine. Heroku deployment changes that model: your server becomes a persistent HTTP endpoint reachable over the network, which means Claude Desktop. or any other MCP client. can connect from anywhere without requiring a local process. This is the key architectural shift this guide addresses.
 
 Heroku suits MCP deployment well for several reasons. You get a managed runtime that handles TLS termination, process restarts, and log aggregation out of the box. The `git push heroku main` deploy workflow is low-friction. And the add-on ecosystem makes it straightforward to attach a database or Redis cache if your MCP server needs persistent state.
 
-## Prerequisites
+Prerequisites
 
 Before deploying, ensure you have:
 
@@ -33,7 +33,7 @@ Before deploying, ensure you have:
 - Git initialized in your project directory
 - Familiarity with the MCP SDK's basic request-handler pattern
 
-## Setting Up Your MCP Server Project
+Setting Up Your MCP Server Project
 
 If you're starting from scratch, create a basic MCP server structure:
 
@@ -97,9 +97,9 @@ Update your `package.json` with a start script:
 }
 ```
 
-The `"type": "module"` field is important — it tells Node.js to treat `.js` files as ES modules, which the MCP SDK uses. Without it, the `import` statements in the SDK will throw a syntax error when Heroku tries to start your dyno.
+The `"type": "module"` field is important. it tells Node.js to treat `.js` files as ES modules, which the MCP SDK uses. Without it, the `import` statements in the SDK will throw a syntax error when Heroku tries to start your dyno.
 
-## Configuring Heroku for MCP Deployment
+Configuring Heroku for MCP Deployment
 
 MCP servers typically communicate over stdio, but Heroku's architecture requires an HTTP-based approach. Modify your server to support HTTP connections:
 
@@ -155,7 +155,7 @@ node_modules/
 *.log
 ```
 
-## Deploying to Heroku
+Deploying to Heroku
 
 Initialize git in your project if you haven't already:
 
@@ -184,7 +184,7 @@ Confirm the dyno is running correctly before proceeding:
 
 ```bash
 heroku ps
-# Should show: web.1: up YYYY/MM/DD ...
+Should show: web.1: up YYYY/MM/DD ...
 ```
 
 If you see `web.1: crashed`, check the logs immediately:
@@ -195,7 +195,7 @@ heroku logs --tail
 
 Common startup failures at this stage are missing dependencies (forgot to `npm install` before committing a lock file), syntax errors in ES module imports, or the wrong `main` field in `package.json`.
 
-## Connecting Claude to Your Heroku MCP Server
+Connecting Claude to Your Heroku MCP Server
 
 With your server deployed, configure Claude Desktop to connect. Create or edit your Claude configuration file:
 
@@ -211,13 +211,13 @@ With your server deployed, configure Claude Desktop to connect. Create or edit y
 
 Replace `your-app-name` with your actual Heroku application name. Claude will now be able to call your deployed MCP server for tool invocations.
 
-On macOS, the Claude Desktop config file lives at `~/Library/Application Support/Claude/claude_desktop_config.json`. On Windows it is at `%APPDATA%\Claude\claude_desktop_config.json`. After editing the file, restart Claude Desktop completely — a reload is not sufficient to pick up new MCP server entries.
+On macOS, the Claude Desktop config file lives at `~/Library/Application Support/Claude/claude_desktop_config.json`. On Windows it is at `%APPDATA%\Claude\claude_desktop_config.json`. After editing the file, restart Claude Desktop completely. a reload is not sufficient to pick up new MCP server entries.
 
-## Production Considerations
+Production Considerations
 
 When moving to production, several factors require attention:
 
-**Environment Variables**: Store sensitive configuration in Heroku config vars rather than hardcoding credentials. Access them in your server:
+Environment Variables: Store sensitive configuration in Heroku config vars rather than hardcoding credentials. Access them in your server:
 
 ```javascript
 const apiKey = process.env.API_KEY;
@@ -231,9 +231,9 @@ heroku config:set API_KEY=your-secret-key
 heroku config:set DATABASE_URL=postgres://user:pass@host/dbname
 ```
 
-Config vars are encrypted at rest and injected into your dyno's environment at startup. They are the correct way to pass secrets to Heroku apps — never commit credentials to your repository.
+Config vars are encrypted at rest and injected into your dyno's environment at startup. They are the correct way to pass secrets to Heroku apps. never commit credentials to your repository.
 
-**Scaling**: Heroku's free tier sleeps after inactivity. For consistent response times, consider a paid dyno or implement a keep-alive mechanism. Scale your dynos based on demand:
+Scaling: Heroku's free tier sleeps after inactivity. For consistent response times, consider a paid dyno or implement a keep-alive mechanism. Scale your dynos based on demand:
 
 ```bash
 heroku ps:scale web=2
@@ -251,7 +251,7 @@ A comparison of Heroku dyno tiers for MCP workloads:
 
 For most MCP servers that bridge Claude to internal APIs, a Standard-1X dyno is sufficient. Upgrade to Standard-2X or Performance-M if your tools load large datasets or run in-process ML inference.
 
-**Logging and Monitoring**: Heroku provides built-in logging:
+Logging and Monitoring: Heroku provides built-in logging:
 
 ```bash
 heroku logs --tail
@@ -274,7 +274,7 @@ function log(level, message, meta = {}) {
 log('info', 'tool_call', { tool: name, args });
 ```
 
-## Authentication and Security
+Authentication and Security
 
 A publicly deployed MCP server is reachable by anyone who knows the URL. For internal tools, add a simple bearer-token check:
 
@@ -309,19 +309,19 @@ Update your Claude Desktop config to send the token:
 }
 ```
 
-## Using Claude Skills with Your MCP Server
+Using Claude Skills with Your MCP Server
 
-Your deployed MCP server works well with various Claude skills. The **frontend-design** skill can help generate UI components that consume your MCP tools. If you're building documentation, pair your server with the **pdf** skill to generate reports from MCP-sourced data.
+Your deployed MCP server works well with various Claude skills. The frontend-design skill can help generate UI components that consume your MCP tools. If you're building documentation, pair your server with the pdf skill to generate reports from MCP-sourced data.
 
-For test-driven development, the **tdd** skill assists in writing comprehensive tests for your MCP server endpoints. The **supermemory** skill can help maintain context across complex conversations about your deployment architecture.
+For test-driven development, the tdd skill assists in writing comprehensive tests for your MCP server endpoints. The supermemory skill can help maintain context across complex conversations about your deployment architecture.
 
-A practical integration pattern: use the **tdd** skill to write a test suite that exercises each of your MCP tools via HTTP, then add that test suite to your CI pipeline so every `git push heroku main` is preceded by a test run. This prevents broken tool handlers from reaching production.
+A practical integration pattern: use the tdd skill to write a test suite that exercises each of your MCP tools via HTTP, then add that test suite to your CI pipeline so every `git push heroku main` is preceded by a test run. This prevents broken tool handlers from reaching production.
 
-## Troubleshooting Common Issues
+Troubleshooting Common Issues
 
-**Connection Timeouts**: If Claude cannot reach your server, verify your Heroku dyno is running and the endpoint URL is correct in your configuration. Run `heroku ps` to check dyno state and `heroku logs --tail` to see if requests are arriving.
+Connection Timeouts: If Claude cannot reach your server, verify your Heroku dyno is running and the endpoint URL is correct in your configuration. Run `heroku ps` to check dyno state and `heroku logs --tail` to see if requests are arriving.
 
-**CORS Issues**: If your MCP server serves web clients directly, ensure CORS headers are properly configured in Express:
+CORS Issues: If your MCP server serves web clients directly, ensure CORS headers are properly configured in Express:
 
 ```javascript
 app.use((req, res, next) => {
@@ -333,23 +333,23 @@ app.use((req, res, next) => {
 });
 ```
 
-**Memory Limits**: Heroku dynos have memory constraints. Optimize your server's memory usage and consider upgrading to larger dyno types for resource-intensive operations. You can monitor memory usage with:
+Memory Limits: Heroku dynos have memory constraints. Optimize your server's memory usage and consider upgrading to larger dyno types for resource-intensive operations. You can monitor memory usage with:
 
 ```bash
 heroku ps:exec --dyno=web.1 -- node -e "console.log(process.memoryUsage())"
 ```
 
-**R10 Boot Timeout**: Heroku kills dynos that don't bind to `PORT` within 60 seconds. If your server does heavy initialization (loading models, seeding caches), do it lazily after the HTTP listener starts, not before.
+R10 Boot Timeout: Heroku kills dynos that don't bind to `PORT` within 60 seconds. If your server does heavy initialization (loading models, seeding caches), do it lazily after the HTTP listener starts, not before.
 
-## Conclusion
+Conclusion
 
 Deploying an MCP server on Heroku bridges the gap between Claude's capabilities and your custom backend services. The platform handles infrastructure concerns, letting you focus on building valuable integrations. With proper configuration and monitoring, your Heroku-hosted MCP server provides a reliable foundation for AI-powered applications.
 
-## Related Reading
+Related Reading
 
 - [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)
 - [Railway MCP Server Deployment Automation Guide](/railway-mcp-server-deployment-automation-guide/)
 - [Render MCP Server Web Service Automation](/render-mcp-server-web-service-automation/)
 - [Integrations Hub](/integrations-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -17,7 +17,7 @@ tags: [chrome-extension, claude-skills]
 
 As developers, we attend daily standups where capturing quick notes can make or break our productivity throughout the day. A well-built Chrome extension for standup meeting notes can transform how you track your progress, blockers, and plans. This guide walks you through building a functional Chrome extension tailored for standup note-taking, from the initial manifest file to practical enhancements that fit real engineering workflows.
 
-## Why Build a Custom Standup Notes Extension
+Why Build a Custom Standup Notes Extension
 
 Most note-taking apps require too many clicks to capture quick updates. Browser-based standup notes should be accessible in seconds. A custom Chrome extension gives you:
 
@@ -32,22 +32,22 @@ A purpose-built browser extension lives one click away at all times. It opens in
 
 There is also a practical archiving benefit. When your notes export as Markdown files with datestamped filenames, you accumulate a searchable journal of your work over time. Three months of standup notes become evidence during performance reviews, fodder for sprint retrospectives, and a personal changelog of every system you have touched.
 
-## Project Structure
+Project Structure
 
 A Chrome extension requires a manifest file and your source files. Create this directory structure:
 
 ```
 standup-notes-extension/
-├── manifest.json
-├── popup.html
-├── popup.js
-├── popup.css
-└── icon.png
+ manifest.json
+ popup.html
+ popup.js
+ popup.css
+ icon.png
 ```
 
-This is intentionally minimal. Chrome extensions can grow into complex multi-page applications with background service workers and content scripts, but a standup notes tool needs none of that. A popup is a self-contained HTML page that renders when the user clicks the toolbar icon. Everything happens inside that popup — no persistent background processes, no injection into web pages you visit.
+This is intentionally minimal. Chrome extensions can grow into complex multi-page applications with background service workers and content scripts, but a standup notes tool needs none of that. A popup is a self-contained HTML page that renders when the user clicks the toolbar icon. Everything happens inside that popup. no persistent background processes, no injection into web pages you visit.
 
-## The Manifest File
+The Manifest File
 
 Every Chrome extension starts with `manifest.json`. This file tells Chrome about your extension's capabilities:
 
@@ -67,11 +67,11 @@ Every Chrome extension starts with `manifest.json`. This file tells Chrome about
 
 Manifest V3 is the current standard. The `storage` permission enables Chrome's sync storage, keeping your notes available across devices.
 
-Manifest V3 replaced V2 in 2023, and Chrome now rejects V2 extensions in the Web Store. The key differences matter for this project: service workers replace background pages, and the `action` key replaces both `browser_action` and `page_action`. For a notes extension, these changes are invisible — the popup works identically under both versions, but using V3 ensures your extension passes Chrome's validation and installs without warnings.
+Manifest V3 replaced V2 in 2023, and Chrome now rejects V2 extensions in the Web Store. The key differences matter for this project: service workers replace background pages, and the `action` key replaces both `browser_action` and `page_action`. For a notes extension, these changes are invisible. the popup works identically under both versions, but using V3 ensures your extension passes Chrome's validation and installs without warnings.
 
 The `storage` permission grants access to `chrome.storage.sync`, which automatically syncs data across all Chrome instances where you are signed in. This is more useful than `localStorage` for a notes tool because your standup notes travel with your Chrome profile. Start typing notes on your work laptop and they appear on your home machine before the meeting ends.
 
-## The Popup Interface
+The Popup Interface
 
 Your popup is what users see when clicking the extension icon. Design it for speed:
 
@@ -106,11 +106,11 @@ Your popup is what users see when clicking the extension icon. Design it for spe
 
 Three text areas match the standard standup format. Users can quickly type their updates without navigating complex menus.
 
-The three-field structure mirrors the Scrum standup format exactly: what did you do yesterday, what will you do today, and what is blocking you. This is deliberate. Deviating from this structure — adding a fourth field for "goals" or "morale" — adds cognitive overhead. If your team uses a different format, you can rename the labels, but resist the urge to add more fields. The power of this tool is its constraint.
+The three-field structure mirrors the Scrum standup format exactly: what did you do yesterday, what will you do today, and what is blocking you. This is deliberate. Deviating from this structure. adding a fourth field for "goals" or "morale". adds cognitive overhead. If your team uses a different format, you can rename the labels, but resist the urge to add more fields. The power of this tool is its constraint.
 
 Loading the script at the bottom of `<body>` matters. If you put it in `<head>` without a `defer` attribute, the script runs before the DOM exists, and `document.getElementById` returns null. Bottom-of-body placement is the simplest fix and works reliably across all browsers.
 
-## Styling the Popup
+Styling the Popup
 
 Keep the CSS minimal but functional:
 
@@ -176,7 +176,7 @@ The system font stack (`-apple-system, BlinkMacSystemFont, sans-serif`) renders 
 
 `resize: none` on textareas prevents users from dragging the textarea borders, which would break the fixed-width layout. The `rows="2"` attribute in HTML sets the initial height; the CSS respects it.
 
-## Core Functionality in JavaScript
+Core Functionality in JavaScript
 
 The JavaScript handles saving, loading, and exporting notes:
 
@@ -215,13 +215,13 @@ function loadNotes() {
 function exportNotes() {
   const notes = `## Standup Notes - ${new Date().toLocaleDateString()}
 
-### Yesterday
+Yesterday
 ${document.getElementById('yesterday').value}
 
-### Today
+Today
 ${document.getElementById('today').value}
 
-### Blockers
+Blockers
 ${document.getElementById('blockers').value}`;
 
   const blob = new Blob([notes], { type: 'text/markdown' });
@@ -251,19 +251,19 @@ function showFeedback(message) {
 
 The export function generates a Markdown file, making it easy to paste into GitHub issues, Slack, or documentation wikis.
 
-### Understanding the Storage API
+Understanding the Storage API
 
-`chrome.storage.sync.set` and `chrome.storage.sync.get` are asynchronous. The callback pattern is intentional — Chrome's storage operations talk to Chrome's internal sync infrastructure, which might communicate with Google servers. Treating them as synchronous would create race conditions where you read data before it has finished writing.
+`chrome.storage.sync.set` and `chrome.storage.sync.get` are asynchronous. The callback pattern is intentional. Chrome's storage operations talk to Chrome's internal sync infrastructure, which might communicate with Google servers. Treating them as synchronous would create race conditions where you read data before it has finished writing.
 
 The `savedAt` field in the notes object timestamps each save. This is useful for detecting staleness. If you open the extension and see notes with a `savedAt` from two days ago, you know those are old and should be cleared before your next standup. You could display this timestamp in the UI to make it even more visible.
 
-### Why Blob and Object URL for Export
+Why Blob and Object URL for Export
 
 The export function creates a `Blob` containing Markdown text, then creates a temporary URL pointing to that blob. An anchor element with `download` attribute and a `.click()` call triggers the browser's native file download without requiring any server or file system permissions beyond what the browser already has.
 
 The filename format `standup-2026-03-21.md` uses ISO date format, which sorts lexicographically. A folder full of standup files will automatically sort chronologically in any file browser, making it easy to scan your recent history.
 
-## Loading Your Extension
+Loading Your Extension
 
 To test your extension:
 
@@ -278,23 +278,23 @@ After loading, Chrome assigns the extension an ID that looks like `abcdefghijklm
 
 If you modify any source files, return to `chrome://extensions/` and click the refresh icon on your extension card. Changes to HTML, CSS, and JavaScript take effect immediately after refresh without reinstalling.
 
-## Practical Usage Tips
+Practical Usage Tips
 
 Once installed, integrate the extension into your workflow:
 
-**Morning Routine**: Open the extension first thing. Type what you accomplished yesterday while your coffee brews.
+Morning Routine: Open the extension first thing. Type what you accomplished yesterday while your coffee brews.
 
-**During Standup**: Keep the popup open. Update the "today" section as teammates share their updates.
+During Standup: Keep the popup open. Update the "today" section as teammates share their updates.
 
-**After Standup**: Click export to save a Markdown copy to your downloads folder. Paste directly into your team's Slack channel or project management tool.
+After Standup: Click export to save a Markdown copy to your downloads folder. Paste directly into your team's Slack channel or project management tool.
 
-**Weekly Review**: Accumulated Markdown files become documentation of your progress. Search through them during performance reviews or sprint retrospectives.
+Weekly Review: Accumulated Markdown files become documentation of your progress. Search through them during performance reviews or sprint retrospectives.
 
 One workflow pattern that works well: at the end of each day, open the extension and move your "today" entries to "yesterday." You are pre-filling tomorrow's standup while the work is still fresh in your mind. When the meeting arrives the next morning, your "yesterday" field is already complete. You only need to write what you plan to do today and note any blockers.
 
-This end-of-day habit also reduces the common standup problem where developers cannot remember what they worked on the day before. Everything was completed hours ago — sometimes 16+ hours by the time the standup starts. The notes you wrote yesterday evening reflect accurate memory.
+This end-of-day habit also reduces the common standup problem where developers cannot remember what they worked on the day before. Everything was completed hours ago. sometimes 16+ hours by the time the standup starts. The notes you wrote yesterday evening reflect accurate memory.
 
-## Adding Keyboard Shortcuts
+Adding Keyboard Shortcuts
 
 Chrome extensions support keyboard shortcuts through the manifest. Add this section to `manifest.json` to let users open the popup without touching the mouse:
 
@@ -323,7 +323,7 @@ Chrome extensions support keyboard shortcuts through the manifest. Add this sect
 
 The `_execute_action` command name is a reserved Chrome keyword that triggers the extension's popup. Users can also visit `chrome://extensions/shortcuts` to customize keyboard shortcuts for any installed extension, including yours.
 
-## Extending the Extension
+Extending the Extension
 
 This foundation supports many enhancements:
 
@@ -339,7 +339,7 @@ Notion integration requires the `host_permissions` for `api.notion.com` and an A
 
 The Chrome storage API handles synchronization across your devices automatically. Users signed into Chrome will see their notes on any machine where they sign in.
 
-## Comparison: Browser Extension vs. Other Note-Taking Approaches
+Comparison: Browser Extension vs. Other Note-Taking Approaches
 
 | Approach | Time to Open | Offline | Sync | Export |
 |---|---|---|---|---|
@@ -351,21 +351,21 @@ The Chrome storage API handles synchronization across your devices automatically
 
 The Chrome extension wins on time-to-open and offline reliability. It loses to physical notebooks on latency (typing is slower than writing) but wins on searchability and portability. For developers who spend most of their day in a browser anyway, a browser extension is the natural home for a daily note-taking tool.
 
-## Conclusion
+Conclusion
 
 A custom Chrome extension for standup meeting notes removes friction from daily routines. The three-field structure matches how teams communicate. Markdown export integrates with existing workflows. Storage sync ensures nothing gets lost.
 
 Start with this basic version. Refine the fields based on your team's specific format. Add keyboard shortcuts once you have used it for a week and know which interactions feel slow. Consider Slack or Notion integration if the copy-paste step becomes the remaining bottleneck. The extension evolves with your needs, becoming an indispensable part of your daily development workflow.
 
-The total implementation — manifest, HTML, CSS, JavaScript — is under 150 lines of code. That is the right size for a focused tool. Resist scope creep. The extension should open in under 100 milliseconds, fit on screen without scrolling, and get out of your way after you have typed three short answers.
+The total implementation. manifest, HTML, CSS, JavaScript. is under 150 lines of code. That is the right size for a focused tool. Resist scope creep. The extension should open in under 100 milliseconds, fit on screen without scrolling, and get out of your way after you have typed three short answers.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 {% endraw %}

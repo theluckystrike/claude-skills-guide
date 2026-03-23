@@ -15,11 +15,11 @@ score: 8
 
 Browser tab overload is a real problem for developers and power users managing multiple projects, documentation, and research sessions. Building a Chrome extension to organize tabs requires understanding the Chrome Tabs API, storage mechanisms, and user interface patterns. This research guide covers the technical foundation for creating a tab organizer extension.
 
-## Understanding the Chrome Tabs API
+Understanding the Chrome Tabs API
 
 The Chrome Tabs API (`chrome.tabs`) provides the core functionality for interacting with browser tabs. Before implementing any tab organization feature, you need to understand which permissions and APIs are required.
 
-### Required Permissions
+Required Permissions
 
 Your `manifest.json` must declare specific permissions:
 
@@ -42,7 +42,7 @@ Your `manifest.json` must declare specific permissions:
 
 The `tabGroups` permission allows creating and managing visual tab groups, introduced in Chrome 88. For extensions targeting broader compatibility, implement fallback logic using window management.
 
-### Core Tab Operations
+Core Tab Operations
 
 Querying tabs is the foundation of any organizer:
 
@@ -67,11 +67,11 @@ chrome.tabs.query({
 
 The query object supports filtering by `url`, `title`, `active`, `pinned`, `incognito`, `windowId`, and more.
 
-## Tab Grouping Strategies
+Tab Grouping Strategies
 
 Organizing tabs into groups provides visual structure. There are two primary approaches.
 
-### Native Tab Groups
+Native Tab Groups
 
 Chrome's built-in tab groups offer native integration:
 
@@ -90,7 +90,7 @@ chrome.tabs.group({ tabIds: [tabId3], groupId: existingGroupId });
 
 Available colors include: `grey`, `blue`, `red`, `yellow`, `green`, `pink`, `purple`, `cyan`, `orange`.
 
-### Custom Grouping with Storage
+Custom Grouping with Storage
 
 For more control, implement custom grouping using Chrome Storage:
 
@@ -116,11 +116,11 @@ const customGroups = {
 
 This approach enables cross-device sync and custom metadata that native groups don't support.
 
-## Session Management Patterns
+Session Management Patterns
 
 Saving and restoring tab sessions is essential for any organizer.
 
-### Basic Session Storage
+Basic Session Storage
 
 ```javascript
 // Capture current window session
@@ -148,7 +148,7 @@ async function captureSession() {
 }
 ```
 
-### Restoring Sessions
+Restoring Sessions
 
 ```javascript
 // Restore a saved session
@@ -166,11 +166,11 @@ async function restoreSession(sessionId) {
 }
 ```
 
-## Automatic Tab Organization
+Automatic Tab Organization
 
 Smart grouping based on content or behavior requires analyzing tab properties.
 
-### Domain-Based Grouping
+Domain-Based Grouping
 
 ```javascript
 // Group tabs by domain
@@ -206,7 +206,7 @@ async function groupByDomain() {
 }
 ```
 
-### Pattern-Based Rules
+Pattern-Based Rules
 
 Define custom rules for automatic organization:
 
@@ -246,11 +246,11 @@ async function applyOrganizationRules() {
 }
 ```
 
-## Performance Considerations
+Performance Considerations
 
 Managing many tabs requires attention to performance.
 
-### Debouncing Operations
+Debouncing Operations
 
 ```javascript
 // Debounce tab operations to avoid performance hits
@@ -267,7 +267,7 @@ const debouncedGroupUpdate = debounce(async () => {
 }, 500);
 ```
 
-### Efficient Storage
+Efficient Storage
 
 Use `chrome.storage.local` for extension data and avoid storing large amounts of tab content. For extensive session data, consider `unlimitedStorage` with compression:
 
@@ -284,18 +284,18 @@ async function compressAndStore(data) {
 }
 ```
 
-## Key Implementation Decisions
+Key Implementation Decisions
 
 When building a tab organizer, consider these architectural choices:
 
-1. **Manifest Version**: Use Manifest V3 for modern Chrome support, but test with V2 fallback for enterprise compatibility
-2. **Sync vs Local Storage**: Use `chrome.storage.sync` for cross-device sessions, `chrome.storage.local` for large datasets
-3. **Background Processing**: Leverage service workers for periodic cleanup tasks
-4. **User Interface**: Consider popup, side panel, or dedicated options page based on complexity
+1. Manifest Version: Use Manifest V3 for modern Chrome support, but test with V2 fallback for enterprise compatibility
+2. Sync vs Local Storage: Use `chrome.storage.sync` for cross-device sessions, `chrome.storage.local` for large datasets
+3. Background Processing: Use service workers for periodic cleanup tasks
+4. User Interface: Consider popup, side panel, or dedicated options page based on complexity
 
 Building a tab organizer extension requires balancing functionality with Chrome's API constraints. Start with basic grouping and session save/restore, then layer on intelligent automation as you understand user patterns in your extension.
 
-## Advanced: AI-Powered Tab Grouping
+Advanced: AI-Powered Tab Grouping
 
 Use a keyword classifier to automatically group tabs by purpose:
 
@@ -330,7 +330,7 @@ async function autoGroupTabs() {
 }
 ```
 
-## Comparison with Native Chrome Features
+Comparison with Native Chrome Features
 
 | Feature | This Extension | Chrome Tab Groups (native) | OneTab |
 |---|---|---|---|
@@ -339,27 +339,27 @@ async function autoGroupTabs() {
 | Cross-device sync | Optional | Partial (Google account) | No |
 | Cost | Free to build | Free | Free |
 
-## Troubleshooting Common Issues
+Troubleshooting Common Issues
 
-**`chrome.tabGroups` API not available**: Add `"tabGroups"` to the manifest `permissions` array. Requires Chrome 89+.
+`chrome.tabGroups` API not available: Add `"tabGroups"` to the manifest `permissions` array. Requires Chrome 89+.
 
-**Session restore in wrong order**: Use sequential `await chrome.tabs.create()` calls rather than `Promise.all` to maintain tab order.
+Session restore in wrong order: Use sequential `await chrome.tabs.create()` calls rather than `Promise.all` to maintain tab order.
 
-**Auto-group conflicting with manually set groups**: Only auto-group ungrouped tabs:
+Auto-group conflicting with manually set groups: Only auto-group ungrouped tabs:
 
 ```javascript
 const ungrouped = (await chrome.tabs.query({ currentWindow: true })).filter(t => t.groupId === chrome.tabGroups.TAB_GROUP_ID_NONE);
 ```
 
-**Storage quota exceeded**: Compress session data before storing using the Compression Streams API (Chrome 80+).
+Storage quota exceeded: Compress session data before storing using the Compression Streams API (Chrome 80+).
 
 Building a tab organizer requires balancing functionality with Chrome's API constraints. Start with basic grouping and session save/restore, then layer on intelligent automation.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

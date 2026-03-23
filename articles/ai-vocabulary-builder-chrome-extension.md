@@ -12,13 +12,13 @@ score: 8
 ---
 
 {% raw %}
-AI vocabulary builder chrome extensions represent a specialized category of browser tools that leverage artificial intelligence to help users learn new words, track terminology, and improve language comprehension while browsing the web. For developers and power users, understanding how to build and customize these extensions provides significant opportunities for creating personalized learning experiences.
+AI vocabulary builder chrome extensions represent a specialized category of browser tools that use artificial intelligence to help users learn new words, track terminology, and improve language comprehension while browsing the web. For developers and power users, understanding how to build and customize these extensions provides significant opportunities for creating personalized learning experiences.
 
-## How AI Vocabulary Builder Extensions Function
+How AI Vocabulary Builder Extensions Function
 
 At their core, AI vocabulary builder extensions capture text from web pages, analyze the context, and help users learn new words through intelligent definitions, examples, and spaced repetition. The typical architecture consists of three interconnected components: a content script that captures user-selected text, a background service worker that handles API calls to AI services, and a popup or side panel interface for displaying definitions and managing word lists.
 
-The implementation uses Chrome Extension Manifest V3, which provides robust isolation between content scripts and the extension's core logic. Here's a foundational structure:
+The implementation uses Chrome Extension Manifest V3, which provides solid isolation between content scripts and the extension's core logic. Here's a foundational structure:
 
 ```javascript
 // manifest.json
@@ -45,11 +45,11 @@ The implementation uses Chrome Extension Manifest V3, which provides robust isol
 }
 ```
 
-Notice the addition of `contextMenus` permission and `side_panel` support. Chrome's Side Panel API (introduced in Manifest V3) is a significantly better UX choice for vocabulary builders than a popup — it stays open while the user continues reading, which is exactly the workflow learners need.
+Notice the addition of `contextMenus` permission and `side_panel` support. Chrome's Side Panel API (introduced in Manifest V3) is a significantly better UX choice for vocabulary builders than a popup. it stays open while the user continues reading, which is exactly the workflow learners need.
 
-## Core Implementation Patterns
+Core Implementation Patterns
 
-### Text Capture and Context Analysis
+Text Capture and Context Analysis
 
 The content script listens for user text selection and extracts contextual information. This approach ensures that users actively choose words they want to learn rather than passively receiving suggestions.
 
@@ -74,7 +74,7 @@ document.addEventListener('mouseup', async (event) => {
 });
 ```
 
-Including `pageUrl` and `pageTitle` in the message lets you record where the user first encountered each word — a detail that dramatically improves recall when reviewing vocabulary later. Seeing "learned from: Hacker News discussion about distributed systems" is far more memorable than a decontextualized definition.
+Including `pageUrl` and `pageTitle` in the message lets you record where the user first encountered each word. a detail that dramatically improves recall when reviewing vocabulary later. Seeing "learned from: Hacker News discussion about distributed systems" is far more memorable than a decontextualized definition.
 
 A common mistake is triggering on every selection change. Binding to `mouseup` rather than `selectionchange` prevents dozens of API calls while the user is still highlighting text. You can add a small debounce if users tend to click rather than drag:
 
@@ -92,7 +92,7 @@ document.addEventListener('mouseup', () => {
 });
 ```
 
-### AI-Powered Definition Generation
+AI-Powered Definition Generation
 
 The background script communicates with AI APIs to generate rich definitions, example sentences, and pronunciation guides. This approach provides more comprehensive learning materials than traditional dictionary APIs.
 
@@ -137,7 +137,7 @@ When choosing an AI backend, the tradeoff looks like this:
 
 For most developers building a personal tool or small-team product, GPT-4o-mini at roughly $0.15 per million input tokens makes AI-quality definitions essentially free at any realistic usage volume. For enterprise deployments where data residency matters, a local model or a self-hosted inference endpoint is the right answer.
 
-### Local Storage and Word List Management
+Local Storage and Word List Management
 
 For privacy and offline access, vocabulary data can be stored locally using Chrome's storage API. This approach also enables features like spaced repetition review.
 
@@ -175,14 +175,14 @@ const VocabularyStore = {
 };
 ```
 
-`chrome.storage.local` has a 10 MB default quota, which holds tens of thousands of word records without issue. If you need cross-device sync, swap `chrome.storage.local` for `chrome.storage.sync`, which mirrors data to the user's Google account — though the sync quota is only 100 KB total, so you'd need to store only core fields (word, definition, reviewCount) and fetch examples on demand.
+`chrome.storage.local` has a 10 MB default quota, which holds tens of thousands of word records without issue. If you need cross-device sync, swap `chrome.storage.local` for `chrome.storage.sync`, which mirrors data to the user's Google account. though the sync quota is only 100 KB total, so you'd need to store only core fields (word, definition, reviewCount) and fetch examples on demand.
 
-### Implementing a Proper Spaced Repetition Schedule
+Implementing a Proper Spaced Repetition Schedule
 
 The `isDueForReview` function above uses a simple exponential backoff, but a proper SM-2 algorithm from the Anki/SuperMemo tradition performs noticeably better for long-term retention:
 
 ```javascript
-// sm2.js — Simplified SM-2 implementation
+// sm2.js. Simplified SM-2 implementation
 function updateSM2(card, quality) {
   // quality: 0-5 (0-1 = failed, 2-5 = passed)
   let { easeFactor = 2.5, interval = 1, repetitions = 0 } = card;
@@ -211,9 +211,9 @@ function updateSM2(card, quality) {
 
 The SM-2 algorithm adjusts the review interval based on how confidently the user recalls each word. A word answered with confidence 5 rapidly expands its interval; a word answered with confidence 2 resets to a one-day interval. This is the same core algorithm behind Anki's scheduling engine and produces dramatically better retention than fixed-interval review.
 
-## Advanced Features for Power Users
+Advanced Features for Power Users
 
-### Contextual Learning Enhancement
+Contextual Learning Enhancement
 
 Advanced implementations analyze the surrounding sentence structure to provide contextually accurate definitions. This is particularly valuable for technical terminology or words with multiple meanings.
 
@@ -232,7 +232,7 @@ function extractContext(text, word, windowSize = 100) {
 }
 ```
 
-For technical domains — medical literature, legal documents, developer documentation — contextual disambiguation is the difference between a useful tool and a frustrating one. "Cache" means something entirely different in a database context versus a CPU architecture discussion. Passing the surrounding 200 characters to the AI prompt costs almost nothing and dramatically improves definition accuracy.
+For technical domains. medical literature, legal documents, developer documentation. contextual disambiguation is the difference between a useful tool and a frustrating one. "Cache" means something entirely different in a database context versus a CPU architecture discussion. Passing the surrounding 200 characters to the AI prompt costs almost nothing and dramatically improves definition accuracy.
 
 You can also extract page-level metadata to prime the AI with domain context:
 
@@ -247,7 +247,7 @@ function getPageDomain() {
 
 Passing the hostname to the AI lets it calibrate tone: a word on `arxiv.org` deserves a technical definition; the same word on a news site might warrant a more accessible explanation.
 
-### Export and Synchronization
+Export and Synchronization
 
 Power users often need to export their vocabulary lists for use in other applications or to back up their learning data.
 
@@ -281,7 +281,7 @@ async function downloadExport(format) {
 }
 ```
 
-### Integration with Anki and Other Flashcard Systems
+Integration with Anki and Other Flashcard Systems
 
 Many language learners use spaced repetition systems like Anki. Building export functionality that formats vocabulary data for these systems significantly increases the utility of your extension. Anki uses a tab-separated format with front and back fields:
 
@@ -305,38 +305,38 @@ async function exportToAnki() {
 
 Users import this file into Anki via File > Import, selecting "Tab-separated" as the format. Fields map to the front and back of a Basic card. If your AI backend returns audio pronunciation data, you can also embed `[sound:word.mp3]` references in the back field, though generating and hosting audio adds significant infrastructure complexity.
 
-## Security and Privacy Considerations
+Security and Privacy Considerations
 
 When building AI vocabulary extensions, handling user data responsibly is essential. Consider implementing:
 
-- **Local-first architecture**: Process as much data as possible on-device to minimize API exposure. Words the user looks up reveal a lot about what they are reading and thinking about.
-- **User consent for AI processing**: Make it clear when words are sent to external AI services. A simple settings toggle labeled "Send selections to AI for definitions (requires internet)" is sufficient.
-- **Data export and deletion**: Provide users with complete control over their vocabulary data, including a one-click "Delete all words" function.
-- **API key management**: Never hardcode API keys; use Chrome's secure storage or require users to input their own keys. Store keys in `chrome.storage.local` (not `chrome.storage.sync`) to avoid syncing credentials across devices without explicit consent.
-- **Content script scope**: Avoid injecting content scripts on sensitive URLs like banking sites. Add exclusion rules in your manifest's `exclude_matches` field for domains like `*.google.com/accounts/*` and banking domains.
+- Local-first architecture: Process as much data as possible on-device to minimize API exposure. Words the user looks up reveal a lot about what they are reading and thinking about.
+- User consent for AI processing: Make it clear when words are sent to external AI services. A simple settings toggle labeled "Send selections to AI for definitions (requires internet)" is sufficient.
+- Data export and deletion: Provide users with complete control over their vocabulary data, including a one-click "Delete all words" function.
+- API key management: Never hardcode API keys; use Chrome's secure storage or require users to input their own keys. Store keys in `chrome.storage.local` (not `chrome.storage.sync`) to avoid syncing credentials across devices without explicit consent.
+- Content script scope: Avoid injecting content scripts on sensitive URLs like banking sites. Add exclusion rules in your manifest's `exclude_matches` field for domains like `*.google.com/accounts/*` and banking domains.
 
 One privacy concern specific to vocabulary builders: the extension reads selected text from every page the user visits. Make this explicit in your privacy policy and in the extension's onboarding flow. Users are increasingly privacy-conscious and will uninstall tools that feel opaque about data handling.
 
-## Building Your Own Extension
+Building Your Own Extension
 
 Starting with a minimal viable product allows you to validate the core user experience before adding advanced features. A practical build order:
 
-1. **Text capture** — content script, mouseup listener, message passing to background
-2. **Definition display** — background fetch, popup rendering with a single definition card
-3. **Persistent storage** — save words with `chrome.storage.local`, list view in popup
-4. **Spaced repetition UI** — quiz mode in the side panel, SM-2 scheduling
-5. **Export** — JSON, CSV, and Anki formats
-6. **Settings** — API key input, review reminder notifications, domain blocklist
+1. Text capture. content script, mouseup listener, message passing to background
+2. Definition display. background fetch, popup rendering with a single definition card
+3. Persistent storage. save words with `chrome.storage.local`, list view in popup
+4. Spaced repetition UI. quiz mode in the side panel, SM-2 scheduling
+5. Export. JSON, CSV, and Anki formats
+6. Settings. API key input, review reminder notifications, domain blocklist
 
 The Chrome Extension documentation provides comprehensive guidance on Manifest V3 implementation patterns. Pay particular attention to the service worker lifecycle: MV3 service workers are ephemeral and can be killed between events. Any state you need to persist must go to `chrome.storage`, not in-memory variables.
 
-The AI vocabulary builder space remains relatively uncrowded compared to other extension categories. Most existing tools offer either basic dictionary lookups without AI or AI lookups without proper spaced repetition scheduling. The combination of contextual AI definitions with a real SM-2 implementation and clean UX represents a meaningful gap in the market. The key differentiator lies in the quality of AI integration and the richness of the learning features — specifically, getting the spaced repetition loop tight enough that users return to the extension daily rather than treating it as a one-off lookup tool.
+The AI vocabulary builder space remains relatively uncrowded compared to other extension categories. Most existing tools offer either basic dictionary lookups without AI or AI lookups without proper spaced repetition scheduling. The combination of contextual AI definitions with a real SM-2 implementation and clean UX represents a meaningful gap in the market. The key differentiator lies in the quality of AI integration and the richness of the learning features. specifically, getting the spaced repetition loop tight enough that users return to the extension daily rather than treating it as a one-off lookup tool.
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

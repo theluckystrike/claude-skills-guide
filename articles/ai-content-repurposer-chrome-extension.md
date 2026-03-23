@@ -13,23 +13,23 @@ score: 8
 ---
 
 {% raw %}
-# AI Content Repurposer Chrome Extension: A Developer Guide
+AI Content Repurposer Chrome Extension: A Developer Guide
 
 Content repurposing has become essential for developers and content creators who need to distribute their work across multiple platforms. A Chrome extension that leverages AI to automate this process can save hours of manual work while maintaining content quality. This guide walks you through building a functional AI content repurposer extension from scratch.
 
-## Understanding the Core Architecture
+Understanding the Core Architecture
 
 An AI content repurposer extension operates through a multi-layered architecture. The content script extracts content from the active browser tab, sends it to an AI service for transformation, and then provides multiple output formats for different platforms.
 
 The key components include:
 
-- **Content extraction layer**: Parses the current page to identify main content, titles, and metadata
-- **AI processing layer**: Sends extracted content to an AI API for transformation
-- **Output layer**: Formats the repurposed content for different platforms (Twitter threads, LinkedIn posts, blog summaries, email newsletters)
+- Content extraction layer: Parses the current page to identify main content, titles, and metadata
+- AI processing layer: Sends extracted content to an AI API for transformation
+- Output layer: Formats the repurposed content for different platforms (Twitter threads, LinkedIn posts, blog summaries, email newsletters)
 
 This architecture allows the extension to work with any web page while providing flexible output options.
 
-## Setting Up the Manifest
+Setting Up the Manifest
 
 Every Chrome extension requires a manifest file. For an AI content repurposer, you'll need version 3 of the manifest with specific permissions:
 
@@ -58,7 +58,7 @@ Every Chrome extension requires a manifest file. For an AI content repurposer, y
 
 The `activeTab` permission allows your extension to access the currently active tab when the user invokes it, while `scripting` enables content script injection for extraction.
 
-## Building the Content Extractor
+Building the Content Extractor
 
 The content script runs in the context of the web page and extracts the main content. You'll want to target the primary content area while avoiding navigation, ads, and other peripheral elements:
 
@@ -104,7 +104,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 This extractor prioritizes semantic HTML elements but includes a fallback for pages that don't follow best practices.
 
-## Implementing the Popup Interface
+Implementing the Popup Interface
 
 The popup provides the user interface for configuring the repurposing options:
 
@@ -140,7 +140,7 @@ The popup provides the user interface for configuring the repurposing options:
 </html>
 ```
 
-## Connecting to AI Services
+Connecting to AI Services
 
 The background script handles communication with AI APIs. This example uses OpenAI's API, but you can adapt it for other providers:
 
@@ -192,7 +192,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 });
 ```
 
-## Wiring the Popup Logic
+Wiring the Popup Logic
 
 The popup script connects the UI to the background processing:
 
@@ -233,7 +233,7 @@ document.getElementById('repurpose').addEventListener('click', async () => {
 });
 ```
 
-## Extension Manifest Requirements
+Extension Manifest Requirements
 
 For the content script to work, you need to declare it in the manifest:
 
@@ -250,34 +250,34 @@ For the content script to work, you need to declare it in the manifest:
 
 This injects your content script into every page, enabling content extraction regardless of the site being visited.
 
-## Security Considerations
+Security Considerations
 
 When building production extensions, follow these security practices:
 
-1. **Never hardcode API keys**: Use `chrome.storage` or a backend proxy to store credentials
-2. **Validate all data**: Sanitize extracted content before sending to AI services
-3. **Implement rate limiting**: Prevent abuse of AI API quotas
-4. **Handle errors gracefully**: Provide useful error messages to users when extraction or processing fails
+1. Never hardcode API keys: Use `chrome.storage` or a backend proxy to store credentials
+2. Validate all data: Sanitize extracted content before sending to AI services
+3. Implement rate limiting: Prevent abuse of AI API quotas
+4. Handle errors gracefully: Provide useful error messages to users when extraction or processing fails
 
-## Practical Use Cases
+Practical Use Cases
 
 Once built, your extension can handle various content repurposing scenarios:
 
-- **Blog to social**: Convert long-form articles into engaging Twitter threads or LinkedIn posts
-- **Research to summary**: Extract key findings from academic papers or news articles
-- **Documentation to snippets**: Pull code examples from technical docs for quick reference
-- **Newsletter compilation**: Gather highlights from multiple articles into a single email draft
+- Blog to social: Convert long-form articles into engaging Twitter threads or LinkedIn posts
+- Research to summary: Extract key findings from academic papers or news articles
+- Documentation to snippets: Pull code examples from technical docs for quick reference
+- Newsletter compilation: Gather highlights from multiple articles into a single email draft
 
 The extension approach works particularly well because it operates directly in the browser, eliminating the need to copy-paste between applications.
 
 Building an AI content repurposer Chrome extension combines web development skills with AI integration, creating a practical tool that automates repetitive content tasks. The architecture shown here provides a solid foundation that you can extend with additional features like custom templates, saved presets, or integration with specific platforms.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

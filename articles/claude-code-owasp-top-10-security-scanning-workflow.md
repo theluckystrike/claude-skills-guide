@@ -15,23 +15,23 @@ permalink: /claude-code-owasp-top-10-security-scanning-workflow/
 
 The OWASP Top 10 remains the definitive guide to web application security risks, but manually checking your code against these vulnerabilities time after time becomes tedious. Claude Code combined with specialized skills transforms security scanning from a periodic chore into an automated workflow that catches issues as you code.
 
-## Setting Up Your Security Scanning Environment
+Setting Up Your Security Scanning Environment
 
 Before building a scanning workflow, you need the right skills installed. The foundation starts with understanding which skills support security analysis:
 
 ```bash
-# Place tdd.md in .claude/ then invoke: /tdd
-# Place pdf.md in .claude/ then invoke: /pdf
-# Place supermemory.md in .claude/ then invoke: /supermemory
+Place tdd.md in .claude/ then invoke: /tdd
+Place pdf.md in .claude/ then invoke: /pdf
+Place supermemory.md in .claude/ then invoke: /supermemory
 ```
 
-The [**tdd** skill](/best-claude-skills-for-developers-2026/) helps you write security-focused tests, while [**supermemory**](/claude-skills-token-optimization-reduce-api-costs/) maintains a persistent vulnerability database across sessions. If you're building PDF reports of findings, the **pdf** skill generates professional documentation.
+The [tdd skill](/best-claude-skills-for-developers-2026/) helps you write security-focused tests, while [supermemory](/claude-skills-token-optimization-reduce-api-costs/) maintains a persistent vulnerability database across sessions. If you're building PDF reports of findings, the pdf skill generates professional documentation.
 
-## Building the OWASP Scanning Workflow
+Building the OWASP Scanning Workflow
 
 The core workflow combines multiple Claude capabilities to scan code against the OWASP Top 10 categories:
 
-### 1. A01:2021 – Broken Access Control
+1. A01:2021 – Broken Access Control
 
 Access control vulnerabilities appear when applications fail to enforce permission boundaries. Your scanning workflow should check for:
 
@@ -48,7 +48,7 @@ Review this Express.js route handler for broken access control:
 
 Claude analyzes the code and identifies missing middleware, hardcoded role checks, or areas where user input could manipulate access levels.
 
-### 2. A02:2021 – Cryptographic Failures
+2. A02:2021 – Cryptographic Failures
 
 formerly A3:2017 – Sensitive Data Exposure, this category covers improper cryptographic implementation. Your workflow should flag:
 
@@ -57,11 +57,11 @@ formerly A3:2017 – Sensitive Data Exposure, this category covers improper cryp
 - Missing TLS configuration
 
 ```python
-# This triggers a security flag
+This triggers a security flag
 import hashlib
 password_hash = hashlib.md5(password.encode()).hexdigest()
 
-# The scanner recommends:
+The scanner recommends:
 import hashlib
 import secrets
 salt = secrets.token_hex(16)
@@ -71,7 +71,7 @@ password_hash = hashlib.pbkdf2_hmac('sha256',
 
 The scanning workflow detects weak cryptographic functions and suggests modern alternatives.
 
-### 3. A03:2021 – Injection
+3. A03:2021 – Injection
 
 SQL injection, NoSQL injection, and command injection remain prevalent. Claude's scanning identifies:
 
@@ -88,7 +88,7 @@ const query = 'SELECT * FROM users WHERE id = ?';
 db.execute(query, [userId]);
 ```
 
-### 4. A04:2021 – Insecure Design
+4. A04:2021 – Insecure Design
 
 This newer category focuses on architectural flaws rather than implementation bugs. Your workflow should evaluate:
 
@@ -96,9 +96,9 @@ This newer category focuses on architectural flaws rather than implementation bu
 - Insufficient logging and monitoring
 - Business logic vulnerabilities
 
-The scanning workflow works well alongside the **tdd** skill to generate security test cases that verify your design assumptions.
+The scanning workflow works well alongside the tdd skill to generate security test cases that verify your design assumptions.
 
-### 5. A05:2021 – Security Misconfiguration
+5. A05:2021 – Security Misconfiguration
 
 Misconfigured servers, frameworks, and dependencies create easy attack vectors. Automated scanning catches:
 
@@ -107,13 +107,13 @@ Misconfigured servers, frameworks, and dependencies create easy attack vectors. 
 - Missing security headers
 
 ```yaml
-# Example security header check in nginx config
+Example security header check in nginx config
 add_header X-Content-Type-Options "nosniff" always;
 add_header X-Frame-Options "DENY" always;
 add_header Content-Security-Policy "default-src 'self'" always;
 ```
 
-### 6. A06:2021 – Vulnerable and Outdated Components
+6. A06:2021 – Vulnerable and Outdated Components
 
 Dependency scanning has become critical as supply chain attacks increase. Pair this with [secret scanning to prevent credential leaks](/claude-code-secret-scanning-prevent-credential-leaks-guide/) in your repositories. Claude can:
 
@@ -128,7 +128,7 @@ Check these dependencies for known vulnerabilities:
 - react: 17.0.2
 ```
 
-### 7. A07:2021 – Identification and Authentication Failures
+7. A07:2021 – Identification and Authentication Failures
 
 Weak authentication implementations expose applications to credential-based attacks. The scanning workflow checks for:
 
@@ -136,7 +136,7 @@ Weak authentication implementations expose applications to credential-based atta
 - Weak password policies
 - Session ID exposure
 
-### 8. A08:2021 – Software and Data Integrity Failures
+8. A08:2021 – Software and Data Integrity Failures
 
 This category covers CI/CD vulnerabilities and insecure deserialization. Your workflow should verify:
 
@@ -144,7 +144,7 @@ This category covers CI/CD vulnerabilities and insecure deserialization. Your wo
 - Insecure deserialization patterns
 - Missing integrity checks in update mechanisms
 
-### 9. A09:2021 – Security Logging and Monitoring Failures
+9. A09:2021 – Security Logging and Monitoring Failures
 
 Without proper logging, breaches go undetected. Claude audits your logging implementation:
 
@@ -152,7 +152,7 @@ Without proper logging, breaches go undetected. Claude audits your logging imple
 - Missing audit trails for critical actions
 - Insufficient log retention
 
-### 10. A10:2021 – Server-Side Request Forgery (SSRF)
+10. A10:2021 – Server-Side Request Forgery (SSRF)
 
 SSRF vulnerabilities occur when applications fetch remote resources without validation. The scanner identifies:
 
@@ -160,11 +160,11 @@ SSRF vulnerabilities occur when applications fetch remote resources without vali
 - Internal service exposure through URL manipulation
 
 ```python
-# Vulnerable
+Vulnerable
 image_url = request.GET['url']
 image = fetch(image_url)
 
-# Protected
+Protected
 from urllib.parse import urlparse
 image_url = request.GET['url']
 parsed = urlparse(image_url)
@@ -172,13 +172,13 @@ if parsed.netloc not in ALLOWED_DOMAINS:
     raise ValidationError("Domain not allowed")
 ```
 
-## Automating the Complete Workflow
+Automating the Complete Workflow
 
 Chain these scanning capabilities together using Claude's skill composition:
 
 ```yaml
-# .claude/commands/scan-owasp.md
-# Run full OWASP Top 10 scan
+.claude/commands/scan-owasp.md
+Run full OWASP Top 10 scan
 
 Analyze the codebase for OWASP Top 10 (2021) vulnerabilities:
 
@@ -199,14 +199,14 @@ For each finding, provide:
 - Remediation recommendation
 ```
 
-Run this command on every pull request to maintain continuous security validation. Store results in **supermemory** for tracking vulnerability remediation over time, and generate PDF reports using the **pdf** skill for compliance documentation.
+Run this command on every pull request to maintain continuous security validation. Store results in supermemory for tracking vulnerability remediation over time, and generate PDF reports using the pdf skill for compliance documentation.
 
-## Integrating with Development Workflow
+Integrating with Development Workflow
 
 The most effective approach embeds security scanning into your existing development process. Add a pre-commit hook:
 
 ```bash
-# .git/hooks/pre-commit
+.git/hooks/pre-commit
 claude --print "scan code for OWASP top 10 vulnerabilities --severity critical"
 ```
 
@@ -230,18 +230,18 @@ jobs:
           path: results.json
 ```
 
-## Conclusion
+Conclusion
 
-Building a Claude Code OWASP Top 10 security scanning workflow transforms security from a periodic audit into continuous protection. The key lies in combining Claude's code analysis capabilities with specialized skills like **tdd** for security testing, **supermemory** for tracking findings, and **pdf** for compliance reporting. Pair this workflow with the [security code review checklist automation](/claude-code-security-code-review-checklist-automation/) to cover both OWASP categories and project-specific security standards.
+Building a Claude Code OWASP Top 10 security scanning workflow transforms security from a periodic audit into continuous protection. The key lies in combining Claude's code analysis capabilities with specialized skills like tdd for security testing, supermemory for tracking findings, and pdf for compliance reporting. Pair this workflow with the [security code review checklist automation](/claude-code-security-code-review-checklist-automation/) to cover both OWASP categories and project-specific security standards.
 
 Start with the ten categories above, customize the scanning rules to your tech stack, and integrate checks into your development workflow. Security improves dramatically when scanning happens at every code change rather than waiting for dedicated audit phases.
 ---
 
-## Related Reading
+Related Reading
 
-- [Claude Skills for Enterprise Security and Compliance](/claude-skills-for-enterprise-security-compliance-guide/) — Integrate OWASP scanning into enterprise-grade access control and audit pipelines
-- [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/) — Developer skills that pair with security scanning in the CI/CD pipeline
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — Run regular security scans without runaway API costs
-- [Claude Code API Security OWASP Guide](/claude-code-api-security-owasp-guide/) — Apply OWASP Top 10 protections specifically to Claude Code API integrations
+- [Claude Skills for Enterprise Security and Compliance](/claude-skills-for-enterprise-security-compliance-guide/). Integrate OWASP scanning into enterprise-grade access control and audit pipelines
+- [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/). Developer skills that pair with security scanning in the CI/CD pipeline
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Run regular security scans without runaway API costs
+- [Claude Code API Security OWASP Guide](/claude-code-api-security-owasp-guide/). Apply OWASP Top 10 protections specifically to Claude Code API integrations
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

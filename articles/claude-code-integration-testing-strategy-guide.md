@@ -15,15 +15,15 @@ tags: [claude-code, claude-skills]
 
 Testing Claude Code skills requires a different approach than traditional unit testing. Since skills combine prompt engineering, tool definitions, and runtime behavior, your testing strategy must cover all three dimensions. This guide walks through practical patterns for building reliable integration tests that validate your skills work correctly in real scenarios.
 
-## Why Integration Testing Matters for Skills
+Why Integration Testing Matters for Skills
 
 Skills often fail in production not because the prompt is wrong, but because tool outputs vary, state management breaks, or edge cases weren't considered. A skill that works perfectly in one conversation may fail when Claude encounters unexpected tool responses or when file system permissions change.
 
-Integration testing catches these failures before deployment. Rather than testing individual prompt components in isolation, you test the complete skill execution path—the prompt, the tool definitions, and the runtime interactions together.
+Integration testing catches these failures before deployment. Rather than testing individual prompt components in isolation, you test the complete skill execution path, the prompt, the tool definitions, and the runtime interactions together.
 
-This distinction matters more than it might initially appear. Unit tests can verify that your prompt instructions are syntactically valid and that individual tool definitions are well-formed. But only integration tests can tell you whether the skill actually does what you intend when Claude processes real inputs, calls real tools, and produces real outputs. A refactoring skill might pass every unit check yet consistently drop comments from code when invoked in certain sequences—an integration test would catch that; a unit test would not.
+This distinction matters more than it might initially appear. Unit tests can verify that your prompt instructions are syntactically valid and that individual tool definitions are well-formed. But only integration tests can tell you whether the skill actually does what you intend when Claude processes real inputs, calls real tools, and produces real outputs. A refactoring skill might pass every unit check yet consistently drop comments from code when invoked in certain sequences, an integration test would catch that; a unit test would not.
 
-## The Three Testing Dimensions
+The Three Testing Dimensions
 
 Before diving into specific patterns, it helps to frame what you are actually testing when you write integration tests for a skill:
 
@@ -33,11 +33,11 @@ Before diving into specific patterns, it helps to frame what you are actually te
 | Tool interactions | External tool calls succeed and return expected shapes | API changes, rate limits, auth failures |
 | Runtime state | Context carries across invocations, cleanup works | Memory leaks, stale state, session conflicts |
 
-Every meaningful integration test should touch at least two of these dimensions. Tests that only exercise the prompt in isolation tend to give false confidence—they pass in your local environment and fail in CI because they never tested the tool boundary.
+Every meaningful integration test should touch at least two of these dimensions. Tests that only exercise the prompt in isolation tend to give false confidence, they pass in your local environment and fail in CI because they never tested the tool boundary.
 
-## Core Testing Patterns
+Core Testing Patterns
 
-### 1. Input-Output Validation Tests
+1. Input-Output Validation Tests
 
 The simplest pattern validates that a skill produces expected outputs given known inputs. This works well for skills that generate content, parse files, or produce structured data.
 
@@ -57,7 +57,7 @@ def test_skill_extraction():
     assert result.returncode == 0
 ```
 
-For content-generation skills, use a more flexible assertion strategy. Exact string matching is brittle—it breaks the moment you tune the skill's prompt wording. Instead, check structural properties:
+For content-generation skills, use a more flexible assertion strategy. Exact string matching is brittle, it breaks the moment you tune the skill's prompt wording. Instead, check structural properties:
 
 ```python
 def test_content_generation_structure():
@@ -77,7 +77,7 @@ def test_content_generation_structure():
 
 This approach gives you meaningful validation without making tests fragile.
 
-### 2. Tool Mocking Tests
+2. Tool Mocking Tests
 
 When your skill depends on external tools or APIs, mocking lets you test without hitting real services. This is essential for skills that integrate with the `supermemory` skill for context retrieval, or skills that call external services through MCP servers.
 
@@ -117,7 +117,7 @@ def test_skill_handles_tool_failure():
     assert "error" not in result.stdout.lower() or "handled" in result.stdout.lower()
 ```
 
-### 3. State Persistence Tests
+3. State Persistence Tests
 
 Skills that use `tdd` workflows or maintain conversation state need tests that verify state persists correctly across multiple invocations. Test that context carries forward, that skill outputs remain consistent, and that cleanup operations work properly.
 
@@ -165,14 +165,14 @@ def test_file_writing_skill(isolated_workspace):
     assert os.path.exists(os.path.join(isolated_workspace, "my-app", "src"))
 ```
 
-## Building a Test Suite
+Building a Test Suite
 
 Organize your tests around skill boundaries rather than individual functions. Each skill should have its own test file that covers the primary use cases:
 
-1. **Happy path tests** - verify the skill works for typical inputs
-2. **Edge case tests** - handle empty inputs, unusual formats, boundary conditions
-3. **Error handling tests** - ensure graceful failure when tools return errors
-4. **Regression tests** - catch bugs that reappear after fixes
+1. Happy path tests - verify the skill works for typical inputs
+2. Edge case tests - handle empty inputs, unusual formats, boundary conditions
+3. Error handling tests - ensure graceful failure when tools return errors
+4. Regression tests - catch bugs that reappear after fixes
 
 For skills that wrap the `frontend-design` or `canvas-design` skills, test that generated code or design outputs are valid and match expected patterns. A visual skill should produce renderable output, not just text.
 
@@ -192,12 +192,12 @@ tests/
 
 Keeping workflow tests separate from individual skill tests makes it easier to run fast unit-style skill checks in development and reserve the slower end-to-end workflow tests for CI.
 
-## Automating Test Execution
+Automating Test Execution
 
 Integrate your test suite into a CI pipeline using GitHub Actions or similar tools. Run tests on every pull request that modifies skill definitions. This catches regressions before they reach users.
 
 ```yaml
-# .github/workflows/skill-tests.yml
+.github/workflows/skill-tests.yml
 name: Skill Integration Tests
 on: [push, pull_request]
 jobs:
@@ -228,7 +228,7 @@ jobs:
         run: python -m pytest tests/skills/ -k "${{ matrix.input_type }}"
 ```
 
-## Testing Multi-Skill Workflows
+Testing Multi-Skill Workflows
 
 Complex workflows often chain multiple skills together. Test the complete workflow, not just individual skills. For example, a documentation pipeline might use `pdf` for extraction, `docx` for content generation, and a custom skill for formatting.
 
@@ -274,11 +274,11 @@ def test_documentation_workflow_with_intermediate_checks():
     assert "##" in format_result.stdout, "Formatted output missing section headers"
 ```
 
-## Continuous Validation
+Continuous Validation
 
 Beyond traditional tests, consider implementing runtime validation. Log skill executions and analyze patterns in failures. If a skill consistently produces unexpected output for certain input types, add specific tests for those cases.
 
-The `supermemory` skill provides a useful pattern here—store test results and failure cases as memories that your testing workflow can retrieve and analyze. This creates a feedback loop that continuously improves test coverage.
+The `supermemory` skill provides a useful pattern here, store test results and failure cases as memories that your testing workflow can retrieve and analyze. This creates a feedback loop that continuously improves test coverage.
 
 A lightweight version of this approach is to write a failure log during CI runs and commit it alongside test results:
 
@@ -300,17 +300,17 @@ def log_test_failure(skill_name, input_data, actual_output, expected_pattern):
 
 Review this log periodically. Clusters of similar failures indicate either a gap in your skill's prompt or a category of inputs you haven't accounted for. Both are cheap to fix early and expensive to debug in production.
 
-## Summary
+Summary
 
 Integration testing for Claude Code skills combines input-output validation, tool mocking, and state persistence checks into a comprehensive quality assurance strategy. Build tests around skill boundaries, automate execution in CI pipelines, and continuously expand coverage based on production failures. This approach ensures your skills work reliably across the diverse scenarios they'll encounter in real-world use.
 
 
-## Related Reading
+Related Reading
 
 - [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/)
 - [Claude Code Skills for Writing Unit Tests Automatically](/claude-skills-for-writing-unit-tests-automatically/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Code Tutorials Hub](/tutorials-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

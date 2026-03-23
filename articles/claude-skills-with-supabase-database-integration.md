@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Skills with Supabase: Practical Workflows"
-description: "How to use Claude Code skills alongside Supabase for database-backed projects — what works, what does not, and practical patterns."
+description: "How to use Claude Code skills alongside Supabase for database-backed projects. what works, what does not, and practical patterns."
 date: 2026-03-13
 categories: [guides]
 tags: [claude-code, claude-skills, supabase, database, backend]
@@ -13,11 +13,11 @@ permalink: /claude-skills-with-supabase-database-integration/
 
 # Claude Skills with Supabase: Practical Workflows
 
-Supabase is a popular open-source backend platform built on PostgreSQL. Claude Code skills are plain `.md` instruction files invoked with slash commands. These two tools are entirely separate — but they work well together because Claude Code can help you write, review, and debug the code that talks to Supabase.
+Supabase is a popular open-source backend platform built on PostgreSQL. Claude Code skills are plain `.md` instruction files invoked with slash commands. These two tools are entirely separate. but they work well together because Claude Code can help you write, review, and debug the code that talks to Supabase.
 
 This article covers practical patterns for using Claude Code skills to speed up Supabase-related development work.
 
-## What Skills Are (and Are Not)
+What Skills Are (and Are Not)
 
 Before diving in: Claude skills are not Node.js modules, Python packages, or server-side plugins. A skill is a text file in `~/.claude/skills/` that loads when you type a slash command like `/tdd` or `/frontend-design`. The skill gives Claude structured guidance for a type of task.
 
@@ -25,7 +25,7 @@ Skills do not run code. They do not have npm dependencies. They do not execute i
 
 Think of a skill as a persistent system prompt for a domain. Loading `/tdd` before asking Claude to write a Supabase query function tells Claude to produce tests first, apply test-driven conventions throughout, and flag untested code paths. The skill shapes Claude's behavior for the duration of the conversation without you having to re-specify those preferences every time.
 
-## Supabase Architecture Concepts That Shape How You Use Claude
+Supabase Architecture Concepts That Shape How You Use Claude
 
 Before asking Claude to write Supabase code, it helps to be precise about which layer you are working in. Supabase has several distinct surfaces that require different approaches:
 
@@ -40,9 +40,9 @@ Before asking Claude to write Supabase code, it helps to be precise about which 
 
 When asking Claude Code for help, naming the layer explicitly gets better results. "Help me write a Supabase query" is less effective than "Help me write a PostgreSQL query using the Supabase JS client that filters by `owner_id` and applies an RLS policy check in the test."
 
-## Using /tdd for Supabase Query Testing
+Using /tdd for Supabase Query Testing
 
-The [`/tdd` skill](/best-claude-skills-for-developers-2026/) is useful when writing functions that query Supabase. Invoke it, describe the function you need, and Claude will help you write tests first — then the implementation.
+The [`/tdd` skill](/best-claude-skills-for-developers-2026/) is useful when writing functions that query Supabase. Invoke it, describe the function you need, and Claude will help you write tests first. then the implementation.
 
 Example workflow:
 
@@ -80,7 +80,7 @@ export async function getProjectsByOwner(ownerId, status) {
 
 The `/tdd` skill helps you think through edge cases: what happens when `ownerId` is null, when the table is empty, or when Supabase returns a network error.
 
-### Writing Tests That Actually Mock Supabase
+Writing Tests That Actually Mock Supabase
 
 The Supabase JS client is a chained object, which makes mocking slightly awkward. Ask Claude Code to generate a mock factory that preserves the chain:
 
@@ -147,7 +147,7 @@ describe('getProjectsByOwner', () => {
 
 Paste this pattern into Claude Code with your actual schema and it will fill in the remaining test cases and the implementation that passes them.
 
-## Using /frontend-design for Supabase-Backed UIs
+Using /frontend-design for Supabase-Backed UIs
 
 When you are building a UI that reads from or writes to Supabase, the `/frontend-design` skill loads guidance for component structure, accessibility, and responsive layouts.
 
@@ -158,7 +158,7 @@ Build a React component that displays a list of projects fetched from Supabase.
 Show a loading state, an empty state, and the list when data arrives.
 ```
 
-Claude produces clean, accessible component code that integrates with your data layer. The skill's guidance ensures the UI handles the async nature of database queries properly — loading indicators, error boundaries, and empty state messaging.
+Claude produces clean, accessible component code that integrates with your data layer. The skill's guidance ensures the UI handles the async nature of database queries properly. loading indicators, error boundaries, and empty state messaging.
 
 A well-structured component from this workflow handles all three states explicitly:
 
@@ -217,9 +217,9 @@ export function ProjectList({ ownerId }) {
 }
 ```
 
-The `cancelled` flag in the cleanup function prevents state updates on unmounted components — a common source of React warnings in Supabase-backed UIs. Ask Claude Code via the `/frontend-design` skill to check every async effect you write for this pattern.
+The `cancelled` flag in the cleanup function prevents state updates on unmounted components. a common source of React warnings in Supabase-backed UIs. Ask Claude Code via the `/frontend-design` skill to check every async effect you write for this pattern.
 
-### Realtime Subscriptions in the UI
+Realtime Subscriptions in the UI
 
 Supabase Realtime adds a layer of complexity to component design. Ask Claude Code to extend any data-fetching component with a Realtime subscription:
 
@@ -259,9 +259,9 @@ useEffect(() => {
 }, [ownerId]);
 ```
 
-The `/frontend-design` skill will also flag that this subscription pattern requires careful cleanup and that the filter syntax (`owner_id=eq.${ownerId}`) must match the column type exactly — UUIDs require no quotes, but strings do.
+The `/frontend-design` skill will also flag that this subscription pattern requires careful cleanup and that the filter syntax (`owner_id=eq.${ownerId}`) must match the column type exactly. UUIDs require no quotes, but strings do.
 
-## Using /webapp-testing for Integration Testing
+Using /webapp-testing for Integration Testing
 
 The `/webapp-testing` skill is useful for end-to-end testing of features that depend on your Supabase backend.
 
@@ -273,7 +273,7 @@ The page fetches from Supabase. Mock the API calls
 and test the loading, error, and success states.
 ```
 
-This approach gives you integration tests that do not depend on a live Supabase instance in CI — the tests mock the network layer and verify the UI behavior independently.
+This approach gives you integration tests that do not depend on a live Supabase instance in CI. the tests mock the network layer and verify the UI behavior independently.
 
 A Playwright test that intercepts the Supabase REST API:
 
@@ -331,9 +331,9 @@ test.describe('Project list page', () => {
 });
 ```
 
-The key insight here is that Supabase's REST API uses predictable URL patterns (`/rest/v1/tablename`) that Playwright's route interceptor can match with a glob. You do not need a special Supabase testing library — standard HTTP mocking works.
+The key insight here is that Supabase's REST API uses predictable URL patterns (`/rest/v1/tablename`) that Playwright's route interceptor can match with a glob. You do not need a special Supabase testing library. standard HTTP mocking works.
 
-## Using /docx and /pdf for Document Storage Workflows
+Using /docx and /pdf for Document Storage Workflows
 
 If your application stores documents in Supabase Storage and you need to process their contents, the [`/pdf`](/best-claude-skills-for-data-analysis/) or `/docx` skills help you write the extraction code.
 
@@ -422,11 +422,11 @@ export async function processAndStoreDocument(bucketName, filePath, documentId) 
 }
 ```
 
-The `/pdf` skill instructs Claude to handle each distinct failure mode — URL generation, network download, and parse errors — as separate throw points with descriptive messages rather than a single catch-all.
+The `/pdf` skill instructs Claude to handle each distinct failure mode. URL generation, network download, and parse errors. as separate throw points with descriptive messages rather than a single catch-all.
 
-## Schema Design with Claude Code
+Schema Design with Claude Code
 
-You do not need a specific skill for database schema work — Claude Code itself handles SQL well. But you can combine the `/tdd` skill with schema design to produce a migration file and tests simultaneously:
+You do not need a specific skill for database schema work. Claude Code itself handles SQL well. But you can combine the `/tdd` skill with schema design to produce a migration file and tests simultaneously:
 
 ```sql
 -- Example: projects table
@@ -450,13 +450,13 @@ create policy "Users can insert their own projects"
   with check (auth.uid() = owner_id);
 ```
 
-Ask Claude to review your schema for common issues — missing indexes, overly permissive RLS policies, or enum patterns that should use a lookup table.
+Ask Claude to review your schema for common issues. missing indexes, overly permissive RLS policies, or enum patterns that should use a lookup table.
 
-### Common Schema Issues Claude Code Catches
+Common Schema Issues Claude Code Catches
 
 When you paste a migration and ask Claude Code to review it, the most frequent findings are:
 
-**Missing indexes on foreign keys and filter columns:**
+Missing indexes on foreign keys and filter columns:
 ```sql
 -- Add these after the table creation
 create index projects_owner_id_idx on projects(owner_id);
@@ -464,9 +464,9 @@ create index projects_status_idx on projects(status);
 create index projects_created_at_idx on projects(created_at desc);
 ```
 
-PostgreSQL does not automatically index foreign keys. If your app filters projects by `owner_id` and that column has no index, every query does a full table scan — something that works fine at 1,000 rows and becomes a serious bottleneck at 100,000.
+PostgreSQL does not automatically index foreign keys. If your app filters projects by `owner_id` and that column has no index, every query does a full table scan. something that works fine at 1,000 rows and becomes a serious bottleneck at 100,000.
 
-**Overly broad RLS policies:**
+Overly broad RLS policies:
 
 A common mistake is writing an `UPDATE` policy that allows users to change any column including `owner_id`:
 
@@ -482,7 +482,7 @@ create policy "Users can update their own projects"
 
 Claude Code will flag this when you ask it to audit your policies.
 
-**Using text for status instead of an enum or lookup table:**
+Using text for status instead of an enum or lookup table:
 
 ```sql
 -- If status values need to be enforced across multiple tables, use an enum
@@ -495,7 +495,7 @@ alter table projects
 
 This prevents invalid status values from being inserted by any code path, not just application-level validation.
 
-### Generating Migrations from Schema Reviews
+Generating Migrations from Schema Reviews
 
 After Claude Code identifies schema improvements, ask it to generate a numbered migration file:
 
@@ -506,7 +506,7 @@ and converts the status column to an enum. Name it 20260315_projects_improvement
 
 Claude generates the migration with the `alter table` and `create index` statements in the correct dependency order, with rollback comments where needed.
 
-## RLS Policy Testing: The Most Overlooked Step
+RLS Policy Testing: The Most Overlooked Step
 
 Row-Level Security is silent by default. A misconfigured policy either blocks legitimate access (returning empty results with no error) or permits unauthorized access (returning data it should not). Neither failure mode produces an obvious error message.
 
@@ -548,18 +548,18 @@ rollback;
 
 These tests run directly in PostgreSQL via Supabase's SQL editor or your migration tooling. They verify the policy logic at the database layer, independently of any application code.
 
-## Practical Tips
+Practical Tips
 
-**Keep credentials out of prompts**: Never paste your Supabase service role key into a Claude Code session. Use environment variable names in your code examples and keep actual keys in `.env` files outside version control.
+Keep credentials out of prompts: Never paste your Supabase service role key into a Claude Code session. Use environment variable names in your code examples and keep actual keys in `.env` files outside version control.
 
-**Use the anon key for client-side code**: The anon key combined with Row-Level Security policies is the correct pattern for browser and mobile clients. The service role key bypasses RLS and should only appear in trusted server-side code.
+Use the anon key for client-side code: The anon key combined with Row-Level Security policies is the correct pattern for browser and mobile clients. The service role key bypasses RLS and should only appear in trusted server-side code.
 
-**Test RLS policies explicitly**: RLS bugs are silent — a policy that is too permissive allows data leaks without errors. Use the `/tdd` skill to write tests that verify policies reject unauthorized access, not just that they allow authorized access.
+Test RLS policies explicitly: RLS bugs are silent. a policy that is too permissive allows data leaks without errors. Use the `/tdd` skill to write tests that verify policies reject unauthorized access, not just that they allow authorized access.
 
-**Separate your Supabase client initialization**: If you initialize the Supabase client inline in every file that uses it, you end up with multiple client instances and inconsistent auth state. Create a single `supabaseClient.js` module and import from it everywhere:
+Separate your Supabase client initialization: If you initialize the Supabase client inline in every file that uses it, you end up with multiple client instances and inconsistent auth state. Create a single `supabaseClient.js` module and import from it everywhere:
 
 ```javascript
-// supabaseClient.js — create once, import everywhere
+// supabaseClient.js. create once, import everywhere
 import { createClient } from '@supabase/supabase-js';
 
 export const supabase = createClient(
@@ -570,7 +570,7 @@ export const supabase = createClient(
 
 When you ask Claude Code to generate any Supabase-using module, tell it to import from this shared client rather than calling `createClient` again.
 
-**Ask Claude to generate TypeScript types from your schema**: Supabase's CLI can generate types automatically (`supabase gen types typescript`), but you can also paste your schema into Claude Code and ask it to write the TypeScript interfaces manually for when the CLI is not available:
+Ask Claude to generate TypeScript types from your schema: Supabase's CLI can generate types automatically (`supabase gen types typescript`), but you can also paste your schema into Claude Code and ask it to write the TypeScript interfaces manually for when the CLI is not available:
 
 ```typescript
 // Generated from projects table schema
@@ -588,7 +588,7 @@ export type ProjectUpdate = Partial<Omit<Project, 'id' | 'owner_id' | 'created_a
 
 Typed query functions catch a large class of bugs at compile time rather than at runtime in production.
 
-## Choosing the Right Skill for Each Supabase Task
+Choosing the Right Skill for Each Supabase Task
 
 A quick reference for which skill to invoke for common Supabase work:
 
@@ -602,15 +602,15 @@ A quick reference for which skill to invoke for common Supabase work:
 | Write RLS policies and tests | `/tdd` | Drives test-first policy verification |
 | Write an Edge Function | No skill needed | Ask Claude to use Deno-compatible patterns explicitly |
 
-No skill is required for pure schema or SQL work — Claude Code's baseline SQL knowledge is strong enough. Skills add the most value when you need structured output (tests + implementation) or domain-specific patterns (accessible component structure, file parsing error handling).
+No skill is required for pure schema or SQL work. Claude Code's baseline SQL knowledge is strong enough. Skills add the most value when you need structured output (tests + implementation) or domain-specific patterns (accessible component structure, file parsing error handling).
 
 ---
 
-## Related Reading
+Related Reading
 
-- [Best Claude Skills for Data Analysis](/best-claude-skills-for-data-analysis/) — Skills for data-heavy workflows
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — Keep long sessions cost-efficient
-- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — How skills activate in context
+- [Best Claude Skills for Data Analysis](/best-claude-skills-for-data-analysis/). Skills for data-heavy workflows
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Keep long sessions cost-efficient
+- [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate in context
 
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

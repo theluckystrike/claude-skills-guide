@@ -13,18 +13,18 @@ tags: [claude-code, claude-skills]
 ---
 
 
-Building a Chrome extension for social media image resizing solves a real problem. Every platform demands different dimensions—Instagram posts need 1080×1080, Twitter/X headers require 1500×500, LinkedIn banners want 1584×396, and Facebook cover photos need 820×312. Manually adjusting images for each platform wastes time. A well-built extension automates this workflow entirely.
+Building a Chrome extension for social media image resizing solves a real problem. Every platform demands different dimensions, Instagram posts need 1080×1080, Twitter/X headers require 1500×500, LinkedIn banners want 1584×396, and Facebook cover photos need 820×312. Manually adjusting images for each platform wastes time. A well-built extension automates this workflow entirely.
 
 This guide covers the architecture, implementation patterns, and key decisions for creating a production-ready social media image resizer extension.
 
-## Extension Architecture
+Extension Architecture
 
 A Chrome extension consists of three core components: the manifest file, background scripts, and content scripts or popup interfaces. For image resizing, you'll need:
 
-1. **Manifest V3** configuration with appropriate permissions
-2. **Canvas API** for image manipulation
-3. **File handling** APIs for saving resized images
-4. **Storage** for user preferences and presets
+1. Manifest V3 configuration with appropriate permissions
+2. Canvas API for image manipulation
+3. File handling APIs for saving resized images
+4. Storage for user preferences and presets
 
 The manifest defines what your extension can access:
 
@@ -42,7 +42,7 @@ The manifest defines what your extension can access:
 }
 ```
 
-## Core Resizing Logic
+Core Resizing Logic
 
 The Canvas API provides the foundation for image manipulation. The resizing function accepts source image data and target dimensions, then outputs a resized blob:
 
@@ -74,7 +74,7 @@ async function resizeImage(imageSource, targetWidth, targetHeight, format = 'ima
 
 This function handles the core transformation. The 0.92 quality parameter balances file size against visual fidelity for JPEG output.
 
-## Platform Presets
+Platform Presets
 
 Different platforms enforce strict dimension requirements. Store these as configurable presets:
 
@@ -102,11 +102,11 @@ const PLATFORM_PRESETS = {
 
 Users select a preset, and the extension applies the corresponding dimensions automatically.
 
-## Integration Approaches
+Integration Approaches
 
 You have three primary integration strategies:
 
-### 1. Popup Interface
+1. Popup Interface
 
 The popup provides a quick-access interface visible in the Chrome toolbar. This works well for one-click operations:
 
@@ -128,7 +128,7 @@ document.getElementById('resizeBtn').addEventListener('click', async () => {
 });
 ```
 
-### 2. Context Menu Integration
+2. Context Menu Integration
 
 Right-click context menus provide alternative access:
 
@@ -149,7 +149,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
 });
 ```
 
-### 3. Drag-and-Drop Zone
+3. Drag-and-Drop Zone
 
 For the popup or options page, a drag-and-drop interface lets users upload images directly:
 
@@ -168,15 +168,15 @@ dropZone.addEventListener('drop', async (e) => {
 });
 ```
 
-## Image Processing Pipeline
+Image Processing Pipeline
 
 The complete processing pipeline involves several stages:
 
-1. **Input capture** — Get the source image from the page, drag-drop, or clipboard
-2. **Validation** — Verify image dimensions and format compatibility
-3. **Transformation** — Resize using canvas with appropriate scaling algorithms
-4. **Output generation** — Create blob in desired format (PNG, JPEG, WebP)
-5. **Download** — Trigger browser download with appropriate filename
+1. Input capture. Get the source image from the page, drag-drop, or clipboard
+2. Validation. Verify image dimensions and format compatibility
+3. Transformation. Resize using canvas with appropriate scaling algorithms
+4. Output generation. Create blob in desired format (PNG, JPEG, WebP)
+5. Download. Trigger browser download with appropriate filename
 
 For best results, implement smart cropping when aspect ratios don't match:
 
@@ -206,7 +206,7 @@ async function smartCrop(imageSource, targetWidth, targetHeight) {
 }
 ```
 
-## Handling Cross-Origin Images
+Handling Cross-Origin Images
 
 When processing images from websites, CORS restrictions apply. The extension needs appropriate permissions and the `crossOrigin` attribute set:
 
@@ -224,7 +224,7 @@ async function loadImageWithCors(url) {
 
 The website serving the image must include `Access-Control-Allow-Origin` headers, or you need to route the image through a proxy service in your background script.
 
-## User Preferences Storage
+User Preferences Storage
 
 Persist user preferences using Chrome's storage API:
 
@@ -241,7 +241,7 @@ async function loadPreferences() {
 
 This allows users to set their preferred output format, default platform, and quality settings across sessions.
 
-## Performance Considerations
+Performance Considerations
 
 Image processing in the browser can be memory-intensive. Optimize by:
 
@@ -250,23 +250,23 @@ Image processing in the browser can be memory-intensive. Optimize by:
 - Using `requestAnimationFrame` for smooth UI updates during processing
 - Limiting maximum input dimensions (e.g., 4096×4096) to prevent crashes
 
-## Testing and Debugging
+Testing and Debugging
 
 Use Chrome's developer tools to debug extension components:
 
-- **Popup**: Right-click the extension icon → "Inspect Popup"
-- **Background script**: Navigate to `chrome://extensions`, enable "Developer mode", click "Service Worker" link
-- **Content scripts**: Use the page's developer console
+- Popup: Right-click the extension icon → "Inspect Popup"
+- Background script: Navigate to `chrome://extensions`, enable "Developer mode", click "Service Worker" link
+- Content scripts: Use the page's developer console
 
 Test with various image sizes and formats, including edge cases like extremely wide or tall images, to ensure graceful handling.
 
 A well-designed social media image resizer extension eliminates repetitive manual work. The patterns outlined here provide a foundation for building extensions that integrate smoothly with users' existing workflows while handling the diverse requirements of modern social platforms.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

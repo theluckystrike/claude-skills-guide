@@ -15,16 +15,16 @@ tags: [claude-code, claude-skills]
 
 Using Claude with Markdown documentation in Rails and Ruby applications transforms how developers approach documentation, testing, and code generation. This guide provides concrete examples of integrating Claude into your Ruby workflow, showing practical patterns you can implement immediately. Whether you are working on a greenfield Rails 7 API or maintaining a decade-old monolith, the patterns here apply directly.
 
-## Setting Up Claude for Ruby Projects
+Setting Up Claude for Ruby Projects
 
-The first step involves configuring your Rails project to work effectively with Claude. Create a `CLAUDE.md` file in your project root. This file acts as persistent project context that Claude reads at the start of every session. It tells Claude about your Rails version, Ruby version, key dependencies, and team conventions — reducing back-and-forth and improving the accuracy of every code suggestion.
+The first step involves configuring your Rails project to work effectively with Claude. Create a `CLAUDE.md` file in your project root. This file acts as persistent project context that Claude reads at the start of every session. It tells Claude about your Rails version, Ruby version, key dependencies, and team conventions. reducing back-and-forth and improving the accuracy of every code suggestion.
 
 A minimal but effective `CLAUDE.md` for a Rails project looks like this:
 
 ```markdown
-# Project: MyApp
+Project: MyApp
 
-## Stack
+Stack
 - Ruby 3.3.0
 - Rails 7.1
 - PostgreSQL 16
@@ -33,20 +33,20 @@ A minimal but effective `CLAUDE.md` for a Rails project looks like this:
 - Pundit for authorization
 - Devise for authentication
 
-## Conventions
+Conventions
 - Service objects live in app/services/
 - Presenters live in app/presenters/
 - Use Interactor gem for multi-step business logic
 - All controllers should be thin; push logic to service objects
 - Prefer named scopes over raw where clauses in controllers
 
-## Testing rules
+Testing rules
 - Minimum 80% coverage enforced in CI
 - Use FactoryBot, never fixtures
 - Use shared_examples for repeated behavior
-- Avoid stubbing ActiveRecord — prefer database-backed tests
+- Avoid stubbing ActiveRecord. prefer database-backed tests
 
-## Off-limits
+Off-limits
 - Do not use .all without a limit or scope
 - Do not call external APIs directly from controllers
 ```
@@ -71,12 +71,12 @@ end
 
 When Claude understands your stack at session start, it generates more accurate code suggestions and documentation. It will stop recommending gems you do not use and will follow the naming conventions you have defined.
 
-## Generating Model Documentation with Claude
+Generating Model Documentation with Claude
 
 One of the most valuable use cases involves using Claude to document your ActiveRecord models. Instead of manually writing documentation, you can describe your models and let Claude generate comprehensive Markdown files that explain associations, validations, enums, scopes, and business rules.
 
 ```ruby
-# app/models/user.rb
+app/models/user.rb
 class User < ApplicationRecord
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy
@@ -112,14 +112,14 @@ Claude is also useful for reviewing models against common Rails antipatterns. As
 | Suggest indexes | "What indexes should this table have?" |
 | Review validations | "Are there validations that should also be DB constraints?" |
 
-## Test-Driven Development with the TDD Skill
+Test-Driven Development with the TDD Skill
 
 The tdd skill enhances your testing workflow significantly. When working on a new feature, describe the expected behavior and let Claude generate RSpec examples before you write the implementation. This forces you to think about the interface first and catches edge cases early.
 
 Here is a realistic set of model specs for a `Post` model:
 
 ```ruby
-# spec/models/post_spec.rb
+spec/models/post_spec.rb
 RSpec.describe Post, type: :model do
   describe 'associations' do
     it { should belong_to(:user) }
@@ -168,7 +168,7 @@ The tdd skill understands Rails conventions and generates tests that follow RSpe
 For request specs and controller-level tests, ask Claude to write specs that hit the full stack including authentication and authorization checks:
 
 ```ruby
-# spec/requests/api/v1/posts_spec.rb
+spec/requests/api/v1/posts_spec.rb
 RSpec.describe "Api::V1::Posts", type: :request do
   let(:user) { create(:user) }
   let(:headers) { auth_headers_for(user) }
@@ -203,12 +203,12 @@ RSpec.describe "Api::V1::Posts", type: :request do
 end
 ```
 
-## Creating API Documentation
+Creating API Documentation
 
 Rails API documentation benefits greatly from Claude's ability to generate OpenAPI specifications from controller code. Describe your endpoints and Claude helps create comprehensive documentation:
 
 ```ruby
-# app/controllers/api/v1/posts_controller.rb
+app/controllers/api/v1/posts_controller.rb
 module Api
   module V1
     class PostsController < ApplicationController
@@ -256,12 +256,12 @@ end
 
 When you paste this controller into a Claude session and ask for OpenAPI YAML, it produces a spec covering all four endpoints, response schemas, error responses, and authentication requirements. For documentation that goes to stakeholders, use the pdf skill to generate downloadable documentation files or the docx skill to create formatted documentation for non-technical reviewers.
 
-## Database Migration Documentation
+Database Migration Documentation
 
 Documenting migrations helps future developers understand schema evolution. When writing migrations, include descriptive comments that explain the business reason for the change, not just the mechanical operation:
 
 ```ruby
-# db/migrate/20260314000000_add_role_to_users.rb
+db/migrate/20260314000000_add_role_to_users.rb
 class AddRoleToUsers < ActiveRecord::Migration[7.1]
   # Adds role-based access control to support the moderation system
   # introduced in v2.1. Replaces the boolean `admin` column with an
@@ -292,45 +292,45 @@ end
 
 A few migration patterns where Claude adds the most value:
 
-- **Backfill safety**: ask Claude to generate a migration that runs data backfills in batches to avoid locking large tables
-- **Index strategy**: paste your migration and ask "what indexes are missing?"
-- **Reversibility audit**: ask "is this migration safely reversible? What would happen on rollback?"
-- **Down method**: ask Claude to fill in the `down` method when you have written only `up`
+- Backfill safety: ask Claude to generate a migration that runs data backfills in batches to avoid locking large tables
+- Index strategy: paste your migration and ask "what indexes are missing?"
+- Reversibility audit: ask "is this migration safely reversible? What would happen on rollback?"
+- Down method: ask Claude to fill in the `down` method when you have written only `up`
 
-## Managing Project Context with Super Memory
+Managing Project Context with Super Memory
 
 The supermemory skill proves invaluable for maintaining project context across sessions. Store architectural decisions, coding standards, and team conventions so that every Claude session starts with full awareness of how your project is structured:
 
 ```markdown
-# Project Conventions
+Project Conventions
 
-## Naming
+Naming
 - Use snake_case for methods and variables
 - Use PascalCase for classes and modules
 - Use SCREAMING_SNAKE_CASE for constants
 - Service objects end in a verb: UserRegistrationService, OrderCancellationService
 
-## Controller Patterns
+Controller Patterns
 - Use service objects for any logic beyond simple CRUD
-- Return meaningful HTTP status codes — never return 200 with an error in the body
+- Return meaningful HTTP status codes. never return 200 with an error in the body
 - Include pagination for all collection endpoints using Kaminari
 - Serializers go in app/serializers/ using jsonapi-serializer
 
-## Testing
+Testing
 - Minimum 80% coverage enforced in CI
 - Focus on request specs for API endpoints; unit specs for models and services
 - Use shared examples for policy authorization tests
 - Do not test private methods directly
 
-## Background Jobs
+Background Jobs
 - All jobs go through Sidekiq
-- Jobs should be idempotent — safe to run twice
+- Jobs should be idempotent. safe to run twice
 - Use unique jobs (sidekiq-unique-jobs) for user-triggered actions
 ```
 
 This context persists across Claude sessions, ensuring consistent responses aligned with your project standards. When you add a new convention, update the memory and Claude will immediately follow it in the next session.
 
-## Frontend Integration Documentation
+Frontend Integration Documentation
 
 When your Rails application includes JavaScript frontend code, Claude helps maintain consistency across the stack. Document component interactions and ask Claude to review Stimulus controllers against your application's patterns:
 
@@ -373,12 +373,12 @@ export default class extends Controller {
 
 Claude understands Stimulus patterns and can suggest improvements to your frontend architecture. When you paste a Stimulus controller and ask "what could go wrong with this on mobile?" or "how would I add optimistic UI updates here?", the answers are grounded in your actual stack rather than generic JavaScript advice.
 
-## Deployment and Environment Documentation
+Deployment and Environment Documentation
 
 Document your deployment process using Markdown that Claude can reference. When an incident happens at 2am, clear documentation saves time. Claude can help generate runbooks from your Capistrano or Kamal configuration:
 
 ```yaml
-# config/deploy.rb
+config/deploy.rb
 set :application, 'myapp'
 set :repo_url,    'git@github.com:company/myapp.git'
 set :deploy_to,   '/var/www/myapp'
@@ -408,7 +408,7 @@ end
 
 Paste this into Claude with your deployment steps and ask: "Write a deployment runbook in Markdown covering normal deploys, rollback procedure, and database migration failures." The result is a structured document you can commit to your repo under `docs/deployment.md`.
 
-## Practical Workflow: The Full Loop
+Practical Workflow: The Full Loop
 
 The highest-value workflow combines all of these pieces into a repeatable loop for every new feature:
 
@@ -422,14 +422,14 @@ The highest-value workflow combines all of these pieces into a repeatable loop f
 
 This loop keeps documentation current automatically, because the conventions you add to `CLAUDE.md` during a feature become the context that improves the next feature.
 
-## Conclusion
+Conclusion
 
-Integrating Claude into your Rails and Ruby workflow dramatically improves documentation quality, testing coverage, and code consistency. The key lies in providing rich context through `CLAUDE.md`, maintaining conventions in the supermemory skill, and using specialized skills like tdd for testing, pdf for generated documentation, and supermemory for maintaining project knowledge. Start with one area — perhaps model documentation or test generation — and expand the workflow as your team becomes comfortable. The compound effect of consistent context means every session gets more useful over time.
+Integrating Claude into your Rails and Ruby workflow dramatically improves documentation quality, testing coverage, and code consistency. The key lies in providing rich context through `CLAUDE.md`, maintaining conventions in the supermemory skill, and using specialized skills like tdd for testing, pdf for generated documentation, and supermemory for maintaining project knowledge. Start with one area. perhaps model documentation or test generation. and expand the workflow as your team becomes comfortable. The compound effect of consistent context means every session gets more useful over time.
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

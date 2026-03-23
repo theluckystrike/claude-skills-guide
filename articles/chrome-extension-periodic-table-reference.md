@@ -15,15 +15,15 @@ tags: [claude-code, claude-skills]
 
 
 {% raw %}
-# Chrome Extension Periodic Table Reference: Developer Guide
+Chrome Extension Periodic Table Reference: Developer Guide
 
-Chrome extensions transform the browsing experience by adding functionality directly into the browser. Understanding the relationships between extension components, APIs, and manifest configurations is essential for building robust extensions. This guide provides a systematic reference for developers working with Chrome extension architecture.
+Chrome extensions transform the browsing experience by adding functionality directly into the browser. Understanding the relationships between extension components, APIs, and manifest configurations is essential for building solid extensions. This guide provides a systematic reference for developers working with Chrome extension architecture.
 
-## Core Extension Components
+Core Extension Components
 
 A Chrome extension consists of several interconnected components that work together. The manifest file serves as the configuration center, defining permissions, content scripts, background workers, and popup interfaces.
 
-### Manifest Configuration
+Manifest Configuration
 
 The manifest.json file is the entry point for every extension:
 
@@ -49,11 +49,11 @@ The manifest.json file is the entry point for every extension:
 
 Manifest V3 introduced significant changes from V2, particularly the replacement of background pages with service workers and modifications to declarative net request rules.
 
-## API Categories and Permissions
+API Categories and Permissions
 
 Chrome provides extensive APIs organized by functionality. Each category requires specific permissions in the manifest.
 
-### Storage APIs
+Storage APIs
 
 The storage API persists data across sessions:
 
@@ -71,7 +71,7 @@ chrome.storage.local.get(["key"]).then((result) => {
 
 Storage options include local (persistent), sync (cloud-synced), and managed (admin-controlled) storage.
 
-### Messaging APIs
+Messaging APIs
 
 Communication between extension components uses message passing:
 
@@ -95,11 +95,11 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 });
 ```
 
-## Content Script Patterns
+Content Script Patterns
 
 Content scripts run in the context of web pages, enabling direct DOM manipulation. They operate in an isolated world, meaning they cannot access page JavaScript variables but can modify the DOM.
 
-### DOM Manipulation
+DOM Manipulation
 
 ```javascript
 // Creating and injecting elements
@@ -117,7 +117,7 @@ container.appendChild(button);
 document.body.appendChild(container);
 ```
 
-### Communicating with Page Scripts
+Communicating with Page Scripts
 
 To share data between content scripts and page JavaScript, use custom events:
 
@@ -134,11 +134,11 @@ document.addEventListener("myExtensionEvent", (e) => {
 });
 ```
 
-## Service Worker Best Practices
+Service Worker Best Practices
 
 Background service workers handle events when no extension UI is visible. They must be efficient and handle the asynchronous nature of Chrome APIs.
 
-### Event Handling
+Event Handling
 
 ```javascript
 // Browser action click handler
@@ -158,7 +158,7 @@ chrome.runtime.onInstalled.addListener((details) => {
 });
 ```
 
-## Extension Contexts Reference
+Extension Contexts Reference
 
 Understanding where your code executes is critical for debugging and architecture:
 
@@ -169,9 +169,9 @@ Understanding where your code executes is critical for debugging and architectur
 | Background | All Chrome APIs | No DOM access |
 | Options Page | Chrome APIs | User-initiated |
 
-## Common Patterns for Power Users
+Common Patterns for Power Users
 
-### Keyboard Shortcuts
+Keyboard Shortcuts
 
 Define commands in manifest:
 
@@ -197,7 +197,7 @@ chrome.commands.onCommand.addListener((command) => {
 });
 ```
 
-### Declarative Content Matching
+Declarative Content Matching
 
 Control when content scripts load:
 
@@ -210,15 +210,15 @@ Control when content scripts load:
 }]
 ```
 
-## Debugging Tips
+Debugging Tips
 
 Effective debugging requires understanding Chrome's extension architecture:
 
-1. **Service Worker Logs**: Use chrome://extensions and click "Service Worker" to access console output
-2. **Content Script Debugging**: Right-click page → Inspect → Content scripts tab
-3. **Network Inspection**: Popup and background scripts appear in Network tab with "Extension" filter
+1. Service Worker Logs: Use chrome://extensions and click "Service Worker" to access console output
+2. Content Script Debugging: Right-click page → Inspect → Content scripts tab
+3. Network Inspection: Popup and background scripts appear in Network tab with "Extension" filter
 
-## Security Considerations
+Security Considerations
 
 Always follow security best practices:
 
@@ -228,11 +228,11 @@ Always follow security best practices:
 - Avoid `eval()` and inline scripts where possible
 - Implement Content Security Policy in manifest
 
-## Tabs and Windows API: Practical Patterns
+Tabs and Windows API: Practical Patterns
 
 The tabs and windows APIs are among the most commonly used in real-world extensions. They let you query, create, update, and close tabs programmatically, enabling everything from simple tab counters to full-featured workflow managers.
 
-### Querying and Updating Active Tabs
+Querying and Updating Active Tabs
 
 A common pattern is grabbing the current active tab and modifying its URL or injecting a script:
 
@@ -250,7 +250,7 @@ chrome.tabs.query({ active: true, currentWindow: true }).then(([tab]) => {
 
 This approach is useful for one-off injections triggered by a popup button click, without needing a persistent content script running on every page. The `scripting` permission must be declared in the manifest.
 
-### Creating and Grouping Tabs
+Creating and Grouping Tabs
 
 Chrome 89+ introduced tab groups, which let extensions organize tabs programmatically:
 
@@ -278,14 +278,14 @@ openDocumentationSet([
 
 This requires the `tabGroups` permission. Tab groups persist across sessions when Chrome's tab restore feature is active, making them practical for saving research workflows.
 
-## Options Page Patterns
+Options Page Patterns
 
 An options page lets users configure extension behavior without cluttering the popup. It's a full HTML page with access to all Chrome APIs.
 
-### Connecting Options Page to Storage
+Connecting Options Page to Storage
 
 ```javascript
-// options.js — save user preferences
+// options.js. save user preferences
 document.getElementById("saveBtn").addEventListener("click", () => {
   const theme = document.getElementById("themeSelect").value;
   const autoRun = document.getElementById("autoRunCheckbox").checked;
@@ -306,14 +306,14 @@ chrome.storage.sync.get(["theme", "autoRun"]).then((prefs) => {
 });
 ```
 
-Using `storage.sync` here ensures that settings follow the user across devices where they are signed into Chrome. Keep sync storage payloads small — Chrome limits sync storage to 100KB total with individual keys capped at 8KB.
+Using `storage.sync` here ensures that settings follow the user across devices where they are signed into Chrome. Keep sync storage payloads small. Chrome limits sync storage to 100KB total with individual keys capped at 8KB.
 
-## Alarms API for Scheduled Tasks
+Alarms API for Scheduled Tasks
 
 Service workers can be terminated by Chrome after a period of inactivity. The alarms API provides a reliable mechanism for scheduling recurring tasks that survive service worker restarts.
 
 ```javascript
-// background.js — schedule a recurring check every 30 minutes
+// background.js. schedule a recurring check every 30 minutes
 chrome.runtime.onInstalled.addListener(() => {
   chrome.alarms.create("dataRefresh", { periodInMinutes: 30 });
 });
@@ -331,7 +331,7 @@ chrome.alarms.onAlarm.addListener((alarm) => {
 
 The alarms API requires the `"alarms"` permission. Unlike `setTimeout`, alarms fire even after the service worker has been idle and restarted, making them essential for any extension that needs reliable background polling.
 
-## Notifications API
+Notifications API
 
 Extensions can surface native OS notifications without requiring the user to have the extension popup open:
 
@@ -355,7 +355,7 @@ chrome.notifications.onButtonClicked.addListener((notificationId, buttonIndex) =
 
 Notifications require the `"notifications"` permission. On macOS, users must grant notification permissions to Chrome at the OS level for these to appear. Always clear notifications once they are no longer relevant using `chrome.notifications.clear()` to avoid notification buildup.
 
-## Building for Production
+Building for Production
 
 Before publishing to Chrome Web Store:
 
@@ -368,11 +368,11 @@ Before publishing to Chrome Web Store:
 The Chrome extension ecosystem offers tremendous flexibility for enhancing browser functionality. By understanding these core patterns and APIs, developers can build extensions that are performant, secure, and provide genuine value to users.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

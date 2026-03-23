@@ -13,13 +13,13 @@ score: 7
 ---
 
 
-# Versioning and Maintaining Published Claude Code Skills
+Versioning and Maintaining Published Claude Code Skills
 
-When you publish a Claude Code skill for others to use, you're not just sharing a prompt—you're establishing a contract with your users. They trust your skill to work reliably, produce consistent results, and not break unexpectedly. Effective versioning and maintenance practices are essential for building that trust and ensuring your skills remain valuable over time.
+When you publish a Claude Code skill for others to use, you're not just sharing a prompt, you're establishing a contract with your users. They trust your skill to work reliably, produce consistent results, and not break unexpectedly. Effective versioning and maintenance practices are essential for building that trust and ensuring your skills remain valuable over time.
 
 This guide covers the full lifecycle of a published Claude Code skill: semantic versioning strategy, changelog formats, deprecation patterns, automated testing approaches, distribution mechanics, and monitoring for regressions. Whether you maintain one skill or a library of dozens, the practices here will help you operate with confidence.
 
-## Why Versioning Matters for Claude Skills
+Why Versioning Matters for Claude Skills
 
 Claude Code skills evolve just like any software project. You may discover edge cases, improve instructions based on user feedback, add new capabilities, or refactor for clarity. Without a clear versioning strategy, users have no way to know what's changed between updates or whether it's safe to upgrade.
 
@@ -27,24 +27,24 @@ Consider a scenario where you publish a skill that helps developers write unit t
 
 Versioning also enables:
 
-- **Reproducible environments.** Teams can pin to a specific skill version and know their workflow will behave identically across machines and over time.
-- **Gradual adoption.** Power users can test new versions before rolling them out team-wide.
-- **Debugging.** When something breaks, you can compare the current version against a previous one to isolate the change that caused the regression.
-- **Automated tooling.** Release pipelines, changelog generators, and package managers all depend on version signals to do their jobs correctly.
+- Reproducible environments. Teams can pin to a specific skill version and know their workflow will behave identically across machines and over time.
+- Gradual adoption. Power users can test new versions before rolling them out team-wide.
+- Debugging. When something breaks, you can compare the current version against a previous one to isolate the change that caused the regression.
+- Automated tooling. Release pipelines, changelog generators, and package managers all depend on version signals to do their jobs correctly.
 
 Without versioning, your skill is a moving target. With it, you give users and tooling something stable to build on.
 
-## Semantic Versioning for Skills
+Semantic Versioning for Skills
 
 Apply [semantic versioning](https://semver.org/) (MAJOR.MINOR.PATCH) to your Claude skills:
 
-- **MAJOR** (X.0.0): Breaking changes that alter the skill's behavior in incompatible ways
-- **MINOR** (1.X.0): New features or significant improvements that remain backward compatible
-- **PATCH** (1.1.X): Bug fixes and minor refinements that don't change behavior
+- MAJOR (X.0.0): Breaking changes that alter the skill's behavior in incompatible ways
+- MINOR (1.X.0): New features or significant improvements that remain backward compatible
+- PATCH (1.1.X): Bug fixes and minor refinements that don't change behavior
 
 For example, if your testing skill originally outputs Jest tests and you change it to output Vitest tests, that's a MAJOR version bump. Adding support for TypeScript test generation would be a MINOR bump. Fixing a typo in your instructions would be a PATCH bump.
 
-### Version Decision Table
+Version Decision Table
 
 The following table helps you decide which version component to increment for common skill changes:
 
@@ -63,7 +63,7 @@ The following table helps you decide which version component to increment for co
 
 When in doubt, increment MINOR rather than PATCH. It is better to signal "something meaningful changed" than to silently slip in a behavioral improvement that users might not expect.
 
-### Pre-Release Labels
+Pre-Release Labels
 
 For skills under active development, use pre-release labels to signal instability:
 
@@ -75,7 +75,7 @@ For skills under active development, use pre-release labels to signal instabilit
 
 These labels tell users and tooling that pinning to this version is risky until a stable release is cut.
 
-## Declaring Versions in Skill Front Matter
+Declaring Versions in Skill Front Matter
 
 Add a `version` field to your skill's front matter to make the version explicitly visible:
 
@@ -103,13 +103,13 @@ The `stability` field communicates the support tier at a glance:
 
 This allows users and tools to identify which version they're using. Claude Code can reference this version when debugging issues or when users report problems.
 
-## Documenting Changes with Changelogs
+Documenting Changes with Changelogs
 
 Every skill that you maintain should include a changelog. You can maintain this in several ways:
 
-1. **Separate CHANGELOG.md file** in your skill repository
-2. **Changelog section** within the skill's description using the `changelog` front matter field
-3. **Version history comment** at the top of the skill file
+1. Separate CHANGELOG.md file in your skill repository
+2. Changelog section within the skill's description using the `changelog` front matter field
+3. Version history comment at the top of the skill file
 
 Here's a practical example of a changelog entry:
 
@@ -132,53 +132,53 @@ changelog: |
 
 Users can quickly see what's changed and decide whether to upgrade.
 
-### Changelog Format Standards
+Changelog Format Standards
 
 Follow the [Keep a Changelog](https://keepachangelog.com/) convention to ensure consistent formatting that tooling and humans can both parse:
 
 ```markdown
-# Changelog
+Changelog
 
 All notable changes to this skill are documented here.
 
-## [Unreleased]
+[Unreleased]
 - Nothing yet.
 
-## [2.1.0] - 2026-03-14
-### Added
+[2.1.0] - 2026-03-14
+Added
 - TypeScript type inference for generated tests
 - Support for Vitest's `expect.soft()` assertions
 
-### Fixed
+Fixed
 - Edge case with null/undefined parameters in describe blocks
 
-### Changed
+Changed
 - Improved async function test templates for better readability
 
-## [2.0.0] - 2026-01-10
-### Breaking Changes
+[2.0.0] - 2026-01-10
+Breaking Changes
 - Output now uses Vitest instead of Jest
 - `--framework` parameter removed; use `--legacy` to restore Jest output
 
-### Added
+Added
 - Migration guide at MIGRATION.md
 - `--legacy` flag for backward-compatible Jest output
 
-## [1.4.2] - 2025-11-22
-### Fixed
+[1.4.2] - 2025-11-22
+Fixed
 - Nested describe block generation for ES6 classes
 - Import path normalization on Windows file systems
 ```
 
 Structure changelog entries under these standard headings: `Added`, `Changed`, `Deprecated`, `Removed`, `Fixed`, `Security`. Breaking changes get their own `Breaking Changes` heading at the top of the relevant version section.
 
-## Handling Breaking Changes
+Handling Breaking Changes
 
 When you must make breaking changes, follow these practices:
 
-1. **Announce deprecation** in advance through the skill's description or a dedicated `deprecation_notice` field
-2. **Maintain version compatibility** by supporting both old and new behaviors during a transition period
-3. **Provide migration guidance** explaining how users can update their workflows
+1. Announce deprecation in advance through the skill's description or a dedicated `deprecation_notice` field
+2. Maintain version compatibility by supporting both old and new behaviors during a transition period
+3. Provide migration guidance explaining how users can update their workflows
 
 For example, if you're changing your skill from generating Jest tests to Vitest, you might release version 2.0.0 with a deprecation notice explaining the change, then offer a "legacy" flag or separate skill for users who need the old behavior:
 
@@ -195,7 +195,7 @@ deprecation_notice: |
 ---
 ```
 
-### Deprecation Timeline Best Practices
+Deprecation Timeline Best Practices
 
 | Phase | Duration | Actions |
 |---|---|---|
@@ -206,30 +206,30 @@ deprecation_notice: |
 
 This timeline gives users adequate runway to migrate at their own pace. High-traffic or enterprise-oriented skills should consider extending the parallel support phase to 6 months.
 
-### Writing a Migration Guide
+Writing a Migration Guide
 
 A dedicated `MIGRATION.md` reduces support burden and signals professionalism. A good migration guide includes:
 
 ```markdown
-# Migrating from v1.x to v2.x
+Migrating from v1.x to v2.x
 
-## What Changed
+What Changed
 
 The Unit Test Generator now outputs Vitest tests instead of Jest.
 
-## Why It Changed
+Why It Changed
 
 Vitest has faster execution, native ESM support, and a compatible API.
 It is becoming the community default for Vite-based projects.
 
-## Step-by-Step Migration
+Step-by-Step Migration
 
 1. Install Vitest: `npm install --save-dev vitest`
 2. Update `package.json` scripts: replace `jest` with `vitest run`
 3. Remove Jest config files if Vitest is now your only test runner
 4. Re-run the skill on existing test files to regenerate them in Vitest format
 
-## Using the Legacy Flag
+Using the Legacy Flag
 
 If you need Jest output temporarily while migrating, pass `--legacy`:
 
@@ -237,40 +237,40 @@ If you need Jest output temporarily while migrating, pass `--legacy`:
 
 This flag will be removed in v3.0.0.
 
-## Getting Help
+Getting Help
 
 Open an issue at https://github.com/yourorg/skills/issues
 ```
 
-## Testing Your Skills
+Testing Your Skills
 
 Before publishing updates, validate that your skill still works as expected:
 
-1. **Manual testing**: Run the skill against various inputs to verify outputs
-2. **Automated testing**: Create test cases that validate skill behavior using Claude Code's testing capabilities
-3. **User testing**: Share beta versions with trusted users before public release
+1. Manual testing: Run the skill against various inputs to verify outputs
+2. Automated testing: Create test cases that validate skill behavior using Claude Code's testing capabilities
+3. User testing: Share beta versions with trusted users before public release
 
 Create a test file within your skill directory:
 
 ```yaml
-# test-cases.md
-## Test Case 1: Simple Function
+test-cases.md
+Test Case 1: Simple Function
 Input: function add(a, b) { return a + b; }
 Expected: Jest test with describe blocks and expect statements
 
-## Test Case 2: Async Function
+Test Case 2: Async Function
 Input: async function fetchData(url) { ... }
 Expected: Tests using async/await and proper promise handling
 ```
 
 Run these tests regularly to catch regressions before they reach users.
 
-### Structured Test Cases
+Structured Test Cases
 
 For more rigorous validation, maintain a JSON or YAML test manifest that can be run programmatically:
 
 ```yaml
-# tests/skill-test-cases.yml
+tests/skill-test-cases.yml
 skill: unit-test-generator
 version: "2.1.0"
 cases:
@@ -302,25 +302,25 @@ cases:
 
 This manifest can be consumed by a test runner script that invokes Claude Code with each input, captures the output, and validates the assertions. Automating this process means you can run your full test suite in CI before every release.
 
-### Regression Testing Across Model Versions
+Regression Testing Across Model Versions
 
 Claude model updates can subtly change skill output. Include model version in your test runs and compare outputs when you bump `min_claude_version`:
 
 ```bash
-# Run test suite against current model
+Run test suite against current model
 claude --skill unit-test-generator < tests/TC001-input.js > tests/TC001-output-current.txt
 
-# Diff against golden output
+Diff against golden output
 diff tests/TC001-output-golden.txt tests/TC001-output-current.txt
 ```
 
 If the diff is non-trivial, investigate whether the output change is a regression or an improvement. Update golden files and increment MINOR version if the change is intentional.
 
-## Distribution and Update Strategies
+Distribution and Update Strategies
 
 When distributing your skills through GitHub or other platforms, consider these approaches:
 
-### Version Tags
+Version Tags
 
 Use Git tags to mark specific versions:
 
@@ -343,7 +343,7 @@ git tag -a v2.1.0 -m "feat: add TypeScript inference and async improvements
 git push origin v2.1.0
 ```
 
-### Branch-Based Stability
+Branch-Based Stability
 
 Maintain branches for different stability levels:
 
@@ -356,16 +356,16 @@ This lets users choose their risk tolerance when installing your skill.
 A typical branching workflow looks like:
 
 ```
-main ──────────────────────────── v2.0.0 ── v2.1.0
+main  v2.0.0  v2.1.0
           \                      /
-           beta ─── beta-1 ─── beta-2
+           beta  beta-1  beta-2
                          \
                           legacy/v1 (maintenance fixes only)
 ```
 
 Document the branch policy clearly in your README so users know where to direct issues and pull requests.
 
-### Pinning Skills in `.claude/settings.json`
+Pinning Skills in `.claude/settings.json`
 
 Users who want reproducibility can pin skills by tag in their Claude Code configuration. Document this pattern in your README:
 
@@ -383,7 +383,7 @@ Users who want reproducibility can pin skills by tag in their Claude Code config
 
 Pinning prevents unexpected behavior changes during team onboarding or in CI environments where skill updates could break automated workflows.
 
-### Release Notes
+Release Notes
 
 Create GitHub releases with detailed notes explaining:
 
@@ -397,36 +397,36 @@ Clear release notes build trust and help users make informed upgrade decisions.
 A strong release note template:
 
 ```markdown
-## Unit Test Generator v2.1.0
+Unit Test Generator v2.1.0
 
-### Summary
+Summary
 This release adds TypeScript type inference and significantly improves
 async function test generation quality.
 
-### What's New
-- **TypeScript inference**: The skill now detects TypeScript signatures and
+What's New
+- TypeScript inference: The skill now detects TypeScript signatures and
   generates typed mocks and assertions automatically.
-- **Async improvements**: Test templates for async functions now correctly
+- Async improvements: Test templates for async functions now correctly
   use `expect(...).resolves` and handle rejection testing.
 
-### Bug Fixes
+Bug Fixes
 - Fixed a regression in v2.0.1 where null parameters caused malformed
   `describe` block nesting.
 
-### Upgrading
+Upgrading
 No action required. This is a backward-compatible minor release.
 Pin to `v2.1.0` to lock in this behavior.
 
-### Known Issues
+Known Issues
 - Complex generic types with multiple constraints may produce simplified
   type assertions. Tracked in issue #47.
 ```
 
-## Monitoring and Feedback Loops
+Monitoring and Feedback Loops
 
 Publishing is not the end of the maintenance cycle. Active monitoring helps you catch regressions early and understand how users actually interact with your skill.
 
-### Issue Triage Labels
+Issue Triage Labels
 
 Use consistent GitHub issue labels to track skill health:
 
@@ -440,7 +440,7 @@ Use consistent GitHub issue labels to track skill health:
 
 Separating `model-drift` issues from skill regressions is important: model updates are outside your control, but you still own the user experience. When a model update changes your skill's output, consider whether a PATCH release with adjusted instructions is needed.
 
-### Collecting Usage Signals
+Collecting Usage Signals
 
 If you distribute skills through a managed platform or package registry, set up lightweight telemetry to understand which versions are still in active use. Even simple version download counts help you prioritize:
 
@@ -450,29 +450,29 @@ If you distribute skills through a managed platform or package registry, set up 
 
 Without usage signals, you are maintaining in the dark.
 
-## Best Practices Summary
+Best Practices Summary
 
-1. **Always increment version numbers** following semantic versioning
-2. **Document every change** in a changelog
-3. **Test thoroughly** before publishing updates
-4. **Communicate breaking changes** clearly and in advance
-5. **Support older versions** when possible for users who need stability
-6. **Use Git tags and branches** to organize versions
-7. **Declare `min_claude_version`** so users know which models your skill requires
-8. **Write migration guides** for every MAJOR version bump
-9. **Automate test cases** to catch regressions before release
-10. **Monitor model drift** and patch skill instructions when model updates affect output quality
+1. Always increment version numbers following semantic versioning
+2. Document every change in a changelog
+3. Test thoroughly before publishing updates
+4. Communicate breaking changes clearly and in advance
+5. Support older versions when possible for users who need stability
+6. Use Git tags and branches to organize versions
+7. Declare `min_claude_version` so users know which models your skill requires
+8. Write migration guides for every MAJOR version bump
+9. Automate test cases to catch regressions before release
+10. Monitor model drift and patch skill instructions when model updates affect output quality
 
-## Conclusion
+Conclusion
 
 Versioning and maintaining Claude Code skills requires the same discipline as maintaining any software project. By following semantic versioning, documenting changes, testing thoroughly, and communicating clearly with your users, you build skills that are reliable, trustworthy, and sustainable. Users will appreciate the stability and clarity, and they'll be more confident in building their workflows around your skills.
 
-The full lifecycle—from initial publish through deprecation and archival—deserves deliberate design. Skills that are well-documented, clearly versioned, and actively maintained attract contributors, reduce support burden, and earn the kind of long-term user trust that makes them foundational pieces of developer workflows. Take the time to establish good versioning practices from the start, and your skills will serve users well for years to come.
+The full lifecycle, from initial publish through deprecation and archival, deserves deliberate design. Skills that are well-documented, clearly versioned, and actively maintained attract contributors, reduce support burden, and earn the kind of long-term user trust that makes them foundational pieces of developer workflows. Take the time to establish good versioning practices from the start, and your skills will serve users well for years to come.
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

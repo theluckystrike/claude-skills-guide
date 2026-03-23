@@ -15,17 +15,17 @@ tags: [chrome-extension, productivity, study-tools]
 {% raw %}
 Chrome extension study schedule planners transform browser-based learning by integrating task management directly into your workflow. For developers and power users, building a custom planner means you get exactly the features you need without relying on generic productivity apps.
 
-## Why Build a Study Schedule Planner Extension
+Why Build a Study Schedule Planner Extension
 
 Most productivity tools force you to context-switch between your browser and a separate app. A chrome extension keeps your study schedule where you're already working. You can create study sessions, set reminders, and track progress without leaving your current tab.
 
 A custom extension also lets you integrate with your existing workflow. Connect it to your note-taking app, sync with your calendar, or automate study session starts based on your coding environment. The flexibility makes a significant difference for developers who spend most of their time in the browser.
 
-The alternative — a standalone web app or native application — introduces friction at exactly the wrong moments. When you are deep in a documentation page or a tutorial and realize you need to log a study session, a popup two clicks away is used. An app requiring you to switch windows and log in is skipped. Browser extensions win on friction, and friction determines whether habits form.
+The alternative. a standalone web app or native application. introduces friction at exactly the wrong moments. When you are deep in a documentation page or a tutorial and realize you need to log a study session, a popup two clicks away is used. An app requiring you to switch windows and log in is skipped. Browser extensions win on friction, and friction determines whether habits form.
 
-## Comparing Your Options: Custom Extension vs. Existing Tools
+Comparing Your Options: Custom Extension vs. Existing Tools
 
-Before building, it is worth understanding where custom extensions outperform existing solutions — and where they do not.
+Before building, it is worth understanding where custom extensions outperform existing solutions. and where they do not.
 
 | Criteria | Custom Extension | Generic Productivity App | Calendar + Reminders |
 |---|---|---|---|
@@ -41,14 +41,14 @@ Before building, it is worth understanding where custom extensions outperform ex
 
 The case for building is strongest when you need subject-level analytics, deep browser integration, or a workflow that no off-the-shelf tool supports. If you just need basic reminders, a calendar works fine.
 
-## Core Architecture
+Core Architecture
 
 A study schedule planner extension built on Manifest V3 consists of several interconnected parts:
 
-- **Popup UI**: Quick access to view today's sessions and add new ones
-- **Side Panel**: Detailed schedule view with calendar and progress tracking
-- **Background Service Worker**: Handles notifications, alarms, and data persistence
-- **Storage API**: Syncs data across devices using chrome.storage.sync
+- Popup UI: Quick access to view today's sessions and add new ones
+- Side Panel: Detailed schedule view with calendar and progress tracking
+- Background Service Worker: Handles notifications, alarms, and data persistence
+- Storage API: Syncs data across devices using chrome.storage.sync
 
 Here's the manifest structure:
 
@@ -75,33 +75,33 @@ The popup serves as a quick-entry point for checking the next session or adding 
 
 One important architectural decision is where to draw the boundary between the popup and the side panel. A good rule of thumb: if the user needs to see it while actively browsing (current session status, time remaining, next session), put it in the popup. If it requires focused attention (schedule planning, analytics, session review), put it in the side panel. Mixing these concerns produces a cluttered popup and an underused side panel.
 
-## Project File Structure
+Project File Structure
 
 A clean file structure makes the extension maintainable as it grows:
 
 ```
 study-planner/
-├── manifest.json
-├── popup.html
-├── popup.js
-├── popup.css
-├── sidepanel.html
-├── sidepanel.js
-├── sidepanel.css
-├── background.js
-├── icons/
-│   ├── icon16.png
-│   ├── icon48.png
-│   └── icon128.png
-└── utils/
-    ├── storage.js      # Shared storage helpers
-    ├── sessions.js     # Session model and CRUD
-    └── time.js         # Date/time formatting utilities
+ manifest.json
+ popup.html
+ popup.js
+ popup.css
+ sidepanel.html
+ sidepanel.js
+ sidepanel.css
+ background.js
+ icons/
+    icon16.png
+    icon48.png
+    icon128.png
+ utils/
+     storage.js      # Shared storage helpers
+     sessions.js     # Session model and CRUD
+     time.js         # Date/time formatting utilities
 ```
 
 Separating storage and session logic into utility modules prevents duplication between the popup and side panel scripts. Both pages import from the same `utils/` files, so a change to the session data model only needs to happen in one place.
 
-## Implementing Session Management
+Implementing Session Management
 
 The core data model revolves around study sessions. Each session needs a subject, duration, scheduled time, and completion status. Store these as JSON objects:
 
@@ -134,7 +134,7 @@ function addSession(session) {
 }
 ```
 
-For a more robust implementation, wrap the storage calls in a dedicated module that handles errors and provides consistent IDs:
+For a more solid implementation, wrap the storage calls in a dedicated module that handles errors and provides consistent IDs:
 
 ```javascript
 // utils/sessions.js
@@ -191,7 +191,7 @@ function deleteSession(sessionId) {
 
 Using Promises instead of raw callbacks makes it much easier to chain operations in the UI code. When the user submits a new session form and you need to save the session, schedule an alarm, and then update the UI, Promise chaining keeps the flow readable.
 
-## Setting Up Reminders with Alarms
+Setting Up Reminders with Alarms
 
 The Chrome Alarms API provides reliable notification scheduling even when the extension isn't actively running. Set an alarm for each study session:
 
@@ -242,7 +242,7 @@ function rescheduleAllAlarms() {
 
 Without this, users who restart Chrome lose their scheduled reminders until they reopen the extension.
 
-## Building the Side Panel Interface
+Building the Side Panel Interface
 
 The side panel becomes your main planning hub. Include a weekly calendar view, session list, and progress statistics:
 
@@ -356,7 +356,7 @@ body {
 }
 ```
 
-## Progress Tracking
+Progress Tracking
 
 Track completion rates to maintain motivation. Store completion data alongside sessions:
 
@@ -446,11 +446,11 @@ function renderSubjectStats(subjects) {
 
 Sorting by lowest completion rate by default surfaces the subjects that need attention without requiring the user to hunt for problem areas.
 
-## Adding Advanced Features
+Adding Advanced Features
 
 Once the core functionality works, enhance the planner with features that matter to developers:
 
-**Pomodoro Integration**: Add a built-in timer that enforces focused work blocks. Use the chrome.idle API to detect when you've stepped away and pause the timer automatically.
+Pomodoro Integration: Add a built-in timer that enforces focused work blocks. Use the chrome.idle API to detect when you've stepped away and pause the timer automatically.
 
 ```javascript
 // Pomodoro timer state
@@ -503,7 +503,7 @@ function broadcastTimerUpdate() {
 
 The `broadcastTimerUpdate` call lets both the popup and the side panel subscribe to timer ticks and update their displays without each page needing to manage its own timer state.
 
-**Keyboard Shortcuts**: Register global shortcuts for common actions:
+Keyboard Shortcuts: Register global shortcuts for common actions:
 
 ```javascript
 chrome.commands.onCommand.addListener((command) => {
@@ -536,7 +536,7 @@ Register the commands in manifest.json:
 }
 ```
 
-**Data Export**: Allow exporting your study data for analysis in other tools:
+Data Export: Allow exporting your study data for analysis in other tools:
 
 ```javascript
 function exportToCSV() {
@@ -564,7 +564,7 @@ function convertToCSV(sessions) {
 
 Add the `downloads` permission to your manifest when implementing this feature. The exported CSV opens cleanly in Excel or Google Sheets, where you can build pivot tables to analyze your study patterns over longer time horizons.
 
-## Handling the chrome.storage.sync Quota
+Handling the chrome.storage.sync Quota
 
 One gotcha that trips up many extension developers: `chrome.storage.sync` has hard quotas. The per-item limit is 8KB and the total quota is 100KB. For a study planner storing many sessions with long notes, you can hit these limits.
 
@@ -600,7 +600,7 @@ async function archiveOldSessions() {
 
 Run `archiveOldSessions` on extension startup to keep sync storage lean. Users who study heavily and add detailed notes will appreciate not hitting quota errors.
 
-## Testing Your Extension
+Testing Your Extension
 
 Before distributing, test the extension systematically against common failure modes:
 
@@ -619,7 +619,7 @@ Test checklist:
 
 Chrome DevTools provides access to extension storage state through the Application tab. Use this to inspect and manually edit storage during testing rather than relying solely on the extension UI.
 
-## Deployment and Distribution
+Deployment and Distribution
 
 Package your extension for distribution through the Chrome Web Store or as a direct CRX install. Prepare your store listing with clear screenshots, a detailed description, and appropriate categorization. The store handles auto-updates for registered extensions.
 
@@ -630,11 +630,11 @@ For internal distribution within a team, use the Enterprise Management console o
 A well-built study schedule planner extension replaces multiple separate tools with an integrated solution. The development effort pays off through better focus, automatic reminders, and data that lives where you need it. The architecture described here scales from a personal tool to a team-distributed extension without requiring fundamental redesign.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

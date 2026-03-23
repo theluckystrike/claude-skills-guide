@@ -14,17 +14,17 @@ score: 7
 
 
 {% raw %}
-# Claude Code for vLLM Inference Server Workflow
+Claude Code for vLLM Inference Server Workflow
 
 Building production-ready LLM inference servers requires careful orchestration of multiple components. vLLM has emerged as a high-performance inference engine that dramatically reduces latency and increases throughput for large language models. When combined with Claude Code's development capabilities, you get a powerful workflow for deploying and managing inference services.
 
 This guide walks you through integrating Claude Code into your vLLM inference server workflow, with practical examples and actionable advice for developers.
 
-## Understanding vLLM and Claude Code
+Understanding vLLM and Claude Code
 
 vLLM is an open-source inference server that uses PagedAttention technology to achieve state-of-the-art serving throughput. It supports popular models like Llama, Mistral, and Qwen, making it a versatile choice for production deployments.
 
-This guide focuses on the **coding workflow**: using Claude Code as a development partner to write, extend, and debug the Python code that powers a vLLM inference server. If you are looking for deployment automation with Claude Code skills (Dockerfiles, Kubernetes manifests, CI/CD pipelines), see the companion guide [Claude Code vLLM Inference Server Deployment Workflow](/claude-code-vllm-inference-server-deployment-workflow/).
+This guide focuses on the coding workflow: using Claude Code as a development partner to write, extend, and debug the Python code that powers a vLLM inference server. If you are looking for deployment automation with Claude Code skills (Dockerfiles, Kubernetes manifests, CI/CD pipelines), see the companion guide [Claude Code vLLM Inference Server Deployment Workflow](/claude-code-vllm-inference-server-deployment-workflow/).
 
 Claude Code accelerates the coding side of vLLM development by helping you:
 - Generate server setup and configuration code
@@ -32,7 +32,7 @@ Claude Code accelerates the coding side of vLLM development by helping you:
 - Instrument code with observability metrics
 - Debug inference logic and error handling
 
-### vLLM vs Other Inference Frameworks
+vLLM vs Other Inference Frameworks
 
 Before committing to vLLM, it helps to understand where it fits relative to other popular options:
 
@@ -46,12 +46,12 @@ Before committing to vLLM, it helps to understand where it fits relative to othe
 
 vLLM's PagedAttention algorithm virtually eliminates KV-cache memory waste, which is why it handles high-concurrency workloads better than most alternatives. Claude Code can help you benchmark your specific model across frameworks, but for most production Python services, vLLM is the right default.
 
-## Setting Up Your vLLM Environment
+Setting Up Your vLLM Environment
 
 Before integrating Claude Code, ensure your vLLM environment is properly configured. Here's a basic setup script that Claude Code can help you generate:
 
 ```python
-# vllm_setup.py
+vllm_setup.py
 from vllm import LLM, SamplingParams
 
 def initialize_model(model_name: str, tensor_parallel_size: int = 1):
@@ -81,12 +81,12 @@ def create_sampling_params(
 
 This foundational setup gives you a starting point that Claude Code can then extend based on your specific requirements.
 
-### GPU Memory Planning
+GPU Memory Planning
 
 One of the most common sources of OOM errors in vLLM is under-estimating KV cache requirements. Claude Code can generate a memory estimation script for your model:
 
 ```python
-# memory_estimator.py
+memory_estimator.py
 import math
 
 def estimate_kv_cache_gb(
@@ -101,9 +101,9 @@ def estimate_kv_cache_gb(
     # Each token needs K and V tensors per layer per head
     bytes_per_token = 2 * num_layers * num_kv_heads * head_dim * dtype_bytes
     total_bytes = bytes_per_token * max_seq_len * max_batch_size
-    return total_bytes / (1024 ** 3)
+    return total_bytes / (1024  3)
 
-# Example: Llama-3-8B on A100-80GB
+Llama-3-8B on A100-80GB
 kv_cache_gb = estimate_kv_cache_gb(
     num_layers=32,
     num_kv_heads=8,
@@ -120,12 +120,12 @@ print(f"Total required:  {model_weights_gb + kv_cache_gb:.1f} GB")
 
 Prompt Claude Code with your model card parameters and target batch size, and it will produce this estimate plus recommend the right `gpu_memory_utilization` setting for `LLM()`.
 
-## Building the Inference Server API
+Building the Inference Server API
 
-A production inference server needs a robust API layer. Here's how Claude Code can help you build one using FastAPI:
+A production inference server needs a solid API layer. Here's how Claude Code can help you build one using FastAPI:
 
 ```python
-# inference_server.py
+inference_server.py
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from typing import List, Optional
@@ -147,7 +147,7 @@ class InferenceResponse(BaseModel):
     prompt_tokens: int
     completion_tokens: int
 
-# Global model instance
+Global model instance
 llm = None
 
 @app.on_event("startup")
@@ -183,7 +183,7 @@ async def generate(request: InferenceRequest):
         raise HTTPException(status_code=500, detail=str(e))
 ```
 
-### Adding Streaming Support
+Adding Streaming Support
 
 For chat interfaces and long-generation use cases, streaming responses dramatically improves perceived latency. Claude Code can add streaming to your existing endpoint:
 
@@ -193,7 +193,7 @@ from vllm import AsyncLLMEngine, AsyncEngineArgs
 import asyncio
 import json
 
-# Use the async engine for streaming
+Use the async engine for streaming
 engine_args = AsyncEngineArgs(
     model="meta-llama/Meta-Llama-3-8B-Instruct",
     tensor_parallel_size=1,
@@ -241,7 +241,7 @@ async def generate_stream(request: InferenceRequest):
 
 This produces Server-Sent Events that any JavaScript `EventSource` or `fetch` with `ReadableStream` can consume. Claude Code will wire this pattern up from a simple description like "add streaming to my completions endpoint."
 
-### OpenAI-Compatible Chat Endpoint
+OpenAI-Compatible Chat Endpoint
 
 Many downstream libraries (LangChain, LlamaIndex, OpenAI SDK) expect the `/v1/chat/completions` format. Ask Claude Code to generate an adapter that maps your vLLM engine to the OpenAI schema:
 
@@ -308,18 +308,18 @@ async def chat_completions(request: ChatCompletionRequest):
     )
 ```
 
-## Creating a Claude Code Workflow Script
+Creating a Claude Code Workflow Script
 
 Now let's create a Claude Code skill that automates common vLLM workflow tasks:
 
 ```yaml
-# claude-code-vllm-skill.md
+claude-code-vllm-skill.md
 ---
 name: vLLM Inference Workflow
 description: Automate vLLM inference server tasks with Claude Code
 ---
 
-# vLLM Inference Workflow
+vLLM Inference Workflow
 
 Help with vLLM inference server tasks including:
 - Generating deployment scripts and docker-compose configurations
@@ -327,28 +327,28 @@ Help with vLLM inference server tasks including:
 - Analyzing and debugging inference issues from error logs
 ```
 
-### Practical Claude Code Prompts for vLLM Development
+Practical Claude Code Prompts for vLLM Development
 
 Here are the most effective prompts for using Claude Code in daily vLLM work:
 
-**Initial setup:** "Create a vLLM server project with FastAPI, Prometheus metrics, health checks, and structured JSON logging. Use Llama-3-8B-Instruct as the default model and support CUDA and CPU backends via an environment flag."
+Initial setup: "Create a vLLM server project with FastAPI, Prometheus metrics, health checks, and structured JSON logging. Use Llama-3-8B-Instruct as the default model and support CUDA and CPU backends via an environment flag."
 
-**Debugging OOM:** "My vLLM server crashes with CUDA OOM during load. My GPU is an A100-40GB, the model is Mixtral-8x7B-Instruct, and I'm using tensor_parallel_size=1. Diagnose what's wrong and suggest configuration fixes."
+Debugging OOM: "My vLLM server crashes with CUDA OOM during load. My GPU is an A100-40GB, the model is Mixtral-8x7B-Instruct, and I'm using tensor_parallel_size=1. Diagnose what's wrong and suggest configuration fixes."
 
-**Performance profiling:** "Write a locust benchmark script that sends concurrent chat completion requests to my server at /v1/chat/completions, ramps from 1 to 50 concurrent users, and reports p50/p95/p99 latency and tokens-per-second."
+Performance profiling: "Write a locust benchmark script that sends concurrent chat completion requests to my server at /v1/chat/completions, ramps from 1 to 50 concurrent users, and reports p50/p95/p99 latency and tokens-per-second."
 
-**Schema migration:** "My InferenceRequest model has grown organically and is missing validation. Add Pydantic v2 validators that enforce: temperature must be 0.0–2.0, max_tokens must be 1–4096, and prompt must be non-empty after stripping whitespace."
+Schema migration: "My InferenceRequest model has grown organically and is missing validation. Add Pydantic v2 validators that enforce: temperature must be 0.0–2.0, max_tokens must be 1–4096, and prompt must be non-empty after stripping whitespace."
 
-## Integrating Monitoring and Observability
+Integrating Monitoring and Observability
 
 Production inference servers require comprehensive monitoring. Here's how to add Prometheus metrics:
 
 ```python
-# metrics.py
+metrics.py
 from prometheus_client import Counter, Histogram, Gauge
 import time
 
-# Request metrics
+Request metrics
 inference_requests = Counter(
     'vllm_inference_requests_total',
     'Total number of inference requests',
@@ -361,7 +361,7 @@ inference_duration = Histogram(
     ['model']
 )
 
-# Model metrics
+Model metrics
 model_loaded = Gauge(
     'vllm_model_loaded',
     'Whether the model is currently loaded',
@@ -396,14 +396,14 @@ async def generate_with_metrics(request: InferenceRequest):
         active_requests.labels(model=request.model).dec()
 ```
 
-### Adding Tokens-Per-Second Tracking
+Adding Tokens-Per-Second Tracking
 
 The single most useful metric for an inference server is output tokens per second. Claude Code can extend the metrics module to track this at the token level:
 
 ```python
 from prometheus_client import Counter, Histogram, Gauge, Summary
 
-# Token throughput metrics
+Token throughput metrics
 tokens_generated = Counter(
     'vllm_tokens_generated_total',
     'Total output tokens generated',
@@ -448,11 +448,11 @@ app.mount("/metrics", metrics_app)
 
 A Grafana dashboard showing p95 generation latency, tokens/second, and active request count gives you instant visibility into server health. Claude Code can generate the full dashboard JSON from a description of which panels you need.
 
-## Best Practices for Production Deployment
+Best Practices for Production Deployment
 
 When deploying vLLM with Claude Code assistance, follow these actionable recommendations:
 
-### 1. Containerize Your Infrastructure
+1. Containerize Your Infrastructure
 
 Use Docker to ensure consistent environments across development and production:
 
@@ -504,7 +504,7 @@ HEALTHCHECK --interval=30s --timeout=10s --retries=3 \
 CMD ["uvicorn", "inference_server:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "1"]
 ```
 
-### 2. Implement Health Checks
+2. Implement Health Checks
 
 Always include health check endpoints for orchestration systems:
 
@@ -552,7 +552,7 @@ async def detailed_health():
     }
 ```
 
-### 3. Configure Auto-Scaling
+3. Configure Auto-Scaling
 
 For production workloads, configure horizontal pod autoscaling based on inference latency or queue depth:
 
@@ -577,7 +577,7 @@ spec:
         averageUtilization: 70
 ```
 
-For LLM inference, CPU utilization is a poor scaling signal — the bottleneck is GPU. A better approach uses a custom metric based on queue depth or active request count:
+For LLM inference, CPU usage is a poor scaling signal. the bottleneck is GPU. A better approach uses a custom metric based on queue depth or active request count:
 
 ```yaml
 apiVersion: autoscaling/v2
@@ -612,7 +612,7 @@ spec:
 
 The `stabilizationWindowSeconds` on scale-up matches your model load time so Kubernetes does not over-provision while waiting for new pods to become ready. Claude Code can tune these values based on your measured cold-start duration.
 
-### 4. Request Queuing and Backpressure
+4. Request Queuing and Backpressure
 
 Without backpressure, a traffic spike can cause all in-flight requests to timeout simultaneously. Add a semaphore to cap concurrency:
 
@@ -626,7 +626,7 @@ _semaphore = asyncio.Semaphore(MAX_CONCURRENT)
 @app.post("/v1/completions")
 async def generate(request: InferenceRequest):
     if _semaphore.locked() and _semaphore._value == 0:
-        # Queue is full — return 503 instead of blocking indefinitely
+        # Queue is full. return 503 instead of blocking indefinitely
         raise HTTPException(
             status_code=503,
             detail="Server at capacity. Retry after a moment.",
@@ -637,12 +637,12 @@ async def generate(request: InferenceRequest):
         return await _generate_internal(request)
 ```
 
-## Performance Benchmarking with Claude Code
+Performance Benchmarking with Claude Code
 
 Before deploying to production, benchmark your server to understand its capacity limits. Claude Code can generate a complete locust benchmark script:
 
 ```python
-# benchmark/locustfile.py
+benchmark/locustfile.py
 from locust import HttpUser, task, between
 import json
 import random
@@ -694,7 +694,7 @@ class InferenceUser(HttpUser):
 
 Run it with: `locust -f benchmark/locustfile.py --host http://localhost:8000 --users 20 --spawn-rate 2 --run-time 2m`
 
-## Debugging Common vLLM Issues
+Debugging Common vLLM Issues
 
 | Issue | Symptom | Diagnosis Command | Fix |
 |---|---|---|---|
@@ -705,15 +705,15 @@ Run it with: `locust -f benchmark/locustfile.py --host http://localhost:8000 --u
 | Tokenizer mismatch | Garbled or empty output | Compare tokenizer name to model name | Set `tokenizer=` explicitly in `LLM()` |
 | High memory fragmentation | Throughput degrades over time | Monitor `vllm_active_requests` over time | Restart on a schedule or tune `block_size` |
 
-Claude Code is particularly effective at diagnosing the first three issues. Paste your server logs and the error message into a Claude Code session and ask "what is wrong with this vLLM configuration?" — it will cross-reference the log output against common failure patterns.
+Claude Code is particularly effective at diagnosing the first three issues. Paste your server logs and the error message into a Claude Code session and ask "what is wrong with this vLLM configuration?". it will cross-reference the log output against common failure patterns.
 
-## Conclusion
+Conclusion
 
 Integrating Claude Code into your vLLM inference server workflow significantly accelerates development and deployment cycles. From generating configuration files to debugging issues, Claude Code serves as an intelligent development partner.
 
 Key takeaways:
 - Start with proper model initialization and sampling parameters
-- Build robust APIs with FastAPI and comprehensive error handling
+- Build solid APIs with FastAPI and comprehensive error handling
 - Add streaming and OpenAI-compatible endpoints to maximize downstream compatibility
 - Add observability from day one with Prometheus metrics and tokens-per-second tracking
 - Containerize everything for reproducible deployments
@@ -724,10 +724,10 @@ By following this workflow, you'll have a production-ready LLM inference server 
 
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

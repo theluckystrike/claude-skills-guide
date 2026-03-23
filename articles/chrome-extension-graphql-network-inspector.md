@@ -15,21 +15,21 @@ tags: [claude-code, claude-skills]
 
 
 {% raw %}
-# Chrome Extension GraphQL Network Inspector: A Developer Guide
+Chrome Extension GraphQL Network Inspector: A Developer Guide
 
 GraphQL has transformed how developers build APIs, offering flexible queries and precise data fetching. However, debugging GraphQL requests in the browser requires specialized tools beyond standard network inspectors. This guide covers everything you need to know about Chrome extensions for inspecting GraphQL network traffic, from using existing tools to building your own inspector.
 
-## Why Standard DevTools Fall Short
+Why Standard DevTools Fall Short
 
 The Chrome DevTools Network tab shows HTTP requests, but GraphQL operations are just POST requests with a JSON body. You cannot easily distinguish between queries, mutations, and subscriptions. Filtering by operation name requires manual searching through request payloads. This is where dedicated GraphQL network inspectors become essential.
 
 A well-designed GraphQL network inspector extracts operation names, variables, and responses from requests, presenting them in a readable format. It should handle batched queries, persist operation history, and integrate smoothly with your development workflow.
 
-## Popular Chrome Extensions for GraphQL Inspection
+Popular Chrome Extensions for GraphQL Inspection
 
 Several extensions provide GraphQL-specific network inspection. The most widely used include Apollo Client DevTools, GraphQL Network Inspector, and responses from the broader Chrome Web Store ecosystem.
 
-### Apollo Client DevTools
+Apollo Client DevTools
 
 If your application uses Apollo Client, the built-in DevTools extension provides operation-level inspection. Open Chrome DevTools and select the "Apollo" tab. You will see a list of executed operations with their names, variables, and cache state. The extension works automatically with Apollo Client applications and requires no configuration.
 
@@ -56,7 +56,7 @@ const { data } = await client.query({
 });
 ```
 
-### Standalone GraphQL Network Inspectors
+Standalone GraphQL Network Inspectors
 
 For non-Apollo GraphQL implementations, standalone extensions like GraphQL Network Inspector intercept all requests containing GraphQL operation bodies. These tools display the complete request-response cycle with operation names extracted from the payload.
 
@@ -67,23 +67,23 @@ When selecting an extension, prioritize these features:
 - Request history with filtering
 - Export capabilities for sharing or logging
 
-## Building Your Own GraphQL Network Inspector
+Building Your Own GraphQL Network Inspector
 
 Creating a custom inspector gives you full control over functionality and integration. Here is a practical implementation using Chrome's declarativeNetRequest API and background script architecture.
 
-### Project Structure
+Project Structure
 
 ```
 graphql-inspector/
-├── manifest.json
-├── background.js
-├── inspector.js
-└── popup/
-    ├── popup.html
-    └── popup.js
+ manifest.json
+ background.js
+ inspector.js
+ popup/
+     popup.html
+     popup.js
 ```
 
-### Manifest Configuration
+Manifest Configuration
 
 ```json
 {
@@ -103,7 +103,7 @@ graphql-inspector/
 }
 ```
 
-### Background Script for Request Interception
+Background Script for Request Interception
 
 ```javascript
 // background.js
@@ -153,7 +153,7 @@ function extractOperationName(query) {
 }
 ```
 
-### Content Script for DOM Injection
+Content Script for DOM Injection
 
 ```javascript
 // inspector.js - injected into web pages
@@ -220,7 +220,7 @@ if (document.readyState === 'loading') {
 }
 ```
 
-### Popup Interface
+Popup Interface
 
 ```html
 <!-- popup/popup.html -->
@@ -261,11 +261,11 @@ chrome.storage.local.get('graphqlRequests', (data) => {
 });
 ```
 
-## Advanced Features to Consider
+Advanced Features to Consider
 
 Once you have basic inspection working, these advanced features improve developer experience significantly.
 
-### Query Formatting
+Query Formatting
 
 Pretty-print GraphQL queries for readability using a library like `graphql/language/printer`:
 
@@ -276,7 +276,7 @@ import { print } from 'graphql';
 const formattedQuery = print(parsedQuery);
 ```
 
-### Error Highlighting
+Error Highlighting
 
 GraphQL responses may include errors array. Display these prominently with context:
 
@@ -288,7 +288,7 @@ if (response.errors) {
 }
 ```
 
-### Request Search and Filter
+Request Search and Filter
 
 Implement filtering by operation name or variables:
 
@@ -301,24 +301,24 @@ function filterRequests(requests, searchTerm) {
 }
 ```
 
-## Integration Tips
+Integration Tips
 
 For maximum effectiveness, position your inspector alongside other development tools. Most developers keep DevTools open on the right panel while working in the main editor. Place your GraphQL inspector popup in a consistent location and use keyboard shortcuts for quick access.
 
 If building for a team, consider adding authentication context to requests so you can filter by logged-in user. This helps when debugging multi-tenant applications where different users see different data.
 
-## Conclusion
+Conclusion
 
 Chrome extensions for GraphQL network inspection bridge the gap between standard browser DevTools and the specific needs of GraphQL debugging. Whether you use existing tools like Apollo Client DevTools or build a custom solution, proper inspection capabilities dramatically accelerate development and troubleshooting.
 
 The implementation above provides a foundation. Extend it based on your specific GraphQL setup, whether you work with Apollo, URQL, or vanilla GraphQL clients.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

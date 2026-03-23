@@ -15,22 +15,22 @@ tags: [claude-code, claude-skills]
 
 {% raw %}
 
-# Claude Code PostHog Multivariate Test Implementation Guide
+Claude Code PostHog Multivariate Test Implementation Guide
 
-Multivariate testing (MVT) allows you to test multiple variations of your application simultaneously, helping you understand which combinations of elements perform best. PostHog provides robust experimentation features that integrate smoothly with modern web applications. This guide shows you how to implement multivariate tests using Claude Code, making experiment setup and analysis more efficient.
+Multivariate testing (MVT) allows you to test multiple variations of your application simultaneously, helping you understand which combinations of elements perform best. PostHog provides solid experimentation features that integrate smoothly with modern web applications. This guide shows you how to implement multivariate tests using Claude Code, making experiment setup and analysis more efficient.
 
-## Understanding Multivariate Tests in PostHog
+Understanding Multivariate Tests in PostHog
 
-PostHog's experimentation platform supports both simple A/B tests and complex multivariate tests with multiple variants and parameters. Unlike traditional A/B testing that compares two versions, multivariate tests let you test multiple combinations — such as different headlines, images, and call-to-action buttons — all at once.
+PostHog's experimentation platform supports both simple A/B tests and complex multivariate tests with multiple variants and parameters. Unlike traditional A/B testing that compares two versions, multivariate tests let you test multiple combinations. such as different headlines, images, and call-to-action buttons. all at once.
 
 The key components you need to understand are:
 
-- **Feature flags**: The foundation for routing users to different variants
-- **Experiment**: The wrapper that tracks outcomes and calculates statistical significance
-- **Variants**: The different versions users might see
-- **Metrics**: The success criteria you're measuring
+- Feature flags: The foundation for routing users to different variants
+- Experiment: The wrapper that tracks outcomes and calculates statistical significance
+- Variants: The different versions users might see
+- Metrics: The success criteria you're measuring
 
-### A/B Test vs. Multivariate Test: When to Use Each
+A/B Test vs. Multivariate Test: When to Use Each
 
 Before reaching for a multivariate test, it is worth understanding when each approach is the right choice.
 
@@ -44,17 +44,17 @@ Before reaching for a multivariate test, it is worth understanding when each app
 | Risk of inconclusive results | Low | Higher with small traffic |
 | Iteration speed | Fast | Slower per test |
 
-A standard A/B test is the right choice when you want to validate a single hypothesis fast. Multivariate tests shine when you need to understand interaction effects — for example, whether a particular headline performs better only when combined with a specific CTA color.
+A standard A/B test is the right choice when you want to validate a single hypothesis fast. Multivariate tests shine when you need to understand interaction effects. for example, whether a particular headline performs better only when combined with a specific CTA color.
 
 For most teams, the practical guidance is: start with A/B tests until you have enough traffic (typically 10,000+ weekly active users) to reach significance on multivariate experiments within a reasonable timeframe (two to four weeks). Running a four-variant multivariate test on a site with 500 daily visitors will take months to reach significance, and the results may not reflect current conditions by the time they arrive.
 
-## Setting Up PostHog for Multivariate Testing
+Setting Up PostHog for Multivariate Testing
 
 Before implementing tests with Claude Code, ensure you have the PostHog SDK installed in your project:
 
 ```bash
 npm install posthog-js
-# or
+or
 yarn add posthog-js
 ```
 
@@ -74,16 +74,16 @@ posthog.init('YOUR_POSTHOG_API_KEY', {
 });
 ```
 
-### Bootstrap vs. Async Flag Loading
+Bootstrap vs. Async Flag Loading
 
 The initialization code above uses `bootstrap` with an empty object, which means flags load asynchronously from the PostHog API. For pages where the variant content appears above the fold, this creates a flash of content: the user briefly sees the control variant before the flag loads and the correct variant renders.
 
 There are two solutions:
 
-**Option 1 — Server-side bootstrap**: Fetch the flags on your server during SSR and inject them into the page. This eliminates the async loading entirely.
+Option 1. Server-side bootstrap: Fetch the flags on your server during SSR and inject them into the page. This eliminates the async loading entirely.
 
 ```javascript
-// Next.js example — pages/index.js
+// Next.js example. pages/index.js
 export async function getServerSideProps(context) {
   const userId = context.req.cookies.userId || generateAnonymousId();
 
@@ -109,7 +109,7 @@ posthog.init('YOUR_API_KEY', {
 });
 ```
 
-**Option 2 — Hide until loaded**: Render nothing (or a skeleton) until flags are confirmed loaded.
+Option 2. Hide until loaded: Render nothing (or a skeleton) until flags are confirmed loaded.
 
 ```javascript
 const [flagsLoaded, setFlagsLoaded] = useState(false);
@@ -123,7 +123,7 @@ if (!flagsLoaded) return <PageSkeleton />;
 
 Option 1 is preferable for conversion-critical pages because it adds zero client-side delay. Option 2 is simpler to implement and acceptable for non-critical experiments.
 
-## Creating a Multivariate Test with Claude Code
+Creating a Multivariate Test with Claude Code
 
 Claude Code can help you set up multivariate tests efficiently. Here's a practical example of implementing an experiment with multiple variants:
 
@@ -166,7 +166,7 @@ export function getHomepageVariant(userId) {
 }
 ```
 
-### Separating Variant Data from Component Logic
+Separating Variant Data from Component Logic
 
 As your experiment library grows, mixing variant definitions directly into component files makes the codebase hard to maintain. A cleaner architecture separates experiment configuration into dedicated files and auto-generates TypeScript types so components get compile-time safety:
 
@@ -225,7 +225,7 @@ export function useExperiment<K extends ExperimentKey>(
 
 With this registry, adding a new experiment means adding one entry to `EXPERIMENTS`. The TypeScript type system prevents referencing undefined experiments or accessing properties that don't exist on a variant.
 
-## Implementing the Test Component
+Implementing the Test Component
 
 Now create a React component that displays different variants based on the feature flag:
 
@@ -273,7 +273,7 @@ export default function Homepage({ userId }) {
 Using the registry-based approach from the previous section, the component becomes simpler and fully type-safe:
 
 ```tsx
-// components/Homepage.tsx — registry-based approach
+// components/Homepage.tsx. registry-based approach
 import { useExperiment } from '../experiments/registry';
 
 export default function Homepage() {
@@ -295,7 +295,7 @@ export default function Homepage() {
 
 The component has no direct PostHog dependency. All experiment logic lives in the hook, making it easy to swap out the experiment platform later if needed.
 
-## Tracking Custom Metrics for Your Experiment
+Tracking Custom Metrics for Your Experiment
 
 PostHog allows you to track custom metrics to measure experiment success. Here's how to set up goal tracking:
 
@@ -329,15 +329,15 @@ export function trackClickThrough(userId, variant, element) {
 }
 ```
 
-### Designing a Metric Hierarchy
+Designing a Metric Hierarchy
 
 Every experiment should track metrics at three levels:
 
-**Primary metric** — The single metric that determines the winner. This should be a meaningful business outcome, not a proxy metric. "Signup completed" is a good primary metric. "CTA clicked" is a proxy — it measures intent but not the conversion you actually care about.
+Primary metric. The single metric that determines the winner. This should be a meaningful business outcome, not a proxy metric. "Signup completed" is a good primary metric. "CTA clicked" is a proxy. it measures intent but not the conversion you actually care about.
 
-**Secondary metrics** — Supporting metrics that help you understand the tradeoff. If variant_a improves signups but also increases support ticket volume, you need to see both numbers to make a good decision.
+Secondary metrics. Supporting metrics that help you understand the tradeoff. If variant_a improves signups but also increases support ticket volume, you need to see both numbers to make a good decision.
 
-**Guardrail metrics** — Metrics that should not worsen significantly. If an experiment improves signups but degrades page load time beyond your SLA, the guardrail metric stops you from shipping a net-negative change.
+Guardrail metrics. Metrics that should not worsen significantly. If an experiment improves signups but degrades page load time beyond your SLA, the guardrail metric stops you from shipping a net-negative change.
 
 ```javascript
 // utils/experiment-metrics.js
@@ -368,21 +368,21 @@ export function captureExperimentEvent(experimentKey, eventName, properties = {}
 
 Tagging events with `metric_type` makes PostHog dashboards significantly easier to build. You can filter to primary metrics for executive reporting and drill into guardrails when a variant looks suspiciously good.
 
-## Analyzing Experiment Results in PostHog
+Analyzing Experiment Results in PostHog
 
 Once your experiment is running, you can analyze results in the PostHog dashboard. Here are the key metrics to watch:
 
-1. **Sample size**: Ensure you have enough users in each variant
-2. **Conversion rate**: Compare the percentage of users completing the desired action
-3. **Statistical significance**: PostHog calculates this automatically — look for 95% confidence
-4. **Primary and secondary metrics**: Track multiple outcomes to understand full impact
+1. Sample size: Ensure you have enough users in each variant
+2. Conversion rate: Compare the percentage of users completing the desired action
+3. Statistical significance: PostHog calculates this automatically. look for 95% confidence
+4. Primary and secondary metrics: Track multiple outcomes to understand full impact
 
-In your PostHog dashboard, navigate to **Experiments** to see:
+In your PostHog dashboard, navigate to Experiments to see:
 - Variant breakdown with conversion rates
 - Confidence intervals
 - Recommended action (winner, loser, or inconclusive)
 
-### Reading PostHog's Bayesian Stats Output
+Reading PostHog's Bayesian Stats Output
 
 PostHog uses Bayesian statistics by default, which reports a "probability of being best" rather than a p-value. This is more intuitive for product teams:
 
@@ -394,14 +394,14 @@ PostHog uses Bayesian statistics by default, which reports a "probability of bei
 | Inconclusive after target sample | No meaningful difference detected | Discard or iterate |
 | Any guardrail metric degrading | Variant may be harmful | Pause and investigate |
 
-Do not confuse "probability of being best" with "statistical significance" in the frequentist sense. A 95% probability of being best means there is a 5% chance the control is actually better — that is not the same as a frequentist p-value of 0.05, which is a statement about the probability of observing your data under the null hypothesis.
+Do not confuse "probability of being best" with "statistical significance" in the frequentist sense. A 95% probability of being best means there is a 5% chance the control is actually better. that is not the same as a frequentist p-value of 0.05, which is a statement about the probability of observing your data under the null hypothesis.
 
-### Sample Size Planning
+Sample Size Planning
 
 Before launching, calculate the required sample size to avoid underpowered experiments:
 
 ```python
-# sample_size_calculator.py
+sample_size_calculator.py
 import math
 
 def required_sample_size(
@@ -428,8 +428,8 @@ def required_sample_size(
     # Standard formula
     n = (
         (z_alpha * math.sqrt(2 * pooled * (1 - pooled)) +
-         z_beta * math.sqrt(p1 * (1 - p1) + p2 * (1 - p2))) ** 2
-    ) / (p2 - p1) ** 2
+         z_beta * math.sqrt(p1 * (1 - p1) + p2 * (1 - p2)))  2
+    ) / (p2 - p1)  2
 
     n_per_variant = math.ceil(n)
     n_total = n_per_variant * num_variants
@@ -440,38 +440,38 @@ def required_sample_size(
         'num_variants': num_variants,
     }
 
-# Example: 5% baseline, detect 20% relative lift, 4 variants
+5% baseline, detect 20% relative lift, 4 variants
 result = required_sample_size(
     baseline_rate=0.05,
     minimum_detectable_effect=0.20,
     num_variants=4,
 )
 print(f"Need {result['per_variant']} users per variant ({result['total']} total)")
-# Need ~3,855 users per variant (15,420 total)
+Need ~3,855 users per variant (15,420 total)
 ```
 
-For a site with 500 daily visitors, a four-variant test requiring 15,420 users takes about 31 days to collect data — before accounting for weekday/weekend traffic variation. At 5,000 daily visitors, the same experiment completes in about 3 days. This math is what separates "we should A/B test everything" as an aspiration from a practical, prioritized testing roadmap.
+For a site with 500 daily visitors, a four-variant test requiring 15,420 users takes about 31 days to collect data. before accounting for weekday/weekend traffic variation. At 5,000 daily visitors, the same experiment completes in about 3 days. This math is what separates "we should A/B test everything" as an aspiration from a practical, prioritized testing roadmap.
 
-## Best Practices for Multivariate Testing
+Best Practices for Multivariate Testing
 
 When implementing multivariate tests with Claude Code, keep these tips in mind:
 
-**Limit variants**: While multivariate tests are powerful, too many variants dilute traffic and extend test duration. Start with 3-4 variants maximum.
+Limit variants: While multivariate tests are powerful, too many variants dilute traffic and extend test duration. Start with 3-4 variants maximum.
 
-**Ensure proper sample size**: Use PostHog's sample size calculator to determine how long to run your test. Insufficient sample size leads to inconclusive results.
+Ensure proper sample size: Use PostHog's sample size calculator to determine how long to run your test. Insufficient sample size leads to inconclusive results.
 
-**Test one change per experiment**: Isolate variables by testing one hypothesis at a time. If you want to test multiple changes, run separate A/B tests.
+Test one change per experiment: Isolate variables by testing one hypothesis at a time. If you want to test multiple changes, run separate A/B tests.
 
-**Document your hypothesis**: Before launching, write down what you expect to happen and why. This helps with learning even when experiments fail.
+Document your hypothesis: Before launching, write down what you expect to happen and why. This helps with learning even when experiments fail.
 
-**Run tests to completion**: Don't stop experiments early just because results look promising. Wait for statistical significance to avoid false positives.
+Run tests to completion: Don't stop experiments early just because results look promising. Wait for statistical significance to avoid false positives.
 
-### Experiment Hygiene Checklist
+Experiment Hygiene Checklist
 
 Use this checklist when launching each experiment:
 
 ```markdown
-## Pre-Launch
+Pre-Launch
 - [ ] Hypothesis documented (if X, then Y, because Z)
 - [ ] Primary metric defined and tracked
 - [ ] Secondary metrics defined and tracked
@@ -482,21 +482,21 @@ Use this checklist when launching each experiment:
 - [ ] Exposure event fires correctly for all variants including control
 - [ ] QA: manually overrode each variant and confirmed correct rendering
 
-## During Test
+During Test
 - [ ] Check for Sample Ratio Mismatch (SRM) in first 24 hours
 - [ ] Monitor guardrail metrics daily
 - [ ] Do not peek at primary metric results (peeking inflates false positive rate)
 
-## Post-Test
+Post-Test
 - [ ] Wait for target sample size before reading results
 - [ ] Document results in experiment log regardless of outcome
 - [ ] If shipping winner: remove experiment code and clean up feature flag
 - [ ] If inconclusive: document learnings, do not run the same test again
 ```
 
-Sample Ratio Mismatch (SRM) occurs when variants receive significantly different traffic than expected. A 25%/25%/25%/25% split experiment where variant_c receives only 18% of traffic indicates a bug in your bucketing logic — cookies not persisting, bots skewing one variant, or a routing bug. Always verify your traffic distribution is close to expected before trusting the results.
+Sample Ratio Mismatch (SRM) occurs when variants receive significantly different traffic than expected. A 25%/25%/25%/25% split experiment where variant_c receives only 18% of traffic indicates a bug in your bucketing logic. cookies not persisting, bots skewing one variant, or a routing bug. Always verify your traffic distribution is close to expected before trusting the results.
 
-## Debugging Experiment Issues
+Debugging Experiment Issues
 
 When your experiment isn't working as expected, check these common issues:
 
@@ -514,7 +514,7 @@ console.log('User variant:', isInExperiment);
 posthog.debug(); // Enables debug mode
 ```
 
-### Systematic Debugging by Symptom
+Systematic Debugging by Symptom
 
 | Symptom | Likely Cause | Debug Step |
 |---------|-------------|------------|
@@ -554,7 +554,7 @@ function debugExperiment(experimentKey) {
 
 The `force_variant` query parameter pattern is particularly useful during QA. Testers can append `?force_variant=variant_b` to any URL to verify the visual rendering of a specific variant without needing to manipulate cookies or create test accounts that happen to fall into the right bucket.
 
-## Server-Side Experimentation
+Server-Side Experimentation
 
 For server-rendered applications, or when you need to personalize API responses based on experiment variant, use the PostHog Node.js SDK:
 
@@ -597,7 +597,7 @@ Server-side evaluation has two advantages over client-side: zero flash of conten
 
 The tradeoff is added latency for the initial page request. Mitigate this by caching flag assignments in a fast store (Redis, edge KV) with a TTL of a few minutes. Users get a slightly stale assignment rather than a fresh API call on every request, which is usually acceptable.
 
-## Conclusion
+Conclusion
 
 Implementing multivariate tests with PostHog and Claude Code is straightforward once you understand the core concepts. Feature flags handle user bucketing, the PostHog SDK provides exposure tracking, and the dashboard gives you statistical analysis out of the box. Claude Code can help you write clean, maintainable experiment code that scales with your application.
 
@@ -605,10 +605,10 @@ Start with a simple A/B test before moving to multivariate experiments, and alwa
 
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -15,12 +15,12 @@ permalink: /claude-code-skills-for-ruby-on-rails-projects/
 
 Ruby on Rails developers benefit significantly from Claude Code's specialized skills. These tools automate scaffolding, enhance test coverage, optimize database queries, and streamline API integrations. This guide covers practical skills that integrate directly into Rails workflows.
 
-## rails-generator: Scaffolding and Code Generation
+rails-generator: Scaffolding and Code Generation
 
 [The rails-generator skill accelerates Rails application setup](/claude-skill-md-format-complete-specification-guide/) and CRUD operations. Instead of manually writing models, controllers, and views, invoke this skill to generate functional code structures.
 
 ```bash
-# Generate a complete resource with associations
+Generate a complete resource with associations
 "Create a Blog app with posts that belong to users and have comments"
 ```
 
@@ -35,12 +35,12 @@ category:references, and validations for presence and uniqueness"
 
 The output includes migration files, model code with associations and validations, controller actions, and corresponding view templates.
 
-## rspec-helper: Test-Driven Development
+rspec-helper: Test-Driven Development
 
 [The rspec-helper skill implements test-driven development patterns](/claude-tdd-skill-test-driven-development-workflow/) specific to Rails. It generates comprehensive test suites covering model validations, controller actions, and request specs.
 
 ```bash
-# Generate tests for a User model
+Generate tests for a User model
 "Write RSpec tests for a User model with email validation, password encryption,
 and associations to posts and comments"
 ```
@@ -70,25 +70,25 @@ For controller testing, specify the resource and actions needed:
 authentication using Devise"
 ```
 
-## active-record-tuner: Query Optimization
+active-record-tuner: Query Optimization
 
 The [active-record-tuner skill analyzes and optimizes database queries](/claude-code-skills-for-golang-microservices/) in Rails applications. It identifies N+1 queries, missing indexes, and inefficient joins.
 
 ```bash
-# Analyze query performance
+Analyze query performance
 "Find N+1 queries in the PostsController#index action"
 ```
 
 The skill provides specific fixes:
 
 ```ruby
-# Before: N+1 query problem
+Before: N+1 query problem
 @posts = Post.all
 @posts.each do |post|
   puts post.author.name  # Triggers separate query each iteration
 end
 
-# After: Eager loading
+After: Eager loading
 @posts = Post.includes(:author).all
 @posts.each do |post|
   puts post.author.name  # Uses preloaded author data
@@ -98,12 +98,12 @@ end
 For complex queries, request optimization suggestions:
 
 ```ruby
-# Original slow query
+Original slow query
 Post.where("created_at > ?", 1.week.ago)
     .order(:comments_count)
     .limit(10)
 
-# Optimized with counter cache
+Optimized with counter cache
 Post.where("posts.created_at > ?", 1.week.ago)
     .order("posts.comments_count DESC")
     .limit(10)
@@ -117,12 +117,12 @@ The skill also suggests appropriate database indexes based on query patterns:
 recent orders and pending notifications"
 ```
 
-## rails-api-builder: REST and GraphQL APIs
+rails-api-builder: REST and GraphQL APIs
 
 The rails-api-builder skill scaffolds API endpoints following Rails best practices. It generates JSON serializers, and supports both REST and GraphQL implementations.
 
 ```bash
-# Generate a REST API for products
+Generate a REST API for products
 "Create a JSON API for Products with CRUD operations, pagination, and 
 filtering by category and price range"
 ```
@@ -160,12 +160,12 @@ For GraphQL integration:
 connections and filtering support"
 ```
 
-## migration-manager: Schema Management
+migration-manager: Schema Management
 
 The migration-manager skill handles Rails database migrations intelligently. It creates clean migration files, handles schema changes safely, and rollback procedures.
 
 ```bash
-# Generate a migration with proper constraints
+Generate a migration with proper constraints
 "Create a migration to add a status column to Orders with an enum 
 and a default value of pending"
 ```
@@ -189,12 +189,12 @@ For complex schema changes, request data migration strategies:
 including a data migration to populate the new columns from existing records"
 ```
 
-## sidekiq-worker: Background Job Setup
+sidekiq-worker: Background Job Setup
 
 The sidekiq-worker skill configures background processing for Rails applications. It generates worker classes, monitors job queues, and handles error retry logic.
 
 ```bash
-# Create a worker for sending welcome emails
+Create a worker for sending welcome emails
 "Generate a Sidekiq worker for sending welcome emails with retry logic
 and rate limiting"
 ```
@@ -219,13 +219,13 @@ end
 Invoke jobs from controllers or models:
 
 ```bash
-# Trigger the worker
+Trigger the worker
 "Add code to call the WelcomeEmailWorker after user registration"
 ```
 
-## Conclusion
+Conclusion
 
-These Claude Code skills transform Ruby on Rails development workflows. From generating scaffolded code to optimizing database queries and managing background jobs, each skill targets specific pain points in Rails development. Integrate these skills into your workflow to reduce boilerplate code, improve test coverage, and build reliable Rails applications faster.
+These Claude Code skills transform Ruby on Rails development workflows. From generating scaffolded code to optimizing database queries and managing background jobs, each skill targets specific problems in Rails development. Integrate these skills into your workflow to reduce boilerplate code, improve test coverage, and build reliable Rails applications faster.
 
 Start by invoking one skill for your next Rails task:
 
@@ -234,15 +234,15 @@ Start by invoking one skill for your next Rails task:
 description:text, due_date:date, and status:integer"
 ```
 
-## Advanced: Generating Complex Rails Features
+Advanced: Generating Complex Rails Features
 
 Claude Code handles complex Rails patterns that typically require significant boilerplate. Some of the most time-saving use cases:
 
-**Polymorphic associations**: Describe the relationship and Claude generates the migration, model macros, and the corresponding controller logic:
+Polymorphic associations: Describe the relationship and Claude generates the migration, model macros, and the corresponding controller logic:
 
 ```ruby
-# Prompt: "Generate a polymorphic comment system for Posts and Articles"
-# Claude generates:
+Prompt: "Generate a polymorphic comment system for Posts and Articles"
+Claude generates:
 class Comment < ApplicationRecord
   belongs_to :commentable, polymorphic: true
   validates :body, presence: true, length: { minimum: 10, maximum: 2000 }
@@ -257,7 +257,7 @@ class Article < ApplicationRecord
 end
 ```
 
-**Background jobs with error handling**: Describe retry logic and Claude generates the complete Sidekiq job with exponential backoff:
+Background jobs with error handling: Describe retry logic and Claude generates the complete Sidekiq job with exponential backoff:
 
 ```ruby
 class EmailDeliveryJob < ApplicationJob
@@ -267,12 +267,12 @@ class EmailDeliveryJob < ApplicationJob
 
   def perform(user_id, template_name, params = {})
     user = User.find(user_id)
-    UserMailer.with(user: user, **params).public_send(template_name).deliver_now
+    UserMailer.with(user: user, params).public_send(template_name).deliver_now
   end
 end
 ```
 
-## Step-by-Step: Using Claude Code for a New Feature
+Step-by-Step: Using Claude Code for a New Feature
 
 1. Describe the feature in plain English: "Add a user reputation system where posts can be upvoted and downvoted, with reputation affecting user permissions"
 2. Claude Code generates the migration files, model changes, and controller actions
@@ -281,7 +281,7 @@ end
 5. Implement the feature and iterate with Claude Code for edge cases
 6. Use `supermemory` to store the reputation system's rules so future prompts in this project have context
 
-## Comparison with Rails Scaffolding
+Comparison with Rails Scaffolding
 
 | Feature | Claude Code | `rails generate scaffold` | Manual coding |
 |---|---|---|---|
@@ -293,24 +293,24 @@ end
 
 Claude Code wins for features with custom logic. `rails generate scaffold` wins for standard CRUD resources where you just need the skeleton.
 
-## Troubleshooting Common Issues
+Troubleshooting Common Issues
 
-**Generated migrations conflicting with existing schema**: Always review generated migrations before running `rails db:migrate`. Claude Code works from a description, not direct database inspection, so check for column name conflicts or missing indexes.
+Generated migrations conflicting with existing schema: Always review generated migrations before running `rails db:migrate`. Claude Code works from a description, not direct database inspection, so check for column name conflicts or missing indexes.
 
-**RSpec specs failing due to factory setup**: When Claude Code generates specs, it may assume FactoryBot factories exist that do not. Add the missing factories before running the test suite.
+RSpec specs failing due to factory setup: When Claude Code generates specs, it may assume FactoryBot factories exist that do not. Add the missing factories before running the test suite.
 
-**Generated code not following your project conventions**: Provide Claude Code with a brief style guide in your prompt: "Use service objects in `app/services/`, never put business logic in controllers, use keyword arguments for all service object `call` methods."
+Generated code not following your project conventions: Provide Claude Code with a brief style guide in your prompt: "Use service objects in `app/services/`, never put business logic in controllers, use keyword arguments for all service object `call` methods."
 
-**N+1 queries in generated associations**: Claude Code often generates clean code but may not include eager loading. After generating controller code, check the query log with `bullet` gem enabled and add `.includes()` where needed.
+N+1 queries in generated associations: Claude Code often generates clean code but may not include eager loading. After generating controller code, check the query log with `bullet` gem enabled and add `.includes()` where needed.
 
 These Claude Code skills transform Ruby on Rails development workflows. Integrate them into your workflow to reduce boilerplate, improve test coverage, and build reliable Rails applications faster.
 
 
-## Related Reading
+Related Reading
 
-- [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/) — apply TDD patterns to Rails testing with RSpec
-- [Claude Code Skills for Golang Microservices](/claude-code-skills-for-golang-microservices/) — compare microservice development patterns across languages
-- [Claude Skill MD Format Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/) — build custom Rails-specific skills for your project
-- [Use Cases Hub](/use-cases-hub/) — explore Claude Code skills for web application development
+- [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/). apply TDD patterns to Rails testing with RSpec
+- [Claude Code Skills for Golang Microservices](/claude-code-skills-for-golang-microservices/). compare microservice development patterns across languages
+- [Claude Skill MD Format Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/). build custom Rails-specific skills for your project
+- [Use Cases Hub](/use-cases-hub/). explore Claude Code skills for web application development
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

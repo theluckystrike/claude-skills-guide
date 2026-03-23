@@ -13,11 +13,11 @@ score: 8
 ---
 
 
-# Chrome Extension Auto Meeting Summary: A Developer Guide
+Chrome Extension Auto Meeting Summary: A Developer Guide
 
 Chrome extensions have transformed how we capture and process information from web-based meeting platforms. Building an auto meeting summary extension requires understanding browser APIs, content scripts, and message passing between different extension components. This guide walks you through creating a functional Chrome extension that captures meeting transcripts and generates summaries automatically.
 
-## Understanding the Architecture
+Understanding the Architecture
 
 A meeting summary extension operates across three distinct contexts: the content script runs within the meeting page, the background service worker handles long-running tasks, and the popup provides user controls. Each component has specific permissions and capabilities that determine what you can capture.
 
@@ -25,7 +25,7 @@ Modern Chrome extensions use Manifest V3, which imposes restrictions on backgrou
 
 The core workflow involves detecting meeting activity, capturing transcript data from the DOM or via accessibility APIs, storing the data locally using chrome.storage, and processing it when the meeting ends.
 
-## Setting Up the Manifest
+Setting Up the Manifest
 
 Your extension begins with the manifest file that declares capabilities and permissions:
 
@@ -65,7 +65,7 @@ Your extension begins with the manifest file that declares capabilities and perm
 
 Notice the host permissions target specific meeting platforms. You should limit permissions to only the domains you intend to support rather than using broad wildcards.
 
-## Capturing Meeting Transcripts
+Capturing Meeting Transcripts
 
 Content scripts run in the context of the meeting page and can access the DOM. Different platforms expose transcripts through varying mechanisms. Google Meet, for instance, displays captions in the DOM that you can observe:
 
@@ -136,7 +136,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 This approach uses MutationObserver to detect new caption elements as they appear. The selector strategy requires platform-specific tuning since each meeting service structures their DOM differently.
 
-## Background Service Worker
+Background Service Worker
 
 The service worker orchestrates the extension lifecycle and handles storage:
 
@@ -153,7 +153,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
     const isMeeting = meetingDomains.some(domain => tab.url.includes(domain));
     
     if (isMeeting) {
-      chrome.action.setBadgeText({ tabId, text: '●' });
+      chrome.action.setBadgeText({ tabId, text: '' });
       chrome.action.setBadgeBackgroundColor({ tabId, color: '#4CAF50' });
     }
   }
@@ -189,7 +189,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 The badge indicator provides visual feedback when the extension detects an active meeting page. This creates immediate user awareness without requiring popup interaction.
 
-## Implementing Summary Generation
+Implementing Summary Generation
 
 Rather than embedding complex NLP logic in the extension, you can use external APIs for summarization. This keeps your extension lightweight and avoids API key exposure by handling requests server-side or through a proxy:
 
@@ -238,7 +238,7 @@ function generateSimpleSummary(transcript) {
 
 The simple fallback ensures users always receive some form of summary even when external APIs fail. This improves reliability for critical meeting capture scenarios.
 
-## Building the Popup Interface
+Building the Popup Interface
 
 The popup provides manual controls for starting and stopping capture:
 
@@ -305,7 +305,7 @@ function displaySummary(summary) {
 }
 ```
 
-## Considerations for Production
+Considerations for Production
 
 Real-world deployment requires handling several edge cases. Captions may not appear in the DOM on all platforms, particularly when using native applications or browser extensions from meeting providers. You might need to explore the chrome.debugger API for caption access or accept that some platforms require user-initiated transcript export.
 
@@ -313,13 +313,13 @@ Rate limiting and quota management matter for API-based summaries. Implement cac
 
 Privacy concerns affect user adoption. Clearly communicate what data your extension captures, offer opt-in settings for cloud sync, and store sensitive transcripts locally by default.
 
-Building a robust auto meeting summary extension takes iteration across different platforms. Start with one meeting provider, perfect the transcript capture for that specific platform, then expand to others. The architecture outlined here provides a foundation you can adapt based on your target users' preferred meeting tools.
+Building a solid auto meeting summary extension takes iteration across different platforms. Start with one meeting provider, perfect the transcript capture for that specific platform, then expand to others. The architecture outlined here provides a foundation you can adapt based on your target users' preferred meeting tools.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

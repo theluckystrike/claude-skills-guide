@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Trello Automation Workflow Guide"
-description: "Learn how to leverage Claude Code CLI to automate Trello workflows, from basic board management to complex automation pipelines."
+description: "Learn how to use Claude Code CLI to automate Trello workflows, from basic board management to complex automation pipelines."
 date: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-trello-automation-workflow-guide/
@@ -13,13 +13,13 @@ score: 7
 ---
 
 
-# Claude Code for Trello Automation Workflow Guide
+Claude Code for Trello Automation Workflow Guide
 
-Trello is a powerful project management tool, but managing boards, lists, and cards manually can become time-consuming as projects scale. By combining Claude Code CLI with Trello's REST API, you can automate repetitive tasks, create custom workflows, and integrate Trello smoothly into your development pipeline. Claude Code acts as an intelligent orchestration layer — it can understand your intent, write and run API calls, handle errors, and even suggest improvements to your board structure.
+Trello is a powerful project management tool, but managing boards, lists, and cards manually can become time-consuming as projects scale. By combining Claude Code CLI with Trello's REST API, you can automate repetitive tasks, create custom workflows, and integrate Trello smoothly into your development pipeline. Claude Code acts as an intelligent orchestration layer. it can understand your intent, write and run API calls, handle errors, and even suggest improvements to your board structure.
 
 This guide walks you through setting up Claude Code for Trello automation, from basic credential configuration to real-time webhook-driven pipelines, with practical examples you can adapt and deploy today.
 
-## Why Automate Trello Through Claude Code?
+Why Automate Trello Through Claude Code?
 
 Before diving into setup, it's worth understanding why Claude Code is a particularly good fit for Trello automation compared to alternatives like Zapier, Make, or custom scripts alone.
 
@@ -32,19 +32,19 @@ Before diving into setup, it's worth understanding why Claude Code is a particul
 
 Claude Code lets you describe what you want in plain language ("move all cards older than 14 days to the Backlog list") and it will generate, test, and run the API calls to make it happen. You can iterate on the logic conversationally, which is significantly faster than editing and re-running scripts manually.
 
-## Setting Up Your Trello API Integration
+Setting Up Your Trello API Integration
 
 Before automating Trello with Claude Code, you'll need to generate an API key and token from the [Trello Developer Portal](https://developer.atlassian.com/cloud/trello/guides/rest-api/api-introduction/).
 
-### Step 1: Obtain Your API Credentials
+Step 1: Obtain Your API Credentials
 
 1. Visit https://trello.com/app-key and log in to your Trello account
 2. Copy your API key
 3. Click the link to generate a token (or use the authorization URL)
 
-The token grants access to your boards, so treat it like a password. The token authorization page will show you the permission scope — for automation scripts that need to create, move, and archive cards, you'll want read and write access.
+The token grants access to your boards, so treat it like a password. The token authorization page will show you the permission scope. for automation scripts that need to create, move, and archive cards, you'll want read and write access.
 
-### Step 2: Configure Environment Variables
+Step 2: Configure Environment Variables
 
 Store your credentials securely using environment variables:
 
@@ -57,7 +57,7 @@ For persistent configuration, add these to your shell profile (`~/.zshrc` or `~/
 
 ```bash
 source ~/.zshrc
-# Verify the variables are set
+Verify the variables are set
 echo "API key set: ${TRELLO_API_KEY:+yes}"
 echo "Token set: ${TRELLO_TOKEN:+yes}"
 ```
@@ -65,13 +65,13 @@ echo "Token set: ${TRELLO_TOKEN:+yes}"
 For team workflows, consider using a `.env` file with `python-dotenv` rather than exporting to the shell, so credentials stay project-local and out of your shell history:
 
 ```bash
-# .env (add to .gitignore immediately)
+.env (add to .gitignore immediately)
 TRELLO_API_KEY=your_api_key_here
 TRELLO_TOKEN=your_token_here
 ```
 
 ```python
-# Load in your script
+Load in your script
 from dotenv import load_dotenv
 import os
 
@@ -80,16 +80,16 @@ API_KEY = os.environ["TRELLO_API_KEY"]
 TOKEN = os.environ["TRELLO_TOKEN"]
 ```
 
-## Basic Board Operations with Claude Code
+Basic Board Operations with Claude Code
 
 Claude Code can interact with Trello using curl commands or a Python script. Here's a practical example of creating a board management script that covers the most common operations.
 
-### Creating a Trello Management Script
+Creating a Trello Management Script
 
 ```python
 #!/usr/bin/env python3
 """
-trello_manager.py — Core Trello API wrapper for Claude Code automation.
+trello_manager.py. Core Trello API wrapper for Claude Code automation.
 Requires TRELLO_API_KEY and TRELLO_TOKEN environment variables.
 """
 
@@ -171,7 +171,7 @@ if __name__ == "__main__":
         print(f"  - {board['name']} (ID: {board['id']})")
 ```
 
-### Using the Script with Claude Code
+Using the Script with Claude Code
 
 Once saved as `trello_manager.py`, you can call it from Claude Code directly or ask Claude to invoke it for you:
 
@@ -181,7 +181,7 @@ python3 trello_manager.py
 
 This outputs all your boards, making it easy to copy board IDs for further automation. You can also ask Claude Code things like "list all cards in the In Progress list on my Dev board" and it will use this script to fetch and display that data.
 
-### Discovering Board and List IDs
+Discovering Board and List IDs
 
 The most common first stumbling block is finding the right IDs. Add this helper to your script for quick discovery:
 
@@ -192,7 +192,7 @@ def print_board_structure(board_id: str) -> None:
     print(f"\nBoard structure for {board_id}:")
     for lst in lists:
         cards = get_cards(lst["id"])
-        print(f"  [{lst['id']}] {lst['name']} — {len(cards)} card(s)")
+        print(f"  [{lst['id']}] {lst['name']}. {len(cards)} card(s)")
         for card in cards[:3]:  # show first 3 cards as sample
             print(f"      • [{card['id']}] {card['name']}")
         if len(cards) > 3:
@@ -201,18 +201,18 @@ def print_board_structure(board_id: str) -> None:
 
 Run this once per board to capture all the IDs you'll reference in your automation scripts.
 
-## Automating Recurring Workflows
+Automating Recurring Workflows
 
 One of the most powerful use cases is automating recurring tasks. Here are practical automation patterns that cover the most common scenarios teams encounter.
 
-### Daily Standup Card Creator
+Daily Standup Card Creator
 
 Automatically create daily standup cards at the start of each workday:
 
 ```bash
 #!/bin/bash
-# daily-standup.sh
-# Creates a dated standup card in the To Do list each morning.
+daily-standup.sh
+Creates a dated standup card in the To Do list each morning.
 
 TODO_LIST_ID="your_todo_list_id"
 DATE=$(date +%Y-%m-%d)
@@ -234,14 +234,14 @@ print(f'Created: {card[\"name\"]} (ID: {card[\"id\"]})')
 Add this to your crontab for automatic execution on weekday mornings:
 
 ```bash
-# Edit crontab
+Edit crontab
 crontab -e
 
-# Add this line to run at 9:00 AM Monday-Friday
+Add this line to run at 9:00 AM Monday-Friday
 0 9 * * 1-5 /path/to/daily-standup.sh >> /var/log/trello-standup.log 2>&1
 ```
 
-### Card Archival Automation
+Card Archival Automation
 
 Keep your boards clean by automatically archiving completed cards older than a threshold:
 
@@ -278,7 +278,7 @@ if __name__ == "__main__":
     archive_stale_completed_cards(DONE_LIST_ID, days_threshold=7)
 ```
 
-### Bulk Card Labeler
+Bulk Card Labeler
 
 When starting a new sprint, quickly label all existing cards by type based on their title keywords:
 
@@ -306,7 +306,7 @@ def auto_label_cards(list_id: str) -> None:
                 break
 ```
 
-### Sprint Rollover Script
+Sprint Rollover Script
 
 At sprint end, move all unfinished In Progress cards back to Backlog:
 
@@ -326,7 +326,7 @@ def rollover_sprint(in_progress_list_id: str, backlog_list_id: str) -> None:
     print("Sprint rollover complete.")
 ```
 
-## Integrating with Claude Skills
+Integrating with Claude Skills
 
 You can create a custom Claude Skill for Trello management. This enables natural language interactions with your boards directly inside a Claude Code session, without having to remember command-line syntax or card IDs.
 
@@ -353,13 +353,13 @@ Common actions:
 - "archive done cards" → call archive_stale_completed_cards()
 ```
 
-Once installed, you can ask Claude Code things like "move the authentication bug card to In Review" and it will look up the board structure, find the right card and list, and execute the move — no manual ID lookup required.
+Once installed, you can ask Claude Code things like "move the authentication bug card to In Review" and it will look up the board structure, find the right card and list, and execute the move. no manual ID lookup required.
 
-## Advanced: Webhook-Based Automation
+Advanced: Webhook-Based Automation
 
 For real-time automation, set up Trello webhooks that trigger Claude Code actions whenever something changes on your board. This is particularly useful for integrating Trello with CI/CD pipelines, Slack notifications, or other services.
 
-### Registering a Webhook
+Registering a Webhook
 
 First, register your webhook endpoint with the Trello API:
 
@@ -376,7 +376,7 @@ def register_webhook(callback_url: str, model_id: str, description: str = "") ->
         "description": description,
     })
 
-# Register a webhook for your board
+Register a webhook for your board
 webhook = register_webhook(
     callback_url="https://your-server.com/trello-webhook",
     model_id="your_board_id",
@@ -385,7 +385,7 @@ webhook = register_webhook(
 print(f"Webhook registered: {webhook['id']}")
 ```
 
-### Building the Webhook Handler
+Building the Webhook Handler
 
 ```python
 from flask import Flask, request, jsonify
@@ -404,7 +404,7 @@ def trello_webhook():
     action_type = data.get("action", {}).get("type", "")
     action_data = data.get("action", {}).get("data", {})
 
-    # Card moved to Done — trigger archival check or notification
+    # Card moved to Done. trigger archival check or notification
     if action_type == "updateCard" and "listAfter" in action_data:
         card_name = action_data.get("card", {}).get("name", "Unknown")
         list_after = action_data.get("listAfter", {}).get("name", "")
@@ -421,11 +421,11 @@ def trello_webhook():
             add_label(card_id, "purple")
             print(f"Added review label to: {card_name}")
 
-    # New card created — auto-assign to current sprint label
+    # New card created. auto-assign to current sprint label
     elif action_type == "createCard":
         card_id = action_data.get("card", {}).get("id")
         card_name = action_data.get("card", {}).get("name", "")
-        print(f"New card: {card_name} — applying sprint label")
+        print(f"New card: {card_name}. applying sprint label")
 
     return jsonify({"status": "ok"})
 
@@ -445,15 +445,15 @@ if __name__ == "__main__":
 For local development, use `ngrok` to expose your local Flask server:
 
 ```bash
-# Terminal 1: start the webhook server
+Terminal 1: start the webhook server
 python3 webhook_server.py
 
-# Terminal 2: expose it publicly for Trello to reach
+Terminal 2: expose it publicly for Trello to reach
 ngrok http 5000
-# Copy the https://xxxxx.ngrok.io URL and use it as your callback_url
+Copy the https://xxxxx.ngrok.io URL and use it as your callback_url
 ```
 
-### Handling Rate Limits in Webhooks
+Handling Rate Limits in Webhooks
 
 When webhook events arrive in bursts (e.g., bulk card moves during a sprint transition), you'll hit Trello's rate limit of 100 requests per 10-second window. Add a simple queue to smooth out the request rate:
 
@@ -469,37 +469,37 @@ def worker():
     while True:
         func, args, kwargs = request_queue.get()
         try:
-            func(*args, **kwargs)
+            func(*args, kwargs)
         except Exception as e:
             print(f"Queue worker error: {e}")
         finally:
             time.sleep(0.12)  # ~8 requests/second, well under the 10/second limit
             request_queue.task_done()
 
-# Start the worker thread on import
+Start the worker thread on import
 threading.Thread(target=worker, daemon=True).start()
 
-def enqueue(func, *args, **kwargs):
+def enqueue(func, *args, kwargs):
     """Add a Trello API call to the rate-limited queue."""
     request_queue.put((func, args, kwargs))
 ```
 
 Use `enqueue(move_card, card_id, list_id)` instead of calling `move_card` directly when processing bulk operations from webhooks.
 
-## Best Practices and Security Tips
+Best Practices and Security Tips
 
 When automating Trello with Claude Code, keep these recommendations in mind to avoid common pitfalls.
 
-**Security First**
+Security First
 - Never commit API keys or tokens to version control. Run `git status` and verify your `.env` file is in `.gitignore` before every commit.
 - Use environment variables for all credentials in development; use a secrets manager (AWS Secrets Manager, HashiCorp Vault, or 1Password Secrets Automation) for production workflows.
 - Rotate your Trello token every 90 days, especially if you share the codebase with others. Revoke tokens from https://trello.com/your-name/account.
 - Scope webhook endpoints with a shared secret in the URL to prevent spoofed POST requests.
 
-**Error Handling**
+Error Handling
 - Always wrap API calls in try/except and handle `requests.HTTPError` specifically. A 401 means an expired or invalid token; a 429 means you've hit the rate limit.
 - Log failures with enough context to debug: include the card ID, list ID, and timestamp, not just the exception message.
-- Validate board and list IDs before running bulk operations — a wrong list ID can move hundreds of cards to the wrong place with no confirmation prompt.
+- Validate board and list IDs before running bulk operations. a wrong list ID can move hundreds of cards to the wrong place with no confirmation prompt.
 
 ```python
 def safe_move_card(card_id: str, new_list_id: str) -> bool:
@@ -511,7 +511,7 @@ def safe_move_card(card_id: str, new_list_id: str) -> bool:
             return True
         except requests.HTTPError as e:
             if e.response.status_code == 429:
-                wait = 2 ** attempt  # exponential backoff: 1s, 2s, 4s
+                wait = 2  attempt  # exponential backoff: 1s, 2s, 4s
                 print(f"Rate limited. Waiting {wait}s before retry {attempt + 1}/{max_retries}")
                 time.sleep(wait)
             else:
@@ -520,19 +520,19 @@ def safe_move_card(card_id: str, new_list_id: str) -> bool:
     return False
 ```
 
-**Rate Limiting**
+Rate Limiting
 - Trello allows up to 100 requests per 10 seconds per token. For bulk operations on large boards (100+ cards), add `time.sleep(0.15)` between calls to stay within limits.
 - Cache board and list metadata locally for scripts that run on a schedule. Board structures rarely change, so there's no reason to fetch list IDs from the API on every run.
 - For webhook handlers that might receive bursts of events, use the queue pattern shown above rather than making synchronous API calls per event.
 
-## Putting It All Together: A Complete Workflow
+Putting It All Together: A Complete Workflow
 
 Here is how you might combine everything into a weekly board maintenance workflow that runs automatically:
 
 ```bash
 #!/bin/bash
-# weekly-board-maintenance.sh
-# Runs every Friday at 6pm to prep the board for Monday
+weekly-board-maintenance.sh
+Runs every Friday at 6pm to prep the board for Monday
 
 echo "=== Weekly Trello Maintenance ==="
 python3 -c "
@@ -543,15 +543,15 @@ DONE_LIST_ID    = 'your_done_list_id'
 BACKLOG_LIST_ID = 'your_backlog_list_id'
 IN_PROG_LIST_ID = 'your_in_progress_list_id'
 
-# 1. Archive done cards older than 7 days
+1. Archive done cards older than 7 days
 print('Step 1: Archiving stale done cards...')
 archive_stale_completed_cards(DONE_LIST_ID, days_threshold=7)
 
-# 2. Roll over in-progress cards that weren't finished
+2. Roll over in-progress cards that weren't finished
 print('Step 2: Rolling over unfinished sprint cards...')
 rollover_sprint(IN_PROG_LIST_ID, BACKLOG_LIST_ID)
 
-# 3. Auto-label any unlabeled backlog cards
+3. Auto-label any unlabeled backlog cards
 print('Step 3: Labeling backlog cards...')
 auto_label_cards(BACKLOG_LIST_ID)
 
@@ -565,15 +565,15 @@ Schedule it with cron:
 0 18 * * 5 /path/to/weekly-board-maintenance.sh >> /var/log/trello-maintenance.log 2>&1
 ```
 
-This runs every Friday at 6 PM, archives old done cards, rolls over unfinished work, and labels the backlog — with no manual effort.
+This runs every Friday at 6 PM, archives old done cards, rolls over unfinished work, and labels the backlog. with no manual effort.
 
-## Conclusion
+Conclusion
 
-Claude Code combined with Trello's API opens up a wide range of automation possibilities. The approach scales from a simple board-listing script all the way to real-time webhook-driven pipelines that integrate with Slack, CI systems, and deployment tools. Start with the basic `trello_manager.py` wrapper, then progressively add the patterns that match your team's workflow pain points.
+Claude Code combined with Trello's API opens up a wide range of automation possibilities. The approach scales from a simple board-listing script all the way to real-time webhook-driven pipelines that integrate with Slack, CI systems, and deployment tools. Start with the basic `trello_manager.py` wrapper, then progressively add the patterns that match your team's workflow problems.
 
 The key to maintaining these automations long-term is treating your Trello scripts like production code: version-control them, add error handling, log failures, and rotate credentials on a schedule. With proper setup and security measures, you'll have a reliable automation layer that keeps your boards organized without manual effort.
 
-## Automating Card Lifecycle Management
+Automating Card Lifecycle Management
 
 Beyond creating and moving cards, a complete Trello automation handles the entire card lifecycle: creation from templates, assignment, due date management, checklist completion tracking, and archiving when work is done. Claude Code generates the full lifecycle manager that responds to card events via webhooks and enforces your team's workflow rules automatically.
 
@@ -582,10 +582,10 @@ For cards that represent recurring tasks, Claude Code generates the template clo
 Due date management is another area where automation saves time. Claude Code generates the due date monitor that runs daily, finds cards approaching their due date without assignees, and sends a Slack message to the board owner asking for assignment. Cards that pass their due date without being moved get a red label added automatically, making overdue work visible in the board view without manual tracking.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

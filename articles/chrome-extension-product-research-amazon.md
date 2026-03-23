@@ -12,24 +12,24 @@ tags: [claude-code, claude-skills]
 ---
 
 {% raw %}
-# Chrome Extension for Amazon Product Research
+Chrome Extension for Amazon Product Research
 
 Product research on Amazon requires gathering data from multiple pages, tracking price history, analyzing reviews, and identifying trends. For developers and power users, building a custom Chrome extension automates these tasks and provides personalized workflows. This guide covers the architecture, implementation patterns, and practical considerations for creating Amazon product research extensions.
 
-## Understanding the Amazon Product Research Workflow
+Understanding the Amazon Product Research Workflow
 
 Before writing code, understand what data points matter for product research:
 
-- **ASIN and product identifiers** - Unique Amazon product IDs
-- **Pricing data** - Current price, list price, historical pricing
-- **Review metrics** - Star ratings, review counts, sentiment breakdown
-- **Sales rank** - Category-specific performance indicators
-- **FBA indicators** - Fulfilled by Amazon status, Prime eligibility
-- **Seller information** - Seller ratings, fulfillment type
+- ASIN and product identifiers - Unique Amazon product IDs
+- Pricing data - Current price, list price, historical pricing
+- Review metrics - Star ratings, review counts, sentiment breakdown
+- Sales rank - Category-specific performance indicators
+- FBA indicators - Fulfilled by Amazon status, Prime eligibility
+- Seller information - Seller ratings, fulfillment type
 
 Chrome extensions excel at this because they can inject scripts into Amazon pages, extract DOM elements, and aggregate data across multiple products.
 
-## Extension Architecture
+Extension Architecture
 
 A typical Amazon product research extension uses the Manifest V3 architecture with three main components:
 
@@ -57,9 +57,9 @@ A typical Amazon product research extension uses the Manifest V3 architecture wi
 }
 ```
 
-The **content script** runs on Amazon pages and extracts product data. The **background service worker** handles data aggregation and storage. The **popup** provides the user interface for viewing and exporting research data.
+The content script runs on Amazon pages and extracts product data. The background service worker handles data aggregation and storage. The popup provides the user interface for viewing and exporting research data.
 
-## Extracting Product Data from Amazon Pages
+Extracting Product Data from Amazon Pages
 
 Content scripts inject into Amazon product pages and extract relevant data using DOM queries. Here's a practical implementation:
 
@@ -115,7 +115,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 });
 ```
 
-## Building a Research Dashboard
+Building a Research Dashboard
 
 For multi-product research, aggregate data into a dashboard view. Store research results using Chrome's storage API:
 
@@ -152,7 +152,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 });
 ```
 
-## Handling Amazon's Dynamic Content
+Handling Amazon's Dynamic Content
 
 Amazon uses heavy JavaScript rendering, so content scripts must wait for page elements to load. Use mutation observers or wait for specific elements:
 
@@ -199,7 +199,7 @@ async function extractWithWait() {
 }
 ```
 
-## Exporting Research Data
+Exporting Research Data
 
 Power users need to export data for deeper analysis. Support CSV and JSON formats:
 
@@ -243,7 +243,7 @@ function exportToJSON(products) {
 }
 ```
 
-## Rate Limiting and Ethical Considerations
+Rate Limiting and Ethical Considerations
 
 When building product research extensions, respect Amazon's terms of service and implement rate limiting:
 
@@ -279,7 +279,7 @@ const rateLimiter = {
 
 Avoid overwhelming Amazon's servers with rapid requests. Space out your data collection to minimize impact on their infrastructure.
 
-## Testing Your Extension
+Testing Your Extension
 
 Test extensions locally using Chrome's developer mode:
 
@@ -290,31 +290,31 @@ Test extensions locally using Chrome's developer mode:
 
 Create separate test cases for different Amazon domain variations (amazon.com, amazon.co.uk, amazon.de, etc.) since DOM structures may vary.
 
-## Conclusion
+Conclusion
 
 Building a Chrome extension for Amazon product research gives you complete control over your data collection workflow. Start with basic product extraction, then expand to include price tracking, review analysis, and competitive benchmarking. The key is structuring your data early so you can scale your research capabilities over time.
 
-For developers, the extension serves as a foundation for more advanced tools—integrate with external databases, add machine learning for sentiment analysis, or connect to inventory management systems. The browser is your interface, and Amazon's data is your canvas.
+For developers, the extension serves as a foundation for more advanced tools, integrate with external databases, add machine learning for sentiment analysis, or connect to inventory management systems. The browser is your interface, and Amazon's data is your canvas.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-## Step-by-Step: Building the Amazon Product Researcher
+Step-by-Step: Building the Amazon Product Researcher
 
-1. **Detect Amazon product pages**: check the URL for `/dp/` and extract the ASIN from the path. The ASIN is the 10-character alphanumeric identifier in the URL segment after `/dp/`.
-2. **Aggregate product data from the page**: read product title, brand, price, rating, review count, and BSR (Best Sellers Rank) from the DOM. All of these are present in structured data (`application/ld+json`) or in predictable elements.
-3. **Analyze reviews**: collect the top 10-20 reviews from the page and send them to the AI API with a prompt asking for the top 3 customer complaints and top 3 customer praises. This gives you a quick competitive intelligence summary.
-4. **Check historical pricing**: compare the current price against the average from the last 90 days (use a price history API or your own stored history) to flag whether this is a good time to buy.
-5. **Research competitor products**: based on the product category and BSR, suggest 3-5 competing products. You can use the Amazon Product Advertising API for this, or scrape the "Customers also bought" section.
-6. **Export research notes**: let users save their product research as a structured note (title, ASIN, price, pros, cons, verdict) to `chrome.storage.local` with export to Notion or Airtable.
+1. Detect Amazon product pages: check the URL for `/dp/` and extract the ASIN from the path. The ASIN is the 10-character alphanumeric identifier in the URL segment after `/dp/`.
+2. Aggregate product data from the page: read product title, brand, price, rating, review count, and BSR (Best Sellers Rank) from the DOM. All of these are present in structured data (`application/ld+json`) or in predictable elements.
+3. Analyze reviews: collect the top 10-20 reviews from the page and send them to the AI API with a prompt asking for the top 3 customer complaints and top 3 customer praises. This gives you a quick competitive intelligence summary.
+4. Check historical pricing: compare the current price against the average from the last 90 days (use a price history API or your own stored history) to flag whether this is a good time to buy.
+5. Research competitor products: based on the product category and BSR, suggest 3-5 competing products. You can use the Amazon Product Advertising API for this, or scrape the "Customers also bought" section.
+6. Export research notes: let users save their product research as a structured note (title, ASIN, price, pros, cons, verdict) to `chrome.storage.local` with export to Notion or Airtable.
 
-## Extracting Amazon Structured Data
+Extracting Amazon Structured Data
 
 ```javascript
 function extractProductData() {
@@ -346,7 +346,7 @@ function extractProductData() {
 }
 ```
 
-## Comparison with Dedicated Research Tools
+Comparison with Dedicated Research Tools
 
 | Tool | Real-time data | AI analysis | Review sentiment | Export | Cost |
 |---|---|---|---|---|---|
@@ -358,7 +358,7 @@ function extractProductData() {
 
 The custom extension is most powerful for individual buyers and small sellers who need AI-driven review analysis without paying for a full research platform subscription.
 
-## Advanced: Review Sentiment Analysis
+Advanced: Review Sentiment Analysis
 
 Classify reviews into sentiment categories for quick competitive analysis:
 
@@ -374,12 +374,12 @@ async function analyzeReviews(reviews) {
 }
 ```
 
-## Troubleshooting
+Troubleshooting
 
-**BSR not found on all product pages**: BSR is only shown for products ranked in a category. Check for `productDetails` table rows matching "Best Sellers Rank" text — the format changes between categories and product types.
+BSR not found on all product pages: BSR is only shown for products ranked in a category. Check for `productDetails` table rows matching "Best Sellers Rank" text. the format changes between categories and product types.
 
-**Reviews paginated across multiple pages**: The extension can only read reviews on the currently visible page. For deeper analysis, open the "See all reviews" page and run analysis there, where more reviews are loaded at once.
+Reviews paginated across multiple pages: The extension can only read reviews on the currently visible page. For deeper analysis, open the "See all reviews" page and run analysis there, where more reviews are loaded at once.
 
-**AI analysis of reviews hitting token limits**: Amazon review sections can contain hundreds of reviews. Sample a random subset of 15-20 reviews that represent the rating distribution (5 five-star, 5 three-star, 5 one-star) rather than sending all reviews.
+AI analysis of reviews hitting token limits: Amazon review sections can contain hundreds of reviews. Sample a random subset of 15-20 reviews that represent the rating distribution (5 five-star, 5 three-star, 5 one-star) rather than sending all reviews.
 
 {% endraw %}

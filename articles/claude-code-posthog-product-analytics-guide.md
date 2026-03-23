@@ -14,19 +14,19 @@ score: 8
 {% raw %}
 
 
-# Claude Code PostHog Product Analytics Guide
+Claude Code PostHog Product Analytics Guide
 
 Product analytics forms the backbone of data-driven decision making in modern software teams. When you combine Claude Code with PostHog, you gain a powerful combination for implementing analytics tracking, analyzing user behavior, and building features that respond to real user data. This guide walks you through practical workflows that developers and power users can apply immediately.
 
-## Why PostHog with Claude Code
+Why PostHog with Claude Code
 
 PostHog provides open-source product analytics that gives you full control over your data. Unlike third-party analytics services, PostHog runs on your infrastructure, ensuring data privacy while delivering enterprise-grade features like funnels, cohorts, and session recording. Claude Code enhances this workflow by automating boilerplate code generation, debugging tracking implementations, and helping you construct complex queries.
 
 The integration works particularly well because both tools prioritize developer experience. PostHog offers SDKs for every major language and framework, while Claude Code accelerates your implementation through intelligent code generation and context-aware assistance.
 
-There is also a practical business case for this pairing. PostHog's self-hosted option means your user behavior data never leaves your infrastructure—a requirement for many regulated industries and a strong selling point for enterprise customers concerned about data sovereignty. Claude Code handles the implementation details so your team can move quickly without compromising that privacy guarantee.
+There is also a practical business case for this pairing. PostHog's self-hosted option means your user behavior data never leaves your infrastructure, a requirement for many regulated industries and a strong selling point for enterprise customers concerned about data sovereignty. Claude Code handles the implementation details so your team can move quickly without compromising that privacy guarantee.
 
-## Setting Up PostHog with Claude Code
+Setting Up PostHog with Claude Code
 
 Begin by initializing PostHog in your project. Claude Code can guide you through the setup process or generate the necessary configuration files. For a typical JavaScript project:
 
@@ -85,7 +85,7 @@ export function initPostHog() {
 
 Ask Claude Code to generate the initialization boilerplate for your specific framework and it will adapt these patterns to your project structure automatically.
 
-## Implementing Event Tracking
+Implementing Event Tracking
 
 Event tracking forms the foundation of product analytics. Claude Code excels at generating consistent tracking code across your codebase. Rather than manually writing capture calls throughout your application, you can establish a tracking abstraction layer:
 
@@ -115,9 +115,9 @@ export function identifyUser(userId: string, traits?: EventProperties) {
 }
 ```
 
-The tdd skill proves invaluable here—write tests for your tracking functions before implementation, ensuring events fire correctly and properties contain expected values. This prevents analytics gaps that often plague production systems.
+The tdd skill proves invaluable here, write tests for your tracking functions before implementation, ensuring events fire correctly and properties contain expected values. This prevents analytics gaps that often plague production systems.
 
-### Naming Events Consistently
+Naming Events Consistently
 
 One of the most common analytics mistakes is inconsistent event naming. After six months of ad-hoc tracking, you end up with `button_clicked`, `ButtonClicked`, `button-click`, and `btn_click` all referring to the same action. Claude Code can enforce a naming convention across your codebase by generating a typed event catalog:
 
@@ -155,7 +155,7 @@ export function trackEvent(eventName: EventName, properties?: EventProperties) {
 
 This pattern gives you autocomplete for event names in your IDE and surfaces typos before they ship to production.
 
-## Working with User Groups and Cohorts
+Working with User Groups and Cohorts
 
 PostHog excels at cohort analysis, but implementing group-based tracking requires thoughtful architecture. Claude Code can help you design group identification patterns that scale:
 
@@ -179,7 +179,7 @@ export function groupUser(userId: string, groups: GroupType[]) {
 
 This pattern supports SaaS applications where users belong to organizations, teams, or accounts. The supermemory skill helps maintain context about which groups matter for your analytics strategy, especially when working across multiple projects.
 
-### Cohort Analysis Patterns
+Cohort Analysis Patterns
 
 Beyond simple group identification, cohort analysis lets you understand how user behavior changes over time. A typical pattern involves tracking users by their signup cohort and comparing retention across cohorts:
 
@@ -211,7 +211,7 @@ export function identifyNewUser(userId: string, userProperties: {
 
 With cohort data flowing into PostHog, you can build retention queries that compare week-one retention for February signups versus March signups, revealing whether product changes improved early activation.
 
-## Building Analytics Dashboards
+Building Analytics Dashboards
 
 PostHog provides built-in dashboards, but you often need custom visualizations. The frontend-design skill complements PostHog data by helping you build custom dashboard components that consume PostHog APIs:
 
@@ -242,7 +242,7 @@ export function MetricCard({ title, value, trend, subtitle }: MetricCardProps) {
 
 Combine this with PostHog's trends API to fetch live data for your custom components. The xlsx skill helps when you need to export PostHog data for offline analysis or stakeholder reports.
 
-### Building a Metrics Overview Page
+Building a Metrics Overview Page
 
 A complete metrics overview page brings together multiple PostHog queries into a single dashboard. Here is a pattern for a server-side rendered metrics page using Next.js:
 
@@ -291,7 +291,7 @@ export default async function DashboardPage() {
 
 Ask Claude Code to extend this pattern with caching, error boundaries, and loading states to make it production-ready.
 
-## Implementing Feature Flags with Analytics
+Implementing Feature Flags with Analytics
 
 The real power emerges when you combine PostHog feature flags with analytics tracking. Track how different user segments interact with features:
 
@@ -316,7 +316,7 @@ export function trackFeatureUsage(featureKey: string, userId: string) {
 
 This pattern helps you understand which features drive value and which might need iteration. Claude Code can analyze this data to suggest optimizations in your feature flag strategies.
 
-### A/B Testing with PostHog Flags
+A/B Testing with PostHog Flags
 
 Feature flags become A/B tests when you track downstream outcomes by variant. Here is a complete pattern for running an experiment and measuring its impact:
 
@@ -363,7 +363,7 @@ await runExperiment(
 
 PostHog's experiment results view then shows conversion rates by variant automatically, because both groups are tracked with the same downstream events.
 
-## Debugging Analytics Issues
+Debugging Analytics Issues
 
 When tracking fails, diagnosing the problem requires systematic investigation. Claude Code assists by reviewing your implementation against PostHog best practices. Common issues include:
 
@@ -374,13 +374,13 @@ When tracking fails, diagnosing the problem requires systematic investigation. C
 
 The docx skill helps generate runbooks documenting your analytics implementation, making team onboarding smoother and debugging faster.
 
-### A Debugging Checklist
+A Debugging Checklist
 
 When events are not appearing in PostHog, work through this checklist:
 
-**1. Verify the API key.** A wrong or expired API key silently drops events. Log the response from PostHog's `/batch` endpoint to confirm events are accepted.
+1. Verify the API key. A wrong or expired API key silently drops events. Log the response from PostHog's `/batch` endpoint to confirm events are accepted.
 
-**2. Check the distinct ID.** Every event must include a distinct ID. Events with null or undefined distinct IDs are dropped. Add a validation layer:
+2. Check the distinct ID. Every event must include a distinct ID. Events with null or undefined distinct IDs are dropped. Add a validation layer:
 
 ```typescript
 export function safeTrackEvent(
@@ -396,7 +396,7 @@ export function safeTrackEvent(
 }
 ```
 
-**3. Confirm flush behavior.** In serverless environments, events may not flush before the function exits. Set `flushAt: 1` and call `await posthog.shutdown()` at the end of each handler:
+3. Confirm flush behavior. In serverless environments, events may not flush before the function exits. Set `flushAt: 1` and call `await posthog.shutdown()` at the end of each handler:
 
 ```typescript
 export async function handler(event: any) {
@@ -410,11 +410,11 @@ export async function handler(event: any) {
 }
 ```
 
-**4. Check network connectivity.** If PostHog is self-hosted, verify the event ingestion endpoint is reachable from your production environment. Firewall rules blocking outbound traffic to your PostHog instance will silently drop events.
+4. Check network connectivity. If PostHog is self-hosted, verify the event ingestion endpoint is reachable from your production environment. Firewall rules blocking outbound traffic to your PostHog instance will silently drop events.
 
-**5. Review property types.** PostHog segments on property values as strings, numbers, or booleans. Mixing types—storing a user tier as both `'premium'` and `true`—produces confusing segmentation results.
+5. Review property types. PostHog segments on property values as strings, numbers, or booleans. Mixing types, storing a user tier as both `'premium'` and `true`, produces confusing segmentation results.
 
-## Automating Analytics Workflows
+Automating Analytics Workflows
 
 Beyond implementation, Claude Code can automate recurring analytics tasks. Use the internal-comms skill to generate weekly analytics summaries for stakeholders, or create scripts that export data for external analysis:
 
@@ -437,7 +437,7 @@ async function exportWeeklyMetrics() {
 }
 ```
 
-### Scheduled Metric Reports
+Scheduled Metric Reports
 
 A more complete reporting workflow fetches multiple metrics and formats them for a Slack digest:
 
@@ -484,7 +484,7 @@ async function fetchMetric(event: string, dateFrom: string): Promise<number> {
 
 Ask Claude Code to adapt this script to your specific Slack channels, metric names, and scheduling system (cron, GitHub Actions, or your cloud provider's scheduler).
 
-## PostHog vs. Alternatives
+PostHog vs. Alternatives
 
 When evaluating whether PostHog is the right choice, a quick comparison helps clarify the tradeoffs:
 
@@ -497,28 +497,28 @@ When evaluating whether PostHog is the right choice, a quick comparison helps cl
 
 PostHog's self-hosted option and open-source codebase differentiate it from every major competitor. For teams where data privacy is non-negotiable, the ability to run PostHog entirely within your own infrastructure removes a class of compliance concerns entirely. Claude Code makes the implementation investment worthwhile by automating the parts of PostHog setup that would otherwise require significant engineering time.
 
-## Best Practices Summary
+Best Practices Summary
 
 Implementing product analytics successfully requires discipline and tooling. Claude Code provides the automation and intelligence layer that makes PostHog implementation sustainable:
 
-1. **Centralize tracking logic** through abstraction modules that Claude Code can generate and maintain
-2. **Test tracking code** using the tdd skill to prevent analytics gaps
-3. **Document event schemas** so your team understands what data flows where
-4. **Combine flags with tracking** to measure feature impact directly
-5. **Automate recurring reports** to keep stakeholders informed without manual effort
-6. **Enforce event naming conventions** with a typed event catalog to prevent fragmented data
-7. **Handle serverless flush correctly** to avoid dropped events in AWS Lambda or Vercel Edge functions
-8. **Validate distinct IDs** before every capture call to prevent orphaned events
+1. Centralize tracking logic through abstraction modules that Claude Code can generate and maintain
+2. Test tracking code using the tdd skill to prevent analytics gaps
+3. Document event schemas so your team understands what data flows where
+4. Combine flags with tracking to measure feature impact directly
+5. Automate recurring reports to keep stakeholders informed without manual effort
+6. Enforce event naming conventions with a typed event catalog to prevent fragmented data
+7. Handle serverless flush correctly to avoid dropped events in AWS Lambda or Vercel Edge functions
+8. Validate distinct IDs before every capture call to prevent orphaned events
 
 The combination of Claude Code and PostHog gives you complete control over your product analytics infrastructure. Whether you're tracking basic events or building sophisticated multi-segment analysis workflows, this integration scales with your needs.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 {% endraw %}

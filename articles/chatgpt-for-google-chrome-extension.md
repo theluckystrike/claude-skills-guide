@@ -17,17 +17,17 @@ Chrome extensions provide a powerful way to extend browser functionality, and in
 
 This guide covers the technical implementation of ChatGPT integration in Chrome extensions, from basic API calls to building sophisticated AI-powered features.
 
-## Understanding the Architecture
+Understanding the Architecture
 
 A ChatGPT-powered Chrome extension typically consists of three main components:
 
-1. **Content scripts** - Code that runs in the context of web pages
-2. **Background scripts** - Long-running scripts that handle API communication
-3. **Popup interface** - The user-facing UI for interaction
+1. Content scripts - Code that runs in the context of web pages
+2. Background scripts - Long-running scripts that handle API communication
+3. Popup interface - The user-facing UI for interaction
 
 The communication between these components follows Chrome's message-passing architecture, where content scripts send requests to background scripts, which then handle external API calls.
 
-## Setting Up Your Extension
+Setting Up Your Extension
 
 Start by creating the extension manifest. For ChatGPT integration, you'll need Manifest V3:
 
@@ -47,9 +47,9 @@ Start by creating the extension manifest. For ChatGPT integration, you'll need M
 }
 ```
 
-The `host_permissions` field is critical—you must explicitly declare access to the OpenAI API endpoint. Without this, your extension cannot communicate with ChatGPT's servers.
+The `host_permissions` field is critical, you must explicitly declare access to the OpenAI API endpoint. Without this, your extension cannot communicate with ChatGPT's servers.
 
-## Implementing the API Client
+Implementing the API Client
 
 Your background script handles all communication with OpenAI's API. Here's a practical implementation:
 
@@ -104,7 +104,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 This implementation provides error handling, async support, and secure API key storage using Chrome's encrypted storage.
 
-## Building the Popup Interface
+Building the Popup Interface
 
 The popup provides users a way to interact with ChatGPT directly:
 
@@ -167,9 +167,9 @@ document.getElementById('sendBtn').addEventListener('click', async () => {
 });
 ```
 
-## Practical Use Cases for Developers
+Practical Use Cases for Developers
 
-### Code Review Assistant
+Code Review Assistant
 
 One powerful application is integrating ChatGPT into code review workflows. Create a content script that injects into your codebase hosting platform:
 
@@ -191,7 +191,7 @@ document.addEventListener('mouseup', () => {
 });
 ```
 
-### Context-Aware Responses
+Context-Aware Responses
 
 For power users, consider building context-aware features that read the current page content:
 
@@ -217,25 +217,25 @@ const messages = [
 ];
 ```
 
-## Security Considerations
+Security Considerations
 
 When building ChatGPT-powered extensions, prioritize security:
 
-1. **Never hardcode API keys** - Store them in `chrome.storage.local` or use OAuth
-2. **Validate all inputs** - Sanitize user prompts before sending to the API
-3. **Limit permissions** - Request only the minimum host permissions needed
-4. **Implement rate limiting** - Prevent abuse and manage API costs
+1. Never hardcode API keys - Store them in `chrome.storage.local` or use OAuth
+2. Validate all inputs - Sanitize user prompts before sending to the API
+3. Limit permissions - Request only the minimum host permissions needed
+4. Implement rate limiting - Prevent abuse and manage API costs
 
 For production extensions, consider implementing user-managed API keys through a settings page rather than storing a single developer's key.
 
-## Performance Optimization
+Performance Optimization
 
 ChatGPT API calls introduce latency. Optimize your extension by:
 
-- **Caching responses** for repeated queries using Chrome's storage API
-- **Using streaming responses** for longer outputs (available in newer API versions)
-- **Implementing optimistic UI** that shows loading states immediately
-- **Debouncing user input** to prevent excessive API calls
+- Caching responses for repeated queries using Chrome's storage API
+- Using streaming responses for longer outputs (available in newer API versions)
+- Implementing optimistic UI that shows loading states immediately
+- Debouncing user input to prevent excessive API calls
 
 ```javascript
 // Simple caching implementation
@@ -254,31 +254,31 @@ async function callWithCache(prompt) {
 }
 ```
 
-## Conclusion
+Conclusion
 
-Building ChatGPT-powered Chrome extensions requires understanding Chrome's extension architecture, secure API handling, and thoughtful UX design. The examples in this guide provide a foundation—you can expand them with features like conversation history, multiple AI models, or deep integration with specific websites.
+Building ChatGPT-powered Chrome extensions requires understanding Chrome's extension architecture, secure API handling, and thoughtful UX design. The examples in this guide provide a foundation, you can expand them with features like conversation history, multiple AI models, or deep integration with specific websites.
 
 Start with the basics, test thoroughly, and iterate based on your specific use case. The combination of Chrome extensions and ChatGPT creates powerful possibilities for enhancing productivity and building AI-assisted workflows.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-## Step-by-Step: Building a ChatGPT-Style Extension
+Step-by-Step: Building a ChatGPT-Style Extension
 
-1. **Obtain an API key**: sign up at platform.openai.com, generate an API key, and store it securely in `chrome.storage.sync` via an options page — never bundle it in the extension source.
-2. **Set up Manifest V3** with `storage`, `contextMenus`, and `sidePanel` permissions.
-3. **Build the chat interface**: create a side panel with a message list, an input field, and a send button. Style messages to visually distinguish user messages from assistant responses.
-4. **Implement the API call**: on send, POST to `https://api.openai.com/v1/chat/completions` with the conversation history and the new user message. Use `stream: true` to render responses token by token.
-5. **Maintain conversation context**: store the message history in `chrome.storage.session` so the conversation persists while the browser is open but clears when it closes — protecting privacy.
-6. **Add page context injection**: when the user asks about the current page, extract the page text and prepend it as a system message so the assistant has relevant context.
+1. Obtain an API key: sign up at platform.openai.com, generate an API key, and store it securely in `chrome.storage.sync` via an options page. never bundle it in the extension source.
+2. Set up Manifest V3 with `storage`, `contextMenus`, and `sidePanel` permissions.
+3. Build the chat interface: create a side panel with a message list, an input field, and a send button. Style messages to visually distinguish user messages from assistant responses.
+4. Implement the API call: on send, POST to `https://api.openai.com/v1/chat/completions` with the conversation history and the new user message. Use `stream: true` to render responses token by token.
+5. Maintain conversation context: store the message history in `chrome.storage.session` so the conversation persists while the browser is open but clears when it closes. protecting privacy.
+6. Add page context injection: when the user asks about the current page, extract the page text and prepend it as a system message so the assistant has relevant context.
 
-## Streaming API Response Rendering
+Streaming API Response Rendering
 
 ```javascript
 async function streamResponse(messages, onToken) {
@@ -315,7 +315,7 @@ async function streamResponse(messages, onToken) {
 }
 ```
 
-## Comparison with Browser AI Assistants
+Comparison with Browser AI Assistants
 
 | Tool | Model | Page context | Privacy | Offline | Cost |
 |---|---|---|---|---|---|
@@ -327,7 +327,7 @@ async function streamResponse(messages, onToken) {
 
 Building your own gives full control over the model, context injection strategy, and data handling. You choose which model to use and can switch between providers.
 
-## Advanced: Custom Personas and System Prompts
+Advanced: Custom Personas and System Prompts
 
 Let users configure custom system prompts for different use cases:
 
@@ -341,12 +341,12 @@ const personas = {
 
 Store the selected persona in `chrome.storage.sync` and prepend it as the system message for every conversation.
 
-## Troubleshooting
+Troubleshooting
 
-**Rate limit errors (429)**: Implement exponential backoff — retry after 1 second, then 2, then 4. Store the retry count in the request state and surface a "Rate limited, retrying..." message in the UI so the user knows to wait.
+Rate limit errors (429): Implement exponential backoff. retry after 1 second, then 2, then 4. Store the retry count in the request state and surface a "Rate limited, retrying..." message in the UI so the user knows to wait.
 
-**Response truncated mid-sentence**: The default `max_tokens` may cut off long responses. Increase it or implement a continuation mechanism that detects an incomplete response (no sentence-ending punctuation at the end) and automatically sends a "continue" message.
+Response truncated mid-sentence: The default `max_tokens` may cut off long responses. Increase it or implement a continuation mechanism that detects an incomplete response (no sentence-ending punctuation at the end) and automatically sends a "continue" message.
 
-**Page context exceeding token limit**: Summarize long pages before injecting them. Extract only the first 2,000 characters, or use the page's meta description and h1/h2 headings as a compact representation of the page content.
+Page context exceeding token limit: Summarize long pages before injecting them. Extract only the first 2,000 characters, or use the page's meta description and h1/h2 headings as a compact representation of the page content.
 
 {% endraw %}

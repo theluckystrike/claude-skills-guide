@@ -15,7 +15,7 @@ permalink: /claude-skill-yaml-front-matter-parsing-error-fix/
 
 A malformed [YAML front matter](/claude-skill-md-format-complete-specification-guide/) block is one of the most common reasons a Claude Code skill silently fails to load. The skill file exists, permissions are correct, but Claude either ignores the invocation or loads the skill without its configured metadata. This guide covers every known cause of YAML front matter parsing errors and gives you the exact fix for each.
 
-## What YAML Front Matter Does in a Skill File
+What YAML Front Matter Does in a Skill File
 
 Skill `.md` files begin with a YAML front matter block delimited by triple dashes:
 
@@ -25,25 +25,25 @@ name: tdd
 description: "Run tests before writing implementation code (TDD)"
 ---
 
-# The rest of the skill instructions go here...
+The rest of the skill instructions go here...
 ```
 
 [Claude Code skills recognize only name and description in front matter](/claude-skill-md-format-complete-specification-guide/) If the front matter fails to parse, the skill body may still load but the description will not be available to the skill system.
 
-## Error 1: Missing or Mismatched Closing Delimiter
+Error 1: Missing or Mismatched Closing Delimiter
 
 The most common mistake. YAML front matter requires exactly three dashes on the opening and closing lines.
 
 ```yaml
-# Broken — closing delimiter is missing
+Broken. closing delimiter is missing
 ---
 description: "My skill"
 
-# Skill body starts here but YAML never closed...
+Skill body starts here but YAML never closed...
 ```
 
 ```yaml
-# Fixed
+Fixed
 ---
 description: "My skill"
 ---
@@ -51,18 +51,18 @@ description: "My skill"
 
 Also watch for trailing spaces after `---`. Some editors add a trailing space, which is invisible but causes the parser to miss the delimiter.
 
-**Check with:**
+Check with:
 ```bash
 cat -A ~/.claude/skills/tdd.md | head -10
-# Lines ending in $ are clean. Lines ending in  $ have trailing spaces.
+Lines ending in $ are clean. Lines ending in  $ have trailing spaces.
 ```
 
-## Error 2: Tabs Instead of Spaces
+Error 2: Tabs Instead of Spaces
 
 YAML does not allow tabs for indentation. This is the single most common source of parse errors in skill files edited in IDEs with smart-tab enabled.
 
 ```yaml
-# Broken — tab characters used for indentation
+Broken. tab characters used for indentation
 ---
 description: "My skill"
 name:	sql-formatter
@@ -70,46 +70,46 @@ name:	sql-formatter
 ```
 
 ```yaml
-# Fixed — no tabs, use spaces
+Fixed. no tabs, use spaces
 ---
 name: sql-formatter
 description: "My skill"
 ---
 ```
 
-**Check and fix:**
+Check and fix:
 ```bash
-# Check for tabs in YAML front matter
+Check for tabs in YAML front matter
 python3 -c "
 content = open('$HOME/.claude/skills/tdd.md').read()
 front = content.split('---')[1]
 if '\t' in front:
-    print('TAB FOUND — replace with spaces')
+    print('TAB FOUND. replace with spaces')
 else:
     print('No tabs found')
 "
 
-# Replace tabs with spaces
+Replace tabs with spaces
 expand -t 2 ~/.claude/skills/tdd.md > /tmp/tdd-fixed.md && mv /tmp/tdd-fixed.md ~/.claude/skills/tdd.md
 ```
 
-## Error 3: Unquoted Strings With Colons
+Error 3: Unquoted Strings With Colons
 
 A colon followed by a space in an unquoted YAML value starts a new key-value pair. This breaks the intended value.
 
 ```yaml
-# Broken — the colon after "Fix:" confuses the parser
+Broken. the colon after "Fix:" confuses the parser
 description: Fix: handle edge cases in auth
 ```
 
 ```yaml
-# Fixed — quote the string
+Fixed. quote the string
 description: "Fix: handle edge cases in auth"
 ```
 
 This hits frequently with `description` fields in the `tdd` and `frontend-design` skills when people write descriptions like "Step 1: write test, Step 2: implement".
 
-## Error 4: Unquoted Special Characters
+Error 4: Unquoted Special Characters
 
 Certain characters have special meaning in YAML and must be quoted when used literally:
 
@@ -122,20 +122,20 @@ Certain characters have special meaning in YAML and must be quoted when used lit
 | `*` `&` | Anchors and aliases | Quote the string |
 
 ```yaml
-# Broken
+Broken
 description: Use {curly braces} for templates
 tags: [tdd, test-first]  # this is actually valid inline list syntax
 
-# Safe approach — always quote description values
+Safe approach. always quote description values
 description: "Use {curly braces} for templates"
 ```
 
-## Error 5: Duplicate Keys
+Error 5: Duplicate Keys
 
 If the same key appears twice in the front matter block, most YAML parsers use the last value and silently discard the first. Some parsers throw an error. Either way, the behavior is unintended.
 
 ```yaml
-# Broken — description appears twice
+Broken. description appears twice
 ---
 name: my-skill
 description: "My skill v1"
@@ -154,9 +154,9 @@ print('Keys:', list(data.keys()))
 "
 ```
 
-## Validating Your Skill Files
+Validating Your Skill Files
 
-**Quick Python check:**
+Quick Python check:
 ```bash
 python3 -c "
 import yaml, sys
@@ -175,7 +175,7 @@ except yaml.YAMLError as e:
 "
 ```
 
-**Batch validate all skills:**
+Batch validate all skills:
 ```bash
 python3 << 'EOF'
 import yaml, os, glob
@@ -194,14 +194,14 @@ for path in glob.glob(os.path.expanduser('~/.claude/skills/*.md')):
 EOF
 ```
 
-## Using yamllint for Strict Validation
+Using yamllint for Strict Validation
 
 `yamllint` catches issues Python's `yaml.safe_load` tolerates:
 
 ```bash
 pip install yamllint
 
-# Extract front matter to a temp file and lint it
+Extract front matter to a temp file and lint it
 python3 -c "
 content = open('$HOME/.claude/skills/docx.md').read()
 front = content.split('---')[1]
@@ -210,7 +210,7 @@ open('/tmp/skill-front.yaml', 'w').write(front)
 yamllint /tmp/skill-front.yaml
 ```
 
-## Minimum Valid Front Matter
+Minimum Valid Front Matter
 
 Claude Code skills recognize two front matter fields: `name` and `description`. This is the complete valid front matter for a skill:
 
@@ -223,28 +223,28 @@ description: "One sentence description of what this skill does"
 
 Fields like `tools`, `version`, `tags`, `permissions`, `auto_invoke`, and `context_files` are not recognized by Claude Code. Do not add them to skill files.
 
-## Diagnosing Skills That Load But Behave Incorrectly
+Diagnosing Skills That Load But Behave Incorrectly
 
 A skill whose front matter parses correctly can still malfunction if the metadata causes the skill system to behave unexpectedly. Two common cases:
 
-**Name mismatch**: The `name` field in front matter must match the filename (without `.md`). If your file is `tdd.md` but the front matter says `name: test-driven-development`, Claude Code may not correctly associate the `/tdd` invocation with this skill.
+Name mismatch: The `name` field in front matter must match the filename (without `.md`). If your file is `tdd.md` but the front matter says `name: test-driven-development`, Claude Code may not correctly associate the `/tdd` invocation with this skill.
 
 ```yaml
-# File: ~/.claude/skills/tdd.md
-# Correct — name matches filename
+File: ~/.claude/skills/tdd.md
+Correct. name matches filename
 ---
 name: tdd
 description: "Write tests before implementation using TDD workflow"
 ---
 
-# Incorrect — name doesn't match filename
+Incorrect. name doesn't match filename
 ---
 name: test-driven-development
 description: "Write tests before implementation using TDD workflow"
 ---
 ```
 
-**Description too long**: While there's no hard character limit documented, extremely long `description` values (multi-paragraph strings) can cause issues with how the skill is displayed in the skill list. Keep descriptions to one or two sentences—describe what the skill does, not how it does it.
+Description too long: While there's no hard character limit documented, extremely long `description` values (multi-paragraph strings) can cause issues with how the skill is displayed in the skill list. Keep descriptions to one or two sentences, describe what the skill does, not how it does it.
 
 A quick check to find skills where name doesn't match filename:
 
@@ -272,7 +272,7 @@ for path in glob.glob(f'{skills_dir}/*.md'):
 EOF
 ```
 
-## Creating a Pre-Commit Hook for Skill File Validation
+Creating a Pre-Commit Hook for Skill File Validation
 
 If you manage skill files in a git repository (useful for sharing skills across a team), a pre-commit hook that validates YAML front matter prevents broken skills from being committed.
 
@@ -280,7 +280,7 @@ Create `.git/hooks/pre-commit`:
 
 ```bash
 #!/bin/bash
-# Validate YAML front matter in Claude skill files before commit
+Validate YAML front matter in Claude skill files before commit
 
 set -e
 
@@ -344,10 +344,10 @@ Make it executable with `chmod +x .git/hooks/pre-commit`. Now any skill file wit
 
 ---
 
-## Related Reading
+Related Reading
 
-- [Skill .md File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/) — The canonical reference for valid YAML front matter fields, including all optional configuration keys
-- [How to Write a Skill .md File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/) — A walkthrough for writing skill files from scratch with properly structured YAML that avoids common parse errors
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — How skill design and YAML front matter affect token consumption, helping you tune for cost efficiency
+- [Skill .md File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/). The canonical reference for valid YAML front matter fields, including all optional configuration keys
+- [How to Write a Skill .md File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/). A walkthrough for writing skill files from scratch with properly structured YAML that avoids common parse errors
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). How skill design and YAML front matter affect token consumption, helping you tune for cost efficiency
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

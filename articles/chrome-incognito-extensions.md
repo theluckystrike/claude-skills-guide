@@ -13,26 +13,26 @@ tags: [claude-code, claude-skills]
 ---
 
 
-# Chrome Incognito Extensions: A Developer's Guide
+Chrome Incognito Extensions: A Developer's Guide
 
-Chrome's incognito mode provides a privacy-focused browsing session that does not save history, cookies, or site data. However, many users expect their extensions to work smoothly in this mode—and developers need to understand how to handle incognito-specific behavior properly.
+Chrome's incognito mode provides a privacy-focused browsing session that does not save history, cookies, or site data. However, many users expect their extensions to work smoothly in this mode, and developers need to understand how to handle incognito-specific behavior properly.
 
 This guide covers the technical details of Chrome incognito extensions, including configuration options, API limitations, implementation patterns, and actionable advice for developers and power users alike.
 
-## How Incognito Mode Affects Extensions
+How Incognito Mode Affects Extensions
 
 When a user opens an incognito window, Chrome applies specific rules to extensions by default:
 
-1. **Extensions are disabled** unless explicitly allowed by the user
-2. **Separate storage** is used for extension data in incognito contexts
-3. **Background pages** may behave differently depending on manifest version and `incognito` mode setting
-4. **Some APIs** have reduced functionality or require special handling
+1. Extensions are disabled unless explicitly allowed by the user
+2. Separate storage is used for extension data in incognito contexts
+3. Background pages may behave differently depending on manifest version and `incognito` mode setting
+4. Some APIs have reduced functionality or require special handling
 
 The default behavior blocks extensions from reading or modifying incognito sessions entirely. Users must manually grant permission for each extension they want active in incognito mode, either during installation or through `chrome://extensions` afterward.
 
-This is intentional from Chrome's perspective. Incognito is meant to be a clean-slate session. Extensions that silently run in incognito and persist data would undermine that expectation. Respecting this design—and being transparent about your extension's incognito behavior—builds user trust.
+This is intentional from Chrome's perspective. Incognito is meant to be a clean-slate session. Extensions that silently run in incognito and persist data would undermine that expectation. Respecting this design, and being transparent about your extension's incognito behavior, builds user trust.
 
-## The Three Incognito Modes Compared
+The Three Incognito Modes Compared
 
 The `incognito` field in your manifest controls how Chrome handles your extension in private sessions. Understanding the differences is critical before writing any code.
 
@@ -44,7 +44,7 @@ The `incognito` field in your manifest controls how Chrome handles your extensio
 
 The `split` mode was more common in Manifest V2 with persistent background pages. In Manifest V3 with service workers, `split` creates a separate service worker instance for incognito sessions. This is resource-intensive and only worth using when your incognito functionality is fundamentally different from regular mode.
 
-## Configuring Extension Manifest
+Configuring Extension Manifest
 
 To support incognito mode, declare the `incognito` field in your manifest. Here is an example for Manifest V3:
 
@@ -62,11 +62,11 @@ To support incognito mode, declare the `incognito` field in your manifest. Here 
 }
 ```
 
-Note that declaring `"incognito": "spanning"` does not automatically enable your extension in incognito—users still must allow it. The manifest field controls what happens once the user has granted access.
+Note that declaring `"incognito": "spanning"` does not automatically enable your extension in incognito, users still must allow it. The manifest field controls what happens once the user has granted access.
 
 If you omit the `incognito` field entirely, Chrome treats it as `spanning` by default in most cases, but it is better to be explicit. Some extension review processes and documentation tools expect to see it declared.
 
-## Enabling Incognito Access — The User Side
+Enabling Incognito Access. The User Side
 
 From a user's perspective, enabling an extension in incognito mode takes a few steps:
 
@@ -76,9 +76,9 @@ From a user's perspective, enabling an extension in incognito mode takes a few s
 
 Users can also right-click the extension icon in the toolbar and choose "Manage Extension" to reach the same settings. Power users who rely on extensions like ad blockers, password managers, or developer tools in incognito sessions need to do this manually for each extension.
 
-As a developer, you can prompt users with instructions when your popup detects it is not allowed in incognito. You cannot programmatically enable incognito access—that would defeat the privacy model.
+As a developer, you can prompt users with instructions when your popup detects it is not allowed in incognito. You cannot programmatically enable incognito access, that would defeat the privacy model.
 
-## Detecting Incognito Mode in Your Extension
+Detecting Incognito Mode in Your Extension
 
 Your extension code can detect whether it is running in an incognito window by checking the tab's `incognito` property:
 
@@ -118,11 +118,11 @@ chrome.extension.isAllowedIncognitoAccess((isAllowed) => {
 });
 ```
 
-This second check is useful in your popup to show a helpful message when the user opens your popup in incognito but has not granted access—instead of showing a broken UI, you can show clear instructions to enable it.
+This second check is useful in your popup to show a helpful message when the user opens your popup in incognito but has not granted access, instead of showing a broken UI, you can show clear instructions to enable it.
 
-## Storage Behavior in Incognito Mode
+Storage Behavior in Incognito Mode
 
-Storage is one of the most important—and most misunderstood—aspects of incognito extensions. Here is how each storage type behaves:
+Storage is one of the most important, and most misunderstood, aspects of incognito extensions. Here is how each storage type behaves:
 
 | Storage API | Incognito Behavior | Notes |
 |-------------|-------------------|-------|
@@ -154,7 +154,7 @@ async function getSettings() {
 }
 ```
 
-## Background Service Workers and Incognito
+Background Service Workers and Incognito
 
 Manifest V3 uses service workers as background scripts. In incognito mode with `spanning` behavior, the same service worker handles both regular and incognito tabs. You need to check the context when handling events to route logic appropriately:
 
@@ -171,13 +171,13 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 });
 ```
 
-With `split` behavior, Chrome creates a separate background context for incognito mode, which runs its own instance of your background script. The two instances cannot share in-memory state—communication between them requires using the messaging API or shared storage (which itself is subject to the storage isolation rules described above).
+With `split` behavior, Chrome creates a separate background context for incognito mode, which runs its own instance of your background script. The two instances cannot share in-memory state, communication between them requires using the messaging API or shared storage (which itself is subject to the storage isolation rules described above).
 
 A practical implication of `spanning` mode: if your service worker caches API responses in memory, those cached values are shared across regular and incognito contexts. This may be acceptable for non-sensitive data (e.g., a cached list of countries), but unacceptable for user-specific data (e.g., a cached authentication token). Design your in-memory state with this sharing in mind.
 
-## Practical Implementation Patterns
+Practical Implementation Patterns
 
-### Pattern 1: Prompt Users to Enable Incognito Access
+Pattern 1: Prompt Users to Enable Incognito Access
 
 Rather than showing a broken popup when your extension is not allowed in incognito, detect the situation and guide the user:
 
@@ -199,7 +199,7 @@ async function checkIncognitoAccess() {
 document.addEventListener('DOMContentLoaded', checkIncognitoAccess);
 ```
 
-### Pattern 2: Disable Specific Features in Incognito
+Pattern 2: Disable Specific Features in Incognito
 
 Not all features make sense in a privacy context. Analytics, sync, and persistent storage should typically be disabled:
 
@@ -229,7 +229,7 @@ async function initializeExtension() {
 
 This approach makes it easy to audit which features are privacy-sensitive. The feature flags object documents the incognito behavior explicitly, which is useful for code reviews and security audits.
 
-### Pattern 3: Clear Sensitive Data on Incognito Exit
+Pattern 3: Clear Sensitive Data on Incognito Exit
 
 When the last incognito window closes, your extension should clean up any data it wrote during that session:
 
@@ -240,16 +240,16 @@ chrome.windows.onRemoved.addListener(async (windowId) => {
   const hasIncognito = incognitoWindows.some(w => w.incognito);
 
   if (!hasIncognito) {
-    // All incognito windows closed — clean up
+    // All incognito windows closed. clean up
     await chrome.storage.session.clear();
     console.log('Incognito session data cleared');
   }
 });
 ```
 
-Using `chrome.storage.session` for incognito-specific transient data (rather than `chrome.storage.local`) is even better, since session storage is automatically cleared by Chrome when the incognito session ends—no manual cleanup needed.
+Using `chrome.storage.session` for incognito-specific transient data (rather than `chrome.storage.local`) is even better, since session storage is automatically cleared by Chrome when the incognito session ends, no manual cleanup needed.
 
-### Pattern 4: Visual Indicator for Incognito Mode
+Pattern 4: Visual Indicator for Incognito Mode
 
 Show users clearly when your extension is running in an incognito context, especially when behavior differs:
 
@@ -270,9 +270,9 @@ async function updatePopupForContext() {
 }
 ```
 
-In your CSS, the `.incognito-mode` class can apply a subtle visual treatment (a dark banner, a lock icon, a muted color scheme) that mirrors Chrome's own incognito visual language—making the UI feel coherent with the browser experience.
+In your CSS, the `.incognito-mode` class can apply a subtle visual treatment (a dark banner, a lock icon, a muted color scheme) that mirrors Chrome's own incognito visual language, making the UI feel coherent with the browser experience.
 
-## Content Scripts in Incognito Mode
+Content Scripts in Incognito Mode
 
 Content scripts run on web pages and are subject to the same incognito access restrictions as the rest of your extension. If your extension is allowed in incognito mode, content scripts will execute on incognito tabs as well.
 
@@ -283,7 +283,7 @@ Here is a content script that checks its own context before doing anything sensi
 ```javascript
 // content-script.js
 (function() {
-  // chrome.tabs is not available in content scripts — use the document URL instead
+  // chrome.tabs is not available in content scripts. use the document URL instead
   // For incognito checks, rely on the background service worker having sent context
   chrome.runtime.sendMessage({ type: 'GET_CONTEXT' }, (response) => {
     if (response?.incognito) {
@@ -296,7 +296,7 @@ Here is a content script that checks its own context before doing anything sensi
 })();
 ```
 
-## Manifest V2 vs V3: What Changed for Incognito
+Manifest V2 vs V3: What Changed for Incognito
 
 Many articles about Chrome incognito extensions reference Manifest V2 patterns. Here is a summary of what changed:
 
@@ -309,28 +309,28 @@ Many articles about Chrome incognito extensions reference Manifest V2 patterns. 
 
 The shift to ephemeral service workers in Manifest V3 makes in-memory state sharing between regular and incognito contexts less reliable. Any state that needs to be shared across contexts must use `chrome.storage` rather than module-level variables.
 
-## User Experience Considerations
+User Experience Considerations
 
 When designing extensions that work with incognito mode, consider these user experience factors:
 
-**Permission Requests**: Users see a specific prompt when they first install an extension that supports incognito. Make sure your extension's purpose is clear so users feel comfortable granting access. A password manager asking for incognito access makes intuitive sense; a coupon finder might raise more questions.
+Permission Requests: Users see a specific prompt when they first install an extension that supports incognito. Make sure your extension's purpose is clear so users feel comfortable granting access. A password manager asking for incognito access makes intuitive sense; a coupon finder might raise more questions.
 
-**Visual Indicators**: Add a clear visual indicator in your extension popup when running in incognito mode. Users should immediately understand why certain features are unavailable, rather than assuming the extension is broken.
+Visual Indicators: Add a clear visual indicator in your extension popup when running in incognito mode. Users should immediately understand why certain features are unavailable, rather than assuming the extension is broken.
 
-**Onboarding for Incognito**: If your extension provides meaningful value in incognito (an ad blocker, for example), proactively suggest that the user enable incognito access during onboarding—but explain why, and let them decline without penalty.
+Onboarding for Incognito: If your extension provides meaningful value in incognito (an ad blocker, for example), proactively suggest that the user enable incognito access during onboarding, but explain why, and let them decline without penalty.
 
-**Documentation**: Clearly document which features work in incognito mode and which do not. Users deserve transparency about privacy-related behavior. A simple table in your extension's README or Chrome Web Store description goes a long way.
+Documentation: Clearly document which features work in incognito mode and which do not. Users deserve transparency about privacy-related behavior. A simple table in your extension's README or Chrome Web Store description goes a long way.
 
-## Common Pitfalls to Avoid
+Common Pitfalls to Avoid
 
-1. **Assuming persistent storage**: Data in `chrome.storage.session` is cleared when incognito windows close. Data in `chrome.storage.local` is isolated per context. Do not assume a value written in regular mode will be readable in incognito.
-2. **Ignoring split mode complexity**: If using `split` behavior, remember you have two separate extension contexts that cannot share in-memory state. Debug each context independently using separate DevTools instances.
-3. **Missing error handling**: Always check `chrome.runtime.lastError` in callback-based APIs, or handle Promise rejections in async code. Incognito contexts can trigger edge cases that do not appear in regular mode.
-4. **Blocking incognito entirely without reason**: Unless there is a valid security or compliance reason, blocking incognito access creates a poor user experience and may result in negative reviews. Handle incognito gracefully with reduced functionality rather than a hard block.
-5. **Logging incognito URLs**: Never log or transmit URLs, page titles, or user actions from incognito tabs to an external server. This violates user trust and may violate Chrome Web Store policies.
-6. **Forgetting that `chrome.storage.local` is context-isolated**: This is the most common source of "my extension forgot my settings in incognito" bug reports. Default settings should be applied when storage reads return empty results in incognito.
+1. Assuming persistent storage: Data in `chrome.storage.session` is cleared when incognito windows close. Data in `chrome.storage.local` is isolated per context. Do not assume a value written in regular mode will be readable in incognito.
+2. Ignoring split mode complexity: If using `split` behavior, remember you have two separate extension contexts that cannot share in-memory state. Debug each context independently using separate DevTools instances.
+3. Missing error handling: Always check `chrome.runtime.lastError` in callback-based APIs, or handle Promise rejections in async code. Incognito contexts can trigger edge cases that do not appear in regular mode.
+4. Blocking incognito entirely without reason: Unless there is a valid security or compliance reason, blocking incognito access creates a poor user experience and may result in negative reviews. Handle incognito gracefully with reduced functionality rather than a hard block.
+5. Logging incognito URLs: Never log or transmit URLs, page titles, or user actions from incognito tabs to an external server. This violates user trust and may violate Chrome Web Store policies.
+6. Forgetting that `chrome.storage.local` is context-isolated: This is the most common source of "my extension forgot my settings in incognito" bug reports. Default settings should be applied when storage reads return empty results in incognito.
 
-## Testing Incognito Behavior During Development
+Testing Incognito Behavior During Development
 
 Testing incognito behavior requires a few specific steps that differ from regular extension development:
 
@@ -344,17 +344,17 @@ Note that in `spanning` mode, the service worker DevTools panel covers both regu
 
 For `split` mode, Chrome creates a second service worker entry in `chrome://serviceworker-internals` with "(incognito)" in the name. Inspect each separately.
 
-## Conclusion
+Conclusion
 
 Chrome incognito extensions require thoughtful implementation to provide good user experience while respecting privacy expectations. By properly configuring your manifest, handling storage appropriately, detecting incognito context in your code, and giving users clear feedback about what works in private mode, you can build extensions that work smoothly in both regular and private browsing sessions.
 
-The most important principle is transparency: users who choose incognito mode are making an active choice about their privacy. Your extension should honor that choice by minimizing data collection, clearly communicating limitations, and cleaning up after itself when the private session ends. Extensions that treat incognito as a first-class context—rather than an afterthought—build significantly more user trust and avoid the negative reviews that come from surprising privacy-related behavior.
+The most important principle is transparency: users who choose incognito mode are making an active choice about their privacy. Your extension should honor that choice by minimizing data collection, clearly communicating limitations, and cleaning up after itself when the private session ends. Extensions that treat incognito as a first-class context, rather than an afterthought, build significantly more user trust and avoid the negative reviews that come from surprising privacy-related behavior.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

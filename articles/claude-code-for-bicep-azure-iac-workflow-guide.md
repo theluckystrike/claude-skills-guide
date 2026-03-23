@@ -14,17 +14,17 @@ score: 7
 
 {% raw %}
 
-# Claude Code for Bicep Azure IaC Workflow Guide
+Claude Code for Bicep Azure IaC Workflow Guide
 
 Azure Infrastructure as Code (IaC) has evolved significantly with Bicep, Microsoft's declarative language that simplifies ARM template deployment. Combined with Claude Code, you can create powerful automation workflows that handle everything from initial resource provisioning to complex multi-environment deployments. This guide walks you through building an effective Bicep-focused workflow with Claude Code.
 
-## Understanding Bicep for Azure IaC
+Understanding Bicep for Azure IaC
 
 Bicep is a domain-specific language (DSL) that provides concise syntax for deploying Azure resources. Unlike raw ARM templates, Bicep offers improved readability, type safety, and modularity. When paired with Claude Code's intelligent assistance, you can rapidly develop, review, and maintain Azure infrastructure definitions.
 
 The key advantages include transpilation to ARM templates, native Azure integration, and a module system that promotes reusability. Claude Code can help you navigate these features, generate boilerplate code, and catch potential issues before deployment.
 
-## Setting Up Your Environment
+Setting Up Your Environment
 
 Before creating your Claude Code workflow, ensure your development environment is properly configured. You'll need the Bicep CLI, Azure CLI, and appropriate credentials for authentication.
 
@@ -46,50 +46,50 @@ Create a project structure for your Bicep files:
 
 ```
 infrastructure/
-├── main.bicep
-├── modules/
-│   ├── networking.bicep
-│   ├── compute.bicep
-│   └── storage.bicep
-└── environments/
-    ├── dev.bicepparam
-    ├── staging.bicepparam
-    └── prod.bicepparam
+ main.bicep
+ modules/
+    networking.bicep
+    compute.bicep
+    storage.bicep
+ environments/
+     dev.bicepparam
+     staging.bicepparam
+     prod.bicepparam
 ```
 
-## Creating the Claude Code Workflow
+Creating the Claude Code Workflow
 
 The foundation of your workflow is a well-structured `CLAUDE.md` file that defines how Claude Code should interact with your Bicep files. This file should establish clear guidelines for resource creation, parameter handling, and deployment safety.
 
 Create a `CLAUDE.md` in your infrastructure repository:
 
 ```markdown
-# Azure Bicep Infrastructure Workflow
+Azure Bicep Infrastructure Workflow
 
 You are assisting with Azure Infrastructure as Code using Bicep. Follow these guidelines:
 
-## Resource Creation
+Resource Creation
 - Always use modules for reusable components
 - Define parameters for environment-specific values
 - Include tags for resource organization and cost tracking
 - Use semantic naming conventions (e.g., rg-{environment}-{project})
 
-## Safety Guidelines
+Safety Guidelines
 - Require explicit approval before `az deployment group create`
 - Always run `az bicep build --file` to validate syntax
 - Show `az deployment group what-if` before applying changes
 - Never hardcode secrets - use Key Vault references or parameters
 
-## Code Quality
+Code Quality
 - Follow Azure naming conventions
 - Include description metadata for all resources
 - Use output statements for cross-module references
 - Keep modules focused on single responsibility
 ```
 
-## Practical Examples
+Practical Examples
 
-### Deploying a Basic Virtual Network
+Deploying a Basic Virtual Network
 
 Here's how Claude Code can help you create a virtual network with subnets:
 
@@ -135,7 +135,7 @@ output appSubnetId string = subnetApp.id
 
 When working with Claude Code, you can describe your requirements conversationally and let it generate the appropriate Bicep syntax, then explain the structure and any Azure-specific considerations.
 
-### Creating Reusable Modules
+Creating Reusable Modules
 
 Build modular infrastructure that scales across environments:
 
@@ -176,23 +176,23 @@ module storage 'modules/storage.bicep' = {
 }
 ```
 
-## Deployment Workflow Best Practices
+Deployment Workflow Best Practices
 
-### Validate Before Deployment
+Validate Before Deployment
 
 Always validate Bicep files before attempting deployment:
 
 ```bash
-# Syntax validation
+Syntax validation
 az bicep build --file main.bicep
 
-# What-if analysis (preview changes)
+What-if analysis (preview changes)
 az deployment group what-if --resource-group my-rg --template-file main.bicep
 ```
 
 Claude Code can automate this validation step, running checks before presenting changes for approval and alerting you to potential issues like resource name conflicts or permission problems.
 
-### Environment-Specific Parameters
+Environment-Specific Parameters
 
 Use parameter files for environment-specific values:
 
@@ -208,7 +208,7 @@ param aksClusterConfig = {
 
 This separation allows the same Bicep code to deploy to development, staging, and production with appropriate configurations.
 
-### State Management
+State Management
 
 For production deployments, use remote state storage:
 
@@ -225,21 +225,21 @@ terraform {
 
 While this example shows Terraform, Bicep handles state natively through Azure Resource Manager, which tracks deployment history automatically.
 
-## Actionable Advice
+Actionable Advice
 
-**Start Small**: Begin with a single resource type (like storage accounts or virtual networks) and expand gradually. This lets you validate your workflow before handling complex architectures.
+Start Small: Begin with a single resource type (like storage accounts or virtual networks) and expand gradually. This lets you validate your workflow before handling complex architectures.
 
-**Implement Guardrails**: Configure your Claude Code workflow to require specific checks before deployment. This includes mandatory what-if analysis, tag validation, and approval gates for production environments.
+Implement Guardrails: Configure your Claude Code workflow to require specific checks before deployment. This includes mandatory what-if analysis, tag validation, and approval gates for production environments.
 
-**Use Azure Policy Integration**: Incorporate Azure Policy compliance checks into your workflow. Claude Code can help you generate policy-compliant resource definitions and identify non-compliant resources.
+Use Azure Policy Integration: Incorporate Azure Policy compliance checks into your workflow. Claude Code can help you generate policy-compliant resource definitions and identify non-compliant resources.
 
-**Establish Naming Conventions**: Define and enforce consistent naming across your infrastructure. Create a naming module that generates compliant resource names based on environment and project identifiers.
+Establish Naming Conventions: Define and enforce consistent naming across your infrastructure. Create a naming module that generates compliant resource names based on environment and project identifiers.
 
-**Document Your Modules**: Every module should include clear parameter descriptions and output documentation. This helps team members understand what each component does without diving into implementation details.
+Document Your Modules: Every module should include clear parameter descriptions and output documentation. This helps team members understand what each component does without diving into implementation details.
 
-**Implement Deployment Pipelines**: Combine Claude Code with CI/CD systems like Azure DevOps or GitHub Actions for automated, auditable deployments with approval workflows.
+Implement Deployment Pipelines: Combine Claude Code with CI/CD systems like Azure DevOps or GitHub Actions for automated, auditable deployments with approval workflows.
 
-## Conclusion
+Conclusion
 
 Integrating Claude Code with Bicep transforms Azure infrastructure management from manual template crafting to intelligent, assisted development. The workflow patterns outlined in this guide provide a foundation for scalable, maintainable IaC practices that improve team productivity and reduce deployment errors.
 
@@ -247,10 +247,10 @@ Start by establishing clear guidelines in your CLAUDE.md, create reusable module
 
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

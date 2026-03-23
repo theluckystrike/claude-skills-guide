@@ -13,26 +13,26 @@ score: 7
 ---
 
 
-# Setting Up Claude Code Approved Tools List for Enterprise
+Setting Up Claude Code Approved Tools List for Enterprise
 
 Enterprise development environments require careful control over which tools AI assistants can access. Claude Code's approved tools list feature enables security teams to define exactly which capabilities developers can use while working with AI-assisted coding. This guide walks through setting up and managing tool restrictions for enterprise deployments.
 
-## Understanding Approved Tools Lists
+Understanding Approved Tools Lists
 
 The approved tools list is a security configuration that restricts which tools Claude Code can access during a session. In enterprise environments, this serves multiple purposes:
 
-- **Security compliance**: Prevent sensitive data exposure through unauthorized file access
-- **Environment isolation**: Limit tool access to approved development environments
-- **Audit requirements**: Maintain clear boundaries around AI-assisted operations
-- **Risk management**: Reduce the attack surface of AI coding assistants
+- Security compliance: Prevent sensitive data exposure through unauthorized file access
+- Environment isolation: Limit tool access to approved development environments
+- Audit requirements: Maintain clear boundaries around AI-assisted operations
+- Risk management: Reduce the attack surface of AI coding assistants
 
 When you configure an approved tools list, Claude Code will only use tools explicitly included in your configuration. Any attempt to use a non-approved tool will be blocked, and the model will either request approval or work around the limitation.
 
-## Configuring Tool Restrictions
+Configuring Tool Restrictions
 
 Claude Code supports tool restrictions through configuration files and environment variables. The primary method uses a JSON configuration file that lists approved tools.
 
-### Basic Configuration Structure
+Basic Configuration Structure
 
 Create a configuration file named `claude-tools.json` in your project's configuration directory:
 
@@ -59,15 +59,15 @@ Create a configuration file named `claude-tools.json` in your project's configur
 
 This configuration explicitly allows core file operation tools while blocking potentially risky operations. The `strictMode` flag ensures that any tool not explicitly approved is automatically denied.
 
-### Environment-Based Configuration
+Environment-Based Configuration
 
 For enterprise deployments, use environment variables to manage tool restrictions across different environments:
 
 ```bash
-# Development environment - more permissive
+Development environment - more permissive
 export CLAUDE_TOOLS_CONFIG="./config/claude-tools-dev.json"
 
-# Production environment - stricter controls
+Production environment - stricter controls
 export CLAUDE_TOOLS_CONFIG="./config/claude-tools-prod.json"
 ```
 
@@ -92,11 +92,11 @@ Create environment-specific configurations to match your deployment workflows:
 }
 ```
 
-## Implementing Per-Project Tool Policies
+Implementing Per-Project Tool Policies
 
 Enterprise teams often need different tool access levels for different projects. Claude Code supports project-level configurations that override global settings.
 
-### Project-Specific Configuration
+Project-Specific Configuration
 
 Add a `claude` section to your project's `.claude/settings.json`:
 
@@ -114,7 +114,7 @@ Add a `claude` section to your project's `.claude/settings.json`:
 
 The `requireApproval` field adds an extra layer of control by prompting for confirmation before executing specific tools. This is particularly useful for shell commands that could modify the system.
 
-### Skill-Based Tool Restrictions
+Skill-Based Tool Restrictions
 
 For skills that require specific tool access, define tool requirements in the skill's front matter:
 
@@ -127,16 +127,16 @@ description: "Review code for security vulnerabilities"
 
 This approach ensures that skills only have access to the minimum tools necessary for their purpose, following the principle of least privilege.
 
-## Enterprise Integration Patterns
+Enterprise Integration Patterns
 
 Large organizations typically integrate tool restrictions with their existing security infrastructure. Here are common patterns for enterprise deployments.
 
-### Integration with Directory Services
+Integration with Directory Services
 
 Sync approved tools lists with your organization's directory service:
 
 ```bash
-# Fetch tool configuration from enterprise config
+Fetch tool configuration from enterprise config
 curl -H "Authorization: Bearer $ENTERPRISE_TOKEN" \
   "https://config.enterprise.com/claude-tools" \
   > claude-tools.json
@@ -144,7 +144,7 @@ curl -H "Authorization: Bearer $ENTERPRISE_TOKEN" \
 
 This approach ensures consistent tool policies across all developers and automatically applies updates when security requirements change.
 
-### Audit Logging Configuration
+Audit Logging Configuration
 
 Enterprise environments require comprehensive audit trails. Configure logging for all tool operations:
 
@@ -166,25 +166,25 @@ Enterprise environments require comprehensive audit trails. Configure logging fo
 
 The `redactPatterns` field automatically removes sensitive information from logs, maintaining security while preserving operational visibility.
 
-### Multi-Team Tool Policies
+Multi-Team Tool Policies
 
 Larger organizations may need different policies for different teams. Use hierarchical configurations:
 
 ```
 config/
-├── claude-tools-base.json      # Default restrictions
-├── claude-tools-security.json # Security team - full access
-├── claude-tools-devops.json   # DevOps - infrastructure tools
-└── claude-tools-qa.json       # QA - testing tools only
+ claude-tools-base.json      # Default restrictions
+ claude-tools-security.json # Security team - full access
+ claude-tools-devops.json   # DevOps - infrastructure tools
+ claude-tools-qa.json       # QA - testing tools only
 ```
 
 Apply team-specific configurations using environment selection or directory-based defaults.
 
-## Best Practices for Enterprise Tool Lists
+Best Practices for Enterprise Tool Lists
 
 Following these practices ensures your tool restriction strategy remains effective as your organization evolves.
 
-### Start Restrictive, Expand Carefully
+Start Restrictive, Expand Carefully
 
 Begin with minimal tool access and gradually add tools as your team proves its needs. This approach prevents accidental over-permissioning:
 
@@ -197,7 +197,7 @@ Begin with minimal tool access and gradually add tools as your team proves its n
 
 As developers demonstrate legitimate use cases, update the configuration through your established change management process.
 
-### Regular Policy Reviews
+Regular Policy Reviews
 
 Schedule quarterly reviews of approved tools lists to ensure configurations remain aligned with current requirements:
 
@@ -206,76 +206,76 @@ Schedule quarterly reviews of approved tools lists to ensure configurations rema
 - Update blocking rules based on emerging threats
 - Document any configuration changes
 
-### Document Exceptions
+Document Exceptions
 
 Create a clear process for requesting tool access exceptions:
 
 ```markdown
-## Tool Access Exception Request
+Tool Access Exception Request
 
-**Requested Tool**: [Tool Name]
-**Justification**: [Business need]
-**Duration**: [Temporary/Permanent]
-**Approved By**: [Security contact]
+Requested Tool: [Tool Name]
+Justification: [Business need]
+Duration: [Temporary/Permanent]
+Approved By: [Security contact]
 ```
 
 This documentation ensures visibility into why certain tools are accessible and maintains accountability.
 
-### Test Configurations Before Deployment
+Test Configurations Before Deployment
 
 Before rolling out new tool restrictions, test them in a controlled environment:
 
 ```bash
-# Validate configuration syntax
+Validate configuration syntax
 claude --print "Validate the tool configuration in claude-tools.json"
 
-# Test with restricted allowedTools before deploying
+Test with restricted allowedTools before deploying
 claude --allowedTools "Read,Edit" --print "Test task with restricted tools"
 ```
 
 This prevents configuration errors that could block legitimate development work.
 
-## Troubleshooting Common Issues
+Troubleshooting Common Issues
 
 When tool restrictions don't work as expected, these solutions address frequent problems.
 
-### Tool Silently Denied
+Tool Silently Denied
 
 If Claude Code appears to ignore tool restrictions, verify the configuration is being loaded:
 
 ```bash
-# Check which config is active
+Check which config is active
 claude config show
 
-# Validate JSON syntax
+Validate JSON syntax
 cat claude-tools.json | python3 -m json.tool
 ```
 
 Configuration loading failures often stem from syntax errors or incorrect file paths.
 
-### Overly Restrictive Policies
+Overly Restrictive Policies
 
-When tool restrictions prevent legitimate work, the model may struggle to complete tasks. Review Claude Code's feedback—it typically indicates which tools would help but are blocked. Use this information to make informed policy adjustments.
+When tool restrictions prevent legitimate work, the model may struggle to complete tasks. Review Claude Code's feedback, it typically indicates which tools would help but are blocked. Use this information to make informed policy adjustments.
 
-### Conflicts Between Global and Project Settings
+Conflicts Between Global and Project Settings
 
 Project-level configurations should override global settings. If you encounter unexpected behavior, check for conflicting files:
 
 ```bash
-# Find all potential configurations
+Find all potential configurations
 find . -name "claude*.json" -o -name ".claude"
 ```
 
-## Conclusion
+Conclusion
 
 Implementing an approved tools list for Claude Code in enterprise environments requires balancing security requirements with developer productivity. Start with restrictive configurations, establish clear processes for policy changes, and maintain comprehensive audit logs. Regularly review and update your tool policies to ensure they evolve with your organization's needs while maintaining the security posture your enterprise requires.
 
 By following these patterns, security teams can confidently deploy Claude Code across their organization, knowing that tool access aligns with established policies and compliance requirements.
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

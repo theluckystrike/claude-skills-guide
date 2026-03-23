@@ -14,23 +14,23 @@ tags: [claude-code, claude-skills]
 
 
 {% raw %}
-# Chrome Extension Broken Link Finder: A Developer Guide
+Chrome Extension Broken Link Finder: A Developer Guide
 
 A broken link checker built as a Chrome extension provides real-time link validation directly in the browser. Unlike standalone crawling tools that require separate processes, a browser-based solution can validate links as you browse, check links before you share them, and maintain a persistent history of link health across sessions.
 
 This guide walks through building a broken link finder extension from scratch, covering the core architecture, implementation patterns, and practical code examples you can adapt for your own projects.
 
-## Core Architecture
+Core Architecture
 
 A broken link finder extension operates across three main components:
 
-1. **Content script** — Scans the page for links and extracts URLs
-2. **Background worker** — Handles the actual HTTP requests and manages rate limiting
-3. **Popup interface** — Displays results and provides controls for the user
+1. Content script. Scans the page for links and extracts URLs
+2. Background worker. Handles the actual HTTP requests and manages rate limiting
+3. Popup interface. Displays results and provides controls for the user
 
 The separation keeps the UI responsive even when checking many links simultaneously. The background worker also persists across page navigations, allowing cached results to display immediately.
 
-## Setting Up the Manifest
+Setting Up the Manifest
 
 Every Chrome extension starts with a manifest file. For a broken link finder, you need Manifest V3 with specific permissions:
 
@@ -62,9 +62,9 @@ Every Chrome extension starts with a manifest file. For a broken link finder, yo
 }
 ```
 
-The `host_permissions` with `<all_urls>` is essential—it allows your extension to make requests to any website to check link status. Without this, CORS policies block your HTTP requests.
+The `host_permissions` with `<all_urls>` is essential, it allows your extension to make requests to any website to check link status. Without this, CORS policies block your HTTP requests.
 
-## Content Script Implementation
+Content Script Implementation
 
 The content script runs on the current page and extracts all links. Here's a practical implementation:
 
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 This script normalizes URLs by removing fragments and filtering out non-HTTP links. Using a Set removes duplicate links efficiently.
 
-## Background Worker for Link Checking
+Background Worker for Link Checking
 
 The background worker handles the actual HTTP requests. It uses a queue system to avoid overwhelming target servers:
 
@@ -212,7 +212,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 This implementation includes several important features: caching to avoid re-checking links, rate limiting to respect server resources, timeout handling for slow responses, and parallel checking with proper result ordering.
 
-## Building the Popup Interface
+Building the Popup Interface
 
 The popup displays results and provides controls for users:
 
@@ -329,7 +329,7 @@ The popup displays results and provides controls for users:
 </html>
 ```
 
-## Popup Logic
+Popup Logic
 
 The popup script coordinates between the user interface and the background worker:
 
@@ -399,28 +399,28 @@ function displayResults(results) {
 }
 ```
 
-## Advanced Features to Consider
+Advanced Features to Consider
 
 Once the basic implementation works, consider adding these power user features:
 
-**Selective checking** — Allow users to check only external links or only links within a specific domain.
+Selective checking. Allow users to check only external links or only links within a specific domain.
 
-**Export functionality** — Generate CSV or JSON reports of broken links for documentation.
+Export functionality. Generate CSV or JSON reports of broken links for documentation.
 
-**Scheduled checks** — Re-check previously visited pages automatically and notify users of newly broken links.
+Scheduled checks. Re-check previously visited pages automatically and notify users of newly broken links.
 
-**Custom headers** — Handle authentication-required links or respect custom server configurations.
+Custom headers. Handle authentication-required links or respect custom server configurations.
 
-## Performance Optimizations
+Performance Optimizations
 
 For pages with hundreds of links, optimize your extension with these patterns:
 
-1. **Chunk processing** — Check links in batches of 10-20 to keep the UI responsive
-2. **Progressive rendering** — Display results as they come in rather than waiting for all
-3. **Connection pooling** — Reuse HTTP connections where possible
-4. **Priority queue** — Check visible links first, defer off-screen links
+1. Chunk processing. Check links in batches of 10-20 to keep the UI responsive
+2. Progressive rendering. Display results as they come in rather than waiting for all
+3. Connection pooling. Reuse HTTP connections where possible
+4. Priority queue. Check visible links first, defer off-screen links
 
-## Testing Your Extension
+Testing Your Extension
 
 Load your extension in Chrome by navigating to `chrome://extensions/`, enabling Developer mode, and clicking "Load unpacked". Test thoroughly:
 
@@ -431,20 +431,20 @@ Load your extension in Chrome by navigating to `chrome://extensions/`, enabling 
 - Non-standard HTTP ports
 - International domain names
 
-## Conclusion
+Conclusion
 
-Building a broken link finder Chrome extension combines browser extension APIs with practical HTTP handling patterns. The core implementation is straightforward—scan links, validate with HEAD requests, display results—but production-ready extensions require attention to caching, rate limiting, and error handling.
+Building a broken link finder Chrome extension combines browser extension APIs with practical HTTP handling patterns. The core implementation is straightforward, scan links, validate with HEAD requests, display results, but production-ready extensions require attention to caching, rate limiting, and error handling.
 
 Start with the basic architecture shown here, then add features based on your specific use case. Whether you're building for personal use or as a product, the patterns established here provide a solid foundation.
 
 ---
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

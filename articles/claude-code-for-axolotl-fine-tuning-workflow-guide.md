@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code for Axolotl Fine-Tuning Workflow Guide"
-description: "Learn how to leverage Claude Code to streamline your Axolotl fine-tuning workflow, from dataset preparation to model training and evaluation."
+description: "Learn how to use Claude Code to streamline your Axolotl fine-tuning workflow, from dataset preparation to model training and evaluation."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-axolotl-fine-tuning-workflow-guide/
@@ -14,26 +14,26 @@ score: 8
 
 
 {% raw %}
-# Claude Code for Axolotl Fine-Tuning Workflow Guide
+Claude Code for Axolotl Fine-Tuning Workflow Guide
 
 Fine-tuning large language models doesn't have to be a fragmented process of switching between scripts, configuration files, and documentation. By integrating Claude Code into your Axolotl workflow, you can automate repetitive tasks, validate configurations before training, and maintain clear documentation throughout the process. This guide walks you through practical strategies for using Claude Code as your AI-assisted fine-tuning companion.
 
-## Understanding the Axolotl Workflow
+Understanding the Axolotl Workflow
 
 Axolotl provides a streamlined approach to fine-tuning open-source language models, but the workflow involves several distinct phases that can benefit from automation and intelligent assistance:
 
-1. **Dataset Preparation** - Formatting your training data correctly
-2. **Configuration Setup** - Creating and validating YAML config files
-3. **Training Execution** - Running the fine-tuning process
-4. **Model Evaluation** - Assessing output quality and making adjustments
+1. Dataset Preparation - Formatting your training data correctly
+2. Configuration Setup - Creating and validating YAML config files
+3. Training Execution - Running the fine-tuning process
+4. Model Evaluation - Assessing output quality and making adjustments
 
 Each phase presents opportunities for Claude Code to reduce manual effort and prevent common errors.
 
-## Dataset Preparation with Claude Code
+Dataset Preparation with Claude Code
 
 The foundation of successful fine-tuning lies in well-prepared datasets. Claude Code can help you transform raw data into Axolotl-compatible formats, whether you're working with JSON, JSONL, or specialized formats.
 
-### Converting Raw Data to Training Format
+Converting Raw Data to Training Format
 
 When you have raw conversation data or document collections, Claude Code can generate conversion scripts or directly transform the data:
 
@@ -67,7 +67,7 @@ def convert_to_axolotl_format(input_file, output_file, format_type="chat"):
 
 Claude Code can generate this transformation logic based on your specific data structure, then execute the conversion, validate the output, and even perform quality checks like detecting empty responses or mismatched message counts.
 
-### Dataset Validation
+Dataset Validation
 
 Before training, validate your dataset programmatically:
 
@@ -93,22 +93,22 @@ def validate_dataset(path):
             print(f'  - {issue}')
         sys.exit(1)
     else:
-        print(f'✓ Validated {len(data)} training examples')
+        print(f' Validated {len(data)} training examples')
 
 validate_dataset('dataset.jsonl')
 "
 ```
 
-## Configuration Validation and Generation
+Configuration Validation and Generation
 
 Axolotl's YAML configuration files are powerful but can be finicky. Claude Code excels at both generating these configurations and validating them before training begins.
 
-### Generating Base Configurations
+Generating Base Configurations
 
 Describe your target model and hardware setup to Claude Code, and it can generate a starter configuration:
 
 ```yaml
-# Example Axolotl configuration structure
+Example Axolotl configuration structure
 base_model: meta-llama/Llama-3.1-8B-Instruct
 model_type: LlamaForCausalLM
 tokenizer_type: LlamaTokenizer
@@ -141,56 +141,56 @@ optimizer: paged_adamw_32bit
 logging_steps: 10
 ```
 
-### Pre-Training Validation Checklist
+Pre-Training Validation Checklist
 
 Before executing training, create a validation workflow:
 
 ```bash
-# Validate configuration syntax
+Validate configuration syntax
 python -c "import yaml; yaml.safe_load(open('config.yaml'))"
-echo "✓ YAML syntax valid"
+echo " YAML syntax valid"
 
-# Verify dataset exists and is readable
+Verify dataset exists and is readable
 python -c "import json; json.load(open('dataset.jsonl'))"
-echo "✓ Dataset readable"
+echo " Dataset readable"
 
-# Check GPU availability
+Check GPU availability
 nvidia-smi --query-gpu=name,memory.total --format=csv,noheader
-echo "✓ GPU available"
+echo " GPU available"
 
-# Confirm output directory is writable
+Confirm output directory is writable
 touch ./outputs/test_write && rm ./outputs/test_write
-echo "✓ Output directory writable"
+echo " Output directory writable"
 ```
 
 Claude Code can wrap all these checks into a single validation command, catching configuration errors before you waste hours on a failed training run.
 
-## Training Execution and Monitoring
+Training Execution and Monitoring
 
 Once your dataset and configuration are ready, Claude Code can assist with execution and real-time monitoring.
 
-### Training Command Generation
+Training Command Generation
 
 Based on your hardware and model, Claude Code can generate the appropriate accelerate command:
 
 ```bash
-# Single GPU training
+Single GPU training
 accelerate launch -m axolotl train config.yaml
 
-# Multi-GPU with DeepSpeed
+Multi-GPU with DeepSpeed
 accelerate launch --config_file configs/deepspeed.yaml -m axolotl train config.yaml
 
-# Multi-GPU with FSDP
+Multi-GPU with FSDP
 accelerate launch --config_file configs/fsdp.yaml -m axolotl train config.yaml
 ```
 
-### Monitoring Progress
+Monitoring Progress
 
 Create a monitoring script that Claude Code can execute during training:
 
 ```bash
 #!/bin/bash
-# Monitor training progress
+Monitor training progress
 
 LOG_FILE="logs/training.log"
 
@@ -206,17 +206,17 @@ echo "=== Latest Checkpoint ==="
 ls -t ./outputs/*/ | head -1
 ```
 
-## Iterative Refinement Workflow
+Iterative Refinement Workflow
 
 Fine-tuning is rarely a single-pass process. Claude Code helps you establish an iterative workflow:
 
-1. **Initial Training** - Run with base configuration
-2. **Evaluate Outputs** - Generate test predictions and review
-3. **Identify Gaps** - Pinpoint where the model struggles
-4. **Augment Data** - Add targeted examples for weak areas
-5. **Retrain** - Continue from checkpoint or restart
+1. Initial Training - Run with base configuration
+2. Evaluate Outputs - Generate test predictions and review
+3. Identify Gaps - Pinpoint where the model struggles
+4. Augment Data - Add targeted examples for weak areas
+5. Retrain - Continue from checkpoint or restart
 
-### Creating Evaluation Sets
+Creating Evaluation Sets
 
 ```python
 def create_eval_set(dataset_path, eval_size=100):
@@ -242,23 +242,23 @@ def create_eval_set(dataset_path, eval_size=100):
     return len(train_data), len(eval_data)
 ```
 
-## Actionable Recommendations
+Actionable Recommendations
 
 To maximize your productivity with Axolotl and Claude Code:
 
-- **Start Simple** - Run a small training (100-200 steps) to validate your entire pipeline before committing to full training
-- **Version Your Data** - Keep your training datasets in version control or clearly labeled by creation date
-- **Document Your Configurations** - Add comments in your YAML files explaining key parameter choices
-- **Use Checkpoints Strategically** - Configure frequent checkpoint saves to enable recovery from crashes
-- **Automate Evaluation** - Create scripts that generate sample outputs after each training run
+- Start Simple - Run a small training (100-200 steps) to validate your entire pipeline before committing to full training
+- Version Your Data - Keep your training datasets in version control or clearly labeled by creation date
+- Document Your Configurations - Add comments in your YAML files explaining key parameter choices
+- Use Checkpoints Strategically - Configure frequent checkpoint saves to enable recovery from crashes
+- Automate Evaluation - Create scripts that generate sample outputs after each training run
 
-By treating Claude Code as an integrated part of your workflow rather than a separate tool, you can move faster while making fewer configuration errors. The key is establishing clear patterns for dataset preparation, configuration validation, and training execution—then letting Claude Code handle the implementation details.
+By treating Claude Code as an integrated part of your workflow rather than a separate tool, you can move faster while making fewer configuration errors. The key is establishing clear patterns for dataset preparation, configuration validation, and training execution, then letting Claude Code handle the implementation details.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

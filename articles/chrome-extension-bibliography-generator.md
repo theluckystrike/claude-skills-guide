@@ -12,22 +12,22 @@ reviewed: true
 score: 8
 ---
 
-Building a Chrome extension for bibliography generation can save researchers, students, and developers hours of tedious citation work. This guide walks you through creating a functional bibliography generator extension, from understanding the core architecture to implementing practical features that integrate seamlessly with Chrome.
+Building a Chrome extension for bibliography generation can save researchers, students, and developers hours of tedious citation work. This guide walks you through creating a functional bibliography generator extension, from understanding the core architecture to implementing practical features that integrate smoothly with Chrome.
 
-## Why Build a Bibliography Generator Extension?
+Why Build a Bibliography Generator Extension?
 
 Manual citation formatting consumes significant time, especially when working across multiple sources and different citation styles (APA, MLA, Chicago, Harvard). A Chrome extension captures page metadata directly from the browser, eliminating the need to manually extract author names, publication dates, titles, and URLs.
 
-For developers, building this extension provides hands-on experience with Chrome's extension APIs, content scripts, and message passing between components. The project combines web scraping, data parsing, and formatting logic—skills transferable to many other extension projects.
+For developers, building this extension provides hands-on experience with Chrome's extension APIs, content scripts, and message passing between components. The project combines web scraping, data parsing, and formatting logic, skills transferable to many other extension projects.
 
-## Core Architecture
+Core Architecture
 
 A bibliography generator extension consists of three primary components:
 
-1. **Manifest file** - Defines permissions and extension structure
-2. **Content script** - Extracts metadata from web pages
-3. **Background script** - Handles formatting and clipboard operations
-4. **Popup UI** - Provides user controls for style selection and output
+1. Manifest file - Defines permissions and extension structure
+2. Content script - Extracts metadata from web pages
+3. Background script - Handles formatting and clipboard operations
+4. Popup UI - Provides user controls for style selection and output
 
 The manifest declares which websites the extension can access and what capabilities it needs:
 
@@ -48,7 +48,7 @@ The manifest declares which websites the extension can access and what capabilit
 }
 ```
 
-## Extracting Metadata from Web Pages
+Extracting Metadata from Web Pages
 
 The content script runs on every page and extracts relevant bibliographic information. Different website structures require different extraction strategies:
 
@@ -114,7 +114,7 @@ chrome.runtime.sendMessage({
 });
 ```
 
-## Citation Style Formatting
+Citation Style Formatting
 
 The background script receives metadata and formats it according to selected citation styles. Here's a formatter implementing APA, MLA, and Chicago styles:
 
@@ -162,7 +162,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 });
 ```
 
-## Building the Popup Interface
+Building the Popup Interface
 
 The popup provides users with style selection and quick actions:
 
@@ -216,7 +216,7 @@ document.getElementById('generateBtn').addEventListener('click', () => {
 });
 ```
 
-## Handling Edge Cases
+Handling Edge Cases
 
 Real-world websites present various challenges. Implement fallback strategies for incomplete metadata:
 
@@ -234,7 +234,7 @@ function normalizeMetadata(raw) {
 
 For pages with no standard metadata, you might implement a fallback that extracts the first heading and uses the page's last-modified date from the server headers.
 
-## Extension Deployment
+Extension Deployment
 
 When your extension is ready, package it for distribution:
 
@@ -244,21 +244,21 @@ When your extension is ready, package it for distribution:
 4. Select your extension directory
 5. Distribute the generated `.crx` file or publish to Chrome Web Store
 
-## Conclusion
+Conclusion
 
-Building a bibliography generator Chrome extension combines practical utility with valuable development experience. The extension architecture—manifest configuration, content scripts, message passing—applies directly to countless other extension projects. Start with the basic implementation above, then expand with features like citation collection management, export to BibTeX or RIS formats, and integration with reference managers like Zotero.
+Building a bibliography generator Chrome extension combines practical utility with valuable development experience. The extension architecture, manifest configuration, content scripts, message passing, applies directly to countless other extension projects. Start with the basic implementation above, then expand with features like citation collection management, export to BibTeX or RIS formats, and integration with reference managers like Zotero.
 
-## Step-by-Step Guide: Capturing a Citation
+Step-by-Step Guide: Capturing a Citation
 
 1. Navigate to any article or web page you want to cite
-2. Click the extension icon — the popup shows auto-detected metadata
+2. Click the extension icon. the popup shows auto-detected metadata
 3. Verify the extracted title, author, and publication date
 4. Select your citation format (APA, MLA, Chicago, IEEE) from the dropdown
-5. Click "Copy Citation" — the formatted string is in your clipboard
+5. Click "Copy Citation". the formatted string is in your clipboard
 
 For pages with poor metadata, the popup shows editable fields so you can correct values before generating the citation.
 
-## Advanced: BibTeX and RIS Export
+Advanced: BibTeX and RIS Export
 
 Academic workflows often require machine-readable formats. Add BibTeX export:
 
@@ -285,7 +285,7 @@ function toRIS(ref) {
 }
 ```
 
-## Comparison with Manual Citation Tools
+Comparison with Manual Citation Tools
 
 | Approach | Speed | Format support | Cost |
 |---|---|---|---|
@@ -293,11 +293,11 @@ function toRIS(ref) {
 | Zotero browser connector | Fast | Excellent | Free |
 | Citation Machine | Moderate (manual) | APA, MLA, Chicago | Freemium |
 
-The extension wins on speed for developers already working in Chrome — you never leave the page you are citing.
+The extension wins on speed for developers already working in Chrome. you never leave the page you are citing.
 
-## Troubleshooting Common Issues
+Troubleshooting Common Issues
 
-**Metadata not extracting correctly**: Build a fallback chain for title extraction:
+Metadata not extracting correctly: Build a fallback chain for title extraction:
 
 ```javascript
 function extractTitle(doc) {
@@ -310,7 +310,7 @@ function extractTitle(doc) {
 }
 ```
 
-**Author field empty for news articles**: Parse JSON-LD structured data as a fallback:
+Author field empty for news articles: Parse JSON-LD structured data as a fallback:
 
 ```javascript
 function extractAuthorFromJSONLD(doc) {
@@ -325,17 +325,17 @@ function extractAuthorFromJSONLD(doc) {
 }
 ```
 
-**Clipboard permission denied**: Trigger copy only from a direct button click handler, not from a timer or async callback outside the user gesture chain.
+Clipboard permission denied: Trigger copy only from a direct button click handler, not from a timer or async callback outside the user gesture chain.
 
-**Publication date off by one day**: Parse dates with `new Date(dateString).toLocaleDateString()` to display the correct local date.
+Publication date off by one day: Parse dates with `new Date(dateString).toLocaleDateString()` to display the correct local date.
 
 Start with the basic implementation, then expand with BibTeX/RIS export and integration with reference managers like Zotero.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

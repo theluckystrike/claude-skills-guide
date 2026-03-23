@@ -16,13 +16,13 @@ score: 7
 
 {% raw %}
 
-# Building Apps with Claude API: Anthropic SDK Python Guide
+Building Apps with Claude API: Anthropic SDK Python Guide
 
 The Anthropic Claude API opens up incredible possibilities for developers who want to integrate advanced AI capabilities into their Python applications. Whether you're building a chatbot, automating content generation, or creating intelligent workflow systems, the Anthropic SDK for Python provides a clean, well-documented interface to use Claude's powerful language model capabilities.
 
 This guide walks you through everything you need to know to start building production-ready applications with the Claude API and Python SDK.
 
-## Setting Up Your Development Environment
+Setting Up Your Development Environment
 
 Before you can start building, you'll need to install the Anthropic SDK and configure your API credentials. The SDK is available via pip and requires Python 3.7 or later.
 
@@ -36,16 +36,16 @@ Once installed, you'll need to set up your API key. The recommended approach is 
 import os
 import anthropic
 
-# Set your API key from environment variable
+Set your API key from environment variable
 os.environ["ANTHROPIC_API_KEY"] = "your-api-key-here"
 
-# Initialize the client
+Initialize the client
 client = anthropic.Anthropic()
 ```
 
 For production applications, consider using a `.env` file with the `python-dotenv` library to manage your credentials securely without hardcoding them in your source code.
 
-## Making Your First API Call
+Making Your First API Call
 
 The fundamental building block of any Claude-powered application is the messages API. Here's how to send a simple request to Claude:
 
@@ -67,7 +67,7 @@ print(response.content[0].text)
 
 The response object contains your generated text along with useful metadata like token usage statistics. You can access these details through `response.usage` to track costs and optimize your prompts.
 
-## Working with Conversation Context
+Working with Conversation Context
 
 Building conversational applications requires maintaining context across multiple exchanges. The messages API supports this naturally through the messages array:
 
@@ -83,7 +83,7 @@ def chat_with_claude(client, conversation_history):
     
     return response.content[0].text
 
-# Example conversation
+Example conversation
 conversation = [
     {"role": "user", "content": "What's the capital of France?"},
     {"role": "assistant", "content": "The capital of France is Paris."},
@@ -95,7 +95,7 @@ reply = chat_with_claude(client, conversation)
 
 This pattern scales well for building chatbots, customer support assistants, and interactive AI applications. Simply maintain your conversation history in a list and append new exchanges as they occur.
 
-## Implementing Function Calling
+Implementing Function Calling
 
 One of the most powerful features of the Claude API is function calling (tool use), which allows Claude to request specific actions from your application. This is essential for building agents that can interact with external systems:
 
@@ -105,7 +105,7 @@ import json
 
 client = Anthropic()
 
-# Define available tools
+Define available tools
 tools = [
     {
         "name": "get_weather",
@@ -123,7 +123,7 @@ tools = [
     }
 ]
 
-# Make a request with tools
+Make a request with tools
 message = client.messages.create(
     model="claude-3-5-sonnet-20241022",
     max_tokens=1024,
@@ -131,7 +131,7 @@ message = client.messages.create(
     tools=tools
 )
 
-# Check if Claude wants to call a tool
+Check if Claude wants to call a tool
 if message.stop_reason == "tool_use":
     for block in message.content:
         if hasattr(block, 'name') and block.name == "get_weather":
@@ -141,7 +141,7 @@ if message.stop_reason == "tool_use":
 
 Function calling transforms Claude from a passive text generator into an active agent that can take meaningful actions in your application.
 
-## Handling Rate Limits and Errors
+Handling Rate Limits and Errors
 
 Production applications must handle API errors gracefully. Implement proper error handling to ensure your application remains reliable:
 
@@ -164,7 +164,7 @@ def robust_api_call(client, prompt, max_retries=3):
             
         except RateLimitError:
             if attempt < max_retries - 1:
-                wait_time = 2 ** attempt
+                wait_time = 2  attempt
                 print(f"Rate limited. Waiting {wait_time}s before retry...")
                 time.sleep(wait_time)
             else:
@@ -180,16 +180,16 @@ def robust_api_call(client, prompt, max_retries=3):
 
 This pattern protects your application from temporary disruptions and ensures a better experience for your users.
 
-## Optimizing for Cost and Performance
+Optimizing for Cost and Performance
 
 When building applications that scale, being mindful of token usage is crucial. Here are practical optimization strategies:
 
-**Prompt Engineering Best Practices:**
+Prompt Engineering Best Practices:
 - Be specific and clear in your instructions
 - Use system prompts to set context and behavioral guidelines
 - Include examples when asking for specific output formats
 
-**Token Management:**
+Token Management:
 ```python
 response = client.messages.create(
     model="claude-3-5-sonnet-20241022",
@@ -198,16 +198,16 @@ response = client.messages.create(
     system="You are a helpful coding assistant that provides concise answers."
 )
 
-# Check token usage
+Check token usage
 print(f"Input tokens: {response.usage.input_tokens}")
 print(f"Output tokens: {response.usage.output_tokens}")
 ```
 
 Consider using the `haiku` model for simpler tasks where speed and cost are priorities, reserving `sonnet` or `opus` for complex reasoning tasks.
 
-## Building a Complete Example: AI-Powered Task Manager
+Building a Complete Example: AI-Powered Task Manager
 
-Here's a practical example that combines these concepts into a useful application—an AI-powered task manager that helps prioritize and break down tasks:
+Here's a practical example that combines these concepts into a useful application, an AI-powered task manager that helps prioritize and break down tasks:
 
 ```python
 import anthropic
@@ -238,7 +238,7 @@ Respond with a numbered list of the tasks in optimal order, with brief explanati
         
         return response.content[0].text
 
-# Usage
+Usage
 assistant = TaskAssistant(api_key="your-api-key")
 assistant.add_task("Write unit tests for authentication")
 assistant.add_task("Fix login bug reported by user")
@@ -249,7 +249,7 @@ prioritized = assistant.prioritize_tasks()
 print(prioritized)
 ```
 
-## Conclusion
+Conclusion
 
 Building applications with the Claude API and Anthropic SDK for Python is straightforward once you understand the core concepts: the messages API for generating responses, conversation history for context, function calling for tool use, and proper error handling for production reliability.
 
@@ -259,10 +259,10 @@ Remember to monitor your token usage, implement proper error handling, and take 
 
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

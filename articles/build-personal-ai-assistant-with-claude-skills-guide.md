@@ -13,23 +13,23 @@ permalink: /build-personal-ai-assistant-with-claude-skills-guide/
 
 # Build Personal AI Assistant with Claude Skills Guide
 
-[A personal AI assistant is useful only if it actually knows how you work](/best-claude-code-skills-to-install-first-2026/) — your coding conventions, your preferred tools, your recurring tasks. Generic AI chat gets you halfway there. Claude skills close the gap by letting you encode your personal workflows as reusable, invokable behaviors that persist across every session.
+[A personal AI assistant is useful only if it actually knows how you work](/best-claude-code-skills-to-install-first-2026/). your coding conventions, your preferred tools, your recurring tasks. Generic AI chat gets you halfway there. Claude skills close the gap by letting you encode your personal workflows as reusable, invokable behaviors that persist across every session.
 
 This guide walks through [building a personal AI assistant](/best-claude-code-skills-to-install-first-2026/) tailored to a developer's daily workflow. You will set up persistent memory, create custom skills for your most common tasks, and wire them into a system that feels genuinely assistive rather than just reactive.
 
-## What Makes Claude Skills Different from Plain Prompting
+What Makes Claude Skills Different from Plain Prompting
 
 Before building, understand what skills actually are. [Claude skills are Markdown files stored in `~/.claude/skills/`](/claude-skill-md-format-complete-specification-guide/) When you invoke `/skill-name` inside a Claude Code session, Claude reads that file as part of its context and follows the instructions inside it.
 
 This means skills are:
-- **Persistent**: they do not disappear when you close a session
-- **Composable**: you can invoke multiple skills in sequence
-- **Version-controlled**: they are plain text files you can commit to a dotfiles repo
-- **Shareable**: you can publish them to a skills hub or share with teammates
+- Persistent: they do not disappear when you close a session
+- Composable: you can invoke multiple skills in sequence
+- Version-controlled: they are plain text files you can commit to a dotfiles repo
+- Shareable: you can publish them to a skills hub or share with teammates
 
 [The `supermemory` skill extends this further by storing structured information](/claude-supermemory-skill-persistent-context-explained/) about you, your projects, and your preferences. The `tdd` skill gives you test-driven development guidance on demand. The `pdf` skill handles document generation. The `frontend-design` skill accelerates UI work. These are your building blocks.
 
-## Step 1: Set Up Your Personal Memory Layer
+Step 1: Set Up Your Personal Memory Layer
 
 The foundation of any personal assistant is memory. Without it, every session starts from zero and you repeat context constantly. The `supermemory` skill solves this.
 
@@ -46,7 +46,7 @@ Store my developer profile:
 - OS: macOS, shell: zsh
 - Editor: Neovim with LSP
 - Common project types: REST APIs, CLI tools, automation scripts
-- I prefer concise explanations — skip introductions, get to the answer
+- I prefer concise explanations. skip introductions, get to the answer
 ```
 
 This profile gets recalled automatically when you invoke supermemory at the start of a session. Claude Code then adapts all suggestions to your preferences without you asking.
@@ -63,14 +63,14 @@ Add to my active projects:
 - Deployment: npm package, published to registry
 ```
 
-## Step 2: Create a Morning Briefing Skill
+Step 2: Create a Morning Briefing Skill
 
-A personal assistant should give you an orientation each morning — what is outstanding, what is scheduled, what needs attention. Create a skill for this.
+A personal assistant should give you an orientation each morning. what is outstanding, what is scheduled, what needs attention. Create a skill for this.
 
 Create `~/.claude/skills/morning-brief.md`:
 
 ```markdown
-# morning-brief
+morning-brief
 
 You are a personal productivity assistant. When invoked, help the user start their day with focus.
 
@@ -80,10 +80,10 @@ You are a personal productivity assistant. When invoked, help the user start the
 2. Ask what is on their calendar or task list today
 
 3. Based on their response, produce:
-   - **Yesterday summary**: 2-3 sentences about what was accomplished based on commits
-   - **Today's priorities**: ranked list of 3-5 things to focus on
-   - **Blockers**: anything that looks like it needs resolution before proceeding
-   - **Quick wins**: small tasks that can be done in under 30 minutes
+   - Yesterday summary: 2-3 sentences about what was accomplished based on commits
+   - Today's priorities: ranked list of 3-5 things to focus on
+   - Blockers: anything that looks like it needs resolution before proceeding
+   - Quick wins: small tasks that can be done in under 30 minutes
 
 Be direct and concise. Do not pad the output. Treat the user as a senior developer who needs signal, not noise.
 ```
@@ -96,14 +96,14 @@ Here is my git log: [paste output]
 Today I have a 10am design review and need to ship the recurring invoice feature by Friday.
 ```
 
-## Step 3: Create a Code Review Skill
+Step 3: Create a Code Review Skill
 
 Code review is one of the highest-use tasks you can partially automate. Build a personal review skill tuned to your standards:
 
 Create `~/.claude/skills/my-review.md`:
 
 ```markdown
-# my-review
+my-review
 
 You are a senior code reviewer with the following personal standards:
 - Flag any function longer than 40 lines as a refactor candidate
@@ -115,9 +115,9 @@ You are a senior code reviewer with the following personal standards:
 - Check imports are sorted (standard library first, then third-party, then local)
 
 When reviewing code, provide feedback as a numbered list sorted by severity:
-1. CRITICAL — must fix before merge
-2. IMPORTANT — should fix
-3. SUGGESTION — optional improvement
+1. CRITICAL. must fix before merge
+2. IMPORTANT. should fix
+3. SUGGESTION. optional improvement
 
 Be terse. Skip praise. Focus on what needs to change.
 ```
@@ -130,14 +130,14 @@ Review this diff before I commit:
 [paste git diff output]
 ```
 
-## Step 4: Build a Daily Task Automation Skill
+Step 4: Build a Daily Task Automation Skill
 
-For recurring tasks — writing commit messages, generating changelogs, summarizing PRs — create dedicated skills so you never have to re-explain context.
+For recurring tasks. writing commit messages, generating changelogs, summarizing PRs. create dedicated skills so you never have to re-explain context.
 
-**Commit message generator** — `~/.claude/skills/commit-msg.md`:
+Commit message generator. `~/.claude/skills/commit-msg.md`:
 
 ```markdown
-# commit-msg
+commit-msg
 
 Generate a conventional commit message for the provided diff.
 
@@ -152,33 +152,33 @@ Types: feat, fix, docs, style, refactor, test, chore
 Return only the commit message. No explanation needed.
 ```
 
-**Changelog entry generator** — `~/.claude/skills/changelog.md`:
+Changelog entry generator. `~/.claude/skills/changelog.md`:
 
 ```markdown
-# changelog
+changelog
 
 Generate a changelog entry for the provided commits.
 
 Format:
-## [version] — YYYY-MM-DD
+[version]. YYYY-MM-DD
 
-### Added
+Added
 - [new features]
 
-### Changed
+Changed
 - [modifications to existing behavior]
 
-### Fixed
+Fixed
 - [bug fixes]
 
-### Removed
+Removed
 - [deprecated or removed features]
 
 Base the entry on the commit messages provided. Keep each line under 100 characters.
 Write for a technical audience. Skip internal refactors unless they affect behavior.
 ```
 
-## Step 5: Wire Skills with Supermemory for Long-Term Context
+Step 5: Wire Skills with Supermemory for Long-Term Context
 
 The real power comes from combining skills with persistent memory. When starting any new coding session:
 
@@ -207,12 +207,12 @@ Retrieve it months later when you forget why you made that choice:
 What was my rationale for using SQLite in invoice-cli?
 ```
 
-## Step 6: Store Your Skill Library in Dotfiles
+Step 6: Store Your Skill Library in Dotfiles
 
 Skills are just text files. Back them up and version-control them with your dotfiles:
 
 ```bash
-# Add skills to your dotfiles repo
+Add skills to your dotfiles repo
 mkdir -p ~/dotfiles/claude/skills
 ln -s ~/dotfiles/claude/skills ~/.claude/skills
 
@@ -224,23 +224,23 @@ git push
 
 When you set up a new machine, restoring your entire personal assistant takes one `git clone` and one symlink.
 
-## Building the Habit
+Building the Habit
 
 A personal assistant is only as useful as how consistently you use it. Suggested daily routine:
 
-- **Morning**: `/morning-brief` with yesterday's git log and today's task list
-- **Before commit**: `/my-review` on your diff, then `/commit-msg` to generate the message
-- **After significant changes**: `/supermemory` to store any new architectural decisions
-- **Weekly**: generate a changelog with `/changelog` from the week's commits
+- Morning: `/morning-brief` with yesterday's git log and today's task list
+- Before commit: `/my-review` on your diff, then `/commit-msg` to generate the message
+- After significant changes: `/supermemory` to store any new architectural decisions
+- Weekly: generate a changelog with `/changelog` from the week's commits
 
 Over two to three weeks, the system accumulates enough context that Claude Code starts feeling like it genuinely knows your codebase and preferences. The `supermemory` layer means you stop repeating yourself. The custom skills mean common tasks take seconds instead of minutes.
 
 ---
 
-## Related Reading
+Related Reading
 
-- [Claude Skills Automated Blog Post Workflow Tutorial](/claude-skills-automated-blog-post-workflow-tutorial/) — Apply skills to content creation
-- [Full Stack Web App with Claude Skills Step by Step](/full-stack-web-app-with-claude-skills-step-by-step/) — Skills across the full development lifecycle
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Full developer skill stack reference
+- [Claude Skills Automated Blog Post Workflow Tutorial](/claude-skills-automated-blog-post-workflow-tutorial/). Apply skills to content creation
+- [Full Stack Web App with Claude Skills Step by Step](/full-stack-web-app-with-claude-skills-step-by-step/). Skills across the full development lifecycle
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Full developer skill stack reference
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

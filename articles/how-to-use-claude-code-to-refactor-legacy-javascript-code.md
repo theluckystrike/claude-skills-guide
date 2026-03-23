@@ -17,14 +17,14 @@ Legacy JavaScript codebases often accumulate technical debt over years of develo
 
 This guide walks through practical techniques for refactoring legacy JavaScript using Claude Code, focusing on real-world strategies you can apply to your projects immediately.
 
-## Setting Up Claude Code for JavaScript Refactoring
+Setting Up Claude Code for JavaScript Refactoring
 
 Before diving into refactoring, ensure Claude Code is configured with the right skills. The most useful skills for JavaScript refactoring include:
 
-- **[tdd](/claude-tdd-skill-test-driven-development-workflow/)** — Helps write tests before making changes, ensuring your refactoring doesn't break functionality
-- **frontend-design** — Assists with component-based refactoring and modern UI patterns
-- **xlsx** — Useful when analyzing code metrics or generating refactoring reports
-- **[supermemory](/claude-supermemory-skill-persistent-context-explained/)** — Remembers context across sessions, helpful for large refactoring projects
+- [tdd](/claude-tdd-skill-test-driven-development-workflow/). Helps write tests before making changes, ensuring your refactoring doesn't break functionality
+- frontend-design. Assists with component-based refactoring and modern UI patterns
+- xlsx. Useful when analyzing code metrics or generating refactoring reports
+- [supermemory](/claude-supermemory-skill-persistent-context-explained/). Remembers context across sessions, helpful for large refactoring projects
 
 Initialize your session by activating the TDD skill:
 
@@ -34,13 +34,13 @@ Initialize your session by activating the TDD skill:
 
 This enables test-first thinking throughout your refactoring process, protecting you from introducing regressions.
 
-## Analyzing Your Legacy Codebase
+Analyzing Your Legacy Codebase
 
 The first step in any refactoring project is understanding what you're working with. Claude Code can analyze your JavaScript files and identify problematic patterns. Here's how to approach this:
 
-1. **Upload or reference your files** — Point Claude to the files needing refactoring
-2. **Request a code audit** — Ask Claude to identify anti-patterns, global variables, and complex functions
-3. **Generate a refactoring plan** — Work with Claude to prioritize changes based on risk and impact
+1. Upload or reference your files. Point Claude to the files needing refactoring
+2. Request a code audit. Ask Claude to identify anti-patterns, global variables, and complex functions
+3. Generate a refactoring plan. Work with Claude to prioritize changes based on risk and impact
 
 For example, you might ask:
 
@@ -69,7 +69,7 @@ function processUserData(users, callback) {
 }
 ```
 
-## Converting Callbacks to Modern Async Patterns
+Converting Callbacks to Modern Async Patterns
 
 One of the most impactful refactoring tasks is converting callback-based code to modern async/await syntax. This transformation dramatically improves readability and error handling.
 
@@ -93,7 +93,7 @@ async function processUserData(users) {
 
 The refactored version eliminates callback nesting, uses const/let instead of var, and returns a promise that callers can await directly.
 
-## Modernizing Variable Declarations
+Modernizing Variable Declarations
 
 Legacy JavaScript frequently uses `var` declarations, which have problematic scoping rules. Claude can systematically convert var to const and let:
 
@@ -123,7 +123,7 @@ function calculateTotal(items) {
 }
 ```
 
-## Component-Based Refactoring with Frontend-Design Skill
+Component-Based Refactoring with Frontend-Design Skill
 
 For frontend JavaScript, the frontend-design skill helps restructure spaghetti code into clean component architectures. This skill understands React, Vue, and other modern frameworks.
 
@@ -137,7 +137,7 @@ Ask Claude to help with this transformation:
 
 > "Convert this jQuery code to a functional React component using hooks. Show the refactored component with appropriate state management."
 
-## Adding Tests with TDD Skill
+Adding Tests with TDD Skill
 
 The [tdd skill](/claude-tdd-skill-test-driven-development-workflow/) becomes essential when refactoring code that lacks test coverage. Before changing any function, use the skill to generate tests that verify current behavior:
 
@@ -148,14 +148,14 @@ Write tests for the processUserData function that cover: active user filtering, 
 
 Claude will generate comprehensive tests that capture the function's current behavior. After refactoring, these tests ensure the new implementation produces identical results.
 
-## Documenting Changes with PDF and Documentation Skills
+Documenting Changes with PDF and Documentation Skills
 
 Large refactoring projects benefit from documentation. The pdf skill can generate refactoring reports, while proper documentation within the codebase helps future maintainers understand changes.
 
 Use inline comments to explain refactoring decisions:
 
 ```javascript
-/**
+/
  * Refactored March 2026: Converted from callback hell to async/await.
  * Previously processUserData() accepted a callback parameter.
  * Now returns a Promise that resolves with processed users.
@@ -167,7 +167,7 @@ async function processUserData(users) {
 }
 ```
 
-## Generating Refactoring Reports with XLSX Skill
+Generating Refactoring Reports with XLSX Skill
 
 For larger refactoring projects, tracking progress matters. The xlsx skill can generate spreadsheets documenting:
 
@@ -178,17 +178,17 @@ For larger refactoring projects, tracking progress matters. The xlsx skill can g
 
 This data helps justify refactoring efforts to stakeholders and plan future work.
 
-## Providing Codebase Context for Legacy Projects
+Providing Codebase Context for Legacy Projects
 
 Legacy codebases have implicit conventions that Claude Code cannot infer from code alone. Create a `.claude/codebase-context.md` file that captures your project's constraints so Claude respects them in every interaction:
 
 ```markdown
-## Legacy Patterns to Preserve
+Legacy Patterns to Preserve
 - Use the legacy service layer pattern
 - Keep the old authentication flow unchanged
 - Maintain backward compatibility for API v1 endpoints
 
-## Technology Constraints
+Technology Constraints
 - Node.js version: 14.x (do not upgrade)
 - No TypeScript - plain JavaScript only
 - Use Express 4.x, not Express 5.x
@@ -203,26 +203,26 @@ Do not touch /legacy, /vendor, or configuration files in /config.
 
 For database migrations in legacy projects, enforce safety rules: never modify existing table structures without approval, always create new columns rather than altering existing ones, and back up data before any migration. These constraints prevent the kind of irreversible changes that make legacy refactoring risky.
 
-## Best Practices for Safe Refactoring
+Best Practices for Safe Refactoring
 
-1. **Start with tests** — Use the tdd skill to establish baseline behavior
-2. **Refactor incrementally** — Change one thing at a time, run tests between changes
-3. **Use version control** — Commit frequently so you can roll back if needed
-4. **Measure improvements** — Track metrics like function length, cyclomatic complexity, and test coverage
+1. Start with tests. Use the tdd skill to establish baseline behavior
+2. Refactor incrementally. Change one thing at a time, run tests between changes
+3. Use version control. Commit frequently so you can roll back if needed
+4. Measure improvements. Track metrics like function length, cyclomatic complexity, and test coverage
 
 Claude Code accelerates each of these steps by generating tests, suggesting targeted changes, and explaining the impact of modifications before you apply them.
 
-## Conclusion
+Conclusion
 
-Refactoring legacy JavaScript doesn't have to be a painful manual process. Claude Code, especially when combined with skills like tdd and frontend-design, provides intelligent assistance throughout the journey—from analyzing code and planning changes to writing tests and documenting modifications.
+Refactoring legacy JavaScript doesn't have to be a painful manual process. Claude Code, especially when combined with skills like tdd and frontend-design, provides intelligent assistance throughout the journey, from analyzing code and planning changes to writing tests and documenting modifications.
 
 Start small with low-risk functions, build test coverage using the tdd skill, and progressively tackle more complex refactoring challenges. Your codebase will become more maintainable, easier to test, and better suited for modern JavaScript development practices.
 
 
-## Related Reading
+Related Reading
 
-- [Claude Code Test Driven Refactoring Guide](/claude-code-test-driven-refactoring-guide/) — Master test-driven refactoring workflows for safely improving legacy codebases
-- [Claude Code Jest to Vitest Migration Workflow Tutorial](/claude-code-jest-to-vitest-migration-workflow-tutorial/) — Migrate your legacy test suite from Jest to Vitest
-- [Claude Code Tutorials Hub](/tutorials-hub/) — See also
+- [Claude Code Test Driven Refactoring Guide](/claude-code-test-driven-refactoring-guide/). Master test-driven refactoring workflows for safely improving legacy codebases
+- [Claude Code Jest to Vitest Migration Workflow Tutorial](/claude-code-jest-to-vitest-migration-workflow-tutorial/). Migrate your legacy test suite from Jest to Vitest
+- [Claude Code Tutorials Hub](/tutorials-hub/). See also
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -13,19 +13,19 @@ tags: [claude-code, claude-skills]
 ---
 
 {% raw %}
-# Claude Code Turborepo Remote Caching Setup Workflow Guide
+Claude Code Turborepo Remote Caching Setup Workflow Guide
 
 Turborepo has revolutionized how developers manage monorepos by providing intelligent caching that dramatically speeds up build times. Remote caching takes this a step further by sharing cache artifacts across your team, ensuring everyone benefits from previously completed work. This guide walks you through setting up Turborepo remote caching with Claude Code, creating an efficient workflow that maximizes productivity.
 
-## Understanding Turborepo Remote Caching
+Understanding Turborepo Remote Caching
 
-Before diving into setup, it's important to understand what remote caching accomplishes. When you run a Turborepo pipeline task, it hashes your task inputs—including source files, dependencies, and environment variables—and stores the output in a cache. On subsequent runs, Turborepo can restore these outputs instantly instead of re-executing the task.
+Before diving into setup, it's important to understand what remote caching accomplishes. When you run a Turborepo pipeline task, it hashes your task inputs, including source files, dependencies, and environment variables, and stores the output in a cache. On subsequent runs, Turborepo can restore these outputs instantly instead of re-executing the task.
 
 Remote caching extends this concept beyond your local machine. Instead of each developer's cache living only on their workstation, cached artifacts are stored in a remote location (typically Vercel or a custom remote) and shared across your entire team. This means when one developer completes a build task, every other developer on the team can pull that cached result.
 
 The performance gains are substantial. A typical monorepo with multiple packages might see build times drop from several minutes to seconds when remote caching is properly configured. Tasks like type checking, linting, and test execution become nearly instantaneous for unchanged code.
 
-## Setting Up Remote Caching with Vercel
+Setting Up Remote Caching with Vercel
 
 The simplest way to enable remote caching is through Vercel, which provides free remote caching for all Turborepo projects. If you already use Vercel for deployment, this integration is nearly automatic.
 
@@ -37,7 +37,7 @@ First, ensure your Turborepo is properly configured. Open your `turbo.json` at t
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["dist/**", ".next/**"]
+      "outputs": ["dist/", ".next/"]
     },
     "lint": {
       "outputs": []
@@ -68,7 +68,7 @@ npx vercel link
 
 This creates a `.vercel` directory with your project configuration. Turborepo automatically detects this and configures itself to use Vercel remote caching. When you run `turbo run build`, you'll see cache hits indicated in the output, and subsequent runs will be significantly faster.
 
-## Configuring Remote Caching with GitHub Actions
+Configuring Remote Caching with GitHub Actions
 
 If you prefer not to use Vercel, or need a self-hosted solution, GitHub Actions provides an excellent alternative. Turborepo maintains an official action that handles remote caching through GitHub's cache infrastructure.
 
@@ -119,7 +119,7 @@ This workflow uses the remote cache action to store and retrieve Turborepo artif
 
 You'll need to configure a few repository secrets for this to work properly. Generate a GitHub Personal Access Token with `repo` scope and add it as `GH_TOKEN` in your repository secrets. This allows the action to read and write cache artifacts.
 
-## Integrating Claude Code into Your Caching Workflow
+Integrating Claude Code into Your Caching Workflow
 
 Claude Code can significantly enhance your Turborepo experience by helping you optimize pipelines, debug cache misses, and maintain consistent configurations across your team.
 
@@ -137,23 +137,23 @@ For teams adopting Turborepo, Claude Code can generate starter configurations ta
 Create a Turborepo configuration for a monorepo with a Next.js frontend, a Node.js API, and shared TypeScript utilities. Include pipeline definitions for build, lint, test, and type-check tasks.
 ```
 
-## Troubleshooting Common Remote Caching Issues
+Troubleshooting Common Remote Caching Issues
 
 Even with proper setup, you may encounter caching problems. Here are solutions to the most frequent issues developers face.
 
-**Cache misses on every run**: This typically indicates the task hash changes between runs. Common causes include missing files in your configuration, environment variables that vary, or timestamps in your source code. Review your pipeline dependencies and ensure you're not including unnecessary inputs.
+Cache misses on every run: This typically indicates the task hash changes between runs. Common causes include missing files in your configuration, environment variables that vary, or timestamps in your source code. Review your pipeline dependencies and ensure you're not including unnecessary inputs.
 
-**Remote cache errors**: If you see errors related to pushing or pulling remote cache artifacts, verify your authentication is properly configured. For Vercel, ensure you're logged in and have the correct team permissions. For GitHub Actions, confirm your token has the necessary scopes.
+Remote cache errors: If you see errors related to pushing or pulling remote cache artifacts, verify your authentication is properly configured. For Vercel, ensure you're logged in and have the correct team permissions. For GitHub Actions, confirm your token has the necessary scopes.
 
-**Cache size growing too large**: Turborepo automatically manages cache cleanup, but you can explicitly set cache limits in your configuration. Add a `globalDependencies` array to exclude files that shouldn't affect cache keys:
+Cache size growing too large: Turborepo automatically manages cache cleanup, but you can explicitly set cache limits in your configuration. Add a `globalDependencies` array to exclude files that shouldn't affect cache keys:
 
 ```json
 {
-  "globalDependencies": ["**/.env.*local"]
+  "globalDependencies": ["/.env.*local"]
 }
 ```
 
-## Best Practices for Maximizing Cache Effectiveness
+Best Practices for Maximizing Cache Effectiveness
 
 To get the most from remote caching, follow these proven practices. First, keep your pipeline granular. Instead of a single massive build task, break your work into smaller, focused tasks that can be cached independently. For example, separate type-checking from bundling so type errors don't require complete rebuilds.
 
@@ -163,17 +163,17 @@ Third, establish team conventions. Ensure everyone on your team uses similar dev
 
 Finally, monitor your cache hit rates. Add a step to your CI that reports cache performance. Many teams add a simple script that parses Turborepo output and posts cache statistics to Slack, keeping the team aware of caching effectiveness.
 
-## Conclusion
+Conclusion
 
 Setting up Turborepo remote caching transforms monorepo build performance from a bottleneck into a competitive advantage. Whether you choose Vercel's hosted solution or GitHub Actions for self-hosted caching, the configuration is straightforward and the benefits are immediate. By integrating Claude Code into your workflow, you can optimize configurations, troubleshoot issues, and maintain best practices that keep your team moving fast.
 
 Start with the basic Vercel integration for the quickest wins, then explore GitHub Actions if you need more control. With remote caching properly configured, your team will wonder how they ever managed without it.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

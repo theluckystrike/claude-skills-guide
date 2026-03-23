@@ -13,11 +13,11 @@ permalink: /claude-skills-memory-and-context-architecture-explained/
 
 # Claude Skills Memory and Context Architecture Explained
 
-One of the most misunderstood aspects of Claude Code skills is how memory and context actually work. Many developers expect skills to "remember" things the way a human colleague would — across sessions, across projects, without any setup. The reality is more precise and more controllable than that.
+One of the most misunderstood aspects of Claude Code skills is how memory and context actually work. Many developers expect skills to "remember" things the way a human colleague would. across sessions, across projects, without any setup. The reality is more precise and more controllable than that.
 
 Understanding the memory and context architecture is not just academic. It directly affects whether your skills produce consistent, high-quality output or drift off course the moment a session ends. This guide walks through every layer of the system: how Claude holds information right now, how to persist state between sessions, and how to design multi-skill workflows that share context cleanly.
 
-## The Context Window: Your Skill's Working Memory
+The Context Window: Your Skill's Working Memory
 
 Every Claude skill operates within a context window. The context window holds everything Claude can "see" at any given moment:
 
@@ -28,11 +28,11 @@ Every Claude skill operates within a context window. The context window holds ev
 
 When the context window fills up, older conversation history is dropped. Tool outputs are typically more aggressively truncated than conversation text.
 
-A key point: **skills do not share context windows**. If you switch from your [`tdd` skill](/best-claude-skills-for-developers-2026/) to your `frontend-design` skill mid-session, the new skill starts with only the shared conversation history — it does not inherit the previous skill's context or tool outputs.
+A key point: skills do not share context windows. If you switch from your [`tdd` skill](/best-claude-skills-for-developers-2026/) to your `frontend-design` skill mid-session, the new skill starts with only the shared conversation history. it does not inherit the previous skill's context or tool outputs.
 
-Think of the context window as RAM, not disk. It is fast, immediate, and limited. When the process ends, it is gone. Everything you want to persist must be written to "disk" — which in practice means files, `CLAUDE.md`, or the `/supermemory` skill.
+Think of the context window as RAM, not disk. It is fast, immediate, and limited. When the process ends, it is gone. Everything you want to persist must be written to "disk". which in practice means files, `CLAUDE.md`, or the `/supermemory` skill.
 
-### How Context Fills Up in Practice
+How Context Fills Up in Practice
 
 A typical skill invocation might consume context in this order:
 
@@ -46,14 +46,14 @@ For a model with a 200,000-token context window, this is plenty for most workflo
 
 The practical implication: keep file injection targeted. Read the specific sections relevant to the task, not entire codebases.
 
-## CLAUDE.md: Project-Level Context
+CLAUDE.md: Project-Level Context
 
-Claude Code loads a `CLAUDE.md` file from the project root (if it exists) into every session's context window automatically. This is not skill-specific — it is available to all skills and to Claude in its default mode.
+Claude Code loads a `CLAUDE.md` file from the project root (if it exists) into every session's context window automatically. This is not skill-specific. it is available to all skills and to Claude in its default mode.
 
 Use `CLAUDE.md` for project-wide context that every skill needs:
 
 ```markdown
-# Project Context
+Project Context
 
 This is a Next.js 15 app using TypeScript, Tailwind CSS, and PostgreSQL via Prisma.
 We use pnpm as the package manager.
@@ -63,7 +63,7 @@ Tests use Jest + React Testing Library. Run tests with pnpm test.
 
 With a well-written `CLAUDE.md`, you can write leaner skill bodies that do not repeat project basics.
 
-### What Belongs in CLAUDE.md vs. Skill System Prompts
+What Belongs in CLAUDE.md vs. Skill System Prompts
 
 A common design mistake is duplicating information between `CLAUDE.md` and individual skill prompts. The right mental model is:
 
@@ -72,7 +72,7 @@ A common design mistake is duplicating information between `CLAUDE.md` and indiv
 
 This separation keeps skill files concise and means a change to the tech stack only needs to happen in one place. If you rename your test runner from `pnpm test` to `pnpm run test:unit`, you update `CLAUDE.md` and every skill that needs that information picks it up automatically.
 
-### Nested CLAUDE.md Files
+Nested CLAUDE.md Files
 
 Claude Code also supports `CLAUDE.md` files in subdirectories. If you invoke a skill while your working directory is `src/components/`, Claude will load both the root `CLAUDE.md` and `src/components/CLAUDE.md` (if present). Use this for sub-project context:
 
@@ -86,9 +86,9 @@ my-monorepo/
       CLAUDE.md           # Web package specifics: Next.js, React Query, component patterns
 ```
 
-## Session Memory: Within a Single Session
+Session Memory: Within a Single Session
 
-Within a single Claude Code session, memory is implicit — it is the conversation history. Claude remembers what you said earlier in the session because that history is in the context window.
+Within a single Claude Code session, memory is implicit. it is the conversation history. Claude remembers what you said earlier in the session because that history is in the context window.
 
 This is stateful within a session but ephemeral across sessions. When you close Claude Code and reopen it, that conversation history is gone.
 
@@ -102,15 +102,15 @@ User: "Now write tests for the user authentication flow."
 Claude: [still in tdd skill, with PostgreSQL context still in window] Writes pg-aware tests.
 ```
 
-### When Within-Session Memory Breaks Down
+When Within-Session Memory Breaks Down
 
 Within-session memory is reliable as long as the relevant information stays in the context window. Two failure modes to watch for:
 
-**Long sessions with many tool calls.** If a session runs long enough that early turns are truncated from the context window, Claude may appear to "forget" something you mentioned an hour ago. The information was there — it just aged out. Solution: summarize critical facts in a file mid-session if the session is expected to run long.
+Long sessions with many tool calls. If a session runs long enough that early turns are truncated from the context window, Claude may appear to "forget" something you mentioned an hour ago. The information was there. it just aged out. Solution: summarize critical facts in a file mid-session if the session is expected to run long.
 
-**Switching skills mid-session.** When you invoke a new skill, the system prompt changes. The conversation history is still visible, but the framing shifts. The new skill's system prompt may not direct Claude to look for earlier context in the same way. If something you said earlier in the session matters for the new skill, restate it or have a shared context file both skills read.
+Switching skills mid-session. When you invoke a new skill, the system prompt changes. The conversation history is still visible, but the framing shifts. The new skill's system prompt may not direct Claude to look for earlier context in the same way. If something you said earlier in the session matters for the new skill, restate it or have a shared context file both skills read.
 
-## The /supermemory Skill: Cross-Session Persistence
+The /supermemory Skill: Cross-Session Persistence
 
 The [`/supermemory` skill](/claude-skills-token-optimization-reduce-api-costs/) solves the cross-session memory problem. It maintains a storage layer that persists between sessions.
 
@@ -132,22 +132,22 @@ Retrieve stored context and conventions for this project.
 
 The supermemory skill operates as a regular skill invoked via the `/supermemory` slash command. It does not run as an automatic pre-hook, and it does not inject context without being asked.
 
-### When to Use Supermemory vs. Files
+When to Use Supermemory vs. Files
 
 Supermemory and file-based context serve different use cases. Use this table to decide:
 
 | Use Case | Supermemory | CLAUDE.md / Files |
 |---|---|---|
-| One-time decisions made during a session | Yes | No — too transient for a committed file |
-| Stable project conventions | No | Yes — commit it to the repo |
-| Personal preferences (not project-wide) | Yes | No — not everyone's preference |
-| Architecture decisions with rationale | Sometimes | Yes — belongs in docs |
+| One-time decisions made during a session | Yes | No. too transient for a committed file |
+| Stable project conventions | No | Yes. commit it to the repo |
+| Personal preferences (not project-wide) | Yes | No. not everyone's preference |
+| Architecture decisions with rationale | Sometimes | Yes. belongs in docs |
 | "Remember we decided X last week" | Yes | No |
-| Team-shared knowledge | No | Yes — it should be in the repo |
+| Team-shared knowledge | No | Yes. it should be in the repo |
 
 The rule of thumb: if the information belongs in version control, put it in a file. If it is personal, ad hoc, or session-specific but needs to survive session restarts, use supermemory.
 
-## File-Based State: Deterministic Injection
+File-Based State: Deterministic Injection
 
 The most reliable approach for giving skills access to project-specific context is writing it to files and including those files in the skill's system prompt body. Reference specific files the skill should read:
 
@@ -168,34 +168,34 @@ Then respond to the user's component request using the established patterns.
 
 This approach is transparent (the files are on disk and inspectable), version-controllable, and completely predictable. If you update `design-tokens.md`, the next invocation of the skill will see the updated version.
 
-### Structuring Context Files for Efficient Injection
+Structuring Context Files for Efficient Injection
 
 A context file that Claude reads at skill startup should be dense but scannable. Long prose wastes tokens. Prefer structured formats:
 
 ```markdown
-# API Conventions
+API Conventions
 
-**Base URL:** /api/v2
-**Auth:** Bearer token in Authorization header
-**Errors:** Always return { error: string, code: string } — never 200 with error body
-**Pagination:** cursor-based, return { data: [], nextCursor: string | null }
+Base URL: /api/v2
+Auth: Bearer token in Authorization header
+Errors: Always return { error: string, code: string }. never 200 with error body
+Pagination: cursor-based, return { data: [], nextCursor: string | null }
 
-## Endpoint patterns
-- GET /api/v2/{resource} — list (paginated)
-- GET /api/v2/{resource}/{id} — single item
-- POST /api/v2/{resource} — create
-- PATCH /api/v2/{resource}/{id} — partial update
-- DELETE /api/v2/{resource}/{id} — soft delete (sets deletedAt)
+Endpoint patterns
+- GET /api/v2/{resource}. list (paginated)
+- GET /api/v2/{resource}/{id}. single item
+- POST /api/v2/{resource}. create
+- PATCH /api/v2/{resource}/{id}. partial update
+- DELETE /api/v2/{resource}/{id}. soft delete (sets deletedAt)
 ```
 
-This kind of document communicates a lot of specific, actionable information in a small number of tokens. Compare it to a paragraph version that says the same thing in three times the space — the dense version leaves more room for actual work.
+This kind of document communicates a lot of specific, actionable information in a small number of tokens. Compare it to a paragraph version that says the same thing in three times the space. the dense version leaves more room for actual work.
 
-### Skills That Write Their Own Context Files
+Skills That Write Their Own Context Files
 
 An advanced pattern is having a skill write context files as part of its work, so that downstream skills can read them. For example, a planning skill might write:
 
 ```markdown
-# Current Sprint Context (auto-generated by /planning skill)
+Current Sprint Context (auto-generated by /planning skill)
 Sprint goal: Complete user authentication MVP
 In scope: login, signup, password reset, session management
 Out of scope: OAuth, SSO, 2FA (next sprint)
@@ -204,7 +204,7 @@ Current blocker: Design spec for password reset email not finalized
 
 ...to `.claude/context/current-sprint.md`. Every other skill that reads this file now has sprint context without the user having to repeat it.
 
-## Context Architecture for Multi-Skill Workflows
+Context Architecture for Multi-Skill Workflows
 
 When you have multiple skills that hand off to each other, context continuity matters. Use a shared context directory that each skill is instructed to read:
 
@@ -228,9 +228,9 @@ testing conventions in this project, and .claude/context/current-sprint.md
 for current sprint context.
 ```
 
-This creates a lightweight shared memory layer that is just files — inspectable, version-controllable, and not dependent on any external service.
+This creates a lightweight shared memory layer that is just files. inspectable, version-controllable, and not dependent on any external service.
 
-### The Context Handoff Pattern
+The Context Handoff Pattern
 
 A well-designed multi-skill workflow treats context handoffs explicitly. Here is a complete example:
 
@@ -244,19 +244,19 @@ A well-designed multi-skill workflow treats context handoffs explicitly. Here is
 
 Each skill in this chain does focused work and produces an artifact that feeds the next. None of them need to ask the user to repeat information that was already captured.
 
-## What Skills Cannot Remember
+What Skills Cannot Remember
 
 Understanding the limits of the memory architecture prevents design mistakes:
 
-**Skills cannot remember across sessions without supermemory.** The conversation history is ephemeral. If you tell Claude something important, either save it to a file, use the `/supermemory` skill, or put it in `CLAUDE.md`.
+Skills cannot remember across sessions without supermemory. The conversation history is ephemeral. If you tell Claude something important, either save it to a file, use the `/supermemory` skill, or put it in `CLAUDE.md`.
 
-**Skills cannot share context within a session without it being in the conversation history.** If skill A learns something and you switch to skill B, skill B cannot access skill A's prior context files unless the file-based approach described above is used.
+Skills cannot share context within a session without it being in the conversation history. If skill A learns something and you switch to skill B, skill B cannot access skill A's prior context files unless the file-based approach described above is used.
 
-**Large context reduces available conversation space.** Every byte of file content Claude reads is a byte not available for conversation history. Keep injected context focused and concise.
+Large context reduces available conversation space. Every byte of file content Claude reads is a byte not available for conversation history. Keep injected context focused and concise.
 
-**Tool outputs compete with conversation history for context space.** A skill that runs many shell commands or reads many files in a single session will fill the context window faster than one that focuses on conversation. If a skill is running out of space, consider splitting the task across multiple sessions with file-based handoffs.
+Tool outputs compete with conversation history for context space. A skill that runs many shell commands or reads many files in a single session will fill the context window faster than one that focuses on conversation. If a skill is running out of space, consider splitting the task across multiple sessions with file-based handoffs.
 
-## Practical Checklist for Memory-Aware Skill Design
+Practical Checklist for Memory-Aware Skill Design
 
 Before finalizing any skill, run through these questions:
 
@@ -270,7 +270,7 @@ Following this checklist consistently produces skills that behave predictably, s
 
 ---
 
-## Related Reading
+Related Reading
 
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) - The memory architecture described here directly affects token consumption
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) - Covers supermemory and context-aware skills in practical terms

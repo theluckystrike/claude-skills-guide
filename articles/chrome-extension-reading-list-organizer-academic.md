@@ -14,24 +14,24 @@ score: 8
 ---
 
 
-As academic researchers and developers, we constantly juggle papers, articles, and technical documentation. Managing a reading list that spans multiple domains—from machine learning papers to historical archives—requires more than simple bookmarking. This guide explores Chrome extensions and custom solutions for organizing academic reading lists effectively.
+As academic researchers and developers, we constantly juggle papers, articles, and technical documentation. Managing a reading list that spans multiple domains, from machine learning papers to historical archives, requires more than simple bookmarking. This guide explores Chrome extensions and custom solutions for organizing academic reading lists effectively.
 
-## Why Standard Bookmarks Fall Short for Academic Work
+Why Standard Bookmarks Fall Short for Academic Work
 
 Chrome's built-in bookmark system works for casual browsing but lacks features critical for research:
 
-- **No citation metadata**: Bookmarks store URLs and titles, but not authors, publication dates, or journal information
-- **Limited grouping**: Folders work for broad categories but struggle with overlapping topics
-- **No reading progress**: You cannot track what you've read, partially read, or need to annotate
-- **No export capability**: Standard bookmarks lack formats compatible with reference managers like Zotero or BibTeX
+- No citation metadata: Bookmarks store URLs and titles, but not authors, publication dates, or journal information
+- Limited grouping: Folders work for broad categories but struggle with overlapping topics
+- No reading progress: You cannot track what you've read, partially read, or need to annotate
+- No export capability: Standard bookmarks lack formats compatible with reference managers like Zotero or BibTeX
 
 Academic reading list organizers address these gaps through specialized extensions and integrations.
 
-## Key Features to Look For
+Key Features to Look For
 
 When evaluating Chrome extensions for academic reading lists, prioritize these capabilities:
 
-### Metadata Extraction
+Metadata Extraction
 
 The best extensions automatically extract:
 - Title and authors
@@ -40,15 +40,15 @@ The best extensions automatically extract:
 - DOI (Digital Object Identifier)
 - Citation format preferences
 
-### Reference Manager Integration
+Reference Manager Integration
 
 Your reading list tool should sync with:
-- **Zotero**: Open-source reference management
-- **BibTeX**: LaTeX-compatible citation files
-- **CSL**: Citation Style Language for format conversions
-- **API access**: For custom automation scripts
+- Zotero: Open-source reference management
+- BibTeX: LaTeX-compatible citation files
+- CSL: Citation Style Language for format conversions
+- API access: For custom automation scripts
 
-### Reading Queue Management
+Reading Queue Management
 
 Look for features that support:
 - Priority tagging (high, medium, low)
@@ -56,7 +56,7 @@ Look for features that support:
 - Note-taking and annotation
 - Due date reminders for deadlines
 
-## Building a Custom Reading List Extension
+Building a Custom Reading List Extension
 
 For developers who want full control, building a Chrome extension for academic reading lists offers maximum flexibility. Here's a foundational approach using Chrome's storage API and a simple manifest:
 
@@ -75,7 +75,7 @@ For developers who want full control, building a Chrome extension for academic r
 }
 ```
 
-### Core Functionality: Adding Papers
+Core Functionality: Adding Papers
 
 The background script handles capturing metadata from academic websites:
 
@@ -125,7 +125,7 @@ function extractAcademicMetadata() {
 }
 ```
 
-### Storage and Retrieval
+Storage and Retrieval
 
 Using Chrome's storage API with a structured data model:
 
@@ -170,7 +170,7 @@ export async function getReadingList(filters = {}) {
 }
 ```
 
-## Integrating with Zotero
+Integrating with Zotero
 
 Zotero is the open-source standard for academic reference management. You can create integrations that sync your Chrome reading list with Zotero collections:
 
@@ -208,16 +208,16 @@ export async function exportToZotero(readingList, apiKey, userId) {
 
 This approach lets you maintain a quick-access reading list in Chrome while building a proper reference library in Zotero.
 
-## Practical Workflow for Academic Reading
+Practical Workflow for Academic Reading
 
-### Daily Research Routine
+Daily Research Routine
 
-1. **Capture**: When you encounter a relevant paper, use your extension to save it with one click
-2. **Categorize**: Add tags based on your research areas (e.g., `machine-learning`, `methodology`, `literature-review`)
-3. **Prioritize**: Mark papers as high-priority for upcoming projects or deadlines
-4. **Annotate**: Add notes directly in your reading list about why the paper matters
+1. Capture: When you encounter a relevant paper, use your extension to save it with one click
+2. Categorize: Add tags based on your research areas (e.g., `machine-learning`, `methodology`, `literature-review`)
+3. Prioritize: Mark papers as high-priority for upcoming projects or deadlines
+4. Annotate: Add notes directly in your reading list about why the paper matters
 
-### Weekly Review Process
+Weekly Review Process
 
 Set aside 30 minutes weekly to:
 
@@ -226,49 +226,49 @@ Set aside 30 minutes weekly to:
 - Export citations to your reference manager
 - Identify papers that need immediate attention
 
-### Export Formats
+Export Formats
 
 For different use cases, export your reading list as:
 
-- **BibTeX**: For LaTeX documents
-- **RIS**: For EndNote, Mendeley, or other managers
-- **CSV**: For spreadsheet analysis
-- **JSON**: For custom scripts or backup
+- BibTeX: For LaTeX documents
+- RIS: For EndNote, Mendeley, or other managers
+- CSV: For spreadsheet analysis
+- JSON: For custom scripts or backup
 
-## Alternative Extension Options
+Alternative Extension Options
 
 Several Chrome extensions already provide academic reading list functionality without custom development:
 
-**Papership** focuses on paper management with Zotero sync, offering a clean interface for tracking what to read next.
+Papership focuses on paper management with Zotero sync, offering a clean interface for tracking what to read next.
 
-**ResearchRabbit** builds visual networks of connected papers, helping you discover related work automatically.
+ResearchRabbit builds visual networks of connected papers, helping you discover related work automatically.
 
-**Lens Chrome** provides annotation and highlighting across academic websites, storing notes alongside your reading list.
+Lens Chrome provides annotation and highlighting across academic websites, storing notes alongside your reading list.
 
-**Zotero Connector** captures metadata directly from publisher websites and automatically syncs to your Zotero library.
+Zotero Connector captures metadata directly from publisher websites and automatically syncs to your Zotero library.
 
-## Automating with APIs
+Automating with APIs
 
 For advanced workflows, connect your reading list to other tools:
 
-- **Slack notifications**: Get reminders about high-priority papers
-- **Calendar integration**: Block time for reading specific papers
-- **Obsidian sync**: Export papers as markdown notes for your knowledge base
-- **GitHub Actions**: Trigger builds or tests when new papers are added to specific categories
+- Slack notifications: Get reminders about high-priority papers
+- Calendar integration: Block time for reading specific papers
+- Obsidian sync: Export papers as markdown notes for your knowledge base
+- GitHub Actions: Trigger builds or tests when new papers are added to specific categories
 
 Building automation around your reading list reduces friction and helps maintain consistent research habits.
 
-## Conclusion
+Conclusion
 
 Chrome extensions for academic reading list management bridge the gap between quick web capture and structured reference management. Whether you build a custom solution or use existing tools, the key is establishing a workflow that captures metadata automatically, integrates with your reference manager, and supports your research process.
 
 The best system is one you'll actually use. Start with basic bookmark capture, then add complexity as your needs evolve. With the right extension and workflow, managing hundreds of academic papers becomes manageable and even enjoyable.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

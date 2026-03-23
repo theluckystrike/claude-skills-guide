@@ -13,26 +13,26 @@ reviewed: true
 ---
 
 {% raw %}
-# Claude Code for Criterion Benchmarking Workflow Guide
+Claude Code for Criterion Benchmarking Workflow Guide
 
-Benchmarking is essential for understanding your code's performance characteristics and identifying optimization opportunities. When working with Rust projects, the **Criterion** framework provides a robust solution for statistical benchmarking, and **Claude Code** can significantly streamline your benchmarking workflow. This guide walks you through building an efficient benchmarking pipeline using both tools together.
+Benchmarking is essential for understanding your code's performance characteristics and identifying optimization opportunities. When working with Rust projects, the Criterion framework provides a solid solution for statistical benchmarking, and Claude Code can significantly streamline your benchmarking workflow. This guide walks you through building an efficient benchmarking pipeline using both tools together.
 
 The combination is more powerful than either tool alone. Criterion gives you statistically rigorous measurements. Claude Code gives you the ability to interpret those measurements, generate hypothesis-driven optimizations, and automate the repetitive parts of the feedback loop. Together they let you move from "my function feels slow" to "my function is 2.3x faster and I have 95% confidence in that number" in a single focused session.
 
-## Understanding Criterion Benchmarking
+Understanding Criterion Benchmarking
 
 Criterion is a statistics-driven benchmarking framework for Rust that goes beyond simple timing measurements. It provides:
 
-- **Statistical analysis** - Uses Welch's t-test to determine whether performance differences are statistically meaningful, not just noise
-- **Warmup phases** - Ensures accurate measurements by warming up CPU caches and branch predictors before recording
-- **Plots and reports** - Generates HTML reports with violin plots and regression charts in `target/criterion/`
-- **Regression tracking** - Compares results against previous saved baselines and flags regressions automatically
-- **Outlier detection** - Labels high and low outliers so you know when your environment was noisy
+- Statistical analysis - Uses Welch's t-test to determine whether performance differences are statistically meaningful, not just noise
+- Warmup phases - Ensures accurate measurements by warming up CPU caches and branch predictors before recording
+- Plots and reports - Generates HTML reports with violin plots and regression charts in `target/criterion/`
+- Regression tracking - Compares results against previous saved baselines and flags regressions automatically
+- Outlier detection - Labels high and low outliers so you know when your environment was noisy
 
 Before integrating with Claude Code, ensure you have Criterion set up in your Rust project:
 
 ```toml
-# Cargo.toml
+Cargo.toml
 [dev-dependencies]
 criterion = { version = "0.5", features = ["html_reports"] }
 
@@ -41,16 +41,16 @@ name = "my_benchmark"
 harness = false
 ```
 
-The `harness = false` line is required — it tells Cargo not to use the default test harness for this binary, so Criterion can own the `main` function and set up its own measurement loop.
+The `harness = false` line is required. it tells Cargo not to use the default test harness for this binary, so Criterion can own the `main` function and set up its own measurement loop.
 
-## Setting Up Your Benchmarking Project
+Setting Up Your Benchmarking Project
 
 The first step is organizing your project for efficient benchmarking. Claude Code can help you set up the entire structure:
 
-1. **Create a benchmarks directory** - Keep your benchmarks organized under `benches/`
-2. **Configure Criterion** - Set up custom measurements and thresholds
-3. **Establish baseline metrics** - Record initial performance data before any optimization
-4. **Group related benchmarks** - Use `criterion_group!` to keep related measurements together in the report
+1. Create a benchmarks directory - Keep your benchmarks organized under `benches/`
+2. Configure Criterion - Set up custom measurements and thresholds
+3. Establish baseline metrics - Record initial performance data before any optimization
+4. Group related benchmarks - Use `criterion_group!` to keep related measurements together in the report
 
 Here's how to configure Criterion with custom settings and multiple benchmark groups:
 
@@ -88,19 +88,19 @@ criterion_main!(benches);
 
 The `BenchmarkId` pattern is especially useful when you want to see how performance scales with input size. Criterion will plot all the data points together, making O(n) versus O(n²) behavior visually obvious in the generated report.
 
-## Claude Code Integration Patterns
+Claude Code Integration Patterns
 
 Claude Code excels at automating repetitive benchmarking tasks. Here are the key integration patterns:
 
-### Automated Baseline Generation
+Automated Baseline Generation
 
 Use Claude Code to generate and save baseline benchmarks before any optimization work:
 
 ```bash
-# Run Criterion and save baseline with a descriptive name
+Run Criterion and save baseline with a descriptive name
 cargo bench --save-baseline before-optimization
 
-# Or use a timestamp for automated pipelines
+Or use a timestamp for automated pipelines
 BASELINE="baseline-$(date +%Y%m%d_%H%M%S)"
 cargo bench --save-baseline "$BASELINE"
 echo "Saved baseline: $BASELINE"
@@ -110,7 +110,7 @@ Claude Code can help you create scripts that automate this process and track bas
 
 ```bash
 #!/bin/bash
-# scripts/run_benchmark.sh
+scripts/run_benchmark.sh
 set -euo pipefail
 
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
@@ -123,23 +123,23 @@ echo "Baseline saved: $BASELINE"
 echo "View report: open target/criterion/report/index.html"
 ```
 
-### Regression Detection Workflow
+Regression Detection Workflow
 
-Compare current results against baselines to detect regressions. This is where Criterion's statistical machinery earns its keep — it reports not just whether a difference exists but whether that difference is larger than measurement noise:
+Compare current results against baselines to detect regressions. This is where Criterion's statistical machinery earns its keep. it reports not just whether a difference exists but whether that difference is larger than measurement noise:
 
 ```bash
-# Compare current code against a named baseline
+Compare current code against a named baseline
 cargo bench --baseline before-optimization
 
-# Example output:
-# sum_0_to_n    time:   [1.2341 ms 1.2389 ms 1.2441 ms]
-#               change: [-15.234% -14.821% -14.391%] (p = 0.00 < 0.05)
-#               Performance has improved.
+Example output:
+sum_0_to_n    time:   [1.2341 ms 1.2389 ms 1.2441 ms]
+              change: [-15.234% -14.821% -14.391%] (p = 0.00 < 0.05)
+              Performance has improved.
 ```
 
 The three numbers in brackets are the lower bound, mean, and upper bound of a 95% confidence interval. When the change report shows `p = 0.00`, Criterion is confident the difference is real, not noise.
 
-### Comparing Multiple Implementations
+Comparing Multiple Implementations
 
 When you have two competing implementations and want to measure which is faster, structure your benchmark to test both in the same run:
 
@@ -173,21 +173,21 @@ fn benchmark_implementations(c: &mut Criterion) {
 
 Criterion generates a side-by-side comparison in the HTML report, showing the violin distributions overlaid. Claude Code can read the output and tell you which implementation is statistically fastest and by what margin.
 
-### Batch Benchmarking
+Batch Benchmarking
 
 For comprehensive analysis, run multiple benchmarks and capture structured output:
 
 ```bash
-# Run all benchmarks with JSON output for further processing
+Run all benchmarks with JSON output for further processing
 cargo bench --message-format=json 2>/dev/null | \
     jq -r 'select(.type == "benchmark") | [.name, .mean.estimate] | @tsv'
 ```
 
-## Practical Example: Optimizing a String Processing Function
+Practical Example: Optimizing a String Processing Function
 
 Let's walk through a real-world optimization scenario using Claude Code and Criterion.
 
-### Initial Benchmark
+Initial Benchmark
 
 First, create a benchmark for the function you want to optimize:
 
@@ -222,7 +222,7 @@ Run and save the baseline:
 cargo bench --bench string_processing --save-baseline before
 ```
 
-### Analysis and Optimization
+Analysis and Optimization
 
 Claude Code can analyze the benchmark results and suggest improvements. The original implementation has two obvious problems: it allocates an intermediate `String` per element for the `to_uppercase()` call, then allocates another `String` for the `trim().to_string()` call. That is two allocations per element, 2000 total for this input.
 
@@ -264,7 +264,7 @@ fn process_strings_ascii(items: &[String]) -> Vec<String> {
 
 This version allocates exactly once per element and does the uppercasing in place. For Unicode data `make_ascii_uppercase` is unsafe to use (it silently ignores non-ASCII), so only apply this in contexts where your inputs are guaranteed ASCII.
 
-### Verify Improvements
+Verify Improvements
 
 Run the comparison to verify your optimizations actually helped:
 
@@ -285,19 +285,19 @@ process_1000_strings_optimized
 
 A 36% improvement, statistically confirmed, from one optimization session.
 
-## Best Practices for Benchmarking Workflows
+Best Practices for Benchmarking Workflows
 
-### Consistent Environment
+Consistent Environment
 
 Environment noise is the enemy of reproducible benchmarks. These steps reduce it significantly:
 
 - Run benchmarks on a quiet system with no background CPU load
 - Disable CPU frequency scaling: `sudo cpupower frequency-set -g performance` on Linux
-- Use fixed seeds for random data generation — nondeterministic inputs make results incomparable across runs
+- Use fixed seeds for random data generation. nondeterministic inputs make results incomparable across runs
 - Pin the benchmark process to a specific CPU core with `taskset` on Linux to avoid scheduler interference
 - Disable Turbo Boost on Intel systems if you want consistent measurements across long runs
 
-### Statistical Significance
+Statistical Significance
 
 Criterion's statistics are only as good as your sample size. For noisy benchmarks:
 
@@ -317,12 +317,12 @@ fn benchmark_with_more_samples(c: &mut Criterion) {
 
 Never interpret a result without looking at the confidence interval width. A measurement of `[198 µs 200 µs 202 µs]` is tight and trustworthy. A measurement of `[150 µs 200 µs 280 µs]` suggests your system was noisy during measurement and the result is unreliable.
 
-### Automation with Claude Code
+Automation with Claude Code
 
 Claude Code can help automate the entire pipeline. A configuration file that captures your thresholds and comparison targets gives Claude Code the context it needs to flag regressions automatically:
 
 ```yaml
-# .claude/benchmark.yml
+.claude/benchmark.yml
 benchmark:
   baseline_dir: "benches/baselines"
   compare_targets:
@@ -336,14 +336,14 @@ benchmark:
     sample_size: 150
 ```
 
-When you ask Claude Code to run your benchmark suite, it reads this config, applies the appropriate Criterion flags, and reports only the benchmarks that crossed your thresholds — rather than making you scan hundreds of lines of output manually.
+When you ask Claude Code to run your benchmark suite, it reads this config, applies the appropriate Criterion flags, and reports only the benchmarks that crossed your thresholds. rather than making you scan hundreds of lines of output manually.
 
-### Continuous Integration
+Continuous Integration
 
 Integrate benchmarking into your CI pipeline to catch regressions before they merge. Note that CI machines typically have noisy environments, so the primary goal is catching large regressions (>10%), not measuring sub-millisecond differences:
 
 ```yaml
-# .github/workflows/benchmark.yml
+.github/workflows/benchmark.yml
 name: Benchmark
 
 on:
@@ -365,7 +365,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~/.cargo/registry
-          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+          key: ${{ runner.os }}-cargo-${{ hashFiles('/Cargo.lock') }}
 
       - name: Restore baseline from main
         run: |
@@ -385,21 +385,21 @@ jobs:
             target/criterion/
 ```
 
-## Interpreting Criterion Reports
+Interpreting Criterion Reports
 
 The HTML report Criterion generates at `target/criterion/report/index.html` is worth spending time with. Each benchmark has:
 
-- **Mean and confidence interval** - The primary number to watch
-- **Violin plot** - Shows the distribution of individual sample times; bimodal distributions suggest context switching or cache effects
-- **Regression plot** - Plots sample time against iteration count; a flat slope means Criterion is measuring the function itself, not startup costs
+- Mean and confidence interval - The primary number to watch
+- Violin plot - Shows the distribution of individual sample times; bimodal distributions suggest context switching or cache effects
+- Regression plot - Plots sample time against iteration count; a flat slope means Criterion is measuring the function itself, not startup costs
 
 Claude Code can help you interpret anomalies. A violin plot with two distinct clusters usually means your function has two code paths with very different performance, or that the OS scheduler was interrupting your measurements. Either way it is worth investigating before trusting the mean.
 
-## Conclusion
+Conclusion
 
 Combining Claude Code with Criterion creates a powerful benchmarking workflow. Claude Code handles the automation, organization, and analysis, while Criterion provides accurate, statistical measurements. Start with simple baselines, automate your comparison workflows, and progressively add sophistication as your benchmarking needs grow.
 
-Remember: good benchmarks require careful setup and consistent execution. The `black_box` function is not optional — without it, the compiler may optimize away the computation entirely and you will be measuring nothing. Use Claude Code to automate the repetitive parts, but always verify results manually when making critical optimization decisions. A 36% improvement that only shows up in synthetic benchmarks is less valuable than a 10% improvement measured in production-representative workloads.
+Remember: good benchmarks require careful setup and consistent execution. The `black_box` function is not optional. without it, the compiler may optimize away the computation entirely and you will be measuring nothing. Use Claude Code to automate the repetitive parts, but always verify results manually when making critical optimization decisions. A 36% improvement that only shows up in synthetic benchmarks is less valuable than a 10% improvement measured in production-representative workloads.
 
 The workflow in this guide gives you a foundation that scales from a single-function optimization session to a project-wide performance regression detection pipeline.
 
@@ -408,12 +408,12 @@ The workflow in this guide gives you a foundation that scales from a single-func
 *This guide helps developers build efficient benchmarking workflows using Claude Code and Criterion.*
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 {% endraw %}

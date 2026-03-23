@@ -17,9 +17,9 @@ Working across multiple programming languages in a single project can feel overw
 
 This guide shows you how to configure Claude for polyglot projects effectively, using Claude.md to define language-specific contexts, tooling expectations, and workflow patterns. By the end, you will have a complete configuration framework you can drop into any multi-language codebase, along with practical patterns for the most common polyglot challenges.
 
-## Why Polyglot Projects Are Hard for AI Assistants
+Why Polyglot Projects Are Hard for AI Assistants
 
-Most AI coding assistants struggle in polyglot environments for a predictable reason: they default to assumptions based on the last language context they saw. Ask Claude to add error handling after spending twenty minutes on TypeScript code, and without explicit guidance it might write Python-style exceptions inside a Go function. The issue is not capability — it is missing context.
+Most AI coding assistants struggle in polyglot environments for a predictable reason: they default to assumptions based on the last language context they saw. Ask Claude to add error handling after spending twenty minutes on TypeScript code, and without explicit guidance it might write Python-style exceptions inside a Go function. The issue is not capability. it is missing context.
 
 Claude.md solves this by giving Claude a persistent, explicit map of your entire project before any conversation begins. Every file read, every code suggestion, and every refactoring plan is informed by the configuration you write there. In a single-language project this matters somewhat; in a polyglot monorepo it is essential.
 
@@ -27,27 +27,27 @@ Consider the difference between these two interactions:
 
 Without a Claude.md, you write: "Add input validation to the user endpoint." Claude must guess which service you mean, which language it is written in, what testing framework you use, and what style of validation your team prefers.
 
-With a well-written Claude.md, the same prompt yields a FastAPI Pydantic validator with pytest test cases, formatted to your line-length standard, using your team's preferred error response schema — because all of that context is already loaded.
+With a well-written Claude.md, the same prompt yields a FastAPI Pydantic validator with pytest test cases, formatted to your line-length standard, using your team's preferred error response schema. because all of that context is already loaded.
 
-## Setting Up Claude.md for Multi-Language Codebases
+Setting Up Claude.md for Multi-Language Codebases
 
 The key to success with Claude in polyglot projects lies in explicit configuration. Claude reads the Claude.md file in your project root, and this file becomes the primary way you communicate project conventions across all languages present in your codebase.
 
 Create a Claude.md file at your project root with language-specific sections:
 
 ```markdown
-# Project Context
+Project Context
 
 This is a polyglot monorepo containing services in Python, TypeScript, Go, and Rust.
 
-## Language Priorities
+Language Priorities
 
 - Python: Primary backend API (FastAPI)
 - TypeScript: Frontend (React) and some backend services
 - Go: CLI tools and data processing pipelines
 - Rust: Performance-critical components
 
-## Tooling Requirements
+Tooling Requirements
 
 - Python: uv for package management, pytest for testing
 - Node.js: pnpm for package management
@@ -57,28 +57,28 @@ This is a polyglot monorepo containing services in Python, TypeScript, Go, and R
 
 This approach tells Claude which languages exist in your project and establishes priority. When you ask Claude to modify backend code, it will prioritize Python context. When working on frontend tasks, TypeScript context becomes primary.
 
-The "Language Priorities" section is not just documentation — it actively shapes which conventions Claude applies when a request could be interpreted in multiple ways. Naming your tech stack alongside each language prevents Claude from assuming defaults (for example, assuming npm instead of pnpm, or unittest instead of pytest).
+The "Language Priorities" section is not just documentation. it actively shapes which conventions Claude applies when a request could be interpreted in multiple ways. Naming your tech stack alongside each language prevents Claude from assuming defaults (for example, assuming npm instead of pnpm, or unittest instead of pytest).
 
-## Language-Specific Context Blocks
+Language-Specific Context Blocks
 
 For more granular control, create language-specific blocks within your Claude.md. These help Claude switch contexts appropriately based on what you're working on:
 
 ```markdown
-## Python Conventions
+Python Conventions
 
 - Use type hints on all function signatures
 - Prefer dataclasses for data structures
 - Run tests with `uv run pytest`
 - Follow PEP 8 with line length of 88
 
-## TypeScript Conventions
+TypeScript Conventions
 
 - Enable strict mode in tsconfig.json
 - Use functional components with hooks
 - Test with Vitest
 - Prefer interface over type for public APIs
 
-## Go Conventions
+Go Conventions
 
 - Use go modules for dependencies
 - Run `go fmt` before commits
@@ -88,19 +88,19 @@ For more granular control, create language-specific blocks within your Claude.md
 
 When you ask Claude to write a new Python service, it applies Python conventions automatically. When switching to TypeScript frontend work, the conventions shift accordingly.
 
-### Expanding Conventions with Concrete Examples
+Expanding Conventions with Concrete Examples
 
 The most effective Claude.md files go one step further and embed brief canonical examples inside each language block. This eliminates ambiguity about what "use custom error types" or "functional components with hooks" actually means on your specific codebase. Here is a more complete version of the Go conventions block:
 
 ```markdown
-## Go Conventions
+Go Conventions
 
 - Use go modules for dependencies
 - Run `go fmt` before commits
 - Implement error handling with custom error types
 - Use table-driven tests where appropriate
 
-### Go Error Handling Pattern
+Go Error Handling Pattern
 
 Wrap standard errors using our internal errors package:
 
@@ -113,12 +113,12 @@ Wrap standard errors using our internal errors package:
         return fmt.Sprintf("%s with id %s not found", e.Resource, e.ID)
     }
 
-Never return raw errors from public API handlers — always wrap with context.
+Never return raw errors from public API handlers. always wrap with context.
 ```
 
 Adding these mini-patterns directly in Claude.md means Claude generates code that already matches your idioms, rather than producing syntactically correct Go that uses log.Fatal instead of structured error returns.
 
-## Language and Tooling Comparison Table
+Language and Tooling Comparison Table
 
 Before writing your Claude.md, it helps to lay out your entire polyglot stack in one view. Here is a reference table for a typical full-stack monorepo:
 
@@ -132,7 +132,7 @@ Before writing your Claude.md, it helps to lay out your entire polyglot stack in
 
 Include a version of this table in your Claude.md under a "Stack Overview" heading. When Claude sees this, it can infer the correct tooling for any given file path without you restating it in every prompt.
 
-## Using Skills for Language-Specific Tasks
+Using Skills for Language-Specific Tasks
 
 Claude's skill system shines in polyglot environments. The xlsx skill helps when your project involves data processing pipelines that output spreadsheets, regardless of the source language. The pdf skill becomes essential when generating documentation or reports from multi-language build processes.
 
@@ -142,19 +142,19 @@ If your project involves documentation generation or API reference guides, the d
 
 For teams using memory features across the project, the supermemory skill integrates with Claude to maintain context across sessions, which proves valuable when switching between different language components throughout the day.
 
-## Handling Build and Dependency Context
+Handling Build and Dependency Context
 
 Multi-language projects require clear dependency management context. Add a section in your Claude.md that explains how different language components relate:
 
 ```markdown
-## Dependency Management
+Dependency Management
 
 - Python dependencies in `requirements.txt` and `pyproject.toml`
 - Node dependencies in `package.json` with pnpm lockfile
 - Go modules in `go.mod`
 - Rust dependencies in `Cargo.toml`
 
-## Build Order
+Build Order
 
 1. Build Rust components first (native dependencies)
 2. Build Go binaries for CLI tools
@@ -165,30 +165,30 @@ Multi-language projects require clear dependency management context. Add a secti
 
 This context helps Claude understand the build pipeline when you ask about compilation issues or dependency conflicts.
 
-### Why Build Order Matters for AI Assistance
+Why Build Order Matters for AI Assistance
 
 When you report a dependency conflict, Claude needs to know the build graph to give useful advice. Without it, suggestions like "just reinstall the package" ignore the fact that your Rust crate must produce a compiled artifact before the Python binding layer can install. A Claude.md with explicit build order lets you ask "why is the Python install failing in CI?" and receive advice that accounts for the Rust compile step that should have run first.
 
 For Makefile-driven projects, include the key targets in Claude.md:
 
 ```markdown
-## Make Targets
+Make Targets
 
-- `make build` — full build in correct order
-- `make test` — run all test suites (Python, TS, Go, Rust)
-- `make lint` — lint all languages in parallel
-- `make dev` — start development servers for Python and TS
-- `make rust-release` — build Rust components with optimizations
+- `make build`. full build in correct order
+- `make test`. run all test suites (Python, TS, Go, Rust)
+- `make lint`. lint all languages in parallel
+- `make dev`. start development servers for Python and TS
+- `make rust-release`. build Rust components with optimizations
 ```
 
-## Cross-Language Refactoring Patterns
+Cross-Language Refactoring Patterns
 
 One of the more complex tasks in polyglot projects involves refactoring that spans multiple languages. A shared data structure might exist as a Python dataclass, a TypeScript interface, a Go struct, and a Rust struct. When this shared model changes, you need consistent updates across all four languages.
 
 Explicitly document this in your Claude.md:
 
 ```markdown
-## Shared Data Models
+Shared Data Models
 
 The `User` entity exists in all languages:
 - Python: `src/models/user.py` (dataclass)
@@ -201,11 +201,11 @@ When modifying shared models, update all four implementations.
 
 When you need to add a new field to the User model, Claude understands it must update all four files and can do so in a single conversation.
 
-### A Complete Cross-Language Refactoring Example
+A Complete Cross-Language Refactoring Example
 
 Suppose the `User` model needs a new `phone_verified` boolean field. With the shared model documentation in place, a single Claude prompt like "add phone_verified to the User model across all implementations" produces consistent results in all four languages:
 
-**Python (`src/models/user.py`)**
+Python (`src/models/user.py`)
 
 ```python
 from dataclasses import dataclass, field
@@ -218,7 +218,7 @@ class User:
     phone_verified: bool = field(default=False)
 ```
 
-**TypeScript (`packages/types/src/user.ts`)**
+TypeScript (`packages/types/src/user.ts`)
 
 ```typescript
 export interface User {
@@ -229,7 +229,7 @@ export interface User {
 }
 ```
 
-**Go (`internal/models/user.go`)**
+Go (`internal/models/user.go`)
 
 ```go
 package models
@@ -242,7 +242,7 @@ type User struct {
 }
 ```
 
-**Rust (`crates/models/src/user.rs`)**
+Rust (`crates/models/src/user.rs`)
 
 ```rust
 use serde::{Deserialize, Serialize};
@@ -258,26 +258,26 @@ pub struct User {
 
 Notice that each language uses its own naming convention (snake_case in Python and Rust, camelCase in TypeScript, snake_case JSON tags in Go). Claude applies these correctly when your Claude.md convention blocks specify them.
 
-## Project-Specific Commands
+Project-Specific Commands
 
 Document the commands your team uses for development, testing, and deployment in each language:
 
 ```markdown
-## Commands
+Commands
 
-### Development
+Development
 - Python: `uv run uvicorn main:app --reload`
 - TypeScript: `pnpm --filter @project/web dev`
 - Go: `go run cmd/api/main.go`
 - Rust: `cargo run --bin cli-tool`
 
-### Testing
+Testing
 - Python: `uv run pytest tests/ -v`
 - TypeScript: `pnpm test --filter @project/web`
 - Go: `go test ./... -v`
 - Rust: `cargo test --all`
 
-### Building
+Building
 - Python: `uv build`
 - TypeScript: `pnpm --filter @project/web build`
 - Go: `go build -o bin/ ./cmd/...`
@@ -286,12 +286,12 @@ Document the commands your team uses for development, testing, and deployment in
 
 This reference prevents Claude from guessing incorrect commands and ensures consistent execution across your team.
 
-## Handling Environment Variables and Secrets Across Languages
+Handling Environment Variables and Secrets Across Languages
 
 Polyglot projects typically share environment configuration but load it differently in each language. Documenting this pattern in Claude.md ensures Claude generates code that actually reads config the way your project expects:
 
 ```markdown
-## Environment Configuration
+Environment Configuration
 
 All services read from a shared `.env` file at project root.
 
@@ -300,7 +300,7 @@ All services read from a shared `.env` file at project root.
 - Go: reads directly from `os.Getenv()`, `.env` loaded by `godotenv` at startup
 - Rust: uses `dotenv` crate, loaded in `main.rs` before config parsing
 
-### Required Variables
+Required Variables
 
 - DATABASE_URL: PostgreSQL connection string
 - REDIS_URL: Redis connection for caching
@@ -310,7 +310,7 @@ All services read from a shared `.env` file at project root.
 
 When Claude knows the environment loading pattern, generated code never contains hardcoded defaults for secrets, and config access is consistent with what the rest of your codebase does.
 
-## Common Polyglot Pitfalls and How Claude.md Prevents Them
+Common Polyglot Pitfalls and How Claude.md Prevents Them
 
 | Problem | Without Claude.md | With Claude.md |
 |---|---|---|
@@ -323,7 +323,7 @@ When Claude knows the environment loading pattern, generated code never contains
 
 Treating this table as a checklist when writing your Claude.md helps you cover the most common failure modes before they happen.
 
-## Structuring Claude.md for Large Teams
+Structuring Claude.md for Large Teams
 
 On larger teams, a single Claude.md file can become unwieldy. A practical structure for a 50+ file monorepo:
 
@@ -352,7 +352,7 @@ Claude reads the CLAUDE.md nearest to the file you are working on, then walks up
 
 The root CLAUDE.md should contain only the things that truly span all languages: shared data models, build order, environment variables, and cross-cutting architectural decisions.
 
-## Best Practices for Polyglot Claude.md
+Best Practices for Polyglot Claude.md
 
 Keep your Claude.md focused and practical. Update it when you add new languages or change tooling. Review it during onboarding to ensure new team members understand the multi-language setup.
 
@@ -360,19 +360,19 @@ The configuration should reduce context-switching friction. When developers move
 
 A few additional practices that improve Claude.md quality over time:
 
-**Run a "cold start" test periodically.** Open a fresh Claude Code session with no prior context and ask it to write a representative piece of code from each language in your stack. If the output matches your conventions, your Claude.md is doing its job. If it misses something, add a concrete example to the relevant section.
+Run a "cold start" test periodically. Open a fresh Claude Code session with no prior context and ask it to write a representative piece of code from each language in your stack. If the output matches your conventions, your Claude.md is doing its job. If it misses something, add a concrete example to the relevant section.
 
-**Treat Claude.md like a test suite.** When you fix a recurring miscommunication — Claude keeps using the wrong import style, wrong assertion library, wrong error shape — add a rule to Claude.md. Over time, your configuration file becomes a living record of every convention decision your team has made.
+Treat Claude.md like a test suite. When you fix a recurring miscommunication. Claude keeps using the wrong import style, wrong assertion library, wrong error shape. add a rule to Claude.md. Over time, your configuration file becomes a living record of every convention decision your team has made.
 
-**Include anti-patterns explicitly.** A short "Do NOT do this" section alongside each language block is surprisingly effective. "Do NOT use `log.Fatal` in library code — only in `main.go`" is the kind of nuance that saves real debugging time.
+Include anti-patterns explicitly. A short "Do NOT do this" section alongside each language block is surprisingly effective. "Do NOT use `log.Fatal` in library code. only in `main.go`" is the kind of nuance that saves real debugging time.
 
 Effective polyglot configuration means Claude spends less time guessing your tooling preferences and more time writing code that fits your project standards. The initial investment in a thorough Claude.md pays back quickly, especially as the number of languages and contributors in your project grows.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

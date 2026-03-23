@@ -14,18 +14,18 @@ categories: [guides]
 
 Network conditions vary wildly across the globe. Your application might load instantly on a fiber connection in New York but become unusable on a 3G network in a rural area. Chrome DevTools includes a powerful network throttling feature that lets you simulate various network conditions directly in your browser. This capability is essential for building resilient, user-friendly applications.
 
-## Opening the Network Throttling Panel
+Opening the Network Throttling Panel
 
 To access network throttling in Chrome DevTools:
 
 1. Open Chrome and navigate to your target website
-2. Press `F12` or right-click and select **Inspect** to open DevTools
-3. Click the **Network** tab
-4. Look for the dropdown that says "No throttling" — this is your throttling control
+2. Press `F12` or right-click and select Inspect to open DevTools
+3. Click the Network tab
+4. Look for the dropdown that says "No throttling". this is your throttling control
 
-You'll find preset options including **Fast 3G**, **Slow 3G**, **Fast 4G**, and **Offline**. Selecting any of these immediately limits network requests to simulate that connection type.
+You'll find preset options including Fast 3G, Slow 3G, Fast 4G, and Offline. Selecting any of these immediately limits network requests to simulate that connection type.
 
-## Understanding Network Presets
+Understanding Network Presets
 
 Chrome provides four built-in presets designed to match real-world conditions:
 
@@ -38,15 +38,15 @@ Chrome provides four built-in presets designed to match real-world conditions:
 
 These presets give you a baseline for testing, but you often need more specific conditions.
 
-## Creating Custom Throttling Profiles
+Creating Custom Throttling Profiles
 
 The built-in presets work for quick tests, but custom profiles let you match specific scenarios. Chrome allows you to add custom network conditions through the DevTools settings.
 
 To create a custom profile:
 
-1. Click the gear icon (⚙️) in the top-right of DevTools
-2. Navigate to **Throttling** under the Devices section
-3. Click **Add custom profile**
+1. Click the gear icon () in the top-right of DevTools
+2. Navigate to Throttling under the Devices section
+3. Click Add custom profile
 4. Configure your desired download speed, upload speed, and latency
 
 Here's a practical example for simulating a typical satellite internet connection:
@@ -59,13 +59,13 @@ Latency: 600 ms
 
 This configuration helps you understand how your app behaves on high-latency connections where every request carries a significant delay.
 
-## Testing API Calls with Throttling
+Testing API Calls with Throttling
 
 When your application makes API requests, slow networks expose issues that fast connections hide. Here's how to identify common problems:
 
-### Detecting Missing Loading States
+Detecting Missing Loading States
 
-Open your application with **Slow 3G** throttling enabled. Click through your app's key interactions. If users see blank screens or frozen interfaces while waiting for data, you need loading indicators.
+Open your application with Slow 3G throttling enabled. Click through your app's key interactions. If users see blank screens or frozen interfaces while waiting for data, you need loading indicators.
 
 A simple loading component in React might look like this:
 
@@ -93,7 +93,7 @@ function UserProfile({ userId }) {
 
 With throttling enabled, this loading state becomes visible and testable.
 
-### Finding Unoptimized Images
+Finding Unoptimized Images
 
 Slow networks reveal image loading problems quickly. Enable throttling and navigate through pages with images. Watch for:
 
@@ -101,9 +101,9 @@ Slow networks reveal image loading problems quickly. Enable throttling and navig
 - Images that are too large for the viewport
 - Missing `srcset` attributes forcing full-resolution downloads
 
-Use Chrome's **Network** tab to sort by size and identify the heaviest requests. Then optimize accordingly.
+Use Chrome's Network tab to sort by size and identify the heaviest requests. Then optimize accordingly.
 
-### Catching Timeout Issues
+Catching Timeout Issues
 
 API requests that work fine on fast connections might timeout on slow networks. Check your fetch requests:
 
@@ -132,7 +132,7 @@ try {
 
 This pattern gives users a clear way to recover from failed requests.
 
-## Throttling and Performance Budgets
+Throttling and Performance Budgets
 
 Network throttling pairs well with performance budgets. Set a performance budget in Lighthouse and run tests with throttling enabled:
 
@@ -163,7 +163,7 @@ module.exports = {
 
 Running Lighthouse with these settings ensures your app meets performance targets on constrained networks.
 
-## Automating Throttling with Puppeteer
+Automating Throttling with Puppeteer
 
 For continuous integration, you can programmatically apply throttling using Puppeteer:
 
@@ -192,19 +192,19 @@ const puppeteer = require('puppeteer');
 
 This approach integrates throttling into your automated test suite, catching performance regressions before they reach production.
 
-## Common Throttling Mistakes to Avoid
+Common Throttling Mistakes to Avoid
 
 A few pitfalls trip up developers when using network throttling:
 
-**Testing only on fast networks** — Always verify your app works on the slowest connection your users might have.
+Testing only on fast networks. Always verify your app works on the slowest connection your users might have.
 
-**Forgetting to disable throttling** — Leaving throttling enabled after testing leads to confusing behavior during normal development.
+Forgetting to disable throttling. Leaving throttling enabled after testing leads to confusing behavior during normal development.
 
-**Ignoring latency** — Download speed matters, but latency affects how quickly each request starts. Slow 3G's 400ms latency makes each API call feel sluggish regardless of the data size.
+Ignoring latency. Download speed matters, but latency affects how quickly each request starts. Slow 3G's 400ms latency makes each API call feel sluggish regardless of the data size.
 
-**Testing in isolation** — Network conditions affect everything simultaneously. Test complete user flows, not just individual components.
+Testing in isolation. Network conditions affect everything simultaneously. Test complete user flows, not just individual components.
 
-## Real-World Application
+Real-World Application
 
 Consider a checkout flow in an e-commerce application. With fast 4G, a user clicks through in seconds. Enable Slow 3G and you might discover:
 
@@ -215,18 +215,18 @@ Consider a checkout flow in an e-commerce application. With fast 4G, a user clic
 
 These are the issues that lose customers in production. Finding them early saves support tickets and improves conversion rates.
 
-## Summary
+Summary
 
 Chrome DevTools network throttling is a practical tool for building applications that work well for everyone, regardless of their connection speed. By simulating slow networks during development, you catch real-world problems before your users encounter them. Start with the built-in presets, create custom profiles for specific scenarios, and integrate throttling into your automated testing pipeline.
 
 Your users on slow connections will thank you.
 
-Built by the luckystrike — More at [zovo.one](https://zovo.one)
+Built by the luckystrike. More at [zovo.one](https://zovo.one)
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

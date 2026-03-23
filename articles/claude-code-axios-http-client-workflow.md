@@ -11,25 +11,25 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-When building modern applications, HTTP requests are the backbone of data exchange. Whether you're fetching from a REST API, sending form data, or handling authentication tokens, having a solid HTTP client workflow saves hours of debugging. This guide walks you through creating a practical Axios workflow that integrates smoothly with Claude Code — covering everything from initial setup to caching strategies and file uploads.
+When building modern applications, HTTP requests are the backbone of data exchange. Whether you're fetching from a REST API, sending form data, or handling authentication tokens, having a solid HTTP client workflow saves hours of debugging. This guide walks you through creating a practical Axios workflow that integrates smoothly with Claude Code. covering everything from initial setup to caching strategies and file uploads.
 
-## Why Axios Over the Native Fetch API
+Why Axios Over the Native Fetch API
 
 Before diving into configuration, it is worth understanding why developers reach for Axios rather than the built-in `fetch`. Both work, but Axios has ergonomic advantages that matter at scale:
 
 | Feature | Axios | Fetch |
 |---|---|---|
-| Automatic JSON parsing | Yes — response body parsed automatically | No — must call `response.json()` manually |
+| Automatic JSON parsing | Yes. response body parsed automatically | No. must call `response.json()` manually |
 | Request/response interceptors | Built-in | Requires wrapper code |
 | Request cancellation | `CancelToken` / `AbortController` | `AbortController` only |
 | Upload progress | `onUploadProgress` callback | No built-in progress events |
-| Automatic error on 4xx/5xx | Yes — rejects the promise | No — must check `response.ok` |
+| Automatic error on 4xx/5xx | Yes. rejects the promise | No. must check `response.ok` |
 | Node.js support | Works natively | Requires Node 18+ or polyfill |
 | Default timeout | Configurable per instance | No timeout by default |
 
 The automatic rejection on 4xx/5xx status codes is particularly important. A `fetch` call to an endpoint that returns 404 resolves successfully unless you check `response.ok`. With Axios, a 404 throws and lands in your catch block, which is almost always the behavior you actually want.
 
-## Setting Up Your Axios Instance
+Setting Up Your Axios Instance
 
 The first step involves configuring a centralized Axios instance with sensible defaults. Rather than making ad-hoc requests throughout your codebase, create a dedicated HTTP client module:
 
@@ -48,7 +48,7 @@ const apiClient = axios.create({
 export default apiClient;
 ```
 
-This approach allows you to modify global settings — such as base URL or default headers — in one place rather than hunting through dozens of files. When your staging and production APIs live at different URLs, you flip one environment variable rather than updating forty request calls.
+This approach allows you to modify global settings. such as base URL or default headers. in one place rather than hunting through dozens of files. When your staging and production APIs live at different URLs, you flip one environment variable rather than updating forty request calls.
 
 For TypeScript projects, add a type declaration to make the client more ergonomic:
 
@@ -70,7 +70,7 @@ export default apiClient;
 
 Exposing `ApiConfig` as a named export lets service modules accept typed options without importing from Axios directly.
 
-## Request and Response Interceptors
+Request and Response Interceptors
 
 Interceptors are powerful tools for handling cross-cutting concerns like authentication tokens and error logging. Add these to your client configuration:
 
@@ -159,9 +159,9 @@ apiClient.interceptors.response.use(
 );
 ```
 
-The queue mechanism handles the case where multiple requests fail simultaneously with 401 — without it, each would independently attempt a token refresh, causing a race condition. Only the first refresh attempt goes through; the rest wait for it to resolve.
+The queue mechanism handles the case where multiple requests fail simultaneously with 401. without it, each would independently attempt a token refresh, causing a race condition. Only the first refresh attempt goes through; the rest wait for it to resolve.
 
-## Building Service Modules
+Building Service Modules
 
 Organize your API calls into service modules grouped by feature or domain. For instance, a user service might look like:
 
@@ -194,7 +194,7 @@ export { productService } from './productService';
 
 Components then import from a single path: `import { userService, orderService } from '@/api/services'`.
 
-## Handling Concurrent Requests
+Handling Concurrent Requests
 
 Modern applications often need to fetch multiple resources simultaneously. Axios provides `Promise.all` for parallel requests:
 
@@ -235,9 +235,9 @@ async function loadDashboardDataResilient() {
 }
 ```
 
-Dashboard pages typically benefit from `allSettled` — a failing notification count should not blank out the entire dashboard.
+Dashboard pages typically benefit from `allSettled`. a failing notification count should not blank out the entire dashboard.
 
-## Error Handling Strategies
+Error Handling Strategies
 
 Solid error handling distinguishes production-ready code from prototypes. Create a utility function that categorizes errors:
 
@@ -312,8 +312,8 @@ function statusToMessage(status) {
     403: 'Access denied',
     404: 'Resource not found',
     422: 'Validation failed',
-    429: 'Too many requests — please slow down',
-    500: 'Server error — our team has been notified',
+    429: 'Too many requests. please slow down',
+    500: 'Server error. our team has been notified',
     503: 'Service temporarily unavailable',
   };
   return messages[status] || `Unexpected error (${status})`;
@@ -322,16 +322,16 @@ function statusToMessage(status) {
 
 Returning structured error objects (with `code`, `message`, and `fields`) lets your UI layer handle validation errors inline on form fields rather than showing a generic toast message.
 
-## Integrating with Claude Code Skills
+Integrating with Claude Code Skills
 
-Your Axios workflow pairs excellently with Claude Code skills for enhanced productivity. When generating API documentation, the **pdf** skill helps create downloadable API guides. For frontend integration, the **frontend-design** skill provides component patterns that consume your service modules elegantly.
+Your Axios workflow pairs excellently with Claude Code skills for enhanced productivity. When generating API documentation, the pdf skill helps create downloadable API guides. For frontend integration, the frontend-design skill provides component patterns that consume your service modules elegantly.
 
-If you're practicing test-driven development, the **tdd** skill assists in writing unit tests for your service functions before implementation. The **supermemory** skill stores API schemas and endpoint documentation, making future refactoring faster.
+If you're practicing test-driven development, the tdd skill assists in writing unit tests for your service functions before implementation. The supermemory skill stores API schemas and endpoint documentation, making future refactoring faster.
 
 For example, when documenting your API contract:
 
 ```javascript
-/**
+/
  * @typedef {Object} User
  * @property {string} id
  * @property {string} email
@@ -339,7 +339,7 @@ For example, when documenting your API contract:
  * @property {string} createdAt ISO 8601 timestamp
  */
 
-/**
+/
  * Fetches current user profile
  * @returns {Promise<import('axios').AxiosResponse<User>>}
  */
@@ -348,7 +348,7 @@ export const getProfile = () => apiClient.get('/users/me');
 
 This JSDoc format works well with documentation generation tools and gives editors enough type information to show autocomplete on `response.data`.
 
-## Testing Your HTTP Client
+Testing Your HTTP Client
 
 Writing tests for your Axios setup prevents regressions:
 
@@ -395,9 +395,9 @@ describe('userService', () => {
 });
 ```
 
-The third test is particularly valuable — it verifies that the request interceptor is actually attaching the token, not just that the service call resolves. Use `axios-mock-adapter` bound to your `apiClient` instance (not the base `axios` import) so your interceptors run during tests.
+The third test is particularly valuable. it verifies that the request interceptor is actually attaching the token, not just that the service call resolves. Use `axios-mock-adapter` bound to your `apiClient` instance (not the base `axios` import) so your interceptors run during tests.
 
-## Performance Optimization Tips
+Performance Optimization Tips
 
 Consider implementing request caching for frequently accessed data:
 
@@ -457,7 +457,7 @@ apiClient.get('/export/report', {
 });
 ```
 
-For request cancellation — essential for search-as-you-type inputs where stale responses should not overwrite fresh ones — use `AbortController`:
+For request cancellation. essential for search-as-you-type inputs where stale responses should not overwrite fresh ones. use `AbortController`:
 
 ```javascript
 let controller = null;
@@ -485,57 +485,57 @@ async function searchProducts(query) {
 
 Connecting this to a debounced input handler prevents both excessive API calls and race conditions where a slow earlier request resolves after a faster later one.
 
-## Summary
+Summary
 
 A well-structured Axios HTTP client workflow transforms raw API calls into maintainable, testable code. Centralize your configuration, use interceptors wisely for auth and error normalization, organize services by domain, implement thorough error handling with structured error objects, and add caching and cancellation where performance matters.
 
-Pair this workflow with Claude Code skills like **pdf** for documentation, **frontend-design** for UI components, and **tdd** for comprehensive test coverage. Your API integration becomes not just functional, but professional-grade — the kind of code that survives team growth, API changes, and the inevitable security audit that asks "how do you handle token expiry?"
+Pair this workflow with Claude Code skills like pdf for documentation, frontend-design for UI components, and tdd for comprehensive test coverage. Your API integration becomes not just functional, but professional-grade. the kind of code that survives team growth, API changes, and the inevitable security audit that asks "how do you handle token expiry?"
 
 
-## Step-by-Step Guide: Building a Production Axios Client
+Step-by-Step Guide: Building a Production Axios Client
 
 Here is a concrete approach to building an Axios client that handles real-world API complexity.
 
-**Step 1 — Create a centralized instance factory.** Rather than calling axios.create() inline, create a factory function that accepts the API configuration and returns a configured instance. Claude Code generates the factory with environment-specific defaults: shorter timeouts for development, longer timeouts for production, and debug logging enabled only when LOG_LEVEL=debug is set.
+Step 1. Create a centralized instance factory. Rather than calling axios.create() inline, create a factory function that accepts the API configuration and returns a configured instance. Claude Code generates the factory with environment-specific defaults: shorter timeouts for development, longer timeouts for production, and debug logging enabled only when LOG_LEVEL=debug is set.
 
-**Step 2 — Add request interceptors for authentication.** Authentication headers need to be fresh on every request, especially when using short-lived JWTs. Claude Code generates the request interceptor that reads the current token from your auth store, checks if it is expired, refreshes it if necessary (using a mutex to prevent concurrent refresh races), and attaches the fresh token to the request.
+Step 2. Add request interceptors for authentication. Authentication headers need to be fresh on every request, especially when using short-lived JWTs. Claude Code generates the request interceptor that reads the current token from your auth store, checks if it is expired, refreshes it if necessary (using a mutex to prevent concurrent refresh races), and attaches the fresh token to the request.
 
-**Step 3 — Add response interceptors for token refresh.** When a 401 response arrives, your client should automatically refresh the token and retry the original request rather than letting the error propagate. Claude Code generates the 401 interceptor with a queue mechanism that holds pending requests while the token refresh is in progress, then replays them all once the new token is available.
+Step 3. Add response interceptors for token refresh. When a 401 response arrives, your client should automatically refresh the token and retry the original request rather than letting the error propagate. Claude Code generates the 401 interceptor with a queue mechanism that holds pending requests while the token refresh is in progress, then replays them all once the new token is available.
 
-**Step 4 — Implement request cancellation for navigation.** In single-page applications, requests started on one route should be cancelled when the user navigates to a different route. Claude Code generates the request manager that tracks all in-flight requests using AbortController, and the React hook that cancels pending requests on component unmount.
+Step 4. Implement request cancellation for navigation. In single-page applications, requests started on one route should be cancelled when the user navigates to a different route. Claude Code generates the request manager that tracks all in-flight requests using AbortController, and the React hook that cancels pending requests on component unmount.
 
-**Step 5 — Add structured error handling with error transformation.** Network errors, HTTP errors, and application-level errors need different handling. Claude Code generates the error transformer that converts Axios errors into your application's error type hierarchy, with serializable properties that can be passed to error boundaries and displayed in UI.
+Step 5. Add structured error handling with error transformation. Network errors, HTTP errors, and application-level errors need different handling. Claude Code generates the error transformer that converts Axios errors into your application's error type hierarchy, with serializable properties that can be passed to error boundaries and displayed in UI.
 
-## Common Pitfalls
+Common Pitfalls
 
-**Not clearing interceptors when the client is destroyed.** If you create Axios instances inside React components (rare but sometimes necessary), each render creates new interceptors that accumulate. Call axios.interceptors.request.eject() and axios.interceptors.response.eject() in the component's cleanup function. Claude Code generates the cleanup hook.
+Not clearing interceptors when the client is destroyed. If you create Axios instances inside React components (rare but sometimes necessary), each render creates new interceptors that accumulate. Call axios.interceptors.request.eject() and axios.interceptors.response.eject() in the component's cleanup function. Claude Code generates the cleanup hook.
 
-**Race conditions in concurrent requests.** When multiple components simultaneously make requests to the same endpoint, you may want request deduplication. Without it, you get N requests for N subscribers. Claude Code generates the deduplication layer using a shared request cache Map keyed on the serialized URL and parameters.
+Race conditions in concurrent requests. When multiple components simultaneously make requests to the same endpoint, you may want request deduplication. Without it, you get N requests for N subscribers. Claude Code generates the deduplication layer using a shared request cache Map keyed on the serialized URL and parameters.
 
-**Not serializing complex query parameters correctly.** Axios serializes nested objects and arrays in query strings using PHP-style brackets by default. Many APIs expect comma-separated values or repeated keys. Configure Axios's paramsSerializer to match your API's expected format. Claude Code generates the custom serializer configured to your API's conventions.
+Not serializing complex query parameters correctly. Axios serializes nested objects and arrays in query strings using PHP-style brackets by default. Many APIs expect comma-separated values or repeated keys. Configure Axios's paramsSerializer to match your API's expected format. Claude Code generates the custom serializer configured to your API's conventions.
 
-**Caching responses without considering cache invalidation.** Response caching saves bandwidth but can serve stale data. Without a strategy for invalidating cache entries after mutations, your application shows outdated data. Claude Code generates the cache manager with time-based expiration and manual invalidation methods that are called after write operations.
+Caching responses without considering cache invalidation. Response caching saves bandwidth but can serve stale data. Without a strategy for invalidating cache entries after mutations, your application shows outdated data. Claude Code generates the cache manager with time-based expiration and manual invalidation methods that are called after write operations.
 
-## Best Practices
+Best Practices
 
-**Use TypeScript generics for typed responses.** Axios supports generic type parameters for response data: axios.get<User[]>('/users'). Claude Code generates the typed API module where every endpoint is represented as a function with typed request parameters and typed return values, giving full IntelliSense coverage across your API surface.
+Use TypeScript generics for typed responses. Axios supports generic type parameters for response data: axios.get<User[]>('/users'). Claude Code generates the typed API module where every endpoint is represented as a function with typed request parameters and typed return values, giving full IntelliSense coverage across your API surface.
 
-**Test interceptors independently.** Interceptors are the most complex part of an Axios client and the most error-prone. Unit test each interceptor by calling it directly rather than through the full Axios stack. Claude Code generates isolated test cases for the authentication interceptor, the retry interceptor, and the error transform interceptor.
+Test interceptors independently. Interceptors are the most complex part of an Axios client and the most error-prone. Unit test each interceptor by calling it directly rather than through the full Axios stack. Claude Code generates isolated test cases for the authentication interceptor, the retry interceptor, and the error transform interceptor.
 
-**Document base URL and authentication requirements.** Each Axios instance should have a comment explaining which API it targets, what authentication it uses, and any special request or response handling. Claude Code generates the JSDoc comments for each instance factory that document these details and appear in IDE tooltips.
+Document base URL and authentication requirements. Each Axios instance should have a comment explaining which API it targets, what authentication it uses, and any special request or response handling. Claude Code generates the JSDoc comments for each instance factory that document these details and appear in IDE tooltips.
 
-## Integration Patterns
+Integration Patterns
 
-**React Query integration.** React Query manages server state and caching on top of any fetch mechanism. Claude Code generates the Axios adapter for React Query that configures sensible defaults (stale time, retry count, error boundary integration) and generates typed query hooks for each of your API endpoints.
+React Query integration. React Query manages server state and caching on top of any fetch mechanism. Claude Code generates the Axios adapter for React Query that configures sensible defaults (stale time, retry count, error boundary integration) and generates typed query hooks for each of your API endpoints.
 
-**Vue.js with Pinia.** In Vue applications using Pinia for state management, Claude Code generates the Axios instance as a Pinia plugin that shares the auth state store reference, allowing interceptors to read and write authentication tokens from the central store without circular dependencies.
+Vue.js with Pinia. In Vue applications using Pinia for state management, Claude Code generates the Axios instance as a Pinia plugin that shares the auth state store reference, allowing interceptors to read and write authentication tokens from the central store without circular dependencies.
 
 
-## Related Reading
+Related Reading
 
 - [What Is the Best Claude Skill for REST API Development?](/what-is-the-best-claude-skill-for-rest-api-development/)
 - [Claude Code Tutorials Hub](/tutorials-hub/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Code Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

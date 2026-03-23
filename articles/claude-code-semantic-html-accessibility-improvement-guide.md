@@ -13,21 +13,21 @@ permalink: /claude-code-semantic-html-accessibility-improvement-guide/
 
 # Claude Code Semantic HTML Accessibility Improvement Guide
 
-Semantic HTML is the foundation of accessible web development. When you use the right elements — `<nav>`, `<main>`, `<button>`, `<label>` — you give screen readers and other assistive technologies the signals they need to navigate your pages correctly. Claude Code, combined with the [`frontend-design` skill](/best-claude-code-skills-for-frontend-development/), helps you audit existing markup and enforce accessibility-focused patterns consistently across your project.
+Semantic HTML is the foundation of accessible web development. When you use the right elements. `<nav>`, `<main>`, `<button>`, `<label>`. you give screen readers and other assistive technologies the signals they need to navigate your pages correctly. Claude Code, combined with the [`frontend-design` skill](/best-claude-code-skills-for-frontend-development/), helps you audit existing markup and enforce accessibility-focused patterns consistently across your project.
 
 This guide focuses specifically on the accessibility dimension of semantic HTML: WCAG compliance, assistive technology compatibility, and testable accessibility requirements. For broader structural refactoring (replacing divs, advanced HTML elements), see the [Semantic HTML Improvement Guide](/claude-code-semantic-html-improvement-guide/).
 
-## Why Semantic HTML Matters for Accessibility
+Why Semantic HTML Matters for Accessibility
 
-Screen readers rely on semantic elements to navigate pages efficiently. Users of assistive technology can jump between landmark regions, cycle through headings, and activate interactive elements — but only if the markup signals the correct roles.
+Screen readers rely on semantic elements to navigate pages efficiently. Users of assistive technology can jump between landmark regions, cycle through headings, and activate interactive elements. but only if the markup signals the correct roles.
 
 When you write semantic markup, you provide a structural map of your content. Instead of announcing "group" for every `<div>`, a screen reader can announce "navigation", "main content", or "button" based on the element used. That distinction determines whether a user can independently navigate your interface.
 
-The scale of this matters more than many developers appreciate. Roughly one in five people worldwide has some form of disability. Among your users, some rely entirely on keyboard navigation, some use screen readers like NVDA or JAWS or VoiceOver, and some depend on voice control software like Dragon NaturallySpeaking. Every one of these tools works better — often dramatically better — when your HTML uses semantic elements correctly.
+The scale of this matters more than many developers appreciate. Roughly one in five people worldwide has some form of disability. Among your users, some rely entirely on keyboard navigation, some use screen readers like NVDA or JAWS or VoiceOver, and some depend on voice control software like Dragon NaturallySpeaking. Every one of these tools works better. often dramatically better. when your HTML uses semantic elements correctly.
 
 There is also a legal dimension. WCAG 2.1 AA compliance is required by law in many jurisdictions under legislation like the Americans with Disabilities Act (ADA) and the European Accessibility Act. Accessibility audits that identify failures can trigger lawsuits. Teams that treat semantic HTML as a best practice rather than a compliance checkbox find that automated tools like Claude Code make staying compliant much less labor-intensive.
 
-## Using Claude Code to Audit Your HTML
+Using Claude Code to Audit Your HTML
 
 Before improving, you need to understand your current state. Claude Code can read through your HTML files and identify areas needing attention. Here's how to prompt it:
 
@@ -43,17 +43,17 @@ Focus on:
 
 The `frontend-design` skill specializes in this type of analysis. It understands HTML5 semantic elements and WCAG guidelines, making it particularly effective at identifying structural issues.
 
-### Reading the Audit Output
+Reading the Audit Output
 
 A thorough Claude Code audit produces findings at multiple severity levels. Pay attention to this breakdown:
 
-- **Errors** are WCAG failures that will block users. A form input without a label is an error — screen reader users cannot determine what to type into that field.
-- **Warnings** are patterns that usually cause problems. An image without alt text might be decorative, but it probably is not.
-- **Suggestions** are improvements that go beyond compliance into best practice. Using `<article>` instead of `<section>` for blog posts is a suggestion.
+- Errors are WCAG failures that will block users. A form input without a label is an error. screen reader users cannot determine what to type into that field.
+- Warnings are patterns that usually cause problems. An image without alt text might be decorative, but it probably is not.
+- Suggestions are improvements that go beyond compliance into best practice. Using `<article>` instead of `<section>` for blog posts is a suggestion.
 
 Fix errors first. They represent genuine barriers. Then work through warnings systematically. Leave suggestions for a dedicated improvement sprint.
 
-### Auditing an Entire Project
+Auditing an Entire Project
 
 For large projects, prompt Claude Code to scan multiple files:
 
@@ -70,9 +70,9 @@ Summarize findings across all files at the end, sorted by issue frequency.
 
 The summary view often reveals systemic problems. If forty-three components are all missing `aria-label` on icon buttons, that is a pattern to fix with a shared component rather than forty-three individual edits.
 
-## Practical Patterns for Semantic Improvement
+Practical Patterns for Semantic Improvement
 
-### Landmark Regions
+Landmark Regions
 
 Every page should include these landmark elements:
 
@@ -94,7 +94,7 @@ Every page should include these landmark elements:
 
 When Claude Code generates new pages, instruct it to include these landmarks by default. You can create a skill that enforces this pattern across your project.
 
-Note that the `role` attributes on `<header>` and `<footer>` are redundant when those elements are direct children of `<body>` — HTML5 already implies those roles. They become useful when those elements appear inside an `<article>` or `<section>`, where the implicit roles change. Include them anyway as explicit documentation of intent.
+Note that the `role` attributes on `<header>` and `<footer>` are redundant when those elements are direct children of `<body>`. HTML5 already implies those roles. They become useful when those elements appear inside an `<article>` or `<section>`, where the implicit roles change. Include them anyway as explicit documentation of intent.
 
 The `id="main-content"` attribute on `<main>` is specifically for skip navigation links. Always pair it with a visible (or visually-hidden) skip link at the top of the page:
 
@@ -104,7 +104,7 @@ The `id="main-content"` attribute on `<main>` is specifically for skip navigatio
 
 Without a skip link, keyboard users must tab through your entire header and navigation on every single page load. Adding two lines of HTML eliminates that friction entirely.
 
-### Heading Hierarchy
+Heading Hierarchy
 
 Headings create an outline that screen reader users navigate with keyboard shortcuts. Maintain a logical hierarchy:
 
@@ -118,11 +118,11 @@ Headings create an outline that screen reader users navigate with keyboard short
 
 Never skip heading levels. A `<h4>` should follow a `<h3>`, not a `<h2>`. Claude Code can scan your content and report heading hierarchy violations across your entire site.
 
-A common mistake is choosing heading levels based on visual size rather than semantic meaning. If your design requires large text inside a section that is logically an `h4`, style the `h4` with CSS to appear larger — do not use `h2` because it looks better by default. The heading level communicates document structure; CSS communicates visual presentation.
+A common mistake is choosing heading levels based on visual size rather than semantic meaning. If your design requires large text inside a section that is logically an `h4`, style the `h4` with CSS to appear larger. do not use `h2` because it looks better by default. The heading level communicates document structure; CSS communicates visual presentation.
 
 This also means you should have exactly one `<h1>` per page. That heading identifies the page's primary topic. Multiple `<h1>` elements confuse the document outline and reduce SEO clarity.
 
-### Button vs Link Semantics
+Button vs Link Semantics
 
 This is a common mistake that affects keyboard navigation:
 
@@ -141,9 +141,9 @@ The distinction matters because buttons and links have different default behavio
 
 The differences run deeper than keyboard behavior. When a screen reader announces a link, it signals "this will take you somewhere." When it announces a button, it signals "this will do something." Users make navigation decisions based on these announcements. Misusing the elements breaks users' mental model of your interface.
 
-There is a third case worth knowing: when you need something that looks like a button but navigates to a URL, use `<a href="...">` and style it to look like a button. Never use a `<button>` with JavaScript `window.location` to fake navigation — it breaks right-click behavior, middle-click, and any browser feature that depends on real links.
+There is a third case worth knowing: when you need something that looks like a button but navigates to a URL, use `<a href="...">` and style it to look like a button. Never use a `<button>` with JavaScript `window.location` to fake navigation. it breaks right-click behavior, middle-click, and any browser feature that depends on real links.
 
-### Form Accessibility
+Form Accessibility
 
 Forms are among the most critical accessibility areas because errors here directly prevent users from completing tasks. Every input needs a visible, associated label:
 
@@ -166,7 +166,7 @@ Forms are among the most critical accessibility areas because errors here direct
 </label>
 ```
 
-Placeholder text disappears when a user starts typing. For users with memory difficulties, this is a serious problem — they cannot check what the field was asking for. Labels persist. Always use labels.
+Placeholder text disappears when a user starts typing. For users with memory difficulties, this is a serious problem. they cannot check what the field was asking for. Labels persist. Always use labels.
 
 For required fields, use both the `required` attribute and a visible indicator:
 
@@ -181,7 +181,7 @@ For required fields, use both the `required` attribute and a visible indicator:
 
 The `aria-hidden="true"` on the asterisk prevents screen readers from announcing the symbol. The visually-hidden span provides the same information in words instead.
 
-### Image Alt Text
+Image Alt Text
 
 Alt text requires judgment, not just presence. Claude Code can identify missing alt attributes, but writing good alt text is a content decision:
 
@@ -209,7 +209,7 @@ Alt text requires judgment, not just presence. Claude Code can identify missing 
 
 The common mistake is writing alt text like a filename description ("image of a chart") rather than conveying the content the image communicates ("Q4 revenue chart showing 23% growth vs Q3"). Ask: if this image were removed, what information would a sighted user lose? Your alt text should provide that information.
 
-## Integrating Accessibility into Your Workflow
+Integrating Accessibility into Your Workflow
 
 The [`tdd` skill](/best-claude-skills-for-developers-2026/) pairs well with accessibility testing. Write tests that verify:
 
@@ -256,7 +256,7 @@ test('all buttons have accessible names', () => {
 
 Consider adding `axe-core` or `jest-axe` to your test suite for broader automated coverage. These libraries check dozens of WCAG criteria automatically. Claude Code can help you write the test setup and interpret failures when they occur.
 
-## Automating Semantic Improvements
+Automating Semantic Improvements
 
 Create a Claude skill that enforces semantic standards:
 
@@ -290,9 +290,9 @@ You can go further by creating a pre-commit hook that triggers this audit automa
 
 ```bash
 #!/bin/sh
-# .git/hooks/pre-commit
+.git/hooks/pre-commit
 
-# Run accessibility audit on staged HTML files
+Run accessibility audit on staged HTML files
 staged_html=$(git diff --cached --name-only --diff-filter=ACM | grep '\.html$')
 
 if [ -n "$staged_html" ]; then
@@ -307,7 +307,7 @@ fi
 
 This hook runs the audit only on staged HTML files, keeping the commit process fast while catching issues before they reach the repository.
 
-## WCAG Compliance Reference
+WCAG Compliance Reference
 
 WCAG 2.1 organizes accessibility requirements into four principles: Perceivable, Operable, Understandable, and Robust (POUR). Most semantic HTML improvements address multiple criteria simultaneously:
 
@@ -326,7 +326,7 @@ WCAG 2.1 organizes accessibility requirements into four principles: Perceivable,
 
 Level A requirements are baseline. Most legal compliance frameworks require AA, which includes Level A. Start by ensuring all Level A requirements are met, then move to AA.
 
-## Real-World Results
+Real-World Results
 
 Teams using Claude Code with accessibility-focused skills report significant improvements:
 
@@ -339,9 +339,9 @@ The key is making accessibility part of your development workflow rather than an
 
 One practical pattern that teams find effective: create a dedicated accessibility review step in your pull request process. Instruct Claude Code to audit every PR's HTML changes before merge. This catches regressions immediately, when the change is still fresh in the developer's mind, rather than surfacing them in a quarterly audit when the original author may have moved on.
 
-## Next Steps
+Next Steps
 
-Start by auditing your current codebase. Use Claude Code with the `frontend-design` skill to identify low-hanging fruit — missing landmarks, heading issues, button/link confusion. Fix these first, then establish patterns that prevent future issues.
+Start by auditing your current codebase. Use Claude Code with the `frontend-design` skill to identify low-hanging fruit. missing landmarks, heading issues, button/link confusion. Fix these first, then establish patterns that prevent future issues.
 
 Prioritize your fixes in this order: forms first (accessibility failures here directly prevent task completion), then landmark regions (they affect navigation for every page), then heading hierarchy, then image alt text, then button semantics. This ordering gets the highest-impact improvements deployed earliest.
 
@@ -349,11 +349,11 @@ Accessibility isn't a destination but an ongoing commitment. With Claude Code as
 
 ---
 
-## Related Reading
+Related Reading
 
-- [Claude Code Semantic HTML Improvement Guide](/claude-code-semantic-html-improvement-guide/) — Structural refactoring: replacing generic containers, advanced HTML elements, and pre-commit audits
-- [Best Claude Skills for Frontend and UI Development](/best-claude-code-skills-for-frontend-development/) — Frontend skills for building accessible, semantic HTML structures
-- [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/) — Developer skills including tdd for writing accessibility tests
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — Auto-trigger frontend and accessibility skills when working on HTML files
+- [Claude Code Semantic HTML Improvement Guide](/claude-code-semantic-html-improvement-guide/). Structural refactoring: replacing generic containers, advanced HTML elements, and pre-commit audits
+- [Best Claude Skills for Frontend and UI Development](/best-claude-code-skills-for-frontend-development/). Frontend skills for building accessible, semantic HTML structures
+- [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/). Developer skills including tdd for writing accessibility tests
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). Auto-trigger frontend and accessibility skills when working on HTML files
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

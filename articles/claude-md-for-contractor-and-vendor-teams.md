@@ -13,19 +13,19 @@ tags: [claude-code, claude-skills]
 ---
 
 
-# Claude MD for Contractor and Vendor Teams
+Claude MD for Contractor and Vendor Teams
 
 When you bring external contractors and vendors into your development workflow, communication gaps, inconsistent code quality, and onboarding delays quickly become expensive problems. Claude Code skills written in Markdown (.md) offer a powerful solution: they let you encode your team's standards, processes, and best practices into reusable, executable prompts that external collaborators can run directly in their environment.
 
 This guide shows developer teams how to use Claude MD skills to onboard contractors faster, enforce coding standards, and maintain consistent output across multiple external contributors.
 
-## Why Contractor Teams Need Standardized Claude Skills
+Why Contractor Teams Need Standardized Claude Skills
 
 External developers often work across multiple clients with different expectations. Without explicit guidance, they'll default to their own patterns, tool preferences, and code styles. The result: pull requests full of formatting debates, missed requirements, and time-consuming revision cycles.
 
 Claude MD skills solve this by making your team's standards executable. Instead of writing lengthy onboarding documents that nobody reads, you create skills that contractors can invoke to check their work against your specific requirements. The skill becomes a gatekeeper that runs before code ever reaches your review process.
 
-## Creating Skills for Contractor Onboarding
+Creating Skills for Contractor Onboarding
 
 The first skill every vendor team should create is an onboarding checker. This skill validates that contractors have configured their environment correctly and understand your baseline requirements.
 
@@ -35,12 +35,12 @@ name: vendor-onboarding
 description: Validates contractor environment setup and baseline requirements
 ---
 
-# Vendor Onboarding Check
+Vendor Onboarding Check
 
 Verify the following before starting any ticket:
 
-1. Run `git config user.name` — must match your contractor agreement name
-2. Run `git config user.email` — must use your company email domain
+1. Run `git config user.name`. must match your contractor agreement name
+2. Run `git config user.email`. must use your company email domain
 3. Confirm Node.js version matches project requirements: `node --version`
 4. Verify ESLint is installed: `npx eslint --version`
 5. Check that you have access to all required private npm registries
@@ -50,7 +50,7 @@ Report any failures immediately. Do not proceed until all checks pass.
 
 This skill runs in seconds and catches configuration issues before they cause problems later. Contractors appreciate clear, automated feedback rather than vague "fix your environment" comments in code reviews.
 
-## Enforcing Code Standards with Quality Skills
+Enforcing Code Standards with Quality Skills
 
 Contractor code reviews consume significant time when reviewers must catch style violations, missing tests, and insecure patterns. Create a pre-submission quality skill that contractors run before opening pull requests:
 
@@ -60,27 +60,27 @@ name: pre-submit-quality
 description: Run comprehensive quality checks before code submission
 ---
 
-# Pre-Submission Quality Gate
+Pre-Submission Quality Gate
 
 Execute these checks in order:
 
-## 1. Linting
+1. Linting
 Run ESLint on all changed files:
 ```bash
-npx eslint --quiet src/**/*.ts
+npx eslint --quiet src//*.ts
 ```
 Fix all errors before continuing.
 
-## 2. Type Checking
+2. Type Checking
 ```bash
 npx tsc --noEmit
 ```
 Address any type errors immediately.
 
-## 3. Test Coverage
+3. Test Coverage
 Verify tests exist for changed modules. Check that coverage hasn't decreased by more than 5% from the baseline.
 
-## 4. Security Scan
+4. Security Scan
 Run your security linter on changed files:
 ```bash
 npm run security:scan
@@ -91,11 +91,11 @@ Report the results. Only proceed if all checks pass with zero errors.
 
 This skill acts as a first line of defense. Your reviewers still examine the code, but they spend less time on preventable issues.
 
-## Domain-Specific Skills for Specialized Work
+Domain-Specific Skills for Specialized Work
 
 Different vendors specialize in different areas. Create targeted skills that speak to their specific domain expertise.
 
-### For Frontend Contractors
+For Frontend Contractors
 
 If you're working with a UI/UX vendor, the `frontend-design` skill helps maintain design system compliance:
 
@@ -105,7 +105,7 @@ name: frontend-design-validator
 description: Validates frontend implementation against design system
 ---
 
-# Design System Compliance Check
+Design System Compliance Check
 
 For each component you're submitting:
 
@@ -118,7 +118,7 @@ For each component you're submitting:
 Flag any deviations. If the design specifies values not in the system, document them for review before implementation.
 ```
 
-### For Documentation Vendors
+For Documentation Vendors
 
 When contractors handle documentation, the `pdf` skill becomes valuable for generating consistent outputs:
 
@@ -128,7 +128,7 @@ name: docs-pdf-generator
 description: Generate PDF documentation following company standards
 ---
 
-# Documentation PDF Generator
+Documentation PDF Generator
 
 For API documentation or user guides:
 
@@ -141,7 +141,7 @@ For API documentation or user guides:
 Output to `dist/docs/` with naming convention: `{project}-docs-{date}.pdf`
 ```
 
-### For Testing Specialists
+For Testing Specialists
 
 Vendor QA teams benefit from skills that encode your testing requirements:
 
@@ -151,7 +151,7 @@ name: tdd-check
 description: Validates test-driven development compliance
 ---
 
-# TDD Compliance Check
+TDD Compliance Check
 
 For each feature branch:
 
@@ -164,7 +164,7 @@ For each feature branch:
 Run: `npm run test:coverage` and verify the report shows >80% coverage.
 ```
 
-## Memory and Context Skills
+Memory and Context Skills
 
 Long-term contractors often struggle with institutional knowledge that full-time team members take for granted. The `supermemory` skill helps contractors maintain their own knowledge base:
 
@@ -174,7 +174,7 @@ name: project-memory
 description: Capture and recall project-specific knowledge
 ---
 
-# Project Memory Manager
+Project Memory Manager
 
 Store important decisions and patterns here. Use this skill:
 
@@ -187,46 +187,46 @@ Run this skill weekly to review and update your memory store.
 
 This creates a searchable knowledge base that travels with the contractor and can be handed off when the engagement ends.
 
-## Collaboration Workflows
+Collaboration Workflows
 
 Structure your contractor interactions around these skill-based workflows:
 
-**Before work starts:** Run the `vendor-onboarding` skill to verify environment setup.
+Before work starts: Run the `vendor-onboarding` skill to verify environment setup.
 
-**During development:** Use domain-specific skills (`frontend-design`, `tdd-check`) as checkpoints.
+During development: Use domain-specific skills (`frontend-design`, `tdd-check`) as checkpoints.
 
-**Before submission:** Run `pre-submit-quality` to catch issues early.
+Before submission: Run `pre-submit-quality` to catch issues early.
 
-**During review:** Your team runs their own validation skills to verify contractor work meets standards.
+During review: Your team runs their own validation skills to verify contractor work meets standards.
 
 This creates a clear feedback loop where contractors self-check before code reaches you, reducing review cycles significantly.
 
-## Measuring Impact
+Measuring Impact
 
 Track these metrics to evaluate your contractor skill implementation:
 
 - Average number of revision cycles per pull request
 - Time spent on code review per contractor
 - Onboarding time for new contractors
-- Percentage of issues caught by pre-submission skills versus review才发现
+- Percentage of issues caught by pre-submission skills versus review
 
 Most teams see a 30-50% reduction in review cycles within the first month of implementing these skills.
 
-## Implementation Tips
+Implementation Tips
 
-Start small. Create one skill for your next contractor onboarding and expand based on recurring issues you see in reviews. Involve your contractors in skill development—they often identify gaps and improvements that make the skills more useful.
+Start small. Create one skill for your next contractor onboarding and expand based on recurring issues you see in reviews. Involve your contractors in skill development, they often identify gaps and improvements that make the skills more useful.
 
 Keep skills version-controlled alongside your code. Update them when standards change, and communicate updates to active contractors promptly.
 
-The goal isn't to micromanage external developers—it's to give them clear, automated guidance that helps them deliver work meeting your standards the first time.
+The goal isn't to micromanage external developers, it's to give them clear, automated guidance that helps them deliver work meeting your standards the first time.
 
 ---
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

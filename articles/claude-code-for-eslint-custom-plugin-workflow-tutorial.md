@@ -14,23 +14,23 @@ score: 8
 
 
 {% raw %}
-# Claude Code for ESLint Custom Plugin Workflow Tutorial
+Claude Code for ESLint Custom Plugin Workflow Tutorial
 
-Creating custom ESLint plugins can significantly improve your codebase's consistency and catch domain-specific issues early. When combined with Claude Code, you gain an AI-powered development partner that can accelerate every step of the plugin creation process—from scaffolding to testing and publishing.
+Creating custom ESLint plugins can significantly improve your codebase's consistency and catch domain-specific issues early. When combined with Claude Code, you gain an AI-powered development partner that can accelerate every step of the plugin creation process, from scaffolding to testing and publishing.
 
 This tutorial walks you through building a complete custom ESLint plugin workflow using Claude Code, with practical examples and actionable advice you can apply immediately.
 
-## Why Build Custom ESLint Plugins?
+Why Build Custom ESLint Plugins?
 
 Before diving into the workflow, let's clarify when custom plugins make sense. You should consider creating one when your project has:
 
-- **Domain-specific rules**: Enforcing naming conventions, architectural patterns, or business logic that standard ESLint rules don't cover
-- **Team-wide standards**: Codifying your team's coding style into automated checks
-- **Legacy migrations**: Gradually enforcing fixes during code refactoring
+- Domain-specific rules: Enforcing naming conventions, architectural patterns, or business logic that standard ESLint rules don't cover
+- Team-wide standards: Codifying your team's coding style into automated checks
+- Legacy migrations: Gradually enforcing fixes during code refactoring
 
 Custom plugins integrate smoothly with your existing ESLint configuration and can be shared across projects or published as npm packages.
 
-## Setting Up Your Plugin Project
+Setting Up Your Plugin Project
 
 The first step is scaffolding your plugin project with a structure that Claude Code can understand and work with efficiently. Create a new directory and initialize it:
 
@@ -44,16 +44,16 @@ Your plugin needs a specific directory structure. The most common layout places 
 
 ```
 eslint-plugin-my-team/
-├── rules/
-│   └── no-hardcoded-credentials.js
-├── tests/
-│   └── rules/
-│       └── no-hardcoded-credentials.test.js
-├── package.json
-└── README.md
+ rules/
+    no-hardcoded-credentials.js
+ tests/
+    rules/
+        no-hardcoded-credentials.test.js
+ package.json
+ README.md
 ```
 
-## Creating Your First Rule
+Creating Your First Rule
 
 Now comes the core of your plugin: the rule itself. A rule is a JavaScript object with a `create` function that returns an AST visitor. Let's create a rule that detects hardcoded credentials:
 
@@ -106,7 +106,7 @@ module.exports = {
 
 This rule checks property assignments for sensitive key names and reports when it finds potential credentials. The schema allows customization of allowed keys, giving teams flexibility.
 
-## Integrating with Claude Code
+Integrating with Claude Code
 
 Here's where the workflow becomes powerful. Create a Claude Code skill to automate repetitive tasks around your plugin:
 
@@ -132,7 +132,7 @@ When writing tests, use the ESLint RuleTester:
 
 This skill gives Claude Code context about your plugin development workflow, enabling it to assist more effectively.
 
-## Writing Comprehensive Tests
+Writing Comprehensive Tests
 
 Every rule needs tests. ESLint provides `RuleTester` which makes this straightforward. Here's how to test our credential rule:
 
@@ -180,7 +180,7 @@ npm install --save-dev mocha
 npx mocha tests/rules/*.test.js
 ```
 
-## Publishing and Sharing Your Plugin
+Publishing and Sharing Your Plugin
 
 When your plugin is ready, you can publish it to npm for reuse across projects:
 
@@ -205,40 +205,40 @@ module.exports = {
 };
 ```
 
-## Automating Plugin Development with Claude Code
+Automating Plugin Development with Claude Code
 
 Beyond creating individual rules, Claude Code can help with entire workflows. Consider creating skills for:
 
-- **Rule generation**: Describe your requirement and have Claude Code scaffold the rule and tests
-- **Bulk updates**: When renaming patterns across many rules
-- **Documentation**: Auto-generate rule documentation from metadata
-- **Migration assistance**: Help convert deprecated rules to new APIs
+- Rule generation: Describe your requirement and have Claude Code scaffold the rule and tests
+- Bulk updates: When renaming patterns across many rules
+- Documentation: Auto-generate rule documentation from metadata
+- Migration assistance: Help convert deprecated rules to new APIs
 
 The key is providing Claude Code with context about your plugin's structure and conventions through well-crafted skills.
 
-## Best Practices for Plugin Development
+Best Practices for Plugin Development
 
 Follow these guidelines for maintainable plugins:
 
-1. **Keep rules focused**: Each rule should do one thing well
-2. **Provide clear error messages**: Help developers understand and fix issues
-3. **Add schemas**: Validate rule options to prevent misconfiguration
-4. **Write comprehensive tests**: Cover edge cases and valid configurations
-5. **Document thoroughly**: Include examples of both passing and failing code
+1. Keep rules focused: Each rule should do one thing well
+2. Provide clear error messages: Help developers understand and fix issues
+3. Add schemas: Validate rule options to prevent misconfiguration
+4. Write comprehensive tests: Cover edge cases and valid configurations
+5. Document thoroughly: Include examples of both passing and failing code
 
-## Conclusion
+Conclusion
 
 Building custom ESLint plugins with Claude Code transforms what used to be a manual process into a collaborative, AI-assisted workflow. From scaffolding new rules to testing and publishing, Claude Code understands your plugin's structure and can meaningfully contribute to development.
 
-Start small with a single rule addressing a specific pain point, then expand as you see the benefits. Your team will appreciate the consistency, and future developers will thank you for catching issues before they reach production.
+Start small with a single rule addressing a specific problem, then expand as you see the benefits. Your team will appreciate the consistency, and future developers will thank you for catching issues before they reach production.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 {% endraw %}

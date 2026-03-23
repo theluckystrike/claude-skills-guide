@@ -15,9 +15,9 @@ score: 7
 
 {% raw %}
 
-Cloud security scanning is a critical component of any modern DevSecOps pipeline. CloudSploit, an open-source cloud security scanner, helps developers and security teams identify misconfigurations across AWS, Azure, Google Cloud, and Oracle Cloud. However, running CloudSploit effectively requires proper configuration, result parsing, and integration into development workflows. This is where Claude Code shines—automating the entire scanning lifecycle, from setup to remediation tracking.
+Cloud security scanning is a critical component of any modern DevSecOps pipeline. CloudSploit, an open-source cloud security scanner, helps developers and security teams identify misconfigurations across AWS, Azure, Google Cloud, and Oracle Cloud. However, running CloudSploit effectively requires proper configuration, result parsing, and integration into development workflows. This is where Claude Code shines, automating the entire scanning lifecycle, from setup to remediation tracking.
 
-## What is CloudSploit?
+What is CloudSploit?
 
 CloudSploit is an open-source tool that scans cloud environments for security misconfigurations. It supports major cloud providers and checks for issues like:
 
@@ -30,33 +30,33 @@ CloudSploit is an open-source tool that scans cloud environments for security mi
 
 The tool runs collection scripts against cloud APIs, then executes plugins that check for specific misconfigurations. Each plugin returns results with severity levels, descriptions, and remediation guidance.
 
-CloudSploit organizes findings into four severity tiers: CRITICAL, HIGH, MEDIUM, and LOW. Critical findings represent immediate threats—publicly exposed databases, S3 buckets with no access controls, or IAM root access keys in active use. High findings are serious issues that should be resolved within days, not weeks. Medium and Low findings provide a long-term hardening backlog. Understanding this structure is essential to building a workflow that reacts proportionally to each category.
+CloudSploit organizes findings into four severity tiers: CRITICAL, HIGH, MEDIUM, and LOW. Critical findings represent immediate threats, publicly exposed databases, S3 buckets with no access controls, or IAM root access keys in active use. High findings are serious issues that should be resolved within days, not weeks. Medium and Low findings provide a long-term hardening backlog. Understanding this structure is essential to building a workflow that reacts proportionally to each category.
 
-## Setting Up CloudSploit with Claude Code
+Setting Up CloudSploit with Claude Code
 
 Before integrating with Claude Code, ensure CloudSploit is installed in your environment:
 
 ```bash
-# Clone the CloudSploit repository
+Clone the CloudSploit repository
 git clone https://github.com/cloudsploit/cloudsploit.git
 cd cloudsploit
 
-# Install dependencies
+Install dependencies
 npm install
 
-# Configure your cloud credentials
-# For AWS:
+Configure your cloud credentials
+For AWS:
 export AWS_ACCESS_KEY_ID=your_access_key
 export AWS_SECRET_ACCESS_KEY=your_secret_key
 export AWS_DEFAULT_REGION=us-east-1
 
-# For Azure (Service Principal):
+For Azure (Service Principal):
 export AZURE_SUBSCRIPTION_ID=your_subscription_id
 export AZURE_TENANT_ID=your_tenant_id
 export AZURE_CLIENT_ID=your_client_id
 export AZURE_CLIENT_SECRET=your_client_secret
 
-# For GCP:
+For GCP:
 export GOOGLE_APPLICATION_CREDENTIALS=/path/to/service-account.json
 ```
 
@@ -64,7 +64,7 @@ For production use, you should never hardcode credentials in environment variabl
 
 Claude Code can then manage the entire scanning workflow through custom skills. Create a skill that encapsulates CloudSploit execution, result parsing, and reporting.
 
-## Creating a CloudSploit Scanning Skill
+Creating a CloudSploit Scanning Skill
 
 A well-designed Claude Code skill for CloudSploit should handle several key functions:
 
@@ -115,14 +115,14 @@ module.exports = { runScan, parseScanResults };
 
 This basic structure provides the foundation for more sophisticated automation. The skill should accept parameters like provider selection, scan scope, and output preferences.
 
-## Automating Scan Execution
+Automating Scan Execution
 
 One of Claude Code's strengths is orchestrating complex workflows. For CloudSploit, this means:
 
-1. **Pre-scan validation**: Verify credentials are configured, required permissions exist, and the environment is ready
-2. **Scan execution**: Run CloudSploit with appropriate flags and handle any errors gracefully
-3. **Result parsing**: Extract findings and categorize by severity
-4. **Reporting**: Generate actionable reports in formats your team needs
+1. Pre-scan validation: Verify credentials are configured, required permissions exist, and the environment is ready
+2. Scan execution: Run CloudSploit with appropriate flags and handle any errors gracefully
+3. Result parsing: Extract findings and categorize by severity
+4. Reporting: Generate actionable reports in formats your team needs
 
 Here is a more complete orchestration wrapper that you can call from a Claude Code skill or a CI step:
 
@@ -165,7 +165,7 @@ async function orchestrate(config) {
     await createJiraIssues(grouped.HIGH, 'High');
   }
 
-  // Fail the process if critical issues exist—useful for CI gates
+  // Fail the process if critical issues exist, useful for CI gates
   if (summary.critical > 0) {
     console.error(`[FAIL] ${summary.critical} critical findings require immediate attention.`);
     process.exit(1);
@@ -180,14 +180,14 @@ orchestrate({
 });
 ```
 
-## Practical Integration Examples
+Practical Integration Examples
 
-### CI/CD Pipeline Integration
+CI/CD Pipeline Integration
 
 Integrate CloudSploit scanning into your CI/CD pipeline to catch misconfigurations before deployment:
 
 ```yaml
-# .github/workflows/cloudsploit-scan.yml
+.github/workflows/cloudsploit-scan.yml
 name: Cloud Security Scan
 
 on:
@@ -249,7 +249,7 @@ jobs:
 
 Using OIDC-based authentication (shown above) instead of long-lived access keys is a security best practice. The scan role should have read-only permissions across the services CloudSploit checks.
 
-### Scheduled Security Audits
+Scheduled Security Audits
 
 Use Claude Code to schedule regular scans and send alerts:
 
@@ -277,7 +277,7 @@ cron.schedule('0 2 * * *', async () => {
 
 For teams with multi-account AWS setups, you can extend this scheduler to loop over a list of account IDs, assume a cross-account role in each, run the scan, and aggregate results into a central reporting bucket. Claude Code can manage this iteration logic and handle failures in individual accounts without aborting the entire run.
 
-## Comparison: Manual vs. Claude Code-Orchestrated Workflow
+Comparison: Manual vs. Claude Code-Orchestrated Workflow
 
 | Task | Manual Approach | Claude Code Workflow |
 |---|---|---|
@@ -290,26 +290,26 @@ For teams with multi-account AWS setups, you can extend this scheduler to loop o
 
 The manual approach is fine for occasional audits. For teams running more than one cloud account or deploying multiple times per week, the overhead of manual triage makes automation essential.
 
-## Best Practices for CloudSploit Workflows
+Best Practices for CloudSploit Workflows
 
-### 1. Scan Scope Management
+1. Scan Scope Management
 
 Avoid scanning everything at once. Instead, break scans into logical segments:
 
-- **Identity and Access Management**: Focus on IAM users, roles, and policies
-- **Storage**: Examine S3 buckets, EBS volumes, and database encryption
-- **Network**: Review security groups, VPCs, and firewall rules
-- **Compute**: Check EC2 instances, Lambda functions, and containers
+- Identity and Access Management: Focus on IAM users, roles, and policies
+- Storage: Examine S3 buckets, EBS volumes, and database encryption
+- Network: Review security groups, VPCs, and firewall rules
+- Compute: Check EC2 instances, Lambda functions, and containers
 
-This modular approach makes results more actionable and easier to triage. You can also assign each module to the team that owns it—storage findings go to the platform team, IAM findings go to the security team, and compute findings go to the application owners.
+This modular approach makes results more actionable and easier to triage. You can also assign each module to the team that owns it, storage findings go to the platform team, IAM findings go to the security team, and compute findings go to the application owners.
 
-### 2. Result Filtering and Prioritization
+2. Result Filtering and Prioritization
 
 Not all findings require immediate attention. Configure your workflow to filter based on:
 
-- **Severity level**: Focus on Critical and High findings first
-- **Resource tags**: Exclude development or test resources from production reports
-- **Known exceptions**: Track acknowledged risks that accept certain trade-offs
+- Severity level: Focus on Critical and High findings first
+- Resource tags: Exclude development or test resources from production reports
+- Known exceptions: Track acknowledged risks that accept certain trade-offs
 
 Here is a filtering helper that skips resources tagged as non-production:
 
@@ -326,7 +326,7 @@ function filterProductionFindings(findings) {
 
 Pairing this filter with a CloudSploit run that covers all environments lets you generate both a strict production report and a broader infrastructure inventory in a single pass.
 
-### 3. Remediation Tracking
+3. Remediation Tracking
 
 Scan results are only valuable if they lead to fixes. Create a workflow that:
 
@@ -337,9 +337,9 @@ Scan results are only valuable if they lead to fixes. Create a workflow that:
 
 A useful pattern is to store each scan's JSON output in an S3 bucket with a date-stamped key, then query it with Athena to generate trend reports. You can ask Claude Code to write the Athena query for a specific plugin over a date range, showing whether a class of findings has been growing or shrinking.
 
-### 4. Least-Privilege Scan Roles
+4. Least-Privilege Scan Roles
 
-CloudSploit only needs read access to audit your environment. Create a dedicated IAM role with read-only permissions and nothing else. Avoid using your deployment role or an admin role for scanning—this reduces the blast radius if credentials are ever compromised.
+CloudSploit only needs read access to audit your environment. Create a dedicated IAM role with read-only permissions and nothing else. Avoid using your deployment role or an admin role for scanning, this reduces the blast radius if credentials are ever compromised.
 
 Example IAM policy for AWS scanning:
 
@@ -371,7 +371,7 @@ Example IAM policy for AWS scanning:
 
 CloudSploit's documentation lists the exact permissions each plugin requires, making it easy to tighten this policy further.
 
-## Advanced: Custom CloudSploit Plugins
+Advanced: Custom CloudSploit Plugins
 
 CloudSploit's plugin architecture allows you to write custom checks for organization-specific policies:
 
@@ -411,7 +411,7 @@ Integrate custom plugins into your Claude Code workflow to enforce organization-
 
 A practical extension is a plugin that verifies your organization's approved AMI list. If an EC2 instance is running an AMI not on the approved list, it flags the instance for review. Claude Code can maintain the approved list as a config file, compare it against the scan output, and open tickets for any violations.
 
-## Generating Executive Reports
+Generating Executive Reports
 
 Security teams often need to present findings to non-technical stakeholders. Claude Code can transform raw CloudSploit JSON into a clean HTML or PDF summary report:
 
@@ -457,11 +457,11 @@ console.log('Report written to security-report.html');
 
 This report can be emailed automatically after each scheduled scan, attached to Jira tickets, or hosted in an internal wiki.
 
-## Conclusion
+Conclusion
 
 Claude Code transforms CloudSploit from a manual security tool into an automated, intelligent scanning workflow. By creating reusable skills, integrating with CI/CD pipelines, and implementing proper result handling, you can establish continuous cloud security scanning that catches misconfigurations early and tracks remediation effectively.
 
-The key is starting simple—run basic scans, establish baseline findings, then layer on automation, filtering, and reporting as your workflow matures. Use the severity grouping to drive proportional responses: auto-block on critical, alert on high, log medium and low for weekly review. With Claude Code orchestrating the process, your team can focus on fixing issues rather than managing the scanning infrastructure.
+The key is starting simple, run basic scans, establish baseline findings, then layer on automation, filtering, and reporting as your workflow matures. Use the severity grouping to drive proportional responses: auto-block on critical, alert on high, log medium and low for weekly review. With Claude Code orchestrating the process, your team can focus on fixing issues rather than managing the scanning infrastructure.
 
 As your organization scales, extend the workflow to cover multiple cloud accounts and providers in parallel, aggregate findings into a central data store, and generate trend metrics that show your security posture improving over time. CloudSploit combined with Claude Code provides the foundation for a mature, measurable cloud security program.
 
@@ -469,10 +469,10 @@ As your organization scales, extend the workflow to cover multiple cloud account
 
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

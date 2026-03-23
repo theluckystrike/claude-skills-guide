@@ -13,9 +13,9 @@ permalink: /claude-skills-with-slack-bot-integration-tutorial/
 
 # Claude Skills with Slack Bot Integration Tutorial
 
-A Slack bot backed by Claude skills gives your team an AI assistant that lives inside their daily workspace. Team members can trigger code reviews with the [`tdd` skill](/best-claude-skills-for-developers-2026/), process documents via `pdf`, recall project context through `supermemory`, or get UI feedback from `frontend-design` — all without leaving Slack. This tutorial covers the full Claude skills with Slack bot integration from app creation to skill invocation.
+A Slack bot backed by Claude skills gives your team an AI assistant that lives inside their daily workspace. Team members can trigger code reviews with the [`tdd` skill](/best-claude-skills-for-developers-2026/), process documents via `pdf`, recall project context through `supermemory`, or get UI feedback from `frontend-design`. all without leaving Slack. This tutorial covers the full Claude skills with Slack bot integration from app creation to skill invocation.
 
-## Architecture Overview
+Architecture Overview
 
 ```
 Slack App (Bolt SDK)
@@ -29,33 +29,33 @@ Slack API (post message)
 
 The bot uses Slack Bolt for Node.js, listens for slash commands or app mentions, routes them to Claude with the appropriate skill system prompt, and posts the response back.
 
-## Prerequisites
+Prerequisites
 
 - Node.js 18+
 - A Slack workspace where you can create apps
 - Claude API key from console.anthropic.com
 - A server or tunneling tool (ngrok for local dev, or a platform like Railway/Render for production)
 
-## Step 1: Create the Slack App
+Step 1: Create the Slack App
 
-1. Go to [api.slack.com/apps](https://api.slack.com/apps) and click **Create New App**
-2. Choose **From scratch**, name it "Claude Skills Bot", select your workspace
-3. Under **OAuth & Permissions**, add Bot Token Scopes:
+1. Go to [api.slack.com/apps](https://api.slack.com/apps) and click Create New App
+2. Choose From scratch, name it "Claude Skills Bot", select your workspace
+3. Under OAuth & Permissions, add Bot Token Scopes:
    - `app_mentions:read`
    - `chat:write`
    - `commands`
    - `files:read`
-4. Under **Slash Commands**, create `/claude` with:
+4. Under Slash Commands, create `/claude` with:
    - Request URL: `https://your-server.com/slack/events`
    - Short description: `Invoke Claude skills`
    - Usage hint: `[skill] [prompt]`
-5. Enable **Event Subscriptions** and subscribe to `app_mention`
+5. Enable Event Subscriptions and subscribe to `app_mention`
 6. Install the app to your workspace and note:
    - Bot User OAuth Token (`xoxb-...`)
    - Signing Secret
    - App-Level Token (for Socket Mode)
 
-## Step 2: Set Up the Node.js Project
+Step 2: Set Up the Node.js Project
 
 ```bash
 mkdir claude-slack-bot && cd claude-slack-bot
@@ -72,7 +72,7 @@ ANTHROPIC_API_KEY=your-claude-api-key
 PORT=3000
 ```
 
-## Step 3: Create the Bot Server
+Step 3: Create the Bot Server
 
 Create `index.js`:
 
@@ -178,7 +178,7 @@ app.event('app_mention', async ({ event, say }) => {
 })();
 ```
 
-## Step 4: Handle File Uploads for PDF Skill
+Step 4: Handle File Uploads for PDF Skill
 
 When users share files in Slack and mention the bot, fetch the file content before sending to Claude:
 
@@ -205,7 +205,7 @@ app.event('app_mention', async ({ event, say, client }) => {
 });
 ```
 
-## Step 5: Add Conversation Threading with Supermemory
+Step 5: Add Conversation Threading with Supermemory
 
 Use the [`supermemory` skill](/claude-skills-token-optimization-reduce-api-costs/) to give the bot memory across threads:
 
@@ -234,12 +234,12 @@ app.event('app_mention', async ({ event, say }) => {
 });
 ```
 
-## Step 6: Deploy to Production
+Step 6: Deploy to Production
 
 For production, deploy to Railway or Render:
 
 ```bash
-# Railway deployment
+Railway deployment
 npm install -g @railway/cli
 railway login
 railway init
@@ -249,7 +249,7 @@ railway up
 
 Set environment variables in the Railway dashboard matching your `.env` file. Railway gives you a public URL to use as the Slack Request URL.
 
-## Step 7: Format Responses for Slack
+Step 7: Format Responses for Slack
 
 Claude's markdown doesn't map perfectly to Slack's mrkdwn format. Add a formatting helper:
 
@@ -262,16 +262,16 @@ function toSlackMarkdown(text) {
 }
 ```
 
-## Conclusion
+Conclusion
 
-This Claude skills with Slack bot integration tutorial covers the full stack from app creation to multi-skill routing and production deployment. The pattern of mapping slash command arguments to skill system prompts is flexible — add new skills by adding entries to the `SKILLS` object. With `supermemory` thread history and `pdf` file handling, your team gets a genuinely useful AI assistant living inside Slack.
+This Claude skills with Slack bot integration tutorial covers the full stack from app creation to multi-skill routing and production deployment. The pattern of mapping slash command arguments to skill system prompts is flexible. add new skills by adding entries to the `SKILLS` object. With `supermemory` thread history and `pdf` file handling, your team gets a genuinely useful AI assistant living inside Slack.
 
 ---
 
-## Related Reading
+Related Reading
 
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — The full skills list to consider for Slack bot routing, including tdd, pdf, supermemory, and frontend-design
-- [How to Share Claude Skills With Your Team](/how-to-share-claude-skills-with-your-team/) — Guidance on distributing skills across a team, relevant to deploying a shared Slack bot backed by team-maintained skills
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — Managing API costs is critical for Slack bots that handle high message volumes; these techniques apply directly
+- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). The full skills list to consider for Slack bot routing, including tdd, pdf, supermemory, and frontend-design
+- [How to Share Claude Skills With Your Team](/how-to-share-claude-skills-with-your-team/). Guidance on distributing skills across a team, relevant to deploying a shared Slack bot backed by team-maintained skills
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Managing API costs is critical for Slack bots that handle high message volumes; these techniques apply directly
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

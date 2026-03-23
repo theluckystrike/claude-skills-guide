@@ -15,29 +15,29 @@ score: 8
 
 
 {% raw %}
-# Claude Code for Metaflow Workflow Tutorial
+Claude Code for Metaflow Workflow Tutorial
 
 Metaflow has become a go-to framework for data scientists and ML engineers who need to build solid, scalable workflows without getting bogged down in infrastructure complexity. Developed by Netflix and now widely adopted across the industry, Metaflow provides a unified API for data manipulation, workflow orchestration, and model training. When you combine Metaflow with Claude Code's AI-assisted development capabilities, you can accelerate your workflow development cycle significantly.
 
 This tutorial walks you through using Claude Code effectively for Metaflow projects, with practical examples and actionable patterns you can apply immediately.
 
-## Why Use Claude Code with Metaflow?
+Why Use Claude Code with Metaflow?
 
 Metaflow workflows often involve complex data transformations, model training pipelines, and integration with external services. Claude Code brings several advantages to your Metaflow development:
 
-- **Rapid prototyping**: Quickly generate flow definitions and iterate on your pipeline logic
-- **Debugging assistance**: Get help interpreting Metaflow error messages and stack traces
-- **Code optimization**: Identify performance bottlenecks in your data processing steps
-- **Best practices**: Apply Metaflow conventions and patterns automatically
+- Rapid prototyping: Quickly generate flow definitions and iterate on your pipeline logic
+- Debugging assistance: Get help interpreting Metaflow error messages and stack traces
+- Code optimization: Identify performance bottlenecks in your data processing steps
+- Best practices: Apply Metaflow conventions and patterns automatically
 
 Whether you're building a simple ETL pipeline or a complex ML training workflow, Claude Code can help you move faster while maintaining code quality.
 
-## Setting Up Claude Code for Your Metaflow Project
+Setting Up Claude Code for Your Metaflow Project
 
 Before diving into workflow development, configure Claude Code to understand your Metaflow project structure. Create a `CLAUDE.md` file in your project root:
 
 ```markdown
-# Project Context
+Project Context
 
 This is a Metaflow project with the following structure:
 - `/flows/` - Metaflow flow definitions
@@ -53,7 +53,7 @@ We use Metaflow with:
 
 This context helps Claude Code provide more relevant suggestions when working on your flows.
 
-## Creating Your First Metaflow Flow
+Creating Your First Metaflow Flow
 
 Let's walk through building a simple data processing flow with Claude Code. Start by asking Claude Code to scaffold a basic flow:
 
@@ -156,7 +156,7 @@ if __name__ == '__main__':
     CustomerChurnFlow()
 ```
 
-## Adding Branching and Parallel Processing
+Adding Branching and Parallel Processing
 
 Metaflow excels at parallel processing. Here's how to extend your flow with branching:
 
@@ -191,7 +191,7 @@ def merge_results(self, inputs):
     self.next(self.end)
 ```
 
-## Working with Conditional Logic
+Working with Conditional Logic
 
 You can add conditional branches to your flows based on flow state:
 
@@ -222,7 +222,7 @@ def retrain_model(self):
     self.next(self.evaluate_model)
 ```
 
-## Debugging Metaflow Flows with Claude Code
+Debugging Metaflow Flows with Claude Code
 
 When your flow fails, Claude Code can help you debug effectively. Share the error message and ask for analysis:
 
@@ -235,26 +235,26 @@ Can you help me understand what's going wrong and how to fix it?
 
 Claude Code will analyze the error and suggest fixes based on the specific Metaflow patterns you're using.
 
-## Best Practices for Claude Code + Metaflow Development
+Best Practices for Claude Code + Metaflow Development
 
 Follow these recommendations for the best experience:
 
-1. **Define your flow structure in CLAUDE.md**: Include information about your Metaflow version, hosting environment, and any custom decorators you use.
+1. Define your flow structure in CLAUDE.md: Include information about your Metaflow version, hosting environment, and any custom decorators you use.
 
-2. **Use type hints**: Metaflow supports type hints which help Claude Code understand your data structures better.
+2. Use type hints: Metaflow supports type hints which help Claude Code understand your data structures better.
 
-3. **Break complex flows into steps**: Smaller, focused steps are easier to debug and maintain.
+3. Break complex flows into steps: Smaller, focused steps are easier to debug and maintain.
 
-4. **Add step documentation**: Use docstrings in your steps to help Claude Code understand the purpose of each step.
+4. Add step documentation: Use docstrings in your steps to help Claude Code understand the purpose of each step.
 
-5. **Version your models**: Use Metaflow's artifact system to track model versions across runs.
+5. Version your models: Use Metaflow's artifact system to track model versions across runs.
 
-## Advanced: Custom Metaflow Clients with Claude Code
+Advanced: Custom Metaflow Clients with Claude Code
 
 For more advanced use cases, you can create custom skills that interact with Metaflow's client API:
 
 ```python
-# Example: Querying flow runs programmatically
+Querying flow runs programmatically
 from metaflow import Metaflow
 
 def get_latest_successful_run(flow_name):
@@ -270,17 +270,17 @@ def get_latest_successful_run(flow_name):
 
 You can ask Claude Code to integrate these patterns into your workflows for enhanced monitoring and analysis.
 
-## Conclusion
+Conclusion
 
-Claude Code significantly accelerates Metaflow workflow development by handling boilerplate, suggesting optimizations, and helping debug issues. The combination of Metaflow's solid infrastructure and Claude Code's AI assistance lets you focus on the logic that matters—building data pipelines that scale.
+Claude Code significantly accelerates Metaflow workflow development by handling boilerplate, suggesting optimizations, and helping debug issues. The combination of Metaflow's solid infrastructure and Claude Code's AI assistance lets you focus on the logic that matters, building data pipelines that scale.
 
 Start with simple flows, then gradually incorporate more advanced patterns like branching, parallel processing, and conditional logic as you become comfortable with the framework.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

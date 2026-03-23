@@ -17,7 +17,7 @@ gRPC sits in a peculiar spot: it is significantly more productive than REST for 
 
 This guide covers the full development loop: protobuf design, server implementation in Node.js and Python, testing, and debugging.
 
-## Why gRPC and Where Claude Helps Most
+Why gRPC and Where Claude Helps Most
 
 gRPC gives you strongly-typed contracts, bidirectional streaming, and HTTP/2 multiplexing out of the box. The friction points are:
 
@@ -28,11 +28,11 @@ gRPC gives you strongly-typed contracts, bidirectional streaming, and HTTP/2 mul
 
 Claude Code accelerates every one of these. The key is giving it precise context: your existing proto files, your language runtime, and exactly what the service needs to do.
 
-## Designing a .proto File with Claude
+Designing a .proto File with Claude
 
-Start by describing your service contract in plain language. Do not just say "generate a proto file" — give Claude the business logic.
+Start by describing your service contract in plain language. Do not just say "generate a proto file". give Claude the business logic.
 
-**Prompt example:**
+Prompt example:
 
 > I need a gRPC service called `OrderService` for an e-commerce backend. It should have three RPCs: `CreateOrder` (takes a cart and user ID, returns an order ID and status), `GetOrder` (takes an order ID, returns full order details), and `StreamOrderUpdates` (server-streaming: takes an order ID, streams status updates until the order is complete or failed). Use proto3.
 
@@ -102,7 +102,7 @@ enum OrderStatus {
 
 Review it carefully. Common issues to catch: missing zero-value enum entries (required in proto3), wrong field number reuse if you are evolving an existing schema, and mismatched streaming direction.
 
-## Generating Stubs
+Generating Stubs
 
 For Node.js, the standard toolchain uses `grpc-tools` and `grpc_tools_node_protoc_ts` for TypeScript types:
 
@@ -132,11 +132,11 @@ python -m grpc_tools.protoc \
 
 Ask Claude to generate the compilation script for your project: "Write a Makefile target that compiles all .proto files in ./proto/ and outputs to ./src/generated/ for Node.js with TypeScript."
 
-## Implementing a gRPC Server in Node.js
+Implementing a gRPC Server in Node.js
 
 With stubs generated, ask Claude to implement the server handler. Be specific about your business logic dependencies.
 
-**Prompt:** "Implement the `OrderService` gRPC server in Node.js/TypeScript. Use `@grpc/grpc-js`. The `CreateOrder` handler should call `orderRepository.save()`. The `StreamOrderUpdates` handler should poll `orderRepository.getStatus()` every 2 seconds and stream updates."
+Prompt: "Implement the `OrderService` gRPC server in Node.js/TypeScript. Use `@grpc/grpc-js`. The `CreateOrder` handler should call `orderRepository.save()`. The `StreamOrderUpdates` handler should poll `orderRepository.getStatus()` every 2 seconds and stream updates."
 
 A typical server implementation:
 
@@ -202,7 +202,7 @@ server.bindAsync("0.0.0.0:50051", grpc.ServerCredentials.createInsecure(), () =>
 });
 ```
 
-## Implementing a gRPC Server in Python
+Implementing a gRPC Server in Python
 
 ```python
 import grpc
@@ -254,9 +254,9 @@ if __name__ == "__main__":
     serve()
 ```
 
-## Testing gRPC Services
+Testing gRPC Services
 
-### Unit testing with mocked stubs (Node.js)
+Unit testing with mocked stubs (Node.js)
 
 ```typescript
 import { createOrderHandler } from "./handlers";
@@ -280,43 +280,43 @@ test("createOrder returns pending status", async () => {
 });
 ```
 
-### Integration testing with grpcurl
+Integration testing with grpcurl
 
 `grpcurl` is the `curl` equivalent for gRPC. Use it to hit your running server from the terminal:
 
 ```bash
-# List available services (requires reflection or a .proto file)
+List available services (requires reflection or a .proto file)
 grpcurl -plaintext localhost:50051 list
 
-# Call CreateOrder
+Call CreateOrder
 grpcurl -plaintext -d '{"user_id": "user-1", "items": [{"product_id": "prod-99", "quantity": 2, "unit_price": 19.99}]}' \
   localhost:50051 order.OrderService/CreateOrder
 
-# Stream order updates
+Stream order updates
 grpcurl -plaintext -d '{"order_id": "order-123"}' \
   localhost:50051 order.OrderService/StreamOrderUpdates
 ```
 
 Ask Claude: "Add a gRPC reflection endpoint to my Node.js server so grpcurl works without a proto file." It will add the `@grpc/reflection` package and wire it in two lines.
 
-## Debugging Common gRPC Errors
+Debugging Common gRPC Errors
 
 When you hit an error, paste the full status code and message into Claude along with the relevant handler code. The most common issues:
 
-**UNAVAILABLE**: Server is not running or the address/port is wrong. Check `bindAsync` success callback and that the port is not blocked.
+UNAVAILABLE: Server is not running or the address/port is wrong. Check `bindAsync` success callback and that the port is not blocked.
 
-**DEADLINE_EXCEEDED**: The client did not set a deadline, or the server is too slow. Claude can add deadline handling: "Add a 5-second deadline to all client calls in my Node.js gRPC client."
+DEADLINE_EXCEEDED: The client did not set a deadline, or the server is too slow. Claude can add deadline handling: "Add a 5-second deadline to all client calls in my Node.js gRPC client."
 
-**UNIMPLEMENTED**: The method name in your client call does not match the service definition. Often caused by stale generated code — regenerate stubs and rebuild.
+UNIMPLEMENTED: The method name in your client call does not match the service definition. Often caused by stale generated code. regenerate stubs and rebuild.
 
-**RESOURCE_EXHAUSTED**: You are hitting server-side rate limits or the `max_concurrent_streams` HTTP/2 limit. Ask Claude to add a connection pool or channel pool on the client.
+RESOURCE_EXHAUSTED: You are hitting server-side rate limits or the `max_concurrent_streams` HTTP/2 limit. Ask Claude to add a connection pool or channel pool on the client.
 
 For streaming errors, Claude is especially useful for diagnosing back-pressure issues: "My server-streaming RPC slows to a crawl after 1000 messages. Here is my handler code. What is causing the back-pressure?"
 
-## Related Reading
+Related Reading
 
 - [Chrome Extension Development in 2026](/chrome-extension-development-2026/)
 - [Open Source Contribution Workflow with Claude Code](/claude-code-open-source-contribution-workflow-guide-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -14,24 +14,24 @@ score: 8
 
 
 {% raw %}
-# Claude Code for EKS IRSA Workflow
+Claude Code for EKS IRSA Workflow
 
 Managing IAM roles for Kubernetes service accounts in Amazon EKS can be complex. Manual configuration of OIDC providers, IAM policies, and Kubernetes service accounts often leads to errors and security misconfigurations. This guide shows how to use Claude Code to automate and simplify your EKS IRSA workflow, making it reproducible, secure, and maintainable.
 
-## Understanding EKS IRSA Architecture
+Understanding EKS IRSA Architecture
 
 Before diving into the Claude Code workflow, let's briefly review how EKS IRSA works. When you configure IRSA, you create an IAM role with a trust policy that allows the Kubernetes service account to assume it. The EKS cluster's OIDC provider mediates this trust relationship, enabling pods to use AWS credentials without storing long-lived secrets.
 
 The key components are:
 
-1. **OIDC Provider** - Must be configured for your EKS cluster
-2. **IAM Role** - With a trust policy referencing the service account
-3. **IAM Policy** - Defining the actual permissions
-4. **Kubernetes Service Account** - Annotated with the IAM role ARN
+1. OIDC Provider - Must be configured for your EKS cluster
+2. IAM Role - With a trust policy referencing the service account
+3. IAM Policy - Defining the actual permissions
+4. Kubernetes Service Account - Annotated with the IAM role ARN
 
-Understanding the request flow helps when debugging: a pod starts, the Kubernetes mutating webhook injects a projected service account token volume into the pod spec, the AWS SDK reads that token, calls `sts:AssumeRoleWithWebIdentity`, and receives temporary credentials. This entire chain depends on each component being configured correctly — which is exactly where manual setups break down and Claude Code's automation pays off.
+Understanding the request flow helps when debugging: a pod starts, the Kubernetes mutating webhook injects a projected service account token volume into the pod spec, the AWS SDK reads that token, calls `sts:AssumeRoleWithWebIdentity`, and receives temporary credentials. This entire chain depends on each component being configured correctly. which is exactly where manual setups break down and Claude Code's automation pays off.
 
-### IRSA vs. Other AWS Credential Patterns
+IRSA vs. Other AWS Credential Patterns
 
 Before committing to IRSA, it helps to understand why it is preferred over the alternatives:
 
@@ -44,7 +44,7 @@ Before committing to IRSA, it helps to understand why it is preferred over the a
 
 IRSA is the recommended pattern for EKS workloads because credentials are short-lived (1 hour by default), scoped to a single service account, and never stored in Kubernetes Secrets.
 
-## Setting Up Claude Code for IRSA Automation
+Setting Up Claude Code for IRSA Automation
 
 To automate IRSA workflows with Claude Code, you'll want to create a specialized skill. This skill will help generate the necessary configurations and validate your setup. Here's a skill definition that handles IRSA operations:
 
@@ -75,12 +75,12 @@ Required permissions: read/write to S3 bucket "payments-receipts-prod",
 
 Claude will respond with the complete OIDC verification steps, IAM policy JSON, trust policy JSON, Kubernetes manifest, and apply commands in the correct order.
 
-## Automating OIDC Provider Configuration
+Automating OIDC Provider Configuration
 
 The first step in any IRSA setup is ensuring your EKS cluster has an OIDC provider. Claude Code can check this and guide you through the configuration. Here's a practical workflow:
 
 ```bash
-# Check if OIDC provider exists for your cluster
+Check if OIDC provider exists for your cluster
 aws eks describe-cluster --name your-cluster-name \
   --query 'cluster.identity.oidc.issuer' \
   --output text
@@ -92,10 +92,10 @@ This returns the issuer URL, for example:
 The OIDC ID is the hex string after `/id/`. You then need to verify this OIDC provider is registered in IAM:
 
 ```bash
-# List OIDC providers in your account
+List OIDC providers in your account
 aws iam list-open-id-connect-providers
 
-# Check if your cluster's OIDC provider is registered
+Check if your cluster's OIDC provider is registered
 aws iam list-open-id-connect-providers | \
   grep EXAMPLED539D4633E53DE1B71EXAMPLE
 ```
@@ -103,7 +103,7 @@ aws iam list-open-id-connect-providers | \
 If the OIDC provider doesn't exist, Claude can help you create it using `eksctl` or the AWS CLI. The `eksctl` approach is simpler:
 
 ```bash
-# Create OIDC provider using eksctl (recommended)
+Create OIDC provider using eksctl (recommended)
 eksctl utils associate-iam-oidc-provider \
   --cluster your-cluster-name \
   --region us-east-1 \
@@ -113,20 +113,20 @@ eksctl utils associate-iam-oidc-provider \
 Alternatively, using the AWS CLI directly:
 
 ```bash
-# Get the OIDC issuer URL
+Get the OIDC issuer URL
 OIDC_URL=$(aws eks describe-cluster \
   --name your-cluster-name \
   --query 'cluster.identity.oidc.issuer' \
   --output text)
 
-# Get the OIDC thumbprint
+Get the OIDC thumbprint
 THUMBPRINT=$(echo | openssl s_client -servername \
   "$(echo $OIDC_URL | sed 's|https://||')" \
   -connect "$(echo $OIDC_URL | sed 's|https://||'):443" 2>&1 | \
   openssl x509 -fingerprint -noout | \
   sed 's/SHA1 Fingerprint=//' | tr -d ':' | tr '[:upper:]' '[:lower:]')
 
-# Create the OIDC provider
+Create the OIDC provider
 aws iam create-open-id-connect-provider \
   --url "$OIDC_URL" \
   --client-id-list sts.amazonaws.com \
@@ -135,7 +135,7 @@ aws iam create-open-id-connect-provider \
 
 Claude Code can generate this entire sequence for you and adapt it to your specific cluster configuration.
 
-## Generating IAM Role Trust Policies
+Generating IAM Role Trust Policies
 
 The trust policy is critical for security. It determines which service account can assume the role. Claude Code can generate this policy dynamically based on your inputs:
 
@@ -159,12 +159,12 @@ The trust policy is critical for security. It determines which service account c
 }
 ```
 
-Notice how the condition restricts the trust to a specific namespace and service account — this follows the principle of least privilege.
+Notice how the condition restricts the trust to a specific namespace and service account. this follows the principle of least privilege.
 
 For the payments example above, Claude would generate a concrete policy:
 
 ```bash
-# Create the trust policy file
+Create the trust policy file
 cat > trust-policy.json << 'EOF'
 {
   "Version": "2012-10-17",
@@ -186,7 +186,7 @@ cat > trust-policy.json << 'EOF'
 }
 EOF
 
-# Create the IAM role
+Create the IAM role
 aws iam create-role \
   --role-name payment-processor-irsa \
   --assume-role-policy-document file://trust-policy.json \
@@ -195,7 +195,7 @@ aws iam create-role \
 
 Note the addition of the `aud` condition (`sts.amazonaws.com`). This is a security hardening measure that restricts the token's audience and is recommended by AWS as of 2024.
 
-## Creating IAM Permission Policies
+Creating IAM Permission Policies
 
 The trust policy controls who can assume the role; the permission policy controls what they can do once they have assumed it. For the payments service example:
 
@@ -239,17 +239,17 @@ The trust policy controls who can assume the role; the permission policy control
 }
 ```
 
-Claude Code generates this permission policy by reasoning about your stated requirements. It also surfaces common mistakes — for example, if you ask for S3 access but forget `s3:ListBucket` on the bucket ARN (not the object ARN), Claude will include it because list permission requires a separate statement targeting the bucket itself rather than `bucket/*`.
+Claude Code generates this permission policy by reasoning about your stated requirements. It also surfaces common mistakes. for example, if you ask for S3 access but forget `s3:ListBucket` on the bucket ARN (not the object ARN), Claude will include it because list permission requires a separate statement targeting the bucket itself rather than `bucket/*`.
 
 ```bash
-# Attach the permission policy to the role
+Attach the permission policy to the role
 aws iam put-role-policy \
   --role-name payment-processor-irsa \
   --policy-name payment-processor-permissions \
   --policy-document file://permission-policy.json
 ```
 
-## Creating Kubernetes Service Account Manifests
+Creating Kubernetes Service Account Manifests
 
 Once the IAM role exists, you need to create the Kubernetes service account with the correct annotation. Claude Code can generate this manifest:
 
@@ -293,37 +293,37 @@ kubectl get serviceaccount payment-processor \
   -o jsonpath='{.metadata.annotations}'
 ```
 
-## End-to-End Workflow with Claude Code
+End-to-End Workflow with Claude Code
 
 Here's a practical end-to-end workflow you can execute with Claude:
 
-1. **Initialize the IRSA setup** - Provide your cluster name, namespace, and desired permissions
-2. **Verify OIDC provider** - Claude checks if the provider exists and generates the creation commands if not
-3. **Generate configurations** - Claude creates the IAM policy, trust policy, and service account manifest as separate files
-4. **Apply resources in order** - Create the IAM role, attach the policy, then apply the Kubernetes manifest
-5. **Verify the setup** - Check that pods can successfully assume the role
+1. Initialize the IRSA setup - Provide your cluster name, namespace, and desired permissions
+2. Verify OIDC provider - Claude checks if the provider exists and generates the creation commands if not
+3. Generate configurations - Claude creates the IAM policy, trust policy, and service account manifest as separate files
+4. Apply resources in order - Create the IAM role, attach the policy, then apply the Kubernetes manifest
+5. Verify the setup - Check that pods can successfully assume the role
 
 The ordering matters. The IAM role must exist before the Kubernetes service account references it, otherwise pods that start before the role is created will fail to authenticate. Claude Code understands this dependency and generates the apply commands in the correct sequence.
 
 ```bash
-# Step 1: Create the IAM role with trust policy
+Step 1: Create the IAM role with trust policy
 aws iam create-role \
   --role-name payment-processor-irsa \
   --assume-role-policy-document file://trust-policy.json
 
-# Step 2: Attach the permission policy
+Step 2: Attach the permission policy
 aws iam put-role-policy \
   --role-name payment-processor-irsa \
   --policy-name payment-processor-permissions \
   --policy-document file://permission-policy.json
 
-# Step 3: Apply the Kubernetes service account
+Step 3: Apply the Kubernetes service account
 kubectl apply -f service-account.yaml
 
-# Step 4: Verify the role ARN annotation
+Step 4: Verify the role ARN annotation
 kubectl get sa payment-processor -n payments -o yaml
 
-# Step 5: Run a verification pod
+Step 5: Run a verification pod
 kubectl run test-irsa \
   --image=amazon/aws-cli \
   --restart=Never \
@@ -335,26 +335,26 @@ kubectl run test-irsa \
 If the pod can retrieve caller identity using IRSA, your setup is working correctly. The response will show the assumed role ARN rather than the node's instance profile, confirming that pod-level identity is functioning.
 
 ```bash
-# Check the test pod output
+Check the test pod output
 kubectl logs test-irsa -n payments
 
-# Expected output:
-# {
-#     "UserId": "AROAIOSFODNN7EXAMPLE:botocore-session-1234567890",
-#     "Account": "123456789012",
-#     "Arn": "arn:aws:sts::123456789012:assumed-role/payment-processor-irsa/botocore-session-1234567890"
-# }
+Expected output:
+{
+    "UserId": "AROAIOSFODNN7EXAMPLE:botocore-session-1234567890",
+    "Account": "123456789012",
+    "Arn": "arn:aws:sts::123456789012:assumed-role/payment-processor-irsa/botocore-session-1234567890"
+}
 
-# Clean up the test pod
+Clean up the test pod
 kubectl delete pod test-irsa -n payments
 ```
 
-## Using Claude Code to Audit Existing IRSA Configurations
+Using Claude Code to Audit Existing IRSA Configurations
 
 One of the most valuable uses of Claude Code is auditing existing IRSA setups across a cluster. Over time, applications accumulate roles with stale permissions or misconfigured trust policies. Claude can help you systematically review them:
 
 ```bash
-# List all service accounts with IRSA annotations across all namespaces
+List all service accounts with IRSA annotations across all namespaces
 kubectl get serviceaccounts --all-namespaces \
   -o jsonpath='{range .items[*]}{.metadata.namespace}{"\t"}{.metadata.name}{"\t"}{.metadata.annotations.eks\.amazonaws\.com/role-arn}{"\n"}{end}' | \
   grep -v "^.*\t.*\t$"
@@ -362,21 +362,21 @@ kubectl get serviceaccounts --all-namespaces \
 
 Feed this output to Claude and ask it to cross-reference each role ARN against your IAM roles, check that the trust policies are correctly scoped, and flag any roles that grant permissions beyond what the service account likely needs. This kind of audit is tedious to do manually but straightforward for Claude to reason through systematically.
 
-## Best Practices for IRSA with Claude Code
+Best Practices for IRSA with Claude Code
 
 When automating IRSA workflows, follow these actionable best practices:
 
-**Use separate roles per application** - Don't share IAM roles across multiple applications. Each service account should have its own role with minimal permissions specific to that application. Sharing roles means a compromised pod in one namespace can use permissions intended for a different application.
+Use separate roles per application - Don't share IAM roles across multiple applications. Each service account should have its own role with minimal permissions specific to that application. Sharing roles means a compromised pod in one namespace can use permissions intended for a different application.
 
-**Always validate OIDC configuration** - Before creating IAM roles, verify that your cluster's OIDC provider is properly configured. Misconfiguration here is the most common IRSA failure point. If the OIDC provider's thumbprint drifts, all IRSA in your cluster stops working simultaneously.
+Always validate OIDC configuration - Before creating IAM roles, verify that your cluster's OIDC provider is properly configured. Misconfiguration here is the most common IRSA failure point. If the OIDC provider's thumbprint drifts, all IRSA in your cluster stops working simultaneously.
 
-**Use namespace restrictions** - In the trust policy, always specify the namespace in the condition. This prevents cross-namespace privilege escalation. A service account in the `default` namespace should not be able to assume a role intended for a `payments` namespace service account.
+Use namespace restrictions - In the trust policy, always specify the namespace in the condition. This prevents cross-namespace privilege escalation. A service account in the `default` namespace should not be able to assume a role intended for a `payments` namespace service account.
 
-**Add the audience condition** - Include `aud: sts.amazonaws.com` in the trust policy condition. This prevents tokens issued for other purposes from being used to assume your role.
+Add the audience condition - Include `aud: sts.amazonaws.com` in the trust policy condition. This prevents tokens issued for other purposes from being used to assume your role.
 
-**Implement rotation awareness** - If you need to rotate IAM roles, Claude Code can help you update the service account annotations without downtime by using rolling deployments. The key insight is that pods only acquire credentials at startup, so rotating an annotation requires a pod restart to take effect.
+Implement rotation awareness - If you need to rotate IAM roles, Claude Code can help you update the service account annotations without downtime by using rolling deployments. The key insight is that pods only acquire credentials at startup, so rotating an annotation requires a pod restart to take effect.
 
-**Tag IAM roles for auditability** - Include tags on your IAM roles that identify the cluster, namespace, and service account:
+Tag IAM roles for auditability - Include tags on your IAM roles that identify the cluster, namespace, and service account:
 
 ```bash
 aws iam tag-role \
@@ -388,40 +388,40 @@ aws iam tag-role \
     Key=managed-by,Value=claude-code
 ```
 
-**Audit your IRSA usage** - Regularly review which service accounts have IAM role annotations and whether those roles still match the principle of least privilege. Use AWS CloudTrail to see which roles are actively being assumed and remove roles for decommissioned services.
+Audit your IRSA usage - Regularly review which service accounts have IAM role annotations and whether those roles still match the principle of least privilege. Use AWS CloudTrail to see which roles are actively being assumed and remove roles for decommissioned services.
 
-## Troubleshooting Common IRSA Issues
+Troubleshooting Common IRSA Issues
 
 Even with automation, issues can arise. Here are common problems and how Claude Code can help diagnose them:
 
-**Pod cannot assume role** - Check the trust policy. Ensure the OIDC provider ID matches exactly and the service account name includes the namespace. The most common mistake is a mismatch between the trust policy's `sub` condition value and the actual service account name. Use Claude to diff your trust policy against the expected format.
+Pod cannot assume role - Check the trust policy. Ensure the OIDC provider ID matches exactly and the service account name includes the namespace. The most common mistake is a mismatch between the trust policy's `sub` condition value and the actual service account name. Use Claude to diff your trust policy against the expected format.
 
-**Permission denied errors** - Verify the IAM policy attached to the role contains the required permissions. Use the AWS IAM policy simulator to validate before applying:
+Permission denied errors - Verify the IAM policy attached to the role contains the required permissions. Use the AWS IAM policy simulator to validate before applying:
 
 ```bash
-# Simulate S3 access for the IRSA role
+Simulate S3 access for the IRSA role
 aws iam simulate-principal-policy \
   --policy-source-arn arn:aws:iam::123456789012:role/payment-processor-irsa \
   --action-names s3:GetObject \
   --resource-arns arn:aws:s3:::payments-receipts-prod/test-key
 ```
 
-**OIDC provider not found** - Ensure the OIDC provider is associated with your AWS account and the issuer URL matches your cluster's OIDC endpoint. This error often appears after cluster upgrades or when working across multiple AWS accounts.
+OIDC provider not found - Ensure the OIDC provider is associated with your AWS account and the issuer URL matches your cluster's OIDC endpoint. This error often appears after cluster upgrades or when working across multiple AWS accounts.
 
-**Token expiration errors** - If pods run long-running jobs exceeding 24 hours, they may see credential expiration. Increase the token expiration annotation on the service account or ensure the application refreshes credentials using the SDK's built-in credential chain.
+Token expiration errors - If pods run long-running jobs exceeding 24 hours, they may see credential expiration. Increase the token expiration annotation on the service account or ensure the application refreshes credentials using the SDK's built-in credential chain.
 
-**Webhook mutation not applied** - If the projected token volume is not injected into the pod, check that the `eks-pod-identity-webhook` is running in `kube-system` and that the pod's service account has the IRSA annotation. Pods in namespaces with the `eks.amazonaws.com/skip-pod-identity: true` label will not receive the injection.
+Webhook mutation not applied - If the projected token volume is not injected into the pod, check that the `eks-pod-identity-webhook` is running in `kube-system` and that the pod's service account has the IRSA annotation. Pods in namespaces with the `eks.amazonaws.com/skip-pod-identity: true` label will not receive the injection.
 
 ```bash
-# Check if the webhook is running
+Check if the webhook is running
 kubectl get pods -n kube-system | grep pod-identity-webhook
 
-# Verify token projection on a running pod
+Verify token projection on a running pod
 kubectl exec -n payments my-pod -- \
   ls /var/run/secrets/eks.amazonaws.com/serviceaccount/
 ```
 
-## Comparing IRSA Setup Approaches
+Comparing IRSA Setup Approaches
 
 | Approach | Setup Time | Error Risk | Repeatability | Claude Code Benefit |
 |----------|-----------|------------|---------------|---------------------|
@@ -432,7 +432,7 @@ kubectl exec -n payments my-pod -- \
 
 Claude Code is particularly valuable for the initial setup of new services where you need to create all components from scratch. For infrastructure managed at scale with Terraform or CDK, Claude Code is better used as a reviewer and debugger of existing IaC rather than as the primary generator.
 
-## Conclusion
+Conclusion
 
 Claude Code transforms EKS IRSA from a manual, error-prone process into a repeatable, secure workflow. By generating correct IAM policies, validating trust relationships, and creating proper Kubernetes manifests, Claude helps you implement IRSA correctly on the first try.
 
@@ -443,10 +443,10 @@ Use Claude Code's audit capabilities periodically to review your existing IRSA c
 Remember: IRSA is about security. Always prefer more restrictive trust policies, use dedicated roles per application, tag your roles for discoverability, and regularly audit your configurations. Claude Code makes this disciplined approach practical and scalable.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

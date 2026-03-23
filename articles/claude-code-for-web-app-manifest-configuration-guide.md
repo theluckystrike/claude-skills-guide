@@ -14,11 +14,11 @@ score: 7
 
 
 {% raw %}
-# Claude Code for Web App Manifest Configuration Guide
+Claude Code for Web App Manifest Configuration Guide
 
 Web app manifests are the backbone of modern progressive web applications (PWAs) and define how your application behaves when installed on a user's device. When working with Claude Code, understanding how to properly configure these manifests ensures your AI-assisted projects are production-ready and installable. This guide walks you through the essential configurations, common pitfalls, and best practices for web app manifest files in Claude Code projects.
 
-## Understanding Web App Manifests
+Understanding Web App Manifests
 
 A web app manifest is a JSON file that provides metadata about your web application. It controls how your app appears in the user's home screen, what icon to display, and how it should launch. Claude Code can help you generate, validate, and optimize these manifests as part of your development workflow.
 
@@ -116,11 +116,11 @@ Before diving into individual fields, it helps to understand what a complete, pr
 
 You can ask Claude Code to generate this file from a single prompt: `Create a complete web app manifest for a productivity PWA named TaskMaster, using blue (#2563eb) as the primary color, with icon entries for all standard sizes and two app shortcuts.`
 
-## Essential Manifest Fields
+Essential Manifest Fields
 
 Every web app manifest should include these fundamental properties to function correctly:
 
-### name and short_name
+name and short_name
 
 The `name` field provides the full application name displayed during installation, while `short_name` appears on the user's home screen when there isn't enough space for the full name.
 
@@ -133,7 +133,7 @@ The `name` field provides the full application name displayed during installatio
 
 Keep `short_name` under 12 characters. Android launchers truncate labels differently depending on the device grid density, and labels longer than 12 characters are frequently cut off mid-word. Claude Code can generate appropriate name variations based on your project context, ensuring consistency across platforms.
 
-### icons
+icons
 
 The `icons` array defines the visual identity of your installed app. You must provide at least a 192x192 pixel icon, though providing multiple sizes is recommended:
 
@@ -177,7 +177,7 @@ generateIcons('./src/assets/logo.svg');
 
 Ask Claude Code to scaffold this script with: `Write a Node.js script using sharp to resize a source SVG into all standard PWA icon sizes and output them to public/icons/`.
 
-### start_url and scope
+start_url and scope
 
 The `start_url` specifies which page to load when the app launches, while `scope` defines the navigation scope:
 
@@ -192,7 +192,7 @@ Adding a query parameter like `?source=pwa` to `start_url` lets your analytics p
 
 The `scope` field restricts which URLs are considered part of your app. If a user navigates outside the scope, the browser opens a regular tab. A common mistake is setting scope too narrowly. For example, if your app lives at `/app/`, your scope must be `/app/`, and setting it to `/` while `start_url` is `/app/` is valid but the reverse is not.
 
-### display
+display
 
 The `display` mode controls the browser chrome appearance:
 
@@ -211,9 +211,9 @@ The `display` mode controls the browser chrome appearance:
 
 For most production PWAs, `standalone` is the right default. It removes the address bar while keeping the system status bar, giving users a native-app feel without hiding the clock or battery indicator.
 
-## Advanced Configuration Options
+Advanced Configuration Options
 
-### theme_color and background_color
+theme_color and background_color
 
 These properties control the UI appearance during app loading and in task switchers:
 
@@ -224,7 +224,7 @@ These properties control the UI appearance during app loading and in task switch
 }
 ```
 
-The `theme_color` tints the browser toolbar and the task-switcher header on Android. It should match the `<meta name="theme-color">` value in your HTML `<head>` so there is no color flash during navigation. The `background_color` fills the splash screen shown while the app's CSS is loading — choose your page background color so the transition is seamless.
+The `theme_color` tints the browser toolbar and the task-switcher header on Android. It should match the `<meta name="theme-color">` value in your HTML `<head>` so there is no color flash during navigation. The `background_color` fills the splash screen shown while the app's CSS is loading. choose your page background color so the transition is smooth.
 
 You can support dark mode by also setting the meta theme-color in your HTML:
 
@@ -233,9 +233,9 @@ You can support dark mode by also setting the meta theme-color in your HTML:
 <meta name="theme-color" content="#0d47a1" media="(prefers-color-scheme: dark)">
 ```
 
-Note that as of early 2026, the manifest `theme_color` property itself does not support media queries — only the meta tag does.
+Note that as of early 2026, the manifest `theme_color` property itself does not support media queries. only the meta tag does.
 
-### categories
+categories
 
 The `categories` field helps app stores categorize your application:
 
@@ -247,7 +247,7 @@ The `categories` field helps app stores categorize your application:
 
 Use standard categories recognized by app stores to improve discoverability. The W3C spec lists a non-exhaustive set of recommended values including `books`, `business`, `education`, `entertainment`, `finance`, `fitness`, `food`, `games`, `government`, `health`, `kids`, `lifestyle`, `magazines`, `medical`, `music`, `navigation`, `news`, `personalization`, `photo`, `politics`, `productivity`, `security`, `shopping`, `social`, `sports`, `travel`, `utilities`, `weather`.
 
-### orientation
+orientation
 
 Specify the default screen orientation for your app:
 
@@ -268,7 +268,7 @@ Specify the default screen orientation for your app:
 
 Lock orientation only when your layout genuinely cannot function in both modes. Forcing portrait on a tablet frustrates users and can lead to negative reviews.
 
-### shortcuts
+shortcuts
 
 App shortcuts appear when a user long-presses your home screen icon and provide quick entry points into key actions:
 
@@ -299,7 +299,7 @@ App shortcuts appear when a user long-presses your home screen icon and provide 
 
 Android supports up to four shortcuts. Prioritize the actions users perform most frequently. Each shortcut URL must be within the manifest `scope`.
 
-### screenshots
+screenshots
 
 The `screenshots` array provides images used in app stores and install dialogs to preview your app before installation:
 
@@ -326,11 +326,11 @@ The `screenshots` array provides images used in app stores and install dialogs t
 
 Use `form_factor: "wide"` for desktop screenshots and `form_factor: "narrow"` for mobile. Chrome on Android uses these in the enhanced install dialog to show users what the app looks like before they install it, which increases conversion rates.
 
-## Working with Claude Code
+Working with Claude Code
 
 Claude Code can assist you in several ways when configuring web app manifests:
 
-### Generating Initial Manifests
+Generating Initial Manifests
 
 Ask Claude Code to create a basic manifest by providing your project details:
 
@@ -343,7 +343,7 @@ and Today's Tasks, and two screenshots for mobile and desktop.
 
 Claude Code will produce a complete JSON file you can place at `public/manifest.json` immediately. From there you can refine specific fields rather than writing from scratch.
 
-### Validating Manifests
+Validating Manifests
 
 Claude Code can review your manifest for common issues:
 
@@ -356,7 +356,7 @@ Claude Code can review your manifest for common issues:
 
 Paste your manifest and ask: `Review this web app manifest for missing fields, incorrect values, and any properties that would prevent Chrome from showing the install prompt.`
 
-### Generating the Icon Build Script
+Generating the Icon Build Script
 
 Ask Claude Code to write an automated icon pipeline for your CI/CD process:
 
@@ -369,7 +369,7 @@ them to public/icons/, and also creates a 512x512 maskable version with
 
 Claude Code will produce a ready-to-run script using `sharp` or `jimp`, saving significant manual effort.
 
-### Dynamic Manifest Updates
+Dynamic Manifest Updates
 
 For single-page applications, you might need to update manifest properties dynamically based on user preferences or runtime conditions:
 
@@ -387,9 +387,9 @@ if ('serviceWorker' in navigator) {
 }
 ```
 
-This technique is useful for white-label applications where tenant branding (colors, app name) differs per account. Note that dynamically injecting a data URI manifest is not fully supported in all browsers — test on iOS Safari and Firefox before relying on it in production.
+This technique is useful for white-label applications where tenant branding (colors, app name) differs per account. Note that dynamically injecting a data URI manifest is not fully supported in all browsers. test on iOS Safari and Firefox before relying on it in production.
 
-### Manifest Validation with Workbox
+Manifest Validation with Workbox
 
 If you are using Workbox for your service worker, Claude Code can help you integrate manifest validation into your build process:
 
@@ -409,9 +409,9 @@ if (errors.length > 0) {
 
 Ask Claude Code to write the `validateManifest` function that checks for all required fields, valid icon sizes, correct URL formats, and correct use of `purpose` values.
 
-## Common Configuration Mistakes to Avoid
+Common Configuration Mistakes to Avoid
 
-### 1. Missing Icon Files
+1. Missing Icon Files
 
 Always ensure the icon files referenced in your manifest actually exist in your project. Broken icon references prevent PWA installation on most devices. Chrome's installability check specifically validates that the 192x192 and 512x512 icons are fetchable and return valid image data.
 
@@ -433,27 +433,27 @@ console.log('All icons found.');
 "
 ```
 
-### 2. Incorrect Start URL
+2. Incorrect Start URL
 
 The `start_url` must be accessible and return valid content. Using relative paths like `"."` is safer than absolute paths that might change between environments. In staging environments, absolute URLs often point to production, causing your test installation to open the wrong site.
 
-### 3. Scope Mismatches
+3. Scope Mismatches
 
-The `scope` should include all pages that are part of your application. Pages outside the scope won't benefit from service worker caching and may break navigation. A common mistake is hosting the app at `/app/` but setting scope to `/`, which works but means the service worker intercepts requests for `/` (including your marketing site) — an often-unintended consequence.
+The `scope` should include all pages that are part of your application. Pages outside the scope won't benefit from service worker caching and may break navigation. A common mistake is hosting the app at `/app/` but setting scope to `/`, which works but means the service worker intercepts requests for `/` (including your marketing site). an often-unintended consequence.
 
-### 4. CORS Issues with Icons
+4. CORS Issues with Icons
 
 If your icons are served from a CDN, ensure proper CORS headers are configured, or host icons locally to avoid installation failures. The manifest fetch itself must succeed with CORS, and each icon URL must be reachable. A CDN misconfiguration that blocks the manifest JSON will silently prevent installation without obvious error messages to end users.
 
-### 5. Forgetting to Update icons When You Rebrand
+5. Forgetting to Update icons When You Rebrand
 
 Teams that rebrand often update their source logo but forget to regenerate the icon set referenced in the manifest. The old icon sits in the CDN cache, and users who already installed the PWA see the old branding indefinitely. Automate icon generation in your build pipeline so it is never a manual step.
 
-### 6. Using the Wrong purpose Values
+6. Using the Wrong purpose Values
 
 As of the current spec, valid `purpose` values are `any`, `maskable`, and `monochrome`. Some older guides recommend `"any maskable"` as a space-separated list (which is valid) but using only `"maskable"` for a non-maskable icon causes Android to crop the image incorrectly. Always test maskable icons using the [Maskable.app](https://maskable.app) tool before shipping.
 
-## Testing Your Manifest
+Testing Your Manifest
 
 After creating your manifest, verify it works correctly:
 
@@ -466,7 +466,7 @@ After creating your manifest, verify it works correctly:
 
 Claude Code can help you interpret these test results and suggest fixes for any issues found. Paste the Lighthouse PWA audit JSON output and ask: `Identify which manifest properties are causing the failing PWA checks and provide corrected JSON for each.`
 
-### Automated Manifest Testing with Playwright
+Automated Manifest Testing with Playwright
 
 For CI pipelines, you can use Playwright to verify the manifest is served correctly on every deploy:
 
@@ -506,7 +506,7 @@ test('manifest is valid and installable', async ({ page }) => {
 
 Ask Claude Code to expand this test suite to also validate that every icon URL returns a 200 status and that color values are valid hex strings.
 
-## Manifest Field Reference
+Manifest Field Reference
 
 Here is a quick-reference table of all manifest properties with their support status:
 
@@ -526,7 +526,7 @@ Here is a quick-reference table of all manifest properties with their support st
 | `screenshots` | Optional | Yes | No | No | Install dialog |
 | `lang` | Recommended | Yes | Yes | Yes | BCP 47 language tag |
 
-## Best Practices Summary
+Best Practices Summary
 
 - Always provide both 192x192 and 512x512 icon sizes as a minimum
 - Use maskable icons for Android compatibility, keeping content in the central 80% safe zone
@@ -545,10 +545,10 @@ By following these guidelines and using Claude Code's assistance, you can create
 
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

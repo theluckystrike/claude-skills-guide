@@ -17,15 +17,15 @@ Japanese developers have unique workflow requirements: handling multilingual pro
 
 This guide shows you how to integrate Claude Code skills into your development workflow, whether you work primarily with Japanese clients, maintain bilingual documentation, or build applications for the Japanese market.
 
-## Setting Up Your Skill Environment
+Setting Up Your Skill Environment
 
 Before implementing workflows, ensure your Claude Code environment includes the essential skills for Japanese development work:
 
-Skills ship as built-in `.md` files with Claude Code — no installation command is needed. The core skills for Japanese development workflows are `/tdd`, `/pdf`, `/supermemory`, `/frontend-design`, and `/docx`. To see available skills, run `ls ~/.claude/skills/`. To use a skill, type `/skill-name` in a Claude Code session.
+Skills ship as built-in `.md` files with Claude Code. no installation command is needed. The core skills for Japanese development workflows are `/tdd`, `/pdf`, `/supermemory`, `/frontend-design`, and `/docx`. To see available skills, run `ls ~/.claude/skills/`. To use a skill, type `/skill-name` in a Claude Code session.
 
-The [**supermemory** skill](/claude-supermemory-skill-persistent-context-explained/) proves particularly valuable for Japanese developers managing long-term projects. It maintains context across sessions, remembering client preferences, project-specific terminology, and design decisions that recur throughout a project's lifecycle.
+The [supermemory skill](/claude-supermemory-skill-persistent-context-explained/) proves particularly valuable for Japanese developers managing long-term projects. It maintains context across sessions, remembering client preferences, project-specific terminology, and design decisions that recur throughout a project's lifecycle.
 
-### Configuring CLAUDE.md for Japanese Projects
+Configuring CLAUDE.md for Japanese Projects
 
 Before using any skill, create a `CLAUDE.md` file at your project root to give Claude Code persistent project context. For Japanese projects, this file is especially important because it eliminates repeated explanations about encoding requirements, locale settings, and client conventions:
 
@@ -35,26 +35,26 @@ This project is a bilingual web application for a Japanese enterprise client.
 Technical stack:
 - Next.js 14 (App Router) with TypeScript
 - i18n: next-intl, translation files at /locales/ja and /locales/en
-- Date handling: Always use JST (Asia/Tokyo). Formal documents use 和暦 (wareki).
+- Date handling: Always use JST (Asia/Tokyo). Formal documents use  (wareki).
 - Character encoding: UTF-8 throughout. Verify output files explicitly.
 
 Client conventions:
 - Communication via Slack in Japanese
 - Design reviews require 3 mockup options before approval
 - Weekly demos on Thursday at 14:00 JST
-- All user-facing strings must use i18n keys — no hardcoded Japanese text in components
+- All user-facing strings must use i18n keys. no hardcoded Japanese text in components
 ```
 
 With this context in place, Claude Code will follow your project's locale, timezone, and naming conventions automatically across every session.
 
-## Daily Development Workflow with Claude Skills
+Daily Development Workflow with Claude Skills
 
-### Test-Driven Development with tdd Skill
+Test-Driven Development with tdd Skill
 
-The **tdd** skill transforms how you write code by enforcing test-first development. For Japanese teams working on enterprise applications, this ensures every feature has corresponding test coverage before implementation begins.
+The tdd skill transforms how you write code by enforcing test-first development. For Japanese teams working on enterprise applications, this ensures every feature has corresponding test coverage before implementation begins.
 
 ```bash
-# Activate tdd skill and start a new feature
+Activate tdd skill and start a new feature
 /tdd
 "Create a user authentication module with email and password login"
 ```
@@ -73,8 +73,8 @@ describe('Japanese phone number validation', () => {
   });
 
   it('accepts full-width digits by normalizing them', () => {
-    // Full-width: ０９０１２３４５６７８
-    expect(validateJapanesePhone('０９０１２３４５６７８')).toBe(true);
+    // Full-width: 
+    expect(validateJapanesePhone('')).toBe(true);
   });
 
   it('accepts hyphenated format', () => {
@@ -89,16 +89,16 @@ describe('Japanese phone number validation', () => {
 
 Ask Claude Code with the `/tdd` skill active: "Write tests for a Japanese phone number validator that normalizes full-width digits." It will generate the test suite first, then implement the validator to pass all cases. This workflow is particularly valuable for Japanese input handling, where full-width/half-width normalization is easy to overlook.
 
-### Frontend Development with frontend-design Skill
+Frontend Development with frontend-design Skill
 
-The [**frontend-design** skill](/claude-frontend-design-skill-review-and-tutorial/) accelerates UI development by converting design specifications into functional code. When working on projects for Japanese clients, you can specify design requirements in both Japanese and English:
+The [frontend-design skill](/claude-frontend-design-skill-review-and-tutorial/) accelerates UI development by converting design specifications into functional code. When working on projects for Japanese clients, you can specify design requirements in both Japanese and English:
 
 ```bash
 /frontend-design
 "Create a product listing page with Japanese localization.
 Requirements:
-- Header with ログアウト button
-- Product grid with 購入 button
+- Header with  button
+- Product grid with  button
 - Responsive layout for mobile"
 ```
 
@@ -134,7 +134,7 @@ The `word-break: keep-all` property prevents awkward mid-word breaks in Japanese
 Japanese enterprise UIs often require higher information density than Western counterparts. Prompt Claude Code with the `/frontend-design` skill to generate data-dense table layouts that remain readable on mobile:
 
 ```tsx
-// components/DataTable.tsx — mobile-optimized for Japanese enterprise UI
+// components/DataTable.tsx. mobile-optimized for Japanese enterprise UI
 export function DataTable({ rows }: { rows: Row[] }) {
   return (
     <div className="overflow-x-auto -mx-4 px-4">
@@ -142,13 +142,13 @@ export function DataTable({ rows }: { rows: Row[] }) {
         <thead>
           <tr className="border-b border-gray-200">
             <th className="text-left py-2 pr-4 font-medium text-gray-600 whitespace-nowrap">
-              顧客名
+              
             </th>
             <th className="text-left py-2 pr-4 font-medium text-gray-600 whitespace-nowrap">
-              注文日
+              
             </th>
             <th className="text-right py-2 font-medium text-gray-600 whitespace-nowrap">
-              金額
+              
             </th>
           </tr>
         </thead>
@@ -169,11 +169,11 @@ export function DataTable({ rows }: { rows: Row[] }) {
 }
 ```
 
-## Documentation Workflow for Japanese Projects
+Documentation Workflow for Japanese Projects
 
-### PDF Generation with pdf Skill
+PDF Generation with pdf Skill
 
-Japanese projects typically require extensive documentation. The **pdf** skill converts Markdown and other formats into professionally formatted PDF documents—essential for client deliverables and regulatory compliance.
+Japanese projects typically require extensive documentation. The pdf skill converts Markdown and other formats into professionally formatted PDF documents, essential for client deliverables and regulatory compliance.
 
 ```bash
 /pdf
@@ -182,7 +182,7 @@ Include:
 - API documentation
 - Database schema
 - Deployment instructions
-Output: 技術仕様書.pdf"
+Output: .pdf"
 ```
 
 The skill maintains Japanese character encoding correctly and supports custom styling to match corporate document standards.
@@ -191,32 +191,32 @@ The skill maintains Japanese character encoding correctly and supports custom st
 
 Japanese technical documents follow specific conventions. When generating PDFs for Japanese clients, include these structural elements in your prompt:
 
-- 表紙 (cover page) with project name, version, and date in 和暦
-- 改訂履歴 (revision history) table at the front
-- 目次 (table of contents) with page numbers
-- 用語集 (glossary) at the back for technical terms
+-  (cover page) with project name, version, and date in 
+-  (revision history) table at the front
+-  (table of contents) with page numbers
+-  (glossary) at the back for technical terms
 
 ```bash
 /pdf
-"Generate a 技術仕様書 from /docs/api-spec.md with:
-- Cover page: プロジェクト名 = 受発注管理システム, version 1.2, date in 令和形式
+"Generate a  from /docs/api-spec.md with:
+- Cover page:  = , version 1.2, date in 
 - Revision history table
 - Auto-generated table of contents
 - Glossary section with technical terms in Japanese/English pairs
-- Corporate header/footer with ページ番号"
+- Corporate header/footer with "
 ```
 
-### Word Documents with docx Skill
+Word Documents with docx Skill
 
-For collaborative documents requiring tracked changes or comments, the **docx** skill handles Microsoft Word file creation and editing:
+For collaborative documents requiring tracked changes or comments, the docx skill handles Microsoft Word file creation and editing:
 
 ```bash
 /docx
 "Create a project proposal document in Japanese with English technical terms preserved.
 Include sections for:
-- プロジェクト概要
-- 技術スタック
-- 開発スケジュール"
+- 
+- 
+- "
 ```
 
 This skill preserves formatting, handles mixed-language content gracefully, and supports the document templates Japanese enterprises commonly use.
@@ -227,17 +227,17 @@ Japanese business documents frequently mix Japanese prose with English technical
 
 ```bash
 /docx
-"Create meeting minutes (議事録) for a sprint review.
+"Create meeting minutes () for a sprint review.
 Rules for mixed language:
 - Japanese body text with English technical terms in parentheses on first use
-  Example: 継続的インテグレーション (CI/CD)
+  (CI/CD)
 - Code snippets and file paths remain in English
 - Action items list bilingual: Japanese description + English assignee name"
 ```
 
-## Managing Project Context with supermemory Skill
+Managing Project Context with supermemory Skill
 
-Long-running Japanese development projects often involve complex stakeholder relationships and evolving requirements. The **supermemory** skill provides persistent context that survives between sessions:
+Long-running Japanese development projects often involve complex stakeholder relationships and evolving requirements. The supermemory skill provides persistent context that survives between sessions:
 
 ```bash
 /supermemory
@@ -250,31 +250,31 @@ Long-running Japanese development projects often involve complex stakeholder rel
 
 When you return to the project in subsequent sessions, Claude Code automatically applies these preferences without requiring repetition.
 
-### What to Store in supermemory for Japanese Projects
+What to Store in supermemory for Japanese Projects
 
 The supermemory skill is most powerful when you store context that would otherwise require significant re-explanation at the start of each session. For Japanese projects, high-value items include:
 
-**Client communication preferences:**
+Client communication preferences:
 ```bash
 /supermemory
-"Store: Client communication notes for 株式会社 Tanaka
-- Primary contact: 田中部長, replies via Slack within 2 hours on weekdays
-- Do not use casual Japanese (タメ口) in any written communication
-- CC 佐藤さん on all emails involving budget or timeline changes
-- Decisions require written confirmation (メール確認) before implementation"
+"Store: Client communication notes for  Tanaka
+- Primary contact: , replies via Slack within 2 hours on weekdays
+- Do not use casual Japanese () in any written communication
+- CC  on all emails involving budget or timeline changes
+- Decisions require written confirmation () before implementation"
 ```
 
-**Project-specific terminology:**
+Project-specific terminology:
 ```bash
 /supermemory
 "Store: Domain terminology for this project
-- 受注 = confirmed order (not 注文 which is a request)
-- 案件 = client project/deal (not プロジェクト which sounds too internal)
-- 納品 = final delivery (use this, not リリース in client-facing docs)
+-  = confirmed order (not  which is a request)
+-  = client project/deal (not  which sounds too internal)
+-  = final delivery (use this, not  in client-facing docs)
 - SLA target: 99.5% uptime, response time under 2 seconds"
 ```
 
-**Recurring technical decisions:**
+Recurring technical decisions:
 ```bash
 /supermemory
 "Store: Architecture decisions
@@ -284,69 +284,69 @@ The supermemory skill is most powerful when you store context that would otherwi
 - Error messages: Always show Japanese user-facing message + English log message"
 ```
 
-## Advanced Workflow: Combining Skills
+Advanced Workflow: Combining Skills
 
 The real power emerges when you chain skills together for complex workflows. Here's a practical example for Japanese enterprise development:
 
 ```bash
-# Combined workflow for feature development
+Combined workflow for feature development
 /tdd
 "Generate tests for user profile management feature"
 
-# After tests are created, implement the feature
+After tests are created, implement the feature
 /frontend-design
 "Build the user profile page with Japanese form labels:
-- ユーザー名
-- メールアドレス
-- 電話番号"
+- 
+- 
+- "
 
-# Document the implementation
+Document the implementation
 /pdf
 "Create API documentation for the user profile endpoints"
 ```
 
-This workflow ensures consistent test coverage, properly localized UI, and comprehensive documentation—all critical for Japanese enterprise projects.
+This workflow ensures consistent test coverage, properly localized UI, and comprehensive documentation, all critical for Japanese enterprise projects.
 
-### End-to-End Sprint Workflow
+End-to-End Sprint Workflow
 
 A complete sprint workflow for a Japanese enterprise team might look like this across a week:
 
-**Monday — Planning:**
+Monday. Planning:
 ```bash
 /supermemory
 "Recall project context and this sprint's goals"
 
 /tdd
-"Generate test cases for the new 発注管理 (purchase order) feature based on these acceptance criteria: [paste criteria]"
+"Generate test cases for the new  (purchase order) feature based on these acceptance criteria: [paste criteria]"
 ```
 
-**Tuesday–Thursday — Implementation:**
+Tuesday–Thursday. Implementation:
 ```bash
 /frontend-design
-"Implement the 発注書作成 form with these fields: [paste spec]"
+"Implement the  form with these fields: [paste spec]"
 
 /tdd
 "Run through the test cases we defined Monday and flag any not yet passing"
 ```
 
-**Friday — Documentation and Delivery:**
+Friday. Documentation and Delivery:
 ```bash
 /pdf
-"Generate 受入テスト仕様書 from the test cases created this week"
+"Generate  from the test cases created this week"
 
 /docx
-"Generate sprint review 議事録 summarizing completed features, blockers, and next sprint goals"
+"Generate sprint review  summarizing completed features, blockers, and next sprint goals"
 ```
 
-## Language-Specific Considerations
+Language-Specific Considerations
 
 When using Claude Code skills for Japanese development, keep these points in mind:
 
-- **Character encoding**: All skills handle UTF-8 natively, but verify output files use the correct encoding for your deployment environment
-- **Localization strings**: Store translations in dedicated i18n files rather than hardcoding Japanese strings in components
-- **Date formatting**: Japanese projects typically use 和暦 (wareki) in formal documents—specify your preference explicitly when generating reports
+- Character encoding: All skills handle UTF-8 natively, but verify output files use the correct encoding for your deployment environment
+- Localization strings: Store translations in dedicated i18n files rather than hardcoding Japanese strings in components
+- Date formatting: Japanese projects typically use  (wareki) in formal documents, specify your preference explicitly when generating reports
 
-### i18n File Structure for Japanese Projects
+i18n File Structure for Japanese Projects
 
 A well-organized i18n setup makes it easy to hand off translation work and maintain consistency:
 
@@ -366,7 +366,7 @@ A well-organized i18n setup makes it easy to hand off translation work and maint
 
 Ask Claude Code: "Audit this component for hardcoded Japanese strings and replace them with i18n keys from locales/ja/forms.json." It will scan the component, identify any hardcoded text, and generate both the replacement code and the new i18n key entries.
 
-### Timezone Handling
+Timezone Handling
 
 Timezone bugs are a common source of production incidents in Japanese applications. A consistent approach:
 
@@ -392,13 +392,13 @@ export function formatWareki(date: Date | string): string {
 }
 
 // Usage
-formatJST(new Date(), 'yyyy年MM月dd日 HH:mm');  // 2026年03月22日 14:30
-formatWareki(new Date());                         // 令和8年3月22日
+formatJST(new Date(), 'yyyyMMdd HH:mm');  // 20260322 14:30
+formatWareki(new Date());                         // 8322
 ```
 
 Store this utility file path in supermemory so Claude Code generates consistent date formatting across all new components without repeated instruction.
 
-## Automating Repetitive Tasks
+Automating Repetitive Tasks
 
 Create [custom skills](/how-to-write-a-skill-md-file-for-claude-code/) for recurring Japanese development tasks:
 
@@ -416,7 +416,7 @@ When reviewing code for Japanese projects:
 5. Check that Japanese text renders correctly in all components
 ```
 
-### Custom Skill: Japanese PR Review Checklist
+Custom Skill: Japanese PR Review Checklist
 
 Extend the code review skill with a PR checklist tailored for bilingual projects:
 
@@ -446,30 +446,30 @@ Accessibility:
 
 Place this file at `~/.claude/skills/jp-pr-checklist.md` and invoke it with `/jp-pr-checklist` before submitting any PR for review.
 
-### Skill Comparison for Japanese Development
+Skill Comparison for Japanese Development
 
 | Skill | Primary Use | Best Invoked When |
 |---|---|---|
 | `/tdd` | Test-first feature development | Starting a new feature or fixing a bug |
 | `/frontend-design` | UI component generation | Building forms, tables, or pages from specs |
 | `/pdf` | Client deliverable documents | Sprint end, regulatory submissions |
-| `/docx` | Collaborative documents | 議事録, proposals needing tracked changes |
+| `/docx` | Collaborative documents | , proposals needing tracked changes |
 | `/supermemory` | Project context persistence | Session start, storing new decisions |
 | Custom skills | Recurring project-specific tasks | Code review, PR checklists, i18n audits |
 
-## Conclusion
+Conclusion
 
-Claude Code skills significantly enhance productivity for Japanese developers by automating documentation, enforcing test-driven development, and maintaining project context across sessions. The combination of **tdd**, **frontend-design**, **pdf**, **docx**, and **supermemory** skills creates a comprehensive toolkit for enterprise development work.
+Claude Code skills significantly enhance productivity for Japanese developers by automating documentation, enforcing test-driven development, and maintaining project context across sessions. The combination of tdd, frontend-design, pdf, docx, and supermemory skills creates a comprehensive toolkit for enterprise development work.
 
 Start by configuring a `CLAUDE.md` file with your project's locale, timezone, and client conventions. Then load supermemory with the context that would otherwise require repetitive explanation. Add the `/tdd` skill to your feature development flow for test-first discipline, use `/frontend-design` for Japanese typography and layout requirements, and reach for `/pdf` and `/docx` at sprint boundaries to generate polished client deliverables without manual formatting work.
 
-Create custom skills for your team's recurring patterns — code review checklists, PR validation, and i18n auditing — so every developer on the team applies the same Japanese-specific standards consistently. The initial setup time pays dividends through consistent code quality, comprehensive documentation, and reduced context-switching overhead. See the [workflows hub](/workflows-hub/) for more developer workflow guides.
+Create custom skills for your team's recurring patterns. code review checklists, PR validation, and i18n auditing. so every developer on the team applies the same Japanese-specific standards consistently. The initial setup time pays dividends through consistent code quality, comprehensive documentation, and reduced context-switching overhead. See the [workflows hub](/workflows-hub/) for more developer workflow guides.
 
-## Related Reading
+Related Reading
 
-- [Claude SuperMemory Skill: Persistent Context Guide](/claude-supermemory-skill-persistent-context-explained/) — detailed guide to using supermemory for long-running projects
-- [Claude Frontend Design Skill Review and Tutorial](/claude-frontend-design-skill-review-and-tutorial/) — UI development workflows with the frontend-design skill
-- [Claude Skills for Localization i18n Workflow Automation](/claude-skills-for-localization-i18n-workflow-automation/) — automate multilingual and i18n workflows
-- [How to Write a Skill MD File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/) — create custom skills for your own development patterns
+- [Claude SuperMemory Skill: Persistent Context Guide](/claude-supermemory-skill-persistent-context-explained/). detailed guide to using supermemory for long-running projects
+- [Claude Frontend Design Skill Review and Tutorial](/claude-frontend-design-skill-review-and-tutorial/). UI development workflows with the frontend-design skill
+- [Claude Skills for Localization i18n Workflow Automation](/claude-skills-for-localization-i18n-workflow-automation/). automate multilingual and i18n workflows
+- [How to Write a Skill MD File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/). create custom skills for your own development patterns
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

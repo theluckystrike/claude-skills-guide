@@ -12,21 +12,21 @@ score: 8
 ---
 
 {% raw %}
-# Claude Code for Knowledge Sharing Workflow Tutorial
+Claude Code for Knowledge Sharing Workflow Tutorial
 
 Knowledge sharing is one of the most valuable yet underutilized capabilities in modern development teams. When done right, it accelerates onboarding, reduces duplicate work, and preserves institutional knowledge. Claude Code provides powerful primitives for building knowledge sharing workflows that can capture, organize, and distribute information automatically. This tutorial walks you through creating practical knowledge sharing systems using skills, tools, and structured workflows.
 
-## Understanding Knowledge Sharing Workflows
+Understanding Knowledge Sharing Workflows
 
 A knowledge sharing workflow is a repeatable process that captures information, structures it for future use, and distributes it to the right people. In the context of Claude Code, these workflows typically involve:
 
-1. **Capture**: Extracting knowledge from conversations, code reviews, or documentation
-2. **Structure**: Organizing captured information into reusable formats
-3. **Distribution**: Making knowledge accessible through searchable repositories or automated notifications
+1. Capture: Extracting knowledge from conversations, code reviews, or documentation
+2. Structure: Organizing captured information into reusable formats
+3. Distribution: Making knowledge accessible through searchable repositories or automated notifications
 
-The key advantage of using Claude Code for this is that workflows become executable— they're not just documentation, they're automated processes that can run repeatedly.
+The key advantage of using Claude Code for this is that workflows become executable,  they're not just documentation, they're automated processes that can run repeatedly.
 
-## Building a Knowledge Capture Skill
+Building a Knowledge Capture Skill
 
 The foundation of any knowledge sharing workflow is a skill that can capture information effectively. Let's create a skill designed to extract and format knowledge from development sessions.
 
@@ -47,22 +47,22 @@ When capturing knowledge from this session:
 3. Note any patterns or conventions established
 
 Format all captured knowledge as markdown with the following structure:
-- **Context**: What was the situation or problem?
-- **Decision**: What was the chosen approach?
-- **Rationale**: Why was this approach better than alternatives?
-- **Outcome**: What was the result?
+- Context: What was the situation or problem?
+- Decision: What was the chosen approach?
+- Rationale: Why was this approach better than alternatives?
+- Outcome: What was the result?
 
 Save captured knowledge to ./knowledge/{YYYY-MM-DD}-{topic-slug}.md
 If ./knowledge/ doesn't exist, create it first.
 ```
 
-This skill provides clear instructions for capturing knowledge in a structured format. The key is specifying both what to capture and how to format it— this consistency makes knowledge searchable and usable later.
+This skill provides clear instructions for capturing knowledge in a structured format. The key is specifying both what to capture and how to format it,  this consistency makes knowledge searchable and usable later.
 
-## Creating an Automated Documentation Workflow
+Creating an Automated Documentation Workflow
 
 Beyond manual capture, you can build skills that automatically generate documentation as part of regular development work. This is particularly valuable for API documentation, component libraries, and architectural decision records.
 
-### The Documentation Generation Pattern
+The Documentation Generation Pattern
 
 Create a skill that triggers documentation generation when code changes:
 
@@ -92,7 +92,7 @@ If there are any breaking changes, note them prominently with "## Breaking Chang
 
 This skill can be invoked whenever code is modified, ensuring documentation stays current without extra effort from developers.
 
-## Building a Team Knowledge Base Skill
+Building a Team Knowledge Base Skill
 
 A team knowledge base skill serves as the central hub for accessing and organizing shared knowledge. This skill should handle both contribution and retrieval.
 
@@ -124,7 +124,7 @@ Categories for knowledge:
 
 This skill provides a consistent interface for both searching existing knowledge and adding new entries.
 
-## Implementing Cross-Repository Knowledge Sync
+Implementing Cross-Repository Knowledge Sync
 
 For organizations with multiple codebases, sharing knowledge across repositories becomes crucial. You can build a workflow that synchronizes knowledge bases across projects.
 
@@ -157,34 +157,34 @@ After sync, summarize what was added or updated in your response.
 
 This workflow ensures teams benefit from knowledge generated in other projects without manual copying.
 
-## Knowledge Sharing Best Practices
+Knowledge Sharing Best Practices
 
 When building knowledge sharing workflows with Claude Code, keep these principles in mind:
 
-### Structure Consistency Matters
+Structure Consistency Matters
 
 The format you choose for captured knowledge determines how usable it becomes later. Always use consistent headers, predictable file naming, and standardized metadata. This makes search and retrieval reliable.
 
-### Capture Context, Not Just Solutions
+Capture Context, Not Just Solutions
 
 A solution without context is rarely reusable. Train your knowledge capture skills to record the problem space, constraints considered, and rationale for decisions. This helps future readers understand when to apply the captured knowledge.
 
-### Automate Distribution
+Automate Distribution
 
-Knowledge that sits in a repository without being seen provides no value. Build notification or distribution into your workflows— whether that's updating a team wiki, posting to Slack, or generating digest emails.
+Knowledge that sits in a repository without being seen provides no value. Build notification or distribution into your workflows,  whether that's updating a team wiki, posting to Slack, or generating digest emails.
 
-### Review and Prune
+Review and Prune
 
 Knowledge bases can become stale. Include periodic review cycles in your workflow where outdated information is flagged or removed. Consider adding a "last verified" timestamp to each knowledge entry.
 
-## Putting It All Together
+Putting It All Together
 
 A complete knowledge sharing ecosystem combines these skills into a cohesive workflow:
 
-1. **Daily**: Use `knowledge-capture` after significant technical decisions
-2. **On commit**: Trigger `doc-gen` to maintain current documentation
-3. **On demand**: Query `team-kb` to find existing knowledge
-4. **Weekly**: Run `kb-sync` to share knowledge across repositories
+1. Daily: Use `knowledge-capture` after significant technical decisions
+2. On commit: Trigger `doc-gen` to maintain current documentation
+3. On demand: Query `team-kb` to find existing knowledge
+4. Weekly: Run `kb-sync` to share knowledge across repositories
 
 This creates a self-reinforcing system where knowledge generated in one context benefits the entire organization.
 
@@ -192,11 +192,11 @@ The power of Claude Code for knowledge sharing lies in making these workflows ex
 
 ---
 
-## Related Reading
+Related Reading
 
-- [Claude Code for Knowledge Base Workflow Tutorial Guide](/claude-code-for-knowledge-base-workflow-tutorial-guide/) — Building knowledge bases from scratch with Claude Code
-- [How to Write a Skill .md File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/) — Fundamental skill writing patterns
-- [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/) — using tools for complex workflows
+- [Claude Code for Knowledge Base Workflow Tutorial Guide](/claude-code-for-knowledge-base-workflow-tutorial-guide/). Building knowledge bases from scratch with Claude Code
+- [How to Write a Skill .md File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/). Fundamental skill writing patterns
+- [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/). using tools for complex workflows
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

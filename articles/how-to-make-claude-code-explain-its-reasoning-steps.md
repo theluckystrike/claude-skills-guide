@@ -15,7 +15,7 @@ permalink: /how-to-make-claude-code-explain-its-reasoning-steps/
 
 When working with Claude Code, understanding its reasoning process helps you debug issues, validate its approach, and build trust in its outputs. Whether you're debugging a complex task or learning how Claude thinks about problems, there are several techniques to make its reasoning transparent.
 
-## Direct Prompting for Reasoning
+Direct Prompting for Reasoning
 
 The simplest approach is to ask Claude explicitly. During any session, you can request that Claude explain its thinking before taking action:
 
@@ -31,13 +31,13 @@ Use the tdd skill and explain your reasoning at each step.
 
 Claude will then walk through its understanding of the requirements, its plan for implementation, and why it chose specific approaches.
 
-## Using Verbose Mode for Detailed Output
+Using Verbose Mode for Detailed Output
 
 Claude Code supports a verbose mode that provides additional context about what the model is doing. When you start Claude with verbose logging enabled, you'll see tool call sequences, token usage, and intermediate reasoning more clearly.
 
 For developers building skills, this verbose output is invaluable. You'll see exactly what tools Claude is calling and in what order, which helps you understand how skills guide behavior.
 
-## Designing Skills That Encourage Explanation
+Designing Skills That Encourage Explanation
 
 When creating Claude skills, you can embed reasoning requirements directly into the skill definition. This approach is more systematic than relying on per-session prompts.
 
@@ -60,7 +60,7 @@ Always explain your reasoning before recommending changes.
 
 This pattern works for any skill. The `frontend-design` skill can require explanation of design decisions. The `pdf` skill can explain why it chose certain formatting approaches. The `supermemory` skill can explain its indexing strategy.
 
-## Chain-of-Thought Prompting in Practice
+Chain-of-Thought Prompting in Practice
 
 Chain-of-thought (CoT) prompting is a technique where you ask Claude to show its work. Rather than just giving the answer, you request the intermediate steps:
 
@@ -74,11 +74,11 @@ Solve this problem using chain-of-thought reasoning:
 
 This is particularly useful for debugging. If Claude is producing unexpected output, asking for step-by-step reasoning helps identify where it went wrong.
 
-## Combining Skills for Transparent Workflows
+Combining Skills for Transparent Workflows
 
 The real power comes from combining reasoning requirements with specialized skills. Consider this workflow:
 
-1. Use `tdd` to write failing tests first — the reasoning is captured in the test descriptions
+1. Use `tdd` to write failing tests first. the reasoning is captured in the test descriptions
 2. Use the test failures to understand what's needed
 3. Implement the code
 4. Run tests to verify
@@ -102,7 +102,7 @@ the mathematical basis for the patterns, and
 why you chose these specific parameters.
 ```
 
-## Session-Level Reasoning Configuration
+Session-Level Reasoning Configuration
 
 You can configure your Claude Code session to be more transparent by default. In your settings, you can adjust how verbose the output is and whether reasoning tokens are included in the conversation.
 
@@ -116,21 +116,21 @@ When making assumptions, state what those assumptions are.
 
 This can be added to your global `.claude/settings.json` or included in a startup skill.
 
-## Debugging Reasoning Issues
+Debugging Reasoning Issues
 
 When Claude's reasoning seems off, there are specific debugging approaches:
 
-**Ask for alternative reasoning:** "Walk me through an alternative approach and explain why you chose the first one over this one."
+Ask for alternative reasoning: "Walk me through an alternative approach and explain why you chose the first one over this one."
 
-**Request explicit assumptions:** "What assumptions are you making about the codebase?"
+Request explicit assumptions: "What assumptions are you making about the codebase?"
 
-**Trace back decisions:** "Why did you choose to read that file first? What were you looking for?"
+Trace back decisions: "Why did you choose to read that file first? What were you looking for?"
 
-**Verify understanding:** "Summarize what you think I want, in your own words, before proceeding."
+Verify understanding: "Summarize what you think I want, in your own words, before proceeding."
 
 For skills like `mcp-builder` that involve complex tool orchestration, this debugging becomes essential. When building MCP servers, asking Claude to explain its tool selection helps you identify gaps in your server design.
 
-## Practical Example
+Practical Example
 
 Here's a real-world scenario. You want Claude to refactor a function and understand its approach:
 
@@ -146,22 +146,22 @@ Before you make any changes:
 
 This creates a reasoning loop where Claude's thought process is visible before any irreversible actions occur.
 
-## Best Practices for Transparent Reasoning
+Best Practices for Transparent Reasoning
 
-**Be specific about what you want explained.** "Explain your reasoning" is vague. "Explain why you chose this data structure" is actionable.
+Be specific about what you want explained. "Explain your reasoning" is vague. "Explain why you chose this data structure" is actionable.
 
-**Request reasoning before implementation, not after.** It's harder to reconstruct reasoning after the fact.
+Request reasoning before implementation, not after. It's harder to reconstruct reasoning after the fact.
 
-**Use skills as reasoning frameworks.** Skills like `tdd` and `code-review` have built-in reasoning patterns.
+Use skills as reasoning frameworks. Skills like `tdd` and `code-review` have built-in reasoning patterns.
 
-**Combine verbal explanation with visible tool use.** When you can see both what Claude is doing (tool calls) and why (explanation), you get full transparency.
+Combine verbal explanation with visible tool use. When you can see both what Claude is doing (tool calls) and why (explanation), you get full transparency.
 
 ---
 
-## Related Reading
+Related Reading
 
-- [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/) — Skills can be designed to expose their tool reasoning patterns
-- [Claude Skill .md File Format Explained](/claude-skill-md-format-complete-specification-guide/) — How to embed reasoning requirements in skill definitions
-- [How to Write a Skill .md File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/) — Step-by-step guide for creating skills that encourage transparent thinking
+- [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/). Skills can be designed to expose their tool reasoning patterns
+- [Claude Skill .md File Format Explained](/claude-skill-md-format-complete-specification-guide/). How to embed reasoning requirements in skill definitions
+- [How to Write a Skill .md File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/). Step-by-step guide for creating skills that encourage transparent thinking
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

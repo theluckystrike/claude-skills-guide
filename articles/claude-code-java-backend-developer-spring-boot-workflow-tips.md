@@ -13,11 +13,11 @@ tags: [claude-code, claude-skills]
 ---
 
 
-# Claude Code Java Backend Developer Spring Boot Workflow Tips
+Claude Code Java Backend Developer Spring Boot Workflow Tips
 
 Claude Code is transforming how Java backend developers approach Spring Boot projects. By using its AI-powered assistance, you can accelerate development, improve code quality, and streamline debugging workflows. This guide provides practical tips for integrating Claude Code into your daily Java development routine, with concrete examples that reflect the real problems you encounter building production REST APIs.
 
-## Why Java Developers Get Extra Value from Claude Code
+Why Java Developers Get Extra Value from Claude Code
 
 Java and Spring Boot have a famously steep boilerplate curve. A single REST endpoint often requires an entity, a repository interface, a service class, a DTO, a mapper, a controller, and at least two test classes. Claude Code compresses that cycle dramatically. Beyond raw generation speed, it understands Spring's annotation model deeply, which means it generates code that works the first time rather than code that compiles but fails at runtime due to missing `@Transactional` annotations or misconfigured component scanning.
 
@@ -33,7 +33,7 @@ The productivity gains are most visible in three areas:
 
 These numbers assume you review and adjust the generated code, which you should always do. Claude Code is a collaborator, not a replacement for judgment.
 
-## Project Initialization and Scaffold
+Project Initialization and Scaffold
 
 Starting a new Spring Boot project becomes effortless with Claude Code. Instead of manually configuring pom.xml or build.gradle files, you can describe your requirements and let Claude generate the foundational structure.
 
@@ -71,9 +71,9 @@ dependencies {
 
 Claude also sets up a sensible `application.yml` with placeholder values for database credentials, HikariCP connection pool settings, and JPA DDL configuration for the development profile.
 
-## Smart Dependency Management
+Smart Dependency Management
 
-Managing dependencies is a common pain point in Java projects. Claude Code helps you navigate the Spring Boot ecosystem by suggesting appropriate dependencies and explaining their purposes.
+Managing dependencies is a common problem in Java projects. Claude Code helps you navigate the Spring Boot ecosystem by suggesting appropriate dependencies and explaining their purposes.
 
 When adding new functionality, ask Claude to identify the necessary dependencies:
 
@@ -113,11 +113,11 @@ Here is the Maven dependency block Claude generates for JWT authentication with 
 </dependency>
 ```
 
-## Efficient Controller and Service Generation
+Efficient Controller and Service Generation
 
 Writing boilerplate code consumes significant development time. Claude Code excels at generating clean, idiomatic Java code that follows Spring conventions.
 
-### REST Controller Example
+REST Controller Example
 
 ```java
 @RestController
@@ -185,11 +185,11 @@ public class GlobalExceptionHandler {
 
 Ask Claude to generate this handler once, add it to your project template, and every new project starts with consistent error responses.
 
-## Testing Strategies with Claude Code
+Testing Strategies with Claude Code
 
 Writing comprehensive tests is essential for maintainable Spring Boot applications. Claude Code assists by generating unit tests, integration tests, and even test data factories.
 
-### Unit Test Generation
+Unit Test Generation
 
 ```java
 @WebMvcTest(ProductController.class)
@@ -217,7 +217,7 @@ class ProductControllerTest {
 
 Request Claude to generate tests by describing your class and the scenarios you want to cover. It understands Spring Boot testing annotations and will create properly configured test classes.
 
-### Integration Testing with Testcontainers
+Integration Testing with Testcontainers
 
 For repository and service layer tests that need a real database, Claude Code generates Testcontainers-based integration tests. These tests spin up a real PostgreSQL container, run migrations, and verify actual SQL queries:
 
@@ -262,7 +262,7 @@ class ProductRepositoryIntegrationTest {
 
 Claude Code also generates test data builders and factory classes, which keeps test setup code readable as your entity model grows.
 
-## Debugging and Error Resolution
+Debugging and Error Resolution
 
 When encountering exceptions or unexpected behavior, Claude Code helps diagnose issues by analyzing stack traces and suggesting solutions.
 
@@ -290,7 +290,7 @@ Some of the Spring Boot errors that consume the most debugging time are deeply n
 
 For complex stack traces with nested causes, Claude Code is particularly good at identifying the root cause buried five levels deep in a Spring proxy chain.
 
-## Database Migration and Entity Management
+Database Migration and Entity Management
 
 Working with JPA entities and database schemas requires careful attention. Claude Code helps design entities that properly map to your database schema.
 
@@ -340,7 +340,7 @@ CREATE INDEX idx_products_stock ON products(stock_quantity) WHERE stock_quantity
 
 This pairing discipline prevents the common drift between entity definitions and actual schema that accumulates over time in long-lived projects.
 
-## Configuration Management
+Configuration Management
 
 Spring Boot's configuration system is powerful but can become complex. Claude Code helps manage application.properties and application.yml files across different environments.
 
@@ -398,7 +398,7 @@ spring:
 
 Notice `open-in-view: false` in the base configuration. Claude Code consistently includes this setting because the default of `true` causes subtle performance problems in production by holding database connections open during HTTP response serialization. It is the kind of default Spring Boot gets wrong and Claude Code gets right.
 
-## Security Configuration for Spring Security 6
+Security Configuration for Spring Security 6
 
 Spring Security 6, which ships with Spring Boot 3.x, replaced the deprecated `WebSecurityConfigurerAdapter` with a component-based configuration model. This breaks many tutorials and migration guides. Claude Code handles the new API correctly:
 
@@ -417,8 +417,8 @@ public class SecurityConfig {
         return http
             .csrf(AbstractHttpConfigurer::disable)
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/api/auth/**", "/actuator/health").permitAll()
-                .requestMatchers("/api/admin/**").hasRole("ADMIN")
+                .requestMatchers("/api/auth/", "/actuator/health").permitAll()
+                .requestMatchers("/api/admin/").hasRole("ADMIN")
                 .anyRequest().authenticated()
             )
             .sessionManagement(session -> session
@@ -443,17 +443,17 @@ public class SecurityConfig {
 
 When you paste a Spring Security 5 config and ask Claude Code to upgrade it to Spring Security 6, it maps every deprecated method to its modern equivalent and flags any security implications of the changes.
 
-## Conclusion
+Conclusion
 
 Integrating Claude Code into your Spring Boot development workflow significantly improves productivity. From project initialization to debugging, AI assistance handles repetitive tasks, suggests best practices, and helps resolve issues quickly. Start incorporating these tips into your daily workflow and experience the transformation in your Java backend development process.
 
 The key is treating Claude Code as a collaborative partner rather than just a code generator. Describe your requirements clearly, review generated code for accuracy, and use its expertise in Spring Boot patterns. Pay particular attention to the areas where Spring Boot has footguns: lazy loading, N+1 queries, the Spring Security 6 migration, and the open-in-view default. Claude Code knows these pitfalls and avoids them in the code it generates. Your development speed and code quality will both improve as a result.
 
-## Related Reading
+Related Reading
 
-- [Claude Code Spring Boot Java Microservices Guide 2026](/claude-code-spring-boot-java-microservices-development/) — Extends these workflows into microservices architecture: inter-service communication, Docker, Kubernetes, and observability
+- [Claude Code Spring Boot Java Microservices Guide 2026](/claude-code-spring-boot-java-microservices-development/). Extends these workflows into microservices architecture: inter-service communication, Docker, Kubernetes, and observability
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

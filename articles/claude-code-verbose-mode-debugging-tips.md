@@ -17,18 +17,18 @@ permalink: /claude-code-verbose-mode-debugging-tips/
 
 This guide covers practical techniques for using Claude Code's verbose mode to troubleshoot skill issues, trace execution flow, and optimize your AI-assisted development process.
 
-## Enabling Verbose Mode in Claude Code
+Enabling Verbose Mode in Claude Code
 
 [Claude Code offers multiple levels of verbosity that reveal different amounts of internal information](/best-claude-code-skills-to-install-first-2026/) The primary flags you can use are `--verbose` and `--debug`, which control the detail level of output.
 
 ```bash
-# Basic verbose output
+Basic verbose output
 claude --verbose
 
-# Maximum debug information
+Maximum debug information
 claude --debug
 
-# Combine with specific commands
+Combine with specific commands
 claude --verbose "analyze this codebase"
 ```
 
@@ -50,13 +50,13 @@ You can also toggle verbosity at the environment variable level, which is useful
 export CLAUDE_VERBOSE=1
 export CLAUDE_LOG_LEVEL=debug
 
-# Then run normally
+Then run normally
 claude "run the audit skill"
 ```
 
 This approach keeps your command invocations clean while ensuring all subprocess calls also inherit the verbose setting.
 
-## Understanding What Verbose Mode Actually Shows
+Understanding What Verbose Mode Actually Shows
 
 Before diving into debugging patterns, it helps to understand the structure of verbose output. When you run with `--verbose`, Claude Code emits labeled blocks that correspond to different phases of execution.
 
@@ -67,12 +67,12 @@ A typical verbose session looks like this:
 [VERBOSE] Skill context loaded: tdd.md (847 tokens)
 [VERBOSE] Tool selection phase started
 [VERBOSE] Candidate tools: Read, Bash, Glob, Grep, Write
-[VERBOSE] Selected: Glob — reason: locate test files matching pattern
+[VERBOSE] Selected: Glob. reason: locate test files matching pattern
 [VERBOSE] Glob result: 3 files found in src/__tests__/
-[VERBOSE] Selected: Read — reason: inspect existing test structure
+[VERBOSE] Selected: Read. reason: inspect existing test structure
 [VERBOSE] Read result: 124 lines from auth.test.ts
 [VERBOSE] Generating test stubs for 6 exported functions
-[VERBOSE] Selected: Write — reason: output new test file
+[VERBOSE] Selected: Write. reason: output new test file
 [VERBOSE] Write complete: src/__tests__/auth.generated.test.ts
 ```
 
@@ -82,16 +82,16 @@ Debug mode adds lower-level details to this picture:
 
 ```
 [DEBUG] API request payload: 14,203 tokens (context: 12,841 / completion budget: 1,362)
-[DEBUG] Tool call raw response: {"type":"tool_use","name":"Glob","input":{"pattern":"**/*.test.ts"}}
+[DEBUG] Tool call raw response: {"type":"tool_use","name":"Glob","input":{"pattern":"/*.test.ts"}}
 [DEBUG] Tool execution time: 43ms
 [DEBUG] Tool result size: 218 bytes
 ```
 
 This is the information you need when troubleshooting token limits, slow tool execution, or surprising model decisions based on what was actually in the context window.
 
-## Tracing Skill Execution
+Tracing Skill Execution
 
-When a custom skill behaves unexpectedly, verbose mode helps you trace exactly what the skill is doing. Consider a scenario where you're using the **tdd** skill to generate tests but receiving unexpected results.
+When a custom skill behaves unexpectedly, verbose mode helps you trace exactly what the skill is doing. Consider a scenario where you're using the tdd skill to generate tests but receiving unexpected results.
 
 Enable verbose output to see:
 
@@ -109,15 +109,15 @@ The output reveals each step: initial prompt analysis, tool selection, file read
 A common pattern is discovering that a skill reads the wrong file. Without verbose mode, you see unexpected test output and have no idea why. With verbose mode, you see a line like:
 
 ```
-[VERBOSE] Selected: Read — reason: load module under test
+[VERBOSE] Selected: Read. reason: load module under test
 [VERBOSE] Read result: 89 lines from src/auth-legacy.ts
 ```
 
 And now you know the skill picked up `auth-legacy.ts` instead of `auth.ts` because the Glob pattern matched both. You can then refine your prompt to specify the exact file, or update the skill's instructions to be more precise.
 
-## Debugging Tool Selection Issues
+Debugging Tool Selection Issues
 
-One common debugging scenario involves skills that select inappropriate tools. For instance, if you're using the **pdf** skill to process documents but it attempts to use image processing tools instead, verbose mode shows the decision-making process.
+One common debugging scenario involves skills that select inappropriate tools. For instance, if you're using the pdf skill to process documents but it attempts to use image processing tools instead, verbose mode shows the decision-making process.
 
 Look for these patterns in verbose output:
 
@@ -140,7 +140,7 @@ A more subtle problem is when the model selects the correct tool but calls it wi
 
 Without visibility into that sequence, you would only see the final (possibly successful) result and miss that the skill silently tried and failed before finding a workaround. That matters because the workaround might be slower, produce slightly different output, or fail in edge cases you have not encountered yet.
 
-### Constraining Tool Access for Cleaner Traces
+Constraining Tool Access for Cleaner Traces
 
 When debugging a specific skill, you can reduce noise by limiting which tools are available. In your Claude Code settings or skill definition, specify allowed tools:
 
@@ -153,9 +153,9 @@ When debugging a specific skill, you can reduce noise by limiting which tools ar
 
 This forces the skill to use only the tools relevant to your debugging scenario, making the verbose trace easier to follow.
 
-## Analyzing Conversation Context
+Analyzing Conversation Context
 
-Verbose mode also exposes how Claude Code maintains conversation context, which helps when debugging issues with multi-turn conversations. This is particularly useful when working with skills like **supermemory** that manage persistent context across sessions.
+Verbose mode also exposes how Claude Code maintains conversation context, which helps when debugging issues with multi-turn conversations. This is particularly useful when working with skills like supermemory that manage persistent context across sessions.
 
 The debug output shows:
 
@@ -175,18 +175,18 @@ A practical example: you ask Claude to refactor a function, it does so correctly
 The fix in this case is to structure your workflow to pass explicit references rather than relying on implicit conversation history:
 
 ```bash
-# Less reliable across long sessions
+Less reliable across long sessions
 claude "make the same change to the other functions"
 
-# More reliable
+More reliable
 claude "apply the same async/await refactor you just applied to parseUser() to parseSession(), parseToken(), and parseRole()"
 ```
 
 Verbose mode makes these problems visible so you can design around them.
 
-## Working with Frontend Design Skills
+Working with Frontend Design Skills
 
-Debugging becomes more complex when working with visual skills like **frontend-design** or **canvas-design**, where the output is visual rather than textual. Verbose mode helps by showing the intermediate steps:
+Debugging becomes more complex when working with visual skills like frontend-design or canvas-design, where the output is visual rather than textual. Verbose mode helps by showing the intermediate steps:
 
 - Design parameter extraction from your prompts
 - Style and layout decisions
@@ -200,80 +200,80 @@ For example, if the skill generates a layout with the wrong breakpoints, verbose
 ```
 [VERBOSE] Extracted design tokens: breakpoints not specified in prompt
 [VERBOSE] Applying defaults: sm=640px, md=768px, lg=1024px
-[VERBOSE] User intent: "responsive dashboard" — inferring Tailwind defaults
+[VERBOSE] User intent: "responsive dashboard". inferring Tailwind defaults
 ```
 
 Knowing that the skill filled in defaults because you did not specify breakpoints tells you exactly what to add to your prompt to get consistent results.
 
-## Common Debugging Patterns
+Common Debugging Patterns
 
 Here are practical patterns for common debugging scenarios:
 
-**Unexpected behavior in multi-step workflows:**
+Unexpected behavior in multi-step workflows:
 ```bash
 claude --debug "complex task with multiple steps"
-# Review each step's input/output in detail
+Review each step's input/output in detail
 ```
 
-**Context or memory issues:**
+Context or memory issues:
 ```bash
 claude --debug "store this detail in memory"
-# Observe memory operations in trace
+Observe memory operations in trace
 ```
 
-**API or network errors:**
+API or network errors:
 ```bash
 claude --debug "operation that failed"
-# Examine raw API responses and error messages
+Examine raw API responses and error messages
 ```
 
-**Skill not finding the right files:**
+Skill not finding the right files:
 ```bash
 claude --verbose "run the audit skill on this project"
-# Watch Glob and Read calls to verify file targeting
+Watch Glob and Read calls to verify file targeting
 ```
 
-**Unexpectedly slow skill execution:**
+Unexpectedly slow skill execution:
 ```bash
 claude --debug "slow operation" 2>&1 | grep "execution time"
-# Identify which tool calls are taking the most time
+Identify which tool calls are taking the most time
 ```
 
-## Interpreting Verbose Output
+Interpreting Verbose Output
 
 The verbose and debug outputs can be overwhelming at first. Focus on these key sections:
 
-1. **Tool Selection**: Shows which tools Claude chose and why
-2. **Execution Results**: Shows what each tool returned
-3. **Reasoning Steps**: Shows the model's chain of thought
-4. **Errors and Warnings**: Highlights issues requiring attention
-5. **Token counts**: Shows context usage, useful for diagnosing truncation issues
+1. Tool Selection: Shows which tools Claude chose and why
+2. Execution Results: Shows what each tool returned
+3. Reasoning Steps: Shows the model's chain of thought
+4. Errors and Warnings: Highlights issues requiring attention
+5. Token counts: Shows context usage, useful for diagnosing truncation issues
 
 When debugging skill issues, start with verbose mode (`--verbose`) and escalate to debug mode (`--debug`) only if you need more detail.
 
 A useful mental model: verbose mode answers "what did the skill do," while debug mode answers "what did the model actually see and how did the API respond." Most skill problems are in the first category.
 
-### Filtering Verbose Output
+Filtering Verbose Output
 
 Raw debug output from a complex skill can run to thousands of lines. Use filtering to focus on what matters:
 
 ```bash
-# Show only tool selection decisions
+Show only tool selection decisions
 claude --verbose "task" 2>&1 | grep "Selected:"
 
-# Show only errors and warnings
+Show only errors and warnings
 claude --debug "task" 2>&1 | grep -E "\[ERROR\]|\[WARN\]"
 
-# Show token usage across the session
+Show token usage across the session
 claude --debug "task" 2>&1 | grep "tokens"
 
-# Show timing for all tool calls
+Show timing for all tool calls
 claude --debug "task" 2>&1 | grep "execution time"
 ```
 
 These one-liners let you extract a specific diagnostic signal from a noisy trace without reading line by line.
 
-## Optimizing Your Debug Workflow
+Optimizing Your Debug Workflow
 
 Rather than running verbose mode constantly, use it strategically:
 
@@ -293,23 +293,23 @@ For repeatable debugging during skill development, create a test script that run
 
 ```bash
 #!/bin/bash
-# test-skill-debug.sh
+test-skill-debug.sh
 
 OUTPUT=$(claude --verbose "run tdd skill on src/auth.ts" 2>&1)
 
-# Verify skill loaded correctly
+Verify skill loaded correctly
 echo "$OUTPUT" | grep -q "Skill context loaded: tdd.md" && echo "PASS: skill loaded" || echo "FAIL: skill not loaded"
 
-# Verify it read the target file
+Verify it read the target file
 echo "$OUTPUT" | grep -q "Read result.*auth.ts" && echo "PASS: correct file read" || echo "FAIL: wrong file"
 
-# Verify test file was written
+Verify test file was written
 echo "$OUTPUT" | grep -q "Write complete.*auth.*test" && echo "PASS: tests written" || echo "FAIL: no test output"
 ```
 
 This kind of lightweight assertion script turns verbose output into an automated quality check during skill development.
 
-## Integration with Skill Development
+Integration with Skill Development
 
 When developing custom skills, verbose mode becomes invaluable for:
 
@@ -318,21 +318,21 @@ When developing custom skills, verbose mode becomes invaluable for:
 - Understanding model behavior with your skill
 - Iterating on skill improvements based on actual traces
 
-The **pdf** skill, **tdd** skill, and other specialized skills all benefit from verbose debugging when you're troubleshooting or optimizing their behavior.
+The pdf skill, tdd skill, and other specialized skills all benefit from verbose debugging when you're troubleshooting or optimizing their behavior.
 
 A particularly effective pattern during skill development is the "trace-compare" cycle: run the skill with verbose mode on a known-good input, save the trace as a baseline, then compare subsequent traces as you modify the skill definition. Differences in tool selection or reasoning steps immediately reveal whether your changes had the intended effect.
 
 ```bash
-# Capture baseline trace
+Capture baseline trace
 claude --verbose "test input" 2>&1 > baseline.log
 
-# Make changes to your skill .md file
-# ...
+Make changes to your skill .md file
+...
 
-# Capture new trace
+Capture new trace
 claude --verbose "test input" 2>&1 > updated.log
 
-# Compare
+Compare
 diff baseline.log updated.log
 ```
 
@@ -342,11 +342,11 @@ The diff output shows exactly how your skill modification changed model behavior
 
 Mastering Claude Code's verbose mode transforms debugging from guesswork into systematic analysis. By understanding what happens inside the "black box," you gain control over your AI-assisted development workflow and can build more reliable, predictable skill integrations.
 
-## Related Reading
+Related Reading
 
 - [Claude Skill .md Format: Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/)
 - [Claude Code Crashes When Loading Skill: Debug Steps](/claude-code-crashes-when-loading-skill-debug-steps/)
 - [Claude Code Output Quality: How to Improve Results](/claude-code-output-quality-how-to-improve-results/)
 - [Troubleshooting Hub](/troubleshooting-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

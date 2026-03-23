@@ -14,11 +14,11 @@ score: 8
 
 
 {% raw %}
-# Claude Code for OPA Rego Workflow Tutorial Guide
+Claude Code for OPA Rego Workflow Tutorial Guide
 
-Open Policy Agent (OPA) has become the industry standard for policy enforcement across cloud-native applications, Kubernetes admission control, and API authorization. However, writing and debugging Rego policies—the declarative language OPA uses—can be challenging, especially for developers new to policy-as-code. This guide shows you how to use Claude Code to accelerate your OPA/Rego workflow from policy writing to testing and deployment.
+Open Policy Agent (OPA) has become the industry standard for policy enforcement across cloud-native applications, Kubernetes admission control, and API authorization. However, writing and debugging Rego policies, the declarative language OPA uses, can be challenging, especially for developers new to policy-as-code. This guide shows you how to use Claude Code to accelerate your OPA/Rego workflow from policy writing to testing and deployment.
 
-## Understanding OPA and Rego Basics
+Understanding OPA and Rego Basics
 
 Before diving into the Claude Code integration, let's establish a quick foundation. OPA is an open-source policy engine that decouples policy decision-making from your application code. Rego is OPA's query language, designed for expressing hierarchical data policies.
 
@@ -39,9 +39,9 @@ allow {
 }
 ```
 
-This policy grants access when the request method is GET and the user matches the subject, or when the user has the admin role. While powerful, composing complex policies across multiple files and testing them effectively requires careful organization—and that's where Claude Code shines.
+This policy grants access when the request method is GET and the user matches the subject, or when the user has the admin role. While powerful, composing complex policies across multiple files and testing them effectively requires careful organization, and that's where Claude Code shines.
 
-## Setting Up Your OPA Development Environment
+Setting Up Your OPA Development Environment
 
 Start by ensuring OPA is installed and accessible in your terminal. You can verify this with:
 
@@ -61,7 +61,7 @@ cd my-opa-policies
 Initialize a simple structure with a main policy file and test data:
 
 ```bash
-# Create example input JSON
+Create example input JSON
 cat > examples/request.json <<EOF
 {
     "method": "GET",
@@ -72,11 +72,11 @@ cat > examples/request.json <<EOF
 EOF
 ```
 
-## Writing Rego Policies with Claude Code
+Writing Rego Policies with Claude Code
 
 Claude Code excels at generating Rego policy templates and helping you refine them. Here's a practical workflow:
 
-### Generating Your First Policy
+Generating Your First Policy
 
 Ask Claude to create a policy for your specific use case. For example:
 
@@ -89,30 +89,30 @@ package accesscontrol
 
 default allow = false
 
-# Allow access to public resources
+Allow access to public resources
 allow {
     input.resource.visibility == "public"
 }
 
-# Allow access to resources owned by the user
+Allow access to resources owned by the user
 allow {
     input.user == input.resource.owner
 }
 
-# Allow admin access to admin-only resources
+Allow admin access to admin-only resources
 allow {
     input.user.role == "admin"
     input.resource.visibility == "admin-only"
 }
 
-# Deny by default
+Deny by default
 deny[msg] {
     not allow
     msg = "Access denied: insufficient permissions"
 }
 ```
 
-### Iterating on Policy Logic
+Iterating on Policy Logic
 
 One of Claude's strongest capabilities is explaining existing Rego and helping you extend it. When your policy grows complex, paste your current Rego and ask:
 
@@ -122,11 +122,11 @@ One of Claude's strongest capabilities is explaining existing Rego and helping y
 
 Claude understands Rego's evaluation order and can suggest improvements that maintain correctness while improving maintainability.
 
-## Testing Your Rego Policies
+Testing Your Rego Policies
 
 Testing is crucial for policy reliability. OPA supports built-in test syntax that integrates smoothly with Claude Code workflows.
 
-### Writing Test Cases
+Writing Test Cases
 
 Create a test file alongside your policy:
 
@@ -155,7 +155,7 @@ test_deny_unauthorized {
 }
 ```
 
-### Running Tests via Claude
+Running Tests via Claude
 
 You can ask Claude to run OPA tests directly:
 
@@ -170,13 +170,13 @@ For more sophisticated test scenarios, ask Claude to generate comprehensive test
 - Cross-tenant access attempts
 - Time-based policy conditions
 
-## Debugging Policy Evaluation
+Debugging Policy Evaluation
 
 When policies don't behave as expected, debugging Rego can be frustrating. Claude Code helps by:
 
-1. **Tracing evaluation**: Paste your policy and input, ask Claude to walk through how each rule evaluates
-2. **Identifying issues**: "Why does this rule not match when it should?"
-3. **Suggesting fixes**: For common patterns like incorrect input path references or missing else clauses
+1. Tracing evaluation: Paste your policy and input, ask Claude to walk through how each rule evaluates
+2. Identifying issues: "Why does this rule not match when it should?"
+3. Suggesting fixes: For common patterns like incorrect input path references or missing else clauses
 
 Here's a debugging example. Suppose this policy isn't matching:
 
@@ -194,16 +194,16 @@ allow {
 }
 ```
 
-## Integrating OPA into Your CI/CD Pipeline
+Integrating OPA into Your CI/CD Pipeline
 
 A complete OPA workflow extends beyond writing policies. Here's how to integrate testing into your pipeline with Claude's guidance:
 
-### Pre-commit Hooks
+Pre-commit Hooks
 
 Ask Claude to generate a pre-commit configuration that runs OPA tests before commits:
 
 ```yaml
-# .pre-commit-hooks.yaml
+.pre-commit-hooks.yaml
 - id: opa-test
   name: OPA Policy Tests
   entry: opa test
@@ -212,7 +212,7 @@ Ask Claude to generate a pre-commit configuration that runs OPA tests before com
   pass_filenames: false
 ```
 
-### GitHub Actions Workflow
+GitHub Actions Workflow
 
 Claude can also help create a GitHub Actions workflow:
 
@@ -232,31 +232,31 @@ jobs:
           path: results.xml
 ```
 
-## Best Practices for OPA/Rego with Claude Code
+Best Practices for OPA/Rego with Claude Code
 
 To maximize your productivity, follow these established patterns:
 
-**Keep policies modular**: Break policies into logical packages. Ask Claude to split monolithic policies into focused modules.
+Keep policies modular: Break policies into logical packages. Ask Claude to split monolithic policies into focused modules.
 
-**Version control your policies**: Store Rego files in Git. Use branches for policy experiments.
+Version control your policies: Store Rego files in Git. Use branches for policy experiments.
 
-**Document intent**: Add comments explaining policy rationale. Claude can help add documentation to complex rules.
+Document intent: Add comments explaining policy rationale. Claude can help add documentation to complex rules.
 
-**Test comprehensively**: Aim for high test coverage. Generate test cases for all input variations your policy must handle.
+Test comprehensively: Aim for high test coverage. Generate test cases for all input variations your policy must handle.
 
-**Use the REPL**: OPA's interactive REPL (`opa run`) is invaluable. Ask Claude to generate REPL commands for testing specific scenarios.
+Use the REPL: OPA's interactive REPL (`opa run`) is invaluable. Ask Claude to generate REPL commands for testing specific scenarios.
 
-## Conclusion
+Conclusion
 
-Claude Code transforms OPA/Rego development from a potentially frustrating experience into a streamlined workflow. By using Claude's ability to generate, explain, test, and debug Rego policies, you can develop robust policy-as-code systems faster while maintaining high quality. Start with simple policies, build comprehensive tests, and progressively tackle more complex authorization scenarios.
+Claude Code transforms OPA/Rego development from a potentially frustrating experience into a streamlined workflow. By using Claude's ability to generate, explain, test, and debug Rego policies, you can develop solid policy-as-code systems faster while maintaining high quality. Start with simple policies, build comprehensive tests, and progressively tackle more complex authorization scenarios.
 
-The key is treating Claude as a collaborative partner—explain your requirements, ask for explanations when policies are unclear, and iterate quickly based on test results. Combined with OPA's powerful policy engine, you'll have a scalable authorization system that developers and security teams can both understand and maintain.
+The key is treating Claude as a collaborative partner, explain your requirements, ask for explanations when policies are unclear, and iterate quickly based on test results. Combined with OPA's powerful policy engine, you'll have a scalable authorization system that developers and security teams can both understand and maintain.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

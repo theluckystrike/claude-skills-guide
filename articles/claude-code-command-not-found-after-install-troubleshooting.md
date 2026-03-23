@@ -17,7 +17,7 @@ Installing Claude Code should give you immediate access to the `claude` CLI tool
 
 This guide walks through the most common causes and their solutions, so you can get back to coding with Claude's AI assistance.
 
-## Understanding the Problem
+Understanding the Problem
 
 When you install Claude Code, the installer adds the Claude CLI to a specific directory on your system. Your shell needs to know where to find that executable. If the installation directory isn't in your PATH environment variable, your terminal simply cannot locate the `claude` command.
 
@@ -35,15 +35,15 @@ bash: claude: command not found
 
 The root cause is almost always PATH-related, but there are a few other possibilities worth checking.
 
-### Why PATH Errors Happen
+Why PATH Errors Happen
 
 To understand the fix, it helps to understand what PATH actually does. When you type a command in your terminal, your shell doesn't search your entire filesystem. It only looks in directories listed in the `PATH` environment variable, checked left to right. If the directory containing `claude` is not in that list, the shell gives up immediately and reports "command not found."
 
 This is a deliberate security feature: unrestricted command lookup would allow malicious binaries in unexpected directories to shadow system commands. The downside is that newly installed tools sometimes end up in directories that aren't already in PATH, especially when the installation uses a user-local directory rather than a system-wide one.
 
-On macOS, the typical culprit is `~/.local/bin` or `~/.npm-global/bin` — directories that are common targets for user-mode installs but are not included in the default system PATH. On Linux, similar issues arise with `/opt` subdirectories or snap/flatpak wrappers.
+On macOS, the typical culprit is `~/.local/bin` or `~/.npm-global/bin`. directories that are common targets for user-mode installs but are not included in the default system PATH. On Linux, similar issues arise with `/opt` subdirectories or snap/flatpak wrappers.
 
-### Quick Diagnostic Checklist
+Quick Diagnostic Checklist
 
 Before diving into detailed solutions, run through this fast checklist:
 
@@ -57,7 +57,7 @@ Before diving into detailed solutions, run through this fast checklist:
 
 If `which claude` returns nothing, the binary either was not installed or is in a directory not in PATH. If it returns a path but running `claude` still fails, the issue is permissions or a broken symlink.
 
-## Solution 1: Verify the Installation Location
+Solution 1: Verify the Installation Location
 
 First, confirm where Claude Code was actually installed. Run this command to search for the executable:
 
@@ -79,7 +79,7 @@ The output will be something like `/usr/local` or `/Users/yourname/.npm-global`.
 
 Once you locate the executable, note the full path. You'll need it for the next steps.
 
-## Solution 2: Check Your PATH Configuration
+Solution 2: Check Your PATH Configuration
 
 Your shell searches for commands in directories listed in the PATH environment variable. Let's verify what's currently in your PATH:
 
@@ -95,17 +95,17 @@ A typical healthy PATH on macOS looks something like this:
 
 If the directory containing the Claude executable isn't listed, you need to add it. Open your shell configuration file:
 
-**For Zsh (macOS default since Catalina):**
+For Zsh (macOS default since Catalina):
 ```bash
 nano ~/.zshrc
 ```
 
-**For Bash:**
+For Bash:
 ```bash
 nano ~/.bashrc
 ```
 
-**For Fish shell:**
+For Fish shell:
 ```bash
 nano ~/.config/fish/config.fish
 ```
@@ -135,7 +135,7 @@ Now try running `claude` again:
 claude --version
 ```
 
-### Common PATH Additions by Install Method
+Common PATH Additions by Install Method
 
 | Install Method | Typical Binary Location | PATH Line to Add |
 |---|---|---|
@@ -145,7 +145,7 @@ claude --version
 | Manual download | `~/.local/bin` | `export PATH="$HOME/.local/bin:$PATH"` |
 | nvm-managed node | `~/.nvm/versions/node/vX.X.X/bin` | Set via nvm (see below) |
 
-## Solution 3: Fix Shell Initialization Issues
+Solution 3: Fix Shell Initialization Issues
 
 Sometimes the PATH is correct in login shells but not in interactive non-login shells. This commonly happens on macOS when using Terminal or iTerm2.
 
@@ -154,7 +154,7 @@ The distinction matters because macOS Terminal opens login shells by default, bu
 The installer typically adds a snippet to your shell config that handles this. Check if the following appears in your `~/.zshrc`:
 
 ```bash
-# Claude Code installer
+Claude Code installer
 if [ -f "/usr/local/bin/claude" ]; then
     export CLAUDE_PATH="/usr/local/bin/claude"
 fi
@@ -162,7 +162,7 @@ fi
 
 If the installer snippet is missing or corrupted, manually add it. Alternatively, some users find success by placing PATH exports at the very top of their shell config, before any conditional logic or framework initializations.
 
-### Diagnosing Login vs. Non-Login Shell Problems
+Diagnosing Login vs. Non-Login Shell Problems
 
 You can confirm which type of shell you are running with:
 
@@ -175,13 +175,13 @@ A `-zsh` prefix (with the dash) indicates a login shell. Plain `zsh` means non-l
 A reliable fix that covers both shell types is to source your `.zshrc` from `.zprofile`:
 
 ```bash
-# ~/.zprofile
+~/.zprofile
 if [ -f "$HOME/.zshrc" ]; then
     source "$HOME/.zshrc"
 fi
 ```
 
-### nvm / asdf Version Manager Conflicts
+nvm / asdf Version Manager Conflicts
 
 If you manage Node.js with nvm or asdf, the PATH they inject may not include the global npm bin directory correctly. After installing via npm, verify the correct node and npm are active:
 
@@ -201,7 +201,7 @@ claude --version
 
 These version managers insert their shim directories early in PATH, which can shadow the system npm and cause installs to land in unexpected places.
 
-## Solution 4: Handle Symlink Issues
+Solution 4: Handle Symlink Issues
 
 The Claude installer may create a symbolic link rather than copying the binary directly. Verify the symlink exists and points to a valid target:
 
@@ -226,18 +226,18 @@ If this returns an empty string or a path that does not exist, the symlink is br
 Example of a broken vs. working symlink:
 
 ```bash
-# Broken symlink (target missing)
+Broken symlink (target missing)
 lrwxr-xr-x  1 root  wheel  38 Mar 12 09:14 /usr/local/bin/claude -> /usr/local/lib/node_modules/@anthropic-ai/claude-code/bin/claude
 
-# Check target
+Check target
 ls /usr/local/lib/node_modules/@anthropic-ai/claude-code/bin/claude
-# ls: No such file or directory  <-- broken
+ls: No such file or directory  <-- broken
 
-# Fix: reinstall the package
+Fix: reinstall the package
 sudo npm install -g @anthropic-ai/claude-code
 ```
 
-## Solution 5: Reinstall Claude Code
+Solution 5: Reinstall Claude Code
 
 If the above solutions don't work, the installation may be corrupted or incomplete. Reinstalling is often faster than debugging further.
 
@@ -270,15 +270,15 @@ After reinstalling, immediately check where the binary landed before assuming it
 
 ```bash
 npm bin -g
-# Outputs: /usr/local/bin  (or wherever npm puts global binaries)
+Outputs: /usr/local/bin  (or wherever npm puts global binaries)
 
 ls $(npm bin -g)/claude
-# Should show the file
+Should show the file
 ```
 
 If `npm bin -g` outputs a path not in your current PATH, add it using the instructions in Solution 2.
 
-## Solution 6: Verify Permissions
+Solution 6: Verify Permissions
 
 Permission issues can prevent the shell from executing the Claude binary. Check the file permissions:
 
@@ -297,24 +297,24 @@ Also ensure your user has read access to the file and its parent directories.
 A full permissions audit looks like this:
 
 ```bash
-# Check the binary
+Check the binary
 ls -la /usr/local/bin/claude
-# Expected: -rwxr-xr-x  1 root  wheel  ...
+Expected: -rwxr-xr-x  1 root  wheel  ...
 
-# Check the parent directory
+Check the parent directory
 ls -la /usr/local/bin/
-# Expected: drwxr-xr-x  ... root  wheel  ...
+Expected: drwxr-xr-x  ... root  wheel  ...
 
-# Check that you can read it
+Check that you can read it
 test -r /usr/local/bin/claude && echo "readable" || echo "not readable"
 
-# Check that you can execute it
+Check that you can execute it
 test -x /usr/local/bin/claude && echo "executable" || echo "not executable"
 ```
 
 If the file is owned by root and lacks execute bits, the npm install may have run into a permissions issue mid-install. Rerunning with `sudo npm install -g` (only when necessary) can resolve this, though it is better practice to configure npm to install globally without needing sudo by setting a user-owned prefix.
 
-### Fixing npm Global Installs Without sudo
+Fixing npm Global Installs Without sudo
 
 To stop needing `sudo` for global npm installs, configure npm to use a user-owned directory:
 
@@ -334,7 +334,7 @@ claude --version
 
 This approach avoids permission problems entirely and is the recommended setup for developer machines.
 
-## Solution 7: macOS Gatekeeper and Security Blocks
+Solution 7: macOS Gatekeeper and Security Blocks
 
 On macOS, Gatekeeper can silently block unsigned binaries from running. If the binary exists, has correct permissions, and is in PATH, but still produces an error, check for a security block:
 
@@ -356,7 +356,7 @@ You can also run the binary directly once and approve it through the resulting d
 open /usr/local/bin/claude
 ```
 
-## Debugging Summary: Decision Tree
+Debugging Summary: Decision Tree
 
 Work through this decision tree when the error persists:
 
@@ -377,36 +377,36 @@ Does `which claude` return a path?
               NO  --> Reinstall (Solution 5)
 ```
 
-## Using Claude Skills Once Working
+Using Claude Skills Once Working
 
 Once you resolve the command not found error, you'll have access to Claude's full ecosystem. [Best Claude Code skills to install first](/best-claude-code-skills-to-install-first-2026/) covers which skills are worth adding immediately. Skills extend Claude's capabilities for specialized tasks. The `frontend-design` skill helps generate UI components and layouts. The `pdf` skill enables document manipulation and extraction. The `tdd` skill assists with test-driven development workflows.
 
-Other valuable skills include `supermemory` for managing project context across sessions, `docx` for Word document automation, and `xlsx` for spreadsheet operations. Skills are `.md` files stored in `~/.claude/skills/` — place the skill file there to activate it.
+Other valuable skills include `supermemory` for managing project context across sessions, `docx` for Word document automation, and `xlsx` for spreadsheet operations. Skills are `.md` files stored in `~/.claude/skills/`. place the skill file there to activate it.
 
-## Prevention Tips
+Prevention Tips
 
 To avoid this issue in the future, keep these tips in mind:
 
-1. **Restart your terminal** after installing CLI tools to ensure shell initialization completes properly
-2. **Use explicit paths** when debugging: `/usr/local/bin/claude --version` confirms the binary works even if PATH is broken
-3. **Check shell framework configs** if you use Oh My Zsh or similar frameworks — they may override PATH settings
-4. **Prefer user-local npm prefix** to avoid sudo-related permission problems on future installs
-5. **Pin your node version** with nvm or asdf so global installs always land in a consistent, expected directory
-6. **Keep a shell config backup** so you can restore known-good PATH configuration if something breaks during an OS upgrade
+1. Restart your terminal after installing CLI tools to ensure shell initialization completes properly
+2. Use explicit paths when debugging: `/usr/local/bin/claude --version` confirms the binary works even if PATH is broken
+3. Check shell framework configs if you use Oh My Zsh or similar frameworks. they may override PATH settings
+4. Prefer user-local npm prefix to avoid sudo-related permission problems on future installs
+5. Pin your node version with nvm or asdf so global installs always land in a consistent, expected directory
+6. Keep a shell config backup so you can restore known-good PATH configuration if something breaks during an OS upgrade
 
-## Wrapping Up
+Wrapping Up
 
 The "claude: command not found" error almost always comes down to PATH configuration. By locating the executable, adding its directory to PATH, and verifying permissions, you can resolve this in under five minutes.
 
-The most common scenario on a fresh macOS machine: npm installed Claude Code into `~/.npm-global/bin`, that directory is not in PATH, and adding one `export PATH` line to `~/.zshrc` is the entire fix. The less common scenarios — broken symlinks, Gatekeeper blocks, nvm version conflicts — take a little more investigation but are equally solvable with the steps above.
+The most common scenario on a fresh macOS machine: npm installed Claude Code into `~/.npm-global/bin`, that directory is not in PATH, and adding one `export PATH` line to `~/.zshrc` is the entire fix. The less common scenarios. broken symlinks, Gatekeeper blocks, nvm version conflicts. take a little more investigation but are equally solvable with the steps above.
 
 If you continue experiencing issues after trying these solutions, check the official Claude Code documentation or open an issue on the GitHub repository with details about your operating system and installation method.
 
-## Related Reading
+Related Reading
 
-- [Claude Code Setup on Mac: Step-by-Step Guide](/claude-code-setup-on-mac-step-by-step/) — Full installation walkthrough for macOS
-- [Best Claude Code Skills to Install First in 2026](/best-claude-code-skills-to-install-first-2026/) — First skills to add once Claude is running
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/) — Full orientation for new users
-- [Claude Skills Troubleshooting Hub](/troubleshooting-hub/) — More installation and setup troubleshooting guides
+- [Claude Code Setup on Mac: Step-by-Step Guide](/claude-code-setup-on-mac-step-by-step/). Full installation walkthrough for macOS
+- [Best Claude Code Skills to Install First in 2026](/best-claude-code-skills-to-install-first-2026/). First skills to add once Claude is running
+- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/). Full orientation for new users
+- [Claude Skills Troubleshooting Hub](/troubleshooting-hub/). More installation and setup troubleshooting guides
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

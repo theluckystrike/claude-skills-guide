@@ -12,11 +12,11 @@ tags: [claude-code, claude-skills, prompting, ai-productivity]
 
 {% raw %}
 
-# Claude Code for Few-Shot Prompting Best Practices Workflow
+Claude Code for Few-Shot Prompting Best Practices Workflow
 
 Few-shot prompting is one of the most powerful techniques for getting high-quality, consistent outputs from Claude Code. By providing carefully chosen examples within your prompts, you teach the model exactly what format, tone, and approach you expect. This guide walks you through a practical workflow for implementing few-shot prompting with Claude Code, complete with real examples and actionable advice you can apply immediately to your projects.
 
-## Understanding Few-Shot Prompting Fundamentals
+Understanding Few-Shot Prompting Fundamentals
 
 Few-shot prompting works by showing Claude Code a small number of input-output examples (typically 2-5) that demonstrate your desired behavior. The model learns from these examples and applies the same pattern to new inputs. This approach dramatically outperforms zero-shot prompting (no examples) for tasks requiring specific formats, specialized terminology, or consistent decision-making patterns.
 
@@ -24,12 +24,12 @@ The key insight is that examples act as implicit instructions. Rather than expla
 
 Consider the difference between these two approaches for generating commit messages:
 
-**Zero-shot approach (less effective):**
+Zero-shot approach (less effective):
 ```
 Write a commit message for this git diff. Make it follow conventional commits format.
 ```
 
-**Few-shot approach (more effective):**
+Few-shot approach (more effective):
 ```
 Write commit messages for these git diffs following conventional commits format:
 
@@ -46,13 +46,13 @@ feat: implement API rate limiting
 {{NEW_DIFF_HERE}}
 ```
 
-The second example demonstrates both format and content expectations. Claude Code immediately understands you want conventional commits with type, scope, and description—without explicitly stating those requirements.
+The second example demonstrates both format and content expectations. Claude Code immediately understands you want conventional commits with type, scope, and description, without explicitly stating those requirements.
 
-## Building Your Few-Shot Prompting Workflow
+Building Your Few-Shot Prompting Workflow
 
-A robust few-shot prompting workflow with Claude Code involves four stages: task analysis, example selection, prompt construction, and iteration. Let's walk through each stage with practical guidance.
+A solid few-shot prompting workflow with Claude Code involves four stages: task analysis, example selection, prompt construction, and iteration. Let's walk through each stage with practical guidance.
 
-### Stage 1: Task Analysis
+Stage 1: Task Analysis
 
 Before writing any prompt, identify what makes your task challenging. Ask yourself three questions:
 
@@ -62,7 +62,7 @@ Before writing any prompt, identify what makes your task challenging. Ask yourse
 
 For instance, if you're prompting Claude Code to review pull requests, your analysis might reveal: you need structured JSON output with severity ratings, the model must identify security issues and code smells, and good responses include specific line numbers and remediation suggestions.
 
-### Stage 2: Example Selection
+Stage 2: Example Selection
 
 Choose 3-5 representative examples that demonstrate the full range of your task's complexity. Quality matters more than quantity. Each example should:
 
@@ -73,7 +73,7 @@ Choose 3-5 representative examples that demonstrate the full range of your task'
 
 Avoid examples that are too simple or perfectly straightforward. Real-world usage will present complications, so your examples should prepare Claude Code to handle them.
 
-### Stage 3: Prompt Construction
+Stage 3: Prompt Construction
 
 Structure your prompt with clear sections:
 
@@ -87,13 +87,13 @@ Structure your prompt with clear sections:
 
 This structure keeps instructions separate from examples, making it easy to update either component independently.
 
-### Stage 4: Iteration and Refinement
+Stage 4: Iteration and Refinement
 
-Test your prompt with real inputs, not just hypothetical ones. Track which inputs produce unexpected outputs and adjust your examples accordingly. Few-shot prompting is an iterative process—your first version will rarely be perfect.
+Test your prompt with real inputs, not just hypothetical ones. Track which inputs produce unexpected outputs and adjust your examples accordingly. Few-shot prompting is an iterative process, your first version will rarely be perfect.
 
-## Practical Code Examples for Common Tasks
+Practical Code Examples for Common Tasks
 
-### Example 1: Generating Database Schemas
+Example 1: Generating Database Schemas
 
 Here's a few-shot prompt for generating SQLAlchemy models:
 
@@ -146,7 +146,7 @@ Table: comments
 - created_at (datetime, default now)
 ```
 
-### Example 2: Creating API Response Validators
+Example 2: Creating API Response Validators
 
 Few-shot prompting excels at generating consistent validation code:
 
@@ -191,9 +191,9 @@ Now create validators for this response:
 {"order_id": "ORD-456", "items": [{"product_id": 1, "quantity": 2, "price": 29.99}], "total": 59.98, "status": "pending"}
 ```
 
-## Advanced Techniques for Better Results
+Advanced Techniques for Better Results
 
-### Variable Placeholders
+Variable Placeholders
 
 Use consistent placeholder patterns in your examples so Claude Code recognizes where to apply the pattern:
 
@@ -201,14 +201,13 @@ Use consistent placeholder patterns in your examples so Claude Code recognizes w
 - `...` indicates omitted content in longer examples
 - `[YOUR_CONTEXT]` marks optional context variables
 
-### Chain-of-Thought Examples
+Chain-of-Thought Examples
 
 For complex reasoning tasks, include examples that show the thinking process:
 
 ```
 Solve the following debugging problem by explaining your reasoning step by step.
 
-Example:
 Input: "Users report that file uploads fail for files larger than 5MB"
 Thought: First, I need to identify where file size limits could be set. Common locations include the frontend, backend, server configuration, and database. Let me check each systematically.
 Action: Examine the frontend upload component for size validation.
@@ -220,7 +219,7 @@ Now solve:
 Input: "API returns 504 errors intermittently under high load"
 ```
 
-### Negative Examples
+Negative Examples
 
 Sometimes showing what you don't want is as valuable as showing what you do want:
 
@@ -250,24 +249,24 @@ def get_active_users(users: list[dict]) -> list[dict]:
 Now write a function that processes order data and calculates totals.
 ```
 
-## Common Pitfalls to Avoid
+Common Pitfalls to Avoid
 
-**Too many examples:** More than 5 examples rarely improves performance and increases token usage. Quality trumps quantity.
+Too many examples: More than 5 examples rarely improves performance and increases token usage. Quality trumps quantity.
 
-**Inconsistent examples:** If your examples contradict each other in format or approach, Claude Code will produce inconsistent results. Keep all examples aligned.
+Inconsistent examples: If your examples contradict each other in format or approach, Claude Code will produce inconsistent results. Keep all examples aligned.
 
-**Vague examples:** Each example should clearly demonstrate your expectations. Ambiguous examples lead to ambiguous outputs.
+Vague examples: Each example should clearly demonstrate your expectations. Ambiguous examples lead to ambiguous outputs.
 
-**Ignoring edge cases:** Include at least one example showing how to handle unusual or difficult inputs. This prepares Claude Code for real-world complexity.
+Ignoring edge cases: Include at least one example showing how to handle unusual or difficult inputs. This prepares Claude Code for real-world complexity.
 
-**Not testing with real data:** Always validate your prompts with actual inputs, not just hypothetical scenarios. What works in theory often fails in practice.
+Not testing with real data: Always validate your prompts with actual inputs, not just hypothetical scenarios. What works in theory often fails in practice.
 
-## Integrating Few-Shot Prompts with Claude Code Skills
+Integrating Few-Shot Prompts with Claude Code Skills
 
 For maximum effectiveness, embed your few-shot prompts within Claude Code skills. This creates reusable, version-controlled prompt templates that your entire team can use:
 
 ```
-# .claude/skills/review-skill.yaml
+.claude/skills/review-skill.yaml
 name: "Code Review"
 description: "Perform thorough code reviews using few-shot learning"
 prompts:
@@ -276,13 +275,13 @@ prompts:
       - DIFF_CONTENT
       - CONTEXT
 
-# review-prompt.md
+review-prompt.md
 Review the following code diff using these examples as reference:
 [3-5 example reviews with specific patterns]
 ```
 
 This approach combines the consistency of few-shot prompting with Claude Code's skill-based workflow system, giving you reproducible results across your entire development process.
 
-Start implementing few-shot prompting in your Claude Code workflows today—the improvements in output quality and consistency will be immediately noticeable.
+Start implementing few-shot prompting in your Claude Code workflows today, the improvements in output quality and consistency will be immediately noticeable.
 
 {% endraw %}

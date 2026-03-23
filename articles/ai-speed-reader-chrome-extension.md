@@ -13,17 +13,17 @@ score: 8
 ---
 
 {% raw %}
-# AI Speed Reader Chrome Extension: A Developer Guide
+AI Speed Reader Chrome Extension: A Developer Guide
 
 AI-powered speed reading extensions represent one of the more practical applications of large language models in browser tooling. These extensions help users consume content faster by intelligently chunking text, highlighting key phrases, and presenting information in optimized formats. This guide covers the technical implementation for developers looking to build or customize these tools.
 
-## How AI Speed Reading Works
+How AI Speed Reading Works
 
 Traditional speed reading tools rely on Rapid Serial Visual Presentation (RSVP), displaying one word at a time at a configurable pace. AI-enhanced versions go further by analyzing text structure, identifying semantic boundaries, and highlighting concepts rather than just individual words. The result is faster comprehension with better retention.
 
 The core components include a text extraction layer, an AI processing pipeline that identifies meaningful chunks, and a presentation layer that renders content at the target speed. Understanding each layer helps you build more effective extensions.
 
-## Setting Up Your Extension
+Setting Up Your Extension
 
 Every Chrome extension begins with the manifest file. For an AI speed reader, you need specific permissions to interact with page content and manage the presentation layer:
 
@@ -53,9 +53,9 @@ Every Chrome extension begins with the manifest file. For an AI speed reader, yo
 }
 ```
 
-The `scripting` permission is essential—it allows your extension to extract text from any webpage. The `storage` permission lets you persist user preferences like reading speed and display mode.
+The `scripting` permission is essential, it allows your extension to extract text from any webpage. The `storage` permission lets you persist user preferences like reading speed and display mode.
 
-## Text Extraction Implementation
+Text Extraction Implementation
 
 The content script extracts readable text from the active page. You need to identify the main content while filtering out navigation, ads, and other non-essential elements:
 
@@ -102,9 +102,9 @@ class TextExtractor {
 
 This extractor prioritizes semantic HTML elements but includes fallback logic for pages without clear structure. The cleaning step removes excess whitespace that would otherwise disrupt the reading flow.
 
-## AI-Powered Text Chunking
+AI-Powered Text Chunking
 
-Raw text needs intelligent segmentation for optimal speed reading. Rather than splitting by fixed word counts, AI analysis identifies semantic units—paragraphs, sentences, and logical clauses:
+Raw text needs intelligent segmentation for optimal speed reading. Rather than splitting by fixed word counts, AI analysis identifies semantic units, paragraphs, sentences, and logical clauses:
 
 ```javascript
 class TextChunker {
@@ -161,9 +161,9 @@ class TextChunker {
 }
 ```
 
-The chunking strategy groups sentences logically rather than arbitrarily. The enhancement step queries an AI model to identify the core concept within each chunk—useful for highlighting or preview purposes.
+The chunking strategy groups sentences logically rather than arbitrarily. The enhancement step queries an AI model to identify the core concept within each chunk, useful for highlighting or preview purposes.
 
-## RSVP Presentation Layer
+RSVP Presentation Layer
 
 The actual speed reading display uses RSVP principles with enhancements:
 
@@ -246,7 +246,7 @@ class SpeedReaderDisplay {
 
 The Optimal Recognition Point (ORP) technique positions the focal character slightly left of center, reducing eye movement and improving reading speed. The display also shows the AI-generated focus phrase as a comprehension aid.
 
-## Building the Popup Interface
+Building the Popup Interface
 
 User controls live in the popup HTML with JavaScript managing the speed reader:
 
@@ -283,36 +283,36 @@ User controls live in the popup HTML with JavaScript managing the speed reader:
 
 The popup communicates with the content script through message passing, allowing users to control reading without returning to the page.
 
-## Practical Considerations
+Practical Considerations
 
 When building production extensions, consider these factors:
 
-**API rate limits** become critical at scale. Cache AI responses for repeated content, and implement batch processing to reduce API calls. For personal use, the free tier of most AI APIs suffices; production extensions need paid plans.
+API rate limits become critical at scale. Cache AI responses for repeated content, and implement batch processing to reduce API calls. For personal use, the free tier of most AI APIs suffices; production extensions need paid plans.
 
-**Privacy concerns** affect user adoption. Process text locally when possible, and be transparent about what data leaves the browser. The extension manifest should declare minimal permissions.
+Privacy concerns affect user adoption. Process text locally when possible, and be transparent about what data leaves the browser. The extension manifest should declare minimal permissions.
 
-**Fallback behavior** matters when AI services are unavailable. Implement a basic chunker that splits by sentence boundaries without AI enhancement—this ensures the extension remains functional during service outages.
+Fallback behavior matters when AI services are unavailable. Implement a basic chunker that splits by sentence boundaries without AI enhancement, this ensures the extension remains functional during service outages.
 
-## Extending the Core Functionality
+Extending the Core Functionality
 
 Beyond basic speed reading, consider adding these features for power users:
 
-- **Text selection reading**: Allow users to highlight any text on the page and immediately start speed reading
-- **Bookmarking**: Save positions in long articles for later resumption
-- **Multiple display modes**: Full-screen immersive mode, floating window, or sidebar presentation
-- **Vocabulary highlighting**: Identify and emphasize technical terms or defined keywords
-- **Comprehension metrics**: Track reading speed and estimate comprehension based on pacing
+- Text selection reading: Allow users to highlight any text on the page and immediately start speed reading
+- Bookmarking: Save positions in long articles for later resumption
+- Multiple display modes: Full-screen immersive mode, floating window, or sidebar presentation
+- Vocabulary highlighting: Identify and emphasize technical terms or defined keywords
+- Comprehension metrics: Track reading speed and estimate comprehension based on pacing
 
 The architecture supports these additions through the same content script and message-passing system. Each feature builds on the extraction and presentation layers already in place.
 
-Building an AI speed reader extension combines practical browser APIs with AI capabilities in a genuinely useful way. The tools exist today—you need only assemble them into a coherent product.
+Building an AI speed reader extension combines practical browser APIs with AI capabilities in a genuinely useful way. The tools exist today, you need only assemble them into a coherent product.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

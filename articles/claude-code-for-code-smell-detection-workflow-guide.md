@@ -3,7 +3,7 @@
 
 layout: default
 title: "Claude Code for Code Smell Detection Workflow Guide"
-description: "Learn how to leverage Claude Code for effective code smell detection. This comprehensive guide covers practical workflows, automated analysis techniques."
+description: "Learn how to use Claude Code for effective code smell detection. This comprehensive guide covers practical workflows, automated analysis techniques."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-code-smell-detection-workflow-guide/
@@ -16,52 +16,52 @@ score: 8
 
 {% raw %}
 
-# Claude Code for Code Smell Detection Workflow Guide
+Claude Code for Code Smell Detection Workflow Guide
 
 Code smells are subtle indicators of deeper problems in your codebase that can lead to maintenance nightmares, bugs, and technical debt if left unchecked. While traditional static analysis tools can catch certain issues, Claude Code offers a powerful, context-aware approach to detecting and addressing code smells. This guide walks you through practical workflows for using Claude Code in your code smell detection process.
 
-## Understanding Code Smells and Why They Matter
+Understanding Code Smells and Why They Matter
 
-Code smells are not bugs—they're symptoms of poor design or implementation choices that make your code harder to maintain, extend, and understand. Common code smells include:
+Code smells are not bugs, they're symptoms of poor design or implementation choices that make your code harder to maintain, extend, and understand. Common code smells include:
 
-- **Long functions** that do too much
-- **Duplicate code** scattered across the codebase
-- **God classes** that know too much or do too much
-- **Tight coupling** between unrelated components
-- **Missing abstractions** that lead to repetitive logic
-- **Inconsistent naming** that obscures intent
+- Long functions that do too much
+- Duplicate code scattered across the codebase
+- God classes that know too much or do too much
+- Tight coupling between unrelated components
+- Missing abstractions that lead to repetitive logic
+- Inconsistent naming that obscures intent
 
 Detecting these issues early prevents them from compounding into larger problems. Claude Code excels at this because it understands context, can analyze entire codebases, and provides actionable recommendations rather than just raw data.
 
-## Setting Up Your Code Smell Detection Workflow
+Setting Up Your Code Smell Detection Workflow
 
-### Step 1: Define Your Detection Rules
+Step 1: Define Your Detection Rules
 
 Before scanning your codebase, establish clear criteria for what constitutes a code smell in your project. Create a reference document that your team agrees on:
 
 ```
-# .claude/code-smells.md
-# Project-specific code smell definitions
+.claude/code-smells.md
+Project-specific code smell definitions
 
-## High Priority
+High Priority
 - Functions exceeding 50 lines
 - Classes with more than 10 public methods
 - Cyclomatic complexity above 10
 - Duplicate code blocks (3+ lines)
 
-## Medium Priority
+Medium Priority
 - Inconsistent naming conventions
 - Missing documentation on public APIs
 - Magic numbers without constants
 - Files exceeding 500 lines
 ```
 
-### Configuring Detection via CLAUDE.md
+Configuring Detection via CLAUDE.md
 
 Create a project-level configuration that Claude Code loads automatically during reviews:
 
 ```markdown
-# Code Review Guidelines
+Code Review Guidelines
 
 When reviewing code, flag these patterns:
 1. Functions over 30 lines
@@ -74,7 +74,7 @@ When reviewing code, flag these patterns:
 
 Load this file before code reviews by including it in your active context or using skill composition to layer it with other quality checks.
 
-### Step 2: Create a Systematic Scanning Prompt
+Step 2: Create a Systematic Scanning Prompt
 
 Build a reusable prompt for Claude Code to analyze your code. This ensures consistent, thorough analysis:
 
@@ -96,21 +96,21 @@ For each finding, provide:
 Prioritize files in [YOUR_PRIORITY_PATHS] first.
 ```
 
-### Step 3: Run Incremental Analysis
+Step 3: Run Incremental Analysis
 
 Don't try to analyze your entire codebase at once. Instead, use a staged approach:
 
 ```bash
-# Analyze one module or directory at a time
+Analyze one module or directory at a time
 claude --print "Analyze the src/auth directory for code smells. Focus on function length, duplicate code, and tight coupling. Output findings in JSON format."
 
-# Track progress systematically
+Track progress systematically
 claude --print "Create a code-smells-findings.md file. Document all code smells found, their locations, and severity levels. Update this file as we address issues."
 ```
 
-## Practical Detection Techniques
+Practical Detection Techniques
 
-### Detecting Long Functions
+Detecting Long Functions
 
 Long functions are among the most common code smells. Claude Code can identify them by analyzing function complexity and suggesting extraction points:
 
@@ -141,7 +141,7 @@ function processUserRegistration(userData) {
 
 Claude identifies the violations: the function handles validation, hashing, database operations, and notifications in one place. It suggests extracting validation into a separate function, creating a user repository for persistence, and moving email notifications to a background job.
 
-### Identifying Code Duplication
+Identifying Code Duplication
 
 Duplicate code is a maintenance nightmare. Use Claude Code to find and consolidate repeated patterns:
 
@@ -153,7 +153,7 @@ Search for code duplication in the utils/ directory:
 - Provide the consolidated code
 ```
 
-### Analyzing Class Responsibilities
+Analyzing Class Responsibilities
 
 God classes accumulate too many responsibilities over time. Claude Code can help you identify and split them:
 
@@ -165,18 +165,18 @@ Analyze the UserManager class:
 4. Provide new class structure recommendations
 ```
 
-## Integrating Detection into Your Development Workflow
+Integrating Detection into Your Development Workflow
 
-### Pre-Commit Checks
+Pre-Commit Checks
 
 Catch code smells before they enter your codebase by adding detection to your workflow:
 
 ```bash
-# In your pre-commit hook
+In your pre-commit hook
 claude --print "Quick scan of staged files for critical code smells. Report any high-severity issues."
 ```
 
-### Code Review Integration
+Code Review Integration
 
 Make code smell detection part of your review process:
 
@@ -188,13 +188,13 @@ During code review, always check for:
 - Inconsistent patterns with existing code
 ```
 
-### Continuous Improvement
+Continuous Improvement
 
 Track your progress over time:
 
 ```markdown
-# code-quality-metrics.md
-## Q1 2026 Code Smell Reduction
+code-quality-metrics.md
+Q1 2026 Code Smell Reduction
 
 | Category | Jan 1 | Feb 1 | Mar 1 | Target |
 |----------|-------|-------|-------|--------|
@@ -203,69 +203,69 @@ Track your progress over time:
 | God classes | 8 | 6 | 4 | 2 |
 ```
 
-## Actionable Strategies for Refactoring
+Actionable Strategies for Refactoring
 
 Once you've identified code smells, the next step is addressing them. Claude Code can guide your refactoring efforts:
 
-### Prioritization Framework
+Prioritization Framework
 
 Not all code smells need immediate attention. Prioritize by:
 
-1. **Business impact**: Smells in frequently changed code
-2. **Risk level**: Smells that could cause bugs or security issues
-3. **Effort**: Quick wins that remove significant technical debt
-4. **Dependencies**: High-coupling areas that block other work
+1. Business impact: Smells in frequently changed code
+2. Risk level: Smells that could cause bugs or security issues
+3. Effort: Quick wins that remove significant technical debt
+4. Dependencies: High-coupling areas that block other work
 
-### Safe Refactoring Approach
+Safe Refactoring Approach
 
 When refactoring, follow these steps:
 
 ```bash
-# 1. Ensure tests cover the code
+1. Ensure tests cover the code
 claude --print "Verify test coverage for the file I'm about to refactor."
 
-# 2. Make one change at a time
+2. Make one change at a time
 claude --print "Extract the first helper function from this long function. Show the refactored code."
 
-# 3. Verify after each change
+3. Verify after each change
 claude --print "Run tests to verify the extraction didn't break functionality."
 ```
 
-## Best Practices and Common Pitfalls
+Best Practices and Common Pitfalls
 
-### Do's
+Do's
 
-- **Do** focus on high-impact smells first
-- **Do** involve your team in defining project standards
-- **Do** use Claude Code's context to understand business logic implications
-- **Do** track findings and progress over time
-- **Do** integrate detection early in your workflow
+- Do focus on high-impact smells first
+- Do involve your team in defining project standards
+- Do use Claude Code's context to understand business logic implications
+- Do track findings and progress over time
+- Do integrate detection early in your workflow
 
-### Don'ts
+Don'ts
 
-- **Don't** try to fix everything at once
-- **Don't** ignore false positives—adjust your criteria
-- **Don't** refactor without tests in place
-- **Don't** prioritize style over substance
-- **Don't** let perfect be the enemy of good
+- Don't try to fix everything at once
+- Don't ignore false positives, adjust your criteria
+- Don't refactor without tests in place
+- Don't prioritize style over substance
+- Don't let perfect be the enemy of good
 
-## Conclusion
+Conclusion
 
 Code smell detection with Claude Code transforms what was once a manual, sporadic process into a systematic, actionable workflow. By establishing clear detection criteria, creating reusable prompts, and integrating analysis into your development process, you can proactively maintain code quality and prevent technical debt from accumulating.
 
-Remember: the goal isn't perfection—it's continuous improvement. Start small, track your progress, and celebrate the wins as you gradually improve your codebase one refactoring at a time.
+Remember: the goal isn't perfection, it's continuous improvement. Start small, track your progress, and celebrate the wins as you gradually improve your codebase one refactoring at a time.
 
 ---
 
 *Ready to improve your code quality workflow? Start by scanning your most problematic module today, and you'll be surprised at how quickly you can identify and address the issues holding your project back.*
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 {% endraw %}

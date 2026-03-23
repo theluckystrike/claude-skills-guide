@@ -16,44 +16,44 @@ score: 8
 
 {% raw %}
 
-# Chrome Extension Screen Recorder for Meetings: A Developer Guide
+Chrome Extension Screen Recorder for Meetings: A Developer Guide
 
 Building a Chrome extension for screen recording during meetings opens up powerful possibilities for developers and power users who need to capture, review, and share meeting content. Whether you're creating documentation, conducting code reviews, or archiving important discussions, a well-built screen recorder extension provides significant value.
 
 This guide walks you through building a functional Chrome extension that captures screen, audio, and meeting content using modern web APIs.
 
-## Understanding Chrome Screen Recording Capabilities
+Understanding Chrome Screen Recording Capabilities
 
 Chrome provides the `getDisplayMedia` API, which enables web applications to request screen capture. This API is the foundation for any screen recording extension. Combined with the MediaStream Recording API, you can capture video and audio streams and save them as video files.
 
 The key APIs you'll work with include:
 
-- **getDisplayMedia()**: Initiates screen capture via browser prompt
-- **MediaRecorder**: Records media streams into chunks
-- **chrome.storage**: Persists recordings locally
-- **chrome.downloads**: Saves files to the user's device
+- getDisplayMedia(): Initiates screen capture via browser prompt
+- MediaRecorder: Records media streams into chunks
+- chrome.storage: Persists recordings locally
+- chrome.downloads: Saves files to the user's device
 
 Chrome extensions benefit from additional capabilities compared to regular web apps. Extensions can use background service workers for continuous recording, popup interfaces for quick controls, and context menus for recording initiation.
 
-## Project Structure
+Project Structure
 
 Create your extension with the following structure:
 
 ```
 screen-recorder/
-├── manifest.json
-├── popup.html
-├── popup.js
-├── background.js
-├── content.js
-├── recorder.js
-└── icons/
-    ├── icon16.png
-    ├── icon48.png
-    └── icon128.png
+ manifest.json
+ popup.html
+ popup.js
+ background.js
+ content.js
+ recorder.js
+ icons/
+     icon16.png
+     icon48.png
+     icon128.png
 ```
 
-## Setting Up the Manifest
+Setting Up the Manifest
 
 Your manifest.json declares the necessary permissions for screen capture and file storage:
 
@@ -96,7 +96,7 @@ Your manifest.json declares the necessary permissions for screen capture and fil
 
 The `host_permissions` section includes common meeting platforms. Adjust these based on your target use cases.
 
-## Implementing the Core Recorder
+Implementing the Core Recorder
 
 Create a `recorder.js` module that handles the recording logic:
 
@@ -231,7 +231,7 @@ class MeetingRecorder {
 }
 ```
 
-## Building the Popup Interface
+Building the Popup Interface
 
 Create `popup.html` for user controls:
 
@@ -327,7 +327,7 @@ Create `popup.html` for user controls:
 </html>
 ```
 
-## Implementing Popup Logic
+Implementing Popup Logic
 
 Create `popup.js` to connect the UI with the recorder:
 
@@ -439,7 +439,7 @@ async function loadState() {
 }
 ```
 
-## Handling Background Tasks
+Handling Background Tasks
 
 Create `background.js` to manage the recorder instance:
 
@@ -490,23 +490,23 @@ async function handleStopRecording() {
 }
 ```
 
-## Key Implementation Considerations
+Key Implementation Considerations
 
 When building a screen recorder for meetings, several factors require attention:
 
-**Platform Compatibility**: Different meeting platforms have varying levels of DOM accessibility. Some provide transcript elements you can capture, while others require more creative approaches using screen capture alone.
+Platform Compatibility: Different meeting platforms have varying levels of DOM accessibility. Some provide transcript elements you can capture, while others require more creative approaches using screen capture alone.
 
-**Storage Management**: Video files grow quickly. Implement cleanup logic to remove old recordings from local storage. The `chrome.storage.local` has a 10MB limit, so you'll need to use `chrome.downloads` or external storage for larger files.
+Storage Management: Video files grow quickly. Implement cleanup logic to remove old recordings from local storage. The `chrome.storage.local` has a 10MB limit, so you'll need to use `chrome.downloads` or external storage for larger files.
 
-**Permissions Flow**: Users must explicitly grant screen capture permission. The browser's picker dialog cannot be customized, so provide clear instructions about what to expect.
+Permissions Flow: Users must explicitly grant screen capture permission. The browser's picker dialog cannot be customized, so provide clear instructions about what to expect.
 
-**Audio Handling**: System audio capture requires additional permissions and behaves differently across operating systems. macOS requires specific screen recording permissions in System Preferences.
+Audio Handling: System audio capture requires additional permissions and behaves differently across operating systems. macOS requires specific screen recording permissions in System Preferences.
 
-## Privacy and Ethics
+Privacy and Ethics
 
 When building recording tools, always consider privacy implications. Implement clear indicators when recording is active, respect platform terms of service, and consider adding features like automatic pause when sensitive content appears.
 
-## Summary
+Summary
 
 Building a Chrome extension for meeting screen recording combines several powerful APIs into a useful productivity tool. The core implementation uses `getDisplayMedia` for capture, `MediaRecorder` for encoding, and Chrome's download API for saving files.
 
@@ -515,12 +515,12 @@ This guide provides a foundation you can extend with features like automatic tra
 ---
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 {% endraw %}

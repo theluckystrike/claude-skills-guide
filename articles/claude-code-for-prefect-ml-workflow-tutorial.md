@@ -14,18 +14,18 @@ score: 8
 ---
 
 
-# Claude Code for Prefect ML Workflow Tutorial
+Claude Code for Prefect ML Workflow Tutorial
 
 Machine learning workflows often involve complex chains of data preprocessing, model training, evaluation, and deployment tasks. Prefect is a powerful workflow orchestration tool that helps data scientists and ML engineers build reliable data pipelines. When combined with Claude Code, you get an AI-powered development partner that can accelerate your ML workflow implementation significantly.
 
 This tutorial shows you how to use Claude Code to build Prefect-based ML workflows efficiently.
 
-## Setting Up Your Prefect Environment
+Setting Up Your Prefect Environment
 
 Before building ML workflows, ensure you have Prefect installed and configured. Claude Code can help you set up the entire environment from scratch.
 
 ```python
-# requirements.txt
+requirements.txt
 prefect>=2.14.0
 prefect-dask
 prefect-mlflow
@@ -46,7 +46,7 @@ claude --print "Create a Prefect ML project structure with:
 - Add a pytest.ini configuration"
 ```
 
-## Building Your First ML Flow with Prefect
+Building Your First ML Flow with Prefect
 
 Prefect uses flows and tasks as its core abstractions. A flow is the top-level container, while tasks are individual units of work. Here's a typical ML training pipeline structure:
 
@@ -130,11 +130,11 @@ if __name__ == "__main__":
     ml_pipeline("data/training_data.csv")
 ```
 
-## Advanced Patterns: Parameterization and Scheduling
+Advanced Patterns: Parameterization and Scheduling
 
 Claude Code can help you build more sophisticated workflows with parameterization, conditional logic, and scheduled runs.
 
-### Parameterized Flows
+Parameterized Flows
 
 ```python
 from prefect import flow
@@ -154,7 +154,7 @@ def parameterized_training(config: TrainingConfig):
     # ... rest of training logic
 ```
 
-### Scheduling and Triggers
+Scheduling and Triggers
 
 Ask Claude Code to add scheduling and automated triggers:
 
@@ -166,14 +166,14 @@ claude --print "Add Prefect scheduling to the ML pipeline:
 - Add conditional task execution based on upstream results"
 ```
 
-## Integrating with MLflow for Experiment Tracking
+Integrating with MLflow for Experiment Tracking
 
 Prefect integrates smoothly with MLflow for tracking experiments, parameters, and metrics. Here's how to set up the integration:
 
 ```python
 from prefect_mlflow import MLFlowTracker
 
-# In your flow definition
+In your flow definition
 @flow(
     name="ML Training with MLflow",
     infer_using_parameters=True
@@ -190,7 +190,7 @@ def training_flow():
     return result
 ```
 
-## Building Multi-Step Pipelines
+Building Multi-Step Pipelines
 
 For more complex ML workflows involving multiple stages, use Prefect's task mapping and dynamic workflows:
 
@@ -222,12 +222,12 @@ def cross_validation_pipeline(data_path: str, n_folds: int = 5):
     return {"fold_results": results, "average_accuracy": avg_accuracy}
 ```
 
-## Deployment and Monitoring
+Deployment and Monitoring
 
 Once your ML flows are working, Claude Code can help you deploy and monitor them:
 
 ```bash
-# Deploy flow to Prefect Cloud or self-hosted server
+Deploy flow to Prefect Cloud or self-hosted server
 claude --print "Create Prefect deployment configuration:
 - Build a Docker image for the ML training flow
 - Create a prefect.yaml deployment file
@@ -236,27 +236,27 @@ claude --print "Create Prefect deployment configuration:
 - Set up Kubernetes deployment manifests"
 ```
 
-## Best Practices for ML Workflows with Prefect
+Best Practices for ML Workflows with Prefect
 
 Follow these tips for production-ready ML pipelines:
 
-1. **Use caching strategically**: Cache expensive preprocessing tasks but not model training (since you likely want fresh results each run)
+1. Use caching strategically: Cache expensive preprocessing tasks but not model training (since you likely want fresh results each run)
 
-2. **Implement proper error handling**: Use Prefect's `try/except` patterns within tasks and configure retries at the flow level
+2. Implement proper error handling: Use Prefect's `try/except` patterns within tasks and configure retries at the flow level
 
-3. **Separate concerns**: Keep data loading, preprocessing, training, and evaluation as separate tasks for better debugging and reusability
+3. Separate concerns: Keep data loading, preprocessing, training, and evaluation as separate tasks for better debugging and reusability
 
-4. **Track everything**: Integrate MLflow for experiment tracking and Prefect for workflow orchestration
+4. Track everything: Integrate MLflow for experiment tracking and Prefect for workflow orchestration
 
-5. **Parameterize flows**: Make your flows configurable so they can be reused across different datasets or model types
+5. Parameterize flows: Make your flows configurable so they can be reused across different datasets or model types
 
-## Conclusion
+Conclusion
 
-Combining Claude Code with Prefect creates a powerful development environment for ML workflows. Claude Code can generate boilerplate, suggest optimizations, and help you build complex pipelines faster. Prefect handles the orchestration, scheduling, and monitoring—letting you focus on the ML logic itself.
+Combining Claude Code with Prefect creates a powerful development environment for ML workflows. Claude Code can generate boilerplate, suggest optimizations, and help you build complex pipelines faster. Prefect handles the orchestration, scheduling, and monitoring, letting you focus on the ML logic itself.
 
 Start with simple flows, then gradually add complexity as your ML pipelines grow. The integration between these tools makes it easy to scale from local development to production deployments.
 
-## Advanced: Automated Hyperparameter Tuning Flow
+Advanced: Automated Hyperparameter Tuning Flow
 
 Use Prefect to orchestrate hyperparameter search with Claude Code generating the search space and evaluation logic:
 
@@ -266,7 +266,7 @@ import optuna
 
 @task
 def train_with_params(params: dict, train_data, val_data):
-    model = build_model(**params)
+    model = build_model(params)
     model.fit(train_data.X, train_data.y)
     return model.score(val_data.X, val_data.y)
 
@@ -288,7 +288,7 @@ def hyperparameter_search(n_trials: int = 50):
 
 Claude Code generates the Optuna objective function from a plain-language description of your model and the parameters you want to tune.
 
-## Step-by-Step: Deploying Your First Prefect Flow
+Step-by-Step: Deploying Your First Prefect Flow
 
 1. Install Prefect: `pip install prefect`
 2. Create a flow file with the `@flow` and `@task` decorators on your ML pipeline functions
@@ -298,7 +298,7 @@ Claude Code generates the Optuna objective function from a plain-language descri
 6. Navigate to `http://127.0.0.1:4200` to see the flow run, task states, and logs
 7. Add `prefect deploy` to push the flow to a work pool for scheduled execution
 
-## Comparison with Alternative ML Orchestration Tools
+Comparison with Alternative ML Orchestration Tools
 
 | Tool | Learning curve | UI | Cloud integration | Cost |
 |---|---|---|---|---|
@@ -309,9 +309,9 @@ Claude Code generates the Optuna objective function from a plain-language descri
 
 Prefect wins for teams that want production-grade orchestration without the overhead of Airflow's DAG-first model. Claude Code reduces Prefect's already-low learning curve further by generating boilerplate flows from descriptions.
 
-## Troubleshooting Common Issues
+Troubleshooting Common Issues
 
-**Flow failing silently**: Add explicit logging and result persistence to each task:
+Flow failing silently: Add explicit logging and result persistence to each task:
 
 ```python
 @task(log_prints=True, persist_result=True)
@@ -321,19 +321,19 @@ def train_model(config: dict):
     return model_artifacts
 ```
 
-**Prefect server not detecting flow changes**: Flows are imported at registration time. After changing a flow file, re-register it with `prefect deploy` or restart the worker process.
+Prefect server not detecting flow changes: Flows are imported at registration time. After changing a flow file, re-register it with `prefect deploy` or restart the worker process.
 
-**Memory issues with large datasets in tasks**: Use Prefect's artifact system to store large intermediate results to S3 or GCS rather than passing them between tasks as Python objects.
+Memory issues with large datasets in tasks: Use Prefect's artifact system to store large intermediate results to S3 or GCS rather than passing them between tasks as Python objects.
 
-**Scheduled flows not running**: Verify the Prefect agent or worker is running and connected to the correct work pool. Check the Prefect UI dashboard for agent status and any queued runs that failed to dispatch.
+Scheduled flows not running: Verify the Prefect agent or worker is running and connected to the correct work pool. Check the Prefect UI dashboard for agent status and any queued runs that failed to dispatch.
 
 Combining Claude Code with Prefect creates a powerful development environment for ML workflows. Claude Code generates boilerplate and suggests optimizations; Prefect handles orchestration, scheduling, and monitoring. Start with simple flows and add complexity as your pipelines grow.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

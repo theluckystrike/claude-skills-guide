@@ -12,7 +12,7 @@ permalink: /chrome-extension-highlight-text-save/
 
 Text selection and saving is one of the most common workflows for developers and power users. Whether you're researching documentation, collecting code snippets, or gathering references from multiple sources, the ability to highlight text and save it efficiently can significantly improve productivity. This guide explores how Chrome extensions handle text highlighting and saving, with practical implementation details for developers who want to build their own solutions.
 
-## Understanding the Selection API
+Understanding the Selection API
 
 The foundation of any highlight-and-save functionality lies in the Window.getSelection() API. This browser-native method returns a Selection object representing the text currently highlighted by the user. Here's how to capture selected text in a Chrome extension:
 
@@ -36,7 +36,7 @@ document.addEventListener('mouseup', function(event) {
 
 This approach captures text whenever the user releases the mouse button after making a selection. The extension then receives the selected text along with metadata about the source page.
 
-## Implementing Context Menus
+Implementing Context Menus
 
 Chrome extensions can add items to the browser's context menu, providing a natural way to trigger save actions. Here's how to set this up:
 
@@ -76,13 +76,13 @@ function saveToStorage(text, url, title) {
 
 This implementation creates a context menu option that appears whenever text is selected. When clicked, it saves the highlight to Chrome's local storage with metadata including the source URL, page title, and timestamp.
 
-## Storage Options for Highlights
+Storage Options for Highlights
 
 Chrome extensions offer several storage mechanisms, each with different characteristics:
 
-- **chrome.storage.local**: Stores data locally with no size limit (within reasonable bounds). Ideal for personal use.
-- **chrome.storage.sync**: Synchronizes data across devices when the user is signed into Chrome. Limited to approximately 100KB.
-- **IndexedDB**: Better for large datasets or when you need complex querying capabilities.
+- chrome.storage.local: Stores data locally with no size limit (within reasonable bounds). Ideal for personal use.
+- chrome.storage.sync: Synchronizes data across devices when the user is signed into Chrome. Limited to approximately 100KB.
+- IndexedDB: Better for large datasets or when you need complex querying capabilities.
 
 For most highlight-and-save use cases, chrome.storage.local provides the best balance of simplicity and capacity. Here's how to retrieve saved highlights:
 
@@ -115,7 +115,7 @@ function escapeHtml(text) {
 }
 ```
 
-## Adding Search and Organization
+Adding Search and Organization
 
 Once you've accumulated several highlights, search functionality becomes essential. Here's a practical approach to implementing search:
 
@@ -155,7 +155,7 @@ function addTag(highlightId, tag) {
 }
 ```
 
-## Export Functionality
+Export Functionality
 
 The ability to export highlights in various formats significantly increases their utility. Here's how to implement export to JSON and Markdown:
 
@@ -187,30 +187,30 @@ function downloadBlob(blob, filename) {
 }
 ```
 
-## Popular Extensions for Highlight and Save
+Popular Extensions for Highlight and Save
 
 If you prefer using existing solutions rather than building your own, several quality options are available:
 
-**OneNote Web Clipper** integrates with Microsoft OneNote, offering robust organization features including notebooks, sections, and tags. The extension can save full pages, selected regions, or just highlighted text.
+OneNote Web Clipper integrates with Microsoft OneNote, offering solid organization features including notebooks, sections, and tags. The extension can save full pages, selected regions, or just highlighted text.
 
-**Evernote Web Clipper** provides similar functionality with Evernote's powerful search and organization capabilities. The service supports text recognition in images and excellent cross-platform synchronization.
+Evernote Web Clipper provides similar functionality with Evernote's powerful search and organization capabilities. The service supports text recognition in images and excellent cross-platform synchronization.
 
-**Raindrop.io** serves as a bookmark manager with strong highlighting capabilities. It offers a visual approach to organizing saved content with collections, tags, and a clean reading interface.
+Raindrop.io serves as a bookmark manager with strong highlighting capabilities. It offers a visual approach to organizing saved content with collections, tags, and a clean reading interface.
 
-**Google Keep** (via Chrome's built-in features) offers the simplest integration—select text and right-click to save directly to Keep, with automatic synchronization to Android and iOS apps.
+Google Keep (via Chrome's built-in features) offers the simplest integration, select text and right-click to save directly to Keep, with automatic synchronization to Android and iOS apps.
 
-## Building Your Own Extension
+Building Your Own Extension
 
 Creating a custom highlight-and-save extension requires only a few files. Here's the essential structure:
 
 ```
 highlight-saver/
-├── manifest.json
-├── content.js
-├── background.js
-├── popup.html
-├── popup.js
-└── styles.css
+ manifest.json
+ content.js
+ background.js
+ popup.html
+ popup.js
+ styles.css
 ```
 
 The manifest.json defines the extension's permissions and entry points:
@@ -243,13 +243,13 @@ The manifest.json defines the extension's permissions and entry points:
 
 This basic structure provides the foundation for a fully functional highlight-and-save extension. From here, you can add features like keyboard shortcuts, cloud synchronization, highlight formatting, and integration with third-party services.
 
-The Chrome extension platform provides robust APIs for capturing and storing text selections. Whether you need a simple personal tool or a feature-rich solution with cross-device synchronization, the building blocks are readily available and well-documented in Chrome's official extension documentation.
+The Chrome extension platform provides solid APIs for capturing and storing text selections. Whether you need a simple personal tool or a feature-rich solution with cross-device synchronization, the building blocks are readily available and well-documented in Chrome's official extension documentation.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

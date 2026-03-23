@@ -16,45 +16,45 @@ tags: [claude-code, claude-skills]
 {% raw %}
 Building a backend with Supabase and Claude Code together creates a powerful development workflow. This guide covers practical strategies to accelerate your backend development, from database schema design to implementing Row Level Security policies. For client-side integration patterns covering CRUD operations, authentication flows, real-time subscriptions, and file storage, see the [Claude Code with Supabase Backend Integration Guide](/claude-code-with-supabase-backend-integration-guide/).
 
-## Why Supabase Works Well with Claude Code
+Why Supabase Works Well with Claude Code
 
 Supabase's architecture is inherently text-friendly. Migrations are plain SQL files. RLS policies are declarative SQL expressions. Edge Functions are TypeScript. Type definitions are generated output. This means Claude Code can read, write, and reason about virtually every layer of your backend without needing specialized tooling.
 
-In practice, this shows up in the workflow constantly. You describe a feature — "users should only be able to read posts in groups they belong to" — and Claude translates that into a correct RLS policy. You have a slow query and paste the EXPLAIN output, and Claude identifies the missing index. You want to add a computed column, and Claude writes the migration with the right syntax for your Postgres version.
+In practice, this shows up in the workflow constantly. You describe a feature. "users should only be able to read posts in groups they belong to". and Claude translates that into a correct RLS policy. You have a slow query and paste the EXPLAIN output, and Claude identifies the missing index. You want to add a computed column, and Claude writes the migration with the right syntax for your Postgres version.
 
 The key is learning what prompts produce good results and organizing your project so Claude has the context it needs to generate accurate code.
 
-## Project Structure for Supabase Projects
+Project Structure for Supabase Projects
 
 Organize your Supabase project with a clear directory structure that separates migrations, functions, and type definitions. Create separate folders for SQL migrations, Edge Functions, and TypeScript type definitions:
 
 ```
 supabase/
-├── migrations/
-│   ├── 20260101000000_initial_schema.sql
-│   ├── 20260115000000_add_groups_tables.sql
-│   └── 20260201000000_add_post_visibility.sql
-├── functions/
-│   ├── send-notification/
-│   │   └── index.ts
-│   └── process-webhook/
-│       └── index.ts
-├── seed.sql
-└── config.toml
+ migrations/
+    20260101000000_initial_schema.sql
+    20260115000000_add_groups_tables.sql
+    20260201000000_add_post_visibility.sql
+ functions/
+    send-notification/
+       index.ts
+    process-webhook/
+        index.ts
+ seed.sql
+ config.toml
 src/
-├── lib/
-│   └── supabase.ts
-└── types/
-    └── supabase.ts
+ lib/
+    supabase.ts
+ types/
+     supabase.ts
 ```
 
-Use timestamp-prefixed migration names rather than sequential integers. Timestamps prevent merge conflicts when two developers create migrations simultaneously — a common issue in team settings where sequential numbers would collide.
+Use timestamp-prefixed migration names rather than sequential integers. Timestamps prevent merge conflicts when two developers create migrations simultaneously. a common issue in team settings where sequential numbers would collide.
 
 This structure keeps your backend organized and makes it easier to version control changes. When working with migrations, always number them sequentially and include descriptive names.
 
 Claude Code benefits from this organization because when you ask it to write a new migration, you can say "read the existing migrations to understand the current schema before writing migration 20260301_add_audit_log.sql." Claude will load the migration history, understand the existing table structures, and write SQL that references the correct column names and foreign key targets.
 
-## Database Schema Development
+Database Schema Development
 
 Start with your core tables and relationships. Define tables using clear SQL with proper constraints:
 
@@ -81,7 +81,7 @@ CREATE POLICY "Users can update own profile"
 
 When iterating on schema, use migration files instead of direct table alterations. This preserves a history of changes and makes collaboration smoother.
 
-A practical schema development approach is to write out the full data model before writing any SQL. For a task management app, that might be: users have projects, projects have tasks, tasks have assignees, tasks can have subtasks. Describe this to Claude and ask it to generate the full initial migration including all tables, foreign keys, indexes, and RLS enable statements. Then review that migration carefully before running it — it is much easier to correct a migration before applying it than after.
+A practical schema development approach is to write out the full data model before writing any SQL. For a task management app, that might be: users have projects, projects have tasks, tasks have assignees, tasks can have subtasks. Describe this to Claude and ask it to generate the full initial migration including all tables, foreign keys, indexes, and RLS enable statements. Then review that migration carefully before running it. it is much easier to correct a migration before applying it than after.
 
 For schema changes after the initial migration, always add a new file rather than editing existing migrations. The `supabase db push` command applies unapplied migrations in order, so editing an already-applied migration has no effect on existing environments and causes confusion. Write the change as a new `ALTER TABLE` or `CREATE INDEX` statement in a fresh migration file.
 
@@ -103,7 +103,7 @@ CREATE TRIGGER set_profiles_updated_at
   FOR EACH ROW EXECUTE FUNCTION public.handle_updated_at();
 ```
 
-## Row Level Security Best Practices
+Row Level Security Best Practices
 
 RLS is Supabase's powerful feature for securing your data. Write granular policies that follow the principle of least privilege. Instead of broad policies, create specific ones for each operation:
 
@@ -123,7 +123,7 @@ CREATE POLICY "Users can insert their own profile"
 
 Test your policies using the Supabase dashboard or CLI to ensure they work as expected before deploying to production.
 
-For more complex access patterns involving relationships — like "a user can read a post if they are a member of the group the post belongs to" — subqueries inside policies work well:
+For more complex access patterns involving relationships. like "a user can read a post if they are a member of the group the post belongs to". subqueries inside policies work well:
 
 ```sql
 CREATE POLICY "Group members can read group posts"
@@ -143,7 +143,7 @@ When RLS policies involve subqueries on large tables, performance can suffer. Us
 
 A useful pattern for testing RLS without writing an entire test suite is to use the Supabase dashboard's SQL editor with `SET LOCAL role = authenticated; SET LOCAL request.jwt.claims = '{"sub": "some-uuid"}';` to simulate a specific user's session and run queries against your tables directly. Claude Code can generate these test queries if you describe the scenarios you want to verify.
 
-## Edge Functions Development
+Edge Functions Development
 
 For server-side logic beyond what SQL can handle, Supabase Edge Functions run on Deno. Write functions with proper error handling and logging:
 
@@ -194,7 +194,7 @@ serve(async (req) => {
     return new Response(JSON.stringify({ error: "Unauthorized" }), { status: 401 });
   }
 
-  // Create a client scoped to the user — RLS applies
+  // Create a client scoped to the user. RLS applies
   const userClient = createClient(
     Deno.env.get("SUPABASE_URL")!,
     Deno.env.get("SUPABASE_ANON_KEY")!,
@@ -214,13 +214,13 @@ serve(async (req) => {
 
 Deploy functions with the Supabase CLI: `supabase functions deploy my-function`.
 
-When using Claude Code to write Edge Functions, provide context about your database schema and the specific operation the function needs to perform. A prompt like "write a Supabase Edge Function that accepts a POST request with a task_id, marks the task complete, and sends a notification to the task creator — here are the relevant table schemas:" produces much better output than a vague request.
+When using Claude Code to write Edge Functions, provide context about your database schema and the specific operation the function needs to perform. A prompt like "write a Supabase Edge Function that accepts a POST request with a task_id, marks the task complete, and sends a notification to the task creator. here are the relevant table schemas:" produces much better output than a vague request.
 
-## Leveraging Claude Skills for Backend Development
+Leveraging Claude Skills for Backend Development
 
-Several Claude skills enhance your Supabase backend workflow. The **tdd** skill helps you write tests for your database functions and Edge Functions before implementation, following test-driven development principles.
+Several Claude skills enhance your Supabase backend workflow. The tdd skill helps you write tests for your database functions and Edge Functions before implementation, following test-driven development principles.
 
-Use the **pdf** skill when generating API documentation from your database schema comments. Document your tables and functions thoroughly — Supabase can generate docs from SQL comments:
+Use the pdf skill when generating API documentation from your database schema comments. Document your tables and functions thoroughly. Supabase can generate docs from SQL comments:
 
 ```sql
 -- Add documentation to your tables
@@ -229,11 +229,11 @@ COMMENT ON COLUMN public.profiles.username IS 'Unique identifier for display pur
 COMMENT ON COLUMN public.profiles.avatar_url IS 'URL to the user avatar image. May be null if not set.';
 ```
 
-For generating client libraries from your schema, the **xlsx** skill helps create API documentation spreadsheets that your frontend team can reference.
+For generating client libraries from your schema, the xlsx skill helps create API documentation spreadsheets that your frontend team can reference.
 
-Beyond these skills, the most practical Claude Code workflow for Supabase development is iterative schema review. As your migration count grows, ask Claude to read all your migrations in order and produce a summary of the current schema state — what tables exist, what their columns are, and what RLS policies are active. This gives you a quick reference without needing to mentally trace through every migration file.
+Beyond these skills, the most practical Claude Code workflow for Supabase development is iterative schema review. As your migration count grows, ask Claude to read all your migrations in order and produce a summary of the current schema state. what tables exist, what their columns are, and what RLS policies are active. This gives you a quick reference without needing to mentally trace through every migration file.
 
-## Type-Safe Database Clients
+Type-Safe Database Clients
 
 Generate TypeScript types from your database schema to ensure type safety across your application. Use the Supabase CLI to generate types:
 
@@ -270,7 +270,7 @@ export const supabase = createClient<Database>(
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 );
 
-// Typed query helper — return type is inferred correctly
+// Typed query helper. return type is inferred correctly
 export async function getProfile(userId: string) {
   const { data, error } = await supabase
     .from("profiles")
@@ -293,19 +293,19 @@ Regenerate types after every migration. The easiest way to enforce this is to ad
 }
 ```
 
-## Workflow Optimization Tips
+Workflow Optimization Tips
 
-1. **Use the Supabase CLI locally**: Run `supabase start` to spin up a local development environment that mirrors production. Test migrations and policies locally before pushing changes.
+1. Use the Supabase CLI locally: Run `supabase start` to spin up a local development environment that mirrors production. Test migrations and policies locally before pushing changes.
 
-2. **Implement database migrations incrementally**: Small, focused migrations are easier to review and roll back if issues arise.
+2. Implement database migrations incrementally: Small, focused migrations are easier to review and roll back if issues arise.
 
-3. **Leverage Supabase Vault for secrets**: Store API keys and sensitive values in Vault instead of environment variables for better secret management.
+3. Use Supabase Vault for secrets: Store API keys and sensitive values in Vault instead of environment variables for better secret management.
 
-4. **Use realtime subscriptions wisely**: Enable realtime only on tables that need it to avoid unnecessary server load.
+4. Use realtime subscriptions wisely: Enable realtime only on tables that need it to avoid unnecessary server load.
 
-5. **Monitor with Supabase logs**: Regularly check the dashboard logs to identify slow queries and potential security issues.
+5. Monitor with Supabase logs: Regularly check the dashboard logs to identify slow queries and potential security issues.
 
-6. **Use database functions for complex logic**: When a business rule requires multiple table operations, write a PostgreSQL function and call it from Edge Functions or directly from the client. This keeps the logic in the database where transactions can protect consistency:
+6. Use database functions for complex logic: When a business rule requires multiple table operations, write a PostgreSQL function and call it from Edge Functions or directly from the client. This keeps the logic in the database where transactions can protect consistency:
 
 ```sql
 CREATE OR REPLACE FUNCTION public.complete_task(task_id UUID)
@@ -332,9 +332,9 @@ END;
 $$ LANGUAGE plpgsql SECURITY DEFINER;
 ```
 
-7. **Seed data for local development**: Maintain a `supabase/seed.sql` file with test users, sample content, and representative data. Running `supabase db reset` applies all migrations and then the seed file, giving you a clean and realistic local environment in seconds.
+7. Seed data for local development: Maintain a `supabase/seed.sql` file with test users, sample content, and representative data. Running `supabase db reset` applies all migrations and then the seed file, giving you a clean and realistic local environment in seconds.
 
-## CI/CD Integration
+CI/CD Integration
 
 Automate your deployment pipeline with GitHub Actions. Run migrations and deploy functions automatically on merge:
 
@@ -372,11 +372,11 @@ For staging environments, maintain a separate Supabase project and deploy to it 
 Building efficient Supabase backends with Claude Code comes down to organized project structure, well-written RLS policies, and automated workflows. Apply these patterns to speed up development and maintain reliable backend infrastructure.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

@@ -14,17 +14,17 @@ score: 7
 
 
 {% raw %}
-# Claude Code for Hybrid Search Workflow Tutorial
+Claude Code for Hybrid Search Workflow Tutorial
 
 Hybrid search combines the strengths of keyword-based search with semantic vector search to deliver more accurate and contextually relevant results. This tutorial shows you how to build a complete hybrid search workflow using Claude Code, from setting up your environment to implementing production-ready search functionality.
 
-## Why Hybrid Search Matters
+Why Hybrid Search Matters
 
 Traditional keyword search excels at finding exact matches but struggles with synonyms, misspellings, and context. Vector search understands semantic meaning but can miss specific terminology. Hybrid search bridges this gap by running both approaches in parallel and combining their results using techniques like reciprocal rank fusion (RRF).
 
 Claude Code can help you implement this workflow by generating the necessary code, debugging integration issues, and optimizing your search pipeline. Whether you're building an e-commerce product search, documentation search, or enterprise knowledge base, hybrid search provides significantly better results than either approach alone.
 
-## Setting Up Your Development Environment
+Setting Up Your Development Environment
 
 Before building your hybrid search workflow, ensure you have the required dependencies. You'll need a vector database (such as ChromaDB, Pinecone, or Weaviate), a keyword search engine (like BM25), and Claude Code configured for your project.
 
@@ -42,11 +42,11 @@ If you need to add search capabilities to an existing project, ask Claude Code t
 Analyze my current project structure and recommend which search dependencies would integrate best with my existing tech stack. My project uses Python/Django.
 ```
 
-## Building the Hybrid Search Pipeline
+Building the Hybrid Search Pipeline
 
 The core of any hybrid search implementation consists of three main components: the keyword search index, the vector search index, and a fusion mechanism to combine results. Let's walk through implementing each component.
 
-### Implementing Keyword Search with BM25
+Implementing Keyword Search with BM25
 
 BM25 (Best Matching 25) is a probabilistic ranking function used by most modern search engines. It's excellent for finding documents that contain your search terms. Here's a basic implementation:
 
@@ -92,7 +92,7 @@ class KeywordSearchEngine:
 
 This keyword search component tokenizes your documents and builds an inverted index. When querying, BM25 calculates relevance scores based on term frequency and document length normalization.
 
-### Implementing Vector Search with Embeddings
+Implementing Vector Search with Embeddings
 
 Vector search uses semantic embeddings to find documents similar in meaning, not just exact term matches. Here's how to integrate a vector database:
 
@@ -154,7 +154,7 @@ class VectorSearchEngine:
 
 The vector search engine converts text into high-dimensional embeddings using sentence transformers. ChromaDB stores these embeddings and performs efficient similarity search.
 
-### Combining Results with Reciprocal Rank Fusion
+Combining Results with Reciprocal Rank Fusion
 
 The fusion step is where hybrid search delivers its magic. Reciprocal Rank Fusion (RRF) combines rankings from multiple search algorithms:
 
@@ -206,50 +206,50 @@ class HybridSearchEngine:
 
 The RRF algorithm gives a boost to documents that rank highly in either search method. Documents appearing in both result sets naturally score higher.
 
-## Integrating with Claude Code Workflows
+Integrating with Claude Code Workflows
 
 Claude Code can dramatically speed up your hybrid search implementation. Here are practical ways to use it:
 
-**Prompt for initial setup:**
+Prompt for initial setup:
 ```
 Create a hybrid search implementation for my e-commerce product catalog. I need keyword search using BM25, vector search using ChromaDB with sentence transformers, and reciprocal rank fusion. The products have name, description, category, and price fields.
 ```
 
-**For debugging search quality:**
+For debugging search quality:
 ```
 My hybrid search returns inconsistent results when testing with queries like "wireless headphones" vs "bluetooth earbuds". Analyze my implementation and suggest improvements to handle synonyms and related terms better.
 ```
 
-**For optimization:**
+For optimization:
 ```
 My search pipeline is slow with 10,000 documents. Profile my current implementation and suggest optimizations such as batching, caching embeddings, or switching to a more efficient vector database.
 ```
 
-## Best Practices for Production
+Best Practices for Production
 
 When moving your hybrid search to production, consider these recommendations:
 
-1. **Tune your fusion parameter**: The k value in RRF (default 60) controls how much ranking from each search engine matters. Lower values favor top-ranked results; higher values distribute importance more evenly.
+1. Tune your fusion parameter: The k value in RRF (default 60) controls how much ranking from each search engine matters. Lower values favor top-ranked results; higher values distribute importance more evenly.
 
-2. **Implement result re-ranking**: After fusion, use a cross-encoder model to re-rank the top results for better relevance. This adds latency but significantly improves result quality.
+2. Implement result re-ranking: After fusion, use a cross-encoder model to re-rank the top results for better relevance. This adds latency but significantly improves result quality.
 
-3. **Monitor search quality**: Implement feedback loops to track click-through rates and query refinements. Use this data to continuously improve your search algorithm.
+3. Monitor search quality: Implement feedback loops to track click-through rates and query refinements. Use this data to continuously improve your search algorithm.
 
-4. **Cache frequently queried results**: Implement caching for common queries to reduce latency and computational costs.
+4. Cache frequently queried results: Implement caching for common queries to reduce latency and computational costs.
 
-5. **Handle edge cases**: Build logic for empty results, single-word queries, and special characters to ensure robust behavior across all user inputs.
+5. Handle edge cases: Build logic for empty results, single-word queries, and special characters to ensure solid behavior across all user inputs.
 
-## Conclusion
+Conclusion
 
 Hybrid search combines the precision of keyword search with the semantic understanding of vector search, delivering significantly better search experiences. With Claude Code, you can rapidly prototype, implement, and optimize these workflows without deep expertise in information retrieval algorithms.
 
 Start with the basic implementation shown here, then iterate based on your specific use case and user feedback. The combination of BM25 and semantic embeddings provides a strong foundation for virtually any search application.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

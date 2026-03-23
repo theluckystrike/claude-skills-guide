@@ -13,21 +13,21 @@ permalink: /claude-code-aws-s3-multipart-upload-workflow-guide/
 
 # Claude Code AWS S3 Multipart Upload Workflow Guide
 
-Large file uploads to Amazon S3 can be challenging when dealing with files exceeding 5GB or unstable network connections. AWS S3 multipart upload breaks large files into parts, enabling parallel uploads and resumable transfers. This guide shows you how to leverage Claude Code to create efficient multipart upload workflows that automate the entire process.
+Large file uploads to Amazon S3 can be challenging when dealing with files exceeding 5GB or unstable network connections. AWS S3 multipart upload breaks large files into parts, enabling parallel uploads and resumable transfers. This guide shows you how to use Claude Code to create efficient multipart upload workflows that automate the entire process.
 
-## Understanding Multipart Upload Basics
+Understanding Multipart Upload Basics
 
 Before diving into Claude Code workflows, let's understand how multipart uploads work in AWS S3. When you upload a large object, S3 allows you to break it into parts (typically 5MB to 5GB each). Each part uploads independently, and you can even upload parts in parallel for faster throughput.
 
 The multipart upload process follows three stages:
 
-1. **Initiate Multipart Upload** - Create an upload ID for tracking
-2. **Upload Parts** - Send each part with its sequence number
-3. **Complete or Abort** - Either combine all parts or clean up failed uploads
+1. Initiate Multipart Upload - Create an upload ID for tracking
+2. Upload Parts - Send each part with its sequence number
+3. Complete or Abort - Either combine all parts or clean up failed uploads
 
-This is where Claude Code shines—it can manage the entire lifecycle, handle errors, and resume interrupted uploads automatically.
+This is where Claude Code shines, it can manage the entire lifecycle, handle errors, and resume interrupted uploads automatically.
 
-## Setting Up AWS Credentials for Claude Code
+Setting Up AWS Credentials for Claude Code
 
 Before creating multipart upload workflows, ensure your AWS credentials are configured properly. You can set up credentials using environment variables or AWS profiles:
 
@@ -39,7 +39,7 @@ export AWS_DEFAULT_REGION="us-east-1"
 
 Alternatively, use AWS profiles with the `AWS_PROFILE` environment variable. Claude Code can read these automatically when executing AWS CLI commands or calling the SDK.
 
-## Creating a Claude Code Skill for Multipart Upload
+Creating a Claude Code Skill for Multipart Upload
 
 Here's a practical skill that handles multipart uploads efficiently:
 
@@ -49,11 +49,11 @@ name: s3-multipart-upload
 description: Upload large files to AWS S3 using multipart upload with automatic retry and resume capability
 ---
 
-# S3 Multipart Upload Skill
+S3 Multipart Upload Skill
 
 This skill handles large file uploads to S3 using multipart upload for reliability and performance.
 
-## Usage
+Usage
 
 When I need to upload a large file to S3, I'll use the following process:
 
@@ -63,33 +63,33 @@ When I need to upload a large file to S3, I'll use the following process:
 4. Track progress and handle any failures gracefully
 5. Complete or abort the upload based on success
 
-## Key Commands
+Key Commands
 
-### Initiate Upload
+Initiate Upload
 aws s3api create-multipart-upload --bucket BUCKET --key KEY --region REGION
 
-### Upload Part
+Upload Part
 aws s3api upload-part --bucket BUCKET --key KEY --upload-id ID --part-number N --body part-file
 
-### Complete Upload
+Complete Upload
 aws s3api complete-multipart-upload --bucket BUCKET --key KEY --upload-id ID --multipart-upload file.json
 ```
 
-## Practical Example: Automated Upload Script
+Practical Example: Automated Upload Script
 
 Here's a practical bash script that Claude Code can use to perform multipart uploads:
 
 ```bash
 #!/bin/bash
 
-# S3 Multipart Upload Script
+S3 Multipart Upload Script
 BUCKET=$1
 FILE_PATH=$2
 KEY=$3
 REGION=${4:-us-east-1}
 PART_SIZE=${5:-100}  # Part size in MB
 
-# Calculate number of parts
+Calculate number of parts
 FILE_SIZE=$(stat -f%z "$FILE_PATH")
 PART_SIZE_BYTES=$((PART_SIZE * 1024 * 1024))
 NUM_PARTS=$(( (FILE_SIZE + PART_SIZE_BYTES - 1) / PART_SIZE_BYTES ))
@@ -98,7 +98,7 @@ echo "File size: $FILE_SIZE bytes"
 echo "Part size: $PART_SIZE MB"
 echo "Number of parts: $NUM_PARTS"
 
-# Initiate multipart upload
+Initiate multipart upload
 UPLOAD_RESULT=$(aws s3api create-multipart-upload \
   --bucket "$BUCKET" \
   --key "$KEY" \
@@ -107,7 +107,7 @@ UPLOAD_RESULT=$(aws s3api create-multipart-upload \
 UPLOAD_ID=$(echo "$UPLOAD_RESULT" | jq -r '.UploadId')
 echo "Upload ID: $UPLOAD_ID"
 
-# Upload each part
+Upload each part
 for i in $(seq 1 $NUM_PARTS); do
   PART_NUM=$i
   START=$(( (i - 1) * PART_SIZE_BYTES ))
@@ -125,7 +125,7 @@ for i in $(seq 1 $NUM_PARTS); do
   echo "Uploaded part $PART_NUM of $NUM_PARTS"
 done
 
-# Complete multipart upload
+Complete multipart upload
 aws s3api complete-multipart-upload \
   --bucket "$BUCKET" \
   --key "$KEY" \
@@ -134,7 +134,7 @@ aws s3api complete-multipart-upload \
   --region "$REGION"
 ```
 
-## Handling Large Files with Resume Capability
+Handling Large Files with Resume Capability
 
 One of the most valuable features you can add to multipart upload workflows is resume capability. Here's how Claude Code can help manage this:
 
@@ -191,23 +191,23 @@ class MultipartUploader:
         return etag
 ```
 
-## Best Practices for Claude Code S3 Workflows
+Best Practices for Claude Code S3 Workflows
 
 When implementing multipart upload workflows with Claude Code, consider these best practices:
 
-1. **Choose the right part size** - For files under 5GB, a single PUT is simpler. For larger files, use 100-500MB parts for optimal performance.
+1. Choose the right part size - For files under 5GB, a single PUT is simpler. For larger files, use 100-500MB parts for optimal performance.
 
-2. **Enable parallel uploads** - Claude Code can orchestrate multiple part uploads simultaneously using background processes:
+2. Enable parallel uploads - Claude Code can orchestrate multiple part uploads simultaneously using background processes:
 
 ```bash
-# Upload parts in parallel
+Upload parts in parallel
 for i in {1..10}; do
   upload_part $i &
 done
 wait
 ```
 
-3. **Implement proper cleanup** - Always abort multipart uploads that don't complete to avoid charges:
+3. Implement proper cleanup - Always abort multipart uploads that don't complete to avoid charges:
 
 ```bash
 aws s3api abort-multipart-upload \
@@ -216,7 +216,7 @@ aws s3api abort-multipart-upload \
   --upload-id UPLOAD_ID
 ```
 
-4. **Use S3 Transfer Acceleration** - For geographically distributed uploads, enable transfer acceleration for faster uploads:
+4. Use S3 Transfer Acceleration - For geographically distributed uploads, enable transfer acceleration for faster uploads:
 
 ```bash
 aws s3api create-multipart-upload \
@@ -226,16 +226,16 @@ aws s3api create-multipart-upload \
   --use-accelerate-endpoint
 ```
 
-## Conclusion
+Conclusion
 
-Claude Code transforms AWS S3 multipart uploads from complex manual processes into automated, reliable workflows. By combining Claude Code's skill system with AWS CLI or SDK capabilities, you can build robust upload handlers that handle large files efficiently, recover from failures automatically, and scale to meet production demands.
+Claude Code transforms AWS S3 multipart uploads from complex manual processes into automated, reliable workflows. By combining Claude Code's skill system with AWS CLI or SDK capabilities, you can build solid upload handlers that handle large files efficiently, recover from failures automatically, and scale to meet production demands.
 
 Start by creating a basic skill following the examples above, then extend it with error handling, progress tracking, and resume capability as your requirements grow. With Claude Code managing your S3 workflows, you can focus on your application logic while it handles the intricacies of large file transfers.
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

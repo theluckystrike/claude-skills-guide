@@ -13,21 +13,21 @@ score: 8
 ---
 
 
-# Claude Code for Upbound Marketplace Workflow Guide
+Claude Code for Upbound Marketplace Workflow Guide
 
 The Upbound Marketplace has become the go-to platform for distributing Crossplane configurations, compositions, and managed control planes. Whether you're publishing a private provider or sharing composition templates with your team, the workflow involves multiple steps that can benefit from automation and intelligent assistance. This guide shows you how to use Claude Code to accelerate every phase of your Upbound Marketplace workflow.
 
-## Understanding the Upbound Marketplace Ecosystem
+Understanding the Upbound Marketplace Ecosystem
 
 Before diving into the workflow, it's essential to understand what you're actually publishing to the Upbound Marketplace. The ecosystem revolves around three core concepts:
 
-- **Providers**: Kubernetes operators that connect to external cloud APIs (like AWS, GCP, Azure)
-- **Configurations**: Bundles of Compositions that define how to create managed resources
-- **Control Planes**: Running instances of configurations that teams can use to provision resources
+- Providers: Kubernetes operators that connect to external cloud APIs (like AWS, GCP, Azure)
+- Configurations: Bundles of Compositions that define how to create managed resources
+- Control Planes: Running instances of configurations that teams can use to provision resources
 
 Claude Code can assist you in creating, testing, and publishing each of these artifacts efficiently.
 
-### Artifact Types Compared
+Artifact Types Compared
 
 Understanding which artifact type to publish helps you choose the right workflow:
 
@@ -35,33 +35,33 @@ Understanding which artifact type to publish helps you choose the right workflow
 |---|---|---|---|
 | Provider | Connect to a cloud API | Platform engineers | Strict semver, frequent updates |
 | Configuration | Reusable Composition bundle | App teams using a platform | Semver, tied to provider version |
-| Control Plane | Running managed instance | End-user teams | N/A — managed by Upbound |
+| Control Plane | Running managed instance | End-user teams | N/A. managed by Upbound |
 
 Most teams start by publishing a Configuration that wraps an existing community provider (like provider-aws or provider-gcp), then graduate to writing their own provider when they need custom resources or private APIs.
 
-## Setting Up Your Development Environment
+Setting Up Your Development Environment
 
 The first step involves configuring your local environment for Upbound development. Claude Code can help you set this up correctly:
 
 ```bash
-# Install the Upbound CLI
+Install the Upbound CLI
 curl -sL https://raw.githubusercontent.com/upbound/up/main/install.sh | sh
 
-# Verify installation
+Verify installation
 up version
 
-# Login to your Upbound account
+Login to your Upbound account
 up login --token YOUR_UPCLOUD_TOKEN
 ```
 
 When setting up your project directory, use Claude Code to scaffold the proper structure:
 
 ```bash
-# Create a new provider structure
+Create a new provider structure
 mkdir -p my-provider/apis my-provider/crds my-provider/controllers
 mkdir -p my-provider/config/crd my-provider/examples
 
-# Initialize with proper go.mod
+Initialize with proper go.mod
 cd my-provider
 go mod init github.com/yourorg/provider-name
 ```
@@ -71,14 +71,14 @@ Claude Code is particularly useful here when you're setting up a provider from s
 You should also ensure that `crossplane-tools` and `controller-gen` are installed, since the `make generate` target depends on them:
 
 ```bash
-# Install crossplane-tools
+Install crossplane-tools
 go install github.com/crossplane/crossplane-tools/cmd/...@latest
 
-# Install controller-gen for CRD generation
+Install controller-gen for CRD generation
 go install sigs.k8s.io/controller-tools/cmd/controller-gen@latest
 ```
 
-## Creating Compositions with Claude Code Assistance
+Creating Compositions with Claude Code Assistance
 
 Compositions are the heart of your Upbound Marketplace offerings. Claude Code can help you write compositions that follow best practices and use the latest Crossplane features.
 
@@ -137,7 +137,7 @@ spec:
 
 Ask Claude Code to explain each section of your Composition, suggest optimizations, or add additional patches for common scenarios like tags, networking, or backup configurations.
 
-### Composition Prompt Patterns That Work
+Composition Prompt Patterns That Work
 
 When asking Claude Code to improve a Composition, be specific about what you want:
 
@@ -145,34 +145,34 @@ When asking Claude Code to improve a Composition, be specific about what you wan
 - "Show me how to add a readiness check that waits for the endpoint to be available"
 - "Generate a matching CompositeResourceDefinition (XRD) for this Composition"
 
-The last prompt is especially valuable — writing a well-typed XRD by hand is tedious, and Claude Code can produce a complete XRD with proper OpenAPI validation schema based on the fields your Composition expects in `spec.parameters`.
+The last prompt is especially valuable. writing a well-typed XRD by hand is tedious, and Claude Code can produce a complete XRD with proper OpenAPI validation schema based on the fields your Composition expects in `spec.parameters`.
 
-## Building and Testing Providers Locally
+Building and Testing Providers Locally
 
 Before publishing to the Marketplace, you need to build and test your provider locally. Claude Code can guide you through the build process:
 
 ```bash
-# Build your provider
+Build your provider
 make build
 
-# Run unit tests
+Run unit tests
 make test
 
-# Build documentation
+Build documentation
 make docs
 
-# Generate CRDs and controllers
+Generate CRDs and controllers
 make generate
 ```
 
 Claude Code can also help you debug common issues. For instance, if your provider fails to reconcile, ask Claude Code to analyze the controller logs and suggest fixes:
 
 ```bash
-# Get controller logs
+Get controller logs
 kubectl logs -n upbound-system -l app=provider-aws-rds -f
 ```
 
-### Common Reconciliation Errors and How Claude Code Helps
+Common Reconciliation Errors and How Claude Code Helps
 
 When providers fail to reconcile, the error messages are often cryptic. Here are common scenarios where Claude Code speeds up debugging:
 
@@ -185,31 +185,31 @@ When providers fail to reconcile, the error messages are often cryptic. Here are
 
 Paste the full error log into Claude Code and ask "What is causing this reconciliation failure and how do I fix it?" It will identify the specific field path or missing annotation causing the issue far faster than manually reading the Crossplane documentation.
 
-## Publishing to the Upbound Marketplace
+Publishing to the Upbound Marketplace
 
 Once your provider or configuration is ready, the publishing process involves several steps that Claude Code can streamline:
 
-### Step 1: Tag Your Release
+Step 1: Tag Your Release
 
 ```bash
-# Create a version tag
+Create a version tag
 git tag -a v0.1.0 -m "Release v0.1.0"
 git push origin v0.1.0
 ```
 
-### Step 2: Build the Package
+Step 2: Build the Package
 
 ```bash
-# Build the provider package
+Build the provider package
 up pkg build provider.yaml \
   --package-file=provider-aws-v0.1.0.xpkg \
   --push=false
 ```
 
-### Step 3: Publish to Marketplace
+Step 3: Publish to Marketplace
 
 ```bash
-# Publish to your organization
+Publish to your organization
 up pkg publish provider-aws-v0.1.0.xpkg \
   --org=your-org-name \
   --repo=providers/aws
@@ -217,7 +217,7 @@ up pkg publish provider-aws-v0.1.0.xpkg \
 
 Claude Code can automate much of this by generating release scripts tailored to your project's structure.
 
-### Generating a Release Script
+Generating a Release Script
 
 Ask Claude Code to generate a full release script that handles all three steps, validates the package manifest, and exits early if any step fails. A reliable release script includes a guard like this:
 
@@ -246,7 +246,7 @@ echo "Done: $VERSION published"
 
 Running `./release.sh v0.2.0` handles the entire flow in one command. Claude Code can extend this script to include automated integration tests, Slack notifications, or a GitHub Release creation step.
 
-## Managing Versions and Updates
+Managing Versions and Updates
 
 A critical part of Marketplace governance is managing versions. Claude Code helps you implement proper version strategies:
 
@@ -257,20 +257,20 @@ A critical part of Marketplace governance is managing versions. Claude Code help
 Create a CHANGELOG.md that Claude Code helps maintain:
 
 ```markdown
-## v0.2.0
-### Added
+v0.2.0
+Added
 - Support for RDS Proxy
 - New patch transform: JSON path extraction
 
-### Fixed
+Fixed
 - Connection secret naming collision
 - Timeout handling for long-running operations
 
-### Breaking
+Breaking
 - Changed `spec.forProvider.multiAZ` default to true
 ```
 
-### Maintaining Backward Compatibility
+Maintaining Backward Compatibility
 
 One of the hardest parts of publishing to a shared Marketplace is maintaining backward compatibility. Ask Claude Code to audit your XRD before a new release:
 
@@ -280,23 +280,23 @@ Claude Code will highlight removed fields, changed validation constraints, and r
 
 When you do need to introduce a breaking change, Claude Code can draft a migration guide explaining what users need to update in their Composite Resources, including `kubectl patch` commands that automate the migration.
 
-## Best Practices for Marketplace Success
+Best Practices for Marketplace Success
 
 Here are actionable tips to make your Upbound Marketplace offerings successful:
 
-1. **Start with examples**: Include working examples in your `examples/` directory. Claude Code can generate these from real-world scenarios.
+1. Start with examples: Include working examples in your `examples/` directory. Claude Code can generate these from real-world scenarios.
 
-2. **Document comprehensively**: Use Claude Code to generate API documentation from your CRD definitions. Ask it to produce a Markdown table of all fields, their types, default values, and whether they are required.
+2. Document comprehensively: Use Claude Code to generate API documentation from your CRD definitions. Ask it to produce a Markdown table of all fields, their types, default values, and whether they are required.
 
-3. **Test in isolation**: Create dedicated test control planes in Upbound before publishing publicly. Upbound's managed control planes make it straightforward to spin up a clean environment for integration testing.
+3. Test in isolation: Create dedicated test control planes in Upbound before publishing publicly. Upbound's managed control planes make it straightforward to spin up a clean environment for integration testing.
 
-4. **Monitor usage**: Set up observability to understand how your configurations are being used. Ask Claude Code to help you write a PrometheusRule that alerts on provider reconciliation error rates.
+4. Monitor usage: Set up observability to understand how your configurations are being used. Ask Claude Code to help you write a PrometheusRule that alerts on provider reconciliation error rates.
 
-5. **Iterate based on feedback**: Use the issues and discussions in your GitHub repository to guide development priorities. Claude Code can help you triage issues by summarizing bug reports and suggesting relevant code areas to investigate.
+5. Iterate based on feedback: Use the issues and discussions in your GitHub repository to guide development priorities. Claude Code can help you triage issues by summarizing bug reports and suggesting relevant code areas to investigate.
 
-6. **Pin provider versions in your Configuration**: Avoid floating `latest` references in your `crossplane.yaml` package dependencies. Ask Claude Code to generate a Renovate or Dependabot configuration that opens PRs when upstream provider versions change.
+6. Pin provider versions in your Configuration: Avoid floating `latest` references in your `crossplane.yaml` package dependencies. Ask Claude Code to generate a Renovate or Dependabot configuration that opens PRs when upstream provider versions change.
 
-## Conclusion
+Conclusion
 
 Claude Code transforms your Upbound Marketplace workflow from a manual, error-prone process into an automated, assisted experience. From scaffolding new providers to debugging reconciliation issues to publishing releases, having an AI coding assistant familiar with Crossplane and the Upbound ecosystem accelerates every step.
 
@@ -304,10 +304,10 @@ The highest-value use cases are the ones that are tedious without help: generati
 
 Start by integrating Claude Code into your daily development cycle, and you'll find that the Marketplace publishing process becomes significantly more manageable and reliable.
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

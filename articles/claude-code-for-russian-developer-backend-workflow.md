@@ -13,11 +13,11 @@ score: 7
 ---
 
 
-# Claude Code for Russian Developer Backend Workflow
+Claude Code for Russian Developer Backend Workflow
 
 Русскоязычные разработчики активно осваивают Claude Code как мощный инструмент для backend-разработки. В этом руководстве мы рассмотрим практические аспекты настройки и использования Claude Code для создания серверных приложений, работы с базами данных и развертывания API.
 
-## Настройка Claude Code для Backend Проектов
+Настройка Claude Code для Backend Проектов
 
 Первым делом необходимо правильно настроить Claude Code для работы с вашим стеком технологий. Создайте файл конфигурации в корне проекта:
 
@@ -37,9 +37,9 @@ score: 7
 
 Для российских разработчиков важно учитывать региональные особенности: работу с российскими платежными системами, интеграцию с localStorage и обработку кириллицы в базах данных.
 
-## Ключевые Навыки для Backend Разработки
+Ключевые Навыки для Backend Разработки
 
-### 1. Навыки для Работы с Базами Данных
+1. Навыки для Работы с Базами Данных
 
 Claude Code отлично справляется с генерацией SQL-запросов и миграций. Используйте навыки для работы с PostgreSQL и MySQL:
 
@@ -51,7 +51,7 @@ claude-code:sql-query-optimization
 Пример работы с миграцией:
 
 ```python
-# Миграция для создания таблицы пользователей
+Миграция для создания таблицы пользователей
 from sqlalchemy import Column, Integer, String, DateTime
 from sqlalchemy.ext.declarative import declarative_base
 from datetime import datetime
@@ -71,13 +71,13 @@ class User(Base):
         return f"<User(email='{self.email}', name='{self.name}')>"
 ```
 
-### 2. Навыки для API Разработки
+2. Навыки для API Разработки
 
 Для создания RESTful API рекомендуется использовать следующие навыки:
 
-- `claude-code:rest-api-development` — генерация эндпоинтов
-- `claude-code:fastapi-async-python` — асинхронные API на Python
-- `claude-code:express-middleware` — middleware для Node.js
+- `claude-code:rest-api-development`. генерация эндпоинтов
+- `claude-code:fastapi-async-python`. асинхронные API на Python
+- `claude-code:express-middleware`. middleware для Node.js
 
 Пример FastAPI приложения с обработкой ошибок:
 
@@ -113,7 +113,7 @@ async def global_exception_handler(request: Request, exc: Exception):
     )
 ```
 
-### 3. Навыки для Тестирования
+3. Навыки для Тестирования
 
 Качественное тестирование критично для production систем:
 
@@ -156,15 +156,15 @@ def test_create_user_invalid_phone():
         )
 ```
 
-## Практический Рабочий Процесс
+Практический Рабочий Процесс
 
-### Ежедневная Разработка
+Ежедневная Разработка
 
-1. **Утренний обзор задач**: Попросите Claude Code проанализировать текущие задачи и предложить план работы
-2. **Написание кода**: Используйте Claude Code для генерации шаблонного кода и документации
-3. **Рефакторинг**: Попросите провести анализ кода на соответствие SOLID принципам
+1. Утренний обзор задач: Попросите Claude Code проанализировать текущие задачи и предложить план работы
+2. Написание кода: Используйте Claude Code для генерации шаблонного кода и документации
+3. Рефакторинг: Попросите провести анализ кода на соответствие SOLID принципам
 
-### Работа с Legacy Кодом
+Работа с Legacy Кодом
 
 Российские разработчики часто сталкиваются с устаревшим кодом. Claude Code помогает:
 
@@ -173,7 +173,7 @@ def test_create_user_invalid_phone():
 - Генерировать тесты для legacy модулей
 
 ```python
-# Пример анализа существующего кода
+Пример анализа существующего кода
 def analyze_legacy_function(func):
     """
     Анализ функции на предмет:
@@ -196,12 +196,12 @@ def analyze_legacy_function(func):
     }
 ```
 
-### CI/CD Интеграция
+CI/CD Интеграция
 
 Настройте автоматическую проверку кода в вашем pipeline:
 
 ```yaml
-# GitHub Actions пример
+GitHub Actions пример
 name: Code Quality Check
 on: [push, pull_request]
 
@@ -217,52 +217,52 @@ jobs:
         run: pytest --cov=src/
 ```
 
-## Советы по Эффективному Использованию
+Советы по Эффективному Использованию
 
-1. **Используйте .claude.md файл** — создайте файл с специфичными для проекта инструкциями
-2. **Разбивайте задачи на подзадачи** — это повышает точность генерации кода
-3. **Проверяйте сгенерированный код** — всегда review перед коммитом
-4. **Используйте навыки из Hub** — найдите навыки для вашего фреймворка
+1. Используйте .claude.md файл. создайте файл с специфичными для проекта инструкциями
+2. Разбивайте задачи на подзадачи. это повышает точность генерации кода
+3. Проверяйте сгенерированный код. всегда review перед коммитом
+4. Используйте навыки из Hub. найдите навыки для вашего фреймворка
 
-## Настройка CLAUDE.md для Backend Проектов
+Настройка CLAUDE.md для Backend Проектов
 
-Файл `CLAUDE.md` в корне проекта — это системная инструкция, которую Claude Code читает при каждом запуске. Для backend-разработчика он должен описывать структуру проекта, соглашения о кодировании и специфические требования вашей команды.
+Файл `CLAUDE.md` в корне проекта. это системная инструкция, которую Claude Code читает при каждом запуске. Для backend-разработчика он должен описывать структуру проекта, соглашения о кодировании и специфические требования вашей команды.
 
 Пример минимального `CLAUDE.md` для Python/FastAPI проекта:
 
 ```markdown
-# Project: Internal API Service
+Project: Internal API Service
 
-## Stack
+Stack
 - Python 3.11, FastAPI, SQLAlchemy 2.0
 - PostgreSQL 15 (UTF-8 collation, Russian locale: ru_RU.UTF-8)
 - Redis for caching, Celery for background tasks
 - pytest for tests, coverage target: 85%
 
-## Conventions
+Conventions
 - All error messages in Russian for end-users, English for logs
 - Phone numbers stored in E.164 format (+7XXXXXXXXXX)
-- Use async/await throughout — no blocking I/O in endpoints
+- Use async/await throughout. no blocking I/O in endpoints
 - Database migrations via Alembic, never edit existing migrations
 
-## Running Locally
-- `make dev` — starts uvicorn with hot reload
-- `make test` — runs pytest with coverage report
-- `make migrate` — applies pending Alembic migrations
+Running Locally
+- `make dev`. starts uvicorn with hot reload
+- `make test`. runs pytest with coverage report
+- `make migrate`. applies pending Alembic migrations
 ```
 
 Чем точнее описание в `CLAUDE.md`, тем меньше повторяющихся уточнений нужно давать в каждом промпте. Claude Code использует этот файл как контекст по умолчанию, что экономит время и снижает количество ошибок в сгенерированном коде.
 
-## Эффективные Промпты для Backend Задач
+Эффективные Промпты для Backend Задач
 
 Качество ответов Claude Code напрямую зависит от формулировки запроса. Расплывчатые задачи дают расплывчатые результаты.
 
-**Плохой промпт:**
+Плохой промпт:
 ```
 Напиши функцию для работы с пользователями
 ```
 
-**Хороший промпт:**
+Хороший промпт:
 ```
 Напиши async endpoint POST /users/verify-phone для FastAPI.
 Входные данные: phone (str, формат +7XXXXXXXXXX), code (str, 6 цифр).
@@ -281,11 +281,11 @@ jobs:
 - Говорите явно, нужны ли тесты и какого уровня (unit, integration)
 - Ссылайтесь на конкретные модели из вашего проекта по имени
 
-## Работа с Кириллицей и Кодировками
+Работа с Кириллицей и Кодировками
 
-Кодировка — постоянный источник проблем в legacy-системах. При работе с базами данных, файлами и сторонними API кириллица ломается в предсказуемых местах.
+Кодировка. постоянный источник проблем в legacy-системах. При работе с базами данных, файлами и сторонними API кириллица ломается в предсказуемых местах.
 
-**Настройка PostgreSQL для русского языка:**
+Настройка PostgreSQL для русского языка:
 
 ```sql
 -- При создании базы данных
@@ -299,25 +299,25 @@ CREATE DATABASE myapp
 SELECT pg_encoding_to_char(encoding), datcollate FROM pg_database WHERE datname = 'myapp';
 ```
 
-**Явная кодировка при работе с файлами:**
+Явная кодировка при работе с файлами:
 
 ```python
-# Плохо — зависит от системных настроек
+Плохо. зависит от системных настроек
 with open('report.csv', 'r') as f:
     data = f.read()
 
-# Хорошо — явно указываем UTF-8
+Хорошо. явно указываем UTF-8
 with open('report.csv', 'r', encoding='utf-8') as f:
     data = f.read()
 
-# Для Windows-совместимых файлов из 1С и Excel
+Для Windows-совместимых файлов из 1С и Excel
 with open('report.csv', 'r', encoding='cp1251') as f:
     data = f.read()
 ```
 
 Когда просите Claude Code написать код с файловым вводом-выводом, явно укажите источник файлов: экспорт из 1С, Excel, сторонний API. Это позволяет сразу получить правильную кодировку в коде, а не исправлять её после.
 
-## Безопасность API: Специфика Для Российских Проектов
+Безопасность API: Специфика Для Российских Проектов
 
 Российские проекты часто работают с ПДн (персональными данными), что накладывает требования по 152-ФЗ. Claude Code помогает проверять код на распространённые уязвимости, но важно задавать правильный контекст.
 
@@ -328,15 +328,15 @@ with open('report.csv', 'r', encoding='cp1251') as f:
 1. SQL injection через ORM (параметризованные запросы vs f-строки)
 2. Утечку персональных данных в логах (email, phone, ИНН)
 3. Отсутствие rate limiting на публичных эндпоинтах
-4. CORS настройки — разрешены ли лишние origin
+4. CORS настройки. разрешены ли лишние origin
 5. Хранение чувствительных данных в открытом виде
 ```
 
 Для хранения телефонов, ИНН, СНИЛС используйте шифрование на уровне приложения. Claude Code генерирует рабочие примеры с `cryptography` (Fernet) или `pgcrypto` для PostgreSQL.
 
-## Деплой и Инфраструктура
+Деплой и Инфраструктура
 
-Большинство российских backend-проектов деплоятся на VPS у Selectel, Timeweb Cloud или Yandex Cloud. Конфигурации Nginx и systemd-сервисы — рутинные задачи, которые Claude Code выполняет быстро.
+Большинство российских backend-проектов деплоятся на VPS у Selectel, Timeweb Cloud или Yandex Cloud. Конфигурации Nginx и systemd-сервисы. рутинные задачи, которые Claude Code выполняет быстро.
 
 Пример запроса для генерации конфигурации:
 
@@ -352,17 +352,17 @@ with open('report.csv', 'r', encoding='cp1251') as f:
 
 За 30 секунд вы получите готовый конфиг с правильными заголовками безопасности, вместо того чтобы собирать его из документации.
 
-## Заключение
+Заключение
 
 Claude Code становится незаменимым инструментом для российских backend-разработчиков. Правильная настройка и использование навыков значительно ускоряет разработку, улучшает качество кода и упрощает поддержку проектов. Начните с базовой настройки, постепенно добавляйте новые навыки и адаптируйте рабочий процесс под свои нужды.
 
 Для получения дополнительной информации о навыках Claude Code обратитесь к официальной документации и Hub сообщества.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

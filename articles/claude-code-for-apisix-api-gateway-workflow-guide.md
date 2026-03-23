@@ -16,7 +16,7 @@ tags: [claude-code, claude-skills]
 
 Apache APISIX is a powerful, open-source API gateway that provides traffic management, security, and observability for microservices architectures. Managing APISIX configurations effectively requires understanding its declarative configuration model, plugin system, and routing logic. Claude Code can significantly accelerate your APISIX workflow by helping you write configuration files, debug routing issues, design plugin chains, and implement best practices. This guide walks you through practical workflows for using Claude Code to manage APISIX API Gateway.
 
-## Understanding APISIX Configuration Fundamentals
+Understanding APISIX Configuration Fundamentals
 
 APISIX uses a declarative configuration model where you define routes, services, upstream servers, and plugins in YAML or JSON format. The gateway operates on a config-as-code approach, meaning your APISIX configuration should live in version control alongside your application code. Claude Code excels at helping you generate valid APISIX configurations by understanding the schema and common patterns.
 
@@ -24,7 +24,7 @@ When working with Claude Code on APISIX projects, start by providing context abo
 
 The core building blocks in APISIX include routes (which define how requests are matched and routed), services (which group routes and their upstream configurations), upstreams (which define backend server targets), and plugins (which add functionality like authentication, rate limiting, or request transformations). Understanding how these components interact is essential before writing configurations.
 
-## Creating Routes and Services
+Creating Routes and Services
 
 Route configuration forms the foundation of your APISIX setup. A route defines the matching criteria (URI path, headers, query parameters) and specifies which service or upstream handles the request. Here's a practical example of creating a route with Claude Code assistance:
 
@@ -34,7 +34,7 @@ Claude Code can help you write route configurations that handle common scenarios
 
 Services in APISIX serve as containers for routes that share similar configurations. Instead of repeating plugin definitions on each route, you attach plugins to a service and all routes under that service inherit them. This approach reduces configuration duplication and makes management easier. Use Claude Code to design your service structure based on your API's logical organization.
 
-## Implementing Authentication and Security
+Implementing Authentication and Security
 
 Securing your APIs is critical, and APISIX provides numerous authentication plugins. Claude Code can help you implement JWT authentication, API key validation, OAuth2, and custom authentication plugins. When configuring authentication, consider where the validation occurs (at the gateway or upstream) and how you handle unauthorized requests.
 
@@ -42,7 +42,7 @@ For JWT authentication, you need to configure the `jwt-auth` plugin on your rout
 
 Rate limiting is another essential security feature. APISIX supports multiple rate limiting strategies including fixed window, sliding window, and token bucket algorithms. Claude Code can help you configure appropriate rate limits based on your API's characteristics and your upstream's capacity. Always start conservative and monitor error rates before increasing limits.
 
-## Configuring Plugins and Plugin Chains
+Configuring Plugins and Plugin Chains
 
 APISIX's plugin system is its most powerful feature, allowing you to extend gateway functionality without modifying core code. Plugins can execute in the request phase (before reaching upstream), response phase (before sending back to client), or both. Claude Code helps you understand plugin execution order and design effective plugin chains.
 
@@ -50,7 +50,7 @@ Common plugins you'll likely use include `proxy-rewrite` for URI and header modi
 
 When designing plugin chains, remember that plugins execute in a specific order defined by APISIX. Some plugins depend on others executing first, so plan your configuration accordingly. For example, authentication plugins should run before rate limiting to avoid counting unauthorized requests against legitimate users. Claude Code can advise on optimal plugin ordering based on your specific requirements.
 
-## Managing Upstreams and Load Balancing
+Managing Upstreams and Load Balancing
 
 Upstream configuration defines your backend services and how APISIX distributes traffic among them. APISIX supports multiple load balancing algorithms including round-robin, weighted round-robin, consistent hashing, and least connections. Claude Code can help you choose the appropriate algorithm based on your backend characteristics.
 
@@ -58,7 +58,7 @@ For Kubernetes deployments, you can use the `kubernetes` ingress controller or s
 
 Health checks are essential for maintaining reliability. APISIX supports both active (periodic checks) and passive (based on response) health checks. Configure appropriate check intervals, thresholds, and timeout values based on your upstream's tolerance for failures. Claude Code can generate health check configurations that balance responsiveness with overhead.
 
-## Debugging and Troubleshooting
+Debugging and Troubleshooting
 
 When issues arise, Claude Code becomes invaluable for debugging. Share error messages, unexpected behaviors, or configuration snippets, and Claude Code can help identify common problems. Typical issues include route matching failures (due to incorrect URI patterns or priority settings), plugin execution errors (due to missing dependencies or incorrect configurations), and upstream connection problems (due to network issues or incorrect endpoints).
 
@@ -66,7 +66,7 @@ Enable debug mode in APISIX to get detailed logs about request processing. The `
 
 For complex issues, collect relevant information including APISIX version, configuration files, error logs, and network traces. This context helps Claude Code provide accurate troubleshooting guidance. Document any recent changes to your configuration, as unintended modifications often cause unexpected behavior.
 
-## Best Practices for APISIX with Claude Code
+Best Practices for APISIX with Claude Code
 
 Following best practices ensures your APISIX deployment remains maintainable and reliable. Store all APISIX configurations in version control with appropriate review processes. Use configuration management tools like Ansible, Terraform, or Helm to deploy and manage APISIX consistently across environments.
 
@@ -78,10 +78,10 @@ Finally, document your APISIX architecture decisions and configuration patterns.
 
 By leveraging Claude Code throughout your APISIX workflow, you can accelerate configuration development, reduce errors, and implement best practices more consistently. The key is providing adequate context about your infrastructure and requirements, then iterating on the generated configurations based on testing and observability data.
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Skills for Nonprofit Donation Platforms"
-description: "Practical Claude Code skills for building nonprofit donation platforms — from Stripe integration to donor management and receipt generation."
+description: "Practical Claude Code skills for building nonprofit donation platforms. from Stripe integration to donor management and receipt generation."
 date: 2026-03-14
 categories: [use-cases]
 tags: [claude-code, claude-skills, nonprofit, donations, automation]
@@ -15,20 +15,20 @@ permalink: /claude-code-skills-for-nonprofit-donation-platforms/
 
 Building a nonprofit donation platform requires handling sensitive financial data, generating tax receipts, managing donor relationships, and ensuring PCI compliance. Claude Code skills accelerate these tasks by providing structured workflows for common nonprofit platform patterns. This guide covers the most useful skills for donation platform development. For more industry-specific automation patterns, see the [use cases hub](/use-cases-hub/).
 
-## Understanding the Skill Model
+Understanding the Skill Model
 
-Claude skills are instruction files loaded from `~/.claude/skills/` when you invoke them with slash commands. They do not execute code — they guide Claude to produce better code for your specific domain. For nonprofit donation platforms, this means getting Stripe-ready implementations, proper receipt generation, and donor data handling patterns from the start. See the [skill .md format specification](/claude-skill-md-format-complete-specification-guide/) for writing these instruction files correctly.
+Claude skills are instruction files loaded from `~/.claude/skills/` when you invoke them with slash commands. They do not execute code. they guide Claude to produce better code for your specific domain. For nonprofit donation platforms, this means getting Stripe-ready implementations, proper receipt generation, and donor data handling patterns from the start. See the [skill .md format specification](/claude-skill-md-format-complete-specification-guide/) for writing these instruction files correctly.
 
 A skill file for nonprofit donation work typically looks like this:
 
 ```markdown
-# /stripe-integration skill
-## Context
+/stripe-integration skill
+Context
 Nonprofit 501(c)(3) platform. Stripe is the payment processor.
 Recurring donations use Stripe Subscriptions, not PaymentIntents.
 Platform collects optional donor-covered fees (tip model).
 
-## Rules
+Rules
 - Always include idempotency keys on PaymentIntent creation
 - Metadata must include donor_id, designation, and campaign_id
 - Webhook signatures must be verified before processing any event
@@ -37,9 +37,9 @@ Platform collects optional donor-covered fees (tip model).
 
 When you load this skill and ask Claude to write payment code, the output reflects those constraints automatically. Without it, you get generic Stripe code that is correct but not tuned to your platform's requirements.
 
-## /stripe-integration: Payment Processing Foundation
+/stripe-integration: Payment Processing Foundation
 
-The **stripe-integration** skill helps you set up donation payment flows correctly. For nonprofit platforms, you need to handle one-time donations, recurring subscriptions, and donor-covered fees.
+The stripe-integration skill helps you set up donation payment flows correctly. For nonprofit platforms, you need to handle one-time donations, recurring subscriptions, and donor-covered fees.
 
 ```javascript
 // Using the skill's guidance to create a donation intent
@@ -62,9 +62,9 @@ export async function createDonationIntent(amount, donorEmail, isRecurring) {
 }
 ```
 
-This skill also covers Stripe Webhook handling for donation confirmations, failed payment recovery, and refund processing — critical for maintaining donor trust.
+This skill also covers Stripe Webhook handling for donation confirmations, failed payment recovery, and refund processing. critical for maintaining donor trust.
 
-### One-Time vs. Recurring Donations: What Changes
+One-Time vs. Recurring Donations: What Changes
 
 One-time and recurring donations use different Stripe objects, and the skill helps Claude keep them straight:
 
@@ -115,12 +115,12 @@ export async function createRecurringDonor(donorEmail, amount, interval = 'month
 
 The `payment_behavior: 'default_incomplete'` pattern ensures the subscription only activates after the first payment confirms, preventing ghost subscribers in your donor database.
 
-## /pdf: Tax Receipt Generation
+/pdf: Tax Receipt Generation
 
-Every nonprofit donation platform needs to generate tax receipts. The **pdf** skill produces properly formatted 501(c)(3) donation receipts with all required IRS information.
+Every nonprofit donation platform needs to generate tax receipts. The pdf skill produces properly formatted 501(c)(3) donation receipts with all required IRS information.
 
 ```python
-# Receipt generation with PDF skill guidance
+Receipt generation with PDF skill guidance
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 
@@ -147,7 +147,7 @@ def generate_donation_receipt(donor_name, amount, date, organization_ein):
 
 The skill ensures your receipts include: organization legal name, EIN, donation date, amount, statement of goods/services provided (or lack thereof), and good-faith estimate of value.
 
-### IRS Requirements: What Must Be on a 501(c)(3) Receipt
+IRS Requirements: What Must Be on a 501(c)(3) Receipt
 
 The IRS has specific requirements for donation acknowledgment letters. Missing any of these fields can invalidate the donor's deduction claim:
 
@@ -162,7 +162,7 @@ The IRS has specific requirements for donation acknowledgment letters. Missing a
 | Good-faith value estimate | Yes if goods provided | e.g., gala dinner = $75 value |
 | Signature | No | But professional presentation builds trust |
 
-### Year-End Tax Summary Generation
+Year-End Tax Summary Generation
 
 For recurring donors, you need an annual summary that aggregates all gifts. The pdf skill handles this pattern too:
 
@@ -217,9 +217,9 @@ def generate_year_end_summary(donor_id, year, db_session):
 
 Send these summaries in January each year. Donors use them when filing their taxes, and sending them proactively improves donor retention.
 
-## /security: Donor Data Protection
+/security: Donor Data Protection
 
-Nonprofit platforms handle sensitive donor information. The **security** skill generates implementations following OWASP guidelines and data protection best practices.
+Nonprofit platforms handle sensitive donor information. The security skill generates implementations following OWASP guidelines and data protection best practices.
 
 Key patterns from this skill include:
 
@@ -249,13 +249,13 @@ export async function storeDonorInfo(donorData) {
 
 This skill also covers GDPR compliance for international donors, data retention policies, and secure logging practices that avoid exposing donor information. For a deeper look at credential and secret protection, see the [secret scanning guide](/claude-code-secret-scanning-prevent-credential-leaks-guide/).
 
-### PCI DSS Compliance: What Nonprofits Must Know
+PCI DSS Compliance: What Nonprofits Must Know
 
 Even though Stripe handles card data, your platform still falls under PCI DSS scope. The security skill helps Claude produce code that meets the relevant requirements:
 
 | PCI Requirement | What It Means for Your Code |
 |---|---|
-| Never store raw card numbers | Stripe tokens only — no raw PAN in your DB |
+| Never store raw card numbers | Stripe tokens only. no raw PAN in your DB |
 | HTTPS everywhere | Enforce TLS 1.2+ on all donation endpoints |
 | Access logging | Log all access to donor records with user ID |
 | Minimal data retention | Delete or anonymize donor PII after retention period |
@@ -272,14 +272,14 @@ export async function auditLogDonorAccess(userId, donorId, action, metadata = {}
     ip_address: metadata.ip,
     user_agent: metadata.userAgent,
     timestamp: new Date(),
-    // Never log the actual PII values — only the action and who took it
+    // Never log the actual PII values. only the action and who took it
   });
 }
 ```
 
-Attach this to every endpoint that reads or modifies donor records. When a data breach investigation occurs — and for any platform that handles money, it eventually does — this log is what protects you.
+Attach this to every endpoint that reads or modifies donor records. When a data breach investigation occurs. and for any platform that handles money, it eventually does. this log is what protects you.
 
-### GDPR for International Donors
+GDPR for International Donors
 
 If your nonprofit accepts donations from donors in the EU, GDPR applies. The security skill generates a deletion workflow:
 
@@ -317,12 +317,12 @@ export async function handleDonorDeletionRequest(donorId) {
 
 Financial records are exempt from GDPR's right to erasure because tax law requires retention. The skill knows this distinction and generates code that handles it correctly.
 
-## /api-design: Donor Management Endpoints
+/api-design: Donor Management Endpoints
 
-The **api-design** skill helps you build clean REST or GraphQL endpoints for donor management. Nonprofit platforms need specific endpoints for:
+The api-design skill helps you build clean REST or GraphQL endpoints for donor management. Nonprofit platforms need specific endpoints for:
 
 ```python
-# FastAPI example from api-design skill guidance
+FastAPI example from api-design skill guidance
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
@@ -355,28 +355,28 @@ async def create_donation(donation: DonationCreate):
 
 The skill ensures consistent error handling, proper HTTP status codes, and documentation generation for your donor management API.
 
-### Complete Nonprofit API Surface
+Complete Nonprofit API Surface
 
 A well-designed nonprofit platform needs a consistent set of endpoints. The api-design skill helps Claude produce these with correct HTTP semantics:
 
 ```python
-# Donations
+Donations
 POST   /api/v1/donations                  # Create donation intent
 GET    /api/v1/donations/{id}             # Get single donation
 GET    /api/v1/donations?donor_id=&year=  # List donations with filters
 
-# Donors
+Donors
 POST   /api/v1/donors                     # Create donor profile
 GET    /api/v1/donors/{id}               # Get donor (PII-protected)
 PATCH  /api/v1/donors/{id}               # Update donor info
 DELETE /api/v1/donors/{id}               # GDPR erasure
 
-# Receipts
+Receipts
 POST   /api/v1/receipts                   # Generate receipt for donation
 GET    /api/v1/receipts/{id}             # Download receipt PDF
 GET    /api/v1/receipts/annual/{donor_id}/{year}  # Year-end summary
 
-# Subscriptions
+Subscriptions
 POST   /api/v1/subscriptions             # Create recurring donation
 GET    /api/v1/subscriptions/{id}        # Subscription status
 DELETE /api/v1/subscriptions/{id}        # Cancel recurring donation
@@ -404,9 +404,9 @@ async def http_exception_handler(request, exc):
 
 Consistent error shapes let your frontend display helpful messages rather than crashing on unexpected response formats.
 
-## /email-templates: Donor Communication
+/email-templates: Donor Communication
 
-The **email-templates** skill generates transactional emails for donation confirmations, recurring donation alerts, and year-end tax summary generation. These are required for donor retention and IRS compliance.
+The email-templates skill generates transactional emails for donation confirmations, recurring donation alerts, and year-end tax summary generation. These are required for donor retention and IRS compliance.
 
 ```javascript
 // Donation confirmation email from email-templates skill
@@ -427,7 +427,7 @@ export function buildDonationConfirmation(donation, donor) {
 }
 ```
 
-### The Full Donor Communication Lifecycle
+The Full Donor Communication Lifecycle
 
 Donor communication is not just a confirmation email. Each event in the donation lifecycle needs a corresponding template:
 
@@ -466,9 +466,9 @@ export function buildFailedPaymentAlert(subscription, donor, paymentMethod) {
 
 Send this email immediately on failure, then again at 3 days and 7 days. Most platforms recover 40-60% of failed recurring donations through this sequence.
 
-## /webhook: Payment Event Handling
+/webhook: Payment Event Handling
 
-The **webhook** skill handles the complex event flows from payment processors. For recurring donations, you need to handle:
+The webhook skill handles the complex event flows from payment processors. For recurring donations, you need to handle:
 
 ```javascript
 // Stripe webhook handler for donation events
@@ -501,7 +501,7 @@ export async function handleStripeWebhook(payload, signature) {
 
 This skill covers idempotency (critical for payment webhooks), retry logic, and alerting for failed processing.
 
-### Idempotency: The Most Important Webhook Concept
+Idempotency: The Most Important Webhook Concept
 
 Stripe retries failed webhooks up to 24 hours. Without idempotency, a temporary database outage causes every donation during that period to be processed twice. The webhook skill generates idempotency-safe handlers:
 
@@ -512,7 +512,7 @@ export async function fulfillDonation(paymentIntent) {
     status: 'completed',
   });
 
-  // Already processed — this is a retry. Return without side effects.
+  // Already processed. this is a retry. Return without side effects.
   if (existingDonation) {
     console.log(`Idempotency hit: donation ${paymentIntent.id} already fulfilled`);
     return existingDonation;
@@ -533,13 +533,13 @@ export async function fulfillDonation(paymentIntent) {
 
 The database transaction prevents the scenario where two simultaneous webhook deliveries both pass the initial check and both generate receipts.
 
-### Webhook Event Priority Table
+Webhook Event Priority Table
 
 Not all webhook events are equally important. Here is how to prioritize your implementation:
 
 | Priority | Event | What Happens if Missed |
 |---|---|---|
-| Critical | `payment_intent.succeeded` | Donor paid but no record — major trust issue |
+| Critical | `payment_intent.succeeded` | Donor paid but no record. major trust issue |
 | Critical | `invoice.payment_failed` | Recurring donor loses active status silently |
 | Critical | `customer.subscription.deleted` | Cancelled donor still treated as active |
 | High | `invoice.payment_succeeded` | No monthly receipt generated |
@@ -549,20 +549,20 @@ Not all webhook events are equally important. Here is how to prioritize your imp
 
 Implement Critical events first. High and Medium can follow in the next iteration.
 
-## Practical Integration Workflow
+Practical Integration Workflow
 
 Combine these skills for a complete donation flow:
 
-1. Use **/api-design** to define your donation endpoint
-2. Use **/stripe-integration** to handle the payment
-3. Use **/webhook** to process the confirmation
-4. Use **/pdf** to generate the tax receipt
-5. Use **/email-templates** to send confirmation
-6. Use **/security** to encrypt stored donor data
+1. Use /api-design to define your donation endpoint
+2. Use /stripe-integration to handle the payment
+3. Use /webhook to process the confirmation
+4. Use /pdf to generate the tax receipt
+5. Use /email-templates to send confirmation
+6. Use /security to encrypt stored donor data
 
 Each skill produces production-ready code that handles the edge cases specific to nonprofit donation platforms.
 
-### End-to-End Sequence Diagram
+End-to-End Sequence Diagram
 
 Here is the complete data flow for a one-time donation, showing how each skill's output connects:
 
@@ -601,7 +601,7 @@ storeDonorInfo()           generate_donation_receipt()
 
 This sequence handles the happy path. Each skill also handles the failure modes at its step: Stripe retries cover webhook failures, the PDF generator handles rendering errors, and the email service queues retries on delivery failure.
 
-### Choosing the Right Tech Stack
+Choosing the Right Tech Stack
 
 When Claude generates the initial scaffold, the skill context helps it pick appropriate libraries for your stack:
 
@@ -618,11 +618,11 @@ Load all of these preferences into your skill files so Claude generates code tha
 
 ---
 
-## Related Reading
+Related Reading
 
-- [Claude Skill MD Format Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/) — write donation workflow skills with correct metadata and instruction structure
-- [Claude Code Secret Scanning: Prevent Credential Leaks Guide](/claude-code-secret-scanning-prevent-credential-leaks-guide/) — keep Stripe API keys and donor data out of your version history
-- [Claude Code Skills for Insurance Claims Processing](/claude-code-skills-for-insurance-claims-processing/) — similar document-handling and compliance automation patterns
-- [Use Cases Hub](/use-cases-hub/) — explore Claude Code skills for other regulated-industry platforms
+- [Claude Skill MD Format Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/). write donation workflow skills with correct metadata and instruction structure
+- [Claude Code Secret Scanning: Prevent Credential Leaks Guide](/claude-code-secret-scanning-prevent-credential-leaks-guide/). keep Stripe API keys and donor data out of your version history
+- [Claude Code Skills for Insurance Claims Processing](/claude-code-skills-for-insurance-claims-processing/). similar document-handling and compliance automation patterns
+- [Use Cases Hub](/use-cases-hub/). explore Claude Code skills for other regulated-industry platforms
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

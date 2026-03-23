@@ -13,19 +13,19 @@ tags: [claude-code, claude-skills]
 ---
 
 {% raw %}
-# Claude Code KPI Dashboard Implementation Guide
+Claude Code KPI Dashboard Implementation Guide
 
 Building a KPI dashboard with Claude Code transforms how you track and visualize project metrics. This implementation guide walks through creating a custom skill that aggregates data, generates visualizations, and delivers real-time insights directly in your development workflow.
 
-## Why Build a KPI Dashboard with Claude
+Why Build a KPI Dashboard with Claude
 
-Most teams struggle with scattered metrics across multiple tools. A Claude Code KPI dashboard centralizes your metrics by invoking skills that pull data from various sources—whether GitHub issues, CI/CD pipelines, or custom databases—and presents them in a unified view. The advantage lies in automation: your dashboard updates automatically when you ask Claude, eliminating manual spreadsheet updates.
+Most teams struggle with scattered metrics across multiple tools. A Claude Code KPI dashboard centralizes your metrics by invoking skills that pull data from various sources, whether GitHub issues, CI/CD pipelines, or custom databases, and presents them in a unified view. The advantage lies in automation: your dashboard updates automatically when you ask Claude, eliminating manual spreadsheet updates.
 
 Before implementing, identify which metrics matter most. Common KPIs include commit frequency, pull request turnaround time, test coverage trends, and error rates. The implementation approach remains similar regardless of your specific metrics.
 
 The real productivity gain comes from eliminating context switching. Instead of opening four browser tabs to check your CI status, GitHub metrics, error tracking dashboard, and deployment history, you ask Claude once and get everything summarized and actionable. Teams that build this habit consistently report saving 30 to 60 minutes per day that would otherwise go to status-gathering overhead.
 
-## Setting Up Your KPI Dashboard Skill
+Setting Up Your KPI Dashboard Skill
 
 Create a new skill file at `~/.claude/skills/user/kpi-dashboard.md`. This skill will handle data fetching, processing, and visualization generation.
 
@@ -36,12 +36,12 @@ description: Generate real-time KPI dashboards with automated data aggregation a
 tools: [Bash, Read, Write, WebFetch]
 ---
 
-# KPI Dashboard Skill
+KPI Dashboard Skill
 
 When invoked, collect metrics from all configured sources, aggregate them,
 and render a dashboard in the requested format (terminal, HTML, or PDF).
 
-## Data Sources
+Data Sources
 - Git repository: commit frequency, PR turnaround, review lag
 - CI/CD pipeline: build pass rate, average build time, flaky test count
 - Error tracking: new errors in last 24h, error rate trend
@@ -50,27 +50,27 @@ and render a dashboard in the requested format (terminal, HTML, or PDF).
 
 The `tools` field grants this skill access to file reading, command execution, and search capabilities. Adjust these permissions based on where your metrics data lives. A skill with too many permissions is a security liability; a skill with too few won't be able to reach all your data sources.
 
-## Choosing the Right KPIs
+Choosing the Right KPIs
 
 Not all metrics are worth tracking. The best KPIs are ones you can act on. Here is a framework for deciding what to include:
 
 | Metric | Signals | Actionable? |
 |---|---|---|
-| Commit frequency | Team velocity, context switching | Yes — low frequency may mean blocked PRs |
-| PR cycle time | Review bottlenecks, collaboration | Yes — identify who is waiting on whom |
-| Test coverage % | Code quality investment | Partly — only if you track trends, not snapshots |
-| Build pass rate | Code health, flaky tests | Yes — below 90% demands investigation |
-| Error rate | Production stability | Yes — spikes require immediate response |
-| Deploy frequency | Release cadence | Yes — low cadence often means fear of deploying |
-| MTTR | Incident response quality | Yes — high MTTR means missing runbooks or tooling |
+| Commit frequency | Team velocity, context switching | Yes. low frequency may mean blocked PRs |
+| PR cycle time | Review bottlenecks, collaboration | Yes. identify who is waiting on whom |
+| Test coverage % | Code quality investment | Partly. only if you track trends, not snapshots |
+| Build pass rate | Code health, flaky tests | Yes. below 90% demands investigation |
+| Error rate | Production stability | Yes. spikes require immediate response |
+| Deploy frequency | Release cadence | Yes. low cadence often means fear of deploying |
+| MTTR | Incident response quality | Yes. high MTTR means missing runbooks or tooling |
 
 Vanity metrics to avoid: total lines of code, raw commit count without context, number of code reviews (without factoring review quality), and story points completed (which teams game).
 
-## Data Aggregation Strategies
+Data Aggregation Strategies
 
 Your dashboard needs data from multiple sources. The most effective approach combines direct file parsing with API integration.
 
-### Git Metrics Collection
+Git Metrics Collection
 
 Track commit activity and code review cycles using Git metadata:
 
@@ -143,17 +143,17 @@ def get_test_coverage(repo_path):
         if os.path.exists(path):
             with open(path) as f:
                 return {"path": path, "raw": f.read(500)}
-    return {"coverage": "not found — run tests with coverage flag first"}
+    return {"coverage": "not found. run tests with coverage flag first"}
 ```
 
 Run this script from your Claude skill using the Bash tool. Store the results in a temporary JSON file that subsequent steps can read.
 
-### CI/CD Pipeline Metrics
+CI/CD Pipeline Metrics
 
 For GitHub Actions, query the API directly:
 
 ```bash
-# Get recent workflow run results
+Get recent workflow run results
 gh run list --limit 30 --json status,conclusion,createdAt,name \
   | jq '[.[] | select(.status=="completed")] | {
       total: length,
@@ -165,25 +165,25 @@ gh run list --limit 30 --json status,conclusion,createdAt,name \
 
 For CircleCI or Jenkins, replace the gh CLI call with your platform's API endpoint. The jq transformation pattern is the same regardless of source.
 
-### Integration with the SuperMemory Skill
+Integration with the SuperMemory Skill
 
 For persistent metric storage, use the supermemory skill to maintain historical data:
 
 ```bash
-# Store metrics using supermemory
+Store metrics using supermemory
 sm-cli add "kpi-metrics" "2026-03-14: commits=47, prs=12, tests=89%, build_pass=94%"
 ```
 
-The supermemory skill preserves your KPI history, enabling trend analysis over weeks or months. Query this data when generating dashboard views. Without historical storage, you only ever see the current state—you cannot tell whether things are improving or deteriorating.
+The supermemory skill preserves your KPI history, enabling trend analysis over weeks or months. Query this data when generating dashboard views. Without historical storage, you only ever see the current state, you cannot tell whether things are improving or deteriorating.
 
 Query historical data to generate trend lines:
 
 ```bash
-# Retrieve last 30 days of stored metrics
+Retrieve last 30 days of stored metrics
 sm-cli search "kpi-metrics" --limit 30 | sort -t: -k2
 ```
 
-## Visualization Generation
+Visualization Generation
 
 Once you have raw metrics, transform them into visual dashboards. The canvas-design skill excels at creating shareable visualizations:
 
@@ -198,22 +198,22 @@ When generating the dashboard, use canvas-design to create:
 For terminal-focused teams, generate ASCII dashboards directly:
 
 ```
-┌─────────────────────────────────────────────────────┐
-│              PROJECT KPI DASHBOARD                  │
-│              Generated: 2026-03-14 09:00            │
-├─────────────────────────────────────────────────────┤
-│  Commits (7d):    ████████████  47    (+12% vs prev)│
-│  PRs Merged:      ████████      12    ( -1  vs prev)│
-│  Test Coverage:   █████████████ 89%   (+2%  vs prev)│
-│  Build Pass Rate: ███████████   94%   (=    vs prev)│
-│  Open Issues:     ████          4     (-3   vs prev)│
-│  Avg PR Time:     4.2 hours           (-0.8 vs prev)│
-└─────────────────────────────────────────────────────┘
+
+              PROJECT KPI DASHBOARD                  
+              Generated: 2026-03-14 09:00            
+
+  Commits (7d):      47    (+12% vs prev)
+  PRs Merged:            12    ( -1  vs prev)
+  Test Coverage:    89%   (+2%  vs prev)
+  Build Pass Rate:    94%   (=    vs prev)
+  Open Issues:               4     (-3   vs prev)
+  Avg PR Time:     4.2 hours           (-0.8 vs prev)
+
 ```
 
-The trend indicators in the right column are the critical addition. A raw number without context tells you almost nothing. Knowing commits are up 12% this week versus last week tells you the team is moving faster—or that someone is making lots of small commits to inflate their count, which is itself a signal worth investigating.
+The trend indicators in the right column are the critical addition. A raw number without context tells you almost nothing. Knowing commits are up 12% this week versus last week tells you the team is moving faster, or that someone is making lots of small commits to inflate their count, which is itself a signal worth investigating.
 
-### Generating an HTML Dashboard
+Generating an HTML Dashboard
 
 For teams that want a browser-based view, Claude can generate a standalone HTML file:
 
@@ -223,7 +223,7 @@ def render_html_dashboard(metrics: dict, output_path: str):
     html = f"""<!DOCTYPE html>
 <html>
 <head>
-  <title>KPI Dashboard — {metrics['date']}</title>
+  <title>KPI Dashboard. {metrics['date']}</title>
   <style>
     body {{ font-family: monospace; background: #1a1a2e; color: #eee; padding: 2rem; }}
     .card {{ background: #16213e; border-radius: 8px; padding: 1rem; margin: 0.5rem; display: inline-block; min-width: 200px; }}
@@ -246,16 +246,16 @@ def render_html_dashboard(metrics: dict, output_path: str):
     return output_path
 ```
 
-## Real-Time Dashboard Updates
+Real-Time Dashboard Updates
 
 Automate dashboard refreshes using cron jobs or webhook triggers:
 
 ```bash
-# Schedule hourly KPI updates
+Schedule hourly KPI updates
 0 * * * * cd /path/to/project && claude --print "Update KPI dashboard metrics"
 
-# Or trigger on every push via a git hook
-# .git/hooks/post-receive
+Or trigger on every push via a git hook
+.git/hooks/post-receive
 #!/bin/bash
 claude --print "Refresh KPI dashboard after push" > /tmp/kpi-update.log 2>&1 &
 ```
@@ -271,11 +271,11 @@ PASS_RATE=$(echo $KPI_JSON | jq '.build_pass_rate')
 if (( $(echo "$PASS_RATE < 80" | bc -l) )); then
   curl -X POST "$SLACK_WEBHOOK_URL" \
     -H 'Content-type: application/json' \
-    --data "{\"text\": \"Build pass rate dropped to ${PASS_RATE}% — investigate immediately\"}"
+    --data "{\"text\": \"Build pass rate dropped to ${PASS_RATE}%. investigate immediately\"}"
 fi
 ```
 
-## Advanced: Test-Driven Dashboard Development
+Advanced: Test-Driven Dashboard Development
 
 Apply the tdd skill principles to your dashboard implementation. Write tests before building:
 
@@ -319,7 +319,7 @@ def test_dashboard_trend_indicator():
 
 This test-driven approach ensures your metrics calculations remain accurate as your project evolves. Bugs in dashboard logic are particularly insidious because they erode trust: once stakeholders see wrong numbers, they stop trusting the dashboard entirely.
 
-## PDF Report Generation
+PDF Report Generation
 
 For stakeholders who prefer static reports, integrate the pdf skill to generate downloadable KPI summaries:
 
@@ -331,11 +331,11 @@ Use pdf skill to create weekly KPI reports with:
 - Top 3 action items based on metrics below target
 ```
 
-The pdf skill accepts your aggregated data and produces formatted reports suitable for leadership reviews. Scheduling these to send every Monday morning before standup creates a strong habit loop—teams start the week with shared context instead of each person arriving with a different mental model of project health.
+The pdf skill accepts your aggregated data and produces formatted reports suitable for leadership reviews. Scheduling these to send every Monday morning before standup creates a strong habit loop, teams start the week with shared context instead of each person arriving with a different mental model of project health.
 
-## Best Practices for KPI Dashboard Implementation
+Best Practices for KPI Dashboard Implementation
 
-Keep your dashboard focused on actionable metrics. Avoid tracking vanity metrics that don't influence decisions. Refresh data on intervals matching your team's workflow—hourly for fast-moving projects, daily for stable ones.
+Keep your dashboard focused on actionable metrics. Avoid tracking vanity metrics that don't influence decisions. Refresh data on intervals matching your team's workflow, hourly for fast-moving projects, daily for stable ones.
 
 Secure sensitive metrics by restricting tool access in your skill definition. Only grant database or API permissions that your specific metrics require. A KPI dashboard that reads your entire filesystem or makes arbitrary network requests is a misconfigured skill.
 
@@ -344,7 +344,7 @@ Document your metric definitions within the skill itself. Future you (or team me
 Set explicit thresholds. A dashboard without targets is just a collection of numbers. Add a configuration block to your skill:
 
 ```yaml
-# kpi-thresholds.yml
+kpi-thresholds.yml
 build_pass_rate:
   target: 95
   warning: 85
@@ -361,7 +361,7 @@ test_coverage_pct:
 
 When metrics breach warning thresholds, the dashboard highlights them in yellow. Critical breaches appear in red and trigger Slack alerts.
 
-## Conclusion
+Conclusion
 
 A Claude Code KPI dashboard automates metric collection and visualization, saving hours of manual tracking. Start with basic Git metrics, then expand to include CI/CD data, error tracking, and business KPIs as your implementation matures.
 
@@ -370,11 +370,11 @@ The combination of skills powers a complete solution: canvas-design for visualiz
 The most important step is simply starting. A five-metric ASCII dashboard you actually look at every morning is worth more than a 50-metric Grafana deployment that nobody checks. Build the habit first, then add complexity.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

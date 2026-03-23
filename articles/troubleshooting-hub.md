@@ -17,7 +17,7 @@ Skills break in predictable ways. A YAML typo stops the skill from loading. A mi
 
 This hub maps every common Claude Code skill error to its cause and fix, then points you to the detailed article for each one.
 
-## Table of Contents
+Table of Contents
 
 1. [Quick-Fix Reference Table](#quick-fix-reference-table)
 2. [Skill Not Loading / Not Triggering](#skill-not-loading--not-triggering)
@@ -31,7 +31,7 @@ This hub maps every common Claude Code skill error to its cause and fix, then po
 
 ---
 
-## Quick-Fix Reference Table
+Quick-Fix Reference Table
 
 Start here. Find your error, check the likely cause, apply the fix, then follow the link for a full walkthrough.
 
@@ -52,13 +52,13 @@ Start here. Find your error, check the likely cause, apply the fix, then follow 
 
 ---
 
-## Skill Not Loading / Not Triggering
+Skill Not Loading / Not Triggering
 
 The most common frustration with Claude skills: you installed the skill, but nothing happens when you expect it to activate. There are two distinct failure modes here.
 
-**Not showing up at all** means Claude Code cannot find or parse the file. Check that the file has a `.md` extension, lives in the correct skills directory, and has valid YAML front matter. A single unmatched quote or missing `---` delimiter will cause the entire file to be silently ignored.
+Not showing up at all means Claude Code cannot find or parse the file. Check that the file has a `.md` extension, lives in the correct skills directory, and has valid YAML front matter. A single unmatched quote or missing `---` delimiter will cause the entire file to be silently ignored.
 
-**Not triggering automatically** means the file loads fine but auto-invocation doesn't fire. Claude's auto-invocation system pattern-matches your messages against the skill's `description`, `tags`, and any trigger hints in the body. Vague descriptions like "a helpful skill" don't provide enough signal. Sharpen the description to include specific action verbs and domain nouns.
+Not triggering automatically means the file loads fine but auto-invocation doesn't fire. Claude's auto-invocation system pattern-matches your messages against the skill's `description`, `tags`, and any trigger hints in the body. Vague descriptions like "a helpful skill" don't provide enough signal. Sharpen the description to include specific action verbs and domain nouns.
 
 - [Claude Skill Not Triggering: Troubleshoot Guide (2026)](/claude-skill-not-triggering-automatically-troubleshoot/)
 - [Why Is My Claude Skill Not Showing Up? Fix Guide](/claude-code-skill-not-found-in-skills-directory-how-to-fix/)
@@ -67,13 +67,13 @@ The most common frustration with Claude skills: you installed the skill, but not
 
 ---
 
-## Permission and Security Errors
+Permission and Security Errors
 
-Claude Code operates a layered permissions model. Skills that request file system access, shell execution, or network calls must have those permissions explicitly granted. When they don't, you get a `permission denied` error—or worse, silent behavior where Claude refuses the action without explaining why.
+Claude Code operates a layered permissions model. Skills that request file system access, shell execution, or network calls must have those permissions explicitly granted. When they don't, you get a `permission denied` error, or worse, silent behavior where Claude refuses the action without explaining why.
 
-**Permission denied** errors are usually straightforward: the skill needs a capability that hasn't been approved. Open Claude Code settings, find the skill, and grant the required permission level.
+Permission denied errors are usually straightforward: the skill needs a capability that hasn't been approved. Open Claude Code settings, find the skill, and grant the required permission level.
 
-**Permission scope errors** are subtler. The skill may have permission to read files but is trying to write them, or has network access but is attempting to hit a non-allowlisted domain. The fix is either to narrow what the skill requests or to expand the approved scope to match.
+Permission scope errors are subtler. The skill may have permission to read files but is trying to write them, or has network access but is attempting to hit a non-allowlisted domain. The fix is either to narrow what the skill requests or to expand the approved scope to match.
 
 Understanding the full permissions model before deploying skills in production environments prevents most security-related issues from occurring in the first place.
 
@@ -83,23 +83,23 @@ Understanding the full permissions model before deploying skills in production e
 
 ---
 
-## YAML and Format Errors
+YAML and Format Errors
 
 The skill.md format uses YAML front matter for machine-readable metadata. YAML is strict: tabs instead of spaces, an unmatched quotation mark, a missing colon, or a string that contains a special character without proper quoting will break parsing entirely.
 
 Common YAML mistakes in skill files:
 
 ```yaml
-# BROKEN: tab indentation
+BROKEN: tab indentation
 name:	my-skill
 
-# BROKEN: unquoted string with colon
+BROKEN: unquoted string with colon
 description: Connect to API: fetch data
 
-# BROKEN: missing closing quote
+BROKEN: missing closing quote
 description: "Analyze CSV files
 
-# CORRECT
+CORRECT
 name: my-skill
 description: "Connect to API: fetch data"
 ```
@@ -114,13 +114,13 @@ Format errors in the skill *body* (the Markdown section below the front matter) 
 
 ---
 
-## Performance Issues
+Performance Issues
 
 Two performance problems appear regularly: slow responses and infinite loops. Both are usually caused by skills that don't set clear boundaries on what Claude should do.
 
-**Slow skills** happen when the skill body is very large (Claude must process all of it on every invocation), when the skill chains many sequential tool calls, or when the skill loads external data that takes time to retrieve. The fix is to split large skills into focused sub-skills, reduce the amount of context loaded per turn, and use parallel tool calls where the skill logic allows.
+Slow skills happen when the skill body is very large (Claude must process all of it on every invocation), when the skill chains many sequential tool calls, or when the skill loads external data that takes time to retrieve. The fix is to split large skills into focused sub-skills, reduce the amount of context loaded per turn, and use parallel tool calls where the skill logic allows.
 
-**Infinite loops** are a logic error: the skill instructs Claude to retry an operation until it succeeds, without a maximum retry count or a fallback exit condition. Claude will keep trying indefinitely, consuming tokens and producing no useful output. Always add explicit termination conditions: `retry up to 3 times, then return the error to the user`.
+Infinite loops are a logic error: the skill instructs Claude to retry an operation until it succeeds, without a maximum retry count or a fallback exit condition. Claude will keep trying indefinitely, consuming tokens and producing no useful output. Always add explicit termination conditions: `retry up to 3 times, then return the error to the user`.
 
 - [Claude Skills Slow Performance: Speed Up Guide](/claude-skills-slow-performance-speed-up-guide/)
 - [How to Fix Claude Skill Infinite Loop Issues](/how-to-fix-claude-skill-infinite-loop-issue/)
@@ -128,15 +128,15 @@ Two performance problems appear regularly: slow responses and infinite loops. Bo
 
 ---
 
-## Context Window Errors
+Context Window Errors
 
-Every Claude model has a finite context window. When a skill session fills that window—through a combination of the skill body, conversation history, tool outputs, and any documents being processed—Claude starts degrading: dropping earlier instructions, losing track of task state, or returning a hard context overflow error.
+Every Claude model has a finite context window. When a skill session fills that window, through a combination of the skill body, conversation history, tool outputs, and any documents being processed, Claude starts degrading: dropping earlier instructions, losing track of task state, or returning a hard context overflow error.
 
 The most effective prevention strategies:
 
-1. **Keep the skill body lean.** Every byte of the skill file counts against the context budget from the first token. Use progressive disclosure: brief at the top, detailed sections only when needed.
-2. **Summarize aggressively.** Long tool outputs should be summarized before being passed back into context. A 10,000-token database query result can usually be compressed to 200 tokens of relevant data.
-3. **Use external state.** Instead of keeping all task state in the conversation, write intermediate results to files or a database and reference them by path.
+1. Keep the skill body lean. Every byte of the skill file counts against the context budget from the first token. Use progressive disclosure: brief at the top, detailed sections only when needed.
+2. Summarize aggressively. Long tool outputs should be summarized before being passed back into context. A 10,000-token database query result can usually be compressed to 200 tokens of relevant data.
+3. Use external state. Instead of keeping all task state in the conversation, write intermediate results to files or a database and reference them by path.
 
 - [Claude Code Skills Context Window Exceeded Error Fix](/claude-code-skills-context-window-exceeded-error-fix/)
 - [Claude Skills Context Window Management Best Practices](/claude-md-too-long-context-window-optimization/)
@@ -144,11 +144,11 @@ The most effective prevention strategies:
 
 ---
 
-## Output and State Issues
+Output and State Issues
 
-**Broken output formatting** is common when a skill tries to enforce a specific output structure but doesn't give Claude explicit enough instructions. The skill body should specify the exact format (JSON schema, Markdown table, plain text), not just describe it vaguely. If Claude's default formatting habits conflict with what the skill wants, add a rule like: "Always respond with a JSON object matching this exact schema. Never add prose outside the JSON block."
+Broken output formatting is common when a skill tries to enforce a specific output structure but doesn't give Claude explicit enough instructions. The skill body should specify the exact format (JSON schema, Markdown table, plain text), not just describe it vaguely. If Claude's default formatting habits conflict with what the skill wants, add a rule like: "Always respond with a JSON object matching this exact schema. Never add prose outside the JSON block."
 
-**State loss between sessions** is not a bug—it is how Claude Code works by design. Claude does not persist in-memory state across sessions. If your workflow requires state (task lists, user preferences, accumulated data), you must store it externally: a local file, a database, or a persistent MCP memory server. The skill can read from and write to that external store at the start and end of each session.
+State loss between sessions is not a bug, it is how Claude Code works by design. Claude does not persist in-memory state across sessions. If your workflow requires state (task lists, user preferences, accumulated data), you must store it externally: a local file, a database, or a persistent MCP memory server. The skill can read from and write to that external store at the start and end of each session.
 
 - [Claude Code Skill Output Formatting Broken Fix](/claude-code-skill-output-formatting-broken-fix/)
 - [Claude Skill Not Saving State Between Sessions Fix](/claude-skill-not-saving-state-between-sessions-fix/)
@@ -156,35 +156,35 @@ The most effective prevention strategies:
 
 ---
 
-## General Code Quality and Behavioral Issues
+General Code Quality and Behavioral Issues
 
 A second category of troubleshooting covers cases where Claude Code runs fine from a technical standpoint but produces incorrect or problematic output: wrong imports, insecure code, files in the wrong directory, missed error handling, or output in the wrong programming language.
 
 These issues are usually caused by insufficient context in the skill body or CLAUDE.md, or by sessions where Claude has lost track of project conventions due to context overflow. The fixes involve tightening skill instructions, adding explicit constraints in CLAUDE.md, and keeping sessions short enough to maintain context coherence.
 
-**Environment and connection errors:**
-- [Claude Code Error: Connection Timeout During Task Fix](/claude-code-error-connection-timeout-during-task-fix/) — Handling connection timeouts in long-running skill sessions
-- [Claude Code Error: Invalid API Key After Rotation Fix](/claude-code-error-invalid-api-key-after-rotation-fix/) — Resolving invalid API key errors in Claude Code
-- [Claude Code Error: npm install Fails in Skill Workflow](/claude-code-error-npm-install-fails-in-skill-workflow/) — Diagnosing and fixing npm install failures in Claude skill execution
-- [Claude Code Error: Out of Memory for Large Codebase Fix](/claude-code-error-out-of-memory-large-codebase-fix/) — Fixing OOM errors when working with very large codebases
-- [Claude Code Verbose Mode Debugging Tips](/claude-code-verbose-mode-debugging-tips/) — Using verbose mode to surface hidden problems in skill sessions
+Environment and connection errors:
+- [Claude Code Error: Connection Timeout During Task Fix](/claude-code-error-connection-timeout-during-task-fix/). Handling connection timeouts in long-running skill sessions
+- [Claude Code Error: Invalid API Key After Rotation Fix](/claude-code-error-invalid-api-key-after-rotation-fix/). Resolving invalid API key errors in Claude Code
+- [Claude Code Error: npm install Fails in Skill Workflow](/claude-code-error-npm-install-fails-in-skill-workflow/). Diagnosing and fixing npm install failures in Claude skill execution
+- [Claude Code Error: Out of Memory for Large Codebase Fix](/claude-code-error-out-of-memory-large-codebase-fix/). Fixing OOM errors when working with very large codebases
+- [Claude Code Verbose Mode Debugging Tips](/claude-code-verbose-mode-debugging-tips/). Using verbose mode to surface hidden problems in skill sessions
 
-**Output correctness issues:**
-- [Claude Code Creates Files in Wrong Directory Fix](/claude-code-creates-files-in-wrong-directory-fix/) — Specifying output directories explicitly to prevent misplaced files
-- [Claude Code Generates Insecure Code Patterns Fix](/claude-code-generates-insecure-code-patterns-fix/) — Preventing Claude from generating insecure code patterns
-- [Claude Code Gives Incorrect Imports: How to Fix](/claude-code-gives-incorrect-imports-how-to-fix/) — Correcting wrong import statements in Claude Code output
-- [Claude Code Ignores CLAUDE.md Instructions Fix](/how-to-fix-claude-code-ignoring-my-claude-md-file/) — Why Claude Code sometimes ignores CLAUDE.md and how to fix it
-- [Claude Code Skips Error Handling in Generated Code](/claude-code-skips-error-handling-in-generated-code/) — Enforcing error handling in every Claude Code output
-- [Claude Code Writes Code in Wrong Programming Language](/claude-code-writes-code-in-wrong-programming-language/) — Preventing language confusion in multi-language projects
-- [How to Make Claude Code Make Smaller Focused Changes](/how-to-make-claude-code-make-smaller-focused-changes/) — Constraining Claude Code to produce scoped, reviewable diffs
+Output correctness issues:
+- [Claude Code Creates Files in Wrong Directory Fix](/claude-code-creates-files-in-wrong-directory-fix/). Specifying output directories explicitly to prevent misplaced files
+- [Claude Code Generates Insecure Code Patterns Fix](/claude-code-generates-insecure-code-patterns-fix/). Preventing Claude from generating insecure code patterns
+- [Claude Code Gives Incorrect Imports: How to Fix](/claude-code-gives-incorrect-imports-how-to-fix/). Correcting wrong import statements in Claude Code output
+- [Claude Code Ignores CLAUDE.md Instructions Fix](/how-to-fix-claude-code-ignoring-my-claude-md-file/). Why Claude Code sometimes ignores CLAUDE.md and how to fix it
+- [Claude Code Skips Error Handling in Generated Code](/claude-code-skips-error-handling-in-generated-code/). Enforcing error handling in every Claude Code output
+- [Claude Code Writes Code in Wrong Programming Language](/claude-code-writes-code-in-wrong-programming-language/). Preventing language confusion in multi-language projects
+- [How to Make Claude Code Make Smaller Focused Changes](/how-to-make-claude-code-make-smaller-focused-changes/). Constraining Claude Code to produce scoped, reviewable diffs
 
-**Advanced diagnostics:**
-- [Segfault and Core Dump Analysis with Claude Code Guide](/claude-code-segfault-core-dump-analysis-workflow-guide/) — Diagnosing native crashes and memory corruption with Claude
-- [Claude Code Skill Conflicts with MCP Server Resolution Guide](/claude-code-skill-conflicts-with-mcp-server-resolution-guide/) — Resolving conflicts between skills and MCP server tool definitions
+Advanced diagnostics:
+- [Segfault and Core Dump Analysis with Claude Code Guide](/claude-code-segfault-core-dump-analysis-workflow-guide/). Diagnosing native crashes and memory corruption with Claude
+- [Claude Code Skill Conflicts with MCP Server Resolution Guide](/claude-code-skill-conflicts-with-mcp-server-resolution-guide/). Resolving conflicts between skills and MCP server tool definitions
 
 ---
 
-## Full Troubleshooting Article Index
+Full Troubleshooting Article Index
 
 | Article | What You'll Learn |
 |---------|-------------------|
@@ -240,16 +240,16 @@ These issues are usually caused by insufficient context in the skill body or CLA
 
 ---
 
-## Related Reading
+Related Reading
 
-- [Getting Started Hub](/getting-started-hub/) — Foundations: what skills are, the .md format, and writing your first skill
-- [Comparisons Hub](/comparisons-hub/) — How Claude Code stacks up against Copilot, Cursor, and other tools
-- [Workflows Hub](/workflows-hub/) — Practical skill workflows for code review, documentation, and CI/CD
-- [Integrations Hub](/integrations-hub/) — Connect skills to GitHub Actions, n8n, Supabase, Slack, and more
-- [Projects Hub](/projects-hub/) — Build real SaaS apps, CLI tools, and APIs using Claude skills
-- [Pricing Hub](/pricing-hub/) — Cost optimization and Claude Code pricing breakdown
+- [Getting Started Hub](/getting-started-hub/). Foundations: what skills are, the .md format, and writing your first skill
+- [Comparisons Hub](/comparisons-hub/). How Claude Code stacks up against Copilot, Cursor, and other tools
+- [Workflows Hub](/workflows-hub/). Practical skill workflows for code review, documentation, and CI/CD
+- [Integrations Hub](/integrations-hub/). Connect skills to GitHub Actions, n8n, Supabase, Slack, and more
+- [Projects Hub](/projects-hub/). Build real SaaS apps, CLI tools, and APIs using Claude skills
+- [Pricing Hub](/pricing-hub/). Cost optimization and Claude Code pricing breakdown
 
 ---
 
-*Built by theluckystrike — More at [zovo.one](https://zovo.one)
+*Built by theluckystrike. More at [zovo.one](https://zovo.one)
 *

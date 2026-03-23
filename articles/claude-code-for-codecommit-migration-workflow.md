@@ -14,17 +14,17 @@ score: 8
 
 
 {% raw %}
-# Claude Code for CodeCommit Migration Workflow
+Claude Code for CodeCommit Migration Workflow
 
 Migrating repositories to or from AWS CodeCommit can be a complex process involving clone operations, branch preservation, commit history transfer, and CI/CD pipeline updates. Claude Code simplifies this workflow by automating repetitive tasks, generating migration scripts, and validating the transferred data. This guide covers practical strategies for using Claude Code in CodeCommit migration projects.
 
-## Understanding CodeCommit Migration Scenarios
+Understanding CodeCommit Migration Scenarios
 
 Before diving into the workflow, it's important to identify your migration scenario. CodeCommit migrations typically fall into several categories: moving from GitHub or GitLab to CodeCommit, migrating from CodeCommit to another provider, or consolidating multiple repositories into a single CodeCommit account. Each scenario requires different considerations around authentication, branch strategies, and pipeline rewiring.
 
 Claude Code can assist with all these scenarios by generating appropriate git commands, reviewing configuration files, and creating validation scripts to ensure nothing is lost during transfer. The key is providing clear context about your source and destination repositories so Claude can tailor its recommendations.
 
-### Prerequisites and Preparation
+Prerequisites and Preparation
 
 Ensure you have the AWS CLI configured with appropriate credentials and Git credential helper set up for CodeCommit. Claude Code needs access to your git repositories either locally or through remote URLs. Before starting migration, document your repository structure including all branches, tags, and any repository-specific configurations like protected branch rules or notification triggers.
 
@@ -36,11 +36,11 @@ List all repositories in my GitHub organization and their branch protection rule
 
 This gives you a complete picture of what needs to be migrated and any constraints you must respect.
 
-## Cloning and Pushing Repositories
+Cloning and Pushing Repositories
 
 The fundamental operation in any CodeCommit migration is cloning from the source and pushing to the destination. For small repositories, a simple clone and push suffices. For larger repositories with extensive history, you might need to consider shallow clones or partial history transfers.
 
-### Basic Migration Script Generation
+Basic Migration Script Generation
 
 Ask Claude Code to generate a migration script for a single repository:
 
@@ -52,30 +52,30 @@ Claude will produce a script similar to this:
 
 ```bash
 #!/bin/bash
-# Repository migration script
+Repository migration script
 
 SOURCE_URL="https://github.com/your-org/repo-name.git"
 CODECOMMIT_REPO="repo-name"
 AWS_REGION="us-east-1"
 
-# Clone with all branches and tags
+Clone with all branches and tags
 git clone --mirror "$SOURCE_URL" temp-repo
 cd temp-repo
 
-# Push all branches to CodeCommit
+Push all branches to CodeCommit
 git push codecommit "$AWS_REGION:$CODECOMMIT_REPO" --all
 
-# Push all tags
+Push all tags
 git push codecommit "$AWS_REGION:$CODECOMMIT_REPO" --tags
 
-# Clean up
+Clean up
 cd ..
 rm -rf temp-repo
 ```
 
 This script handles the basic case but may need customization for authentication mechanisms, large repositories, or special branch requirements.
 
-### Handling Authentication Differences
+Handling Authentication Differences
 
 CodeCommit uses SSH or HTTPS with AWS credentials rather than personal access tokens. Claude can help you configure the appropriate credential helper:
 
@@ -85,11 +85,11 @@ How do I configure git credential helper for CodeCommit on macOS?
 
 Claude will guide you through setting up the credential helper in your git configuration, ensuring your pushes authenticate correctly.
 
-## Migrating Multiple Repositories
+Migrating Multiple Repositories
 
 Enterprise migrations often involve dozens of repositories. Claude Code excels at generating batch migration scripts and tracking progress across many repositories.
 
-### Batch Migration Strategy
+Batch Migration Strategy
 
 Create a systematic approach by first cataloging all repositories, then generating individual migration scripts for each. Ask Claude:
 
@@ -99,7 +99,7 @@ Generate a Python script that reads a list of repository names from a JSON file 
 
 Claude will produce a comprehensive script that handles multiple repositories with proper error handling. This approach is far more reliable than manual copy-paste operations.
 
-### Migration Tracking and Validation
+Migration Tracking and Validation
 
 After migration, validate each repository by comparing branch lists, commit counts, and tag collections between source and destination. Claude can generate validation queries:
 
@@ -107,11 +107,11 @@ After migration, validate each repository by comparing branch lists, commit coun
 Create a validation script that compares git refs between two remote repositories and reports any discrepancies
 ```
 
-## Updating CI/CD Pipelines
+Updating CI/CD Pipelines
 
 Migration isn't complete until your build and deployment pipelines point to the new repository location. This often involves updating multiple configuration files across many projects.
 
-### Identifying Pipeline Configurations
+Identifying Pipeline Configurations
 
 Ask Claude to find all files referencing your old repository URL:
 
@@ -121,7 +121,7 @@ Search my codebase for files containing "github.com/your-org" and list each file
 
 This gives you a complete inventory of files requiring updates. Claude can then help update these files systematically, whether they're GitHub Actions workflows, Jenkinsfiles, or other CI configuration.
 
-### Updating GitHub Actions Workflows
+Updating GitHub Actions Workflows
 
 For GitHub Actions workflows, the changes typically involve updating the `checkout` action's repository URL. Claude can generate the necessary sed commands or produce a Python script for bulk updates:
 
@@ -129,11 +129,11 @@ For GitHub Actions workflows, the changes typically involve updating the `checko
 Generate a Python script that updates all .github/workflows/*.yml files to replace the old repository URL with the new CodeCommit URL
 ```
 
-## Handling Special Cases
+Handling Special Cases
 
 Some repositories require additional attention due to their structure or history. Claude can help identify and handle these scenarios.
 
-### Large Repository Considerations
+Large Repository Considerations
 
 For repositories with extensive history or large binary assets, consider shallow cloning to reduce transfer time:
 
@@ -143,7 +143,7 @@ What's the best way to clone a large repository with 10+ years of history while 
 
 Claude will recommend appropriate strategies like clone depth limits or Git LFS considerations for large files.
 
-### Preserving Commit Metadata
+Preserving Commit Metadata
 
 CodeCommit preserves commit hashes differently than GitHub, meaning SHA-1 links will break. If you have external documentation referencing specific commits, discuss with Claude how to document the mapping or implement redirects:
 
@@ -151,17 +151,17 @@ CodeCommit preserves commit hashes differently than GitHub, meaning SHA-1 links 
 How do I track commit SHA mappings between GitHub and CodeCommit after migration?
 ```
 
-## Post-Migration Validation
+Post-Migration Validation
 
 After completing the migration, thorough validation ensures completeness. Claude can help generate comprehensive check scripts.
 
-### Branch and Tag Verification
+Branch and Tag Verification
 
 Create a verification script that compares all refs between source and destination:
 
 ```bash
 #!/bin/bash
-# Verify migration completeness
+Verify migration completeness
 
 SOURCE_REPO="https://github.com/your-org/repo.git"
 DEST_REPO="codecommit::us-east-1://repo-name"
@@ -181,7 +181,7 @@ echo "Tag comparison:"
 diff source-tags.txt dest-tags.txt || true
 ```
 
-### Commit History Sampling
+Commit History Sampling
 
 For critical repositories, verify commit history integrity by spot-checking a few commit SHAs:
 
@@ -191,17 +191,17 @@ How do I compare commit histories between two git remotes to ensure all commits 
 
 Claude will provide commands to compare commit logs and verify history completeness.
 
-## Conclusion
+Conclusion
 
-Claude Code significantly accelerates CodeCommit migrations through automation, validation, and systematic approaches. By using Claude's ability to generate scripts, identify configuration changes, and validate results, you can migrate repositories more reliably and with less manual effort. The key is breaking the migration into discrete phases: preparation, transfer, pipeline updates, and validation—with Claude assisting at each stage.
+Claude Code significantly accelerates CodeCommit migrations through automation, validation, and systematic approaches. By using Claude's ability to generate scripts, identify configuration changes, and validate results, you can migrate repositories more reliably and with less manual effort. The key is breaking the migration into discrete phases: preparation, transfer, pipeline updates, and validation, with Claude assisting at each stage.
 
 For large-scale enterprise migrations, consider running pilot migrations with non-critical repositories to refine your process before tackling production workloads.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

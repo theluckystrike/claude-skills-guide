@@ -15,19 +15,19 @@ permalink: /brave-search-mcp-server-research-automation/
 
 Integrating Brave Search with Claude Code through MCP servers opens up powerful automation possibilities for developers and researchers. This guide covers setting up a Brave Search MCP server, configuring authentication, and building practical research workflows that save hours of manual searching.
 
-## Why Brave Search for Automation
+Why Brave Search for Automation
 
 Brave Search provides an API that works exceptionally well for programmatic queries. Unlike traditional search APIs that throttle requests or require complex OAuth flows, Brave offers straightforward API key authentication with generous rate limits. This makes it ideal for building research automation pipelines.
 
 The search results include web results, news, and images, all accessible through a clean REST API. When combined with Claude Code's natural language processing, you can query research topics and have Claude summarize, analyze, or synthesize the findings automatically. For a broader look at how MCP servers compare to native Claude skills, see [MCP servers vs. Claude skills explained](/mcp-servers-vs-claude-skills-what-is-the-difference/).
 
-## Setting Up Your Brave Search API Key
+Setting Up Your Brave Search API Key
 
 Before building the MCP server, obtain your Brave Search API key:
 
 1. Visit [brave.com/search/api](https://brave.com/search/api/) and create an account
 2. Navigate to the API keys section and generate a new key
-3. Copy the key—you'll need it for configuration
+3. Copy the key, you'll need it for configuration
 
 Store this key securely. Never commit it to version control. The [MCP credential management guide](/mcp-credential-management-and-secrets-handling/) covers best practices for handling API keys across environments. Use environment variables or a secrets manager:
 
@@ -35,7 +35,7 @@ Store this key securely. Never commit it to version control. The [MCP credential
 export BRAVE_SEARCH_API_KEY="your_api_key_here"
 ```
 
-## Building the Brave Search MCP Server
+Building the Brave Search MCP Server
 
 Create a new directory for your MCP server and initialize the project:
 
@@ -158,7 +158,7 @@ const transport = new StdioServerTransport();
 await server.connect(transport);
 ```
 
-## Configuring Claude Code
+Configuring Claude Code
 
 Add the MCP server to your Claude Code configuration in `~/.claude/settings.json`:
 
@@ -178,9 +178,9 @@ Add the MCP server to your Claude Code configuration in `~/.claude/settings.json
 
 Restart Claude Code to load the new server. You can now use the Brave Search tools directly in your conversations.
 
-## Practical Research Workflows
+Practical Research Workflows
 
-### Automated Literature Review
+Automated Literature Review
 
 Combine Brave Search with the pdf skill to build a literature review workflow. Query for academic papers, then use Claude to analyze and summarize them:
 
@@ -190,7 +190,7 @@ Search for recent papers on "machine learning model compression techniques" usin
 
 The workflow queries Brave, retrieves URLs and abstracts, then Claude can either visit the links directly or guide you through accessing the papers.
 
-### Competitive Analysis Automation
+Competitive Analysis Automation
 
 Use the supermemory skill to store research findings persistently, then query Brave Search for competitive intelligence. The [competitive analysis automation workflow](/claude-skills-competitive-analysis-automation-workflow/) shows how to structure multi-source research pipelines:
 
@@ -200,7 +200,7 @@ Search Brave for competitor news about "AI coding assistants" from the last 30 d
 
 This creates a searchable knowledge base that accumulates research over time.
 
-### Technical Documentation Research
+Technical Documentation Research
 
 When investigating new technologies or debugging issues, chain Brave Search with code analysis:
 
@@ -210,23 +210,23 @@ Search for documentation on "Kubernetes pod eviction policies" and compare with 
 
 The search results provide context, while Claude applies that knowledge to your specific situation.
 
-## Advanced: Multi-Step Research Pipelines
+Advanced: Multi-Step Research Pipelines
 
 For complex research tasks, create a [Claude skill](/advanced-hub/) that orchestrates multiple searches. Here's a pattern for comprehensive research:
 
 ```javascript
 // research-pipeline.md
-# Research Pipeline Skill
+Research Pipeline Skill
 
 You help execute multi-step research workflows using Brave Search MCP.
 
-## Process
+Process
 
-1. **Initial Discovery**: Search broadly to map out the topic
-2. **Deep Focus**: Query specific aspects identified in discovery
-3. **Synthesis**: Combine findings into actionable insights
+1. Initial Discovery: Search broadly to map out the topic
+2. Deep Focus: Query specific aspects identified in discovery
+3. Synthesis: Combine findings into actionable insights
 
-## Tools
+Tools
 
 - Use `brave_web_search` for general research
 - Use `brave_news_search` for recent developments
@@ -234,7 +234,7 @@ You help execute multi-step research workflows using Brave Search MCP.
 - Use `frontend-design` skill to review UI/UX research findings
 ```
 
-## Rate Limiting and Best Practices
+Rate Limiting and Best Practices
 
 Brave Search API has rate limits to consider:
 
@@ -262,15 +262,15 @@ async function cachedSearch(query, type = 'web') {
 }
 ```
 
-## Conclusion
+Conclusion
 
 Brave Search MCP server integration enables powerful research automation within Claude Code. The straightforward API, combined with Claude's analysis capabilities, creates a research workflow that would otherwise require significant manual effort. Start with the basic server setup, then expand into specialized skills like tdd for technical validation or supermemory for persistent knowledge storage.
 
-## Related Reading
+Related Reading
 
-- [MCP Credential Management and Secrets Handling](/mcp-credential-management-and-secrets-handling/) — Secure API keys for your MCP server integrations
-- [MCP Servers vs. Claude Skills: What Is the Difference](/mcp-servers-vs-claude-skills-what-is-the-difference/) — Understand when to use each approach
-- [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/) — Configure MCP servers from scratch
-- [Competitive Analysis Automation Workflow](/claude-skills-competitive-analysis-automation-workflow/) — Build multi-source research pipelines
+- [MCP Credential Management and Secrets Handling](/mcp-credential-management-and-secrets-handling/). Secure API keys for your MCP server integrations
+- [MCP Servers vs. Claude Skills: What Is the Difference](/mcp-servers-vs-claude-skills-what-is-the-difference/). Understand when to use each approach
+- [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/). Configure MCP servers from scratch
+- [Competitive Analysis Automation Workflow](/claude-skills-competitive-analysis-automation-workflow/). Build multi-source research pipelines
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

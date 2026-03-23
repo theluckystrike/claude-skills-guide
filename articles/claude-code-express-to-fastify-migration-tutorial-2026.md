@@ -15,11 +15,11 @@ permalink: /claude-code-express-to-fastify-migration-tutorial-2026/
 
 [Fastify has become the preferred choice for Node.js developers seeking better performance](/best-claude-code-skills-to-install-first-2026/), built-in TypeScript support, and a more modern API. If you're maintaining an Express.js application in 2026, migrating to Fastify can reduce response times by up to 40% while providing better schema validation and plugin architecture. This tutorial shows you how to use Claude Code and its ecosystem of skills to streamline the migration process.
 
-## Why Migrate from Express to Fastify
+Why Migrate from Express to Fastify
 
 Express.js served the Node.js community well for over a decade, but Fastify addresses many of its shortcomings. Fastify offers serialization at roughly three times the speed of Express, native support for async/await without wrapper libraries, and a schema-based validation system that eliminates manual input checking. The plugin system is more intuitive, and the TypeScript support is first-class rather than an afterthought.
 
-### Performance Comparison
+Performance Comparison
 
 The numbers are not marginal. Benchmarks from the Fastify project and independent tests consistently show:
 
@@ -29,9 +29,9 @@ The numbers are not marginal. Benchmarks from the Fastify project and independen
 | Fastify 4.x | ~45,000 | ~4 ms | ~38 MB |
 | Fastify 5.x | ~52,000 | ~3.5 ms | ~36 MB |
 
-These figures are from a single-core `autocannon` benchmark against a simple JSON endpoint on Node.js 22. Real-world differences depend on your route complexity, database I/O, and middleware stack — but the trend holds across nearly every benchmark configuration.
+These figures are from a single-core `autocannon` benchmark against a simple JSON endpoint on Node.js 22. Real-world differences depend on your route complexity, database I/O, and middleware stack. but the trend holds across nearly every benchmark configuration.
 
-### Feature Comparison
+Feature Comparison
 
 | Feature | Express 4.x | Fastify 4/5 |
 |---------|:-----------:|:-----------:|
@@ -44,18 +44,18 @@ These figures are from a single-core `autocannon` benchmark against a simple JSO
 | Built-in logging | No | Yes (pino) |
 | Hook system | Middleware chain | Named lifecycle hooks |
 
-Before starting your migration, ensure your current Express application has adequate test coverage. The [**tdd** skill](/best-claude-skills-for-developers-2026/) from Claude Code can help you establish test patterns if your project lacks them. Run your existing test suite to establish a baseline, then begin the incremental migration.
+Before starting your migration, ensure your current Express application has adequate test coverage. The [tdd skill](/best-claude-skills-for-developers-2026/) from Claude Code can help you establish test patterns if your project lacks them. Run your existing test suite to establish a baseline, then begin the incremental migration.
 
-## Setting Up Your Migration Environment
+Setting Up Your Migration Environment
 
 [Create a parallel Fastify project alongside your existing Express application](/claude-tdd-skill-test-driven-development-workflow/) This approach lets you migrate route by route without disrupting production traffic.
 
 ```bash
-# Initialize new Fastify project
+Initialize new Fastify project
 npm init fastify@latest myapp-fastify
 cd myapp-fastify
 
-# Install dependencies matching your Express app
+Install dependencies matching your Express app
 npm install express@^4.18.0
 ```
 
@@ -93,16 +93,16 @@ start();
 ```bash
 node server.js
 curl http://localhost:3001/health
-# {"status":"ok","timestamp":"2026-03-13T10:00:00.000Z"}
+{"status":"ok","timestamp":"2026-03-13T10:00:00.000Z"}
 ```
 
-The migration works best when you copy your existing Express route handlers and adapt them to Fastify's interface. The [**supermemory** skill](/claude-skills-token-optimization-reduce-api-costs/) helps maintain context across your migration sessions, remembering which routes you've converted and any issues encountered.
+The migration works best when you copy your existing Express route handlers and adapt them to Fastify's interface. The [supermemory skill](/claude-skills-token-optimization-reduce-api-costs/) helps maintain context across your migration sessions, remembering which routes you've converted and any issues encountered.
 
-## Converting Route Handlers
+Converting Route Handlers
 
 Express and Fastify share similar routing syntax, but the request/response objects differ significantly. Here's a side-by-side comparison:
 
-**Express Handler:**
+Express Handler:
 ```javascript
 app.get('/api/users/:id', (req, res) => {
   const userId = req.params.id;
@@ -111,7 +111,7 @@ app.get('/api/users/:id', (req, res) => {
 });
 ```
 
-**Fastify Handler:**
+Fastify Handler:
 ```javascript
 fastify.get('/api/users/:id', async (request, reply) => {
   const userId = request.params.id;
@@ -120,9 +120,9 @@ fastify.get('/api/users/:id', async (request, reply) => {
 });
 ```
 
-The key differences: Fastify uses `request` instead of `req`, `reply` instead of `res`, and supports direct return values instead of calling `res.json()`. For complex migrations, the **frontend-design** skill can help generate consistent handler patterns across your codebase.
+The key differences: Fastify uses `request` instead of `req`, `reply` instead of `res`, and supports direct return values instead of calling `res.json()`. For complex migrations, the frontend-design skill can help generate consistent handler patterns across your codebase.
 
-### Full Route Object Reference
+Full Route Object Reference
 
 Understanding every property difference prevents subtle bugs during migration:
 
@@ -140,12 +140,12 @@ Understanding every property difference prevents subtle bugs during migration:
 | `res.redirect(url)` | `reply.redirect(url)` | Same |
 | `res.sendFile(path)` | `reply.sendFile(path)` | Requires `@fastify/static` |
 
-### Converting POST Handlers with Body Parsing
+Converting POST Handlers with Body Parsing
 
 Express uses `express.json()` middleware globally. Fastify parses JSON by default:
 
 ```javascript
-// Express — requires middleware
+// Express. requires middleware
 app.use(express.json());
 app.post('/api/users', (req, res) => {
   const { name, email } = req.body;
@@ -153,7 +153,7 @@ app.post('/api/users', (req, res) => {
   res.status(201).json(user);
 });
 
-// Fastify — no middleware needed for JSON
+// Fastify. no middleware needed for JSON
 fastify.post('/api/users', async (request, reply) => {
   const { name, email } = request.body;
   const user = await createUser({ name, email });
@@ -180,11 +180,11 @@ fastify.post('/upload', async (request, reply) => {
 });
 ```
 
-## Handling Middleware and Plugins
+Handling Middleware and Plugins
 
 Express middleware doesn't work directly in Fastify. You have two options: wrap Express middleware using `fastify-express` or rewrite using Fastify's native plugin system.
 
-### Option 1: Wrapping Express Middleware
+Option 1: Wrapping Express Middleware
 
 ```javascript
 const fastify = require('fastify')({ logger: true });
@@ -197,7 +197,7 @@ fastify.use(cookieParser());
 
 This approach provides quick compatibility but doesn't deliver Fastify's full performance benefits.
 
-### Option 2: Native Fastify Plugins
+Option 2: Native Fastify Plugins
 
 For better performance, convert middleware to Fastify plugins:
 
@@ -217,9 +217,9 @@ async function cookiePlugin(fastify, options) {
 fastify.register(fp(cookiePlugin));
 ```
 
-Note: `fastify-plugin` (`fp`) unwraps the plugin from Fastify's scope encapsulation, making the decorator visible to the entire application. Without `fp`, decorators and hooks added inside a plugin are scoped to that plugin's child context only.
+`fastify-plugin` (`fp`) unwraps the plugin from Fastify's scope encapsulation, making the decorator visible to the entire application. Without `fp`, decorators and hooks added inside a plugin are scoped to that plugin's child context only.
 
-### Common Express Middleware to Fastify Plugin Mappings
+Common Express Middleware to Fastify Plugin Mappings
 
 | Express Middleware | Fastify Equivalent | Install Command |
 |--------------------|--------------------|-----------------|
@@ -235,7 +235,7 @@ Note: `fastify-plugin` (`fp`) unwraps the plugin from Fastify's scope encapsulat
 
 Most official packages are maintained by the Fastify core team and follow the same plugin interface, so configuration is consistent across all of them.
 
-### Registering Common Plugins
+Registering Common Plugins
 
 ```javascript
 const fastify = require('fastify')({ logger: true });
@@ -267,9 +267,9 @@ await fastify.register(require('@fastify/static'), {
 });
 ```
 
-The **pdf** skill can generate migration documentation as you progress, capturing decisions and code changes for your team.
+The pdf skill can generate migration documentation as you progress, capturing decisions and code changes for your team.
 
-## Schema-Based Validation
+Schema-Based Validation
 
 Fastify's JSON Schema validation replaces Express route-level validation. Define schemas alongside your routes:
 
@@ -301,7 +301,7 @@ fastify.get('/api/users/:id', { schema: userSchema }, async (request, reply) => 
 
 This approach eliminates manual validation code and provides automatic documentation generation.
 
-### Replacing Express-Validator
+Replacing Express-Validator
 
 A common migration challenge is replacing `express-validator` logic with Fastify schemas. Here's a concrete before/after:
 
@@ -355,9 +355,9 @@ fastify.post('/api/posts', { schema: createPostSchema }, async (request, reply) 
 });
 ```
 
-Fastify automatically returns a `400` with a descriptive error message if the request body doesn't match the schema — no validation middleware needed.
+Fastify automatically returns a `400` with a descriptive error message if the request body doesn't match the schema. no validation middleware needed.
 
-### Reusing Schemas with $ref
+Reusing Schemas with $ref
 
 For larger applications with many routes sharing common types, use `$ref` to avoid duplication:
 
@@ -392,7 +392,7 @@ fastify.get('/api/users/me', {
 });
 ```
 
-## Error Handling Differences
+Error Handling Differences
 
 Express error handling uses middleware with four parameters. Fastify uses a different pattern with custom error handlers:
 
@@ -411,7 +411,7 @@ fastify.setErrorHandler((error, request, reply) => {
 });
 ```
 
-### Structured Error Handling with Custom Error Classes
+Structured Error Handling with Custom Error Classes
 
 Fastify's `setErrorHandler` integrates cleanly with custom error hierarchies:
 
@@ -475,7 +475,7 @@ fastify.get('/api/users/:id', async (request, reply) => {
 });
 ```
 
-### 404 Handler
+404 Handler
 
 Express uses `app.use()` at the end of the middleware chain as a catch-all. Fastify has a dedicated `setNotFoundHandler`:
 
@@ -495,21 +495,21 @@ fastify.setNotFoundHandler((request, reply) => {
 });
 ```
 
-## Testing the Migration
+Testing the Migration
 
-The **tdd** skill accelerates your migration testing by generating comprehensive test suites. Create parallel tests for both implementations during the transition:
+The tdd skill accelerates your migration testing by generating comprehensive test suites. Create parallel tests for both implementations during the transition:
 
 ```bash
-# Run both servers on different ports
-# Express on 3000, Fastify on 3001
+Run both servers on different ports
+Express on 3000, Fastify on 3001
 
-# Test Fastify routes
+Test Fastify routes
 curl http://localhost:3001/api/users/123
 ```
 
-### Writing Tests with fastify.inject
+Writing Tests with fastify.inject
 
-Fastify's built-in `inject` method lets you test routes without starting a real HTTP server — significantly faster than Express testing with supertest:
+Fastify's built-in `inject` method lets you test routes without starting a real HTTP server. significantly faster than Express testing with supertest:
 
 ```javascript
 // Install test runner
@@ -553,7 +553,7 @@ tap.test('GET /api/users/:id', async (t) => {
 The key is structuring your Fastify app as a factory function rather than a module-level singleton:
 
 ```javascript
-// app.js — factory pattern for testability
+// app.js. factory pattern for testability
 const fastify = require('fastify');
 
 function buildApp(opts = {}) {
@@ -568,16 +568,16 @@ function buildApp(opts = {}) {
 
 module.exports = buildApp;
 
-// server.js — entry point
+// server.js. entry point
 const buildApp = require('./app');
 
 const app = buildApp({ logger: true });
 app.listen({ port: process.env.PORT || 3000, host: '0.0.0.0' });
 ```
 
-Compare response times, status codes, and payload formats between implementations. The **canvas-design** skill can help visualize performance metrics if you need to present findings to stakeholders.
+Compare response times, status codes, and payload formats between implementations. The canvas-design skill can help visualize performance metrics if you need to present findings to stakeholders.
 
-## Incremental Migration Strategy
+Incremental Migration Strategy
 
 Rather than a complete rewrite, migrate route by route:
 
@@ -595,31 +595,31 @@ app.use('/fastify', createProxyMiddleware({
 }));
 ```
 
-### Migration Tracking Checklist Pattern
+Migration Tracking Checklist Pattern
 
-With the **supermemory** skill tracking your progress, maintain a migration checklist in code comments:
+With the supermemory skill tracking your progress, maintain a migration checklist in code comments:
 
 ```javascript
 // routes/index.js
 // Migration status:
-// [x] GET  /health          — migrated 2026-03-10
-// [x] GET  /api/users       — migrated 2026-03-11
-// [x] GET  /api/users/:id   — migrated 2026-03-11
-// [x] POST /api/users       — migrated 2026-03-12
-// [ ] PUT  /api/users/:id   — pending
-// [ ] DELETE /api/users/:id — pending
-// [ ] GET  /api/posts       — pending (depends on pagination refactor)
-// [ ] POST /api/upload      — pending (multipart refactor needed)
+// [x] GET  /health         . migrated 2026-03-10
+// [x] GET  /api/users      . migrated 2026-03-11
+// [x] GET  /api/users/:id  . migrated 2026-03-11
+// [x] POST /api/users      . migrated 2026-03-12
+// [ ] PUT  /api/users/:id  . pending
+// [ ] DELETE /api/users/:id. pending
+// [ ] GET  /api/posts      . pending (depends on pagination refactor)
+// [ ] POST /api/upload     . pending (multipart refactor needed)
 ```
 
-This pattern pairs well with Claude Code sessions — paste the checklist at the start of each session and update it as you go.
+This pattern pairs well with Claude Code sessions. paste the checklist at the start of each session and update it as you go.
 
-### Routing Strategy During Transition
+Routing Strategy During Transition
 
 Use NGINX or a lightweight Node proxy to split traffic without touching application code:
 
 ```nginx
-# nginx.conf — route by path prefix during migration
+nginx.conf. route by path prefix during migration
 upstream express_app {
     server localhost:3000;
 }
@@ -645,25 +645,25 @@ server {
 
 This strategy reduces risk and lets you validate performance improvements incrementally without deploying two separate services to production.
 
-## Performance Verification
+Performance Verification
 
 After migrating key routes, benchmark using tools like autocannon or wrk:
 
 ```bash
-# Install autocannon
+Install autocannon
 npm i -g autocannon
 
-# Benchmark Fastify
+Benchmark Fastify
 autocannon -c 100 -d 10 http://localhost:3001/api/users/1
 ```
 
-### Side-by-Side Benchmark Script
+Side-by-Side Benchmark Script
 
 Run both servers and compare automatically:
 
 ```bash
 #!/bin/bash
-# benchmark.sh — compare Express and Fastify on the same route
+benchmark.sh. compare Express and Fastify on the same route
 
 DURATION=15
 CONNECTIONS=100
@@ -681,7 +681,7 @@ autocannon -c $CONNECTIONS -d $DURATION --json http://localhost:3001$ROUTE | \
 
 Compare results against your Express baseline. Most teams see significant improvements in p99 latency after completing the migration.
 
-### What to Measure
+What to Measure
 
 Focus on these metrics when validating the migration:
 
@@ -694,18 +694,18 @@ Focus on these metrics when validating the migration:
 | Error rate | Response codes during load test | Must be 0% at sustained load |
 | Startup time | `time node server.js` | Fastify is typically faster to start |
 
-## Conclusion
+Conclusion
 
-Migrating from Express to Fastify requires thoughtful refactoring but delivers substantial performance and developer experience improvements. Claude Code's ecosystem—including the **tdd** skill for test-driven migration, **supermemory** for tracking progress, **pdf** for documentation, and **frontend-design** for code patterns—makes the process more manageable. Start with non-critical routes, establish validation schemas early, and verify performance at each step.
+Migrating from Express to Fastify requires thoughtful refactoring but delivers substantial performance and developer experience improvements. Claude Code's ecosystem, including the tdd skill for test-driven migration, supermemory for tracking progress, pdf for documentation, and frontend-design for code patterns, makes the process more manageable. Start with non-critical routes, establish validation schemas early, and verify performance at each step.
 
 The incremental approach is the key to a low-risk migration. Migrate one route group at a time, keep the Express server running alongside Fastify until every route is converted and verified, and use the proxy layer to split traffic without a big-bang cutover. By the time you decommission the Express instance, every route will have been individually validated in production traffic.
 
 ---
 
-## Related Reading
+Related Reading
 
-- [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/) — The tdd and supermemory skills power migration workflows
-- [Claude Skills Auto-Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) — Trigger skills automatically during migration and refactoring tasks
-- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) — Manage token usage during long migration sessions
+- [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/). The tdd and supermemory skills power migration workflows
+- [Claude Skills Auto-Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). Trigger skills automatically during migration and refactoring tasks
+- [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Manage token usage during long migration sessions
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -14,7 +14,7 @@ score: 8
 {% raw %}
 AI-powered screen readers represent a significant advancement in web accessibility. Unlike traditional screen readers that rely on static rule-based parsing, AI screen readers use machine learning models to understand page context, interpret ambiguous UI elements, and provide intelligent verbal descriptions. For developers building Chrome extensions, understanding how to integrate these capabilities opens up powerful accessibility solutions.
 
-## What Makes AI Screen Readers Different
+What Makes AI Screen Readers Different
 
 Traditional screen readers traverse the DOM and announce content based on ARIA attributes and HTML semantics. An AI screen reader goes further by analyzing visual layout, inferring component purpose from patterns, and generating natural language descriptions of complex interfaces.
 
@@ -28,13 +28,13 @@ Consider a button with no accessible name:
 
 A traditional screen reader might announce "button" with no context. An AI extension analyzes the surrounding UI, detects a shopping cart icon nearby, and announces "Add to cart button."
 
-## Building Blocks for Chrome Extension Development
+Building Blocks for Chrome Extension Development
 
 A Chrome extension for AI screen reading consists of three main components:
 
-1. **Content Script** - Injected into web pages to capture DOM and visual data
-2. **Background Service Worker** - Handles communication and model loading
-3. **Popup UI** - User controls for configuration and feedback
+1. Content Script - Injected into web pages to capture DOM and visual data
+2. Background Service Worker - Handles communication and model loading
+3. Popup UI - User controls for configuration and feedback
 
 Here's a minimal content script structure:
 
@@ -72,11 +72,11 @@ window.addEventListener('load', () => {
 });
 ```
 
-## Integrating Machine Learning Models
+Integrating Machine Learning Models
 
 The core of an AI screen reader is the ML model. For Chrome extensions, you have several deployment options:
 
-**On-Device Models (TensorFlow.js)**
+On-Device Models (TensorFlow.js)
 
 For privacy and latency benefits, run models directly in the browser:
 
@@ -113,7 +113,7 @@ class AIModel {
 }
 ```
 
-**API-Based Models**
+API-Based Models
 
 For more sophisticated analysis, call external AI APIs:
 
@@ -160,7 +160,7 @@ class RemoteAIAnalyzer {
 }
 ```
 
-## Implementing Speech Output
+Implementing Speech Output
 
 Once you have AI-generated descriptions, you need to speak them. The Web Speech API provides this capability:
 
@@ -207,11 +207,11 @@ class SpeechOutput {
 }
 ```
 
-## Practical Implementation Strategies
+Practical Implementation Strategies
 
 When building production AI screen readers, consider these patterns:
 
-**Focus Tracking with Context**
+Focus Tracking with Context
 
 Track user focus and maintain a context buffer:
 
@@ -251,7 +251,7 @@ class FocusContextManager {
 }
 ```
 
-**Keyboard Navigation Enhancement**
+Keyboard Navigation Enhancement
 
 Add intelligent keyboard shortcuts:
 
@@ -276,7 +276,7 @@ document.addEventListener('keydown', (e) => {
 });
 ```
 
-## Extension Manifest Configuration
+Extension Manifest Configuration
 
 Your manifest.json needs appropriate permissions:
 
@@ -304,7 +304,7 @@ Your manifest.json needs appropriate permissions:
 }
 ```
 
-## Testing and Performance
+Testing and Performance
 
 AI screen readers introduce latency. Optimize by:
 
@@ -329,15 +329,15 @@ For accessibility testing, use Chrome DevTools' accessibility pane alongside you
 AI screen readers transform how users interact with web content. By combining ML models with Chrome extension APIs, you build tools that understand context rather than just parsing markup.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-## Step-by-Step: Testing Your AI Screen Reader
+Step-by-Step: Testing Your AI Screen Reader
 
 1. Load the extension via `chrome://extensions` > "Load unpacked"
 2. Navigate to a page with images, buttons, and complex UI elements
@@ -346,7 +346,7 @@ Built by theluckystrike — More at [zovo.one](https://zovo.one)
 5. Compare against native aria-label attributes using Chrome DevTools Accessibility pane
 6. Tune the model prompt to produce clearer, more actionable descriptions
 
-## Advanced: Context-Aware Navigation Commands
+Advanced: Context-Aware Navigation Commands
 
 Implement voice-command navigation so users can say "go to the price" instead of tabbing through every element:
 
@@ -376,7 +376,7 @@ class VoiceNavigator {
 }
 ```
 
-## Comparison with Traditional Screen Readers
+Comparison with Traditional Screen Readers
 
 | Feature | AI Screen Reader Extension | NVDA | JAWS |
 |---|---|---|---|
@@ -387,9 +387,9 @@ class VoiceNavigator {
 
 AI screen readers complement rather than replace established tools. They add semantic understanding that rule-based parsers cannot provide, but introduce latency that experienced users may find disruptive.
 
-## Troubleshooting Common Issues
+Troubleshooting Common Issues
 
-**High latency**: Cache descriptions for static DOM elements using a WeakMap:
+High latency: Cache descriptions for static DOM elements using a WeakMap:
 
 ```javascript
 const cache = new WeakMap();
@@ -401,9 +401,9 @@ async function describeCached(el) {
 }
 ```
 
-**Descriptions not updating on dynamic pages**: Use MutationObserver to invalidate cache entries for changed elements.
+Descriptions not updating on dynamic pages: Use MutationObserver to invalidate cache entries for changed elements.
 
-**TTS speaking over itself**: Always cancel the current utterance before speaking the next:
+TTS speaking over itself: Always cancel the current utterance before speaking the next:
 
 ```javascript
 function speak(text) { speechSynthesis.cancel(); speechSynthesis.speak(new SpeechSynthesisUtterance(text)); }

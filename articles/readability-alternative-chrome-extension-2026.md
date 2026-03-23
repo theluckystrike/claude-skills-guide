@@ -18,18 +18,18 @@ When you need to quickly assess and improve content readability while browsing, 
 
 This guide evaluates the best readability-focused Chrome extensions available in 2026, with a focus on tools that go beyond basic text extraction to provide meaningful readability analysis and content improvement features.
 
-## What Makes a Good Readability Extension
+What Makes a Good Readability Extension
 
 Before diving into alternatives, let's establish what developers should look for:
 
-- **Content extraction**: Stripping away ads, navigation, and clutter to present clean text
-- **Readability scoring**: Analyzing text complexity using established metrics like Flesch-Kincaid
-- **Customization options**: Adjustable fonts, themes, and reading preferences
-- **Developer features**: Keyboard shortcuts, export options, and minimal resource usage
+- Content extraction: Stripping away ads, navigation, and clutter to present clean text
+- Readability scoring: Analyzing text complexity using established metrics like Flesch-Kincaid
+- Customization options: Adjustable fonts, themes, and reading preferences
+- Developer features: Keyboard shortcuts, export options, and minimal resource usage
 
-## Top Readability Alternatives in 2026
+Top Readability Alternatives in 2026
 
-### 1. Mercury Reader (Free + Premium)
+1. Mercury Reader (Free + Premium)
 
 Mercury Reader has become the go-to choice for developers who want a clean reading experience without bloat. The extension strips away everything except the main content, presenting it in a customizable reader view.
 
@@ -58,7 +58,7 @@ const extractMainContent = (document) => {
 
 The free version covers most use cases. Premium ($3/month) adds unlimited saved articles and cross-device sync.
 
-### 2. Textise Dot iitty (Free)
+2. Textise Dot iitty (Free)
 
 Textise focuses on pure text extraction with zero distractions. It's particularly popular among developers who appreciate the minimal interface and keyboard-first approach.
 
@@ -83,7 +83,7 @@ const sentenceCount = plainText.split(/[.!?]+/).length;
 const avgWordsPerSentence = words.length / sentenceCount;
 ```
 
-### 3. Clearly (By Evernote) (Free)
+3. Clearly (By Evernote) (Free)
 
 Clearly remains a solid choice for those already in the Evernote ecosystem. It excels at saving articles to your Evernote account with one click, making it ideal for research workflows.
 
@@ -96,11 +96,11 @@ Features include:
 
 However, the extension requires an Evernote account, which may not appeal to developers preferring standalone tools.
 
-### 4. Reader Mode (Built into Chrome)
+4. Reader Mode (Built into Chrome)
 
 Modern Chrome versions include native reader mode functionality. This is often overlooked but provides solid basic functionality without installing extensions.
 
-**Activation**: Click the icon in the address bar when available, or use `Ctrl+Shift+R` (Cmd+Shift+R on Mac)
+Activation: Click the icon in the address bar when available, or use `Ctrl+Shift+R` (Cmd+Shift+R on Mac)
 
 Benefits:
 
@@ -113,7 +113,7 @@ Limitations:
 - Not available on all pages
 - Less customizable than dedicated extensions
 
-### 5. Zettlr (Desktop + Browser Extension)
+5. Zettlr (Desktop + Browser Extension)
 
 For developers who work with Markdown and academic content, Zettlr provides a unique approach. While primarily a desktop Markdown editor, its browser extension enables capturing web content directly into Markdown format.
 
@@ -122,14 +122,14 @@ For developers who work with Markdown and academic content, Zettlr provides a un
 // developers building content pipelines:
 
 // What you get when capturing from Zettlr:
-## Article Title
+Article Title
 
-**Source:** https://example.com/article
-**Captured:** 2026-03-15
+Source: https://example.com/article
+Captured: 2026-03-15
 
 Content here gets converted to clean Markdown...
 
-### Code blocks preserve formatting
+Code blocks preserve formatting
 
 ```javascript
 console.log('preserved');
@@ -138,7 +138,7 @@ console.log('preserved');
 
 This makes Zettlr ideal if your workflow involves converting web content into documentation or technical writing.
 
-### 6. LeanREAD
+6. LeanREAD
 
 A newer entrant focused on developer ergonomics, LeanREAD provides Vim-style keyboard navigation for reading mode.
 
@@ -170,20 +170,20 @@ Configuration is stored in a local JSON file:
 
 LeanREAD is particularly appealing for developers who already use Vim-style keybindings in their editor and terminal.
 
-## Open-Source and Self-Hosted Alternatives
+Open-Source and Self-Hosted Alternatives
 
 For developers who value transparency and data ownership, several open-source options exist:
 
-**Wallabag** functions as a self-hosted reading list. Save articles to your own instance, then read them in a clean, customizable format:
+Wallabag functions as a self-hosted reading list. Save articles to your own instance, then read them in a clean, customizable format:
 
 ```bash
-# Self-host Wallabag with Docker
+Self-host Wallabag with Docker
 docker run -d -p 8080:80 wallabag/wallabag
 ```
 
-**Shaarli** serves as a personal bookmarking service with clean reading. Combine it with a reading mode bookmarklet for a completely self-controlled workflow.
+Shaarli serves as a personal bookmarking service with clean reading. Combine it with a reading mode bookmarklet for a completely self-controlled workflow.
 
-**Mercury Parser** provides the underlying extraction engine that powered the original Mercury Reader, available as an npm package:
+Mercury Parser provides the underlying extraction engine that powered the original Mercury Reader, available as an npm package:
 
 ```javascript
 import Mercury from '@postlight/mercury-parser';
@@ -201,17 +201,17 @@ async function extractArticle(url) {
 
 This open-source solution gives developers full control over the reading experience, enabling custom frontends and reader implementations.
 
-## Privacy Considerations
+Privacy Considerations
 
 When choosing a reading mode extension, consider your threat model:
 
-**Server-side processing** means some alternatives analyze your reading habits on external servers. If you're reading confidential documentation, choose extensions that process everything locally.
+Server-side processing means some alternatives analyze your reading habits on external servers. If you're reading confidential documentation, choose extensions that process everything locally.
 
-**Browser data access** varies by extension. Some require access to all websites, while others work only on specific domains. Review permissions before installation.
+Browser data access varies by extension. Some require access to all websites, while others work only on specific domains. Review permissions before installation.
 
-**Open-source options** allow you to verify that no data leaves your machine. Self-hosting provides the strongest privacy guarantees.
+Open-source options allow you to verify that no data leaves your machine. Self-hosting provides the strongest privacy guarantees.
 
-## Making the Right Choice
+Making the Right Choice
 
 Consider your specific needs:
 
@@ -223,7 +223,7 @@ Consider your specific needs:
 | Minimal resource usage | Chrome built-in Reader Mode |
 | Markdown workflow | Zettlr |
 
-## Implementation Tips for Developers
+Implementation Tips for Developers
 
 If you're building tools that work with readability extensions, here are some practical patterns:
 
@@ -264,19 +264,19 @@ const analyzeReadability = (text) => {
 };
 ```
 
-## Conclusion
+Conclusion
 
-The Chrome extension ecosystem in 2026 offers robust alternatives to the original Readability extension. For developers and power users, Mercury Reader and Textise Dot iitty stand out as the most capable options—one for superior reading experience, the other for text extraction workflows.
+The Chrome extension ecosystem in 2026 offers solid alternatives to the original Readability extension. For developers and power users, Mercury Reader and Textise Dot iitty stand out as the most capable options, one for superior reading experience, the other for text extraction workflows.
 
 The built-in Chrome reader mode provides a no-install alternative for basic needs, while Zettlr serves users whose workflow centers on Markdown documentation.
 
 Evaluate based on your specific use case: quick reading, content extraction, research organization, or integration with existing tooling. Each option here delivers solid performance without requiring paid subscriptions for core functionality.
 
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Code Comparisons Hub](/comparisons-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

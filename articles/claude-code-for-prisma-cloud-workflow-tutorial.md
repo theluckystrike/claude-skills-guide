@@ -14,13 +14,13 @@ score: 7
 
 
 {% raw %}
-# Claude Code for Prisma Cloud Workflow Tutorial
+Claude Code for Prisma Cloud Workflow Tutorial
 
-Security teams today face the challenge of managing increasingly complex cloud environments while maintaining rapid development cycles. Prisma Cloud provides comprehensive cloud security posture management, but integrating it smoothly into your development workflow requires automation and intelligent tooling. This tutorial shows you how to use Claude Code to streamline your Prisma Cloud workflows, making security checks seamless and automated.
+Security teams today face the challenge of managing increasingly complex cloud environments while maintaining rapid development cycles. Prisma Cloud provides comprehensive cloud security posture management, but integrating it smoothly into your development workflow requires automation and intelligent tooling. This tutorial shows you how to use Claude Code to streamline your Prisma Cloud workflows, making security checks smooth and automated.
 
-## Understanding the Prisma Cloud and Claude Code Integration
+Understanding the Prisma Cloud and Claude Code Integration
 
-Prisma Cloud offers robust APIs and command-line tools that allow you to programmatic access security findings, compliance status, and configuration data. By combining these capabilities with Claude Code's natural language processing and task automation, you can create powerful workflows that reduce manual effort and improve security outcomes.
+Prisma Cloud offers solid APIs and command-line tools that allow you to programmatic access security findings, compliance status, and configuration data. By combining these capabilities with Claude Code's natural language processing and task automation, you can create powerful workflows that reduce manual effort and improve security outcomes.
 
 Claude Code acts as an intelligent intermediary between you and the Prisma Cloud console, translating natural language requests into precise API calls and presenting results in an actionable format. This integration is particularly valuable for teams without dedicated security engineers or those looking to democratize security responsibilities across the development team.
 
@@ -31,12 +31,12 @@ Before diving into the implementation, ensure you have the following prerequisit
 - Basic familiarity with REST APIs and JSON data structures
 - Access credentials (Access Key and Secret Key) from your Prisma Cloud console
 
-## Setting Up Your Prisma Cloud API Credentials
+Setting Up Your Prisma Cloud API Credentials
 
 The first step involves configuring authentication with your Prisma Cloud environment. Store your credentials securely and avoid hardcoding them in scripts or configuration files.
 
 ```bash
-# Configure Prisma Cloud CLI credentials
+Configure Prisma Cloud CLI credentials
 prisma-cloud compute --api-url https://api.prisma.cloud.example.com \
   --access-key $PC_ACCESS_KEY \
   --secret-key $PC_SECRET_KEY
@@ -59,14 +59,14 @@ You are a Prisma Cloud workflow assistant. When users ask about security finding
 4. Provide remediation guidance where possible
 ```
 
-## Automating Security Scans with Claude Code
+Automating Security Scans with Claude Code
 
 One of the most valuable use cases for this integration is automating security scans during your development workflow. You can create a Claude skill that initiates scans and parses results without leaving your terminal.
 
 Here's a practical example of a scan automation workflow:
 
 ```bash
-# Trigger a Prisma Cloud compute scan for a specific container
+Trigger a Prisma Cloud compute scan for a specific container
 prisma-cloud compute scan images --registry docker.io --image-name myapp:latest
 ```
 
@@ -88,12 +88,12 @@ When asked to scan or check security status:
 
 This approach allows you to initiate scans using natural language. Simply tell Claude Code what you need, and it handles the underlying CLI commands and presents results in a digestible format.
 
-## Building Vulnerability Management Workflows
+Building Vulnerability Management Workflows
 
 Beyond basic scanning, you can build comprehensive vulnerability management workflows that track issues across your cloud environment. The following example demonstrates how to query and prioritize vulnerabilities:
 
 ```bash
-# Get vulnerabilities filtered by severity and resource
+Get vulnerabilities filtered by severity and resource
 curl -X GET "https://api.prisma.cloud.example.com/v1/vulnerabilities" \
   -H "Authorization: Bearer $PC_TOKEN" \
   -H "Content-Type: application/json" \
@@ -123,12 +123,12 @@ For vulnerability management tasks:
 5. Generate reports suitable for different audiences (dev teams, leadership)
 ```
 
-## Implementing Compliance Checks
+Implementing Compliance Checks
 
 Compliance verification represents another critical workflow you can automate. Prisma Cloud supports numerous compliance frameworks including SOC 2, PCI-DSS, HIPAA, and CIS benchmarks. Claude Code can help you continuously monitor compliance status:
 
 ```bash
-# Check compliance status for specific standards
+Check compliance status for specific standards
 prisma-cloud compute compliance --framework "CIS,DISA,PCI" --host all
 ```
 
@@ -148,12 +148,12 @@ For compliance inquiries:
 5. Provide actionable remediation steps for failed controls
 ```
 
-## Creating Custom Alert Workflows
+Creating Custom Alert Workflows
 
 Combine these capabilities into custom alert workflows that notify your team of critical security events. Use Claude Code to parse and contextualize alerts before notification:
 
 ```bash
-# Example: Get recent critical alerts
+Get recent critical alerts
 prisma-cloud compute alerts --severity critical --hours 24
 ```
 
@@ -164,28 +164,28 @@ Create an alerting skill that can:
 3. Correlate events to identify potential attack chains
 4. Format notifications for different channels (Slack, email, PagerDuty)
 
-## Actionable Advice for Implementation
+Actionable Advice for Implementation
 
 Start small when implementing Claude Code with Prisma Cloud. Focus on one specific use case, such as simplifying scan results or providing quick compliance status checks. Once you've validated that workflow, expand to additional capabilities.
 
 Consider the following best practices:
 
-- **Version control your skills**: Store skill definitions in Git alongside your infrastructure code to track changes and enable collaboration
-- **Implement proper error handling**: Prisma Cloud API calls can fail due to network issues or authentication problems. Build retry logic and clear error messages into your skills
-- **Cache when appropriate**: Some queries return stable data that doesn't need real-time updates. Implement caching to reduce API calls and improve response times
-- **Test thoroughly**: Before deploying skills to your team, test them with non-production environments to ensure they handle edge cases correctly
+- Version control your skills: Store skill definitions in Git alongside your infrastructure code to track changes and enable collaboration
+- Implement proper error handling: Prisma Cloud API calls can fail due to network issues or authentication problems. Build retry logic and clear error messages into your skills
+- Cache when appropriate: Some queries return stable data that doesn't need real-time updates. Implement caching to reduce API calls and improve response times
+- Test thoroughly: Before deploying skills to your team, test them with non-production environments to ensure they handle edge cases correctly
 
-## Conclusion
+Conclusion
 
 Integrating Claude Code with Prisma Cloud transforms how your team interacts with cloud security. By automating routine tasks, providing natural language access to security data, and enabling intelligent workflow creation, you can shift security left without adding burden to your development teams. Start with the examples in this tutorial, customize them to your specific environment, and progressively build more sophisticated automation as your confidence grows.
 
 The combination of Claude Code's flexibility and Prisma Cloud's comprehensive security capabilities creates a powerful platform for modern cloud security operations. Embrace these tools to build a security-aware culture that scales with your organization.
 {% endraw %}
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

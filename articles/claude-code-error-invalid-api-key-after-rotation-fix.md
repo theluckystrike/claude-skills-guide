@@ -15,13 +15,13 @@ tags: [claude-code, claude-skills]
 
 Rotating API keys is a security best practice, but it often breaks your Claude Code workflow when the old credentials remain cached or stored in multiple locations. This guide provides practical solutions for resolving the invalid API key error after rotation, covering environment variables, configuration files, and skill-specific credentials.
 
-## Why API Key Rotation Breaks Claude Code
+Why API Key Rotation Breaks Claude Code
 
 When you rotate your Anthropic API key in the console, any application storing the old key will continue using invalid credentials until you update all references. Claude Code reads API keys from multiple sources, and if any location still contains the old key, authentication will fail. Understanding these sources helps you systematically track down every place that needs updating.
 
 Common scenarios causing the error after rotation include environment variables pointing to expired keys, configuration files with cached credentials, MCP servers holding stale authentication, and skills that store API keys directly in their configuration.
 
-## Verify Your API Key First
+Verify Your API Key First
 
 Before troubleshooting configuration, confirm your API key works directly with a curl request:
 
@@ -33,9 +33,9 @@ curl -s https://api.anthropic.com/v1/messages \
   -d '{"model":"claude-3-haiku-20240307","max_tokens":10,"messages":[{"role":"user","content":"hi"}]}'
 ```
 
-A successful response confirms the key is valid. If you receive an error, obtain a fresh key from your Anthropic console. Also watch for whitespace or formatting issues — extra spaces before or after your API key, or accidentally copying surrounding text from the dashboard, causes validation failures.
+A successful response confirms the key is valid. If you receive an error, obtain a fresh key from your Anthropic console. Also watch for whitespace or formatting issues. extra spaces before or after your API key, or accidentally copying surrounding text from the dashboard, causes validation failures.
 
-## Identifying the Error
+Identifying the Error
 
 After rotating your API key, you may encounter error messages like:
 
@@ -47,14 +47,14 @@ Authentication failed: API key not recognized
 
 The error typically appears when starting Claude Code, initializing a skill that requires API access, or running any task that calls the Anthropic API. If you recently rotated your key and now see these errors, the solution involves updating credential storage across your system.
 
-## Solution 1: Update Environment Variables
+Solution 1: Update Environment Variables
 
 The first and most common place to check is your shell environment. Many developers store API keys in `.bashrc`, `.zshrc`, or `.env` files.
 
 Check your current environment variables:
 
 ```bash
-# View API-related environment variables
+View API-related environment variables
 env | grep -i anthropic
 env | grep -i api
 ```
@@ -62,10 +62,10 @@ env | grep -i api
 If you find the old key still set, update it:
 
 ```bash
-# For bash/zsh
+For bash/zsh
 export ANTHROPIC_API_KEY="sk-ant-your-new-key-here"
 
-# Add to your shell config for persistence
+Add to your shell config for persistence
 echo 'export ANTHROPIC_API_KEY="sk-ant-your-new-key-here"' >> ~/.zshrc
 source ~/.zshrc
 ```
@@ -73,7 +73,7 @@ source ~/.zshrc
 For projects using `.env` files, open your project's `.env` file and update the key:
 
 ```bash
-# .env file
+.env file
 ANTHROPIC_API_KEY=sk-ant-your-new-key-here
 ```
 
@@ -83,12 +83,12 @@ After updating, verify the change took effect:
 echo $ANTHROPIC_API_KEY
 ```
 
-## Solution 2: Update Claude Code Configuration File
+Solution 2: Update Claude Code Configuration File
 
 Claude Code stores authentication settings in its configuration file. The location varies by operating system:
 
-- **macOS/Linux**: `~/.claude/settings.json`
-- **Windows**: `%APPDATA%\Claude\settings.json`
+- macOS/Linux: `~/.claude/settings.json`
+- Windows: `%APPDATA%\Claude\settings.json`
 
 Open this file and locate the authentication section:
 
@@ -112,7 +112,7 @@ Replace the old key with your new API key. If the entire section is missing, you
 
 Some users prefer removing this section entirely and relying on environment variables, which eliminates synchronization issues between different credential sources.
 
-## Solution 3: Update MCP Server Credentials
+Solution 3: Update MCP Server Credentials
 
 If you use MCP (Model Context Protocol) servers that connect to external APIs, they may store their own credentials. Common MCP servers requiring API keys include brave-search, tavily, and custom servers you may have configured.
 
@@ -140,7 +140,7 @@ Update any stored API keys in these configurations:
 
 Restart Claude Code after updating MCP credentials to ensure the new keys load correctly.
 
-## Solution 4: Update Skill-Specific Credentials
+Solution 4: Update Skill-Specific Credentials
 
 Many Claude skills include their own API key configuration. When rotating keys, you must update each skill that uses the Anthropic API or other services.
 
@@ -156,68 +156,68 @@ Check each skill's configuration or documentation for environment variable requi
 For skills storing credentials in custom configuration files, locate the file and update the API key:
 
 ```bash
-# Find configuration files in your skills directory
+Find configuration files in your skills directory
 find ~/.claude/skills -name "*.json" -o -name ".env" | xargs grep -l "sk-ant"
 ```
 
 Update any matches with your new API key.
 
-## Solution 5: Clear Cached Credentials
+Solution 5: Clear Cached Credentials
 
 Claude Code may cache credentials in memory during extended sessions. If updating credentials doesn't resolve the error immediately, restart Claude Code entirely to clear cached authentication state.
 
 Additionally, some systems maintain credential caches at the OS level. On macOS, you can reset keychain entries if you stored API keys there:
 
 ```bash
-# macOS keychain (if applicable)
+macOS keychain (if applicable)
 security find-internet-password -s "anthropic.com"
 security delete-internet-password -s "anthropic.com"
 ```
 
-## Preventing Future Rotation Issues
+Preventing Future Rotation Issues
 
 To avoid this problem in the future, consider these practices:
 
-1. **Use environment variables exclusively** rather than storing keys in multiple locations
-2. **Document your API key locations** in a secure note or password manager
-3. **Use a credential manager** like 1Password or HashiCorp Vault to centralize API key storage
-4. **Implement a rotation script** that updates all credential locations simultaneously
+1. Use environment variables exclusively rather than storing keys in multiple locations
+2. Document your API key locations in a secure note or password manager
+3. Use a credential manager like 1Password or HashiCorp Vault to centralize API key storage
+4. Implement a rotation script that updates all credential locations simultaneously
 
 Here's an example rotation script:
 
 ```bash
 #!/bin/bash
-# rotate-api-key.sh
+rotate-api-key.sh
 
 NEW_KEY=$1
 
-# Update environment variable
+Update environment variable
 export ANTHROPIC_API_KEY="$NEW_KEY"
 
-# Update Claude config
+Update Claude config
 sed -i '' "s/sk-ant-.*/sk-ant-.../" ~/.claude/settings.json
 
-# Update project .env files
+Update project .env files
 find . -name ".env" -exec sed -i '' "s/ANTHROPIC_API_KEY=.*/ANTHROPIC_API_KEY=$NEW_KEY/" {} \;
 
 echo "API key rotated across all locations"
 ```
 
-## Solution 6: Fix Permission and Network Issues
+Solution 6: Fix Permission and Network Issues
 
 Claude Code needs read access to your configuration files. Check file permissions:
 
 ```bash
 ls -la ~/.claude/settings.json
-# Fix restrictive permissions
+Fix restrictive permissions
 chmod 600 ~/.claude/settings.json
 ```
 
 Some organizations route API requests through proxies that interfere with authentication. If you're behind a corporate network, verify your proxy settings allow connections to `api.anthropic.com`. You may need to configure `HTTPS_PROXY` or `NO_PROXY` environment variables.
 
-Claude Code checks for your API key in this order: `ANTHROPIC_API_KEY` environment variable, then `CLAUDE_API_KEY` environment variable, then the configuration file at `~/.claude/settings.json`. Multiple Claude installations or conflicting configuration files across directories can load stale credentials — check each location systematically.
+Claude Code checks for your API key in this order: `ANTHROPIC_API_KEY` environment variable, then `CLAUDE_API_KEY` environment variable, then the configuration file at `~/.claude/settings.json`. Multiple Claude installations or conflicting configuration files across directories can load stale credentials. check each location systematically.
 
-## Verification Steps
+Verification Steps
 
 After applying fixes, verify that Claude Code recognizes your new API key:
 
@@ -226,13 +226,13 @@ After applying fixes, verify that Claude Code recognizes your new API key:
 3. Check for any remaining authentication errors
 4. Confirm environment variables display the new key
 
-If errors persist, systematically check each credential location again—it's easy to miss a configuration file storing the old key.
+If errors persist, systematically check each credential location again, it's easy to miss a configuration file storing the old key.
 
 
-## Related Reading
+Related Reading
 
-- [How Do I Set Environment Variables for a Claude Skill?](/how-do-i-set-environment-variables-for-a-claude-skill/) — See also
-- [Claude Code Secret Scanning: Prevent Credential Leaks Guide](/claude-code-secret-scanning-prevent-credential-leaks-guide/) — See also
-- [Claude Skills Troubleshooting Hub](/troubleshooting-hub/) — See also
+- [How Do I Set Environment Variables for a Claude Skill?](/how-do-i-set-environment-variables-for-a-claude-skill/). See also
+- [Claude Code Secret Scanning: Prevent Credential Leaks Guide](/claude-code-secret-scanning-prevent-credential-leaks-guide/). See also
+- [Claude Skills Troubleshooting Hub](/troubleshooting-hub/). See also
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

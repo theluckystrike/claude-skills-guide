@@ -14,13 +14,13 @@ tags: [claude-code, claude-skills]
 
 
 
-# Claude Code GitBook Documentation Workflow
+Claude Code GitBook Documentation Workflow
 
 GitBook remains a popular choice for technical documentation, but manually maintaining content across multiple pages, updating screenshots, and keeping examples in sync with your codebase quickly becomes overwhelming. Claude Code transforms this workflow by automating content generation, formatting, and even the publishing pipeline itself.
 
 This guide shows you how to build an efficient GitBook documentation workflow using Claude skills, complete with practical code examples you can adapt for your own projects.
 
-## What You Need
+What You Need
 
 Before building your workflow, ensure you have the following in place:
 
@@ -32,22 +32,22 @@ Before building your workflow, ensure you have the following in place:
 
 You can install skills using Claude's built-in skill management commands, or pull them from the community repository when needed.
 
-## Setting Up Your Documentation Structure
+Setting Up Your Documentation Structure
 
 A well-organized GitBook starts with a clear directory structure. Create a layout that separates different types of content:
 
 ```
 docs/
-├── getting-started/
-│   ├── installation.md
-│   └── quick-start.md
-├── guides/
-│   ├── basic-usage.md
-│   └── advanced-features.md
-├── api-reference/
-│   └── index.md
-└── _assets/
-    └── images/
+ getting-started/
+    installation.md
+    quick-start.md
+ guides/
+    basic-usage.md
+    advanced-features.md
+ api-reference/
+    index.md
+ _assets/
+     images/
 ```
 
 Claude Code can generate this structure automatically based on your project's existing code. Use the file operations tools to create directories and scaffold initial pages.
@@ -58,9 +58,9 @@ Beyond the directory layout, you also need a `SUMMARY.md` file that GitBook uses
 Scan the docs/ directory and regenerate SUMMARY.md with all pages listed in logical reading order. Group API reference pages under their own heading. Add any new files discovered in docs/guides/ that are not yet in SUMMARY.md.
 ```
 
-This eliminates a common pain point: forgetting to update SUMMARY.md after adding a new file and then wondering why the GitBook navigation is broken.
+This eliminates a common problem: forgetting to update SUMMARY.md after adding a new file and then wondering why the GitBook navigation is broken.
 
-## Automating Content Generation
+Automating Content Generation
 
 The most time-consuming part of documentation is keeping it synchronized with your codebase. When you add a new function, update an API endpoint, or change a configuration option, the documentation must reflect those changes. Claude Code handles this through its code analysis capabilities.
 
@@ -89,11 +89,11 @@ Analyze lib/auth.js and generate API documentation in Markdown format suitable f
 Claude produces structured output that you can drop directly into your GitBook's API reference section. The resulting documentation might look like:
 
 ```markdown
-## authenticateUser(credentials)
+authenticateUser(credentials)
 
 Validates user credentials against the database and returns a signed JWT token.
 
-**Parameters**
+Parameters
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
@@ -101,15 +101,15 @@ Validates user credentials against the database and returns a signed JWT token.
 | credentials.username | string | The user's account username |
 | credentials.password | string | The plaintext password to verify |
 
-**Returns**
+Returns
 
-`Promise<string>` — A signed JWT token valid for 24 hours.
+`Promise<string>`. A signed JWT token valid for 24 hours.
 
-**Throws**
+Throws
 
-- `AuthError` — Thrown when the username does not exist or the password hash does not match.
+- `AuthError`. Thrown when the username does not exist or the password hash does not match.
 
-**Example**
+Example
 
 ```js
 const token = await authenticateUser({ username: 'alice', password: 'hunter2' });
@@ -117,14 +117,14 @@ console.log(token); // eyJhbGciOiJIUzI1NiIs...
 ```
 ```
 
-This level of detail — parameter tables, return type, throw conditions, working example — would take five to ten minutes to write by hand for a single function. Multiply that across a large codebase and the time savings become significant.
+This level of detail. parameter tables, return type, throw conditions, working example. would take five to ten minutes to write by hand for a single function. Multiply that across a large codebase and the time savings become significant.
 
-## Converting Existing Documentation
+Converting Existing Documentation
 
 If you have existing documentation in other formats, the `docx` skill converts Word documents to Markdown that works with GitBook. This is particularly useful for teams migrating from Confluence, Google Docs, or legacy documentation systems.
 
 ```bash
-# Convert a Word document to GitBook-compatible Markdown
+Convert a Word document to GitBook-compatible Markdown
 claude --print "/docx--convert input.docx --output docs/guides/"
 ```
 
@@ -142,9 +142,9 @@ Review docs/guides/converted-guide.md for:
 Output a list of issues with line numbers, then apply fixes.
 ```
 
-This two-pass approach — convert then audit — produces clean Markdown with far less manual review than inspecting the raw output yourself.
+This two-pass approach. convert then audit. produces clean Markdown with far less manual review than inspecting the raw output yourself.
 
-## Generating Multi-Format Outputs
+Generating Multi-Format Outputs
 
 GitBook publishes to the web by default, but your users may need offline access or printable versions. The `pdf` skill generates professional PDF documentation directly from your GitBook content:
 
@@ -167,22 +167,22 @@ Claude can generate each of these from the same source Markdown. Define a build 
 
 ```bash
 #!/bin/bash
-# build-docs.sh
+build-docs.sh
 claude --print "/pdf --source docs/getting-started/ --output build/quick-start.pdf"
 claude --print "/pdf --source docs/ --output build/full-manual.pdf"
 npx gitbook build docs/ build/web/
 echo "All documentation formats built successfully"
 ```
 
-## Implementing a Review Workflow
+Implementing a Review Workflow
 
 Documentation improves through iteration, and Claude Code helps maintain quality through automated review checks. Set up a pre-commit hook that validates your documentation:
 
 ```bash
 #!/bin/bash
-# .git/hooks/pre-commit
+.git/hooks/pre-commit
 
-# Run documentation validation
+Run documentation validation
 claude --print "Review all Markdown files staged for commit. Check for:
 - Broken internal links (links to non-existent pages)
 - Code blocks missing language identifiers
@@ -190,7 +190,7 @@ claude --print "Review all Markdown files staged for commit. Check for:
 - Headings that skip levels
 Report any issues found. If all checks pass, output 'DOCS OK'."
 
-# Capture exit status and abort commit if issues found
+Capture exit status and abort commit if issues found
 STATUS=$?
 if [ $STATUS -ne 0 ]; then
   echo "Documentation validation failed. Fix issues before committing."
@@ -200,10 +200,10 @@ fi
 
 This catches common issues before they reach your published GitBook: broken internal links, syntax errors in code examples, and missing metadata fields.
 
-You can also set up a weekly review cron job that goes deeper — checking for outdated content, functions documented but no longer exported, and examples that reference deprecated APIs. This longer analysis is too slow for a pre-commit hook but valuable as a scheduled task:
+You can also set up a weekly review cron job that goes deeper. checking for outdated content, functions documented but no longer exported, and examples that reference deprecated APIs. This longer analysis is too slow for a pre-commit hook but valuable as a scheduled task:
 
 ```bash
-# Run as a scheduled GitHub Action or cron job
+Run as a scheduled GitHub Action or cron job
 claude --print "Audit the docs/ directory against the current codebase in src/.
 Identify:
 1. Documented functions that no longer exist in the source
@@ -214,24 +214,24 @@ Identify:
 Output a prioritized list of documentation debt."
 ```
 
-## Maintaining Consistency Across Pages
+Maintaining Consistency Across Pages
 
 One challenge with multi-page documentation is maintaining consistent formatting, terminology, and structure. Create a style guide document that Claude references when editing or generating content:
 
 ```markdown
-# Documentation Style Guide
+Documentation Style Guide
 
-## Terminology
+Terminology
 - Always use "Claude Code" (not "Claude CLI" or "Anthropic CLI")
 - Refer to skills as "skills" (lowercase, plural)
 - Use "you" for direct reader address
 
-## Code Blocks
+Code Blocks
 - Include language identifiers for syntax highlighting
 - Show complete, runnable examples
 - Add comments explaining non-obvious logic
 
-## Headings
+Headings
 - Use sentence case for all headings
 - H1 only for page titles
 - Maximum heading depth: H3
@@ -245,9 +245,9 @@ Storing the style guide in `docs/_style-guide.md` (with a leading underscore so 
 Following the conventions in docs/_style-guide.md, generate a new guide for...
 ```
 
-Consistency failures — "API key" on one page, "api-key" on another, "API_KEY" on a third — erode reader trust over time. Automated style enforcement prevents this accumulation without requiring a human editor to catch every instance.
+Consistency failures. "API key" on one page, "api-key" on another, "API_KEY" on a third. erode reader trust over time. Automated style enforcement prevents this accumulation without requiring a human editor to catch every instance.
 
-### Batch Consistency Fixes
+Batch Consistency Fixes
 
 When you first adopt a style guide in an existing project, you likely have years of inconsistency to clean up. Rather than fixing pages one by one, batch the work:
 
@@ -259,17 +259,17 @@ Then apply the fixes across all affected files.
 
 Claude can scan hundreds of pages in a single session, apply uniform fixes, and report exactly what changed. Run this on a dedicated branch so you can review the diff before merging.
 
-## Publishing with CI/CD
+Publishing with CI/CD
 
 Automate your GitBook publishing using a CI pipeline that triggers on documentation changes:
 
 ```yaml
-# .github/workflows/docs.yml
+.github/workflows/docs.yml
 name: Publish Documentation
 on:
   push:
     paths:
-      - 'docs/**'
+      - 'docs/'
       - 'book.json'
 
 jobs:
@@ -310,20 +310,20 @@ Extend this pipeline to also generate and archive the PDF version of your docume
 
 This ensures every versioned release ships with a downloadable PDF snapshot of the documentation at that exact point, which is especially useful for enterprise customers who need offline references tied to specific product versions.
 
-## Handling Versioned Documentation
+Handling Versioned Documentation
 
 If your project has multiple supported versions, documentation becomes significantly harder to maintain. Changes to v2 docs must not appear in v1 docs, and vice versa. Structure your repository to support this from the start:
 
 ```
 docs/
-├── v1/
-│   ├── getting-started/
-│   └── api-reference/
-├── v2/
-│   ├── getting-started/
-│   └── api-reference/
-└── _shared/
-    └── _style-guide.md
+ v1/
+    getting-started/
+    api-reference/
+ v2/
+    getting-started/
+    api-reference/
+ _shared/
+     _style-guide.md
 ```
 
 When asking Claude to generate or update documentation, always specify the version context:
@@ -334,23 +334,23 @@ introduced in v2.3. Do not modify anything in docs/v1/.
 Follow docs/_shared/_style-guide.md for formatting.
 ```
 
-Explicit version scoping in your prompts prevents Claude from accidentally updating the wrong version's docs — a subtle error that is easy to miss in code review.
+Explicit version scoping in your prompts prevents Claude from accidentally updating the wrong version's docs. a subtle error that is easy to miss in code review.
 
-## Wrapping Up
+Wrapping Up
 
 A Claude Code GitBook documentation workflow reduces manual effort while improving consistency and accuracy. By automating content generation from code, converting existing documents, implementing automated validation, and tying everything together with CI/CD, you spend less time on maintenance and more time on creating valuable documentation.
 
-The key is starting simple: generate your first API docs automatically, validate them with a pre-commit hook, and gradually add more automation as your needs grow. Each piece of automation compounds — once your style guide is in place, every new page benefits from it automatically. Once your CI pipeline is publishing PDFs, every release ships better documentation without any extra effort.
+The key is starting simple: generate your first API docs automatically, validate them with a pre-commit hook, and gradually add more automation as your needs grow. Each piece of automation compounds. once your style guide is in place, every new page benefits from it automatically. Once your CI pipeline is publishing PDFs, every release ships better documentation without any extra effort.
 
 Documentation debt compounds in the same way that technical debt does. Building automation early means you pay down that debt continuously rather than facing a massive catch-up effort before each release.
 
 
-## Related Reading
+Related Reading
 
 - [What Is the Best Claude Skill for Generating Documentation?](/what-is-the-best-claude-skill-for-generating-documentation/)
 - [Claude Code Guides Hub](/guides-hub/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [How to Write Effective CLAUDE.md for Your Project](/how-to-write-effective-claude-md-for-your-project/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

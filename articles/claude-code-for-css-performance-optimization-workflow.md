@@ -3,7 +3,7 @@
 
 layout: default
 title: "Claude Code for CSS Performance Optimization Workflow"
-description: "Learn how to leverage Claude Code for efficient CSS performance optimization. This guide covers automated analysis, best practices, and practical."
+description: "Learn how to use Claude Code for efficient CSS performance optimization. This guide covers automated analysis, best practices, and practical."
 date: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-css-performance-optimization-workflow/
@@ -16,20 +16,20 @@ score: 7
 
 CSS performance optimization remains one of the most impactful areas for improving website speed and user experience. While JavaScript performance often receives more attention, CSS affects critical rendering path metrics and can significantly impact First Contentful Paint (FCP) and Largest Contentful Paint (LCP). This guide demonstrates how Claude Code transforms CSS optimization from a manual, tedious process into an automated, systematic workflow.
 
-## Understanding the CSS Performance Challenge
+Understanding the CSS Performance Challenge
 
 Modern web applications often accumulate CSS that becomes bloated over time. Teams add styles for new features, inherit styles from frameworks, and rarely remove unused code. This accumulation creates several performance problems: larger file sizes increase download time, more complex selectors slow down browser matching, and render-blocking CSS delays visual feedback to users.
 
 Claude Code addresses these challenges through intelligent code analysis, pattern recognition, and automated optimization suggestions. The workflow combines proactive prevention with reactive optimization, creating a comprehensive approach to maintaining performant CSS.
 
-## Setting Up Claude Code for CSS Analysis
+Setting Up Claude Code for CSS Analysis
 
 Before diving into optimization, configure Claude Code to analyze your CSS effectively. The key is providing context about your project structure and performance goals.
 
 Start by creating a project-specific instruction file that defines your CSS architecture:
 
 ```bash
-# Create .claude/settings.local.md for CSS context
+Create .claude/settings.local.md for CSS context
 echo "# CSS Architecture
 - Framework: Tailwind CSS with custom components
 - Output: Single minified bundle for production
@@ -40,11 +40,11 @@ echo "# CSS Architecture
 
 This context helps Claude understand your constraints and provide relevant suggestions. When you ask for CSS analysis, Claude considers these parameters and tailors recommendations accordingly.
 
-## Automated CSS Audit Workflow
+Automated CSS Audit Workflow
 
 The foundation of efficient CSS optimization is regular auditing. Claude Code can perform comprehensive audits that would take manual effort hours to complete.
 
-### Running a Full CSS Analysis
+Running a Full CSS Analysis
 
 Ask Claude to analyze your CSS with specific focus areas:
 
@@ -59,33 +59,33 @@ Analyze the CSS in src/styles/ for performance issues. Identify:
 
 Claude examines your CSS files and provides detailed findings. The analysis typically reveals several categories of improvement opportunities.
 
-### Interpreting Audit Results
+Interpreting Audit Results
 
 After receiving audit results, prioritize changes based on impact:
 
-**High Impact Changes:**
+High Impact Changes:
 - Removing unused selectors reduces file size directly
 - Eliminating render-blocking CSS improves perceived load time
 - Consolidating duplicate rules reduces browser processing
 
-**Medium Impact Changes:**
+Medium Impact Changes:
 - Simplifying complex selectors improves matching performance
 - Using CSS custom properties improves maintainability and can reduce repetition
 - Converting to shorthand properties slightly reduces file size
 
-**Low Impact Changes:**
+Low Impact Changes:
 - Minor selector refinements have minimal performance impact
 - These serve mainly for code cleanliness
 
-## Practical Optimization Techniques
+Practical Optimization Techniques
 
 Claude Code excels at implementing specific optimization techniques. Here are practical examples of common improvements.
 
-### Example 1: Removing Unused CSS
+Example 1: Removing Unused CSS
 
 Unused CSS accumulates as projects evolve. Here's how Claude identifies and removes it:
 
-**Before optimization:**
+Before optimization:
 ```css
 /* Components that no longer exist in the codebase */
 .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); }
@@ -100,11 +100,11 @@ LegacyButton { padding: 8px 16px; border-radius: 4px; }
 
 Claude identifies which selectors correspond to existing HTML elements and removes the rest, reducing file size significantly.
 
-### Example 2: Optimizing Selector Performance
+Example 2: Optimizing Selector Performance
 
 Complex selectors force browsers to examine more elements. Claude suggests improvements:
 
-**Before (slow matching):**
+Before (slow matching):
 ```css
 /* Browser must check all nested elements */
 div.container > ul.nav-menu > li > a.nav-link:hover {
@@ -112,7 +112,7 @@ div.container > ul.nav-menu > li > a.nav-link:hover {
 }
 ```
 
-**After (efficient matching):**
+After (efficient matching):
 ```css
 /* Direct class targeting */
 .nav-link:hover {
@@ -122,7 +122,7 @@ div.container > ul.nav-menu > li > a.nav-link:hover {
 
 Claude explains that class selectors perform faster than tag-based descendant selectors, especially for frequently matched rules.
 
-### Example 3: Implementing Critical CSS Workflow
+Example 3: Implementing Critical CSS Workflow
 
 Critical CSS inlining prevents render blocking for above-fold content. Claude helps implement this:
 
@@ -160,16 +160,16 @@ Then in your HTML:
 </head>
 ```
 
-## Integrating Optimization into Development Workflow
+Integrating Optimization into Development Workflow
 
 The best CSS performance strategy prevents problems rather than fixing them later. Claude Code supports this through integration into your development process.
 
-### Pre-Commit CSS Validation
+Pre-Commit CSS Validation
 
 Configure git hooks to validate CSS before commits:
 
 ```bash
-# .git/hooks/pre-commit
+.git/hooks/pre-commit
 npm run lint:css
 npm run test:css-performance
 ```
@@ -184,12 +184,12 @@ Create a stylelint configuration that:
 - Enforces shorthand property usage
 ```
 
-### Automated Performance Budgets
+Automated Performance Budgets
 
 Define CSS performance budgets and track them in CI:
 
 ```yaml
-# .github/workflows/css-performance.yml
+.github/workflows/css-performance.yml
 - name: Check CSS Budget
   run: |
     CSS_SIZE=$(wc -c dist/styles.css | awk '{print $1}')
@@ -200,11 +200,11 @@ Define CSS performance budgets and track them in CI:
     fi
 ```
 
-## Measuring and Monitoring
+Measuring and Monitoring
 
 Optimization without measurement is guesswork. Claude helps establish meaningful metrics.
 
-### Key CSS Performance Metrics
+Key CSS Performance Metrics
 
 Track these metrics over time:
 
@@ -215,28 +215,28 @@ Track these metrics over time:
 | First Contentful Paint | < 1.5s | Chrome DevTools |
 | Selector Complexity | Average < 2 | stylelint |
 
-### Continuous Monitoring
+Continuous Monitoring
 
 Set up regular audits using Claude's analysis capabilities:
 
 ```bash
-# Weekly CSS health check script
+Weekly CSS health check script
 #!/bin/bash
 echo "Running weekly CSS audit..."
-npx stylelint "src/**/*.css" --formatter json > reports/stylelint.json
+npx stylelint "src//*.css" --formatter json > reports/stylelint.json
 echo "Audit complete. Review reports/stylelint.json"
 ```
 
-## Conclusion
+Conclusion
 
 CSS performance optimization doesn't require sacrificing developer productivity. By using Claude Code's analysis capabilities, you can automate audits, receive actionable recommendations, and integrate performance checks into your development workflow. The key is establishing regular auditing habits and implementing preventive measures through pre-commit validation and performance budgets.
 
 Start with a comprehensive audit using Claude, prioritize high-impact changes, and establish ongoing monitoring. This systematic approach ensures your CSS remains performant as your project evolves, delivering faster experiences to users while maintaining development velocity.
 
-## Related Reading
+Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)

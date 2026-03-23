@@ -18,17 +18,17 @@ permalink: /claude-code-bash-command-not-found-in-skill/
 
 
 
-# Claude Code Bash Command Not Found in Skill: Troubleshooting Guide
+Claude Code Bash Command Not Found in Skill: Troubleshooting Guide
 
-If you've encountered a "command not found" error when using bash within a Claude Code skill, you're not alone. This is one of the most common issues skill authors face when their carefully crafted skill fails to execute shell commands. In this guide, we'll explore why this happens and how to fix it.
+If you've encountered a "command not found" error when using bash within a Claude Code skill, you're not alone. This is one of the most common issues skill authors face when their carefully crafted skill fails to execute shell commands. we'll explore why this happens and how to fix it.
 
-## Understanding the Problem
+Understanding the Problem
 
 When you create a Claude Code skill that uses the `Bash` tool, you might expect it to have access to the same shell environment you have in your terminal. However, skills operate in a slightly different context that can lead to unexpected "command not found" errors. Let's break down the common causes and solutions.
 
-## Common Causes of Command Not Found Errors
+Common Causes of Command Not Found Errors
 
-### 1. The Bash Tool Is Not Declared in Skill Front Matter
+1. The Bash Tool Is Not Declared in Skill Front Matter
 
 The most frequent cause of command failures is simply forgetting to declare the `Bash` tool in your skill's front matter. Without this declaration, Claude Code won't allow the skill to execute any shell commands.
 
@@ -43,11 +43,11 @@ Your skill description and instructions go here.
 
 If you omit `Bash` from the tools list, Claude will either fail silently or report that the command cannot be executed. Always verify your front matter includes all tools your skill needs.
 
-### 2. Path Variables Not Available in Skill Context
+2. Path Variables Not Available in Skill Context
 
 Even when the `Bash` tool is available, your skill may not have access to the same PATH environment variable that your terminal uses. This is particularly common on macOS where the shell profile (`~/.zshrc`) sets up paths that may not be inherited by Claude Code's subprocess environment.
 
-**The Fix:** Always use absolute paths or explicitly set PATH in your skill instructions:
+The Fix: Always use absolute paths or explicitly set PATH in your skill instructions:
 
 ```
 When running commands, use absolute paths. For example:
@@ -59,25 +59,25 @@ Or set PATH explicitly at the start of your skill:
 First, run: export PATH="/usr/local/bin:/usr/bin:/bin:$PATH"
 ```
 
-### 3. Shell-Specific Commands Not Available
+3. Shell-Specific Commands Not Available
 
 Some commands are shell-specific. For example, bash built-ins like `source` (for sourcing files) or certain zsh-specific commands won't work in all environments. Claude Code typically uses `/bin/sh` or `bash` as the default shell, which may differ from your interactive shell.
 
-**Solution:** Use POSIX-compliant commands or explicitly invoke the correct shell:
+Solution: Use POSIX-compliant commands or explicitly invoke the correct shell:
 
 ```bash
-# Instead of: source ~/.bashrc
-# Use: . ~/.bashrc  (POSIX-compatible)
+Instead of: source ~/.bashrc
+Use: . ~/.bashrc  (POSIX-compatible)
 
-# Or explicitly use bash:
+Or explicitly use bash:
 bash -c 'source ~/.bashrc && your-command'
 ```
 
-### 4. Environment Variables Not Set
+4. Environment Variables Not Set
 
 Skills don't automatically inherit environment variables from your shell profile. Variables like `NVM_DIR`, `RVM_PATH`, or custom PATH additions from your `.zshrc` or `.bashrc` won't be available unless explicitly set.
 
-**How to handle this:**
+How to handle this:
 
 ```
 Before running any Node.js commands, ensure nvm is loaded:
@@ -86,11 +86,11 @@ Run: export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm
 Then you can use: nvm use default
 ```
 
-### 5. Skills Running in Different Working Directory
+5. Skills Running in Different Working Directory
 
 Your skill might be executing commands from a different working directory than expected. This can cause issues if your commands rely on relative paths or project-specific tooling.
 
-**Solution:** Always verify and set your working directory explicitly:
+Solution: Always verify and set your working directory explicitly:
 
 ```
 Before running any commands, first check your current directory:
@@ -100,9 +100,9 @@ If not in the project root, navigate there:
 Run: cd /path/to/your/project
 ```
 
-## Practical Examples
+Practical Examples
 
-### Example 1: Creating a Node.js Build Skill
+Example 1: Creating a Node.js Build Skill
 
 Here's a properly configured skill that runs Node.js build commands:
 
@@ -123,7 +123,7 @@ This skill builds Node.js projects reliably.
 Always use absolute paths to node and npm to avoid PATH issues.
 ```
 
-### Example 2: Python Virtual Environment Skill
+Example 2: Python Virtual Environment Skill
 
 ```yaml
 ---
@@ -144,7 +144,7 @@ If the virtual environment doesn't exist, create it:
 - pip install -r requirements.txt
 ```
 
-### Example 3: Docker Commands in Skills
+Example 3: Docker Commands in Skills
 
 ```yaml
 ---
@@ -161,27 +161,27 @@ This skill helps manage Docker containers.
 Always use absolute paths to Docker and related tools.
 ```
 
-## Debugging Tips
+Debugging Tips
 
 When you encounter command not found errors, follow this diagnostic process:
 
-1. **Check the skill's tools declaration** - Verify `Bash` is listed in the front matter
-2. **Test with absolute paths** - Replace `command` with `/full/path/to/command`
-3. **Print your PATH** - Run `echo $PATH` in the skill to see what's available
-4. **Check the current directory** - Run `pwd` to confirm your location
-5. **Test environment variables** - Run `env` to see available environment variables
+1. Check the skill's tools declaration - Verify `Bash` is listed in the front matter
+2. Test with absolute paths - Replace `command` with `/full/path/to/command`
+3. Print your PATH - Run `echo $PATH` in the skill to see what's available
+4. Check the current directory - Run `pwd` to confirm your location
+5. Test environment variables - Run `env` to see available environment variables
 
-## Best Practices for Reliable Shell Execution
+Best Practices for Reliable Shell Execution
 
 To minimize command not found errors in your skills:
 
-- **Always use absolute paths** for executables
-- **Declare all required tools** in the front matter
-- **Set up the environment explicitly** at the start of your skill
-- **Include PATH setup commands** if your tooling requires specific paths
-- **Test your skill** after writing it to ensure commands execute correctly
+- Always use absolute paths for executables
+- Declare all required tools in the front matter
+- Set up the environment explicitly at the start of your skill
+- Include PATH setup commands if your tooling requires specific paths
+- Test your skill after writing it to ensure commands execute correctly
 
-## Summary
+Summary
 
 The "command not found" error in Claude Code skills typically stems from three root causes: missing tool declarations in front matter, unavailable PATH variables, and missing environment configurations. By using absolute paths, declaring the Bash tool, and setting up your environment explicitly within the skill, you can create reliable skills that execute shell commands consistently.
 
@@ -189,11 +189,11 @@ Remember: skills run in a constrained environment that doesn't automatically inh
 
 ---
 
-## Related Reading
+Related Reading
 
-- [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/) — Master tool configuration in skills
-- [Best Claude Code Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) — Essential skills for development workflows
-- [Claude Skill MD Format Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/) — Complete skill authoring reference
+- [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/). Master tool configuration in skills
+- [Best Claude Code Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Essential skills for development workflows
+- [Claude Skill MD Format Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/). Complete skill authoring reference
 
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
