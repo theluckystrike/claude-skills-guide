@@ -18,10 +18,4 @@ Build production applications with the Claude API. SDKs, streaming, tool use, au
 - [Batch Processing Large Datasets](/claude-api-batch-processing-large-datasets-workflow-guide/)
 - [API Rate Limiting Implementation](/claude-code-api-rate-limiting-implementation/)
 - [API Key vs Pro Subscription Billing](/claude-code-api-key-vs-pro-subscription-billing/)
-
-## All API Articles
-
-{% assign apis = site.pages | where_exp: "p", "p.path contains 'articles/'" | where_exp: "p", "p.title contains 'API'" | sort: "title" %}
-{% for p in apis %}{% if p.title %}
-- [{{ p.title }}]({{ p.url }})
-{% endif %}{% endfor %}
+- [API Authentication Patterns](/claude-code-api-authentication-patterns-guide/)

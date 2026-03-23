@@ -23,10 +23,3 @@ Configure projects, automate workflows, and get the most out of Claude Code's pr
 
 - [Git Hooks and Pre-Commit Automation](/claude-code-git-hooks-pre-commit-automation/)
 - [New Features: Skills and Hooks Roundup (2026)](/claude-code-2026-new-features-skills-and-hooks-roundup/)
-
-## All CLAUDE.md Articles
-
-{% assign claudes = site.pages | where_exp: "p", "p.path contains 'articles/'" | where_exp: "p", "p.title contains 'CLAUDE.md' or p.title contains 'claude.md' or p.title contains 'Claude.md'" | sort: "title" %}
-{% for p in claudes %}{% if p.title %}
-- [{{ p.title }}]({{ p.url }})
-{% endif %}{% endfor %}

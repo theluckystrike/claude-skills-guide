@@ -18,10 +18,4 @@ Write better prompts, get better results. Techniques for Claude Code CLI, Claude
 - [Prompt Management Workflow](/claude-code-prompt-management-workflow-guide/)
 - [Prompt Testing and Evaluation](/claude-code-for-prompt-testing-evaluation-guide/)
 - [Prompt Caching Performance Optimization](/claude-api-prompt-caching-performance-optimization-guide/)
-
-## All Prompt Engineering Articles
-
-{% assign prompts = site.pages | where_exp: "p", "p.path contains 'articles/'" | where_exp: "p", "p.title contains 'Prompt'" | sort: "title" %}
-{% for p in prompts %}{% if p.title %}
-- [{{ p.title }}]({{ p.url }})
-{% endif %}{% endfor %}
+- [Prompt Chaining Workflows](/claude-code-for-prompt-chaining-workflows-tutorial-guide/)

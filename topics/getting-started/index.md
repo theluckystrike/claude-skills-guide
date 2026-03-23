@@ -20,10 +20,5 @@ Everything you need to go from zero to productive with Claude Code.
 - [MCP Integration Guide for Beginners](/mcp-integration-guide-for-claude-code-beginners/)
 - [Pair Programming for Beginner Developers](/claude-code-pair-programming-for-beginner-developers/)
 - [Common Beginner Mistakes to Avoid](/claude-code-common-beginner-mistakes-to-avoid/)
-
-## All Getting Started Articles
-
-{% assign gs = site.pages | where_exp: "p", "p.path contains 'articles/'" | where_exp: "p", "p.tags contains 'getting-started' or p.tags contains 'beginners'" | sort: "title" %}
-{% for p in gs %}{% if p.title %}
-- [{{ p.title }}]({{ p.url }})
-{% endif %}{% endfor %}
+- [Best Claude Code Skills to Install First](/best-claude-code-skills-to-install-first-2026/)
+- [Getting Started Hub](/getting-started-hub/)

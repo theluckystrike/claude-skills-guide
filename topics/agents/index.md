@@ -19,10 +19,5 @@ Build autonomous agents, multi-agent orchestration, and production agent systems
 - [Supervisor-Worker Agent Architecture](/building-supervisor-worker-agent-architecture-tutorial/)
 - [Agent Goal Decomposition Explained](/ai-agent-goal-decomposition-how-it-works-explained/)
 - [Agent Memory Types for Developers](/ai-agent-memory-types-explained-for-developers/)
-
-## All Agent Articles
-
-{% assign agents = site.pages | where_exp: "p", "p.path contains 'articles/'" | where_exp: "p", "p.title contains 'Agent'" | sort: "title" %}
-{% for p in agents %}{% if p.title %}
-- [{{ p.title }}]({{ p.url }})
-{% endif %}{% endfor %}
+- [Multi-Agent Error Recovery Strategies](/claude-code-multi-agent-error-recovery-strategies/)
+- [Subagent Communication Guide](/claude-code-multi-agent-subagent-communication-guide/)
