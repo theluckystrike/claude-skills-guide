@@ -37,28 +37,47 @@
   </script>
   {% endif %}
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 720px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; }
-    h1 { font-size: 1.8em; }
-    h2 { font-size: 1.4em; margin-top: 2em; }
-    a { color: #1a73e8; }
-    footer { margin-top: 3em; padding-top: 1em; border-top: 1px solid #eee; font-size: 0.9em; color: #666; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.7; color: #1a1a2e; background: #fafafa; }
+    h1 { font-size: 1.8rem; margin-top: 2rem; color: #0f0f23; }
+    h2 { font-size: 1.4rem; margin-top: 1.8rem; color: #16213e; border-bottom: 1px solid #e0e0e0; padding-bottom: 0.3rem; }
+    a { color: #1a73e8; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    code { background: #f0f0f0; padding: 2px 6px; border-radius: 3px; font-size: 0.9em; }
+    pre { background: #1a1a2e; color: #e0e0e0; padding: 16px; border-radius: 6px; overflow-x: auto; }
+    pre code { background: none; color: inherit; padding: 0; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+    th, td { border: 1px solid #ddd; padding: 8px 12px; text-align: left; }
+    th { background: #f5f5f5; font-weight: 600; }
+    blockquote { border-left: 3px solid #1a73e8; margin: 1rem 0; padding: 0.5rem 1rem; background: #f8f9fa; }
+    footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #e0e0e0; color: #666; font-size: 0.85rem; }
+    nav { padding: 1rem 0; border-bottom: 1px solid #e0e0e0; margin-bottom: 2rem; }
+    nav a { margin-right: 1.5rem; font-weight: 500; }
+    .updated-date { color: #666; font-size: 0.85rem; margin-bottom: 1.5rem; }
   </style>
 </head>
 <body>
-  <header><a href="{{ site.baseurl }}/">{{ site.title }}</a></header>
-  <main>{{ content }}</main>
-  <footer>Built by theluckystrike. More tips at <a href="https://zovo.one">zovo.one</a></footer>
-  <div class="site-nav-footer" style="background:#f8f9fa;padding:20px;margin-top:40px;border-top:2px solid #e9ecef;text-align:center;">
-    <p style="margin-bottom:10px;font-weight:bold;color:#333;">Explore Our Developer Guides</p>
-    <nav>
-      <a href="https://chrometipsguide.com/" style="margin:0 8px;color:#0366d6;text-decoration:none;">Chrome Tips</a> &middot;
-      <a href="https://bestchromeextensions.com/" style="margin:0 8px;color:#0366d6;text-decoration:none;">Extensions</a> &middot;
-      <a href="https://claudecodeguides.com/" style="margin:0 8px;color:#0366d6;text-decoration:none;">Claude Skills</a> &middot;
-      <a href="https://bestremotetools.com/" style="margin:0 8px;color:#0366d6;text-decoration:none;">AI Tools</a> &middot;
-      <a href="https://welikeremotestack.com/" style="margin:0 8px;color:#0366d6;text-decoration:none;">Remote Work</a> &middot;
-      <a href="https://securetoolsguide.com/" style="margin:0 8px;color:#0366d6;text-decoration:none;">Privacy Tools</a>
-    </nav>
-    <p style="margin-top:10px;font-size:0.85em;color:#666;">&copy; 2026 <a href="https://claudecodeguides.com/" style="color:#666;">theluckystrike Developer Guides</a></p>
-  </div>
+  <nav>
+    <a href="{{ site.baseurl }}/">Home</a>
+    <a href="{{ site.baseurl }}/about/">About</a>
+    <a href="{{ site.baseurl }}/getting-started-hub/">Getting Started</a>
+    <a href="{{ site.baseurl }}/claude-code-multi-agent-orchestration-patterns-guide/">Agents</a>
+    <a href="{{ site.baseurl }}/mcp-integration-guide-for-claude-code-beginners/">MCP</a>
+  </nav>
+  <main>
+    {% if page.date %}
+    <p class="updated-date">Last updated: {{ page.last_modified_at | default: page.date | date: "%B %d, %Y" }}</p>
+    {% endif %}
+    {{ content }}
+  </main>
+  <footer>
+    <p>More guides:
+      <a href="https://securetoolsguide.com">Privacy Tools</a> ·
+      <a href="https://chrometipsguide.com">Chrome Tips</a> ·
+      <a href="https://bestchromeextensions.com">Extensions</a> ·
+      <a href="https://bestremotetools.com">AI Tools</a> ·
+      <a href="https://welikeremotestack.com">Remote Work</a>
+    </p>
+    <p>&copy; 2026 Claude Code Guides &middot; <a href="{{ site.baseurl }}/about/">About</a></p>
+  </footer>
 </body>
 </html>

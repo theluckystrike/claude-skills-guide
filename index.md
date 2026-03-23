@@ -1,15 +1,45 @@
 ---
 layout: default
-title: "Claude Skills Guide — 2361+ Free Guides for Claude Code"
-description: "2361+ free guides for Claude Code skills, workflows, and AI agent productivity. Open source, updated daily."
+title: "Claude Code Guides — Practical AI Coding Tutorials"
+description: "2,300+ tested guides for Claude Code, Claude API, MCP tools, and AI-assisted development. Open source and updated regularly."
 permalink: /
 ---
 
-# Claude Skills Guide
+# Claude Code Guides
 
-**2361+ free guides** for Claude Code skills, workflows, troubleshooting, and integrations.
+Tested tutorials and reference guides for Claude Code, Claude API, and AI-assisted development. Every command is verified, every code example runs.
 
-Open source. Updated daily. Built by [theluckystrike](https://github.com/theluckystrike).
+**2,300+ articles** across 11 categories, open source, updated regularly.
+
+---
+
+## Start Here
+
+New to Claude Code? These five guides cover the essentials.
+
+- [Complete Beginner Guide](/claude-skills-guide/getting-started-hub/) -- Installation, setup, and your first session
+- [How to Write Effective Prompts for Claude Code](/claude-skills-guide/how-to-write-effective-prompts-for-claude-code/) -- Get better results from every prompt
+- [MCP Integration Guide for Beginners](/claude-skills-guide/mcp-integration-guide-for-claude-code-beginners/) -- Connect Claude Code to external tools
+- [Best Way to Write a CLAUDE.md File](/claude-skills-guide/best-way-to-write-claudemd-file-for-your-project/) -- Project-level instructions that stick
+- [Building a REST API with Claude Code](/claude-skills-guide/building-a-rest-api-with-claude-code-tutorial/) -- End-to-end walkthrough
+
+---
+
+## Browse by Topic
+
+| Category | Articles |
+|----------|----------|
+| [🚀 Getting-Started](#getting-started) | 9 |
+| [📚 Guides](#guides) | 1613 |
+| [📖 Tutorials](#tutorials) | 300 |
+| [🐛 Troubleshooting](#troubleshooting) | 138 |
+| [🔧 Workflows](#workflows) | 111 |
+| [🆚 Comparisons](#comparisons) | 104 |
+| [⚡ Advanced](#advanced) | 24 |
+| [🏆 Best-Of](#best-of) | 21 |
+| [🔌 Integrations](#integrations) | 16 |
+| [🏗️ Use-Cases](#use-cases) | 16 |
+| [📁 Other](#other) | 9 |
 
 ---
 
@@ -2388,6 +2418,4 @@ Open source. Updated daily. Built by [theluckystrike](https://github.com/theluck
 
 ---
 
-**2361 articles** across 11 categories.
-
-Built by theluckystrike — More at [zovo.one](https://zovo.one)
+**2,300+ articles** across 11 categories. [About this site](/claude-skills-guide/about/).
