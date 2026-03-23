@@ -10,11 +10,30 @@ Practical guides for getting real work done with Claude Code, Claude API, and Cl
 
 ## Start Here
 
-- [Complete Beginner Guide](/claude-code-for-beginners-complete-getting-started-2026/) -- Installation, setup, and your first session
-- [How to Write Effective Prompts for Claude Code](/how-to-write-effective-prompts-for-claude-code/) -- Get better results from every prompt
-- [MCP Integration Guide for Beginners](/mcp-integration-guide-for-claude-code-beginners/) -- Connect Claude Code to external tools
-- [CLAUDE.md Complete Guide](/claude-md-file-complete-guide-what-it-does/) -- Project-level instructions that stick
-- [Building a REST API with Claude Code](/building-a-rest-api-with-claude-code-tutorial/) -- End-to-end walkthrough
+<div class="card">
+  <a href="/claude-code-for-beginners-complete-getting-started-2026/">Complete Beginner Guide</a>
+  <p>Installation, setup, and your first session</p>
+</div>
+
+<div class="card">
+  <a href="/how-to-write-effective-prompts-for-claude-code/">How to Write Effective Prompts</a>
+  <p>Get better results from every prompt</p>
+</div>
+
+<div class="card">
+  <a href="/mcp-integration-guide-for-claude-code-beginners/">MCP Integration Guide for Beginners</a>
+  <p>Connect Claude Code to external tools</p>
+</div>
+
+<div class="card">
+  <a href="/claude-md-file-complete-guide-what-it-does/">CLAUDE.md Complete Guide</a>
+  <p>Project-level instructions that stick</p>
+</div>
+
+<div class="card">
+  <a href="/building-a-rest-api-with-claude-code-tutorial/">Building a REST API with Claude Code</a>
+  <p>End-to-end walkthrough from scratch</p>
+</div>
 
 ## Recently Updated
 
