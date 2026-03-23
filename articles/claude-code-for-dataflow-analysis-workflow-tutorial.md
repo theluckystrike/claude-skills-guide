@@ -222,7 +222,7 @@ tools: [Read, Glob, Grep]
 
 This prevents accidental modifications and makes the skill's purpose clear.
 
-Leverage Claude's Context Window
+Use Claude's Context Window
 
 Modern Claude models have large context windows. Use this to your advantage:
 

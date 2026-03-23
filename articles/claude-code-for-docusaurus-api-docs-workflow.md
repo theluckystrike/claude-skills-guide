@@ -43,7 +43,7 @@ Manual vs. AI-Assisted Documentation: A Comparison
 | Coverage of edge cases | Depends on author knowledge | Guided by source annotations |
 | Human review still needed | Yes | Yes |
 
-The table makes clear that automation does not eliminate human involvement. it shifts human time from writing boilerplate to reviewing and correcting AI output, which is a much higher-leverage use of developer attention.
+The table makes clear that automation does not eliminate human involvement. it shifts human time from writing boilerplate to reviewing and correcting AI output, which is a much higher-use use of developer attention.
 
 Setting Up Your Documentation Workflow
 

@@ -266,7 +266,7 @@ Provide context upfront: When starting a new feature, share your project structu
 
 Use incremental development: Instead of asking for complete implementations, build incrementally. Start with the domain model, then the repository, service, and finally the controller. This approach reduces errors and makes debugging easier.
 
-Leverage Claude for code review: After implementing reactive chains, ask Claude to review your code for common reactive programming mistakes, blocking calls, missing error handling, or improper use of operators.
+Use Claude for code review: After implementing reactive chains, ask Claude to review your code for common reactive programming mistakes, blocking calls, missing error handling, or improper use of operators.
 
 Document complex reactive flows: When your reactive streams become complex, ask Claude to add comments explaining what each operator does. This improves maintainability for your team.
 

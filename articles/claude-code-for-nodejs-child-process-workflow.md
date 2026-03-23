@@ -139,7 +139,7 @@ function streamProcess(command, args) {
 
 Error Handling and Process Management
 
-Robust child process workflows require comprehensive error handling. This includes catching spawn errors, handling timeouts, dealing with zombie processes, and implementing graceful shutdown.
+Solid child process workflows require comprehensive error handling. This includes catching spawn errors, handling timeouts, dealing with zombie processes, and implementing graceful shutdown.
 
 Claude can help you implement a production-ready process manager:
 

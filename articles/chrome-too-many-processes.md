@@ -48,7 +48,7 @@ Chrome provides a built-in Task Manager to monitor process usage. Access it by p
 
 The Task Manager shows each process with columns for:
 - Memory: Current RAM usage
-- CPU: CPU utilization
+- CPU: CPU usage
 - Network: Network activity
 - Process ID: Unique identifier for debugging
 

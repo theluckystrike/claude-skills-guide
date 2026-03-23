@@ -17,7 +17,7 @@ GIF recorder Chrome extensions have become essential tools for developers who ne
 
 How GIF Recorder Extensions Work
 
-GIF recorder Chrome extensions capture screen activity by leveraging the Chrome APIs and canvas rendering capabilities. The core mechanism involves recording individual frames from the browser viewport and then encoding them into the GIF format.
+GIF recorder Chrome extensions capture screen activity by using the Chrome APIs and canvas rendering capabilities. The core mechanism involves recording individual frames from the browser viewport and then encoding them into the GIF format.
 
 When you initiate a recording, the extension captures the visible portion of the web page at specified intervals, typically ranging from 5 to 30 frames per second. These frames are stored in memory and then processed through a GIF encoder that combines them into an animated GIF file.
 

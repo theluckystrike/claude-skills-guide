@@ -59,7 +59,7 @@ bw create item login \
   --uri "https://api.example.com"
 ```
 
-You can also unlock the vault and search items for use in scripts:
+You can also use the vault and search items for use in scripts:
 
 ```bash
 bw unlock --passwordenv BW_PASSWORD

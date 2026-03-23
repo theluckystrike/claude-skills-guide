@@ -39,7 +39,7 @@ google-chrome \
   --ignore-gpu-blocklist
 ```
 
-On macOS with Apple Silicon, Chrome already leverages Metal for rendering. However, you can verify GPU health at `chrome://gpu`. Look for green "Hardware accelerated" labels next to Canvas, WebGL, and Video Decode. If any show "Software only, hardware acceleration unavailable," your system may need a Chrome reinstall or GPU driver update.
+On macOS with Apple Silicon, Chrome already uses Metal for rendering. However, you can verify GPU health at `chrome://gpu`. Look for green "Hardware accelerated" labels next to Canvas, WebGL, and Video Decode. If any show "Software only, hardware acceleration unavailable," your system may need a Chrome reinstall or GPU driver update.
 
 For Windows developers, ANGLE (Almost Native Graphics Layer Engine) is Chrome's abstraction layer between WebGL and DirectX. Setting ANGLE to D3D11 can improve rendering performance on Windows 10/11:
 
@@ -105,7 +105,7 @@ Enable Local Overrides. Instead of relying on network requests for static assets
 
 Optimize Console Settings. Disable "Log XMLHttpRequests" and "Preserve log" unless necessary. These features generate significant overhead during long debugging sessions.
 
-DevTools Performance Panel Deep Dive
+DevTools Performance Panel Detailed look
 
 The Performance panel is your most powerful tool for diagnosing what makes Chrome slow on a specific page. Recording a performance trace captures a timeline of:
 
@@ -218,7 +218,7 @@ export default {
 
 Use `chrome://cache` (or `chrome://net-export/`) to inspect what Chrome has cached. When you need to force a clean slate without losing your profile, use Ctrl+Shift+R (hard reload) or the "Empty Cache and Hard Reload" option available in the Network panel's reload button context menu.
 
-Leverage Performance Flags
+Use Performance Flags
 
 Chrome's experimental flags offer significant performance gains. Access them at `chrome://flags`:
 
@@ -358,7 +358,7 @@ Run this script in CI against your staging environment. A score drop of more tha
 
 Summary
 
-Chrome speed optimization for developers and power users combines multiple strategies: enabling hardware acceleration, managing memory through sleeping tabs and groups, fine-tuning DevTools, auditing extensions, configuring network settings, and leveraging performance flags. Implement these changes incrementally, measuring impact before adopting new configurations.
+Chrome speed optimization for developers and power users combines multiple strategies: enabling hardware acceleration, managing memory through sleeping tabs and groups, fine-tuning DevTools, auditing extensions, configuring network settings, and using performance flags. Implement these changes incrementally, measuring impact before adopting new configurations.
 
 These optimizations compound over time, delivering smoother development sessions and reduced context-switching overhead. Start with the flags and extension audits, they typically yield the most immediate improvements. Follow up with the DevTools profiling techniques to identify page-specific bottlenecks, and establish automated Lighthouse monitoring so performance regressions surface before they reach production.
 

@@ -23,7 +23,7 @@ Before making any optimization changes, you need visibility into where your mone
 
 Claude Code can help you analyze your cluster costs through the bash tool and kubectl integration. The first step involves gathering metrics from your cloud provider's cost APIs or from cluster-exporter data. Many teams use Kubecost for detailed cost breakdowns, but you can start with basic node metrics.
 
-A practical starting point involves writing a Claude skill that queries your cluster's resource utilization. This skill should pull pod CPU and memory requests, compare them against actual usage, and generate a report highlighting over-provisioned workloads. The goal is identifying resources allocated but never fully utilized.
+A practical starting point involves writing a Claude skill that queries your cluster's resource usage. This skill should pull pod CPU and memory requests, compare them against actual usage, and generate a report highlighting over-provisioned workloads. The goal is identifying resources allocated but never fully utilized.
 
 Right-Sizing Your Workloads
 
@@ -55,7 +55,7 @@ The pdf skill proves useful for generating cost reports. You can instruct Claude
 
 Clusterright-Sizing and consolidation
 
-Cluster consolidation addresses costs at the infrastructure level. Many organizations run multiple small clusters when fewer, larger clusters would reduce operational overhead and improve resource utilization. Each cluster incurs control plane costs and limits your ability to bin-pack workloads efficiently.
+Cluster consolidation addresses costs at the infrastructure level. Many organizations run multiple small clusters when fewer, larger clusters would reduce operational overhead and improve resource usage. Each cluster incurs control plane costs and limits your ability to bin-pack workloads efficiently.
 
 Before consolidating clusters, analyze your workloads to identify complementary applications that could share nodes. A cluster running multiple microservices with similar scheduling requirements presents consolidation opportunities. Claude can help map application relationships and simulate consolidation scenarios.
 

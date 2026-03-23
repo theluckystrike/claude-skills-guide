@@ -96,7 +96,7 @@ Rather than generating the entire file at once, build it piece by piece:
 3. Testing requirements - From your test directories and configuration
 4. Code standards - From your linting configuration and style guides
 
-Leverage Claude Code's Pattern Recognition
+Use Claude Code's Pattern Recognition
 
 Claude Code can identify patterns in your existing codebase to inform guidelines:
 

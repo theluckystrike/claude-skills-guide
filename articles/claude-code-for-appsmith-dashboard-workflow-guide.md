@@ -197,7 +197,7 @@ Use version control. Export your Appsmith application as JSON and commit it to a
 
 Test incrementally. After each significant change, test your dashboard in Appsmith's preview mode before proceeding. This catches issues early and provides feedback for refining Claude's output.
 
-Leverage Appsmith's community templates. When starting a new dashboard type, ask Claude to help you adapt an existing template rather than building from scratch.
+Use Appsmith's community templates. When starting a new dashboard type, ask Claude to help you adapt an existing template rather than building from scratch.
 
 Troubleshooting Common Issues
 

@@ -104,7 +104,7 @@ anything that isn't on our allowed list.
 
 Integrating License Scanning into Development Workflow
 
-With the basic scanning setup in place, let's explore how Claude Code can enhance the workflow through intelligent analysis and action planning.
+With the basic scanning setup in place, Consider how Claude Code can enhance the workflow through intelligent analysis and action planning.
 
 Automated Dependency Analysis
 

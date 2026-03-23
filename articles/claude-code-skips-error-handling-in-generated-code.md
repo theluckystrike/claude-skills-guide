@@ -260,7 +260,7 @@ Different skill categories have different defaults. Knowing these helps you know
 
 For any skill in the API integration or database categories, treat the first output as a draft and immediately ask for error handling additions.
 
-Building Robust Applications With Claude Code
+Building Solid Applications With Claude Code
 
 The key to success is understanding that Claude Code optimizes for the implicit context of your request. By making your expectations explicit, you get code that matches your needs. For production systems, always review generated code for error handling gaps, especially around external API calls, file operations, and user input processing.
 

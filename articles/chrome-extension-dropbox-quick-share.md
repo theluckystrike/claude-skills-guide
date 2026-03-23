@@ -238,7 +238,7 @@ document.getElementById('shareBtn').addEventListener('click', async () => {
 
 Handling Edge Cases and Errors
 
-Robust error handling distinguishes a professional extension from a basic prototype. Consider these scenarios:
+Solid error handling distinguishes a professional extension from a basic prototype. Consider these scenarios:
 
 Token Expiration: Dropbox access tokens expire after several hours. Implement refresh logic or prompt re-authentication:
 

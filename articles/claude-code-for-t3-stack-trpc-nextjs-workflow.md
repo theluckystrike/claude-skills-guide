@@ -275,7 +275,7 @@ Conclusion
 
 Claude Code combined with the T3 stack creates a powerful development environment where type safety flows smoothly from your database through your API to your frontend. By understanding the core patterns, router definitions, procedure types, and frontend consumption, you can build solid full-stack applications with confidence.
 
-The key is leveraging Claude Code not just for code generation, but as a pair programmer that understands the T3 stack's conventions and can help you navigate the nuances of type-safe API development.
+The key is using Claude Code not just for code generation, but as a pair programmer that understands the T3 stack's conventions and can help you navigate the nuances of type-safe API development.
 {% endraw %}
 
 

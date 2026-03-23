@@ -188,7 +188,7 @@ Incremental Changes: When modifying BUILD files, make incremental changes and te
 
 Use Goals Appropriately: Understand the purpose of different Pants goals, `check` for type checking, `lint` for code quality, `test` for running tests.
 
-Leverage Built-ins: Pants includes built-in support for many tools (Black, isort, MyPy, Flake8). Claude can help configure these without external plugins.
+Use Built-ins: Pants includes built-in support for many tools (Black, isort, MyPy, Flake8). Claude can help configure these without external plugins.
 
 Understand the Graph: Pants builds a dependency graph. When asking Claude to make changes, explain the relationships between components.
 

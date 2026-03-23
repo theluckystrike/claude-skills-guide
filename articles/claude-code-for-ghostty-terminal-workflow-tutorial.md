@@ -16,7 +16,7 @@ score: 8
 
 Claude Code for Ghostty Terminal Workflow Tutorial
 
-Ghostty is a modern terminal emulator built with Zig that has quickly become a favorite among developers for its exceptional performance, native-feel experience on macOS, and deep integration capabilities. When paired with Claude Code, it creates an incredibly efficient development environment that leverages the best of both worlds: Ghostty's blazing-fast rendering and Claude Code's AI-powered coding assistance. This tutorial will guide you through setting up and maximizing this powerful combination.
+Ghostty is a modern terminal emulator built with Zig that has quickly become a favorite among developers for its exceptional performance, native-feel experience on macOS, and deep integration capabilities. When paired with Claude Code, it creates an incredibly efficient development environment that uses the best of both worlds: Ghostty's blazing-fast rendering and Claude Code's AI-powered coding assistance. This tutorial will guide you through setting up and maximizing this powerful combination.
 
 Why Ghostty for Claude Code Development
 

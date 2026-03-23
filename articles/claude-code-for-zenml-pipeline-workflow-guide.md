@@ -24,7 +24,7 @@ Why ZenML and Claude Code Belong Together
 
 ZenML handles a genuine problem in machine learning engineering: reproducibility. Every pipeline run is tracked, every artifact versioned, and every step configuration logged. But writing ZenML pipelines well requires knowing its conventions, the right way to annotate return types, configure stacks, handle materializers, and set up integrations with external tools.
 
-Claude Code bridges the knowledge gap. Instead of spending twenty minutes hunting through ZenML documentation to remember how to configure a GCP artifact store, you ask Claude and stay in flow. This is where AI assistance provides real leverage: not replacing your judgment, but eliminating the friction of routine lookups and boilerplate.
+Claude Code bridges the knowledge gap. Instead of spending twenty minutes hunting through ZenML documentation to remember how to configure a GCP artifact store, you ask Claude and stay in flow. This is where AI assistance provides real use: not replacing your judgment, but eliminating the friction of routine lookups and boilerplate.
 
 | Task | Without Claude Code | With Claude Code |
 |---|---|---|
@@ -400,7 +400,7 @@ Document Your Steps: Ask Claude to generate docstrings and type hints for your c
 
 Version Control Your Configs: Store ZenML stack configurations in version control. Claude can help you create modular, reusable configurations for different environments (dev, staging, prod). A common pattern is a `stacks/` directory with separate YAML files for each environment, which can be imported programmatically.
 
-Leverage Claude's Context Memory: Keep your Claude session active while working on a pipeline. This allows Claude to maintain context across multiple interactions, providing more accurate suggestions. If you close the session and reopen it, your `CLAUDE.md` file restores the project context automatically.
+Use Claude's Context Memory: Keep your Claude session active while working on a pipeline. This allows Claude to maintain context across multiple interactions, providing more accurate suggestions. If you close the session and reopen it, your `CLAUDE.md` file restores the project context automatically.
 
 Write Tests for Your Steps: Individual ZenML steps are plain Python functions and can be unit tested independently of the pipeline runner. Ask Claude to generate pytest tests for your step logic, this catches bugs faster than running the full pipeline:
 

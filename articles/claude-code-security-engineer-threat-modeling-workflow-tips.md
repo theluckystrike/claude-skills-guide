@@ -14,7 +14,7 @@ score: 8
 {% raw %}
 Claude Code Security Engineer Threat Modeling Workflow Tips
 
-Threat modeling is a critical security practice that helps teams identify potential threats, understand attack surfaces, and implement appropriate mitigations before vulnerabilities can be exploited. For security engineers, Claude Code offers powerful capabilities to streamline and enhance threat modeling workflows. This guide provides practical tips for leveraging Claude Code skills and features to conduct effective threat modeling sessions.
+Threat modeling is a critical security practice that helps teams identify potential threats, understand attack surfaces, and implement appropriate mitigations before vulnerabilities can be exploited. For security engineers, Claude Code offers powerful capabilities to streamline and enhance threat modeling workflows. This guide provides practical tips for using Claude Code skills and features to conduct effective threat modeling sessions.
 
 Setting Up Your Threat Modeling Environment
 
@@ -100,7 +100,7 @@ Combine Claude Code with architecture documentation for comprehensive threat mod
 3. Validate findings - Review and refine the generated threats with your security team
 4. Document mitigations - Create actionable security requirements for each identified threat
 
-This workflow leverages Claude Code's ability to parse complex documentation and apply security frameworks consistently across different architecture patterns.
+This workflow uses Claude Code's ability to parse complex documentation and apply security frameworks consistently across different architecture patterns.
 
 A concrete example: when a new event-driven messaging system is introduced, Claude Code can examine the message schema, the consumers, and the producer code in parallel and identify threats that span component boundaries. something that's easy to miss when reviewing files one at a time. Ask it specifically to enumerate trust boundaries and list what crosses each one. Then focus your manual review on those crossing points.
 
@@ -234,7 +234,7 @@ Keep your threat modeling skills updated. As new attack techniques emerge and yo
 
 One often overlooked practice is threat model versioning. Store your threat model documents alongside your code in version control. When a security incident occurs, you can diff the threat model against the version in place at the time of the incident and understand whether the vulnerability was a known-but-unmitigated risk or a blind spot. This feedback loop improves the quality of future threat models over time.
 
-Claude Code transforms threat modeling from a periodic exercise into a continuous, integrated practice. By leveraging skills, hooks, and MCP server integrations, security engineers can build comprehensive threat models faster while maintaining the rigor required for solid security programs.
+Claude Code transforms threat modeling from a periodic exercise into a continuous, integrated practice. By using skills, hooks, and MCP server integrations, security engineers can build comprehensive threat models faster while maintaining the rigor required for solid security programs.
 
 {% endraw %}
 

@@ -369,7 +369,7 @@ Practical Tips for NeMo Development
 
 1. Start Small: Test configurations with smaller models before scaling up
 2. Use Configs as Code: Keep YAML configs version-controlled
-3. Monitor Resources: Use NVIDIA's tools to track GPU memory and utilization
+3. Monitor Resources: Use NVIDIA's tools to track GPU memory and usage
 4. Validate Early: Run inference on test samples before full training
 5. Document Experiments: Track hyperparameters and results systematically
 

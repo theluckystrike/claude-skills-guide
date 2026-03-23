@@ -121,7 +121,7 @@ suggesting a fix. Show me the minimal code that demonstrates the issue.
 
 This forces the problem to be isolated from the complexity of your real codebase. A surprising number of bugs disappear during this process, which tells you the root cause was in the surrounding code rather than the suspected location.
 
-Leverage File Operations Strategically
+Use File Operations Strategically
 
 Claude Code's file operations become powerful when you understand how to use them efficiently. The difference between a fast workflow and a slow one often comes down to how you structure file reads and edits.
 
@@ -158,7 +158,7 @@ Full rewrites introduce risk: something in the existing file that Claude did not
 
 This matters especially in collaborative projects where preserving git blame and file metadata reduces friction during PR reviews.
 
-Provide Architecture Context Before Deep Dives
+Provide Architecture Context Before Detailed look
 
 For projects with non-obvious structure, invest one prompt in establishing architectural context:
 

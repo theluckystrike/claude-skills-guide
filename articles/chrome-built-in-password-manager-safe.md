@@ -18,7 +18,7 @@ How Chrome's Password Manager Actually Works
 
 Chrome's password manager stores credentials locally on your device using operating system-level protection. When you save a password in Chrome, the browser encrypts it before writing to disk.
 
-On macOS, Chrome uses the Keychain API. On Windows, it leverages the Data Protection API (DPAPI). This means your saved passwords benefit from the same encryption your operating system uses for other sensitive data.
+On macOS, Chrome uses the Keychain API. On Windows, it uses the Data Protection API (DPAPI). This means your saved passwords benefit from the same encryption your operating system uses for other sensitive data.
 
 ```python
 Chrome stores passwords in SQLite databases
@@ -210,7 +210,7 @@ Tier 3: Hardware key or secrets manager (high risk)
 - Database master passwords
 - Code signing certificates
 
-Implementing this segmentation requires initial discipline but becomes automatic. The mental model is: if compromising this credential gives an attacker production access or financial leverage, it should not live in Chrome's password manager regardless of how secure it is.
+Implementing this segmentation requires initial discipline but becomes automatic. The mental model is: if compromising this credential gives an attacker production access or financial use, it should not live in Chrome's password manager regardless of how secure it is.
 
 ```bash
 Store production secrets properly using environment variables

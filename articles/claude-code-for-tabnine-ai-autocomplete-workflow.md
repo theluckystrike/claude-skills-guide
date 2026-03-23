@@ -80,7 +80,7 @@ Save this skill to your Claude skills directory (typically `~/.claude/skills/`).
 
 Practical Workflow Integration
 
-Now let's explore how to use both tools effectively in your daily development workflow.
+Here are how to use both tools effectively in your daily development workflow.
 
 Phase 1: Rapid Initial Coding with TabNine
 
@@ -141,7 +141,7 @@ Use keyboard shortcuts: Configure your IDE to switch quickly between edit mode a
 
 Create context-specific skills: Rather than a single TabNine coordinator, create skills tailored to different languages or frameworks. A Python-focused skill might have different guidance than a JavaScript one.
 
-Leverage Claude Code's skill system for code generation: When you need to generate boilerplate or repetitive patterns, create reusable skills that generate exactly what you need, then use TabNine for fine-tuning.
+Use Claude Code's skill system for code generation: When you need to generate boilerplate or repetitive patterns, create reusable skills that generate exactly what you need, then use TabNine for fine-tuning.
 
 Common Pitfalls to Avoid
 

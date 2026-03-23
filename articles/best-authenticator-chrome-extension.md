@@ -304,7 +304,7 @@ For most developers, GAuth Authenticator offers the best balance of features, tr
 
 If you prefer maximum convenience and are comfortable with cloud-based storage, Authy provides a solid experience across devices. The key is choosing an extension that fits your threat model and workflow requirements. there is no universal right answer, only the right answer for your specific situation.
 
-Developers who already use 1Password can simplify their tooling by leveraging its built-in TOTP support, accepting the security trade-off of combining password and second factor in one system for most accounts.
+Developers who already use 1Password can simplify their tooling by using its built-in TOTP support, accepting the security trade-off of combining password and second factor in one system for most accounts.
 
 Whatever you choose, the non-negotiable requirements are: backup your secrets, test the complete login flow during setup, and use hardware keys for your most critical accounts. The best authenticator is one you'll actually use consistently and maintain properly. Evaluate based on your specific needs, maintain proper backups, and stay secure.
 

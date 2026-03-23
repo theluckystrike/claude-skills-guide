@@ -16,7 +16,7 @@ tags: [claude-code, full-stack, workflow, remix]
 
 Claude Code Remix Full Stack Workflow Guide
 
-Building modern full stack applications requires coordinating multiple technologies, managing state across boundaries, and deploying with confidence. Claude Code provides a powerful foundation for this workflow, especially when combined with framework-specific approaches like Remix. This guide walks you through a practical full stack development process that leverages Claude's capabilities at every stage. from initial scaffolding through production monitoring.
+Building modern full stack applications requires coordinating multiple technologies, managing state across boundaries, and deploying with confidence. Claude Code provides a powerful foundation for this workflow, especially when combined with framework-specific approaches like Remix. This guide walks you through a practical full stack development process that uses Claude's capabilities at every stage. from initial scaffolding through production monitoring.
 
 Setting Up Your Development Environment
 
@@ -130,7 +130,7 @@ Route Architecture Comparison
 
 State Management Strategies
 
-Full stack applications require thoughtful state management. Remix reduces the need for global client state by leveraging URL state and server state. Reserve client-side state for genuinely ephemeral data like form inputs and UI toggles.
+Full stack applications require thoughtful state management. Remix reduces the need for global client state by using URL state and server state. Reserve client-side state for genuinely ephemeral data like form inputs and UI toggles.
 
 When you need more sophisticated state management, consider these patterns:
 

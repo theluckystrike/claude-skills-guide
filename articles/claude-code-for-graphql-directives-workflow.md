@@ -32,7 +32,7 @@ type User {
 }
 ```
 
-The most common built-in directives are `@skip`, `@include`, and `@deprecated`, but custom directives unlock the true power of this feature. They let you express cross-cutting concerns, caching policies, rate limiting, formatting rules, access control, directly in the schema, where every client and every developer can see them at a glance.
+The most common built-in directives are `@skip`, `@include`, and `@deprecated`, but custom directives use the true power of this feature. They let you express cross-cutting concerns, caching policies, rate limiting, formatting rules, access control, directly in the schema, where every client and every developer can see them at a glance.
 
 Directive Location Types
 

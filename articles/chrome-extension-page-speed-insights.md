@@ -15,7 +15,7 @@ tags: [chrome-extension, page-speed, lighthouse, web-performance]
 
 Performance optimization remains one of the most critical aspects of modern web development. Users abandon sites that load slowly, and search engines penalize sluggish pages in rankings. For developers building Chrome extensions focused on performance analysis, integrating Page Speed Insights provides a powerful way to deliver actionable metrics directly in the browser.
 
-This guide walks you through building a Chrome extension that leverages Google's Page Speed Insights API and Lighthouse to analyze web pages in real-time. You'll learn the technical foundation, practical implementation patterns, and how to present meaningful data to users.
+This guide walks you through building a Chrome extension that uses Google's Page Speed Insights API and Lighthouse to analyze web pages in real-time. You'll learn the technical foundation, practical implementation patterns, and how to present meaningful data to users.
 
 Understanding the Page Speed Insights API
 

@@ -21,7 +21,7 @@ What is SuperMaven?
 
 SuperMaven is an AI-powered code completion tool designed to provide fast, context-aware suggestions while you type. Unlike basic autocomplete, SuperMaven uses large language models trained specifically on code to predict entire functions, classes, and algorithms based on your coding context.
 
-The tool positions itself as a "supercharged" alternative to traditional autocomplete, hence the name. It aims to reduce keystrokes and accelerate development by understanding not just syntax, but also the intent behind your code.
+The tool positions itself as a "sped up" alternative to traditional autocomplete, hence the name. It aims to reduce keystrokes and accelerate development by understanding not just syntax, but also the intent behind your code.
 
 Key Features of SuperMaven
 
@@ -231,7 +231,7 @@ In benchmarks, SuperMaven achieves impressive numbers:
 
 - Completion speed: 45ms average latency
 - Accuracy: 35% acceptance rate for multi-line completions
-- Context utilization: 92% of suggestions use surrounding context
+- Context usage: 92% of suggestions use surrounding context
 
 These metrics make SuperMaven competitive with other leading completion tools like GitHub Copilot and Tabnine.
 

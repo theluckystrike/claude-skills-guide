@@ -18,7 +18,7 @@ Understanding Claude Code in the RFP Context
 
 Claude Code is Anthropic's command-line interface for interacting with Claude AI. Unlike web-based interactions, Claude Code integrates directly into your development workflow, enabling automation, scripting, and programmatic access to AI capabilities. When applied to RFP responses, it becomes a powerful tool for drafting, reviewing, and optimizing proposal content.
 
-The key advantage is maintaining full control over your data while leveraging AI assistance. Everything runs locally or through API calls you manage, ensuring compliance with security requirements that many enterprise RFP processes demand.
+The key advantage is maintaining full control over your data while using AI assistance. Everything runs locally or through API calls you manage, ensuring compliance with security requirements that many enterprise RFP processes demand.
 
 Setting Up Your RFP Response Environment
 

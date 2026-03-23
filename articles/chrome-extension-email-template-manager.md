@@ -88,7 +88,7 @@ async function saveTemplate(template) {
 
 Email Client Compatibility
 
-Different email clients present unique challenges. Gmail uses contenteditable divs for the composition area, while Outlook's web version has its own DOM structure. Robust extensions include client detection and adaptation layers:
+Different email clients present unique challenges. Gmail uses contenteditable divs for the composition area, while Outlook's web version has its own DOM structure. Solid extensions include client detection and adaptation layers:
 
 ```javascript
 function detectEmailClient() {

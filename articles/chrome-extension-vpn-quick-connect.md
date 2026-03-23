@@ -165,7 +165,7 @@ Use content security policies. Restrict script execution to prevent injection at
 
 Handling Network Edge Cases
 
-Robust VPN extensions must handle various network scenarios:
+Solid VPN extensions must handle various network scenarios:
 
 Network transitions occur when users switch between WiFi and cellular or move between networks. Implement automatic reconnection logic that triggers when network connectivity changes. Use the `chrome.network.availability` API to detect network state changes.
 

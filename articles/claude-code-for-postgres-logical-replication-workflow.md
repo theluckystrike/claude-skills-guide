@@ -212,7 +212,7 @@ For high availability, consider implementing a cascading replication topology wh
 
 Conclusion
 
-PostgreSQL logical replication is an essential tool for building resilient, distributed database architectures. By leveraging Claude Code to generate SQL configurations, create monitoring scripts, and troubleshoot issues, you can streamline the implementation and maintenance of replication workflows. The combination of PostgreSQL's powerful replication features and AI-assisted development makes it easier than ever to build solid data distribution systems that scale with your application's needs.
+PostgreSQL logical replication is an essential tool for building resilient, distributed database architectures. By using Claude Code to generate SQL configurations, create monitoring scripts, and troubleshoot issues, you can streamline the implementation and maintenance of replication workflows. The combination of PostgreSQL's powerful replication features and AI-assisted development makes it easier than ever to build solid data distribution systems that scale with your application's needs.
 
 Related Reading
 

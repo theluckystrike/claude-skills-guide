@@ -231,7 +231,7 @@ spec:
     path: apps/user-facing
 ```
 
-Leverage Claude for validation: Before applying configurations, ask Claude to validate your YAML structure and check for common issues like missing required fields or incorrect API versions.
+Use Claude for validation: Before applying configurations, ask Claude to validate your YAML structure and check for common issues like missing required fields or incorrect API versions.
 
 Troubleshooting App of Apps with Claude
 

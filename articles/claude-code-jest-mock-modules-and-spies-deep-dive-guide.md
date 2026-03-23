@@ -12,7 +12,7 @@ tags: [claude-code, claude-skills]
 ---
 
 {% raw %}
-Claude Code Jest Mock Modules and Spies Deep Dive Guide
+Claude Code Jest Mock Modules and Spies Detailed look Guide
 
 Effective unit testing requires isolating code under test from its dependencies. Jest provides powerful mocking capabilities that enable you to replace real implementations with controlled mocks, spies, and stubs. This detailed look guide explores advanced mocking techniques with Jest, demonstrating how Claude Code can help you write comprehensive tests that verify behavior rather than implementation details.
 

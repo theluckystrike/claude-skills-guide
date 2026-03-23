@@ -18,7 +18,7 @@ SQL query generation has become a critical use case for AI-powered coding assist
 
 Understanding the SQL Generation Landscape
 
-Both Claude Code and Codeium offer SQL query generation capabilities, but their approaches differ significantly. Claude Code leverages Anthropic's Claude model with its deep understanding of database patterns, while Codeium uses its own language model trained on code and database schemas. The practical difference becomes apparent when handling complex queries, schema awareness, and integration with development workflows.
+Both Claude Code and Codeium offer SQL query generation capabilities, but their approaches differ significantly. Claude Code uses Anthropic's Claude model with its deep understanding of database patterns, while Codeium uses its own language model trained on code and database schemas. The practical difference becomes apparent when handling complex queries, schema awareness, and integration with development workflows.
 
 Claude Code's strength lies in its ability to maintain conversation context across multiple interactions. This means you can iteratively refine a query based on results, explain errors, and optimize performance without re-explaining your database structure each time.
 
@@ -160,7 +160,7 @@ Conclusion
 
 For SQL query generation, Claude Code offers distinct advantages through its large context window, conversation memory, and specialized skills. While both tools can handle basic queries, Claude Code excels when dealing with complex analytical queries, multi-table joins, and iterative refinement workflows. The ability to maintain context across sessions makes it particularly valuable for database-intensive applications where queries often require careful tuning based on schema evolution and performance requirements.
 
-By leveraging Claude Code's strengths in context understanding and its database-focused skills, developers can generate more accurate, optimized SQL queries while reducing the back-and-forth typically required with AI assistants.
+By using Claude Code's strengths in context understanding and its database-focused skills, developers can generate more accurate, optimized SQL queries while reducing the back-and-forth typically required with AI assistants.
 
 {% endraw %}
 

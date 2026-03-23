@@ -308,7 +308,7 @@ Claude Code can diagnose these issues by examining your project configuration an
 
 Conclusion
 
-Claude Code transforms EAS builds from a manual, error-prone process into an automated workflow. By creating custom skills for your specific needs, you can trigger builds, monitor progress, handle submissions, and troubleshoot issues, all through natural conversation. The key is setting up proper configurations upfront and leveraging Claude Code's ability to understand your project context and execute commands intelligently.
+Claude Code transforms EAS builds from a manual, error-prone process into an automated workflow. By creating custom skills for your specific needs, you can trigger builds, monitor progress, handle submissions, and troubleshoot issues, all through natural conversation. The key is setting up proper configurations upfront and using Claude Code's ability to understand your project context and execute commands intelligently.
 
 Start by creating a basic EAS workflow skill, then expand it as your release process evolves. With Claude Code handling the complexity, you can focus on building great mobile experiences.
 

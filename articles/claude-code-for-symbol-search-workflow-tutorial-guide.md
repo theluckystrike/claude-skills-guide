@@ -192,7 +192,7 @@ Show me all database queries in the repository
 
 Conclusion
 
-Symbol search in Claude Code transforms how you navigate and understand codebases. By leveraging semantic understanding, context awareness, and natural language queries, you can quickly locate definitions, understand relationships, and trace data flows. 
+Symbol search in Claude Code transforms how you navigate and understand codebases. By using semantic understanding, context awareness, and natural language queries, you can quickly locate definitions, understand relationships, and trace data flows. 
 
 The key to effective symbol search is combining the basic techniques with your specific workflow needs. Whether you're debugging, reviewing code, or exploring a new project, these patterns will help you work more efficiently.
 

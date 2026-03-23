@@ -358,7 +358,7 @@ Conclusion
 
 GDPR compliance requires ongoing attention rather than one-time implementation. Claude Code assists with generating compliant code patterns, building test coverage, and maintaining documentation, but your team owns the compliance outcome. Focus on privacy-by-design principles, automate where possible, and maintain clear audit trails for all personal data processing.
 
-The highest-leverage investments are: a thorough data inventory, automated retention enforcement, solid consent management with audit history, and a tested breach response procedure. Build these foundations first and the remaining compliance work becomes incremental rather than overwhelming.
+The most impactful investments are: a thorough data inventory, automated retention enforcement, solid consent management with audit history, and a tested breach response procedure. Build these foundations first and the remaining compliance work becomes incremental rather than overwhelming.
 
 
 Related Reading

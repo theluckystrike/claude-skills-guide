@@ -270,7 +270,7 @@ Chrome extensions transform the browser from a distraction source into a focused
 
 Syncing Focus Schedules Across Devices
 
-A focus mode extension that only blocks sites on one device is only partially effective. distractions are always one device switch away. For students and developers who move between a desktop, laptop, and mobile device, syncing block schedules makes the system more robust.
+A focus mode extension that only blocks sites on one device is only partially effective. distractions are always one device switch away. For students and developers who move between a desktop, laptop, and mobile device, syncing block schedules makes the system more solid.
 
 Chrome's `chrome.storage.sync` API automatically syncs data to all Chrome instances where the user is signed in:
 

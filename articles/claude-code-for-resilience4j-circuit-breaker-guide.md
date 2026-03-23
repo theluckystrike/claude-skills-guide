@@ -451,7 +451,7 @@ Claude Code is effective at generating these test cases from your service implem
 
 Conclusion
 
-Resilience4j provides a robust, lightweight solution for implementing circuit breaker patterns in Java applications. By combining it with Claude Code's AI-assisted development, you can rapidly prototype, test, and deploy fault-tolerant systems. Start with simple configurations, monitor your metrics, and progressively tune your circuit breakers based on real-world traffic patterns.
+Resilience4j provides a solid, lightweight solution for implementing circuit breaker patterns in Java applications. By combining it with Claude Code's AI-assisted development, you can rapidly prototype, test, and deploy fault-tolerant systems. Start with simple configurations, monitor your metrics, and progressively tune your circuit breakers based on real-world traffic patterns.
 
 The key to success is treating circuit breakers as living components that require ongoing attention and refinement as your system evolves. A circuit breaker configured for last year's traffic profile will not serve you well as your service scales, and Claude Code can help you revisit and update configurations as your observability data reveals new patterns.
 {% endraw %}

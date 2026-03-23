@@ -161,7 +161,7 @@ Each skill handles one stage of the content lifecycle. The result is a consisten
 
 Content Repurposing Workflow
 
-One of the highest-leverage uses for writing skills is content repurposing. taking a single source piece and producing multiple derivative formats without rewriting from scratch.
+One of the most impactful uses for writing skills is content repurposing. taking a single source piece and producing multiple derivative formats without rewriting from scratch.
 
 A blog post published Monday becomes a slide deck for Wednesday's webinar, a PDF guide for the newsletter download, and a data table embedded in the follow-up email. Skills make each conversion a single command rather than a multi-hour manual task.
 

@@ -175,7 +175,7 @@ Keep the CSV in version control alongside your Group Policy documentation. This 
 
 Summary
 
-GPO-based Chrome extension deployment provides a robust, on-premises mechanism for enterprise environments. By configuring the Administrative Template and specifying extension IDs in the force-install policy, you ensure mandatory extensions are present on all managed workstations. The approach requires no user interaction, prevents removal by end users, and handles updates automatically.
+GPO-based Chrome extension deployment provides a solid, on-premises mechanism for enterprise environments. By configuring the Administrative Template and specifying extension IDs in the force-install policy, you ensure mandatory extensions are present on all managed workstations. The approach requires no user interaction, prevents removal by end users, and handles updates automatically.
 
 For developers managing Windows infrastructure, integrating extension deployment into your existing Group Policy workflows eliminates the need for separate extension management solutions. Test thoroughly, maintain accurate extension IDs, and document your configuration for future maintenance.
 

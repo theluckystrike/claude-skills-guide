@@ -172,13 +172,13 @@ Best Practices for Homebrew Formula Management
 
 To get the most out of Claude Code in your workflow, keep these practices in mind:
 
-Always verify checksums manually – While Claude Code can help calculate SHA256 hashes, verify them yourself before publishing.
+Always verify checksums manually, While Claude Code can help calculate SHA256 hashes, verify them yourself before publishing.
 
-Test on multiple macOS versions – Homebrew supports macOS 11+ (Big Sur and later). Test your formula on different versions if possible.
+Test on multiple macOS versions, Homebrew supports macOS 11+ (Big Sur and later). Test your formula on different versions if possible.
 
-Keep dependencies minimal – Each dependency increases the chance of installation failures. Only add what's absolutely necessary.
+Keep dependencies minimal, Each dependency increases the chance of installation failures. Only add what's absolutely necessary.
 
-Write meaningful tests – The `test` block in your formula is crucial. Include tests that verify core functionality, not just version output.
+Write meaningful tests, The `test` block in your formula is crucial. Include tests that verify core functionality, not just version output.
 
 Conclusion
 

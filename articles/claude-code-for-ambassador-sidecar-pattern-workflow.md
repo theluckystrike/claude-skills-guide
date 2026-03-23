@@ -391,7 +391,7 @@ For the Envoy sidecar itself, use the admin endpoint to confirm the proxy has lo
 
 Observability Integration
 
-Leverage the sidecar for centralized observability:
+Use the sidecar for centralized observability:
 
 1. Metrics: Configure Envoy to expose Prometheus metrics on admin port 15090
 2. Tracing: Set up Jaeger or Zipkin for distributed tracing through the sidecar

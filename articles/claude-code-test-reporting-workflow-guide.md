@@ -53,7 +53,7 @@ Run Jest with JSON reporter and save to file
 npx jest --reporters=default --reporters=jest-junit --json --outputFile=test-results.json
 ```
 
-#### Configuring Jest Reporters in package.json
+Configuring Jest Reporters in package.json
 
 Rather than passing reporter flags on every run, define your reporter configuration directly in `package.json` or `jest.config.js` so the settings are shared across the team:
 

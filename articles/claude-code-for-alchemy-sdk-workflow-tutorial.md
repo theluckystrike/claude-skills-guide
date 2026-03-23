@@ -227,7 +227,7 @@ async function withRetry(fn, maxRetries = 3) {
 
 Use WebSocket connections for real-time features: When monitoring pending transactions or events, prefer WebSocket-based subscriptions over polling for efficiency.
 
-Leverage Alchemy's webhook notifications: For production monitoring, configure Alchemy webhooks to receive notifications without maintaining persistent connections.
+Use Alchemy's webhook notifications: For production monitoring, configure Alchemy webhooks to receive notifications without maintaining persistent connections.
 
 Conclusion
 

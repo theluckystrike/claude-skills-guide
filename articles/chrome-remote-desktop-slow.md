@@ -69,7 +69,7 @@ Access the Chrome Remote Desktop settings:
 
 5. Optimize Network Settings
 
-#### Port Forwarding
+Port Forwarding
 
 Chrome Remote Desktop uses port 443 (TCP) and 3478 (UDP). Ensure these are open:
 
@@ -81,7 +81,7 @@ Test UDP port 3478
 nc -zvu your.router.ip 3478
 ```
 
-#### Quality of Service (QoS)
+Quality of Service (QoS)
 
 If you're on a network with multiple users, prioritize Chrome Remote Desktop traffic:
 

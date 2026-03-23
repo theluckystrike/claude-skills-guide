@@ -390,7 +390,7 @@ Follow these practices when implementing Supabase Auth with RLS:
 
 Conclusion
 
-Supabase Auth combined with Row Level Security provides a robust, scalable approach to data security. By defining policies at the database level, you ensure consistent enforcement regardless of how your data is accessed. Claude Code can accelerate your implementation, helping you write policies, test them thoroughly, and iterate quickly as your application evolves.
+Supabase Auth combined with Row Level Security provides a solid, scalable approach to data security. By defining policies at the database level, you ensure consistent enforcement regardless of how your data is accessed. Claude Code can accelerate your implementation, helping you write policies, test them thoroughly, and iterate quickly as your application evolves.
 
 {% endraw %}
 

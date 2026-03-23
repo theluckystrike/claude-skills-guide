@@ -150,7 +150,7 @@ Claude Code can generate the transaction construction logic but should never hav
 
 Error Handling and Retry Logic
 
-Blockchain RPCs can fail for various reasons: network issues, rate limiting, invalid parameters, or chain reorganizations. Robust workflows need retry mechanisms.
+Blockchain RPCs can fail for various reasons: network issues, rate limiting, invalid parameters, or chain reorganizations. Solid workflows need retry mechanisms.
 
 QuickNode provides informative error responses. Common issues include:
 

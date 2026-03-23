@@ -27,11 +27,11 @@ What is Act and Why Use It?
 Act is a CLI tool that executes your GitHub Actions workflow files locally using Docker. Instead of pushing to your repository and waiting for GitHub's CI to run, you can test your entire pipeline on your local machine in seconds or minutes, depending on your workflow complexity.
 
 Benefits of using Act:
-- Fast iteration – No more waiting for remote CI to complete
-- Debug locally – Inspect logs and outputs without flooding your CI history
-- Test secrets – Use local environment variables instead of GitHub secrets
-- Offline development – Work on your workflows without an internet connection
-- Cost savings – Reduce CI minutes consumed on GitHub
+- Fast iteration, No more waiting for remote CI to complete
+- Debug locally, Inspect logs and outputs without flooding your CI history
+- Test secrets, Use local environment variables instead of GitHub secrets
+- Offline development, Work on your workflows without an internet connection
+- Cost savings, Reduce CI minutes consumed on GitHub
 
 Installing Act
 
@@ -323,14 +323,14 @@ act --hostname github.mycompany.com
 
 Best Practices for Local CI/CD Development
 
-1. Always test locally first – Use Act before every pull request
-2. Keep secrets local – Never commit real secrets; use `.secrets` file with `.gitignore`
-3. Use Act's dry-run mode – Validate workflow syntax without execution:
+1. Always test locally first, Use Act before every pull request
+2. Keep secrets local, Never commit real secrets; use `.secrets` file with `.gitignore`
+3. Use Act's dry-run mode, Validate workflow syntax without execution:
    ```bash
    act -n
    ```
-4. Cache dependencies – Configure caching in Act to speed up subsequent runs
-5. Use Claude Code – Use Claude Code for workflow generation, debugging, and optimization
+4. Cache dependencies, Configure caching in Act to speed up subsequent runs
+5. Use Claude Code, Use Claude Code for workflow generation, debugging, and optimization
 
 Conclusion
 

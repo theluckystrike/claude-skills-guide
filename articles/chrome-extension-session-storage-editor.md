@@ -50,7 +50,7 @@ Creating a Custom Session Storage Editor Extension
 
 Building a custom extension provides more powerful session storage editing capabilities:
 
-#### Manifest Configuration
+Manifest Configuration
 
 ```json
 {
@@ -64,7 +64,7 @@ Building a custom extension provides more powerful session storage editing capab
 }
 ```
 
-#### Popup Interface (popup.html)
+Popup Interface (popup.html)
 
 ```html
 <!DOCTYPE html>
@@ -91,7 +91,7 @@ Building a custom extension provides more powerful session storage editing capab
 </html>
 ```
 
-#### Popup Logic (popup.js)
+Popup Logic (popup.js)
 
 ```javascript
 document.addEventListener('DOMContentLoaded', () => {
@@ -272,7 +272,7 @@ Several Chrome extensions provide session storage editing capabilities:
 
 Conclusion
 
-Editing sessionStorage in Chrome extensions is essential for effective debugging and development. Whether using DevTools directly, building custom extensions, or leveraging third-party tools, understanding these techniques will significantly improve your development workflow. Remember to follow security best practices and consider using chrome.storage for production extension data.
+Editing sessionStorage in Chrome extensions is essential for effective debugging and development. Whether using DevTools directly, building custom extensions, or using third-party tools, understanding these techniques will significantly improve your development workflow. Remember to follow security best practices and consider using chrome.storage for production extension data.
 
 For more guides on Chrome extension development and debugging tools, explore our collection of articles covering extension development, storage APIs, and development workflows.
 

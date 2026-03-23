@@ -27,8 +27,8 @@ Activating Password Generation
 
 Chrome can generate passwords in two primary scenarios:
 
-1. Manual trigger – When you're focused on a password field, right-click and select "Suggest strong password"
-2. Automatic suggestion – Chrome automatically suggests strong passwords when it detects you're creating or changing a password field
+1. Manual trigger, When you're focused on a password field, right-click and select "Suggest strong password"
+2. Automatic suggestion, Chrome automatically suggests strong passwords when it detects you're creating or changing a password field
 
 To ensure automatic suggestions are enabled, navigate to `chrome://settings/passwords` and verify that "Offer to save passwords" and "Suggest strong passwords" are both toggled on.
 

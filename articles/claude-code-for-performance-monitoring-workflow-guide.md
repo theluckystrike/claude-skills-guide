@@ -35,7 +35,7 @@ Every performance monitoring strategy should start with these core metrics:
 1. Response Time: How quickly your application responds to requests
 2. Throughput: Number of requests processed per unit of time
 3. Error Rate: Percentage of failed requests
-4. Resource Utilization: CPU, memory, and disk usage patterns
+4. Resource Usage: CPU, memory, and disk usage patterns
 5. Database Performance: Query execution times and connection pool status
 
 Claude Code can help you identify which metrics matter most for your specific application. For instance, a real-time application will prioritize latency, while a batch processing system might focus on throughput.

@@ -315,7 +315,7 @@ When building production-grade Drill workflows with Claude Code, consider these 
 
 Optimize Query Performance: Use LIMIT clauses during exploration to avoid scanning entire datasets. Drill's distributed execution model means poorly optimized queries can stress cluster resources significantly. A practical rule: always add `LIMIT 1000` during development and remove it only when you have confirmed the query shape is correct.
 
-Leverage Metadata Caching: Drill caches metadata aggressively. For frequently queried sources, maintain a separate metadata refresh workflow to ensure schema changes are recognized. Trigger a metadata refresh by calling the REST API after new data lands:
+Use Metadata Caching: Drill caches metadata aggressively. For frequently queried sources, maintain a separate metadata refresh workflow to ensure schema changes are recognized. Trigger a metadata refresh by calling the REST API after new data lands:
 
 ```bash
 curl -X POST -H "Content-Type: application/json" \

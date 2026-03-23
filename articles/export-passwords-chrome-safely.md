@@ -58,7 +58,7 @@ The exported CSV, however, contains plaintext passwords. This is the critical se
 
 Understanding what this means in practice: when Chrome reads passwords to display them in settings or autofill them on a page, it decrypts them in memory using the OS keychain, uses them, then discards the plaintext. The export function does the same decryption but writes the result to disk as plaintext. The security model that protects stored passwords does not extend to the export file.
 
-On macOS, this means Chrome will prompt for your macOS login password or Touch ID before completing the export. Chrome needs to unlock the Keychain to decrypt the stored passwords. On Windows, DPAPI ties encryption to the current user account, so exports can only happen while logged in as that user. On Linux with libsecret, the behavior depends on your distribution's secret service implementation.
+On macOS, this means Chrome will prompt for your macOS login password or Touch ID before completing the export. Chrome needs to use the Keychain to decrypt the stored passwords. On Windows, DPAPI ties encryption to the current user account, so exports can only happen while logged in as that user. On Linux with libsecret, the behavior depends on your distribution's secret service implementation.
 
 Command-Line Export Methods
 

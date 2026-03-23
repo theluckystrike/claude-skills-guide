@@ -131,7 +131,7 @@ The skill file should include clear instructions about when to use Cloudinary tr
 
 Error Handling and Fallbacks
 
-Robust Cloudinary skills must handle common failure scenarios: invalid image URLs, quota limits, network timeouts, and unsupported transformation parameters. Your skill should provide clear guidance when transformations fail and suggest alternatives:
+Solid Cloudinary skills must handle common failure scenarios: invalid image URLs, quota limits, network timeouts, and unsupported transformation parameters. Your skill should provide clear guidance when transformations fail and suggest alternatives:
 
 - If Cloudinary is unavailable, fall back to serving original images
 - If transformations exceed size limits, suggest splitting into multiple images

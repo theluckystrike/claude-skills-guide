@@ -82,7 +82,7 @@ Several Claude skills enhance your SvelteKit workflow significantly:
 - pdf: Generates documentation, API references, and reports directly from your codebase
 - supermemory: Maintains context across sessions, recalling previous decisions and patterns
 
-Install these skills using the Claude CLI to unlock their full potential within your SvelteKit projects.
+Install these skills using the Claude CLI to reach their full potential within your SvelteKit projects.
 
 When to activate each skill during a SvelteKit project:
 

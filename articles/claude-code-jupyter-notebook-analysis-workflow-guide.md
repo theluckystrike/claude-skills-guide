@@ -453,7 +453,7 @@ Conclusion
 
 The Claude Code and Jupyter notebook combination offers a powerful environment for data analysis. By following these workflow patterns and best practices, you can accelerate your exploratory analysis while maintaining clean, reproducible code. Remember to use Claude Code's strengths, code generation, explanation, and review, throughout your analysis process.
 
-The highest-leverage places to involve Claude Code are: reviewing cleaning logic for correctness, explaining statistical test selection, generating boilerplate for standard analysis patterns you have done before, and drafting the markdown narrative that turns a sequence of charts into a coherent data story. Start with simple workflows and gradually incorporate more advanced patterns as you become comfortable with the collaboration between Claude Code and Jupyter notebooks.
+The most impactful places to involve Claude Code are: reviewing cleaning logic for correctness, explaining statistical test selection, generating boilerplate for standard analysis patterns you have done before, and drafting the markdown narrative that turns a sequence of charts into a coherent data story. Start with simple workflows and gradually incorporate more advanced patterns as you become comfortable with the collaboration between Claude Code and Jupyter notebooks.
 {% endraw %}
 
 Related Reading

@@ -297,7 +297,7 @@ Claude skills transform incident management from reactive firefighting into stru
 
 Start with the triage skill, add escalation handling, then layer in resolution guidance. Before long, you'll have a complete incident management system that reduces response times and improves outcomes.
 
-The key is treating skills as composable building blocks, each one focused, well-tested, and designed to work with others. Your incident management workflow will only be as strong as its weakest skill, so invest time in making each one robust.
+The key is treating skills as composable building blocks, each one focused, well-tested, and designed to work with others. Your incident management workflow will only be as strong as its weakest skill, so invest time in making each one solid.
 
 
 Related Reading

@@ -18,7 +18,7 @@ Pull request status checks are essential for maintaining code quality in any dev
 
 Why Automate PR Status Checks with Claude Code?
 
-Manual PR status checking is time-consuming and prone to oversight. By leveraging Claude Code, you can:
+Manual PR status checking is time-consuming and prone to oversight. By using Claude Code, you can:
 
 - Automate repetitive checks - Run linting, testing, and validation without manual intervention
 - Get contextual alerts - Receive specific guidance when checks fail

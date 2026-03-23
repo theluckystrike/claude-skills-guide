@@ -77,7 +77,7 @@ claude "Review docs/guides/getting-started.md for user onboarding quality. Verif
 
 Practical Review Strategies
 
-Now let's explore concrete strategies you can implement immediately.
+Here are concrete strategies you can implement immediately.
 
 Strategy 1: Pre-Commit Documentation Checks
 

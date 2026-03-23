@@ -69,7 +69,7 @@ The update URL after the semicolon tells Chrome where to fetch the extension. Fo
 
 The extension IDs are the 32-character identifiers from the Chrome Web Store URL. This approach works well for corporate-licensed extensions or internal tools your team develops.
 
-#### Extension Policy Comparison
+Extension Policy Comparison
 
 | Policy | Effect | Typical Use Case |
 |---|---|---|

@@ -172,7 +172,7 @@ Extensions like "The Great Suspender" automatically suspend inactive tabs:
 
 Whitelist your localhost development servers and any pages where you need live updates (CI dashboards, log tails). Everything else can safely suspend after 5-10 minutes of inactivity without impacting your workflow.
 
-Leverage Progressive Web Apps
+Use Progressive Web Apps
 
 Convert frequently-used web apps to PWAs for reduced overhead:
 

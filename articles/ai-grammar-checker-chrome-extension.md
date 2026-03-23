@@ -37,9 +37,9 @@ Core Architecture of an AI Grammar Checker Extension
 
 A typical Chrome extension for grammar checking consists of three main components:
 
-1. Content Script – Injected into web pages to capture user input
-2. Background Service Worker – Handles API communication and caching
-3. Popup or Overlay UI – Displays corrections to the user
+1. Content Script, Injected into web pages to capture user input
+2. Background Service Worker, Handles API communication and caching
+3. Popup or Overlay UI, Displays corrections to the user
 
 Here is a simplified manifest configuration for such an extension:
 
@@ -121,15 +121,15 @@ async function checkGrammar(text) {
 ```
 
 For more advanced AI capabilities, you can integrate with services like:
-- OpenAI's GPT API – Provides contextual suggestions and style improvements
-- Grammarly's API – Offers comprehensive grammar checking (requires partnership)
-- LanguageTool Enterprise – Self-hosted option for privacy-sensitive applications
+- OpenAI's GPT API, Provides contextual suggestions and style improvements
+- Grammarly's API, Offers comprehensive grammar checking (requires partnership)
+- LanguageTool Enterprise, Self-hosted option for privacy-sensitive applications
 
 Displaying Corrections to Users
 
 Once you receive corrections from the API, the extension needs to display them. Two common approaches exist:
 
-Popup approach – Click the extension icon to see a list of issues in the current page context:
+Popup approach, Click the extension icon to see a list of issues in the current page context:
 
 ```javascript
 // Show issues in popup
@@ -149,7 +149,7 @@ function renderCorrections(corrections, container) {
 }
 ```
 
-Inline approach – Highlight problematic text directly in the page:
+Inline approach, Highlight problematic text directly in the page:
 
 ```javascript
 // Inline highlighting (advanced)
@@ -168,7 +168,7 @@ Performance Considerations
 
 Real-time grammar checking introduces latency concerns. Here are optimization strategies:
 
-Debounce input – Wait 500-1000ms after the user stops typing before sending requests:
+Debounce input, Wait 500-1000ms after the user stops typing before sending requests:
 
 ```javascript
 let debounceTimer;
@@ -180,7 +180,7 @@ function onTextChange(text) {
 }
 ```
 
-Cache results – Store corrections locally to avoid repeated API calls for unchanged text:
+Cache results, Store corrections locally to avoid repeated API calls for unchanged text:
 
 ```javascript
 const cache = new Map();
@@ -196,7 +196,7 @@ function getCachedCheck(text) {
 }
 ```
 
-Limit scope – Check only the paragraph or section being edited rather than entire documents.
+Limit scope, Check only the paragraph or section being edited rather than entire documents.
 
 Privacy and Security
 

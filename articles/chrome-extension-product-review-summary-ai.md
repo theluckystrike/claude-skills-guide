@@ -32,9 +32,9 @@ Architecture Overview
 
 A Chrome extension for review summarization consists of three main components:
 
-1. Content Script – Injected into the page to extract review text
-2. Background Service Worker – Handles API communication and caching
-3. Popup/Options Page – User interface for configuration
+1. Content Script, Injected into the page to extract review text
+2. Background Service Worker, Handles API communication and caching
+3. Popup/Options Page, User interface for configuration
 
 The AI summarization typically happens server-side using an API like OpenAI, Anthropic, or a self-hosted model. The extension collects reviews, sends them to the API, and displays the generated summary.
 

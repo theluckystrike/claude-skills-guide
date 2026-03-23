@@ -404,7 +404,7 @@ Claude Code can assist you in designing appropriate monitoring solutions, review
 
 Conclusion
 
-Building reliable BullMQ delayed retry job workflows requires thoughtful configuration and ongoing maintenance. By leveraging BullMQ's built-in retry mechanisms, implementing custom backoff strategies, using `UnrecoverableError` to skip pointless retries, and applying circuit breaker patterns for downstream dependencies, you can create solid systems that handle failures gracefully while maintaining processing reliability.
+Building reliable BullMQ delayed retry job workflows requires thoughtful configuration and ongoing maintenance. By using BullMQ's built-in retry mechanisms, implementing custom backoff strategies, using `UnrecoverableError` to skip pointless retries, and applying circuit breaker patterns for downstream dependencies, you can create solid systems that handle failures gracefully while maintaining processing reliability.
 
 Remember to always implement dead letter queues for jobs that exceed retry limits, set memory-safe `removeOnComplete` and `removeOnFail` limits, monitor your queue health proactively, and design your retry strategy based on your specific failure modes and business requirements. Claude Code is particularly effective for auditing existing configurations, surfacing subtle misconfigurations, and generating the boilerplate for patterns like flow producers and circuit breakers.
 {% endraw %}

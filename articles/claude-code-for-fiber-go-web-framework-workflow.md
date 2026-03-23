@@ -229,7 +229,7 @@ func (r *PostgresUserRepository) FindAll() ([]User, error) {
 
 Error Handling and Validation
 
-Robust error handling distinguishes production-ready applications from prototypes. Claude Code helps implement comprehensive validation and error responses.
+Solid error handling distinguishes production-ready applications from prototypes. Claude Code helps implement comprehensive validation and error responses.
 
 Request Validation with Custom Validators
 

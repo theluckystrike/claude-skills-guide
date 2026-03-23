@@ -58,7 +58,7 @@ const testScript = `
 
 Claude Code with Postman
 
-Postman's integration with Claude Code leverages its extensive API and collections format:
+Postman's integration with Claude Code uses its extensive API and collections format:
 
 ```bash
 Export Postman collection

@@ -34,11 +34,11 @@ Before writing any code, you need to find a project worth contributing to. Here'
 
 Starting Your Search
 
-1. Choose a project you actually use – Contributing to tools you use daily gives you genuine motivation and real-world testing scenarios.
+1. Choose a project you actually use, Contributing to tools you use daily gives you genuine motivation and real-world testing scenarios.
 
-2. Look for "good first issue" labels – Most well-maintained OSS projects tag beginner-friendly issues. Search GitHub with `label:"good first issue"` for repositories in your preferred language.
+2. Look for "good first issue" labels, Most well-maintained OSS projects tag beginner-friendly issues. Search GitHub with `label:"good first issue"` for repositories in your preferred language.
 
-3. Check the contribution – Review recent activity: Are issues being addressed? Is there an active community? A responsive maintainer team makes the contribution process much smoother.
+3. Check the contribution, Review recent activity: Are issues being addressed? Is there an active community? A responsive maintainer team makes the contribution process much smoother.
 
 ```bash
 Search for beginner-friendly Python projects

@@ -269,7 +269,7 @@ Optimizing Performance
 
 Arrow Flight's efficiency comes from columnar data representation and zero-copy transfers. Maximize performance with these techniques:
 
-1. Batch your data: Instead of sending individual rows, batch them into Arrow RecordBatches. A batch size of 64K-256K rows typically strikes the best balance between memory pressure and network utilization.
+1. Batch your data: Instead of sending individual rows, batch them into Arrow RecordBatches. A batch size of 64K-256K rows typically strikes the best balance between memory pressure and network usage.
 2. Use compression: Enable LZ4 or Zstandard compression for network transfers, both decompress faster than gzip while achieving comparable ratios for columnar data.
 3. Pre-define schemas: Define schemas upfront rather than inferring them on each call. Schema inference requires a full scan of the data and produces less precise types.
 4. Reuse client connections: Instantiate `FlightClient` once and reuse it. Creating a new client per request pays the gRPC handshake cost on every call.

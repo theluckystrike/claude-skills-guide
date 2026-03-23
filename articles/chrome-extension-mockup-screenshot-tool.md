@@ -243,7 +243,7 @@ Testing your extension across different Chrome versions ensures compatibility wi
 
 Conclusion
 
-A chrome extension mockup screenshot tool combines screenshot capture, annotation, and export capabilities into a streamlined workflow. By leveraging Chrome's APIs and HTML5 Canvas, you can build powerful features that rival standalone design tools while maintaining the convenience of browser integration.
+A chrome extension mockup screenshot tool combines screenshot capture, annotation, and export capabilities into a streamlined workflow. By using Chrome's APIs and HTML5 Canvas, you can build powerful features that rival standalone design tools while maintaining the convenience of browser integration.
 
 Whether you need to create Web Store listings, technical documentation, or stakeholder presentations, having a custom mockup screenshot tool integrated into your development environment saves context-switching and accelerates your workflow.
 

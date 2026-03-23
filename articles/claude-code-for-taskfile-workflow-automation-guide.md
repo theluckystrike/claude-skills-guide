@@ -187,7 +187,7 @@ Keep tasks focused and single-purpose. Each task should do one thing well. Compl
 
 Use descriptive task names and descriptions. Claude Code reads these to understand available capabilities and suggest appropriate actions.
 
-Leverage Claude Code's analysis capabilities. Before running expensive operations like full test suites or complete builds, use Claude Code to analyze what actually needs to happen.
+Use Claude Code's analysis capabilities. Before running expensive operations like full test suites or complete builds, use Claude Code to analyze what actually needs to happen.
 
 Version your skill definitions. As your workflows evolve, maintain version history so you can roll back problematic changes.
 

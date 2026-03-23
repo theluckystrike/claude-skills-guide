@@ -208,7 +208,7 @@ The `trap` command is one of the most useful, and most overlooked, features in b
 
 API and Network Automation
 
-Shell scripts frequently need to interact with REST APIs. Robust API calls require retry logic, timeout handling, and proper error propagation:
+Shell scripts frequently need to interact with REST APIs. Solid API calls require retry logic, timeout handling, and proper error propagation:
 
 ```bash
 #!/usr/bin/env bash

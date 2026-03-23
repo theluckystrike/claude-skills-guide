@@ -31,7 +31,7 @@ Syntax.fm
 
 Hosted by Wes Bos and Scott Tolinski, Syntax.fm focuses on web development with a practical tilt. Several episodes cover Claude Code as part of broader discussions on AI tools in the development workflow.
 
-Recommended episode: "AI Coding Assistants Deep Dive". explores how Claude and similar tools handle code generation, debugging, and refactoring tasks. The episode includes live coding demonstrations and discusses prompt strategies that produce better results.
+Recommended episode: "AI Coding Assistants Detailed look". explores how Claude and similar tools handle code generation, debugging, and refactoring tasks. The episode includes live coding demonstrations and discusses prompt strategies that produce better results.
 
 Why it works for developers: The hosts maintain a developer-first perspective, discussing tools in the context of actual projects rather than abstract capabilities. Episodes often include code examples you can adapt immediately.
 

@@ -405,7 +405,7 @@ Claude Code will suggest `createMemo` placements when you ask it to review a com
 
 Building Reusable Primitives with Claude Code
 
-One high-leverage use of Claude Code in a SolidJS project is generating custom reactive primitives that encapsulate common patterns. Rather than writing signals and effects inline, you can build composable utilities:
+One high-use use of Claude Code in a SolidJS project is generating custom reactive primitives that encapsulate common patterns. Rather than writing signals and effects inline, you can build composable utilities:
 
 ```typescript
 // Ask Claude Code: "Create a SolidJS primitive for tracking window size reactively"

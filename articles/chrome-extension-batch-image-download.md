@@ -158,7 +158,7 @@ async function downloadImages(urls, folderName) {
 }
 ```
 
-The second approach leverages the fact that the Downloads API can accept blob URLs. However, this requires converting images to blobs first, which adds complexity.
+The second approach uses the fact that the Downloads API can accept blob URLs. However, this requires converting images to blobs first, which adds complexity.
 
 Building the User Interface
 

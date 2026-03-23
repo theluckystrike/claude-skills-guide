@@ -279,7 +279,7 @@ px.display(df[df.is_anomaly].sort('time_', desc=True), 'error_anomalies')
 
 The threshold value (0.05 in this example) comes from running the baseline version of this script during normal operation and letting Claude Code analyze the output to recommend a meaningful threshold.
 
-Resource Utilization Investigation
+Resource Usage Investigation
 
 When pods are OOMKilled or experiencing CPU throttling, Pixie's process stats table gives per-pod resource data that Claude Code can query efficiently:
 

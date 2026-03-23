@@ -450,7 +450,7 @@ async function validateAndRunPipeline(db, collectionName, pipeline) {
 
 Conclusion
 
-MongoDB aggregation pipelines combined with Claude Code provide a powerful combination for building data analytics and transformation workflows. The key to success lies in understanding the available stages, optimizing pipeline order, and leveraging indexes effectively. Start with simple pipelines and gradually add complexity as you become more comfortable with the framework.
+MongoDB aggregation pipelines combined with Claude Code provide a powerful combination for building data analytics and transformation workflows. The key to success lies in understanding the available stages, optimizing pipeline order, and using indexes effectively. Start with simple pipelines and gradually add complexity as you become more comfortable with the framework.
 
 Remember these best practices:
 - Place `$match` stages early to reduce data volume

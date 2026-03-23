@@ -282,7 +282,7 @@ A near-zero norm on the query embedding indicates an API failure or model miscon
 
 5. Using Claude Code's Analysis Skills
 
-Leverage Claude Code's specialized skills for deeper analysis:
+Use Claude Code's specialized skills for deeper analysis:
 
 - xlsx skill - Analyze CSV exports of query logs and performance metrics. Ask Claude to open a spreadsheet of your query history and identify patterns in which queries fail consistently.
 - docx skill - Review documentation and identify inconsistencies between what your knowledge base describes and what users are actually asking.

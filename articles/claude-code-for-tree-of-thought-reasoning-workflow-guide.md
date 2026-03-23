@@ -17,7 +17,7 @@ Understanding Tree of Thought Reasoning
 
 Traditional linear AI reasoning follows a single path from problem to solution. Tree of Thought reasoning, in contrast, maintains multiple reasoning branches simultaneously, evaluating each path and pruning less promising branches while expanding successful ones. This approach mirrors how humans naturally tackle complex problems, exploring different angles before committing to a solution.
 
-Claude Code's tool-calling capabilities make it exceptionally well-suited for implementing ToT workflows. By leveraging structured tool invocations, you can create systems that generate multiple solution paths, evaluate their viability, and iteratively refine their approach.
+Claude Code's tool-calling capabilities make it exceptionally well-suited for implementing ToT workflows. By using structured tool invocations, you can create systems that generate multiple solution paths, evaluate their viability, and iteratively refine their approach.
 
 Implementing ToT with Claude Code
 

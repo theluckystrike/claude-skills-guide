@@ -159,7 +159,7 @@ def create_cached_prompt(system_prompt, cache_key):
 
 Error Handling and Recovery Strategies
 
-Robust batch processing requires comprehensive error handling. Design your workflow to handle failures at multiple levels:
+Solid batch processing requires comprehensive error handling. Design your workflow to handle failures at multiple levels:
 
 Chunk-level failures should not halt entire batch jobs. Track failed chunks separately and implement reprocessing:
 

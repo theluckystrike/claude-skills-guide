@@ -146,7 +146,7 @@ if __name__ == "__main__":
 
 Claude Code excels at expanding this skeleton into production-ready code. You can ask it to add error handling, request validation, logging, and monitoring with simple prompts.
 
-Adding Robust Input Validation
+Adding Solid Input Validation
 
 The skeleton above has no input validation, a significant production risk. Claude Code will expand `decode_request` to catch bad inputs early:
 
@@ -737,7 +737,7 @@ Best Practices for Claude Code + LitServe Workflows
 
 4. Implement Health Checks: Add `/health` and `/metrics` endpoints for Kubernetes readiness probes.
 
-5. Monitor GPU Utilization: Use Lightning's built-in observability to track inference latency and throughput.
+5. Monitor GPU Usage: Use Lightning's built-in observability to track inference latency and throughput.
 
 Writing Testable LitAPI Code
 

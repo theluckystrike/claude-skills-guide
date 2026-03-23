@@ -117,7 +117,7 @@ Teach what you learn. Explain concepts back to Claude Code or write documentatio
 
 Connect to your goals. Always tie what you're learning to your specific objectives. Are you learning to contribute? Building something similar? Understanding a concept? Your goals shape what you focus on.
 
-Advanced Techniques for Deep Dives
+Advanced Techniques for Detailed look
 
 For complex projects, consider these advanced approaches:
 
@@ -129,7 +129,7 @@ Build reference documentation. As you learn, create your own documentation. This
 
 Conclusion
 
-Claude Code transforms open source project study from overwhelming exploration into structured learning. By leveraging its context-aware analysis, pattern recognition, and interactive exploration capabilities, you can efficiently understand even complex codebases.
+Claude Code transforms open source project study from overwhelming exploration into structured learning. By using its context-aware analysis, pattern recognition, and interactive exploration capabilities, you can efficiently understand even complex codebases.
 
 Remember that effective learning requires active engagement, ask questions, experiment with changes, and connect concepts to your goals. Claude Code is a powerful partner in this process, but your curiosity and persistence drive the actual learning.
 

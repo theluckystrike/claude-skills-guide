@@ -28,13 +28,13 @@ Essential Skills for Dockerfile Work
 
 Claude Code's effectiveness comes from its skill ecosystem. These skills extend its capabilities for specialized tasks:
 
-Dockerfile Analyzer – Reviews existing Dockerfiles for security vulnerabilities, inefficient layers, and compliance issues. Run it with `/dockerfile-analyze` to get actionable improvement suggestions.
+Dockerfile Analyzer, Reviews existing Dockerfiles for security vulnerabilities, inefficient layers, and compliance issues. Run it with `/dockerfile-analyze` to get actionable improvement suggestions.
 
-Multi-Stage Build Generator – Creates optimized multi-stage builds that dramatically reduce final image sizes. This skill understands language-specific nuances and produces builds that separate build dependencies from runtime environments.
+Multi-Stage Build Generator, Creates optimized multi-stage builds that dramatically reduce final image sizes. This skill understands language-specific nuances and produces builds that separate build dependencies from runtime environments.
 
-Security Scanner Integration – Embeds security best practices directly into your Dockerfile generation, including non-root user creation, minimal base images, and vulnerability-aware package selection.
+Security Scanner Integration, Embeds security best practices directly into your Dockerfile generation, including non-root user creation, minimal base images, and vulnerability-aware package selection.
 
-Base Image Advisor – Compares candidate base images by size, CVE count, and update frequency. When you ask "should I use `python:3.11-slim` or `python:3.11-alpine`?", this skill gives a concrete answer with tradeoff analysis rather than a generic recommendation.
+Base Image Advisor, Compares candidate base images by size, CVE count, and update frequency. When you ask "should I use `python:3.11-slim` or `python:3.11-alpine`?", this skill gives a concrete answer with tradeoff analysis rather than a generic recommendation.
 
 Choosing the Right Base Image
 
@@ -289,13 +289,13 @@ Practical Workflow: Generating a Production Dockerfile
 
 Here's how to work effectively with Claude Code for Dockerfile generation:
 
-1. Describe your project context – Tell Claude Code about your language, framework, and any specific requirements (GPU access, system dependencies, etc.)
+1. Describe your project context, Tell Claude Code about your language, framework, and any specific requirements (GPU access, system dependencies, etc.)
 
-2. Request specific optimizations – "Generate a Dockerfile optimized for minimal size" or "Create a Dockerfile with security hardening"
+2. Request specific optimizations, "Generate a Dockerfile optimized for minimal size" or "Create a Dockerfile with security hardening"
 
-3. Iterate with feedback – Claude Code refines based on your input. "Make it work with Python 3.12" or "Add support for CUDA"
+3. Iterate with feedback, Claude Code refines based on your input. "Make it work with Python 3.12" or "Add support for CUDA"
 
-4. Validate the output – Always test the generated Dockerfile locally before deploying.
+4. Validate the output, Always test the generated Dockerfile locally before deploying.
 
 A concrete example of this workflow with a FastAPI application:
 
@@ -322,15 +322,15 @@ Common Pitfalls to Avoid
 
 Even with AI assistance, certain mistakes persist:
 
-- Copying everything before installing dependencies – This breaks layer caching
-- Using `:latest` tags – Pin versions for reproducibility
-- Running as root – Always create and use non-root users
-- Exposing unnecessary ports – Minimize the attack surface
-- Not setting proper labels – Add OCI-standard labels for tracking
-- Installing dev dependencies in production – Use `npm ci --omit=dev` or `pip install --no-dev`
-- Not cleaning package manager caches – `apt-get clean`, `npm cache clean --force`, `pip --no-cache-dir` save 10-50 MB per image
-- Hardcoding secrets – Never `ENV API_KEY=secret`; use Docker secrets or environment injection at runtime
-- Missing .dockerignore – Without it, `COPY . .` includes `.git`, `node_modules`, `.env`, and test fixtures
+- Copying everything before installing dependencies, This breaks layer caching
+- Using `:latest` tags, Pin versions for reproducibility
+- Running as root, Always create and use non-root users
+- Exposing unnecessary ports, Minimize the attack surface
+- Not setting proper labels, Add OCI-standard labels for tracking
+- Installing dev dependencies in production, Use `npm ci --omit=dev` or `pip install --no-dev`
+- Not cleaning package manager caches, `apt-get clean`, `npm cache clean --force`, `pip --no-cache-dir` save 10-50 MB per image
+- Hardcoding secrets, Never `ENV API_KEY=secret`; use Docker secrets or environment injection at runtime
+- Missing .dockerignore, Without it, `COPY . .` includes `.git`, `node_modules`, `.env`, and test fixtures
 
 The labels pitfall deserves special attention. OCI standard labels make images self-describing in registries and CI dashboards:
 
@@ -459,11 +459,11 @@ Looking Ahead: 2026 and Beyond
 
 Dockerfile generation continues evolving. In 2026, we see emerging trends:
 
-- AI-native security scanning – Integrated CVE assessment during generation, with Claude Code flagging known-vulnerable package versions before the image is ever built
-- Ephemeral build environments – Faster, more secure builds using temporary containers that are destroyed immediately after the build artifact is extracted
-- Platform-specific optimizations – Better ARM/Apple Silicon support, with automatic detection of architecture-specific gotchas like musl vs. glibc binary compatibility
-- Integrated CI/CD validation – Automatic testing of generated Dockerfiles in pipelines, including security gate policies that block deployments with high-severity CVEs
-- BuildKit cache mounts – Persistent cache mounts (`--mount=type=cache`) that survive across builds without being committed to image layers, dramatically speeding up pip and npm installs in CI
+- AI-native security scanning, Integrated CVE assessment during generation, with Claude Code flagging known-vulnerable package versions before the image is ever built
+- Ephemeral build environments, Faster, more secure builds using temporary containers that are destroyed immediately after the build artifact is extracted
+- Platform-specific optimizations, Better ARM/Apple Silicon support, with automatic detection of architecture-specific gotchas like musl vs. glibc binary compatibility
+- Integrated CI/CD validation, Automatic testing of generated Dockerfiles in pipelines, including security gate policies that block deployments with high-severity CVEs
+- BuildKit cache mounts, Persistent cache mounts (`--mount=type=cache`) that survive across builds without being committed to image layers, dramatically speeding up pip and npm installs in CI
 
 BuildKit cache mounts in particular are under-used in 2026 despite being available for years. Claude Code can generate them automatically:
 
@@ -483,7 +483,7 @@ Conclusion
 
 Claude Code transforms Dockerfile generation from a tedious task into a collaborative, intelligent process. By using its understanding of security, optimization, and modern deployment patterns, you can generate production-ready Dockerfiles that follow best practices automatically. Start with the essential skills, iterate on the output, and build confidence in your containerized deployments.
 
-The highest-leverage practices to adopt immediately are: multi-stage builds for every compiled or framework-heavy application, pinned base image versions for reproducibility, non-root users as the default, and a `.dockerignore` file in every repository. Claude Code's skills encode all of these as defaults so you do not have to remember them under deadline pressure.
+The most impactful practices to adopt immediately are: multi-stage builds for every compiled or framework-heavy application, pinned base image versions for reproducibility, non-root users as the default, and a `.dockerignore` file in every repository. Claude Code's skills encode all of these as defaults so you do not have to remember them under deadline pressure.
 {% endraw %}
 
 Related Reading

@@ -175,7 +175,7 @@ function OptimisticTitle({ title }) {
 }
 ```
 
-Claude Code can help you identify where in your application navigation state can be leveraged to create more responsive interfaces. The key is identifying user actions that would benefit from immediate feedback.
+Claude Code can help you identify where in your application navigation state can be used to create more responsive interfaces. The key is identifying user actions that would benefit from immediate feedback.
 
 Full Page-Level Optimistic State
 

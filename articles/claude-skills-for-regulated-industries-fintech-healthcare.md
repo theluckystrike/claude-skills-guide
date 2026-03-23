@@ -206,7 +206,7 @@ The [claude-code-secret-scanning-prevent-credential-leaks-guide](/claude-code-se
 
 PCI-DSS Scope Reduction Strategies
 
-The cheapest compliance is compliance you do not have to do. Reducing your PCI scope is the highest-leverage action a fintech team can take. Here is how different architectural choices affect your scope:
+The cheapest compliance is compliance you do not have to do. Reducing your PCI scope is the most impactful action a fintech team can take. Here is how different architectural choices affect your scope:
 
 | Architecture | PCI Scope | Implementation Complexity | Recommended For |
 |--------------|-----------|--------------------------|-----------------|

@@ -20,7 +20,7 @@ Understanding Horizontal Pod Autoscaling
 
 HPA monitors resource usage and scales pods accordingly. The Kubernetes HPA controller checks metrics at regular intervals (default 15 seconds) and adjusts replica counts within defined boundaries. You specify minimum and maximum replica counts, and HPA maintains optimal pod counts based on your chosen metrics.
 
-The autoscaler works with CPU utilization, memory usage, or custom metrics. For most applications, CPU-based autoscaling provides a solid starting point. Memory-based scaling helps applications with variable memory footprints. for example, JVM services that load data into heap on first request. Custom metrics enable sophisticated scaling decisions based on business-specific indicators like request queue depth or active user sessions.
+The autoscaler works with CPU usage, memory usage, or custom metrics. For most applications, CPU-based autoscaling provides a solid starting point. Memory-based scaling helps applications with variable memory footprints. for example, JVM services that load data into heap on first request. Custom metrics enable sophisticated scaling decisions based on business-specific indicators like request queue depth or active user sessions.
 
 Before configuring HPA, ensure your cluster runs Kubernetes 1.18 or later for the `autoscaling/v2` API. You also need `metrics-server` deployed for resource metrics collection. Verify it is running before any HPA configuration:
 
@@ -120,7 +120,7 @@ spec:
         periodSeconds: 15
 ```
 
-This configuration scales between 2 and 10 replicas. The autoscaler triggers scaling when CPU exceeds 70% or memory exceeds 80% utilization. The `behavior` section controls scaling stability, preventing rapid fluctuations.
+This configuration scales between 2 and 10 replicas. The autoscaler triggers scaling when CPU exceeds 70% or memory exceeds 80% usage. The `behavior` section controls scaling stability, preventing rapid fluctuations.
 
 The scale-down policy removes at most 10% of current replicas per 60-second window. For a 10-pod deployment, that means removing 1 pod per minute during scale-down. The scale-up policy allows doubling the replica count every 15 seconds, enabling rapid response to sudden load spikes.
 
@@ -132,7 +132,7 @@ kubectl apply -f hpa.yaml
 kubectl get hpa api-server-hpa --watch
 ```
 
-The `--watch` flag shows the HPA status updating in real time. The `TARGETS` column displays `current/desired` utilization. If it shows `<unknown>/70%`, the metrics-server is not yet collecting data for those pods. wait 30-60 seconds.
+The `--watch` flag shows the HPA status updating in real time. The `TARGETS` column displays `current/desired` usage. If it shows `<unknown>/70%`, the metrics-server is not yet collecting data for those pods. wait 30-60 seconds.
 
 Using Claude Code for HPA Configuration
 
@@ -148,7 +148,7 @@ When working with complex multi-metric HPA configurations, combine Claude Code w
 
 Custom Metrics for Advanced Autoscaling
 
-Production applications often require scaling beyond simple CPU or memory metrics. Custom metrics enable HPA to respond to application-specific indicators like request queue length, database connection pool utilization, or business metrics such as active user sessions.
+Production applications often require scaling beyond simple CPU or memory metrics. Custom metrics enable HPA to respond to application-specific indicators like request queue length, database connection pool usage, or business metrics such as active user sessions.
 
 To use custom metrics, deploy Prometheus and configure the Prometheus adapter. Install the adapter with Helm:
 
@@ -220,7 +220,7 @@ Resource Requests: The Most Important Configuration Detail
 
 HPA calculates usage based on resource requests, not limits. This single fact is responsible for more misconfigured autoscalers than any other issue.
 
-If a pod has `requests.cpu: 100m` but typically uses `300m` under normal load, HPA calculates 300% utilization. With a 70% target, HPA will try to scale out immediately even at normal traffic levels, leading to constant unnecessary scaling. Conversely, if requests are set too high. `requests.cpu: 1000m` but actual usage is 100m. HPA will never trigger even under heavy load.
+If a pod has `requests.cpu: 100m` but typically uses `300m` under normal load, HPA calculates 300% usage. With a 70% target, HPA will try to scale out immediately even at normal traffic levels, leading to constant unnecessary scaling. Conversely, if requests are set too high. `requests.cpu: 1000m` but actual usage is 100m. HPA will never trigger even under heavy load.
 
 The right approach is to set requests at roughly your p50 usage and limits at your p99 usage. Claude Code can help you derive these values if you provide your Prometheus query output:
 
@@ -232,7 +232,7 @@ Or query Prometheus directly
 rate(container_cpu_usage_seconds_total{pod=~"api-server.*"}[5m])
 ```
 
-Share the output with Claude Code and ask it to recommend appropriate request and limit values along with a corresponding HPA target utilization.
+Share the output with Claude Code and ask it to recommend appropriate request and limit values along with a corresponding HPA target usage.
 
 Best Practices and Common Pitfalls
 
@@ -298,7 +298,7 @@ Conclusion
 
 Horizontal Pod Autoscaling transforms Kubernetes deployments into responsive, cost-efficient systems. Start with basic CPU and memory metrics, set resource requests accurately, and configure behavior windows that match your pod startup time. Then evolve toward custom metrics as your observability maturity increases and you have real traffic data to calibrate thresholds against.
 
-Claude Code streamlines configuration generation and helps maintain best practices across your cluster. Use it to audit existing HPA configurations, generate Prometheus adapter rules, and review whether your resource requests match your observed usage. Combine HPA with other infrastructure patterns. rolling update deployments for zero-downtime releases, pod disruption budgets to protect against simultaneous scaling and node maintenance, and cluster autoscaling to handle the case where HPA wants more pods but the cluster lacks available nodes. Together these tools create robust, self-adjusting workloads that serve users effectively while controlling infrastructure costs.
+Claude Code streamlines configuration generation and helps maintain best practices across your cluster. Use it to audit existing HPA configurations, generate Prometheus adapter rules, and review whether your resource requests match your observed usage. Combine HPA with other infrastructure patterns. rolling update deployments for zero-downtime releases, pod disruption budgets to protect against simultaneous scaling and node maintenance, and cluster autoscaling to handle the case where HPA wants more pods but the cluster lacks available nodes. Together these tools create solid, self-adjusting workloads that serve users effectively while controlling infrastructure costs.
 
 
 Related Reading

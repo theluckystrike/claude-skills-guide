@@ -65,7 +65,7 @@ Understanding why cursors are preferred over offsets helps you make better desig
 | Consistency | Data may shift between pages | Stable regardless of inserts/deletes |
 | Performance | Slower as offset grows (DB must count rows) | Consistent speed regardless of position |
 | Random access | Can jump to page 5 directly | Must traverse forward sequentially |
-| Resumability | Fragile. offset becomes stale | Robust. cursor remains valid |
+| Resumability | Fragile. offset becomes stale | Solid. cursor remains valid |
 | Implementation | Simple to reason about | Slightly more complex initially |
 
 For the Claude Code API, cursors are the right tool because conversation history and document libraries change frequently. Offset pagination would give you unreliable results in any live system.

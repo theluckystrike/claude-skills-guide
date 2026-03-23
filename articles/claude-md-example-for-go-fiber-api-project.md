@@ -163,7 +163,7 @@ Keeping routes in one place makes it easy to audit what is exposed. Claude can g
 
 Testing Your Fiber API with Claude
 
-Testing is where Claude Code produces the most leverage. Fiber includes a built-in test helper that lets you run requests against the app without starting an HTTP server. Use the tdd skill to drive your development. Describe the expected behavior of your endpoints:
+Testing is where Claude Code produces the most use. Fiber includes a built-in test helper that lets you run requests against the app without starting an HTTP server. Use the tdd skill to drive your development. Describe the expected behavior of your endpoints:
 
 > "Write tests for GET /api/users that cover: empty list returns 200 with empty array, pagination params are respected, invalid limit returns 400."
 
@@ -380,7 +380,7 @@ users.Delete("/:id", middleware.RequireRole("admin"), userHandler.Delete)
 
 Error Handling Strategies
 
-Robust error handling distinguishes production-ready APIs from prototypes. Claude can help implement centralized error handling using Fiber's ErrorHandler:
+Solid error handling distinguishes production-ready APIs from prototypes. Claude can help implement centralized error handling using Fiber's ErrorHandler:
 
 ```go
 // config/errors.go

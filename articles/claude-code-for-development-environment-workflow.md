@@ -85,7 +85,7 @@ This context file ensures Claude Code provides relevant suggestions aligned with
 
 Practical Development Workflows with Claude Code
 
-Now let's explore concrete examples of how Claude Code integrates into everyday development tasks.
+Here are concrete examples of how Claude Code integrates into everyday development tasks.
 
 Debugging and Issue Resolution
 

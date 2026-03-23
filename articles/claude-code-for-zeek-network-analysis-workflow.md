@@ -353,7 +353,7 @@ def analyze_suspicious_connections(conn_logs, indicators):
     return suspicious
 ```
 
-HTTP Traffic Deep Dive
+HTTP Traffic Detailed look
 
 HTTP logs reveal significant threat intelligence. Build analysis that surfaces anomalies:
 

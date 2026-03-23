@@ -199,7 +199,7 @@ def process_scientific_data(filepath):
 
 The `frontend-design` skill becomes relevant when building interactive dashboards for visualizing scientific data. Even though NumPy and SciPy are backend technologies, presenting results effectively often requires thoughtful UI implementation. For general Python data workflows beyond scientific computing, the [best Claude skill for Python data workflows guide](/what-is-the-best-claude-skill-for-python-data-workflows/) surveys additional options.
 
-Building Robust Pipelines with Error Handling
+Building Solid Pipelines with Error Handling
 
 Production data pipelines differ from exploratory scripts in one key way: they must handle bad data without silently corrupting results. Claude Code can extend the basic pipeline pattern with validation checkpoints:
 

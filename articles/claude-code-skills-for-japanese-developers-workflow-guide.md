@@ -61,7 +61,7 @@ Activate tdd skill and start a new feature
 
 The skill generates test cases in your preferred framework (Jest, Vitest, or pytest), creating a safety net for refactoring. Japanese developers often appreciate this approach because it produces self-documenting code that future team members can understand without extensive comments.
 
-#### TDD Example: Japanese Form Validation
+TDD Example: Japanese Form Validation
 
 A practical scenario for Japanese development is form validation that handles full-width characters and Japanese-specific input conventions:
 
@@ -104,7 +104,7 @@ Requirements:
 
 This skill understands component composition and generates accessible, semantic HTML with appropriate class names. It works well with popular frameworks like Next.js, Nuxt, and Remix.
 
-#### Handling Japanese Typography in Components
+Handling Japanese Typography in Components
 
 Japanese web design has specific typographic requirements: line-height, font-size hierarchies, and text-overflow behavior differ from Latin text. Ask Claude Code to generate components with Japanese typography best practices:
 
@@ -129,7 +129,7 @@ export function ArticleBody({ content }: { content: string }) {
 
 The `word-break: keep-all` property prevents awkward mid-word breaks in Japanese text, while `font-feature-settings: 'palt'` enables proportional alternates in Japanese fonts for tighter, more natural character spacing. Claude Code will add these details when you specify "Japanese typography" in your prompt.
 
-#### Responsive Japanese UI Patterns
+Responsive Japanese UI Patterns
 
 Japanese enterprise UIs often require higher information density than Western counterparts. Prompt Claude Code with the `/frontend-design` skill to generate data-dense table layouts that remain readable on mobile:
 
@@ -187,7 +187,7 @@ Output: .pdf"
 
 The skill maintains Japanese character encoding correctly and supports custom styling to match corporate document standards.
 
-#### Structuring Japanese Technical Documents
+Structuring Japanese Technical Documents
 
 Japanese technical documents follow specific conventions. When generating PDFs for Japanese clients, include these structural elements in your prompt:
 
@@ -221,7 +221,7 @@ Include sections for:
 
 This skill preserves formatting, handles mixed-language content gracefully, and supports the document templates Japanese enterprises commonly use.
 
-#### Mixed-Language Content Handling
+Mixed-Language Content Handling
 
 Japanese business documents frequently mix Japanese prose with English technical terms, product names, and acronyms. Ask Claude Code to maintain consistent mixed-language formatting:
 

@@ -14,7 +14,7 @@ tags: [claude-code, claude-skills]
 
 Claude Code for Prompt Chaining Workflows Tutorial Guide
 
-Prompt chaining is one of the most powerful techniques for building sophisticated AI workflows. Instead of asking Claude Code to accomplish complex tasks in a single prompt, you chain multiple smaller prompts together, each building on the output of the previous one. This approach transforms how developers automate workflows, process documents, and build AI-powered applications. In this tutorial, you'll learn how to implement prompt chaining with Claude Code skills to create robust, maintainable AI workflows.
+Prompt chaining is one of the most powerful techniques for building sophisticated AI workflows. Instead of asking Claude Code to accomplish complex tasks in a single prompt, you chain multiple smaller prompts together, each building on the output of the previous one. This approach transforms how developers automate workflows, process documents, and build AI-powered applications. In this tutorial, you'll learn how to implement prompt chaining with Claude Code skills to create solid, maintainable AI workflows.
 
 What Is Prompt Chaining?
 

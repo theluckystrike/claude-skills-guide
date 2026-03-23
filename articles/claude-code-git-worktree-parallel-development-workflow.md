@@ -243,7 +243,7 @@ Worktrees sometimes have permission issues on shared filesystems. Ensure consist
 
 Conclusion
 
-Git worktrees combined with Claude Code create a powerful parallel development environment. You maintain multiple isolated working contexts without the overhead of separate repository clones, while Claude Code's skill system, particularly when leveraging skills like `xlsx` for tracking or `docx` for documentation, amplifies your productivity across all branches simultaneously.
+Git worktrees combined with Claude Code create a powerful parallel development environment. You maintain multiple isolated working contexts without the overhead of separate repository clones, while Claude Code's skill system, particularly when using skills like `xlsx` for tracking or `docx` for documentation, amplifies your productivity across all branches simultaneously.
 
 Whether you're managing feature development alongside bug fixes, conducting code reviews, or experimenting with refactoring, this workflow scales from simple two-branch scenarios to complex multi-context projects. The key advantage is eliminating the mental overhead of state management: each worktree simply *is* its branch, requiring no careful stashing or complex git operations to preserve.
 

@@ -75,7 +75,7 @@ The permission system received a major overhaul. The `--dangerously-skip-permiss
 }
 ```
 
-Skills like docx and pptx leveraged these hooks to provide rich document generation capabilities. The version also introduced better error handling and retry logic, making Claude Code more reliable for production use.
+Skills like docx and pptx used these hooks to provide rich document generation capabilities. The version also introduced better error handling and retry logic, making Claude Code more reliable for production use.
 
 Version 4.0: The Skills Ecosystem Explosion
 

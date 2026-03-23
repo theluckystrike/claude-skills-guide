@@ -86,7 +86,7 @@ Claude Code will identify patterns like:
 - Local storage synchronization
 - Window/resize computations
 
-Building Robust Composable Functions
+Building Solid Composable Functions
 
 When creating composables, Claude Code can help structure them properly:
 

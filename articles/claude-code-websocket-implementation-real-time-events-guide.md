@@ -330,7 +330,7 @@ This room manager maintains message history, tracks members, and broadcasts even
 
 Error Handling and Reconnection Patterns
 
-Robust error handling distinguishes production systems from prototypes. Handle connection timeouts, invalid messages, and graceful degradation:
+Solid error handling distinguishes production systems from prototypes. Handle connection timeouts, invalid messages, and graceful degradation:
 
 ```javascript
 class ResilientWebSocketClient extends WebSocketClient {

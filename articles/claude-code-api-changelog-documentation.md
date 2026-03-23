@@ -132,7 +132,7 @@ Consider adding a "Recent Changes" section to your API reference landing page th
 
 Conclusion
 
-Creating and maintaining API changelog documentation doesn't have to be a tedious process. By leveraging Claude Code for drafting, refining, and automating your changelog workflow, you can ensure your developers always have access to clear, consistent, and actionable information about API changes. The key is establishing good habits early, using consistent formatting, and treating your changelog as a critical part of your API's user experience.
+Creating and maintaining API changelog documentation doesn't have to be a tedious process. By using Claude Code for drafting, refining, and automating your changelog workflow, you can ensure your developers always have access to clear, consistent, and actionable information about API changes. The key is establishing good habits early, using consistent formatting, and treating your changelog as a critical part of your API's user experience.
 
 
 Related Reading

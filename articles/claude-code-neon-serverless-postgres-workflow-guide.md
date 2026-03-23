@@ -84,7 +84,7 @@ The host format for Neon is:
 host = "endpoint.region.aws.neon.tech"
 ```
 
-This skill provides the foundation for all Neon interactions. Now let's explore practical workflows.
+This skill provides the foundation for all Neon interactions. Here are practical workflows.
 
 Practical Workflow Examples
 

@@ -354,7 +354,7 @@ Claude Code will read your existing configuration, understand the database schem
 
 Handling Authentication Errors and Edge Cases
 
-Robust authentication requires proper error handling. NextAuth provides several ways to manage errors:
+Solid authentication requires proper error handling. NextAuth provides several ways to manage errors:
 
 ```typescript
 // app/auth/error/page.tsx

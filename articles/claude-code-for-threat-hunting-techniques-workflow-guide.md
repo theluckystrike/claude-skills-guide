@@ -197,7 +197,7 @@ Actionable Advice for Effective Threat Hunting
 
 Conclusion
 
-Claude Code transforms threat hunting from a purely manual, expertise-dependent practice into an accessible, automated workflow. By leveraging Claude's natural language understanding and code execution capabilities, security teams can scale their hunting operations, reduce investigation time, and focus human expertise on complex threat analysis.
+Claude Code transforms threat hunting from a purely manual, expertise-dependent practice into an accessible, automated workflow. By using Claude's natural language understanding and code execution capabilities, security teams can scale their hunting operations, reduce investigation time, and focus human expertise on complex threat analysis.
 
 The key is starting small, automate one hunting workflow, measure the results, and expand gradually. As you build your library of threat hunting skills, you'll create a powerful, reusable toolkit that makes proactive security accessible to your entire development and security team.
 {% endraw %}

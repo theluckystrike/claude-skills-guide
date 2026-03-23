@@ -164,7 +164,7 @@ This approach combines AI efficiency with human judgment, producing better resul
 
 Setting Up a Context File
 
-One high-leverage investment is creating a project context file that you paste at the start of each session. This replaces the need to re-explain your stack and conventions every time:
+One high-use investment is creating a project context file that you paste at the start of each session. This replaces the need to re-explain your stack and conventions every time:
 
 ```
 PROJECT CONTEXT. MyApp API
@@ -301,7 +301,7 @@ Lesson: complex distributed system bugs need human debugging
 
 After a few weeks, patterns emerge. For most developers, AI tools deliver 2-4x speed improvements on well-defined tasks with clear requirements (CRUD operations, boilerplate, test generation, refactoring to a defined pattern). They deliver near-zero improvement on ambiguous architecture decisions, novel debugging, and security review.
 
-Concentrating your AI tool usage on the high-leverage tasks and staying skeptical in the low-leverage areas produces better outcomes than trying to use AI for everything.
+Concentrating your AI tool usage on the high-use tasks and staying skeptical in the low-use areas produces better outcomes than trying to use AI for everything.
 
 Team Adoption Strategies That Actually Work
 

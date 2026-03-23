@@ -249,7 +249,7 @@ Real-time Updates: Use the Calendar API's watch endpoint to receive push notific
 
 Handling Edge Cases and Errors
 
-Robust error handling improves the extension experience significantly. Common scenarios to handle include:
+Solid error handling improves the extension experience significantly. Common scenarios to handle include:
 
 - Token expiration: The access token expires after about an hour. Implement token refresh logic or prompt re-authentication.
 - Network failures: Display appropriate error messages and provide retry functionality.

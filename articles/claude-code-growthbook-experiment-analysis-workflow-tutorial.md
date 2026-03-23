@@ -162,7 +162,7 @@ Segment-specific findings: Be cautious about rolling out based on segment analys
 
 Conclusion
 
-Claude Code transforms GrowthBook experiment analysis from a manual, error-prone process into a structured, reproducible workflow. By leveraging Claude's capabilities for data retrieval, statistical interpretation, and report generation, you can make more confident, data-driven product decisions.
+Claude Code transforms GrowthBook experiment analysis from a manual, error-prone process into a structured, reproducible workflow. By using Claude's capabilities for data retrieval, statistical interpretation, and report generation, you can make more confident, data-driven product decisions.
 
 The key is establishing clear processes around your experiment analysis, using Claude Code as a knowledgeable assistant that helps maintain statistical rigor while accelerating your workflow. Start with simple analyses and gradually build toward more sophisticated automated reporting as your experimentation program matures.
 

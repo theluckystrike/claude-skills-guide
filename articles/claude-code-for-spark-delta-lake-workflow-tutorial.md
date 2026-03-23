@@ -361,7 +361,7 @@ DeltaTable.forName(spark, "main.analytics.events").optimize().executeCompaction(
 
 Liquid Clustering avoids the file explosion that static `partitionBy` causes on high-cardinality columns and removes the need for Z-Order. Tell Claude Code which Databricks Runtime version you are on and it will recommend Liquid Clustering for DBR 13.3+ or Z-Order for earlier releases.
 
-Building Robust Data Pipelines
+Building Solid Data Pipelines
 
 For production pipelines, incorporate error handling and monitoring:
 

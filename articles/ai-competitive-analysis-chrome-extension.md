@@ -213,7 +213,7 @@ How is output formatted?
 - CSV export for loading into spreadsheets
 - Direct integration with Notion or Google Sheets via their APIs
 
-Robust Content Extraction
+Solid Content Extraction
 
 The simple `querySelectorAll` approach works on sites with consistent class names, but most competitor sites will not cooperate. Here is a more resilient extractor that falls back to full-page text:
 

@@ -379,7 +379,7 @@ When implementing clerk in your organization, start simple and iterate. Begin wi
 
 Regularly audit permissions to remove unnecessary access. As projects change, some permissions become obsolete. Schedule quarterly reviews to ensure roles remain aligned with current responsibilities.
 
-Leverage workflow templates for common patterns. Claude Code provides pre-built workflows for code review, document approval, and deployment gates that you can customize to your context.
+Use workflow templates for common patterns. Claude Code provides pre-built workflows for code review, document approval, and deployment gates that you can customize to your context.
 
 Finally, integrate clerk notifications with your existing communication tools. Approval requests should reach reviewers through Slack, email, or other channels they actively monitor.
 

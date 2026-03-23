@@ -31,7 +31,7 @@ Before diving into solutions, it's helpful to understand why this happens. Claud
 
 4. Misinterpret broad requests - Vague instructions like "update the API" can lead to modifications across many files.
 
-Now let's explore the specific techniques to prevent these issues.
+Here are the specific techniques to prevent these issues.
 
 Technique 1: Use Explicit File Scope in Your Prompts
 

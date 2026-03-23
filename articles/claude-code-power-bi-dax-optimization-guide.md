@@ -81,7 +81,7 @@ RETURN
 TotalQuantity * AvgUnitCost
 ```
 
-The optimized version leverages the VertiPaq engine's strength in aggregation rather than row-by-row evaluation.
+The optimized version uses the VertiPaq engine's strength in aggregation rather than row-by-row evaluation.
 
 Avoiding Repeated Context Transitions
 

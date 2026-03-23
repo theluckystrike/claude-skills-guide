@@ -132,7 +132,7 @@ This enables Claude Code to:
 
 Handling Edge Cases and Errors
 
-Robust signed URL workflows need proper error handling. Common issues include:
+Solid signed URL workflows need proper error handling. Common issues include:
 
 Expired URLs: If a signed URL expires before use, regenerate a new one and retry the operation.
 

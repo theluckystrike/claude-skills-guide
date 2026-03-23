@@ -72,11 +72,11 @@ Following best practices ensures your APISIX deployment remains maintainable and
 
 Structure your configuration hierarchically with clear separation between routes, services, upstreams, and plugin definitions. Use naming conventions that make resources identifiable and searchable. Implement configuration validation in your CI/CD pipeline to catch errors before deployment.
 
-Monitor your APISIX instances using metrics like request rate, latency percentiles, error rates, and resource utilization. APISIX integrates with Prometheus, Grafana, and other observability tools. Claude Code can help you set up appropriate monitoring dashboards and alerting rules based on your SLO requirements.
+Monitor your APISIX instances using metrics like request rate, latency percentiles, error rates, and resource usage. APISIX integrates with Prometheus, Grafana, and other observability tools. Claude Code can help you set up appropriate monitoring dashboards and alerting rules based on your SLO requirements.
 
 Finally, document your APISIX architecture decisions and configuration patterns. This documentation helps team members understand the setup and enables easier modifications. Use CLAUDE.md files in your repository to capture APISIX-specific guidance that Claude Code can reference in future sessions.
 
-By leveraging Claude Code throughout your APISIX workflow, you can accelerate configuration development, reduce errors, and implement best practices more consistently. The key is providing adequate context about your infrastructure and requirements, then iterating on the generated configurations based on testing and observability data.
+By using Claude Code throughout your APISIX workflow, you can accelerate configuration development, reduce errors, and implement best practices more consistently. The key is providing adequate context about your infrastructure and requirements, then iterating on the generated configurations based on testing and observability data.
 
 Related Reading
 

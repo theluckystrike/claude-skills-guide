@@ -31,7 +31,7 @@ By default, the Task Manager shows several columns, but you can enable additiona
 
 - Memory: The total memory footprint in megabytes
 - JavaScript Memory: Heap size used by JavaScript engines
-- CPU: Percentage of processor utilization
+- CPU: Percentage of processor usage
 - Network: Current network activity in KB/s
 - FPS: Frames per second (useful for detecting rendering issues)
 

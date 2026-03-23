@@ -177,7 +177,7 @@ Running these checks programmatically before posts enter the approval queue save
 
 Repurposing Content at Scale
 
-The highest-leverage application of this workflow is systematic repurposing. A single long-form piece of content, a blog post, a recorded talk transcript, a product changelog, can generate weeks of social posts if you process it correctly.
+The most impactful application of this workflow is systematic repurposing. A single long-form piece of content, a blog post, a recorded talk transcript, a product changelog, can generate weeks of social posts if you process it correctly.
 
 Set up a repurposing session with `/pdf` or `/docx`:
 

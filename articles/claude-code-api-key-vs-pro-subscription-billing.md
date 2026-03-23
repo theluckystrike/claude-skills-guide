@@ -36,7 +36,7 @@ For a standard coding session where you ask Claude to review a pull request, wri
 
 A more intensive session, say refactoring an entire module or generating a new API endpoint with full documentation, might use 200,000 to 500,000 tokens, costing somewhere between $2.00 and $8.00.
 
-The beauty of API key billing is predictability for irregular usage. If you only use Claude Code occasionally for specific tasks, paying per token often works out cheaper than a monthly subscription you might not fully utilize.
+The beauty of API key billing is predictability for irregular usage. If you only use Claude Code occasionally for specific tasks, paying per token often works out cheaper than a monthly subscription you might not fully use.
 
 How Pro Subscription Works
 
@@ -82,7 +82,7 @@ Use Claude Code's Skills Effectively: Skills like `/compact` help reduce context
 
 Be Specific in Prompts: Vague requests like "help me with this code" force Claude to ask clarifying questions, increasing token usage. Precise prompts like "write a unit test for this user authentication function using Jest" lead to faster, more accurate responses.
 
-Leverage Local Context: Instead of pasting entire files, describe what you need or reference specific functions. Claude can read files directly when you grant permission, saving you from copying large code blocks into the chat.
+Use Local Context: Instead of pasting entire files, describe what you need or reference specific functions. Claude can read files directly when you grant permission, saving you from copying large code blocks into the chat.
 
 Monitor Your Usage: Both API key users and Pro subscribers should regularly check their usage dashboards. Understanding your consumption patterns helps you choose the right plan or optimize your workflow.
 

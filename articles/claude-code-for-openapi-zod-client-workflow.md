@@ -87,7 +87,7 @@ export const UserSchema = z.object({
 export type User = z.infer<typeof UserSchema>;
 ```
 
-Notice how Claude adds sensible validations, `.email()` for email fields, `.min(1)` for required strings, and `.datetime()` for ISO date strings. These small details make your runtime validation robust.
+Notice how Claude adds sensible validations, `.email()` for email fields, `.min(1)` for required strings, and `.datetime()` for ISO date strings. These small details make your runtime validation solid.
 
 Building Type-Safe API Clients
 
@@ -211,7 +211,7 @@ const ApiResponseSchema = z.discriminatedUnion('status', [
 ]);
 ```
 
-Leverage Zod Transformations: For date fields, use Zod's `.transform()` to convert strings to Date objects automatically:
+Use Zod Transformations: For date fields, use Zod's `.transform()` to convert strings to Date objects automatically:
 
 ```typescript
 const UserSchema = z.object({

@@ -162,7 +162,7 @@ Always review Claude Code's changes before accepting them. Check specifically fo
 - Debug code left behind
 - Commented-out logging code
 
-Leverage IDE Extensions
+Use IDE Extensions
 
 Use IDE extensions that highlight console.log usage to catch them early:
 - ESLint rules for detecting console statements

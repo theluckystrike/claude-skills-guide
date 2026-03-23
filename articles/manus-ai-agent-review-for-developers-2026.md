@@ -105,7 +105,7 @@ For development teams, the choice often comes down to specific use cases:
 - Choose Claude Code when you need predictable, repeatable behavior; have specialized domain requirements; need strong audit trails; or want to build reusable automation assets.
 - Choose Manus when exploring new problem spaces; needing flexible adaptation to unexpected requirements; or prioritizing rapid prototyping over long-term maintainability.
 
-Many teams find value in using both platforms for different aspects of their workflow, leveraging Claude Code for core development tasks while using Manus for exploratory analysis and research.
+Many teams find value in using both platforms for different aspects of their workflow, using Claude Code for core development tasks while using Manus for exploratory analysis and research.
 
 Conclusion
 

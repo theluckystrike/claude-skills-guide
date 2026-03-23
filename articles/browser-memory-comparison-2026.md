@@ -20,7 +20,7 @@ This guide provides a practical comparison of major browser memory consumption p
 
 Browser Memory Architecture Overview
 
-Modern browsers employ different architectural approaches to memory management. Chrome uses a multi-process model where each tab, extension, and renderer runs in isolation. Firefox utilizes a multi-process architecture with a focus on content process sharing, while Safari leverages the underlying operating system for memory optimization.
+Modern browsers employ different architectural approaches to memory management. Chrome uses a multi-process model where each tab, extension, and renderer runs in isolation. Firefox utilizes a multi-process architecture with a focus on content process sharing, while Safari uses the underlying operating system for memory optimization.
 
 The trade-off is straightforward: process isolation provides stability but increases memory overhead, while shared architectures reduce memory usage at the cost of potential cross-tab interference.
 

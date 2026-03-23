@@ -123,7 +123,7 @@ claude --print "Following the existing pattern in src/services/logger.ts, create
 ```
 
 Test-First Prompts
-Leverage Claude Code's test generation capabilities:
+Use Claude Code's test generation capabilities:
 
 ```
 claude --print "Write failing tests first for the payment processing module, then implement the code to make them pass"

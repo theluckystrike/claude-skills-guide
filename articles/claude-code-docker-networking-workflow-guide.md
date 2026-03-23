@@ -611,7 +611,7 @@ This script is idempotent, it will not fail if the networks already exist, makin
 
 Conclusion
 
-Docker networking does not have to be a source of frustration. By understanding the core network drivers, leveraging Docker Compose for declarative configurations, and automating troubleshooting workflows, you can build reliable containerized applications. Claude Code amplifies these capabilities by enabling skill-based automation, documentation generation, and systematic debugging approaches.
+Docker networking does not have to be a source of frustration. By understanding the core network drivers, using Docker Compose for declarative configurations, and automating troubleshooting workflows, you can build reliable containerized applications. Claude Code amplifies these capabilities by enabling skill-based automation, documentation generation, and systematic debugging approaches.
 
 The key principles to carry forward are: use custom bridge networks rather than the default bridge to get automatic DNS resolution; apply the `internal: true` flag to networks that should not have internet access; always bind host ports to `127.0.0.1` unless external access is required; and use health checks with `depends_on` conditions to eliminate race conditions during startup.
 

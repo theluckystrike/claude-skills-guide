@@ -27,10 +27,10 @@ What is OIDC and Why Does It Matter?
 OIDC (OpenID Connect) is an authentication protocol built on top of OAuth 2.0 that provides identity verification. In the context of GitHub Actions, OIDC allows your workflow to request short-lived tokens directly from your cloud provider, without storing permanent secrets in GitHub.
 
 Benefits of OIDC:
-- No secrets storage – Credentials never leave your cloud provider
-- Automatic expiration – Tokens are valid for minutes to hours, not months
-- Reduced attack surface – No long-lived secrets to rotate or revoke
-- Fine-grained permissions – Scope tokens to specific roles and resources
+- No secrets storage, Credentials never leave your cloud provider
+- Automatic expiration, Tokens are valid for minutes to hours, not months
+- Reduced attack surface, No long-lived secrets to rotate or revoke
+- Fine-grained permissions, Scope tokens to specific roles and resources
 
 Setting Up OIDC for AWS
 
@@ -179,9 +179,9 @@ jobs:
 Step 3: Configure Azure Secrets
 
 Add these repository secrets:
-- `AZURE_CLIENT_ID` – Application (client) ID
-- `AZURE_TENANT_ID` – Directory (tenant) ID  
-- `AZURE_SUBSCRIPTION_ID` – Subscription ID
+- `AZURE_CLIENT_ID`, Application (client) ID
+- `AZURE_TENANT_ID`, Directory (tenant) ID  
+- `AZURE_SUBSCRIPTION_ID`, Subscription ID
 
 Note that you still need these identifiers, but the secret itself (password/certificate) is replaced by OIDC federation.
 
@@ -266,7 +266,7 @@ Claude Code will generate the complete workflow with the correct OIDC configurat
 
 Best Practices for OIDC in GitHub Actions
 
-1. Scope permissions tightly – Use `sub` conditions to restrict which repository branches or paths can authenticate:
+1. Scope permissions tightly, Use `sub` conditions to restrict which repository branches or paths can authenticate:
    ```json
    "Condition": {
      "StringLike": {
@@ -276,13 +276,13 @@ Best Practices for OIDC in GitHub Actions
    }
    ```
 
-2. Use separate roles per environment – Create distinct IAM roles/Azure AD apps for dev, staging, and production with different permission levels.
+2. Use separate roles per environment, Create distinct IAM roles/Azure AD apps for dev, staging, and production with different permission levels.
 
-3. Audit regularly – Review CloudTrail/AWS CloudTrail logs to verify which roles are being assumed and from where.
+3. Audit regularly, Review CloudTrail/AWS CloudTrail logs to verify which roles are being assumed and from where.
 
-4. Enable GitHub's OIDC token verification – Ensure your cloud provider validates the OIDC token signature.
+4. Enable GitHub's OIDC token verification, Ensure your cloud provider validates the OIDC token signature.
 
-5. Use environment protection rules – Combine OIDC with GitHub Environments requiring approvals for production deployments.
+5. Use environment protection rules, Combine OIDC with GitHub Environments requiring approvals for production deployments.
 
 Troubleshooting Common Issues
 

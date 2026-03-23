@@ -195,7 +195,7 @@ This helps you understand what changed and choose the better version.
 
 When Variability Is Actually Beneficial
 
-Sometimes different output isn't a problem, it's a feature. Consider leveraging variability for:
+Sometimes different output isn't a problem, it's a feature. Consider using variability for:
 
 - Exploring multiple solutions: Ask for different approaches and choose the best
 - Creative problem solving: Different outputs might reveal better solutions
@@ -205,7 +205,7 @@ The key is knowing when you need consistency and when variation is acceptable.
 
 Conclusion
 
-Claude Code's variable output is an inherent characteristic of language model generation, not a flaw. By understanding why it happens and applying these practical strategies, using explicit examples, creating consistent skills, structuring prompts carefully, and leveraging templates, you can achieve the reproducibility your workflow requires. Start with providing examples in your prompts, as this single technique often provides the biggest improvement in output consistency.
+Claude Code's variable output is an inherent characteristic of language model generation, not a flaw. By understanding why it happens and applying these practical strategies, using explicit examples, creating consistent skills, structuring prompts carefully, and using templates, you can achieve the reproducibility your workflow requires. Start with providing examples in your prompts, as this single technique often provides the biggest improvement in output consistency.
 
 Remember: the goal isn't to eliminate all variation, but to control it strategically. Use these techniques when consistency matters, and enjoy the creative exploration when it doesn't.
 

@@ -15,7 +15,7 @@ score: 8
 {% raw %}
 AI Presentation Maker Chrome Extension: A Developer Guide
 
-Building a Chrome extension that leverages AI to create presentations transforms how developers and content creators generate slides. This guide covers the technical implementation, API integrations, and practical patterns for creating a production-ready AI presentation maker extension.
+Building a Chrome extension that uses AI to create presentations transforms how developers and content creators generate slides. This guide covers the technical implementation, API integrations, and practical patterns for creating a production-ready AI presentation maker extension.
 
 Core Architecture Overview
 

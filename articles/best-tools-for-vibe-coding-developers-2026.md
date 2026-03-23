@@ -62,7 +62,7 @@ Project Conventions
 - Follow the existing naming convention: PascalCase components, camelCase utilities
 ```
 
-This file is the single most leveraged configuration investment you can make for a vibe coding project.
+This file is the single most used configuration investment you can make for a vibe coding project.
 
 Specialized Skills for Common Tasks
 

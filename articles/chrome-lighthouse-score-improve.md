@@ -38,7 +38,7 @@ Here is a quick reference for score thresholds across all categories:
 | 50 – 89 | Needs Improvement | Prioritize fixes |
 | 0 – 49 | Poor | Address immediately |
 
-The scoring weights within Performance deserve special attention. LCP, TBT (Total Blocking Time), CLS, FCP, and Speed Index each contribute differently. TBT has historically carried 30% of the performance score weight, making JavaScript optimization particularly high-leverage.
+The scoring weights within Performance deserve special attention. LCP, TBT (Total Blocking Time), CLS, FCP, and Speed Index each contribute differently. TBT has historically carried 30% of the performance score weight, making JavaScript optimization particularly high-use.
 
 Improving Performance Score
 
@@ -202,7 +202,7 @@ self.onmessage = (event) => {
 };
 ```
 
-Leverage Browser Caching
+Use Browser Caching
 
 Missing cache headers force repeat visitors to re-download unchanged resources. Serve static assets with long cache lifetimes and use content-hash filenames for cache busting:
 

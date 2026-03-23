@@ -259,11 +259,11 @@ Best Practices
 
 Follow these recommendations when working with NGINX Ingress and Claude Code:
 
-1. Use ingressClassName explicitly – Avoid relying on the default class
-2. Define TLS minimum versions – Add `ssl-prefer-server-ciphers: "true"` and specify `ssl-min-version: "TLSv1.2"`
-3. Set appropriate timeouts – Configure `proxy-connect-timeout`, `proxy-send-timeout`, and `proxy-read-timeout` for long-running requests
-4. Enable access logging – Use annotations like `nginx.ingress.kubernetes.io/log-format-upstream` for detailed debugging
-5. Version your configurations – Keep ingress YAML in version control
+1. Use ingressClassName explicitly, Avoid relying on the default class
+2. Define TLS minimum versions, Add `ssl-prefer-server-ciphers: "true"` and specify `ssl-min-version: "TLSv1.2"`
+3. Set appropriate timeouts, Configure `proxy-connect-timeout`, `proxy-send-timeout`, and `proxy-read-timeout` for long-running requests
+4. Enable access logging, Use annotations like `nginx.ingress.kubernetes.io/log-format-upstream` for detailed debugging
+5. Version your configurations, Keep ingress YAML in version control
 
 Conclusion
 

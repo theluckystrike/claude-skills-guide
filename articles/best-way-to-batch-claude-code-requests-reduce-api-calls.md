@@ -24,7 +24,7 @@ The key benefits of batching include:
 - Cost reduction: Fewer API calls mean lower overall spending
 - Rate limit avoidance: Batched requests are less likely to hit rate limits
 - Improved throughput: Bulk operations complete faster than sequential requests
-- Better context utilization: Grouped requests can share context more efficiently
+- Better context usage: Grouped requests can share context more efficiently
 
 Strategy 1: Use Multi-Turn Conversations Effectively
 
@@ -200,7 +200,7 @@ This shows token usage per operation, helping you identify where batching would 
 
 Conclusion
 
-Batching Claude Code requests effectively is one of the most powerful ways to reduce API costs while maintaining productivity. By leveraging multi-turn conversations, Claude Skills, hooks, subagents, shell scripts, and MCP servers, you can consolidate what would be dozens of individual requests into a handful of efficient batch operations. Start implementing these strategies today, and you'll likely see 50-70% reduction in API calls for typical development workflows.
+Batching Claude Code requests effectively is one of the most powerful ways to reduce API costs while maintaining productivity. By using multi-turn conversations, Claude Skills, hooks, subagents, shell scripts, and MCP servers, you can consolidate what would be dozens of individual requests into a handful of efficient batch operations. Start implementing these strategies today, and you'll likely see 50-70% reduction in API calls for typical development workflows.
 
 The key is to think in terms of complete tasks rather than individual actions. Every time you would naturally say "now do this next thing," consider whether it can be incorporated into your current batch of operations instead.
 

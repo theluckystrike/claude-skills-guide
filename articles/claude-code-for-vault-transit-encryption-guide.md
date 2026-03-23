@@ -311,7 +311,7 @@ fi
 
 Conclusion
 
-Vault Transit encryption combined with Claude Code provides a powerful solution for data protection. By leveraging Claude's natural language capabilities, you can perform complex encryption operations without memorizing Vault CLI commands or managing encryption logic manually.
+Vault Transit encryption combined with Claude Code provides a powerful solution for data protection. By using Claude's natural language capabilities, you can perform complex encryption operations without memorizing Vault CLI commands or managing encryption logic manually.
 
 Start with basic encryption operations, then expand to key rotation and batch processing as your needs grow. The combination of Vault's solid encryption infrastructure and Claude Code's automation capabilities makes securing sensitive data accessible to developers at any level.
 

@@ -20,7 +20,7 @@ Performance data analysis is critical for building efficient applications, yet m
 
 Understanding Performance Data Analysis in Claude Code
 
-Performance data analysis involves collecting metrics from your application, response times, memory usage, CPU utilization, database query performance, and transforming that data into actionable insights. Claude Code can automate the entire pipeline: from gathering raw performance logs to generating polished reports with visualizations.
+Performance data analysis involves collecting metrics from your application, response times, memory usage, CPU usage, database query performance, and transforming that data into actionable insights. Claude Code can automate the entire pipeline: from gathering raw performance logs to generating polished reports with visualizations.
 
 The key advantage of using Claude Code for this workflow is its ability to combine file operations, bash command execution, and natural language processing into cohesive automation. You can create a skill that understands your specific performance metrics format and provides tailored analysis.
 

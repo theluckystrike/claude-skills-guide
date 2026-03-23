@@ -130,7 +130,7 @@ For very large codebases, scope Claude Code to specific directories:
 Focus on the /packages/auth directory and explain how token refresh works.
 ```
 
-Leverage File Patterns
+Use File Patterns
 
 Ask Claude Code to analyze files matching patterns:
 

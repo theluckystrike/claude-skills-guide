@@ -327,7 +327,7 @@ Handling schema evolution in streaming. When reading from Kafka or file sources 
 
 Delta Lake MERGE operations. Upserting data efficiently requires the MERGE INTO syntax when using Delta Lake. Claude Code generates the complete MERGE statement with matched update conditions, not-matched insert conditions, and source deduplication logic to prevent duplicate key violations when the source contains multiple updates for the same key.
 
-Performance Optimization Deep Dive
+Performance Optimization Detailed look
 
 Understanding Spark's execution model helps Claude Code generate more targeted optimization suggestions.
 

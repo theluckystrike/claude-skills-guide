@@ -17,7 +17,7 @@ score: 7
 {% raw %}
 How to Pass State Between AI Agents: A Practical Guide
 
-As AI agent systems grow more sophisticated, the need for multiple agents to collaborate and share information becomes essential. Whether you're building a code review pipeline, a data processing workflow, or a complex autonomous system, understanding how to pass state between AI agents is crucial for creating robust, interconnected applications.
+As AI agent systems grow more sophisticated, the need for multiple agents to collaborate and share information becomes essential. Whether you're building a code review pipeline, a data processing workflow, or a complex autonomous system, understanding how to pass state between AI agents is crucial for creating solid, interconnected applications.
 
 This guide covers framework-agnostic patterns for state sharing between AI agents. applicable to Claude, OpenAI, LangChain, CrewAI, and custom agent systems. The techniques here work regardless of which AI provider or orchestration library you use. If you are specifically working with Claude Code subagents, see the companion guide [Passing Context Between Claude Code Subagents](/passing-context-between-claude-code-subagents-guide/) for Claude-specific invocation patterns and skill integration.
 

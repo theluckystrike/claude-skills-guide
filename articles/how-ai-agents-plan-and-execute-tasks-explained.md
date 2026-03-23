@@ -103,11 +103,11 @@ Break down your own requests into clear sub-tasks when possible. While Claude Co
 
 Use checkpoint moments to review and steer. Don't wait until completion to check in, reviewing after each major subtask keeps work aligned with expectations.
 
-Leverage skills for specialized tasks. When your work involves specific domains like spreadsheets, presentations, or document generation, invoking relevant skills improves execution quality.
+Use skills for specialized tasks. When your work involves specific domains like spreadsheets, presentations, or document generation, invoking relevant skills improves execution quality.
 
 Conclusion
 
-AI agents like Claude Code combine sophisticated planning with systematic execution to accomplish complex tasks. Understanding the planning phase, how goals get decomposed into actionable subtasks, helps you provide better context. Recognizing execution patterns, tool use, checkpoints, and verification loops, helps you work effectively with the agent throughout the process. By using skills for specialized domains and following best practices for collaboration, you can harness the full power of AI-assisted development.
+AI agents like Claude Code combine sophisticated planning with systematic execution to accomplish complex tasks. Understanding the planning phase, how goals get decomposed into actionable subtasks, helps you provide better context. Recognizing execution patterns, tool use, checkpoints, and verification loops, helps you work effectively with the agent throughout the process. By using skills for specialized domains and following best practices for collaboration, you can use the full power of AI-assisted development.
 
 The key insight is this: AI task execution isn't magic. It's a structured process of analysis, planning, and methodical execution that becomes more powerful when you understand how to guide it effectively.
 

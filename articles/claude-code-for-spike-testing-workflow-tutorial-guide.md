@@ -30,7 +30,7 @@ Setting Up Your Spike Testing Environment
 
 Before writing any test code, ensure your environment is properly configured. Spike testing requires careful preparation to avoid skewing results or causing unintended side effects.
 
-First, establish clear baseline metrics by running your application under normal load conditions. Document response times, throughput, resource utilization, and error rates. These baselines provide the reference point for evaluating spike test results.
+First, establish clear baseline metrics by running your application under normal load conditions. Document response times, throughput, resource usage, and error rates. These baselines provide the reference point for evaluating spike test results.
 
 Next, create a dedicated testing workspace where Claude Code can access your application code, configuration files, and testing tools. Structure your workspace like this:
 
@@ -142,7 +142,7 @@ Response Time Degradation: Compare p50, p95, and p99 response times across basel
 
 Error Rate Spikes: Track error rates by type (timeouts, 5xx errors, connection failures). Even small error rate increases during spikes indicate capacity issues.
 
-Resource Utilization Patterns: Correlate response time degradation with CPU, memory, network, and database connection utilization. This identifies whether bottlenecks are computational, memory-bound, I/O-limited, or database-related.
+Resource Usage Patterns: Correlate response time degradation with CPU, memory, network, and database connection usage. This identifies whether bottlenecks are computational, memory-bound, I/O-limited, or database-related.
 
 Recovery Behavior: Measure how quickly the system returns to baseline performance after peak load. Slow recovery indicates resource exhaustion or caching issues.
 

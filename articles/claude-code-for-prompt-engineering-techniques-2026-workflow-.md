@@ -195,7 +195,7 @@ def multi_step_analysis(data):
 
 Output Validation and Error Handling
 
-Robust workflows include validation steps to catch problematic outputs:
+Solid workflows include validation steps to catch problematic outputs:
 
 ```python
 def validated_completion(prompt, schema):

@@ -415,7 +415,7 @@ jobs:
             });
 ```
 
-Jira Integration Deep Dive
+Jira Integration Detailed look
 
 Miro's official Jira integration syncs Jira cards directly into Miro as cards you can drag around. For teams that already use Jira as their source of truth, this removes the copy-paste step during sprint planning:
 

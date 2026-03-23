@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code Supabase Backend Development Workflow Tips"
-description: "Practical workflow tips for building Supabase backends with Claude Code. Learn how to structure projects, write database migrations, and leverage."
+description: "Practical workflow tips for building Supabase backends with Claude Code. Learn how to structure projects, write database migrations, and use Claude effectively."
 date: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-supabase-backend-development-workflow-tips/

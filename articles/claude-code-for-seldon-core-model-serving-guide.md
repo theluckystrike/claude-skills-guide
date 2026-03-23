@@ -533,7 +533,7 @@ def test_prediction():
     assert "data" in response.json()
 ```
 
-6. Monitor Continuously: Integrate Prometheus metrics exposed by Seldon Core. Track prediction latency, error rates, and resource utilization.
+6. Monitor Continuously: Integrate Prometheus metrics exposed by Seldon Core. Track prediction latency, error rates, and resource usage.
 
 7. Use Horizontal Pod Autoscaling: Configure HPA based on CPU or custom metrics so your serving infrastructure scales with traffic automatically. Claude Code can generate the HPA manifest alongside your SeldonDeployment.
 
@@ -541,7 +541,7 @@ def test_prediction():
 
 Conclusion
 
-Claude Code transforms Seldon Core deployment from manual YAML editing into an automated, error-resistant workflow. By creating specialized skills for your model serving patterns, generating configurations on demand, and assisting with debugging, you accelerate the path from training to production inference. The combination of Claude Code's automation capabilities and Seldon Core's powerful serving infrastructure enables robust, scalable ML deployments with minimal friction.
+Claude Code transforms Seldon Core deployment from manual YAML editing into an automated, error-resistant workflow. By creating specialized skills for your model serving patterns, generating configurations on demand, and assisting with debugging, you accelerate the path from training to production inference. The combination of Claude Code's automation capabilities and Seldon Core's powerful serving infrastructure enables solid, scalable ML deployments with minimal friction.
 
 Start by creating a deployment generator skill for your specific model types, then expand to cover testing, monitoring, and advanced inference graph patterns as your serving needs grow. As your fleet of deployed models scales, the consistency that comes from Claude Code-generated configurations pays compounding dividends. fewer incidents caused by hand-crafted YAML errors, faster onboarding for new team members, and a documented, reproducible process for every deployment.
 

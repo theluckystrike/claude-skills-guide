@@ -15,7 +15,7 @@ score: 7
 
 Claude Code Inngest Durable Workflow for Long Running Tasks
 
-Building applications that handle long-running tasks is a common challenge in modern software development. Whether you're processing large datasets, running AI model inference, or coordinating complex multi-step workflows, you need a reliable way to manage state and ensure tasks complete successfully even when interruptions occur. This guide explores how to combine Claude Code with Inngest to create robust, durable workflows that handle long-running tasks with ease.
+Building applications that handle long-running tasks is a common challenge in modern software development. Whether you're processing large datasets, running AI model inference, or coordinating complex multi-step workflows, you need a reliable way to manage state and ensure tasks complete successfully even when interruptions occur. This guide explores how to combine Claude Code with Inngest to create solid, durable workflows that handle long-running tasks with ease.
 
 Understanding Durable Workflows
 
@@ -243,7 +243,7 @@ Conclusion
 
 Combining Claude Code with Inngest gives you a powerful toolkit for building reliable long-running task systems. Inngest handles the complexity of durable execution, while Claude Code assists with design, implementation, and debugging. Start with simple workflows and progressively adopt more advanced patterns as your needs grow.
 
-The key is to use Claude Code's strengths, understanding intent, generating code, and explaining patterns, while letting Inngest handle the heavy lifting of workflow state management. Together, they make building robust, long-running task systems accessible to developers at any level.
+The key is to use Claude Code's strengths, understanding intent, generating code, and explaining patterns, while letting Inngest handle the heavy lifting of workflow state management. Together, they make building solid, long-running task systems accessible to developers at any level.
 
 Related Reading
 

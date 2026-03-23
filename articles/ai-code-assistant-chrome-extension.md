@@ -238,7 +238,7 @@ document.addEventListener('keydown', (event) => {
 
 Building a Prompt Template Library
 
-The single highest-leverage configuration improvement is building a personal library of prompt templates. Instead of typing out context every time, you save templates for your most common tasks:
+The single most impactful configuration improvement is building a personal library of prompt templates. Instead of typing out context every time, you save templates for your most common tasks:
 
 | Template Name | Prompt Pattern | Best Used For |
 |---------------|----------------|---------------|

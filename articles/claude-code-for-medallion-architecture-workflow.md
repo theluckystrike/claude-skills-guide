@@ -237,7 +237,7 @@ Capture comprehensive metadata at each layer, ingestion timestamps, source syste
 
 Validate data quality at layer transitions using tools like Great Expectations or dbt tests. Catching issues early prevents expensive cleanup operations later.
 
-Leverage Claude Code's strengths by asking it to generate boilerplate code, explain complex transformations, or suggest optimization opportunities. For complex medallion implementations, consider using the dbt skill to define transformations declaratively and maintain clear documentation.
+Use Claude Code's strengths by asking it to generate boilerplate code, explain complex transformations, or suggest optimization opportunities. For complex medallion implementations, consider using the dbt skill to define transformations declaratively and maintain clear documentation.
 
 Claude Code accelerates medallion architecture implementation by handling repetitive boilerplate while you focus on business logic. The key is establishing clear separation between layers, implementing solid quality checks, and maintaining comprehensive metadata for observability.
 {% endraw %}

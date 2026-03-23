@@ -185,7 +185,7 @@ This guide assumes your Capacitor project is already initialized and building. I
 
 Conclusion
 
-Claude Code transforms Capacitor debugging from a frustrating multi-platform challenge into a structured, systematic process. By leveraging its ability to work across your entire project, including native iOS and Android configurations, you can trace issues through every layer of your hybrid application. The key is providing comprehensive context: error messages, platform information, code snippets, and reproduction steps. Combine this with skills like webapp-testing for automated browser testing and bash for build verification, and you have a powerful debugging toolkit for any Capacitor project.
+Claude Code transforms Capacitor debugging from a frustrating multi-platform challenge into a structured, systematic process. By using its ability to work across your entire project, including native iOS and Android configurations, you can trace issues through every layer of your hybrid application. The key is providing comprehensive context: error messages, platform information, code snippets, and reproduction steps. Combine this with skills like webapp-testing for automated browser testing and bash for build verification, and you have a powerful debugging toolkit for any Capacitor project.
 {% endraw %}
 
 

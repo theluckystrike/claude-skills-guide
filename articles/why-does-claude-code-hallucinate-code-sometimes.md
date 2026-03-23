@@ -190,7 +190,7 @@ Several Claude skills can help reduce hallucinations in specialized areas:
 - frontend-design - For UI work, this skill knows actual CSS properties and framework APIs
 - mcp-builder - When building integrations, it generates code based on actual protocol specifications
 
-Skills work by injecting structured, accurate context at the start of the session. This context functions as authoritative grounding that competes with, and often overrides, the model's training-derived patterns. When working in a domain with an available skill, using it is one of the highest-leverage ways to reduce hallucination.
+Skills work by injecting structured, accurate context at the start of the session. This context functions as authoritative grounding that competes with, and often overrides, the model's training-derived patterns. When working in a domain with an available skill, using it is one of the most impactful ways to reduce hallucination.
 
 Verify Generated Code
 

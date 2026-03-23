@@ -272,7 +272,7 @@ When working with Claude Code on Workbox projects, keep these recommendations in
 
 Conclusion
 
-Combining Claude Code with Workbox creates a powerful workflow for building offline-capable PWAs. By leveraging Claude Code's ability to generate contextually appropriate code and explain complex patterns, you can implement professional-grade service worker functionality without becoming a service worker expert. Remember to test thoroughly in production-like environments and keep your caching strategies aligned with your users' needs.
+Combining Claude Code with Workbox creates a powerful workflow for building offline-capable PWAs. By using Claude Code's ability to generate contextually appropriate code and explain complex patterns, you can implement professional-grade service worker functionality without becoming a service worker expert. Remember to test thoroughly in production-like environments and keep your caching strategies aligned with your users' needs.
 
 The key to success is starting simple, understanding the caching strategies available, and iterating based on real-world performance data. With Claude Code as your development partner, you have an intelligent assistant that can guide you through Workbox's capabilities while maintaining best practices.
 {% endraw %}

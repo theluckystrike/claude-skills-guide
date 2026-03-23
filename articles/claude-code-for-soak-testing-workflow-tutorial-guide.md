@@ -282,7 +282,7 @@ jobs:
 
 Conclusion
 
-Claude Code transforms soak testing from a manually intensive process into an automated, intelligent workflow. By leveraging its capabilities for script generation, result analysis, and CI/CD integration, you can establish solid soak testing practices that catch critical issues before they reach production. Start with realistic tests, monitor comprehensively, and iterate based on findings.
+Claude Code transforms soak testing from a manually intensive process into an automated, intelligent workflow. By using its capabilities for script generation, result analysis, and CI/CD integration, you can establish solid soak testing practices that catch critical issues before they reach production. Start with realistic tests, monitor comprehensively, and iterate based on findings.
 
 Remember: the best soak tests are those that closely mirror real-world usage patterns over time. Let Claude Code help you build tests that truly stress your system in ways that matter.
 

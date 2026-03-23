@@ -41,7 +41,7 @@ Compare these two scenarios:
 | `feature/user-notification-settings` | Type (feature), domain (user), subsystem (notifications), scope (settings) |
 | `hotfix/payment-gateway-timeout` | Type (emergency), system (payment gateway), symptom (timeout) |
 
-The information density of a well-named branch is significant, and Claude Code leverages it at the start of every session.
+The information density of a well-named branch is significant, and Claude Code uses it at the start of every session.
 
 Standard Branch Prefix Conventions
 

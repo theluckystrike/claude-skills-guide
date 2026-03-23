@@ -168,7 +168,7 @@ netstat -an | grep :80 | wc -l
 Review recent errors
 tail -100 /var/log/application/error.log
 
-Check resource utilization
+Check resource usage
 docker stats --no-stream
 ```
 

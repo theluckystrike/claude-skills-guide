@@ -172,7 +172,7 @@ claude "Review my current progress against the project requirements. What featur
 
 Conclusion
 
-Claude Code transforms university software engineering projects from challenging assignments into opportunities for learning and professional growth. By leveraging its skills for code generation, explanation, review, and testing, you can produce higher-quality work while developing better coding habits.
+Claude Code transforms university software engineering projects from challenging assignments into opportunities for learning and professional growth. By using its skills for code generation, explanation, review, and testing, you can produce higher-quality work while developing better coding habits.
 
 Remember that Claude Code works best as a collaborative tool, use it to learn, to question, and to improve. The skills you develop working with AI-assisted development will serve you well throughout your career as a software engineer.
 

@@ -202,7 +202,7 @@ Claude Code can generate reports on these metrics, helping you understand where 
 
 Conclusion
 
-Claude Code and Linear AI together create a powerful system for maintaining project-code alignment. By leveraging Claude Code's context-aware generation, the CLAUDE.md convention system, and integration with Linear's issue tracking, development teams can ensure that every line of code serves its intended purpose.
+Claude Code and Linear AI together create a powerful system for maintaining project-code alignment. By using Claude Code's context-aware generation, the CLAUDE.md convention system, and integration with Linear's issue tracking, development teams can ensure that every line of code serves its intended purpose.
 
 The key is treating alignment as an ongoing process rather than a one-time setup. Regular maintenance, clear conventions, and automated enforcement keep your codebase aligned with your project's direction, even as your team and code grow.
 

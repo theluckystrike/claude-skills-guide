@@ -198,7 +198,7 @@ window.addEventListener('load', function() {
 });
 ```
 
-Leverage Print API Events
+Use Print API Events
 
 ```javascript
 // Clean up after printing completes

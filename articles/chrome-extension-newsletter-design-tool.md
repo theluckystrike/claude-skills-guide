@@ -24,9 +24,9 @@ The browser has become a natural workspace for many development tasks. Newslette
 
 A dedicated Chrome extension for newsletter design typically offers three core advantages:
 
-1. Local-first workflow – Design and test without uploading content to third-party services
-2. Developer tool integration – Access to browser inspection, debugging, and version control
-3. Customizable templates – JSON or YAML-based template systems that version control
+1. Local-first workflow, Design and test without uploading content to third-party services
+2. Developer tool integration, Access to browser inspection, debugging, and version control
+3. Customizable templates, JSON or YAML-based template systems that version control
 
 These tools bridge the gap between raw HTML coding and visual email builders, giving you precise control over the final output.
 
@@ -153,9 +153,9 @@ Limitations and Workarounds
 
 Chrome extension newsletter tools have constraints worth noting:
 
-- Browser rendering differences – Always test in actual email clients; browser previews may differ
-- Extension permissions – Some require broad permissions; review privacy implications
-- Offline limitations – Many features require an internet connection for preview services
+- Browser rendering differences, Always test in actual email clients; browser previews may differ
+- Extension permissions, Some require broad permissions; review privacy implications
+- Offline limitations, Many features require an internet connection for preview services
 
 For critical campaigns, run final tests using a service like Mailtrap or your own test accounts before full distribution.
 

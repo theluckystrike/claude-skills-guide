@@ -64,7 +64,7 @@ dependencies = [
 
 The [tdd skill](/claude-tdd-skill-test-driven-development-workflow/) often generates test code that imports your existing dependencies, version pinning ensures compatibility.
 
-#### Locking Dependencies with pip-tools
+Locking Dependencies with pip-tools
 
 For production Python projects, exact version pinning in `requirements.txt` is a starting point, but it doesn't lock transitive dependencies. A package you pin directly might pull in a newer version of one of its own dependencies, which can still break your build.
 
@@ -111,7 +111,7 @@ In `package.json`, specify exact versions or ranges:
 
 The caret (`^`) allows minor and patch updates. For strict control, use exact versions like `"express": "4.18.2"`.
 
-#### Understanding npm Version Semantics
+Understanding npm Version Semantics
 
 The version range operators in `package.json` have specific meanings that affect what Claude Code will suggest:
 
@@ -149,7 +149,7 @@ Do not suggest upgrading library versions without explicit approval.
 
 The [supermemory skill](/best-claude-skills-for-developers-2026/) can help you track which versions work across different projects.
 
-A well-maintained `CLAUDE.md` is the single highest-leverage thing you can do for version control. Because it loads automatically, you don't have to remember to state your constraints at the start of every session. Consider adding your full dependency list as a reference section, not just the high-level constraints. Claude Code reads this file before responding to any request, so making it comprehensive reduces the chance of version drift in any generated code.
+A well-maintained `CLAUDE.md` is the single most impactful thing you can do for version control. Because it loads automatically, you don't have to remember to state your constraints at the start of every session. Consider adding your full dependency list as a reference section, not just the high-level constraints. Claude Code reads this file before responding to any request, so making it comprehensive reduces the chance of version drift in any generated code.
 
 Here's a more detailed example for a production Python web service:
 
@@ -213,7 +213,7 @@ Compatible with pandas 1.5.3
 series = pd.Series([1, 2, None], dtype="float64")
 ```
 
-#### Identifying Version-Specific Code Patterns
+Identifying Version-Specific Code Patterns
 
 Some changes between library major versions are obvious from imports or method names. Others are subtle behavioral differences. Here are common patterns to watch for when reviewing Claude-generated code against your pinned versions:
 

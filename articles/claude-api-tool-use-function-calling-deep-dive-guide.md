@@ -14,7 +14,7 @@ score: 7
 
 
 {% raw %}
-Claude API Tool Use and Function Calling Deep Dive Guide
+Claude API Tool Use and Function Calling Detailed look Guide
 
 The Claude API's tool use and function calling capabilities represent one of its most powerful features, enabling you to build AI systems that can interact with external services, execute code, and perform real-world actions. This comprehensive guide walks you through everything you need to know to use these capabilities effectively in your applications.
 

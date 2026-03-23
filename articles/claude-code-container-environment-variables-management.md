@@ -16,7 +16,7 @@ score: 7
 {% raw %}
 Claude Code Container Environment Variables Management
 
-Environment variables are the backbone of flexible, secure container configurations in Claude Code. Whether you're managing API keys, database connections, or feature flags, understanding how to properly handle environment variables in containerized Claude Code environments is essential for building robust, production-ready applications.
+Environment variables are the backbone of flexible, secure container configurations in Claude Code. Whether you're managing API keys, database connections, or feature flags, understanding how to properly handle environment variables in containerized Claude Code environments is essential for building solid, production-ready applications.
 
 Why Environment Variables Matter in Containers
 

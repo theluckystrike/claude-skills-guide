@@ -37,7 +37,7 @@ Key topics covered include:
 
 The official path works best for developers who prefer structured learning and want to ensure they're following best practices directly from the source.
 
-2. Skill-Specific Deep Dives
+2. Skill-Specific Detailed look
 
 Many developers benefit from focusing on individual skills rather than trying to master everything at once. Here are the most valuable skill-specific resources available:
 

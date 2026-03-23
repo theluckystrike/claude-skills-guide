@@ -188,7 +188,7 @@ Optimize Query Structure
 - Use EXISTS instead of IN for subqueries when checking presence
 - Avoid functions on indexed columns in WHERE clauses, they prevent index usage
 
-Leverage Caching Wisely
+Use Caching Wisely
 - Redis or Memcached frequently-accessed, rarely-changing query results
 - Implement cache invalidation strategies for data that changes
 

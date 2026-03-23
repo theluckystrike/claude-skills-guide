@@ -242,7 +242,7 @@ Scopes and Callbacks with Claude Code
 
 Claude Code can help you write, review, and refactor scopes and callbacks. Here's how to collaborate effectively:
 
-#### Generating Scopes
+Generating Scopes
 
 Ask Claude Code to generate scopes based on your requirements:
 
@@ -260,7 +260,7 @@ end
 
 When generating scopes with Claude Code, always follow up by asking it to generate the corresponding RSpec examples. This catches edge cases. particularly the nil-return issue with conditional scopes. before the code reaches production.
 
-#### Reviewing Callbacks
+Reviewing Callbacks
 
 Use Claude Code to review callback chains for potential issues:
 

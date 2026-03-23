@@ -44,7 +44,7 @@ Before writing any kubectl commands, the most important decision is which profil
 
 For production environments, continuous sampling profilers are usually the right default. They add negligible overhead and give you historical data when an incident occurs. On-demand tracing is better for a controlled investigation where you can temporarily accept higher overhead.
 
-Claude Code can help you decide by analyzing your pod resource requests, existing HPA configurations, and current CPU utilization. If your pods are already running near their CPU limits, adding an instrumentation profiler during a traffic spike is not safe. Claude will flag this and suggest a sampling approach instead.
+Claude Code can help you decide by analyzing your pod resource requests, existing HPA configurations, and current CPU usage. If your pods are already running near their CPU limits, adding an instrumentation profiler during a traffic spike is not safe. Claude will flag this and suggest a sampling approach instead.
 
 Setting Up Your Profiling Environment
 

@@ -219,7 +219,7 @@ Conclusion
 
 Combining Claude Code with AWS CDK Pipelines creates a powerful development workflow for infrastructure-as-code projects. Claude Code assists with generating pipeline configurations, debugging deployment issues, and implementing best practices throughout your CI/CD journey.
 
-Start by setting up a basic pipeline, then gradually add complexity with custom actions, security scanning, and approval gates. Claude Code's contextual understanding of your infrastructure makes it an invaluable partner for building robust, production-ready CDK Pipelines.
+Start by setting up a basic pipeline, then gradually add complexity with custom actions, security scanning, and approval gates. Claude Code's contextual understanding of your infrastructure makes it an invaluable partner for building solid, production-ready CDK Pipelines.
 
 {% endraw %}
 

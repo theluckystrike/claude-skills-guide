@@ -19,7 +19,7 @@ Strawberry GraphQL has emerged as one of the most popular Python libraries for b
 
 Why Strawberry GraphQL with Claude Code?
 
-Strawberry GraphQL distinguishes itself from other Python GraphQL libraries through its modern approach. Unlike older libraries that require manual type definitions, Strawberry leverages Python's type hints to automatically generate GraphQL schemas. This means less boilerplate code and fewer opportunities for inconsistencies between your Python types and GraphQL schema.
+Strawberry GraphQL distinguishes itself from other Python GraphQL libraries through its modern approach. Unlike older libraries that require manual type definitions, Strawberry uses Python's type hints to automatically generate GraphQL schemas. This means less boilerplate code and fewer opportunities for inconsistencies between your Python types and GraphQL schema.
 
 When you add Claude Code to this mix, you gain an AI assistant that understands both Python type systems and GraphQL schema design. Claude Code can help you:
 

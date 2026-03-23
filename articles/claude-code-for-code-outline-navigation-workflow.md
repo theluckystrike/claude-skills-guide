@@ -63,7 +63,7 @@ rg -t ts "export function" --ctx 2
 
 Building a Navigation Skill
 
-While Claude Code's built-in commands work well, creating a dedicated navigation skill supercharges your workflow. Here's a practical skill for code outline navigation:
+While Claude Code's built-in commands work well, creating a dedicated navigation skill speed up your workflow. Here's a practical skill for code outline navigation:
 
 ```yaml
 ---

@@ -88,7 +88,7 @@ To get the most from Claude Code in your Winglang workflow, follow these practic
 
 Be specific in prompts: Instead of "help with queue," try "help me create an SQS queue with batch processing configured for 10 messages per batch and 30-second visibility timeout."
 
-Leverage Claude Code for learning: When Winglang introduces new features or constructs, ask Claude Code for explanations and examples. This accelerates your understanding of the language.
+Use Claude Code for learning: When Winglang introduces new features or constructs, ask Claude Code for explanations and examples. This accelerates your understanding of the language.
 
 Iterate incrementally: Make small changes and test frequently. Claude Code works best when working through incremental improvements rather than generating large complex systems at once.
 

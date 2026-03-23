@@ -92,7 +92,7 @@ public double computeHash(byte[] input) {
 /* PRESERVE-END: certified_algorithm */
 ```
 
-Leverage Claude.md for Persistent Instructions
+Use Claude.md for Persistent Instructions
 
 Create a `claude.md` file in your project root that specifies functions and code sections that should never be modified. This file persists across sessions and provides constant context to Claude Code, meaning you do not have to repeat preservation rules in every prompt.
 
@@ -260,7 +260,7 @@ Each of the approaches covered above has different strengths depending on your s
 | Conservative editor skill | Repeated work on sensitive codebases | Medium (one-time setup) | Active when skill is loaded |
 | Git checkpoints | Recovery and rollback | Low | Permanent history |
 
-For most developers, the highest-leverage combination is: a `claude.md` with preservation rules (set once, always active) plus narrow scoped prompts (per-task discipline) plus frequent git commits (recovery safety net). The other strategies are supplements for specific situations.
+For most developers, the most impactful combination is: a `claude.md` with preservation rules (set once, always active) plus narrow scoped prompts (per-task discipline) plus frequent git commits (recovery safety net). The other strategies are supplements for specific situations.
 
 Common Mistakes That Invite Rewrites
 

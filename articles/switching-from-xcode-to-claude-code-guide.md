@@ -104,7 +104,7 @@ Use git frequently. Claude Code makes rapid changes. Commit often to maintain a 
 git add -A && git commit -m "feat: add profile view with user info"
 ```
 
-Leverage the CLAUDE.md file. Store project-specific conventions: naming patterns, architecture decisions, testing preferences. This file grows with your project knowledge.
+Use the CLAUDE.md file. Store project-specific conventions: naming patterns, architecture decisions, testing preferences. This file grows with your project knowledge.
 
 Combine with Xcode's AI Assistant. Xcode's built-in AI features complement Claude Code. Use each for what it does best.
 

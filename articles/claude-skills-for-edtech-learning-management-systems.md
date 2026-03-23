@@ -187,7 +187,7 @@ Measuring Skill Effectiveness
 Track these metrics to evaluate your Claude integrations:
 
 - Grading agreement rate: How often instructors accept Claude grades without modification
-- Feedback utilization: Do students act on Claude-generated suggestions?
+- Feedback usage: Do students act on Claude-generated suggestions?
 - Support deflection: What percentage of inquiries resolve without human intervention?
 - Time savings: Hours reduced in grading and student support workflows
 

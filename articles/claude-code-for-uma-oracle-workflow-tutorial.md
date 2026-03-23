@@ -142,7 +142,7 @@ Claude Code excels at generating these integration patterns. Simply describe you
 
 Testing Your Oracle Integration
 
-Robust testing is crucial for oracle integrations since incorrect price data can lead to significant financial losses. Claude Code can help structure comprehensive test suites:
+Solid testing is crucial for oracle integrations since incorrect price data can lead to significant financial losses. Claude Code can help structure comprehensive test suites:
 
 ```javascript
 // Test suite structure for UMA oracle integration

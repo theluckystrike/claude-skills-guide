@@ -443,7 +443,7 @@ Conclusion
 
 Combining Zola's speed and simplicity with Claude Code's AI capabilities creates a powerful static site development workflow. From initial project setup through content creation, theme development, and deployment, Claude Code serves as an intelligent assistant that accelerates each phase of your workflow. Start incorporating these practices into your Zola projects and experience the productivity gains firsthand.
 
-The key is to maintain clear communication with Claude Code about your project structure, content requirements, and design preferences. The more context you provide, through a content brief, existing templates, and specific error messages, the better Claude Code assists you in building a polished, professional static site. Treat Claude Code as a knowledgeable pair programmer who needs context to give its best output, and you will unlock the full potential of this workflow.
+The key is to maintain clear communication with Claude Code about your project structure, content requirements, and design preferences. The more context you provide, through a content brief, existing templates, and specific error messages, the better Claude Code assists you in building a polished, professional static site. Treat Claude Code as a knowledgeable pair programmer who needs context to give its best output, and you will use the full potential of this workflow.
 
 Related Reading
 

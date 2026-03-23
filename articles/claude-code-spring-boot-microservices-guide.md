@@ -392,7 +392,7 @@ Document your microservice APIs using OpenAPI specifications. Claude Code can he
 
 Conclusion
 
-Claude Code transforms Spring Boot microservices development from manual coding to collaborative AI-assisted creation. By understanding Spring Boot patterns and leveraging specialized skills like tdd, pdf, frontend-design, and supermemory, you can build solid microservices faster while maintaining code quality.
+Claude Code transforms Spring Boot microservices development from manual coding to collaborative AI-assisted creation. By understanding Spring Boot patterns and using specialized skills like tdd, pdf, frontend-design, and supermemory, you can build solid microservices faster while maintaining code quality.
 
 The key is providing clear requirements, reviewing generated code, and maintaining good development practices. Claude Code amplifies your capabilities but works best when you guide it with your architectural vision and domain expertise.
 

@@ -78,7 +78,7 @@ This JSON configuration registers a service with a health check endpoint. Claude
 
 Implementing Service Discovery in Your Applications
 
-Now let's explore how to integrate Consul service discovery into your application code. Claude Code can generate idiomatic implementations for various programming languages and frameworks.
+Here are how to integrate Consul service discovery into your application code. Claude Code can generate idiomatic implementations for various programming languages and frameworks.
 
 Go Service Discovery Client
 

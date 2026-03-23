@@ -427,7 +427,7 @@ Always specify the application name when asking Claude to modify code. Use the N
 
 Use affected commands for changes that impact multiple projects. Claude understands NX's affected graph and can help you identify all projects that need updates when you modify a shared library.
 
-Leverage NX generators rather than manual file creation. Ask Claude to generate components, services, and libraries using the proper NX commands, ensuring correct project configuration and barrel exports.
+Use NX generators rather than manual file creation. Ask Claude to generate components, services, and libraries using the proper NX commands, ensuring correct project configuration and barrel exports.
 
 Run type checking before committing. Use `npx nx run-many -t typecheck` to catch type errors across all projects, which is especially important in micro frontends with shared TypeScript code.
 

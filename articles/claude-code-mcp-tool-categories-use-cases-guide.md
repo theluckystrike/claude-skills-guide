@@ -543,7 +543,7 @@ async def automated_code_review(repo: str, pr_number: int):
 
 Documentation Generation Pipeline
 
-Another common pattern involves generating and maintaining documentation automatically. This workflow uses file reading to understand your codebase, then leverages template tools to produce formatted documentation.
+Another common pattern involves generating and maintaining documentation automatically. This workflow uses file reading to understand your codebase, then uses template tools to produce formatted documentation.
 
 ```python
 Documentation generation workflow

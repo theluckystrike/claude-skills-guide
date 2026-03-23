@@ -59,7 +59,7 @@ The `host_permissions` specification is critical. Without explicit access to eBa
 
 Parsing eBay Auction Data
 
-eBay's HTML structure changes frequently, so your parser needs to be robust. Here's a content script pattern for extracting auction information:
+eBay's HTML structure changes frequently, so your parser needs to be solid. Here's a content script pattern for extracting auction information:
 
 ```javascript
 // content.js - runs on eBay listing pages

@@ -318,7 +318,7 @@ Using the wrong epsilon scale. The choice of epsilon depends on your input norma
 
 Not separating adversarial training from test evaluation. The attacker in the evaluation should not have access to your defense. Claude Code generates the evaluation protocol that uses a fresh attack instance that treats the defended model as a black box.
 
-Evaluating robustness only on aggregate accuracy. Some classes may be much more vulnerable than others, and aggregate accuracy hides this. A model that is 95% accurate overall but 30% accurate on one safety-critical class is not robust. Claude Code generates the per-class robustness breakdown.
+Evaluating robustness only on aggregate accuracy. Some classes may be much more vulnerable than others, and aggregate accuracy hides this. A model that is 95% accurate overall but 30% accurate on one safety-critical class is not solid. Claude Code generates the per-class robustness breakdown.
 
 Treating adversarial robustness as a one-time task. Model robustness degrades when you retrain on new data or fine-tune for a different task. Claude Code generates the robustness regression test suite that runs on every model update.
 

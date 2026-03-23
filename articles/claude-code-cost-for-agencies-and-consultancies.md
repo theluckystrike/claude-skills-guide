@@ -75,7 +75,7 @@ Large consultancies with 50+ developers operating across multiple client engagem
 - Subscription: Enterprise tier with custom pricing
 - Total monthly investment: $5,000-15,000+
 
-At this scale, the conversation shifts from "can we afford it?" to "how do we optimize our usage?" The key becomes implementing agency-wide standards for prompt efficiency and leveraging custom skills to reduce redundant work across teams.
+At this scale, the conversation shifts from "can we afford it?" to "how do we optimize our usage?" The key becomes implementing agency-wide standards for prompt efficiency and using custom skills to reduce redundant work across teams.
 
 Enterprise-scale operations should also budget for a dedicated AI tooling role or working group. Someone needs to monitor token consumption across teams, identify wasteful patterns (like developers leaving large files in context unnecessarily), and maintain the shared skill library. This typically represents 0.25-0.5 of one FTE's time but directly influences whether your $10,000/month investment returns 2x or 5x.
 
@@ -121,7 +121,7 @@ Only load relevant directories
 cd client-project && claude --add-dir src/components
 ```
 
-Context window discipline is one of the highest-leverage optimizations available. Loading an entire repository into context when you are only working on one feature area wastes tokens on every message in the session. A developer who habitually loads 200KB of source files into context before asking a simple question about one component can spend 5-10x more on that session than necessary.
+Context window discipline is one of the most impactful optimizations available. Loading an entire repository into context when you are only working on one feature area wastes tokens on every message in the session. A developer who habitually loads 200KB of source files into context before asking a simple question about one component can spend 5-10x more on that session than necessary.
 
 Create a CLAUDE.md template for new projects that the account manager fills in at project kickoff:
 

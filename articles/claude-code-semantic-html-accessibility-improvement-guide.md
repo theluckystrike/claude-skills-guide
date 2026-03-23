@@ -309,7 +309,7 @@ This hook runs the audit only on staged HTML files, keeping the commit process f
 
 WCAG Compliance Reference
 
-WCAG 2.1 organizes accessibility requirements into four principles: Perceivable, Operable, Understandable, and Robust (POUR). Most semantic HTML improvements address multiple criteria simultaneously:
+WCAG 2.1 organizes accessibility requirements into four principles: Perceivable, Operable, Understandable, and Solid (POUR). Most semantic HTML improvements address multiple criteria simultaneously:
 
 | Semantic Practice | WCAG Criterion | Level |
 |---|---|---|

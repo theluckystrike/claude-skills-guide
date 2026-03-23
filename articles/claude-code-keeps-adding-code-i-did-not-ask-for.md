@@ -206,7 +206,7 @@ Place it in `~/.claude/skills/minimal-code.md` and invoke it in a session with `
 
 When to Allow Extra Code
 
-Sometimes the extra code Claude Code adds is actually beneficial. Error handling, type safety, and proper logging make code more robust. The key is knowing when to accept these additions and when to reject them.
+Sometimes the extra code Claude Code adds is actually beneficial. Error handling, type safety, and proper logging make code more solid. The key is knowing when to accept these additions and when to reject them.
 
 Accept extra code when you're building new features from scratch, when working on security-sensitive code where error handling matters, or when you're learning and the additional context helps you understand patterns. Reject extra code when you're making quick fixes, working in a code review pipeline where large diffs create friction, or when you have specific constraints like minimal bundle size.
 

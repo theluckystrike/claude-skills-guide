@@ -164,7 +164,7 @@ If you are developing WebGL applications, several techniques produce meaningful 
 
 Minimize Draw Calls
 
-Each draw call has overhead, switching GPU state, issuing commands across the CPU-GPU bridge, and waiting for the results. Reducing draw calls is often the highest-leverage optimization available. Batch geometries together:
+Each draw call has overhead, switching GPU state, issuing commands across the CPU-GPU bridge, and waiting for the results. Reducing draw calls is often the most impactful optimization available. Batch geometries together:
 
 ```javascript
 // Inefficient: one draw call per object

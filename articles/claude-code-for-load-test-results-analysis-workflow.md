@@ -69,7 +69,7 @@ Parsing Different Load Test Formats
 
 Your skill needs to handle various output formats. Here's how to implement parsers for common tools:
 
-#### k6 JSON Output
+k6 JSON Output
 
 k6 exports JSON that includes all metrics:
 
@@ -90,7 +90,7 @@ def parse_k6_results(json_file):
     return metrics
 ```
 
-#### JMeter CSV Parsing
+JMeter CSV Parsing
 
 JMeter's CSV format requires handling headers and timestamp columns:
 

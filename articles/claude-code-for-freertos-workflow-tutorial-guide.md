@@ -606,7 +606,7 @@ For most Cortex-M projects, heap_4 is the right answer. Use heap_5 when your MCU
 
 Conclusion
 
-Integrating Claude Code into your FreeRTOS workflow transforms how you develop embedded systems. By providing structured context about your RTOS configuration, establishing clear communication patterns, and leveraging Claude Code's ability to analyze complex synchronization scenarios, you can build more solid firmware faster. Start with a project-specific skill, maintain organized file structures, and use Claude Code as a debugging partner for those tricky concurrency issues that plague embedded development.
+Integrating Claude Code into your FreeRTOS workflow transforms how you develop embedded systems. By providing structured context about your RTOS configuration, establishing clear communication patterns, and using Claude Code's ability to analyze complex synchronization scenarios, you can build more solid firmware faster. Start with a project-specific skill, maintain organized file structures, and use Claude Code as a debugging partner for those tricky concurrency issues that plague embedded development.
 
 The patterns shown here. static allocation throughout, ISR-safe primitives, watermark monitoring, priority tables, and team skill files. are the foundation of a reliable embedded codebase. Feed Claude Code your FreeRTOSConfig.h, your linker script, and your team skill file at the start of every session, and you will get suggestions that compile, run safely, and fit your project from the first iteration.
 

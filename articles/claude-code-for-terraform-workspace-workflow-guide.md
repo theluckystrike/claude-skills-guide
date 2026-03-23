@@ -16,7 +16,7 @@ tags: [claude-code, claude-skills]
 
 Claude Code for Terraform Workspace Workflow Guide
 
-Terraform workspaces provide a powerful mechanism for managing infrastructure across multiple environments without duplicating configuration. When combined with Claude Code's AI-assisted development capabilities, you can build robust, maintainable infrastructure workflows that scale with your organization. This guide walks you through practical patterns for integrating Claude Code into your Terraform workspace management.
+Terraform workspaces provide a powerful mechanism for managing infrastructure across multiple environments without duplicating configuration. When combined with Claude Code's AI-assisted development capabilities, you can build solid, maintainable infrastructure workflows that scale with your organization. This guide walks you through practical patterns for integrating Claude Code into your Terraform workspace management.
 
 Understanding Terraform Workspaces
 

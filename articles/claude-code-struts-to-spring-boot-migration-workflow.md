@@ -25,7 +25,7 @@ Struts applications typically comprise Action classes extending `ActionSupport`,
 - Form Beans: Map to Spring `@ModelAttribute` or DTOs
 - JSP Views: Modernize with Thymeleaf or keep as JSP with minimal changes
 
-Claude Code excels at analyzing existing codebases, identifying patterns, and generating equivalent Spring Boot implementations. The key lies in leveraging skills that combine code analysis tools with intelligent transformation capabilities.
+Claude Code excels at analyzing existing codebases, identifying patterns, and generating equivalent Spring Boot implementations. The key lies in using skills that combine code analysis tools with intelligent transformation capabilities.
 
 The typical Struts application carries substantial technical debt. Action classes often accumulate direct database calls, session manipulation, and business logic that was never separated from the web layer. Before writing a single line of migrated code, you need a clear picture of what you are dealing with. Attempting to rewrite without a full inventory leads to missed dependencies, broken functionality, and months of debugging after go-live.
 
@@ -415,7 +415,7 @@ Following this order means you have working Spring Boot controllers handling the
 
 Conclusion
 
-Claude Code transforms the daunting Struts to Spring Boot migration from months of manual effort into a structured, automated workflow. By leveraging code analysis, pattern recognition, and intelligent transformation skills, you preserve business logic while modernizing your architecture. The key advantages include consistent code generation, comprehensive dependency management, and built-in validation ensuring functional equivalence.
+Claude Code transforms the daunting Struts to Spring Boot migration from months of manual effort into a structured, automated workflow. By using code analysis, pattern recognition, and intelligent transformation skills, you preserve business logic while modernizing your architecture. The key advantages include consistent code generation, comprehensive dependency management, and built-in validation ensuring functional equivalence.
 
 The most successful migrations treat Claude Code as an experienced pairing partner rather than a code generator. Use it to analyze before transforming, validate after each batch, and generate the tedious boilerplate. test classes, DTO mappings, Spring Security configuration. that slows down manual migrations. Keep your focus on the business logic that only your team fully understands.
 

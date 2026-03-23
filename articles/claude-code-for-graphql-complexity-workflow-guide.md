@@ -276,12 +276,12 @@ Best Practices Summary
 
 To keep your GraphQL codebase maintainable:
 
-1. Measure complexity early – Use introspection and analysis tools from day one
-2. Implement pagination everywhere – Never return unbounded lists
-3. Use DataLoader proactively – Batch loads before N+1 problems occur
-4. Deprecate gracefully – Never remove fields without a migration path
-5. Document expensive operations – Make complexity visible to other developers
-6. Set complexity limits – Protect your API from runaway queries
+1. Measure complexity early, Use introspection and analysis tools from day one
+2. Implement pagination everywhere, Never return unbounded lists
+3. Use DataLoader proactively, Batch loads before N+1 problems occur
+4. Deprecate gracefully, Never remove fields without a migration path
+5. Document expensive operations, Make complexity visible to other developers
+6. Set complexity limits, Protect your API from runaway queries
 
 Claude Code becomes an invaluable partner in maintaining these practices by providing contextual suggestions, generating boilerplate, and identifying issues before they reach production.
 

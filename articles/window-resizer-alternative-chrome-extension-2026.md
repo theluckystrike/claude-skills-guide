@@ -276,7 +276,7 @@ When implementing window management solutions, consider these recommendations:
 
 Use Chrome's windowManagement API when building custom extensions, it provides more reliable cross-platform behavior than older approaches that relied on `tabs` or `system.display` permissions.
 
-Leverage keyboard shortcuts to minimize context switching. Map frequently used dimensions to custom shortcuts in your productivity tools. A Raycast snippet that types an osascript command is faster than clicking an extension popup.
+Use keyboard shortcuts to minimize context switching. Map frequently used dimensions to custom shortcuts in your productivity tools. A Raycast snippet that types an osascript command is faster than clicking an extension popup.
 
 Test across monitors if your workflow involves multi-monitor setups. Window positioning behaves differently depending on display configuration. The `left` and `top` values in `chrome.windows.update` are relative to the primary display's origin, which can produce unexpected results on a secondary monitor.
 

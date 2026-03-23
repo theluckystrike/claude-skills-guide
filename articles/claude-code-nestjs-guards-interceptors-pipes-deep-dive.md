@@ -14,7 +14,7 @@ score: 7
 
 
 {% raw %}
-Claude Code NestJS Guards Interceptors Pipes Deep Dive
+Claude Code NestJS Guards Interceptors Pipes Detailed look
 
 When building solid Node.js applications with NestJS, understanding guards, interceptors, and pipes is essential for creating maintainable and secure code. These three middleware-like components form the backbone of NestJS's request processing pipeline, each serving a distinct purpose in your application's lifecycle. This guide walks you through each concept with practical examples you can implement immediately in your projects.
 

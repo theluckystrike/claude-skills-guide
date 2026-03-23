@@ -216,15 +216,15 @@ Best Practices for Performance Budgets
 
 When implementing performance budgets with Claude Code, keep these tips in mind:
 
-1. Start lenient and tighten gradually – Begin with achievable thresholds and decrease them over time as your team improves performance.
+1. Start lenient and tighten gradually, Begin with achievable thresholds and decrease them over time as your team improves performance.
 
-2. Set different budgets for different environments – Production should have stricter budgets than staging.
+2. Set different budgets for different environments, Production should have stricter budgets than staging.
 
-3. Track trends, not just snapshots – Use Claude Code to generate trend reports showing performance over time.
+3. Track trends, not just snapshots, Use Claude Code to generate trend reports showing performance over time.
 
-4. Involve the whole team – Make performance part of your code review process by having Claude Code comment on PRs.
+4. Involve the whole team, Make performance part of your code review process by having Claude Code comment on PRs.
 
-5. Balance metrics holistically – Don't optimize for a single metric at the expense of others.
+5. Balance metrics holistically, Don't optimize for a single metric at the expense of others.
 
 Conclusion
 

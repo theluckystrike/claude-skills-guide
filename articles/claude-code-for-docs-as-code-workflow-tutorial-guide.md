@@ -14,7 +14,7 @@ score: 8
 {% raw %}
 Claude Code for Docs as Code Workflow Tutorial Guide
 
-The docs-as-code approach treats documentation like software: you version it in Git, write it in Markdown, and automate its build and deployment. Claude Code supercharges this workflow by acting as an intelligent documentation assistant that can generate content, enforce standards, and catch errors before publication. This tutorial walks you through building a complete docs-as-code pipeline powered by Claude Code.
+The docs-as-code approach treats documentation like software: you version it in Git, write it in Markdown, and automate its build and deployment. Claude Code speed up this workflow by acting as an intelligent documentation assistant that can generate content, enforce standards, and catch errors before publication. This tutorial walks you through building a complete docs-as-code pipeline powered by Claude Code.
 
 Why Combine Docs as Code with Claude Code?
 

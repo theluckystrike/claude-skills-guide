@@ -233,7 +233,7 @@ I want to improve the documentation for [feature]. Please help me:
 
 Conclusion
 
-Claude Code transforms open source contribution from an intimidating process into a systematic workflow. By leveraging its capabilities for understanding codebases, writing quality code, and crafting effective pull requests, you can contribute more confidently and more frequently to the open source projects you care about.
+Claude Code transforms open source contribution from an intimidating process into a systematic workflow. By using its capabilities for understanding codebases, writing quality code, and crafting effective pull requests, you can contribute more confidently and more frequently to the open source projects you care about.
 
 Remember that open source communities value the effort you put in, not just the code you write. Use Claude Code to help you navigate the non-coding aspects of contribution, understanding guidelines, writing clear communication, and responding professionally to feedback. These soft skills, supported by AI assistance, will help you become a valued member of any open source community.
 

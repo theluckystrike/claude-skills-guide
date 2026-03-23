@@ -463,7 +463,7 @@ This workflow. trace in Jaeger, analyze with Claude Code. compresses a debugging
 
 Conclusion
 
-Transaction tracing is a powerful technique for understanding and debugging complex applications. By leveraging Claude Code to generate tracing code, create custom handlers, and build analysis tools, you can significantly accelerate your tracing implementation while maintaining best practices.
+Transaction tracing is a powerful technique for understanding and debugging complex applications. By using Claude Code to generate tracing code, create custom handlers, and build analysis tools, you can significantly accelerate your tracing implementation while maintaining best practices.
 
 Start with basic span instrumentation, then gradually add contextual attributes and propagate traces across service boundaries. Use auto-instrumentation libraries to get coverage of database queries, HTTP clients, and framework middleware without writing anything. Add manual spans for the business-logic operations that auto-instrumentation cannot see.
 

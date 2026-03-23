@@ -318,7 +318,7 @@ Add support for dynamic column names like "tbl_users_columnName"
 
 Iterating in small steps makes it easier to spot when a pattern diverges from your intent. Claude Code is particularly good at this incremental refinement workflow. each prompt builds on the previous one.
 
-Leverage Type Inference
+Use Type Inference
 
 Template literal types work exceptionally well with TypeScript's inference capabilities. Use them in function parameters to infer precise types:
 

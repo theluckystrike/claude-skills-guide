@@ -260,7 +260,7 @@ Host regular AI coding practice sessions:
 - Case studies: Analyze both successful AI assistance and lessons learned, including failures, which are often more instructive
 - Prompt competitions: Give the whole team the same task and compare prompting strategies. Variety often surprises people
 
-A well-maintained prompt library is one of the most leveraged investments a team can make. When an engineer discovers a prompt that consistently produces high-quality output for your specific codebase, that knowledge should be captured and shared rather than staying in one person's shell history.
+A well-maintained prompt library is one of the most used investments a team can make. When an engineer discovers a prompt that consistently produces high-quality output for your specific codebase, that knowledge should be captured and shared rather than staying in one person's shell history.
 
 ```bash
 prompts/code-review.sh. standardized review prompt

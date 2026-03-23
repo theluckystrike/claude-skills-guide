@@ -250,7 +250,7 @@ ALERT_RULES = [
 
 The after-hours usage alert is particularly useful for detecting compromised credentials or policy violations without waiting for a monthly audit cycle.
 
-Optimizing Seat Utilization
+Optimizing Seat Usage
 
 Once you have visibility into usage patterns, apply these optimization strategies:
 
@@ -492,7 +492,7 @@ Spikes often coincide with large automated refactoring runs, bulk code migration
 
 Conclusion
 
-Effective enterprise seat management requires the right combination of policy, tooling, and ongoing monitoring. By implementing the strategies outlined in this guide, your organization can optimize seat utilization, control costs, ensure regulatory compliance, and give your development teams the access they need without overspending.
+Effective enterprise seat management requires the right combination of policy, tooling, and ongoing monitoring. By implementing the strategies outlined in this guide, your organization can optimize seat usage, control costs, ensure regulatory compliance, and give your development teams the access they need without overspending.
 
 Start with basic usage tracking and SSO integration, then progressively implement more sophisticated policies. chargeback reporting, dynamic scaling, and SIEM integration. as your team's needs evolve. The key is establishing visibility into usage patterns early, then using that data to make informed decisions about seat allocation and policy adjustments. Organizations that treat Claude Code seat management as an ongoing operational discipline rather than a one-time setup task consistently see better ROI and fewer compliance surprises.
 {% endraw %}

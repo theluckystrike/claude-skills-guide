@@ -298,7 +298,7 @@ Claude Code transforms SRE workflows by automating routine tasks, accelerating i
 
 The skills framework means you can customize workflows for your specific infrastructure. Whether you're managing a small service or a complex microservices architecture, Claude Code provides the foundation for building more reliable systems.
 
-The most immediate wins come from three areas: using Claude to draft post-mortems (saving 2-3 hours per incident), using it to maintain runbooks (eliminating the "runbooks are always out of date" problem), and using it for capacity planning analysis (turning a week-long spreadsheet exercise into an afternoon). These improvements compound over time as your runbooks get better, your incidents teach Claude more about your systems, and your team spends more time on high-leverage reliability work instead of documentation maintenance.
+The most immediate wins come from three areas: using Claude to draft post-mortems (saving 2-3 hours per incident), using it to maintain runbooks (eliminating the "runbooks are always out of date" problem), and using it for capacity planning analysis (turning a week-long spreadsheet exercise into an afternoon). These improvements compound over time as your runbooks get better, your incidents teach Claude more about your systems, and your team spends more time on high-use reliability work instead of documentation maintenance.
 
 Start by placing the core SRE skill files in your `.claude/` directory, configure your monitoring integrations, and run your first automated check. Your future self. handling a 3 AM incident. will thank you.
 

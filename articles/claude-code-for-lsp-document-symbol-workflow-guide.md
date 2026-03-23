@@ -360,7 +360,7 @@ The generated code matches the style, return types, and async patterns of existi
 
 Generating Test Stubs from Symbols
 
-One of the highest-leverage automation tasks is generating test stubs that mirror the exact public interface of a class. With symbol information, Claude Code can produce complete, accurate test scaffolding:
+One of the most impactful automation tasks is generating test stubs that mirror the exact public interface of a class. With symbol information, Claude Code can produce complete, accurate test scaffolding:
 
 ```typescript
 // Source class. Claude reads its symbols

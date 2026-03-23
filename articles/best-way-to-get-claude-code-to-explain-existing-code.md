@@ -14,7 +14,7 @@ score: 8
 
 # Best Way to Get Claude Code to Explain Existing Code
 
-One of Claude Code's most valuable capabilities is its ability to analyze and explain existing code. Whether you're joining a new project, debugging legacy systems, or reviewing someone else's implementation, getting clear explanations from Claude Code can dramatically accelerate your understanding. The key lies in knowing how to ask the right questions and leveraging Claude Code's features effectively.
+One of Claude Code's most valuable capabilities is its ability to analyze and explain existing code. Whether you're joining a new project, debugging legacy systems, or reviewing someone else's implementation, getting clear explanations from Claude Code can dramatically accelerate your understanding. The key lies in knowing how to ask the right questions and using Claude Code's features effectively.
 
 Why Claude Code Excels at Code Explanation
 
@@ -159,7 +159,7 @@ Ignoring follow-up questions: After an initial explanation, ask clarifying quest
 
 Conclusion
 
-Getting Claude Code to explain existing code effectively comes down to providing clear context, asking specific questions, and leveraging relevant skills. The investment in crafting good prompts pays dividends in the quality and usefulness of explanations you receive. Start with context-rich requests, use skills strategically, and iterate with follow-up questions until your understanding is complete.
+Getting Claude Code to explain existing code effectively comes down to providing clear context, asking specific questions, and using relevant skills. The investment in crafting good prompts pays dividends in the quality and usefulness of explanations you receive. Start with context-rich requests, use skills strategically, and iterate with follow-up questions until your understanding is complete.
 
 With these techniques, Claude Code becomes an invaluable partner for understanding unfamiliar codebases quickly and thoroughly.
 

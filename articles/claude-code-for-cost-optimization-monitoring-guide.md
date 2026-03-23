@@ -83,7 +83,7 @@ Analyze the week's spending trend and identify:
 
 This skill can be invoked whenever you need a quick cost overview, making regular check-ins effortless.
 
-Analyzing Resource Utilization
+Analyzing Resource Usage
 
 Understanding how efficiently you use resources is fundamental to cost optimization. Idle resources represent direct money loss, while underutilized resources indicate wasted potential.
 
@@ -107,7 +107,7 @@ aws ec2 describe-instances \
   --output table
 ```
 
-Claude Code can then correlate this data with CloudWatch metrics to identify instances that have consistently low utilization.
+Claude Code can then correlate this data with CloudWatch metrics to identify instances that have consistently low usage.
 
 Storage Cost Analysis
 
@@ -146,10 +146,10 @@ Reserved Instance Management
 
 For predictable baseline workloads,Reserved Instances or Savings Plans offer significant discounts (often 40-60%). Claude Code can help:
 
-1. Analyze your baseline utilization
+1. Analyze your baseline usage
 2. Calculate potential savings
 3. Recommend appropriate reservation sizes
-4. Track reservation coverage and utilization
+4. Track reservation coverage and usage
 
 Spot Instance Strategies
 

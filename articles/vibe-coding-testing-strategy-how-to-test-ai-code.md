@@ -186,7 +186,7 @@ def test_auth_service_interface():
 
 This pattern is particularly valuable in large vibe coding sessions where you have generated dozens of modules across multiple conversations. The interface validation test gives you a quick pass/fail signal that all AI-generated components are still compatible with each other.
 
-Leverage Claude Skills for Testing Workflows
+Use Claude Skills for Testing Workflows
 
 Several Claude skills enhance your testing capabilities:
 

@@ -15,7 +15,7 @@ score: 7
 
 
 {% raw %}
-Claude Code + FastAPI + Pydantic V2 Validation Deep Dive
+Claude Code + FastAPI + Pydantic V2 Validation Detailed look
 
 Building solid APIs requires solid input validation. FastAPI combined with Pydantic v2 provides one of the most powerful validation systems available in Python today. This guide dives deep into validation patterns that will help you build production-ready APIs, with practical examples you can apply immediately.
 
@@ -241,7 +241,7 @@ class PaymentDetails(BaseModel):
 
 Error Handling with User-Friendly Messages
 
-Robust validation requires extracting meaningful error messages from Pydantic exceptions:
+Solid validation requires extracting meaningful error messages from Pydantic exceptions:
 
 ```python
 from pydantic import ValidationError

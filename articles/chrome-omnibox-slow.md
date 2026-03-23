@@ -57,7 +57,7 @@ Step 1: Test in incognito mode. Press `Ctrl+Shift+N` (Windows/Linux) or `Cmd+Shi
 
 Step 2: Test in a fresh profile. Go to `chrome://settings/` and create a new profile. A brand-new profile has no history, no bookmarks, and no extensions. If the omnibox is fast here, your data (history or bookmarks) is the culprit. If it is still slow, the issue is system-level.
 
-Step 3: Check system resources. Open the OS task manager (not Chrome's) and look at overall CPU and memory usage. If you are at 90%+ memory utilization, no amount of Chrome tuning will fully fix the lag.
+Step 3: Check system resources. Open the OS task manager (not Chrome's) and look at overall CPU and memory usage. If you are at 90%+ memory usage, no amount of Chrome tuning will fully fix the lag.
 
 Step 4: Identify the bottleneck with Chrome flags. Visit `chrome://flags/` and search for "omnibox" to see currently active experimental features that may be contributing to slowness.
 

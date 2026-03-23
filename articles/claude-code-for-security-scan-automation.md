@@ -430,7 +430,7 @@ export async function scanContainer(imageName) {
 
 Base Image Strategy
 
-The single highest-leverage container security decision is your base image. Most container vulnerabilities come from the OS layer, not your application code:
+The single most impactful container security decision is your base image. Most container vulnerabilities come from the OS layer, not your application code:
 
 | Base Image | Typical Vulnerability Count | Notes |
 |---|---|---|

@@ -429,7 +429,7 @@ Before shipping an MCP server to production, verify each of the following:
 
 Conclusion
 
-Input validation forms the foundation of secure MCP server development. By implementing type checking, allowlists, context-aware validation, and rate limiting, you create multiple layers of defense against malicious requests. Combine these patterns with thorough testing using the tdd skill and comprehensive documentation with the pdf skill to build robust, secure MCP integrations.
+Input validation forms the foundation of secure MCP server development. By implementing type checking, allowlists, context-aware validation, and rate limiting, you create multiple layers of defense against malicious requests. Combine these patterns with thorough testing using the tdd skill and comprehensive documentation with the pdf skill to build solid, secure MCP integrations.
 
 Remember that validation is not a one-time implementation but an ongoing process. Review and update your validation rules as new attack vectors emerge and your system evolves. The threat landscape changes. a validation pattern that was sufficient last year may not cover techniques that are common today. Build validation reviews into your regular security cadence alongside dependency updates and penetration testing.
 

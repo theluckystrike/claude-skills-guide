@@ -77,7 +77,7 @@ Do NOT comment on style or formatting. we have ESLint for that.
 
 Scoping the review prevents a flood of stylistic suggestions when you actually care about security. The constraint to skip style feedback saves both tokens and reading time.
 
-Leverage Context Windows Strategically
+Use Context Windows Strategically
 
 Claude Code's extended context window is a superpower when used correctly. Rather than pasting entire files repeatedly, provide context once and reference specific sections.
 

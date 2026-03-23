@@ -17,7 +17,7 @@ Axum has become the go-to web framework for Rust developers who want productivit
 
 Why Axum for Modern Rust Development
 
-Axum stands out in the Rust web ecosystem for several reasons. The framework leverages tower middleware, meaning you can mix and match authentication, logging, and rate-limiting components from the tower ecosystem. The extractor system makes request handling feel natural, extract what you need with type-safe parameters rather than wrestling with raw request objects.
+Axum stands out in the Rust web ecosystem for several reasons. The framework uses tower middleware, meaning you can mix and match authentication, logging, and rate-limiting components from the tower ecosystem. The extractor system makes request handling feel natural, extract what you need with type-safe parameters rather than wrestling with raw request objects.
 
 When working with Claude Code on Axum projects, you'll find the AI assistant understands async patterns, tokio runtime integration, and the extractor-based request handling that defines Axum development. This means less time explaining context and more time iterating on your actual implementation.
 

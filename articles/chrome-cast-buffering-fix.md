@@ -128,7 +128,7 @@ playerManager.setPlaybackConfig(playbackConfig);
 
 Handle Network Errors Gracefully
 
-Robust error handling prevents buffering from becoming playback failure:
+Solid error handling prevents buffering from becoming playback failure:
 
 ```javascript
 playerManager.addEventListener(

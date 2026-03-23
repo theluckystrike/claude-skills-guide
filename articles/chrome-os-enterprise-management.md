@@ -42,7 +42,7 @@ Organizational unit structure
 
 This structure enables you to apply different policies to different device groups without manual reconfiguration.
 
-Chrome Enterprise Policies Deep Dive
+Chrome Enterprise Policies Detailed look
 
 Chrome Enterprise policies control browser behavior, device settings, and security configurations. Access these through Devices > Chrome > Settings in the Admin Console, or manage them programmatically using the Policy Management API.
 

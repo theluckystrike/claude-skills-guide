@@ -219,7 +219,7 @@ When auditing focus management, verify compliance with these WCAG 2.1 criteria:
 
 Conclusion
 
-Focus management is fundamental to web accessibility. By leveraging Claude Code skills and automation tools like axe-core, you can systematically audit and improve focus handling in your applications. Start with the basics, visible focus indicators and logical tab order, then address more complex scenarios like modal focus traps and dynamic content focus management.
+Focus management is fundamental to web accessibility. By using Claude Code skills and automation tools like axe-core, you can systematically audit and improve focus handling in your applications. Start with the basics, visible focus indicators and logical tab order, then address more complex scenarios like modal focus traps and dynamic content focus management.
 
 Remember: accessible focus management isn't just about compliance; it improves usability for all keyboard users, creating a better experience for everyone.
 

@@ -12,7 +12,7 @@ tags: [claude-code, claude-skills]
 {% raw %}
 Claude Code for Helicone LLM Gateway Workflow Tutorial
 
-As AI applications scale, managing LLM API calls becomes increasingly complex. Helicone provides a powerful LLM gateway that adds observability, caching, request transformation, and rate limiting to any LLM API. This tutorial shows you how to integrate Claude Code with Helicone to build robust, efficient AI workflows.
+As AI applications scale, managing LLM API calls becomes increasingly complex. Helicone provides a powerful LLM gateway that adds observability, caching, request transformation, and rate limiting to any LLM API. This tutorial shows you how to integrate Claude Code with Helicone to build solid, efficient AI workflows.
 
 What is Helicone?
 

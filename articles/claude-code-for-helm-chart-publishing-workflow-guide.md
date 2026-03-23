@@ -608,7 +608,7 @@ Even with automation, publishing can fail. Here is a quick reference for the iss
 
 Conclusion
 
-Claude Code transforms Helm chart publishing from manual effort into an automated, reliable process. By leveraging Claude's capabilities for code generation, validation, and workflow orchestration, you can establish consistent publishing practices that reduce errors and save time.
+Claude Code transforms Helm chart publishing from manual effort into an automated, reliable process. By using Claude's capabilities for code generation, validation, and workflow orchestration, you can establish consistent publishing practices that reduce errors and save time.
 
 Start by automating your validation checks, then gradually build toward fully automated publishing workflows. Add schema validation next, then tackle the CI/CD integration. The investment pays off in improved reliability and developer productivity, teams that automate their chart publishing typically catch misconfiguration before it reaches production rather than after.
 

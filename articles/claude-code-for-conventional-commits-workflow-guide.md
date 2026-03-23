@@ -217,7 +217,7 @@ It will review each message and provide actionable feedback for improvement.
 
 Conclusion
 
-Claude Code transforms conventional commits from a chore into a conversation. By leveraging AI assistance for message crafting, organization, and validation, you maintain commit standards without sacrificing productivity. Start with one workflow, interactive message generation, and expand as your team matures. Your future self will thank you when browsing the git history.
+Claude Code transforms conventional commits from a chore into a conversation. By using AI assistance for message crafting, organization, and validation, you maintain commit standards without sacrificing productivity. Start with one workflow, interactive message generation, and expand as your team matures. Your future self will thank you when browsing the git history.
 {% endraw %}
 
 Related Reading

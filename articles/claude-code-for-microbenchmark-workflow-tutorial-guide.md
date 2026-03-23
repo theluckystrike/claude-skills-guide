@@ -480,7 +480,7 @@ Claude will typically suggest checking CPU cache behavior, Python version differ
 
 Wrapping Up
 
-Claude Code transforms microbenchmarking from a manual, error-prone process into a collaborative workflow. By leveraging Claude's understanding of performance patterns and best practices, you can:
+Claude Code transforms microbenchmarking from a manual, error-prone process into a collaborative workflow. By using Claude's understanding of performance patterns and best practices, you can:
 
 - Write statistically sound benchmarks faster
 - Automate execution and result analysis

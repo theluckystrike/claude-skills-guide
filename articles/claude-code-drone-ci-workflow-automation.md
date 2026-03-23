@@ -259,7 +259,7 @@ steps:
   - npm test
 ```
 
-Describing your monorepo layout to Claude and asking it to generate an appropriate multi-pipeline configuration is one of the highest-leverage uses of the automation. something that would take an experienced DevOps engineer an hour to get right takes Claude a few seconds.
+Describing your monorepo layout to Claude and asking it to generate an appropriate multi-pipeline configuration is one of the most impactful uses of the automation. something that would take an experienced DevOps engineer an hour to get right takes Claude a few seconds.
 
 Matrix Builds for Multi-Environment Testing
 
@@ -461,7 +461,7 @@ Claude Code transforms Drone CI workflow management from manual configuration to
 
 Start by adding Claude to your development workflow, describe your pipeline requirements, and watch as automated configurations emerge. Your team benefits from consistent, tested, and optimized CI processes without the manual overhead.
 
-The highest-leverage starting point is to bring Claude your most painful pipeline. the one that's slowest, most brittle, or hardest for new team members to understand. and ask it for a complete rewrite with caching, parallelization, and documented step purposes. That single exercise typically cuts build times in half and produces a configuration that becomes the template for every other repository going forward.
+The most impactful starting point is to bring Claude your most painful pipeline. the one that's slowest, most brittle, or hardest for new team members to understand. and ask it for a complete rewrite with caching, parallelization, and documented step purposes. That single exercise typically cuts build times in half and produces a configuration that becomes the template for every other repository going forward.
 
 
 Related Reading

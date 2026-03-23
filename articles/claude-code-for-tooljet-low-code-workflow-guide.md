@@ -171,7 +171,7 @@ try {
 }
 ```
 
-Leverage Component Library
+Use Component Library
 
 Tooljet provides extensive component options. Claude Code recommends appropriate components based on your use case, for example, suggesting the Table component for data display, Modal for complex forms, and Tabs for organizing related content.
 

@@ -533,7 +533,7 @@ Claude works best when given the full context: the profiling output, the relevan
 
 Conclusion
 
-Memory profiling does not have to be a daunting task. By leveraging Claude Code throughout the workflow. from setting up profiling tools to interpreting results and implementing fixes. you can approach memory optimization systematically and confidently. Remember to establish baselines, use representative workloads, compare snapshots, track trends over time, and always verify your fixes with follow-up profiling. With these practices and Claude's assistance, you will be well-equipped to tackle even the most challenging memory issues in your applications, whether you are working in Python, Node.js, Go, or any other language with profiling tooling.
+Memory profiling does not have to be a daunting task. By using Claude Code throughout the workflow. from setting up profiling tools to interpreting results and implementing fixes. you can approach memory optimization systematically and confidently. Remember to establish baselines, use representative workloads, compare snapshots, track trends over time, and always verify your fixes with follow-up profiling. With these practices and Claude's assistance, you will be well-equipped to tackle even the most challenging memory issues in your applications, whether you are working in Python, Node.js, Go, or any other language with profiling tooling.
 
 
 Related Reading

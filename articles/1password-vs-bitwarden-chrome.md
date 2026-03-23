@@ -42,7 +42,7 @@ Bitwarden's Chrome extension provides similar autofill capabilities with a focus
 
 The Send feature lets you share encrypted text and files securely, which proves useful for sharing sensitive tokens or configuration snippets with team members. Bitwarden also offers vault health reports identifying weak, reused, or compromised passwords.
 
-Bitwarden's extension is entirely self-contained and does not require a companion desktop application. This makes it useful in environments where you are working on a machine you do not own. a borrowed laptop, a cloud development environment like GitHub Codespaces, or a coworker's machine. You can unlock the extension directly through the browser without installing anything else.
+Bitwarden's extension is entirely self-contained and does not require a companion desktop application. This makes it useful in environments where you are working on a machine you do not own. a borrowed laptop, a cloud development environment like GitHub Codespaces, or a coworker's machine. You can use the extension directly through the browser without installing anything else.
 
 The extension's notification bar prompts you to save new credentials when it detects a login form submission, and it handles credential updates gracefully when you change a password. These prompts are reliable and difficult to accidentally dismiss, which prevents the common scenario of updating a password and losing the new one.
 
@@ -290,7 +290,7 @@ Choose 1Password if you:
 Choose Bitwarden if you:
 - Need self-hosted deployment options
 - Prioritize open-source transparency
-- Work with tight budgets (robust free tier)
+- Work with tight budgets (solid free tier)
 - Want full API access without enterprise pricing
 - Require Argon2id KDF for enhanced brute-force resistance
 - Need a portable solution that works without a companion desktop app

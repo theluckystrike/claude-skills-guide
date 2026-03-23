@@ -304,7 +304,7 @@ def safe_claude_call(prompt, fallback=None):
 ```
 
 4. Use Sessions Wisely
-Leverage conversation context to maintain state across related operations. A multi-step refactoring task benefits from a single session where Claude Code retains knowledge of the codebase structure discovered in earlier steps.
+Use conversation context to maintain state across related operations. A multi-step refactoring task benefits from a single session where Claude Code retains knowledge of the codebase structure discovered in earlier steps.
 
 5. Test Iteratively
 Start with simple tasks and gradually add complexity. Claude Code's behavior can sometimes surprise you, so testing is essential. Build a small test harness that runs your skill against a fixed input and checks the output against expected patterns before deploying to any automated workflow.

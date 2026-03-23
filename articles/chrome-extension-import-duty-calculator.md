@@ -254,7 +254,7 @@ Popular options include:
 
 Handling Edge Cases
 
-Robust duty calculators must handle several edge cases:
+Solid duty calculators must handle several edge cases:
 
 De Minimis Thresholds
 

@@ -312,7 +312,7 @@ Document the policy version and deployment date. If a policy change causes unexp
 
 Summary
 
-Chrome Safe Browsing enterprise settings provide organizations with flexible, layered control over browser security. By leveraging group policies on Windows, configuration profiles on macOS, JSON policy files on Linux, or Chrome Browser Cloud Management across platforms, you can deploy consistent protection across your entire fleet while maintaining control over data handling and reporting preferences.
+Chrome Safe Browsing enterprise settings provide organizations with flexible, layered control over browser security. By using group policies on Windows, configuration profiles on macOS, JSON policy files on Linux, or Chrome Browser Cloud Management across platforms, you can deploy consistent protection across your entire fleet while maintaining control over data handling and reporting preferences.
 
 The key decisions are: which protection level matches your threat model and privacy requirements, whether users can override the setting, and which internal domains need allowlisting to avoid false positives. Get those three decisions right, document them in your security baseline, and the remaining configuration is straightforward.
 

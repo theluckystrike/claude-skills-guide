@@ -347,7 +347,7 @@ def test_handle_string_input():
 
 Optimizing Function Performance
 
-Claude Code can help you identify performance bottlenecks and optimize your functions for better throughput and resource utilization.
+Claude Code can help you identify performance bottlenecks and optimize your functions for better throughput and resource usage.
 
 Resource Allocation Guidelines
 

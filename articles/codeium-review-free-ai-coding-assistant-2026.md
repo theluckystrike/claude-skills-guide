@@ -90,7 +90,7 @@ Use Claude Code skills for:
 
 Integration Possibilities
 
-The most powerful approach combines both tools. Use Codeium for day-to-day coding efficiency while leveraging Claude Code skills for higher-level tasks. For instance, you might use Claude Code to plan a major feature implementation, then rely on Codeium to implement the individual components efficiently.
+The most powerful approach combines both tools. Use Codeium for day-to-day coding efficiency while using Claude Code skills for higher-level tasks. For instance, you might use Claude Code to plan a major feature implementation, then rely on Codeium to implement the individual components efficiently.
 
 Practical Examples
 

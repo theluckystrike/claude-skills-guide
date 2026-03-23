@@ -105,7 +105,7 @@ The skill was trying to get workflow run details. What might be wrong?
 
 Claude Code can help identify whether the issue stems from incorrect repository names, missing permissions, or API rate limiting.
 
-Leverage the GitHub CLI for Interactive Debugging
+Use the GitHub CLI for Interactive Debugging
 
 Within your skill, use the `gh` CLI for more readable output:
 

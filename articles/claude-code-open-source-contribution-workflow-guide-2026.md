@@ -13,7 +13,7 @@ permalink: /claude-code-open-source-contribution-workflow-guide-2026/
 
 # Claude Code for Open Source Contributions: 2026 Workflow Guide
 
-Contributing to open source is one of the highest-leverage activities in a developer's career, and also one of the most friction-heavy. You clone an unfamiliar repo, spend an hour understanding the architecture, hunt for the contributing guide, write a fix, and then get a review comment asking you to follow a convention you did not know existed.
+Contributing to open source is one of the most impactful activities in a developer's career, and also one of the most friction-heavy. You clone an unfamiliar repo, spend an hour understanding the architecture, hunt for the contributing guide, write a fix, and then get a review comment asking you to follow a convention you did not know existed.
 
 Claude Code reduces that friction significantly. This guide walks through a repeatable workflow: from first clone to merged PR.
 

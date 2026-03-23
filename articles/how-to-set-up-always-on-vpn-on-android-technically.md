@@ -26,7 +26,7 @@ Android provides native always-on VPN support since Android 4.4 (API 20), but th
 
 Understanding the difference between these approaches matters before you configure anything. The native Android feature relies on the OS itself enforcing the VPN policy. meaning it kicks in before any app starts, survives app crashes, and persists across reboots without any additional setup on your part. Third-party implementations give you more control (custom kill switch logic, split tunneling per app, protocol selection) but introduce more moving parts that can fail independently.
 
-For personal devices where you want simple, reliable protection, the native feature is the right starting point. For enterprise deployments or cases where you need granular control over what traffic goes through the VPN, a third-party implementation or MDM-enforced configuration gives you more leverage.
+For personal devices where you want simple, reliable protection, the native feature is the right starting point. For enterprise deployments or cases where you need granular control over what traffic goes through the VPN, a third-party implementation or MDM-enforced configuration gives you more use.
 
 How Android Enforces Always-On VPN Internally
 
@@ -48,7 +48,7 @@ Popular VPN apps with confirmed native always-on support include: WireGuard for 
 
 Step-by-Step Configuration
 
-#### For Users (Device Settings)
+For Users (Device Settings)
 
 1. Open Settings on your Android device
 2. Navigate to Network & Internet → VPN (or Connections → VPN on older versions)
@@ -78,7 +78,7 @@ adb shell settings get global always_on_vpn_mode
 adb shell settings get global always_on_vpn_lockdown
 ```
 
-#### For Developers (Programmatic Implementation)
+For Developers (Programmatic Implementation)
 
 If you're building a VPN app, implement the `AlwaysOnVpnService`:
 

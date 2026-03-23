@@ -209,7 +209,7 @@ The multi-agent section is one of the most technically detailed parts of the doc
 
 This pattern is particularly powerful for large refactoring efforts, where one agent plans the work and multiple subagents execute changes in parallel across different parts of the codebase.
 
-Configuration Deep Dive
+Configuration Detailed look
 
 The configuration section provides comprehensive details about customizing Claude Code's behavior.
 

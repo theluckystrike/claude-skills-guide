@@ -88,7 +88,7 @@ Qwik vs React vs Vue: Reactivity Comparison
 
 The most meaningful difference for day-to-day development is mutation style. In Qwik you mutate reactive state directly (`count.value++`, `store.user.name = 'Alice'`) and Qwik tracks the dependency graph for you. There is no setState equivalent, no immer-style immutable updates, and no manual dependency arrays.
 
-useStore Deep Dive
+useStore Detailed look
 
 The `useStore` hook creates a reactive object that Qwik tracks at a fine-grained level. The second argument lets you configure reactivity options.
 

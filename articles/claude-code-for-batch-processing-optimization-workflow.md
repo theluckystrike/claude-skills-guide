@@ -110,7 +110,7 @@ def parallel_cpu_process(records):
 
 Error Handling and Recovery Patterns
 
-Robust batch processing requires comprehensive error handling. Here are battle-tested patterns:
+Solid batch processing requires comprehensive error handling. Here are battle-tested patterns:
 
 Checkpointing for Long-Running Jobs
 

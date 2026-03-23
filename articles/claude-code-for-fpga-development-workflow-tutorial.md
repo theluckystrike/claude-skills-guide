@@ -423,7 +423,7 @@ Use Lint Tools: Ask Claude Code to help you configure Verilator for RTL linting 
 verilator --lint-only -Wall rtl/uart_rx.v
 ```
 
-Document Resource Budgets: For resource-constrained designs, keep a running estimate of your LUT, DSP, BRAM, and I/O utilization. Ask Claude Code to help you review usage reports and flag when a new module consumes more resources than expected.
+Document Resource Budgets: For resource-constrained designs, keep a running estimate of your LUT, DSP, BRAM, and I/O usage. Ask Claude Code to help you review usage reports and flag when a new module consumes more resources than expected.
 
 A Complete Iterative Workflow
 

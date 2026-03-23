@@ -60,7 +60,7 @@ Practical Skill Examples
 
 Here are practical examples of how Claude Code skills enable agentic behavior:
 
-#### 1. Automated Code Review Skill
+1. Automated Code Review Skill
 
 ```yaml
 name: code-review
@@ -69,7 +69,7 @@ description: Automated code review with security and performance checks
 
 This skill activates automatically on pull requests, analyzing code for security vulnerabilities, performance issues, and test coverage gaps, work that would otherwise require hours of manual review.
 
-#### 2. Database Migration Skill
+2. Database Migration Skill
 
 ```yaml
 name: database-migration
@@ -78,7 +78,7 @@ description: Safe database schema migrations with rollback support
 
 A database migration skill can autonomously handle schema changes, including creating backups and rollback scripts, ensuring safe deployment.
 
-#### 3. API Documentation Skill
+3. API Documentation Skill
 
 ```yaml
 name: api-docs

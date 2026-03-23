@@ -247,7 +247,7 @@ processed = data.map(safe_process).filter(lambda x: x is not None)
 
 Optimize for Cost: Monitor your Beam Cloud usage and implement cost-saving measures like checkpointing at appropriate intervals, using smaller instance types when possible, and implementing automatic shutdown for idle resources.
 
-Leverage Claude Code for Documentation: Maintain clear documentation of your pipeline architecture. Claude Code can generate docstrings and README files that help team members understand complex workflows.
+Use Claude Code for Documentation: Maintain clear documentation of your pipeline architecture. Claude Code can generate docstrings and README files that help team members understand complex workflows.
 
 Conclusion
 

@@ -212,7 +212,7 @@ class UserProfile(BaseModel):
     )
 ```
 
-Leverage Response Models for Clear API Contracts
+Use Response Models for Clear API Contracts
 
 Always specify response models to ensure the OpenAPI schema accurately documents your API responses:
 

@@ -20,7 +20,7 @@ Understanding Throughput vs. Latency
 
 Before diving into optimization techniques, it's essential to distinguish between throughput and latency. Latency measures the time it takes to complete a single operation, while throughput measures how many operations you can complete per unit of time. Optimizing for one often involves trade-offs with the other, and understanding this relationship is crucial for making informed architectural decisions.
 
-Claude Code excels at analyzing both metrics and identifying bottlenecks in your workflows. By examining your code execution patterns, API call sequences, and resource utilization, Claude can recommend specific optimizations that target the actual constraints in your system rather than guesswork.
+Claude Code excels at analyzing both metrics and identifying bottlenecks in your workflows. By examining your code execution patterns, API call sequences, and resource usage, Claude can recommend specific optimizations that target the actual constraints in your system rather than guesswork.
 
 Parallel Processing Patterns
 

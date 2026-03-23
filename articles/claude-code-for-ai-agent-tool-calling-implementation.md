@@ -245,7 +245,7 @@ Your tool descriptions directly impact model performance. Follow these guideline
 
 Error Handling and Recovery
 
-Robust agents must handle tool failures gracefully:
+Solid agents must handle tool failures gracefully:
 
 ```python
 def resilient_tool_executor(tool_call, max_retries=3):
@@ -309,7 +309,7 @@ Use this checklist when implementing tool calling in your agents:
 
 Conclusion
 
-Tool calling transforms AI agents from conversational partners into capable executors. Whether you use Claude's native function calling API or use Claude Skills for higher-level abstractions, the patterns and practices outlined in this guide will help you build robust, capable agents.
+Tool calling transforms AI agents from conversational partners into capable executors. Whether you use Claude's native function calling API or use Claude Skills for higher-level abstractions, the patterns and practices outlined in this guide will help you build solid, capable agents.
 
 Start with simple tools and ReAct-style iteration. As your agents grow more sophisticated, add parallel execution and human-in-the-loop approvals. The key is to build incrementally while maintaining safety and observability throughout.
 

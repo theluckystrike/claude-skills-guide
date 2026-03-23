@@ -200,7 +200,7 @@ Request metrics configuration:
 
 > "Generate Kong Mesh insights configuration to collect metrics from all services in the default mesh and export to Prometheus."
 
-Claude Code produces the appropriate DataplaneInsight or MeshInsight configuration, helping you understand service-level metrics, traffic patterns, and resource utilization.
+Claude Code produces the appropriate DataplaneInsight or MeshInsight configuration, helping you understand service-level metrics, traffic patterns, and resource usage.
 
 Distributed Tracing Setup
 
@@ -243,13 +243,13 @@ Use Labels Consistently: Establish naming conventions for your services and mesh
 
 Test in Staging: Always validate generated configurations in a non-production environment before applying them to production meshes.
 
-Leverage Claude Code's Context: Provide Claude Code with your existing Kubernetes context, current mesh state, and specific requirements for the most accurate configurations.
+Use Claude Code's Context: Provide Claude Code with your existing Kubernetes context, current mesh state, and specific requirements for the most accurate configurations.
 
 Version Control Configurations: Store all Kong Mesh YAML files in git. Claude Code can help generate diffs and review changes before applying them.
 
 Conclusion
 
-Claude Code transforms Kong Mesh workflows from complex manual configuration to collaborative, AI-assisted operations. From generating initial mesh resources to implementing sophisticated traffic management policies, Claude Code accelerates every step of the service mesh journey. By combining Claude Code's configuration generation with your domain expertise, you can deploy robust, secure, and observable microservices architectures with confidence.
+Claude Code transforms Kong Mesh workflows from complex manual configuration to collaborative, AI-assisted operations. From generating initial mesh resources to implementing sophisticated traffic management policies, Claude Code accelerates every step of the service mesh journey. By combining Claude Code's configuration generation with your domain expertise, you can deploy solid, secure, and observable microservices architectures with confidence.
 
 Start experimenting with Kong Mesh and Claude Code today, your future self will thank you for the time saved on configuration and debugging.
 

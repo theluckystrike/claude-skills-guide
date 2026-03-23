@@ -18,7 +18,7 @@ Claude Code for Zustand State Management Workflow
 
 State management is one of the most critical aspects of building scalable React applications. Zustand has emerged as a lightweight, intuitive solution that simplifies state management without the boilerplate overhead of Redux. When combined with Claude Code, the AI-powered coding assistant, you can dramatically accelerate your development workflow and write more maintainable state management code.
 
-This guide explores how to effectively use Claude Code for Zustand state management, covering everything from initial setup to advanced patterns that will make your React applications more robust.
+This guide explores how to effectively use Claude Code for Zustand state management, covering everything from initial setup to advanced patterns that will make your React applications more solid.
 
 Setting Up Zustand in Your Project
 
@@ -334,7 +334,7 @@ Review Generated Code
 
 While Claude Code produces high-quality code, always review the generated implementations. Verify that the logic matches your requirements and that there are no unintended side effects in state mutations.
 
-Leverage Claude Code for Refactoring
+Use Claude Code for Refactoring
 
 When your stores grow complex, ask Claude Code to help refactor them. You can request improvements like "Convert this monolithic store into multiple slice files using the Zustand slice pattern" or "Add TypeScript types to this JavaScript store."
 

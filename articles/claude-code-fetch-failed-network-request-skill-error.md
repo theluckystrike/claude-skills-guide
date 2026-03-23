@@ -77,7 +77,7 @@ For skills requiring API keys, ensure you have configured credentials properly i
 
 Fix 3: Implement Retry Logic and Error Handling
 
-Robust skills should include retry logic for transient failures. Implement exponential backoff to handle temporary network issues gracefully:
+Solid skills should include retry logic for transient failures. Implement exponential backoff to handle temporary network issues gracefully:
 
 ```javascript
 async function fetchWithRetry(url, options, maxRetries = 3) {

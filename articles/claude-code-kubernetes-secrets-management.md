@@ -370,7 +370,7 @@ Kubernetes secrets management requires careful planning and the right tooling. C
 
 The path to production-grade secrets management follows a natural progression: replace manually created secrets with ExternalSecrets, enable etcd encryption, implement RBAC scoped to specific secret names, add pre-commit scanning, and finally automate rotation with zero-downtime procedures. Each step is independently valuable, so you can improve incrementally rather than attempting a complete overhaul at once.
 
-By following these practices and leveraging Claude Code to generate YAML scaffolding and rotation runbooks, you can establish a secrets management workflow that scales with your infrastructure while maintaining security best practices appropriate for production workloads.
+By following these practices and using Claude Code to generate YAML scaffolding and rotation runbooks, you can establish a secrets management workflow that scales with your infrastructure while maintaining security best practices appropriate for production workloads.
 
 
 Related Reading

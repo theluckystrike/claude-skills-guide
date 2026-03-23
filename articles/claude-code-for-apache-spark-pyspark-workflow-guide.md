@@ -151,7 +151,7 @@ result_df.explain(True)  # True for formatted output
 
 Look for signs of inefficiency: broad Cartesian products, missing filter pushdowns, or unnecessary shuffles. Claude Code can interpret these plans and suggest specific optimizations.
 
-Paste the output of `explain(True)` directly into a Claude Code session. Ask it to identify the most expensive stages and what changes to the DataFrame API calls would reduce shuffles. This is one of the highest-leverage uses of Claude Code in a Spark workflow because plan output is dense and difficult to parse without experience.
+Paste the output of `explain(True)` directly into a Claude Code session. Ask it to identify the most expensive stages and what changes to the DataFrame API calls would reduce shuffles. This is one of the most impactful uses of Claude Code in a Spark workflow because plan output is dense and difficult to parse without experience.
 
 Diagnosing Data Skew
 
@@ -313,7 +313,7 @@ Follow these practical recommendations to improve your PySpark workflows:
 
 7. Use Adaptive Query Execution (AQE) - On Spark 3.x, set `spark.sql.adaptive.enabled=true`. This allows Spark to re-optimize the plan at runtime based on actual partition statistics, often eliminating skew and reducing shuffle without any code changes.
 
-Claude Code can assist you at every step, reviewing your code, suggesting optimizations, and helping you understand Spark's complex execution model. By combining your domain knowledge with AI-assisted development, you can build robust, efficient Spark pipelines that scale with your data needs.
+Claude Code can assist you at every step, reviewing your code, suggesting optimizations, and helping you understand Spark's complex execution model. By combining your domain knowledge with AI-assisted development, you can build solid, efficient Spark pipelines that scale with your data needs.
 
 Related Reading
 

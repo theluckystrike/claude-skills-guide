@@ -379,9 +379,9 @@ Practical Implementation Checklist
 4. Verify BBR congestion control is active with `sysctl net.ipv4.tcp_congestion_control`
 5. Configure WireGuard PostUp commands to apply buffer tuning on interface start
 6. Test with 4-8 parallel rsync streams and compare against single-stream baseline
-7. Monitor CPU core utilization. if any single core saturates, consider multiple WireGuard instances
+7. Monitor CPU core usage. if any single core saturates, consider multiple WireGuard instances
 8. For 10 Gbps+ workloads, tune IRQ affinity and consider NUMA topology
-9. Set up ongoing monitoring with `wg show all transfer` to track per-peer utilization
+9. Set up ongoing monitoring with `wg show all transfer` to track per-peer usage
 10. Iterate: re-benchmark after each change to confirm improvement
 
 WireGuard's simplicity doesn't mean sacrificing performance. With thoughtful tuning, you can achieve multi-gigabit throughput suitable for enterprise file distribution, backup synchronization, and media production workflows. Start with MTU and kernel tuning. these two changes alone often deliver 2-3x improvement over default configurations. Then move to BBR, parallel connections, and hardware-specific optimizations as your workload demands.

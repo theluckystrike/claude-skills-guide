@@ -270,7 +270,7 @@ Ask Claude Code to generate a usage file based on your application's traffic exp
 
 Integrating Infracost into CI/CD
 
-The highest-leverage place to surface cost data is in the pull request review, before any code merges. Infracost supports GitHub Actions, GitLab CI, and CircleCI natively.
+The most impactful place to surface cost data is in the pull request review, before any code merges. Infracost supports GitHub Actions, GitLab CI, and CircleCI natively.
 
 GitHub Actions Integration
 

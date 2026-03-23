@@ -179,7 +179,7 @@ Conclusion
 
 Claude Code transforms Flux bootstrap from a manual, error-prone process into a guided workflow. By generating configuration templates, explaining complex options, and helping troubleshoot issues, it lets you focus on designing your GitOps architecture rather than wrestling with YAML syntax. Start with single-cluster bootstraps, then expand to multi-cluster patterns as your infrastructure grows.
 
-The key is providing Claude Code with enough context about your environment, repository structure, cluster names, and specific requirements, to generate accurate configurations. With this foundation, you can build robust, reproducible Kubernetes deployments managed entirely through Git.
+The key is providing Claude Code with enough context about your environment, repository structure, cluster names, and specific requirements, to generate accurate configurations. With this foundation, you can build solid, reproducible Kubernetes deployments managed entirely through Git.
 {% endraw %}
 
 Related Reading

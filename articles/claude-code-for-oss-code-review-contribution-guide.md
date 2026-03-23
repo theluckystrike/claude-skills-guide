@@ -190,7 +190,7 @@ Explore Alternatives
 What are some alternative implementations for this function? What are the tradeoffs of each approach?
 ```
 
-Deep Dives
+Detailed look
 
 ```
 Research the libraries and frameworks used in this PR. Provide a brief summary of how they work and their key concepts.

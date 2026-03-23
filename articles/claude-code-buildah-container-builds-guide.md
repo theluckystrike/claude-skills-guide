@@ -136,7 +136,7 @@ A typical workflow involves:
 4. Execute builds locally or in CI/CD pipelines
 5. Iterate on the script as requirements evolve
 
-This approach maintains build reproducibility while leveraging AI assistance for complex configurations.
+This approach maintains build reproducibility while using AI assistance for complex configurations.
 
 Troubleshooting Build Issues
 

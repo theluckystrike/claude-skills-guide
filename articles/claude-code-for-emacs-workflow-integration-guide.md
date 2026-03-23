@@ -185,7 +185,7 @@ To get the most out of your integrated workflow, follow these practical guidelin
 
 Keep conversations focused: Claude Code works best when queries are specific. Instead of asking "fix this code," specify "extract this function into a separate module" or "add error handling to this API call."
 
-Leverage Emacs's selection model: Use Emacs's powerful selection capabilities to provide exactly the context Claude Code needs. Narrowing (`C-x n n`) lets you focus Claude Code on specific sections.
+Use Emacs's selection model: Use Emacs's powerful selection capabilities to provide exactly the context Claude Code needs. Narrowing (`C-x n n`) lets you focus Claude Code on specific sections.
 
 Combine with existing Emacs tools: Use Emacs's built-in tools like `grep`, `occur`, and `imenu` to gather context before querying Claude Code. This hybrid approach often yields better results than relying solely on AI.
 

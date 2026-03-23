@@ -186,7 +186,7 @@ Feedback Integration: Encourage documentation feedback from users. Use issues or
 
 Conclusion
 
-Claude Code transforms Docusaurus documentation workflows from manual effort to AI-assisted efficiency. From initial setup through ongoing maintenance, Claude's capabilities integrate naturally with every aspect of documentation development. By leveraging these tools, you can maintain high-quality documentation with significantly less effort, freeing you to focus on what matters most: the content itself.
+Claude Code transforms Docusaurus documentation workflows from manual effort to AI-assisted efficiency. From initial setup through ongoing maintenance, Claude's capabilities integrate naturally with every aspect of documentation development. By using these tools, you can maintain high-quality documentation with significantly less effort, freeing you to focus on what matters most: the content itself.
 
 Whether you're starting fresh or improving existing documentation, Claude Code provides practical assistance at every step. The workflows outlined in this guide represent proven patterns for documentation success in modern development teams.
 {% endraw %}

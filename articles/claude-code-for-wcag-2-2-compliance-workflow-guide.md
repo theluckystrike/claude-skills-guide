@@ -22,11 +22,11 @@ Understanding WCAG 2.2 Key Changes
 
 WCAG 2.2 builds on previous versions with three new success criteria that directly impact code implementation:
 
-- 1.4.3 Contrast (Minimum) AA – Requires text contrast ratio of at least 4.5:1 for normal text
-- 1.4.11 Non-text Contrast AA – Requires 3:1 contrast for UI components and graphics
-- 2.4.7 Focus Visible AAA – Requires visible focus indicators on all interactive elements
-- 2.5.7 Dragging Movements AA – No reliance on dragging unless dragging is essential
-- 3.2.9 Focus Not Inseparable AA – Focus movement must be perceivable and not hidden
+- 1.4.3 Contrast (Minimum) AA, Requires text contrast ratio of at least 4.5:1 for normal text
+- 1.4.11 Non-text Contrast AA, Requires 3:1 contrast for UI components and graphics
+- 2.4.7 Focus Visible AAA, Requires visible focus indicators on all interactive elements
+- 2.5.7 Dragging Movements AA, No reliance on dragging unless dragging is essential
+- 3.2.9 Focus Not Inseparable AA, Focus movement must be perceivable and not hidden
 
 Claude Code can help you implement these criteria systematically, catching accessibility issues before they reach production.
 

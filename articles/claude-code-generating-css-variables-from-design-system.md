@@ -356,7 +356,7 @@ Circular references in semantic alias layers can produce undefined variables at 
 
 Conclusion
 
-Claude Code transforms the tedious process of creating CSS variables from design systems into a streamlined, automated workflow. By leveraging Claude's ability to read design specifications, understand structured data formats, and generate clean code, you can maintain design system consistency while significantly reducing manual effort. Whether you're working with simple color palettes or complex multi-theme systems, Claude Code provides the flexibility and power to generate production-ready CSS custom properties that integrate smoothly into modern web projects.
+Claude Code transforms the tedious process of creating CSS variables from design systems into a streamlined, automated workflow. By using Claude's ability to read design specifications, understand structured data formats, and generate clean code, you can maintain design system consistency while significantly reducing manual effort. Whether you're working with simple color palettes or complex multi-theme systems, Claude Code provides the flexibility and power to generate production-ready CSS custom properties that integrate smoothly into modern web projects.
 
 The most durable benefit is not the time saved on any single token generation, it is the fact that your CSS variables stay synchronized with your design source of truth. When tokens and variables drift apart, the design system loses credibility with engineers and designers alike. Automating the generation step removes drift from the equation entirely.
 

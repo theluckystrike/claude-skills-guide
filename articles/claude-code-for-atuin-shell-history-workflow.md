@@ -167,7 +167,7 @@ When asking Claude Code to analyze your history, specify that it should ignore s
 
 Conclusion
 
-Combining Claude Code with Atuin creates a powerful workflow for managing and leveraging your shell history. Atuin provides the infrastructure for rich, searchable command history, while Claude Code adds the intelligence to analyze patterns, suggest improvements, and help you reuse past work effectively.
+Combining Claude Code with Atuin creates a powerful workflow for managing and using your shell history. Atuin provides the infrastructure for rich, searchable command history, while Claude Code adds the intelligence to analyze patterns, suggest improvements, and help you reuse past work effectively.
 
 Start by installing Atuin and letting it collect history for a few days, then begin experimenting with the analysis workflows described in this guide. As your history grows, so does the value you can extract with Claude Code's assistance.
 

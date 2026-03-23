@@ -253,7 +253,7 @@ Version control your storage manifests. Store all Ceph manifests in Git alongsid
 
 Test disaster recovery procedures regularly. Automate your DR testing with Claude Code scripts that create temporary PVCs from snapshots, verify data integrity, and clean up afterward.
 
-Leverage the Rook toolbox for debugging. The toolbox pod provides direct Ceph commands for troubleshooting. Claude Code can generate diagnostic reports automatically when issues arise.
+Use the Rook toolbox for debugging. The toolbox pod provides direct Ceph commands for troubleshooting. Claude Code can generate diagnostic reports automatically when issues arise.
 
 Conclusion
 

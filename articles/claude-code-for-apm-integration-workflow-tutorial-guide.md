@@ -125,7 +125,7 @@ Claude Code executes parallel queries to your APM and deployment tracking system
 - p99 latency: 4.2s (up from 800ms)
 - One deployment 45 minutes ago
 
-Step 2: Deep Dive
+Step 2: Detailed look
 
 ```
 Show me the slowest endpoints and any correlated errors in the logs.

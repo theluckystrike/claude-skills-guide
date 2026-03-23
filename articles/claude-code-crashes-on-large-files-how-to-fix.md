@@ -507,7 +507,7 @@ function safeRead(filepath) {
 }
 ```
 
-A More Robust File Safety Wrapper
+A More Solid File Safety Wrapper
 
 The basic check above throws an error on large files but does not offer an alternative. A more useful wrapper auto-splits the file and returns the first safe chunk with a warning:
 

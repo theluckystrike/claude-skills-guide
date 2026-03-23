@@ -163,7 +163,7 @@ def unfreeze_last_blocks(self):
             param.requires_grad = True
 ```
 
-Building Robust Training Loops
+Building Solid Training Loops
 
 Writing training loops from scratch introduces opportunities for bugs. Claude Code can generate clean, well-documented training code with best practices:
 

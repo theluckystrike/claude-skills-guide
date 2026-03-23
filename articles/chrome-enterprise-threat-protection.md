@@ -57,7 +57,7 @@ Here's how you might configure browser policies for an enterprise environment us
 
 These policies control how aggressively Chrome blocks potentially harmful content. The SafeBrowsingProtectionLevel setting determines whether you're in standard protection mode or enhanced protection mode, with the latter sending additional data to Google for more comprehensive threat detection.
 
-#### SafeBrowsingProtectionLevel Values
+SafeBrowsingProtectionLevel Values
 
 | Value | Mode | Description |
 |---|---|---|

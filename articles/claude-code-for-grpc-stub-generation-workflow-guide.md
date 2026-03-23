@@ -240,7 +240,7 @@ When gRPC stubs fail to compile or have runtime errors, share the error messages
 
 Conclusion
 
-Claude Code transforms gRPC stub generation from a manual, error-prone process into an automated, reliable workflow. By setting up proper project structure, using buf for generation, and leveraging Claude's verification capabilities, you can significantly reduce the time spent on boilerplate code while improving code quality.
+Claude Code transforms gRPC stub generation from a manual, error-prone process into an automated, reliable workflow. By setting up proper project structure, using buf for generation, and using Claude's verification capabilities, you can significantly reduce the time spent on boilerplate code while improving code quality.
 
 Start by defining clear proto file conventions, create reusable generation templates, and let Claude Code handle the repetitive tasks. Your future self will thank you when maintaining microservices becomes noticeably smoother.
 {% endraw %}

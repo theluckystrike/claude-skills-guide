@@ -109,7 +109,7 @@ The same chaining works across more combinations now. The tdd skill can feed gen
 
 Context Persistence Enhancements
 
-Memory management receives substantial upgrades. The supermemory skill now maintains cross-session context more reliably, with improved deduplication and retrieval algorithms. Projects with extensive codebases benefit from smarter context window utilization.
+Memory management receives substantial upgrades. The supermemory skill now maintains cross-session context more reliably, with improved deduplication and retrieval algorithms. Projects with extensive codebases benefit from smarter context window usage.
 
 Key improvements include:
 

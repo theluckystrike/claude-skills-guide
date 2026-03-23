@@ -429,7 +429,7 @@ Set a budget in `lighthouserc.js` to fail builds that regress below your perform
 
 Conclusion
 
-Chrome iOS performance requires understanding the platform's constraints and optimizing accordingly. Focus on reducing JavaScript main thread work, implementing aggressive caching, minimizing network requests, and leveraging iOS-specific APIs. Image optimization, passive scroll listeners, deferred third-party scripts, and proper font loading strategies collectively deliver the largest gains for real users. Regular profiling on actual devices ensures your optimizations deliver measurable improvements rather than theoretical gains from simulation alone.
+Chrome iOS performance requires understanding the platform's constraints and optimizing accordingly. Focus on reducing JavaScript main thread work, implementing aggressive caching, minimizing network requests, and using iOS-specific APIs. Image optimization, passive scroll listeners, deferred third-party scripts, and proper font loading strategies collectively deliver the largest gains for real users. Regular profiling on actual devices ensures your optimizations deliver measurable improvements rather than theoretical gains from simulation alone.
 
 
 Related Reading

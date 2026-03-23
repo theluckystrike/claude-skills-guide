@@ -173,7 +173,7 @@ Start Small and Be Consistent
 2. Establish conventions in a CLAUDE.md file before
 3. Document incrementally, add documentation when you touch code, not all at once
 
-Leverage Claude Code's Context
+Use Claude Code's Context
 
 When working with Claude Code, provide sufficient context for better results:
 

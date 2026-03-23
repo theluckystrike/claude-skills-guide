@@ -162,7 +162,7 @@ For developers interested in building custom solutions, Chrome's extension docum
 
 Building a Custom Prompt Library
 
-One of the highest-leverage investments you can make when working with AI email extensions is building a personal prompt library. Rather than relying on the default prompts bundled with an extension, maintaining your own set of reusable instructions gives you consistent, predictable output across different scenarios.
+One of the most impactful investments you can make when working with AI email extensions is building a personal prompt library. Rather than relying on the default prompts bundled with an extension, maintaining your own set of reusable instructions gives you consistent, predictable output across different scenarios.
 
 A practical prompt library typically organizes prompts by category. Common categories include cold outreach, follow-up sequences, internal communication, client-facing updates, and incident reports. Each category benefits from a slightly different tone and structure. Cold outreach prompts should emphasize brevity and a clear call to action. Internal updates can be more direct and assume shared context. Client-facing messages often require a more formal register.
 

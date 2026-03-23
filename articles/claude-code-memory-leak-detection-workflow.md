@@ -371,7 +371,7 @@ Open questions: [things you need to figure out]
 
 Filling this out takes two minutes and means your next session picks up exactly where you left off with none of the context bloat.
 
-## Related Reading
+Related Reading
 
 - [Claude Code Profiler Integration Guide](/claude-code-profiler-integration-guide/). Profiling complements memory leak detection
 - [Claude Code Error Out of Memory Large Codebase Fix](/claude-code-error-out-of-memory-large-codebase-fix/). OOM errors often stem from memory leaks

@@ -237,7 +237,7 @@ Most OSS projects welcome documentation contributors. Join Discord channels, for
 
 Conclusion
 
-Claude Code transforms documentation contribution from an intimidating task into an achievable goal. By leveraging its ability to understand code, generate consistent examples, and identify gaps, you can make meaningful contributions to open source projects while developing valuable communication skills.
+Claude Code transforms documentation contribution from an intimidating task into an achievable goal. By using its ability to understand code, generate consistent examples, and identify gaps, you can make meaningful contributions to open source projects while developing valuable communication skills.
 
 Start small: find a typo to fix, clarify a confusing sentence, or add an example to an API endpoint. Each contribution makes open source more accessible to everyone.
 

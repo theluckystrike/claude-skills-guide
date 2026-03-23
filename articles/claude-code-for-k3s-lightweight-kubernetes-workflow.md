@@ -165,7 +165,7 @@ Use namespaces for isolation: K3s supports namespaces just like full Kubernetes.
 
 Set resource limits: Prevent resource exhaustion by specifying requests and limits in your pod specifications. Claude Code can help you calculate appropriate values based on your workload requirements.
 
-Leverage K3s-specific features: K3s includes built-in support for Helm charts and a simplified storage mechanism. Ask Claude Code about these capabilities when deploying complex applications.
+Use K3s-specific features: K3s includes built-in support for Helm charts and a simplified storage mechanism. Ask Claude Code about these capabilities when deploying complex applications.
 
 Conclusion
 

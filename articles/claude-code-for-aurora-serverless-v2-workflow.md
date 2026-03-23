@@ -31,7 +31,7 @@ Key characteristics to keep in mind:
 - Scaling happens in seconds, not minutes
 - You pay only for the ACUs consumed per second
 
-Now let's explore how Claude Code skills enhance your workflow.
+Here are how Claude Code skills enhance your workflow.
 
 Setting Up Claude Code for Aurora Development
 

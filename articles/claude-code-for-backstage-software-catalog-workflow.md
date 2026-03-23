@@ -192,7 +192,7 @@ Automate documentation: Use Claude Code to generate and update API documentation
 
 Conclusion
 
-Claude Code transforms Backstage software catalog management from a manual, error-prone process into an automated, consistent workflow. By leveraging its understanding of YAML structures, API definitions, and code patterns, you can rapidly create valid entities, maintain relationships, and keep your catalog synchronized with your evolving codebase.
+Claude Code transforms Backstage software catalog management from a manual, error-prone process into an automated, consistent workflow. By using its understanding of YAML structures, API definitions, and code patterns, you can rapidly create valid entities, maintain relationships, and keep your catalog synchronized with your evolving codebase.
 
 Start by setting up proper project structure, defining conventions in CLAUDE.md, and gradually automating common tasks like entity creation, validation, and documentation. The investment in establishing these workflows pays dividends in improved discoverability, clearer ownership, and better developer experience across your organization.
 

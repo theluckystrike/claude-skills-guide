@@ -356,7 +356,7 @@ Generate an accessibility report for this week's changes. Compare:
 
 Conclusion
 
-Automating ARIA label implementation in React components through Claude Code transforms accessibility from a burdensome chore into an integral part of your development workflow. By leveraging the frontend-design, tdd, and axe-accessibility-testing skills together, you can:
+Automating ARIA label implementation in React components through Claude Code transforms accessibility from a burdensome chore into an integral part of your development workflow. By using the frontend-design, tdd, and axe-accessibility-testing skills together, you can:
 
 - Generate accessible components from descriptions alone
 - Automatically test for ARIA compliance

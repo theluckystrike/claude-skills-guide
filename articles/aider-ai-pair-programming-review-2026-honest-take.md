@@ -158,7 +158,7 @@ The honest take? Aider is a competent tool for basic AI-assisted coding, but Cla
 
 ---
 
-Bottom Line: If you're already invested in a terminal-based workflow and need simple code editing with git integration, Aider works. If you want a capable, extensible AI development partner with specialized skills for security, testing, documentation, and more, Claude Code delivers significantly more value.
+If you're already invested in a terminal-based workflow and need simple code editing with git integration, Aider works. If you want a capable, extensible AI development partner with specialized skills for security, testing, documentation, and more, Claude Code delivers significantly more value.
 
 Related Reading
 

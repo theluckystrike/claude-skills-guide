@@ -19,7 +19,7 @@ Why Look for Grammarly Alternatives?
 
 Grammarly has become synonymous with grammar checking, but it's not the only option, and it's certainly not free for all features. Here's why you might consider alternatives:
 
-- Cost Concerns: Grammarly Premium starts at $12/month, which adds up to $144/year for features many users don't fully utilize
+- Cost Concerns: Grammarly Premium starts at $12/month, which adds up to $144/year for features many users don't fully use
 - Privacy Issues: Some users prefer not to send their writing to third-party AI services; Grammarly's data policies have drawn scrutiny from security researchers
 - Feature Overlap: Many alternatives offer 80% of Grammarly's functionality for free, particularly for everyday writing tasks
 - Platform Integration: Some alternatives integrate better with specific workflows, such as academic platforms or multilingual content pipelines
@@ -58,7 +58,7 @@ Best for: Multilingual users, privacy-conscious developers, and those who need g
 Hemingway Editor takes a different approach, focusing on readability and writing clarity rather than grammatical correctness. It:
 
 - Highlights complex sentences that are hard to read, color-coded by severity
-- Suggests simpler alternatives for convoluted phrasing (for example, "utilize" becoming "use")
+- Suggests simpler alternatives for convoluted phrasing (for example, "use" becoming "use")
 - Marks adverbs that weaken your writing, pushing you toward stronger verbs
 - Identifies passive voice usage throughout your text
 - Grades reading level using the Flesch-Kincaid readability formula

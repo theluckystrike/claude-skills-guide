@@ -269,7 +269,7 @@ Claude Code can prompt you for these reviews and help document findings and acti
 
 Conclusion
 
-Integrating Claude Code with Aqua Security transforms container security from a manual burden into an automated, developer-friendly process. By leveraging AI assistance for script generation, policy creation, and operational tasks, teams maintain strong security posture without sacrificing development velocity.
+Integrating Claude Code with Aqua Security transforms container security from a manual burden into an automated, developer-friendly process. By using AI assistance for script generation, policy creation, and operational tasks, teams maintain strong security posture without sacrificing development velocity.
 
 Start with image scanning automation, then progressively add admission control and runtime protection. Claude Code's ability to understand context and generate relevant code accelerates each step of this journey. Remember that security policies require ongoing tuning, use the feedback loops provided by Aqua Security findings to continuously refine your approach.
 

@@ -31,7 +31,7 @@ This distinction matters because senior engineers communicate differently than j
 |---|---|---|
 | Junior | Line-by-line guidance, syntax help | Faster learning, fewer mistakes |
 | Mid-level | Feature scaffolding, test generation | Faster feature delivery |
-| Senior | Architecture validation, multi-file refactoring, skill authoring | Compressing overhead on high-leverage work |
+| Senior | Architecture validation, multi-file refactoring, skill authoring | Compressing overhead on high-use work |
 | Principal/Staff | System design review, cross-team standards, automated workflows | Scaling expertise across the org |
 
 Automating Code Reviews and Documentation
@@ -118,7 +118,7 @@ Team Standards
 
 A well-designed skill can enforce anything from naming conventions to architectural patterns, ensuring consistency without repeated manual review.
 
-This is one of the highest-leverage things a senior engineer can do with Claude Code: encode their hard-won standards in skills that every team member can load. The alternative is code review comments that say "we always handle errors this way" repeated across hundreds of PRs over years. Skills make that institutional knowledge self-serve.
+This is one of the most impactful things a senior engineer can do with Claude Code: encode their hard-won standards in skills that every team member can load. The alternative is code review comments that say "we always handle errors this way" repeated across hundreds of PRs over years. Skills make that institutional knowledge self-serve.
 
 Consider building skills around your team's most common patterns:
 

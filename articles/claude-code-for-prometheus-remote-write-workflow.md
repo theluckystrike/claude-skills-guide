@@ -334,7 +334,7 @@ Conclusion
 
 Integrating Claude Code with Prometheus Remote Write workflow empowers developers to build more reliable observability pipelines. From configuration generation to debugging complex issues, Claude Code serves as an invaluable assistant throughout the entire lifecycle of your monitoring infrastructure.
 
-By leveraging Claude Code's capabilities. reading your existing configuration files, executing diagnostic commands, generating validated YAML, and analyzing metric patterns. you can automate repetitive configuration tasks, quickly diagnose problems, and focus on building applications rather than wrestling with infrastructure complexity. The combination of Claude Code's contextual understanding and Prometheus Remote Write's flexible protocol gives you a powerful foundation for scalable, maintainable observability.
+By using Claude Code's capabilities. reading your existing configuration files, executing diagnostic commands, generating validated YAML, and analyzing metric patterns. you can automate repetitive configuration tasks, quickly diagnose problems, and focus on building applications rather than wrestling with infrastructure complexity. The combination of Claude Code's contextual understanding and Prometheus Remote Write's flexible protocol gives you a powerful foundation for scalable, maintainable observability.
 {% endraw %}
 
 Related Reading

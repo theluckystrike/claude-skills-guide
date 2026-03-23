@@ -16,7 +16,7 @@ Claude Code for TanStack Start Workflow Guide
 
 TanStack Start (now part of TanStack Router) provides a powerful, type-safe routing and data loading framework for React applications. Combined with Claude Code's CLI capabilities, developers can rapidly build solid applications with end-to-end type safety, nested layouts, and sophisticated data loading patterns.
 
-This guide explores practical workflows for leveraging Claude Code when building applications with TanStack Start, covering project initialization, route configuration, data loading, and common patterns for building production-ready applications.
+This guide explores practical workflows for using Claude Code when building applications with TanStack Start, covering project initialization, route configuration, data loading, and common patterns for building production-ready applications.
 
 Setting Up TanStack Start with Claude Code
 
@@ -269,7 +269,7 @@ Conclusion
 
 Claude Code combined with TanStack Start provides a powerful workflow for building type-safe React applications. The framework's routing and data loading capabilities, paired with Claude Code's ability to generate boilerplate and implement patterns quickly, enable rapid development without sacrificing code quality.
 
-By following the workflows outlined in this guide, proper project setup, type-safe routing, data loading patterns, and best practices, you'll be well-equipped to build production-ready applications with confidence. The key is leveraging Claude Code's strengths in code generation and pattern implementation while relying on TanStack Start's type-safe foundations for your application's core architecture.
+By following the workflows outlined in this guide, proper project setup, type-safe routing, data loading patterns, and best practices, you'll be well-equipped to build production-ready applications with confidence. The key is using Claude Code's strengths in code generation and pattern implementation while relying on TanStack Start's type-safe foundations for your application's core architecture.
 {% endraw %}
 
 Related Reading

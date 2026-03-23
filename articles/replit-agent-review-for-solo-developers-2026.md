@@ -56,7 +56,7 @@ Practical Example: Building a Data Dashboard
 
 Consider a solo developer building a customer analytics dashboard. Replit Agent could scaffold the initial web application, while Claude Code skills handle the data processing pipeline. The `xlsx` skill could generate weekly reports, and the `pdf` skill could create client-ready summaries.
 
-This combination allows solo developers to match the output of much larger teams by leveraging AI assistance for different aspects of their work.
+This combination allows solo developers to match the output of much larger teams by using AI assistance for different aspects of their work.
 
 Comparing the Two Platforms
 

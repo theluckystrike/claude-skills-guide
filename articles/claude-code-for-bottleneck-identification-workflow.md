@@ -22,7 +22,7 @@ Understanding Bottleneck Identification
 Before diving into the workflow, it's essential to understand what constitutes a bottleneck. A bottleneck is any component in your system that limits throughput or increases latency beyond acceptable thresholds. Common categories include:
 
 - CPU-bound bottlenecks: Intensive computations, inefficient algorithms, or excessive looping
-- Memory-bound bottlenecks: Memory leaks, excessive allocations, or poor cache utilization
+- Memory-bound bottlenecks: Memory leaks, excessive allocations, or poor cache usage
 - I/O-bound bottlenecks: Slow database queries, blocking network calls, or inefficient file operations
 - Concurrency bottlenecks: Race conditions, lock contention, or improper synchronization
 

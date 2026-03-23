@@ -605,7 +605,7 @@ Web3Modal v3 handles EIP-6963 discovery automatically, but knowing how it works 
 
 Error Handling Patterns
 
-Robust wallet workflows require comprehensive error handling:
+Solid wallet workflows require comprehensive error handling:
 
 ```javascript
 export async function withWalletErrorHandling(fn) {

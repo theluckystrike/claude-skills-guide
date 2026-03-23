@@ -313,7 +313,7 @@ Automated bug finding with git bisect and Claude Code dramatically reduces mean 
 
 Beyond the time saving, there is a behavioral shift: when you know any regression can be found in minutes, you stop fearing fast-moving development. You can merge feature branches confidently, run the bisect script when something breaks, and fix it quickly. The psychological cost of "what if we introduced a bug?" drops to near zero.
 
-The permanent regression tests you write after each bisect session compound over time. Each investigation makes your test suite more robust, so future bugs are caught earlier and earlier, often in CI before they even reach your main branch.
+The permanent regression tests you write after each bisect session compound over time. Each investigation makes your test suite more solid, so future bugs are caught earlier and earlier, often in CI before they even reach your main branch.
 
 Instead of dreading regressions, you gain confidence that you can quickly identify and resolve issues, making your development process more reliable and your codebase healthier.
 

@@ -13,7 +13,7 @@ permalink: /developer-productivity-gains-from-using-claude-code/
 
 # Developer Productivity Gains from Using Claude Code
 
-Claude Code represents a fundamental shift in how developers approach coding tasks. Rather than treating AI as a simple autocomplete tool, understanding how to use its full capabilities, particularly through skills and agentic workflows, produces measurable productivity improvements across the entire development lifecycle. This guide breaks down where those gains come from, how to measure them, and which techniques unlock the highest return on your time investment.
+Claude Code represents a fundamental shift in how developers approach coding tasks. Rather than treating AI as a simple autocomplete tool, understanding how to use its full capabilities, particularly through skills and agentic workflows, produces measurable productivity improvements across the entire development lifecycle. This guide breaks down where those gains come from, how to measure them, and which techniques use the highest return on your time investment.
 
 Quantifying the Productivity Impact
 

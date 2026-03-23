@@ -175,7 +175,7 @@ const child = spawn('sudo', ['node', 'privileged-script.js'], {
 });
 ```
 
-Practical Example: Building a Robust Node.js Skill
+Practical Example: Building a Solid Node.js Skill
 
 Here's a complete example of a Claude Code skill that handles Node.js execution robustly:
 

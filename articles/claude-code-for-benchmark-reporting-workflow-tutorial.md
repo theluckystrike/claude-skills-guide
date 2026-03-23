@@ -18,7 +18,7 @@ Automating benchmark reporting is essential for maintaining performance visibili
 
 Understanding the Benchmark Reporting Pipeline
 
-A benchmark reporting workflow typically involves three core stages: execution, collection, and presentation. Claude Code excels at each stage by leveraging its ability to run shell commands, read and write files, and generate formatted output.
+A benchmark reporting workflow typically involves three core stages: execution, collection, and presentation. Claude Code excels at each stage by using its ability to run shell commands, read and write files, and generate formatted output.
 
 Before diving into implementation, ensure you have Claude Code installed and configured with access to the tools you'll need for running benchmarks and processing results.
 

@@ -38,7 +38,7 @@ For detailed certificate information, click "Certificate is valid" or the certif
 
 This quick method works for most day-to-day certificate checks. If the lock icon is missing or replaced by a warning triangle, Chrome has already detected a problem. use DevTools to dig deeper.
 
-Deep Dive with Chrome DevTools
+Detailed look with Chrome DevTools
 
 For more comprehensive analysis, Chrome DevTools provides detailed security information. Open DevTools with F12 or right-click and select "Inspect," then navigate to the Security tab.
 

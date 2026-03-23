@@ -89,7 +89,7 @@ For teams using OpenAPI or Swagger specifications, Claude Code can transform the
 
 Maintaining a Style Guide with a Custom Skill
 
-One of the highest-leverage uses of custom skills is encoding your organization's style guide into a reusable prompt. This solves the consistency problem that plagues teams where multiple writers contribute to the same docs.
+One of the most impactful uses of custom skills is encoding your organization's style guide into a reusable prompt. This solves the consistency problem that plagues teams where multiple writers contribute to the same docs.
 
 A style-guide skill file at `.claude/style-guide.md` might look like this:
 

@@ -112,7 +112,7 @@ Allow parallel execution. Independent sub-goals can sometimes be executed simult
 
 Improve accuracy. Smaller, focused tasks are easier for AI systems to execute correctly than massive, undifferentiated objectives.
 
-Facilitate human oversight. You can review and approve each component before the AI proceeds to the next, ensuring alignment with your expectations.
+Support human oversight. You can review and approve each component before the AI proceeds to the next, ensuring alignment with your expectations.
 
 Best Practices for Working with Goal Decomposition
 
@@ -130,7 +130,7 @@ Conclusion
 
 Goal decomposition transforms overwhelming AI requests into manageable, trackable, and accurate executions. Claude Code's skill system exemplifies this approach, breaking complex operations into logical phases that use specialized capabilities. Whether you're creating spreadsheets, processing documents, or building presentations, understanding how goal decomposition works helps you work more effectively with AI assistants.
 
-By embracing this structured approach, you unlock the full potential of AI agents, achieving results that would be impossible through undifferentiated, monolithic task execution. The next time you have a complex project, remember: break it down, and let Claude Code handle each piece systematically.
+By embracing this structured approach, you use the full potential of AI agents, achieving results that would be impossible through undifferentiated, monolithic task execution. The next time you have a complex project, remember: break it down, and let Claude Code handle each piece systematically.
 
 Related Reading
 

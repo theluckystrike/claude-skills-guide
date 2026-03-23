@@ -651,7 +651,7 @@ Announcement summarizer: If your institution's Blackboard deployment has long an
 
 Dark mode: Inject a CSS stylesheet that overrides Blackboard's default white background. Store the user's preference in `chrome.storage.sync` and apply it on every page load. This is one of the most requested quality-of-life improvements from student users.
 
-The Blackboard Learn platform will continue evolving, and maintaining a helper extension requires ongoing attention to DOM changes and API updates. Focus on robust, adaptable implementations that can withstand structural modifications to the underlying platform. Pinning your selector logic behind the `detectBBVersion` abstraction means you can update one function to handle a new interface variant without rewriting every feature module.
+The Blackboard Learn platform will continue evolving, and maintaining a helper extension requires ongoing attention to DOM changes and API updates. Focus on solid, adaptable implementations that can withstand structural modifications to the underlying platform. Pinning your selector logic behind the `detectBBVersion` abstraction means you can update one function to handle a new interface variant without rewriting every feature module.
 
 
 Distributing to Your Institution

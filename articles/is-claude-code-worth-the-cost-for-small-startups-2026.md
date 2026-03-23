@@ -110,7 +110,7 @@ Start with the Free Tier
 
 Before committing to paid tiers, validate Claude Code on real projects. Use it for non-critical tasks, explore the skill ecosystem, and measure the actual productivity difference. Many teams find the free tier sufficient for initial exploration before upgrading once they have specific high-value use cases identified.
 
-Leverage Community Skills
+Use Community Skills
 
 The Claude Code community contributes free skills covering popular frameworks and languages. Before purchasing premium skills, explore what's available. Community solutions often address common needs without additional cost. Contributing custom skills back also builds team reputation and surfaces help from other users.
 

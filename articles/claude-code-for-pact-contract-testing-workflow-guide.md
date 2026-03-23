@@ -197,11 +197,11 @@ Start with high-value contracts: Focus initial Pact adoption on critical service
 
 Run contract tests frequently: Integrate contract verification into your development workflow rather than treating it as a separate stage. The earlier you catch contract violations, the easier they are to resolve.
 
-Leverage the Pact Broker: Use a centralized broker to share contracts between teams, track version relationships, and enable can-i-deploy checks before releasing.
+Use the Pact Broker: Use a centralized broker to share contracts between teams, track version relationships, and enable can-i-deploy checks before releasing.
 
 Conclusion
 
-Claude Code transforms Pact contract testing from a manual, error-prone process into an efficient, developer-friendly workflow. By leveraging its code generation capabilities, debugging assistance, and documentation support, teams can establish solid contract testing practices that scale with their microservices architecture. Start small with your most critical service integrations, establish patterns that work for your team, and progressively expand coverage as your confidence grows.
+Claude Code transforms Pact contract testing from a manual, error-prone process into an efficient, developer-friendly workflow. By using its code generation capabilities, debugging assistance, and documentation support, teams can establish solid contract testing practices that scale with their microservices architecture. Start small with your most critical service integrations, establish patterns that work for your team, and progressively expand coverage as your confidence grows.
 
 The combination of Claude Code's productivity enhancements and Pact's contract testing methodology creates a powerful foundation for building reliable, maintainable distributed systems.
 

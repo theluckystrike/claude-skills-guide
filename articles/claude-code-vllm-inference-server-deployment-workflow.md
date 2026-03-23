@@ -118,7 +118,7 @@ vLLM relies on numerous environment variables for optimal performance. Claude Co
 /env Create a .env.production file with vLLM environment variables including VLLM_WORKER_MULTIPROC_METHOD, VLLM_CACHE_DIR, and MODEL_NAME. Use placeholder values for secrets.
 ```
 
-Key environment variables include `VLLM_WORKER_MULTIPROC_METHOD` set to "spawn" for better GPU utilization, `VLLM_ATTENTION_BACKEND` to specify the attention implementation, and `VLLM_MAX_NUM_BATCHED_TOKENS` for batch optimization. Claude Code provides sensible defaults while allowing customization.
+Key environment variables include `VLLM_WORKER_MULTIPROC_METHOD` set to "spawn" for better GPU usage, `VLLM_ATTENTION_BACKEND` to specify the attention implementation, and `VLLM_MAX_NUM_BATCHED_TOKENS` for batch optimization. Claude Code provides sensible defaults while allowing customization.
 
 For secrets like Hugging Face tokens or API keys, Claude Code generates references to Kubernetes secrets:
 

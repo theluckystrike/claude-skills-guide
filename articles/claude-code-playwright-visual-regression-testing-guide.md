@@ -448,7 +448,7 @@ Full-page screenshots are more comprehensive but also more expensive. they scrol
 
 Smoke Testing a Component Library
 
-If your team maintains a shared component library with a Storybook or similar catalog, visual testing against it provides maximum leverage. one test file covers every component variant:
+If your team maintains a shared component library with a Storybook or similar catalog, visual testing against it provides maximum use. one test file covers every component variant:
 
 ```javascript
 // visual-tests/components.spec.js

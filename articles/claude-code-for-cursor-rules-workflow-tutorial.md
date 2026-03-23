@@ -144,7 +144,7 @@ This level of specificity gives Claude Code and Cursor the detail they need to p
 
 Creating Claude Code Workflows
 
-Now let's explore how to create practical workflows using Claude Code with Cursor Rules.
+Here are how to create practical workflows using Claude Code with Cursor Rules.
 
 Workflow 1: Automated Code Generation
 

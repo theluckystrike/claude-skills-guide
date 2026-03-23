@@ -662,7 +662,7 @@ Best Practices Summary
 
 Conclusion
 
-Claude Code transforms runbook authoring from a documentation chore into a collaborative, maintainable practice. By treating runbooks as living documents and leveraging Claude Code's contextual understanding, you create operational procedures that actually get used when incidents occur.
+Claude Code transforms runbook authoring from a documentation chore into a collaborative, maintainable practice. By treating runbooks as living documents and using Claude Code's contextual understanding, you create operational procedures that actually get used when incidents occur.
 
 The workflow is clear: start with a solid CLAUDE.md that describes your infrastructure, generate a skeleton runbook with a focused prompt, iterate with follow-up prompts to add specificity, validate commands against your real environment, and establish a review cycle tied to incidents and infrastructure changes.
 

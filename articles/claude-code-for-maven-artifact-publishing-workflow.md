@@ -328,7 +328,7 @@ jobs:
 
 Notice the `actions/setup-java` action handles the `settings.xml` generation automatically when you specify `server-id`, `server-username`, and `server-password`. Claude Code knows this shortcut and will use it instead of requiring you to manually maintain a `settings.xml` in your repository.
 
-GPG Signing Deep Dive
+GPG Signing Detailed look
 
 GPG signing is mandatory for Maven Central but optional for GitHub Packages and private Nexus. Claude Code can guide you through the full GPG setup:
 

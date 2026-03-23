@@ -13,7 +13,7 @@ permalink: /best-way-to-configure-claude-code-to-understand-your-internal-apis/
 
 # Best Way to Configure Claude Code to Understand Your Internal APIs
 
-Getting Claude Code to effectively understand and work with your internal APIs requires strategic configuration across multiple dimensions: providing API documentation, setting up proper context, and leveraging Claude's built-in capabilities for API interaction. This guide covers the most effective approaches for making Claude Code your go-to tool for internal API development.
+Getting Claude Code to effectively understand and work with your internal APIs requires strategic configuration across multiple dimensions: providing API documentation, setting up proper context, and using Claude's built-in capabilities for API interaction. This guide covers the most effective approaches for making Claude Code your go-to tool for internal API development.
 
 Why Configure Claude Code for Internal APIs?
 

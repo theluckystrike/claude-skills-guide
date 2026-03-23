@@ -347,7 +347,7 @@ Implement safety checks. Always validate job specifications before submission an
 
 Maintain audit trails. Log all Nomad operations with timestamps and operators for compliance and troubleshooting purposes. A simple approach is to write each job run command, the current modify-index, and the operator's name to an append-only log file or a structured log sink.
 
-Leverage Nomad's capabilities fully. Take advantage of features like service discovery, Consul integration, and periodic job scheduling through your skill. Nomad's native Consul integration means every service task gets automatic DNS registration and health-check-driven deregistration without extra tooling.
+Use Nomad's capabilities fully. Take advantage of features like service discovery, Consul integration, and periodic job scheduling through your skill. Nomad's native Consul integration means every service task gets automatic DNS registration and health-check-driven deregistration without extra tooling.
 
 Pin image versions. Never deploy with a `latest` tag in production. Claude Code can enforce this as a validation step, if the job spec contains `:latest`, reject it and prompt the operator to specify an explicit digest or version tag.
 

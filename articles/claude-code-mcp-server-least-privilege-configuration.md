@@ -21,7 +21,7 @@ Least privilege means granting MCP servers only the permissions they absolutely 
 
 When Claude Code interacts with MCP servers, those servers operate with the permissions you've configured. A misconfigured server with excessive privileges could theoretically access credentials, modify production files, or exfiltrate sensitive data. Implementing least privilege creates defense in depth. even if one component is compromised, the damage remains contained.
 
-The principle maps naturally to the concept of blast radius. If a server that only has read access to `/workspace/docs` is compromised, an attacker can exfiltrate documentation but cannot touch your database credentials, private keys, or source code. Compare that to a server with full home-directory access. the same compromise becomes catastrophic. Every permission you withhold is a capability an attacker cannot leverage.
+The principle maps naturally to the concept of blast radius. If a server that only has read access to `/workspace/docs` is compromised, an attacker can exfiltrate documentation but cannot touch your database credentials, private keys, or source code. Compare that to a server with full home-directory access. the same compromise becomes catastrophic. Every permission you withhold is a capability an attacker cannot use.
 
 This matters especially as MCP ecosystems mature and third-party servers become more common. A server you install from an npm registry today may have had its package hijacked by tomorrow. Least privilege isn't pessimism. it's operational hygiene for systems that compose external code at runtime.
 

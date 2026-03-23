@@ -492,7 +492,7 @@ Claude Code can generate the configuration for all three layers. Describe your b
 
 Conclusion
 
-Landmark regions form the navigation backbone of accessible websites. By leveraging Claude Code and accessibility skills, you can implement proper landmarks from project start and maintain them through development cycles. The investment is minimal, proper landmark implementation takes minutes, while the benefit to screen reader users is substantial. Users gain the ability to navigate directly to content that matters to them, bypassing repetitive elements that would otherwise require dozens of tab presses.
+Landmark regions form the navigation backbone of accessible websites. By using Claude Code and accessibility skills, you can implement proper landmarks from project start and maintain them through development cycles. The investment is minimal, proper landmark implementation takes minutes, while the benefit to screen reader users is substantial. Users gain the ability to navigate directly to content that matters to them, bypassing repetitive elements that would otherwise require dozens of tab presses.
 
 Start by auditing your current projects for landmark presence using axe-core, then add missing regions and labels. Pair your landmarks with skip links for keyboard-only users, and validate with at least one real screen reader before shipping. Your users will notice the improvement immediately.
 
