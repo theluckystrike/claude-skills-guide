@@ -1,30 +1,31 @@
 title: "Claude Skills Guide"
-description: "Comprehensive guides, tutorials, and comparisons for Claude AI Skills, Claude Code workflows, and AI agent productivity"
+tagline: "Ship Faster with Claude Code — Tutorials, Workflows & AI Agent Guides"
+description: "Step-by-step Claude Code tutorials, AI agent workflows, and prompt engineering guides. Learn to automate coding tasks, build with Claude AI, and boost developer productivity."
 url: "https://claudecodeguides.com"
 baseurl: ""
 permalink: /:title/
 theme: minima
 twitter:
   username: _alphashark_
-  card: summary_large_image
+    card: summary_large_image
 
-author:
-  name: Michael Lip
-  url: https://github.com/theluckystrike
+    author:
+      name: Michael Lip
+        url: https://github.com/theluckystrike
 
-plugins:
-  - jekyll-sitemap
-  - jekyll-seo-tag
-  - jekyll-feed
+        plugins:
+          - jekyll-sitemap
+            - jekyll-seo-tag
+              - jekyll-feed
 
-# FLEET NOTE (PM1, PM2, PM3): render_with_liquid: false is set here but
-# GitHub Pages IGNORES this setting. Articles with {{ or {% syntax MUST be
-# wrapped in {% raw %} / {% endraw %} to prevent Liquid build errors.
-# PM1 adds these tags where needed. PM2 must NOT strip them.
-defaults:
-  - scope:
-      path: "articles"
-    values:
-      layout: default
-      render_with_liquid: false
-
+              # FLEET NOTE (PM1, PM2, PM3): render_with_liquid: false is set here but
+              # GitHub Pages IGNORES this setting. Articles with {{ or {% syntax MUST be
+              # wrapped in {% raw %} / {% endraw %} to prevent Liquid build errors.
+              # PM1 adds these tags where needed. PM2 must NOT strip them.
+              defaults:
+                - scope:
+                      path: "articles"
+                          values:
+                                layout: default
+                                      render_with_liquid: false
+                                      
