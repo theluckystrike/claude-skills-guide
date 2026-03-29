@@ -7,25 +7,24 @@ permalink: /:title/
 theme: minima
 twitter:
   username: _alphashark_
-    card: summary_large_image
+  card: summary_large_image
 
-    author:
-      name: Michael Lip
-        url: https://github.com/theluckystrike
+author:
+  name: Michael Lip
+  url: https://github.com/theluckystrike
 
-        plugins:
-          - jekyll-sitemap
-            - jekyll-seo-tag
-              - jekyll-feed
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
 
-              # FLEET NOTE (PM1, PM2, PM3): render_with_liquid: false is set here but
-              # GitHub Pages IGNORES this setting. Articles with {{ or {% syntax MUST be
-              # wrapped in {% raw %} / {% endraw %} to prevent Liquid build errors.
-              # PM1 adds these tags where needed. PM2 must NOT strip them.
-              defaults:
-                - scope:
-                      path: "articles"
-                          values:
-                                layout: default
-                                      render_with_liquid: false
-                                      
+# FLEET NOTE (PM1, PM2, PM3): render_with_liquid: false is set here but
+# GitHub Pages IGNORES this setting. Articles with {{ or {% syntax MUST be
+# wrapped in {% raw %} / {% endraw %} to prevent Liquid build errors.
+# PM1 adds these tags where needed. PM2 must NOT strip them.
+defaults:
+  - scope:
+      path: "articles"
+    values:
+      layout: default
+      render_with_liquid: false
