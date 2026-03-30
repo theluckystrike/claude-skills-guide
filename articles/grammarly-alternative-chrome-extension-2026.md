@@ -4,6 +4,7 @@ layout: default
 title: "Grammarly Alternative Chrome Extension 2026"
 description: "Find the best Grammarly alternatives with Chrome extensions for developers in 2026. Compare open-source options, API access, and CLI tools for writing."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /grammarly-alternative-chrome-extension-2026/
 reviewed: true

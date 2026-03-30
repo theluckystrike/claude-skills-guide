@@ -5,6 +5,7 @@ layout: default
 title: "Chrome Extension Accessibility Audit: A Practical Guide"
 description: "Learn how to conduct a comprehensive accessibility audit for Chrome extensions. Step-by-step process, automated tools, and manual testing techniques."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-accessibility-audit/
 reviewed: true

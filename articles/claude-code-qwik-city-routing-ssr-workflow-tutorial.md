@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Qwik City Routing SSR Workflow Tutorial"
 description: "Learn how to use Claude Code to build Qwik City applications with server-side rendering. Practical guide covering routing, SSR data loading, and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-qwik-city-routing-ssr-workflow-tutorial/
 categories: [guides]

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Fortran Scientific Code Modernization Guide"
 description: "A comprehensive guide to using Claude Code for modernizing legacy Fortran scientific codebases, including refactoring patterns, testing strategies, and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, fortran, scientific-computing, modernization, refactoring, claude-skills]

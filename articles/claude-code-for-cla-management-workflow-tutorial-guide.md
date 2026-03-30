@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for CLA Management Workflow Tutorial Guide"
 description: "Learn how to automate Contributor License Agreement (CLA) management using Claude Code. This guide covers practical workflows, code examples, and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-cla-management-workflow-tutorial-guide/
 categories: [guides, workflows]

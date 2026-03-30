@@ -5,6 +5,7 @@ layout: default
 title: "AI Knowledge Base Chrome Extension: A Developer's Guide"
 description: "Learn how to build and use AI knowledge base chrome extensions for intelligent document management and quick information retrieval."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /ai-knowledge-base-chrome-extension/
 reviewed: true

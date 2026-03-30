@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Senior Engineer Productivity"
 description: "Discover how senior software engineers use Claude Code to accelerate development workflows, automate repetitive tasks, and focus on high-impact."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-for-senior-engineer-productivity/
 reviewed: true

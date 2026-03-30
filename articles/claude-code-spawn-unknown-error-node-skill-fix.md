@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Spawn Unknown Error Node Skill Fix"
 description: "Troubleshoot and fix spawn unknown error in Claude Code Node.js skills. Practical solutions for child_process spawn failures, path issues, and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [troubleshooting]
 tags: [claude-code, claude-skills, node.js, spawn, error-fix]
 author: "Claude Skills Guide"

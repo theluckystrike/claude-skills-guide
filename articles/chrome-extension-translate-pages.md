@@ -5,6 +5,7 @@ layout: default
 title: "Chrome Extension Translate Pages: A Developer Guide"
 description: "Learn how to build chrome extension translate pages with practical code examples. Target developers and power users looking to integrate translation."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-translate-pages/
 reviewed: true

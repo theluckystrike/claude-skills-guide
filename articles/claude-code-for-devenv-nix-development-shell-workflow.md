@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Devenv Nix Development Shell Workflow"
 description: "A practical guide to using Claude Code with devenv for streamlined Nix-based development shell workflows. Learn how to configure, automate, and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 categories: [guides]
 tags: [claude-code, claude-skills]

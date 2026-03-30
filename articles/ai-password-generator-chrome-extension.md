@@ -4,6 +4,7 @@ layout: default
 title: "AI Password Generator Chrome Extension: A Developer Guide"
 description: "Learn how to build and use AI-powered password generator Chrome extensions. Practical code examples, security considerations, and implementation patterns."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /ai-password-generator-chrome-extension/
 reviewed: true

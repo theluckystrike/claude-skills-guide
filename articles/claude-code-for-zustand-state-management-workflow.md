@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Zustand State Management Workflow"
 description: "Learn how to integrate Claude Code into your Zustand state management workflow for more efficient React application development."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-zustand-state-management-workflow/
 categories: [guides]

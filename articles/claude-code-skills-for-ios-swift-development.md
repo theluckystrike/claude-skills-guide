@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Skills for iOS Swift Development"
 description: "Practical guide to using Claude Code skills for iOS and Swift development. Build workflows with built-in skills for TDD, documentation, and workflow."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, claude-skills, ios, swift, xcode, mobile-development]

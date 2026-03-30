@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Chainlink VRF Workflow Guide"
 description: "Learn how to use Claude Code to implement Chainlink VRF workflows in your smart contracts. This guide covers practical examples, code snippets, and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-chainlink-vrf-workflow-guide/
 categories: [guides]

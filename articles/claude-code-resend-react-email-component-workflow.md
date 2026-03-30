@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Resend React Email Component Workflow"
 description: "Master the workflow of building email templates with React Email and Resend using Claude Code. Learn practical patterns for creating, testing, and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, resend, react-email, email-templates, workflow, claude-skills]
 author: "Claude Skills Guide"

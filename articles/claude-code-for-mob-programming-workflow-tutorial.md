@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Mob Programming Workflow Tutorial"
 description: "Learn how to integrate Claude Code into mob programming sessions for enhanced collaboration, knowledge sharing, and productivity. Practical examples."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-mob-programming-workflow-tutorial/
 categories: [tutorials]

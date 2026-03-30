@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Tinybird Real-Time Analytics Workflow"
 description: "Learn how to use Claude Code to build powerful real-time analytics pipelines with Tinybird, from data ingestion to visualization."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-tinybird-real-time-analytics-workflow/
 categories: [guides]

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Version Bump Workflow Tutorial Guide"
 description: "Learn how to automate version bumping in your projects using Claude Code. A comprehensive guide with practical examples, code snippets, and actionable advice."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-version-bump-workflow-tutorial-guide/
 categories: [workflows, tutorials]

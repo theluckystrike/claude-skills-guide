@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code vs Traditional IDE: A Productivity Study for."
 description: "A practical comparison of Claude Code versus traditional IDEs for developer productivity. Real-world examples, code snippets, and productivity metrics."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-vs-traditional-ide-productivity-study/
 reviewed: true

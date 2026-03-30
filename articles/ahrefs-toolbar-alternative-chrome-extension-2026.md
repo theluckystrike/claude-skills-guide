@@ -4,6 +4,7 @@ layout: default
 title: "Ahrefs Toolbar Alternative Chrome Extension in 2026"
 description: "Explore the best Ahrefs toolbar alternatives for Chrome in 2026. These developer-friendly SEO tools offer backlink analysis, site auditing, and keyword."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /ahrefs-toolbar-alternative-chrome-extension-2026/
 reviewed: true

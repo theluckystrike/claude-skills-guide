@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code GitHub Actions Matrix Builds Guide"
 description: "How to use Claude Code to configure GitHub Actions matrix builds for testing across multiple environments, Node versions, and OS platforms."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, github-actions, ci-cd, testing]
 author: "Claude Skills Guide"

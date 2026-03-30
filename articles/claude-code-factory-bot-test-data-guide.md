@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Factory Bot Test Data Guide"
 description: "Learn how to use Factory Bot with Claude Code to generate test data, create factories, and streamline your Ruby on Rails testing workflow."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, ruby, rails, testing]
 author: "Claude Skills Guide"

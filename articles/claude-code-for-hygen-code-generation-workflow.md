@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Hygen Code Generation Workflow"
 description: "Learn how to use Claude Code with Hygen to automate and accelerate your code generation workflows. Practical examples and actionable advice for."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-hygen-code-generation-workflow/
 categories: [guides]

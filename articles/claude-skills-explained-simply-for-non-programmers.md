@@ -3,6 +3,7 @@ layout: default
 title: "Claude Skills Explained Simply for Non-Programmers 2026"
 description: "A plain-English explanation of what Claude skills are, why they exist, and how to use them without any technical background. no coding required."
 date: 2026-03-13
+last_modified_at: 2026-03-13
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, claude-skills, beginner, non-programmer]

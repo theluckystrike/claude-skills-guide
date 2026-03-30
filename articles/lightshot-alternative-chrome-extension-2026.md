@@ -4,6 +4,7 @@ layout: default
 title: "Lightshot Alternative Chrome Extension 2026"
 description: "Discover the best Lightshot alternatives for Chrome in 2026. Developer-friendly screenshot tools with OCR, cloud upload, and automation capabilities."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /lightshot-alternative-chrome-extension-2026/
 reviewed: true

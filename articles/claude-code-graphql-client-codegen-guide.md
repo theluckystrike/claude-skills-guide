@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code GraphQL Client Codegen Guide (2026)"
 description: "Learn how to automate GraphQL client code generation using Claude Code skills. Practical examples for TypeScript, React, and Apollo setups."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, claude-code, graphql, codegen, typescript]
 author: "Claude Skills Guide"

@@ -3,6 +3,7 @@ layout: default
 title: "Chrome DevTools Console Commands: A Practical Guide for Developers"
 description: "Master Chrome DevTools console commands for efficient debugging. Learn essential console methods, shortcuts, and practical techniques used by professional."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-devtools-console-commands/
 categories: [guides]

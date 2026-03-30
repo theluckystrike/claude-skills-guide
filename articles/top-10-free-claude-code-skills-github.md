@@ -3,6 +3,7 @@ layout: default
 title: "Top 10 Free Claude Code Skills for GitHub Projects"
 description: "The best free Claude Code skills for GitHub workflows: PDF processing, TDD, frontend design, webapp testing, and more. How to invoke each one."
 date: 2026-03-13
+last_modified_at: 2026-03-13
 categories: [best-of]
 tags: [claude-code, claude-skills, github, tdd, pdf, frontend-design, free-skills]
 author: "Claude Skills Guide"

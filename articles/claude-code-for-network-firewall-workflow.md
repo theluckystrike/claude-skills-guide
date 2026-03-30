@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Network Firewall Workflow"
 description: "Learn how to use Claude Code to streamline network firewall configuration, rule management, and security policy automation with practical examples."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-network-firewall-workflow/
 categories: [guides]

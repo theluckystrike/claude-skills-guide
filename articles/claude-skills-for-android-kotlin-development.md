@@ -3,6 +3,7 @@ layout: default
 title: "Claude Skills for Android and Kotlin Development"
 description: "Use Claude Code skills to accelerate Android development: Jetpack Compose UI, Room databases, Retrofit clients, Espresso testing, and Gradle optimization."
 date: 2026-03-20
+last_modified_at: 2026-03-20
 categories: [guides]
 tags: [claude-code, android, kotlin, jetpack-compose, room, retrofit, espresso, gradle]
 author: "Claude Skills Guide"

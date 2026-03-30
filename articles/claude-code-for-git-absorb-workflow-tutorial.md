@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Git Absorb Workflow Tutorial"
 description: "Learn how to use Claude Code with Git Absorb to automatically clean up fixup commits and maintain a clean git history. Practical examples and workflow."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-git-absorb-workflow-tutorial/
 categories: [guides]

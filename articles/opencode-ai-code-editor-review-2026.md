@@ -4,6 +4,7 @@ layout: default
 title: "Opencode AI Code Editor Review 2026: Finding the Best Option"
 description: "A practical review of opencode AI code editors in 2026, comparing features, pricing, and real-world performance for developers and power users."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: theluckystrike
 permalink: /opencode-ai-code-editor-review-2026/
 categories: [comparisons]

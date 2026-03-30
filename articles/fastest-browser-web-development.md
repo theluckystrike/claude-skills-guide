@@ -4,6 +4,7 @@ layout: default
 title: "Fastest Browser for Web Development in 2026"
 description: "Discover the fastest browsers for web development in 2026. Compare performance, developer tools, and features for building modern web applications."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /fastest-browser-web-development/
 reviewed: true

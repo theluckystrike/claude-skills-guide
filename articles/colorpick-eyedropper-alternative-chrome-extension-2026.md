@@ -4,6 +4,7 @@ layout: default
 title: "Colorpick Eyedropper Alternative Chrome Extension in 2026"
 description: "Explore the best colorpick eyedropper alternative Chrome extensions for developers in 2026. Compare features, API access, and developer-friendly color tools."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /colorpick-eyedropper-alternative-chrome-extension-2026/
 reviewed: true

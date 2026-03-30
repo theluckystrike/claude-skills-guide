@@ -4,6 +4,7 @@ layout: default
 title: "Chrome DevTools Responsive Design Mode: A Practical."
 description: "Master Chrome DevTools responsive design mode to test and debug responsive layouts across device viewports. Learn keyboard shortcuts, device emulation."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-devtools-responsive-design-mode/
 reviewed: true

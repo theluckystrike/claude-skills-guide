@@ -3,6 +3,7 @@ layout: default
 title: "Claude Skill Prompt Compression Techniques"
 description: "Reduce token usage and improve response speed with these practical prompt compression strategies for Claude skills."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 categories: [advanced]
 tags: [claude-code, claude-skills, prompt-compression, token-optimization, performance]

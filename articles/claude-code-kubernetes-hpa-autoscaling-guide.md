@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Kubernetes HPA Autoscaling Guide"
 description: "Learn how to implement Horizontal Pod Autoscaling in Kubernetes using Claude Code. Practical examples for setting up CPU, memory, and custom."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-kubernetes-hpa-autoscaling-guide/
 categories: [guides]

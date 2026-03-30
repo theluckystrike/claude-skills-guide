@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Docker Volumes Persistence Guide"
 description: "A practical guide to managing Docker volumes for persistence in Claude Code projects. Learn bind mounts, named volumes, and data management strategies."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-docker-volumes-persistence-guide/
 categories: [guides]

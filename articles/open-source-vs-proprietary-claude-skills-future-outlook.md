@@ -4,6 +4,7 @@ layout: default
 title: "Open Source vs Proprietary Claude Skills: Future Outlook"
 description: "Explore the evolving landscape of Claude Code skills, comparing open source community skills with proprietary solutions, and what it means for."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, open-source, proprietary, ecosystem]
 author: "Claude Skills Guide"

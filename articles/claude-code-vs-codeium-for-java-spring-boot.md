@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code vs Codeium for Java Spring Boot Development"
 description: "A practical comparison of Claude Code and Codeium for Java Spring Boot development. Learn which AI coding assistant best fits your workflow with."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-vs-codeium-for-java-spring-boot/
 categories: [guides]

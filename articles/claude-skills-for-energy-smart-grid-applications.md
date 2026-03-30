@@ -3,6 +3,7 @@ layout: default
 title: "Claude Skills for Energy Smart Grid Applications"
 description: "Practical guide to using Claude skills for building energy smart grid applications, including demand forecasting, IoT integration, and grid optimization."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [use-cases]
 tags: [claude-code, claude-skills, energy, smart-grid, iot]
 author: "Claude Skills Guide"

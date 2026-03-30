@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Update Broke Speed? Fix Performance Issues After Updates"
 description: "Learn how to fix Chrome browser performance issues after updates. Practical solutions for slow speeds, high CPU usage, and memory problems."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-update-broke-speed-fix/
 reviewed: true

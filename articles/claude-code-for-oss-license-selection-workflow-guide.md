@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for OSS License Selection Workflow Guide"
 description: "Learn how to use Claude Code to systematically select the right open source license for your project. A practical workflow guide for developers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-oss-license-selection-workflow-guide/
 categories: [guides]

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Accessibility Workflow for Frontend Engineers"
 description: "Learn how to build accessible web applications using Claude Code. This guide covers automated accessibility testing, ARIA patterns, semantic HTML, and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, accessibility, frontend, web-development, a11y, claude-skills]
 author: "Claude Skills Guide"

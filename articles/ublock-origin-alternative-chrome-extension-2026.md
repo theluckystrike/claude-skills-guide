@@ -4,6 +4,7 @@ layout: default
 title: "uBlock Origin Alternative Chrome Extension 2026: A Developer's Guide"
 description: "Discover the best uBlock Origin alternatives for Chrome in 2026. Compare features, performance, and customization options for developers and power users."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /ublock-origin-alternative-chrome-extension-2026/
 reviewed: true

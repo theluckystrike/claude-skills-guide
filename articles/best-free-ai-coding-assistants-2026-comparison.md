@@ -4,6 +4,7 @@ layout: default
 title: "Best Free AI Coding Assistants 2026 Comparison"
 description: "A practical comparison of the best free AI coding assistants available in 2026. Learn which tools deliver real value for developers without."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [comparisons]
 tags: [ai-coding-assistants, free-tools, developer-tools, claude-code, github-copilot, claude-skills]
 author: "Claude Skills Guide"

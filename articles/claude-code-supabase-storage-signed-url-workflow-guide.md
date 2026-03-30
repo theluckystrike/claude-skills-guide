@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Supabase Storage Signed URL Workflow Guide"
 description: "Learn how to build secure file upload and download workflows using Claude Code with Supabase Storage signed URLs. Practical examples for handling."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, supabase, storage, signed-urls, security, file-upload, claude-skills]
 author: "Claude Skills Guide"

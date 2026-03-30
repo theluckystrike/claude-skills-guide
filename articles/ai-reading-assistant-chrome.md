@@ -3,6 +3,7 @@ layout: default
 title: "AI Reading Assistant Chrome: Technical Implementation Guide"
 description: "Learn how to build and integrate AI reading assistants in Chrome. Code examples, APIs, and implementation patterns for developers and power users."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /ai-reading-assistant-chrome/
 categories: [guides]

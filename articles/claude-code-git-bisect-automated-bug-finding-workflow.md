@@ -3,6 +3,7 @@ layout: default
 title: "Git Bisect + Claude Code: Automated Bug Finding Guide"
 description: "Use git bisect with Claude Code to automatically locate buggy commits. Practical workflow automation for regression hunting."
 date: 2026-03-13
+last_modified_at: 2026-03-13
 categories: [workflows]
 tags: [claude-code, claude-skills, git, bisect, debugging, automation]
 author: "Claude Skills Guide"

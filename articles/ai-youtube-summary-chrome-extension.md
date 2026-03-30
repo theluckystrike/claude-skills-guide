@@ -4,6 +4,7 @@ layout: default
 title: "AI YouTube Summary Chrome Extension: A Developer Guide"
 description: "Learn how to build and customize AI-powered YouTube summary Chrome extensions for efficient video content extraction and analysis."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /ai-youtube-summary-chrome-extension/
 reviewed: true

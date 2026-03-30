@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code React Native Performance Optimization Guide"
 description: "Learn how to use Claude Code to optimize React Native app performance. Discover practical techniques for reducing bundle sizes, improving rendering."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: Claude Skills Guide
 permalink: /claude-code-react-native-performance-optimization-guide/
 categories: [tutorials]

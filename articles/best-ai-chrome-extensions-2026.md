@@ -3,6 +3,7 @@ layout: default
 title: "Best AI Chrome Extensions 2026: A Practical Guide for Developers"
 description: "Discover the most useful AI-powered Chrome extensions for developers and power users in 2026. Compare features, pricing, and real-world use cases."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /best-ai-chrome-extensions-2026/
 categories: [guides]

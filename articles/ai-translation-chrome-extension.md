@@ -4,6 +4,7 @@ layout: default
 title: "AI Translation Chrome Extension: A Developer Guide"
 description: "Learn how to build AI-powered translation extensions for Chrome. Practical code examples, APIs, and implementation patterns for developers and power users."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /ai-translation-chrome-extension/
 categories: [guides]

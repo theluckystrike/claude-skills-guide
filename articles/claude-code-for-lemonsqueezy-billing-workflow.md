@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for LemonSqueezy Billing Workflow: Complete."
 description: "Learn how to use Claude Code to build, automate, and optimize LemonSqueezy billing workflows. Includes practical examples, code snippets, and actionable."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-lemonsqueezy-billing-workflow/
 categories: [tutorials]

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Snippet Library Management"
 description: "Learn how to build, organize, and maintain a personal code snippet library using Claude Code skills. Practical strategies for developers and power users."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-snippet-library-management/
 categories: [guides]

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Astro Middleware Workflow Guide"
 description: "Learn how to use Claude Code to build, test, and optimize Astro middleware with practical examples and actionable workflows for modern web development."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-astro-middleware-workflow-guide/
 categories: [guides]

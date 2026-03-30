@@ -3,6 +3,7 @@ layout: default
 title: "Best Chrome Extensions for Students in 2026"
 description: "A curated list of the best Chrome extensions for students in 2026. These tools enhance productivity, streamline research, and optimize workflow for."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /best-chrome-extensions-for-students-2026/
 reviewed: true

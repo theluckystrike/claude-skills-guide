@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Flask Blueprint Architecture Guide"
 description: "A practical guide to structuring Flask applications with blueprints in Claude Code. Learn scalable architecture patterns, organization strategies, and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-flask-blueprint-architecture-guide/
 categories: [guides]

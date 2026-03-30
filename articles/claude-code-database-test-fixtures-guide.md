@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Database Test Fixtures Guide"
 description: "Learn how to use Claude Code CLI to create and manage database test fixtures. Practical examples for generating test data, seeding databases, and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"

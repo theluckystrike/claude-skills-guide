@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Skills for Writing Integration Tests"
 description: "A practical guide to using Claude Code skills for writing integration tests. Learn skills, techniques, and code examples for effective testing."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, integration-tests, testing, automation, development]
 author: "Claude Skills Guide"

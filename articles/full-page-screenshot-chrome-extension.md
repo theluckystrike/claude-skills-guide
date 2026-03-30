@@ -3,6 +3,7 @@ layout: default
 title: "Full Page Screenshot Chrome Extension: Methods and Tools for Developers"
 description: "Learn how to capture entire webpages as images using Chrome extensions, developer tools, and programmatic approaches. Practical techniques for developers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /full-page-screenshot-chrome-extension/
 ---

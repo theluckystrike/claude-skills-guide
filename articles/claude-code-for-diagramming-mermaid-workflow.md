@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Diagramming: Mermaid Workflow Guide"
 description: "Learn how to use Claude Code with Mermaid diagrams for visualizing workflows, architecture, and complex processes. Practical examples and actionable."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-diagramming-mermaid-workflow/
 categories: [guides]

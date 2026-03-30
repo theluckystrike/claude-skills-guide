@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Azure Arc Kubernetes Workflow"
 description: "A practical guide to using Claude Code for managing Azure Arc-enabled Kubernetes clusters, including deployment automation, configuration management."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-azure-arc-kubernetes-workflow/
 categories: [guides]

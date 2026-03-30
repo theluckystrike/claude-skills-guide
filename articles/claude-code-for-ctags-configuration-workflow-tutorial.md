@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for ctags Configuration Workflow Tutorial"
 description: "Learn how to configure and use ctags with Claude Code for efficient code navigation. This tutorial covers setup, configuration, and practical workflows."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-ctags-configuration-workflow-tutorial/
 categories: [tutorials, guides]

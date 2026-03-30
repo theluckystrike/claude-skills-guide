@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Security Engineer Threat Modeling Workflow Tips"
 description: "Master threat modeling workflows with Claude Code. Practical tips for security engineers to identify, analyze, and mitigate threats efficiently."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "theluckystrike"
 permalink: /claude-code-security-engineer-threat-modeling-workflow-tips/
 categories: [guides]

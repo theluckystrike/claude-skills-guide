@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Over Engineers: Simple Solution Fix for."
 description: "A practical guide to fixing common Claude Code issues quickly without requiring a full engineering team. Learn quick fixes, CLI optimizations, and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-over-engineers-simple-solution-fix/
 reviewed: true

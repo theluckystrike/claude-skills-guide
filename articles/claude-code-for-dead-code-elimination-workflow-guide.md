@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for Dead Code Elimination Workflow Guide"
 description: "Learn how to use Claude Code to identify and eliminate dead code from your projects. A practical workflow guide with examples and actionable advice."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-dead-code-elimination-workflow-guide/
 categories: [guides]

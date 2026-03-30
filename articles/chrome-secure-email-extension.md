@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Secure Email Extension: A Technical Guide for."
 description: "Explore chrome secure email extensions, how they work, key security features, implementation patterns, and what developers need to know to build or."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-secure-email-extension/
 reviewed: true

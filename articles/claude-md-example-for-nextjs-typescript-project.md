@@ -4,6 +4,7 @@ layout: default
 title: "Claude MD Example for Next.js TypeScript Project"
 description: "A practical guide to using Claude Code with Next.js and TypeScript. Learn how to create effective skill files, automate component generation, and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-md-example-for-nextjs-typescript-project/
 categories: [guides]

@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code International Date Format Handling Workflow"
 description: "A practical guide for developers handling international date formats with Claude Code skills and automation workflows."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [workflows]
 tags: [claude-code, claude-skills, i18n, date-format, internationalization]
 author: "Claude Skills Guide"

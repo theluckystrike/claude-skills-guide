@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Multi-Language Comment and Docstring Workflow"
 description: "Learn how to use Claude Code for managing comments and docstrings across multiple programming languages with practical examples and actionable advice."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-multi-language-comment-and-docstring-workflow/
 categories: [guides]

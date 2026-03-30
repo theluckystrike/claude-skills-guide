@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Node.js Cluster Module Workflow"
 description: "Learn how to use Claude Code to streamline Node.js cluster module workflows, with practical examples for multi-process server architectures and load."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-node-js-cluster-module-workflow/
 categories: [guides]

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Data Engineer ETL Debugging Daily Workflow"
 description: "A practical guide to using Claude Code for debugging ETL pipelines, handling data quality issues, and optimizing your daily data engineering workflow."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-data-engineer-etl-debugging-daily-workflow/
 categories: [troubleshooting]

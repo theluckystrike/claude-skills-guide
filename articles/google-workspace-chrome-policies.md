@@ -4,6 +4,7 @@ layout: default
 title: "Google Workspace Chrome Policies: A Developer's Guide"
 description: "Learn how to configure Chrome browser policies through Google Workspace admin console. Practical examples for power users managing browser."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /google-workspace-chrome-policies/
 reviewed: true

@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Enterprise Bandwidth Management: A Practical Guide"
 description: "Learn how to configure bandwidth management policies in Chrome Browser Enterprise. Covers data saver settings, prefetch rules, and programmatic."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-enterprise-bandwidth-management/
 reviewed: true

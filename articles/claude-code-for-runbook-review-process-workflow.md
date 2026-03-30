@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Runbook Review Process Workflow"
 description: "Learn how to use Claude Code CLI to streamline runbook review processes, automate validation checks, and ensure operational documentation meets quality."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-runbook-review-process-workflow/
 categories: [guides]

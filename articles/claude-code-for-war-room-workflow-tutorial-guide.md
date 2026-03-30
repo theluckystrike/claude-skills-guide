@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for War Room Workflow Tutorial Guide"
 description: "Learn how to use Claude Code to build efficient war room workflows for incident response, debugging sessions, and critical production issues."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-war-room-workflow-tutorial-guide/
 categories: [guides]

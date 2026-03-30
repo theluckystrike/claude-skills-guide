@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Package.json Scripts Automation Workflow Guide"
 description: "Master package.json script automation with Claude Code. Learn to create efficient npm script workflows, use AI-powered skills, and automate your."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, package-json, npm-scripts, automation, workflow, developer-tools, claude-skills]
 author: Claude Skills Guide

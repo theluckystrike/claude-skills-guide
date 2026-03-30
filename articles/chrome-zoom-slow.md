@@ -3,6 +3,7 @@ layout: default
 title: "Chrome Zoom Slow: Diagnosing and Fixing Performance Issues"
 description: "Troubleshoot Chrome zoom performance problems. Fix laggy zoom, unresponsive page scaling, and browser slowdowns when using keyboard shortcuts or pinch-to-zoom."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-zoom-slow/
 categories: [troubleshooting]

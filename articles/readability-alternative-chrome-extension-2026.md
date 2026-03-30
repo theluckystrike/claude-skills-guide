@@ -4,6 +4,7 @@ layout: default
 title: "Readability Alternative Chrome Extension in 2026"
 description: "Discover the best readability Chrome extensions as alternatives in 2026. These developer-focused tools help improve content readability, accessibility."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /readability-alternative-chrome-extension-2026/
 reviewed: true

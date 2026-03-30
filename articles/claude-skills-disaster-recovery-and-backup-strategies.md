@@ -3,6 +3,7 @@ layout: default
 title: "Claude Skills Disaster Recovery and Backup Strategies"
 description: "Protect your Claude skills investments with reliable backup strategies, version control, and disaster recovery planning for skill-based workflows."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"

@@ -3,6 +3,7 @@ layout: default
 title: "Chrome Topics API: Privacy-First Advertising Without."
 description: "Learn how the Chrome Topics API enables interest-based advertising while preserving user privacy. Includes implementation examples and privacy best."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 categories: [guides]
 tags: [chrome, privacy, topics-api, web-development, advertising, cookies]
 author: theluckystrike

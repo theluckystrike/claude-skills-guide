@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension Package Tracker for All Carriers: A."
 description: "Learn how to build or use a Chrome extension that tracks packages across all carriers. Practical code examples and architecture for developers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-package-tracker-all-carriers/
 reviewed: true

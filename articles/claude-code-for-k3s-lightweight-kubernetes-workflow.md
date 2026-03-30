@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for K3s Lightweight Kubernetes Workflow"
 description: "Learn how to use Claude Code to streamline K3s Kubernetes management. This guide covers practical workflows for deploying, managing, and monitoring."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-k3s-lightweight-kubernetes-workflow/
 categories: [guides]

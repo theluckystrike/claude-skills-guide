@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for NX Monorepo Micro Frontend Guide"
 description: "Learn how to use Claude Code to develop NX monorepo micro frontends efficiently. Includes practical patterns for workspace management, shared."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-nx-monorepo-micro-frontend-guide/
 categories: [guides]

@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code GitHub Actions Secrets Management"
 description: "Learn how to securely manage secrets, API keys, and credentials in GitHub Actions workflows with Claude Code. Practical patterns for environment."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, github-actions, security]
 author: "theluckystrike"

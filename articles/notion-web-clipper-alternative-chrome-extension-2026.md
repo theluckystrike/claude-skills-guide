@@ -4,6 +4,7 @@ layout: default
 title: "Notion Web Clipper Alternative Chrome Extension in 2026"
 description: "Looking for a Notion Web Clipper alternative? Discover Chrome extensions for saving web content tailored for developers and power users in 2026."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /notion-web-clipper-alternative-chrome-extension-2026/
 reviewed: true

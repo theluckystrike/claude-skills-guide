@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Terraform Module Development Guide"
 description: "Master Terraform module development with Claude Code. Learn practical workflows for creating reusable, well-documented infrastructure modules."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, terraform, infrastructure, devops, modules, iac, claude-skills]
 author: theluckystrike

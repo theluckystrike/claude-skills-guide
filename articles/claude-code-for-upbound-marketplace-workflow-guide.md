@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Upbound Marketplace Workflow Guide"
 description: "Learn how to use Claude Code to streamline your Upbound Marketplace workflow, from Crossplane compositions to published providers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-upbound-marketplace-workflow-guide/
 categories: [guides]

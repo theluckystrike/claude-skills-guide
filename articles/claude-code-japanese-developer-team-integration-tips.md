@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Japanese Developer Team Integration Tips"
 description: "Practical tips for integrating Claude Code into Japanese developer teams. Learn about skills, workflows, and best practices for smooth adoption."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, japanese-developers, team-integration, workflow, best-practices]
 author: "theluckystrike"

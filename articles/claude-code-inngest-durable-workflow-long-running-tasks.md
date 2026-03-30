@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Inngest Durable Workflow for Long Running Tasks"
 description: "Learn how to combine Claude Code with Inngest to build solid durable workflows for long-running tasks. Practical examples and best practices for."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-inngest-durable-workflow-long-running-tasks/
 categories: [guides]

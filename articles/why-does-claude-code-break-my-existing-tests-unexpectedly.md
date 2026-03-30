@@ -3,6 +3,7 @@ layout: default
 title: "Why Does Claude Code Break My Existing Tests Unexpectedly"
 description: "Discover why Claude Code sometimes breaks your existing tests and learn practical strategies to prevent and resolve these conflicts."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /why-does-claude-code-break-my-existing-tests-unexpectedly/
 reviewed: true

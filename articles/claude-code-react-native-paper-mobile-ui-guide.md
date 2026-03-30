@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code React Native Paper Mobile UI Guide"
 description: "A practical guide to building mobile UIs with React Native and Paper using Claude Code. Learn how to use skills for component generation, testing, and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, react-native, mobile-ui, frontend]
 author: "Claude Skills Guide"

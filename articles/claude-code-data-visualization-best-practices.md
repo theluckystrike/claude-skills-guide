@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Data Visualization Best Practices"
 description: "Master data visualization with Claude Code. Learn to generate charts, build dashboards, and create compelling data stories using Claude skills."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, data-visualization, charts, dashboards, charts-library, claude-skills]
 author: "Claude Skills Guide"

@@ -5,6 +5,7 @@ layout: default
 title: "Chrome Extension GraphQL Network Inspector: A Developer."
 description: "Learn how to use and build Chrome extensions for inspecting GraphQL network requests. Practical examples, code snippets, and techniques for developers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-graphql-network-inspector/
 reviewed: true

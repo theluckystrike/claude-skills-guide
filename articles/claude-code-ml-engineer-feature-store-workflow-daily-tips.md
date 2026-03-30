@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for ML Engineer: Feature Store Workflow."
 description: "Master Claude Code for ML feature store development with practical daily workflow tips. Learn to create features, validate data, automate."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-ml-engineer-feature-store-workflow-daily-tips/
 categories: [guides]

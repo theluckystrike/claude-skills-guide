@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Configure8 Portal Workflow Guide"
 description: "Learn how to use Claude Code to streamline your Configure8 developer portal workflow. This guide covers automation, API integration, and practical."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-configure8-portal-workflow-guide/
 categories: [workflows, guides]

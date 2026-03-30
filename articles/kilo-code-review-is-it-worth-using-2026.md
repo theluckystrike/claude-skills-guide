@@ -4,6 +4,7 @@ layout: default
 title: "Kilo Code Review: Is It Worth Using in 2026?"
 description: "An honest evaluation of Kilo code review tool for developers. Learn about features, pricing, integrations, and whether it fits your workflow in 2026."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /kilo-code-review-is-it-worth-using-2026/
 reviewed: true

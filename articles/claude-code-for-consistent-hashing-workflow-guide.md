@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Consistent Hashing Workflow Guide"
 description: "A practical guide to implementing consistent hashing workflows using Claude Code. Learn how to build scalable distributed systems with code examples."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-consistent-hashing-workflow-guide/
 categories: [guides]

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Detectron2 Workflow Guide"
 description: "A comprehensive guide to using Claude Code for Detectron2 object detection projects. Learn how to set up, train, and deploy Detectron2 models."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-detectron2-workflow-guide/
 categories: [guides]

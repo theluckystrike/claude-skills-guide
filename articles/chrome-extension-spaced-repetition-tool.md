@@ -3,6 +3,7 @@ layout: default
 title: "Chrome Extension Spaced Repetition Tool: Building Memory."
 description: "Learn how to build a Chrome extension spaced repetition tool for memorizing programming concepts, API documentation, and technical vocabulary."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "theluckystrike"
 permalink: /chrome-extension-spaced-repetition-tool/
 categories: [guides]

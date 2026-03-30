@@ -3,6 +3,7 @@ layout: default
 title: "MCP Integration Guide for Claude Code Beginners"
 description: "Learn how to integrate MCP (Model Context Protocol) with Claude Code. Step-by-step guide with practical examples for beginners."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [getting-started, integrations]
 tags: [mcp, model-context-protocol, claude-code, integration, beginners-guide]
 author: theluckystrike

@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for Microbenchmark Workflow Tutorial Guide"
 description: "Learn how to use Claude Code to create, run, and analyze microbenchmarks efficiently. A practical guide for developers who want to measure code."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 categories: [tutorials]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"

@@ -3,6 +3,7 @@ layout: default
 title: "Best Screenshot Chrome Extension 2026: A Developer's Guide"
 description: "Discover the top screenshot Chrome extensions for developers and power users in 2026. Compare features, API integrations, and automation capabilities."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /best-screenshot-chrome-extension-2026/
 reviewed: true

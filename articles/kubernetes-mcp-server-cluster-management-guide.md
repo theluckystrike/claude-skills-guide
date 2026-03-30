@@ -3,6 +3,7 @@ layout: default
 title: "Kubernetes MCP Server Cluster Management Guide"
 description: "Learn how to manage Kubernetes clusters effectively using MCP servers with practical examples and code snippets for developers."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, kubernetes, mcp, cluster-management, devops]
 author: "Claude Skills Guide"

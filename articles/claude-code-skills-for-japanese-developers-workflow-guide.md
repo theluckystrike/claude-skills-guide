@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Skills for Japanese Developers Workflow Guide"
 description: "A practical workflow guide for Japanese developers using Claude Code skills. Learn how to integrate skills like tdd, pdf, supermemory, and frontend-design."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, japanese-developers, workflow, tdd, pdf, supermemory]
 author: "Claude Skills Guide"

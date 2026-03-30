@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code API Reference Generation Guide"
 description: "Learn how to generate API references automatically using Claude Code skills. Practical examples with frontend-design, pdf, and documentation workflows."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, api-reference, documentation, automation, pdf, frontend-design, supermemory]
 author: theluckystrike

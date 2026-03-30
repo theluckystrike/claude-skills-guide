@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Blue-Green Deployment Workflow"
 description: "Learn how to use Claude Code to implement blue-green deployment workflows for zero-downtime releases. Practical examples, code snippets, and actionable."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 categories: [guides]
 tags: [claude-code, blue-green-deployment, devops, ci-cd, deployment, claude-skills]
 author: "Claude Skills Guide"

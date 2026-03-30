@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Kubernetes Resource Limits Guide"
 description: "Master Kubernetes resource limits configuration with Claude Code. Practical examples for setting CPU and memory requests/limits in your deployments."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-kubernetes-resource-limits-guide/
 categories: [guides]

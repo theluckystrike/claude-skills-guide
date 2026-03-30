@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Git Worktree Parallel Development Workflow"
 description: "Master parallel development with Git worktrees and Claude Code. Run multiple branches simultaneously without switching contexts."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-git-worktree-parallel-development-workflow/
 categories: [workflows, guides]

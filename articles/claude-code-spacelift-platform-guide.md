@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Spacelift Platform Guide"
 description: "Learn how to integrate Claude Code with Spacelift for automated infrastructure management, policy enforcement, and intelligent deployment workflows."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-spacelift-platform-guide/
 categories: [guides]

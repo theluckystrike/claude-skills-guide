@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for ZenRows Scraping Workflow Tutorial"
 description: "Learn how to integrate Claude Code with ZenRows for efficient web scraping. This tutorial covers API setup, dynamic content handling, and building."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-zenrows-scraping-workflow-tutorial/
 categories: [tutorials]

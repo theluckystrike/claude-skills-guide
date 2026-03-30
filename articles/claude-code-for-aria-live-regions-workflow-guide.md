@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for ARIA Live Regions Workflow Guide"
 description: "Learn how to use Claude Code to implement accessible ARIA live regions in your web applications. This comprehensive guide covers best practices, code."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-aria-live-regions-workflow-guide/
 categories: [guides]

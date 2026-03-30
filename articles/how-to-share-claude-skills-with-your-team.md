@@ -3,6 +3,7 @@ layout: default
 title: "How to Share Claude Skills with Your Team"
 description: "Share Claude Code skill files across your development team: Git repository approach, documentation standards, naming conventions, and update distribution."
 date: 2026-03-13
+last_modified_at: 2026-03-13
 categories: [guides]
 tags: [claude-code, claude-skills, team, collaboration]
 author: "Claude Skills Guide"

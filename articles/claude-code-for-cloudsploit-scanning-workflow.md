@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for CloudSploit Scanning Workflow"
 description: "Learn how to integrate Claude Code with CloudSploit to automate cloud security scanning, identify misconfigurations, and strengthen your cloud security."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-cloudsploit-scanning-workflow/
 categories: [guides]

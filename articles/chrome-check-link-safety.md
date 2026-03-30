@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Check Link Safety: Developer Tools and Techniques"
 description: "Learn how to check link safety in Chrome using built-in features, developer tools, and extensions. Practical techniques for developers and power users."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-check-link-safety/
 reviewed: true

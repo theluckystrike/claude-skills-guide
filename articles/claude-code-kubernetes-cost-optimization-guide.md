@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Kubernetes Cost Optimization Guide"
 description: "A practical guide for developers to reduce Kubernetes costs using Claude Code automation, right-sizing strategies, and smart resource management."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, kubernetes, cost-optimization, devops, cloud-costs, claude-skills]

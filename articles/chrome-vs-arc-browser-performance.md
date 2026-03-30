@@ -3,6 +3,7 @@ layout: default
 title: "Chrome vs Arc Browser Performance: A Developer's Technical Analysis"
 description: "A technical comparison of Chrome and Arc browser performance, with benchmarks, architecture insights, and optimization strategies for developers and power."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-vs-arc-browser-performance/
 categories: [comparisons]

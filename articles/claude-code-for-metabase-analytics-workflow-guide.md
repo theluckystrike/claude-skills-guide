@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Metabase Analytics Workflow Guide"
 description: "Learn how to integrate Claude Code with Metabase to build powerful analytics workflows, automate queries, and streamline data exploration."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-metabase-analytics-workflow-guide/
 categories: [guides]

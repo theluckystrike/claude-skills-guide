@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Regula Policy Workflow Guide"
 description: "Learn how to integrate Claude Code with Regula for automated infrastructure policy validation. Practical examples for building policy-as-code workflows."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-regula-policy-workflow-guide/
 categories: [guides]

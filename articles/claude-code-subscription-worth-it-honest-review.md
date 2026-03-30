@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Subscription Worth It? An Honest Review for."
 description: "A practical look at Claude Code subscription plans for developers and power users. What you actually get, real-world usage scenarios, and whether the."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-subscription-worth-it-honest-review/
 reviewed: true

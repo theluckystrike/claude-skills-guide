@@ -4,6 +4,7 @@ layout: default
 title: "How to Save Research Sessions with Chrome Extensions"
 description: "Learn how to use Chrome extensions to save and restore your research sessions, keeping tabs organized and accessible across browsing sessions."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-save-research-sessions/
 reviewed: true

@@ -3,6 +3,7 @@ layout: default
 title: "Claude Skills vs Custom GPTs: 2026 Comparison"
 description: "Compare Claude Code skills with Custom GPTs in 2026. Learn when to use each for development workflows, automation, and AI-powered tooling."
 date: 2026-03-13
+last_modified_at: 2026-03-13
 categories: [comparisons]
 tags: [claude-code, claude-skills, custom-gpts, openai, comparison]
 author: "Claude Skills Guide"

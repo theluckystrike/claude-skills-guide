@@ -4,6 +4,7 @@ layout: default
 title: "Setting Up Claude Code Approved Tools List for Enterprise"
 description: "Learn how to configure an approved tools list for Claude Code in enterprise environments. This guide covers security policies, tool restrictions, and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /setting-up-claude-code-approved-tools-list-for-enterprise/
 categories: [guides]

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code GitFlow Workflow Automation Guide"
 description: "Learn how to automate GitFlow workflows using Claude Code. Practical examples for branch management, commit conventions, and release automation."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, gitflow, workflow-automation, devops, claude-skills]

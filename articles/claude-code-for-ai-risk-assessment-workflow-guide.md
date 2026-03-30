@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for AI Risk Assessment Workflow Guide"
 description: "Learn how to build automated AI risk assessment workflows using Claude Code. Practical examples for evaluating model outputs, detecting bias, and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-ai-risk-assessment-workflow-guide/
 categories: [guides]

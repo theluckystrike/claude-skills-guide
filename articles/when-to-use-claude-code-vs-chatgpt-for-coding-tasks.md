@@ -3,6 +3,7 @@ layout: default
 title: "When to Use Claude Code vs ChatGPT for Coding Tasks"
 description: "A practical guide for developers choosing between Claude Code and ChatGPT for programming tasks. Learn which tool excels at different coding scenarios."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /when-to-use-claude-code-vs-chatgpt-for-coding-tasks/
 reviewed: true

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Atomico Web Components Workflow"
 description: "Learn how to use Claude Code to streamline your Atomico web components development workflow. Practical examples, code snippets, and actionable advice."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 categories: [workflows]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"

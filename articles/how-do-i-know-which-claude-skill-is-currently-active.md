@@ -3,6 +3,7 @@ layout: default
 title: "How Do I Know Which Claude Skill Is Currently Active?"
 description: "Learn how to identify the active Claude skill during your session. Practical methods, CLI commands, and tips for tracking skill context."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 categories: [tutorials]
 tags: [claude-code, claude-skills, workflow, productivity]

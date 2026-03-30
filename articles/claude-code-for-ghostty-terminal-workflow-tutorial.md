@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Ghostty Terminal Workflow Tutorial"
 description: "Learn how to integrate Claude Code with Ghostty terminal for a powerful, efficient development workflow. This tutorial covers setup, configuration, and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-ghostty-terminal-workflow-tutorial/
 categories: [tutorials]

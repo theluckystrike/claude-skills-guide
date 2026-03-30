@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension Auto Summarize Articles: A Developer Guide"
 description: "Learn how to build and use Chrome extensions that automatically summarize articles using JavaScript APIs and text processing techniques."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-auto-summarize-articles/
 reviewed: true

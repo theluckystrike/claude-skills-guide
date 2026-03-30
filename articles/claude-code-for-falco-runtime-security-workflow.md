@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Falco Runtime Security Workflow"
 description: "Learn how to integrate Claude Code with Falco for automated runtime security monitoring and incident response in containerized environments."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-falco-runtime-security-workflow/
 categories: [guides]

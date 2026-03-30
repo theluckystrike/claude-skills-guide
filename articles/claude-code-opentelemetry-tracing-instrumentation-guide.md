@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code OpenTelemetry Tracing Instrumentation Guide"
 description: "Master OpenTelemetry tracing instrumentation with Claude Code. Learn how to set up distributed tracing, create custom spans, and monitor your."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, opentelemetry, tracing, instrumentation, observability, monitoring, claude-skills]
 author: "Claude Skills Guide"

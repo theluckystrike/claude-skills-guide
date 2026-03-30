@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Language Server Protocol Workflow Guide"
 description: "A comprehensive guide to integrating Claude Code with Language Server Protocol (LSP) for enhanced code intelligence, autocomplete, and intelligent."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-language-server-protocol-workflow-guide/
 categories: [guides]

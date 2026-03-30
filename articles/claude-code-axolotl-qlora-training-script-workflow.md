@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Axolotl QLoRA Training Script Workflow"
 description: "Learn how to use Claude Code skills to streamline Axolotl QLoRA fine-tuning workflows. Practical examples for configuring, running, and monitoring."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, axolotl, qlora, fine-tuning, machine-learning, training, claude-skills]
 author: "Claude Skills Guide"

@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code Keeps Rewriting Functions I Said Keep"
 description: "Understand why Claude Code rewrites functions you've asked to preserve, and learn practical strategies to prevent unwanted refactoring during your."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-keeps-rewriting-functions-i-said-keep/
 reviewed: true

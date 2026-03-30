@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Hot Config Reload Workflow Guide"
 description: "Learn how to implement hot config reload workflows with Claude Code for faster development iterations. Practical examples and actionable advice for."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-hot-config-reload-workflow-guide/
 categories: [guides]

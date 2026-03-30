@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension Focus Timer Productivity: A Developer Guide"
 description: "Learn how chrome extension focus timer productivity tools work, how to build them, and which techniques maximize your deep work sessions."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-focus-timer-productivity/
 reviewed: true

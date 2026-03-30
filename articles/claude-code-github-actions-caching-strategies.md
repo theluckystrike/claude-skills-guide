@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code GitHub Actions Caching Strategies for Faster."
 description: "Learn practical caching strategies for GitHub Actions when working with Claude Code. Optimize your CI/CD pipelines with node_modules, pip, and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-github-actions-caching-strategies/
 categories: [guides]

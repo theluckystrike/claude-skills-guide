@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for Pinecone vs Alternatives: 2026 Workflow Guide"
 description: "A practical comparison of using Claude Code with Pinecone versus alternative vector databases. Includes workflow patterns, code examples, and..."
 date: 2026-03-20
+last_modified_at: 2026-03-20
 author: "Claude Skills Guide"
 permalink: /claude-code-for-pinecone-vs-alternatives-2026-workflow-guide/
 categories: [guides]

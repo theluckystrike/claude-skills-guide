@@ -4,6 +4,7 @@ layout: default
 title: "Why Is Claude Code Good at Understanding Legacy Code"
 description: "Discover how Claude Code's extended context, skills, and systematic analysis make it exceptionally effective at deciphering and improving legacy codebases."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /why-is-claude-code-good-at-understanding-legacy-code/
 reviewed: true

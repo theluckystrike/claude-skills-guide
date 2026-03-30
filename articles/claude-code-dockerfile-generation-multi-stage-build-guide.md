@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Dockerfile Generation: Multi-Stage Build Guide"
 description: "Learn how to use Claude Code to generate optimized multi-stage Dockerfiles. Covers build caching, layer optimization, and production-ready container patterns."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, docker, containers, devops]
 author: "Claude Skills Guide"

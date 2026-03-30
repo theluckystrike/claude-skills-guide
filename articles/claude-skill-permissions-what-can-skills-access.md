@@ -3,6 +3,7 @@ layout: default
 title: "Claude Skill Permissions: What Can Skills Access?"
 description: "A comprehensive guide to understanding Claude skill permissions, tool access controls, and what capabilities skills have within your development."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, permissions, security, settings]
 author: "Claude Skills Guide"

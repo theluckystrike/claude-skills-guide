@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Keep a Changelog Workflow Tutorial"
 description: "Learn how to automate and manage your project changelog using Claude Code. A practical tutorial covering Keep a Changelog format, workflow automation."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-keep-a-changelog-workflow-tutorial/
 categories: [tutorials]

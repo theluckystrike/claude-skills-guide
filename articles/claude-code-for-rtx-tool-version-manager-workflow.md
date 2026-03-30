@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for RTX Tool Version Manager Workflow"
 description: "Master the RTX Tool Version Manager workflow with Claude Code. Learn how to automate tool version management, streamline CUDA environment setup, and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-rtx-tool-version-manager-workflow/
 categories: [guides]

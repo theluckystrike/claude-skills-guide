@@ -4,6 +4,7 @@ layout: default
 title: "How to Fix Claude Code Context Window Full in Large."
 description: "Learn practical solutions for handling context window limitations when working with large codebases in Claude Code. Includes workspace configuration."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: Claude Skills Guide
 permalink: /claude-code-context-window-full-in-large-codebase-fix/
 categories: [guides]

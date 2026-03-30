@@ -3,6 +3,7 @@ layout: default
 title: "Best DNS Settings for Chrome to Speed Up Your Browser"
 description: "Optimize Chrome DNS settings for faster page loads. Learn about DNS prefetching, secure DNS, and custom resolvers for developers and power users."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /best-dns-chrome-speed/
 categories: [guides]

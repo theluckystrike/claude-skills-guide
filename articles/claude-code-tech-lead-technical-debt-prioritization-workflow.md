@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code Tech Lead Technical Debt Prioritization Workflow"
 description: "A practical workflow for tech leads to identify, categorize, and prioritize technical debt using Claude Code skills and automation."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-tech-lead-technical-debt-prioritization-workflow/
 categories: [guides]

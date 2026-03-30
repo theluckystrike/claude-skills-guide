@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code Meilisearch Faceted Search Workflow Guide"
 description: "Master faceted search implementation with Meilisearch using Claude Code. Learn practical workflows for building dynamic filtering, attribute."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-meilisearch-faceted-search-workflow-guide/
 categories: [guides]

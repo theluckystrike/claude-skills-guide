@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension Docker Dashboard: Streamlined Container."
 description: "Discover Chrome extensions that bring Docker management directly into your browser. Compare top solutions, explore key features, and learn how to."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-docker-dashboard/
 reviewed: true

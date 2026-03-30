@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code ArXiv Paper Implementation Guide"
 description: "Learn how to use Claude Code to understand, extract, and implement algorithms from ArXiv research papers with practical code examples."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: Claude Skills Guide
 permalink: /claude-code-arxiv-paper-implementation-guide/
 categories: [guides]

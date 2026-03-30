@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code: Cannot Read Property Undefined Fix"
 description: "Fix 'Cannot read property of undefined/null' errors in Claude Code skill execution. Diagnosis steps and solutions for developers."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-cannot-read-property-undefined-null-error/
 categories: [troubleshooting]

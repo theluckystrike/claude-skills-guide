@@ -4,6 +4,7 @@ layout: default
 title: "Slack Chrome Extension Features for Developers and Power."
 description: "Explore powerful Slack Chrome extension features that enhance team communication, automate workflows, and boost productivity for developers and power."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 categories: [tutorials]
 tags: [slack, chrome-extension, productivity, developer-tools, workflows, claude-skills]
 author: "Claude Skills Guide"

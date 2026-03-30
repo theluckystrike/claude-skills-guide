@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Business Intelligence Workflow"
 description: "Build powerful business intelligence pipelines with Claude Code. Learn to automate data extraction, analysis, and reporting using Claude skills and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-business-intelligence-workflow/
 categories: [guides]

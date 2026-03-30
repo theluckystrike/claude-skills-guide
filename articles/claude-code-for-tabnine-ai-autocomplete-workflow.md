@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Tabnine AI Autocomplete Workflow"
 description: "Learn how to integrate Claude Code with TabNine to create a powerful AI autocomplete workflow that enhances your coding productivity."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-tabnine-ai-autocomplete-workflow/
 categories: [guides]

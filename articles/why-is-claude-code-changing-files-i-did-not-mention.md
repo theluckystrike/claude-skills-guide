@@ -4,6 +4,7 @@ layout: default
 title: "Why Is Claude Code Changing Files I Did Not Mention?"
 description: "Understand why Claude Code modifies files you didn't mention. Control skill auto-invocation, context awareness, and file modification scope."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [troubleshooting]
 tags: [claude-code, claude-skills, file-changes, debugging, troubleshooting, skill-configuration]
 author: theluckystrike

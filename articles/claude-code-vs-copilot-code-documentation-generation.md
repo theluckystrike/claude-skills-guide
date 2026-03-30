@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code vs Copilot: Code Documentation Generation."
 description: "Discover how Claude Code and GitHub Copilot approach automated code documentation. Learn practical techniques for generating comprehensive docs with."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-vs-copilot-code-documentation-generation/
 categories: [guides]

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for GitHub Actions Self-Hosted Runner Guide"
 description: "Learn how to set up and configure Claude Code on GitHub Actions self-hosted runners for automated AI-assisted development workflows."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-github-actions-self-hosted-runner-guide/
 categories: [guides]

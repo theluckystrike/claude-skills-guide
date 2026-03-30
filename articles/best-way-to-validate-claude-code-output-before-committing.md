@@ -5,6 +5,7 @@ layout: default
 title: "Best Way to Validate Claude Code Output Before Committing"
 description: "Learn practical strategies and Claude Code skills for validating AI-generated code before committing. Includes step-by-step workflows and real-world."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /best-way-to-validate-claude-code-output-before-committing/
 reviewed: true

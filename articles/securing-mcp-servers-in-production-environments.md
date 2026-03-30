@@ -4,6 +4,7 @@ layout: default
 title: "Securing MCP Servers in Production Environments"
 description: "A practical guide to hardening your Model Context Protocol servers against common vulnerabilities and attack vectors."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /securing-mcp-servers-in-production-environments/
 categories: [troubleshooting]

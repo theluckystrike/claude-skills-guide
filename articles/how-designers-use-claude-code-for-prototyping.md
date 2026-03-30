@@ -3,6 +3,7 @@ layout: default
 title: "How Designers Use Claude Code for Prototyping"
 description: "Discover how designers use Claude Code skills like frontend-design, pdf, and tdd to accelerate prototyping workflows."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, claude-skills, prototyping, design, frontend-development]

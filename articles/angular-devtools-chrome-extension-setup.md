@@ -4,6 +4,7 @@ layout: default
 title: "Angular DevTools Chrome Extension Setup: A Complete Guide"
 description: "Learn how to install and configure Angular DevTools for Chrome to debug, inspect, and optimize your Angular applications effectively."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /angular-devtools-chrome-extension-setup/
 reviewed: true

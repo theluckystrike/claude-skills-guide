@@ -3,6 +3,7 @@ layout: default
 title: "Best Pesticide Alternatives for Chrome in 2026"
 description: "Looking for Pesticide Chrome extension alternatives? Discover the best developer tools for visualizing web page layouts and element structures in 2026."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /pesticide-alternative-chrome-extension-2026/
 categories: [guides]

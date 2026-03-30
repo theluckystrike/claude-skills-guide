@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Multi-Agent Orchestration Patterns Guide"
 description: "Patterns for orchestrating multiple Claude Code agents across complex workflows. Covers parallel execution, task delegation, and coordination strategies."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, multi-agent, orchestration, workflow]
 author: "Claude Skills Guide"

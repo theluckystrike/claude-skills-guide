@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Jest Unit Testing Workflow Guide"
 description: "A comprehensive guide to implementing efficient Jest unit testing workflows with Claude Code for developers and power users."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-jest-unit-testing-workflow-guide/
 categories: [guides]

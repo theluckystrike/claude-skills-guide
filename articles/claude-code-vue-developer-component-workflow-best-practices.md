@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Vue Developer Component Workflow Best Practices"
 description: "Master Vue.js component development with Claude Code. Learn efficient workflows for building, testing, and maintaining Vue components using Claude."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, vue, vuejs, component-development, best-practices, workflow, claude-skills]

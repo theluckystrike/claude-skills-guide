@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension XPath Finder: A Developer's Guide to."
 description: "Discover the best Chrome extensions for finding XPath locators. Compare popular tools, learn practical techniques for web automation, scraping, and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-xpath-finder/
 reviewed: true

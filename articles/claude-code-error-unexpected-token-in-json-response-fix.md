@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Error: Unexpected Token in JSON Response Fix"
 description: "Resolve the 'unexpected token in JSON' error in Claude Code with practical solutions, debugging techniques, and prevention strategies for developers."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-error-unexpected-token-in-json-response-fix/
 reviewed: true

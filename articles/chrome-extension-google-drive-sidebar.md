@@ -3,6 +3,7 @@ layout: default
 title: "Chrome Extension Google Drive Sidebar: Build Your Own"
 description: "A practical guide to building a Chrome extension with Google Drive sidebar integration. Learn manifest configuration, authentication, Drive API usage."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-google-drive-sidebar/
 categories: [guides]

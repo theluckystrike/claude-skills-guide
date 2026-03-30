@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code Insomnia API Testing Workflow"
 description: "Master API testing with Claude Code and Insomnia. Learn practical workflows for creating, organizing, and automating API tests with real-world examples."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, insomnia, api-testing]
 author: "theluckystrike"

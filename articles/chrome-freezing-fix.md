@@ -3,6 +3,7 @@ layout: default
 title: "Chrome Freezing Fix: Complete Guide for Developers and Power Users"
 description: "Practical solutions to fix Chrome browser freezing and unresponsive issues. Command-line tools, flags, and troubleshooting steps for developers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-freezing-fix/
 categories: [guides]

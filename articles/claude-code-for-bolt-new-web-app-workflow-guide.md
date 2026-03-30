@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Bolt.new Web App Workflow Guide"
 description: "Learn how to integrate Claude Code into your Bolt.new web app development workflow. Practical examples, code snippets, and actionable advice for."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-bolt-new-web-app-workflow-guide/
 categories: [guides]

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for WCAG 2.2 Compliance Workflow Guide"
 description: "A practical developer guide to building accessible web applications using Claude Code. Learn workflows, code patterns, and automated testing for WCAG."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-wcag-2-2-compliance-workflow-guide/
 categories: [guides]

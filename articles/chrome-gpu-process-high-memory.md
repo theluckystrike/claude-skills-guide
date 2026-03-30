@@ -5,6 +5,7 @@ layout: default
 title: "Chrome GPU Process High Memory: Causes and Solutions"
 description: "A practical guide for developers and power users troubleshooting Chrome GPU process memory issues. Learn what's consuming memory and how to fix it."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-gpu-process-high-memory/
 reviewed: true

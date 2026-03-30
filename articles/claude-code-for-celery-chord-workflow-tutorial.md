@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Celery Chord Workflow Tutorial"
 description: "Learn how to use Claude Code to build, debug, and optimize Celery chord workflows. A practical guide for Python developers working with asynchronous."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 categories: [tutorials, guides]
 tags: [claude-code, claude-skills, celery, python, async-tasks, workflow-automation]
 author: "Claude Skills Guide"

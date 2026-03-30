@@ -4,6 +4,7 @@ layout: default
 title: "Price Tracker Chrome Extension for Amazon: A Developer Guide"
 description: "Learn how to build a price tracker Chrome extension for Amazon. Technical implementation guide covering web scraping, price monitoring, and alert systems."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /price-tracker-chrome-extension-amazon/
 categories: [guides]

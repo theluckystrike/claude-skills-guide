@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Huh Forms Terminal Workflow Guide"
 description: "Learn how to integrate Claude Code with huh forms for building powerful interactive CLI workflows. This guide covers terminal form handling, workflow."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-huh-forms-terminal-workflow-guide/
 categories: [guides]

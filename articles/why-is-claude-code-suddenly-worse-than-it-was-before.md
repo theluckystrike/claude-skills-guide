@@ -4,6 +4,7 @@ layout: default
 title: "Why Is Claude Code Suddenly Worse Than It Was Before?"
 description: "Understanding why Claude Code may seem to have regressed and how to troubleshoot performance issues with your AI coding assistant."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [troubleshooting]
 tags: [claude-code, troubleshooting, performance, issues, claude-skills]
 author: "Claude Skills Guide"

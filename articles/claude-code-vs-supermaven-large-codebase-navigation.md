@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code vs Supermaven for Large Codebase Navigation"
 description: "A comprehensive comparison of Claude Code and Supermaven for navigating and understanding large codebases, with practical examples and use cases."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-vs-supermaven-large-codebase-navigation/
 categories: [guides]

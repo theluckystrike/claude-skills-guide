@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for OpenAPI Zod Client Workflow"
 description: "Learn how to use Claude Code to streamline your OpenAPI to Zod client workflow with practical examples and actionable advice."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-openapi-zod-client-workflow/
 categories: [guides]

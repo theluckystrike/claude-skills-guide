@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code vs Aider: Open Source Contribution Workflow."
 description: "Compare Claude Code and Aider for open source contributions. Learn practical workflows, skill advantages, and which tool best suits your OSS."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-vs-aider-open-source-contribution-workflow/
 categories: [guides]

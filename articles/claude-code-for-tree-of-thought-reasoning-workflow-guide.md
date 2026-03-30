@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for Tree of Thought Reasoning Workflow Guide"
 description: "Learn how to implement Tree of Thought reasoning with Claude Code to solve complex problems through systematic exploration of multiple solution paths."
 date: 2026-03-20
+last_modified_at: 2026-03-20
 author: Claude Skills Guide
 permalink: /claude-code-for-tree-of-thought-reasoning-workflow-guide/
 categories: [guides, workflows]

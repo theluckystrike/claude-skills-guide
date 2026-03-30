@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Appsmith Dashboard Workflow Guide"
 description: "Learn how to use Claude Code to accelerate Appsmith dashboard development, automate workflow creation, and build more efficient data-driven."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-appsmith-dashboard-workflow-guide/
 categories: [guides]

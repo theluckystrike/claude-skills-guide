@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for Go Benchmark Workflow Tutorial Guide"
 description: "A practical tutorial on integrating Claude Code into your Go benchmarking workflow. Learn to write, run, and analyze benchmarks with AI assistance."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 categories: [guides]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"

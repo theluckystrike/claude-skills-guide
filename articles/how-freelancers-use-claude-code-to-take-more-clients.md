@@ -4,6 +4,7 @@ layout: default
 title: "How Freelancers Use Claude Code to Take More Clients"
 description: "Practical strategies for developers to use Claude Code, automate workflows, and scale client acquisition without burning out."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /how-freelancers-use-claude-code-to-take-more-clients/
 categories: [guides]

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for EKS IRSA Workflow"
 description: "Learn how to automate EKS IAM Roles for Service Accounts (IRSA) configuration using Claude Code. Practical examples and actionable guidance for developers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-eks-irsa-workflow/
 categories: [guides]

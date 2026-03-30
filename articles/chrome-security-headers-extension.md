@@ -5,6 +5,7 @@ layout: default
 title: "Chrome Security Headers Extension: A Practical Guide for."
 description: "Discover Chrome extensions that analyze and visualize security headers. Learn how to audit HTTP response headers, identify vulnerabilities, and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-security-headers-extension/
 reviewed: true

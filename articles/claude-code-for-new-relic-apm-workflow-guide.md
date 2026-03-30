@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for New Relic APM Workflow Guide"
 description: "Learn how to integrate Claude Code with New Relic APM for enhanced application performance monitoring, debugging, and observability workflows."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-new-relic-apm-workflow-guide/
 categories: [guides]

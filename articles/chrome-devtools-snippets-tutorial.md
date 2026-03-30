@@ -4,6 +4,7 @@ layout: default
 title: "Chrome DevTools Snippets Tutorial: Automate Your Browser."
 description: "Learn how to create, manage, and execute JavaScript snippets in Chrome DevTools to speed up debugging, testing, and repetitive development tasks."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-devtools-snippets-tutorial/
 reviewed: true

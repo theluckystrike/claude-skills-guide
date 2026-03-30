@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Redwood JS Fullstack Workflow Guide"
 description: "Master the complete workflow of building fullstack applications with RedwoodJS and Claude Code. Learn practical patterns for API development, frontend."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-redwood-js-fullstack-workflow-guide/
 categories: [guides]

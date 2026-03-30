@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Delta Git Diff Workflow Guide"
 description: "Learn how to integrate Delta (the syntax-highlighting git diff pager) with Claude Code to create powerful, visual git diff workflows that enhance your."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-delta-git-diff-workflow-guide/
 categories: [guides]

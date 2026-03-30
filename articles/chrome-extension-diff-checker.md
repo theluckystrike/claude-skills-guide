@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension Diff Checker: A Developer Guide"
 description: "Learn how to build and use Chrome extension diff checkers for comparing code, text, and files. Practical examples, APIs, and implementation patterns."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-diff-checker/
 reviewed: true

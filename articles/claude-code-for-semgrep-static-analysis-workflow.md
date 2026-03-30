@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Semgrep Static Analysis Workflow"
 description: "Learn how to integrate Claude Code with Semgrep for automated security scanning, custom rule development, and streamlined static analysis workflows."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 categories: [guides]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"

@@ -3,6 +3,7 @@ layout: default
 title: "WhatFont Alternative Chrome Extension in 2026"
 description: "Discover the best WhatFont alternatives for Chrome in 2026. Explore developer-friendly font inspection tools with advanced features, code integration."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /whatfont-alternative-chrome-extension-2026/
 categories: [guides]

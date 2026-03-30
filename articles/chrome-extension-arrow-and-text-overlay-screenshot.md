@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension Arrow and Text Overlay Screenshot Guide"
 description: "Learn how to build a Chrome extension that captures screenshots with arrow and text overlays. Practical examples for developers and power users."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-arrow-and-text-overlay-screenshot/
 reviewed: true

@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code DevSecOps Compliance Pipeline Automation Guide"
 description: "Learn how to automate compliance pipelines using Claude Code skills. Practical examples for SOC 2, ISO 27001, and regulatory compliance automation."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-devsecops-compliance-pipeline-automation/
 reviewed: true

@@ -3,6 +3,7 @@ layout: default
 title: "Jest to Vitest Migration Workflow with Claude Code"
 description: "Migrate test suites from Jest to Vitest using Claude Code. Step-by-step guide covering config translation, import rewrites, and CI updates."
 date: 2026-03-13
+last_modified_at: 2026-03-13
 categories: [tutorials]
 tags: [claude-code, claude-skills, jest, vitest, migration, testing, javascript]
 author: "Claude Skills Guide"

@@ -4,6 +4,7 @@ layout: default
 title: "GitHub Copilot vs Claude Code: Deep Comparison 2026"
 description: "A comprehensive comparison of GitHub Copilot and Claude Code AI coding assistants, focusing on capabilities, workflows, and real-world use cases for."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /github-copilot-vs-claude-code-deep-comparison-2026/
 categories: [guides]

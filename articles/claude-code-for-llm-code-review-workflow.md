@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for LLM Code Review Workflow"
 description: "Master the art of building LLM-powered code review workflows with Claude Code. Learn practical implementations, automation patterns, and best practices."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-llm-code-review-workflow/
 categories: [guides]

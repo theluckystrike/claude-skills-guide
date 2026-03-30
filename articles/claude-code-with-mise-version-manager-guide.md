@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code with Mise Version Manager Guide"
 description: "Learn how to integrate Claude Code with Mise for powerful version management. Set up automated tool switching, environment handling, and smooth."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-with-mise-version-manager-guide/
 categories: [guides]

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Platform Engineer: Infrastructure."
 description: "Master Claude Code to automate infrastructure tasks, manage Kubernetes, write Terraform, and streamline DevOps workflows with practical examples."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-for-platform-engineer-infrastructure-automation-/
 categories: [guides]

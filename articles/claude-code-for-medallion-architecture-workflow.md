@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Medallion Architecture Workflow"
 description: "Master medallion architecture workflows with Claude Code. Learn practical techniques for implementing Bronze-Silver-Gold data pipelines, managing data."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-medallion-architecture-workflow/
 categories: [guides]

@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for gRPC Service Development Workflow"
 description: "Master gRPC service development with Claude Code. Learn practical workflows for defining proto files, generating code, implementing services, and testing."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-grpc-service-development-workflow/
 categories: [guides]

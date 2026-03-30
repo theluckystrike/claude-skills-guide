@@ -3,6 +3,7 @@ layout: default
 title: "AI Autocomplete Chrome Extension: A Developer's Guide"
 description: "Explore how AI autocomplete Chrome extensions enhance coding productivity. Learn about implementation approaches, API integration, and practical use."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "theluckystrike"
 permalink: /ai-autocomplete-chrome-extension/
 categories: [guides]

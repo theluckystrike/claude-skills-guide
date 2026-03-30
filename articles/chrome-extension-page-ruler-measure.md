@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension Page Ruler & Measure Tools for Developers"
 description: "A practical guide to Chrome extensions for measuring web elements, checking layouts, and inspecting dimensions. Learn how developers and designers use."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-page-ruler-measure/
 reviewed: true

@@ -3,6 +3,7 @@ layout: default
 title: "Best Way to Set Up Claude Code for a New Project"
 description: "A practical guide to configuring Claude Code for new projects. Learn how to create CLAUDE.md files, organize project context, and use skills like."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-md, project-setup, claude-skills, supermemory, frontend-design, tdd]
 author: theluckystrike

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Dockerfile Generation Best Practices 2026"
 description: "Master Dockerfile generation with Claude Code: learn how to use AI-powered skills, write production-ready Dockerfiles, and automate container."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, docker, dockerfile, devops, containerization, automation, claude-skills]
 author: "Claude Skills Guide"

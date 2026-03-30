@@ -4,6 +4,7 @@ layout: default
 title: "Remix Error Boundaries and Nested Routes: A Practical Guide"
 description: "Learn how to implement error boundaries with nested routes in Remix to create resilient, user-friendly applications with granular error handling."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: Claude Skills Guide
 permalink: /claude-code-remix-error-boundaries-nested-routes-guide/
 categories: [guides]

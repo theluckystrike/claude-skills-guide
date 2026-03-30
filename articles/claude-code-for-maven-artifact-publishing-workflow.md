@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Maven Artifact Publishing Workflow"
 description: "Learn how to use Claude Code to automate your Maven artifact publishing workflow. Practical examples and code snippets for developers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-maven-artifact-publishing-workflow/
 categories: [guides]

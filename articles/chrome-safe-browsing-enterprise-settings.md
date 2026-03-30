@@ -3,6 +3,7 @@ layout: default
 title: "Chrome Safe Browsing Enterprise Settings: A Developer's Guide"
 description: "Configure Chrome Safe Browsing enterprise settings for organization-wide security. Learn about policies, registry configurations, and advanced protection."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-safe-browsing-enterprise-settings/
 categories: [guides]

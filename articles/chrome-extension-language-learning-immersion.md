@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension Language Learning Immersion: A."
 description: "Learn how to build and use Chrome extensions for language learning immersion. Practical code examples and architecture patterns for developers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-language-learning-immersion/
 reviewed: true

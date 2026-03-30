@@ -3,6 +3,7 @@ layout: default
 title: "Claude Skills Onboarding for New Engineering Team Members"
 description: "A practical guide for new engineering team members to get started with Claude skills. Learn which skills to install, how to set up your environment, and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, claude-skills]

@@ -4,6 +4,7 @@ layout: default
 title: "Switching From Copilot to Claude Code: An Honest Review"
 description: "A practical and honest review of switching from GitHub Copilot to Claude Code, covering the real differences, learning curve, and what to expect."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /switching-from-copilot-to-claude-code-honest-review/
 categories: [guides]

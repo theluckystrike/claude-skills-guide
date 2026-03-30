@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Inngest Event Driven Function Workflow Tutorial"
 description: "Learn how to build event-driven function workflows with Claude Code and Inngest. Step-by-step tutorial with practical code examples for developers."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-inngest-event-driven-function-workflow-tutorial/
 categories: [tutorials]

@@ -3,6 +3,7 @@ layout: default
 title: "Claude Skills for Writing Unit Tests Automatically"
 description: "Discover Claude skills that automatically generate unit tests for your codebase. Practical examples, configuration tips, and workflows for developers."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, unit-tests, testing, automation, tdd]
 author: "Claude Skills Guide"

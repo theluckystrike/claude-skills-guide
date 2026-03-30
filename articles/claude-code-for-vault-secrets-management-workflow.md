@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Vault Secrets Management Workflow"
 description: "Learn how to integrate Claude Code with HashiCorp Vault for secure secrets management. Practical examples and workflows for developers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 categories: [guides]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"

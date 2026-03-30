@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Image Optimization Workflow Guide"
 description: "Learn how to use Claude Code to automate and optimize your image processing workflows for faster websites and better user experience."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-image-optimization-workflow-guide/
 categories: [guides]

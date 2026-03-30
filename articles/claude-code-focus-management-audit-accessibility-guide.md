@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Focus Management Audit Accessibility Guide"
 description: "Master focus management and accessibility auditing with Claude Code skills. Learn practical techniques for keyboard navigation, screen reader support."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, focus-management, accessibility, a11y, audit, wcag, keyboard-navigation]
 author: theluckystrike

@@ -4,6 +4,7 @@ layout: default
 title: "Claude API Prompt Caching Performance Optimization Guide"
 description: "A comprehensive guide to optimizing Claude API performance through prompt caching strategies, reducing costs and improving response times for."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-api-prompt-caching-performance-optimization-guide/
 categories: [guides]

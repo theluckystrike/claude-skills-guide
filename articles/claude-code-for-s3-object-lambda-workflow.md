@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for S3 Object Lambda Workflow"
 description: "Learn how to use Claude Code to build, test, and deploy S3 Object Lambda functions efficiently. Includes practical examples, best practices, and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-s3-object-lambda-workflow/
 categories: [guides]

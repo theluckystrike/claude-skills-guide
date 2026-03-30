@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Health Endpoint Pattern Workflow"
 description: "Learn how to use Claude Code to implement solid health endpoint patterns in your applications. Covers Kubernetes probes, dependency checks, and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-health-endpoint-pattern-workflow/
 categories: [guides]

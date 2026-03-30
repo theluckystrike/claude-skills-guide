@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Vue 3 Suspense Workflow Tutorial"
 description: "Learn how to use Claude Code CLI to build Vue 3 Suspense workflows with async components, error boundaries, and practical code examples."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-vue-3-suspense-workflow-tutorial/
 categories: [tutorials, guides]

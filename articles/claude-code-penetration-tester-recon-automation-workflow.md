@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Penetration Tester Recon Automation Workflow"
 description: "Master penetration testing reconnaissance automation with Claude Code. Learn practical workflows for subdomain enumeration, port scanning, and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-penetration-tester-recon-automation-workflow/
 categories: [tutorials]

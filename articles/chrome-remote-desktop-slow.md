@@ -3,6 +3,7 @@ layout: default
 title: "Chrome Remote Desktop Slow? Here's How to Fix Lag and Performance Issues"
 description: "Experiencing slow Chrome Remote Desktop connections? This guide covers proven solutions to reduce latency, fix lag, and improve remote desktop performance."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-remote-desktop-slow/
 categories: [guides]

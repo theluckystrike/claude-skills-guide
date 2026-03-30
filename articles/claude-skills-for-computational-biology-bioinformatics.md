@@ -3,6 +3,7 @@ layout: default
 title: "Claude Skills for Computational Biology and Bioinformatics"
 description: "Claude skills for computational biology: automate sequence analysis, build phylogenetic pipelines, process NGS data, and accelerate bioinformatics."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, bioinformatics, computational-biology, python, data-science]
 author: "Claude Skills Guide"

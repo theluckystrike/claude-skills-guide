@@ -5,6 +5,7 @@ layout: default
 title: "How QA Engineers Use Claude Code for Test Automation"
 description: "Discover how QA engineers use Claude Code for test automation, from generating test cases with the tdd skill to validating PDF outputs and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /how-qa-engineers-use-claude-code-for-test-automation/
 categories: [guides]

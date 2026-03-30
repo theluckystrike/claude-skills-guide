@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Tfsec Terraform Security Guide"
 description: "Learn how to integrate tfsec into your Claude Code workflow for automated Terraform security scanning. Practical examples for developers and power users."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-tfsec-terraform-security-guide/
 categories: [guides]

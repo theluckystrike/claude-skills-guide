@@ -3,6 +3,7 @@ layout: default
 title: "Structuring Claude Skills for Large Enterprise Codebases"
 description: "A practical guide to organizing, configuring, and managing Claude skills in large enterprise codebases. Learn directory structures, skill composition, a..."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, enterprise, architecture, skill-organization]
 author: "Claude Skills Guide"

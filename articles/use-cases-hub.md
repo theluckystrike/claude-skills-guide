@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Use Cases: Real-World Applications & Examples"
 description: "Explore Claude Code use cases by role, technology, and industry. Find examples for frontend, backend, DevOps, data science, and more."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [use-cases]
 tags: [claude-skills, use-cases, examples, applications, developers]
 is_pillar: true

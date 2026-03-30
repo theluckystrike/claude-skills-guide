@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension Meeting Agenda Template: A Developer's."
 description: "Learn how to create and use meeting agenda templates specifically designed for Chrome extension development teams. Includes practical examples and code."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-meeting-agenda-template/
 reviewed: true

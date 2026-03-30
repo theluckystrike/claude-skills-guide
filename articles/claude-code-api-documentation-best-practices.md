@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code API Documentation Best Practices"
 description: "Master API documentation with Claude Code: automate docs generation, maintain consistency, and create developer-friendly guides using Claude skills."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-api-documentation-best-practices/
 categories: [guides]

@@ -3,6 +3,7 @@ layout: default
 title: "Chrome Proxy Slow? Here’s How to Diagnose and Fix It"
 description: "Troubleshooting slow proxy connections in Chrome for developers and power users. Identify bottlenecks and optimize your proxy setup."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-proxy-slow/
 categories: [guides]

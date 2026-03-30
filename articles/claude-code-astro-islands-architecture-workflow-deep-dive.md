@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Astro Islands Architecture Workflow Deep Dive"
 description: "Master Astro's islands architecture with Claude Code. Learn practical workflows for building performant, interactive web applications with partial."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: Claude Skills Guide
 permalink: /claude-code-astro-islands-architecture-workflow-deep detailed look/
 categories: [guides]

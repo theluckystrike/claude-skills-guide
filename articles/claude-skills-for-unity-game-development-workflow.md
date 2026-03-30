@@ -3,6 +3,7 @@ layout: default
 title: "Claude Skills for Unity Game Development Workflow"
 description: "Automate Unity workflows with Claude skills. Build CI pipelines, generate scripts, document projects, and accelerate game development using AI-powered a..."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [workflows]
 tags: [claude-code, claude-skills, unity, game-development]
 author: "Claude Skills Guide"

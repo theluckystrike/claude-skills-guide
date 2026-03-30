@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Call Graph Analysis Workflow Tutorial"
 description: "Learn how to use Claude Code for efficient call graph analysis. This tutorial covers practical workflows to understand code relationships, trace."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-call-graph-analysis-workflow-tutorial/
 categories: [tutorials]

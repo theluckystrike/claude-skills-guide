@@ -3,6 +3,7 @@ layout: default
 title: "Chrome Extension Headline Analyzer: A Developer's Guide"
 description: "Learn how to build and use a chrome extension headline analyzer to optimize your headlines for better click-through rates and engagement."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-headline-analyzer/
 reviewed: true

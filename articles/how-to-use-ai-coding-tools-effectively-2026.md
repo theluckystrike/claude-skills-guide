@@ -3,6 +3,7 @@ layout: default
 title: "How to Use AI Coding Tools Effectively in 2026"
 description: "A practical guide for developers on maximizing productivity with AI coding tools. Learn prompt engineering, workflow integration, and skill selection."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [ai-coding, productivity, claude-code, tools, workflow]
 author: theluckystrike

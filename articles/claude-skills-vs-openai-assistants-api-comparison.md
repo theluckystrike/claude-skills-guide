@@ -3,6 +3,7 @@ layout: default
 title: "Claude Skills vs OpenAI Assistants API Comparison"
 description: "Claude skills vs OpenAI Assistants API: architecture, flexibility, cost, and production readiness for developers building AI workflows in 2026."
 date: 2026-03-13
+last_modified_at: 2026-03-13
 author: "Claude Skills Guide"
 categories: [comparisons]
 tags: [claude-code, claude-skills, openai, comparison, assistants-api]

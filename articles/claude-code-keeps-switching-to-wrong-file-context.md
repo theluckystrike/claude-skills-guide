@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Keeps Switching to Wrong File Context"
 description: "Fix Claude Code switching to wrong file context. Causes and solutions for context confusion in multi-file skill workflows."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [troubleshooting]
 tags: [claude-code, claude-skills, file-context, debugging, troubleshooting]
 author: "Claude Skills Guide"

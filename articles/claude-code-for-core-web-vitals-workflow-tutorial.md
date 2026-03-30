@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for Core Web Vitals Workflow Tutorial"
 description: "Learn how to use Claude Code to measure, monitor, and optimize Core Web Vitals. Practical workflows with code examples for LCP, FID, and CLS optimization."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-core-web-vitals-workflow-tutorial/
 categories: [tutorials]

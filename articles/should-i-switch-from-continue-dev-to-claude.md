@@ -4,6 +4,7 @@ layout: default
 title: "Should I Switch From Continue Dev to Claude? A Practical."
 description: "Thinking about moving from Continue.dev to Claude Code? This comprehensive guide covers the key differences, unique Claude Code features, and practical."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, continue-dev, ai-coding-tools, developer-tools, comparison, claude-skills]
 author: "theluckystrike"

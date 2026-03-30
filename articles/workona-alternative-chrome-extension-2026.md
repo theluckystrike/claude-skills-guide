@@ -3,6 +3,7 @@ layout: default
 title: "Workona Alternative Chrome Extension 2026: Top Picks for Power Users"
 description: "Discover the best Workona alternatives for Chrome in 2026. Open-source tab management solutions, developer-focused features, and practical implementation."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /workona-alternative-chrome-extension-2026/
 categories: [guides]

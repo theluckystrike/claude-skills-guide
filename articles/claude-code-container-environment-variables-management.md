@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Container Environment Variables Management"
 description: "Master environment variable handling in Claude Code containers. Learn how to set, access, and manage environment variables for secure and efficient."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, containers, environment-variables, devops, docker, claude-skills]
 author: "Claude Skills Guide"

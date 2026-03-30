@@ -3,6 +3,7 @@ layout: default
 title: "Claude MD Example for Laravel PHP Application"
 description: "A practical guide to using Claude Code with Laravel PHP. Real skill examples, code snippets, and workflow patterns for Laravel developers."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, laravel, php, markdown]
 author: theluckystrike

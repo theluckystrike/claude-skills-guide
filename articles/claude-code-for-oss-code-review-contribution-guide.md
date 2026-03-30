@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for OSS Code Review Contribution Guide"
 description: "Learn how to use Claude Code to contribute effective code reviews to open source projects. Practical examples, workflows, and actionable advice for."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-oss-code-review-contribution-guide/
 categories: [guides]

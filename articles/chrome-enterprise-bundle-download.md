@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Enterprise Bundle Download: A Developer's Guide"
 description: "Learn how to download, configure, and manage Chrome Enterprise bundles for streamlined browser deployment in enterprise environments."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-enterprise-bundle-download/
 reviewed: true

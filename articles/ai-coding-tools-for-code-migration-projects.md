@@ -4,6 +4,7 @@ layout: default
 title: "AI Coding Tools for Code Migration Projects"
 description: "Discover the best AI coding tools that streamline code migration projects, from legacy system upgrades to cross-platform transitions."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /ai-coding-tools-for-code-migration-projects/
 categories: [guides]

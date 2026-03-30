@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Twilio SMS Workflow Guide"
 description: "Learn how to build powerful Twilio SMS automation workflows with Claude Code. This guide covers practical examples, code snippets, and actionable."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-twilio-sms-workflow-guide/
 categories: [guides]

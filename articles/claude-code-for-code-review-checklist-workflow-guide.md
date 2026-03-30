@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for Code Review Checklist Workflow Guide"
 description: "Learn how to create an efficient code review checklist workflow using Claude Code. Automate your review process with practical examples and actionable."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-code-review-checklist-workflow-guide/
 categories: [guides]

@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Skills for Backend: Node.js and Python"
 description: "Claude Code skills for backend developers working with Node.js and Python. Practical patterns for /tdd, /pdf, /supermemory in API and data workflows."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, backend, nodejs, python, api, tdd]
 author: "Claude Skills Guide"

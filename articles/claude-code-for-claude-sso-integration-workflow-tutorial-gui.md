@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for Claude SSO Integration Workflow Tutorial Guide"
 description: "A comprehensive guide to integrating Claude Code with Single Sign-On (SSO) workflows. Learn practical implementation steps, code examples, and best..."
 date: 2026-03-20
+last_modified_at: 2026-03-20
 author: Claude Skills Guide
 permalink: /claude-code-for-claude-sso-integration-workflow-tutorial-gui/
 categories: [guides, security]

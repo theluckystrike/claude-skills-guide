@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Vercel Supabase Clerk Full Stack Development"
 description: "Master Claude Code for building full-stack applications with Vercel, Supabase, and Clerk. Learn practical workflows, skill configurations, and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, vercel, supabase, clerk, full-stack, nextjs, authentication, database, claude-skills]
 author: "Claude Skills Guide"

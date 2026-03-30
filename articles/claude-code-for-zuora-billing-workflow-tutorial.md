@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Zuora Billing Workflow Tutorial"
 description: "Learn how to automate Zuora billing operations using Claude Code. This tutorial covers API integration, subscription management, invoice processing."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-zuora-billing-workflow-tutorial/
 categories: [tutorials, integrations]

@@ -3,6 +3,7 @@ layout: default
 title: "Claude Skills for PHP Laravel Development Workflow"
 description: "Learn how to create Claude skills that accelerate your PHP Laravel development workflow. Practical examples for code generation, testing, debugging, and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, php, laravel, workflow]
 author: "Claude Skills Guide"

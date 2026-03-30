@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Kubernetes YAML Generation Workflow Guide"
 description: "Learn how to use Claude Code for efficient Kubernetes YAML configuration generation, validation, and management in your development workflow."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-kubernetes-yaml-generation-workflow-guide/
 reviewed: true

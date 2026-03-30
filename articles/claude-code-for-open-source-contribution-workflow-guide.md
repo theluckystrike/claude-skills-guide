@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Open Source Contribution Workflow Guide"
 description: "Learn how to use Claude Code to streamline your open source contributions, from finding issues to submitting pull requests."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-open-source-contribution-workflow-guide/
 categories: [guides]

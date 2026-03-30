@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Skill Invalid YAML Syntax Error How to Debug"
 description: "Learn how to diagnose and fix YAML syntax errors in Claude skills. Practical debugging techniques with real examples for developers."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [troubleshooting]
 tags: [claude-code, claude-skills, yaml, debugging, errors]
 author: "Claude Skills Guide"

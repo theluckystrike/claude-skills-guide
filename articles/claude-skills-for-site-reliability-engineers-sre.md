@@ -3,6 +3,7 @@ layout: default
 title: "Claude Skills for Site Reliability Engineers SRE"
 description: "Practical guide to Claude Code skills that help SREs automate incident response, analyze logs, build monitoring dashboards, and manage on-call workflows."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [best-of]
 tags: [claude-code, claude-skills, sre, site-reliability-engineering, devops, monitoring]
 author: "Claude Skills Guide"

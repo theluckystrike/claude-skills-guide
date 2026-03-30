@@ -5,6 +5,7 @@ layout: default
 title: "CRX Extractor Alternative Chrome Extension in 2026"
 description: "Discover the best CRX extractor alternatives for Chrome in 2026. Learn command-line tools, browser-based solutions, and programmatic approaches for."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /crx-extractor-alternative-chrome-extension-2026/
 reviewed: true

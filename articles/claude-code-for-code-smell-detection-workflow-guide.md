@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Code Smell Detection Workflow Guide"
 description: "Learn how to use Claude Code for effective code smell detection. This comprehensive guide covers practical workflows, automated analysis techniques."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-code-smell-detection-workflow-guide/
 categories: [guides]

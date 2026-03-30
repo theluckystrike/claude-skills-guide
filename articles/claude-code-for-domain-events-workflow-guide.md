@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Domain Events Workflow Guide"
 description: "Learn how to use Claude Code to build solid domain event workflows, implement event sourcing patterns, and create scalable event-driven architectures."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-domain-events-workflow-guide/
 categories: [guides]

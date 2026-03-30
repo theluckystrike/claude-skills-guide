@@ -3,6 +3,7 @@ layout: default
 title: "Bundle Size Reduction: Webpack to Vite 2026 Guide"
 description: "Use Claude Code to reduce JavaScript bundle sizes when migrating from Webpack to Vite. Practical optimization strategies included."
 date: 2026-03-13
+last_modified_at: 2026-03-13
 categories: [workflows]
 tags: [claude-code, claude-skills, webpack, vite, bundle-size, performance, javascript]
 author: "Claude Skills Guide"

@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for Chinese Python Developers Guide (2026)"
 description: "A practical guide for Chinese Python developers using Claude Code in 2026. Setup, essential skills, and real-world workflows."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [getting-started]
 tags: [claude-code, claude-skills, python, chinese-developers]
 author: "Claude Skills Guide"

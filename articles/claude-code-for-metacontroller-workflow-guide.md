@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Metacontroller Workflow Guide"
 description: "A practical guide for developers to use Claude Code when building and managing Metacontroller workflows in Kubernetes. Learn how to use AI."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-metacontroller-workflow-guide/
 categories: [guides]

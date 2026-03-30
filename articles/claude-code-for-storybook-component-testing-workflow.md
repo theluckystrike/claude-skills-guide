@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Storybook Component Testing Workflow"
 description: "Learn how to use Claude Code to streamline Storybook component testing workflow. A practical guide for frontend developers building testable UI components."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-storybook-component-testing-workflow/
 categories: [guides]

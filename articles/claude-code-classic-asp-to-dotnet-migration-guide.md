@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Classic ASP to .NET Migration Guide"
 description: "A comprehensive guide to migrating Classic ASP applications to .NET using Claude Code, featuring practical examples and expert techniques."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-classic-asp-to-dotnet-migration-guide/
 categories: [troubleshooting]

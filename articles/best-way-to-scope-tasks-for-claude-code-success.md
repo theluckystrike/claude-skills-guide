@@ -4,6 +4,7 @@ layout: default
 title: "Best Way to Scope Tasks for Claude Code Success"
 description: "Frameworks for scoping development tasks with Claude Code. Get better results by structuring prompts effectively."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, task-scoping, ai-assistants, prompt-engineering, productivity, claude-skills]

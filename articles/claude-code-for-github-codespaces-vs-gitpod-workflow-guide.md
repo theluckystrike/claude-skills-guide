@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code GitHub Codespaces vs Gitpod Workflow Guide"
 description: "A comprehensive comparison of using Claude Code with GitHub Codespaces versus Gitpod. Learn which cloud IDE best suits your development workflow and."
 date: 2026-03-21
+last_modified_at: 2026-03-21
 categories: [guides]
 tags: [claude-code, claude-skills, github-codespaces, gitpod, cloud-ide, development-environment, comparison]
 author: "Claude Skills Guide"

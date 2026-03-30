@@ -3,6 +3,7 @@ layout: default
 title: "AI Inbox Organizer Chrome Extension: A Developer's Guide to Intelligent Email Management"
 description: "Learn how AI inbox organizer Chrome extensions work under the hood. Practical implementation guide for developers building email automation tools."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /ai-inbox-organizer-chrome-extension/
 categories: [guides]

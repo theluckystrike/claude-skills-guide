@@ -3,6 +3,7 @@ layout: default
 title: "How to Use Claude Code to Write Database Queries from."
 description: "Learn how to use Claude Code to generate database queries from scratch, with practical examples and expert techniques for developers."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /how-to-use-claude-code-to-write-database-queries-from-scratch/
 reviewed: true

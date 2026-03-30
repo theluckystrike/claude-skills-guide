@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Rook Ceph Storage Workflow Guide"
 description: "A comprehensive guide to using Claude Code for managing Rook Ceph storage workflows, including practical examples, code snippets, and actionable advice."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-rook-ceph-storage-workflow-guide/
 categories: [guides]

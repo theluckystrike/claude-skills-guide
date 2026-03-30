@@ -5,6 +5,7 @@ layout: default
 title: "How AI Agents Plan and Execute Tasks Explained"
 description: "Discover how AI agents like Claude Code plan, decompose, and execute complex tasks. Learn the planning strategies and execution patterns that make."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /how-ai-agents-plan-and-execute-tasks-explained/
 categories: [guides]

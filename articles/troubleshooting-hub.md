@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Skills Troubleshooting: Fix Common Errors"
 description: "Fix Claude Code skill errors fast: permission denied, YAML parsing, infinite loops, context overflow, and every other common issue."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, troubleshooting, debug, errors]
 author: "Claude Skills Guide"

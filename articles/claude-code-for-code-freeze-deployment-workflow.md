@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Code Freeze Deployment Workflow"
 description: "Learn how to use Claude Code effectively during code freeze periods to maintain stability, reduce deployment risks, and keep your team productive."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-code-freeze-deployment-workflow/
 categories: [guides]

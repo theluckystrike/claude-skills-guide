@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for PR Template Workflow Tutorial Guide"
 description: "Learn how to use Claude Code to create, manage, and automate PR template workflows for more efficient code reviews and better developer collaboration."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-pr-template-workflow-tutorial-guide/
 categories: [guides]

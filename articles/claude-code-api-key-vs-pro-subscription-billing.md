@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code API Key vs Pro Subscription: Understanding."
 description: "A practical guide to understanding Claude Code billing: API key pay-per-use vs Pro subscription. Learn which option fits your workflow with real cost."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-api-key-vs-pro-subscription-billing/
 categories: [guides]

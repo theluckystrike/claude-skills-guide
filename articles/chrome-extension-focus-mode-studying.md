@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension Focus Mode for Studying: A Practical Guide"
 description: "Discover Chrome extensions that create distraction-free study environments. Learn how to build custom focus modes with blocking, timers, and workspace."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-focus-mode-studying/
 reviewed: true

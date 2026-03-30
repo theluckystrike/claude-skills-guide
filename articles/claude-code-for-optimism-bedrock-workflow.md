@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Optimism Bedrock Workflow"
 description: "A practical guide for developers using Claude Code to build on Optimism Bedrock. Learn workflow patterns, smart contract development, and deployment."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-optimism-bedrock-workflow/
 categories: [workflows, guides]

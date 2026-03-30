@@ -3,6 +3,7 @@ layout: default
 title: "How to Make Claude Code Stop Adding Markdown to Code."
 description: "Learn proven techniques to prevent Claude Code from wrapping code in markdown backticks. Practical examples for developers who want clean, paste-ready."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: theluckystrike
 permalink: /how-to-make-claude-code-stop-adding-markdown-to-code/
 reviewed: true

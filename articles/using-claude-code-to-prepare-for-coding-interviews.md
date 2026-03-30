@@ -4,6 +4,7 @@ layout: default
 title: "Using Claude Code to Prepare for Coding Interviews"
 description: "A practical guide for developers using Claude Code and its skill system to prepare for technical coding interviews. Includes examples, workflows, and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /using-claude-code-to-prepare-for-coding-interviews/
 categories: [guides]

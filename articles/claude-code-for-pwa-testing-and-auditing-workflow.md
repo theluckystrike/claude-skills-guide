@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for PWA Testing and Auditing Workflow"
 description: "Master PWA testing and auditing with Claude Code. Learn to validate service workers, manifest files, offline capabilities, and automate Lighthouse."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-pwa-testing-and-auditing-workflow/
 categories: [guides]

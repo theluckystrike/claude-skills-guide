@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Fast Web Components Workflow"
 description: "Learn how to use Claude Code to accelerate your web components development workflow with practical examples, automation scripts, and expert debugging."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-fast-web-components-workflow/
 categories: [guides]

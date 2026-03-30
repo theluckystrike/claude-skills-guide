@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Brownie Python Workflow Guide"
 description: "A comprehensive guide to integrating Claude Code CLI with Brownie for efficient smart contract development, testing, and deployment workflows."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-brownie-python-workflow-guide/
 categories: [guides]

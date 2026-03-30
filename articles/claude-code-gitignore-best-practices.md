@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Gitignore Best Practices"
 description: "Master .gitignore configuration for Claude Code projects with patterns for node_modules, venv, Claude data directories, and skill-specific exclusions."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, gitignore, best-practices, version-control, claude-skills]
 author: "Claude Skills Guide"

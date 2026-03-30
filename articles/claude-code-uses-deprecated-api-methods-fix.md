@@ -3,6 +3,7 @@ layout: default
 title: "Fixing Claude Code Deprecated API Methods"
 description: "Resolve deprecated API method warnings and errors in Claude Code. Practical solutions for developers and power users working with the Anthropic API."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-uses-deprecated-api-methods-fix/
 reviewed: true

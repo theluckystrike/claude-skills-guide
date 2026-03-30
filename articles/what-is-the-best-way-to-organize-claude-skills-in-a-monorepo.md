@@ -3,6 +3,7 @@ layout: default
 title: "What Is the Best Way to Organize Claude Skills in a Monorepo"
 description: "A practical guide to organizing Claude Code skills in a monorepo structure. Includes directory layouts, skill dependencies, and real-world examples for ..."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 tags: [claude-code, claude-skills, monorepo, organization, best-practices]
 categories: [guides]

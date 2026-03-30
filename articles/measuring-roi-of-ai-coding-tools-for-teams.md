@@ -5,6 +5,7 @@ layout: default
 title: "Measuring ROI of AI Coding Tools for Teams"
 description: "A practical guide for developers and power users on measuring the return on investment of AI coding tools. Includes metrics, formulas, and real examples."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /measuring-roi-of-ai-coding-tools-for-teams/
 categories: [guides]

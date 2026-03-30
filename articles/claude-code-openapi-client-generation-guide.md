@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code OpenAPI Client Generation Guide"
 description: "Learn how to use Claude Code with OpenAPI specifications to generate type-safe API clients. Practical examples, workflow patterns, and integration tips."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, claude-code, openapi, api-client, code-generation, typescript, python]
 author: "theluckystrike"

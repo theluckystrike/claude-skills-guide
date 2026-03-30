@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Out of Memory Heap Allocation Skill"
 description: "Master heap allocation and memory management skills in Claude Code. Practical techniques to handle out-of-memory errors and optimize memory usage."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: theluckystrike
 categories: [guides]
 tags: [claude-code, memory, heap-allocation, performance, troubleshooting, claude-skills]

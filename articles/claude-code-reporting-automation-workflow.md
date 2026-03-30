@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Reporting Automation Workflow"
 description: "Master the art of building automated reporting workflows with Claude Code. Practical guide for developers and power users creating documentation."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-reporting-automation-workflow/
 categories: [guides]

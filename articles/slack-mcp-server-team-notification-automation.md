@@ -3,6 +3,7 @@ layout: default
 title: "Slack MCP Server Team Notification Automation"
 description: "Build automated team notifications with Slack MCP server. Learn to trigger alerts from CI/CD pipelines, monitor deployments, and coordinate multi-service."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, slack, mcp, notifications, team-communication]
 author: "Claude Skills Guide"

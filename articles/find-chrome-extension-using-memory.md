@@ -4,6 +4,7 @@ layout: default
 title: "How to Find Chrome Extensions That Use Memory for Enhanced Productivity"
 description: "Discover Chrome extensions that use memory systems to provide personalized, context-aware experiences. Learn how to find, evaluate, and use."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 categories: [guides]
 tags: [chrome-extension, memory, productivity, browser-tools, developer-tools]
 author: "theluckystrike"

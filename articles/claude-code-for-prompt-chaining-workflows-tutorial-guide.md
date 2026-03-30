@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Prompt Chaining Workflows Tutorial Guide"
 description: "Master prompt chaining with Claude Code skills. Learn to build powerful multi-step AI workflows that transform how you write code, process documents,..."
 date: 2026-03-20
+last_modified_at: 2026-03-20
 author: "Claude Skills Guide"
 permalink: /claude-code-for-prompt-chaining-workflows-tutorial-guide/
 categories: [tutorials, guides]

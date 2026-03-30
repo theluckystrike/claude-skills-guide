@@ -3,6 +3,7 @@ layout: default
 title: "Best Way to Use Claude Code for Large File Refactoring"
 description: "Learn how to use Claude Code for large file refactoring without context overflow. Practical strategies for incremental refactoring across big codebases."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, refactoring, large-files, code-quality]
 author: theluckystrike

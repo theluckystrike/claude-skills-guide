@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for IBC Cosmos Workflow"
 description: "A practical guide to using Claude Code for developing Inter-Blockchain Communication workflows in the Cosmos ecosystem. Learn how to automate IBC."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-ibc-cosmos-workflow/
 categories: [tutorials, guides]

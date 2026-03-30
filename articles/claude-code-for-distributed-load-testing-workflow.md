@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Distributed Load Testing Workflow"
 description: "Learn how to use Claude Code and specialized skills to build, execute, and analyze distributed load testing workflows for modern cloud-native."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-distributed-load-testing-workflow/
 categories: [guides]

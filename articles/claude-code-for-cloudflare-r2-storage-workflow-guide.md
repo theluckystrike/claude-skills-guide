@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Cloudflare R2 Storage Workflow Guide"
 description: "Learn how to integrate Claude Code with Cloudflare R2 for efficient object storage workflows. Practical examples, code snippets, and best practices for."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-cloudflare-r2-storage-workflow-guide/
 categories: [guides]

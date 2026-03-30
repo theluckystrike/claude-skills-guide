@@ -4,6 +4,7 @@ layout: default
 title: "Building a White Label Developer Copilot with Claude."
 description: "Learn how to build a customizable developer copilot using Claude Code API, with practical examples and implementation guidance."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /white-label-developer-copilot-built-on-claude-code-api/
 categories: [guides]

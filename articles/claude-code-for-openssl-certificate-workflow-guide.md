@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for OpenSSL Certificate Workflow Guide"
 description: "Learn how to use Claude Code to automate OpenSSL certificate workflows including generation, validation, renewal, and management of SSL/TLS certificates."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-openssl-certificate-workflow-guide/
 categories: [guides]

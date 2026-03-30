@@ -5,6 +5,7 @@ layout: default
 title: "Human in the Loop Multi Agent Patterns Guide"
 description: "Master human in the loop multi agent patterns with Claude Code. Learn practical techniques for integrating human oversight into agentic workflows."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /human-in-the-loop-multi-agent-patterns-guide/
 categories: [guides]

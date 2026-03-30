@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code NestJS Custom Decorators Workflow Tutorial"
 description: "Learn how to create custom decorators in NestJS with practical examples. This tutorial covers decorator composition, parameter decorators, and workflow."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-nestjs-custom-decorators-workflow-tutorial/
 categories: [tutorials]

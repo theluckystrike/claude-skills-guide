@@ -3,6 +3,7 @@ layout: default
 title: "Heroku MCP Server Application Deployment Guide"
 description: "A comprehensive guide to deploying MCP servers on Heroku for developers building AI-powered applications."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, heroku, mcp, deployment, devops]
 author: "Claude Skills Guide"

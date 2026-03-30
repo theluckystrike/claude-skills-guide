@@ -4,6 +4,7 @@ layout: default
 title: "Mastering Coding Interviews with Claude Code: A Complete."
 description: "Learn how to use Claude Code's powerful skills and features to speed up your coding interview preparation. From algorithm practice to system."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-for-coding-interview-preparation-workflow/
 categories: [guides]

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Dependabot Configuration Workflow"
 description: "Learn how to automate and streamline your Dependabot configuration using Claude Code. Practical examples for setting up dependency updates, security."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-dependabot-configuration-workflow/
 categories: [guides]

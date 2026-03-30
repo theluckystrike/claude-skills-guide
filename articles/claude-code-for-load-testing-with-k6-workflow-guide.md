@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Load Testing with K6 Workflow Guide"
 description: "Learn how to integrate Claude Code with K6 for efficient load testing workflows. This guide covers script generation, test execution, and result."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-load-testing-with-k6-workflow-guide/
 categories: [guides]

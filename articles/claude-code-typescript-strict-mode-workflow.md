@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code TypeScript Strict Mode Workflow"
 description: "A practical guide to setting up and using TypeScript strict mode with Claude Code. Includes configuration examples, workflow patterns, and integration."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-typescript-strict-mode-workflow/
 categories: [guides]

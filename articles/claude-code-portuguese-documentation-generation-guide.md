@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Portuguese Documentation Generation Guide"
 description: "Generate Portuguese documentation for your codebase using Claude Code skills: workflow setup, language configuration, and practical examples."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [workflows]
 tags: [claude-code, claude-skills, documentation, portuguese, localization, pdf, supermemory]
 author: "Claude Skills Guide"

@@ -3,6 +3,7 @@ layout: default
 title: "AI Note Taker Chrome Extension: A Developer's Guide"
 description: "Explore the best AI-powered note taking Chrome extensions for developers. Learn how to integrate AI note takers into your workflow with practical examples."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /ai-note-taker-chrome-extension/
 categories: [guides]

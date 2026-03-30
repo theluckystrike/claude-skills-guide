@@ -4,6 +4,7 @@ layout: default
 title: "Claude MD for Accessibility Requirements: A Practical."
 description: "Learn how to use Claude Code skills to generate, audit, and maintain accessibility-compliant code. Practical examples for WCAG compliance, ARIA."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, accessibility, a11y, wcag, aria, keyboard-navigation, claude-skills]
 author: "theluckystrike"

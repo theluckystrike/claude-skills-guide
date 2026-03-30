@@ -5,6 +5,7 @@ layout: default
 title: "Chrome Extension Stock Photo Finder Free: A Developer's Guide"
 description: "Discover how to build or use a free Chrome extension stock photo finder for your development workflow. Practical implementation guide with code."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-stock-photo-finder-free/
 reviewed: true

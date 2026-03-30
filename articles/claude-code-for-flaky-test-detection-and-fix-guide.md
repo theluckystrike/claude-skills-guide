@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Flaky Test Detection and Fix Guide"
 description: "Learn how to use Claude Code to identify, diagnose, and fix flaky tests in your codebase. Practical strategies and code examples for reliable test suites."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-flaky-test-detection-and-fix-guide/
 categories: [guides]

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for GraphQL Directives Workflow"
 description: "Learn how to create a Claude Code skill for generating, validating, and managing GraphQL directives with practical examples and actionable workflows."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-graphql-directives-workflow/
 categories: [guides]

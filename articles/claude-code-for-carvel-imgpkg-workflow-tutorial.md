@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Carvel imgpkg Workflow Tutorial"
 description: "Learn how to use Claude Code CLI to automate and streamline your Carvel imgpkg workflows for Kubernetes configuration management."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-carvel-imgpkg-workflow-tutorial/
 categories: [guides]

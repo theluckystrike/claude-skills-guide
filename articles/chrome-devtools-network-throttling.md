@@ -3,6 +3,7 @@ layout: default
 title: "Chrome DevTools Network Throttling: Simulate Slow."
 description: "Learn how to use Chrome DevTools network throttling to test your web applications under slow network conditions. Includes practical examples and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-devtools-network-throttling/
 reviewed: true

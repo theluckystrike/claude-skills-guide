@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for HAProxy Load Balancer Workflow"
 description: "Learn how to use Claude Code to configure, manage, and optimize HAProxy load balancer deployments with practical examples and automation strategies."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-haproxy-load-balancer-workflow/
 categories: [guides]

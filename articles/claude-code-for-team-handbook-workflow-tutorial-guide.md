@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for Team Handbook Workflow Tutorial Guide"
 description: "Learn how to use Claude Code to create, maintain, and automate your team's handbook workflows with practical examples and actionable advice."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-team-handbook-workflow-tutorial-guide/
 categories: [guides, tutorials]

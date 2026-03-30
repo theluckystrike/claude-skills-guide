@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Kubernetes Persistent Volumes Guide"
 description: "Learn how to manage Kubernetes persistent volumes effectively with Claude Code. Practical examples for PVCs, storage classes, and dynamic provisioning."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-kubernetes-persistent-volumes-guide/
 categories: [guides]

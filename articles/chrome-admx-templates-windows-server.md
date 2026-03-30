@@ -3,6 +3,7 @@ layout: default
 title: "Chrome ADMX Templates for Windows Server: Enterprise."
 description: "Learn how to deploy and manage Chrome browser settings across Windows Server environments using ADMX templates. Includes practical examples for IT."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 categories: [guides]
 tags: [chrome, admx, windows-server, group-policy, enterprise, sysadmin]
 author: theluckystrike

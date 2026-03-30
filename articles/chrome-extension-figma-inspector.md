@@ -5,6 +5,7 @@ layout: default
 title: "Chrome Extension Figma Inspector: A Practical Guide for."
 description: "Learn how Chrome extensions for Figma inspection streamline design handoff workflows. Compare tools, understand key features, and implement practical."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-figma-inspector/
 reviewed: true

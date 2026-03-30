@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Production Profiling Workflow Guide"
 description: "Learn how to use Claude Code for production profiling workflows. This guide covers practical techniques to identify performance bottlenecks, analyze."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-production-profiling-workflow-guide/
 categories: [guides]

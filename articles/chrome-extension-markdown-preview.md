@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension Markdown Preview: Complete Developer Guide"
 description: "Discover the best Chrome extensions for live markdown preview. Compare features, code examples, and find the perfect tool for your documentation workflow."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-markdown-preview/
 reviewed: true

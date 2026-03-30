@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Runbook Testing Workflow Tutorial"
 description: "Learn how to use Claude Code to automate and streamline your runbook testing workflow. This comprehensive guide covers practical examples, code."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-runbook-testing-workflow-tutorial/
 categories: [guides]

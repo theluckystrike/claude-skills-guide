@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for LSP Hover Provider Workflow Tutorial"
 description: "Learn how to build LSP hover provider workflows with Claude Code. Create custom skills that use language server protocol for intelligent code."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-lsp-hover-provider-workflow-tutorial/
 categories: [guides]

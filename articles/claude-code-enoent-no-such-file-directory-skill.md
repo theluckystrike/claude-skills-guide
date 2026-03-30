@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code ENOENT No Such File or Directory Error."
 description: "Learn how to handle ENOENT (no such file or directory) errors in Claude Code skills with practical examples and best practices."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [troubleshooting]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"

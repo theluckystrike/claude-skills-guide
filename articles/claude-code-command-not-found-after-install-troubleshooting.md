@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Command Not Found After Install."
 description: "Fix the 'claude: command not found' error after installing Claude Code. Practical solutions for PATH issues, shell configuration, and installation."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-command-not-found-after-install-troubleshooting/
 reviewed: true

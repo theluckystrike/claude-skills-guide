@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Kafka Consumer Producer Tutorial Guide"
 description: "A comprehensive guide to building Kafka consumers and producers with Claude Code, featuring practical examples and actionable advice for developers."
 date: 2026-03-20
+last_modified_at: 2026-03-20
 author: Claude Skills Guide
 permalink: /claude-code-kafka-consumer-producer-tutorial-guide/
 categories: [guides]

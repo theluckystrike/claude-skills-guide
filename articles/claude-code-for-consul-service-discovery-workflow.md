@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Consul Service Discovery Workflow"
 description: "Learn how to use Claude Code to streamline Consul service discovery implementation with practical examples and actionable advice for developers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-consul-service-discovery-workflow/
 categories: [guides]

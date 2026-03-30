@@ -4,6 +4,7 @@ layout: default
 title: "Zed Editor AI Features Review for Developers 2026"
 description: "A comprehensive review of Zed Editor's AI capabilities for developers in 2026, focusing on Claude Code integration, practical examples, and advanced."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 categories: [comparisons]
 tags: [zed-editor, ai-coding, claude-code, developer-tools, 2026, claude-skills]

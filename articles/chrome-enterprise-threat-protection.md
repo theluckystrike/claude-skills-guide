@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Enterprise Threat Protection: A Developer Guide"
 description: "Learn how Chrome Enterprise threat protection works, its built-in security features, and how developers can use these capabilities for safer browsing."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-enterprise-threat-protection/
 categories: [guides]

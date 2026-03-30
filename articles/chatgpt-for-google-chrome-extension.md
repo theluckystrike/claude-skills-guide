@@ -3,6 +3,7 @@ layout: default
 title: "ChatGPT for Google Chrome Extension: A Developer Guide"
 description: "Learn how to integrate ChatGPT into Chrome extensions, build AI-powered features, and create custom implementations for enhanced productivity."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chatgpt-for-google-chrome-extension/
 categories: [guides]

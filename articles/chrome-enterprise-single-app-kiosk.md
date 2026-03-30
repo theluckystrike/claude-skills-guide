@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Enterprise Single App Kiosk: Complete."
 description: "Learn how to configure Chrome Enterprise single app kiosk mode for dedicated devices. Step-by-step setup, XML configuration, and PowerShell deployment."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-enterprise-single-app-kiosk/
 reviewed: true

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code GitHub Actions Environment Protection"
 description: "A practical guide to securing your GitHub Actions workflows with Claude Code. Learn environment variable protection, secrets management, and security."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-github-actions-environment-protection/
 categories: [guides]

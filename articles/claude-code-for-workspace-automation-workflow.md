@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Workspace Automation Workflow"
 description: "Learn how to use Claude Code to automate your development workspace. From file organization to batch processing, discover practical workflows that."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-workspace-automation-workflow/
 categories: [guides]

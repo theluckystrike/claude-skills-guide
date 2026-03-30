@@ -5,6 +5,7 @@ layout: default
 title: "Best AI Pair Programming Tools 2026 Review"
 description: "A practical review of the top AI pair programming tools for developers in 2026, comparing features, integration, and real-world workflow improvements."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /best-ai-pair-programming-tools-2026-review/
 reviewed: true

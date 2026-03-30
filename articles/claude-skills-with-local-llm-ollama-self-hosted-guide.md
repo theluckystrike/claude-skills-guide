@@ -3,6 +3,7 @@ layout: default
 title: "Claude Skills with Local LLM Ollama Self-Hosted Guide"
 description: "A practical guide to running Claude skills with a local Ollama LLM. Step-by-step setup for self-hosted AI development without cloud dependencies."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, ollama, local-llm, self-hosted, ai]
 author: "Claude Skills Guide"

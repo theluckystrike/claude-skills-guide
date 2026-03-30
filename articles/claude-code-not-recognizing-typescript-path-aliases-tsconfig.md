@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Not Recognizing TypeScript Path Aliases in."
 description: "Fix the issue where Claude Code ignores TypeScript path aliases from tsconfig.json. Practical solutions for developers working with path aliases."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [troubleshooting]
 tags: [claude-code, claude-skills, claude-code, typescript, tsconfig, path-aliases, troubleshooting]
 author: "Claude Skills Guide"

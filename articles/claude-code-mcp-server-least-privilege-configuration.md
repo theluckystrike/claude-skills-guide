@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code MCP Server Least Privilege Configuration"
 description: "Learn how to configure least privilege principles for MCP servers in Claude Code. Practical examples and security best practices for developers."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-mcp-server-least-privilege-configuration/
 categories: [guides]

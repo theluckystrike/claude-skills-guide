@@ -4,6 +4,7 @@ layout: default
 title: "Pushbullet Alternative Chrome Extension in 2026"
 description: "Discover the best Pushbullet alternatives with Chrome extensions for developers in 2026. Compare self-hostable options, API access, and cross-device sync tools."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /pushbullet-alternative-chrome-extension-2026/
 reviewed: true

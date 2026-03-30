@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for AI Red Teaming Workflow Guide"
 description: "A comprehensive guide to building AI red teaming workflows with Claude Code, featuring practical examples, testing patterns, and production-ready."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-ai-red-teaming-workflow-guide/
 categories: [guides]

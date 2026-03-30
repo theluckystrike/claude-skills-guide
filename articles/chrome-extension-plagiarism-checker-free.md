@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension Plagiarism Checker Free: A Developer Guide"
 description: "Discover free Chrome extensions for plagiarism checking tailored for developers and power users. Compare features, integration methods, and best practices."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-plagiarism-checker-free/
 reviewed: true

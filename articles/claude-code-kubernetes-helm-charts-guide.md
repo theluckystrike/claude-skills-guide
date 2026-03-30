@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Kubernetes Helm Charts Guide"
 description: "A practical guide to using Claude Code for Kubernetes and Helm chart development. Learn how to automate deployments, manage configurations, and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, kubernetes, helm, devops, automation, claude-skills]
 author: "Claude Skills Guide"

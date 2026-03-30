@@ -4,6 +4,7 @@ layout: default
 title: "AI Grammar Checker Chrome Extension: A Developer's Guide"
 description: "Learn how AI grammar checker Chrome extensions work under the hood, how to build one, and which APIs power real-time writing assistance."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /ai-grammar-checker-chrome-extension/
 reviewed: true

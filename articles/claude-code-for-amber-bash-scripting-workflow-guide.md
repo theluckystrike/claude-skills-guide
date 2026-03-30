@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Amber: Bash Scripting Workflow Guide"
 description: "Master bash scripting workflows with Claude Code. Learn practical techniques for writing, debugging, and optimizing shell scripts with AI assistance."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-amber-bash-scripting-workflow-guide/
 categories: [guides]

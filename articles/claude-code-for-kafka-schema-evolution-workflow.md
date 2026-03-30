@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Kafka Schema Evolution Workflow"
 description: "Learn how to use Claude Code CLI to automate and streamline Kafka schema evolution, manage Avro/Protobuf schemas, and prevent compatibility issues in."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-kafka-schema-evolution-workflow/
 categories: [guides]

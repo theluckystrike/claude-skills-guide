@@ -4,6 +4,7 @@ layout: default
 title: "How to Choose the Right MCP Server"
 description: "A practical guide to selecting the best Model Context Protocol (MCP) server for your Claude Code workflow. Includes evaluation criteria, common use."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /how-to-choose-the-right-mcp-server/
 reviewed: true

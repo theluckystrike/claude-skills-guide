@@ -4,6 +4,7 @@ layout: default
 title: "How Claude Code Changed My Development Workflow"
 description: "A developer shares practical insights on how Claude Code transformed their daily coding routines, from automated testing with tdd skill to document."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /how-claude-code-changed-my-development-workflow/
 categories: [troubleshooting]

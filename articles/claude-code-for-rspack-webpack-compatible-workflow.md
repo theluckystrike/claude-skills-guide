@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Rspack Webpack Compatible Workflow"
 description: "Learn how to use Claude Code to create a Rspack and Webpack compatible build workflow. Practical examples, code snippets, and actionable advice for."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-rspack-webpack-compatible-workflow/
 categories: [guides]

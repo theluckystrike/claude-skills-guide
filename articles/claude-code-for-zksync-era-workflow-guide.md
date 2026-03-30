@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for zkSync Era Workflow Guide"
 description: "A comprehensive guide to using Claude Code for zkSync Era development. Learn smart contract deployment, Layer 2 optimization, testing strategies, and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-zksync-era-workflow-guide/
 categories: [guides]

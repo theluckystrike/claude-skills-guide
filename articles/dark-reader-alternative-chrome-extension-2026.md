@@ -4,6 +4,7 @@ layout: default
 title: "Dark Reader Alternative Chrome Extension in 2026"
 description: "Explore the best Dark Reader alternatives for Chrome in 2026. Find developer-focused dark mode extensions with custom CSS, API access, and automation support."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /dark-reader-alternative-chrome-extension-2026/
 reviewed: true

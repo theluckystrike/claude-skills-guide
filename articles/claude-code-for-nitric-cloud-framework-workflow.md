@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Nitric Cloud Framework Workflow"
 description: "Learn how to integrate Claude Code into your Nitric cloud framework workflow for faster serverless development, intelligent API generation, and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-nitric-cloud-framework-workflow/
 categories: [guides]

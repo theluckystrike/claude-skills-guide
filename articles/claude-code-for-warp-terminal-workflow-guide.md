@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Warp Terminal Workflow Guide"
 description: "Learn how to integrate Claude Code with Warp terminal for enhanced developer productivity. This guide covers setup, configuration, and practical workflows."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-warp-terminal-workflow-guide/
 categories: [guides]

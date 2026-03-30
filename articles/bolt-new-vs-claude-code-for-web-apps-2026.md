@@ -4,6 +4,7 @@ layout: default
 title: "Bolt.new vs Claude Code for Web Apps in 2026"
 description: "A practical comparison of Bolt.new and Claude Code for building web applications in 2026. Learn when to use each tool and how to combine them for."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: theluckystrike
 permalink: /bolt-new-vs-claude-code-for-web-apps-2026/
 categories: [comparisons]

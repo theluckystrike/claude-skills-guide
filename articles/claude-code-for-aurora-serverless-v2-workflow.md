@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Aurora Serverless V2 Workflow"
 description: "A practical guide to using Claude Code skills for Aurora Serverless V2 workflows. Learn how to set up, design, and manage serverless databases with AI."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-aurora-serverless-v2-workflow/
 categories: [workflows, guides]

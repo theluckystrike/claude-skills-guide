@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Webhook Handler Tutorial Guide"
 description: "Learn how to build powerful webhook handlers using Claude Code skills. This comprehensive guide covers setup, implementation, and best practices for developers."
 date: 2026-03-20
+last_modified_at: 2026-03-20
 author: Claude Skills Guide
 permalink: /claude-code-webhook-handler-tutorial-guide/
 categories: [guides, tutorials]

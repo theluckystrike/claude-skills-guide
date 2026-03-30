@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Signage Kiosk Digital Display: A Developer Guide"
 description: "Learn how to build and deploy Chrome-based digital signage solutions for kiosks. Practical code examples, configuration patterns, and implementation."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-signage-kiosk-digital-display/
 categories: [guides]

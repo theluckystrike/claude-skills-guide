@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Netcat (nc) Networking Workflow"
 description: "Master Netcat networking with Claude Code. Learn practical workflows for port scanning, file transfer, reverse shells, and network debugging using nc."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-netcat-nc-networking-workflow/
 categories: [guides]

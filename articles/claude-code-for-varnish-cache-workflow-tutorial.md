@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Varnish Cache Workflow Tutorial"
 description: "Learn how to use Claude Code CLI to automate Varnish Cache configuration, testing, and deployment workflows with practical examples and actionable advice."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-varnish-cache-workflow-tutorial/
 categories: [tutorials]

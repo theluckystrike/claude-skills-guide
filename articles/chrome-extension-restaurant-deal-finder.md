@@ -6,6 +6,7 @@ layout: default
 title: "Chrome Extension Restaurant Deal Finder: A Developer Guide"
 description: "Learn how to build a Chrome extension for finding restaurant deals. Technical implementation guide with code examples for developers and power users."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-restaurant-deal-finder/
 categories: [guides]

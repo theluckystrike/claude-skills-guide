@@ -4,6 +4,7 @@ layout: default
 title: "Best Way to Onboard New Developers Using Claude Code"
 description: "A practical guide for engineering leaders on using Claude Code skills to accelerate developer onboarding. Includes skill recommendations, setup."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [workflows]
 tags: [claude-code, onboarding, developer-productivity, skills, engineering-teams, claude-skills]
 author: "Claude Skills Guide"

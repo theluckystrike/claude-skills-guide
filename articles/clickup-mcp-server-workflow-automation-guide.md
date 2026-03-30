@@ -3,6 +3,7 @@ layout: default
 title: "ClickUp MCP Server: Workflow Automation Guide"
 description: "Connect Claude to ClickUp using the Model Context Protocol. Automate task creation, status updates, and project workflows with MCP servers."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [integrations]
 tags: [claude-code, claude-skills, mcp, clickup, workflow-automation]
 author: "Claude Skills Guide"

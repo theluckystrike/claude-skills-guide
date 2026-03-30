@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Fork and Pull Request Workflow Guide"
 description: "Learn how to use Claude Code CLI to efficiently work with GitHub forks and pull requests. This guide covers essential commands, practical examples, and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-fork-and-pull-request-workflow-guide/
 categories: [guides]

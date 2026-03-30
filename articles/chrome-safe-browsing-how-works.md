@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Safe Browsing: How It Works Under the Hood"
 description: "A technical deep detailed look into Chrome Safe Browsing mechanisms. Learn how the feature detects threats, its API endpoints, and how developers can integrate."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "theluckystrike"
 permalink: /chrome-safe-browsing-how-works/
 categories: [guides]

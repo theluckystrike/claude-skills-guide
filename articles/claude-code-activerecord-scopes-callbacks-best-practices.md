@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code ActiveRecord Scopes and Callbacks Best Practices"
 description: "Master ActiveRecord scopes and callbacks in Rails with Claude Code. Learn to write efficient scopes, use callbacks properly, and avoid common."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, rails, activerecord, scopes, callbacks, best-practices]
 author: "Claude Skills Guide"

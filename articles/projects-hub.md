@@ -3,6 +3,7 @@ layout: default
 title: "Build Real Projects with Claude Skills: Complete Guide 2026"
 description: "Step-by-step guides for building SaaS apps, CLI tools, APIs, Chrome extensions, and landing pages with Claude Code skills."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, projects, saas, build, development]
 author: "Claude Skills Guide"

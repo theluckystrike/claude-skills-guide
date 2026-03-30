@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code SQLAlchemy Alembic Migrations Deep Dive Guide"
 description: "Master database migrations with Claude Code and SQLAlchemy. Learn practical workflows for generating, reviewing, and managing Alembic migrations."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-sqlalchemy-alembic-migrations-deep detailed look-guide/
 categories: [tutorials]

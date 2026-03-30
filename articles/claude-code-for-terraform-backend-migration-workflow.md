@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Terraform Backend Migration Workflow"
 description: "Learn how to use Claude Code to automate and streamline Terraform backend migration workflows with practical examples and actionable advice."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-terraform-backend-migration-workflow/
 categories: [guides]

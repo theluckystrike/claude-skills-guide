@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Skip Navigation Implementation Guide"
 description: "Learn how to use Claude Code and Claude Skills to implement accessible skip navigation links that improve keyboard navigation and WCAG compliance."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-skip-navigation-implementation-guide/
 categories: [guides]

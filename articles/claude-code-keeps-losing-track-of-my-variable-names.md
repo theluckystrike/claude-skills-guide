@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Keeps Losing Track of My Variable Names"
 description: "Practical solutions when Claude Code forgets your variable names mid-session. Learn context management techniques and skills to maintain variable."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, troubleshooting, workflow, productivity]
 author: theluckystrike

@@ -4,6 +4,7 @@ layout: default
 title: "Claude API Tool Use and Function Calling Deep Dive Guide"
 description: "Master Claude's API tool use and function calling capabilities. Learn how to integrate external tools, build reliable function-calling workflows, and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: Claude Skills Guide
 permalink: /claude-api-tool-use-function-calling-deep detailed look-guide/
 categories: [guides]

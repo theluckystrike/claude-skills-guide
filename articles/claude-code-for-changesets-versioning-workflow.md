@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Changesets Versioning Workflow"
 description: "Learn how to set up and use Claude Code with Changesets for automated semantic versioning, changelog generation, and streamlined package publishing."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-changesets-versioning-workflow/
 categories: [guides]

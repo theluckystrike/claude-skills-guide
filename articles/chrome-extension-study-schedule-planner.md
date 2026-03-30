@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension Study Schedule Planner: Build Your Own"
 description: "Learn how to create a chrome extension study schedule planner for managing study sessions, tracking progress, and automating reminders."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-study-schedule-planner/
 reviewed: true

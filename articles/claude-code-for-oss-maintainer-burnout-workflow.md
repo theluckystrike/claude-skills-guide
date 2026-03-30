@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for OSS Maintainer Burnout Workflow"
 description: "Practical strategies and automation workflows using Claude Code to prevent and recover from open source maintainer burnout."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-oss-maintainer-burnout-workflow/
 categories: [guides]

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Portuguese Developer Coding Workflow Setup"
 description: "Aprenda a configurar Claude Code para otimizar seu fluxo de trabalho como desenvolvedor português. Guia prático com exemplos de configuração e."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, portuguese-developer, workflow-setup, coding, brazil, portugal, claude-skills]
 author: "Claude Skills Guide"

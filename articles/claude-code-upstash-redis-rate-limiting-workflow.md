@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Upstash Redis Rate Limiting Workflow"
 description: "Learn how to build a rate limiting workflow using Claude Code skills with Upstash Redis. Practical examples for API protection, request throttling, and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [workflows, integrations]
 tags: [claude-code, upstash, redis, rate-limiting, api-protection, mcp, claude-skills]
 author: "Claude Skills Guide"

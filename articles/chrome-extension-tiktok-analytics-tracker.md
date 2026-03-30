@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension TikTok Analytics Tracker: A Developer's Guide"
 description: "Learn how to build and use Chrome extensions for TikTok analytics tracking. Practical code examples, API integration patterns, and custom dashboard."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-tiktok-analytics-tracker/
 reviewed: true

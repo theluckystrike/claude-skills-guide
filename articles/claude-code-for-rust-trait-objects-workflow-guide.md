@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Rust Trait Objects Workflow Guide"
 description: "A comprehensive guide to working with Rust trait objects using Claude Code. Learn practical workflows, dynamic dispatch patterns, and actionable."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-rust-trait-objects-workflow-guide/
 categories: [guides]

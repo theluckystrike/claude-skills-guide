@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code vs Cursor 2026: Detailed Comparison for."
 description: "A comprehensive 2026 comparison of Claude Code and Cursor covering code editing, AI models, terminal integration, pricing, and which tool is right for."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-vs-cursor-2026-detailed-comparison/
 categories: [comparisons]

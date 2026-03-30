@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Next.js Authentication NextAuth Guide"
 description: "Build secure Next.js authentication with NextAuth using Claude Code CLI. Practical examples for integrating providers, protecting routes, and managing."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, nextjs, authentication, next-auth, web-development, claude-skills]
 author: "Claude Skills Guide"

@@ -3,6 +3,7 @@ layout: default
 title: "Best Way to Use Claude Code for Database Migrations"
 description: "A practical guide for developers on using Claude Code to streamline database migrations, generate safe SQL, and automate schema changes with confidence."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, database, migrations, sql, workflow]
 author: theluckystrike

@@ -5,6 +5,7 @@ layout: default
 title: "Bolt.new Review: AI Web App Builder 2026"
 description: "A comprehensive review of Bolt.new as an AI-powered web app builder in 2026, with practical examples of using Claude Code skills to enhance your."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [comparisons, guides]
 tags: [bolt-new, ai-web-app-builder, claude-code, 2026, web-development, claude-skills]
 author: "Claude Skills Guide"

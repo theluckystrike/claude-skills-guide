@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code ROI Measurement Framework for Engineering."
 description: "A practical framework for engineering managers to measure and track the return on investment of Claude Code in their teams. Includes metrics, formulas."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-roi-measurement-framework-for-engineering-manage/
 categories: [guides]

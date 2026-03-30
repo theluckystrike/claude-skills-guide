@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code API Regression Testing Workflow Guide"
 description: "Master API regression testing with Claude Code. Learn workflows, tools integration, automated testing, and best practices for catching breaking changes."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, api, testing, regression, automation, http, rest, graphql, claude-skills]
 author: "Claude Skills Guide"

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for wasm-bindgen Workflow Tutorial"
 description: "Learn how to use Claude Code to streamline your wasm-bindgen workflow for building high-performance WebAssembly modules that integrate smoothly with."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-wasm-bindgen-workflow-tutorial/
 categories: [tutorials]

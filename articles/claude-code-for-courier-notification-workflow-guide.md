@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Courier Notification Workflow Guide"
 description: "Build automated courier notification workflows with Claude Code. Learn to create skills that handle delivery tracking, status updates, and customer alerts."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 categories: [guides]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"

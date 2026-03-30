@@ -3,6 +3,7 @@ layout: default
 title: "Chrome High CPU Fix: A Developer and Power User Guide"
 description: "Learn how to diagnose and fix Chrome browser high CPU usage with practical solutions for developers and power users."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-high-cpu-fix/
 categories: [guides]

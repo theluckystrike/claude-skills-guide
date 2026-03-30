@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for QuickNode RPC Workflow Guide"
 description: "Learn how to integrate Claude Code with QuickNode for efficient blockchain RPC workflows. Practical examples, code snippets, and actionable advice for."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 categories: [tutorials]
 tags: [claude-code, quicknode, rpc, blockchain, workflow, claude-skills]
 author: "Claude Skills Guide"

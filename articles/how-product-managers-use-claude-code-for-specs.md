@@ -3,6 +3,7 @@ layout: default
 title: "How Product Managers Use Claude Code for Specs"
 description: "Practical guide for product managers using Claude Code and specialized skills to write faster, clearer product specifications."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [use-cases]
 tags: [claude-code, claude-skills, product-management, specifications, workflow]
 author: "Claude Skills Guide"

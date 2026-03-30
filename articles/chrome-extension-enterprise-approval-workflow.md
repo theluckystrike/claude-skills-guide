@@ -3,6 +3,7 @@ layout: default
 title: "Chrome Extension Enterprise Approval Workflow: A Practical Guide"
 description: "Learn how to build enterprise-grade approval workflows for Chrome extensions. Covers implementation patterns, code examples, and deployment strategies for."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-enterprise-approval-workflow/
 categories: [guides]

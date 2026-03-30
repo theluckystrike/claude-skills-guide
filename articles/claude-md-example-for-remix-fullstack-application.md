@@ -3,6 +3,7 @@ layout: default
 title: "Claude MD Example for Remix Fullstack Application"
 description: "A practical guide to using Claude Code with Remix. Includes skill templates, fullstack workflows, loaders, actions, and real code examples for modern."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, remix, fullstack, react, web-development, markdown]
 author: theluckystrike

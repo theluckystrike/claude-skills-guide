@@ -3,6 +3,7 @@ layout: default
 title: "Best Browser for Low RAM in 2026 - A Developer's Guide"
 description: "Discover the best browsers for low RAM usage in 2026. Compare Firefox, Brave, and Chrome alternatives to optimize your system memory."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /best-browser-low-ram-2026/
 categories: [guides]

@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Release Automation Workflow Tutorial"
 description: "Learn how to build automated release workflows with Claude Code. Master CI/CD integration, version management, and deployment automation for faster."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-release-automation-workflow-tutorial/
 categories: [guides]

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code OpenTofu Guide: Terraform Alternative Workflow"
 description: "Learn how to use Claude Code with OpenTofu as a Terraform alternative. Practical examples for infrastructure-as-code workflows using open source tools."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-opentofu-terraform-alternative-guide/
 categories: [guides]

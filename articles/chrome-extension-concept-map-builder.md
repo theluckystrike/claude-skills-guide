@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension Concept Map Builder: A Developer's Guide"
 description: "Learn how to build a Chrome extension for creating concept maps. Practical examples, code snippets, and architecture patterns for developers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-concept-map-builder/
 reviewed: true

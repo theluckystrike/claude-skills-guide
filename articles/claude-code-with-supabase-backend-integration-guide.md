@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code with Supabase Backend Integration Guide"
 description: "A practical guide to integrating Claude Code with Supabase for backend development. covering database operations, authentication, Edge Functions, and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-with-supabase-backend-integration-guide/
 reviewed: true

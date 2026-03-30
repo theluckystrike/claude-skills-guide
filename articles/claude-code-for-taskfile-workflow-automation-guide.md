@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Taskfile Workflow Automation Guide"
 description: "Learn how to use Claude Code with Taskfile to automate development workflows, streamline repetitive tasks, and build intelligent task runners that."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-taskfile-workflow-automation-guide/
 categories: [guides]

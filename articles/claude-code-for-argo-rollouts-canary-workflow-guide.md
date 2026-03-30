@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Argo Rollouts Canary Workflow Guide"
 description: "Learn how to integrate Claude Code with Argo Rollouts for intelligent canary deployments. Practical guide with code examples for DevOps engineers."
 date: 2026-03-20
+last_modified_at: 2026-03-20
 author: "Claude Skills Guide"
 permalink: /claude-code-for-argo-rollouts-canary-workflow-guide/
 categories: [guides]

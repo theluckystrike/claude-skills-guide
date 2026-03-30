@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for Computer Science Bootcamp Students"
 description: "A comprehensive guide for computer science bootcamp students learning to use Claude Code effectively. Master AI-assisted coding, skills, and workflows."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, bootcamp, students, learning, programming]
 author: theluckystrike

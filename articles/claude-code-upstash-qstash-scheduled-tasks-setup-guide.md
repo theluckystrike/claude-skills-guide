@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Upstash QStash Scheduled Tasks Setup Guide"
 description: "Learn how to set up scheduled tasks using Upstash QStash with Claude Code. A practical guide to building reliable cron jobs and event-driven workflows."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, upstash, qstash, scheduled-tasks, cron, serverless, claude-skills]
 author: "Claude Skills Guide"

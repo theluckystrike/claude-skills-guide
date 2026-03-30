@@ -3,6 +3,7 @@ layout: default
 title: "Chrome Performance Flags: A Complete Guide for Power Users"
 description: "Learn how to use Chrome performance flags to optimize browser speed, reduce memory usage, and enhance your development workflow."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-performance-flags/
 categories: [guides]

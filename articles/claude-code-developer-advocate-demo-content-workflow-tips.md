@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Developer Advocate Demo Content Workflow Tips"
 description: "Master the art of creating compelling demos and content using Claude Code. Learn practical workflow strategies for developer advocates."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-developer-advocate-demo-content-workflow-tips/
 categories: [guides]

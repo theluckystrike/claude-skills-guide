@@ -4,6 +4,7 @@ layout: default
 title: "Claude.md Example for Data Science Python Project"
 description: "Practical Claude.md examples for data science Python projects. Learn how to create effective skill files for data analysis, ML pipelines, and pandas."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-md-example-for-data-science-python-project/
 categories: [guides]

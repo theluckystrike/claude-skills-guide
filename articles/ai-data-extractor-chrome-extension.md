@@ -3,6 +3,7 @@ layout: default
 title: "AI Data Extractor Chrome Extension: A Developer's Guide"
 description: "Learn how to build and use AI-powered data extraction tools for Chrome. Practical examples, code snippets, and implementation patterns for developers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /ai-data-extractor-chrome-extension/
 categories: [guides]

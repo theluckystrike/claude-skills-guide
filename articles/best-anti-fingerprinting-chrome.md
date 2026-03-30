@@ -3,6 +3,7 @@ layout: default
 title: "Best Anti-Fingerprinting Chrome: A Developer Guide to."
 description: "Learn effective anti-fingerprinting techniques for Chrome. Practical examples and code snippets for developers and power users who want to enhance."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /best-anti-fingerprinting-chrome/
 reviewed: true

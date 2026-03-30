@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Model Card Documentation Workflow"
 description: "Learn how to use Claude Code and specialized skills to create comprehensive model cards for ML models. Practical workflow guide with examples."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-model-card-documentation-workflow/
 categories: [guides]

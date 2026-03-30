@@ -4,6 +4,7 @@ layout: default
 title: "AI Podcast Summary Chrome Extension: A Developer's Guide."
 description: "Learn how AI podcast summary Chrome extensions work, their technical architecture, and how to build one from scratch. Perfect for developers and power."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /ai-podcast-summary-chrome-extension/
 reviewed: true

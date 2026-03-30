@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for LazyGit Workflow Tutorial Guide"
 description: "Master the LazyGit workflow with Claude Code integration. Learn practical patterns for managing git operations efficiently using lazygit with AI."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-lazygit-workflow-tutorial-guide/
 categories: [tutorials]

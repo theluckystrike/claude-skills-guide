@@ -4,6 +4,7 @@ layout: default
 title: "AI Photo Enhancer Chrome Extension: A Developer Guide"
 description: "Learn how AI photo enhancer Chrome extensions work, their technical implementation, and how developers can build or integrate them into workflows."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /ai-photo-enhancer-chrome-extension/
 reviewed: true

@@ -4,6 +4,7 @@ layout: default
 title: "Best Way to Use Claude Code for Rapid Prototyping"
 description: "A practical guide for developers on using Claude Code to accelerate rapid prototyping. Learn workflow patterns, skill selection, and real-world examples."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, rapid-prototyping, development, workflow, claude-skills]

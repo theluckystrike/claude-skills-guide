@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Mobile CI/CD GitHub Actions Workflow Guide"
 description: "Build automated mobile CI/CD pipelines with GitHub Actions and Claude Code. Learn to automate iOS and Android builds, testing, code signing, and app."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Development Workflow Templates"
 description: "Practical workflow templates for structuring Claude Code projects, from skill creation to complex multi-agent systems. Includes code examples and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-development-workflow-templates/
 reviewed: true

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code CMMC Compliance Checklist Automation"
 description: "Learn how to automate CMMC compliance checklist tasks using Claude Code skills. Practical examples for defense contractors managing cybersecurity."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"

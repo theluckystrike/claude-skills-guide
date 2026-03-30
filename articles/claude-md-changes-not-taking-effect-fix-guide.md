@@ -6,6 +6,7 @@ layout: default
 title: "Claude MD Changes Not Taking Effect Fix Guide"
 description: "Troubleshoot and fix Claude Code MD file changes not taking effect. Practical solutions for developers dealing with markdown rendering issues."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [troubleshooting, guides]
 tags: [claude-code, md, markdown, troubleshooting, claude-skills, fix-guide]
 author: "Claude Skills Guide"

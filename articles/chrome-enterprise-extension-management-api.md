@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Enterprise Extension Management API: A Practical."
 description: "Learn how to programmatically manage Chrome extensions in enterprise environments using the Chrome Enterprise Extension Management API with code examples."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-enterprise-extension-management-api/
 reviewed: true

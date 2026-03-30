@@ -4,6 +4,7 @@ layout: default
 title: "How to Improve Chrome Lighthouse Score: A Developer Guide"
 description: "Learn practical techniques to improve your Chrome Lighthouse score with code examples. Boost performance, accessibility, best practices, and SEO."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-lighthouse-score-improve/
 categories: [guides]

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Terraform AWS Provider Guide"
 description: "A practical guide to using Claude Code with Terraform and the AWS provider. Learn skill patterns, workflow automation, and real-world examples for."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-terraform-aws-provider-guide/
 reviewed: true

@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Kubernetes Ingress Configuration"
 description: "Learn how to configure Kubernetes Ingress with Claude Code. Practical examples for managing routing, TLS, and load balancing."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-kubernetes-ingress-configuration/
 categories: [guides]

@@ -4,6 +4,7 @@ layout: default
 title: "Vibe Coding vs Traditional Development: A Practical."
 description: "A comprehensive comparison of vibe coding versus traditional development approaches. Learn when AI-assisted coding shines and when manual development."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [comparisons]
 tags: [vibe-coding, ai-assisted-coding, traditional-development, claude-code, development-methodology, claude-skills]
 author: "Claude Skills Guide"

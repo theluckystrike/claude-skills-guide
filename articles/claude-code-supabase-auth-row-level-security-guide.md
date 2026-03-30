@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Supabase Auth Row Level Security Guide"
 description: "A comprehensive guide to implementing Supabase authentication with Row Level Security (RLS) policies using Claude Code. Learn how to secure your data."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-supabase-auth-row-level-security-guide/
 categories: [guides]

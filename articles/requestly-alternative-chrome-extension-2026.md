@@ -5,6 +5,7 @@ layout: default
 title: "Requestly Alternative Chrome Extension in 2026"
 description: "Discover the best Requestly alternatives for Chrome in 2026. Developer-friendly tools for API mocking, request interception, and network debugging."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /requestly-alternative-chrome-extension-2026/
 reviewed: true

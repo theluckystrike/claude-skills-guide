@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for PR Diff Analysis Workflow Tutorial"
 description: "Learn how to build a Claude Code skill for analyzing pull request diffs, automating code reviews, and streamlining your development workflow with."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-pr-diff-analysis-workflow-tutorial/
 categories: [tutorials, workflows]

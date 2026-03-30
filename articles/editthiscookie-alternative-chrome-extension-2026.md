@@ -4,6 +4,7 @@ layout: default
 title: "EditThisCookie Alternative: Best Chrome Extensions for."
 description: "Discover powerful Chrome extensions for managing browser cookies. Compare features, security, and developer-friendly tools as alternatives to."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /editthiscookie-alternative-chrome-extension-2026/
 reviewed: true

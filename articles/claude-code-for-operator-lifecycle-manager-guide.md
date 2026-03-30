@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Operator Lifecycle Manager Guide"
 description: "A comprehensive guide to using Claude Code with Kubernetes Operator Lifecycle Manager (OLM). Learn to create, manage, and deploy operators with."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-operator-lifecycle-manager-guide/
 categories: [guides]

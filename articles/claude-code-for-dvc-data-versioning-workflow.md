@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for DVC Data Versioning Workflow"
 description: "Learn how to integrate Claude Code with DVC for efficient data versioning, ML model tracking, and reproducible data science workflows."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-dvc-data-versioning-workflow/
 categories: [guides]

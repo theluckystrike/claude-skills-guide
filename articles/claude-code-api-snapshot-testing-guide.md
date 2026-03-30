@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code API Snapshot Testing Guide"
 description: "Learn how to implement API snapshot testing with Claude Code. Practical examples for automating regression detection in your API workflows."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, claude-code, api-testing, snapshot-testing, automation, regression-testing]
 author: "Claude Skills Guide"

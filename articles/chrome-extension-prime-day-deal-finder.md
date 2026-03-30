@@ -3,6 +3,7 @@ layout: default
 title: "Building a Chrome Extension for Prime Day Deal Finding"
 description: "Learn how to build a Chrome extension that helps developers and power users find the best Prime Day deals across Amazon."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-prime-day-deal-finder/
 categories: [guides]

@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension Knowledge Wiki Team: A Complete Guide."
 description: "Learn how to build and manage a comprehensive knowledge wiki for chrome extension development teams. Covers documentation strategies, tooling, and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-knowledge-wiki-team/
 reviewed: true

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Indie Developer Side Project Workflow Guide"
 description: "Learn how indie developers can use Claude Code to streamline their side project workflow, from ideation to deployment."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-indie-developer-side-project-workflow-guide/
 categories: [guides]

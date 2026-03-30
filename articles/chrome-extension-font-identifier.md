@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension Font Identifier: How to Detect Fonts on Any Webpage"
 description: "Learn how to identify fonts on any webpage using Chrome extensions. Compare the best font identifier tools for developers and designers, with practical."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-font-identifier/
 ---

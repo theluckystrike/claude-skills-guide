@@ -4,6 +4,7 @@ layout: default
 title: "Best Way to Get Claude Code to Explain Existing Code"
 description: "Practical techniques for getting Claude Code to explain unfamiliar codebases effectively. Learn prompt strategies, skills to use, and how to extract."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: theluckystrike
 categories: [guides]
 tags: [claude-code, code-explanation, understanding-codebase, ai-assistants, documentation]

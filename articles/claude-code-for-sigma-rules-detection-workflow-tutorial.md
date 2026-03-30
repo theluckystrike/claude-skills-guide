@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for Sigma Rules Detection Workflow Tutorial"
 description: "Learn how to use Claude Code to create, test, and deploy Sigma rules for threat detection. A practical guide for security teams and SOC analysts."
 date: 2026-03-20
+last_modified_at: 2026-03-20
 categories: [tutorials, security, guides]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"

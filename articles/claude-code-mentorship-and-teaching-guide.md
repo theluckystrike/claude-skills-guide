@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Mentorship and Teaching Guide"
 description: "Master Claude Code mentorship and teaching strategies. Learn how to guide developers through AI-assisted coding, skill development, and building."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-mentorship-and-teaching-guide/
 reviewed: true

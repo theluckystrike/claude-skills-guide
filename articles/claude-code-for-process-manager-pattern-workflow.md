@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Process Manager Pattern Workflow"
 description: "Learn how to implement the Process Manager pattern using Claude Code. Master workflow orchestration, state management, and compensation strategies for."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-process-manager-pattern-workflow/
 categories: [guides]

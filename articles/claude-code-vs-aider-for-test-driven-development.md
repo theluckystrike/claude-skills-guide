@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code vs Aider for Test Driven Development"
 description: "A practical comparison of Claude Code and Aider for test-driven development workflows. Learn which tool excels at TDD, with real examples and use cases."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-vs-aider-for-test-driven-development/
 categories: [guides]

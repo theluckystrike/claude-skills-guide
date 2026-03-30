@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Android DataStore Workflow Guide"
 description: "Learn how to use Claude Code to streamline your Android DataStore implementation with practical examples, code patterns, and actionable workflows."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-android-datastore-workflow-guide/
 categories: [guides]

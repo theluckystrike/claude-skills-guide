@@ -5,6 +5,7 @@ layout: default
 title: "Claude MD Character Limit and Optimization Guide"
 description: "Master Claude's character limits and learn practical optimization techniques for longer conversations, complex prompts, and efficient AI interactions."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-md-character-limit-and-optimization-guide/
 categories: [guides]

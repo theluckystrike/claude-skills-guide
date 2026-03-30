@@ -4,6 +4,7 @@ layout: default
 title: "Chrome DevTools Workspaces and Local Overrides: A."
 description: "Learn how to use Chrome DevTools Workspaces and Local Overrides to edit files directly in the browser and persist changes to your local filesystem."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-devtools-workspaces-local-overrides/
 reviewed: true

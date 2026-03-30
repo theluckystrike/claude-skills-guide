@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Perl Script to Python Migration Workflow"
 description: "A practical guide to migrating Perl scripts to Python using Claude Code skills. Step-by-step workflow with code examples and best practices."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-perl-script-to-python-migration-workflow/
 categories: [troubleshooting]

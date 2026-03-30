@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for VHS Terminal Recorder Workflow"
 description: "Learn how to integrate Claude Code with VHS for creating professional terminal recordings, GIFs, and demos for your projects."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-vhs-terminal-recorder-workflow/
 categories: [guides]

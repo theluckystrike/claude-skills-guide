@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Survey Data Analysis Automation"
 description: "Learn how to automate survey data analysis using Claude Code. This guide covers practical techniques for processing, analyzing, and visualizing survey."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: Claude Skills Guide
 permalink: /claude-code-for-survey-data-analysis-automation/
 categories: [guides]

@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Terraform Compliance Workflow"
 description: "Learn how to use Claude Code to automate Terraform compliance workflows. This guide covers policy-as-code, real-time compliance checking, CI/CD."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-terraform-compliance-workflow/
 categories: [guides]

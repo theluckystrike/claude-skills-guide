@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Vanilla Extract Type Safe CSS"
 description: "Learn how to use Vanilla Extract with TypeScript for type-safe CSS in your Claude Code skills and projects. Practical examples for developers."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-vanilla-extract-type-safe-css/
 reviewed: true

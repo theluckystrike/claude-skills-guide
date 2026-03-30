@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code LaTeX Document Writing Workflow Tutorial"
 description: "Learn how to create professional LaTeX documents efficiently using Claude Code. This comprehensive tutorial covers setup, writing, compilation, and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: Claude Skills Guide
 permalink: /claude-code-latex-document-writing-workflow-tutorial/
 categories: [tutorials, guides]

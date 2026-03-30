@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Batch Processing with Skills Guide"
 description: "Learn how to use Claude Code skills for [batch processing with Claude Code skills](/best-claude-code-skills-to-install-first-2026/)."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, claude-skills, batch-processing, automation, workflow]

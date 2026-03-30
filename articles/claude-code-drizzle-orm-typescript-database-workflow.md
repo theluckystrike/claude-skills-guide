@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for Drizzle ORM TypeScript Database Workflow"
 description: "Master Drizzle ORM with TypeScript for type-safe database operations. Learn practical workflows for queries, migrations, and building solid data layers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 categories: [guides]
 tags: [claude-code, drizzle-orm, typescript, database, orm, postgresql, mysql, sqlite]
 author: "Claude Skills Guide"

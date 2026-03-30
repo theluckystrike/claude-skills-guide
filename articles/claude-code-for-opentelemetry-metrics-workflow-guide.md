@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for OpenTelemetry Metrics Workflow Guide"
 description: "Learn how to use Claude Code to implement OpenTelemetry metrics in your applications. A practical workflow guide for developers integrating metrics."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 categories: [guides]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"

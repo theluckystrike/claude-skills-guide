@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Prometheus Federation Workflow Guide"
 description: "Learn how to use Claude Code to automate and streamline Prometheus federation workflows. Practical examples, configuration patterns, and actionable."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-prometheus-federation-workflow-guide/
 categories: [guides]

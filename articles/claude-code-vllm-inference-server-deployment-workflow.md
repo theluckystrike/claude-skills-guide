@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code vLLM Inference Server Deployment Workflow"
 description: "Learn how to use Claude Code skills to automate vLLM inference server deployment, from local development to production Kubernetes clusters."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-vllm-inference-server-deployment-workflow/
 categories: [guides]

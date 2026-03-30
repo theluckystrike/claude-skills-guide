@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Debug Configuration Workflow"
 description: "Master the debug configuration workflow in Claude Code. Learn to set breakpoints, inspect variables, and troubleshoot skill behavior effectively."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-debug-configuration-workflow/
 reviewed: true

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Tailwind CSS V4 Migration Guide"
 description: "A practical guide for developers to migrate to Tailwind CSS v4 using Claude Code. Automate the upgrade process with Claude skills and MCP tools."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, tailwind-css, v4, migration, frontend, css, claude-skills]

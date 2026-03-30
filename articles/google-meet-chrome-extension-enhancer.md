@@ -4,6 +4,7 @@ layout: default
 title: "Google Meet Chrome Extension Enhancer: A Developer Guide"
 description: "Learn how to build and enhance Chrome extensions for Google Meet. Practical code examples, APIs, and techniques for developers and power users."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /google-meet-chrome-extension-enhancer/
 categories: [guides]

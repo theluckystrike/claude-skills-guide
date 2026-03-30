@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension Employee Recognition Tool: Build Your Own"
 description: "Learn how to build a custom Chrome extension for employee recognition. Practical code examples, architecture patterns, and implementation strategies."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-employee-recognition-tool/
 categories: [guides]

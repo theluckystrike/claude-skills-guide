@@ -3,6 +3,7 @@ layout: default
 title: "Claude MD for Backend Projects Best Practices"
 description: "Master Claude.md for backend development. Practical patterns for API design, database migrations, and server-side workflows using Claude Code skills."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, backend, best-practices, markdown]
 author: "Claude Skills Guide"

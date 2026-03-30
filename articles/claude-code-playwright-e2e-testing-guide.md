@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Playwright E2E Testing Guide"
 description: "A practical guide to using Claude Code with Playwright for end-to-end testing. Learn how to set up, write, and maintain E2E tests with AI assistance."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-playwright-e2e-testing-guide/
 categories: [guides]

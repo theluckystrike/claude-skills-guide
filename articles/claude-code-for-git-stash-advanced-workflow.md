@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Git Stash Advanced Workflow"
 description: "Master advanced git stash workflows with Claude Code. Learn to manage complex stashing scenarios, automate stash operations, and integrate stash."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-git-stash-advanced-workflow/
 categories: [guides]

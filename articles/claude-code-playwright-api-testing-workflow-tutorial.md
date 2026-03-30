@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Playwright API Testing Workflow Tutorial"
 description: "Learn how to build a powerful API testing workflow using Claude Code and Playwright. This comprehensive guide covers setup, test creation, and best."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-playwright-api-testing-workflow-tutorial/
 categories: [tutorials]

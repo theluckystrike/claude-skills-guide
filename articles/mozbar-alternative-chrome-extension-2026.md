@@ -4,6 +4,7 @@ layout: default
 title: "MozBar Alternative Chrome Extension 2026: Developer SEO Tools"
 description: "Discover the best MozBar alternatives for Chrome in 2026. Compare free and paid SEO extensions with practical examples for developers and power users."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /mozbar-alternative-chrome-extension-2026/
 categories: [comparisons]

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for DevOps Engineers: CI/CD Pipeline Daily."
 description: "Learn how Claude Code transforms DevOps daily workflows with practical examples for CI/CD pipeline management, incident response, and infrastructure."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-devops-engineer-ci-cd-pipeline-daily-workflow/
 reviewed: true

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Envoy Authorization Workflow Tutorial"
 description: "A practical guide to building authorization workflows with Envoy and Claude Code. Learn to implement JWT validation, RBAC, and external authz with AI."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-envoy-authz-workflow-tutorial/
 categories: [guides]

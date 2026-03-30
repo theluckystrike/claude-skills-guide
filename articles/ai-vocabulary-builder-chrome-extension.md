@@ -3,6 +3,7 @@ layout: default
 title: "AI Vocabulary Builder Chrome Extension: A Developer Guide"
 description: "Learn how to build and integrate AI vocabulary builder chrome extensions for enhanced language learning and terminology management."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /ai-vocabulary-builder-chrome-extension/
 categories: [guides]

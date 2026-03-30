@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Mythril Workflow Tutorial"
 description: "Learn how to integrate Claude Code with Mythril for automated smart contract security analysis. Step-by-step guide with practical examples."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-mythril-workflow-tutorial/
 categories: [tutorials]

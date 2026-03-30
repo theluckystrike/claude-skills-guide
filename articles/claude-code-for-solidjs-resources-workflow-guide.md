@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for SolidJS Resources Workflow Guide"
 description: "Learn how to use Claude Code CLI to streamline your SolidJS development workflow, manage reactive resources, and build efficient SolidJS applications."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-solidjs-resources-workflow-guide/
 categories: [guides]

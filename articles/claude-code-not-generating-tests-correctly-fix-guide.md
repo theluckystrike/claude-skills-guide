@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Not Generating Tests Correctly Fix Guide"
 description: "Learn how to fix common issues when Claude Code fails to generate tests correctly. Practical solutions for test generation problems with code examples."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-not-generating-tests-correctly-fix-guide/
 categories: [guides]

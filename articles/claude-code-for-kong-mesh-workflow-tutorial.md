@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Kong Mesh Workflow Tutorial"
 description: "A practical guide to using Claude Code for Kong Mesh configuration, deployment, and management. Learn workflows for service mesh, traffic routing, and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-kong-mesh-workflow-tutorial/
 categories: [guides]

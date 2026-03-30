@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Node.js Worker Threads Workflow"
 description: "Learn how to integrate Claude Code with Node.js worker threads for efficient parallel processing. Practical examples and patterns for building."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-nodejs-worker-threads-workflow/
 categories: [guides]

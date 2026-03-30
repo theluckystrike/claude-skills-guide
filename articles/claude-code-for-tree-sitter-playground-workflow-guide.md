@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Tree-sitter Playground Workflow Guide"
 description: "Learn how to use Claude Code to streamline your Tree-sitter Playground workflows, from grammar exploration to parser generation."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-tree-sitter-playground-workflow-guide/
 categories: [guides]

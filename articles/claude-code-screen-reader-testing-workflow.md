@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Screen Reader Testing Workflow"
 description: "A practical guide to testing web accessibility with screen readers using Claude Code. Automate your a11y workflow with proven techniques."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-screen-reader-testing-workflow/
 categories: [guides]

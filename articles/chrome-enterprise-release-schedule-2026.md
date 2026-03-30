@@ -3,6 +3,7 @@ layout: default
 title: "Chrome Enterprise Release Schedule 2026: A Practical Guide"
 description: "A comprehensive guide to Chrome Enterprise release schedule 2026. Learn about Chrome browser release cycles, Extended Stable channel, and how to plan."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-enterprise-release-schedule-2026/
 categories: [guides]

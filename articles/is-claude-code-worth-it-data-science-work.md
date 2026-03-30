@@ -5,6 +5,7 @@ layout: default
 title: "Is Claude Code Worth It for Data Science Work? A."
 description: "An honest assessment of whether Claude Code is worth using for data science projects, with real-world examples and practical insights."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, data-science, ai-coding, python, machine-learning, claude-skills]
 author: "Claude Skills Guide"

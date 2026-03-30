@@ -4,6 +4,7 @@ layout: default
 title: "Speedtest Alternative Chrome Extension 2026: Developer."
 description: "Explore Chrome extensions that serve as speedtest alternatives in 2026. Compare features, APIs, and implementation approaches for developers and power."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /speedtest-alternative-chrome-extension-2026/
 reviewed: true

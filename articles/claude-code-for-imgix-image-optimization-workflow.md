@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Imgix Image Optimization Workflow"
 description: "Learn how to build Claude Code skills that automate Imgix image optimization workflows. Practical examples for URL generation, responsive images, and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 categories: [guides, tutorials]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"

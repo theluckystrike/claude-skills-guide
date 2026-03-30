@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension Canvas LMS Helper: A Developer Guide"
 description: "Learn how to build and customize Chrome extensions for Canvas LMS to automate workflows, enhance course navigation, and integrate external tools."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-canvas-lms-helper/
 reviewed: true

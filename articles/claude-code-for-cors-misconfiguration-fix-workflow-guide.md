@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for CORS Misconfiguration Fix Workflow Guide"
 description: "A comprehensive guide to identifying, analyzing, and fixing CORS misconfigurations using Claude Code's powerful debugging and code generation capabilities."
 date: 2026-03-20
+last_modified_at: 2026-03-20
 author: Claude Skills Guide
 permalink: /claude-code-for-cors-misconfiguration-fix-workflow-guide/
 categories: [guides, security]

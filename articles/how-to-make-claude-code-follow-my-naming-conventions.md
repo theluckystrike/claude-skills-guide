@@ -3,6 +3,7 @@ layout: default
 title: "How to Make Claude Code Follow My Naming Conventions"
 description: "Learn practical techniques to configure Claude Code to respect your naming conventions. Includes .claude.json settings, skill patterns, and examples."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, naming-conventions, code-style]
 author: "theluckystrike"

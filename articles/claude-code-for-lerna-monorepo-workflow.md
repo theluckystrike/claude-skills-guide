@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Lerna Monorepo Workflow"
 description: "Master Lerna monorepo management with Claude Code. Learn how to automate package publishing, manage dependencies, coordinate cross-package changes, and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, claude-skills]

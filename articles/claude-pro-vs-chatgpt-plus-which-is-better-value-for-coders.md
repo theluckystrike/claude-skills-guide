@@ -4,6 +4,7 @@ layout: default
 title: "Claude Pro vs ChatGPT Plus: Which Is Better Value for Coders"
 description: "A practical comparison of Claude Pro and ChatGPT Plus for developers, analyzing coding capabilities, context handling, and real-world value for programmers."
 date: 2026-03-16
+last_modified_at: 2026-03-16
 author: theluckystrike
 permalink: /claude-pro-vs-chatgpt-plus-which-is-better-value-for-coders/
 categories: [comparisons]

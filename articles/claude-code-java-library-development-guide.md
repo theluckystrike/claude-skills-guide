@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Java Library Development Guide"
 description: "Build production-ready Java libraries with Claude Code. Set up projects, implement core features, write tests with TDD patterns, and publish to Maven."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, claude-skills, claude-code, java, library-development, maven, gradle, tdd]

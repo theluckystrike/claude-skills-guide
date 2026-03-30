@@ -3,6 +3,7 @@ layout: default
 title: "How Do I Test a Claude Skill Before Deploying to Team"
 description: "A practical guide to testing Claude skills before team deployment. Learn validation techniques, local testing workflows, and quality assurance patterns."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 categories: [tutorials]
 tags: [claude-code, claude-skills, testing, deployment, team-workflow]

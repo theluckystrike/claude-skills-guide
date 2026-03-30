@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Code Generation Pipeline Guide"
 description: "Learn how to build an automated code generation pipeline using Claude Code, leveraging specialized skills for consistent, high-quality output across."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-for-code-generation-pipeline-guide/
 categories: [guides]

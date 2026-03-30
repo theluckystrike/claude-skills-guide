@@ -4,6 +4,7 @@ layout: default
 title: "How to Stop Claude Code from Using Snake Case in TypeScript"
 description: "Practical guide to prevent Claude Code from generating snake_case variable names in TypeScript projects. Learn configuration tricks and best practices."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, typescript, naming-conventions, configuration, best-practices, claude-skills]
 author: "Claude Skills Guide"

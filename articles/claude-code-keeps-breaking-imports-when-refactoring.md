@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Keeps Breaking Imports When Refactoring"
 description: "Discover why Claude Code breaks imports during refactoring and learn practical solutions using Claude Code skills, configuration, and workflows to."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-keeps-breaking-imports-when-refactoring/
 categories: [troubleshooting, guides]

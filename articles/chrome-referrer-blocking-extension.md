@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Referrer Blocking Extension: A Developer's Guide"
 description: "Learn how to control and block the HTTP Referrer header in Chrome using extensions. Practical implementation guide for developers and power users."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-referrer-blocking-extension/
 reviewed: true

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code with Astro Content Collections Workflow"
 description: "Master content management in Astro using Claude Code skills. Learn to define schemas, query collections, and build type-safe content workflows with."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"

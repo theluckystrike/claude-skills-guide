@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for PyTorch Model Training Workflow"
 description: "Learn how to use Claude Code CLI to streamline your PyTorch model training workflow, from project setup to hyperparameter optimization."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-pytorch-model-training-workflow/
 categories: [guides]

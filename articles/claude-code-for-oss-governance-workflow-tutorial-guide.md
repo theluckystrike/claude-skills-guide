@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for OSS Governance Workflow Tutorial Guide"
 description: "Learn how to use Claude Code for open source governance workflows. Practical tutorial with code examples, automation patterns, and actionable advice."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-oss-governance-workflow-tutorial-guide/
 categories: [guides]

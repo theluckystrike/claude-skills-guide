@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for ZenML MLOps Workflow Guide"
 description: "Learn how to use Claude Code to streamline ZenML MLOps workflows. This guide covers pipeline creation, step definitions, and best practices for."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-zenml-mlops-workflow-guide/
 categories: [guides]

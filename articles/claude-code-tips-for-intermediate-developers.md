@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Tips for Intermediate Developers"
 description: "Level up your Claude Code workflow with practical tips for power users. Learn skill selection, prompt engineering, and automation patterns."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-tips-for-intermediate-developers/
 reviewed: true

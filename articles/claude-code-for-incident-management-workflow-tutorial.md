@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for Incident Management Workflow Tutorial"
 description: "Learn how to build Claude skills for incident management workflows. Create automated response systems, on-call escalation handlers, and post-incident."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-incident-management-workflow-tutorial/
 categories: [guides, tutorials]

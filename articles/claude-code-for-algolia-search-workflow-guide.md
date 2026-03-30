@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Algolia Search Workflow Guide"
 description: "Learn how to integrate Claude Code with Algolia for intelligent search experiences. This guide covers setup, indexing, and querying workflows with."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-algolia-search-workflow-guide/
 categories: [guides]

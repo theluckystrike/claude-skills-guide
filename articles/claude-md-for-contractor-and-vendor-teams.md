@@ -4,6 +4,7 @@ layout: default
 title: "Claude MD for Contractor and Vendor Teams"
 description: "A practical guide for developer teams working with external contractors and vendors using Claude Code skills. Learn how to standardize workflows."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-md-for-contractor-and-vendor-teams/
 reviewed: true

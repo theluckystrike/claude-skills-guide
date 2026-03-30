@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Java Backend Developer Spring Boot Workflow Tips"
 description: "Master Claude Code for Java Spring Boot development with practical tips on project setup, dependency management, testing, and debugging workflows."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-java-backend-developer-spring-boot-workflow-tips/
 categories: [guides]

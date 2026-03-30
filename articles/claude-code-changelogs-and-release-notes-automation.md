@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Changelogs and Release Notes Automation"
 description: "Learn how to automate changelogs and release notes generation using Claude Code skills, git history analysis, and practical workflows for development."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: Claude Skills Guide
 permalink: /claude-code-changelogs-and-release-notes-automation/
 categories: [guides]

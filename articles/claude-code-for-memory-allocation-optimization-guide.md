@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for Memory Allocation Optimization Guide"
 description: "Master memory allocation optimization techniques in your code with Claude Code. Learn practical strategies for reducing memory usage, preventing leaks."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-memory-allocation-optimization-guide/
 categories: [guides]

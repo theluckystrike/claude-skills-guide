@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Bandwhich Bandwidth Monitor Workflow"
 description: "Learn how to integrate Claude Code with bandwhich for network bandwidth monitoring. Includes practical examples, CLI workflows, and skill integration."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 categories: [guides]
 tags: [claude-code, bandwhich, networking, monitoring, devops, bandwidth, terminal, claude-skills]
 author: "Claude Skills Guide"

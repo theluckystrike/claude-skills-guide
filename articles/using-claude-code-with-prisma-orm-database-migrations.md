@@ -3,6 +3,7 @@ layout: default
 title: "Using Claude Code with Prisma ORM Database Migrations"
 description: "Learn how to use Claude Code AI assistant to streamline your Prisma ORM database migration workflow with practical examples and code snippets."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /using-claude-code-with-prisma-orm-database-migrations/
 reviewed: true

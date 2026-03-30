@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Service Worker Caching Workflow"
 description: "Learn how to use Claude Code to build solid service worker caching strategies for PWAs. Practical examples and actionable advice for developers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-service-worker-caching-workflow/
 categories: [guides]

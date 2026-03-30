@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Upgradeable Contract Workflow Guide"
 description: "Master upgradeable smart contract development with Claude Code. Learn proxy patterns, deployment workflows, and best practices for managing contract."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-upgradeable-contract-workflow-guide/
 categories: [guides]

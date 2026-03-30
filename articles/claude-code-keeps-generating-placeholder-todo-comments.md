@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Keeps Generating Placeholder TODO Comments"
 description: "Why Claude Code keeps adding placeholder TODO comments and how to fix it. Practical solutions for controlling AI-generated code comments."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [troubleshooting]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"

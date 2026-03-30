@@ -5,6 +5,7 @@ layout: default
 title: "Chrome Compromised Password Alert: Complete Guide for."
 description: "Learn how Chrome's compromised password alert works, how to enable it, and how developers can integrate breach detection into their applications."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-compromised-password-alert/
 reviewed: true

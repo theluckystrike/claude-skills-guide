@@ -3,6 +3,7 @@ title: "Claude Code Test Reporting Workflow Guide"
 description: "Learn how to set up and optimize test reporting workflows with Claude Code. Comprehensive guide covering test automation, reporting tools, and best practices."
 keywords: "claude code test reporting workflow guide"
 date: 2024-01-01
+last_modified_at: 2024-01-01
 layout: article
 permalink: /claude-code-test-reporting-workflow-guide/
 categories: [guides]

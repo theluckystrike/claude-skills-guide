@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Honest Review 2026: A Developer's Perspective"
 description: "An honest review of Claude Code as an AI coding tool in 2026. Practical examples, real-world usage, and honest assessment of capabilities and limitations."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /same-dev-ai-coding-tool-honest-review-2026/
 categories: [comparisons]

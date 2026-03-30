@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Data Anonymization Workflow Guide"
 description: "Learn how to use Claude Code to build automated data anonymization workflows that protect sensitive information while maintaining data utility."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-data-anonymization-workflow-guide/
 categories: [guides]

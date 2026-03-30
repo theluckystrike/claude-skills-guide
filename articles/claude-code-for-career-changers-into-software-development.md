@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Career Changers into Software Development"
 description: "A practical guide for professionals transitioning into software development using Claude Code. Learn how to use AI-assisted coding to accelerate."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"

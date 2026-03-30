@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Test Data Generation Workflow"
 description: "Learn how to generate test data efficiently using Claude Code and specialized skills. Practical workflow for developers and power users."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-test-data-generation-workflow/
 categories: [guides]

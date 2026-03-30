@@ -3,6 +3,7 @@ layout: default
 title: "Chrome Extension CORS Unblock Development: A Practical Guide for Developers"
 description: "Learn how to build Chrome extensions that handle CORS restrictions during development. Complete implementation guide with code examples for developers and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-cors-unblock-development/
 reviewed: true

@@ -4,6 +4,7 @@ layout: default
 title: "Pieces for Developers AI Review Workflow Tool"
 description: "Learn how to integrate Pieces for Developers with Claude Code to build powerful AI-assisted code review workflows. Practical examples and real-world."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /pieces-for-developers-ai-review-workflow-tool/
 categories: [guides]

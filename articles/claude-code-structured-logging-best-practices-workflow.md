@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Structured Logging Best Practices Workflow"
 description: "Learn how to implement structured logging in your Claude Code workflow for better debugging, observability, and developer productivity."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-structured-logging-best-practices-workflow/
 categories: [guides]

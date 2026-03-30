@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code SRE On-Call Incident Response Workflow Guide"
 description: "Learn how to use Claude Code skills and features to streamline on-call incident response, reduce MTTR, and automate SRE workflows effectively."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-sre-on-call-incident-response-workflow-guide/
 reviewed: true

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for SAM Local Testing Workflow"
 description: "Learn how to use Claude Code to streamline your AWS SAM local testing workflow. Practical examples, automation tips, and code snippets for developers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-sam-local-testing-workflow/
 categories: [tutorials]

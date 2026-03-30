@@ -4,6 +4,7 @@ layout: default
 title: "Using Claude Code for Data Quality Validation Workflow"
 description: "Learn how to use Claude Code CLI to build solid data quality validation workflows that ensure your datasets meet the highest standards."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-data-quality-validation-workflow/
 categories: [guides, workflows]

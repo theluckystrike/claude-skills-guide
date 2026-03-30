@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Skills for Terraform IaC: Complete Guide"
 description: "Use Claude Code skills for Terraform and IaC workflows. Practical patterns with /tdd, /supermemory, and custom skills for Terraform examples."
 date: 2026-03-13
+last_modified_at: 2026-03-13
 categories: [tutorials]
 tags: [claude-code, claude-skills, terraform, infrastructure-as-code]
 author: "Claude Skills Guide"

@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension Google Calendar Sidebar: Build Your Own."
 description: "A developer guide to building Chrome extensions that integrate with Google Calendar sidebar. Learn the APIs, techniques, and code patterns for creating."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-google-calendar-sidebar/
 reviewed: true

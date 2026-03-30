@@ -3,6 +3,7 @@ layout: default
 title: "Manifest V3 Privacy: What Developers and Power Users."
 description: "A practical guide to Chrome extension privacy in Manifest V3. Learn about permission changes, host permissions, declarative Net Request, and how to."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /manifest-v3-privacy/
 categories: [guides]

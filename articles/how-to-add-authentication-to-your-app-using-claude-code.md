@@ -3,6 +3,7 @@ layout: default
 title: "How to Add Authentication to Your App Using Claude Code"
 description: "Learn how to implement secure authentication in your applications using Claude Code and specialized skills. A practical guide for developers building."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /how-to-add-authentication-to-your-app-using-claude-code/
 reviewed: true

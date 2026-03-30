@@ -4,6 +4,7 @@ layout: default
 title: "How to Disable Chrome Guest Mode via Group Policy"
 description: "Learn how to disable Chrome guest mode using group policy settings for enterprise and organization management."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-guest-mode-disable-group-policy/
 reviewed: true

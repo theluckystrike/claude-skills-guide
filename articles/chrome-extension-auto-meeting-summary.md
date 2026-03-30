@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension Auto Meeting Summary: A Developer Guide"
 description: "Build a Chrome extension that automatically captures and summarizes meeting transcripts. Complete implementation guide with code examples for developers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 categories: [guides]
 tags: [chrome-extension, meeting-summary, productivity, javascript, manifest-v3, claude-skills]
 author: "Claude Skills Guide"

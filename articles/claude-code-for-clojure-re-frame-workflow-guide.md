@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Clojure re-frame Workflow Guide"
 description: "Master the art of using Claude Code for Clojure re-frame development. Learn practical workflows, debugging strategies, and code generation patterns for."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 categories: [workflows, guides]
 tags: [clojure, re-frame, claude-code, claude-skills]
 author: "Claude Skills Guide"

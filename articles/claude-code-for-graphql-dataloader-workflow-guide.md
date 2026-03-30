@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for GraphQL DataLoader Workflow Guide"
 description: "Master GraphQL DataLoader patterns with Claude Code. Learn workflow strategies, batch loading techniques, and practical implementation for efficient."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-graphql-dataloader-workflow-guide/
 categories: [guides]

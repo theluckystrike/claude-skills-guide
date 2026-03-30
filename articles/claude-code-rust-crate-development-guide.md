@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Rust Crate Development Guide"
 description: "A practical guide to developing Rust crates with Claude Code. Learn workflows, tooling, and skill integration for efficient Rust development."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-rust-crate-development-guide/
 reviewed: true

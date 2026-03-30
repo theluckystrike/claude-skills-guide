@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Common Beginner Mistakes to Avoid"
 description: "Avoid these common pitfalls when getting started with Claude Code. Learn practical solutions for skill installation, prompt writing, and workflow."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-common-beginner-mistakes-to-avoid/
 categories: [guides]

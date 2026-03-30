@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Ambassador Sidecar Pattern Workflow"
 description: "Learn how to implement the Ambassador sidecar pattern using Claude Code. This guide covers practical workflows for deploying Envoy-powered sidecars."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-ambassador-sidecar-pattern-workflow/
 categories: [guides]

@@ -3,6 +3,7 @@ layout: default
 title: "Building Stateful Agents with Claude Skills: Complete Guide"
 description: "Design Claude Code agents that maintain state across turns and sessions using files, supermemory, and structured state management patterns."
 date: 2026-03-13
+last_modified_at: 2026-03-13
 categories: [advanced]
 tags: [claude-code, claude-skills, agents, state-management, supermemory]
 author: "Claude Skills Guide"

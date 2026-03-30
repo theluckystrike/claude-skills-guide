@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Docker Compose Production Guide"
 description: "Learn how to set up Claude Code with Docker Compose for production environments. Includes practical examples, best practices, and deployment strategies."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-docker-compose-production-guide/
 categories: [guides]

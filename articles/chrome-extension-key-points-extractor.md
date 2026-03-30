@@ -5,6 +5,7 @@ layout: default
 title: "Chrome Extension Key Points Extractor: Building a."
 description: "Learn how to build a Chrome extension that extracts key points from any web page. Practical code examples, API integration patterns, and implementation."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-key-points-extractor/
 reviewed: true

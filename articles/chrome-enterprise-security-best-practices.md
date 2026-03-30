@@ -3,6 +3,7 @@ layout: default
 title: "Chrome Enterprise Security Best Practices for 2026"
 description: "Master Chrome enterprise security best practices for developers and power users. Learn about policies, extensions, network configuration, and advanced."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-enterprise-security-best-practices/
 categories: [guides]

@@ -3,6 +3,7 @@ layout: default
 title: "Claude Skills Slow Performance: Speed Up Guide"
 description: "Speed up slow Claude Code skills: token reduction, skill file trimming, tool call batching, and session architecture for faster workflows."
 date: 2026-03-13
+last_modified_at: 2026-03-13
 categories: [troubleshooting]
 tags: [claude-code, claude-skills, performance, optimization]
 author: "Claude Skills Guide"

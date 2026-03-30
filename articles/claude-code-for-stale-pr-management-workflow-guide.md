@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Stale PR Management Workflow Guide"
 description: "Learn how to use Claude Code CLI to automate and streamline stale pull request management with practical examples and actionable advice."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-stale-pr-management-workflow-guide/
 categories: [guides]

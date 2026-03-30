@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for PostgreSQL Full-Text Search Workflow"
 description: "Learn how to use Claude Code to build efficient PostgreSQL full-text search workflows, from setup to optimization, with practical code examples."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-postgres-full-text-search-workflow/
 categories: [guides]

@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Cypress Component Testing Guide"
 description: "Learn how to use Claude Code for Cypress component testing. Build reliable component tests with AI assistance, test-driven workflows, and practical."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, cypress, component-testing, testing, tdd, frontend-development]
 author: "theluckystrike"

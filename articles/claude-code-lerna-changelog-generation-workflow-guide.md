@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Lerna Changelog Generation Workflow Guide"
 description: "Learn how to automate changelog generation in Lerna monorepos using Claude Code. Set up intelligent commit parsing, conventional commits integration."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, claude-skills]

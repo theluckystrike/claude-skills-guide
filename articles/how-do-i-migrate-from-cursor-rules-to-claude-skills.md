@@ -3,6 +3,7 @@ layout: default
 title: "How Do I Migrate from Cursor Rules to Claude Skills"
 description: "A practical guide for developers moving custom AI rules from Cursor to Claude Code skills. Includes step-by-step migration, code examples, and skill rec..."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, claude-skills, migration]

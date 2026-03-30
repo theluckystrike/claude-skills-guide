@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for Runbook Version Control Workflow"
 description: "Master runbook version control with Claude Code. Learn practical workflows for tracking, branching, and managing operational procedures with Git."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-runbook-version-control-workflow/
 categories: [guides]

@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code Bitbucket Pipelines Workflow Guide"
 description: "A practical guide to integrating Claude Code into Bitbucket Pipelines for automated code generation, testing, and deployment workflows."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-bitbucket-pipelines-workflow-guide/
 categories: [guides]

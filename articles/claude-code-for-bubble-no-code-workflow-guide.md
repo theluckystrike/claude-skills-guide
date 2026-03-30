@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Bubble No-Code Workflow Guide"
 description: "Learn how to use Claude Code to enhance your Bubble no-code application development workflow. Practical examples for automating API integrations."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 categories: [tutorials]
 tags: [claude-code, bubble, no-code, workflow-automation, claude-skills]
 author: "Claude Skills Guide"

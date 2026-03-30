@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code LaunchDarkly Targeting Rules Setup Workflow"
 description: "Learn how to set up and manage LaunchDarkly targeting rules efficiently using Claude Code skills and automation workflows."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-launchdarkly-targeting-rules-setup-workflow/
 categories: [guides]

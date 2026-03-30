@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension SEO Checker: A Developer Guide"
 description: "Learn how to build and integrate a chrome extension SEO checker for analyzing web page optimization directly in your browser."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-seo-checker/
 ---

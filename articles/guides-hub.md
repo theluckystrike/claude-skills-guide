@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Guides: Complete Reference Library (2026)"
 description: "The complete index of Claude Code skill guides covering MCP servers, security, language support, productivity, enterprise adoption, and every major topic."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 permalink: /guides-hub/
 categories: [guides]
 tags: [claude-skills, guides, claude-code, reference, mcp-servers, security]

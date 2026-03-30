@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for DDoS Mitigation Workflow Guide"
 description: "Learn how to use Claude Code to build automated DDoS mitigation workflows, analyze traffic patterns, and create responsive protection scripts for."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-ddos-mitigation-workflow-guide/
 categories: [guides]

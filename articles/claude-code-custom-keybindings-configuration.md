@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Custom Keybindings Configuration"
 description: "Master custom keybindings in Claude Code: configure shortcuts, map actions, and optimize your workflow with practical examples."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-custom-keybindings-configuration/
 reviewed: true

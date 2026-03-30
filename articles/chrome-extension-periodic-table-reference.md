@@ -5,6 +5,7 @@ layout: default
 title: "Chrome Extension Periodic Table Reference: Developer Guide"
 description: "A comprehensive reference guide to Chrome extension APIs and components. Practical patterns, code examples, and best practices for developers building."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-periodic-table-reference/
 reviewed: true

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Few-Shot Prompting Best Practices Workflow"
 description: "Master few-shot prompting with Claude Code. Learn practical workflows, code examples, and actionable techniques to get better results from AI coding assistants."
 date: 2026-03-20
+last_modified_at: 2026-03-20
 author: "Claude Skills Guide"
 permalink: /claude-code-for-few-shot-prompting-best-practices-workflow/
 categories: [tutorials]

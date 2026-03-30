@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Bazel Build System Workflow Guide"
 description: "A comprehensive guide to integrating Claude Code into your Bazel build system workflow for efficient C++ and multi-language project development."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-bazel-build-system-workflow-guide/
 categories: [guides]

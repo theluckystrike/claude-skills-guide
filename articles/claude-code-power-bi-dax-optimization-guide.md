@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Power BI DAX Optimization Guide"
 description: "Learn how to use Claude Code to optimize Power BI DAX formulas for better performance. Practical examples and code snippets for developers."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-power-bi-dax-optimization-guide/
 categories: [guides]

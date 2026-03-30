@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code Consultant Codebase Context Switching Workflow"
 description: "Master the art of efficient codebase context switching as a Claude Code consultant. Learn workflows, skills, and techniques for smooth transitions."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-consultant-codebase-context-switching-workflow/
 categories: [guides]

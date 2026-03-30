@@ -4,6 +4,7 @@ layout: default
 title: "Building a Chrome Extension for Gaming Deal Finding"
 description: "Learn how to build a Chrome extension that finds the best gaming deals across multiple stores. Practical code examples, API integration patterns, and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-gaming-deal-finder-chrome/
 reviewed: true

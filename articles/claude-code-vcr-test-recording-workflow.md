@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code VCR Test Recording Workflow"
 description: "Learn how to implement VCR-style test recording in Claude Code for reproducible AI interactions. Capture, replay, and verify AI-driven test scenarios."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, claude-code, testing, vcr, test-automation, reproducibility]
 author: "Claude Skills Guide"

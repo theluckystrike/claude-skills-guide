@@ -5,6 +5,7 @@ layout: default
 title: "Cashback Chrome Extension Best 2026"
 description: "Discover the best cashback Chrome extensions for developers and power users in 2026. Learn technical implementation, API integrations, and how to."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /cashback-chrome-extension-best-2026/
 reviewed: true

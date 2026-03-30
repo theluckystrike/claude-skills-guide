@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Skill Versioning and Upgrades: What to Expect"
 description: "Understand how Claude Code skills are versioned, how upgrades work, and what changes you might encounter when maintaining or updating your skill."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, versioning, upgrades, skill-management]
 author: "Claude Skills Guide"

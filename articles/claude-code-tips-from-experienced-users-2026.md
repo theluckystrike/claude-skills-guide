@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Tips from Experienced Users 2026"
 description: "Practical Claude Code tips from developers and power users. Learn skill selection, prompt engineering, and workflow optimization for 2026."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-tips-from-experienced-users-2026/
 categories: [guides]

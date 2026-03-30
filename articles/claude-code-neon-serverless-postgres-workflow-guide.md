@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Neon Serverless Postgres Workflow Guide"
 description: "Master the art of building serverless PostgreSQL workflows with Claude Code. Learn how to integrate Neon with Claude Code skills for efficient database."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, neon, serverless, postgres, database, workflow, claude-skills]
 author: "Claude Skills Guide"

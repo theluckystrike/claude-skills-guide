@@ -4,6 +4,7 @@ layout: default
 title: "WireGuard Performance Tuning for Large File Transfer Optimization Guide"
 description: "Master WireGuard VPN performance tuning for large file transfers. Learn MTU optimization, kernel tuning, throughput configuration, and advanced techniques."
 date: 2026-03-16
+last_modified_at: 2026-03-16
 author: theluckystrike
 permalink: /wireguard-performance-tuning-large-file-transfer-optimization-guide/
 reviewed: true

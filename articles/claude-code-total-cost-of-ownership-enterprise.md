@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Total Cost of Ownership for Enterprise Teams"
 description: "A practical breakdown of the total cost of ownership for Claude Code in enterprise environments. Includes licensing, skill development, training, and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: theluckystrike
 categories: [guides]
 tags: [claude-code, enterprise, total-cost-of-ownership, budget, skill-development]

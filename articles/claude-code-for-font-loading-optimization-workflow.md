@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Font Loading Optimization Workflow"
 description: "Learn how to build an automated font loading optimization workflow using Claude Code. Practical examples for analyzing, testing, and optimizing web."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-font-loading-optimization-workflow/
 categories: [guides]

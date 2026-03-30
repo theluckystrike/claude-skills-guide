@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension Block Distracting Sites: A Developer Guide"
 description: "Learn how to build a chrome extension to block distracting sites using Manifest V3, custom blocklists, and programmatic controls."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-block-distracting-sites/
 reviewed: true

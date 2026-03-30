@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for AWS App Mesh Workflow"
 description: "Learn how to use Claude Code CLI to streamline AWS App Mesh configuration, deployment, and management workflows with practical examples and actionable."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 categories: [guides]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"

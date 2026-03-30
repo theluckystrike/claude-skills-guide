@@ -3,6 +3,7 @@ layout: default
 title: "Claude Skills Token Optimization: Reduce API Costs"
 description: "Practical strategies to reduce Claude Code token usage and API costs when working with skills. Covers context management, skill design, and prompt efficiency."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, token-optimization, cost-reduction]
 author: "Claude Skills Guide"

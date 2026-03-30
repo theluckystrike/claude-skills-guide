@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Axios HTTP Client Workflow"
 description: "Learn how to build efficient HTTP client workflows using Axios with Claude Code for streamlined API interactions."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-axios-http-client-workflow/
 reviewed: true

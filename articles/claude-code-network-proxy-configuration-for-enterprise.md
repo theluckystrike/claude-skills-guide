@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code Network Proxy Configuration for Enterprise"
 description: "Learn how to configure Claude Code network proxy settings for enterprise environments. This guide covers HTTP/HTTPS proxies, authentication, SSL."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-network-proxy-configuration-for-enterprise/
 categories: [guides]

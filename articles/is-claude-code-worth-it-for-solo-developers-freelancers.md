@@ -3,6 +3,7 @@ layout: default
 title: "Is Claude Code Worth It for Solo Developers and Freelancers?"
 description: "A practical look at whether Claude Code provides real value for independent developers and freelancers. Cost, time savings, and skill recommendations."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /is-claude-code-worth-it-for-solo-developers-freelancers/
 reviewed: true

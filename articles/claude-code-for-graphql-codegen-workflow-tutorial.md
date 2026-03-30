@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for GraphQL Codegen Workflow Tutorial"
 description: "Learn how to automate your GraphQL codegen workflow using Claude Code. This comprehensive guide covers setup, configuration, and best practices for."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-graphql-codegen-workflow-tutorial/
 categories: [guides, workflows]

@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Shell Operator Workflow Tutorial"
 description: "Learn how to use Claude Code to build, debug, and automate shell operator workflows. A comprehensive guide for developers working with Kubernetes."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-shell-operator-workflow-tutorial/
 categories: [tutorials]

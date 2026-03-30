@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for JMH Benchmark Workflow Tutorial Guide"
 description: "Learn how to use Claude Code to streamline your JMH benchmark workflow, from project setup to writing effective benchmarks and analyzing results."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-jmh-benchmark-workflow-tutorial-guide/
 categories: [guides]

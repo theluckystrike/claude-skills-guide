@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for CodeSearch Integration Workflow Guide"
 description: "A comprehensive guide to integrating Claude Code with CodeSearch workflows for enhanced developer productivity and code discovery."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-codesearch-integration-workflow-guide/
 categories: [guides]

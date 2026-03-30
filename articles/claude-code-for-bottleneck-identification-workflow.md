@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for Bottleneck Identification Workflow"
 description: "Master the art of identifying performance bottlenecks using Claude Code. Learn systematic workflows, profiling techniques, and practical strategies to."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-bottleneck-identification-workflow/
 categories: [guides]

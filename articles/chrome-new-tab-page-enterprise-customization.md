@@ -3,6 +3,7 @@ layout: default
 title: "Chrome New Tab Page Enterprise Customization: A Practical Guide for Developers"
 description: "Learn how to customize Chrome's new tab page in enterprise environments using group policies, extensions, and developer tools."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-new-tab-page-enterprise-customization/
 reviewed: true

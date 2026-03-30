@@ -3,6 +3,7 @@ layout: default
 title: "Claude Skills with GitHub Actions CI/CD Pipeline 2026"
 description: "Integrate Claude Code into GitHub Actions CI/CD to automate code review, TDD analysis, and report generation using the Anthropic API."
 date: 2026-03-13
+last_modified_at: 2026-03-13
 categories: [workflows]
 tags: [claude-code, claude-skills, github-actions, cicd, tdd, automation]
 author: "Claude Skills Guide"

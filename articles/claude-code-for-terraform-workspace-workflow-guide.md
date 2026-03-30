@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Terraform Workspace Workflow Guide"
 description: "Master Terraform workspace management with Claude Code. Learn practical workflows for organizing, deploying, and managing infrastructure across."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-terraform-workspace-workflow-guide/
 categories: [guides]

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Claim Check Pattern Workflow"
 description: "Learn how to implement the claim check pattern for message processing with Claude Code. Practical examples, code snippets, and actionable advice for."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-claim-check-pattern-workflow/
 categories: [guides]

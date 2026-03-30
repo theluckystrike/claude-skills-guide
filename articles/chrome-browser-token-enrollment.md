@@ -5,6 +5,7 @@ layout: default
 title: "Chrome Browser Token Enrollment: A Practical Guide"
 description: "Learn how to implement Chrome browser token enrollment for enterprise environments. Step-by-step setup, API integration, and code examples for."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-browser-token-enrollment/
 reviewed: true

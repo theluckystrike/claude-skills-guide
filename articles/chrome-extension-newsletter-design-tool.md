@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension Newsletter Design Tool for Developers"
 description: "A comprehensive guide to building and designing newsletters using Chrome extensions. Learn about automation tools, template systems, and developer workflows."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-newsletter-design-tool/
 categories: [guides]

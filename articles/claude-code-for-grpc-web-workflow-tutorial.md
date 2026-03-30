@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for gRPC Web Workflow Tutorial"
 description: "Learn how to integrate Claude Code into your gRPC Web development workflow. This tutorial covers setup, code generation, service definition, and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-grpc-web-workflow-tutorial/
 categories: [tutorials, guides]

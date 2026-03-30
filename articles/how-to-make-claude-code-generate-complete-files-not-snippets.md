@@ -4,6 +4,7 @@ layout: default
 title: "How to Make Claude Code Generate Complete Files Not Snippets"
 description: "Learn practical techniques to get Claude Code to generate complete, production-ready files instead of code snippets."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Technical Debt Tracking Workflow"
 description: "A practical workflow for identifying, tracking, and managing technical debt using Claude Code skills and automation tools."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-technical-debt-tracking-workflow/
 categories: [guides]

@@ -3,6 +3,7 @@ layout: default
 title: "Claude Skills for Puppet Chef Configuration Management"
 description: "Learn how Claude Code skills accelerate Puppet and Chef infrastructure automation. Practical examples for writing manifests, cookbooks, and managing."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [use-cases]
 tags: [claude-code, claude-skills, puppet, chef, configuration-management, devops]
 author: "Claude Skills Guide"

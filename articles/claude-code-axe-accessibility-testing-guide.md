@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Axe Accessibility Testing Guide"
 description: "Automate accessibility audits with axe-core and Claude Code. Fix common WCAG violations using Claude skills."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-axe-accessibility-testing-guide/
 categories: [guides]

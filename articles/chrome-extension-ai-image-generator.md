@@ -3,6 +3,7 @@ layout: default
 title: "Chrome Extension AI Image Generator: A Complete Guide for Developers"
 description: "Learn how to build and use Chrome extensions that use AI for image generation. Practical code examples and implementation guide for developers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-ai-image-generator/
 categories: [guides]

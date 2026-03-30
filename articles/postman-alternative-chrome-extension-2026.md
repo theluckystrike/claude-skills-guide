@@ -5,6 +5,7 @@ layout: default
 title: "Postman Alternative Chrome Extension: Top Picks for 2026"
 description: "Discover lightweight Chrome extensions that serve as Postman alternatives for API testing. Compare features, performance, and real-world use cases for."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /postman-alternative-chrome-extension-2026/
 reviewed: true

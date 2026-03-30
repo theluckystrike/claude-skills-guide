@@ -5,6 +5,7 @@ layout: default
 title: "Chrome Extension Cornell Notes Template: A Developer Guide"
 description: "Learn how to build a Chrome extension for Cornell Notes with practical code examples and implementation patterns for developers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-cornell-notes-template/
 reviewed: true

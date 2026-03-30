@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Free Tier vs Pro Plan: Feature Comparison 2026"
 description: "A comprehensive comparison of Claude Code's free and Pro plans for developers and power users. Includes practical examples, code snippets, and skill."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-free-tier-vs-pro-plan-feature-comparison-2026/
 reviewed: true

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Workspace Indexing Workflow Tutorial"
 description: "Learn how to set up and optimize workspace indexing workflows with Claude Code. Practical examples, automation patterns, and expert tips for developers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-workspace-indexing-workflow-tutorial/
 categories: [tutorials]

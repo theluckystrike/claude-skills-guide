@@ -3,6 +3,7 @@ layout: default
 title: "Top MCP Servers for Claude Code Developers in 2026"
 description: "The most powerful MCP servers for Claude Code developers in 2026. Practical setup guides and examples for filesystem, GitHub, database, cloud, and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: theluckystrike
 categories: [integrations]
 tags: [claude-code, mcp, mcp-servers, integrations, development]

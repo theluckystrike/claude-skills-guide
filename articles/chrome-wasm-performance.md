@@ -4,6 +4,7 @@ layout: default
 title: "Chrome WASM Performance: A Practical Guide for Developers"
 description: "Learn how WebAssembly performs in Chrome, with code examples and optimization techniques for building high-performance web applications."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-wasm-performance/
 reviewed: true

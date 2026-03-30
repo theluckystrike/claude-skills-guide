@@ -4,6 +4,7 @@ layout: default
 title: "AI Presentation Maker Chrome Extension: A Developer Guide"
 description: "Learn how to build an AI-powered presentation maker Chrome extension. Practical code examples, API integrations, and techniques for developers and power users."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /ai-presentation-maker-chrome-extension/
 categories: [guides]

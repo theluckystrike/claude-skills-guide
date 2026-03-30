@@ -4,6 +4,7 @@ layout: default
 title: "Why Is Claude Code Producing Code That Does Not Run?"
 description: "Understand why Claude Code sometimes generates non-runnable code and learn practical strategies to improve code generation quality using Claude Code."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [troubleshooting]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"

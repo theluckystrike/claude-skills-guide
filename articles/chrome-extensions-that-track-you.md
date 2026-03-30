@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extensions That Track You: What Developers Need."
 description: "A technical breakdown of how Chrome extensions track users, with code examples showing the tracking mechanisms. Learn to audit extensions and protect."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "theluckystrike"
 permalink: /chrome-extensions-that-track-you/
 reviewed: true

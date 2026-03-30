@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for Transaction Tracing Workflow Tutorial"
 description: "Learn how to use Claude Code for building solid transaction tracing workflows in your applications. A practical guide with code examples."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-transaction-tracing-workflow-tutorial/
 categories: [guides]

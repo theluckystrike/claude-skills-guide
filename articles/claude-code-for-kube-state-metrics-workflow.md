@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Kube State Metrics Workflow: A Complete."
 description: "Learn how to use Claude Code to streamline your Kube State Metrics workflow, from deployment configuration to custom metric creation and alerting."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-kube-state-metrics-workflow/
 categories: [guides]

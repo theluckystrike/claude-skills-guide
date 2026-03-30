@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Beta Features: How to Access and Use Them"
 description: "A practical guide for developers and power users on accessing Claude Code beta features. Learn the setup process, configuration options, and practical."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-beta-features-how-to-access/
 reviewed: true

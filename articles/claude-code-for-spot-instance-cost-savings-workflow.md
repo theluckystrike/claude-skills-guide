@@ -4,6 +4,7 @@ layout: default
 title: "How to Use Claude Code for Spot Instance Cost Savings."
 description: "Learn how to use Claude Code and Claude Skills to automate spot instance management, reduce AWS costs, and build cost-effective cloud."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-spot-instance-cost-savings-workflow/
 categories: [guides]

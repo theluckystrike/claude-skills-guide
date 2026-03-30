@@ -3,6 +3,7 @@ layout: default
 title: "How to Find Claude Skills on GitHub: A Practical Guide"
 description: "Discover how to search, filter, and install Claude Code skills from GitHub repositories. Learn advanced GitHub search techniques and community resources."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, github, discovery, community]
 author: "Claude Skills Guide"

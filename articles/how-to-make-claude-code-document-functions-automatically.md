@@ -3,6 +3,7 @@ layout: default
 title: "How to Make Claude Code Document Functions."
 description: "Learn proven strategies for automating function documentation with Claude Code. Practical techniques for developers and power users to maintain."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /how-to-make-claude-code-document-functions-automatically/
 reviewed: true

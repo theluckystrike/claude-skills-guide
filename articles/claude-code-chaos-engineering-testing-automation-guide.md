@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Chaos Engineering Testing Automation Guide"
 description: "Implement chaos engineering testing automation with Claude Code. Build resilient systems using Claude skills and automated testing workflows."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, chaos-engineering, testing, automation, resilience, devops, kubernetes]
 author: "Claude Skills Guide"

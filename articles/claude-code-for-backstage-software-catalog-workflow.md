@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Backstage Software Catalog Workflow"
 description: "A comprehensive guide to managing Backstage software catalog workflows using Claude Code. Learn how to automate entity registration, documentation."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-backstage-software-catalog-workflow/
 categories: [guides]

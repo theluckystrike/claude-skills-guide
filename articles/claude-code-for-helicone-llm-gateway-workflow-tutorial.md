@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for Helicone LLM Gateway Workflow Tutorial"
 description: "Learn how to integrate Claude Code with Helicone's LLM gateway for enhanced observability, caching, and rate limiting in your AI applications."
 date: 2026-03-20
+last_modified_at: 2026-03-20
 author: "Claude Skills Guide"
 permalink: /claude-code-for-helicone-llm-gateway-workflow-tutorial/
 categories: [tutorials]

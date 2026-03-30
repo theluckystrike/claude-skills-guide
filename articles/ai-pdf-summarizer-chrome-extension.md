@@ -4,6 +4,7 @@ layout: default
 title: "AI PDF Summarizer Chrome Extension: A Developer Guide"
 description: "Learn how to build and integrate AI PDF summarizer Chrome extensions for efficient document processing and productivity."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /ai-pdf-summarizer-chrome-extension/
 reviewed: true

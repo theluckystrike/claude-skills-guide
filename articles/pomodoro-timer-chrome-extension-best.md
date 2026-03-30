@@ -4,6 +4,7 @@ layout: default
 title: "Best Pomodoro Timer Chrome Extension for Developers and."
 description: "A practical guide to the best Pomodoro timer Chrome extensions for developers. Features, integrations, and custom solutions for maximizing productivity."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /pomodoro-timer-chrome-extension-best/
 reviewed: true

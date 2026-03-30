@@ -3,6 +3,7 @@ layout: default
 title: "MCP Updates March 2026: What Developers Need to Know"
 description: "Claude Code MCP updates March 2026: enhanced tool discovery, improved state persistence, and OAuth 2.1 for developers."
 date: 2026-03-13
+last_modified_at: 2026-03-13
 categories: [guides]
 tags: [claude-code, claude-skills, mcp, model-context-protocol, integrations, developer-tools]
 author: "Claude Skills Guide"

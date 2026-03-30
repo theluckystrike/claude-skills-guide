@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Cookbook: Practical Recipes Collection"
 description: "A practical collection of Claude Code cookbook recipes for developers and power users. Learn how to use Claude skills for PDF creation, frontend."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-cookbook-recipes-collection/
 reviewed: true

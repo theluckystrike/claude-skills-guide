@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Performance SLO Workflow Tutorial"
 description: "Learn how to use Claude Code to implement and automate performance Service Level Objectives (SLOs) in your development workflow with practical examples."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-performance-slo-workflow-tutorial/
 categories: [guides]

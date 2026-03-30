@@ -4,6 +4,7 @@ layout: default
 title: "AI Search Enhancer Chrome Extension: A Developer Guide"
 description: "Learn how AI search enhancer Chrome extensions can transform your search workflow. Practical implementation guide with code examples for developers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /ai-search-enhancer-chrome-extension/
 reviewed: true

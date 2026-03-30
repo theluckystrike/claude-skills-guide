@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code SvelteKit Full Stack Guide"
 description: "Build full-stack SvelteKit applications faster with Claude Code. Learn practical workflows, skill recommendations, and code generation patterns for."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, sveltekit, full-stack, web-development, ai-coding, claude-skills]
 author: "Claude Skills Guide"

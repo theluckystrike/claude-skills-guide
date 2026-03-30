@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Experimental Features Speed: A Developer Guide"
 description: "Discover Chrome experimental features that boost browser speed. Practical examples and code snippets for developers and power users."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-experimental-features-speed/
 categories: [guides]

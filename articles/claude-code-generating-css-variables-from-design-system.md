@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Generating CSS Variables from Design System"
 description: "Learn how to use Claude Code skills to automatically generate CSS variables from design systems. Practical examples for extracting colors, typography."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-generating-css-variables-from-design-system/
 categories: [guides]

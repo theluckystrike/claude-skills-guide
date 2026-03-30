@@ -3,6 +3,7 @@ layout: default
 title: "Advanced Claude Skills: Token Optimization & Chaining"
 description: "Advanced Claude skills guide covering token optimization, skill chaining strategies, and cost reduction for power users and engineering teams."
 date: 2026-03-13
+last_modified_at: 2026-03-13
 categories: [guides]
 tags: [claude-code, claude-skills, token-optimization, advanced]
 author: "Claude Skills Guide"

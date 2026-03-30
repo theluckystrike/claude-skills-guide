@@ -4,6 +4,7 @@ layout: default
 title: "Vibe Coding Project Structure Best Practices"
 description: "Master project structure for vibe coding workflows. Learn how to organize your codebase for AI-assisted development, maintain clean architecture, and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [vibe-coding, ai-development, project-structure, claude-code, best-practices, claude-skills]
 author: "Claude Skills Guide"

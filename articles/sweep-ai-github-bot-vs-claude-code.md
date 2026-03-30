@@ -4,6 +4,7 @@ layout: default
 title: "Sweep AI GitHub Bot vs Claude Code: Which One Should You."
 description: "A practical comparison of Sweep AI and Claude Code for developers. Learn when to use each tool and how they can work together."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /sweep-ai-github-bot-vs-claude-code/
 categories: [guides]

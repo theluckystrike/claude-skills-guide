@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for Heap Profiling Workflow Tutorial Guide"
 description: "Learn how to use Claude Code for heap profiling workflow, with practical examples and actionable advice for developers debugging memory issues."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-heap-profiling-workflow-tutorial-guide/
 categories: [guides]

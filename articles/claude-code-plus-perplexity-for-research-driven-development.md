@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Plus Perplexity for Research-Driven Development"
 description: "Learn how combining Claude Code's AI coding capabilities with Perplexity's research features creates a powerful workflow for informed, evidence-based."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, perplexity, research, ai-coding, development-workflow]
 author: theluckystrike

@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code GitBook Documentation Workflow"
 description: "Build a streamlined GitBook documentation workflow using Claude Code and specialized skills. Automate content generation, formatting, and publishing."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-gitbook-documentation-workflow/
 reviewed: true

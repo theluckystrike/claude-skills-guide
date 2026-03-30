@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Resend Email Workflow Tutorial"
 description: "Learn how to build automated email workflows using Resend and Claude Code. This tutorial covers practical examples, code snippets, and actionable."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-resend-email-workflow-tutorial/
 categories: [tutorials]

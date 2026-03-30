@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Release Rollback Workflow Tutorial"
 description: "Learn how to implement automated release rollback workflows using Claude Code. Practical examples, code snippets, and actionable advice for developers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-release-rollback-workflow-tutorial/
 categories: [tutorials]

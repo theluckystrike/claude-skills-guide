@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Arrow Flight Workflow Tutorial"
 description: "Learn how to use Claude Code to build efficient Arrow Flight data transfer workflows. Practical guide with code examples for developers working with."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-arrow-flight-workflow-tutorial/
 categories: [tutorials]

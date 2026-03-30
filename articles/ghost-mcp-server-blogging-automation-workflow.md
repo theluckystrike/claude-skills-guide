@@ -3,6 +3,7 @@ layout: default
 title: "Ghost MCP Server: Blogging Automation Workflow"
 description: "Connect Claude to Ghost using the Model Context Protocol. Automate blog post creation, scheduling, and content management workflows with MCP servers."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [integrations]
 tags: [claude-code, claude-skills, mcp, ghost, blogging, automation, workflow]
 author: "Claude Skills Guide"

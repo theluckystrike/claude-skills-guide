@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension Wireframe Builder: A Practical Guide"
 description: "Learn how to build a Chrome extension for wireframing. Practical code examples, architecture patterns, and implementation techniques for developers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "theluckystrike"
 permalink: /chrome-extension-wireframe-builder/
 reviewed: true

@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Skills for Kubernetes Operator Development"
 description: "Learn how Claude Code skills accelerate Kubernetes operator development with practical examples, code generation, testing workflows, and documentation auto"
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [advanced]
 tags: [claude-code, claude-skills, kubernetes, operator-development, devops, go]
 author: "Claude Skills Guide"

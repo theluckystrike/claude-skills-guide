@@ -3,6 +3,7 @@ layout: default
 title: "Chrome Extension Import Duty Calculator: A Practical Guide"
 description: "Learn how to build a chrome extension import duty calculator to accurately estimate customs fees, taxes, and landed costs for international shipments."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-import-duty-calculator/
 categories: [guides]

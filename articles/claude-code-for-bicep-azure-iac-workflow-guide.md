@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Bicep Azure IaC Workflow Guide"
 description: "A comprehensive guide to building efficient Azure Infrastructure as Code workflows using Bicep and Claude Code. Learn practical patterns for automating."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-bicep-azure-iac-workflow-guide/
 categories: [guides]

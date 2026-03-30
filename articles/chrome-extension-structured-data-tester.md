@@ -3,6 +3,7 @@ layout: default
 title: "Chrome Extension Structured Data Tester: A Developer Guide"
 description: "Learn how to test structured data using Chrome extensions. Compare tools, understand JSON-LD validation, and implement testing in your development workflow."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-structured-data-tester/
 categories: [guides]

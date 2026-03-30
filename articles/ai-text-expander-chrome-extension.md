@@ -4,6 +4,7 @@ layout: default
 title: "AI Text Expander Chrome Extension: A Developer Guide"
 description: "Learn how to build and integrate AI text expander chrome extensions for intelligent text automation and productivity enhancement."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /ai-text-expander-chrome-extension/
 reviewed: true

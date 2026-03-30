@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Postgres Logical Replication Workflow"
 description: "Learn how to implement PostgreSQL logical replication using Claude Code. Practical examples, SQL configurations, and actionable advice for developers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-postgres-logical-replication-workflow/
 categories: [guides]

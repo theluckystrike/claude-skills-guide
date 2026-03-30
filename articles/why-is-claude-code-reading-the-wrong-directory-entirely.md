@@ -4,6 +4,7 @@ layout: default
 title: "Why Is Claude Code Reading the Wrong Directory Entirely?"
 description: "Fix Claude Code reading the wrong directory. Solutions for workspace path confusion and context misdirection in skill workflows."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [troubleshooting]
 tags: [claude-code, directory, file-operations, troubleshooting, working-directory, claude-skills]
 author: "Claude Skills Guide"

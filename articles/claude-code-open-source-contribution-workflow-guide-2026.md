@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for Open Source Contributions: 2026 Workflow Guide"
 description: "Use Claude Code to analyze repos, understand unfamiliar codebases, write quality PRs, run test suites, and follow contribution guidelines. A practical."
 date: 2026-03-20
+last_modified_at: 2026-03-20
 categories: [guides]
 tags: [claude-code, open-source, github, pull-requests, code-review, testing]
 author: "Claude Skills Guide"

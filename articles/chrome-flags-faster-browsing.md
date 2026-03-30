@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Flags for Faster Browsing: Complete 2026 Guide"
 description: "Discover the best Chrome flags to speed up your browser in 2026. Learn about experimental features that reduce latency, improve rendering, and optimize."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-flags-faster-browsing/
 reviewed: true

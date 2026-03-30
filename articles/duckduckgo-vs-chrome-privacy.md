@@ -4,6 +4,7 @@ layout: default
 title: "DuckDuckGo vs Chrome Privacy: A Developer & Power User Guide"
 description: "A technical comparison of DuckDuckGo and Chrome privacy features for developers. Learn about data collection, API access, extension ecosystems, and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /duckduckgo-vs-chrome-privacy/
 reviewed: true

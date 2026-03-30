@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for dbt Snapshot Workflow Tutorial"
 description: "Learn how to use Claude Code to streamline dbt snapshot workflows. This comprehensive tutorial covers snapshot configuration, type 2 SCD."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 categories: [tutorials]
 tags: [claude-code, claude-skills, dbt, data-engineering, snapshot, workflow]
 author: Claude Skills Guide

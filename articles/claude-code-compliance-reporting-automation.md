@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Compliance Reporting Automation"
 description: "Learn how to automate compliance reporting workflows using Claude Code and specialized skills. Practical examples for developers and power users."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-compliance-reporting-automation/
 categories: [guides]

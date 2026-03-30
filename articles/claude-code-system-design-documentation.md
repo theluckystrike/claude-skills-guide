@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code System Design Documentation: A Practical."
 description: "Learn how to create comprehensive system design documentation using Claude Code. Practical techniques for architects and developers to document."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "theluckystrike"
 permalink: /claude-code-system-design-documentation/
 reviewed: true

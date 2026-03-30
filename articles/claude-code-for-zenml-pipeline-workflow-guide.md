@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for ZenML Pipeline Workflow Guide"
 description: "Learn how to use Claude Code CLI to streamline your ZenML MLOps pipeline development, from setup to deployment."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-zenml-pipeline-workflow-guide/
 categories: [guides]

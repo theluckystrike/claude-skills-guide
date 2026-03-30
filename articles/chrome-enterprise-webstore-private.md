@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Enterprise Webstore Private: Deploying Extensions to Your Organization"
 description: "Learn how to deploy Chrome extensions privately in enterprise environments using the Chrome Enterprise Webstore Private feature. Practical setup guide for."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-enterprise-webstore-private/
 categories: [guides]

@@ -3,6 +3,7 @@ layout: default
 title: "MCP Server Permission Auditing Best Practices"
 description: "A practical guide to auditing and managing Model Context Protocol server permissions for secure AI agent deployments."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, mcp, security, permission-auditing]
 author: theluckystrike

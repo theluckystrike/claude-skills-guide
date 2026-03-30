@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension Mood Tracker for Teams: Building."
 description: "Learn how to build a Chrome extension for team mood tracking. Explore implementation patterns, data synchronization, and privacy considerations for."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-mood-tracker-team/
 reviewed: true

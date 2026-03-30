@@ -4,6 +4,7 @@ layout: default
 title: "Parallel AI Agent Execution Patterns and Trade-offs"
 description: "Explore parallel execution patterns for AI agents using Claude Code, including supervisor-worker architectures, concurrent tool use, and the trade-offs."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, parallel-execution, multi-agent, concurrency, performance, claude-skills]
 author: "Claude Skills Guide"

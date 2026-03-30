@@ -3,6 +3,7 @@ layout: default
 title: "How a Solo Developer Ships Faster with Claude Code"
 description: "Practical strategies for solo developers to ship products faster using Claude Code skills. Learn about automation, testing, and workflow optimization."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, workflow, productivity, tdd, pdf, supermemory]
 author: "theluckystrike"

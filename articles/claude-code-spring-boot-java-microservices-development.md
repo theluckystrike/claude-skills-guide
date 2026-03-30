@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for Spring Boot Java Microservices Development"
 description: "How to use Claude Code to accelerate Spring Boot microservices development. Covers project scaffolding, REST APIs, service communication, and testing."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, java, spring-boot, microservices]
 author: "Claude Skills Guide"

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Rails API Mode Full Stack Workflow"
 description: "A comprehensive guide to building full stack Rails applications with API mode using Claude Code. Includes practical examples, skill recommendations."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-rails-api-mode-full-stack-workflow/
 reviewed: true

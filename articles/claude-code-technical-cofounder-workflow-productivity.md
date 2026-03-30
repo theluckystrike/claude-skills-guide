@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code as Your Technical Co-founder: Workflow."
 description: "Learn how to use Claude Code as a technical co-founder to accelerate development workflows, make better architectural decisions, and ship products."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-technical-cofounder-workflow-productivity/
 categories: [workflows, guides]

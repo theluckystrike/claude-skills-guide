@@ -5,6 +5,7 @@ layout: default
 title: "Building Apps with Claude API: Anthropic SDK Python Guide"
 description: "A comprehensive guide to building powerful applications using Claude API and the Anthropic SDK for Python. Includes practical examples, code snippets."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /building-apps-with-claude-api-anthropic-sdk-python-guide/
 categories: [guides]

@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension Service Worker Inspector: Complete."
 description: "Learn how to inspect, debug, and monitor service workers in Chrome extensions using built-in Chrome DevTools and advanced techniques."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-service-worker-inspector/
 reviewed: true

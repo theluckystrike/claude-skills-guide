@@ -4,6 +4,7 @@ layout: default
 title: "Mastering Critical CSS Workflow with Claude Code: A."
 description: "Learn how to automate and optimize your critical CSS workflow using Claude Code. This comprehensive tutorial covers practical examples, code snippets."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-critical-css-workflow-tutorial/
 categories: [guides, workflows]

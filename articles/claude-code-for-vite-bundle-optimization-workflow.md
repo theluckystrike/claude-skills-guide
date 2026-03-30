@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Vite Bundle Optimization Workflow"
 description: "Learn how to use Claude Code to automate Vite bundle optimization, reduce bundle size, and improve build performance with practical workflows and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-vite-bundle-optimization-workflow/
 categories: [guides]

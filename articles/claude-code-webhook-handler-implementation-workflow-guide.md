@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Webhook Handler Implementation Workflow Guide"
 description: "A practical workflow guide for implementing webhook handlers with Claude Code. Learn to build secure, reliable event processing systems with."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, webhooks, api-integration, event-handling, backend-development, claude-skills]
 author: theluckystrike

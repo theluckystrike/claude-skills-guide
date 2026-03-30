@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code BullMQ Delayed Retry Job Workflow Guide"
 description: "Master BullMQ delayed retry job workflows with Claude Code. Learn practical techniques for implementing reliable job processing, delayed execution, and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-bullmq-delayed-retry-job-workflow-guide/
 categories: [guides]

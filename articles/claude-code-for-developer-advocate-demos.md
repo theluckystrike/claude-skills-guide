@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Developer Advocate Demos"
 description: "Build compelling live demos with Claude Code. Practical patterns for developer advocates creating technical presentations, product walkthroughs, and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-for-developer-advocate-demos/
 reviewed: true

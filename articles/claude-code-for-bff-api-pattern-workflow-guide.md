@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for BFF API Pattern Workflow Guide"
 description: "Learn how to use Claude Code to streamline BFF (Backend-for-Frontend) API pattern development with practical examples, code snippets, and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-bff-api-pattern-workflow-guide/
 categories: [guides]

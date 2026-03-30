@@ -3,6 +3,7 @@ layout: default
 title: "How to Use Claude Code to Refactor Legacy JavaScript Code"
 description: "A practical guide to refactoring legacy JavaScript code using Claude Code and its specialized skills. Learn techniques for modernizing old codebases."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, javascript, refactoring, legacy-code, development]
 author: theluckystrike

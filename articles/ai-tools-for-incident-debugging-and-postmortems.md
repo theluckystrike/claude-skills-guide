@@ -4,6 +4,7 @@ layout: default
 title: "AI Tools for Incident Debugging and Postmortems"
 description: "Practical AI tools and techniques for debugging production incidents and writing effective postmortems. Learn how Claude skills accelerate root cause."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "theluckystrike"
 permalink: /ai-tools-for-incident-debugging-and-postmortems/
 categories: [troubleshooting]

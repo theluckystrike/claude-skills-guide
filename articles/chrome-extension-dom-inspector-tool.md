@@ -4,6 +4,7 @@ layout: default
 title: "Building a Chrome Extension DOM Inspector Tool: A."
 description: "Learn how to build a Chrome extension DOM inspector tool from scratch. Complete implementation guide with code examples for developers and power users."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-dom-inspector-tool/
 reviewed: true

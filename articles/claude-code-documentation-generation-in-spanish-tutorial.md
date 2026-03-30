@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Documentation Generation in Spanish Tutorial"
 description: "Learn how to generate code documentation in Spanish using Claude Code skills. Step-by-step guide with practical examples for developers."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, documentation, spanish, i18n]
 author: "Claude Skills Guide"

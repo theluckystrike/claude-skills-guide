@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Skills in WSL2: A Practical Setup Guide"
 description: "Run Claude Code skills in WSL2 Windows Subsystem for Linux. Step-by-step installation, path configuration, and skill invocation examples."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, wsl2, windows-subsystem-linux, skills]
 author: "Claude Skills Guide"

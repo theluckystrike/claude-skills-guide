@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for Context Window Optimization Workflow Guide"
 description: "A comprehensive guide to optimizing context window usage in Claude Code CLI for developers. Learn practical strategies, code examples, and actionable tips."
 date: 2026-03-20
+last_modified_at: 2026-03-20
 author: Claude Skills Guide
 permalink: /claude-code-for-context-window-optimization-workflow-guide/
 categories: [guides]

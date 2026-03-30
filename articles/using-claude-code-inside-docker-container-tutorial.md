@@ -3,6 +3,7 @@ layout: default
 title: "Using Claude Code Inside Docker Container Tutorial"
 description: "Learn how to set up and run Claude Code inside Docker containers for isolated, reproducible AI-assisted development environments."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: theluckystrike
 permalink: /using-claude-code-inside-docker-container-tutorial/
 categories: [tutorials]

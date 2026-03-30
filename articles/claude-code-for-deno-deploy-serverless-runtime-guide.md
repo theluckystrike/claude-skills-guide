@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for Deno Deploy Serverless Runtime Guide"
 description: "A practical guide to building serverless applications with Deno Deploy using Claude Code. Learn workflows, patterns, and skill integration for efficient."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, deno-deploy, serverless, edge-computing, deno]
 author: "Claude Skills Guide"

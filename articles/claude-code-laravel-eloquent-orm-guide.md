@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Laravel Eloquent ORM Guide"
 description: "Master Laravel Eloquent ORM with Claude Code. Learn relationship handling, query scopes, eager loading, and performance optimization techniques."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-laravel-eloquent-orm-guide/
 categories: [guides]

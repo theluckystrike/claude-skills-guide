@@ -5,6 +5,7 @@ layout: default
 title: "Chrome Preload Pages Setting: A Complete Guide for."
 description: "Learn how Chrome preload pages setting works, how to configure it, and optimize browser performance for your development workflow."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-preload-pages-setting/
 reviewed: true

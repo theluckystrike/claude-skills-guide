@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Great Expectations Data Workflow"
 description: "Learn how to integrate Claude Code CLI with Great Expectations to build automated data validation pipelines, create custom expectations, and maintain."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-great-expectations-data-workflow/
 categories: [guides]

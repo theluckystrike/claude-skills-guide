@@ -4,6 +4,7 @@ layout: default
 title: "Nimbus Screenshot Alternative Chrome Extension in 2026"
 description: "Discover the best Nimbus Screenshot alternatives for Chrome in 2026. Developer-friendly screen capture tools with API access, automation support, and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /nimbus-screenshot-alternative-chrome-extension-2026/
 categories: [guides]

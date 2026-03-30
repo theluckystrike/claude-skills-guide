@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Running Slow? Too Many Extensions Could Be the Cause"
 description: "Discover why Chrome slows down with too many extensions. Practical troubleshooting steps, diagnostic techniques, and optimization strategies for."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-slow-too-many-extensions/
 categories: [guides]

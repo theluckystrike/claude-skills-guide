@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension VPN Quick Connect: A Developer Guide"
 description: "Learn how to implement VPN quick connect functionality in Chrome extensions. Technical implementation details, APIs, and best practices for developers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-vpn-quick-connect/
 reviewed: true

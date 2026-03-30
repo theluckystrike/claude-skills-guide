@@ -4,6 +4,7 @@ layout: default
 title: "Is Claude Code Worth It for Open Source Maintainers? A."
 description: "Discover how Claude Code can transform your open source maintenance workflow. Real examples from managing repositories, handling issues, and automating."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, open-source, maintainers, productivity, ai-tools, claude-skills]
 author: "Claude Skills Guide"

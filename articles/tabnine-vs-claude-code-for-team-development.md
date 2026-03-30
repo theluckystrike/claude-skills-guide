@@ -4,6 +4,7 @@ layout: default
 title: "Tabnine vs Claude Code for Team Development"
 description: "Compare Tabnine and Claude Code for team development workflows. Learn which AI coding assistant fits your team's needs for collaboration, code quality."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /tabnine-vs-claude-code-for-team-development/
 reviewed: true

@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Hackathon Development Workflow"
 description: "A practical guide to using Claude Code for rapid prototyping, team coordination, and shipping winning hackathon projects in record time."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "theluckystrike"
 permalink: /claude-code-for-hackathon-development-workflow/
 categories: [guides]

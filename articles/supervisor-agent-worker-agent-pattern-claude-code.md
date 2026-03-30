@@ -3,6 +3,7 @@ layout: default
 title: "Supervisor-Agent Worker-Agent Pattern with Claude Code"
 description: "Implement the supervisor-worker agent pattern in Claude Code: task decomposition, parallel execution, result aggregation, and error handling for."
 date: 2026-03-20
+last_modified_at: 2026-03-20
 categories: [advanced]
 tags: [claude-code, agent-patterns, supervisor-agent, worker-agent, parallel-execution, pipelines]
 author: "Claude Skills Guide"

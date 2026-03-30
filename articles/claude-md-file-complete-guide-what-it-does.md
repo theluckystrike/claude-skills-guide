@@ -3,6 +3,7 @@ layout: default
 title: "Claude MD File Complete Guide. What It Does"
 description: "A comprehensive guide to .md files in Claude Code: how they power skills, contain configuration via front matter, and structure AI interactions."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, claude-md, skill-format, configuration]
 author: "Claude Skills Guide"

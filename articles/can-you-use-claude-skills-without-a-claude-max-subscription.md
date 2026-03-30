@@ -3,6 +3,7 @@ layout: default
 title: "Can You Use Claude Skills Without a Claude Max Subscription?"
 description: "A practical guide to using Claude Code skills without a Max subscription. Learn which skills are free, what's behind the paywall, and how to maximize value"
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"

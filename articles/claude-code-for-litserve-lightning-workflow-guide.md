@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for LitServe Lightning Workflow Guide"
 description: "Learn how to use Claude Code CLI to develop, test, and deploy LitServe AI models within the Lightning AI ecosystem. Practical guide with code examples."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-litserve-lightning-workflow-guide/
 categories: [guides]

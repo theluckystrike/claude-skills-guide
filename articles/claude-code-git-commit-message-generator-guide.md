@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Git Commit Message Generator Guide"
 description: "Learn how to create and use Claude Code skills to generate semantic git commit messages automatically. Includes setup instructions and practical examples."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-git-commit-message-generator-guide/
 reviewed: true

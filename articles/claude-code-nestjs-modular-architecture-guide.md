@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code NestJS Modular Architecture Guide"
 description: "A practical guide to building modular NestJS applications with Claude Code. Learn how to structure your codebase for scalability and maintainability."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-nestjs-modular-architecture-guide/
 categories: [guides]

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code API Authentication Patterns Guide"
 description: "Master API authentication patterns with Claude Code. Learn OAuth 2.0, API keys, JWT tokens, and secure credential management for your projects."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-api-authentication-patterns-guide/
 categories: [guides]

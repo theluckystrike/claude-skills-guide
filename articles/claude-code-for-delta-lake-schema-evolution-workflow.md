@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Delta Lake Schema Evolution Workflow"
 description: "Learn how to use Claude Code to automate and streamline Delta Lake schema evolution workflows. Practical examples and actionable advice for data engineers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-delta-lake-schema-evolution-workflow/
 categories: [guides]

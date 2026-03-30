@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Automated Alt Text Generation Workflow"
 description: "Learn how to build automated alt text generation workflows with Claude Code. This guide covers image analysis skills, batch processing patterns, and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, accessibility, alt-text, image-analysis, automation, workflows, claude-skills]
 author: "Claude Skills Guide"

@@ -4,6 +4,7 @@ layout: default
 title: "Monetizing Claude Code Skills as an Independent Developer"
 description: "A practical guide to turning your Claude Code expertise into a sustainable income as a freelance developer or solo entrepreneur."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /monetizing-claude-code-skills-as-an-independent-developer/
 categories: [troubleshooting]

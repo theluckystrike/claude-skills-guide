@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Documentation Review Workflow Guide"
 description: "Learn how to use Claude Code to streamline and automate your documentation review processes with practical examples and actionable advice."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-documentation-review-workflow-guide/
 categories: [guides]

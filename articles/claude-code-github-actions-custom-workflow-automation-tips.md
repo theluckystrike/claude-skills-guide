@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code GitHub Actions Custom Workflow Automation Tips"
 description: "Master custom GitHub Actions workflow automation with Claude Code. Learn advanced patterns for CI/CD pipelines, matrix builds, conditional execution."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-github-actions-custom-workflow-automation-tips/
 categories: [guides]

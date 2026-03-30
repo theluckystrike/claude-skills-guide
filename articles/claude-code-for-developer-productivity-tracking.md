@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Developer Productivity Tracking"
 description: "Learn how to use Claude Code to track and improve your developer productivity with practical examples, code snippets, and actionable strategies."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-developer-productivity-tracking/
 categories: [guides]

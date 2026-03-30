@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Chalk Feature Workflow Tutorial"
 description: "Learn how to use Claude Code CLI to streamline chalk feature development workflows. Practical examples for implementing terminal styling features."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-chalk-feature-workflow-tutorial/
 categories: [guides]

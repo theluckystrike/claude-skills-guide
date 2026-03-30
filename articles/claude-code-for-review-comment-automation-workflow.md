@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Review Comment Automation Workflow"
 description: "Learn how to build a review comment automation workflow with Claude Code to streamline code reviews, manage feedback, and maintain consistent quality."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-review-comment-automation-workflow/
 categories: [guides]

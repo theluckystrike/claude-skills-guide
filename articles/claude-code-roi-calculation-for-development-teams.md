@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code ROI Calculation for Development Teams"
 description: "Learn how to calculate the return on investment (ROI) for implementing Claude Code in your development team. Practical formulas, examples, and metrics."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-roi-calculation-for-development-teams/
 categories: [guides]

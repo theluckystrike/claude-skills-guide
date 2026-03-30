@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Git Filter-Repo Workflow"
 description: "Learn how to use Claude Code to automate and simplify git filter-repo workflows for cleaning up repository history, removing sensitive data, and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-git-filter-repo-workflow/
 categories: [guides]

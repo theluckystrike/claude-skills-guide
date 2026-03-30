@@ -4,6 +4,7 @@ layout: default
 title: "How to Make Claude Code Not Add Unused Imports"
 description: "Practical techniques to prevent Claude Code from adding unused imports, including CLAUDE.md settings, custom skills, and project configuration."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, import-management, code-quality]
 author: "Claude Skills Guide"

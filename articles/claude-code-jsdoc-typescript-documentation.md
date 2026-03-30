@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code JSDoc TypeScript Documentation Guide"
 description: "Master JSDoc and TypeScript documentation workflows with Claude Code. Practical examples for generating type-safe docs, automating API references, and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-jsdoc-typescript-documentation/
 reviewed: true

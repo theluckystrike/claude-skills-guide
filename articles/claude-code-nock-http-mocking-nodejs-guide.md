@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Nock HTTP Mocking Node.js Guide"
 description: "Learn how to use Nock for HTTP mocking in Node.js with Claude Code. Practical examples for intercepting HTTP requests, testing APIs, and building."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, nock, http-mocking, nodejs, testing, tdd]
 author: "Claude Skills Guide"

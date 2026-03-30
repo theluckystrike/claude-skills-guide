@@ -3,6 +3,7 @@ layout: default
 title: "Advanced Claude Skills with Tool Use and Function Calling"
 description: "Design Claude skills with precise tool use: restrict tool access per skill, create custom MCP tools, and build reliable function-calling workflows."
 date: 2026-03-13
+last_modified_at: 2026-03-13
 categories: [guides]
 tags: [claude-code, claude-skills, tool-use, function-calling, mcp]
 author: "Claude Skills Guide"

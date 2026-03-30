@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for OpenTofu Migration Workflow Guide"
 description: "A comprehensive guide to using Claude Code for migrating from Terraform to OpenTofu. Learn workflow strategies, automation patterns, and best practices."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-opentofu-migration-workflow-guide/
 categories: [guides]

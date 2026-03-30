@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Pytest Parametrize Advanced Workflow Patterns"
 description: "Explore advanced pytest parametrize patterns for efficient test automation. Learn indirect parametrization, fixture-based generation, hooks."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 categories: [tutorials]
 tags: [claude-code, claude-skills]

@@ -3,6 +3,7 @@ layout: default
 title: "MCP Memory Server: Persistent Storage for Claude Guide"
 description: "Set up the MCP memory server for persistent storage across Claude Code sessions. Configuration, usage, and tips for 2026."
 date: 2026-03-13
+last_modified_at: 2026-03-13
 categories: [guides]
 tags: [claude-skills, claude-code, mcp, memory, persistent-storage, agents, server]
 author: "Claude Skills Guide"

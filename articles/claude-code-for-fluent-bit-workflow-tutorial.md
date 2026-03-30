@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Fluent Bit Workflow Tutorial"
 description: "A comprehensive guide to using Claude Code CLI for creating, managing, and optimizing Fluent Bit log processing workflows. Includes practical examples."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-fluent-bit-workflow-tutorial/
 categories: [tutorials, guides]

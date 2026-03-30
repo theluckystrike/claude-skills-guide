@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Cypress Custom Commands Workflow Best Practices"
 description: "Master Cypress custom commands with Claude Code. Learn workflow patterns, TypeScript integration, best practices for maintainable test automation."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills]
 author: Claude Skills Guide

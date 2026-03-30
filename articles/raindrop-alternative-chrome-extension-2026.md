@@ -5,6 +5,7 @@ layout: default
 title: "Raindrop.io Alternative Chrome Extension in 2026"
 description: "Discover the best Raindrop.io alternatives for Chrome in 2026. Developer-friendly bookmark managers with API access, automation, and open-source options."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /raindrop-alternative-chrome-extension-2026/
 reviewed: true

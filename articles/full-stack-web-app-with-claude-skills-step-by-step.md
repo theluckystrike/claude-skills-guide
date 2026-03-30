@@ -3,6 +3,7 @@ layout: default
 title: "Full Stack Web App with Claude Skills Step-by-Step"
 description: "Build a full stack web app with Claude Code skills step by step. From project setup to deployment using specialized skills for each phase."
 date: 2026-03-13
+last_modified_at: 2026-03-13
 author: "Claude Skills Guide"
 categories: [tutorials]
 tags: [claude-code, claude-skills, full-stack, web-app, react, express]

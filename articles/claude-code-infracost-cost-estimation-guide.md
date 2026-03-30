@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Infracost Cost Estimation Guide"
 description: "Learn how to integrate Infracost with Claude Code to estimate AWS, GCP, and Azure infrastructure costs directly from your terminal."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-infracost-cost-estimation-guide/
 categories: [guides]

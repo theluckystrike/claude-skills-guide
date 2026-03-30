@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Docker Secrets Management Guide"
 description: "Learn how to manage Docker secrets effectively with Claude Code. Practical techniques for developers and power users working with containerized."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-docker-secrets-management-guide/
 categories: [guides]

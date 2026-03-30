@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code CloudFormation Template Generation Workflow Guid"
 description: "Learn how to generate AWS CloudFormation templates efficiently using Claude Code. Practical workflow patterns, code examples, and skill integration for inf"
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"

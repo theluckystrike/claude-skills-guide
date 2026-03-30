@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code vs Windsurf: Python Backend Development."
 description: "A comprehensive comparison of Claude Code and Windsurf for Python backend development, with practical examples and best practices."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-vs-windsurf-python-backend-development/
 reviewed: true

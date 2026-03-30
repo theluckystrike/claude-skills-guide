@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code Docker Multi-Stage Builds Guide"
 description: "Learn how to use Claude Code to generate efficient Docker multi-stage builds. Practical examples, code snippets, and techniques for developers."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-docker-multi-stage-builds-guide/
 reviewed: true

@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension Wolfram Alpha Helper"
 description: "A practical guide to Chrome extensions that integrate Wolfram Alpha for developers and power users. Learn how to use computational knowledge."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-wolfram-alpha-helper/
 reviewed: true

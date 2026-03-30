@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension Code Beautifier: Transform Messy Code."
 description: "Discover the best Chrome extensions for beautifying and formatting code directly in your browser. Practical examples and tips for developers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-code-beautifier/
 reviewed: true

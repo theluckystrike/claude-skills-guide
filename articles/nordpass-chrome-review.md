@@ -4,6 +4,7 @@ layout: default
 title: "NordPass Chrome Review: A Developer and Power User's."
 description: "An in-depth analysis of NordPass Chrome extension covering security architecture, API integration, CLI alternatives, and practical usage for developers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /nordpass-chrome-review/
 reviewed: true

@@ -3,6 +3,7 @@ layout: default
 title: "Best Calendar Chrome Extensions for Developers and Power."
 description: "Discover the top calendar Chrome extensions that boost productivity for developers. Learn about key features, integration capabilities, and how to."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "theluckystrike"
 permalink: /calendar-chrome-extension-best/
 categories: [guides]

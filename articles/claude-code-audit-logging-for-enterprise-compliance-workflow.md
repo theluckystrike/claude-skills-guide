@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Audit Logging for Enterprise Compliance Workflow"
 description: "Learn how to implement comprehensive audit logging in Claude Code for enterprise compliance. Practical patterns, code examples, and actionable advice."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-audit-logging-for-enterprise-compliance-workflow/
 categories: [guides]

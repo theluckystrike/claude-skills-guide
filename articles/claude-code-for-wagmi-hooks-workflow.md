@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Wagmi Hooks Workflow"
 description: "A practical guide for developers on using Claude Code with Wagmi hooks for Ethereum dApp development: workflow optimization, best practices, and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-wagmi-hooks-workflow/
 categories: [guides]

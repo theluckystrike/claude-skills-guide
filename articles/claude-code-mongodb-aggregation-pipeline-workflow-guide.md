@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code MongoDB Aggregation Pipeline Workflow Guide"
 description: "Master MongoDB aggregation pipelines with Claude Code. Learn practical workflows for building complex data transformations, analytics, and data."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "theluckystrike"
 permalink: /claude-code-mongodb-aggregation-pipeline-workflow-guide/
 categories: [guides]

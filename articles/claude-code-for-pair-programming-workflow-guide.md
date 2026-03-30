@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Pair Programming Workflow Guide"
 description: "Learn how to use Claude Code as your AI pair programming partner. This guide covers session setup, effective communication patterns, and practical."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-pair-programming-workflow-guide/
 categories: [guides]

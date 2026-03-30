@@ -4,6 +4,7 @@ layout: default
 title: "Using Claude Code for Kubernetes Priority Class Workflow"
 description: "Learn how to use Claude Code to automate and streamline Kubernetes PriorityClass management with practical examples and actionable advice."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-kubernetes-priority-class-workflow/
 categories: [guides, workflows]

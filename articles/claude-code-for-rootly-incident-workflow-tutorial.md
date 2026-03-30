@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Rootly Incident Workflow Tutorial"
 description: "Learn how to integrate Claude Code with Rootly incident management to automate runbooks, streamline response workflows, and reduce MTTR. Practical."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 categories: [tutorials]
 tags: [claude-code, rootly, incident-management, devops, automation, claude-skills]

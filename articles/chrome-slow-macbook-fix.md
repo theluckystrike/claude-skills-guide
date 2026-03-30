@@ -3,6 +3,7 @@ layout: default
 title: "Chrome Slow on MacBook? Here's How to Fix It"
 description: "Practical solutions for fixing Chrome performance issues on MacBook. Diagnose memory leaks, optimize extensions, and restore browser speed."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-slow-macbook-fix/
 categories: [guides]

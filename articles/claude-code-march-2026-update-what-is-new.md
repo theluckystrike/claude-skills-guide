@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code March 2026 Update: What's New for Developers"
 description: "A comprehensive guide to the Claude Code March 2026 update, featuring new skills, enhanced capabilities, and practical examples for developers and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-march-2026-update-what-is-new/
 reviewed: true

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Figma to Code Component Workflow"
 description: "A practical workflow for converting Figma designs into production-ready code components using Claude Code skills. Includes step-by-step process, code."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-figma-to-code-component-workflow/
 categories: [guides]

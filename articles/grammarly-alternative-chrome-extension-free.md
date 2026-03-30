@@ -3,6 +3,7 @@ layout: default
 title: "Best Free Grammarly Alternatives for Chrome in 2026"
 description: "Discover the best free Grammarly alternatives for Chrome in 2026. Compare features, pricing, and find the perfect grammar checking extension for your needs."
 date: 2026-03-19
+last_modified_at: 2026-03-19
 author: "Claude Skills Guide"
 permalink: /grammarly-alternative-chrome-extension-free/
 reviewed: true

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code vs Codeium for SQL Query Generation"
 description: "A comprehensive comparison of AI-powered SQL query generation capabilities, focusing on Claude Code's advanced features, context awareness, and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-vs-codeium-sql-query-generation/
 categories: [guides]

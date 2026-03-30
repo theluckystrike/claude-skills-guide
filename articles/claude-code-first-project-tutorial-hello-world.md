@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code First Project Tutorial: Hello World"
 description: "Create your first Claude Code project with this step-by-step hello world tutorial. Code examples for developers getting started with Claude Code."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [getting-started]
 tags: [claude-code, claude-skills, hello-world, getting-started, tutorial]
 author: "Claude Skills Guide"

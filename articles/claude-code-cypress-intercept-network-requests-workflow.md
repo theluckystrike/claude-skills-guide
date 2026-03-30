@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Cypress Intercept Network Requests Workflow"
 description: "Learn how to use Claude Code to streamline Cypress intercept network requests workflow. Practical examples, code snippets, and actionable advice for."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-cypress-intercept-network-requests-workflow/
 categories: [guides]

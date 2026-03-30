@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Kotlin Coroutines Flow Workflow"
 description: "Master the workflow of building solid Kotlin Coroutines Flow applications with Claude Code. Learn practical patterns for flow creation."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-kotlin-coroutines-flow-workflow/
 categories: [guides]

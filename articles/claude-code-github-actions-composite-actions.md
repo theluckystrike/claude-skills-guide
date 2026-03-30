@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code GitHub Actions Composite Actions"
 description: "Learn to build reusable GitHub Actions composite actions that integrate Claude Code automation into your CI/CD pipelines."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, github-actions, composite-actions, cicd]
 author: "Claude Skills Guide"

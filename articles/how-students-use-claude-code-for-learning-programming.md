@@ -4,6 +4,7 @@ layout: default
 title: "How Students Use Claude Code for Learning Programming"
 description: "Discover how students use Claude Code as a programming tutor, debugger, and project mentor. Practical examples and actionable advice for."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /how-students-use-claude-code-for-learning-programming/
 categories: [guides]

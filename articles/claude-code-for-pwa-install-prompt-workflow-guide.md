@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for PWA Install Prompt Workflow Guide"
 description: "Learn how to implement Progressive Web App install prompts using Claude Code. A practical guide with code examples and best practices for web developers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-pwa-install-prompt-workflow-guide/
 categories: [guides]

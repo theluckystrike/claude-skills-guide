@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Mobile App Accessibility Testing Workflow"
 description: "A comprehensive guide to implementing accessibility testing workflows for mobile apps using Claude Code. Learn practical techniques for automated."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: Claude Skills Guide
 permalink: /claude-code-mobile-app-accessibility-testing-workflow/
 categories: [tutorials]

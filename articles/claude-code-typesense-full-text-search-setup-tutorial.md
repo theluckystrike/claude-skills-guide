@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Typesense Full Text Search Setup Tutorial"
 description: "Learn how to integrate Claude Code with Typesense for powerful full-text search capabilities in your applications."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-typesense-full-text-search-setup-tutorial/
 categories: [guides]

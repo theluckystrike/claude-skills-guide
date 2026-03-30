@@ -4,6 +4,7 @@ layout: default
 title: "Git LFS + Claude Code: Managing Large Files in Your."
 description: "A practical workflow for handling large binary files with Git LFS while using Claude Code for development. Includes configuration tips and common pitfalls."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-git-lfs-large-files-workflow/
 categories: [guides]

@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for APM Integration Workflow Tutorial Guide"
 description: "Learn how to integrate Claude Code into your Application Performance Monitoring workflows. This guide covers practical techniques for setting up APM."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-apm-integration-workflow-tutorial-guide/
 categories: [guides]

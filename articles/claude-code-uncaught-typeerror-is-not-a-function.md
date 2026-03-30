@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code: Fixing Uncaught TypeError Is Not a Function"
 description: "Learn how to diagnose and fix 'Uncaught TypeError: is not a function' errors when working with Claude Code skills. Practical examples included."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-uncaught-typeerror-is-not-a-function/
 categories: [troubleshooting]

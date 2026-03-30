@@ -3,6 +3,7 @@ layout: default
 title: "How Agencies Use Claude Code for Client Projects"
 description: "Practical strategies for agencies integrating Claude Code into client workflows, with real examples and skill recommendations for deliverable-focused."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, agencies, workflow, productivity]
 author: "Claude Skills Guide"

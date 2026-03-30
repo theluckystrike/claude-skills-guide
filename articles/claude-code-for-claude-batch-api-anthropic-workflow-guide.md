@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for Claude Batch API: Anthropic Workflow Guide"
 description: "Learn how to use Claude Code with Anthropic's Batch API to efficiently process large volumes of prompts. This comprehensive guide covers setup,..."
 date: 2026-03-20
+last_modified_at: 2026-03-20
 author: Claude Skills Guide
 permalink: /claude-code-for-claude-batch-api-anthropic-workflow-guide/
 categories: [guides]

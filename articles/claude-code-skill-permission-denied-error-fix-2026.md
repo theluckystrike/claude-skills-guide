@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Skill Permission Denied Error Fix 2026"
 description: "Fix the permission denied error in Claude Code skills. Step-by-step solutions for file permissions, sandbox settings, and skill configuration."
 date: 2026-03-13
+last_modified_at: 2026-03-13
 categories: [troubleshooting]
 tags: [claude-code, claude-skills, troubleshooting, permissions]
 author: "Claude Skills Guide"

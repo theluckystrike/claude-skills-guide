@@ -3,6 +3,7 @@ layout: default
 title: "Claude Skills for Enterprise Security & Compliance Guide"
 description: "Deploy Claude Code skills in enterprise environments with security controls, audit logging, access management, and compliance requirements."
 date: 2026-03-13
+last_modified_at: 2026-03-13
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, claude-skills, enterprise, security, compliance]

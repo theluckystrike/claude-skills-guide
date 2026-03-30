@@ -4,6 +4,7 @@ layout: default
 title: "AI Blog Post Generator for Chrome: A Developer's Guide"
 description: "Discover how to use AI-powered blog post generators as Chrome extensions. Practical examples, APIs, and automation techniques for developers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /ai-blog-post-generator-chrome/
 reviewed: true

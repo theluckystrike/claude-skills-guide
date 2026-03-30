@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension Permissions Explained: A Developer's Guide"
 description: "Learn how Chrome extension permissions work, what each permission means, and how to manage them safely. Essential guide for developers and power users."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-permissions-explained/
 reviewed: true

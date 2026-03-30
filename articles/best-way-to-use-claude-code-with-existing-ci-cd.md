@@ -4,6 +4,7 @@ layout: default
 title: "Best Way to Use Claude Code with Existing CI/CD Pipelines"
 description: "Integrate Claude Code into your existing CI/CD workflows. Practical examples for GitHub Actions, GitLab CI, and Jenkins with code snippets and best."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /best-way-to-use-claude-code-with-existing-ci-cd/
 categories: [guides]

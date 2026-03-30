@@ -5,6 +5,7 @@ layout: default
 title: "Chrome Cast Buffering Fix: Practical Solutions for."
 description: "Discover why your Chrome Cast buffers and learn practical fixes ranging from network optimization to developer-level debugging techniques."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-cast-buffering-fix/
 reviewed: true

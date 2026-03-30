@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Jest Snapshot Testing Workflow Best Practices"
 description: "Master Jest snapshot testing with Claude Code: set up workflows, manage snapshots, integrate with CI/CD, and avoid common pitfalls with practical examples."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: Claude Skills Guide
 permalink: /claude-code-jest-snapshot-testing-workflow-best-practices/
 categories: [guides]

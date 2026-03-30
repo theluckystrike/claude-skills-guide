@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code German Developer Localization Workflow Guide"
 description: "A comprehensive guide for German developers on using Claude Code to streamline localization workflows, manage translations, and build multilingual."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, localization, german, i18n, internationalization, translation, claude-skills]
 author: "Claude Skills Guide"

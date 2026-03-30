@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Using Too Much RAM Fix: A Developer's Guide"
 description: "Practical solutions to reduce Chrome memory usage. Learn memory profiling, flags, extensions management, and automation techniques for power users."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-using-too-much-ram-fix/
 categories: [guides]

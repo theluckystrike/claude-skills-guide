@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension CSS Gradient Generator: Tools and Techniques for Developers"
 description: "Explore the best Chrome extensions for CSS gradient generation. Learn how to create linear, radial, and conic gradients with live preview and export options."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-css-gradient-generator/
 categories: [guides]

@@ -3,6 +3,7 @@ layout: default
 title: "Chrome Extension Price Match Finder: A Developer's Guide"
 description: "Learn how to build a Chrome extension that finds lower prices across retailers. Covers manifest V3, content scripts, messaging between components, and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-price-match-finder/
 categories: [guides]

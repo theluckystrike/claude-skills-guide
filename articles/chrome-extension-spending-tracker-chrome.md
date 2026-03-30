@@ -3,6 +3,7 @@ layout: default
 title: "Chrome Extension Spending Tracker Chrome: A Developer's Guide"
 description: "Learn how to build a spending tracker Chrome extension from scratch. Practical code examples and architecture for developers and power users."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-spending-tracker-chrome/
 categories: [guides]

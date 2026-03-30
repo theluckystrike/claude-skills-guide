@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for CDK Nag Policy Workflow Guide"
 description: "Learn how to integrate Claude Code with AWS CDK Nag for automated infrastructure policy compliance, security scanning, and governance workflows."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-cdk-nag-policy-workflow-guide/
 categories: [guides, tutorials]

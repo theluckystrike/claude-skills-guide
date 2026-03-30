@@ -5,6 +5,7 @@ layout: default
 title: "Chrome OS Enterprise Management: A Practical Guide for."
 description: "Learn how to manage Chrome OS devices in enterprise environments using Google Admin Console, Chrome Enterprise policies, and APIs. Includes code."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-os-enterprise-management/
 reviewed: true

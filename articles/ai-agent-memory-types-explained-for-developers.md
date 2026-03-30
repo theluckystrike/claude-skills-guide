@@ -4,6 +4,7 @@ layout: default
 title: "AI Agent Memory Types Explained for Developers"
 description: "Understand the different memory types in AI agents and how Claude Code manages context, persistence, and knowledge for building smarter applications."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, ai-agent, memory, context, developer-guide, claude-skills]
 author: "theluckystrike"

@@ -3,6 +3,7 @@ layout: default
 title: "Cline AI Code Assistant Review 2026"
 description: "An honest review of Cline AI code assistant in 2026: features, strengths, limitations, pricing, and a clear comparison with Claude Code."
 date: 2026-03-20
+last_modified_at: 2026-03-20
 categories: [comparisons]
 tags: [cline, claude-code, ai-code-assistant, comparison, review, vscode, agentic-coding]
 author: "Claude Skills Guide"

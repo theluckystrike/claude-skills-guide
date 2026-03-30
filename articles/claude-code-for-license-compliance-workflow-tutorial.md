@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for License Compliance Workflow Tutorial"
 description: "Learn how to automate software license compliance using Claude Code. This comprehensive guide covers practical workflows, code examples, and actionable."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-license-compliance-workflow-tutorial/
 categories: [guides, workflows]

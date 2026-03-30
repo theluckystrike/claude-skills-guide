@@ -4,6 +4,7 @@ layout: default
 title: "Dashlane Alternative Chrome Extension in 2026"
 description: "Discover the best Dashlane alternatives for Chrome in 2026. These developer-focused password managers offer solid APIs, CLI tools, and self-hosted options."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /dashlane-alternative-chrome-extension-2026/
 reviewed: true

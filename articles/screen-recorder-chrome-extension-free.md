@@ -4,6 +4,7 @@ layout: default
 title: "Free Screen Recorder Chrome Extension: A Developer Guide"
 description: "Learn how to build a free screen recorder Chrome extension from scratch. Practical code examples, APIs, and implementation patterns for developers and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /screen-recorder-chrome-extension-free/
 categories: [guides]

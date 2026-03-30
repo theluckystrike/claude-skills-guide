@@ -3,6 +3,7 @@ layout: default
 title: "Claude Skills Serverless Function Development Workflow"
 description: "Build Claude skills that deploy serverless functions. A practical workflow for creating, testing, and deploying cloud functions."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [workflows]
 tags: [claude-code, claude-skills, serverless, aws-lambda, cloud-functions]
 author: "Claude Skills Guide"

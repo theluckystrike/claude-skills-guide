@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Gatling Performance Test Workflow"
 description: "Learn how to integrate Claude Code into your Gatling performance testing workflow to write efficient load tests, analyze results, and optimize your."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-gatling-performance-test-workflow/
 categories: [guides]

@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Actix Web Rust API Guide"
 description: "Build REST APIs with Actix Web and Rust using Claude Code. Practical examples, skill integration, and workflow tips for developers."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, actix-web, rust, api, backend, web-development]
 author: "Claude Skills Guide"

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Cheerio HTML Parsing Workflow"
 description: "Master HTML parsing with Cheerio and Claude Code. Learn practical workflows for extracting data from web pages, handling dynamic content, and building."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-cheerio-html-parsing-workflow/
 categories: [guides]

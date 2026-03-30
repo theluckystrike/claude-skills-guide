@@ -3,6 +3,7 @@ layout: default
 title: "GDPR Data Privacy Implementation with Claude Code 2026"
 description: "Practical checklist for implementing GDPR data privacy compliance using Claude Code. Covers consent, data handling, and code examples."
 date: 2026-03-13
+last_modified_at: 2026-03-13
 categories: [guides]
 tags: [claude-code, claude-skills, gdpr, data-privacy, compliance, security]
 author: "Claude Skills Guide"

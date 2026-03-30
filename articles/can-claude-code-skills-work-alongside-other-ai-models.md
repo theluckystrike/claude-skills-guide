@@ -3,6 +3,7 @@ layout: default
 title: "Can Claude Code Skills Work Alongside Other AI Models?"
 description: "Learn how Claude Code skills integrate with other AI tools like GPT-4, Gemini, and Cursor. Practical patterns for multi-AI development workflows."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, claude-skills, ai-models, gpt-4, multi-ai, integration]

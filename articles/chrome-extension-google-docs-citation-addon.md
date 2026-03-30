@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension Google Docs Citation Addon: A Developer Guide"
 description: "Learn how to build and integrate chrome extension Google Docs citation addons for automated bibliography management and academic writing."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-google-docs-citation-addon/
 categories: [guides]

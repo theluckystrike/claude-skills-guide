@@ -4,6 +4,7 @@ layout: default
 title: "SimilarWeb Alternative Chrome Extension in 2026"
 description: "Discover the best SimilarWeb alternatives for Chrome in 2026. Developer-friendly tools for website traffic analysis, competitor research, and market."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /similarweb-alternative-chrome-extension-2026/
 reviewed: true

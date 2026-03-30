@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Dependency Injection Refactoring"
 description: "Learn how to apply dependency injection patterns to your Claude skills for better testability, reusability, and maintainability."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, dependency-injection, refactoring, architecture]
 author: "Claude Skills Guide"

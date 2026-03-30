@@ -4,6 +4,7 @@ layout: default
 title: "Claude MD Example for Rails Ruby Application"
 description: "A practical guide to using Claude with Markdown for Rails and Ruby development workflows."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-md-example-for-rails-ruby-application/
 categories: [guides]

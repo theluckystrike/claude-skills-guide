@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Workflow for Turkish Developer Teams"
 description: "Practical guide for Turkish development teams implementing Claude Code workflows. Setup, team collaboration, skills, and real-world examples."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [workflows]
 tags: [claude-code, turkish-developers, team-workflow, collaboration]
 author: "theluckystrike"

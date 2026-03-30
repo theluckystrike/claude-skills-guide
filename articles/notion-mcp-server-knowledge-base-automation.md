@@ -3,6 +3,7 @@ layout: default
 title: "Notion MCP Server Knowledge Base Automation"
 description: "Learn how to automate your Notion knowledge base using the Notion MCP server with Claude Code. Practical examples, API integration patterns, and workflow."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, notion, mcp, knowledge-base, automation, productivity]
 author: "Claude Skills Guide"

@@ -4,6 +4,7 @@ layout: default
 title: "Buffer Alternative Chrome Extension 2026"
 description: "Find the best Buffer alternatives with Chrome extensions for social media scheduling in 2026. Compare features, pricing, and developer-friendly APIs."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /buffer-alternative-chrome-extension-2026/
 categories: [guides]

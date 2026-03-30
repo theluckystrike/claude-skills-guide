@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Cost Optimization Monitoring Guide"
 description: "Learn how to use Claude Code CLI to monitor, analyze, and optimize your cloud infrastructure costs with practical examples and actionable strategies."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-cost-optimization-monitoring-guide/
 categories: [guides]

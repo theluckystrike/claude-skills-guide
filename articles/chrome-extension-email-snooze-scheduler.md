@@ -3,6 +3,7 @@ layout: default
 title: "Chrome Extension Email Snooze Scheduler - Complete Guide for Developers"
 description: "Learn how to build and use Chrome extensions for email snooze scheduling. Technical deep detailed look into implementation patterns, APIs, and best practices."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-email-snooze-scheduler/
 categories: [guides]

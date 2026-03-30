@@ -4,6 +4,7 @@ layout: default
 title: "How to Make Claude Code Respect My ESLint Config"
 description: "A practical guide to ensuring Claude Code follows your ESLint configuration when writing and editing code. Learn the key techniques and configurations."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, eslint, linting, code-quality, configuration, claude-skills]
 author: "Claude Skills Guide"

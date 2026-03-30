@@ -3,6 +3,7 @@ layout: default
 title: "Chrome Extension Miro Whiteboard: A Complete Guide for Developers and Power Users"
 description: "Discover how to use the Miro Chrome extension for smooth whiteboard collaboration, including setup, features, and advanced integration techniques."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-miro-whiteboard/
 categories: [guides]

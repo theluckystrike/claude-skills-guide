@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for ModSecurity WAF Workflow Guide"
 description: "Learn how to use Claude Code to streamline ModSecurity WAF rule development, configuration, and troubleshooting workflows for solid web application."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-modsecurity-waf-workflow-guide/
 categories: [guides]

@@ -3,6 +3,7 @@ layout: default
 title: "Chrome Enterprise vs Consumer Features: A Developer Guide"
 description: "Understand the key differences between Chrome enterprise and consumer features. Learn which capabilities matter for developers, IT administrators, and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-enterprise-vs-consumer-features/
 categories: [guides]

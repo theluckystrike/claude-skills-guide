@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for MITRE ATT&CK Workflow Guide"
 description: "Learn how to use Claude Code to streamline your MITRE ATT&CK workflow, from technique mapping to detection rule creation and security automation."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-mitre-attck-workflow-guide/
 categories: [guides]

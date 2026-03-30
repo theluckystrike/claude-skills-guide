@@ -3,6 +3,7 @@ layout: default
 title: "How Locale Settings Reveal Your Browser: The Intl API Fingerprinting Guide"
 description: "Discover how websites use the Internationalization API to fingerprint your browser through locale settings. Learn about the techniques, privacy."
 date: 2026-03-16
+last_modified_at: 2026-03-16
 author: "Claude Skills Guide"
 permalink: /intl-api-fingerprinting-how-locale-settings-reveal-your-brow/
 reviewed: false

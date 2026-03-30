@@ -3,6 +3,7 @@ layout: default
 title: "How to Make Claude Code Explain Its Reasoning Steps"
 description: "Learn techniques to get Claude Code to reveal its thought process, from explicit prompting strategies to skill-based approaches for transparent AI."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, reasoning, prompting, debugging]
 author: theluckystrike

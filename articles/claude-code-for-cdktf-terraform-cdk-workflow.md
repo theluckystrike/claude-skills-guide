@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for CDKTF Terraform CDK Workflow"
 description: "Learn how to use Claude Code to streamline your CDKTF (Terraform Cloud Development Kit) workflow. This guide covers infrastructure-as-code best practices."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-cdktf-terraform-cdk-workflow/
 categories: [guides]

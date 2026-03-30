@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Docker Desktop Workflow Tips"
 description: "Practical tips for integrating Claude Code with Docker Desktop. Streamline containerized development with these actionable workflow patterns."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-docker-desktop-workflow-tips/
 categories: [guides]

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for On-Call Rotation Workflow Tutorial"
 description: "Learn how to use Claude Code to streamline on-call rotations, automate incident triage, and reduce MTTR. Practical examples and actionable advice for."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-on-call-rotation-workflow-tutorial/
 categories: [workflows, guides]

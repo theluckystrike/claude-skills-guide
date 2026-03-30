@@ -4,6 +4,7 @@ layout: default
 title: "Distributing Claude Skills Across Isolated Client."
 description: "Learn how to effectively distribute and manage Claude Code skills across multiple isolated client environments for consistent AI assistance."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /distributing-claude-skills-across-isolated-client-environmen/
 reviewed: true

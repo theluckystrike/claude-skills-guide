@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension Bulk Social Media Posting: A Developer."
 description: "Learn how to build and use Chrome extensions for bulk social media posting. Technical guide for developers and power users with practical examples."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-bulk-social-media-posting/
 reviewed: true

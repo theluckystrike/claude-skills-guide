@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for WindSurf Cascade Workflow Guide"
 description: "Master the integration of Claude Code with WindSurf Cascade workflow. Learn practical techniques to enhance your AI-assisted development with powerful."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-windsurf-cascade-workflow-guide/
 categories: [guides]

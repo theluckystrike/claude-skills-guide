@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for C# Source Generators Workflow"
 description: "Learn how to use Claude Code to streamline your C# source generator development workflow. Practical examples and actionable advice for .NET."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-csharp-source-generators-workflow/
 categories: [guides]

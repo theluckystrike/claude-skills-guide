@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension Permissions Too Many: A Practical Guide"
 description: "Learn how Chrome extension permissions work, why too many permissions pose security risks, and how to audit them effectively."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-permissions-too-many/
 reviewed: true

@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension Credit Card Rewards Optimizer: A Developer Guide"
 description: "Learn how to build and use Chrome extensions for optimizing credit card rewards. Technical implementation guide with code examples for developers and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-credit-card-rewards-optimizer/
 categories: [guides]

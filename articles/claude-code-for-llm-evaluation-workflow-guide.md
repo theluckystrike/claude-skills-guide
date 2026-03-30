@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for LLM Evaluation Workflow Guide"
 description: "Master LLM evaluation workflows with Claude Code. Learn to build automated testing pipelines, benchmark model performance, and implement reliable."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-llm-evaluation-workflow-guide/
 categories: [workflows]

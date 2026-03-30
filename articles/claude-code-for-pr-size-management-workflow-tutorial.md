@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for PR Size Management Workflow Tutorial"
 description: "Learn how to use Claude Code to enforce PR size limits, automate review workflows, and maintain healthy pull request habits in your development team."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-pr-size-management-workflow-tutorial/
 categories: [guides, tutorials]

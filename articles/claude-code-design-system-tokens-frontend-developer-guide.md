@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Design System Tokens: A Frontend Developer Guide"
 description: "Learn how to use Claude Code's design system tokens for building consistent, professional user interfaces with the canvas-design skill."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, design-system, frontend, canvas-design, tokens, claude-skills]

@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Beam Cloud ML Workflow Guide"
 description: "Master Beam Cloud ML pipeline development with Claude Code. Learn efficient workflows for distributed training, model deployment, and scalable machine."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-beam-cloud-ml-workflow-guide/
 categories: [guides]

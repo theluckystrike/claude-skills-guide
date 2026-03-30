@@ -3,6 +3,7 @@ layout: default
 title: "Chrome Extension Batch Image Download: A Developer Guide"
 description: "Learn how to build a Chrome extension for batch image downloading. Practical code examples, APIs, and implementation patterns for developers and power users."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-batch-image-download/
 categories: [guides]

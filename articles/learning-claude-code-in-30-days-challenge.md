@@ -4,6 +4,7 @@ layout: default
 title: "Learning Claude Code in 30 Days: A Structured Challenge"
 description: "Master Claude Code skills in 30 days with this practical developer challenge. Build automation workflows, integrate APIs, and become a power user."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, learning, challenge, productivity]
 author: "Claude Skills Guide"

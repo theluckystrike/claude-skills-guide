@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Jupyter Notebook Analysis Workflow Guide"
 description: "Master the art of using Claude Code with Jupyter notebooks for interactive data analysis. Learn practical workflows, code patterns, and tips for."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-jupyter-notebook-analysis-workflow-guide/
 categories: [guides]

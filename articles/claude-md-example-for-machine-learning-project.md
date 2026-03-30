@@ -3,6 +3,7 @@ layout: default
 title: "Claude MD Example for Machine Learning Project"
 description: "Learn how to use Claude with markdown files for machine learning projects. Practical examples for prompts, workflows, documentation, and integrating."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, machine-learning, prompts, md-files, developer-guide, claude-skills]
 author: "theluckystrike"

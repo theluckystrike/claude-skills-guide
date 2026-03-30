@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Swagger Documentation Workflow (2026)"
 description: "Build an automated Swagger documentation workflow using Claude skills: OpenAPI spec generation, API documentation, and integration with your."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [workflows]
 tags: [claude-code, claude-skills, swagger, openapi, documentation, api]
 author: "Claude Skills Guide"

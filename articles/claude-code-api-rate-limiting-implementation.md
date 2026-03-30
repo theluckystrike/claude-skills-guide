@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code API Rate Limiting Implementation Guide"
 description: "Implement solid rate limiting for Claude Code API integrations. Learn token bucketing, request throttling, and practical patterns for production systems."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, api, rate-limiting, development, engineering, claude-skills]
 author: "Claude Skills Guide"

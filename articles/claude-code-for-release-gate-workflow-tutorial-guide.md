@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Release Gate Workflow Tutorial Guide"
 description: "Learn how to use Claude Code for release gate workflows. A practical guide for developers to create, implement, and automate release gates."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-release-gate-workflow-tutorial-guide/
 categories: [guides]

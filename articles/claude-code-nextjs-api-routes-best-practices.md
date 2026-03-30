@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code NextJS API Routes Best Practices: A."
 description: "Master NextJS API routes with Claude Code. Learn best practices for building robust, secure, and performant API endpoints in your NextJS applications."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-nextjs-api-routes-best-practices/
 categories: [guides]

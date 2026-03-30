@@ -4,6 +4,7 @@ layout: default
 title: "Why Does Claude Code Occasionally Repeat Same Errors?"
 description: "Understanding why Claude Code sometimes makes the same mistakes repeatedly and how to break the error cycle for better development workflows."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /why-does-claude-code-occasionally-repeat-same-errors/
 categories: [troubleshooting]

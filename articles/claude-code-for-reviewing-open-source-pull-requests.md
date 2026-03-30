@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Reviewing Open Source Pull Requests"
 description: "Learn how to use Claude Code to efficiently review open source pull requests, with practical workflows, code analysis techniques, and actionable advice."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [workflows]
 tags: [claude-code, claude-skills, open-source, pull-requests, code-review]
 author: "Claude Skills Guide"

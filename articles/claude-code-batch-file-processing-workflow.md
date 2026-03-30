@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Batch File Processing Workflow"
 description: "Learn how to automate repetitive file operations with Claude Code. This guide covers batch processing patterns, skill composition, and practical."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, batch-processing, automation, file-operations, workflows, claude-skills]
 author: "Claude Skills Guide"

@@ -3,6 +3,7 @@ layout: default
 title: "Claude Skills for Regulated Industries: Fintech"
 description: "Discover Claude skills tailored for fintech and healthcare development. Practical examples, compliance workflows, and code patterns for regulated."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, claude-skills, fintech, healthcare, compliance]

@@ -4,6 +4,7 @@ layout: default
 title: "Grounding AI Agents in Real World Data Explained"
 description: "Learn how Claude Code grounds AI agents in real-world data through file operations, bash commands, and tool integration for practical, accurate results."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, ai-agents, grounding, rag, vector-database, data, claude-skills]
 author: "theluckystrike"

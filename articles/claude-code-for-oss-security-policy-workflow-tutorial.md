@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for OSS Security Policy Workflow Tutorial"
 description: "Learn how to use Claude Code to create, manage, and automate Open Source Software security policy workflows for your projects."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-oss-security-policy-workflow-tutorial/
 categories: [tutorials]

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Azure Functions Development Workflow"
 description: "A practical guide to developing Azure Functions with Claude Code. Learn how to set up, develop, test, and deploy serverless functions efficiently using."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-azure-functions-development-workflow/
 categories: [workflows]

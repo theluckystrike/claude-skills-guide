@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Incident Tracking Workflow Tutorial"
 description: "Learn how to build an incident tracking workflow with Claude Code. Create skills for logging, triaging, and resolving incidents with practical code."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-incident-tracking-workflow-tutorial/
 categories: [tutorials, workflows]

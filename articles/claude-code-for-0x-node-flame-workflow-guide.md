@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for 0x Node Flame Workflow Guide"
 description: "A comprehensive guide to integrating Claude Code with 0x node operations and flame workflow automation for developers building decentralized exchange."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-0x-node-flame-workflow-guide/
 categories: [guides]

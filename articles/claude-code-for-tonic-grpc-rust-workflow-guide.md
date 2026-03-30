@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Tonic gRPC Rust Workflow Guide"
 description: "Master building gRPC services with Tonic and Rust using Claude Code. Learn workflow patterns, code generation, and best practices for high-performance."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-tonic-grpc-rust-workflow-guide/
 categories: [tutorials]

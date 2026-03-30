@@ -4,6 +4,7 @@ layout: default
 title: "Vibe Coding for Startup Founders: A Non-Technical Guide"
 description: "Learn how non-technical startup founders can use vibe coding with Claude Code to build products. Practical examples, skill recommendations, and real."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /vibe-coding-for-startup-founders-non-technical/
 categories: [guides]

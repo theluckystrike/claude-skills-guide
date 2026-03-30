@@ -5,6 +5,7 @@ layout: default
 title: "Best AI Tools for Code Refactoring in 2026"
 description: "Discover the most effective AI-powered tools for code refactoring in 2026. Learn how Claude Code, CodeRabbit, and other tools transform your."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [ai, code-refactoring, developer-tools, claude-code, claude-skills]

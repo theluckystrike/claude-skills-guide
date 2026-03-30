@@ -4,6 +4,7 @@ layout: default
 title: "Using Claude Code as a Backend Engine for Dev Tools"
 description: "Learn how to use Claude Code's CLI, skills system, and MCP integration to build powerful development tools that automate workflows, analyze."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, dev-tools, automation, mcp, backend, claude-skills]
 author: "Claude Skills Guide"

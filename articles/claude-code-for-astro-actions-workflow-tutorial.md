@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Astro Actions Workflow Tutorial"
 description: "Learn how to use Claude Code to automate and streamline your Astro Actions workflow with practical examples and actionable advice."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-astro-actions-workflow-tutorial/
 categories: [guides, tutorials]

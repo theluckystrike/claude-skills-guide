@@ -3,6 +3,7 @@ layout: default
 title: "Why Does Claude Code Produce Incomplete Code Blocks? Fix."
 description: "Learn why Claude Code sometimes produces truncated code blocks and discover practical solutions to fix this common issue."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /why-does-claude-code-produce-incomplete-code-blocks-fix/
 reviewed: true

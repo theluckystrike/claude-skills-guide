@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Braintree Payment Workflow Guide: A."
 description: "Learn how to use Claude Code to build, automate, and optimize Braintree payment workflows. Includes practical examples, code snippets, and actionable."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-braintree-payment-workflow-guide/
 categories: [tutorials]

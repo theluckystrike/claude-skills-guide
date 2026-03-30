@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Aqua Security Container Workflow Guide"
 description: "Learn how to integrate Claude Code with Aqua Security for comprehensive container security workflows. Practical examples and actionable advice for developers."
 date: 2026-03-20
+last_modified_at: 2026-03-20
 author: "Claude Skills Guide"
 permalink: /claude-code-for-aqua-security-container-workflow-guide/
 categories: [guides]

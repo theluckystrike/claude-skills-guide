@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Winglang Workflow Tutorial Guide"
 description: "Learn how to use Claude Code to accelerate your Winglang cloud development workflow. This comprehensive guide covers setup, practical examples, and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-winglang-workflow-tutorial-guide/
 categories: [tutorials]

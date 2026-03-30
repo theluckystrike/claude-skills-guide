@@ -3,6 +3,7 @@ layout: default
 title: "How to Contribute Claude Skills to Open Source"
 description: "Step-by-step guide to contributing Claude AI skills to open source. Learn code structure, testing, PR best practices, and how to get your skill adopted."
 date: 2026-03-13
+last_modified_at: 2026-03-13
 categories: [guides]
 tags: [claude-code, claude-skills, open-source, contribution]
 author: "Claude Skills Guide"

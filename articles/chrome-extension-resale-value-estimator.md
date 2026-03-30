@@ -3,6 +3,7 @@ layout: default
 title: "Chrome Extension Resale Value Estimator: A Practical."
 description: "Learn how to estimate the resale value of your Chrome extension with this comprehensive guide covering metrics, valuation methods, and practical examples."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-resale-value-estimator/
 reviewed: true

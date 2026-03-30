@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for React Reasoning Agent Workflow"
 description: "Learn how to build intelligent React applications with Claude Code reasoning agent workflows. This guide covers agent architectures, tool calling."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-react-reasoning-agent-workflow/
 categories: [guides]

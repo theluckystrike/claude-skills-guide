@@ -3,6 +3,7 @@ layout: default
 title: "How to Write Effective Prompts for Claude Code"
 description: "Master the art of prompting Claude Code with concrete techniques: context framing, task decomposition, output specification, and iterative refinement."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [getting-started]
 tags: [claude-code, claude-skills, prompting, skill-writing, productivity]
 author: "Claude Skills Guide"

@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code disallowedTools Security Configuration"
 description: "Master disallowedTools configuration in Claude Code to control tool access, enhance security, and build safer AI-assisted workflows for development teams."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, security, disallowedtools, configuration]
 author: "Claude Skills Guide"

@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for Multi-Language Navigation Workflow"
 description: "Learn how to use Claude Code CLI to navigate and manage multi-language projects efficiently with practical examples and actionable workflows."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-multi-language-navigation-workflow/
 categories: [guides]

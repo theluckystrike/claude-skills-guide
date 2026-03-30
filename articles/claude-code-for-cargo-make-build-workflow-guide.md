@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Cargo Make Build Workflow Guide"
 description: "Master Cargo Make build automation with Claude Code. Learn to create efficient Rust build workflows, use AI-powered skills, and automate your."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 categories: [guides]
 tags: [claude-code, cargo-make, rust, build-automation, workflow, devops, claude-skills]
 author: Claude Skills Guide

@@ -3,6 +3,7 @@ layout: default
 title: "Claude Skills Access Control and Permissions Enterprise G..."
 description: "Implement granular access control and permission models for Claude Code skills in enterprise environments. Learn role-based access, skill isolation, and..."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, claude-skills, access-control, permissions, enterprise, security]

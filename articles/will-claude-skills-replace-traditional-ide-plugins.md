@@ -3,6 +3,7 @@ layout: default
 title: "Will Claude Skills Replace Traditional IDE Plugins?"
 description: "An analysis of whether Claude Code skills can replace traditional IDE plugins. Practical examples comparing skills like pdf, tdd, xlsx, and frontend-design"
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [comparisons]
 tags: [claude-code, claude-skills, ide-plugins, developer-tools]
 author: "Claude Skills Guide"

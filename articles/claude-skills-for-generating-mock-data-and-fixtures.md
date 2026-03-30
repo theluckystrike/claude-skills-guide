@@ -3,6 +3,7 @@ layout: default
 title: "Claude Skills for Generating Mock Data and Fixtures"
 description: "A practical guide to using Claude Code skills for generating mock data and test fixtures. Real examples for developers building applications with."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, mock-data, fixtures, testing, development]
 author: "Claude Skills Guide"

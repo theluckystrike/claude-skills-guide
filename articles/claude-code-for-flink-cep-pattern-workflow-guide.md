@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Flink CEP Pattern Workflow Guide"
 description: "Master Complex Event Processing patterns in Apache Flink with Claude Code. Learn to build pattern detection workflows, implement alerting systems, and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-flink-cep-pattern-workflow-guide/
 categories: [guides]

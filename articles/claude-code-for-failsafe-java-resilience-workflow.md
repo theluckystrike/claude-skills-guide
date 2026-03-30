@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Failsafe Java Resilience Workflow"
 description: "Learn how to use Claude Code to build solid Failsafe Java resilience patterns including retries, circuit breakers, and fallbacks for."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 categories: [guides]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"

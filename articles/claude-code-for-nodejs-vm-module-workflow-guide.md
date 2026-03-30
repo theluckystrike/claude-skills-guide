@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Node.js VM Module Workflow Guide"
 description: "Master Node.js vm module for code compilation and sandboxing with Claude Code. Learn practical workflows for secure code execution, template rendering."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-nodejs-vm-module-workflow-guide/
 categories: [guides]

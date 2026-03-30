@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Metaflow Workflow Tutorial"
 description: "Master Metaflow workflow development with Claude Code. Learn how to build, debug, and deploy data science pipelines using practical examples and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-metaflow-workflow-tutorial/
 categories: [guides]

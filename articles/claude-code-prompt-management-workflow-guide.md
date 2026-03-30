@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Prompt Management Workflow Guide"
 description: "Master prompt management with Claude Code. Practical workflow strategies for developers to organize, reuse, and optimize prompts across projects."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-prompt-management-workflow-guide/
 categories: [guides]

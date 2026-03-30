@@ -5,6 +5,7 @@ layout: default
 title: "Chrome Enterprise Blocked Extensions: A Practical Guide"
 description: "Understand how Chrome Enterprise manages extension blocking, configure policies for your organization, and work around restrictions effectively."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-enterprise-blocked-extensions/
 reviewed: true

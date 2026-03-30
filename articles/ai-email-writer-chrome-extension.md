@@ -4,6 +4,7 @@ layout: default
 title: "AI Email Writer Chrome Extension: A Developer's Guide"
 description: "Learn how AI-powered Chrome extensions can streamline your email workflow with intelligent composing, reply generation, and customization options for."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /ai-email-writer-chrome-extension/
 categories: [guides]

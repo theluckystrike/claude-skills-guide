@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Hybrids Web Components Workflow"
 description: "Learn how to use Claude Code effectively with Hybrids web components. This guide covers practical workflows, code examples, and best practices for."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-hybrids-web-components-workflow/
 categories: [guides]

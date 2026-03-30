@@ -3,6 +3,7 @@ layout: default
 title: "Evernote Web Clipper Alternative for Chrome in 2026: A."
 description: "Explore the best Evernote Web Clipper alternatives for Chrome in 2026. Compare features, API access, developer-friendly options, and learn how to build."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /evernote-web-clipper-alternative-chrome-extension-2026/
 reviewed: true

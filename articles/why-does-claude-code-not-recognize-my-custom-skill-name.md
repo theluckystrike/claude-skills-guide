@@ -3,6 +3,7 @@ layout: default
 title: "Why Does Claude Code Not Recognize My Custom Skill Name?"
 description: "Troubleshooting guide for custom skill registration issues in Claude Code. Learn why your skill won't load and how to fix skill name recognition problems."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [troubleshooting]
 tags: [claude-code, claude-skills, troubleshooting, skill-registration]
 author: "Claude Skills Guide"

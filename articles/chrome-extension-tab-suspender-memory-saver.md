@@ -5,6 +5,7 @@ layout: default
 title: "Chrome Extension Tab Suspender Memory Saver: A Developer."
 description: "Learn how chrome extension tab suspenders save memory, the technical implementation behind them, and how to build or optimize your own extension."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-tab-suspender-memory-saver/
 reviewed: true

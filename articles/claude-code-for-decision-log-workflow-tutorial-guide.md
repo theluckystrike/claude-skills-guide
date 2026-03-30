@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Decision Log Workflow: A Complete."
 description: "Learn how to create, manage, and automate decision logs using Claude Code. This guide covers practical workflows, code examples, and best practices for."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-decision-log-workflow-tutorial-guide/
 categories: [workflows, tutorials]

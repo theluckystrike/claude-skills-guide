@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Dotfiles Configuration Management Workflow"
 description: "Learn how to use Claude Code for efficient dotfiles management. Track configuration files across machines, automate symlinking, and maintain."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-dotfiles-configuration-management-workflow/
 categories: [guides]

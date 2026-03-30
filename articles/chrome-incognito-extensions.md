@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Incognito Extensions: A Developer's Guide"
 description: "Learn how Chrome incognito extensions work, what limitations exist, and how to properly configure extension behavior for private browsing sessions."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-incognito-extensions/
 reviewed: true

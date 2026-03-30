@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code CSP Content Security Policy Generation Guide"
 description: "Generate and implement Content Security Policy headers with Claude Code. Secure your web apps against XSS and data injection attacks."
 date: 2026-03-13
+last_modified_at: 2026-03-13
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, claude-skills]

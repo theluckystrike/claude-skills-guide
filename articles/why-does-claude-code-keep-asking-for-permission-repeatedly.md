@@ -3,6 +3,7 @@ layout: default
 title: "Why Does Claude Code Keep Asking for Permission Repeatedly?"
 description: "Understanding Claude Code's permission prompts and how to configure permission modes for a smoother development workflow."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /why-does-claude-code-keep-asking-for-permission-repeatedly/
 reviewed: true

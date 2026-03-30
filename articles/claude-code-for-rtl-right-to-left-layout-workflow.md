@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for RTL Right-to-Left Layout Workflow"
 description: "Learn how to use Claude Code to build RTL layouts for Arabic, Hebrew, Persian and other right-to-left languages. Includes practical examples, code."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-rtl-right-to-left-layout-workflow/
 categories: [guides]

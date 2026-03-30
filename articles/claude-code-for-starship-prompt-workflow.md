@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Starship Prompt Workflow"
 description: "Learn how to use Claude Code to streamline your Starship prompt configuration workflow. Get practical prompts, code examples, and actionable tips for."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-starship-prompt-workflow/
 categories: [guides]

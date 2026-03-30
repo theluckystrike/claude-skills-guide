@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code GrowthBook Experiment Analysis Workflow Tutorial"
 description: "Learn how to use Claude Code for GrowthBook experiment analysis. This tutorial covers practical workflows for analyzing A/B test results, interpreting."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-growthbook-experiment-analysis-workflow-tutorial/
 categories: [tutorials]

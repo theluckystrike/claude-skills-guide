@@ -3,6 +3,7 @@ layout: default
 title: "How to Build an AI Video Summarizer Chrome Extension"
 description: "Learn how to build a Chrome extension that uses AI to summarize videos from YouTube, Vimeo, and Coursera. Complete implementation guide with code examples."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /ai-video-summarizer-chrome-extension/
 categories: [guides]

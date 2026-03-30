@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Standard Version Workflow"
 description: "Learn how to use Claude Code to implement standard version workflows including semantic versioning, changelog generation, and automated release management."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-standard-version-workflow/
 categories: [guides]

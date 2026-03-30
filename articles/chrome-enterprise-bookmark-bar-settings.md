@@ -3,6 +3,7 @@ layout: default
 title: "Chrome Enterprise Bookmark Bar Settings: A Complete Guide"
 description: "Learn how to configure Chrome browser bookmark bar settings via enterprise policies for IT administrators and power users managing Chrome deployments."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-enterprise-bookmark-bar-settings/
 categories: [guides]

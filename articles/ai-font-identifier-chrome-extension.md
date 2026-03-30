@@ -3,6 +3,7 @@ layout: default
 title: "AI Font Identifier Chrome Extension: A Developer's Guide"
 description: "Discover how AI-powered font identifier Chrome extensions work, their technical implementation, and how developers can use them for design workflows."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /ai-font-identifier-chrome-extension/
 categories: [guides]

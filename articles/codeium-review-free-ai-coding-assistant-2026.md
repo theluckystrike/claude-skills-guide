@@ -4,6 +4,7 @@ layout: default
 title: "Codeium Review: Free AI Coding Assistant 2026"
 description: "A comprehensive review of Codeium, the free AI coding assistant in 2026. Explore its features, capabilities, and how it compares to Claude Code skills."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: theluckystrike
 permalink: /codeium-review-free-ai-coding-assistant-2026/
 categories: [guides]

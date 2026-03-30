@@ -3,6 +3,7 @@ layout: default
 title: "Claude PDF Skill: Document Generation Guide"
 description: "Complete guide to using the Claude Code PDF skill for document generation. Covers invoices, reports, technical specs, and automated document workflows."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, pdf, document-generation]
 author: "Claude Skills Guide"

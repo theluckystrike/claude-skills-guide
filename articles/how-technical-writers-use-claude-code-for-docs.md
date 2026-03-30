@@ -4,6 +4,7 @@ layout: default
 title: "How Technical Writers Use Claude Code for Docs: A."
 description: "Discover how technical writers use Claude Code and its skill system to streamline documentation workflows, automate repetitive tasks, and create."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /how-technical-writers-use-claude-code-for-docs/
 categories: [guides]

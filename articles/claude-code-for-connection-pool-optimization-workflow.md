@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for Connection Pool Optimization Workflow"
 description: "Learn how to use Claude Code to optimize database connection pools with practical examples and actionable advice for developers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-connection-pool-optimization-workflow/
 categories: [guides]

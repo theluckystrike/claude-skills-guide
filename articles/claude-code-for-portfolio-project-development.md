@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Portfolio Project Development"
 description: "A practical guide to using Claude Code for building professional portfolio projects, with code examples and skill recommendations."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-for-portfolio-project-development/
 categories: [guides]

@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Writing Research Methodology Sections"
 description: "Learn how to use Claude Code to write comprehensive research methodology sections. Practical examples, code snippets, and actionable advice for developers."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-for-writing-research-methodology-sections/
 categories: [guides]

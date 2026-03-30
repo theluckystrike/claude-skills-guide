@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Reading Unfamiliar Open Source Codebase"
 description: "Learn how to use Claude Code to effectively navigate and understand unfamiliar open source codebases. Practical examples, code snippets, and actionable."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: Claude Skills Guide
 permalink: /claude-code-for-reading-unfamiliar-open-source-codebase/
 categories: [guides]

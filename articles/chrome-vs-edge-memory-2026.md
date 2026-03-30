@@ -5,6 +5,7 @@ layout: default
 title: "Chrome vs Edge Memory 2026: Which Browser Uses Less RAM?"
 description: "A practical comparison of Chrome and Edge memory usage in 2026. Learn which browser is better for low-RAM systems and how to optimize browser memory."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-vs-edge-memory-2026/
 categories: [guides]

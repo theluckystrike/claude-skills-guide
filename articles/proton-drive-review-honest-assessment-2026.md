@@ -4,6 +4,7 @@ layout: default
 title: "Proton Drive Review: Honest Assessment 2026"
 description: "An honest, comprehensive review of Proton Drive in 2026. Evaluate its features, privacy, pricing, performance, and limitations compared to competitors."
 date: 2026-03-16
+last_modified_at: 2026-03-16
 author: theluckystrike
 permalink: /proton-drive-review-honest-assessment-2026/
 reviewed: true

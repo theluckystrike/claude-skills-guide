@@ -4,6 +4,7 @@ layout: default
 title: "How to Coordinate Multiple AI Agents in Pipeline"
 description: "Learn how to coordinate multiple AI agents in pipeline workflows using Claude Code. Discover practical techniques, best practices, and real-world examples."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /how-to-coordinate-multiple-ai-agents-in-pipeline/
 categories: [guides]

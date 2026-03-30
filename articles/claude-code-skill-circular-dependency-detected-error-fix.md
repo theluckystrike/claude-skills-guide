@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Skill Circular Dependency Detected Error Fix"
 description: "Resolve the circular dependency detected error in Claude Code skills with practical solutions, code examples, and prevention strategies."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 categories: [troubleshooting]
 tags: [claude-code, claude-skills]

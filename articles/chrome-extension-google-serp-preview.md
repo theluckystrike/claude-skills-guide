@@ -3,6 +3,7 @@ layout: default
 title: "Chrome Extension Google SERP Preview: A Developer Guide"
 description: "Learn how to build and use Chrome extensions for Google Search Engine Results Page preview, including implementation patterns and practical examples."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-google-serp-preview/
 reviewed: true

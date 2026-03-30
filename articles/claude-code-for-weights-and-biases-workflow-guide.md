@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Weights & Biases Workflow Guide"
 description: "A practical guide to integrating Claude Code with Weights & Biases for machine learning experiment tracking, model versioning, and collaborative workflows."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-weights-and-biases-workflow-guide/
 categories: [guides]

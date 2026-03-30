@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Pants Build System Workflow Guide"
 description: "A comprehensive guide to integrating Claude Code into your Pants build system workflow for efficient Python and multi-language project development."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-pants-build-system-workflow-guide/
 categories: [guides]

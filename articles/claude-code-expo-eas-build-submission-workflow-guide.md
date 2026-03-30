@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Expo EAS Build Submission Workflow Guide"
 description: "Master the complete workflow for building and submitting Expo apps using EAS Build with Claude Code. From project setup to App Store submission."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, expo, eas-build, mobile-development, react-native]
 author: theluckystrike

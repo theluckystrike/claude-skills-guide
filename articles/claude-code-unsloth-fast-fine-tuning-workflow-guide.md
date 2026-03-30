@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code + Unsloth: Fast Fine-Tuning Workflow Guide"
 description: "A practical guide to using Claude Code with Unsloth for accelerated LLM fine-tuning workflows"
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"

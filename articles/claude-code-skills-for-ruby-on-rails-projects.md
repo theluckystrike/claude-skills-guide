@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Skills for Ruby on Rails Projects"
 description: "Practical Claude Code skills that accelerate Ruby on Rails development: code generation, testing, database optimization, and API integration."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, ruby, rails, testing]
 author: "Claude Skills Guide"

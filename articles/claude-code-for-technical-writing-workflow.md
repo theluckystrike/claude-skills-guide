@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Technical Writing Workflow"
 description: "Master technical writing with Claude Code: build skills for API documentation, code comments, README files, and automated content generation."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-technical-writing-workflow/
 categories: [guides]

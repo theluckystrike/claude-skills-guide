@@ -3,6 +3,7 @@ layout: default
 title: "How to Use Claude Code to Understand Unfamiliar Codebase."
 description: "A practical guide for developers to rapidly comprehend new codebases using Claude Code. Learn effective prompts, workflows, and skill-based strategies."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /how-to-use-claude-code-to-understand-unfamiliar-codebase-quickly/
 reviewed: true

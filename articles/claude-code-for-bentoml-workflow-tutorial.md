@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for BentoML Workflow Tutorial"
 description: "Learn how to use Claude Code to streamline your BentoML machine learning deployment workflow from model training to serving."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-bentoml-workflow-tutorial/
 categories: [guides]

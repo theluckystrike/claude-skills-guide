@@ -4,6 +4,7 @@ layout: default
 title: "Lightest Browser for Chromebook: A Developer Guide"
 description: "Find the lightest browser for Chromebook optimized for developers and power users. Compare resource usage, extensions, and performance benchmarks."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /lightest-browser-chromebook/
 categories: [guides]

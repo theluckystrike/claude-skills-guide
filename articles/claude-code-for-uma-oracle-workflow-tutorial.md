@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for UMA Oracle Workflow Tutorial"
 description: "Learn how to use Claude Code to streamline UMA Oracle workflow development. This tutorial covers practical examples, code snippets, and actionable."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-uma-oracle-workflow-tutorial/
 categories: [tutorials]

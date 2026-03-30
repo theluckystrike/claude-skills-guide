@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Spring Virtual Threads Workflow"
 description: "Learn how to use Claude Code to build efficient Spring applications with Virtual Threads. Practical examples and workflow patterns for modern Java."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-spring-virtual-threads-workflow/
 categories: [guides]

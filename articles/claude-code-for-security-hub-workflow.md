@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for Security Hub Workflow: A Developer's Guide"
 description: "Learn how to integrate Claude Code into your AWS Security Hub workflow for automated security compliance, finding and fixing vulnerabilities, and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-security-hub-workflow/
 categories: [guides]

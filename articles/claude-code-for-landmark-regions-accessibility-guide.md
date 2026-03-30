@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Landmark Regions Accessibility Guide"
 description: "Learn how to use Claude Code to implement and audit ARIA landmark regions for improved web accessibility and screen reader navigation."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-landmark-regions-accessibility-guide/
 categories: [guides]

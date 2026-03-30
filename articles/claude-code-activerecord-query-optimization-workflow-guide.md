@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code ActiveRecord Query Optimization Workflow Guide"
 description: "Master ActiveRecord query optimization with Claude Code. Learn practical techniques for identifying N+1 queries, using eager loading, query methods."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-activerecord-query-optimization-workflow-guide/
 categories: [guides]

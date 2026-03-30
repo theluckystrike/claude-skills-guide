@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for EKS Karpenter Workflow: A Complete Guide"
 description: "Learn how to use Claude Code to automate and streamline your Amazon EKS Karpenter workflow for efficient Kubernetes cluster management."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-eks-karpenter-workflow/
 categories: [guides]

@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Kotlin Delegation Pattern Workflow"
 description: "Learn how to use Claude Code to streamline your Kotlin delegation pattern implementation with practical examples, code snippets, and actionable."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-kotlin-delegation-pattern-workflow/
 categories: [guides]

@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Error Connection Refused Localhost Fix"
 description: "Practical solutions for fixing connection refused errors when Claude Code tries to connect to localhost. Debug localhost connections, check ports, and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [troubleshooting]
 tags: [claude-code, claude-skills, error-fix, connection-refused, localhost, network, troubleshooting, productivity]
 author: "Claude Skills Guide"

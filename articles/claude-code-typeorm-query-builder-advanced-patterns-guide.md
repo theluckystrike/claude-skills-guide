@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code TypeORM Query Builder Advanced Patterns Guide"
 description: "Master advanced TypeORM Query Builder patterns including subqueries, joins, conditional filtering, and dynamic query construction for complex database."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: Claude Skills Guide
 permalink: /claude-code-typeorm-query-builder-advanced-patterns-guide/
 categories: [guides, tutorials]

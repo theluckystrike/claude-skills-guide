@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code Statsig A/B Test Experiment Setup Guide"
 description: "Learn how to set up and configure A/B tests and experiments using Statsig with Claude Code CLI. Practical examples for implementing experiment workflows."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-statsig-ab-test-experiment-setup-guide/
 reviewed: true

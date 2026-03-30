@@ -4,6 +4,7 @@ layout: default
 title: "Why Is Claude Code Terminal-Based, Not a GUI Application?"
 description: "Understanding why Claude Code runs in the terminal: developer workflow integration, automation capabilities, and how it differs from GUI-based AI."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, terminal, cli, developer-tools, claude-skills]

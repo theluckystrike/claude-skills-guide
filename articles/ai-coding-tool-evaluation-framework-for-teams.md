@@ -4,6 +4,7 @@ layout: default
 title: "AI Coding Tool Evaluation Framework for Teams"
 description: "A practical framework for evaluating AI coding tools in team environments. Compare capabilities, measure productivity gains, and choose the right tool."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /ai-coding-tool-evaluation-framework-for-teams/
 reviewed: true

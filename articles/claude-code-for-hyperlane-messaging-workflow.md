@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Hyperlane Messaging Workflow"
 description: "Learn how to use Claude Code CLI to streamline Hyperlane cross-chain messaging workflows, with practical examples and implementation guides for."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-hyperlane-messaging-workflow/
 categories: [guides]

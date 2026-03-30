@@ -3,6 +3,7 @@ layout: default
 title: "Chrome Extension Price Per Unit Calculator: A Practical."
 description: "Learn how to build a chrome extension price per unit calculator to determine optimal pricing for your browser extensions. Includes formulas, code."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-price-per-unit-calculator/
 categories: [guides]

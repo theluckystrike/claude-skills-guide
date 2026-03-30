@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for GitHub Actions OIDC Workflow Guide"
 description: "Learn how to securely authenticate with cloud providers using OpenID Connect (OIDC) in your GitHub Actions workflows, eliminating the need for."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-github-actions-oidc-workflow-guide/
 categories: 

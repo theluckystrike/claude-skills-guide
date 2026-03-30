@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Version History and Improvements"
 description: "A comprehensive guide tracking Claude Code's evolution, major version releases, and key improvements that enhance developer productivity."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-version-history-and-improvements/
 reviewed: true

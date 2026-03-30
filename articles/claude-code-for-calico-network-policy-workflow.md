@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Calico Network Policy Workflow"
 description: "Learn how to use Claude Code to automate and streamline Calico network policy creation, management, and testing in Kubernetes environments."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-calico-network-policy-workflow/
 categories: [guides]

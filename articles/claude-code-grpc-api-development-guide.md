@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for gRPC API Development: A Practical Guide"
 description: "Use Claude Code to generate .proto files, implement gRPC services in Node.js and Python, write tests, and debug gRPC issues. Real workflows and code examples."
 date: 2026-03-20
+last_modified_at: 2026-03-20
 categories: [tutorials]
 tags: [claude-code, grpc, protobuf, nodejs, python, api-development]
 author: "Claude Skills Guide"

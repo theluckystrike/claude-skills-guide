@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Statsig Dynamic Config Remote Values Guide"
 description: "Learn how to integrate Claude Code with Statsig for dynamic configuration and remote values. Practical examples for feature flags and dynamic config."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, statsig, feature-flags, dynamic-config]
 author: theluckystrike

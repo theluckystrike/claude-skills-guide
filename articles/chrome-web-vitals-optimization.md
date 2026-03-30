@@ -5,6 +5,7 @@ layout: default
 title: "Chrome Web Vitals Optimization: A Practical Guide for."
 description: "Learn how to optimize Chrome Web Vitals (LCP, FID, CLS) with practical code examples. A developer-focused guide to improving Core Web Vitals scores."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-web-vitals-optimization/
 reviewed: true

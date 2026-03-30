@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Developer Portfolio Projects Guide"
 description: "Learn how to build impressive developer portfolios using Claude Code. Practical examples and skill recommendations for power users."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-developer-portfolio-projects-guide/
 reviewed: true

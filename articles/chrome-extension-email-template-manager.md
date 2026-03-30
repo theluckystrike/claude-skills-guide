@@ -5,6 +5,7 @@ layout: default
 title: "Chrome Extension Email Template Manager: A Complete Guide"
 description: "Learn how Chrome extension email template managers streamline workflow for developers and power users. Discover features, implementation, and practical."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-email-template-manager/
 reviewed: true

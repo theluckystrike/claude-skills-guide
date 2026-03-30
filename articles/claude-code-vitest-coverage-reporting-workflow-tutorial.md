@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Vitest Coverage Reporting Workflow Tutorial"
 description: "Learn how to set up automated Vitest coverage reporting with Claude Code. This tutorial covers configuration, CI integration, and best practices for."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-vitest-coverage-reporting-workflow-tutorial/
 categories: [tutorials, guides]

@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Integration Testing Strategy Guide"
 description: "A practical guide to building integration testing workflows for Claude Code skills. Learn test patterns, automation strategies, and quality assurance."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-integration-testing-strategy-guide/
 reviewed: true

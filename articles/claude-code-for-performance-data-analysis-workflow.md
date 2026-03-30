@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Performance Data Analysis Workflow"
 description: "Master performance data analysis with Claude Code. Learn to build automated workflows, process metrics, and generate actionable insights using Claude skills."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-performance-data-analysis-workflow/
 categories: [guides]

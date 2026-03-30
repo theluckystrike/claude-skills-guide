@@ -3,6 +3,7 @@ layout: default
 title: "Chrome Extension Page Speed Insights: A Developer Guide"
 description: "Learn how to build Chrome extensions that analyze page speed performance using Lighthouse and the Page Speed Insights API. Practical examples for developers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-page-speed-insights/
 categories: [guides]

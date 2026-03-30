@@ -3,6 +3,7 @@ layout: default
 title: "Benchmarking Claude Code Skills Performance Guide"
 description: "A practical guide for measuring and analyzing Claude Code skill performance. Learn to track execution time, token usage, and optimize skill workflows."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, benchmarking, performance]
 author: "Claude Skills Guide"

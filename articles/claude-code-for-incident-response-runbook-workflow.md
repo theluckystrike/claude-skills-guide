@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for Incident Response Runbook Workflow"
 description: "Learn how to use Claude Code to automate and streamline your incident response runbooks with practical examples and actionable advice."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-incident-response-runbook-workflow/
 categories: [guides]

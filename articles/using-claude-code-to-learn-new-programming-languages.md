@@ -5,6 +5,7 @@ layout: default
 title: "Using Claude Code to Learn New Programming Languages"
 description: "Discover how Claude Code can accelerate your programming language learning through interactive coding assistance, real-time feedback, and skill-guided."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /using-claude-code-to-learn-new-programming-languages/
 categories: [guides]

@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension CSS Coverage Analyzer: Identify Unused."
 description: "Learn how to use CSS coverage analyzer tools in Chrome extensions to detect and remove unused CSS rules, optimize performance, and reduce bundle sizes."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-css-coverage-analyzer/
 reviewed: true

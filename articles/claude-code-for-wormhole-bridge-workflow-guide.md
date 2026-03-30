@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Wormhole Bridge Workflow Guide"
 description: "Learn how to create efficient Wormhole bridge workflows using Claude Code. This guide covers cross-chain transfer automation, skill creation, and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-wormhole-bridge-workflow-guide/
 categories: [guides]

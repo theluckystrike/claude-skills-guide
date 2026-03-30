@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Node.js Event Loop Workflow Guide"
 description: "Master Node.js event loop concepts with Claude Code. Learn practical patterns for async operations, timers, callbacks, and performance optimization."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-nodejs-event-loop-workflow-guide/
 categories: [guides]

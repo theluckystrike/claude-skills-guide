@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension Tailwind CSS DevTools: Debugging Tools."
 description: "A practical guide to debugging Chrome extensions that use Tailwind CSS. Learn how to inspect components, troubleshoot styling issues, and optimize your."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-tailwind-css-devtools/
 reviewed: true

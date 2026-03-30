@@ -3,6 +3,7 @@ layout: default
 title: "ChatGPT Chrome Extension Alternatives: A Developer's Guide"
 description: "Discover the best ChatGPT Chrome extension alternatives for developers and power users. Compare features, API integrations, and implementation approaches."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chatgpt-chrome-extension-alternatives/
 categories: [guides]

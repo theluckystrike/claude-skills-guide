@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for AWS PrivateLink Workflow"
 description: "Learn how to use Claude Code to automate AWS PrivateLink configuration and management. Practical examples, code snippets, and actionable workflow."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-aws-privatelink-workflow/
 categories: [tutorials]

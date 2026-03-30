@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Lerna Independent Versioning Workflow Tutorial"
 description: "Master independent versioning in Lerna monorepos with Claude Code. Learn practical workflows for managing multiple packages with distinct release cycles."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: Claude Skills Guide
 permalink: /claude-code-lerna-independent-versioning-workflow-tutorial/
 categories: [guides]

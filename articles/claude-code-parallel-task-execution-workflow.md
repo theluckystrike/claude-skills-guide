@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Parallel Task Execution Workflow"
 description: "Learn how to execute multiple Claude Code tasks simultaneously using parallel workflows, subagents, and batch processing techniques for maximum."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-parallel-task-execution-workflow/
 categories: [guides]

@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code vs Codeium vs Windsurf: A Comprehensive."
 description: "Compare Claude Code, Codeium, and Windsurf for AI-assisted development. Learn the strengths, use cases, and practical differences to choose the right."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-codeium-windsurf-comparison-guide/
 categories: [guides]

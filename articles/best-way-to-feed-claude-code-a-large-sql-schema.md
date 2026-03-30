@@ -4,6 +4,7 @@ layout: default
 title: "Best Way to Feed Claude Code a Large SQL Schema"
 description: "Learn the most effective strategies for providing Claude Code with large SQL schemas. Practical examples for database design, schema analysis, and SQL."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, sql, database, schema, tips, claude-skills]
 author: "Claude Skills Guide"

@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Performance Regression Workflow Guide"
 description: "Learn how to use Claude Code to detect, prevent, and manage performance regressions in your development workflow with practical examples and actionable."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-performance-regression-workflow-guide/
 categories: [guides]

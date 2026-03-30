@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension Highlight Text Save"
 description: "Learn how to build and use Chrome extensions to highlight and save text. Practical implementation guide with code examples for developers and power users."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-highlight-text-save/
 ---

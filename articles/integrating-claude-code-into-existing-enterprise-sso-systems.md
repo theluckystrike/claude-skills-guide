@@ -4,6 +4,7 @@ layout: default
 title: "Integrating Claude Code into Existing Enterprise SSO Systems"
 description: "A practical guide for integrating Claude Code with enterprise SSO systems like Okta, Azure AD, and Google Workspace. Learn authentication flows, skill."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: theluckystrike
 permalink: /integrating-claude-code-into-existing-enterprise-sso-systems/
 categories: [guides]

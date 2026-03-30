@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Unbuild Build Tool Workflow Guide"
 description: "Master the integration of Claude Code with Unbuild to automate build configuration, generate entry points, and streamline your JavaScript/TypeScript."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-unbuild-build-tool-workflow-guide/
 categories: [guides, tutorials]

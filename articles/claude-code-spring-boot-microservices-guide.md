@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Spring Boot Microservices Guide"
 description: "A practical guide to using Claude Code for building Spring Boot microservices. Learn how to use AI-assisted development for faster microservices."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, spring-boot, microservices, java, ai-assisted-development]
 author: theluckystrike

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for AsyncAPI Event-Driven Workflow Guide"
 description: "Learn how to use Claude Code to design, document, and implement event-driven workflows using AsyncAPI. Practical examples and code snippets for developers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-asyncapi-event-driven-workflow-guide/
 categories: [guides]

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Gateway Routing Pattern Workflow"
 description: "Learn how to implement gateway routing patterns using Claude Code. Discover practical workflows for routing requests across microservices, API."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 categories: [workflows, tutorials]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"

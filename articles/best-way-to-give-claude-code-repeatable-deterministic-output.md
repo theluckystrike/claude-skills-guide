@@ -4,6 +4,7 @@ layout: default
 title: "Best Way to Give Claude Code Repeatable, Deterministic."
 description: "Learn how to get consistent, reproducible results from Claude Code using seeds, prompts, and best practices."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"

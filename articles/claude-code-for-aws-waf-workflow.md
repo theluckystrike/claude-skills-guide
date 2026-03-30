@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for AWS WAF Workflow: A Practical Guide"
 description: "Learn how to use Claude Code to streamline AWS WAF configuration, rule management, and security automation. Includes practical examples and code snippets."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-aws-waf-workflow/
 categories: [guides]

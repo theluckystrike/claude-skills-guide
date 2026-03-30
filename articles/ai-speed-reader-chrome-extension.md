@@ -4,6 +4,7 @@ layout: default
 title: "AI Speed Reader Chrome Extension: A Developer Guide"
 description: "Learn how to build and customize AI-powered speed reading extensions for Chrome. Practical code examples, APIs, and implementation patterns for developers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /ai-speed-reader-chrome-extension/
 categories: [guides]

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Performance Bottleneck Finding"
 description: "A practical guide for developers to identify and resolve performance bottlenecks in Claude Code. Learn to profile skill execution, analyze tool call."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-performance-bottleneck-finding/
 categories: [guides]

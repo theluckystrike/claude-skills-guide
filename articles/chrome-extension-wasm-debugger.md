@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension WASM Debugger: A Practical Guide"
 description: "Learn how to debug WebAssembly modules within Chrome extensions using built-in DevTools features and practical techniques."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-wasm-debugger/
 reviewed: true

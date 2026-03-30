@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Weights and Biases Experiment Tracking"
 description: "Learn how to integrate Claude Code with Weights & Biases for powerful ML experiment tracking, automated logging, and streamlined model development."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, weights-and-biases, experiment-tracking, ml, mlops, claude-skills]
 author: "Claude Skills Guide"

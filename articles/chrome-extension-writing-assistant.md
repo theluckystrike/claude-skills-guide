@@ -3,6 +3,7 @@ layout: default
 title: "Chrome Extension Writing Assistant: A Developer's Guide"
 description: "Learn how Chrome extension writing assistants enhance productivity for developers and content creators. Explore implementation patterns, API integrations."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-writing-assistant/
 categories: [guides]

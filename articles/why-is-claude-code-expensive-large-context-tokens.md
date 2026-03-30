@@ -3,6 +3,7 @@ layout: default
 title: "Why Claude Code Is Expensive: Context Token Costs"
 description: "Learn why large context windows cost more in Claude Code, how token limits affect pricing, and practical strategies to reduce costs while maintaining."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, context-window, tokens, pricing, cost-optimization]
 author: theluckystrike

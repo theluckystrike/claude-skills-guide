@@ -3,6 +3,7 @@ layout: default
 title: "Should I Use Claude Code for Writing Infrastructure Scripts?"
 description: "A practical guide for developers deciding whether Claude Code is right for your infrastructure automation scripts."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /should-i-use-claude-code-for-writing-infrastructure-scripts/
 reviewed: true

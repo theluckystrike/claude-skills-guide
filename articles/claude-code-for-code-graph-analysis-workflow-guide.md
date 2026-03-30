@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Code Graph Analysis Workflow Guide"
 description: "Master code graph analysis with Claude Code. Learn to map dependencies, visualize relationships, and automate architecture discovery using skills and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-code-graph-analysis-workflow-guide/
 categories: [guides]

@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Security Code Review Checklist Automation"
 description: "Automate security code review checklists with Claude Code. Streamline security checks and find vulnerabilities in your workflow."
 date: 2026-03-13
+last_modified_at: 2026-03-13
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, claude-skills]

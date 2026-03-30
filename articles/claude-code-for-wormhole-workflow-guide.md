@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Wormhole Workflow Guide"
 description: "Learn how to build wormhole-style workflows with Claude Code to instantly transfer context, code patterns, and solutions across projects, teams, and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-wormhole-workflow-guide/
 categories: [workflows]

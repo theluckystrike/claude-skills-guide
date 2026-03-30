@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Enterprise Data Loss Prevention: A Developer Guide"
 description: "Learn how Chrome Enterprise data loss prevention works, configuration methods, and practical implementation strategies for protecting sensitive data."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-enterprise-data-loss-prevention/
 reviewed: true

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for ArgoCD Image Updater Workflow"
 description: "Learn how to automate container image updates in ArgoCD using Claude Code. This guide covers setup, configuration, and practical workflows for."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 categories: [guides]
 tags: [claude-code, claude-skills, argocd, gitops, devops]
 author: "Claude Skills Guide"

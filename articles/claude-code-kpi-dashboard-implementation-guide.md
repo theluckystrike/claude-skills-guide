@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code KPI Dashboard Implementation Guide"
 description: "Build a KPI dashboard with Claude Code. Step-by-step implementation using data aggregation, visualization skills, and automation for real-time metrics."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-kpi-dashboard-implementation-guide/
 reviewed: true

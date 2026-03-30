@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Tooljet Low Code Workflow Guide"
 description: "Learn how to integrate Claude Code with Tooljet to build powerful low-code workflows faster. Practical examples, code snippets, and actionable advice."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-tooljet-low-code-workflow-guide/
 categories: [guides]

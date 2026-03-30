@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Jest Mock Modules and Spies Deep Dive Guide"
 description: "Master Jest mocking techniques with Claude Code. Learn mock modules, spies, and advanced testing patterns for solid JavaScript/TypeScript applications."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-jest-mock-modules-and-spies-deep detailed look-guide/
 categories: [guides]

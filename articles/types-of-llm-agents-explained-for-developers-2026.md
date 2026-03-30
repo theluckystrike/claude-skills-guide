@@ -4,6 +4,7 @@ layout: default
 title: "Types of LLM Agents Explained for Developers 2026"
 description: "A comprehensive guide to understanding different types of LLM agents and how to build them using Claude Code. Learn about reactive, deliberative."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "theluckystrike"
 permalink: /types-of-llm-agents-explained-for-developers-2026/
 categories: [guides]

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for MongoDB Atlas Search Workflow"
 description: "Learn how to integrate Claude Code with MongoDB Atlas Search to build powerful search workflows for your applications."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-mongodb-atlas-search-workflow/
 categories: [guides]

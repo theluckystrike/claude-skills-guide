@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Hot Reload Development Setup"
 description: "A practical guide to configuring hot reload for Claude Code development environments. Learn setup techniques, skill integration, and workflow optimization."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-hot-reload-development-setup/
 categories: [guides]

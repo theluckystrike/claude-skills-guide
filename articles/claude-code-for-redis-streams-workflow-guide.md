@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Redis Streams Workflow Guide"
 description: "A comprehensive guide to building Redis Streams workflows with Claude Code, featuring practical examples, code patterns, and production-ready."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-redis-streams-workflow-guide/
 categories: [guides]

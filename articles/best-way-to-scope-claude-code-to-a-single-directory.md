@@ -4,6 +4,7 @@ layout: default
 title: "Best Way to Scope Claude Code to a Single Directory"
 description: "Learn how to constrain Claude Code to work within a specific directory for better focus, security, and project isolation."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: theluckystrike
 categories: [guides]
 tags: [claude-code, directory-scoping, project-isolation, security, configuration]

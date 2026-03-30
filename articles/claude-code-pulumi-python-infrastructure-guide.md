@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Pulumi Python Infrastructure Guide"
 description: "Learn how to use Claude Code with Pulumi and Python for infrastructure automation. Practical patterns for provisioning and managing cloud resources."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-pulumi-python-infrastructure-guide/
 categories: [guides]

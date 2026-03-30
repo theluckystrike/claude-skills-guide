@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Nacos Service Registry Workflow"
 description: "Learn how to use Claude Code CLI to automate Nacos service registration, discovery, and management workflows. Practical examples and best practices for."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-nacos-service-registry-workflow/
 categories: [guides]

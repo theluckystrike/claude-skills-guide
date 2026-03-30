@@ -4,6 +4,7 @@ layout: default
 title: "Mendeley Chrome Extension Review: A Practical Guide for."
 description: "A technical review of the Mendeley Chrome extension covering web import, PDF annotation, citation management, and developer integration options."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /mendeley-chrome-extension-review/
 reviewed: true

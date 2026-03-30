@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for CQRS Read Model Workflow Guide"
 description: "Learn how to use Claude Code to build, maintain, and optimize CQRS read models with practical workflows and code examples."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-cqrs-read-model-workflow-guide/
 categories: [guides]

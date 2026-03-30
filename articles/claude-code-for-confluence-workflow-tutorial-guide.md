@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for Confluence Workflow Tutorial Guide"
 description: "Learn how to automate Confluence workflows using Claude Code CLI with practical examples and actionable advice for developers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-confluence-workflow-tutorial-guide/
 categories: [guides]

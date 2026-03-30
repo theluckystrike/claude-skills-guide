@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Mutation Testing Workflow Guide"
 description: "Learn how to build an automated mutation testing workflow in Claude Code. Practical examples, tool setup, and integration patterns for developers."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [workflows]
 tags: [claude-code, testing, mutation-testing, tdd, quality-assurance, automation]
 author: theluckystrike

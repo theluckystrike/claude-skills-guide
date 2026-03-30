@@ -3,6 +3,7 @@ layout: default
 title: "Claude MD for Frontend Projects Best Practices"
 description: "Master Claude MD files for frontend development. Practical patterns, skill examples, and workflow optimization for React, Vue, and Svelte projects."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, frontend, react, vue, svelte, best-practices]
 author: theluckystrike

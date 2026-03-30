@@ -3,6 +3,7 @@ layout: default
 title: "Why Does Claude Code Skill Take So Long to Initialize?"
 description: "Understanding Claude Code skill initialization delays. Learn what happens during skill loading, why some skills are slower than others, and how to optim..."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, claude-skills]

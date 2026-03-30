@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Node.js Child Process Workflow"
 description: "Learn how to use Claude Code to streamline Node.js child process workflows, with practical examples for spawning, piping, and managing subprocesses."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-nodejs-child-process-workflow/
 categories: [guides]

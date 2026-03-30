@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Docker Compose API Tutorial Guide"
 description: "Learn how to use Claude Code with Docker Compose to build, test, and deploy APIs efficiently. A comprehensive guide with practical examples."
 date: 2026-03-20
+last_modified_at: 2026-03-20
 author: Claude Skills Guide
 permalink: /claude-code-docker-compose-api-tutorial-guide/
 categories: [guides]

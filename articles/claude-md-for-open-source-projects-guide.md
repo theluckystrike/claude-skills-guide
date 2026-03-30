@@ -3,6 +3,7 @@ layout: default
 title: "Claude MD for Open Source Projects Guide"
 description: "Comprehensive guide to using Claude Code and Claude MD files effectively in open source projects. Learn how to create claude-md files that help."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, open-source, claude-md, contribution-guide, community]
 author: "Open Source Guide"

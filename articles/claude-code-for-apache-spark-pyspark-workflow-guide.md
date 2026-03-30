@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Apache Spark PySpark Workflow Guide"
 description: "Master Apache Spark and PySpark development with Claude Code. Learn efficient workflows, debugging strategies, and production-ready pipeline patterns."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-apache-spark-pyspark-workflow-guide/
 categories: [guides]

@@ -4,6 +4,7 @@ layout: default
 title: "Browser Speed Benchmark 2026: A Practical Guide for Developers"
 description: "Learn how to run browser speed benchmarks in 2026. Compare Chrome, Firefox, Edge, and Safari performance with code examples and practical testing methodologies."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /browser-speed-benchmark-2026/
 categories: [guides]

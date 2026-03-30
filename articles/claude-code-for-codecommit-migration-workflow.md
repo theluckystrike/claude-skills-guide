@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for CodeCommit Migration Workflow"
 description: "Learn how to use Claude Code to automate and streamline your AWS CodeCommit repository migration workflow. Practical examples, migration strategies."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 categories: [tutorials]
 tags: [claude-code, claude-skills, aws, codecommit, migration, devops]
 author: "Claude Skills Guide"

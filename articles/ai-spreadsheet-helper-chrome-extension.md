@@ -4,6 +4,7 @@ layout: default
 title: "AI Spreadsheet Helper Chrome Extension: A Developer's Guide"
 description: "Learn how AI-powered Chrome extensions transform spreadsheet workflows. Build custom solutions, integrate with Google Sheets and Excel, and automate."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /ai-spreadsheet-helper-chrome-extension/
 reviewed: true

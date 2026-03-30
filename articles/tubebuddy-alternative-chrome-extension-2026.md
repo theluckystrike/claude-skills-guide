@@ -4,6 +4,7 @@ layout: default
 title: "TubeBuddy Alternative Chrome Extension in 2026"
 description: "Discover the best TubeBuddy alternatives for Chrome in 2026. These developer-friendly YouTube tools offer keyword research, thumbnail testing, and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /tubebuddy-alternative-chrome-extension-2026/
 reviewed: true

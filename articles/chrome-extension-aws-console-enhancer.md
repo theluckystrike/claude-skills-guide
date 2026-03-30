@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension AWS Console Enhancer: Boost Your Cloud."
 description: "Discover the best Chrome extensions that enhance the AWS Console experience. Learn how to improve navigation, resource management, and productivity in AWS."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-aws-console-enhancer/
 reviewed: true

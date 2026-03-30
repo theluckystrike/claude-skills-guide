@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension Meeting Transcription Live: A Developer."
 description: "Learn how to build Chrome extensions for real-time meeting transcription. Technical implementation, APIs, and best practices for developers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-meeting-transcription-live/
 reviewed: true

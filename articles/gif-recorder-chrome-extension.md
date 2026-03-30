@@ -3,6 +3,7 @@ layout: default
 title: "GIF Recorder Chrome Extension: Capture Browser Activity with Code Examples"
 description: "Learn how GIF recorder Chrome extensions work, their technical implementation, and popular use cases for developers documenting bugs and creating tutorials."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "theluckystrike"
 permalink: /gif-recorder-chrome-extension/
 categories: [guides]

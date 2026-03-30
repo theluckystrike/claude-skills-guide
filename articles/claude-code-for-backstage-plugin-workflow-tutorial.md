@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Backstage Plugin Workflow Tutorial"
 description: "A comprehensive tutorial on building Backstage plugins using Claude Code. Learn how to create, test, and deploy custom plugins with AI-assisted."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-backstage-plugin-workflow-tutorial/
 categories: [guides]

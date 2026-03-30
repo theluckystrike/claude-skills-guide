@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for GitLab CI Workflow Optimization"
 description: "Master GitLab CI workflow optimization with Claude Code. Learn practical strategies to speed up pipelines, reduce costs, and improve deployment."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-gitlab-ci-workflow-optimization/
 categories: [guides]

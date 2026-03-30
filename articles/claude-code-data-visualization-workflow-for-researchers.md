@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Data Visualization Workflow for Researchers"
 description: "A practical guide to building efficient data visualization workflows using Claude Code, with examples for researchers working with Python, R, and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"

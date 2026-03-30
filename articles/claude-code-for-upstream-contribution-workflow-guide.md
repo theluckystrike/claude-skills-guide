@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Upstream Contribution Workflow Guide"
 description: "Learn how to use Claude Code to contribute to upstream open source projects. A practical guide with workflow examples and actionable advice."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-upstream-contribution-workflow-guide/
 categories: [workflows]

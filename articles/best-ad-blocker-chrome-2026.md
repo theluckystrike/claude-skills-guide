@@ -5,6 +5,7 @@ layout: default
 title: "Best Ad Blocker for Chrome in 2026"
 description: "A technical guide to the best ad blockers for Chrome in 2026. Compare uBlock Origin, AdGuard, and developer-focused solutions for blocking ads."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /best-ad-blocker-chrome-2026/
 reviewed: true

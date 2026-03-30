@@ -4,6 +4,7 @@ layout: default
 title: "How to Check if a Chrome Extension is Safe Before Installing"
 description: "Learn practical methods to verify Chrome extension safety, including analyzing permissions, inspecting source code, and using verification tools."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /check-chrome-extension-safe/
 reviewed: true

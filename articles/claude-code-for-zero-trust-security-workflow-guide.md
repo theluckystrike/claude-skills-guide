@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Zero Trust Security Workflow Guide"
 description: "Implement zero trust security principles when using Claude Code. Learn to validate AI outputs, secure tool permissions, and build verified development."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-zero-trust-security-workflow-guide/
 categories: [guides]

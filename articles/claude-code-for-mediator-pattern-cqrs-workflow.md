@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Mediator Pattern and CQRS Workflow"
 description: "Learn how to implement the mediator pattern and CQRS workflow in your Claude Code skills for cleaner architecture and better separation of concerns."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-mediator-pattern-cqrs-workflow/
 categories: [guides]

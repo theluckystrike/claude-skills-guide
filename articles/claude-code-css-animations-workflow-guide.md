@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code CSS Animations Workflow Guide"
 description: "Master CSS animations with Claude Code. A practical workflow guide for developers building smooth, performant animations using modern CSS techniques."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-css-animations-workflow-guide/
 categories: [guides]

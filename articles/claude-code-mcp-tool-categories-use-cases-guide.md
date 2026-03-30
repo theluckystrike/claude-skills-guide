@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code MCP Tool Categories and Use Cases Guide"
 description: "A comprehensive guide to understanding MCP tool categories in Claude Code, with practical examples for developers building AI-powered workflows."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, mcp, tools, use-cases, development]
 author: theluckystrike

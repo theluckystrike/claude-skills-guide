@@ -3,6 +3,7 @@ layout: default
 title: "Chrome Omnibox Slow? Here's How to Fix It"
 description: "Is your Chrome address bar lagging? Discover the common causes of slow omnibox performance and practical solutions to speed up Chrome's URL bar."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-omnibox-slow/
 categories: [guides]

@@ -4,6 +4,7 @@ layout: default
 title: "Enhancer for YouTube Alternative Chrome Extension in 2026: A Developer Guide"
 description: "Discover the best Enhancer for YouTube alternatives in 2026. Learn about open-source options, built-in features, and how to build custom YouTube."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /enhancer-for-youtube-alternative-chrome-extension-2026/
 categories: [guides]

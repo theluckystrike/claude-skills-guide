@@ -4,6 +4,7 @@ layout: default
 title: "How to Spoof User Agent in Chrome for Development and."
 description: "Learn practical methods to spoof user agent strings in Chrome for cross-browser testing, debugging, and development. Includes code examples and CLI tools."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /spoof-user-agent-chrome/
 reviewed: true

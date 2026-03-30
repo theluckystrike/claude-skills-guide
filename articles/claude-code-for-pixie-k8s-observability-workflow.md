@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Pixie K8s Observability Workflow"
 description: "Learn how to use Claude Code with Pixie for powerful Kubernetes observability. This guide covers practical workflows, code examples, and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-pixie-k8s-observability-workflow/
 categories: [guides]

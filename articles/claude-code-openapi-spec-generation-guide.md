@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code OpenAPI Spec Generation Guide"
 description: "Learn how to generate OpenAPI specifications using Claude Code. Practical examples, workflows, and tips for API developers."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, openapi, api-development, specification, swagger, claude-skills]
 author: "theluckystrike"

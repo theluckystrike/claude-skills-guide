@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Docker Networking Troubleshooting Guide"
 description: "Master Docker networking debugging with Claude Code skills. Learn practical techniques for diagnosing container connectivity issues, DNS resolution."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-docker-networking-troubleshooting-guide/
 reviewed: true

@@ -3,6 +3,7 @@ layout: default
 title: "How Data Scientists Use Claude Code for Analysis"
 description: "Practical guide for data scientists using Claude Code with specialized skills for data analysis, automation, and insight generation."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [use-cases]
 tags: [claude-code, claude-skills, data-science, analysis, workflow, python]
 author: "Claude Skills Guide"

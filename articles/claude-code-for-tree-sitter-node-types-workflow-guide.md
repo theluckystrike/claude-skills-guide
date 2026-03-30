@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for Tree-sitter Node Types Workflow Guide"
 description: "A practical guide to using Claude Code for Tree-sitter node types development. Learn workflows for parsing, analyzing, and transforming code using."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-tree-sitter-node-types-workflow-guide/
 categories: [guides]

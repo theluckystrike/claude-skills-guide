@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code with Nix Flakes for Reproducible Development ..."
 description: "Learn how to combine Claude Code with Nix Flakes to create fully reproducible, declarative development environments that work consistently across machines."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, claude-skills, nix-flake, reproducible, development-environment, docker-alternatives]

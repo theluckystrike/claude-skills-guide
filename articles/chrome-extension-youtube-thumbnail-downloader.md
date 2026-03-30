@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension YouTube Thumbnail Downloader: A."
 description: "Learn how to build or use a Chrome extension to download YouTube thumbnails. Includes URL patterns, code examples, and practical implementation tips."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-youtube-thumbnail-downloader/
 reviewed: true

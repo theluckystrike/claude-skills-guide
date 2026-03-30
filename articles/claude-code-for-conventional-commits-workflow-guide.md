@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Conventional Commits Workflow Guide"
 description: "Learn how to use Claude Code to automate and simplify Conventional Commits in your development workflow. Practical examples, code snippets, and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-conventional-commits-workflow-guide/
 categories: [guides]

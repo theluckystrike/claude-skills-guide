@@ -4,6 +4,7 @@ layout: default
 title: "Best Password Manager Chrome Free: A Developer Guide"
 description: "Find the best free password manager for Chrome without compromising security. Compare open-source options, CLI tools, and developer-friendly solutions."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /best-password-manager-chrome-free/
 reviewed: true

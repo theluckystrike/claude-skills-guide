@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Go to Definition Workflow Tutorial"
 description: "Master the art of navigating codebases efficiently with Claude Code. Learn practical workflows for jumping to definitions, understanding code."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-go-to-definition-workflow-tutorial/
 categories: [tutorials]

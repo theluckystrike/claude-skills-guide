@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Go Profile-Guided Optimization"
 description: "Learn how to use Claude Code for Go Profile-Guided Optimization (PGO). Covers profiling setup, optimization strategies, and practical."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-go-profile-guided-optimization/
 categories: [guides]

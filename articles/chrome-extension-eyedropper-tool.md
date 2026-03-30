@@ -3,6 +3,7 @@ layout: default
 title: "Chrome Extension Eyedropper Tool: A Developer's Guide"
 description: "Learn how to build and use a color picker eyedropper tool in Chrome extensions. Complete implementation guide with code examples for developers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-eyedropper-tool/
 categories: [guides]

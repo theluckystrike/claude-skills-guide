@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Keeps Producing Slightly Different Code Each."
 description: "Understand why Claude Code generates varying outputs on each run and learn practical strategies to achieve consistent results. Includes real examples."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: theluckystrike
 categories: [troubleshooting]
 tags: [claude-code, consistency, ai-coding, reproducibility, debugging]

@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Enterprise Self-Hosted Extension Store: A."
 description: "Learn how to set up and manage a self-hosted Chrome extension store for enterprise environments. Complete implementation guide with code examples."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-enterprise-self-hosted-extension-store/
 reviewed: true

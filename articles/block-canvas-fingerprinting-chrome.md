@@ -4,6 +4,7 @@ layout: default
 title: "How to Block Canvas Fingerprinting in Chrome: A."
 description: "Learn practical methods to block canvas fingerprinting in Chrome. Includes browser settings, extensions, and code-level solutions for developers and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /block-canvas-fingerprinting-chrome/
 reviewed: true

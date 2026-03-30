@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code vs Free Supermaven Tier: Is the Free Version."
 description: "A comprehensive comparison between Claude Code with its powerful skills system and Supermaven's free tier, analyzing whether the free version meets."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-vs-free-supermaven-tier-enough/
 categories: [comparisons]

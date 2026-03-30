@@ -5,6 +5,7 @@ layout: default
 title: "Chrome Extension APA Citation Formatter: Automate Your."
 description: "A practical guide to building and using Chrome extensions for APA citation formatting. Learn implementation approaches, key APIs, and how to integrate."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-apa-citation-formatter/
 reviewed: true

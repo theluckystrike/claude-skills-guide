@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Java Virtual Threads (Loom) Workflow"
 description: "A comprehensive guide to using Claude Code with Java Virtual Threads (Project Loom). Learn workflow patterns for building highly scalable concurrent."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-java-virtual-threads-loom-workflow/
 categories: [guides]

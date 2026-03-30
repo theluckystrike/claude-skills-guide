@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Hardhat Plugins Workflow"
 description: "Learn how to use Claude Code effectively with Hardhat plugins. Practical examples, code snippets, and actionable advice for Ethereum developers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 categories: [workflows]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"

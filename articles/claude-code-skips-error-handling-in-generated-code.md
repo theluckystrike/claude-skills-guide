@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Skips Error Handling in Generated Code"
 description: "Understanding why Claude Code sometimes generates code without proper error handling, and how to work around this limitation effectively."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-skips-error-handling-in-generated-code/
 reviewed: true

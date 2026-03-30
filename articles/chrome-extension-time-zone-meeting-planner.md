@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension Time Zone Meeting Planner: A."
 description: "Discover the best Chrome extensions for time zone meeting planning in 2026. Learn how to coordinate meetings across time zones with code examples and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-time-zone-meeting-planner/
 reviewed: true

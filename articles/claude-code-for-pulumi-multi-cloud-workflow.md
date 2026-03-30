@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Pulumi Multi-Cloud Workflow"
 description: "Learn how to use Claude Code to accelerate your Pulumi infrastructure-as-code projects across multiple cloud providers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-pulumi-multi-cloud-workflow/
 categories: [guides]

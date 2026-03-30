@@ -4,6 +4,7 @@ layout: default
 title: "Building a Price Comparison Chrome Extension: A."
 description: "Learn how to build a price comparison Chrome extension from scratch. Covers manifest V3, content scripts, messaging APIs, and real-world implementation."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /price-comparison-chrome-extension/
 reviewed: true

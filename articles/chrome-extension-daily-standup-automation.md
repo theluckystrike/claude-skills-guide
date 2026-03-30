@@ -5,6 +5,7 @@ layout: default
 title: "Chrome Extension Daily Standup Automation: A Practical Guide"
 description: "Learn how to build a Chrome extension that automates your daily standup workflow. Practical code examples, APIs, and implementation patterns for."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-daily-standup-automation/
 reviewed: true

@@ -5,6 +5,7 @@ layout: default
 title: "Chrome Extension Outlook Calendar Integration: A."
 description: "Learn how to build Chrome extensions that integrate with Outlook Calendar. Practical code examples, API authentication, and implementation patterns for."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-outlook-calendar-integration/
 reviewed: true

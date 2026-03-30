@@ -5,6 +5,7 @@ layout: default
 title: "Standardizing Pull Request Workflows with Claude Code Skills"
 description: "Learn how to use Claude Code skills to create consistent, automated, and efficient pull request workflows across your development team."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /standardizing-pull-request-workflows-with-claude-code-skills/
 categories: [guides]

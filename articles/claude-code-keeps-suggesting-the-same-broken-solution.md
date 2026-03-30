@@ -6,6 +6,7 @@ layout: default
 title: "Why Claude Code Keeps Suggesting the Same Broken Solution"
 description: "Learn why Claude Code gets stuck in repetitive solution loops and how to break free with practical techniques and skill design patterns."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [troubleshooting]
 tags: [claude-code, debugging, troubleshooting, skill-design, prompts, claude-skills]
 author: "Claude Skills Guide"

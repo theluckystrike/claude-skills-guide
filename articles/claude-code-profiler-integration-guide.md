@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code Profiler Integration Guide"
 description: "A practical guide to integrating code profilers with Claude Code. Learn to measure execution time, memory usage, and identify performance bottlenecks."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, profiling, performance, debugging, development-tools, claude-skills]
 author: "Claude Skills Guide"

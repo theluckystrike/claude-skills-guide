@@ -5,6 +5,7 @@ layout: default
 title: "Chrome Extension Multi Account Container: A Developer Guide"
 description: "Learn how to build and implement multi-account container systems for Chrome extensions, enabling users to manage separate identities within a single."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-multi-account-container/
 reviewed: true

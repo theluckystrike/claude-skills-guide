@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Duplicate Code Refactoring Guide"
 description: "Practical guide to identifying and refactoring duplicate code using Claude Code skills. Includes patterns, automation strategies, and real-world examples."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, refactoring, duplicate-code, code-quality]
 author: theluckystrike

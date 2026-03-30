@@ -4,6 +4,7 @@ layout: default
 title: "Rakuten Chrome Extension Review"
 description: "A technical deep detailed look into the Rakuten Chrome extension for developers and power users, exploring API access, customization, automation potential, and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /rakuten-chrome-extension-review/
 reviewed: true

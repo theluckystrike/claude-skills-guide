@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Dotenv Configuration Workflow"
 description: "A practical guide to managing environment variables with Claude Code for developers and power users."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-dotenv-configuration-workflow/
 reviewed: true

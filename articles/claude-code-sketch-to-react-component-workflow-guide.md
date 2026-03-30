@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Sketch to React Component Workflow Guide"
 description: "Master the workflow of transforming design sketches and wireframes into production-ready React components using Claude Code. Learn practical."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-sketch-to-react-component-workflow-guide/
 categories: [guides]

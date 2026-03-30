@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code SDK Versioning and Release Guide"
 description: "A practical guide to versioning your custom Claude skills, managing releases, and maintaining backward compatibility for developers and power users."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: theluckystrike
 categories: [guides]
 tags: [claude-code, claude-skills, claude-code, sdk, versioning, releases, skill-development]

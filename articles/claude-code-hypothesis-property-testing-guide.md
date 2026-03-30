@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Hypothesis Property Testing Guide"
 description: "Learn how to use Hypothesis for property-based testing in Python with Claude Code. Write smarter tests that catch edge cases automatically."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-hypothesis-property-testing-guide/
 categories: [guides]

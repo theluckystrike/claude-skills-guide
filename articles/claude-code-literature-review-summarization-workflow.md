@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code Literature Review Summarization Workflow"
 description: "Learn how to build an efficient literature review summarization workflow using Claude Code. This guide covers practical examples, code snippets, and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: Claude Skills Guide
 permalink: /claude-code-literature-review-summarization-workflow/
 categories: [guides]

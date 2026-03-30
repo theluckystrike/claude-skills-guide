@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Hidden Features Most Developers Miss"
 description: "Discover hidden Claude Code features that power users use for maximum productivity. Learn about MCP servers, skill chaining, and advanced."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-hidden-features-most-developers-miss/
 reviewed: true

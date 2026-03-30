@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Load Testing Automation Guide"
 description: "Learn how to automate load testing workflows using Claude Code. Practical examples, code snippets, and integration strategies for developers."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-for-load-testing-automation-guide/
 categories: [guides]

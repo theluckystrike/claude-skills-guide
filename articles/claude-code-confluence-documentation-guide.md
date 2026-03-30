@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Confluence Documentation Guide"
 description: "Learn how to integrate Claude Code with Confluence for automated documentation workflows. Practical examples for developers and power users."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [integrations, workflows]
 tags: [claude-code, confluence, documentation, automation, pdf, docx, mcp, claude-skills]
 author: "Claude Skills Guide"

@@ -3,6 +3,7 @@ layout: default
 title: "Claude Skills Workflow Guide: Build, Chain & Contribute"
 description: "Build repeatable Claude skills workflows. Covers skill chaining patterns, contributing to open source, and production-ready automation pipelines."
 date: 2026-03-13
+last_modified_at: 2026-03-13
 categories: [workflows]
 tags: [claude-code, claude-skills, workflows, automation, open-source]
 author: "Claude Skills Guide"

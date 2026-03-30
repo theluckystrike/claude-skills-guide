@@ -5,6 +5,7 @@ layout: default
 title: "Capital One Shopping Chrome Extension: A Developer and."
 description: "A technical deep detailed look into the Capital One Shopping Chrome extension, examining its architecture, API integrations, and customization potential for."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /capital-one-shopping-chrome-review/
 reviewed: true

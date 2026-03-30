@@ -3,6 +3,7 @@ layout: default
 title: "Violentmonkey Alternative Chrome Extension 2026"
 description: "Discover the best Violentmonkey alternatives for Chrome in 2026. Compare features, performance, and developer experience for managing userscripts."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /violentmonkey-alternative-chrome-extension-2026/
 reviewed: true

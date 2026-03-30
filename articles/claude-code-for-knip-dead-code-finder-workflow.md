@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Knip Dead Code Finder Workflow"
 description: "Learn how to integrate Knip dead code detection into your Claude Code workflow to identify and remove unused code, exports, and dependencies automatically."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-knip-dead-code-finder-workflow/
 categories: [workflows]

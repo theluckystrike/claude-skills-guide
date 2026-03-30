@@ -4,6 +4,7 @@ layout: default
 title: "Chrome vs Vivaldi Memory: A Developer's Performance Guide"
 description: "A practical comparison of Chrome and Vivaldi memory usage. Learn memory management techniques, extension overhead, and optimization strategies for power users."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-vs-vivaldi-memory/
 categories: [guides]

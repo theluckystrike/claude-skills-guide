@@ -4,6 +4,7 @@ layout: default
 title: "How to Make Claude Code Not Break Type Definitions"
 description: "Learn practical strategies and best practices for working with Claude Code without accidentally breaking your TypeScript or type definition files."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Local Development Setup Guide"
 description: "A practical guide to setting up Claude Code for local development, including environment configuration, skill integration, and optimization tips."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-local-development-setup-guide/
 categories: [guides]

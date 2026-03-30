@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for CDK Aspects Workflow Tutorial"
 description: "Learn how to use Claude Code with AWS CDK Aspects for infrastructure validation, compliance enforcement, and automated cloud governance. Practical."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-cdk-aspects-workflow-tutorial/
 categories: [guides]

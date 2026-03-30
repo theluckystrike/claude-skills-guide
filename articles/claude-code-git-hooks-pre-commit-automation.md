@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Git Hooks: Automate Your Pre-Commit Workflow"
 description: "Learn how to integrate Claude Code with git hooks for automated code quality checks, linting, and pre-commit validation in your development workflow."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-git-hooks-pre-commit-automation/
 categories: [guides]

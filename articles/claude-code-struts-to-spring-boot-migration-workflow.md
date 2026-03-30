@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Struts to Spring Boot Migration Workflow"
 description: "A comprehensive guide to migrating legacy Struts applications to Spring Boot using Claude Code skills and automation workflows."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, struts, spring-boot, migration, legacy-modernization]
 author: theluckystrike

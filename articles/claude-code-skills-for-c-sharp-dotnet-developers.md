@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Skills for C# .NET Developers"
 description: "Practical guide to Claude Code skills that accelerate C# and .NET development: code generation, testing, documentation, and automation workflows."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, csharp, dotnet, .net, development]
 author: "Claude Skills Guide"

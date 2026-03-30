@@ -3,6 +3,7 @@ layout: default
 title: "Planetscale MCP Server Branching Workflow Guide"
 description: "A practical guide to implementing database branching workflows using the Planetscale MCP server for automated database schema management."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, planetscale, mcp, database, branching]
 author: "Claude Skills Guide"

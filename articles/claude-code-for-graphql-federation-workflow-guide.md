@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for GraphQL Federation Workflow Guide"
 description: "Learn how to use Claude Code to streamline GraphQL Federation development, from schema design to subgraph configuration and federated query testing."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 categories: [guides]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Architect ARC Serverless Workflow"
 description: "Learn how to use Claude Code to architect efficient serverless workflows using ARC patterns. Practical examples, code snippets, and actionable advice."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-architect-arc-serverless-workflow/
 categories: [guides]

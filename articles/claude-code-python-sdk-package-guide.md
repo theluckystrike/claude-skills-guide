@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Python SDK Package Guide"
 description: "A practical guide to building and publishing Python SDK packages with Claude Code. Learn setup, structure, and best practices for developers."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-python-sdk-package-guide/
 reviewed: true

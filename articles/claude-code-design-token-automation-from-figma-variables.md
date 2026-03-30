@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Design Token Automation from Figma Variables"
 description: "Learn how to automate design token workflows using Claude Code with Figma variables for smooth design-to-code pipelines."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-design-token-automation-from-figma-variables/
 categories: [guides]

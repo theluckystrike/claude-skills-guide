@@ -3,6 +3,7 @@ layout: default
 title: "How Do I Share Claude Skills Across Multiple Projects"
 description: "A practical guide to sharing Claude skills across projects. Learn version control strategies, repository patterns, and workflow optimization techniques."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"

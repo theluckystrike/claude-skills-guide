@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for TypeScript Declaration Merging Guide"
 description: "A practical guide to TypeScript declaration merging with Claude Code. Learn how to extend types, create ambient declarations, and build solid type."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-typescript-declaration-merging-guide/
 categories: [guides]

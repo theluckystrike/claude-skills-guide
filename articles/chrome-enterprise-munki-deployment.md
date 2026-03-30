@@ -5,6 +5,7 @@ layout: default
 title: "Chrome Enterprise Munki Deployment: Complete Setup Guide"
 description: "Learn how to deploy and manage Google Chrome Enterprise using Munki with practical examples, scripts, and configuration strategies for Mac administrators."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-enterprise-munki-deployment/
 reviewed: true

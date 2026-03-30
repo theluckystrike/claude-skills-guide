@@ -5,6 +5,7 @@ layout: default
 title: "Chrome Enterprise Printing Settings: A Power User Guide"
 description: "Master Chrome Enterprise printing settings with practical examples, code snippets, and configuration strategies for developers and IT professionals."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-enterprise-printing-settings/
 reviewed: true

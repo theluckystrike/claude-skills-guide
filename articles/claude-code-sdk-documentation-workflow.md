@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code SDK Documentation Workflow"
 description: "Build efficient SDK documentation workflows with Claude Code. Automate API docs, code examples, and reference guides using Claude skills like pdf, tdd."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-sdk-documentation-workflow/
 reviewed: true

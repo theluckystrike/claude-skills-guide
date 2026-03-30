@@ -4,6 +4,7 @@ layout: default
 title: "Cline AI Coding Assistant Review vs Claude Code"
 description: "A comprehensive comparison of Cline AI and Claude Code, exploring features, capabilities, and which AI coding assistant best suits your development."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /cline-ai-coding-assistant-review-vs-claude-code/
 reviewed: true

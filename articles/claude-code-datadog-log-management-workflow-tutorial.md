@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code Datadog Log Management Workflow Tutorial"
 description: "Learn how to use Claude Code skills for efficient Datadog log management. This tutorial covers practical workflows for searching, filtering."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-datadog-log-management-workflow-tutorial/
 categories: [tutorials]

@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code SRE Reliability Engineering Workflow Guide"
 description: "Master Site Reliability Engineering workflows with Claude Code. Learn practical skills for incident response, monitoring automation, and building."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-sre-reliability-engineering-workflow-guide/
 categories: [guides]

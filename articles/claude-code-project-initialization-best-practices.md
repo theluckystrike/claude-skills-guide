@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Project Initialization Best Practices"
 description: "A practical guide to initializing Claude Code projects with proper setup, CLAUDE.md configuration, skill loading, and workflow optimization for developers."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, project-initialization, best-practices, setup]
 author: "Claude Skills Guide"

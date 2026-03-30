@@ -5,6 +5,7 @@ layout: default
 title: "Tabnine Review: Enterprise AI Code Completion 2026"
 description: "A comprehensive review of Tabnine for enterprise AI code completion in 2026, comparing it with Claude Code skills and examining practical implementations."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /tabnine-review-enterprise-ai-code-completion-2026/
 reviewed: true

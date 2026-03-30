@@ -4,6 +4,7 @@ layout: default
 title: "How to Make Claude Code Make Smaller, Focused Changes"
 description: "Learn techniques to guide Claude Code toward incremental, focused code changes instead of large refactors. Practical strategies with skill examples."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /how-to-make-claude-code-make-smaller-focused-changes/
 categories: [guides]

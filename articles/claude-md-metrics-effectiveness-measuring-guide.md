@@ -3,6 +3,7 @@ layout: default
 title: "Claude MD Metrics Effectiveness: Measuring Guide"
 description: "Learn how to measure and track Claude Code skill effectiveness with practical metrics, benchmarks, and evaluation frameworks for developers."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, metrics, measurement, effectiveness, benchmarking]
 author: "Claude Skills Guide"

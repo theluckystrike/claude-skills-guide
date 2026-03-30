@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for AST-Based Code Search Workflow"
 description: "Master AST-based code search with Claude Code to find, analyze, and refactor code patterns across your entire codebase with precision and speed."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-ast-based-code-search-workflow/
 categories: [guides]

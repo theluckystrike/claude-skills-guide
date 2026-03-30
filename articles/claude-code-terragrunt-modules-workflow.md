@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Terragrunt Modules Workflow: A Practical Guide"
 description: "Learn how to streamline your Terragrunt infrastructure workflow using Claude Code. Practical examples for developers managing Terraform modules at scale."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-terragrunt-modules-workflow/
 categories: [guides]

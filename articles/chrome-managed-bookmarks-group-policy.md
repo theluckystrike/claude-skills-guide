@@ -3,6 +3,7 @@ layout: default
 title: "Chrome Managed Bookmarks Group Policy: Complete Enterprise Deployment Guide"
 description: "Learn how to configure Chrome managed bookmarks using Group Policy to standardize browser bookmarks across your organization's devices."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-managed-bookmarks-group-policy/
 reviewed: true

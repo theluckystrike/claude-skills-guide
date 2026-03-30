@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension LeetCode Helper: Boost Your Coding."
 description: "Discover how Chrome extensions can accelerate your LeetCode practice. Explore features like solution hints, timer tracking, problem categorization, and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-leetcode-helper/
 categories: [guides]

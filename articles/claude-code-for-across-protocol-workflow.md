@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Across Protocol Workflow"
 description: "A comprehensive guide for developers on using Claude Code across multiple communication protocols. Learn how to build, test, and integrate services."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-across-protocol-workflow/
 categories: [workflows]

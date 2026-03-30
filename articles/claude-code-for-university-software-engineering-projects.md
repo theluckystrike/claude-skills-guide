@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for University Software Engineering Projects"
 description: "A comprehensive guide for university students using Claude Code to excel in software engineering projects. Learn skills, workflows, and practical."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, university, software-engineering, students, projects, learning]
 author: theluckystrike

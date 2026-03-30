@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension SVG Editor: A Developer Guide"
 description: "Learn how to build powerful SVG editing chrome extensions. Practical code examples, APIs, and implementation patterns for developers and power users."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-svg-editor/
 reviewed: true

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Go Fuzz Workflow Tutorial Guide"
 description: "Learn how to integrate Claude Code into your Go fuzz testing workflow. This guide covers setting up fuzz tests, writing effective fuzz targets, and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-go-fuzz-workflow-tutorial-guide/
 categories: [tutorials]

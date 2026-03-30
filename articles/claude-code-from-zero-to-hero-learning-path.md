@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code from Zero to Hero Learning Path"
 description: "A structured learning path to master Claude Code from basics to advanced skill development. Build professional AI-powered workflows step by step."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, learning-path, claude-skills, beginners]

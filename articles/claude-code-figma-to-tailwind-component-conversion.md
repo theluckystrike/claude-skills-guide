@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Figma to Tailwind Component Conversion"
 description: "Learn how to use Claude Code to convert Figma designs into production-ready Tailwind CSS components. Practical workflow with MCP tools and real examples."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, figma, tailwind, component-conversion, mcp, claude-skills]

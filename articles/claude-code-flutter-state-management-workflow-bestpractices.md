@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Flutter State Management Workflow Best Practices"
 description: "Master Flutter state management with Claude Code. Learn practical workflows, code patterns, and actionable strategies for building maintainable Flutter."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-flutter-state-management-workflow-bestpractices/
 categories: [guides]

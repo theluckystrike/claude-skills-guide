@@ -3,6 +3,7 @@ layout: default
 title: "Using Claude Code with Bun Runtime for JavaScript Projects"
 description: "A practical guide to integrating Claude Code with Bun runtime for faster JavaScript development. Learn setup, configuration, and real-world workflows."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, bun, javascript, runtime, development]
 author: theluckystrike

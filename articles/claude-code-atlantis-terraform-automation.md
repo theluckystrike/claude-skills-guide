@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Atlantis Terraform Automation"
 description: "Learn how to combine Claude Code with Atlantis for automated Terraform pull request workflows. Practical examples for infrastructure-as-code teams."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-atlantis-terraform-automation/
 categories: [guides]

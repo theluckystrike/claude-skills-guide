@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Trunk Based Development Guide"
 description: "Learn how to use Claude Code with trunk based development workflows. Practical examples for developers integrating AI assistance into short-lived."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-trunk-based-development-guide/
 categories: [guides]

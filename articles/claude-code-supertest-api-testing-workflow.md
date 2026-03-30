@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code Supertest API Testing Workflow"
 description: "Learn how to build automated API testing workflows using Claude Code with Supertest. Practical examples, testing patterns, and integration strategies."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-supertest-api-testing-workflow/
 categories: [guides]

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code API Contract Testing Guide"
 description: "Learn how to implement API contract testing using Claude Code skills. Practical examples for developers and power users."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-api-contract-testing-guide/
 categories: [guides]

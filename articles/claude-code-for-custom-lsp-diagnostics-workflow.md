@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Custom LSP Diagnostics Workflow"
 description: "Learn how to build powerful custom diagnostics workflows using Claude Code and Language Server Protocol to automate code quality checks and error."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-custom-lsp-diagnostics-workflow/
 categories: [guides, workflows]

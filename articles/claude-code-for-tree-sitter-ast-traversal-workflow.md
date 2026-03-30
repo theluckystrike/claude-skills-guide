@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Tree-sitter AST Traversal Workflow"
 description: "Master AST traversal with Tree-sitter and Claude Code. Learn practical patterns for analyzing code structure, finding nodes, and building automated."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-tree-sitter-ast-traversal-workflow/
 categories: [workflows, guides]

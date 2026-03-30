@@ -3,6 +3,7 @@ layout: default
 title: "Best Claude Skills for Developers in 2026"
 description: "A curated guide to the most useful Claude Code skills for developers in 2026. Covers productivity, testing, documentation, and workflow automation skills."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 categories: [best-of]
 tags: [claude-code, claude-skills, developer-tools, productivity]
 author: "Claude Skills Guide"

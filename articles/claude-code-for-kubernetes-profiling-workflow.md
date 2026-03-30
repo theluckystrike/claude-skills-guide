@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Kubernetes Profiling Workflow"
 description: "Learn how to use Claude Code to build efficient Kubernetes profiling workflows. Practical examples and code snippets for developers working with."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-kubernetes-profiling-workflow/
 categories: [guides]

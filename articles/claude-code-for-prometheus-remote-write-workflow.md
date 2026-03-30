@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Prometheus Remote Write Workflow"
 description: "Learn how to integrate Claude Code with Prometheus Remote Write for building solid monitoring and observability pipelines. Practical examples and best."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-prometheus-remote-write-workflow/
 categories: [guides]

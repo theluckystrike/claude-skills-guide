@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension Annotate Web Pages: Build Your Own."
 description: "Learn how to build Chrome extensions to annotate web pages. Practical code examples, implementation techniques, and tips for developers and power users."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-annotate-web-pages/
 reviewed: true

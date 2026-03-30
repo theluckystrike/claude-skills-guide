@@ -4,6 +4,7 @@ layout: default
 title: "How to Make Claude Code Follow DRY and SOLID Principles"
 description: "Learn practical strategies for applying DRY and SOLID design principles when working with Claude Code and AI assistants."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /how-to-make-claude-code-follow-dry-solid-principles/
 categories: [guides]

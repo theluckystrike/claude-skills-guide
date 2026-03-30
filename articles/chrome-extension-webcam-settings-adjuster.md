@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension Webcam Settings Adjuster: A Complete Guide"
 description: "Learn how to build a Chrome extension that adjusts webcam settings like brightness, contrast, and resolution directly in the browser."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-webcam-settings-adjuster/
 reviewed: true

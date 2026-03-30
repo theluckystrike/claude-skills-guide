@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Dependency License Audit Workflow"
 description: "Learn how to use Claude Code to automate dependency license audits in your projects. Practical examples and actionable advice for maintaining license."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-dependency-license-audit-workflow/
 categories: [guides]

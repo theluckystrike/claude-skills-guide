@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code with Task Runners: Getting Started with Just."
 description: "Learn how to integrate Task (just-taskfile) with Claude Code to automate development workflows and boost productivity."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-with-task-runners-just-taskfile/
 reviewed: true

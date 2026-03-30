@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code API Security: OWASP Guidelines for AI Agent."
 description: "Learn how to secure your Claude Code integrations against OWASP Top 10 vulnerabilities. Practical patterns for building safe AI agent APIs."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-api-security-owasp-guide/
 categories: [guides]

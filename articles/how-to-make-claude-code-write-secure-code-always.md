@@ -4,6 +4,7 @@ layout: default
 title: "How to Make Claude Code Write Secure Code Always"
 description: "A practical guide to configuring Claude Code for secure coding practices. Learn to use security-focused skills, define security constraints, and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /how-to-make-claude-code-write-secure-code-always/
 categories: [guides]

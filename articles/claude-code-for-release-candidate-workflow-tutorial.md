@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Release Candidate Workflow Tutorial"
 description: "Learn how to create a professional release candidate workflow using Claude Code. This tutorial covers automated testing, version management, and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-release-candidate-workflow-tutorial/
 categories: [guides]

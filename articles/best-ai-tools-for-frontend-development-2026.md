@@ -5,6 +5,7 @@ layout: default
 title: "Best AI Tools for Frontend Development in 2026"
 description: "Discover the top AI-powered tools and assistants that will streamline your frontend development workflow in 2026. From code generation to automated."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /best-ai-tools-for-frontend-development-2026/
 categories: [guides]

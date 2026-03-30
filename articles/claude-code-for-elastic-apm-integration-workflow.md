@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Elastic APM Integration Workflow"
 description: "Learn how to integrate Claude Code with Elastic APM for automated observability monitoring, error tracking, and performance optimization workflows."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-elastic-apm-integration-workflow/
 categories: [guides]

@@ -4,6 +4,7 @@ layout: default
 title: "Best Way to Batch Claude Code Requests to Reduce API Calls"
 description: "Learn how to efficiently batch Claude Code requests to minimize API calls and reduce costs by up to 70%. Practical examples with skills, hooks, and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, batching, api-calls, optimization, claude-skills, cost-reduction]
 author: theluckystrike

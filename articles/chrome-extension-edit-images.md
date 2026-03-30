@@ -3,6 +3,7 @@ layout: default
 title: "Chrome Extension Edit Images: A Practical Guide for Developers"
 description: "Learn how to build Chrome extensions that edit images directly in the browser. Complete implementation guide with JavaScript code examples and Canvas API usage."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /chrome-extension-edit-images/
 categories: [guides]

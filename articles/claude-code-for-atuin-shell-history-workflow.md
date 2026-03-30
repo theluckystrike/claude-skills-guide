@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Atuin Shell History Workflow"
 description: "Master the combination of Claude Code and Atuin for enhanced shell history management. Learn practical workflows to search, analyze, and use your."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 categories: [guides]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"

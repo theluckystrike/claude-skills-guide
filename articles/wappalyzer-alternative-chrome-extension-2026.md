@@ -3,6 +3,7 @@ layout: default
 title: "Wappalyzer Alternative Chrome Extension in 2026"
 description: "Discover the best Wappalyzer alternatives with Chrome extensions for developers in 2026. Compare open-source options, detection accuracy, and API access."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /wappalyzer-alternative-chrome-extension-2026/
 reviewed: true

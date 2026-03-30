@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Codemod Authoring Workflow Tutorial"
 description: "Learn how to use Claude Code to automate large-scale code refactoring with codemods. This tutorial covers workflow setup, pattern matching, and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-codemod-authoring-workflow-tutorial/
 categories: [tutorials]

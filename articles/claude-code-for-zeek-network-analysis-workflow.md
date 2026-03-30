@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Zeek Network Analysis Workflow"
 description: "Learn how to use Claude Code CLI to streamline Zeek network analysis workflows, automate log processing, and build efficient security."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-zeek-network-analysis-workflow/
 categories: [tutorials]

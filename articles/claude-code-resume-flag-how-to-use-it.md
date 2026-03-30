@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Resume Flag: How to Use It"
 description: "Learn how to use Claude Code's --resume flag to continue interrupted sessions, recover work in progress, and manage long-running tasks effectively."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-resume-flag-how-to-use-it/
 reviewed: true

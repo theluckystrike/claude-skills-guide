@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Temporal Workflow Orchestration"
 description: "Learn how to orchestrate complex workflows using Claude Code with Temporal. Practical examples, code patterns, and actionable advice for developers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-temporal-workflow-orchestration/
 categories: [guides]

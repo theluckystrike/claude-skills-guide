@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code PostHog Product Analytics Guide"
 description: "Master product analytics implementation with Claude Code and PostHog. Learn practical workflows for tracking events, analyzing user behavior, and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: theluckystrike
 categories: [guides]
 tags: [claude-code, posthog, product-analytics, analytics, claude-skills]

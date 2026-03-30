@@ -4,6 +4,7 @@ layout: default
 title: "How to Make Claude Code Stop Overwriting Your Edits"
 description: "A practical guide to preventing Claude Code from accidentally overwriting your edits. Learn the Read-before-edit pattern, safe editing techniques, and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, editing, best-practices, troubleshooting, claude-skills]
 author: "Claude Skills Guide"

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Seldon Core Model Serving Guide"
 description: "Learn how to use Claude Code to streamline Seldon Core deployment workflows, create ML model serving configurations, and automate Kubernetes-based."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-seldon-core-model-serving-guide/
 categories: [guides]

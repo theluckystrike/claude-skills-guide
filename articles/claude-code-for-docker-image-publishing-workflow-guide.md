@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Docker Image Publishing Workflow Guide"
 description: "A comprehensive guide to using Claude Code for automating Docker image building, tagging, and publishing workflows. Learn practical techniques for."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-docker-image-publishing-workflow-guide/
 categories: [guides]

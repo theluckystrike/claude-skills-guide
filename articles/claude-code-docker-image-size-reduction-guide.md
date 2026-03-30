@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Docker Image Size Reduction Guide"
 description: "A practical guide to reducing Docker image sizes for Claude Code workflows. Learn multi-stage builds, minimal base images, and optimization techniques."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-docker-image-size-reduction-guide/
 categories: [guides]

@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code SDK Development Workflow Guide"
 description: "A practical guide to building applications with Claude Code SDK. Learn development workflows, skill integration, and best practices for 2026."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "theluckystrike"
 permalink: /claude-code-sdk-development-workflow-guide/
 reviewed: true

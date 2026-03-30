@@ -3,6 +3,7 @@ layout: default
 title: "Is Claude Code Worth the Cost for Small Startups in 2026?"
 description: "A practical cost-benefit analysis for small startups considering Claude Code in 2026. Includes real ROI calculations, skill recommendations, and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /is-claude-code-worth-the-cost-for-small-startups-2026/
 reviewed: true

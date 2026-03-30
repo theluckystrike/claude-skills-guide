@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Skills Redis Caching Layer Implementation"
 description: "Implement a Redis caching layer for Claude Code skills. Practical examples for storing skill outputs, session data, and cross-agent communication."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, redis, caching, performance]
 author: "Claude Skills Guide"

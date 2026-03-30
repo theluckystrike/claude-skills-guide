@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Dhat Memory Profiling Workflow"
 description: "A practical guide to using Claude Code with Dhat for Python memory profiling. Learn how to identify memory allocation patterns and optimize your Python."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-dhat-memory-profiling-workflow/
 categories: [guides]

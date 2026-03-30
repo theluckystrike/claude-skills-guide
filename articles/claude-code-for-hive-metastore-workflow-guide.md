@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Hive Metastore Workflow Guide"
 description: "Master Hive Metastore operations with Claude Code. Learn efficient workflows for schema management, table operations, and metadata automation."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-hive-metastore-workflow-guide/
 categories: [guides]

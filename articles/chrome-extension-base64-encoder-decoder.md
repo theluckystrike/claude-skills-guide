@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Extension Base64 Encoder Decoder: A Practical Guide"
 description: "Learn how to build and use Chrome extensions for Base64 encoding and decoding. Includes code examples, implementation patterns, and practical use cases."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-base64-encoder-decoder/
 reviewed: true

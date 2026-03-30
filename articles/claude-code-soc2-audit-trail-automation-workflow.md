@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code SOC2 Audit Trail Automation Workflow"
 description: "Learn how to build an automated audit trail system for SOC2 compliance using Claude Code skills. Practical examples for tracking changes, generating."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 categories: [tutorials]
 tags: [claude-code, soc2, compliance, audit-trail, automation, claude-skills]

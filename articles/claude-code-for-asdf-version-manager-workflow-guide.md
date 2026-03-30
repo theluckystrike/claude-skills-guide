@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for asdf Version Manager Workflow Guide"
 description: "Learn how to integrate Claude Code with asdf version manager for streamlined multi-language development. Practical examples, automation tips, and."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-asdf-version-manager-workflow-guide/
 categories: [guides]

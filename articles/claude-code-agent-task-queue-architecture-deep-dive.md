@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Agent Task Queue Architecture Deep Dive"
 description: "Explore how Claude Code's agent task queue works under the hood. Learn about task scheduling, skill-based routing, parallel execution, and practical."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, agent, task-queue, architecture, skills, claude-skills]
 author: "theluckystrike"

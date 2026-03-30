@@ -4,6 +4,7 @@ layout: default
 title: "Chrome Slow Startup: Diagnose and Fix Performance Issues"
 description: "A practical guide for developers and power users to diagnose and fix Chrome browser slow startup. Covers extension diagnostics, profile issues, startup."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-slow-startup/
 reviewed: true

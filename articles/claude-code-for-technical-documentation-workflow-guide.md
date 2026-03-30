@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for Technical Documentation Workflow Guide"
 description: "A comprehensive guide to building efficient technical documentation workflows using Claude Code. Learn practical strategies, code examples, and best."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-technical-documentation-workflow-guide/
 categories: [guides]

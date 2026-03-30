@@ -3,6 +3,7 @@ layout: default
 title: "Axe DevTools Chrome Extension Guide: Automated."
 description: "Learn how to use axe DevTools Chrome extension for automated accessibility testing. Practical examples, code snippets, and best practices for developers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /axe-devtools-chrome-extension-guide/
 reviewed: true

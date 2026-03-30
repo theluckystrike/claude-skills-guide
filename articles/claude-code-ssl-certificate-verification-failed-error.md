@@ -4,6 +4,7 @@ layout: default
 title: "Fixing SSL Certificate Verification Failed Error in."
 description: "A comprehensive guide to diagnosing and resolving SSL certificate verification errors when using Claude Code for API calls and network requests."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [troubleshooting]
 author: theluckystrike
 permalink: /claude-code-ssl-certificate-verification-failed-error/

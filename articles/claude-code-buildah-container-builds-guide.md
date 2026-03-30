@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Buildah Container Builds Guide"
 description: "Learn how to use Claude Code with Buildah for efficient container image creation. A practical guide for developers building lightweight, secure."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: theluckystrike
 permalink: /claude-code-buildah-container-builds-guide/
 categories: [guides]

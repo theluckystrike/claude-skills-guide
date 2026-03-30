@@ -4,6 +4,7 @@ layout: default
 title: "Best Way to Use Claude Code Offline Without Internet Access"
 description: "Learn how to use Claude Code effectively in offline or air-gapped environments. Complete guide to local models, offline skills, and self-hosted MCP."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, offline, air-gapped, local-models, mcp, claude-skills]

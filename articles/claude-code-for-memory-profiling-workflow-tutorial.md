@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for Memory Profiling Workflow Tutorial"
 description: "Learn how to use Claude Code to streamline memory profiling in your development workflow. Practical examples and actionable advice for developers."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-memory-profiling-workflow-tutorial/
 categories: [guides]

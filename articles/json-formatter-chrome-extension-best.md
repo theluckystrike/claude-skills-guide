@@ -4,6 +4,7 @@ layout: default
 title: "Best JSON Formatter Chrome Extensions for Developers in 2026"
 description: "A practical guide to the best JSON formatter Chrome extensions for developers and power users. Compare features, speed, and usability for daily API."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /json-formatter-chrome-extension-best/
 reviewed: true

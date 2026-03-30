@@ -3,6 +3,7 @@ layout: default
 title: "Telegram MCP Server Bot Automation Workflow"
 description: "Master Telegram bot automation using the Model Context Protocol server with Claude Code. This guide covers setup, message handling, workflow automation."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, telegram, mcp, bot-automation, workflow]
 author: "Claude Skills Guide"

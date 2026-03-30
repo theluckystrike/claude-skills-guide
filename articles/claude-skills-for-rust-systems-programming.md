@@ -3,6 +3,7 @@ layout: default
 title: "Claude Skills for Rust Systems Programming"
 description: "Practical guide to using Claude skills for Rust systems programming. Memory management, unsafe code, FFI, and performance optimization examples."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [tutorials]
 tags: [claude-code, claude-skills, rust, systems-programming, ffi, memory-management]
 author: "Claude Skills Guide"

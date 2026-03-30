@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Feature Flags Workflow Git Guide"
 description: "Learn how to use Claude Code CLI with feature flags. Practical examples for implementing feature flag workflows with Git branching, environment."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"

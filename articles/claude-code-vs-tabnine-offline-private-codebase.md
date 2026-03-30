@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code vs Tabnine: Which is Better for Offline."
 description: "A comprehensive comparison of Claude Code and Tabnine for developers working with offline or private codebases. Discover which AI coding assistant."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-vs-tabnine-offline-private-codebase/
 reviewed: true

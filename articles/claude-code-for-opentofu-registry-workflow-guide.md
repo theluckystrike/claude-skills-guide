@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for OpenTofu Registry Workflow Guide"
 description: "Learn how to use Claude Code to streamline your OpenTofu registry workflow. Practical guide with examples for managing infrastructure as code efficiently."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-opentofu-registry-workflow-guide/
 categories: [guides]

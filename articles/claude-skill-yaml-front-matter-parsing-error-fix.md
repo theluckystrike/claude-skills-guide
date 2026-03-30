@@ -3,6 +3,7 @@ layout: default
 title: "Claude Skill YAML Front Matter Parsing Error Fix"
 description: "Fix YAML front matter parsing errors in Claude Code skill files. Covers indentation, special characters, missing closing delimiters, and validation tools."
 date: 2026-03-13
+last_modified_at: 2026-03-13
 categories: [troubleshooting]
 tags: [claude-code, claude-skills, troubleshooting, yaml, front-matter]
 author: "Claude Skills Guide"

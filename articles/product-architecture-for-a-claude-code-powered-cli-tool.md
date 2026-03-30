@@ -4,6 +4,7 @@ layout: default
 title: "Product Architecture for a Claude Code Powered CLI Tool"
 description: "Learn how to design and build a powerful CLI tool powered by Claude Code, focusing on core architecture, skills integration, and practical."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /product-architecture-for-a-claude-code-powered-cli-tool/
 categories: [guides]

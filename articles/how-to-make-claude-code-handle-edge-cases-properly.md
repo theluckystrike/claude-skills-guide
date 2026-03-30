@@ -3,6 +3,7 @@ layout: default
 title: "How to Make Claude Code Handle Edge Cases Properly"
 description: "A practical guide for developers and power users to ensure Claude Code properly handles edge cases in code generation. Includes skill recommendations."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, edge-cases, code-quality, claude-skills, tdd, code-review]
 author: theluckystrike

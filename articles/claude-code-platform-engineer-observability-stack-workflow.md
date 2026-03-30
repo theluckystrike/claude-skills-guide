@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Platform Engineer Observability Stack Workflow"
 description: "Learn how to build a comprehensive observability stack workflow using Claude Code skills. Includes practical examples for metrics, logging, tracing."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, platform-engineer, observability, monitoring, devops, claude-skills]
 author: "Claude Skills Guide"

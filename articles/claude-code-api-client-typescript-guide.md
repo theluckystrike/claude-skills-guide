@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code API Client TypeScript Guide"
 description: "A practical guide to building TypeScript API clients that integrate with Claude Code, covering authentication, skill composition, and real-world patterns."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-api-client-typescript-guide/
 reviewed: true

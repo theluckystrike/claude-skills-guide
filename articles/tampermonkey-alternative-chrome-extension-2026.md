@@ -4,6 +4,7 @@ layout: default
 title: "TamperMonkey Alternative Chrome Extension in 2026"
 description: "Explore the best TamperMonkey alternatives for Chrome in 2026. Compare Violentmonkey, ScriptSafe, and other userscript managers for developers and power users."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: theluckystrike
 permalink: /tampermonkey-alternative-chrome-extension-2026/
 reviewed: true

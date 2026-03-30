@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code for Terraform Workflow Tutorial Guide"
 description: "Learn how to integrate Claude Code into your Terraform workflow to automate infrastructure management, write better configurations, and streamline..."
 date: 2026-03-20
+last_modified_at: 2026-03-20
 author: Claude Skills Guide
 permalink: /claude-code-for-terraform-workflow-tutorial-guide/
 categories: [guides]

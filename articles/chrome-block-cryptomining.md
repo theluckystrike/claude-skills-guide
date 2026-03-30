@@ -4,6 +4,7 @@ layout: default
 title: "How to Block Cryptomining in Chrome: A Developer's Guide"
 description: "Learn multiple methods to block cryptomining scripts in Chrome. Includes built-in settings, extensions, network-level filtering, and developer tools."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-block-cryptomining/
 reviewed: true

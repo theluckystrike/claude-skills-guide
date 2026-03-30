@@ -3,6 +3,7 @@ layout: default
 title: "Claude MD for Database Conventions and Patterns"
 description: "Learn how to use Claude's markdown-based skills to implement consistent database conventions and design patterns across your projects."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, database, conventions, patterns, sql, mcp]
 author: "Claude Skills Guide"

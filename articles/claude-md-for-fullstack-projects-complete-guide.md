@@ -3,6 +3,7 @@ layout: default
 title: "Claude MD for Fullstack Projects Complete Guide"
 description: "Master Claude Code .md skill files for fullstack development. Learn to create, organize, and deploy Claude skills across frontend, backend, and."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, fullstack, markdown, development]
 author: theluckystrike

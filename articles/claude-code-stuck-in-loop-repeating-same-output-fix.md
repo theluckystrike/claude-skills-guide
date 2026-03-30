@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Stuck in Loop Repeating Same Output Fix"
 description: "Practical solutions for fixing Claude Code stuck in loop issues. Learn how to break repetitive output patterns and get Claude Code unstuck."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-stuck-in-loop-repeating-same-output-fix/
 reviewed: true

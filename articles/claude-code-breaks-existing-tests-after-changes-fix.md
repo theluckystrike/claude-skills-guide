@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Breaks Existing Tests After Changes Fix"
 description: "When Claude Code modifies your codebase, existing tests may fail. Learn the root causes and practical solutions to prevent and fix test breaks during."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "theluckystrike"
 permalink: /claude-code-breaks-existing-tests-after-changes-fix/
 reviewed: true

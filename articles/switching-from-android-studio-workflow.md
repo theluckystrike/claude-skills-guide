@@ -4,6 +4,7 @@ layout: default
 title: "Switching from Android Studio Workflow: A Developer's Guide"
 description: "Move your Android development from Android Studio to Claude Code with AI-assisted workflows. Practical examples for building apps faster with less."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, android-development, ai-coding, workflow-optimization, claude-skills]

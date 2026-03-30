@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for LSP Document Symbol Workflow Guide"
 description: "Learn how to use Claude Code with Language Server Protocol (LSP) document symbols to enhance your code navigation, refactoring, and development."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-lsp-document-symbol-workflow-guide/
 categories: [guides]

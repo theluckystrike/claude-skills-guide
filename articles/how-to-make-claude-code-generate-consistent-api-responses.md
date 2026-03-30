@@ -3,6 +3,7 @@ layout: default
 title: "How to Make Claude Code Generate Consistent API Responses"
 description: "Learn practical patterns for building Claude skills that produce reliable, predictable API responses every time. Includes code examples and best practices."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills, api-responses, consistency, mcp]
 author: theluckystrike

@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Learning System Design Concepts"
 description: "A practical guide to using Claude Code as your learning companion for mastering system design. Includes actionable examples and code snippets."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: Claude Skills Guide
 permalink: /claude-code-for-learning-system-design-concepts/
 categories: [guides]

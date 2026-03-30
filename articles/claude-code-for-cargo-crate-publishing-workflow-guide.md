@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code for Cargo Crate Publishing Workflow Guide"
 description: "Learn how to use Claude Code to streamline your Rust crate publishing workflow. From initial setup to publishing on crates.io, discover practical."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-cargo-crate-publishing-workflow-guide/
 categories: [guides]

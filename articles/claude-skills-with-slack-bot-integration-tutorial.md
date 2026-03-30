@@ -3,6 +3,7 @@ layout: default
 title: "Claude Skills with Slack Bot Integration Tutorial"
 description: "Build a Slack bot that invokes Claude skills on demand for code review, document processing, and memory recall directly from Slack using Node.js."
 date: 2026-03-13
+last_modified_at: 2026-03-13
 categories: [tutorials]
 tags: [claude-code, claude-skills, slack, bot, node-js, integration]
 author: "Claude Skills Guide"

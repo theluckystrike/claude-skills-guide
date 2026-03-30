@@ -4,6 +4,7 @@ layout: default
 title: "Building a Chrome Extension for Break Reminders in."
 description: "Learn how to build a Chrome extension that helps remote workers take regular breaks. Complete with code examples and practical implementation guide."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /chrome-extension-break-reminder-remote-work/
 reviewed: true

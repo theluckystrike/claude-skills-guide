@@ -4,6 +4,7 @@ layout: default
 title: "Claude Code Phoenix LiveView Workflow Guide"
 description: "Master Phoenix LiveView development with Claude Code: efficient workflows, real-time UI patterns, and state management strategies for Elixir developers."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-phoenix-liveview-workflow-guide/
 reviewed: true

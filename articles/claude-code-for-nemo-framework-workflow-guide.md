@@ -5,6 +5,7 @@ layout: default
 title: "Claude Code for NeMo Framework Workflow Guide"
 description: "Master NeMo Framework development with Claude Code. Learn practical workflows for building, training, and deploying generative AI models using NVIDIA NeMo."
 date: 2026-03-15
+last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
 permalink: /claude-code-for-nemo-framework-workflow-guide/
 categories: [guides]

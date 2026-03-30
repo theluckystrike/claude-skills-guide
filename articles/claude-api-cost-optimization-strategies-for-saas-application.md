@@ -4,6 +4,7 @@ layout: default
 title: "Claude API Cost Optimization Strategies for SaaS."
 description: "Practical strategies to reduce Claude API costs in production SaaS applications without sacrificing quality. Learn prompt optimization, caching."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"

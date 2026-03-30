@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Crashes on Large Files: How to Fix"
 description: "Troubleshooting and solutions for Claude Code (claude.ai) crashes when handling large files. Practical fixes for developers and power users."
 date: 2026-03-14
+last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
 permalink: /claude-code-crashes-on-large-files-how-to-fix/
 reviewed: true
