@@ -5,9 +5,12 @@ description: "Tutorials for building with the Claude API: SDKs, streaming, tool 
 permalink: /topics/api/
 ---
 
-# Claude API Guides
+<div class="page-header">
+  <h1>Claude API Guides</h1>
+  <p class="page-subtitle">Build production applications with the Claude API. SDKs, streaming, tool use, authentication, and cost optimization.</p>
+</div>
 
-Build production applications with the Claude API. SDKs, streaming, tool use, authentication, and cost optimization.
+<div class="topic-listing">
 
 ## All API Guides (99 articles)
 
@@ -110,3 +113,5 @@ Build production applications with the Claude API. SDKs, streaming, tool use, au
 - [What is the Best Claude Skill for Rest API Development](/what-is-the-best-claude-skill-for-rest-api-development/)
 - [Why is Claude Code Expensive Large Context Tokens](/why-is-claude-code-expensive-large-context-tokens/)
 - [Writing Claude Md Files That Define Your Projects API Versio](/writing-claude-md-files-that-define-your-projects-api-versio/)
+
+</div>

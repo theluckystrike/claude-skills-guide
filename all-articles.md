@@ -5,9 +5,12 @@ description: "Complete list of all Claude Code guides, tutorials, and resources.
 permalink: /all-articles/
 ---
 
-# All Articles
+<div class="page-header">
+  <h1>All Articles</h1>
+  <p class="page-subtitle">A complete index of all 2,518 guides, tutorials, and resources on this site.</p>
+</div>
 
-A complete index of all 2518 guides, tutorials, and resources on this site.
+<div class="article-index">
 
 ## #
 
@@ -2598,3 +2601,5 @@ A complete index of all 2518 guides, tutorials, and resources on this site.
 - [Zed Editor AI Features Review for Developers 2026](/zed-editor-ai-features-review-for-developers-2026/)
 - [Zoom MCP Server Meeting Summary Automation](/zoom-mcp-server-meeting-summary-automation/)
 - [Zotero Chrome Extension Setup Guide](/zotero-chrome-extension-setup-guide/)
+
+</div>

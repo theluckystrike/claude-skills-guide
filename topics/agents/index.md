@@ -5,9 +5,12 @@ description: "Build autonomous agents, multi-agent systems, and orchestration pa
 permalink: /topics/agents/
 ---
 
-# AI Agent Guides
+<div class="page-header">
+  <h1>AI Agent Guides</h1>
+  <p class="page-subtitle">Build autonomous agents, multi-agent orchestration, and production agent systems with Claude.</p>
+</div>
 
-Build autonomous agents, multi-agent orchestration, and production agent systems with Claude. This page lists every agent-related guide on the site.
+<div class="topic-listing">
 
 ## All Agent Guides (65 articles)
 
@@ -76,3 +79,5 @@ Build autonomous agents, multi-agent orchestration, and production agent systems
 - [What Are AI Agent Skills Complete Guide Developers](/what-are-ai-agent-skills-complete-guide-developers/)
 - [What is Agentic AI and Why It Matters](/what-is-agentic-ai-and-why-it-matters/)
 - [What is an AI Agent Loop Explained Simply](/what-is-an-ai-agent-loop-explained-simply/)
+
+</div>

@@ -1,119 +1,142 @@
 ---
 layout: default
-title: "Claude Code Guides — Ship Faster with AI"
-description: "Practical Claude Code, Claude API, and AI coding tutorials."
+title: "Claude Code Guides — Tutorials, Workflows & AI Agent Guides"
+description: "2,500+ practical Claude Code tutorials for developers. Prompt engineering, API guides, MCP integrations, autonomous agents, and production workflows."
 ---
 
-# Claude Code Guides
-
-Practical guides for getting real work done with Claude Code, Claude API, and Claude Desktop. From prompt engineering to autonomous agents to production deployments. Written by a developer who ships with Claude daily.
-
-## Start Here
-
-<div class="card">
-  <a href="/claude-code-for-beginners-complete-getting-started-2026/">Complete Beginner Guide</a>
-  <p>Installation, setup, and your first session</p>
+<div class="hero">
+  <h1>Claude Code Guides</h1>
+  <p class="hero-sub">Ship faster with Claude Code. 2,500+ practical tutorials for developers.</p>
+  <div class="stats">
+    <div class="stat"><span class="number">2,500+</span><span class="label">Guides</span></div>
+    <div class="stat"><span class="number">7</span><span class="label">Topics</span></div>
+    <div class="stat"><span class="number">Daily</span><span class="label">Updates</span></div>
+  </div>
 </div>
 
-<div class="card">
-  <a href="/how-to-write-effective-prompts-for-claude-code/">How to Write Effective Prompts</a>
-  <p>Get better results from every prompt</p>
+<h2>Start Here</h2>
+<div class="card-grid">
+  <a href="/claude-code-for-beginners-complete-getting-started-2026/" class="card">
+    <h3>Complete Beginner Guide</h3>
+    <p>Installation, setup, and your first session</p>
+  </a>
+  <a href="/how-to-write-effective-prompts-for-claude-code/" class="card">
+    <h3>How to Write Effective Prompts</h3>
+    <p>Get better results from every prompt</p>
+  </a>
+  <a href="/mcp-integration-guide-for-claude-code-beginners/" class="card">
+    <h3>MCP Integration Guide for Beginners</h3>
+    <p>Connect Claude Code to external tools</p>
+  </a>
+  <a href="/claude-md-file-complete-guide-what-it-does/" class="card">
+    <h3>CLAUDE.md Complete Guide</h3>
+    <p>Project-level instructions that stick</p>
+  </a>
+  <a href="/building-a-rest-api-with-claude-code-tutorial/" class="card">
+    <h3>Building a REST API with Claude Code</h3>
+    <p>End-to-end walkthrough from scratch</p>
+  </a>
 </div>
 
-<div class="card">
-  <a href="/mcp-integration-guide-for-claude-code-beginners/">MCP Integration Guide for Beginners</a>
-  <p>Connect Claude Code to external tools</p>
-</div>
-
-<div class="card">
-  <a href="/claude-md-file-complete-guide-what-it-does/">CLAUDE.md Complete Guide</a>
-  <p>Project-level instructions that stick</p>
-</div>
-
-<div class="card">
-  <a href="/building-a-rest-api-with-claude-code-tutorial/">Building a REST API with Claude Code</a>
-  <p>End-to-end walkthrough from scratch</p>
-</div>
-
-## Recently Updated
-
+<h2>Recently Updated</h2>
+<div class="recent-list">
 {% assign sorted_pages = site.pages | where_exp: "p", "p.path contains 'articles/'" | sort: "date" | reverse %}
 {% for p in sorted_pages limit: 6 %}{% if p.title %}
-- [{{ p.title }}]({{ p.url }})
+<a href="{{ p.url }}" class="recent-item">{{ p.title }}</a>
 {% endif %}{% endfor %}
+</div>
 
-## Browse by Topic
+<h2>Browse by Topic</h2>
+<div class="topic-grid">
+  <div class="topic-card">
+    <h3>Getting Started</h3>
+    <p>New to Claude Code? Start with the fundamentals.</p>
+    <ul>
+      <li><a href="/claude-code-first-project-tutorial-hello-world/">First Project Tutorial: Hello World</a></li>
+      <li><a href="/claude-code-setup-on-mac-step-by-step/">Setup on Mac: Step-by-Step</a></li>
+      <li><a href="/claude-code-tips-for-absolute-beginners-2026/">Tips for Absolute Beginners</a></li>
+      <li><a href="/how-to-use-claude-code-with-existing-github-repo/">Using Claude Code with an Existing GitHub Repo</a></li>
+    </ul>
+    <a href="/topics/getting-started/" class="browse-link">Browse all &rarr;</a>
+  </div>
 
-### Getting Started
-New to Claude Code? Start with the fundamentals.
+  <div class="topic-card">
+    <h3>Prompt Engineering</h3>
+    <p>Write better prompts, get better results.</p>
+    <ul>
+      <li><a href="/how-to-write-effective-prompts-for-claude-code/">How to Write Effective Prompts</a></li>
+      <li><a href="/claude-api-system-prompt-engineering-for-production-apps/">System Prompt Engineering for Production</a></li>
+      <li><a href="/claude-skill-prompt-compression-techniques/">Prompt Compression Techniques</a></li>
+    </ul>
+    <a href="/topics/prompt-engineering/" class="browse-link">Browse all &rarr;</a>
+  </div>
 
-- [First Project Tutorial: Hello World](/claude-code-first-project-tutorial-hello-world/)
-- [Setup on Mac: Step-by-Step](/claude-code-setup-on-mac-step-by-step/)
-- [Tips for Absolute Beginners](/claude-code-tips-for-absolute-beginners-2026/)
-- [Using Claude Code with an Existing GitHub Repo](/how-to-use-claude-code-with-existing-github-repo/)
+  <div class="topic-card">
+    <h3>Claude API</h3>
+    <p>Build production applications with the Claude API.</p>
+    <ul>
+      <li><a href="/building-apps-with-claude-api-anthropic-sdk-python-guide/">Building Apps with the Anthropic SDK (Python)</a></li>
+      <li><a href="/claude-api-streaming-responses-implementation-tutorial/">Streaming Responses Implementation</a></li>
+      <li><a href="/claude-api-tool-use-function-calling-deep-dive-guide/">Tool Use and Function Calling Deep Dive</a></li>
+      <li><a href="/claude-api-cost-optimization-strategies-for-saas-application/">Cost Optimization Strategies</a></li>
+    </ul>
+    <a href="/topics/api/" class="browse-link">Browse all &rarr;</a>
+  </div>
 
-[Browse all Getting Started guides -->](/topics/getting-started/)
+  <div class="topic-card">
+    <h3>Agents</h3>
+    <p>Build autonomous and multi-agent systems.</p>
+    <ul>
+      <li><a href="/claude-code-multi-agent-orchestration-patterns-guide/">Multi-Agent Orchestration Patterns</a></li>
+      <li><a href="/building-production-ai-agents-with-claude-skills-2026/">Building Production AI Agents</a></li>
+      <li><a href="/building-stateful-agents-with-claude-skills-guide/">Stateful Agents Guide</a></li>
+      <li><a href="/agent-handoff-strategies-for-long-running-tasks-guide/">Agent Handoff Strategies</a></li>
+    </ul>
+    <a href="/topics/agents/" class="browse-link">Browse all &rarr;</a>
+  </div>
 
-### Prompt Engineering
-Write better prompts, get better results.
+  <div class="topic-card">
+    <h3>MCP Integrations</h3>
+    <p>Connect Claude Code to databases, APIs, and services.</p>
+    <ul>
+      <li><a href="/mcp-integration-guide-for-claude-code-beginners/">MCP Integration Guide for Beginners</a></li>
+      <li><a href="/building-your-first-mcp-tool-integration-guide-2026/">Building Your First MCP Tool</a></li>
+      <li><a href="/aws-mcp-server-cloud-automation-with-claude-code/">AWS MCP Server</a></li>
+      <li><a href="/brave-search-mcp-server-research-automation/">Brave Search MCP Server</a></li>
+    </ul>
+    <a href="/topics/mcp/" class="browse-link">Browse all &rarr;</a>
+  </div>
 
-- [How to Write Effective Prompts](/how-to-write-effective-prompts-for-claude-code/)
-- [System Prompt Engineering for Production](/claude-api-system-prompt-engineering-for-production-apps/)
-- [Prompt Compression Techniques](/claude-skill-prompt-compression-techniques/)
+  <div class="topic-card">
+    <h3>CLAUDE.md and Workflows</h3>
+    <p>Configure projects and automate your workflow.</p>
+    <ul>
+      <li><a href="/claude-md-file-complete-guide-what-it-does/">CLAUDE.md Complete Guide</a></li>
+      <li><a href="/claude-md-best-practices-for-large-codebases/">CLAUDE.md Best Practices for Large Codebases</a></li>
+      <li><a href="/claude-code-git-hooks-pre-commit-automation/">Git Hooks and Pre-Commit Automation</a></li>
+      <li><a href="/claude-code-2026-new-features-skills-and-hooks-roundup/">New Features: Skills and Hooks Roundup</a></li>
+    </ul>
+    <a href="/topics/workflows/" class="browse-link">Browse all &rarr;</a>
+  </div>
 
-[Browse all Prompt guides -->](/topics/prompt-engineering/)
+  <div class="topic-card">
+    <h3>Chrome Extensions</h3>
+    <p>Guides for building, optimizing, and using Chrome extensions.</p>
+    <ul>
+      <li><a href="/ai-code-assistant-chrome-extension/">AI Code Assistant Chrome Extension</a></li>
+      <li><a href="/chrome-extension-service-worker-inspector/">Chrome Extension Service Worker Inspector</a></li>
+      <li><a href="/chrome-extension-performance-optimization/">Chrome Extension Performance Optimization</a></li>
+    </ul>
+    <a href="/topics/chrome-extensions/" class="browse-link">Browse all &rarr;</a>
+  </div>
+</div>
 
-### Claude API
-Build production applications with the Claude API.
+<div class="about-section">
+  <h2>About</h2>
+  <p>Practical, tested tutorials for developers working with Claude Code, Claude API, and Claude Desktop. Written by developers who ship with Claude daily.</p>
+  <a href="/about/" class="browse-link">Learn more &rarr;</a>
+</div>
 
-- [Building Apps with the Anthropic SDK (Python)](/building-apps-with-claude-api-anthropic-sdk-python-guide/)
-- [Streaming Responses Implementation](/claude-api-streaming-responses-implementation-tutorial/)
-- [Tool Use and Function Calling Deep Dive](/claude-api-tool-use-function-calling-deep-dive-guide/)
-- [Cost Optimization Strategies](/claude-api-cost-optimization-strategies-for-saas-application/)
-
-[Browse all API guides -->](/topics/api/)
-
-### Agents
-Build autonomous and multi-agent systems.
-
-- [Multi-Agent Orchestration Patterns](/claude-code-multi-agent-orchestration-patterns-guide/)
-- [Building Production AI Agents](/building-production-ai-agents-with-claude-skills-2026/)
-- [Stateful Agents Guide](/building-stateful-agents-with-claude-skills-guide/)
-- [Agent Handoff Strategies](/agent-handoff-strategies-for-long-running-tasks-guide/)
-
-[Browse all Agent guides -->](/topics/agents/)
-
-### MCP Integrations
-Connect Claude Code to databases, APIs, and services.
-
-- [MCP Integration Guide for Beginners](/mcp-integration-guide-for-claude-code-beginners/)
-- [Building Your First MCP Tool](/building-your-first-mcp-tool-integration-guide-2026/)
-- [AWS MCP Server](/aws-mcp-server-cloud-automation-with-claude-code/)
-- [Brave Search MCP Server](/brave-search-mcp-server-research-automation/)
-
-[Browse all MCP guides -->](/topics/mcp/)
-
-### CLAUDE.md and Workflows
-Configure projects and automate your workflow.
-
-- [CLAUDE.md Complete Guide](/claude-md-file-complete-guide-what-it-does/)
-- [CLAUDE.md Best Practices for Large Codebases](/claude-md-best-practices-for-large-codebases/)
-- [Git Hooks and Pre-Commit Automation](/claude-code-git-hooks-pre-commit-automation/)
-- [New Features: Skills and Hooks Roundup](/claude-code-2026-new-features-skills-and-hooks-roundup/)
-
-[Browse all Workflow guides -->](/topics/workflows/)
-
-### Chrome Extensions
-Guides for building, optimizing, and using Chrome extensions.
-
-- [AI Code Assistant Chrome Extension](/ai-code-assistant-chrome-extension/)
-- [Chrome Extension Service Worker Inspector](/chrome-extension-service-worker-inspector/)
-- [Chrome Extension Performance Optimization](/chrome-extension-performance-optimization/)
-
-[Browse all Chrome Extension guides -->](/topics/chrome-extensions/)
-
-[Browse all 2,500+ articles -->](/all-articles/)
-
-## About
-
-Claude Code Guides publishes tested, practical tutorials for developers working with Claude. [Read more -->](/about/)
+<div style="text-align:center; margin: 2rem 0;">
+  <a href="/all-articles/" class="browse-link">Browse all 2,500+ guides &rarr;</a>
+</div>

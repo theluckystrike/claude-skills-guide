@@ -5,9 +5,12 @@ description: "Guides for building Chrome extensions with AI, Claude Code, and mo
 permalink: /topics/chrome-extensions/
 ---
 
-# Chrome Extension Guides
+<div class="page-header">
+  <h1>Chrome Extension Guides</h1>
+  <p class="page-subtitle">Guides for building, comparing, and using Chrome extensions. From AI-powered extensions to productivity tools and developer utilities.</p>
+</div>
 
-Guides for building, comparing, and using Chrome extensions. From AI-powered extensions to productivity tools and developer utilities.
+<div class="topic-listing">
 
 ## All Chrome Extension Guides (582 articles)
 
@@ -593,3 +596,5 @@ Guides for building, comparing, and using Chrome extensions. From AI-powered ext
 - [Window Resizer Alternative Chrome Extension 2026](/window-resizer-alternative-chrome-extension-2026/)
 - [Workona Alternative Chrome Extension 2026](/workona-alternative-chrome-extension-2026/)
 - [Zotero Chrome Extension Setup Guide](/zotero-chrome-extension-setup-guide/)
+
+</div>
