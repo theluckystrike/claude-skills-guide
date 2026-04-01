@@ -1,0 +1,2 @@
+# Redirect www to non-www (requires www.claudecodeguides.com added as custom domain in CF Pages)
+https://www.claudecodeguides.com/* https://claudecodeguides.com/:splat 301

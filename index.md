@@ -103,6 +103,17 @@ Configure projects and automate your workflow.
 
 [Browse all Workflow guides -->](/topics/workflows/)
 
+### Chrome Extensions
+Guides for building, optimizing, and using Chrome extensions.
+
+- [AI Code Assistant Chrome Extension](/ai-code-assistant-chrome-extension/)
+- [Chrome Extension Service Worker Inspector](/chrome-extension-service-worker-inspector/)
+- [Chrome Extension Performance Optimization](/chrome-extension-performance-optimization/)
+
+[Browse all Chrome Extension guides -->](/topics/chrome-extensions/)
+
+[Browse all 2,500+ articles -->](/all-articles/)
+
 ## About
 
 Claude Code Guides publishes tested, practical tutorials for developers working with Claude. [Read more -->](/about/)

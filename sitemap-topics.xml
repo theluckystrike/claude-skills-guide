@@ -3,7 +3,7 @@
 
   <!-- Homepage -->
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/</loc>
+    <loc>https://claudecodeguides.com/</loc>
     <lastmod>2026-03-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -11,73 +11,73 @@
 
   <!-- Hub pages -->
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/advanced-hub/</loc>
+    <loc>https://claudecodeguides.com/advanced-hub/</loc>
     <lastmod>2026-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/best-of-hub/</loc>
+    <loc>https://claudecodeguides.com/best-of-hub/</loc>
     <lastmod>2026-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/comparisons-hub/</loc>
+    <loc>https://claudecodeguides.com/comparisons-hub/</loc>
     <lastmod>2026-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/getting-started-hub/</loc>
+    <loc>https://claudecodeguides.com/getting-started-hub/</loc>
     <lastmod>2026-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/guides-hub/</loc>
+    <loc>https://claudecodeguides.com/guides-hub/</loc>
     <lastmod>2026-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/integrations-hub/</loc>
+    <loc>https://claudecodeguides.com/integrations-hub/</loc>
     <lastmod>2026-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/pricing-hub/</loc>
+    <loc>https://claudecodeguides.com/pricing-hub/</loc>
     <lastmod>2026-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/projects-hub/</loc>
+    <loc>https://claudecodeguides.com/projects-hub/</loc>
     <lastmod>2026-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/troubleshooting-hub/</loc>
+    <loc>https://claudecodeguides.com/troubleshooting-hub/</loc>
     <lastmod>2026-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/tutorials-hub/</loc>
+    <loc>https://claudecodeguides.com/tutorials-hub/</loc>
     <lastmod>2026-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/use-cases-hub/</loc>
+    <loc>https://claudecodeguides.com/use-cases-hub/</loc>
     <lastmod>2026-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/workflows-hub/</loc>
+    <loc>https://claudecodeguides.com/workflows-hub/</loc>
     <lastmod>2026-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -85,252 +85,252 @@
 
   <!-- 50 most recent articles -->
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/zotero-chrome-extension-setup-guide/</loc>
+    <loc>https://claudecodeguides.com/zotero-chrome-extension-setup-guide/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/zoom-mcp-server-meeting-summary-automation/</loc>
+    <loc>https://claudecodeguides.com/zoom-mcp-server-meeting-summary-automation/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/zed-editor-ai-features-review-for-developers-2026/</loc>
+    <loc>https://claudecodeguides.com/zed-editor-ai-features-review-for-developers-2026/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/writing-claude-md-files-that-define-your-projects-api-versio/</loc>
+    <loc>https://claudecodeguides.com/writing-claude-md-files-that-define-your-projects-api-versio/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/workona-alternative-chrome-extension-2026/</loc>
+    <loc>https://claudecodeguides.com/workona-alternative-chrome-extension-2026/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/workflows-hub/</loc>
+    <loc>https://claudecodeguides.com/workflows-hub/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/wireguard-postup-postdown-scripts-for-advanced-routing-configuration/</loc>
+    <loc>https://claudecodeguides.com/wireguard-postup-postdown-scripts-for-advanced-routing-configuration/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/wireguard-performance-tuning-large-file-transfer-optimization-guide/</loc>
+    <loc>https://claudecodeguides.com/wireguard-performance-tuning-large-file-transfer-optimization-guide/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/windsurf-editor-review-for-professional-developers-2026/</loc>
+    <loc>https://claudecodeguides.com/windsurf-editor-review-for-professional-developers-2026/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/window-resizer-alternative-chrome-extension-2026/</loc>
+    <loc>https://claudecodeguides.com/window-resizer-alternative-chrome-extension-2026/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/will-claude-skills-support-voice-interfaces-2026/</loc>
+    <loc>https://claudecodeguides.com/will-claude-skills-support-voice-interfaces-2026/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/will-claude-skills-replace-traditional-ide-plugins/</loc>
+    <loc>https://claudecodeguides.com/will-claude-skills-replace-traditional-ide-plugins/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/why-is-claude-code-terminal-based-not-gui-application/</loc>
+    <loc>https://claudecodeguides.com/why-is-claude-code-terminal-based-not-gui-application/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/why-is-claude-code-suddenly-worse-than-it-was-before/</loc>
+    <loc>https://claudecodeguides.com/why-is-claude-code-suddenly-worse-than-it-was-before/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/why-is-claude-code-recommended-for-refactoring-tasks/</loc>
+    <loc>https://claudecodeguides.com/why-is-claude-code-recommended-for-refactoring-tasks/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/why-is-claude-code-reading-the-wrong-directory-entirely/</loc>
+    <loc>https://claudecodeguides.com/why-is-claude-code-reading-the-wrong-directory-entirely/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/why-is-claude-code-producing-code-that-does-not-run/</loc>
+    <loc>https://claudecodeguides.com/why-is-claude-code-producing-code-that-does-not-run/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/why-is-claude-code-popular-for-complex-codebases/</loc>
+    <loc>https://claudecodeguides.com/why-is-claude-code-popular-for-complex-codebases/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/why-is-claude-code-good-at-understanding-legacy-code/</loc>
+    <loc>https://claudecodeguides.com/why-is-claude-code-good-at-understanding-legacy-code/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/why-is-claude-code-expensive-large-context-tokens/</loc>
+    <loc>https://claudecodeguides.com/why-is-claude-code-expensive-large-context-tokens/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/why-is-claude-code-changing-files-i-did-not-mention/</loc>
+    <loc>https://claudecodeguides.com/why-is-claude-code-changing-files-i-did-not-mention/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/why-is-claude-code-better-than-chatgpt-for-developers/</loc>
+    <loc>https://claudecodeguides.com/why-is-claude-code-better-than-chatgpt-for-developers/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/why-is-chrome-so-slow-2026/</loc>
+    <loc>https://claudecodeguides.com/why-is-chrome-so-slow-2026/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/why-does-my-claude-skill-work-locally-but-fail-in-ci/</loc>
+    <loc>https://claudecodeguides.com/why-does-my-claude-skill-work-locally-but-fail-in-ci/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/why-does-claude-skill-produce-different-output-each-run/</loc>
+    <loc>https://claudecodeguides.com/why-does-claude-skill-produce-different-output-each-run/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/why-does-claude-skill-auto-invocation-fail-intermittently/</loc>
+    <loc>https://claudecodeguides.com/why-does-claude-skill-auto-invocation-fail-intermittently/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/why-does-claude-code-work-better-with-skills-loaded/</loc>
+    <loc>https://claudecodeguides.com/why-does-claude-code-work-better-with-skills-loaded/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/why-does-claude-code-sometimes-ignore-my-instructions/</loc>
+    <loc>https://claudecodeguides.com/why-does-claude-code-sometimes-ignore-my-instructions/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/why-does-claude-code-skill-take-so-long-to-initialize/</loc>
+    <loc>https://claudecodeguides.com/why-does-claude-code-skill-take-so-long-to-initialize/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/why-does-claude-code-reject-my-skill-instruction-block/</loc>
+    <loc>https://claudecodeguides.com/why-does-claude-code-reject-my-skill-instruction-block/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/why-does-claude-code-produce-incomplete-code-blocks-fix/</loc>
+    <loc>https://claudecodeguides.com/why-does-claude-code-produce-incomplete-code-blocks-fix/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/why-does-claude-code-perform-better-with-claude-md/</loc>
+    <loc>https://claudecodeguides.com/why-does-claude-code-perform-better-with-claude-md/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/why-does-claude-code-occasionally-repeat-same-errors/</loc>
+    <loc>https://claudecodeguides.com/why-does-claude-code-occasionally-repeat-same-errors/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/why-does-claude-code-not-recognize-my-custom-skill-name/</loc>
+    <loc>https://claudecodeguides.com/why-does-claude-code-not-recognize-my-custom-skill-name/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/why-does-claude-code-need-so-much-context-window/</loc>
+    <loc>https://claudecodeguides.com/why-does-claude-code-need-so-much-context-window/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/why-does-claude-code-keep-asking-for-permission-repeatedly/</loc>
+    <loc>https://claudecodeguides.com/why-does-claude-code-keep-asking-for-permission-repeatedly/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/why-does-claude-code-ignore-my-skill-md-file-entirely/</loc>
+    <loc>https://claudecodeguides.com/why-does-claude-code-ignore-my-skill-md-file-entirely/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/why-does-claude-code-hallucinate-code-sometimes/</loc>
+    <loc>https://claudecodeguides.com/why-does-claude-code-hallucinate-code-sometimes/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/why-does-claude-code-break-my-existing-tests-unexpectedly/</loc>
+    <loc>https://claudecodeguides.com/why-does-claude-code-break-my-existing-tests-unexpectedly/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/why-does-anthropic-limit-claude-code-context-window/</loc>
+    <loc>https://claudecodeguides.com/why-does-anthropic-limit-claude-code-context-window/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/why-do-teams-switch-from-copilot-to-claude-code/</loc>
+    <loc>https://claudecodeguides.com/why-do-teams-switch-from-copilot-to-claude-code/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/why-do-senior-developers-prefer-claude-code-2026/</loc>
+    <loc>https://claudecodeguides.com/why-do-senior-developers-prefer-claude-code-2026/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/white-label-developer-copilot-built-on-claude-code-api/</loc>
+    <loc>https://claudecodeguides.com/white-label-developer-copilot-built-on-claude-code-api/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/which-chrome-extensions-safe/</loc>
+    <loc>https://claudecodeguides.com/which-chrome-extensions-safe/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/where-the-claude-code-skill-ecosystem-is-headed-2027/</loc>
+    <loc>https://claudecodeguides.com/where-the-claude-code-skill-ecosystem-is-headed-2027/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/when-to-use-claude-code-vs-manual-coding-tradeoffs/</loc>
+    <loc>https://claudecodeguides.com/when-to-use-claude-code-vs-manual-coding-tradeoffs/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/when-to-use-claude-code-vs-chatgpt-for-coding-tasks/</loc>
+    <loc>https://claudecodeguides.com/when-to-use-claude-code-vs-chatgpt-for-coding-tasks/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/when-to-split-one-claude-skill-into-multiple-files/</loc>
+    <loc>https://claudecodeguides.com/when-to-split-one-claude-skill-into-multiple-files/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/whatfont-alternative-chrome-extension-2026/</loc>
+    <loc>https://claudecodeguides.com/whatfont-alternative-chrome-extension-2026/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theluckystrike.github.io/claude-skills-guide/what-is-the-best-way-to-organize-claude-skills-in-a-monorepo/</loc>
+    <loc>https://claudecodeguides.com/what-is-the-best-way-to-organize-claude-skills-in-a-monorepo/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
