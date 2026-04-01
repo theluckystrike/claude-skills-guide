@@ -28,7 +28,6 @@ Phase 1: Generating Multiple Reasoning Paths
 
 The first step involves prompting Claude to generate several distinct approaches to the problem. Here's how to structure this:
 
-{%{%{%
 ```python
 tree_of_thought.py
 import json
@@ -58,7 +57,6 @@ Phase 2: Evaluating Branch Viability
 
 Once you have multiple branches, the next phase involves evaluating each path's potential for success. This evaluation can be based on various criteria depending on your use case:
 
-{%{%{%
 ```python
 def evaluate_branch(branch, context):
     """Evaluate the viability of a reasoning branch."""
@@ -82,7 +80,6 @@ Phase 3: Iterative Exploration and Selection
 
 The final phase implements the tree's expansion and pruning. Successful branches are explored deeper, while less promising paths are abandoned:
 
-{%{%{%
 ```python
 def expand_tree(initial_branches, max_depth=3):
     """Iteratively expand the reasoning tree."""
