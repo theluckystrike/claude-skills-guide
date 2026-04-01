@@ -176,8 +176,8 @@ Effective Terraform state management prevents infrastructure incidents before th
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Terraform Module Development Guide](/claude-code-terraform-module-development-guide/)
+- [Claude Code Tfsec Terraform Security Guide](/claude-code-tfsec-terraform-security-guide/)
+- [Claude Code Kubernetes Upgrade Workflow Guide](/claude-code-kubernetes-upgrade-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

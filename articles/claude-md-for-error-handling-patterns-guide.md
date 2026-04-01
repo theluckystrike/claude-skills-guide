@@ -358,9 +358,9 @@ The investment in thoughtful error handling pays dividends every time a skill ru
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Code Troubleshooting Hub](/troubleshooting-hub/)
+- [Claude Code Skips Error Handling in Generated Code](/claude-code-skips-error-handling-in-generated-code/)
+- [Claude API Timeout Errors: Handling and Retry Guide](/claude-api-timeout-error-handling-retry-guide/)
+- [Claude Code Docker Permission Denied Bind Mount Error](/claude-code-docker-permission-denied-bind-mount-error/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

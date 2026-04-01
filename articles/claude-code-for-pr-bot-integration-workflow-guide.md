@@ -237,9 +237,9 @@ Remember to iterate on your configuration based on real feedback. The most succe
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Azure DevOps Integration Workflow Tutorial](/claude-code-azure-devops-integration-workflow-tutorial/)
+- [Claude Code for APM Integration Workflow Tutorial Guide](/claude-code-for-apm-integration-workflow-tutorial-guide/)
+- [Claude Code for Benchmark CI Integration Workflow](/claude-code-for-benchmark-ci-integration-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

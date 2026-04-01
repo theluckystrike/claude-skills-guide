@@ -884,8 +884,8 @@ The most important shift is cultural: once evidence collection is automated and 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Skills Compliance SOC2 ISO27001 Guide](/claude-skills-compliance-soc2-iso27001-guide/)
+- [Claude Code for Wazuh SIEM Workflow Tutorial](/claude-code-for-wazuh-siem-workflow-tutorial/)
+- [Claude Code CIS Benchmark Hardening Script Automation](/claude-code-cis-benchmark-hardening-script-automation/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

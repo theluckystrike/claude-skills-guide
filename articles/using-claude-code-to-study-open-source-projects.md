@@ -141,8 +141,8 @@ Start with a small project, apply these techniques, and gradually scale up to la
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for OSS Security Policy Workflow Tutorial](/claude-code-for-oss-security-policy-workflow-tutorial/)
+- [Claude MD for Open Source Projects Guide](/claude-md-for-open-source-projects-guide/)
+- [Claude Code for Apache Drill Workflow Tutorial](/claude-code-for-apache-drill-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

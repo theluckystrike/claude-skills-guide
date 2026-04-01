@@ -245,8 +245,8 @@ OpenTofu provides a mature, open-source alternative to Terraform that works smoo
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for OpenTofu Provider Workflow Tutorial](/claude-code-for-opentofu-provider-workflow-tutorial/)
+- [Claude Code Skills for Terraform IaC: Complete Guide](/claude-code-skills-for-infrastructure-as-code-terraform/)
+- [Claude Code Terraform Module Development Guide](/claude-code-terraform-module-development-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

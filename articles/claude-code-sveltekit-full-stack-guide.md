@@ -590,8 +590,8 @@ For documentation needs, the pdf skill generates project documentation directly 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Vercel Supabase Clerk Full Stack Development](/claude-code-for-vercel-supabase-clerk-full-stack/)
+- [Claude Code Remix Full Stack Workflow Guide](/claude-code-remix-full-stack-workflow-guide/)
+- [Claude Code Skills for Product Engineers Building Full Stack](/claude-code-skills-for-product-engineers-building-full-stack/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

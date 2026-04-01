@@ -279,8 +279,8 @@ For more guides on Chrome extension development and debugging tools, explore our
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Extension Cookie Editor: A Developer's Guide](/chrome-extension-cookie-editor-developer/)
+- [Chrome Extension Local Storage Viewer: Complete Guide.](/chrome-extension-local-storage-viewer/)
+- [AI Calendar Assistant Chrome Extension: A Developer's Guide](/ai-calendar-assistant-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

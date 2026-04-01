@@ -195,4 +195,11 @@ Conclusion
 Both Insomnia and Postman work effectively with Claude Code in 2026, but your choice should depend on your specific workflow needs. Insomnia offers a more developer-centric experience with excellent GraphQL support, while Postman provides superior collaboration and documentation features. Claude Code bridges these tools, adding intelligent automation and test generation that enhances any API development workflow.
 
 The best approach? Experiment with both tools using the code patterns above, then choose the one that aligns with your team's workflow and scales with your project requirements.
+
+Related Reading
+
+- [Claude Code Insomnia API Testing Workflow](/claude-code-insomnia-api-testing-workflow/)
+- [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)
+- [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)
+
 {% endraw %}

@@ -300,9 +300,9 @@ The RAM freed by the suspender is immediately available to other processes. loca
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Memory Saver Mode: A Developer's Guide to Reducing Browser Memory Usage](/chrome-memory-saver-mode/)
+- [AI Agent Memory Types Explained for Developers](/ai-agent-memory-types-explained-for-developers/)
+- [AI Tab Organizer Chrome Extension: A Practical Guide for.](/ai-tab-organizer-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

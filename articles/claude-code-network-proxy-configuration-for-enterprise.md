@@ -182,8 +182,8 @@ Configuring Claude Code for enterprise proxy environments is straightforward onc
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Augment Code AI Review for Enterprise Teams 2026](/augment-code-ai-review-for-enterprise-teams-2026/)
+- [Chrome ADMX Templates for Windows Server: Enterprise.](/chrome-admx-templates-windows-server/)
+- [Chrome Enterprise Deployment Guide 2026](/chrome-enterprise-deployment-guide-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

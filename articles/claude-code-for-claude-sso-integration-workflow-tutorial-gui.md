@@ -263,4 +263,11 @@ Conclusion
 Integrating Claude Code with your SSO workflow provides secure, centralized authentication for your development team. By following this guide, you can implement a production-ready authentication system that uses your existing identity infrastructure while maintaining the flexibility to work with Claude Code's capabilities.
 
 Remember to regularly review and update your security configurations, stay current with your IdP's documentation, and implement the best practices outlined here for a secure and reliable authentication experience.
+
+Related Reading
+
+- [Claude Code for CORS Misconfiguration Fix Workflow Guide](/claude-code-for-cors-misconfiguration-fix-workflow-guide/)
+- [Claude Code for Sigma Rules Detection Workflow Tutorial](/claude-code-for-sigma-rules-detection-workflow-tutorial/)
+- [Claude Code for Threat Hunting Techniques Workflow Guide](/claude-code-for-threat-hunting-techniques-workflow-guide/)
+
 {% endraw %}

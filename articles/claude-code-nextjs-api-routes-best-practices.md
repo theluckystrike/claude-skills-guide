@@ -173,7 +173,7 @@ Authentication and Authorization
 
 Securing API routes requires layered protection. For authentication, integrate with solutions like NextAuth.js or implement JWT validation. For authorization, verify user permissions before executing sensitive operations.
 
-Claude Code's skill for [pdf](/pdf) generation can help create reports from authenticated user data, while the [tdd](/tdd) skill ensures your auth flows have proper test coverage. Consider these patterns for protected endpoints:
+Claude Code's skill for pdf generation can help create reports from authenticated user data, while the tdd skill ensures your auth flows have proper test coverage. Consider these patterns for protected endpoints:
 
 ```typescript
 // Middleware pattern for protected routes
@@ -284,7 +284,7 @@ Error Handling and Logging
 
 Consistent error handling makes debugging significantly easier. Create utility functions that standardize error responses across all your endpoints. Track errors using your preferred observability solution, options include Sentry, Datadog, or cloud-native solutions.
 
-For complex error scenarios, Claude Code can help generate comprehensive error handling logic that covers network failures, database timeouts, and edge cases specific to your business domain. The [supermemory](/supermemory) skill can assist in maintaining documentation of error patterns and their resolutions.
+For complex error scenarios, Claude Code can help generate comprehensive error handling logic that covers network failures, database timeouts, and edge cases specific to your business domain. The supermemory skill can assist in maintaining documentation of error patterns and their resolutions.
 
 ```typescript
 // lib/api-utils.ts
@@ -371,7 +371,7 @@ Batch operations when clients need multiple related resources. Instead of multip
 
 Implement pagination for list endpoints from the start. Cursor-based pagination performs better than offset-based approaches for large datasets.
 
-When building frontend integrations with these APIs, use the [frontend-design](/frontend-design) skill to create components that handle loading states, error displays, and data refresh patterns elegantly.
+When building frontend integrations with these APIs, use the frontend-design skill to create components that handle loading states, error displays, and data refresh patterns elegantly.
 
 Response Caching with Cache-Control Headers
 
@@ -491,7 +491,7 @@ Avoid setting `Access-Control-Allow-Origin: *` on endpoints that require authent
 
 Testing Your API Routes
 
-The [tdd](/tdd) skill proves invaluable when building API routes. Write integration tests that exercise your endpoints with various inputs, including edge cases and error conditions. Test tools like Jest and Supertest work well for this purpose.
+The tdd skill proves invaluable when building API routes. Write integration tests that exercise your endpoints with various inputs, including edge cases and error conditions. Test tools like Jest and Supertest work well for this purpose.
 
 Mock external dependencies during testing to ensure tests run quickly and reliably. Database connections, third-party APIs, and authentication providers should have test doubles that simulate different scenarios.
 
@@ -548,8 +548,8 @@ For additional NextJS optimization strategies, explore the guide on NextJS deplo
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code REST API Design Best Practices](/claude-code-rest-api-design-best-practices/)
+- [Claude Code ActiveRecord Scopes and Callbacks Best Practices](/claude-code-activerecord-scopes-callbacks-best-practices/)
+- [Claude Code Bug Reporting Best Practices](/claude-code-bug-reporting-best-practices/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

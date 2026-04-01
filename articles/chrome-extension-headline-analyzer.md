@@ -426,8 +426,8 @@ Building your own chrome extension headline analyzer gives you full control over
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [AI Headline Writer Chrome Extension: A Developer's Guide](/ai-headline-writer-chrome-extension/)
+- [AI Sentiment Analyzer Chrome Extension: A Developer's Guide](/ai-sentiment-analyzer-chrome-extension/)
+- [Chrome Extension CSS Coverage Analyzer: Identify Unused.](/chrome-extension-css-coverage-analyzer/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

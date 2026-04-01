@@ -235,8 +235,8 @@ The workflows and patterns covered in this guide will help you make the most of 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Drizzle ORM TypeScript Database Workflow](/claude-code-drizzle-orm-typescript-database-workflow/)
+- [Claude Code Express TypeScript API Guide: Build.](/claude-code-express-typescript-api-guide/)
+- [Claude Code for T3 Stack tRPC Next.js Workflow](/claude-code-for-t3-stack-trpc-nextjs-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

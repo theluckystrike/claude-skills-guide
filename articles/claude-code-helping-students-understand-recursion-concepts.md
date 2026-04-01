@@ -102,9 +102,9 @@ Recursion education benefits enormously from interactive, personalized guidance,
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Best Way to Configure Claude Code to Understand Your Internal APIs](/best-way-to-configure-claude-code-to-understand-your-internal-apis/)
+- [Chrome Extension Bookmark Manager for Students: A.](/chrome-extension-bookmark-manager-students/)
+- [Chrome Extension Paraphrase Tool for Students: A.](/chrome-extension-paraphrase-tool-students/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

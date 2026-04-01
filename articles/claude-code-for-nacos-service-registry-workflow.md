@@ -157,8 +157,8 @@ Integrating Claude Code into your Nacos service registry workflow transforms wha
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Monolith to Microservices Refactor Guide](/claude-code-for-monolith-to-microservices-refactor-guide/)
+- [Claude Code Spring Boot Microservices Guide](/claude-code-spring-boot-microservices-guide/)
+- [Claude Code Container Registry Workflow Guide](/claude-code-container-registry-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

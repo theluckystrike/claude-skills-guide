@@ -199,8 +199,8 @@ Start with simple experiments, headline changes or button colors, before attempt
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code GrowthBook Experiment Analysis Workflow Tutorial](/claude-code-growthbook-experiment-analysis-workflow-tutorial/)
+- [AI Document Editor Chrome Extension: A Developer's Guide](/ai-document-editor-chrome-extension/)
+- [Chrome Extension Cookie Editor: A Developer's Guide](/chrome-extension-cookie-editor-developer/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

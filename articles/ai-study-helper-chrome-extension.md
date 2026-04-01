@@ -269,9 +269,9 @@ Building an AI study helper Chrome extension combines web development skills wit
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Extension Canvas LMS Helper: A Developer Guide](/chrome-extension-canvas-lms-helper/)
+- [Chrome Extension Study Schedule Planner: Build Your Own](/chrome-extension-study-schedule-planner/)
+- [Chrome Extension Wolfram Alpha Helper](/chrome-extension-wolfram-alpha-helper/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

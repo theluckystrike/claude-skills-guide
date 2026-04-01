@@ -320,9 +320,9 @@ Start with the basic calculation logic, then progressively add features like rea
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Extension Price Per Unit Calculator: A Practical.](/chrome-extension-price-per-unit-calculator/)
+- [AI Code Assistant Chrome Extension: Practical Guide for.](/ai-code-assistant-chrome-extension/)
+- [Best AI Chrome Extensions 2026: A Practical Guide for Developers](/best-ai-chrome-extensions-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

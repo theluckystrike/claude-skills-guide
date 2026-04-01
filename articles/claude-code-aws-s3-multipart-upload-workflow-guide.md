@@ -235,8 +235,8 @@ Start by creating a basic skill following the examples above, then extend it wit
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code API Regression Testing Workflow Guide](/claude-code-api-regression-testing-workflow/)
+- [Claude Code Automated Alt Text Generation Workflow](/claude-code-automated-alt-text-generation-workflow/)
+- [Claude Code Batch File Processing Workflow](/claude-code-batch-file-processing-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

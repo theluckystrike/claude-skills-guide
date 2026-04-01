@@ -536,8 +536,8 @@ Experiment with different skill combinations to find what works best for your sp
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Coverage Reporting Setup Guide](/claude-code-coverage-reporting-setup-guide/)
+- [Codeium Review: Free AI Coding Assistant 2026](/codeium-review-free-ai-coding-assistant-2026/)
+- [Measuring ROI of AI Coding Tools for Teams](/measuring-roi-of-ai-coding-tools-for-teams/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -193,8 +193,8 @@ Next Steps:
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Dependency License Audit Workflow](/claude-code-for-dependency-license-audit-workflow/)
+- [Claude Code for First OSS Contribution Workflow Guide](/claude-code-for-first-oss-contribution-workflow-guide/)
+- [Claude Code for License Compatibility Workflow Guide](/claude-code-for-license-compatibility-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

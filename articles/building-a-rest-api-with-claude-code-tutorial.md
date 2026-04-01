@@ -314,8 +314,8 @@ Your next steps: scaffold a new API project, load the tdd skill, and build one e
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Actix Web Rust API Guide](/claude-code-actix-web-rust-api-guide/)
+- [Claude Code for GraphQL to REST Migration Guide](/claude-code-for-graphql-to-rest-migration-guide/)
+- [Ansible MCP Server Configuration Management](/ansible-mcp-server-configuration-management/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

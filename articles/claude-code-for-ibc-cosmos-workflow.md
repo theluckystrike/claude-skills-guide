@@ -327,8 +327,8 @@ Start with clear configuration in your CLAUDE.md, break complex tasks into manag
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for OpenSea Protocol Workflow Guide](/claude-code-for-opensea-protocol-workflow-guide/)
+- [Claude Code for QuickNode RPC Workflow Guide](/claude-code-for-quicknode-rpc-workflow-guide/)
+- [Claude Skills for Solidity Smart Contract Development](/claude-skills-for-solidity-smart-contract-development/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

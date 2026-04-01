@@ -232,8 +232,8 @@ Remember that ROI calculations are not one-time exercises. Continuously monitor 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Measuring ROI of AI Coding Tools for Teams](/measuring-roi-of-ai-coding-tools-for-teams/)
+- [AI Coding Tool Evaluation Framework for Teams](/ai-coding-tool-evaluation-framework-for-teams/)
+- [Async Product Discovery Process for Remote Teams Using Recorded Interviews](/async-product-discovery-process-for-remote-teams-using-recorded-interviews/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

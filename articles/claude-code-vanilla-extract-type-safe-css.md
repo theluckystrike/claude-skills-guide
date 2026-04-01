@@ -256,8 +256,8 @@ The initial setup requires minimal configuration, and the learning curve stays l
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [How to Check if a Chrome Extension is Safe Before Installing](/check-chrome-extension-safe/)
+- [Is Chrome's Built-in Password Manager Safe? A Developer Perspective](/chrome-built-in-password-manager-safe/)
+- [Chrome Extension CSS Coverage Analyzer: Identify Unused.](/chrome-extension-css-coverage-analyzer/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -88,8 +88,8 @@ The question isn't whether open source or proprietary will win, it's how you'll 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Open Source Claude Skills Ecosystem Outlook 2026](/open-source-claude-skills-ecosystem-outlook-2026/)
+- [Claude Code for Open Source Contributions: 2026 Workflow Guide](/claude-code-open-source-contribution-workflow-guide-2026/)
+- [Claude MD for Open Source Projects Guide](/claude-md-for-open-source-projects-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

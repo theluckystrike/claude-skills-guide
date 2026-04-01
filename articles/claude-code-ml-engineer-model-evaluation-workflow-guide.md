@@ -16,7 +16,7 @@ permalink: /claude-code-ml-engineer-model-evaluation-workflow-guide/
 
 Claude Code ML Engineer Model Evaluation Workflow Guide
 
-[Effective model evaluation is the backbone of any successful machine learning project](/best-claude-code-skills-for-data-analysis/) As ML engineers, we need systematic ways to assess model performance, compare alternatives, and ensure our deployments meet quality standards. Claude Code provides a powerful toolkit for building solid evaluation workflows that integrate smoothly into your development pipeline.
+[Effective model evaluation is the backbone of any successful machine learning project](/best-claude-skills-for-data-analysis/) As ML engineers, we need systematic ways to assess model performance, compare alternatives, and ensure our deployments meet quality standards. Claude Code provides a powerful toolkit for building solid evaluation workflows that integrate smoothly into your development pipeline.
 
 Why ML Engineers Need Structured Evaluation Workflows
 
@@ -428,8 +428,8 @@ The key is starting simple: define your evaluation criteria, build baseline metr
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Adversarial Robustness Workflow](/claude-code-for-adversarial-robustness-workflow/)
+- [Claude Code for ML Engineer: Feature Store Workflow.](/claude-code-ml-engineer-feature-store-workflow-daily-tips/)
+- [Claude Code for LLM Evaluation Workflow Guide](/claude-code-for-llm-evaluation-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

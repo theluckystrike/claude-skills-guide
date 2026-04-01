@@ -355,8 +355,8 @@ With these tools at your disposal, you have complete control over where Claude C
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code disallowedTools Security Configuration](/claude-code-disallowedtools-security-configuration/)
+- [MCP Transport Layer Security TLS Configuration Guide](/mcp-transport-layer-security-tls-configuration/)
+- [Best Encrypted Backup Solution for Developers: A 2026 Technical Guide](/best-encrypted-backup-solution-for-developers/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

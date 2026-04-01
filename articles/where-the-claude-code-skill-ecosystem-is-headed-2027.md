@@ -119,8 +119,8 @@ The skills you use today are building blocks for an AI-assisted development futu
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Open Source Claude Skills Ecosystem Outlook 2026](/open-source-claude-skills-ecosystem-outlook-2026/)
+- [Open Source vs Proprietary Claude Skills: Future Outlook](/open-source-vs-proprietary-claude-skills-future-outlook/)
+- [The Future of AI Agent Skills Beyond Claude Code in 2026](/future-of-ai-agent-skills-beyond-claude-code-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -195,8 +195,8 @@ Remember: The goal isn't to fit your entire codebase into context, but to put ex
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Profile Too Large? Fix It Fast (Step-by-Step)](/chrome-profile-too-large/)
+- [Claude Code Error Out of Memory Large Codebase Fix](/claude-code-error-out-of-memory-large-codebase-fix/)
+- [Claude Code for Context Window Optimization Workflow Guide](/claude-code-for-context-window-optimization-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

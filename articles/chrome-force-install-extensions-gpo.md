@@ -210,8 +210,8 @@ For organizations with more sophisticated endpoint management, most modern platf
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Enterprise Webstore Private: Deploying Extensions to Your Organization](/chrome-enterprise-webstore-private/)
+- [Best AI Chrome Extensions 2026: A Practical Guide for Developers](/best-ai-chrome-extensions-2026/)
+- [Best Calendar Chrome Extensions for Developers and Power.](/calendar-chrome-extension-best/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

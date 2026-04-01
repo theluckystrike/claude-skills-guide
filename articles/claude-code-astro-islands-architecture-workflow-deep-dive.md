@@ -6,7 +6,7 @@ description: "Master Astro's islands architecture with Claude Code. Learn practi
 date: 2026-03-14
 last_modified_at: 2026-03-14
 author: Claude Skills Guide
-permalink: /claude-code-astro-islands-architecture-workflow-deep detailed look/
+permalink: /claude-code-astro-islands-architecture-workflow-deep-dive/
 categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
@@ -230,8 +230,8 @@ The key is starting simple, default to static, then add interactivity only where
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Agent Task Queue Architecture Deep Dive](/claude-code-agent-task-queue-architecture-deep-dive/)
+- [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)
+- [Claude API Tool Use and Function Calling Deep Dive Guide](/claude-api-tool-use-function-calling-deep-dive-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

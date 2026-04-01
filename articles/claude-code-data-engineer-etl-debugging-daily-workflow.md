@@ -186,8 +186,8 @@ Start by creating project-specific context files, then gradually build custom sk
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Code Troubleshooting Hub](/troubleshooting-hub/)
+- [Claude Code Frontend Developer CSS Debugging Workflow Guide](/claude-code-frontend-developer-css-debugging-workflow-guide/)
+- [AI Tools for Incident Debugging and Postmortems](/ai-tools-for-incident-debugging-and-postmortems/)
+- [Chrome DevTools Memory Leak Debugging: Find and Fix.](/chrome-devtools-memory-leak-debugging/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

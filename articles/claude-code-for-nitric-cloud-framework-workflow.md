@@ -263,8 +263,8 @@ The key is treating Claude not just as a code generator, but as a development pa
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Neon Serverless Postgres Workflow Guide](/claude-code-neon-serverless-postgres-workflow-guide/)
+- [Claude Code for Deno Deploy Serverless Runtime Guide](/claude-code-for-deno-deploy-serverless-runtime-guide/)
+- [Claude Code Upstash QStash Scheduled Tasks Setup Guide](/claude-code-upstash-qstash-scheduled-tasks-setup-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

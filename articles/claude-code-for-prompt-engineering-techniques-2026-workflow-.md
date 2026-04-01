@@ -234,4 +234,11 @@ The key is treating prompts as first-class code: version-controlled, tested, and
 ---
 
 Next Steps: Explore integrating these techniques with Claude Code's tool-use capabilities for fully autonomous workflows that can execute code, call APIs, and interact with your development environment.
+
+Related Reading
+
+- [Claude Code for Apache Drill Workflow Tutorial](/claude-code-for-apache-drill-workflow-tutorial/)
+- [Claude Code for Astro Actions Workflow Tutorial](/claude-code-for-astro-actions-workflow-tutorial/)
+- [Claude Code for Automated PR Checks Workflow Tutorial](/claude-code-for-automated-pr-checks-workflow-tutorial/)
+
 {% endraw %}

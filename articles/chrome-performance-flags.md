@@ -169,8 +169,8 @@ Chrome performance flags provide powerful tools for optimizing your browsing exp
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Extension Miro Whiteboard: A Complete Guide for Developers and Power Users](/chrome-extension-miro-whiteboard/)
+- [Chrome Freezing Fix: Complete Guide for Developers and Power Users](/chrome-freezing-fix/)
+- [Chrome Slow After Update: Causes and Solutions for Power Users](/chrome-slow-after-update/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

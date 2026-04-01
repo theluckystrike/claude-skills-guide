@@ -391,7 +391,7 @@ The skills like `pdf`, `tdd`, `frontend-design`, and `supermemory` all work bett
 Related Reading
 
 - [Claude Code REST API Design Best Practices](/claude-code-rest-api-design-best-practices/)
-- [Claude Code GraphQL Schema Design Guide](/claude-code-graphql-schema-design-guide/)
+- Claude Code GraphQL Schema Design Guide
 - [Claude Code OpenAPI Spec Generation Guide](/claude-code-openapi-spec-generation-guide/)
 - [Claude Skills Integrations Hub](/integrations-hub/)
 

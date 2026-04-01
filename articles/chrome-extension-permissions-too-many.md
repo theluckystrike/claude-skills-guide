@@ -209,8 +209,8 @@ Treat your extension list the same way you treat installed software. review it p
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Running Slow? Too Many Extensions Could Be the Cause](/chrome-slow-too-many-extensions/)
+- [Chrome Too Many Processes: A Developer's Guide to Fixing High Memory Usage](/chrome-too-many-processes/)
+- [Agentic AI Coding Tools Comparison 2026: A Practical.](/agentic-ai-coding-tools-comparison-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

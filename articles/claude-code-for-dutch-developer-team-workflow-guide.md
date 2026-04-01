@@ -416,8 +416,8 @@ The teams that see the most value from Claude Code are not the ones that automat
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Team Wiki Maintenance Workflow](/claude-code-for-team-wiki-maintenance-workflow/)
+- [Claude Code Data Retention Policy Workflow](/claude-code-data-retention-policy-workflow/)
+- [Claude Code for Aurora Serverless V2 Workflow](/claude-code-for-aurora-serverless-v2-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

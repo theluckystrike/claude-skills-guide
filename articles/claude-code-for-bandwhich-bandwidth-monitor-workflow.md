@@ -275,7 +275,7 @@ The key is starting simple, run bandwhich interactively, explore your network tr
 Related Reading
 
 - [Claude Code Kubernetes Monitoring with Prometheus](/claude-code-kubernetes-monitoring-prometheus/)
-- [Claude Code for Network Security Analysis](/claude-code-network-security-analysis-workflow/)
+- Claude Code for Network Security Analysis
 - [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

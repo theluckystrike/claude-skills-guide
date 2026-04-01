@@ -360,8 +360,8 @@ Remember: Type definitions are the contract of your codebase. Protect them, and 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Building a Chrome Extension for Break Reminders in.](/chrome-extension-break-reminder-remote-work/)
+- [Claude Code for Cargo Make Build Workflow Guide](/claude-code-for-cargo-make-build-workflow-guide/)
+- [Claude Code Vanilla Extract Type Safe CSS](/claude-code-vanilla-extract-type-safe-css/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

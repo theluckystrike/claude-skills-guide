@@ -820,8 +820,8 @@ Start with a simple fine-tuning run on a small dataset, use Claude Code to itera
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for PyTorch Model Training Workflow](/claude-code-for-pytorch-model-training-workflow/)
+- [Claude Code Axolotl QLoRA Training Script Workflow](/claude-code-axolotl-qlora-training-script-workflow/)
+- [Claude Code Diffusers Stable Diffusion Training Guide](/claude-code-diffusers-stable-diffusion-training-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

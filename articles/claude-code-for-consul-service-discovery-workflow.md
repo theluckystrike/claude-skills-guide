@@ -390,8 +390,8 @@ Remember to start with a single-node development setup, thoroughly test your hea
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for gRPC Service Development Workflow](/claude-code-for-grpc-service-development-workflow/)
+- [Claude Code for Nacos Service Registry Workflow](/claude-code-for-nacos-service-registry-workflow/)
+- [Claude Code for Service Worker Caching Workflow](/claude-code-for-service-worker-caching-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -227,9 +227,9 @@ Explore the Chrome Web Store for options that match your specific needs, or cons
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Pieces for Developers AI Review Workflow Tool](/pieces-for-developers-ai-review-workflow-tool/)
+- [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/)
+- [AI Agent Memory Types Explained for Developers](/ai-agent-memory-types-explained-for-developers/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

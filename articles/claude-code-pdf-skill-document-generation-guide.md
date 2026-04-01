@@ -253,7 +253,8 @@ The general pattern for automated PDF workflows is: trigger (cron/webhook/event)
 
 Related Reading
 
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Can Claude Skills Generate Images or Multimedia Files?](/can-claude-skills-generate-images-or-handle-multimedia-files/)
+- [Claude 4 Skills: New Features and Improvements Guide](/claude-4-skills-improvements-and-new-features/)
+- [Claude Code 2026: Skills and Hooks Feature Roundup](/claude-code-2026-new-features-skills-and-hooks-roundup/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -149,8 +149,8 @@ The browser landscape continues evolving rapidly. New entrants like Arc demonstr
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome vs Edge Memory 2026: Which Browser Uses Less RAM?](/chrome-vs-edge-memory-2026/)
+- [Speed Up Chrome When Running Low on RAM: A Developer's Guide](/speed-up-chrome-low-ram/)
+- [Best DNS Settings for Chrome to Speed Up Your Browser](/best-dns-chrome-speed/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

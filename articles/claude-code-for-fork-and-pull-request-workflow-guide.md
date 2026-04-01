@@ -219,8 +219,8 @@ Remember that the best workflow is one that works consistently for you. Experime
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Automated Pull Request Review Workflow Guide](/claude-code-automated-pull-request-review-workflow-guide/)
+- [Claude Code for Pull Request Review Workflow Guide](/claude-code-for-pull-request-review-workflow-guide/)
+- [Claude Code Pull Request Description Generator Workflow](/claude-code-pull-request-description-generator-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

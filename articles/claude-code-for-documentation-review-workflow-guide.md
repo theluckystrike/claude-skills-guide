@@ -216,8 +216,8 @@ Remember: great documentation isn't written once, it's refined through consisten
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)
+- [Claude Code Automated Pull Request Review Workflow Guide](/claude-code-automated-pull-request-review-workflow-guide/)
+- [Claude Code Community Health Metrics Documentation Workflow](/claude-code-community-health-metrics-documentation-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

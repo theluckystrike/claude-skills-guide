@@ -162,8 +162,8 @@ Is Claude Code worth it? For most active open source projects, the answer is inc
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Open Source Contributions: 2026 Workflow Guide](/claude-code-open-source-contribution-workflow-guide-2026/)
+- [Claude MD for Open Source Projects Guide](/claude-md-for-open-source-projects-guide/)
+- [How to Contribute Claude Skills to Open Source](/how-to-contribute-claude-skills-to-open-source/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

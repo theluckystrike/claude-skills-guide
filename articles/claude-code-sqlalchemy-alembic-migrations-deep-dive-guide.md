@@ -7,7 +7,7 @@ description: "Master database migrations with Claude Code and SQLAlchemy. Learn 
 date: 2026-03-14
 last_modified_at: 2026-03-14
 author: "Claude Skills Guide"
-permalink: /claude-code-sqlalchemy-alembic-migrations-deep detailed look-guide/
+permalink: /claude-code-sqlalchemy-alembic-migrations-deep-dive-guide/
 categories: [tutorials]
 tags: [claude-code, claude-skills]
 reviewed: true
@@ -166,8 +166,8 @@ Start by integrating Claude into your migration workflow on a small project, the
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Best Way to Use Claude Code for Database Migrations](/best-way-to-use-claude-code-for-database-migrations/)
+- [Ansible MCP Server Configuration Management](/ansible-mcp-server-configuration-management/)
+- [Apache Kafka MCP Server for Event Streaming Guide](/apache-kafka-mcp-server-event-streaming-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -381,8 +381,8 @@ The combination is especially powerful for rapid prototyping. You can go from a 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Design System Tokens: A Frontend Developer Guide](/claude-code-design-system-tokens-frontend-developer-guide/)
+- [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)
+- [Chrome Extension Color Picker Design: A Developer's Guide](/chrome-extension-color-picker-design/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -219,8 +219,8 @@ Start by installing Ollama and pulling a model, then create a few offline-ready 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Best Way to Configure Claude Code to Understand Your Internal APIs](/best-way-to-configure-claude-code-to-understand-your-internal-apis/)
+- [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/)
+- [AI Agent Skills Standardization Efforts 2026](/ai-agent-skills-standardization-efforts-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

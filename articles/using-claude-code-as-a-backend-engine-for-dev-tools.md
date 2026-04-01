@@ -374,8 +374,8 @@ Start small, create a simple skill for one specific task, and gradually expand a
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Building Your First MCP Tool Integration Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)
+- [RabbitMQ MCP Server for Message Queue Automation](/rabbitmq-mcp-server-message-queue-automation/)
+- [Render MCP Server Web Service Automation](/render-mcp-server-web-service-automation/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

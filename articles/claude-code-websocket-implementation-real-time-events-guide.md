@@ -435,9 +435,9 @@ Event sourcing integration. For applications built on event sourcing, Claude Cod
 
 Related Reading
 
-- [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/)
-- [Guides Hub](/guides-hub/)
-
+- [Claude Code Skills for WebSocket Real-Time App Development](/claude-code-skills-websocket-real-time-app-development/)
+- [Claude Skills for WebSocket Realtime App Development](/claude-skills-for-websocket-realtime-app-development/)
+- [Claude Code Skills for Gaming Backend Development](/claude-code-skills-for-gaming-backend-development/)
 ---
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

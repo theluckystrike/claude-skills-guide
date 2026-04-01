@@ -385,8 +385,8 @@ Start with simple tasks, configuration explanation and code generation, then pro
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Fiber Go Web Framework Workflow](/claude-code-for-fiber-go-web-framework-workflow/)
+- [Claude Code for Fresh Deno Framework Workflow](/claude-code-for-fresh-deno-framework-workflow/)
+- [Claude Code for Nitric Cloud Framework Workflow](/claude-code-for-nitric-cloud-framework-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

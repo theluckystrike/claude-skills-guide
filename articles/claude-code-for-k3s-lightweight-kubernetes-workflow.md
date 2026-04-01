@@ -176,8 +176,8 @@ Start with simple deployments and gradually incorporate more advanced patterns a
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Azure Arc Kubernetes Workflow](/claude-code-for-azure-arc-kubernetes-workflow/)
+- [Claude Code for k9s Kubernetes Terminal Workflow Guide](/claude-code-for-k9s-kubernetes-terminal-workflow-guide/)
+- [Claude Code for Kubernetes CSI Driver Workflow](/claude-code-for-kubernetes-csi-driver-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

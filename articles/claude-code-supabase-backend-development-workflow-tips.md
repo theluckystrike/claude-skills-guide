@@ -375,9 +375,9 @@ Building efficient Supabase backends with Claude Code comes down to organized pr
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Java Backend Developer Spring Boot Workflow Tips](/claude-code-java-backend-developer-spring-boot-workflow-tips/)
+- [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)
+- [Claude Code Developer Advocate Demo Content Workflow Tips](/claude-code-developer-advocate-demo-content-workflow-tips/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

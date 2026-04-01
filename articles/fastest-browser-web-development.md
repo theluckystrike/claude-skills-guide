@@ -265,8 +265,8 @@ The developers who waste the most time are those who insist on doing everything 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Enterprise Split Tunnel Browsing: A Practical Guide](/chrome-enterprise-split-tunnel-browsing/)
+- [Chrome Extension Arrow and Text Overlay Screenshot Guide](/chrome-extension-arrow-and-text-overlay-screenshot/)
+- [Chrome Extension Keyword Density Checker: A Developer's Guide](/chrome-extension-keyword-density-checker/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

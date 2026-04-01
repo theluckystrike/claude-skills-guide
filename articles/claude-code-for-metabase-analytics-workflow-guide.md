@@ -215,8 +215,8 @@ Remember to secure your API credentials, implement proper error handling, and gr
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Amplitude Analytics Workflow](/claude-code-for-amplitude-analytics-workflow/)
+- [Claude Code for Plausible Analytics Workflow Guide](/claude-code-for-plausible-analytics-workflow-guide/)
+- [Claude Code for Tinybird Real-Time Analytics Workflow](/claude-code-for-tinybird-real-time-analytics-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

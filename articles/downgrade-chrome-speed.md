@@ -204,8 +204,8 @@ For each slow third-party resource you identify, consider whether it is render-b
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Browser Speed Benchmark 2026: A Practical Guide for Developers](/browser-speed-benchmark-2026/)
+- [Chrome Speed Up Tips for Developers and Power Users in 2026](/chrome-speed-up-tips-2026/)
+- [AI Agent Memory Types Explained for Developers](/ai-agent-memory-types-explained-for-developers/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

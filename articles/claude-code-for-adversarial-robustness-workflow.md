@@ -356,8 +356,8 @@ Input certification through randomized smoothing adds Gaussian noise to inputs m
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code ML Engineer Model Evaluation Workflow Guide](/claude-code-ml-engineer-model-evaluation-workflow-guide/)
+- [Claude Code OWASP Top 10 Security Scanning Workflow](/claude-code-owasp-top-10-security-scanning-workflow/)
+- [Claude Code SOX Financial Code Audit Workflow Guide](/claude-code-sox-financial-code-audit-workflow-guide/)
 
 Built by theluckystrike. More at zovo.one

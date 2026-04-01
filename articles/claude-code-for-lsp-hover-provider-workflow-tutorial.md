@@ -274,9 +274,9 @@ Remember, the goal isn't to replicate a visual hover UI, it's to provide the sam
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Cold Fusion Modernization Workflow Guide](/claude-code-cold-fusion-modernization-workflow-guide/)
+- [Claude Code Daily Workflow for Frontend Developers Guide](/claude-code-daily-workflow-for-frontend-developers-guide/)
+- [Claude Code Data Retention Policy Workflow](/claude-code-data-retention-policy-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

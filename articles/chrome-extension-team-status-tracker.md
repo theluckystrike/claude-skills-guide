@@ -264,9 +264,9 @@ Building a Chrome extension for team status tracking requires balancing local re
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Best Way to Integrate Claude Code into Team Workflow](/best-way-to-integrate-claude-code-into-team-workflow/)
+- [Chrome Extension Black Friday Deal Tracker: A.](/chrome-extension-black-friday-deal-tracker/)
+- [Chrome Extension Costco Deal Tracker: A Developer Guide](/chrome-extension-costco-deal-tracker/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

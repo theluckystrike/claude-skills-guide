@@ -281,8 +281,8 @@ Attribute-Based Access Control provides the flexibility modern applications need
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Skills Access Control and Permissions Enterprise G...](/claude-skills-access-control-and-permissions-enterprise/)
+- [Best Way to Use Claude Code Offline Without Internet Access](/best-way-to-use-claude-code-offline-without-internet-access/)
+- [Chrome Enterprise Context-Aware Access: Implementation Guide](/chrome-enterprise-context-aware-access/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

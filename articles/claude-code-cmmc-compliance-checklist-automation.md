@@ -165,8 +165,8 @@ The investment in building and refining your compliance skills pays dividends th
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Compliance Reporting Automation](/claude-code-compliance-reporting-automation/)
+- [Claude Code DevSecOps Compliance Pipeline Automation Guide](/claude-code-devsecops-compliance-pipeline-automation/)
+- [Claude Code Security Code Review Checklist Automation](/claude-code-security-code-review-checklist-automation/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

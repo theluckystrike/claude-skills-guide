@@ -222,8 +222,8 @@ Start with a small, well-contained module to build confidence in the process. On
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Extract Method Refactoring Workflow](/claude-code-for-extract-method-refactoring-workflow/)
+- [Claude Code SOLID Principles Implementation](/claude-code-solid-principles-implementation/)
+- [How to Make Claude Code Follow DRY and SOLID Principles](/how-to-make-claude-code-follow-dry-solid-principles/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

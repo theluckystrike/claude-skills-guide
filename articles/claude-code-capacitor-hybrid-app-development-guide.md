@@ -348,8 +348,8 @@ Continue exploring Capacitor's capabilities by experimenting with additional plu
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Capacitor Hybrid App Debugging Workflow](/claude-code-capacitor-hybrid-app-debugging-workflow/)
+- [Claude Code React Native Expo Workflow Debugging Guide](/claude-code-react-native-expo-workflow-debugging-guide/)
+- [Claude Code React Native Performance Optimization Guide](/claude-code-react-native-performance-optimization-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

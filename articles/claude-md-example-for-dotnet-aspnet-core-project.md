@@ -205,9 +205,9 @@ The .NET skills work well with other Claude skills. The pdf skill helps generate
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude MD Example for Android Kotlin Project](/claude-md-example-for-android-kotlin-project/)
+- [Claude.md Example for Data Science Python Project](/claude-md-example-for-data-science-python-project/)
+- [Claude MD Example for Go Fiber API Project](/claude-md-example-for-go-fiber-api-project/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

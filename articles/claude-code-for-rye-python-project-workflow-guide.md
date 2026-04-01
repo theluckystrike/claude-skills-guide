@@ -292,8 +292,8 @@ The key is to let Claude Code handle the cognitive heavy lifting, planning, writ
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Brownie Python Workflow Guide](/claude-code-for-brownie-python-workflow-guide/)
+- [Claude Code for Plotly Dash Python Workflow](/claude-code-for-plotly-dash-python-workflow/)
+- [Claude Code for Python Dataclass Advanced Workflow](/claude-code-for-python-dataclass-advanced-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

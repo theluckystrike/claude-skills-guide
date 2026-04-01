@@ -632,9 +632,9 @@ Run Lighthouse regularly during development to catch regressions early. A score 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Extension Lighthouse Audit Runner: A Developer Guide](/chrome-extension-lighthouse-audit-runner/)
+- [Chrome Extension Readability Score Checker: A Developer Guide](/chrome-extension-readability-score-checker/)
+- [Claude Code Output Quality: How to Improve Results](/claude-code-output-quality-how-to-improve-results/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

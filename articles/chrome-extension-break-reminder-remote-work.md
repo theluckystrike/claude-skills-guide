@@ -230,9 +230,9 @@ Remember: the best productivity tools are the ones you'll actually use. Start wi
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Building a Chrome Extension for Gaming Deal Finding](/chrome-extension-gaming-deal-finder-chrome/)
+- [Chrome Extension Spaced Repetition Tool: Building Memory.](/chrome-extension-spaced-repetition-tool/)
+- [Building a Chrome Extension for Standup Meeting Notes](/chrome-extension-standup-meeting-notes/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

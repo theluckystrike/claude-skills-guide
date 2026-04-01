@@ -363,9 +363,9 @@ The total implementation. manifest, HTML, CSS, JavaScript. is under 150 lines of
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Extension Auto Meeting Summary: A Developer Guide](/chrome-extension-auto-meeting-summary/)
+- [Building a Chrome Extension for Break Reminders in.](/chrome-extension-break-reminder-remote-work/)
+- [Building a Chrome Extension for Gaming Deal Finding](/chrome-extension-gaming-deal-finder-chrome/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

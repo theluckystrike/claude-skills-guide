@@ -180,8 +180,8 @@ Self-taught developers who use Claude Code's skills ecosystem can compress years
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Can You Use Claude Skills Inside VS Code Extensions?](/can-you-use-claude-skills-inside-vs-code-extensions/)
+- [Claude Code Agent Task Queue Architecture Deep Dive](/claude-code-agent-task-queue-architecture-deep-dive/)
+- [Claude Code Daily Workflow for Frontend Developers Guide](/claude-code-daily-workflow-for-frontend-developers-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

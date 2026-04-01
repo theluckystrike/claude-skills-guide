@@ -283,8 +283,8 @@ With these practices, you'll be well-equipped to build solid local-first applica
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Best Way to Feed Claude Code a Large SQL Schema](/best-way-to-feed-claude-code-a-large-sql-schema/)
+- [Claude Code for ScyllaDB Workflow Tutorial Guide](/claude-code-for-scylladb-workflow-tutorial-guide/)
+- [Planetscale MCP Server Branching Workflow Guide](/planetscale-mcp-server-branching-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

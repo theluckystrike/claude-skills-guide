@@ -147,8 +147,8 @@ When a technique from a video does not work as shown, check the release notes be
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Best Claude Code Courses Online 2026: A Developer Guide](/best-claude-code-courses-online-2026/)
+- [Chrome Extension Spaced Repetition Tool: Building Memory.](/chrome-extension-spaced-repetition-tool/)
+- [Claude Code for Computer Science Bootcamp Students](/claude-code-for-computer-science-bootcamp-students/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

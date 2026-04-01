@@ -397,8 +397,8 @@ Supabase Auth combined with Row Level Security provides a solid, scalable approa
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Supabase Storage Signed URL Workflow Guide](/claude-code-supabase-storage-signed-url-workflow-guide/)
+- [Claude Code disallowedTools Security Configuration](/claude-code-disallowedtools-security-configuration/)
+- [Claude Code for Vercel Supabase Clerk Full Stack Development](/claude-code-for-vercel-supabase-clerk-full-stack/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

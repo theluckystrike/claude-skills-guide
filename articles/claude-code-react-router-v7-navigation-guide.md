@@ -263,8 +263,8 @@ The key is understanding how loaders, actions, and outlets work together to crea
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code React Testing Library Workflow](/claude-code-react-testing-library-workflow/)
+- [Claude Code Cypress Component Testing Guide](/claude-code-cypress-component-testing-guide/)
+- [How Designers Use Claude Code for Prototyping](/how-designers-use-claude-code-for-prototyping/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

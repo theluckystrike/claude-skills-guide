@@ -271,9 +271,9 @@ For Flutter development, consider installing complementary skills like the `fron
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Expo EAS Build Submission Workflow Guide](/claude-code-expo-eas-build-submission-workflow-guide/)
+- [Claude Code for React Native Fabric Renderer Workflow](/claude-code-for-react-native-fabric-renderer-workflow/)
+- [Kotlin Android Development with Claude Code Guide](/claude-code-kotlin-android-development-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

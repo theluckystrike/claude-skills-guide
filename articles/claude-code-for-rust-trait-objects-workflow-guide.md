@@ -320,8 +320,8 @@ Remember to profile your code, the dynamic dispatch overhead is small, but in pe
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Rust Profiling Workflow Tutorial Guide](/claude-code-for-rust-profiling-workflow-tutorial-guide/)
+- [Claude Code for Zola Rust Static Site Workflow](/claude-code-for-zola-rust-static-site-workflow/)
+- [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

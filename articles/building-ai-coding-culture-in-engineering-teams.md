@@ -358,8 +358,8 @@ Start small, measure results, and expand what works. Within six months, your tea
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [AI Coding Tool Evaluation Framework for Teams](/ai-coding-tool-evaluation-framework-for-teams/)
+- [Chrome Extension Mood Tracker for Teams: Building.](/chrome-extension-mood-tracker-team/)
+- [Measuring ROI of AI Coding Tools for Teams](/measuring-roi-of-ai-coding-tools-for-teams/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -427,7 +427,7 @@ Whether you're streaming AI responses, live logs, or notification updates, SSE p
 
 Related Reading
 
-- [Claude Code WebSocket API Implementation](/claude-code-websocket-api-implementation/)
+- Claude Code WebSocket API Implementation
 - [Claude Code gRPC API Development Guide](/claude-code-grpc-api-development-guide/)
 - [Claude Code REST API Design Best Practices](/claude-code-rest-api-design-best-practices/)
 - [Claude Skills Integrations Hub](/integrations-hub/)

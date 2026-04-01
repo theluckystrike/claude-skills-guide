@@ -322,8 +322,8 @@ Test your configuration thoroughly in a staging environment before rolling out o
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Enterprise Bookmark Bar Settings: A Complete Guide](/chrome-enterprise-bookmark-bar-settings/)
+- [Is Chrome's Built-in Password Manager Safe? A Developer Perspective](/chrome-built-in-password-manager-safe/)
+- [Chrome Enterprise Device Trust Connector: A Developer Guide](/chrome-enterprise-device-trust-connector/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

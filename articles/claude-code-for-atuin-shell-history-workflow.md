@@ -176,8 +176,8 @@ Start by installing Atuin and letting it collect history for a few days, then be
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Devenv Nix Development Shell Workflow](/claude-code-for-devenv-nix-development-shell-workflow/)
+- [Claude Code Shell Scripting Automation Workflow Guide](/claude-code-shell-scripting-automation-workflow-guide/)
+- [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

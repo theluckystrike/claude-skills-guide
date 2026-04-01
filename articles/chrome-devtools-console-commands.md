@@ -389,9 +389,9 @@ Mastering these commands transforms the console from a print statement dumping g
 
 Related Reading
 
-- [Chrome DevTools Tips for Frontend Developers](/chrome-devtools-tips-frontend-developers/). Additional techniques for maximizing your DevTools workflow
-- [JavaScript Debugging Techniques for Production](/javascript-debugging-techniques-production/). Strategies for debugging in live environments
+- Chrome DevTools Tips for Frontend Developers. Additional techniques for maximizing your DevTools workflow
+- JavaScript Debugging Techniques for Production. Strategies for debugging in live environments
 
-Related guides: [Mastering Browser Developer Tools](/mastering-browser-developer-tools/)
+Related guides: Mastering Browser Developer Tools
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

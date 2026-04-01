@@ -279,8 +279,8 @@ Start with simple workflows like account creation, then gradually build toward c
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Prisma Cloud Workflow Tutorial](/claude-code-for-prisma-cloud-workflow-tutorial/)
+- [Claude Code for Twistlock Prisma Cloud Workflow Tutorial](/claude-code-for-twistlock-prisma-cloud-workflow-tutorial/)
+- [Claude Code for gRPC Web Workflow Tutorial](/claude-code-for-grpc-web-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

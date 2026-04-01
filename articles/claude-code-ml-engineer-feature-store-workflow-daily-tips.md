@@ -164,8 +164,8 @@ Start with these daily tips and you'll find your feature development speed incre
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code ML Engineer Model Evaluation Workflow Guide](/claude-code-ml-engineer-model-evaluation-workflow-guide/)
+- [Claude Code Axolotl QLoRA Training Script Workflow](/claude-code-axolotl-qlora-training-script-workflow/)
+- [Claude Code for ZenML MLOps Workflow Guide](/claude-code-for-zenml-mlops-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

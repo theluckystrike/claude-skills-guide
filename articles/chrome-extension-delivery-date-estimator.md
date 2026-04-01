@@ -272,8 +272,8 @@ For most teams, the practical impact is not the hours saved on the estimate itse
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Extension Resale Value Estimator: A Practical.](/chrome-extension-resale-value-estimator/)
+- [Building Webhook Delivery Workflows with Claude Code and.](/claude-code-upstash-qstash-webhook-delivery-workflow/)
+- [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

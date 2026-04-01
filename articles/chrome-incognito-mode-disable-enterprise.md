@@ -178,9 +178,9 @@ For most organizations, the combination of Group Policy (Windows), Configuration
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Enterprise Password Manager Policy: A Practical Guide for Developers](/chrome-enterprise-password-manager-policy/)
+- [Chrome ADMX Templates for Windows Server: Enterprise.](/chrome-admx-templates-windows-server/)
+- [Chrome Verified Access Enterprise: A Developer's Guide](/chrome-verified-access-enterprise/)
 
 Built by theluckystrike. More at https://zovo.one
 

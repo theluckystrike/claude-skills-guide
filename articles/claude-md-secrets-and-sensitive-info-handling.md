@@ -199,8 +199,8 @@ Following these patterns keeps your Claude skill workflows secure while maintain
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Extension Permissions Explained: A Developer's Guide](/chrome-extension-permissions-explained/)
+- [Claude Code for Go Fuzz Workflow Tutorial Guide](/claude-code-for-go-fuzz-workflow-tutorial-guide/)
+- [Claude Code for Mythril Workflow Tutorial](/claude-code-for-mythril-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

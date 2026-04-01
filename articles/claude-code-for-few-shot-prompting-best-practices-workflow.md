@@ -285,4 +285,11 @@ This approach combines the consistency of few-shot prompting with Claude Code's 
 
 Start implementing few-shot prompting in your Claude Code workflows today, the improvements in output quality and consistency will be immediately noticeable.
 
+
+Related Reading
+
+- [Claude Code for Self-Consistency Prompting Workflow Tutorial](/claude-code-for-self-consistency-prompting-workflow-tutorial/)
+- [Claude Code Algolia GeoSearch Filtering Workflow Tutorial](/claude-code-algolia-geosearch-filtering-workflow-tutorial/)
+- [Claude Code CloudFormation Template Generation Workflow Guid](/claude-code-cloudformation-template-generation-workflow-guid/)
+
 {% endraw %}

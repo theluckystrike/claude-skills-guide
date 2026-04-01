@@ -572,9 +572,9 @@ The progression from static selectors to heuristic scoring to local model infere
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Extension Network Request Blocker: A Developer's Guide](/chrome-extension-network-request-blocker/)
+- [Chrome JavaScript Blocker Extension: A Developer's Guide](/chrome-javascript-blocker-extension/)
+- [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

@@ -547,9 +547,9 @@ The patterns in this guide compound well together. A workflow that combines vali
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Express Middleware Error Handling Patterns Guide](/claude-code-express-middleware-error-handling-patterns-guide/)
+- [Claude Code Prisma Transactions and Error Handling Patterns](/claude-code-prisma-transactions-and-error-handling-patterns/)
+- [Accessible Forms with Claude Code: Error Handling Guide](/claude-code-accessible-forms-validation-error-handling-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

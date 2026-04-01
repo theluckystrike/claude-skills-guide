@@ -344,8 +344,8 @@ Start implementing these practices today, and you'll be well on your way to buil
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for CSS Performance Optimization Workflow](/claude-code-for-css-performance-optimization-workflow/)
+- [Claude Code for Gatling Performance Test Workflow](/claude-code-for-gatling-performance-test-workflow/)
+- [Claude Code for Performance Budget Workflow Tutorial](/claude-code-for-performance-budget-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

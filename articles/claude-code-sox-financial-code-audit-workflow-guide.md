@@ -158,8 +158,8 @@ Start with the skills and workflows outlined in this guide, adapt them to your o
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Adversarial Robustness Workflow](/claude-code-for-adversarial-robustness-workflow/)
+- [Claude Code OWASP Top 10 Security Scanning Workflow](/claude-code-owasp-top-10-security-scanning-workflow/)
+- [Should I Use Claude Code for Security-Sensitive.](/should-i-use-claude-code-for-security-sensitive-applications/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

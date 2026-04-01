@@ -204,4 +204,11 @@ Optimizing context window in Claude Code is about working smarter, not harder. B
 Start with the basics: use focused requests and targeted file reading. As you become more comfortable, incorporate project instructions and workflow scripts for even greater efficiency. The key is treating each conversation as a focused collaboration rather than dumping everything into the context at once.
 
 Remember, effective context management isn't about limiting what Claude can see, it's about ensuring Claude sees the right information at the right time. Apply these techniques consistently, and you'll notice significant improvements in your Claude Code workflow productivity.
+
+Related Reading
+
+- [Claude MD Too Long Context Window Optimization](/claude-md-too-long-context-window-optimization/)
+- [Claude Code ActiveRecord Query Optimization Workflow Guide](/claude-code-activerecord-query-optimization-workflow-guide/)
+- [Claude Code Consultant Codebase Context Switching Workflow](/claude-code-consultant-codebase-context-switching-workflow/)
+
 {% endraw %}

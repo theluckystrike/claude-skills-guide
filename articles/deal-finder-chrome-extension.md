@@ -331,8 +331,8 @@ Building a deal finder chrome extension requires careful attention to web scrapi
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Extension Price Match Finder: A Developer's Guide](/chrome-extension-price-match-finder/)
+- [Chrome Extension Restaurant Deal Finder: A Developer Guide](/chrome-extension-restaurant-deal-finder/)
+- [Chrome Extension Return Policy Finder: Tools and Techniques for Developers](/chrome-extension-return-policy-finder/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

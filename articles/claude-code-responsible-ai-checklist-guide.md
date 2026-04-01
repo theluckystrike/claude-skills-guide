@@ -343,8 +343,8 @@ Using Claude Code responsibly means balancing productivity with quality. This ch
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code CMMC Compliance Checklist Automation](/claude-code-cmmc-compliance-checklist-automation/)
+- [Claude Code Enterprise Onboarding Checklist for Dev Teams](/claude-code-enterprise-onboarding-checklist-for-dev-teams/)
+- [Claude Code for Code Review Checklist Workflow Guide](/claude-code-for-code-review-checklist-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

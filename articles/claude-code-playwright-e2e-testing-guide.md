@@ -227,8 +227,8 @@ Combine these tools based on your project's specific needs. Playwright handles b
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Extension Window Resizer Testing: A Practical Guide](/chrome-extension-window-resizer-testing/)
+- [Claude Code Accessibility Regression Testing Guide](/claude-code-accessibility-regression-testing/)
+- [Claude Code API Contract Testing Guide](/claude-code-api-contract-testing-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -377,8 +377,8 @@ The more reproducible and specific your report, the faster the Chromium team can
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Extension Session Manager Tabs: A Complete Guide.](/chrome-extension-session-manager-tabs/)
+- [Chrome Lag When Switching Tabs. Causes and Solutions.](/chrome-lag-switching-tabs/)
+- [Chrome New Tab Slow: Causes and Fixes for Developers](/chrome-new-tab-slow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

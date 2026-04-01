@@ -593,8 +593,8 @@ The key areas to get right in production are: setting meaningful token expiratio
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code API Authentication Patterns Guide](/claude-code-api-authentication-patterns-guide/)
+- [Best AI Tools for API Development in 2026: A Practical Guide](/best-ai-tools-for-api-development-2026/)
+- [Best Way to Batch Claude Code Requests to Reduce API Calls](/best-way-to-batch-claude-code-requests-reduce-api-calls/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

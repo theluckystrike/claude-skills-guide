@@ -290,9 +290,9 @@ The key to a successful implementation lies in solid content extraction that han
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [AI PDF Summarizer Chrome Extension: A Developer Guide](/ai-pdf-summarizer-chrome-extension/)
+- [AI Summarizer Chrome Extension: Build Your Own Text Summarization Tool](/ai-summarizer-chrome-extension/)
+- [How to Build an AI Video Summarizer Chrome Extension](/ai-video-summarizer-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

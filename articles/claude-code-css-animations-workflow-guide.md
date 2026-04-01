@@ -526,8 +526,8 @@ The canvas-design skill can help visualize animation timing and easing curves, w
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Tailwind CSS V4 Migration Guide](/claude-code-tailwind-css-v4-migration-guide/)
+- [Claude Code Dark Mode Implementation Guide](/claude-code-dark-mode-implementation-guide/)
+- [Claude Code for Svelte Transitions Workflow Guide](/claude-code-for-svelte-transitions-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

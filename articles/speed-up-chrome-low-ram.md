@@ -389,9 +389,9 @@ These techniques work together. A single optimization might save 100 MB; combine
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Best Browser for Low RAM in 2026 - A Developer's Guide](/best-browser-low-ram-2026/)
+- [Agent Handoff Strategies for Long Running Tasks Guide](/agent-handoff-strategies-for-long-running-tasks-guide/)
+- [AI Speed Reader Chrome Extension: A Developer Guide](/ai-speed-reader-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

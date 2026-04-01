@@ -221,8 +221,8 @@ Claude Code transforms MLflow experiment tracking from a manual, error-prone pro
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for MLflow Model Registry Workflow Automation](/claude-code-mlflow-model-registry-workflow-automation/)
+- [Claude Code Sentry Error Tracking Source Maps Workflow](/claude-code-sentry-error-tracking-source-maps-workflow/)
+- [Claude Code Technical Debt Tracking Workflow](/claude-code-technical-debt-tracking-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

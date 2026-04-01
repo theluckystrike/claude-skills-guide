@@ -410,8 +410,8 @@ For complex Spring Boot applications requiring deep framework knowledge, archite
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Java Backend Developer Spring Boot Workflow Tips](/claude-code-java-backend-developer-spring-boot-workflow-tips/)
+- [Claude Code Java Library Development Guide](/claude-code-java-library-development-guide/)
+- [Claude Code Spring Boot Microservices Guide](/claude-code-spring-boot-microservices-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

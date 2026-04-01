@@ -167,8 +167,8 @@ By using Claude Code's strengths in context understanding and its database-focus
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Should I Switch from Codeium to Claude Code? A.](/should-i-switch-from-codeium-to-claude-code/)
+- [Claude MD for Database Conventions and Patterns](/claude-md-for-database-conventions-and-patterns/)
+- [Best Way to Feed Claude Code a Large SQL Schema](/best-way-to-feed-claude-code-a-large-sql-schema/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

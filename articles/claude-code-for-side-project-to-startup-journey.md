@@ -144,9 +144,9 @@ Remember that Claude Code is a tool to amplify your capabilities, not replace yo
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Skills for Startup Founders and Solopreneurs](/claude-skills-for-startup-founders-and-solopreneurs/)
+- [How to Build a SaaS MVP with Claude Code Skills Guide](/how-to-build-saas-mvp-with-claude-code-skills-guide/)
+- [Claude Code Indie Developer Side Project Workflow Guide](/claude-code-indie-developer-side-project-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

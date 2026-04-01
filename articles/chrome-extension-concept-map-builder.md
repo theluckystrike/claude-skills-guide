@@ -321,8 +321,8 @@ The modular architecture separates concerns cleanly, making it straightforward t
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [AI Vocabulary Builder Chrome Extension: A Developer Guide](/ai-vocabulary-builder-chrome-extension/)
+- [Bolt.new Review: AI Web App Builder 2026](/bolt-new-review-ai-web-app-builder-2026/)
+- [Chrome Extension Mind Map Generator: Build Your Own or.](/chrome-extension-mind-map-generator/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

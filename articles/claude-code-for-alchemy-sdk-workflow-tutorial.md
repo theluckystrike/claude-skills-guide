@@ -239,8 +239,8 @@ The combination of Claude Code's natural language processing and Alchemy's compr
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Thirdweb SDK Workflow Tutorial](/claude-code-for-thirdweb-sdk-workflow-tutorial/)
+- [Claude Code Algolia GeoSearch Filtering Workflow Tutorial](/claude-code-algolia-geosearch-filtering-workflow-tutorial/)
+- [Claude Code CloudFormation Template Generation Workflow Guid](/claude-code-cloudformation-template-generation-workflow-guid/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

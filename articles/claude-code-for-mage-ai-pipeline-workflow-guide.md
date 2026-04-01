@@ -570,8 +570,8 @@ The key is treating Claude as a pair programmer who understands data engineering
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Embedding Pipeline Workflow](/claude-code-for-embedding-pipeline-workflow/)
+- [Claude Code for Harness CD Pipeline Workflow](/claude-code-for-harness-cd-pipeline-workflow/)
+- [Claude Code for ZenML Pipeline Workflow Guide](/claude-code-for-zenml-pipeline-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

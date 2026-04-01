@@ -263,8 +263,8 @@ With proper setup and configuration, Claude Code can reduce survey analysis time
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Performance Data Analysis Workflow](/claude-code-for-performance-data-analysis-workflow/)
+- [Claude Code Static Analysis Automation Guide](/claude-code-static-analysis-automation-guide/)
+- [Claude Skills: Competitive Analysis Automation Guide](/claude-skills-competitive-analysis-automation-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

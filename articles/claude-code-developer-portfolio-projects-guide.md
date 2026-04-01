@@ -22,7 +22,7 @@ This guide walks through building a portfolio that showcases your skills effecti
 
 Why Claude Code Changes Portfolio Development
 
-Traditional portfolio creation involves writing boilerplate code, setting up project structures, and spending hours on configuration. Claude Code eliminates this friction through intelligent skill systems. When you use the [frontend-design](/skills/frontend-design) skill, you get access to design patterns optimized for modern portfolios. The [pdf](/skills/pdf) skill helps generate polished documentation. The [tdd](/skills/tdd) skill ensures your projects maintain test coverage from day one.
+Traditional portfolio creation involves writing boilerplate code, setting up project structures, and spending hours on configuration. Claude Code eliminates this friction through intelligent skill systems. When you use the frontend-design skill, you get access to design patterns optimized for modern portfolios. The pdf skill helps generate polished documentation. The tdd skill ensures your projects maintain test coverage from day one.
 
 These skills work together. A typical portfolio project might use frontend-design for the UI, tdd for maintaining code quality, and pdf for generating project specification documents, all while Claude Code handles the implementation details based on your architectural direction.
 
@@ -83,7 +83,7 @@ Essential Portfolio Projects
 
 1. Interactive Project Tracker
 
-Build a task management application that showcases state management, real-time updates, and responsive design. Use [frontend-design](/skills/frontend-design) to implement a clean interface with proper component architecture.
+Build a task management application that showcases state management, real-time updates, and responsive design. Use frontend-design to implement a clean interface with proper component architecture.
 
 Key features to implement:
 - Drag-and-drop task organization
@@ -101,7 +101,7 @@ Implement a dark/light theme toggle that respects prefers-color-scheme, persists
 
 2. API Documentation Generator
 
-Demonstrate backend skills by building a tool that consumes open APIs and generates beautiful documentation. The [pdf](/skills/pdf) skill becomes valuable here for creating downloadable documentation packages.
+Demonstrate backend skills by building a tool that consumes open APIs and generates beautiful documentation. The pdf skill becomes valuable here for creating downloadable documentation packages.
 
 This project shows:
 - RESTful API integration
@@ -163,9 +163,9 @@ claude "using the tdd skill, generate tests for a CLI tool that validates all er
 
 Leveraging Claude Skills Effectively
 
-The [supermemory](/skills/supermemory) skill proves invaluable for portfolio development. It helps you organize research, track learning resources, and maintain notes across all your projects. When building multiple portfolio projects, staying organized becomes critical.
+The supermemory skill proves invaluable for portfolio development. It helps you organize research, track learning resources, and maintain notes across all your projects. When building multiple portfolio projects, staying organized becomes critical.
 
-For testing, the [tdd](/skills/tdd) skill integrates directly into your workflow:
+For testing, the tdd skill integrates directly into your workflow:
 
 ```javascript
 // Example test structure for portfolio project
@@ -230,7 +230,7 @@ Linting and formatting: Add ESLint and Prettier to every project and configure t
 
 Presentation Matters
 
-Technical excellence matters, but presentation determines whether reviewers engage with your work. Use the [theme-factory](/skills/theme-factory) skill to apply consistent styling across your portfolio. A cohesive visual identity signals attention to detail.
+Technical excellence matters, but presentation determines whether reviewers engage with your work. Use the theme-factory skill to apply consistent styling across your portfolio. A cohesive visual identity signals attention to detail.
 
 For each project, include:
 - Clear description (2-3 sentences)
@@ -247,11 +247,11 @@ Workflow for Rapid Development
 
 Here's a practical workflow using Claude Code skills:
 
-1. Planning: Use [supermemory](/skills/supermemory) to research and organize requirements
+1. Planning: Use supermemory to research and organize requirements
 2. Scaffolding: Let Claude Code generate project structure
-3. Implementation: Use [frontend-design](/skills/frontend-design) for UI components
-4. Testing: Run [tdd](/skills/tdd) in watch mode during development
-5. Documentation: Generate docs with [pdf](/skills/pdf) skill
+3. Implementation: Use frontend-design for UI components
+4. Testing: Run tdd in watch mode during development
+5. Documentation: Generate docs with pdf skill
 
 This approach produces portfolio projects that demonstrate not just coding ability, but professional development workflow understanding.
 
@@ -280,9 +280,9 @@ Claude Code accelerates every phase of portfolio development, but the architectu
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [AI Coding Tools for Code Migration Projects](/ai-coding-tools-for-code-migration-projects/)
+- [Best Way to Use Claude Code with TypeScript Projects](/best-way-to-use-claude-code-with-typescript-projects/)
+- [Claude Code for Portfolio Project Development](/claude-code-for-portfolio-project-development/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

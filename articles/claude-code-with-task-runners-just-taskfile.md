@@ -388,9 +388,9 @@ The workflow becomes: describe your goal to Claude, which reads your Taskfile, i
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [AI Task Prioritizer Chrome Extension: A Practical Guide for Developers](/ai-task-prioritizer-chrome-extension/)
+- [Chain of Agents Pattern for Sequential Task Processing](/chain-of-agents-pattern-for-sequential-task-processing/)
+- [Chrome Extension Asana Task Manager: A Developer's Guide](/chrome-extension-asana-task-manager/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

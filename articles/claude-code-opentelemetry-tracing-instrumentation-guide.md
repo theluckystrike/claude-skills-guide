@@ -434,8 +434,8 @@ Remember to iterate: start with basic setup, add meaningful attributes, implemen
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Kubernetes Monitoring with Prometheus](/claude-code-kubernetes-monitoring-prometheus/)
+- [Claude Code Platform Engineer Observability Stack Workflow](/claude-code-platform-engineer-observability-stack-workflow/)
+- [Monitoring and Logging in Claude Code Multi-Agent Systems](/monitoring-and-logging-claude-code-multi-agent-systems/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

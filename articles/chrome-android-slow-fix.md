@@ -307,8 +307,8 @@ For developers, building ADB-based monitoring scripts into your CI or device lab
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Zoom Slow: Diagnosing and Fixing Performance Issues](/chrome-zoom-slow/)
+- [Chrome iPad Slow Fix. Complete Guide for Developers and.](/chrome-ipad-slow-fix/)
+- [Claude Code Slow Response: How to Fix Latency Issues](/claude-code-slow-response-how-to-fix-latency-issues/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -491,9 +491,9 @@ Start with the alias approach for local development, graduate to the wrapper scr
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Podman Container Workflow Setup Tutorial](/claude-code-podman-container-workflow-setup-tutorial/)
+- [Chrome Extension Docker Dashboard: Streamlined Container.](/chrome-extension-docker-dashboard/)
+- [Chrome Extension Multi Account Container: A Developer Guide](/chrome-extension-multi-account-container/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

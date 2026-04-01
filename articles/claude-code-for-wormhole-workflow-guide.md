@@ -256,8 +256,8 @@ The beauty of wormhole workflows is that they improve with use. Every pattern yo
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Data Retention Policy Workflow](/claude-code-data-retention-policy-workflow/)
+- [Claude Code Dotfiles Management and Skill Sync Workflow](/claude-code-dotfiles-management-and-skill-sync-workflow/)
+- [Claude Code Workflow Optimization Tips for 2026](/claude-code-workflow-optimization-tips-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -415,4 +415,11 @@ Conclusion
 Combining Docker Compose with Claude Code creates a powerful development environment for building APIs. Docker Compose handles the complexity of multi-container applications, while Claude Code assists with configuration generation, debugging, testing, and documentation.
 
 Start with simple setups and gradually add complexity as your application grows. Remember to implement health checks, proper environment management, and comprehensive testing from the beginning. With these practices in place, you'll have a solid foundation for API development that scales with your project.
+
+Related Reading
+
+- [Claude Code Docker Compose Development Workflow](/claude-code-docker-compose-development-workflow/)
+- [Claude Code Docker Compose Production Guide](/claude-code-docker-compose-production-guide/)
+- [Claude Code Docker Compose Test Setup Guide](/claude-code-docker-compose-test-setup-guide/)
+
 {% endraw %}

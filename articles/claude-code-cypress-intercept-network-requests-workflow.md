@@ -457,8 +457,8 @@ Remember: the goal isn't to mock everything, but to mock strategically. controll
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Cypress Custom Commands Workflow Best Practices](/claude-code-cypress-custom-commands-workflow-best-practices/)
+- [Claude Code for Calico Network Policy Workflow](/claude-code-for-calico-network-policy-workflow/)
+- [Claude Code for Network Firewall Workflow](/claude-code-for-network-firewall-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

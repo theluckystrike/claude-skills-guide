@@ -220,8 +220,8 @@ For developers building memory-sensitive applications, regular Task Manager moni
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Enterprise Password Manager Policy: A Practical Guide for Developers](/chrome-enterprise-password-manager-policy/)
+- [Chrome Too Many Processes: A Developer's Guide to Fixing High Memory Usage](/chrome-too-many-processes/)
+- [Chrome vs Edge Memory 2026: Which Browser Uses Less RAM?](/chrome-vs-edge-memory-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

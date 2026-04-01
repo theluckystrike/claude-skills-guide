@@ -401,8 +401,8 @@ Start with the essentials: naming conventions, response envelope format, and HTT
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code API Error Handling Standards](/claude-code-api-error-handling-standards/)
+- [Claude Code Event Driven API Design Guide](/claude-code-event-driven-api-design-guide/)
+- [Claude Code REST API Design Best Practices](/claude-code-rest-api-design-best-practices/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

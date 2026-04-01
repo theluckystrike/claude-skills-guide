@@ -268,9 +268,9 @@ For teams adopting these new capabilities, start with one skill that addresses y
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Enterprise Announcements 2026: What's New.](/claude-code-enterprise-announcements-2026/)
+- [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/)
+- [Agent Handoff Strategies for Long Running Tasks Guide](/agent-handoff-strategies-for-long-running-tasks-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

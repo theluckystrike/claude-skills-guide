@@ -220,8 +220,8 @@ The investment in a solid evals workflow pays dividends through faster iteration
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Jest to Vitest Migration Workflow with Claude Code](/claude-code-jest-to-vitest-migration-workflow-tutorial/)
+- [Claude Code L10n Testing Automation Workflow Tutorial](/claude-code-l10n-testing-automation-workflow-tutorial/)
+- [Claude Code Vitest Coverage Reporting Workflow Tutorial](/claude-code-vitest-coverage-reporting-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

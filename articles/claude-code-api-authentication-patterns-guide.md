@@ -406,8 +406,8 @@ The most effective approach is to involve Claude Code early. before you start wr
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Laravel Sanctum API Authentication Guide](/claude-code-laravel-sanctum-api-authentication-guide/)
+- [Best AI Tools for API Development in 2026: A Practical Guide](/best-ai-tools-for-api-development-2026/)
+- [Best Way to Batch Claude Code Requests to Reduce API Calls](/best-way-to-batch-claude-code-requests-reduce-api-calls/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

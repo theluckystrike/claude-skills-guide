@@ -163,4 +163,11 @@ Conclusion
 Claude Code transforms RFP response from a painful manual process into an efficient, repeatable workflow. By automating analysis, drafting, and review phases, your team focuses energy on strategic differentiation rather than formatting and compliance. Start with one workflow component, measure the improvement, and gradually expand your AI-assisted capabilities.
 
 The initial investment in setting up proper templates, skills, and pipelines pays dividends across every subsequent RFP. Your competition is still wrestling with spreadsheets and email threads, position yourself ahead with AI-powered workflows.
+
+Related Reading
+
+- [Claude Code for Incident Response Runbook Workflow](/claude-code-for-incident-response-runbook-workflow/)
+- [Claude Code for Lambda Response Streaming Workflow](/claude-code-for-lambda-response-streaming-workflow/)
+- [Claude Code for Streaming LLM Response Workflow](/claude-code-for-streaming-llm-response-workflow/)
+
 {% endraw %}

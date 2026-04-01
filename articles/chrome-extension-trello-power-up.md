@@ -324,8 +324,8 @@ The combination of Chrome extension capabilities with Trello's Power-Up framewor
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [AI Form Filler Chrome Extension: A Developer and Power.](/ai-form-filler-chrome-extension/)
+- [Best Privacy Browser 2026 Ranked: A Developer and Power User Guide](/best-privacy-browser-2026-ranked/)
+- [Browser Memory Comparison 2026: A Developer and Power User Guide](/browser-memory-comparison-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

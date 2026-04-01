@@ -179,8 +179,8 @@ The key is providing sufficient context, Buck2 projects can be complex with many
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Bazel Build System Workflow Guide](/claude-code-for-bazel-build-system-workflow-guide/)
+- [Claude Code for Pants Build System Workflow Guide](/claude-code-for-pants-build-system-workflow-guide/)
+- [Claude Code Expo EAS Build Submission Workflow Guide](/claude-code-expo-eas-build-submission-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

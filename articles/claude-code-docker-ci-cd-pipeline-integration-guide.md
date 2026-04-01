@@ -505,8 +505,8 @@ The combination of Claude Code's intelligent assistance with Docker's containeri
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Building Your First MCP Tool Integration Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)
+- [Chrome Extension Docker Dashboard: Streamlined Container.](/chrome-extension-docker-dashboard/)
+- [Claude AI Chrome Extension: A Developer's Guide to Integration](/claude-ai-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

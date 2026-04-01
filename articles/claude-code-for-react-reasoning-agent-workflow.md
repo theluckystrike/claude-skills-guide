@@ -335,8 +335,8 @@ Reasoning agent workflows represent a powerful pattern for building intelligent 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for React Native Fabric Renderer Workflow](/claude-code-for-react-native-fabric-renderer-workflow/)
+- [Claude Code for Tree of Thought Reasoning Workflow Guide](/claude-code-for-tree-of-thought-reasoning-workflow-guide/)
+- [Claude Code for tRPC React Query Workflow](/claude-code-for-trpc-react-query-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

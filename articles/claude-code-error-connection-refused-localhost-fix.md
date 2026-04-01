@@ -177,7 +177,7 @@ Related Reading
 
 - [Claude Code With Docker Container Skill Setup Guide](/using-claude-code-inside-docker-container-tutorial/). See also
 - [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/). See also
-- [Claude Code Error: Rate Limit Exceeded 429 Workaround](/claude-code-error-rate-limit-exceeded-429-workaround/). See also
+- Claude Code Error: Rate Limit Exceeded 429 Workaround. See also
 - [Claude Skills Troubleshooting Hub](/troubleshooting-hub/). See also
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

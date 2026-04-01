@@ -684,14 +684,14 @@ Start by generating collections from your existing OpenAPI specs, then layer in 
 
 Related Resources:
 - [OpenAPI Specification Best Practices](/claude-code-openapi-spec-generation-guide/)
-- [Claude Code API Testing Workflows](/best-claude-code-skills-for-qa-engineers-automating-test-suites/)
+- [Claude Code API Testing Workflows](/claude-code-skills-for-qa-engineers-automating-test-suites/)
 - [API Authentication Patterns](/claude-code-api-authentication-patterns-guide/)
 {% endraw %}
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code FastAPI OpenAPI Schema Generation Workflow](/claude-code-fastapi-openapi-schema-generation-workflow/)
+- [Claude Code API Reference Generation Guide](/claude-code-api-reference-generation-guide/)
+- [Claude Code for Automated PR Checks Workflow Tutorial](/claude-code-for-automated-pr-checks-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

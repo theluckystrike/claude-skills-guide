@@ -414,9 +414,9 @@ Your extension is now ready for the Chrome Web Store. The combination of Svelte'
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome DevTools Console Commands: A Practical Guide for Developers](/chrome-devtools-console-commands/)
+- [Chrome DevTools Performance Profiling: A Practical Guide](/chrome-devtools-performance-profiling/)
+- [Agentic AI Coding Tools Comparison 2026: A Practical.](/agentic-ai-coding-tools-comparison-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

@@ -107,8 +107,8 @@ Monetizing Claude Code skills isn't about finding shortcuts, it's about being ge
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Code Troubleshooting Hub](/troubleshooting-hub/)
+- [AI Tools for Incident Debugging and Postmortems](/ai-tools-for-incident-debugging-and-postmortems/)
+- [Best Way to Handle Claude Code Mistakes Efficiently](/best-way-to-handle-claude-code-mistakes-efficiently/)
+- [How to Block Canvas Fingerprinting in Chrome: A.](/block-canvas-fingerprinting-chrome/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

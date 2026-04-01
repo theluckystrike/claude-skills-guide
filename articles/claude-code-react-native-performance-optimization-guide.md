@@ -218,8 +218,8 @@ Remember that not all optimizations are worth implementing. Focus on the changes
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code React Native Expo Workflow Debugging Guide](/claude-code-react-native-expo-workflow-debugging-guide/)
+- [Claude Code React Native Paper Mobile UI Guide](/claude-code-react-native-paper-mobile-ui-guide/)
+- [Claude Code Capacitor Hybrid App Development Guide](/claude-code-capacitor-hybrid-app-development-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -408,8 +408,8 @@ Start with the basic Web ACL template, then gradually add custom rules and autom
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Extension Enterprise Approval Workflow: A Practical Guide](/chrome-extension-enterprise-approval-workflow/)
+- [Claude Code AWS S3 Multipart Upload Workflow Guide](/claude-code-aws-s3-multipart-upload-workflow-guide/)
+- [Claude Code for AWS App Mesh Workflow](/claude-code-for-aws-app-mesh-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -160,8 +160,8 @@ The maintainers who thrive in 2026 are not those who work hardest, but those who
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Is Claude Code Worth It for Open Source Maintainers? A.](/is-claude-code-worth-it-open-source-maintainers/)
+- [Claude Code for Open Source Contribution Workflow Guide](/claude-code-for-open-source-contribution-workflow-guide/)
+- [Claude Code for Open Source Security Vulnerability Fix](/claude-code-for-open-source-security-vulnerability-fix/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

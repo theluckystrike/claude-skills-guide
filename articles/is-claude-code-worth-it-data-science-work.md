@@ -269,8 +269,8 @@ If you're primarily doing ad-hoc analysis in notebooks with limited coding, the 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Skills for Data Science and Jupyter: 2026 Guide](/claude-skills-for-data-science-and-jupyter-notebooks/)
+- [Claude Skills for Computational Biology and Bioinformatics](/claude-skills-for-computational-biology-bioinformatics/)
+- [How Data Scientists Use Claude Code for Analysis](/how-data-scientists-use-claude-code-for-analysis/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

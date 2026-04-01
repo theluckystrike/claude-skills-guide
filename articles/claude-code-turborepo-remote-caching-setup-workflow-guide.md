@@ -173,8 +173,8 @@ Start with the basic Vercel integration for the quickest wins, then explore GitH
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Bazel Remote Cache Workflow](/claude-code-for-bazel-remote-cache-workflow/)
+- [Claude Code for Memcached Caching Workflow Guide](/claude-code-for-memcached-caching-workflow-guide/)
+- [Claude Code for Prometheus Remote Write Workflow](/claude-code-for-prometheus-remote-write-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

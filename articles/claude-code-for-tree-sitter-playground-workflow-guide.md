@@ -115,9 +115,9 @@ The key is to treat Claude Code as a collaborative partner in your grammar devel
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Tree-sitter AST Traversal Workflow](/claude-code-for-tree-sitter-ast-traversal-workflow/)
+- [Claude Code for Tree-sitter Node Types Workflow Guide](/claude-code-for-tree-sitter-node-types-workflow-guide/)
+- [Claude Code for Tree-sitter Workflow Tutorial](/claude-code-for-tree-sitter-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -234,8 +234,8 @@ Start building your webhook delivery workflow today, and let Claude Code guide y
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Building Fan-Out Parallel Tasks Workflows with Claude.](/claude-code-inngest-fan-out-parallel-tasks-workflow/)
+- [AI Prompt Manager Chrome Extension: Organize and Optimize Your AI Workflows](/ai-prompt-manager-chrome-extension/)
+- [Building a CLI DevTool with Claude Code: A Practical.](/building-a-cli-devtool-with-claude-code-walkthrough/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

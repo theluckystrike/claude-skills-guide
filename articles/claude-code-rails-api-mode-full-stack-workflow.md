@@ -208,8 +208,8 @@ This workflow combines Rails' backend strength with Claude Code's AI capabilitie
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Full Stack Developer Feature Shipping Workflow](/claude-code-full-stack-developer-feature-shipping-workflow/)
+- [Claude Code Nuxt Vue Full Stack Workflow](/claude-code-nuxt-vue-full-stack-workflow/)
+- [AI-Assisted Database Schema Design Workflow](/ai-assisted-database-schema-design-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

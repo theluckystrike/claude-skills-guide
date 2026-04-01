@@ -264,4 +264,11 @@ Claude Code transforms bug reporting from a chore into an efficient workflow. By
 Start with the bug investigator skill setup, practice creating minimal reproduction cases, and gradually build your automation skills. Your OSS contributions will become more valuable, and maintainers will appreciate the quality of your bug reports.
 
 Remember: The best bug report is one that helps maintainers understand and fix the issue with minimal back-and-forth. Claude Code is your partner in achieving that goal.
+
+Related Reading
+
+- [Claude Code for OSS CoC Enforcement Workflow Tutorial](/claude-code-for-oss-coc-enforcement-workflow-tutorial/)
+- [Claude Code for OSS Maintainer Workflow Tutorial Guide](/claude-code-for-oss-maintainer-workflow-tutorial-guide/)
+- [Claude Code for OSS Roadmap Workflow Tutorial Guide](/claude-code-for-oss-roadmap-workflow-tutorial-guide/)
+
 {% endraw %}

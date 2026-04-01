@@ -182,9 +182,9 @@ When generating or reviewing multi-stage Dockerfiles with Claude Code, remember 
 
 Related Reading
 
-- [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/)
-- [Guides Hub](/guides-hub/)
-
+- [Claude Code Container Environment Variables Management](/claude-code-container-environment-variables-management/)
+- [Claude Code Dockerfile Generation Best Practices 2026](/claude-code-dockerfile-generation-best-practices-2026/)
+- [Claude Code Buildah Container Builds Guide](/claude-code-buildah-container-builds-guide/)
 ---
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

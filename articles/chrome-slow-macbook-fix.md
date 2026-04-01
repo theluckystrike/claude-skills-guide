@@ -125,8 +125,8 @@ These optimizations work together, the cumulative effect significantly improves 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Omnibox Slow? Here's How to Fix It](/chrome-omnibox-slow/)
+- [Chrome Password Manager Slow? Here's Why and How to Fix It](/chrome-password-manager-slow/)
+- [Chrome Proxy Slow? Here’s How to Diagnose and Fix It](/chrome-proxy-slow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

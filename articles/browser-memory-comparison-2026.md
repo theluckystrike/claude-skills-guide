@@ -344,8 +344,8 @@ The most impactful changes you can make: audit and remove unused extensions, ena
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Best Privacy Browser 2026 Ranked: A Developer and Power User Guide](/best-privacy-browser-2026-ranked/)
+- [Chrome Do Not Track: A Developer and Power User Guide](/chrome-do-not-track/)
+- [Chrome Enterprise Printing Settings: A Power User Guide](/chrome-enterprise-printing-settings/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

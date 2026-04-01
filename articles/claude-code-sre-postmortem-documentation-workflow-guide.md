@@ -161,8 +161,8 @@ Effective postmortems build reliability culture. With Claude Code handling the m
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Automated Code Documentation Workflow with Claude Skills](/automated-code-documentation-workflow-with-claude-skills/)
+- [Claude Code MkDocs Documentation Workflow](/claude-code-mkdocs-documentation-workflow/)
+- [Claude Code Swagger Documentation Workflow (2026)](/claude-code-swagger-documentation-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

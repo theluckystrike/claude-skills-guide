@@ -585,8 +585,8 @@ Due date management is another area where automation saves time. Claude Code gen
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Mailchimp Automation Workflow Guide](/claude-code-for-mailchimp-automation-workflow-guide/)
+- [Claude Code for SRE Toil Automation Workflow](/claude-code-for-sre-toil-automation-workflow/)
+- [Claude Code Data Retention Policy Workflow](/claude-code-data-retention-policy-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

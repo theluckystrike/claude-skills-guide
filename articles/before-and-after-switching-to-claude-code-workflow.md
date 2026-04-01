@@ -155,8 +155,8 @@ Start with small tasks, asking Claude Code to explain a piece of code or generat
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [AI-Assisted Database Schema Design Workflow](/ai-assisted-database-schema-design-workflow/)
+- [Automated Code Documentation Workflow with Claude Skills](/automated-code-documentation-workflow-with-claude-skills/)
+- [Claude Code AppSec: Developer Secure Coding Workflow Tips](/claude-code-appsec-developer-secure-coding-workflow-tips/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

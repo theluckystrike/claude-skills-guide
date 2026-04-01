@@ -321,8 +321,8 @@ Match the tool to the workflow, understand the limitations around dynamic conten
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [AI Screen Reader Chrome Extension: A Complete Guide for Developers](/ai-screen-reader-chrome-extension/)
+- [Free Screen Recorder Chrome Extension: A Developer Guide](/screen-recorder-chrome-extension-free/)
+- [Screen Sharing Chrome Extension: A Developer's Guide](/screen-sharing-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

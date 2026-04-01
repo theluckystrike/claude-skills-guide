@@ -369,8 +369,8 @@ The key is establishing clear project conventions and maintaining consistent pra
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for OpenEBS Storage Workflow Tutorial](/claude-code-for-openebs-storage-workflow-tutorial/)
+- [Claude Code for Shell Operator Workflow Tutorial](/claude-code-for-shell-operator-workflow-tutorial/)
+- [Claude Code Chaos Engineering Testing Automation Guide](/claude-code-chaos-engineering-testing-automation-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

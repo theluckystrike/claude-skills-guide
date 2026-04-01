@@ -258,8 +258,8 @@ Start small, iterate quickly, and let Claude handle the boilerplate while you fo
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for CSS Performance Optimization Workflow](/claude-code-for-css-performance-optimization-workflow/)
+- [Claude Code for Load Test Results Analysis Workflow](/claude-code-for-load-test-results-analysis-workflow/)
+- [Claude Code for Load Test Scenario Workflow Tutorial](/claude-code-for-load-test-scenario-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

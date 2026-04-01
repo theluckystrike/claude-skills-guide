@@ -588,9 +588,9 @@ Claude Code transforms Docker Compose from a manual orchestration tool into an i
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code DevOps Engineer Docker Container Workflow Tips](/claude-code-devops-engineer-docker-container-workflow-tips/)
+- [Claude Code Docker Compose API Tutorial Guide](/claude-code-docker-compose-api-tutorial-guide/)
+- [Claude Code Docker Compose Production Guide](/claude-code-docker-compose-production-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

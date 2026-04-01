@@ -412,8 +412,8 @@ Remember to always implement dead letter queues for jobs that exceed retry limit
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Skills Redis Caching Layer Implementation](/claude-code-skills-redis-caching-layer-implementation/)
+- [Claude Code Upstash Redis Rate Limiting Workflow](/claude-code-upstash-redis-rate-limiting-workflow/)
+- [Claude Code Trigger.dev Background Job Workflow Guide](/claude-code-triggerdev-background-job-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

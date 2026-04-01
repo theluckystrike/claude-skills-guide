@@ -285,8 +285,8 @@ Next Steps:
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Prompt Engineering Techniques: 2026 Workflow Guide](/claude-code-for-prompt-engineering-techniques-2026-workflow-/)
+- [Claude Code for Team Wiki Maintenance Workflow](/claude-code-for-team-wiki-maintenance-workflow/)
+- [Claude Code for Wiki Analytics Workflow Tutorial Guide](/claude-code-for-wiki-analytics-workflow-tutorial-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

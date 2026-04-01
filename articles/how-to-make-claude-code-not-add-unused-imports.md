@@ -179,8 +179,8 @@ Remember: Claude responds well to explicit instructions. The more clearly you co
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [How to Make Claude Code Handle Edge Cases Properly](/how-to-make-claude-code-handle-edge-cases-properly/)
+- [How to Make Claude Code Respect My ESLint Config](/how-to-make-claude-code-respect-my-eslint-config/)
+- [Best Way to Use Claude Code for Large File Refactoring](/best-way-to-use-claude-code-for-large-file-refactoring/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

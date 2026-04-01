@@ -386,9 +386,9 @@ The teams that get the most value from Claude Code treat it as a team member rat
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [AI-Assisted Database Schema Design Workflow](/ai-assisted-database-schema-design-workflow/)
+- [Async Product Discovery Process for Remote Teams Using Recorded Interviews](/async-product-discovery-process-for-remote-teams-using-recorded-interviews/)
+- [Automated Code Documentation Workflow with Claude Skills](/automated-code-documentation-workflow-with-claude-skills/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

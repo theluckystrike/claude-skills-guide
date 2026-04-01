@@ -279,8 +279,8 @@ Start with small, focused plugins, and gradually expand as you become more comfo
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Backstage Software Catalog Workflow](/claude-code-for-backstage-software-catalog-workflow/)
+- [Claude Code for Grafana Plugin Development Workflow](/claude-code-for-grafana-plugin-development-workflow/)
+- [Claude Code for JetBrains Plugin Workflow Tutorial](/claude-code-for-jetbrains-plugin-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

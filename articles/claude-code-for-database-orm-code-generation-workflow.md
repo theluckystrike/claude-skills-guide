@@ -223,9 +223,9 @@ Start with simple entity generation, gradually add repository and service layers
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [AI-Assisted Database Schema Design Workflow](/ai-assisted-database-schema-design-workflow/)
+- [Claude Code for Database Benchmark Workflow Tutorial](/claude-code-for-database-benchmark-workflow-tutorial/)
+- [Claude Code for Database Query Optimization Workflow](/claude-code-for-database-query-optimization-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

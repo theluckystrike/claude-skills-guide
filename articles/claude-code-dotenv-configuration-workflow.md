@@ -312,8 +312,8 @@ Start with a simple `.env` setup and expand as your requirements grow. The patte
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Grafana Dashboard Configuration Workflow Tips](/claude-code-grafana-dashboard-configuration-workflow-tips/)
+- [AI-Assisted Database Schema Design Workflow](/ai-assisted-database-schema-design-workflow/)
+- [Automated Code Documentation Workflow with Claude Skills](/automated-code-documentation-workflow-with-claude-skills/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

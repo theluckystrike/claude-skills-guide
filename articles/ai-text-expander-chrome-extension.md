@@ -280,9 +280,9 @@ The most durable implementations treat the snippet library as a first-class data
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Building a Chrome Extension Text Expander from Scratch](/chrome-extension-text-expander/)
+- [AI Summarizer Chrome Extension: Build Your Own Text Summarization Tool](/ai-summarizer-chrome-extension/)
+- [AI Text to Speech Chrome Extension: A Developer Guide](/ai-text-to-speech-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

@@ -249,8 +249,8 @@ Remember that the best Cargo Make configuration is one that matches your specifi
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Makefile Build Automation Workflow Guide](/claude-code-makefile-build-automation-workflow-guide/)
+- [Claude Code Cold Fusion Modernization Workflow Guide](/claude-code-cold-fusion-modernization-workflow-guide/)
+- [Claude Code Continuous Testing Workflow: Complete Guide for 2026](/claude-code-continuous-testing-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

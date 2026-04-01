@@ -231,8 +231,8 @@ Remember: speed matters in hotfixes, but so does safety. Let Claude handle the m
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Changesets Monorepo Release Workflow](/claude-code-for-changesets-monorepo-release-workflow/)
+- [Claude Code for Multi-Platform Release Workflow Guide](/claude-code-for-multi-platform-release-workflow-guide/)
+- [Claude Code for Release Automation Workflow Tutorial](/claude-code-for-release-automation-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

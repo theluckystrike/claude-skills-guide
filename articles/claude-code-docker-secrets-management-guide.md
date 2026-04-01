@@ -362,8 +362,8 @@ Start with simple secret configurations and mature your approach as your infrast
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Vault Secrets Management Workflow](/claude-code-for-vault-secrets-management-workflow/)
+- [Claude Code Kubernetes Secrets Management: A Practical Guide](/claude-code-kubernetes-secrets-management/)
+- [MCP Credential Management and Secrets Handling](/mcp-credential-management-and-secrets-handling/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

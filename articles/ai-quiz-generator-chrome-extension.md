@@ -189,8 +189,8 @@ For developers and power users, custom quiz generators offer flexibility that pr
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Extension MLA Citation Generator: Build Your Own Tool](/chrome-extension-mla-citation-generator/)
+- [AI Flashcard Maker Chrome Extension: Build Your Own Learning Tool](/ai-flashcard-maker-chrome-extension/)
+- [AI Summarizer Chrome Extension: Build Your Own Text Summarization Tool](/ai-summarizer-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

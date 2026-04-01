@@ -223,8 +223,8 @@ Start by applying one or two of these tips to your daily workflow, you'll quickl
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Platform Engineer Observability Stack Workflow](/claude-code-platform-engineer-observability-stack-workflow/)
+- [Claude Code Dart Flutter Cross Platform Development Guide](/claude-code-dart-flutter-cross-platform-development-guide/)
+- [Claude Code DevOps Engineer Docker Container Workflow Tips](/claude-code-devops-engineer-docker-container-workflow-tips/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

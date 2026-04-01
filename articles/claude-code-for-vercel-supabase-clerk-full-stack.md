@@ -253,8 +253,8 @@ Claude Code transforms full-stack development from a complex orchestration task 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Skills for Supabase Full Stack Apps Guide](/claude-code-skills-for-supabase-full-stack-apps-guide/)
+- [Claude Code Vercel Deployment Next.js Workflow Guide](/claude-code-vercel-deployment-nextjs-workflow-guide/)
+- [Claude Skills with Supabase: Practical Workflows](/claude-skills-with-supabase-database-integration/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

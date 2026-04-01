@@ -99,7 +99,7 @@ export const robustProcessJob = new Job({
 });
 ```
 
-Claude Code skills can help you implement more advanced error handling patterns, including circuit breakers, dead letter queues, and alerting integrations. If you're working on complex integrations, consider combining Trigger.dev with MCP servers for additional capabilities like [Slack notifications](/slack-mcp-server-team-notification-automation/) or [monitoring dashboards](/claude-code-plus-grafana-dashboard-configuration-automation/).
+Claude Code skills can help you implement more advanced error handling patterns, including circuit breakers, dead letter queues, and alerting integrations. If you're working on complex integrations, consider combining Trigger.dev with MCP servers for additional capabilities like [Slack notifications](/slack-mcp-server-team-notification-automation/) or monitoring dashboards.
 
 Scheduling Recurring Background Jobs
 
@@ -194,8 +194,8 @@ For more information on related topics, explore the [workflow automation hub](/w
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Trigger.dev Workflow Automation Tutorial](/claude-code-for-trigger-dev-workflow-automation-tutorial/)
+- [Chrome Enterprise Split Tunnel Browsing: A Practical Guide](/chrome-enterprise-split-tunnel-browsing/)
+- [Chrome Extension Arrow and Text Overlay Screenshot Guide](/chrome-extension-arrow-and-text-overlay-screenshot/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

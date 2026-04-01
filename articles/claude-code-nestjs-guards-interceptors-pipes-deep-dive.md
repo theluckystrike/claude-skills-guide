@@ -6,7 +6,7 @@ description: "Master NestJS guards, interceptors, and pipes with Claude Code. Le
 date: 2026-03-14
 last_modified_at: 2026-03-14
 author: Claude Skills Guide
-permalink: /claude-code-nestjs-guards-interceptors-pipes-deep detailed look/
+permalink: /claude-code-nestjs-guards-interceptors-pipes-deep-dive/
 categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
@@ -543,8 +543,8 @@ By mastering guards, interceptors, and pipes, you'll build NestJS applications t
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude API Tool Use and Function Calling Deep Dive Guide](/claude-api-tool-use-function-calling-deep-dive-guide/)
+- [Claude Code Agent Task Queue Architecture Deep Dive](/claude-code-agent-task-queue-architecture-deep-dive/)
+- [Claude Code Astro Islands Architecture Workflow Deep Dive](/claude-code-astro-islands-architecture-workflow-deep-dive/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

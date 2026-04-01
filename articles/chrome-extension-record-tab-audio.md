@@ -240,9 +240,9 @@ For most use cases, podcast recording, tutorial creation, meeting archival, the 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [AI Tab Organizer Chrome Extension: A Practical Guide for.](/ai-tab-organizer-chrome-extension/)
+- [Chrome Extension Tab Organizer Research: A Developer's Guide](/chrome-extension-tab-organizer-research/)
+- [Chrome Extension Tab Suspender Memory Saver: A Developer.](/chrome-extension-tab-suspender-memory-saver/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

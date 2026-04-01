@@ -198,8 +198,8 @@ Claude Code transforms localization from a painful afterthought into an integrat
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Multilingual Codebase Management Guide](/claude-code-multilingual-codebase-management-guide/)
+- [Claude Skills for Localization i18n Workflow Automation](/claude-skills-for-localization-i18n-workflow-automation/)
+- [Claude Code for RTL Right-to-Left Layout Workflow](/claude-code-for-rtl-right-to-left-layout-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

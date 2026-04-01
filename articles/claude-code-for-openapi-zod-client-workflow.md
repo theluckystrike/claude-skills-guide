@@ -231,8 +231,8 @@ Remember: type safety isn't just about catching bugs, it's about documentation t
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Axios HTTP Client Workflow](/claude-code-axios-http-client-workflow/)
+- [Claude Code for Bruno API Client Workflow Tutorial](/claude-code-for-bruno-api-client-workflow-tutorial/)
+- [Claude Code for OpenAPI 3.1 Workflow Tutorial](/claude-code-for-openapi-3-1-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

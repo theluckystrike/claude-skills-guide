@@ -364,8 +364,8 @@ The most durable benefit is not the time saved on any single token generation, i
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Design System Tokens: A Frontend Developer Guide](/claude-code-design-system-tokens-frontend-developer-guide/)
+- [Claude Code Design Token Automation from Figma Variables](/claude-code-design-token-automation-from-figma-variables/)
+- [Claude Code for Learning System Design Concepts](/claude-code-for-learning-system-design-concepts/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

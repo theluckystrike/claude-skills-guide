@@ -244,8 +244,8 @@ The combination of Axum's ergonomic design and Claude Code's AI assistance makes
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Actix Web Rust API Guide](/claude-code-actix-web-rust-api-guide/)
+- [Claude Code Skills for Backend: Node.js and Python](/claude-code-skills-for-backend-developers-node-and-python/)
+- [Claude Code Skills for Golang Microservices](/claude-code-skills-for-golang-microservices/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

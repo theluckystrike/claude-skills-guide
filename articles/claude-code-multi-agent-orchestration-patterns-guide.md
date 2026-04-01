@@ -282,9 +282,9 @@ Best Practices for Production Workflows
 
 Related Reading
 
-- [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/)
-- [Guides Hub](/guides-hub/)
-
+- [Multi-Agent Orchestration with Claude Subagents Guide](/multi-agent-orchestration-with-claude-subagents-guide/)
+- [Human in the Loop Multi Agent Patterns Guide](/human-in-the-loop-multi-agent-patterns-guide/)
+- [Claude Opus Orchestrator Sonnet Worker Architecture](/claude-opus-orchestrator-sonnet-worker-architecture/)
 ---
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

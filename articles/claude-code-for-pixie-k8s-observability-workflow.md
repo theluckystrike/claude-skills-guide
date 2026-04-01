@@ -372,8 +372,8 @@ The most effective teams treat Claude Code not as a one-time script generator bu
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Platform Engineer Observability Stack Workflow](/claude-code-platform-engineer-observability-stack-workflow/)
+- [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)
+- [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

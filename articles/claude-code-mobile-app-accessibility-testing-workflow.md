@@ -443,8 +443,8 @@ By integrating testing into your development process, documenting common issues,
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for ArgoCD App of Apps Workflow](/claude-code-for-argocd-app-of-apps-workflow/)
+- [Claude Code for SAM Local Testing Workflow](/claude-code-for-sam-local-testing-workflow/)
+- [Claude Code L10n Testing Automation Workflow Tutorial](/claude-code-l10n-testing-automation-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

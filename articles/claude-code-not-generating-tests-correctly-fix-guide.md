@@ -215,8 +215,8 @@ Remember that test generation is a collaborative process, the more context and f
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Freezing Fix: Complete Guide for Developers and Power Users](/chrome-freezing-fix/)
+- [Chrome High CPU Fix: A Developer and Power User Guide](/chrome-high-cpu-fix/)
+- [Chrome iOS Slow Fix: A Developer's Guide to Speed Optimization](/chrome-ios-slow-fix/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

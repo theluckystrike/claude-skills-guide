@@ -364,8 +364,8 @@ Start integrating Claude Code into your Spark workflow today, and you'll see imm
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Apache Spark ML Workflow](/claude-code-for-apache-spark-ml-workflow/)
+- [Claude Code for Apache Spark PySpark Workflow Guide](/claude-code-for-apache-spark-pyspark-workflow-guide/)
+- [Claude Code for Apache Drill Workflow Tutorial](/claude-code-for-apache-drill-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

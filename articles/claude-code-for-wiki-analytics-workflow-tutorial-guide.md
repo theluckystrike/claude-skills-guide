@@ -234,4 +234,11 @@ Claude Code transforms wiki analytics from manual, time-consuming tasks into aut
 Start small, perhaps with basic page statistics, and gradually expand to more sophisticated analyses. The flexibility of Claude Code means you can adapt your workflows as your wiki evolves and your analytical needs grow.
 
 Remember: the goal isn't just collecting data, but transforming that data into insights that improve your wiki's value as a knowledge resource.
+
+Related Reading
+
+- [Claude Code for Amplitude Analytics Workflow](/claude-code-for-amplitude-analytics-workflow/)
+- [Claude Code for Engineering Wiki Workflow Tutorial](/claude-code-for-engineering-wiki-workflow-tutorial/)
+- [Claude Code for Metabase Analytics Workflow Guide](/claude-code-for-metabase-analytics-workflow-guide/)
+
 {% endraw %}

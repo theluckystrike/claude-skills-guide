@@ -262,9 +262,9 @@ Chrome's enterprise customization options provide powerful tools for improving u
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Enterprise Password Manager Policy: A Practical Guide for Developers](/chrome-enterprise-password-manager-policy/)
+- [AI Tab Organizer Chrome Extension: A Practical Guide for.](/ai-tab-organizer-chrome-extension/)
+- [AI Task Prioritizer Chrome Extension: A Practical Guide for Developers](/ai-task-prioritizer-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -6,7 +6,7 @@ description: "Master Claude's API tool use and function calling capabilities. Le
 date: 2026-03-14
 last_modified_at: 2026-03-14
 author: Claude Skills Guide
-permalink: /claude-api-tool-use-function-calling-deep detailed look-guide/
+permalink: /claude-api-tool-use-function-calling-deep-dive-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
@@ -421,8 +421,8 @@ Start with simple tool definitions, test thoroughly, and gradually add complexit
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/)
+- [Claude Code Agent Task Queue Architecture Deep Dive](/claude-code-agent-task-queue-architecture-deep-dive/)
+- [Claude Code Astro Islands Architecture Workflow Deep Dive](/claude-code-astro-islands-architecture-workflow-deep-dive/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

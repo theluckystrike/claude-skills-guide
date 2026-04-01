@@ -201,4 +201,11 @@ Conclusion
 Claude Code transforms threat hunting from a purely manual, expertise-dependent practice into an accessible, automated workflow. By using Claude's natural language understanding and code execution capabilities, security teams can scale their hunting operations, reduce investigation time, and focus human expertise on complex threat analysis.
 
 The key is starting small, automate one hunting workflow, measure the results, and expand gradually. As you build your library of threat hunting skills, you'll create a powerful, reusable toolkit that makes proactive security accessible to your entire development and security team.
+
+Related Reading
+
+- [Chrome Check Link Safety: Developer Tools and Techniques](/chrome-check-link-safety/)
+- [Claude Code for Claude SSO Integration Workflow Tutorial Guide](/claude-code-for-claude-sso-integration-workflow-tutorial-gui/)
+- [Claude Code for CORS Misconfiguration Fix Workflow Guide](/claude-code-for-cors-misconfiguration-fix-workflow-guide/)
+
 {% endraw %}

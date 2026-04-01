@@ -261,8 +261,8 @@ Start with simple query automation and progressively add more sophisticated dete
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Elastic APM Integration Workflow](/claude-code-for-elastic-apm-integration-workflow/)
+- [Claude Code for Wazuh SIEM Workflow Tutorial](/claude-code-for-wazuh-siem-workflow-tutorial/)
+- [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

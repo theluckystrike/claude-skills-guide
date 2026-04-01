@@ -188,8 +188,8 @@ The key is starting simple: install the tool, configure basic project context, a
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Docker Compose Development Workflow](/claude-code-docker-compose-development-workflow/)
+- [Claude Code for Chef Cookbook Development Workflow](/claude-code-for-chef-cookbook-development-workflow/)
+- [Claude Code for Devenv Nix Development Shell Workflow](/claude-code-for-devenv-nix-development-shell-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

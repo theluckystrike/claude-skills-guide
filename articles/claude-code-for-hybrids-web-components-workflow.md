@@ -223,8 +223,8 @@ Finally, review generated code carefully, especially around descriptor definitio
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Fast Web Components Workflow](/claude-code-for-fast-web-components-workflow/)
+- [Claude Code for Stencil Web Components Workflow](/claude-code-for-stencil-web-components-workflow/)
+- [Claude Code for Bolt.new Web App Workflow Guide](/claude-code-for-bolt-new-web-app-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

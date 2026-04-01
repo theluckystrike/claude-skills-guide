@@ -217,8 +217,8 @@ Start small: pick one function in your codebase, analyze its complexity, and opt
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [AI Coding Tools for Performance Optimization: A.](/ai-coding-tools-for-performance-optimization/)
+- [Chrome iOS Slow Fix: A Developer's Guide to Speed Optimization](/chrome-ios-slow-fix/)
+- [Chrome Web Vitals Optimization: A Practical Guide for.](/chrome-web-vitals-optimization/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

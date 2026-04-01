@@ -340,8 +340,8 @@ By using Claude Code's capabilities. reading your existing configuration files, 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Bazel Remote Cache Workflow](/claude-code-for-bazel-remote-cache-workflow/)
+- [Claude Code for Prometheus Federation Workflow Guide](/claude-code-for-prometheus-federation-workflow-guide/)
+- [Claude Code Turborepo Remote Caching Setup Workflow Guide](/claude-code-turborepo-remote-caching-setup-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

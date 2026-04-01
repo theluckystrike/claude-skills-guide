@@ -224,4 +224,11 @@ Conclusion
 Claude Code is a powerful ally in your TDD workflow, but it works best when you maintain the discipline that makes TDD effective. Write your tests yourself, use Claude Code for implementation and refactoring, and always verify with your test suite. The combination of human test design and AI-assisted implementation creates a powerful feedback loop that leads to better-designed, more reliable code.
 
 Start with small projects, practice the red-green-refactor rhythm, and gradually incorporate these patterns into your daily development workflow. Your code quality will improve, and you'll find that TDD becomes more sustainable with Claude Code handling routine implementation tasks while you focus on the creative problem-solving that only humans can do.
+
+Related Reading
+
+- [Claude TDD Skill: Test-Driven Development Guide (2026)](/claude-tdd-skill-test-driven-development-workflow/)
+- [Claude Code for Load Test Scenario Workflow Tutorial](/claude-code-for-load-test-scenario-workflow-tutorial/)
+- [Claude Code Inngest Event Driven Function Workflow Tutorial](/claude-code-inngest-event-driven-function-workflow-tutorial/)
+
 {% endraw %}

@@ -267,8 +267,8 @@ Start with a simple two-level structure and expand as your platform grows. Claud
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Mobile App Accessibility Testing Workflow](/claude-code-mobile-app-accessibility-testing-workflow/)
+- [Claude Code Algolia GeoSearch Filtering Workflow Tutorial](/claude-code-algolia-geosearch-filtering-workflow-tutorial/)
+- [Claude Code Capacitor Hybrid App Development Guide](/claude-code-capacitor-hybrid-app-development-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

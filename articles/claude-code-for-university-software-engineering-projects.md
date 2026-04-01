@@ -182,8 +182,8 @@ Start with small projects, build consistent habits, and watch your productivity 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Students: Homework and Projects](/claude-code-for-students-homework-and-projects/)
+- [Claude Code for Computer Science Bootcamp Students](/claude-code-for-computer-science-bootcamp-students/)
+- [Using Claude Code to Study Open Source Projects: A.](/using-claude-code-to-study-open-source-projects/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

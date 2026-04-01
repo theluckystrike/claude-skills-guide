@@ -160,8 +160,8 @@ The workflows outlined in this guide provide starting points, but the true power
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Wormhole Workflow Guide](/claude-code-for-wormhole-workflow-guide/)
+- [Claude Code Workflow Optimization Tips for 2026](/claude-code-workflow-optimization-tips-2026/)
+- [Claude Skills Email Drafting Automation Workflow](/claude-skills-email-drafting-automation-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

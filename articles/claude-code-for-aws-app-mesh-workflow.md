@@ -382,8 +382,8 @@ Claude Code transforms AWS App Mesh development from manual, error-prone configu
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code AWS S3 Multipart Upload Workflow Guide](/claude-code-aws-s3-multipart-upload-workflow-guide/)
+- [Claude Code for AWS WAF Workflow: A Practical Guide](/claude-code-for-aws-waf-workflow/)
+- [Claude Code for Bolt.new Web App Workflow Guide](/claude-code-for-bolt-new-web-app-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

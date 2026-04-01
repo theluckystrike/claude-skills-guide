@@ -226,8 +226,8 @@ As you build confidence, layer in more automations. The compounding effect kicks
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Aider AI Pair Programming Review 2026: An Honest Take](/aider-ai-pair-programming-review-2026-honest-take/)
+- [Is Claude Code Worth It for Solo Developers and Freelancers?](/is-claude-code-worth-it-for-solo-developers-freelancers/)
+- [Why Does Claude Code Skill Take So Long to Initialize?](/why-does-claude-code-skill-take-so-long-to-initialize/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

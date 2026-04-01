@@ -293,8 +293,8 @@ The root cause of slow Chrome downloads is often one of a few specific settings.
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Remote Desktop Slow? Here's How to Fix Lag and Performance Issues](/chrome-remote-desktop-slow/)
+- [AI Coding Tools for Performance Optimization: A.](/ai-coding-tools-for-performance-optimization/)
+- [Benchmarking Claude Code Skills Performance Guide](/benchmarking-claude-code-skills-performance-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

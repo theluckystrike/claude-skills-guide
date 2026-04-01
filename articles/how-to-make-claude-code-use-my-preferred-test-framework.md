@@ -431,8 +431,8 @@ Start by creating a custom skill for your preferred test framework, and you'll n
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Evals Framework Workflow Tutorial](/claude-code-for-evals-framework-workflow-tutorial/)
+- [Claude TDD Skill: Test-Driven Development Guide (2026)](/claude-tdd-skill-test-driven-development-workflow/)
+- [How Do I Test a Claude Skill Before Deploying to Team](/how-do-i-test-a-claude-skill-before-deploying-to-team/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

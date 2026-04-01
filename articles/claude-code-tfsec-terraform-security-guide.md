@@ -210,9 +210,9 @@ Start by installing tfsec and running it against your current Terraform projects
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Terraform Module Development Guide](/claude-code-terraform-module-development-guide/)
+- [Claude Code Terraform State Management Guide](/claude-code-terraform-state-management-guide/)
+- [Claude Code disallowedTools Security Configuration](/claude-code-disallowedtools-security-configuration/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

@@ -200,8 +200,8 @@ Start with a simple server serving a few prompts, then iterate based on your act
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Fly.io MCP Server Deployment Workflow Guide](/fly-io-mcp-server-deployment-workflow-guide/)
+- [Brave Search MCP Server for Research Automation](/brave-search-mcp-server-research-automation/)
+- [Claude Code for Astro Server Endpoints Workflow](/claude-code-for-astro-server-endpoints-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -155,4 +155,11 @@ Conclusion
 Tree of Thought reasoning transforms how developers use Claude Code for complex problem-solving. By systematically exploring multiple solution paths, evaluating their viability, and iteratively refining approaches, you can tackle challenges that defeat linear reasoning. The implementations demonstrated here provide a foundation for building sophisticated ToT workflows tailored to your specific needs.
 
 As AI reasoning capabilities continue advancing, ToT frameworks will become increasingly valuable for developers seeking to harness these capabilities effectively. Start implementing these patterns today to stay ahead of the curve in AI-assisted development.
+
+Related Reading
+
+- [Claude Code for Tree-sitter AST Traversal Workflow](/claude-code-for-tree-sitter-ast-traversal-workflow/)
+- [Claude Code for Tree-sitter Workflow Tutorial](/claude-code-for-tree-sitter-workflow-tutorial/)
+- [Claude Code Data Retention Policy Workflow](/claude-code-data-retention-policy-workflow/)
+
 {% endraw %}

@@ -618,9 +618,9 @@ Remember: always validate charts before publishing, maintain consistent versioni
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Artifact Publishing Workflow Tutorial](/claude-code-for-artifact-publishing-workflow-tutorial/)
+- [Claude Code for Cargo Crate Publishing Workflow Guide](/claude-code-for-cargo-crate-publishing-workflow-guide/)
+- [Claude Code for Docker Image Publishing Workflow Guide](/claude-code-for-docker-image-publishing-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

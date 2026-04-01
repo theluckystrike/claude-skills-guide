@@ -235,4 +235,11 @@ Conclusion
 Self-consistency prompting with Claude Code transforms unpredictable AI responses into reliable, consistent outputs. By generating multiple reasoning paths and selecting the most coherent answer, you build systems that are more trustworthy and suitable for production use.
 
 Start with simple workflows and progressively add complexity as you understand your specific use case's consistency requirements. The investment in building solid self-consistency workflows pays dividends in system reliability and user trust.
+
+Related Reading
+
+- [Claude Code for Apache Drill Workflow Tutorial](/claude-code-for-apache-drill-workflow-tutorial/)
+- [Claude Code for Astro Actions Workflow Tutorial](/claude-code-for-astro-actions-workflow-tutorial/)
+- [Claude Code for Automated PR Checks Workflow Tutorial](/claude-code-for-automated-pr-checks-workflow-tutorial/)
+
 {% endraw %}

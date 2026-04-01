@@ -248,8 +248,8 @@ Start implementing these practices today, and you'll notice significant improvem
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Changesets Versioning Workflow](/claude-code-for-changesets-versioning-workflow/)
+- [Claude Code for Hotfix Release Workflow Tutorial Guide](/claude-code-for-hotfix-release-workflow-tutorial-guide/)
+- [Claude Code for Lerna Monorepo Workflow](/claude-code-for-lerna-monorepo-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

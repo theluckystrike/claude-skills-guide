@@ -131,8 +131,8 @@ The investment in learning to use Claude Code effectively pays dividends over ti
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Code Troubleshooting Hub](/troubleshooting-hub/)
+- [Claude Code Data Engineer ETL Debugging Daily Workflow](/claude-code-data-engineer-etl-debugging-daily-workflow/)
+- [Claude Code Debug Configuration Workflow](/claude-code-debug-configuration-workflow/)
+- [Claude Code Error: npm install Fails in Skill Workflow](/claude-code-error-npm-install-fails-in-skill-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -761,9 +761,9 @@ Start with the foundational configuration and zod schemas, add snapshot tests fo
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Accessibility Regression Testing Guide](/claude-code-accessibility-regression-testing/)
+- [Claude Code Keyboard Navigation Testing Guide](/claude-code-keyboard-navigation-testing-guide/)
+- [Chrome Extension Selenium IDE Recorder: Complete Guide.](/chrome-extension-selenium-ide-recorder/)
 
 Built by theluckystrike. More at zovo.one
 {% endraw %}

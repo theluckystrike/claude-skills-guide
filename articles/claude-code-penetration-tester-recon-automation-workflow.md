@@ -167,15 +167,15 @@ The combination of Claude Code's natural language interface with structured auto
 
 Related Resources
 
-- [Claude Code Skills Tutorial](/claude-code-skills-tutorial/)
-- [Security Automation with Claude Code](/security-automation-with-claude-code/)
-- [AI-Powered Penetration Testing Guide](/ai-penetration-testing-guide/)
+- Claude Code Skills Tutorial
+- Security Automation with Claude Code
+- AI-Powered Penetration Testing Guide
 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code L10n Testing Automation Workflow Tutorial](/claude-code-l10n-testing-automation-workflow-tutorial/)
+- [Claude Code SOC2 Audit Trail Automation Workflow](/claude-code-soc2-audit-trail-automation-workflow/)
+- [Cloudflare MCP Server Edge Automation Workflow](/cloudflare-mcp-server-edge-automation-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

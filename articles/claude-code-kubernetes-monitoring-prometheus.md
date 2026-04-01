@@ -481,9 +481,9 @@ Claude skills like pdf for reporting, xlsx for data analysis, and tdd for testin
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Kubernetes Logging Stack Guide](/claude-code-kubernetes-logging-stack-guide/)
+- [Claude Code Platform Engineer Observability Stack Workflow](/claude-code-platform-engineer-observability-stack-workflow/)
+- [Claude Code Kubernetes Cost Optimization Guide](/claude-code-kubernetes-cost-optimization-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

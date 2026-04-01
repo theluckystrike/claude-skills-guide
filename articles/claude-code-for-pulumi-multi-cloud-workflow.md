@@ -270,8 +270,8 @@ With this foundation, you're equipped to tackle sophisticated multi-cloud archit
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Beam Cloud ML Workflow Guide](/claude-code-for-beam-cloud-ml-workflow-guide/)
+- [Claude Code for Cloud Security Posture Workflow](/claude-code-for-cloud-security-posture-workflow/)
+- [Claude Code for Multi-Language Navigation Workflow](/claude-code-for-multi-language-navigation-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

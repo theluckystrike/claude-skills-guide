@@ -436,8 +436,8 @@ Start with simple CRUD operations, then gradually add caching, batch processing,
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Cloudflare R2 Storage Workflow Guide](/claude-code-for-cloudflare-r2-storage-workflow-guide/)
+- [Claude Code for Cloudflare WAF Rules Workflow](/claude-code-for-cloudflare-waf-rules-workflow/)
+- [Claude Code for Web Workers Workflow Guide](/claude-code-for-web-workers-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

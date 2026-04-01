@@ -253,8 +253,8 @@ The focus on skill interoperability signals a shift toward treating Claude Code 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [MCP Updates March 2026: What Developers Need to Know](/anthropic-model-context-protocol-updates-march-2026/)
+- [AI Agent Memory Types Explained for Developers](/ai-agent-memory-types-explained-for-developers/)
+- [AI Screen Reader Chrome Extension: A Complete Guide for Developers](/ai-screen-reader-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -326,8 +326,8 @@ Remember: the goal isn't to eliminate all manual work, it's to eliminate work th
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Mailchimp Automation Workflow Guide](/claude-code-for-mailchimp-automation-workflow-guide/)
+- [Claude Code for Trello Automation Workflow Guide](/claude-code-for-trello-automation-workflow-guide/)
+- [Claude Code SRE Postmortem Documentation Workflow Guide](/claude-code-sre-postmortem-documentation-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -314,8 +314,8 @@ The Dropbox API offers extensive capabilities beyond basic sharing. Explore the 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Extension File Sharing Quick Upload: A.](/chrome-extension-file-sharing-quick-upload/)
+- [Chrome Extension Size Chart Converter: Tools for Quick Unit Conversions](/chrome-extension-size-chart-converter/)
+- [Chrome Extension VPN Quick Connect: A Developer Guide](/chrome-extension-vpn-quick-connect/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

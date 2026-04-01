@@ -277,8 +277,8 @@ If the command-line total matches what you expect from Task Manager, the browser
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome vs Edge Memory 2026: Which Browser Uses Less RAM?](/chrome-vs-edge-memory-2026/)
+- [Chrome Too Many Processes: A Developer's Guide to Fixing High Memory Usage](/chrome-too-many-processes/)
+- [Claude Code Error Out of Memory Large Codebase Fix](/claude-code-error-out-of-memory-large-codebase-fix/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

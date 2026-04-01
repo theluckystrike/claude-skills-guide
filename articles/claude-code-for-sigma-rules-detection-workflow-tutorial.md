@@ -167,4 +167,11 @@ Conclusion
 Using Claude Code for Sigma rules development transforms a traditionally manual process into an efficient, automated workflow. From initial rule generation through validation, conversion, and deployment, Claude Code serves as an intelligent assistant that understands both Sigma syntax and security concepts. Start by setting up your development environment, then gradually incorporate Claude Code into each phase of your detection engineering practice.
 
 The key is maintaining human oversight while using Claude's ability to accelerate the mechanical aspects of rule writing. With proper validation and testing procedures in place, you'll build a solid detection library that catches real threats while minimizing analyst fatigue from false positives.
+
+Related Reading
+
+- [Claude Code for Apache Drill Workflow Tutorial](/claude-code-for-apache-drill-workflow-tutorial/)
+- [Claude Code for Astro Actions Workflow Tutorial](/claude-code-for-astro-actions-workflow-tutorial/)
+- [Claude Code for Automated PR Checks Workflow Tutorial](/claude-code-for-automated-pr-checks-workflow-tutorial/)
+
 {% endraw %}

@@ -677,9 +677,9 @@ Start small, iterate, and let Claude Code handle the boilerplate while you focus
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Cargo Make Build Workflow Guide](/claude-code-for-cargo-make-build-workflow-guide/)
+- [Claude Code for Fly.io Deployment Automation Workflow](/claude-code-for-fly-io-deployment-automation-workflow/)
+- [Claude Code Package.json Scripts Automation Workflow Guide](/claude-code-package-json-scripts-automation-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

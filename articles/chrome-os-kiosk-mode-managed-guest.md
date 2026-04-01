@@ -432,8 +432,8 @@ For large-scale deployments, invest time in your policy JSON structure and organ
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Enterprise Kiosk Mode Setup: Complete.](/chrome-enterprise-kiosk-mode-setup/)
+- [How to Disable Chrome Guest Mode via Group Policy](/chrome-guest-mode-disable-group-policy/)
+- [Chrome Energy Saver Mode: A Complete Guide for.](/chrome-energy-saver-mode/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

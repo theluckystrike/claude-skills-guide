@@ -192,8 +192,8 @@ The key is starting with a clear understanding of what you need, then implementi
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [AI Spreadsheet Helper Chrome Extension: A Developer's Guide](/ai-spreadsheet-helper-chrome-extension/)
+- [AI Study Helper Chrome Extension: A Developer's Guide](/ai-study-helper-chrome-extension/)
+- [Chrome Extension Blackboard Learn Helper: A Developer Guide](/chrome-extension-blackboard-learn-helper/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

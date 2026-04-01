@@ -214,8 +214,8 @@ Avoid this approach for extensions from large companies with formal pricing stru
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Extension Academic Paper Finder: Tools and.](/chrome-extension-academic-paper-finder/)
+- [Chrome Extension Broken Link Finder: A Developer Guide](/chrome-extension-broken-link-finder/)
+- [Chrome Extension Car Rental Deals: A Developer's Guide.](/chrome-extension-car-rental-deals/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

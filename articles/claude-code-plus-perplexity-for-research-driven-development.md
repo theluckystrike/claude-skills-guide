@@ -132,8 +132,8 @@ Claude Code and Perplexity together create a development workflow where implemen
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Best Claude Code Courses Online 2026: A Developer Guide](/best-claude-code-courses-online-2026/)
+- [Best Claude Code YouTube Channels to Follow in 2026](/best-claude-code-youtube-channels-to-follow/)
+- [Chrome Extension Reading List Organizer for Academic.](/chrome-extension-reading-list-organizer-academic/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

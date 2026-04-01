@@ -381,8 +381,8 @@ Downloaded enhanced image has wrong filename: The enhanced image URL from the AP
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [AI Search Enhancer Chrome Extension: A Developer Guide](/ai-search-enhancer-chrome-extension/)
+- [Chrome Extension AWS Console Enhancer: Boost Your Cloud.](/chrome-extension-aws-console-enhancer/)
+- [Chrome Extension Stock Photo Finder Free: A Developer's Guide](/chrome-extension-stock-photo-finder-free/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -184,4 +184,11 @@ Claude Code skills transform Diamond Model intrusion analysis from a manual, inc
 
 The key is maintaining consistency in how you document intrusions. Once your team standardizes on a Diamond Model skill workflow, the accumulated data becomes increasingly valuable for pattern recognition and adversary attribution.
 
+
+Related Reading
+
+- [Claude Code Algolia GeoSearch Filtering Workflow Tutorial](/claude-code-algolia-geosearch-filtering-workflow-tutorial/)
+- [Claude Code CloudFormation Template Generation Workflow Guid](/claude-code-cloudformation-template-generation-workflow-guid/)
+- [Claude Code Container Debugging: Docker Logs Workflow Guide](/claude-code-container-debugging-docker-logs-workflow-guide/)
+
 {% endraw %}

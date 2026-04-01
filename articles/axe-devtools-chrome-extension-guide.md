@@ -179,9 +179,9 @@ Start by installing the extension and running scans on your current projects. Ad
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Angular DevTools Chrome Extension Setup: A Complete Guide](/angular-devtools-chrome-extension-setup/)
+- [Chrome DevTools Console Commands: A Practical Guide for Developers](/chrome-devtools-console-commands/)
+- [Chrome DevTools Network Throttling: Simulate Slow.](/chrome-devtools-network-throttling/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

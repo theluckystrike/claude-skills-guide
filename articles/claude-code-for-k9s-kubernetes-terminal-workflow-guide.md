@@ -267,4 +267,11 @@ Conclusion
 Combining Claude Code with k9s transforms Kubernetes management from manual navigation to efficient, scriptable workflows. Start with the basic kubectl integrations, then progressively build automation for your most common operations. The key is creating reproducible patterns that reduce cognitive load while maintaining safety through validation steps.
 
 Remember to always verify destructive operations, use namespace isolation, and test your automation scripts in non-production environments first.
+
+Related Reading
+
+- [Claude Code for Azure Arc Kubernetes Workflow](/claude-code-for-azure-arc-kubernetes-workflow/)
+- [Claude Code for Huh Forms Terminal Workflow Guide](/claude-code-for-huh-forms-terminal-workflow-guide/)
+- [Claude Code for K3s Lightweight Kubernetes Workflow](/claude-code-for-k3s-lightweight-kubernetes-workflow/)
+
 {% endraw %}

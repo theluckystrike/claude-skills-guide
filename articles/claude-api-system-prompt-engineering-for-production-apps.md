@@ -254,8 +254,8 @@ Remember: your system prompt is the foundation of every conversation. Build it c
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Building Apps with Claude API: Anthropic SDK Python Guide](/building-apps-with-claude-api-anthropic-sdk-python-guide/)
+- [Claude API Prompt Caching Performance Optimization Guide](/claude-api-prompt-caching-performance-optimization-guide/)
+- [Claude Code for Prompt Engineering Techniques: 2026 Workflow Guide](/claude-code-for-prompt-engineering-techniques-2026-workflow-/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

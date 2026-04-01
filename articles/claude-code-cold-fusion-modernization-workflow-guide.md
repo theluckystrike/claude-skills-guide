@@ -220,8 +220,8 @@ Start your modernization journey today by installing the cold-fusion-analyzer sk
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Fortran Scientific Code Modernization Guide](/claude-code-fortran-scientific-code-modernization-guide/)
+- [Why Is Claude Code Good at Understanding Legacy Code](/why-is-claude-code-good-at-understanding-legacy-code/)
+- [How to Use Claude Code to Refactor Legacy JavaScript Code](/how-to-use-claude-code-to-refactor-legacy-javascript-code/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -322,8 +322,8 @@ Testing and debugging multi-agent workflows requires a different mindset than tr
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Code Troubleshooting Hub](/troubleshooting-hub/)
+- [Claude Code Crashes When Loading Skill: Debug Guide](/claude-code-crashes-when-loading-skill-debug-steps/)
+- [Claude Code Debug Configuration Workflow](/claude-code-debug-configuration-workflow/)
+- [Claude Code Maximum Call Stack Exceeded: Skill Debug Guide](/claude-code-maximum-call-stack-exceeded-skill-debug/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

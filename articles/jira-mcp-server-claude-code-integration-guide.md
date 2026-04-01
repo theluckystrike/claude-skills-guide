@@ -485,9 +485,9 @@ When querying, specify which server to use: "Using jira-cloud, find all tickets.
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Salesforce MCP Server Data Integration Guide](/salesforce-mcp-server-data-integration-guide/)
+- [Cloudflare MCP Server Edge Automation Workflow](/cloudflare-mcp-server-edge-automation-workflow/)
+- [Notion MCP Server Knowledge Base Automation](/notion-mcp-server-knowledge-base-automation/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

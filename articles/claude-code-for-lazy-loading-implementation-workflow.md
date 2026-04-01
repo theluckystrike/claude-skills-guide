@@ -221,8 +221,8 @@ By using Claude Code's code generation capabilities, you can quickly implement l
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Font Loading Optimization Workflow](/claude-code-for-font-loading-optimization-workflow/)
+- [Claude Code for LSP Server Implementation Workflow](/claude-code-for-lsp-server-implementation-workflow/)
+- [Claude Code Webhook Handler Implementation Workflow Guide](/claude-code-webhook-handler-implementation-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

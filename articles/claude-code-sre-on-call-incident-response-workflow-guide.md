@@ -175,8 +175,8 @@ Claude Code transforms on-call incident response from a stressful, manual proces
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Incident Tracking Workflow Tutorial](/claude-code-for-incident-tracking-workflow-tutorial/)
+- [Claude Code for On-Call Rotation Workflow Tutorial](/claude-code-for-on-call-rotation-workflow-tutorial/)
+- [Claude Code for On-Call Runbook Workflow Tutorial](/claude-code-for-on-call-runbook-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

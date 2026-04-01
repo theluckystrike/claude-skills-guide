@@ -377,8 +377,8 @@ For most developers and power users, Tampermonkey or ScriptCat will provide the 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [TamperMonkey Alternative Chrome Extension in 2026](/tampermonkey-alternative-chrome-extension-2026/)
+- [Window Resizer Alternative Chrome Extension 2026](/window-resizer-alternative-chrome-extension-2026/)
+- [AI Calendar Assistant Chrome Extension: A Developer's Guide](/ai-calendar-assistant-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -191,8 +191,8 @@ The convenience of extensions often comes with hidden costs. By understanding th
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Block Phishing Extension: A Developer Guide to.](/chrome-block-phishing-extension/)
+- [Chrome Extensions That Track You: What Developers Need.](/chrome-extensions-that-track-you/)
+- [Chrome Check Link Safety: Developer Tools and Techniques](/chrome-check-link-safety/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

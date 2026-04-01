@@ -218,8 +218,8 @@ Start by creating a Claude.md file in your infrastructure project, then incremen
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for AWS PrivateLink Workflow](/claude-code-for-aws-privatelink-workflow/)
+- [Claude Code for Sigma Rules Detection Workflow Tutorial](/claude-code-for-sigma-rules-detection-workflow-tutorial/)
+- [AWS MCP Server Cloud Automation with Claude Code](/aws-mcp-server-cloud-automation-with-claude-code/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -167,8 +167,8 @@ With these techniques, Claude Code becomes an invaluable partner for understandi
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Best Way to Scope Tasks for Claude Code Success](/best-way-to-scope-tasks-for-claude-code-success/)
+- [Claude Code API Changelog Documentation Guide](/claude-code-api-changelog-documentation/)
+- [Claude Code for Technical Documentation Workflow Guide](/claude-code-for-technical-documentation-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

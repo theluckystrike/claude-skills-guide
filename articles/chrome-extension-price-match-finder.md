@@ -343,8 +343,8 @@ False positives. same model number, different configuration: Laptops and applian
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Deal Finder Chrome Extension: A Developer's Guide to Building Price Tracking Tools](/deal-finder-chrome-extension/)
+- [Chrome Extension Hotel Price Comparison: A Developer Guide](/chrome-extension-hotel-price-comparison/)
+- [Chrome Extension Restaurant Deal Finder: A Developer Guide](/chrome-extension-restaurant-deal-finder/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

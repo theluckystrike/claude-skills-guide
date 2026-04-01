@@ -304,4 +304,11 @@ Prompt chaining with Claude Code skills unlocks powerful workflow automation cap
 
 The key is treating each prompt as a focused, testable component. This modular approach lets you refine individual steps, reuse them across workflows, and confidently scale your AI automation efforts.
 
+
+Related Reading
+
+- [Claude Code for Prompt Engineering Techniques: 2026 Workflow Guide](/claude-code-for-prompt-engineering-techniques-2026-workflow-/)
+- [Claude Code for Apache Drill Workflow Tutorial](/claude-code-for-apache-drill-workflow-tutorial/)
+- [Claude Code for Astro Actions Workflow Tutorial](/claude-code-for-astro-actions-workflow-tutorial/)
+
 {% endraw %}

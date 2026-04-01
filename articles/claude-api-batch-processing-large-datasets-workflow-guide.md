@@ -293,8 +293,8 @@ Start with simpler sequential processing, then add parallelization as you valida
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Batch File Processing Workflow](/claude-code-batch-file-processing-workflow/)
+- [Claude Code for Batch Processing Optimization Workflow](/claude-code-for-batch-processing-optimization-workflow/)
+- [Claude Code for Claude Batch API: Anthropic Workflow Guide](/claude-code-for-claude-batch-api-anthropic-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

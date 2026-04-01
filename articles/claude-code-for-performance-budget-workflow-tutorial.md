@@ -238,9 +238,9 @@ Remember, the goal isn't to make development slower, it's to make fast applicati
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code GitLab CI Pipeline Docker Registry Tutorial](/claude-code-gitlab-ci-pipeline-docker-registry-tutorial/)
+- [Claude Code for Automated PR Checks Workflow Tutorial](/claude-code-for-automated-pr-checks-workflow-tutorial/)
+- [Claude Code for Fluent Bit Workflow Tutorial](/claude-code-for-fluent-bit-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

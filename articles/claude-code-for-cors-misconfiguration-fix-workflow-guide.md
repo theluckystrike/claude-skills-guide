@@ -194,4 +194,11 @@ Conclusion
 CORS misconfigurations can lead to serious security vulnerabilities, but with Claude Code's assistance, you can systematically identify, fix, and prevent these issues. The key is implementing strict origin validation, avoiding wildcards in production, and maintaining comprehensive test coverage. By following this workflow and using Claude Code's analysis capabilities, you'll significantly improve your API's security posture.
 
 Remember: CORS should be treated as a defense-in-depth measure, not your only line of defense. Always validate inputs server-side and implement proper authentication regardless of CORS configuration.
+
+Related Reading
+
+- [Claude Code for Claude SSO Integration Workflow Tutorial Guide](/claude-code-for-claude-sso-integration-workflow-tutorial-gui/)
+- [Claude Code for Sigma Rules Detection Workflow Tutorial](/claude-code-for-sigma-rules-detection-workflow-tutorial/)
+- [Claude Code for Threat Hunting Techniques Workflow Guide](/claude-code-for-threat-hunting-techniques-workflow-guide/)
+
 {% endraw %}

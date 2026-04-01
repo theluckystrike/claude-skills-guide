@@ -665,9 +665,9 @@ The key is treating security scanning as code. version controlled, automated, an
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Security Code Review Checklist Automation](/claude-code-security-code-review-checklist-automation/)
+- [AI Coding Tools Security Concerns Enterprise Guide](/ai-coding-tools-security-concerns-enterprise-guide/)
+- [Brave Search MCP Server for Research Automation](/brave-search-mcp-server-research-automation/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

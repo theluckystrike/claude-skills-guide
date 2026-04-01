@@ -231,4 +231,11 @@ Start with smaller models like Phi-3 or Mistral 7B to understand the workflow, t
 Remember to monitor GPU memory usage and adjust parameters accordingly. With practice, you'll develop an intuition for optimal configurations that balance speed, memory efficiency, and model performance.
 
 Happy fine-tuning!
+
+Related Reading
+
+- [Claude Code for Apache Drill Workflow Tutorial](/claude-code-for-apache-drill-workflow-tutorial/)
+- [Claude Code for Astro Actions Workflow Tutorial](/claude-code-for-astro-actions-workflow-tutorial/)
+- [Claude Code for Automated PR Checks Workflow Tutorial](/claude-code-for-automated-pr-checks-workflow-tutorial/)
+
 {% endraw %}

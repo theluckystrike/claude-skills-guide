@@ -428,8 +428,8 @@ Handling these events makes your PWA resilient to both Memory Saver discards and
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [How to Reduce Chrome Memory Usage: A Developer's Guide](/reduce-chrome-memory-usage/)
+- [Chrome Browser MSI Deployment with SCCM: A Complete Guide](/chrome-browser-msi-deployment-sccm/)
+- [Lightest Browser for Chromebook: A Developer Guide](/lightest-browser-chromebook/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -582,8 +582,8 @@ The investment in well-crafted Tree-sitter queries pays dividends every time you
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Tree-sitter AST Traversal Workflow](/claude-code-for-tree-sitter-ast-traversal-workflow/)
+- [Claude Code for Tree-sitter Node Types Workflow Guide](/claude-code-for-tree-sitter-node-types-workflow-guide/)
+- [Claude Code for Tree-sitter Playground Workflow Guide](/claude-code-for-tree-sitter-playground-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

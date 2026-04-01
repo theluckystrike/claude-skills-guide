@@ -448,8 +448,8 @@ Claude Code transforms shell scripting from a tedious manual process into a coll
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Makefile Build Automation Workflow Guide](/claude-code-makefile-build-automation-workflow-guide/)
+- [Claude Code Package.json Scripts Automation Workflow Guide](/claude-code-package-json-scripts-automation-workflow-guide/)
+- [Claude Code Data Retention Policy Workflow](/claude-code-data-retention-policy-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

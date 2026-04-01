@@ -255,8 +255,8 @@ The combination of Claude Code's development assistance and Hopsworks' enterpris
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Full Stack Developer Feature Shipping Workflow](/claude-code-full-stack-developer-feature-shipping-workflow/)
+- [Claude Skills Feature Flag Implementation Workflow](/claude-skills-feature-flag-implementation-workflow/)
+- [AI-Assisted Database Schema Design Workflow](/ai-assisted-database-schema-design-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

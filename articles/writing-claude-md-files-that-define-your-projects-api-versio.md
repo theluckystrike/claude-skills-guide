@@ -153,9 +153,9 @@ The investment in writing comprehensive API versioning documentation pays divide
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code REST API Versioning Strategy Workflow Tips](/claude-code-rest-api-versioning-strategy-workflow-tips/)
+- [Claude Code API Versioning Strategies Guide](/claude-code-api-versioning-strategies-guide/)
+- [Claude Code for Writing CONTRIBUTING.md Files Guide](/claude-code-for-writing-contributingmd-files-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

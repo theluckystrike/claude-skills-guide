@@ -368,9 +368,9 @@ Start with basic coverage reporting, then gradually add thresholds, CI integrati
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Vitest Coverage Reporting Workflow Tutorial](/claude-code-vitest-coverage-reporting-workflow-tutorial/)
+- [Claude Code Docker Compose Test Setup Guide](/claude-code-docker-compose-test-setup-guide/)
+- [Neovim AI Coding Setup with Claude 2026: Complete Guide](/neovim-ai-coding-setup-with-claude-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

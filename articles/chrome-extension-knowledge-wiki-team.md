@@ -204,8 +204,8 @@ A well-maintained knowledge wiki transforms how your chrome extension team opera
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Team Wiki Maintenance Workflow](/claude-code-for-team-wiki-maintenance-workflow/)
+- [AI Bookmark Manager for Chrome: Organizing Your Web Knowledge](/ai-bookmark-manager-chrome/)
+- [AI Knowledge Base Chrome Extension: A Developer's Guide](/ai-knowledge-base-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

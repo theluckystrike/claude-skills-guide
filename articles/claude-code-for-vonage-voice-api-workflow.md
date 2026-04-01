@@ -277,8 +277,8 @@ The key is providing clear context about your Vonage setup and being specific ab
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Bruno API Client Workflow Tutorial](/claude-code-for-bruno-api-client-workflow-tutorial/)
+- [Claude Code for Apache Drill Workflow Tutorial](/claude-code-for-apache-drill-workflow-tutorial/)
+- [Claude Code for Astro Actions Workflow Tutorial](/claude-code-for-astro-actions-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

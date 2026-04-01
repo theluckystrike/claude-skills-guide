@@ -156,8 +156,8 @@ Both models are powerful. The key is matching the tool to the task.
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [AI Agent Memory Types Explained for Developers](/ai-agent-memory-types-explained-for-developers/)
+- [Claude Code vs Jan AI: Local AI Assistant Comparison](/claude-code-vs-jan-ai-local-assistant/)
+- [What Are AI Agent Skills: Complete Guide for Developers](/what-are-ai-agent-skills-complete-guide-developers/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

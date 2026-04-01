@@ -3,7 +3,7 @@
 
 layout: default
 title: "Capital One Shopping Chrome Extension: A Developer and."
-description: "A technical deep detailed look into the Capital One Shopping Chrome extension, examining its architecture, API integrations, and customization potential for."
+description: "A technical deep-dive into the Capital One Shopping Chrome extension, examining its architecture, API integrations, and customization potential for."
 date: 2026-03-15
 last_modified_at: 2026-03-15
 author: "Claude Skills Guide"
@@ -139,9 +139,9 @@ The extension succeeds at its core function, finding and applying discount codes
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Extension Shopping List Organizer: A Developer Guide](/chrome-extension-shopping-list-organizer/)
+- [AI Autocomplete Chrome Extension: A Developer's Guide](/ai-autocomplete-chrome-extension/)
+- [AI Bookmark Manager for Chrome: Organizing Your Web Knowledge](/ai-bookmark-manager-chrome/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

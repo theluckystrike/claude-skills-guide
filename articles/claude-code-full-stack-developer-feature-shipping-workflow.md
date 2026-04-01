@@ -422,8 +422,8 @@ The workflow becomes faster not because Claude Code writes code magically, but b
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Nuxt Vue Full Stack Workflow](/claude-code-nuxt-vue-full-stack-workflow/)
+- [Claude Code Rails API Mode Full Stack Workflow](/claude-code-rails-api-mode-full-stack-workflow/)
+- [Claude Code for Hopsworks Feature Store Workflow](/claude-code-for-hopsworks-feature-store-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

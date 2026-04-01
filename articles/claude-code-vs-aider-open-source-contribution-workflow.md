@@ -325,8 +325,8 @@ Try both tools with your next OSS contribution and see which workflow feels more
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Open Source Contribution Workflow Guide](/claude-code-for-open-source-contribution-workflow-guide/)
+- [Claude Code for Open Source Contributions: 2026 Workflow Guide](/claude-code-open-source-contribution-workflow-guide-2026/)
+- [Claude Code Open Source Issue Triage Workflow Guide](/claude-code-open-source-issue-triage-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

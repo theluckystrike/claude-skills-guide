@@ -194,8 +194,8 @@ Related guides: [AI Coding Tools Security Concerns Enterprise Guide](/ai-coding-
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Skills for Enterprise Architects Governance](/claude-code-skills-for-enterprise-architects-governance/)
+- [Chrome Enterprise Password Manager Policy: A Practical Guide for Developers](/chrome-enterprise-password-manager-policy/)
+- [Claude Skills Governance Security Audit Checklist](/claude-skills-governance-security-audit-checklist/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

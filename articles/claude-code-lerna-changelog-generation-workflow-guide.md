@@ -795,8 +795,8 @@ The single biggest lever in this entire system is consistent conventional commit
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for PR Changelog Generation Workflow](/claude-code-for-pr-changelog-generation-workflow/)
+- [Claude Code Astro Static Site Generation Workflow Guide](/claude-code-astro-static-site-generation-workflow-guide/)
+- [Claude Code Automated Alt Text Generation Workflow](/claude-code-automated-alt-text-generation-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

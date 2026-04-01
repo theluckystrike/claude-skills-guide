@@ -13,7 +13,7 @@ tags: [claude-code, claude-skills]
 {% raw %}
 Claude Code for Tree of Thought Prompting Workflow Guide
 
-[Tree of Thought (ToT) prompting](/what-is-claude-code-and-how-to-get-started/) transforms how you interact with Claude Code by enabling systematic exploration of multiple solution paths simultaneously. Rather than following a single linear reasoning chain, ToT encourages Claude to branch into different approaches, evaluate each path, and converge on the optimal solution. This guide shows you how to implement effective Tree of Thought workflows that dramatically improve problem-solving quality.
+Tree of Thought (ToT) prompting transforms how you interact with Claude Code by enabling systematic exploration of multiple solution paths simultaneously. Rather than following a single linear reasoning chain, ToT encourages Claude to branch into different approaches, evaluate each path, and converge on the optimal solution. This guide shows you how to implement effective Tree of Thought workflows that dramatically improve problem-solving quality.
 
 Understanding Tree of Thought Prompting
 
@@ -208,4 +208,11 @@ Conclusion
 Tree of Thought prompting transforms Claude Code from a linear problem-solver into a systematic explorer of solution spaces. By structuring interactions around branching, evaluation, and selection, you get better solutions, more thoughtful reasoning, and clearer explanations of why particular approaches were chosen.
 
 Start by using the `tot-solver` skill for complex tasks, then graduate to custom ToT workflows tailored to your specific domains. The investment in learning ToT patterns pays dividends in solution quality and reasoning transparency.
+
+Related Reading
+
+- [Claude Code for Tree of Thought Reasoning Workflow Guide](/claude-code-for-tree-of-thought-reasoning-workflow-guide/)
+- [Claude Code for Self-Consistency Prompting Workflow Tutorial](/claude-code-for-self-consistency-prompting-workflow-tutorial/)
+- [Claude Code for Tree-sitter AST Traversal Workflow](/claude-code-for-tree-sitter-ast-traversal-workflow/)
+
 {% endraw %}

@@ -227,9 +227,9 @@ For enterprise and team environments, push DoH configuration via group policy so
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Browser Speed Benchmark 2026: A Practical Guide for Developers](/browser-speed-benchmark-2026/)
+- [How Locale Settings Reveal Your Browser: The Intl API Fingerprinting Guide](/intl-api-fingerprinting-how-locale-settings-reveal-your-brow/)
+- [AI Speed Reader Chrome Extension: A Developer Guide](/ai-speed-reader-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

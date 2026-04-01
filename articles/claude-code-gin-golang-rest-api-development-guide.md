@@ -289,8 +289,8 @@ Start with a clear project structure, use middleware for cross-cutting concerns,
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Best AI Tools for API Development in 2026: A Practical Guide](/best-ai-tools-for-api-development-2026/)
+- [Claude Code REST API Design Best Practices](/claude-code-rest-api-design-best-practices/)
+- [Claude Code for GraphQL to REST Migration Guide](/claude-code-for-graphql-to-rest-migration-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

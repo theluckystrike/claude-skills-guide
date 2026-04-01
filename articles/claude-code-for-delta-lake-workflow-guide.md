@@ -314,8 +314,8 @@ By integrating Claude Code into your Delta Lake workflows, you can reduce manual
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Delta Lake Schema Evolution Workflow](/claude-code-for-delta-lake-schema-evolution-workflow/)
+- [Claude Code for Spark Delta Lake Workflow Tutorial](/claude-code-for-spark-delta-lake-workflow-tutorial/)
+- [Claude Code for Delta Git Diff Workflow Guide](/claude-code-for-delta-git-diff-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

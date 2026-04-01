@@ -159,4 +159,11 @@ Conclusion
 Combining Claude Code with GNU Stow gives you a powerful, reproducible system for managing configuration files. The declarative nature of Stow means your dotfiles remain organized and version-controlled, while Claude Code provides an intelligent interface to interact with them naturally. Start with a simple setup, commit regularly, and gradually add more configurations as you need them.
 
 Your dotfiles are personal, they should evolve with your workflow. With Stow and Claude Code, managing that evolution becomes significantly easier.
+
+Related Reading
+
+- [Claude Code for ScyllaDB Workflow Tutorial Guide](/claude-code-for-scylladb-workflow-tutorial-guide/)
+- [Claude Code Algolia GeoSearch Filtering Workflow Tutorial](/claude-code-algolia-geosearch-filtering-workflow-tutorial/)
+- [Claude Code for dbt Snapshot Workflow Tutorial](/claude-code-for-dbt-snapshot-workflow-tutorial/)
+
 {% endraw %}

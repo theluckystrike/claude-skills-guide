@@ -311,8 +311,8 @@ One final consideration for organizations rolling out bookmark policies for the 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Safe Browsing Enterprise Settings: A Developer's Guide](/chrome-safe-browsing-enterprise-settings/)
+- [Chrome Enterprise Device Trust Connector: A Developer Guide](/chrome-enterprise-device-trust-connector/)
+- [Chrome Enterprise Private Extension Hosting: A Complete Guide](/chrome-enterprise-private-extension-hosting/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

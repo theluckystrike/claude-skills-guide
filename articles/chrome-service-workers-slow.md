@@ -219,8 +219,8 @@ Service worker performance directly affects your application's responsiveness. B
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Code Troubleshooting Hub](/troubleshooting-hub/)
+- [Chrome Cast Buffering Fix: Practical Solutions for.](/chrome-cast-buffering-fix/)
+- [Chrome Web Store Slow: Causes and Solutions for Developers](/chrome-web-store-slow/)
+- [Chrome Android Slow Fix: Speed Up Your Browser](/chrome-android-slow-fix/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

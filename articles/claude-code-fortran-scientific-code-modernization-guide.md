@@ -355,8 +355,8 @@ With Claude Code as your assistant, you have a powerful partner in preserving an
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Cold Fusion Modernization Workflow Guide](/claude-code-cold-fusion-modernization-workflow-guide/)
+- [Best Way to Use Claude Code for Large File Refactoring](/best-way-to-use-claude-code-for-large-file-refactoring/)
+- [Claude Code Dependency Injection Refactoring](/claude-code-dependency-injection-refactoring/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

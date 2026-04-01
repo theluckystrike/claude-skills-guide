@@ -639,8 +639,8 @@ The key is treating read models as first-class citizens in your architecture, wi
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Mediator Pattern and CQRS Workflow](/claude-code-for-mediator-pattern-cqrs-workflow/)
+- [Claude Code for Model Card Documentation Workflow](/claude-code-for-model-card-documentation-workflow/)
+- [Claude Code for PyTorch Model Training Workflow](/claude-code-for-pytorch-model-training-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

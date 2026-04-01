@@ -631,9 +631,9 @@ Remember: good Core Web Vitals scores not only improve user experience but also 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for gRPC Web Workflow Tutorial](/claude-code-for-grpc-web-workflow-tutorial/)
+- [Claude Code for Infura Web3 Workflow Tutorial](/claude-code-for-infura-web3-workflow-tutorial/)
+- [Claude Code for Web Share API Workflow Tutorial](/claude-code-for-web-share-api-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

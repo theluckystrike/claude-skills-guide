@@ -226,8 +226,8 @@ The initial investment in proper RTL architecture pays dividends as your applica
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code German Developer Localization Workflow Guide](/claude-code-german-developer-localization-workflow-guide/)
+- [Claude Code Multilingual Codebase Management Guide](/claude-code-multilingual-codebase-management-guide/)
+- [Claude Code Arabic Interface Development Workflow Tips](/claude-code-arabic-interface-development-workflow-tips/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

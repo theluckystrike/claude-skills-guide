@@ -8,7 +8,7 @@ last_modified_at: 2026-03-14
 categories: [guides]
 tags: [claude-code, agent, task-queue, architecture, skills, claude-skills]
 author: "theluckystrike"
-permalink: /claude-code-agent-task-queue-architecture-deep detailed look/
+permalink: /claude-code-agent-task-queue-architecture-deep-dive/
 reviewed: true
 score: 7
 ---
@@ -217,8 +217,8 @@ The key takeaways: tasks flow through a priority-based queue with dependency awa
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Agent Sandbox Skill: Complete Guide (2026)](/claude-agent-sandbox-skill-isolated-environments/)
+- [What Are AI Agent Skills: Complete Guide for Developers](/what-are-ai-agent-skills-complete-guide-developers/)
+- [Building Supervisor Worker Agent Architecture Tutorial](/building-supervisor-worker-agent-architecture-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

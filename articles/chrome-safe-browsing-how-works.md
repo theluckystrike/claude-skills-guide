@@ -2,7 +2,7 @@
 
 layout: default
 title: "Chrome Safe Browsing: How It Works Under the Hood"
-description: "A technical deep detailed look into Chrome Safe Browsing mechanisms. Learn how the feature detects threats, its API endpoints, and how developers can integrate."
+description: "A technical deep-dive into Chrome Safe Browsing mechanisms. Learn how the feature detects threats, its API endpoints, and how developers can integrate."
 date: 2026-03-15
 last_modified_at: 2026-03-15
 author: "theluckystrike"
@@ -291,8 +291,8 @@ Safe Browsing checks are also designed to fail open rather than fail closed. If 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Safe Browsing Enterprise Settings: A Developer's Guide](/chrome-safe-browsing-enterprise-settings/)
+- [AI Agent Goal Decomposition: How It Works Explained](/ai-agent-goal-decomposition-how-it-works-explained/)
+- [How to Check if a Chrome Extension is Safe Before Installing](/check-chrome-extension-safe/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -477,8 +477,8 @@ The combination of Claude Code, React Email, and Resend creates a powerful email
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code React Testing Library Workflow](/claude-code-react-testing-library-workflow/)
+- [Claude Code SendGrid Email List Management Workflow](/claude-code-sendgrid-email-list-management-workflow/)
+- [Claude Code Vue Developer Component Workflow Best Practices](/claude-code-vue-developer-component-workflow-best-practices/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

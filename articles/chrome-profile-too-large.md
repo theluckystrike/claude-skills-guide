@@ -263,8 +263,8 @@ Start by checking your current profile size, then apply targeted cleanup based o
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Using Too Much RAM Fix: A Developer's Guide](/chrome-using-too-much-ram-fix/)
+- [How to Fix Claude Code Context Window Full in Large.](/claude-code-context-window-full-in-large-codebase-fix/)
+- [Claude Code Error Out of Memory Large Codebase Fix](/claude-code-error-out-of-memory-large-codebase-fix/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

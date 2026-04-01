@@ -168,8 +168,8 @@ Start with the basic search workflows, then gradually adopt more sophisticated a
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Ansible MCP Server Configuration Management](/ansible-mcp-server-configuration-management/)
+- [Claude Code for AWS PrivateLink Workflow](/claude-code-for-aws-privatelink-workflow/)
+- [Claude Code for Chart Museum Workflow Tutorial](/claude-code-for-chart-museum-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

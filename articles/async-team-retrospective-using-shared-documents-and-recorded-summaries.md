@@ -177,9 +177,8 @@ One final note: async retrospectives require facilitators who can write clearly 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
-
+- [Async Product Discovery Process for Remote Teams Using Recorded Interviews](/async-product-discovery-process-for-remote-teams-using-recorded-interviews/)
+- [Claude Code for Dutch Developer Team Workflow Guide](/claude-code-for-dutch-developer-team-workflow-guide/)
+- [Claude Code for Team Wiki Maintenance Workflow](/claude-code-for-team-wiki-maintenance-workflow/)
 Built by the luckystrike. More at https://zovo.one
 {% endraw %}

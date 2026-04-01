@@ -552,8 +552,8 @@ Remember to check the OpenFaaS documentation for the latest features and best pr
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Azure Arc Kubernetes Workflow](/claude-code-for-azure-arc-kubernetes-workflow/)
+- [Claude Code for K3s Lightweight Kubernetes Workflow](/claude-code-for-k3s-lightweight-kubernetes-workflow/)
+- [Claude Code for k9s Kubernetes Terminal Workflow Guide](/claude-code-for-k9s-kubernetes-terminal-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

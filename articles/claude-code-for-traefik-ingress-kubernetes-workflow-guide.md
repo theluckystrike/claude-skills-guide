@@ -227,4 +227,11 @@ Conclusion
 Claude Code transforms Kubernetes Traefik ingress management from manual YAML editing to a conversational workflow. By describing your requirements in natural language, you can rapidly generate, deploy, and manage ingress resources. The key is establishing a well-configured skill that understands your cluster's topology and organizational conventions.
 
 Start with simple ingress configurations and progressively incorporate middleware and TLS as you become comfortable with the workflow. Over time, you'll find that Claude Code accelerates your Kubernetes networking tasks significantly.
+
+Related Reading
+
+- [Claude Code for Azure Arc Kubernetes Workflow](/claude-code-for-azure-arc-kubernetes-workflow/)
+- [Claude Code for K3s Lightweight Kubernetes Workflow](/claude-code-for-k3s-lightweight-kubernetes-workflow/)
+- [Claude Code for k9s Kubernetes Terminal Workflow Guide](/claude-code-for-k9s-kubernetes-terminal-workflow-guide/)
+
 {% endraw %}

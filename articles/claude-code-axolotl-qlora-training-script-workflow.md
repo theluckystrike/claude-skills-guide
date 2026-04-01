@@ -592,8 +592,8 @@ Start with a single working configuration, build your dataset validation and lau
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Diffusers Stable Diffusion Training Guide](/claude-code-diffusers-stable-diffusion-training-guide/)
+- [Claude Code for Unsloth Fast Fine Tuning Workflow Tutorial](/claude-code-for-unsloth-fast-fine-tuning-workflow-tutorial/)
+- [Claude Code for ZenML MLOps Workflow Guide](/claude-code-for-zenml-mlops-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

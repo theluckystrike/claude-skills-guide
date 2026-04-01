@@ -106,7 +106,7 @@ Databases and Storage
 - [Claude Skills for GraphQL Schema Design and Testing](/claude-skills-for-graphql-schema-design-and-testing/). GraphQL schema design, resolver patterns, and testing
 
 Data Science and ML
-- [Claude Code for W&B Weights & Biases Integration Setup](/claude-code-for-wandb-weights-biases-integration-setup/). ML experiment tracking with Weights & Biases
+- Claude Code for W&B Weights & Biases Integration Setup. ML experiment tracking with Weights & Biases
 - [Claude Skills for Financial Modeling: Excel Alternative](/claude-skills-for-financial-modeling-excel-alternative/). Financial modeling workflows replacing Excel macros
 - [Claude Skills for Generating Mock Data and Fixtures](/claude-skills-for-generating-mock-data-and-fixtures/). Generating realistic test data and fixtures at scale
 - [Claude /xlsx Skill: Spreadsheet Automation Guide](/claude-xlsx-skill-spreadsheet-automation-tutorial/). Automating spreadsheet tasks with the `/xlsx` skill
@@ -257,7 +257,7 @@ Complete Tutorial Index
 | [Claude Code Firebase Security Rules Validation Testing Guide](/claude-code-firebase-security-rules-validation-testing-guide/) | Database |
 | [Claude Code for Beginners: Getting Started 2026](/claude-code-for-beginners-complete-getting-started-2026/) | Getting Started |
 | [Claude Code for Turso SQLite Edge Database Tutorial](/claude-code-for-turso-sqlite-edge-database-tutorial/) | Database |
-| [Claude Code for W&B Weights & Biases Integration Setup](/claude-code-for-wandb-weights-biases-integration-setup/) | Data Science |
+| Claude Code for W&B Weights & Biases Integration Setup | Data Science |
 | [Claude Code GitHub Actions Composite Actions](/claude-code-github-actions-composite-actions/) | CI/CD |
 | [Claude Code GitHub Actions Matrix Builds Guide](/claude-code-github-actions-matrix-builds-guide/) | CI/CD |
 | [Claude Code GitHub Actions Workflow Matrix Strategy Guide](/claude-code-github-actions-workflow-matrix-strategy-guide/) | CI/CD |

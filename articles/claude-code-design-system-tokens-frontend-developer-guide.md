@@ -546,8 +546,8 @@ The investment in learning token-based design pays dividends in reduced design d
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/)
+- [Claude Code Accessibility Workflow for Frontend Engineers](/claude-code-accessibility-workflow-for-frontend-engineers/)
+- [Claude Code Daily Workflow for Frontend Developers Guide](/claude-code-daily-workflow-for-frontend-developers-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

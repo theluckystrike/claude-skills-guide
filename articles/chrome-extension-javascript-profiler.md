@@ -274,8 +274,8 @@ Focus on the areas that most affect user experience: message passing latency, st
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome JavaScript Blocker Extension: A Developer's Guide](/chrome-javascript-blocker-extension/)
+- [Claude Code Profiler Integration Guide](/claude-code-profiler-integration-guide/)
+- [Using Claude Code with Bun Runtime for JavaScript Projects](/using-claude-code-with-bun-runtime-javascript-projects/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

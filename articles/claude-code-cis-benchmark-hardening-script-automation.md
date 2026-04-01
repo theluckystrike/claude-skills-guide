@@ -248,8 +248,8 @@ Claude Code transforms CIS benchmark compliance from a manual, error-prone proce
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code ISO 27001 Evidence Collection Workflow](/claude-code-iso27001-evidence-collection-workflow/)
+- [Claude Code SOC2 Audit Trail Automation Workflow](/claude-code-soc2-audit-trail-automation-workflow/)
+- [Claude Code DevSecOps Compliance Pipeline Automation Guide](/claude-code-devsecops-compliance-pipeline-automation/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

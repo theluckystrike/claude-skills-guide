@@ -549,8 +549,8 @@ Use test organization to run quick tests in continuous integration while running
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Enterprise VPN Integration - A Practical Guide.](/chrome-enterprise-vpn-integration/)
+- [Chrome Extension Anki Web Integration: A Developer Guide](/chrome-extension-anki-web-integration/)
+- [Chrome Extension Outlook Calendar Integration: A.](/chrome-extension-outlook-calendar-integration/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

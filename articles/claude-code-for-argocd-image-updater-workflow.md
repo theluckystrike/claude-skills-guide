@@ -259,8 +259,8 @@ Start with simple configurations, gradually add complexity as your understanding
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Continuous Testing Workflow: Complete Guide for 2026](/claude-code-continuous-testing-workflow/)
+- [Claude Code Docker Networking Workflow Guide](/claude-code-docker-networking-workflow-guide/)
+- [Claude Code for Bandwhich Bandwidth Monitor Workflow](/claude-code-for-bandwhich-bandwidth-monitor-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

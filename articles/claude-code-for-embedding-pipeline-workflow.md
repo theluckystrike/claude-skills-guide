@@ -199,8 +199,8 @@ With Claude Code assisting your workflow, you can focus on higher-level design d
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Harness CD Pipeline Workflow](/claude-code-for-harness-cd-pipeline-workflow/)
+- [Claude Code for Mage AI Pipeline Workflow Guide](/claude-code-for-mage-ai-pipeline-workflow-guide/)
+- [Claude Code for ZenML Pipeline Workflow Guide](/claude-code-for-zenml-pipeline-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

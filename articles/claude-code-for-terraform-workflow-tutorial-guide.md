@@ -264,4 +264,11 @@ Claude Code transforms Terraform development from a manual, error-prone process 
 Start small, use Claude Code for a single module or one aspect of your infrastructure, and gradually expand its role in your workflow. The time savings and error reduction will quickly become obvious, and you'll wonder how you ever managed Terraform without it.
 
 Remember: Claude Code is a powerful assistant, but always review its suggestions, especially for production infrastructure. Use the `terraform plan` output as your source of truth before applying any changes. Happy infrastructuring!
+
+Related Reading
+
+- [Claude Code for CDKTF Terraform CDK Workflow](/claude-code-for-cdktf-terraform-cdk-workflow/)
+- [Claude Code for Terraform Backend Migration Workflow](/claude-code-for-terraform-backend-migration-workflow/)
+- [Claude Code for Terraform Cloud Run Workflow Guide](/claude-code-for-terraform-cloud-run-workflow-guide/)
+
 {% endraw %}

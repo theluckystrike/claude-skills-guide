@@ -154,9 +154,9 @@ Remember that compliance automation augments your security program rather than r
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [CCPA Privacy Compliance with Claude Code 2026](/claude-code-ccpa-privacy-compliance-guide/)
+- [Claude Code CIS Benchmark Hardening Script Automation](/claude-code-cis-benchmark-hardening-script-automation/)
+- [Claude Code German Enterprise Compliance Workflow Tips](/claude-code-german-enterprise-compliance-workflow-tips/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

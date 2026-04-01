@@ -360,9 +360,9 @@ The chrome extension focus timer productivity ecosystem continues evolving as de
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Extension Focus Mode for Studying: A Practical Guide](/chrome-extension-focus-mode-studying/)
+- [Claude Code for Bootcamp Students: Productivity Guide](/claude-code-for-bootcamp-students-productivity-guide/)
+- [Claude Code for Developer Productivity Tracking](/claude-code-for-developer-productivity-tracking/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

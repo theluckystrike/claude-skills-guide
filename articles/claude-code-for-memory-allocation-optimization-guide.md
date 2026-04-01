@@ -516,8 +516,8 @@ Remember that premature optimization can add complexity without benefit. Always 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Out of Memory Heap Allocation Skill](/claude-code-out-of-memory-heap-allocation-skill/)
+- [AI Agent Memory Types Explained for Developers](/ai-agent-memory-types-explained-for-developers/)
+- [AI Coding Tools for Performance Optimization: A.](/ai-coding-tools-for-performance-optimization/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

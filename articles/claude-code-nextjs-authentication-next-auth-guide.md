@@ -495,8 +495,8 @@ As your application grows, lean on Claude Code to extend these patterns. adding 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for T3 Stack tRPC Next.js Workflow](/claude-code-for-t3-stack-trpc-nextjs-workflow/)
+- [Claude Code Next.js Image Optimization Guide](/claude-code-nextjs-image-optimization-guide/)
+- [Claude Code for Vercel Supabase Clerk Full Stack Development](/claude-code-for-vercel-supabase-clerk-full-stack/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

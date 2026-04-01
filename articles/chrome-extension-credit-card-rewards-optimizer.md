@@ -329,8 +329,8 @@ For comprehensive optimization, pair your extension with manual tracking for off
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Extension Gift Card Balance Checker: A Developer Guide](/chrome-extension-gift-card-balance-checker/)
+- [AI Citation Generator Chrome: A Developer Guide](/ai-citation-generator-chrome/)
+- [AI Color Picker Chrome Extension: A Developer's Guide](/ai-color-picker-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

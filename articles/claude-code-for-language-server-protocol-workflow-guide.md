@@ -124,9 +124,9 @@ Start by ensuring your LSP setup works correctly, then layer Claude Code skills 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Astro Server Endpoints Workflow](/claude-code-for-astro-server-endpoints-workflow/)
+- [Claude Code for LSP Server Implementation Workflow](/claude-code-for-lsp-server-implementation-workflow/)
+- [Claude Code for MCP Prompt Server Workflow](/claude-code-for-mcp-prompt-server-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

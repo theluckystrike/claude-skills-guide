@@ -256,7 +256,8 @@ The result is a codebase where the real-time layer is tested, the reconnect logi
 
 Related Reading
 
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Skills for WebSocket Realtime App Development](/claude-skills-for-websocket-realtime-app-development/)
+- [Claude Code WebSocket Implementation: Real-Time Events Guide](/claude-code-websocket-implementation-real-time-events-guide/)
+- [How to Make Claude Code Use My Preferred Test Framework](/how-to-make-claude-code-use-my-preferred-test-framework/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

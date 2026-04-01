@@ -400,8 +400,8 @@ Windsurf remains a solid choice for developers who want their AI assistance embe
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code vs Windsurf for AI Development](/claude-code-vs-windsurf-for-ai-development/)
+- [Claude Code vs Windsurf: Python Backend Development.](/claude-code-vs-windsurf-python-backend-development/)
+- [Windsurf Editor Review for Professional Developers 2026](/windsurf-editor-review-for-professional-developers-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

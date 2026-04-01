@@ -287,4 +287,11 @@ Start small: parse a file, run a query, understand the output. Then progressivel
 
 Remember: the key is understanding node types as the building blocks of code structure, then using Claude Code to intelligently work with those blocks for analysis and transformation.
 
+
+Related Reading
+
+- [Claude Code for Tree-sitter AST Traversal Workflow](/claude-code-for-tree-sitter-ast-traversal-workflow/)
+- [Claude Code for Tree-sitter Playground Workflow Guide](/claude-code-for-tree-sitter-playground-workflow-guide/)
+- [Claude Code for Tree-sitter Workflow Tutorial](/claude-code-for-tree-sitter-workflow-tutorial/)
+
 {% endraw %}

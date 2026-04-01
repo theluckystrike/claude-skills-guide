@@ -280,8 +280,8 @@ By following the patterns in this guide, you'll build more maintainable applicat
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code ActiveRecord Query Optimization Workflow Guide](/claude-code-activerecord-query-optimization-workflow-guide/)
+- [Claude Code for React Native Fabric Renderer Workflow](/claude-code-for-react-native-fabric-renderer-workflow/)
+- [Claude Code for React Reasoning Agent Workflow](/claude-code-for-react-reasoning-agent-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

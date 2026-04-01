@@ -637,16 +637,16 @@ Your tests become more comprehensive with less manual effort. That's the power o
 
 Related Topics
 
-- [Test-Driven Development with Claude Code](/claude-code-tdd-workflow-guide/)
-- [Python Testing Best Practices](/python-testing-best-practices-2026/)
+- Test-Driven Development with Claude Code
+- Python Testing Best Practices
 - [Claude Skills for Developers](/best-claude-skills-for-developers-2026/)
 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Skills for Backend: Node.js and Python](/claude-code-skills-for-backend-developers-node-and-python/)
+- [Claude Code Contract Testing with Pact Guide](/claude-code-contract-testing-pact-guide/)
+- [Claude Code Cypress Component Testing Guide](/claude-code-cypress-component-testing-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

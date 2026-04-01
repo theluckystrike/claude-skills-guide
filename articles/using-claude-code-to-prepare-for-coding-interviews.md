@@ -228,8 +228,8 @@ Start with one skill, build a habit, and iterate. Your next interview will be be
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Mastering Coding Interviews with Claude Code: A Complete.](/claude-code-for-coding-interview-preparation-workflow/)
+- [Agentic AI Coding Tools Comparison 2026: A Practical.](/agentic-ai-coding-tools-comparison-2026/)
+- [AI Coding Tool Evaluation Framework for Teams](/ai-coding-tool-evaluation-framework-for-teams/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

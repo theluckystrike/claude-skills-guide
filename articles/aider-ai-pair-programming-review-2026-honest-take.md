@@ -163,8 +163,8 @@ If you're already invested in a terminal-based workflow and need simple code edi
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started 2026](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Pair Programming Workflow Guide](/claude-code-for-pair-programming-workflow-guide/)
+- [Claude Code for Pair Review Workflow Tutorial Guide](/claude-code-for-pair-review-workflow-tutorial-guide/)
+- [Is Claude Code Worth It? An Honest Beginner Review 2026](/is-claude-code-worth-it-honest-beginner-review-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

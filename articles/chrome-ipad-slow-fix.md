@@ -191,8 +191,8 @@ Chrome iPad performance issues stem from memory constraints, accumulated cache, 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Android Slow Fix: Speed Up Your Browser](/chrome-android-slow-fix/)
+- [Chrome DevTools Memory Leak Debugging: Find and Fix.](/chrome-devtools-memory-leak-debugging/)
+- [Chrome Zoom Slow: Diagnosing and Fixing Performance Issues](/chrome-zoom-slow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

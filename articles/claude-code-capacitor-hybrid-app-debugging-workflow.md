@@ -192,8 +192,8 @@ Claude Code transforms Capacitor debugging from a frustrating multi-platform cha
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Capacitor Hybrid App Development Guide](/claude-code-capacitor-hybrid-app-development-guide/)
+- [Best Way to Use Claude Code for Debugging Sessions](/best-way-to-use-claude-code-for-debugging-sessions/)
+- [Git Bisect + Claude Code: Automated Bug Finding Guide](/claude-code-git-bisect-automated-bug-finding-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

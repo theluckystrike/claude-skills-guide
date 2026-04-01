@@ -472,8 +472,8 @@ As your organization scales, extend the workflow to cover multiple cloud account
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Container Security Scanning Workflow Guide](/claude-code-container-security-scanning-workflow-guide/)
+- [Claude Code for Gitleaks Secret Scanning Workflow](/claude-code-for-gitleaks-secret-scanning-workflow/)
+- [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

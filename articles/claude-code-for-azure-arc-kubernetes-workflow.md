@@ -252,8 +252,8 @@ Remember to always verify commands and configurations before applying them to pr
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Azure DevOps Integration Workflow Tutorial](/claude-code-azure-devops-integration-workflow-tutorial/)
+- [Claude Code for Architect ARC Serverless Workflow](/claude-code-for-architect-arc-serverless-workflow/)
+- [Claude Code for Azure Cost Management Workflow](/claude-code-for-azure-cost-management-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

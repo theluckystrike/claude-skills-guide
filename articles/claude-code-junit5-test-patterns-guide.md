@@ -502,8 +502,8 @@ Writing solid tests takes practice, but JUnit 5's modern features make the proce
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Cypress Component Testing Guide](/claude-code-cypress-component-testing-guide/)
+- [Claude Code Java Library Development Guide](/claude-code-java-library-development-guide/)
+- [Claude Code Mockito Java Testing Workflow](/claude-code-mockito-java-testing-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

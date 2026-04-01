@@ -171,8 +171,8 @@ The key is providing clear context through skills, understanding which tools are
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Extension Return Policy Finder: Tools and Techniques for Developers](/chrome-extension-return-policy-finder/)
+- [Chrome Extension Size Chart Converter: Tools for Quick Unit Conversions](/chrome-extension-size-chart-converter/)
+- [Deal Finder Chrome Extension: A Developer's Guide to Building Price Tracking Tools](/deal-finder-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

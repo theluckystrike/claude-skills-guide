@@ -451,8 +451,8 @@ The key is treating AI as an intelligent assistant rather than an oracle, provid
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Docker Compose Development Workflow](/claude-code-docker-compose-development-workflow/)
+- [Claude Code for Chef Cookbook Development Workflow](/claude-code-for-chef-cookbook-development-workflow/)
+- [Claude Code for Development Environment Workflow](/claude-code-for-development-environment-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -375,9 +375,9 @@ Start with simple single-commit cherry-picks on non-critical branches to build c
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Git Rebase Interactive Workflow](/claude-code-git-rebase-interactive-workflow/)
+- [Claude MD Version Control Strategy Best Practices](/claude-md-version-control-strategy-best-practices/)
+- [Claude Code for Delta Git Diff Workflow Guide](/claude-code-for-delta-git-diff-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

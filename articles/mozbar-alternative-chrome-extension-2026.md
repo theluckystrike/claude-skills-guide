@@ -234,8 +234,8 @@ The Chrome extension ecosystem in 2026 offers strong alternatives to MozBar for 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [TubeBuddy Alternative Chrome Extension in 2026](/tubebuddy-alternative-chrome-extension-2026/)
+- [Chrome Extension Open Graph Preview: Implementation Guide](/chrome-extension-open-graph-preview/)
+- [Chrome Extension Canva Alternative: Build Your Own.](/chrome-extension-canva-alternative/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

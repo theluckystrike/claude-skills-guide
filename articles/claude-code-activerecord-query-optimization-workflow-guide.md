@@ -245,8 +245,8 @@ Remember: every database query has a cost. By fetching only what you need, when 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code ActiveRecord Scopes and Callbacks Best Practices](/claude-code-activerecord-scopes-callbacks-best-practices/)
+- [Claude Code Factory Bot Test Data Guide](/claude-code-factory-bot-test-data-guide/)
+- [Claude Code Skills for Ruby on Rails Projects](/claude-code-skills-for-ruby-on-rails-projects/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -394,9 +394,9 @@ The developers who extract the most value from Claude Code are not those who use
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Speed Up Tips for Developers and Power Users in 2026](/chrome-speed-up-tips-2026/)
+- [Chrome DevTools Tips and Tricks for 2026](/chrome-devtools-tips-tricks-2026/)
+- [Chrome Extension Miro Whiteboard: A Complete Guide for Developers and Power Users](/chrome-extension-miro-whiteboard/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

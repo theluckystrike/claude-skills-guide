@@ -122,8 +122,8 @@ Most chrome new tab slow problems resolve by disabling unnecessary extensions, c
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Autofill Slow: Causes and Solutions for Developers](/chrome-autofill-slow/)
+- [Chrome WebGL Slow: Causes and Solutions for Developers](/chrome-webgl-slow/)
+- [Chrome Network Service High CPU Usage: Causes and Solutions for Developers](/chrome-network-service-cpu/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

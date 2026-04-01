@@ -375,15 +375,15 @@ Claude Code transforms Packer workflows from manual, error-prone processes into 
 Start integrating Claude Code into your Packer workflows today, and you'll see significant improvements in both development speed and image quality.
 
 Related guides:
-- [Claude Code for Terraform Infrastructure Workflow](/claude-code-for-terraform-infrastructure-workflow/)
+- Claude Code for Terraform Infrastructure Workflow
 - [Building Immutable Infrastructure with Packer and Terraform](https://learn.hashicorp.com/tutorials/packer/aws-images)
 - [Claude Skills Guides Hub](/guides-hub/)
 {% endraw %}
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Imgix Image Optimization Workflow](/claude-code-for-imgix-image-optimization-workflow/)
+- [Claude Code for Apache Drill Workflow Tutorial](/claude-code-for-apache-drill-workflow-tutorial/)
+- [Claude Code for Astro Actions Workflow Tutorial](/claude-code-for-astro-actions-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

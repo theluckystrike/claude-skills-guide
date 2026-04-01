@@ -462,8 +462,8 @@ The key is treating this migration as an opportunity to improve your workflows, 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for OpenTofu Migration Workflow Guide](/claude-code-for-opentofu-migration-workflow-guide/)
+- [Claude Code for Terraform Backend Migration Workflow](/claude-code-for-terraform-backend-migration-workflow/)
+- [Claude Code MongoDB to PostgreSQL Migration Workflow](/claude-code-mongodb-to-postgresql-migration-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

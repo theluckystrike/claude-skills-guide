@@ -257,8 +257,8 @@ The ecosystem around AI-powered writing assistance continues to evolve rapidly. 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Extension Color Contrast Checker: A Developer Guide](/chrome-extension-color-contrast-checker/)
+- [Chrome Extension Core Web Vitals Checker: Developer Guide](/chrome-extension-core-web-vitals-checker/)
+- [Chrome Extension Diff Checker: A Developer Guide](/chrome-extension-diff-checker/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

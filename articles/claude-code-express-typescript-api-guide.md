@@ -373,8 +373,8 @@ For persistent context across sessions, consider the supermemory skill to mainta
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Express Middleware Error Handling Patterns Guide](/claude-code-express-middleware-error-handling-patterns-guide/)
+- [Express to Fastify Migration with Claude Code (2026)](/claude-code-express-to-fastify-migration-tutorial-2026/)
+- [Claude Code for gRPC API Development: A Practical Guide](/claude-code-grpc-api-development-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

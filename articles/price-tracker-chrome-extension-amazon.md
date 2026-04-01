@@ -325,9 +325,9 @@ A custom Amazon price tracker Chrome extension puts you in control of your shopp
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Price History Chrome Extension: Technical Implementation.](/price-history-chrome-extension/)
+- [Chrome Extension Black Friday Deal Tracker: A.](/chrome-extension-black-friday-deal-tracker/)
+- [Chrome Extension Linear Issue Tracker: A Developer's Guide](/chrome-extension-linear-issue-tracker/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

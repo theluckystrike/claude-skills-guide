@@ -217,9 +217,9 @@ For users with 32GB+ RAM who need maximum functionality, both browsers perform a
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [AI Agent Memory Types Explained for Developers](/ai-agent-memory-types-explained-for-developers/)
+- [AI Coding Tools for Performance Optimization: A.](/ai-coding-tools-for-performance-optimization/)
+- [Benchmarking Claude Code Skills Performance Guide](/benchmarking-claude-code-skills-performance-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

@@ -267,8 +267,8 @@ Start with small experiments, gradually migrate existing components, and use Cla
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Expo EAS Build Submission Workflow Guide](/claude-code-expo-eas-build-submission-workflow-guide/)
+- [Claude Code React Native Expo Workflow Debugging Guide](/claude-code-react-native-expo-workflow-debugging-guide/)
+- [Claude Code React Native Performance Optimization Guide](/claude-code-react-native-performance-optimization-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

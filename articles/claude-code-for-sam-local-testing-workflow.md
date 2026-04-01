@@ -176,8 +176,8 @@ Start implementing these practices in your next SAM project, and you'll notice a
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code L10n Testing Automation Workflow Tutorial](/claude-code-l10n-testing-automation-workflow-tutorial/)
+- [Claude Code Mobile App Accessibility Testing Workflow](/claude-code-mobile-app-accessibility-testing-workflow/)
+- [Claude Code Playwright API Testing Workflow Tutorial](/claude-code-playwright-api-testing-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

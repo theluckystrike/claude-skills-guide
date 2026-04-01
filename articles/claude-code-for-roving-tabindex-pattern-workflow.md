@@ -262,8 +262,8 @@ With these techniques and Claude Code as your development partner, you'll be bui
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Accessibility Workflow for Frontend Engineers](/claude-code-accessibility-workflow-for-frontend-engineers/)
+- [Claude Code Keyboard Navigation Testing Guide](/claude-code-keyboard-navigation-testing-guide/)
+- [Claude MD for Accessibility Requirements: A Practical.](/claude-md-for-accessibility-requirements-a11y/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

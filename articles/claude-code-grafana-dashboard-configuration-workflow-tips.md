@@ -272,9 +272,9 @@ By integrating Claude Code into your Grafana workflow, you reduce manual configu
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Skills Feature Flag Implementation Workflow](/claude-skills-feature-flag-implementation-workflow/)
+- [Claude Skills for Automated Changelog Generation](/claude-skills-for-automated-changelog-generation/)
+- [Claude Code for Bandwhich Bandwidth Monitor Workflow](/claude-code-for-bandwhich-bandwidth-monitor-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

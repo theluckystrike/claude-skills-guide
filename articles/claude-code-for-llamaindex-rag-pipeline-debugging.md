@@ -527,8 +527,8 @@ Remember that successful RAG debugging is iterative. continuously monitor, analy
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [AI Tools for Incident Debugging and Postmortems](/ai-tools-for-incident-debugging-and-postmortems/)
+- [Chrome DevTools Memory Leak Debugging: Find and Fix.](/chrome-devtools-memory-leak-debugging/)
+- [Claude Code CS50 Project Help and Debugging Guide](/claude-code-cs50-project-help-and-debugging-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

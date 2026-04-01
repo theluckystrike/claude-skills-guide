@@ -132,8 +132,8 @@ The honest truth is that both tools are excellent. Claude Code offers more power
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Aider AI Pair Programming Review 2026: An Honest Take](/aider-ai-pair-programming-review-2026-honest-take/)
+- [Is Claude Code Worth It? An Honest Beginner Review 2026](/is-claude-code-worth-it-honest-beginner-review-2026/)
+- [Proton Drive Review: Honest Assessment 2026](/proton-drive-review-honest-assessment-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

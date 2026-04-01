@@ -478,8 +478,8 @@ With these best practices, you'll write Rails models that are both powerful and 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code ActiveRecord Query Optimization Workflow Guide](/claude-code-activerecord-query-optimization-workflow-guide/)
+- [Claude Code Bug Reporting Best Practices](/claude-code-bug-reporting-best-practices/)
+- [Claude Code Gitignore Best Practices](/claude-code-gitignore-best-practices/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

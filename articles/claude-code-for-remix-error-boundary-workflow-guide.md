@@ -257,8 +257,8 @@ The key is to treat error boundaries as a first-class concern in your applicatio
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Claude Error Handling Patterns Workflow Guide](/claude-code-for-claude-error-handling-patterns-workflow-guid/)
+- [Claude Code for Remix Optimistic UI Workflow](/claude-code-for-remix-optimistic-ui-workflow/)
+- [Remix Error Boundaries and Nested Routes: A Practical Guide](/claude-code-remix-error-boundaries-nested-routes-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

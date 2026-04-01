@@ -221,9 +221,9 @@ For developers building web applications, implementing proper visibility handlin
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Autofill Slow: Causes and Solutions for Developers](/chrome-autofill-slow/)
+- [Chrome GPU Process High Memory: Causes and Solutions](/chrome-gpu-process-high-memory/)
+- [Chrome Network Service High CPU Usage: Causes and Solutions for Developers](/chrome-network-service-cpu/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

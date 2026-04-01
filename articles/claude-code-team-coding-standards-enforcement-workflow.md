@@ -253,8 +253,8 @@ Start with your team's most critical standards, build automation incrementally, 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Best Way to Integrate Claude Code into Team Workflow](/best-way-to-integrate-claude-code-into-team-workflow/)
+- [Claude Code Conventional Commits Enforcement Workflow](/claude-code-conventional-commits-enforcement-workflow/)
+- [Claude Code for Dutch Developer Team Workflow Guide](/claude-code-for-dutch-developer-team-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

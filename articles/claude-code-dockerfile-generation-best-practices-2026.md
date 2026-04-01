@@ -489,8 +489,8 @@ The most impactful practices to adopt immediately are: multi-stage builds for ev
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Docker Networking Workflow Guide](/claude-code-docker-networking-workflow-guide/)
+- [Claude Code Dockerfile Generation: Multi-Stage Build Guide](/claude-code-dockerfile-generation-multi-stage-build-guide/)
+- [Claude Code Buildah Container Builds Guide](/claude-code-buildah-container-builds-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

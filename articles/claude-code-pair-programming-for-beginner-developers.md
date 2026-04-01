@@ -196,8 +196,8 @@ The key is to treat Claude as a partner rather than a tool. Engage with it, ask 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Building Supervisor Worker Agent Architecture Tutorial](/building-supervisor-worker-agent-architecture-tutorial/)
+- [Claude Code Algolia GeoSearch Filtering Workflow Tutorial](/claude-code-algolia-geosearch-filtering-workflow-tutorial/)
+- [Claude Code for Resend Email Workflow Tutorial](/claude-code-for-resend-email-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

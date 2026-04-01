@@ -327,8 +327,8 @@ Master these techniques, and Claude Code becomes significantly more effective at
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Best Way to Use Claude Code for Database Migrations](/best-way-to-use-claude-code-for-database-migrations/)
+- [Claude Code Database Seeding Automation](/claude-code-database-seeding-automation/)
+- [Claude Code FastAPI OpenAPI Schema Generation Workflow](/claude-code-fastapi-openapi-schema-generation-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -135,8 +135,8 @@ With systematic diagnosis and targeted fixes, you can reduce Chrome startup from
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Code Troubleshooting Hub](/troubleshooting-hub/)
+- [Chrome Translate Slow: Fix Performance Issues for Power Users](/chrome-translate-slow/)
+- [Chrome Zoom Slow: Diagnosing and Fixing Performance Issues](/chrome-zoom-slow/)
+- [Claude Code Slow Response: How to Fix Latency Issues](/claude-code-slow-response-how-to-fix-latency-issues/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

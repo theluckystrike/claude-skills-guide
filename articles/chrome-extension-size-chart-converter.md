@@ -192,8 +192,8 @@ The most effective extensions balance accuracy with speed, providing conversions
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Extension Return Policy Finder: Tools and Techniques for Developers](/chrome-extension-return-policy-finder/)
+- [Deal Finder Chrome Extension: A Developer's Guide to Building Price Tracking Tools](/deal-finder-chrome-extension/)
+- [How AI Agents Use Tools and Skills Explained](/how-ai-agents-use-tools-and-skills-explained/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

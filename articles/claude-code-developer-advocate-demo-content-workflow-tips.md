@@ -130,8 +130,8 @@ Remember: great demos aren't born, they're built, tested, and refined. Let Claud
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code DevOps Engineer Docker Container Workflow Tips](/claude-code-devops-engineer-docker-container-workflow-tips/)
+- [Claude Code Docker Desktop Workflow Tips](/claude-code-docker-desktop-workflow-tips/)
+- [Claude Code for SAST Static Analysis Workflow Tips](/claude-code-for-sast-static-analysis-workflow-tips/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

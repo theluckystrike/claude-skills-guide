@@ -604,8 +604,8 @@ Claude Code accelerates each phase of Azure Functions development, from initial 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Skills Serverless Function Development Workflow](/claude-skills-serverless-function-development-workflow/)
+- [Claude Code Arabic Interface Development Workflow Tips](/claude-code-arabic-interface-development-workflow-tips/)
+- [Claude Code Development Workflow Templates](/claude-code-development-workflow-templates/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

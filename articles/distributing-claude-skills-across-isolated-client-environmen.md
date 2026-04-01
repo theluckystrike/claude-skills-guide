@@ -400,8 +400,8 @@ The key is to establish clear distribution channels, implement proper versioning
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Code Troubleshooting Hub](/troubleshooting-hub/)
+- [Claude Code API Client TypeScript Guide](/claude-code-api-client-typescript-guide/)
+- [Claude Code Axios HTTP Client Workflow](/claude-code-axios-http-client-workflow/)
+- [Claude Code Client Library Generation Guide](/claude-code-client-library-generation-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -390,9 +390,9 @@ The implementation examples above provide a starting point for developers who wa
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [AI Photo Enhancer Chrome Extension: A Developer Guide](/ai-photo-enhancer-chrome-extension/)
+- [Brave Search MCP Server for Research Automation](/brave-search-mcp-server-research-automation/)
+- [Chrome Extension AWS Console Enhancer: Boost Your Cloud.](/chrome-extension-aws-console-enhancer/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -223,8 +223,8 @@ For large datasets, document the approximate size of each stage's inputs and out
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Rye Python Project Workflow Guide](/claude-code-for-rye-python-project-workflow-guide/)
+- [Claude MD Example for Android Kotlin Project](/claude-md-example-for-android-kotlin-project/)
+- [Claude MD Example for .NET ASP.NET Core Project](/claude-md-example-for-dotnet-aspnet-core-project/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -366,8 +366,8 @@ The key is to start simple, test thoroughly, and iterate. Claude Code is particu
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Fly.io Deployment Automation Workflow](/claude-code-for-fly-io-deployment-automation-workflow/)
+- [Claude Code Vercel Deployment Next.js Workflow Guide](/claude-code-vercel-deployment-nextjs-workflow-guide/)
+- [Fly.io MCP Server Deployment Workflow Guide](/fly-io-mcp-server-deployment-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

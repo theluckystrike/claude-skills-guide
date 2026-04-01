@@ -355,9 +355,9 @@ For production environments, treat exported tests as a starting point. Apply the
 *
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Selenium Browser Testing Automation Guide](/claude-code-selenium-browser-testing-automation-guide/)
+- [Chrome Extension Jira Ticket Creator: Automate Issue.](/chrome-extension-jira-ticket-creator/)
+- [Chrome Extension Microphone Test Tool: Developer Guide](/chrome-extension-microphone-test-tool/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 *

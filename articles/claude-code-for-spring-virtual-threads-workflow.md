@@ -388,8 +388,8 @@ Virtual threads do not replace all concurrency patterns. CPU-bound work still ne
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Java Virtual Threads (Loom) Workflow](/claude-code-for-java-virtual-threads-loom-workflow/)
+- [Claude Code for Node.js Worker Threads Workflow](/claude-code-for-nodejs-worker-threads-workflow/)
+- [Claude Code for Spring WebFlux Workflow Tutorial](/claude-code-for-spring-webflux-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

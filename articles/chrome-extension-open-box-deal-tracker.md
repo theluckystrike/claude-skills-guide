@@ -284,9 +284,9 @@ Building your own open box deal tracker gives you complete control over which re
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Extension Annotate Web Pages: Build Your Own.](/chrome-extension-annotate-web-pages/)
+- [Chrome Extension Black Friday Deal Tracker: A.](/chrome-extension-black-friday-deal-tracker/)
+- [Chrome Extension Employee Recognition Tool: Build Your Own](/chrome-extension-employee-recognition-tool/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

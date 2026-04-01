@@ -367,8 +367,8 @@ For developers, the best extension is the one that does one thing exceptionally 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Code Troubleshooting Hub](/troubleshooting-hub/)
+- [Chrome Sync Slowing Browser: Diagnosis and Solutions for.](/chrome-sync-slowing-browser/)
+- [Chrome Android Slow Fix: Speed Up Your Browser](/chrome-android-slow-fix/)
+- [AI Tools for Incident Debugging and Postmortems](/ai-tools-for-incident-debugging-and-postmortems/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

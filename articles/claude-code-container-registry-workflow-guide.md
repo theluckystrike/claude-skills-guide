@@ -409,8 +409,8 @@ Document your tagging conventions in CLAUDE.md. Adding a note like "images are t
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Container Security Scanning Workflow Guide](/claude-code-container-security-scanning-workflow-guide/)
+- [Claude Code DevOps Engineer Docker Container Workflow Tips](/claude-code-devops-engineer-docker-container-workflow-tips/)
+- [Claude Code for Aqua Security Container Workflow Guide](/claude-code-for-aqua-security-container-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

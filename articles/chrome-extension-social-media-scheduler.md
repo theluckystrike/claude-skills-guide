@@ -404,9 +404,9 @@ The foundation you build here scales into a full-featured social media managemen
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Extension Bulk Social Media Posting: A Developer.](/chrome-extension-bulk-social-media-posting/)
+- [Chrome Extension Hashtag Generator for Social Media: A Developer Guide](/chrome-extension-hashtag-generator-social-media/)
+- [Chrome Extension Social Media Image Resizer](/chrome-extension-social-media-image-resizer/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

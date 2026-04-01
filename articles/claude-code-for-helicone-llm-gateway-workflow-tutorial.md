@@ -235,4 +235,11 @@ Conclusion
 Integrating Claude Code with Helicone's LLM gateway transforms your AI development workflow. You gain observability into every LLM call, reduce costs through intelligent caching, and build more resilient applications with rate limiting and retry logic.
 
 Start with basic integration, then add caching, monitoring, and advanced routing as your needs grow. The combination of Claude Code's agentic capabilities and Helicone's gateway features gives you a powerful foundation for production AI applications.
+
+Related Reading
+
+- [Claude Code for Gateway Routing Pattern Workflow](/claude-code-for-gateway-routing-pattern-workflow/)
+- [Claude Code for JSON Mode LLM Workflow Guide](/claude-code-for-json-mode-llm-workflow-guide/)
+- [Claude Code for LLM Caching Workflow Tutorial](/claude-code-for-llm-caching-workflow-tutorial/)
+
 {% endraw %}

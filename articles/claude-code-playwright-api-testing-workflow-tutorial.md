@@ -332,8 +332,8 @@ Remember: the best test is one that catches bugs before they reach production wh
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Bruno API Client Workflow Tutorial](/claude-code-for-bruno-api-client-workflow-tutorial/)
+- [Claude Code for SAM Local Testing Workflow](/claude-code-for-sam-local-testing-workflow/)
+- [Claude Code for Vonage Voice API Workflow](/claude-code-for-vonage-voice-api-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

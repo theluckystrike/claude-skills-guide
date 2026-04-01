@@ -102,8 +102,8 @@ The key to successful shift-left testing lies in integrating these practices int
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Performance Testing Strategy Workflow](/claude-code-for-performance-testing-strategy-workflow/)
+- [Claude Code Integration Testing Strategy Guide](/claude-code-integration-testing-strategy-guide/)
+- [Vibe Coding Testing Strategy: How to Test AI-Generated Code](/vibe-coding-testing-strategy-how-to-test-ai-code/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -707,8 +707,8 @@ Remember: snapshots are a tool, not a crutch. Combine them with traditional asse
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Jest Unit Testing Workflow Guide](/claude-code-jest-unit-testing-workflow-guide/)
+- [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)
+- [Claude Code API Regression Testing Workflow Guide](/claude-code-api-regression-testing-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

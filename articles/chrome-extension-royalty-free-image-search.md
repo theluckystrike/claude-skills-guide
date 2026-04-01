@@ -511,9 +511,9 @@ As you scale toward production, the most important investments are rate limit ca
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [AI Paraphraser Chrome Extension Free: A Developer's Guide](/ai-paraphraser-chrome-extension-free/)
+- [AI Search Enhancer Chrome Extension: A Developer Guide](/ai-search-enhancer-chrome-extension/)
+- [AI Writing Assistant Chrome Extension Free: A Developer's Guide](/ai-writing-assistant-chrome-extension-free/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

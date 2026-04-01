@@ -311,8 +311,8 @@ Start by placing the core SRE skill files in your `.claude/` directory, configur
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code SRE Postmortem Documentation Workflow Guide](/claude-code-sre-postmortem-documentation-workflow-guide/)
+- [Claude Skills for Site Reliability Engineers SRE](/claude-skills-for-site-reliability-engineers-sre/)
+- [Claude Code for Engineering Wiki Workflow Tutorial](/claude-code-for-engineering-wiki-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

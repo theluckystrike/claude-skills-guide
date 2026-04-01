@@ -392,7 +392,7 @@ Verify that text extraction handles various page structures correctly, and test 
 
 Related Reading
 
-- [Chrome Extension Development: Getting Started Guide](/chrome-extension-development-getting-started/)
+- [Chrome Extension Development: Getting Started Guide](/chrome-extension-development-2026/)
 - [Web Speech API Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 

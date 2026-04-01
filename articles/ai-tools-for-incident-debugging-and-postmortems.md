@@ -356,8 +356,8 @@ The key is integrating these tools into your existing workflows rather than trea
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Code Troubleshooting Hub](/troubleshooting-hub/)
+- [Chrome Developer Tools Running Slow? Here is How to Fix It](/chrome-developer-tools-slow/)
+- [Chrome DevTools Memory Leak Debugging: Find and Fix.](/chrome-devtools-memory-leak-debugging/)
+- [Claude Code CS50 Project Help and Debugging Guide](/claude-code-cs50-project-help-and-debugging-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

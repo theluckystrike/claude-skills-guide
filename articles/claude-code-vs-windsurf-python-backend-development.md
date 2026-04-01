@@ -223,8 +223,8 @@ The AI coding assistant landscape continues evolving rapidly. Both Claude Code a
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code vs Windsurf for AI Development](/claude-code-vs-windsurf-for-ai-development/)
+- [Claude Code vs Cursor for React Development](/claude-code-vs-cursor-for-react-development/)
+- [Claude Code vs Windsurf: Tailwind CSS Frontend.](/claude-code-vs-windsurf-tailwind-css-frontend/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

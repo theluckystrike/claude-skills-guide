@@ -671,8 +671,8 @@ A production-ready extension also handles the edge cases: service worker restart
 
 Related Reading
 
-- [Chrome Extension Development: Complete Guide](/chrome-extension-development-complete-guide-2026/)
-- [Best Chrome Extensions for Social Media Managers](/best-chrome-extensions-social-media-managers-2026/)
+- [Chrome Extension Development: Complete Guide](/chrome-extension-development-2026/)
+- Best Chrome Extensions for Social Media Managers
 - [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -281,8 +281,8 @@ Remember: every expert contributor began exactly where you are now. The communit
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for First OSS Contribution Workflow Guide](/claude-code-for-first-oss-contribution-workflow-guide/)
+- [Claude Code for OSS Issue Triage Workflow Tutorial](/claude-code-for-oss-issue-triage-workflow-tutorial/)
+- [Claude Code for Claude Issue Triage Workflow Tutorial Guide](/claude-code-for-claude-issue-triage-workflow-tutorial-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -345,9 +345,9 @@ For persistent issues, consult your specific skill documentation or rebuild from
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Code Troubleshooting Hub](/troubleshooting-hub/)
+- [Claude Code ESM Module Not Found Import Error Fix](/claude-code-esm-module-not-found-import-error-fix/)
+- [Claude Code Docker Permission Denied Bind Mount Error](/claude-code-docker-permission-denied-bind-mount-error/)
+- [Claude Code Creates Files in Wrong Directory Fix](/claude-code-creates-files-in-wrong-directory-fix/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

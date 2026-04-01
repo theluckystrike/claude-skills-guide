@@ -298,9 +298,9 @@ Building a solid batch image download extension requires handling many real-worl
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Best Way to Batch Claude Code Requests to Reduce API Calls](/best-way-to-batch-claude-code-requests-reduce-api-calls/)
+- [Chrome Downloads Slow: A Developer's Guide to Fixing Download Performance](/chrome-downloads-slow/)
+- [Chrome Enterprise Bundle Download: A Developer's Guide](/chrome-enterprise-bundle-download/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

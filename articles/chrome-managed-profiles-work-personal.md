@@ -428,8 +428,8 @@ Start with two profiles. Work and Personal. and expand as your needs evolve. Man
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Safe Browsing Enterprise Settings: A Developer's Guide](/chrome-safe-browsing-enterprise-settings/)
+- [How to Clear Chrome Cache for Faster Browsing: A Developer's Guide](/clear-chrome-cache-speed/)
+- [AI Citation Generator Chrome: A Developer Guide](/ai-citation-generator-chrome/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

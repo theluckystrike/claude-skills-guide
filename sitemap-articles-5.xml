@@ -1,6 +1,7 @@
 ---
 layout: null
 permalink: /sitemap-articles-5.xml
+sitemap: false
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -507,4 +508,7 @@ permalink: /sitemap-articles-5.xml
   <url><loc>https://claudecodeguides.com/zed-editor-ai-features-review-for-developers-2026/</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://claudecodeguides.com/zoom-mcp-server-meeting-summary-automation/</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://claudecodeguides.com/zotero-chrome-extension-setup-guide/</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://claudecodeguides.com/claude-ai-cornell-notes-how-to-create-guide/</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://claudecodeguides.com/claude-api-timeout-error-handling-retry-guide/</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://claudecodeguides.com/claude-code-mcp-timeout-settings-configuration-guide/</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

@@ -202,8 +202,8 @@ Start building your CONTRIBUTING.md today, and watch your contributor community 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Writing CLAUDE.md Files That Define Your Project's API Versioning Strategy for AI 2026](/writing-claude-md-files-that-define-your-projects-api-versio/)
+- [AI SEO Writing Chrome Extension: A Developer's Guide](/ai-seo-writing-chrome-extension/)
+- [AI Writing Assistant Chrome Extension Free: A Developer's Guide](/ai-writing-assistant-chrome-extension-free/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

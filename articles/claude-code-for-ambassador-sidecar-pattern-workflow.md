@@ -473,8 +473,8 @@ Remember: the key to successful sidecar deployments is treating the sidecar as a
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for BFF API Pattern Workflow Guide](/claude-code-for-bff-api-pattern-workflow-guide/)
+- [Claude Code for Claim Check Pattern Workflow](/claude-code-for-claim-check-pattern-workflow/)
+- [Claude Code for Flink CEP Pattern Workflow Guide](/claude-code-for-flink-cep-pattern-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

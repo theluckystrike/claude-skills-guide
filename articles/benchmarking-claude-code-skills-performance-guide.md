@@ -240,6 +240,6 @@ Related Reading
 - [Claude Skills Slow Performance: Speed Up Guide](/claude-skills-slow-performance-speed-up-guide/)
 - [Claude Skills with GitHub Actions CI/CD Pipeline 2026](/claude-skills-with-github-actions-ci-cd-pipeline/)
 
-Related guides: [Best Way to Reduce Claude Code API Token Costs](/best-way-to-reduce-claude-code-api-token-costs/)
+Related guides: Best Way to Reduce Claude Code API Token Costs
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

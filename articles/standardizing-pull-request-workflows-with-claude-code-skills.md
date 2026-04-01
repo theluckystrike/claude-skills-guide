@@ -273,8 +273,8 @@ Start small. Pick one problem, maybe it's always forgetting to add tests, or PRs
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Automated Alt Text Generation Workflow](/claude-code-automated-alt-text-generation-workflow/)
+- [Claude Code Batch File Processing Workflow](/claude-code-batch-file-processing-workflow/)
+- [Extended Thinking + Claude Skills: Integration Guide](/claude-code-extended-thinking-skills-integration-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

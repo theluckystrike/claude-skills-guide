@@ -405,7 +405,7 @@ Related Reading
 
 - [Claude Code Shift Left Testing Strategy Guide](/claude-code-shift-left-testing-strategy-guide/)
 - [Claude Code Test Reporting Workflow Guide](/claude-code-test-reporting-workflow-guide/)
-- [Claude Code Test Isolation Strategies Guide](/claude-code-test-isolation-strategies-guide/)
+- Claude Code Test Isolation Strategies Guide
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

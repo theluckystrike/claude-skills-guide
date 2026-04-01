@@ -269,4 +269,11 @@ Building webhook handlers with Claude Code combines the reliability of tradition
 The key to success is treating webhooks as part of a larger event-driven architecture rather than isolated endpoints. When integrated properly with Claude Code skills, your webhook handlers become intelligent components that can analyze, route, and respond to events with minimal manual intervention.
 
 Start building your webhook handler today, and use real-time event processing with Claude Code.
+
+Related Reading
+
+- [Claude Code for Apache Drill Workflow Tutorial](/claude-code-for-apache-drill-workflow-tutorial/)
+- [Claude Code for Astro Actions Workflow Tutorial](/claude-code-for-astro-actions-workflow-tutorial/)
+- [Claude Code for Automated PR Checks Workflow Tutorial](/claude-code-for-automated-pr-checks-workflow-tutorial/)
+
 {% endraw %}

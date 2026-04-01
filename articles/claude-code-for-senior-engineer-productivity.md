@@ -242,8 +242,8 @@ The deeper productivity gain is qualitative: senior engineers who delegate mecha
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Extension Focus Timer Productivity: A Developer Guide](/chrome-extension-focus-timer-productivity/)
+- [Building a Chrome Extension for Senior Discounts: A Developer Guide](/chrome-extension-senior-discount-chrome/)
+- [Claude Code DevOps Engineer Docker Container Workflow Tips](/claude-code-devops-engineer-docker-container-workflow-tips/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

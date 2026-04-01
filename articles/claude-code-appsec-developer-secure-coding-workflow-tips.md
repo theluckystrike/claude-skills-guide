@@ -433,9 +433,9 @@ Start implementing these workflow tips today, and you'll see improvements in you
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Arabic Interface Development Workflow Tips](/claude-code-arabic-interface-development-workflow-tips/)
+- [Claude Code Grafana Dashboard Configuration Workflow Tips](/claude-code-grafana-dashboard-configuration-workflow-tips/)
+- [Claude Code Workflow Optimization Tips for 2026](/claude-code-workflow-optimization-tips-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

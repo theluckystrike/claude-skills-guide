@@ -186,8 +186,8 @@ Variable name tracking issues in Claude Code are frustrating but solvable. By un
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Lost Context Mid Task. How to Recover](/claude-code-lost-context-mid-task-how-to-recover/)
+- [How Do I Know Which Claude Skill Is Currently Active?](/how-do-i-know-which-claude-skill-is-currently-active/)
+- [How to Use AI Coding Tools Effectively in 2026](/how-to-use-ai-coding-tools-effectively-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

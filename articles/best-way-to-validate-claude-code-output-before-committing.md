@@ -195,8 +195,8 @@ Remember that Claude Code is a powerful tool, but it works best as a collaborati
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [What Is the Best Way to Organize Claude Skills in a Monorepo](/what-is-the-best-way-to-organize-claude-skills-in-a-monorepo/)
+- [Accessible Forms with Claude Code: Error Handling Guide](/claude-code-accessible-forms-validation-error-handling-guide/)
+- [Claude Code ActiveRecord Scopes and Callbacks Best Practices](/claude-code-activerecord-scopes-callbacks-best-practices/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

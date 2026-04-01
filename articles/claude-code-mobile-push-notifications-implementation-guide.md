@@ -271,8 +271,8 @@ Push notifications remain a powerful tool for mobile engagement when implemented
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for React Native Push Notifications Guide](/claude-code-for-react-native-push-notifications-guide/)
+- [AI Reading Assistant Chrome: Technical Implementation Guide](/ai-reading-assistant-chrome/)
+- [Chrome Enterprise Context-Aware Access: Implementation Guide](/chrome-enterprise-context-aware-access/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

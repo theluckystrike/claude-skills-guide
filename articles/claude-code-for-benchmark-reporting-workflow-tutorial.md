@@ -237,9 +237,9 @@ With the foundation we've built here, you have everything needed to establish pr
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for CDN Optimization Workflow Tutorial](/claude-code-for-cdn-optimization-workflow-tutorial/)
+- [Claude Code for Code Bookmark Workflow Tutorial Guide](/claude-code-for-code-bookmark-workflow-tutorial-guide/)
+- [Claude Code for Decision Log Workflow: A Complete.](/claude-code-for-decision-log-workflow-tutorial-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

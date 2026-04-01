@@ -307,9 +307,9 @@ The most effective implementations focus on specific niches, whether that's Link
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [AI Blog Post Generator for Chrome: A Developer's Guide](/ai-blog-post-generator-chrome/)
+- [AI Citation Generator Chrome: A Developer Guide](/ai-citation-generator-chrome/)
+- [AI Password Generator Chrome Extension: A Developer Guide](/ai-password-generator-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

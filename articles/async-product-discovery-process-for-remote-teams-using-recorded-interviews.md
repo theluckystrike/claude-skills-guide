@@ -139,9 +139,9 @@ Start small with one discovery cycle using this approach. Measure how team engag
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [How to Run Async Team Retrospectives Using Shared Documents and Recorded Summaries](/async-team-retrospective-using-shared-documents-and-recorded-summaries/)
+- [Claude Code Data Retention Policy Workflow](/claude-code-data-retention-policy-workflow/)
+- [Claude Code for Aurora Serverless V2 Workflow](/claude-code-for-aurora-serverless-v2-workflow/)
 
 Built by theluckystrike. More at https://zovo.one
 

@@ -209,8 +209,8 @@ Start by integrating Claude Code into small parts of your workflow, perhaps just
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for wasm-bindgen Workflow Tutorial](/claude-code-for-wasm-bindgen-workflow-tutorial/)
+- [Claude Code Actix Web Rust API Guide](/claude-code-actix-web-rust-api-guide/)
+- [Claude Code Axum Rust Web Framework Guide](/claude-code-axum-rust-web-framework-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

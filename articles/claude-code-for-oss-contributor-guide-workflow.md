@@ -209,8 +209,8 @@ Remember: every expert contributor started somewhere. Your first PR might take l
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for First OSS Contribution Workflow Guide](/claude-code-for-first-oss-contribution-workflow-guide/)
+- [Claude Code for OSS Community Engagement Workflow](/claude-code-for-oss-community-engagement-workflow/)
+- [Claude Code for OSS Deprecation Workflow Tutorial](/claude-code-for-oss-deprecation-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

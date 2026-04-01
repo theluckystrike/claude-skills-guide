@@ -311,9 +311,9 @@ For developers looking to customize their translation experience, the Chrome Ext
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Enterprise Startup Pages Policy: A Practical Guide](/chrome-enterprise-startup-pages-policy/)
+- [Chrome Extension Annotate Web Pages: Build Your Own.](/chrome-extension-annotate-web-pages/)
+- [Chrome Preload Pages Setting: A Complete Guide for.](/chrome-preload-pages-setting/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

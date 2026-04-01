@@ -200,8 +200,8 @@ Start with the basic integrations outlined here, then customize them to match yo
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Meilisearch Integration Workflow](/claude-code-for-meilisearch-integration-workflow/)
+- [Claude Code + LangChain Integration: Agent Workflow](/claude-code-langchain-integration-agent-workflow-guide/)
+- [Building Your First MCP Tool Integration Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

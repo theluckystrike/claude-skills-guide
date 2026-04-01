@@ -262,8 +262,8 @@ Remember: effective Kubernetes monitoring isn't about collecting every possible 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Community Health Metrics Documentation Workflow](/claude-code-community-health-metrics-documentation-workflow/)
+- [Claude Code Flutter State Management Workflow Best Practices](/claude-code-flutter-state-management-workflow-bestpractices/)
+- [Claude Code for Code Review Metrics Workflow Guide](/claude-code-for-code-review-metrics-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

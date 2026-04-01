@@ -176,9 +176,9 @@ Start applying these techniques today, and you'll never have to recover overwrit
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [How to Stop Claude Code from Using Snake Case in TypeScript](/how-to-stop-claude-code-from-using-snake-case-in-typescript/)
+- [Best Way to Validate Claude Code Output Before Committing](/best-way-to-validate-claude-code-output-before-committing/)
+- [Chrome Update Broke Speed? Fix Performance Issues After Updates](/chrome-update-broke-speed-fix/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 ```

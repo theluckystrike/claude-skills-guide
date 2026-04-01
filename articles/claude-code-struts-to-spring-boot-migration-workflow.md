@@ -425,9 +425,9 @@ Start your migration today by installing the recommended skills and executing th
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Spring Boot Microservices Guide](/claude-code-spring-boot-microservices-guide/)
+- [Claude Code Backbone.js to Vue Migration Guide](/claude-code-backbone-js-to-vue-migration-guide/)
+- [Claude Code for GraphQL to REST Migration Guide](/claude-code-for-graphql-to-rest-migration-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

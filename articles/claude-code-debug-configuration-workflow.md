@@ -172,9 +172,9 @@ The key is patience: configuration problems often have simple causes, and method
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Code Troubleshooting Hub](/troubleshooting-hub/)
+- [Claude Code Crashes When Loading Skill: Debug Guide](/claude-code-crashes-when-loading-skill-debug-steps/)
+- [Claude Code Data Engineer ETL Debugging Daily Workflow](/claude-code-data-engineer-etl-debugging-daily-workflow/)
+- [Claude Code Error: npm install Fails in Skill Workflow](/claude-code-error-npm-install-fails-in-skill-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

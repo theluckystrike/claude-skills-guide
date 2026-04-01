@@ -313,9 +313,9 @@ With proper planning and the right tools, your team can complete the migration w
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code CSS Animations Workflow Guide](/claude-code-css-animations-workflow-guide/)
+- [Claude Code Dark Mode Implementation Guide](/claude-code-dark-mode-implementation-guide/)
+- [Claude Code Backbone.js to Vue Migration Guide](/claude-code-backbone-js-to-vue-migration-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

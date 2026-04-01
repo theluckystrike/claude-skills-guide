@@ -258,8 +258,8 @@ Related Topics: [Docker Compose Development Workflow](/claude-code-docker-compos
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Docker Desktop Workflow Tips](/claude-code-docker-desktop-workflow-tips/)
+- [Claude Code Security Engineer Threat Modeling Workflow Tips](/claude-code-security-engineer-threat-modeling-workflow-tips/)
+- [Chrome Extension Docker Dashboard: Streamlined Container.](/chrome-extension-docker-dashboard/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

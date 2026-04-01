@@ -203,8 +203,8 @@ By following the patterns and practices outlined in this guide, you can use the 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [How to Use AI Coding Tools Effectively in 2026](/how-to-use-ai-coding-tools-effectively-2026/)
+- [Claude Code Cold Fusion Modernization Workflow Guide](/claude-code-cold-fusion-modernization-workflow-guide/)
+- [Claude Code Daily Workflow for Frontend Developers Guide](/claude-code-daily-workflow-for-frontend-developers-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

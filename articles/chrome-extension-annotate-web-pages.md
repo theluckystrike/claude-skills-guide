@@ -351,9 +351,9 @@ Building a web annotation extension demonstrates fundamental Chrome extension pa
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Extension Employee Recognition Tool: Build Your Own](/chrome-extension-employee-recognition-tool/)
+- [Chrome Extension Google Drive Sidebar: Build Your Own](/chrome-extension-google-drive-sidebar/)
+- [Chrome Extension Markdown Editor: Build Your Own Browser-Based Writing Tool](/chrome-extension-markdown-editor/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

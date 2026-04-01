@@ -287,9 +287,9 @@ The key is starting simple, organize your most-used prompts first, then expand a
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Prompt Chaining Workflows Tutorial Guide](/claude-code-for-prompt-chaining-workflows-tutorial-guide/)
+- [AI Bookmark Manager for Chrome: Organizing Your Web Knowledge](/ai-bookmark-manager-chrome/)
+- [Best Cookie Manager Chrome Extensions for Developers in 2026](/best-cookie-manager-chrome/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

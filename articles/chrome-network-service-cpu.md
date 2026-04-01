@@ -320,8 +320,8 @@ High CPU usage from Chrome's network service often stems from extension conflict
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Autofill Slow: Causes and Solutions for Developers](/chrome-autofill-slow/)
+- [Chrome GPU Process High Memory: Causes and Solutions](/chrome-gpu-process-high-memory/)
+- [Chrome WebGL Slow: Causes and Solutions for Developers](/chrome-webgl-slow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

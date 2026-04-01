@@ -528,9 +528,9 @@ Claude Code makes JMH benchmarking accessible by handling project setup, generat
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for API Benchmark Workflow Tutorial Guide](/claude-code-for-api-benchmark-workflow-tutorial-guide/)
+- [Claude Code for Benchmark CI Integration Workflow](/claude-code-for-benchmark-ci-integration-workflow/)
+- [Claude Code for Benchmark Regression Workflow Tutorial](/claude-code-for-benchmark-regression-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

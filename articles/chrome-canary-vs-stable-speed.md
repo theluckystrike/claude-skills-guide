@@ -231,8 +231,8 @@ DevTools performance panel accuracy: The performance profiler in Canary sometime
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [AI Speed Reader Chrome Extension: A Developer Guide](/ai-speed-reader-chrome-extension/)
+- [Best DNS Settings for Chrome to Speed Up Your Browser](/best-dns-chrome-speed/)
+- [Browser Speed Benchmark 2026: A Practical Guide for Developers](/browser-speed-benchmark-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

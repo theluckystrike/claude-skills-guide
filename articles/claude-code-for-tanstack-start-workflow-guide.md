@@ -275,8 +275,8 @@ By following the workflows outlined in this guide, proper project setup, type-sa
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for T3 Stack tRPC Next.js Workflow](/claude-code-for-t3-stack-trpc-nextjs-workflow/)
+- [Claude MD Example for Remix Fullstack Application](/claude-md-example-for-remix-fullstack-application/)
+- [Claude Code Accessibility Workflow for Frontend Engineers](/claude-code-accessibility-workflow-for-frontend-engineers/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

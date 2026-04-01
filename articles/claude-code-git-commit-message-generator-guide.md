@@ -162,8 +162,8 @@ The investment in setup pays dividends in readable commit history and reduced co
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Git Hooks: Automate Your Pre-Commit Workflow](/claude-code-git-hooks-pre-commit-automation/)
+- [AI Blog Post Generator for Chrome: A Developer's Guide](/ai-blog-post-generator-chrome/)
+- [AI Citation Generator Chrome: A Developer Guide](/ai-citation-generator-chrome/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

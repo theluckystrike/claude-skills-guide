@@ -521,8 +521,8 @@ Many React developers ultimately use both tools for different aspects of their w
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Code Comparisons Hub](/comparisons-hub/)
+- [Claude Code vs Cursor 2026: Detailed Comparison for.](/claude-code-vs-cursor-2026-detailed-comparison/)
+- [Claude Code vs Cursor: Debugging Runtime Errors](/claude-code-vs-cursor-debugging-runtime-errors/)
+- [Claude Code React Testing Library Workflow](/claude-code-react-testing-library-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

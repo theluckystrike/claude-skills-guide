@@ -244,8 +244,8 @@ The key is treating your documentation workflow as a system worth optimizing, be
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Developer Blog Post Writing Workflow](/claude-code-for-developer-blog-post-writing-workflow/)
+- [Claude Code for Technical Documentation Workflow Guide](/claude-code-for-technical-documentation-workflow-guide/)
+- [Claude Code LaTeX Document Writing Workflow Tutorial](/claude-code-latex-document-writing-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

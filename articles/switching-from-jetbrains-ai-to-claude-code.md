@@ -183,8 +183,8 @@ Give yourself two weeks to adapt. The initial friction transforms into productiv
 
 Related Reading
 
-- [Claude Code Skills: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Ant to Maven Gradle Build Migration](/claude-code-for-ant-to-maven-gradle-build-migration/)
+- [Async Product Discovery Process for Remote Teams Using Recorded Interviews](/async-product-discovery-process-for-remote-teams-using-recorded-interviews/)
+- [Claude Code Data Retention Policy Workflow](/claude-code-data-retention-policy-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -486,8 +486,8 @@ Combine with complementary skills like `frontend-design`, `tdd`, and `supermemor
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude MD Example for Elixir Phoenix Application](/claude-md-example-for-elixir-phoenix-application/)
+- [Claude MD Example for Laravel PHP Application](/claude-md-example-for-laravel-php-application/)
+- [Building a REST API with Claude Code Tutorial](/building-a-rest-api-with-claude-code-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

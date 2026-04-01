@@ -100,8 +100,8 @@ The developers who get the most from Claude Code treat each episode as a startin
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code vs Gemini CLI for Developers 2026](/claude-code-vs-gemini-cli-for-developers-2026/)
+- [Zed Editor AI Features Review for Developers 2026](/zed-editor-ai-features-review-for-developers-2026/)
+- [Is Claude Code Worth It for Data Science Work? A.](/is-claude-code-worth-it-data-science-work/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

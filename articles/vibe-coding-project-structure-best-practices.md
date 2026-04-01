@@ -196,8 +196,8 @@ Start with simple structures and evolve as needed. Your future self, and every A
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Vibe Coding for Web Apps: NextJS + Vercel Guide](/vibe-coding-for-web-apps-nextjs-vercel-guide/)
+- [Vibe Coding Testing Strategy: How to Test AI-Generated Code](/vibe-coding-testing-strategy-how-to-test-ai-code/)
+- [Claude Code ActiveRecord Scopes and Callbacks Best Practices](/claude-code-activerecord-scopes-callbacks-best-practices/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

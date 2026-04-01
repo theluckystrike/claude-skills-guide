@@ -196,8 +196,8 @@ Chrome's privacy sandbox initiatives are gradually reducing third-party cookie r
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [AI Screen Reader Chrome Extension: A Complete Guide for Developers](/ai-screen-reader-chrome-extension/)
+- [Is Chrome's Built-in Password Manager Safe? A Developer Perspective](/chrome-built-in-password-manager-safe/)
+- [Chrome Extension Email Snooze Scheduler - Complete Guide for Developers](/chrome-extension-email-snooze-scheduler/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

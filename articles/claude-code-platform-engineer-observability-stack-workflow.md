@@ -310,8 +310,8 @@ The key is to treat monitoring as code, version controlled, reviewed, and automa
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Kubernetes Monitoring with Prometheus](/claude-code-kubernetes-monitoring-prometheus/)
+- [Claude Code for Bandwhich Bandwidth Monitor Workflow](/claude-code-for-bandwhich-bandwidth-monitor-workflow/)
+- [Claude Code Kubernetes Logging Stack Guide](/claude-code-kubernetes-logging-stack-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

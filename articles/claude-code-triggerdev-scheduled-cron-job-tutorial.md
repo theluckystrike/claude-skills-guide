@@ -228,8 +228,8 @@ Remember to monitor your jobs initially and adjust timeouts and schedules based 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code BullMQ Delayed Retry Job Workflow Guide](/claude-code-bullmq-delayed-retry-job-workflow-guide/)
+- [Claude Code Trigger.dev Background Job Workflow Guide](/claude-code-triggerdev-background-job-workflow-guide/)
+- [Claude Code Upstash QStash Scheduled Tasks Setup Guide](/claude-code-upstash-qstash-scheduled-tasks-setup-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

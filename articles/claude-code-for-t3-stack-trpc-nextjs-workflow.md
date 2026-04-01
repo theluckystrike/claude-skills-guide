@@ -282,8 +282,8 @@ The key is using Claude Code not just for code generation, but as a pair program
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for TanStack Start Workflow Guide](/claude-code-for-tanstack-start-workflow-guide/)
+- [Claude Code Next.js Authentication NextAuth Guide](/claude-code-nextjs-authentication-next-auth-guide/)
+- [Claude Code Next.js Image Optimization Guide](/claude-code-nextjs-image-optimization-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

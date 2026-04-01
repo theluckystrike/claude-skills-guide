@@ -147,8 +147,8 @@ The future of coding is collaborative, between human developers and AI assistant
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Cline AI Code Assistant Review 2026](/cline-ai-code-assistant-review-2026/)
+- [Continue Dev Review: Open Source AI Coding in 2026](/continue-dev-review-open-source-ai-coding-2026/)
+- [Best AI Code Review Tools 2026 Guide](/best-ai-code-review-tools-2026-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

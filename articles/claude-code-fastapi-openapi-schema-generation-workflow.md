@@ -303,8 +303,8 @@ By following this workflow with Claude Code, you can rapidly develop well-docume
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code OpenAPI Spec Generation Guide](/claude-code-openapi-spec-generation-guide/)
+- [Claude Code for Postman Collection Generation Workflow](/claude-code-for-postman-collection-generation-workflow/)
+- [Claude Code OpenAPI Client Generation Guide](/claude-code-openapi-client-generation-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

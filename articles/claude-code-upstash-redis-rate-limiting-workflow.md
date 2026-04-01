@@ -307,9 +307,9 @@ Combining Claude Code's automation capabilities with Upstash Redis creates a pow
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Confluence Documentation Guide](/claude-code-confluence-documentation-guide/)
+- [ClickUp MCP Server: Workflow Automation Guide](/clickup-mcp-server-workflow-automation-guide/)
+- [Ghost MCP Server: Blogging Automation Workflow](/ghost-mcp-server-blogging-automation-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 ```

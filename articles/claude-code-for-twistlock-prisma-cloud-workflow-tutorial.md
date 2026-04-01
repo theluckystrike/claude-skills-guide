@@ -148,4 +148,11 @@ Conclusion
 Integrating Claude Code with Twistlock Prisma Cloud transforms your security operations from reactive to proactive. By automating vulnerability scanning, compliance checks, and alert processing, you enable your development team to focus on building secure applications while maintaining solid security posture.
 
 Start with simple automation tasks and gradually expand to more complex workflows as you become comfortable with the integration. The combination of natural language processing and programmatic security tooling creates powerful possibilities for DevSecOps excellence.
+
+Related Reading
+
+- [Claude Code for Prisma Cloud Workflow Tutorial](/claude-code-for-prisma-cloud-workflow-tutorial/)
+- [Claude Code for Zuora Billing Workflow Tutorial](/claude-code-for-zuora-billing-workflow-tutorial/)
+- [Claude Code for Go Fuzz Workflow Tutorial Guide](/claude-code-for-go-fuzz-workflow-tutorial-guide/)
+
 {% endraw %}

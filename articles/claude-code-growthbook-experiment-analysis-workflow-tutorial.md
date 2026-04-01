@@ -171,8 +171,8 @@ Remember: the goal isn't just to run experiments, but to learn from them effecti
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code GrowthBook Visual Editor A/B Test Guide](/claude-code-growthbook-visual-editor-ab-test-guide/)
+- [Claude Code for Call Graph Analysis Workflow Tutorial](/claude-code-for-call-graph-analysis-workflow-tutorial/)
+- [Claude Code for Dataflow Analysis Workflow Tutorial](/claude-code-for-dataflow-analysis-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

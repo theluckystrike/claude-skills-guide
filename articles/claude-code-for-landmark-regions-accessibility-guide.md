@@ -501,8 +501,8 @@ Start by auditing your current projects for landmark presence using axe-core, th
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [AI Accessibility Chrome Extension: A Developer Guide](/ai-accessibility-chrome-extension/)
+- [AI Coding Tools for Accessibility Improvements](/ai-coding-tools-for-accessibility-improvements/)
+- [Chrome Extension Accessibility Audit: A Practical Guide](/chrome-extension-accessibility-audit/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -277,8 +277,8 @@ Start your next flow-based project with Claude Code, and experience how AI-assis
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Kotlin Delegation Pattern Workflow](/claude-code-for-kotlin-delegation-pattern-workflow/)
+- [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)
+- [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

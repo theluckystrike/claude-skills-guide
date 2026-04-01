@@ -372,8 +372,8 @@ Effective polyglot configuration means Claude spends less time guessing your too
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Multi-Language Navigation Workflow](/claude-code-for-multi-language-navigation-workflow/)
+- [Claude Code Multi-Language Comment and Docstring Workflow](/claude-code-multi-language-comment-and-docstring-workflow/)
+- [AI Coding Tools for Code Migration Projects](/ai-coding-tools-for-code-migration-projects/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

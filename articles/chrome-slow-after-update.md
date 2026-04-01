@@ -290,8 +290,8 @@ Chrome slow after an update usually stems from cache incompatibilities, extensio
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Autofill Slow: Causes and Solutions for Developers](/chrome-autofill-slow/)
+- [Chrome WebGL Slow: Causes and Solutions for Developers](/chrome-webgl-slow/)
+- [Chrome Extension Miro Whiteboard: A Complete Guide for Developers and Power Users](/chrome-extension-miro-whiteboard/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -456,8 +456,8 @@ Your users. and your Lighthouse scores. will thank you.
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Imgix Image Optimization Workflow](/claude-code-for-imgix-image-optimization-workflow/)
+- [Claude Code Next.js Image Optimization Guide](/claude-code-nextjs-image-optimization-guide/)
+- [AI Coding Tools for Performance Optimization: A.](/ai-coding-tools-for-performance-optimization/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

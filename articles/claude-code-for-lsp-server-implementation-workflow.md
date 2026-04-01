@@ -271,9 +271,9 @@ The key is treating Claude Code as a pair programmer who understands the LSP spe
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Astro Server Endpoints Workflow](/claude-code-for-astro-server-endpoints-workflow/)
+- [Claude Code for Custom LSP Diagnostics Workflow](/claude-code-for-custom-lsp-diagnostics-workflow/)
+- [Claude Code for Language Server Protocol Workflow Guide](/claude-code-for-language-server-protocol-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

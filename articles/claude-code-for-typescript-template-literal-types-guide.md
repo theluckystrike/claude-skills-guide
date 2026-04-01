@@ -421,8 +421,8 @@ Template literal types unlock sophisticated type-level programming in TypeScript
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for TypeScript Conditional Types Guide](/claude-code-for-typescript-conditional-types-guide/)
+- [AI Agent Memory Types Explained for Developers](/ai-agent-memory-types-explained-for-developers/)
+- [Best Way to Use Claude Code with TypeScript Projects](/best-way-to-use-claude-code-with-typescript-projects/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

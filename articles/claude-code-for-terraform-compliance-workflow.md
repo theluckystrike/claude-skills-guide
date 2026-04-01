@@ -280,8 +280,8 @@ The key is starting simple: set up a compliance context, add basic checks to you
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Audit Logging for Enterprise Compliance Workflow](/claude-code-audit-logging-for-enterprise-compliance-workflow/)
+- [Claude Code for CDKTF Terraform CDK Workflow](/claude-code-for-cdktf-terraform-cdk-workflow/)
+- [Claude Code for License Compliance Workflow Tutorial](/claude-code-for-license-compliance-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

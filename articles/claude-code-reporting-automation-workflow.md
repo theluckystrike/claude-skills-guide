@@ -154,8 +154,8 @@ Building effective reporting automation with Claude Code requires understanding 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Automated Alt Text Generation Workflow](/claude-code-automated-alt-text-generation-workflow/)
+- [Claude Code Batch File Processing Workflow](/claude-code-batch-file-processing-workflow/)
+- [How to Use Claude Skills with n8n Automation Workflows](/how-to-use-claude-skills-with-n8n-automation-workflows/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

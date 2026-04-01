@@ -207,8 +207,8 @@ Building effective CLAUDE.md files takes iteration. Start with the basics, verif
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Code Troubleshooting Hub](/troubleshooting-hub/)
+- [How to Fix Claude Code Ignoring My claude.md File](/how-to-fix-claude-code-ignoring-my-claude-md-file/)
+- [Claude Code Creates Files in Wrong Directory Fix](/claude-code-creates-files-in-wrong-directory-fix/)
+- [Claude Code Error Connection Refused Localhost Fix](/claude-code-error-connection-refused-localhost-fix/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

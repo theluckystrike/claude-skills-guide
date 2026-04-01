@@ -269,8 +269,8 @@ Start your next coding session with clear intent, communicate context generously
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Aider AI Pair Programming Review 2026: An Honest Take](/aider-ai-pair-programming-review-2026-honest-take/)
+- [Claude Code for Competitive Programming Practice Workflow](/claude-code-for-competitive-programming-practice-workflow/)
+- [Claude Code for Pair Review Workflow Tutorial Guide](/claude-code-for-pair-review-workflow-tutorial-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

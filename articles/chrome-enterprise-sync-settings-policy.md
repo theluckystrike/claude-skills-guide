@@ -118,8 +118,8 @@ For developers, understanding these policies helps you build applications that w
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Enterprise Data Loss Prevention: A Developer Guide](/chrome-enterprise-data-loss-prevention/)
+- [Chrome Group Policy Templates 2026: Complete Admin Guide](/chrome-group-policy-templates-2026/)
+- [Chrome Enterprise Auto Update Settings: A Developer's Guide](/chrome-enterprise-auto-update-settings/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

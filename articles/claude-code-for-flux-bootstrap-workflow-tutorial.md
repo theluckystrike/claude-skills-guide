@@ -185,8 +185,8 @@ The key is providing Claude Code with enough context about your environment, rep
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for ArgoCD Image Updater Workflow](/claude-code-for-argocd-image-updater-workflow/)
+- [Claude Code Kubernetes Upgrade Workflow Guide](/claude-code-kubernetes-upgrade-workflow-guide/)
+- [Claude Code Kubernetes Cost Optimization Guide](/claude-code-kubernetes-cost-optimization-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

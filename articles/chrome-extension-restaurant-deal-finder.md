@@ -252,9 +252,9 @@ The restaurant deal space remains fragmented, with many independent restaurants 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Deal Finder Chrome Extension: A Developer's Guide to Building Price Tracking Tools](/deal-finder-chrome-extension/)
+- [Chrome Extension Price Match Finder: A Developer's Guide](/chrome-extension-price-match-finder/)
+- [Chrome Extension Return Policy Finder: Tools and Techniques for Developers](/chrome-extension-return-policy-finder/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

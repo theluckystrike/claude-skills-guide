@@ -237,8 +237,8 @@ Start with simple caching of your system prompts, then expand to knowledge base 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [AI Coding Tools for Performance Optimization: A.](/ai-coding-tools-for-performance-optimization/)
+- [Claude API Cost Optimization Strategies for SaaS.](/claude-api-cost-optimization-strategies-for-saas-application/)
+- [Claude API System Prompt Engineering for Production Apps](/claude-api-system-prompt-engineering-for-production-apps/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

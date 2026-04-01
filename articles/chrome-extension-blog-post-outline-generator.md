@@ -123,8 +123,8 @@ The key lies in treating outlines as flexible frameworks rather than rigid presc
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Extension Bibliography Generator: A Practical Guide](/chrome-extension-bibliography-generator/)
+- [AI Citation Generator Chrome: A Developer Guide](/ai-citation-generator-chrome/)
+- [AI Content Repurposer Chrome Extension: A Developer Guide](/ai-content-repurposer-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -622,8 +622,8 @@ When you face a networking challenge, start with inspection commands to understa
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Dockerfile Generation Best Practices 2026](/claude-code-dockerfile-generation-best-practices-2026/)
+- [Claude Code Docker Compose Test Setup Guide](/claude-code-docker-compose-test-setup-guide/)
+- [Claude Code for Bandwhich Bandwidth Monitor Workflow](/claude-code-for-bandwhich-bandwidth-monitor-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

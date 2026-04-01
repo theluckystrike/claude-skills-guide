@@ -209,9 +209,9 @@ Chrome extension email template managers represent a significant productivity en
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [AI Bookmark Manager for Chrome: Organizing Your Web Knowledge](/ai-bookmark-manager-chrome/)
+- [AI Email Writer Chrome Extension: A Developer's Guide](/ai-email-writer-chrome-extension/)
+- [AI Inbox Organizer Chrome Extension: A Developer's Guide to Intelligent Email Management](/ai-inbox-organizer-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

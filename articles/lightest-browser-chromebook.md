@@ -237,8 +237,8 @@ A practical recommendation: use Brave as your primary browser and supplement it 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Browser MSI Deployment with SCCM: A Complete Guide](/chrome-browser-msi-deployment-sccm/)
+- [Chrome Memory Saver Mode: A Developer's Guide to Reducing Browser Memory Usage](/chrome-memory-saver-mode/)
+- [AI Citation Generator Chrome: A Developer Guide](/ai-citation-generator-chrome/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

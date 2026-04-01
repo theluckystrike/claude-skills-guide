@@ -539,8 +539,8 @@ Use this data to prioritize which skill workflows to document and share in your 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Skills for Japanese Developers Workflow Guide](/claude-code-skills-for-japanese-developers-workflow-guide/)
+- [Claude Code Vue Developer Component Workflow Best Practices](/claude-code-vue-developer-component-workflow-best-practices/)
+- [Claude Code for Emacs Workflow Integration Guide](/claude-code-for-emacs-workflow-integration-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

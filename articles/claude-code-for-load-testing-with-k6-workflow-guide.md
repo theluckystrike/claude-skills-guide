@@ -305,8 +305,8 @@ Integrating Claude Code with K6 transforms load testing from a manual, time-inte
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Load Test Scenario Workflow Tutorial](/claude-code-for-load-test-scenario-workflow-tutorial/)
+- [Claude Code for Load Testing Automation Guide](/claude-code-for-load-testing-automation-guide/)
+- [Claude Code for Performance Budget Workflow Tutorial](/claude-code-for-performance-budget-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

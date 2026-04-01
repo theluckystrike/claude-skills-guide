@@ -273,8 +273,8 @@ Remember: the goal isn't to use every feature, but to use Qwik City's strengths 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [WireGuard PostUp/PostDown Scripts for Advanced Routing Configuration](/wireguard-postup-postdown-scripts-for-advanced-routing-configuration/)
+- [GIF Recorder Chrome Extension: Capture Browser Activity with Code Examples](/gif-recorder-chrome-extension/)
+- [Claude Code Algolia GeoSearch Filtering Workflow Tutorial](/claude-code-algolia-geosearch-filtering-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

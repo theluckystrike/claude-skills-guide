@@ -465,8 +465,8 @@ The most effective immersion tools are those you will actually use, so prioritiz
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [AI Flashcard Maker Chrome Extension: Build Your Own Learning Tool](/ai-flashcard-maker-chrome-extension/)
+- [Claude Code for Language Server Protocol Workflow Guide](/claude-code-for-language-server-protocol-workflow-guide/)
+- [Claude Code for Learning System Design Concepts](/claude-code-for-learning-system-design-concepts/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

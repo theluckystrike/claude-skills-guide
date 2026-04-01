@@ -280,8 +280,8 @@ Happy Coding!
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Setup on Mac: Step-by-Step Guide for Developers](/claude-code-setup-on-mac-step-by-step/)
+- [Claude Code for Arabic Speaking Developer Teams](/claude-code-for-arabic-speaking-developer-teams/)
+- [Claude Code for Chinese Python Developers Guide (2026)](/claude-code-for-chinese-python-developers-guide-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

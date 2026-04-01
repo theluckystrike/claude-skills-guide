@@ -132,8 +132,8 @@ The best way to determine if Claude Code is right for you is to try it on a real
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Should I Switch From Continue Dev to Claude? A Practical.](/should-i-switch-from-continue-dev-to-claude/)
+- [Claude Code vs Codeium for SQL Query Generation](/claude-code-vs-codeium-sql-query-generation/)
+- [Codeium Review: Free AI Coding Assistant 2026](/codeium-review-free-ai-coding-assistant-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

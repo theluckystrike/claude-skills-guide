@@ -290,9 +290,9 @@ Start with storage-based isolation for simplicity, add cookie management for aut
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Extension Docker Dashboard: Streamlined Container.](/chrome-extension-docker-dashboard/)
+- [Claude Code Buildah Container Builds Guide](/claude-code-buildah-container-builds-guide/)
+- [Claude Code Container Environment Variables Management](/claude-code-container-environment-variables-management/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

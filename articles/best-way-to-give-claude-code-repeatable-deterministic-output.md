@@ -454,8 +454,8 @@ By implementing these techniques, you can build reliable, reproducible workflows
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Best Way to Batch Claude Code Requests to Reduce API Calls](/best-way-to-batch-claude-code-requests-reduce-api-calls/)
+- [Best Way to Configure Claude Code to Understand Your Internal APIs](/best-way-to-configure-claude-code-to-understand-your-internal-apis/)
+- [Best Way to Customize Claude Code Output Format Style](/best-way-to-customize-claude-code-output-format-style/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

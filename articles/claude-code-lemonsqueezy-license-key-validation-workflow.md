@@ -432,8 +432,8 @@ Start by creating the Claude Code skill to handle validation conversations, then
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Using Claude Code for Data Quality Validation Workflow](/claude-code-for-data-quality-validation-workflow/)
+- [Claude Code for Dependency License Audit Workflow](/claude-code-for-dependency-license-audit-workflow/)
+- [Claude Code for License Compatibility Workflow Guide](/claude-code-for-license-compatibility-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

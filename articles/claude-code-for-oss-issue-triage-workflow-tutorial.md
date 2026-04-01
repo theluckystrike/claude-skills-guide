@@ -372,8 +372,8 @@ Your maintainers will thank you, and so will contributors who see their issues a
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Claude Issue Triage Workflow Tutorial Guide](/claude-code-for-claude-issue-triage-workflow-tutorial-guide/)
+- [Claude Code for OSS Good First Issue Workflow Guide](/claude-code-for-oss-good-first-issue-workflow-guide/)
+- [Claude Code Open Source Issue Triage Workflow Guide](/claude-code-open-source-issue-triage-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

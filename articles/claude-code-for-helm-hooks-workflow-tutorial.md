@@ -324,8 +324,8 @@ Start with simple hooks and progressively add more sophisticated Claude Code int
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Helm Chart Publishing Workflow Guide](/claude-code-for-helm-chart-publishing-workflow-guide/)
+- [Claude Code for Wagmi Hooks Workflow](/claude-code-for-wagmi-hooks-workflow/)
+- [Claude Code Git Hooks: Automate Your Pre-Commit Workflow](/claude-code-git-hooks-pre-commit-automation/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

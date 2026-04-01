@@ -381,8 +381,8 @@ Claude Code serves as an excellent development partner for Dash projects, helpin
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Brownie Python Workflow Guide](/claude-code-for-brownie-python-workflow-guide/)
+- [Claude Code for Python Dataclass Advanced Workflow](/claude-code-for-python-dataclass-advanced-workflow/)
+- [Claude Code for Rye Python Project Workflow Guide](/claude-code-for-rye-python-project-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

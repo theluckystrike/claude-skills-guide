@@ -184,8 +184,8 @@ Start your migration today by having Claude Code analyze your codebase and provi
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Perl Script to Python Migration Workflow](/claude-code-perl-script-to-python-migration-workflow/)
+- [Claude Code Classic ASP to .NET Migration Guide](/claude-code-classic-asp-to-dotnet-migration-guide/)
+- [Claude Code Data Engineer ETL Debugging Daily Workflow](/claude-code-data-engineer-etl-debugging-daily-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

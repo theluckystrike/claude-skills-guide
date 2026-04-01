@@ -292,8 +292,8 @@ Evaluate your specific needs: script count, performance requirements, security c
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Violentmonkey Alternative Chrome Extension 2026](/violentmonkey-alternative-chrome-extension-2026/)
+- [Chrome Extension Jira Ticket Creator: Automate Issue.](/chrome-extension-jira-ticket-creator/)
+- [Chrome Extension Selenium IDE Recorder: Complete Guide.](/chrome-extension-selenium-ide-recorder/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

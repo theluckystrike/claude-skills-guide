@@ -257,8 +257,8 @@ Building a team world clock extension requires careful attention to timezone acc
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [AI Inbox Organizer Chrome Extension: A Developer's Guide to Intelligent Email Management](/ai-inbox-organizer-chrome-extension/)
+- [Best Way to Integrate Claude Code into Team Workflow](/best-way-to-integrate-claude-code-into-team-workflow/)
+- [Building a CLI DevTool with Claude Code: A Practical.](/building-a-cli-devtool-with-claude-code-walkthrough/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -251,8 +251,8 @@ Start with simple tests, iterate on them as your application evolves, and build 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Distributed Load Testing Workflow](/claude-code-for-distributed-load-testing-workflow/)
+- [Claude Code for Load Testing with K6 Workflow Guide](/claude-code-for-load-testing-with-k6-workflow-guide/)
+- [Claude Code API Regression Testing Workflow Guide](/claude-code-api-regression-testing-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

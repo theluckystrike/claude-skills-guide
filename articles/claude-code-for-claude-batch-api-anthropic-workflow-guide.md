@@ -310,4 +310,11 @@ The combination of Claude Code and Anthropic's Batch API enables powerful automa
 Start with small batches to validate your prompts, then scale up gradually while monitoring performance. With these tools and techniques, you're well-equipped to tackle large-scale AI-powered workloads in production environments.
 
 Remember to consult the official Anthropic documentation for the latest API specifications and pricing details, as these evolve regularly with new model releases and feature updates.
+
+Related Reading
+
+- [Claude API Batch Processing Large Datasets Workflow Guide](/claude-api-batch-processing-large-datasets-workflow-guide/)
+- [Best Way to Batch Claude Code Requests to Reduce API Calls](/best-way-to-batch-claude-code-requests-reduce-api-calls/)
+- [Building Apps with Claude API: Anthropic SDK Python Guide](/building-apps-with-claude-api-anthropic-sdk-python-guide/)
+
 {% endraw %}

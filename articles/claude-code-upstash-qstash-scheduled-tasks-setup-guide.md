@@ -400,8 +400,8 @@ The combination of small payloads, idempotent handlers, and structured logging g
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Deno Deploy Serverless Runtime Guide](/claude-code-for-deno-deploy-serverless-runtime-guide/)
+- [Claude Code for Nitric Cloud Framework Workflow](/claude-code-for-nitric-cloud-framework-workflow/)
+- [Claude Code Neon Serverless Postgres Workflow Guide](/claude-code-neon-serverless-postgres-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

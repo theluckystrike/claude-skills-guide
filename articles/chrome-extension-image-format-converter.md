@@ -260,9 +260,9 @@ The patterns shown here scale from single-image conversions to batch processing 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Chrome Extension Markdown Editor: Build Your Own Browser-Based Writing Tool](/chrome-extension-markdown-editor/)
+- [Chrome Extension Open Graph Preview: Implementation Guide](/chrome-extension-open-graph-preview/)
+- [Chrome Extension Product Review Summary AI: A Developer Guide](/chrome-extension-product-review-summary-ai/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

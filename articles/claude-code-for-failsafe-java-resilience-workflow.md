@@ -183,8 +183,8 @@ With these patterns in place, your Java applications will handle failures gracef
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Java Virtual Threads (Loom) Workflow](/claude-code-for-java-virtual-threads-loom-workflow/)
+- [Claude Code Java Backend Developer Spring Boot Workflow Tips](/claude-code-java-backend-developer-spring-boot-workflow-tips/)
+- [Claude Code Mockito Java Testing Workflow](/claude-code-mockito-java-testing-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

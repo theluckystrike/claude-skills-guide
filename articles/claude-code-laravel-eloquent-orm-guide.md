@@ -659,8 +659,8 @@ Combine Claude Code with Laravel's built-in features like scopes, accessors, eag
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Django ORM Optimization Guide](/claude-code-django-orm-optimization-guide/)
+- [Claude Code for Drizzle ORM TypeScript Database Workflow](/claude-code-drizzle-orm-typescript-database-workflow/)
+- [Claude Code Laravel Queues, Jobs, Workers & Workflow Guide](/claude-code-laravel-queues-jobs-workers-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

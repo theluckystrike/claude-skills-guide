@@ -176,8 +176,8 @@ Remember: The key to getting the most out of Claude Code skills is providing cle
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [AI Agent Memory Types Explained for Developers](/ai-agent-memory-types-explained-for-developers/)
+- [Manus AI Agent Review for Developers 2026](/manus-ai-agent-review-for-developers-2026/)
+- [Claude Code Agent Task Queue Architecture Deep Dive](/claude-code-agent-task-queue-architecture-deep-dive/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

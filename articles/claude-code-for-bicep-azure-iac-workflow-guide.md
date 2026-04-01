@@ -250,8 +250,8 @@ Start by establishing clear guidelines in your CLAUDE.md, create reusable module
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Azure DevOps Integration Workflow Tutorial](/claude-code-azure-devops-integration-workflow-tutorial/)
+- [Claude Code for Azure Arc Kubernetes Workflow](/claude-code-for-azure-arc-kubernetes-workflow/)
+- [Claude Code for Azure Cost Management Workflow](/claude-code-for-azure-cost-management-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

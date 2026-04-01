@@ -341,8 +341,8 @@ With these practices in place, you'll have visibility into your code's test cove
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Jest to Vitest Migration Workflow with Claude Code](/claude-code-jest-to-vitest-migration-workflow-tutorial/)
+- [Claude Code Coverage Reporting Setup Guide](/claude-code-coverage-reporting-setup-guide/)
+- [Claude Code for Evals Framework Workflow Tutorial](/claude-code-for-evals-framework-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

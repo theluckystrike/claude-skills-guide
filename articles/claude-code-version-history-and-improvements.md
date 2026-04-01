@@ -231,9 +231,9 @@ Understanding this evolution helps developers use Claude Code effectively. The s
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [AI Coding Tools for Accessibility Improvements](/ai-coding-tools-for-accessibility-improvements/)
+- [Chrome Canary vs Stable Speed: Which Chrome Version Should You Use?](/chrome-canary-vs-stable-speed/)
+- [Claude 4 Skills: New Features and Improvements Guide](/claude-4-skills-improvements-and-new-features/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

@@ -156,8 +156,8 @@ The key to success lies in iterative development: start with simple generators, 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Open Source Contribution Workflow Guide](/claude-code-for-open-source-contribution-workflow-guide/)
+- [Claude Code Nx Generators Executors Custom Workflow Guide](/claude-code-nx-generators-executors-custom-workflow-guide/)
+- [Claude Code for Open Source Contributions: 2026 Workflow Guide](/claude-code-open-source-contribution-workflow-guide-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

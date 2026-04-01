@@ -388,8 +388,8 @@ Apply risk-based triage before each coding session, maintain a prompt pattern li
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Vibe Coding for Web Apps: NextJS + Vercel Guide](/vibe-coding-for-web-apps-nextjs-vercel-guide/)
+- [Vibe Coding Project Structure Best Practices](/vibe-coding-project-structure-best-practices/)
+- [Claude Code Continuous Testing Workflow: Complete Guide for 2026](/claude-code-continuous-testing-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

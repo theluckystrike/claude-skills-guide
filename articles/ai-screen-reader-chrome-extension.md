@@ -332,9 +332,9 @@ AI screen readers transform how users interact with web content. By combining ML
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [AI Speed Reader Chrome Extension: A Developer Guide](/ai-speed-reader-chrome-extension/)
+- [Best Cookie Manager Chrome Extensions for Developers in 2026](/best-cookie-manager-chrome/)
+- [Chrome Extension Email Snooze Scheduler - Complete Guide for Developers](/chrome-extension-email-snooze-scheduler/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

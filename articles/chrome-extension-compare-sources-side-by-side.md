@@ -427,9 +427,9 @@ Start with the manifest and content script above, verify the diff output in the 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Code Comparisons Hub](/comparisons-hub/)
+- [EditThisCookie Alternative: Best Chrome Extensions for.](/editthiscookie-alternative-chrome-extension-2026/)
+- [1Password Alternative Chrome Extension in 2026](/1password-alternative-chrome-extension-2026/)
+- [1Password vs Bitwarden Chrome: Which Password Manager.](/1password-vs-bitwarden-chrome/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

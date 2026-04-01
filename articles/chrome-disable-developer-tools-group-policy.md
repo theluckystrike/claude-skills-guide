@@ -358,9 +358,9 @@ For most organizational use cases, combining Developer Tools restrictions with o
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [How to Disable Chrome Guest Mode via Group Policy](/chrome-guest-mode-disable-group-policy/)
+- [AI Coding Tools Governance Policy for Enterprises](/ai-coding-tools-governance-policy-for-enterprises/)
+- [How to Block File Downloads in Chrome Using Group Policy](/chrome-block-file-downloads-group-policy/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

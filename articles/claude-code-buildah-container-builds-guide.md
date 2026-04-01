@@ -167,8 +167,8 @@ Experiment with the patterns in this guide, customize scripts for your specific 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Container Environment Variables Management](/claude-code-container-environment-variables-management/)
+- [Claude Code Docker Networking Workflow Guide](/claude-code-docker-networking-workflow-guide/)
+- [Claude Code Dockerfile Generation Best Practices 2026](/claude-code-dockerfile-generation-best-practices-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

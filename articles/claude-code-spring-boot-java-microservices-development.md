@@ -348,9 +348,9 @@ You can create a set of reusable prompts for your organization, ensuring every n
 
 Related Reading
 
-- [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/)
-- [Tutorials Hub](/tutorials-hub/)
-
+- [Claude Code Spring Boot Microservices Guide](/claude-code-spring-boot-microservices-guide/)
+- [Claude Code Skills for Golang Microservices](/claude-code-skills-for-golang-microservices/)
+- [Chrome Extension Development in 2026: A Practical Manifest V3 Guide](/chrome-extension-development-2026/)
 ---
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

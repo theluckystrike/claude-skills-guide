@@ -822,8 +822,8 @@ These workflows integrate smoothly with Claude Code's development assistance, ma
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Bolt.new Web App Workflow Guide](/claude-code-for-bolt-new-web-app-workflow-guide/)
+- [Claude Code for Fast Web Components Workflow](/claude-code-for-fast-web-components-workflow/)
+- [Claude Code for Fiber Go Web Framework Workflow](/claude-code-for-fiber-go-web-framework-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

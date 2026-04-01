@@ -213,8 +213,8 @@ Claude Code transforms code freeze from a stressful bottleneck into a controlled
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Blue-Green Deployment Workflow](/claude-code-for-blue-green-deployment-workflow/)
+- [Claude Code for Fly.io Deployment Automation Workflow](/claude-code-for-fly-io-deployment-automation-workflow/)
+- [Claude Code Kubernetes Deployment Workflow Guide](/claude-code-kubernetes-deployment-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

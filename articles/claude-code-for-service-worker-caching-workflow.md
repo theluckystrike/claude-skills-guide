@@ -235,8 +235,8 @@ Remember: the best caching strategy is one that your users never notice, because
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Workbox Service Worker Workflow Guide](/claude-code-for-workbox-service-worker-workflow-guide/)
+- [Chrome Extension Service Worker Inspector: Complete.](/chrome-extension-service-worker-inspector/)
+- [Claude Code for Consul Service Discovery Workflow](/claude-code-for-consul-service-discovery-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

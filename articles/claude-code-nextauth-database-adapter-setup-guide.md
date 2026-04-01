@@ -298,8 +298,8 @@ Start with the adapter that matches your existing stack, and use Claude Code's c
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Vercel Supabase Clerk Full Stack Development](/claude-code-for-vercel-supabase-clerk-full-stack/)
+- [Claude Code for Drizzle ORM TypeScript Database Workflow](/claude-code-drizzle-orm-typescript-database-workflow/)
+- [Claude Code Next.js Authentication NextAuth Guide](/claude-code-nextjs-authentication-next-auth-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

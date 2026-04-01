@@ -623,8 +623,8 @@ The key workflow is: collect the right profile type for your symptom, export it 
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Go Fuzz Workflow Tutorial Guide](/claude-code-for-go-fuzz-workflow-tutorial-guide/)
+- [Claude Code React Native Performance Optimization Guide](/claude-code-react-native-performance-optimization-guide/)
+- [Claude Code Skills for Golang Microservices](/claude-code-skills-for-golang-microservices/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

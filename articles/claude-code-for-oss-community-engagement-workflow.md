@@ -346,8 +346,8 @@ Claude Code transforms OSS community engagement from reactive firefighting to pr
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Community Health Metrics Documentation Workflow](/claude-code-community-health-metrics-documentation-workflow/)
+- [Claude Code for First OSS Contribution Workflow Guide](/claude-code-for-first-oss-contribution-workflow-guide/)
+- [Claude Code for OSS Contributor Guide Workflow](/claude-code-for-oss-contributor-guide-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

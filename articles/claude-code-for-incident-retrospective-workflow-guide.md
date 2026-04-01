@@ -129,8 +129,8 @@ The key is starting simple, create a basic retrospective skill, use it for a few
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Incident Communication Workflow Guide](/claude-code-for-incident-communication-workflow-guide/)
+- [Claude Code for Incident Escalation Workflow Tutorial](/claude-code-for-incident-escalation-workflow-tutorial/)
+- [Claude Code for Incident Management Workflow Tutorial](/claude-code-for-incident-management-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -165,9 +165,9 @@ The key is balance, keeping the extensions you need while eliminating those that
 
 Related Reading
 
-- [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
-- [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
-- [Claude Skills Guides Hub](/guides-hub/)
+- [Best Cookie Manager Chrome Extensions for Developers in 2026](/best-cookie-manager-chrome/)
+- [Chrome iOS Slow Fix: A Developer's Guide to Speed Optimization](/chrome-ios-slow-fix/)
+- [Chrome Omnibox Slow? Here's How to Fix It](/chrome-omnibox-slow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
