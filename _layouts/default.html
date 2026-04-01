@@ -163,6 +163,16 @@
     footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #e0e0e0; color: #888; font-size: 0.82rem; line-height: 1.8; }
     footer a { color: #888; }
     .date { color: #888; font-size: 0.85rem; margin-bottom: 1.5rem; display: block; }
+    .newsletter-cta { margin-top: 2.5rem; padding: 2rem 1.5rem; background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 100%); border-radius: 12px; text-align: center; }
+    .newsletter-cta h2 { color: #fff; font-size: 1.3rem; border: none; padding: 0; margin: 0 0 0.4rem 0; }
+    .newsletter-cta p { color: #a0a0b8; font-size: 0.9rem; margin: 0 0 1.2rem 0; }
+    .newsletter-cta iframe { border: none; border-radius: 8px; max-width: 100%; }
+    .newsletter-cta .nl-fallback { display: flex; gap: 8px; max-width: 420px; margin: 0 auto; }
+    .newsletter-cta .nl-fallback input { flex: 1; padding: 10px 14px; border: 1px solid #333; border-radius: 6px; background: #12121a; color: #e0e0e8; font-size: 0.9rem; outline: none; }
+    .newsletter-cta .nl-fallback input:focus { border-color: #1a73e8; }
+    .newsletter-cta .nl-fallback button { padding: 10px 20px; background: #1a73e8; color: #fff; border: none; border-radius: 6px; font-weight: 600; font-size: 0.9rem; cursor: pointer; white-space: nowrap; }
+    .newsletter-cta .nl-fallback button:hover { background: #1557b0; }
+    .newsletter-cta .nl-note { color: #666; font-size: 0.75rem; margin-top: 0.8rem; }
     .related-guides { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #e0e0e0; }
     .related-guides h2 { font-size: 1.2rem; color: #16213e; border-bottom: none; padding-bottom: 0; margin-top: 0; margin-bottom: 0.8rem; }
     .related-guides ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.5rem; }
@@ -186,6 +196,21 @@
     {% endif %}
     {{ content }}
   </main>
+  {% if site.newsletter.enabled %}
+  <section class="newsletter-cta">
+    <h2>{{ site.newsletter.heading | default: "Stay Updated" }}</h2>
+    <p>{{ site.newsletter.subheading | default: "Get the latest guides delivered to your inbox." }}</p>
+    {% if site.newsletter.beehiiv_embed_url != "" %}
+    <iframe src="{{ site.newsletter.beehiiv_embed_url }}" data-test-id="beehiiv-embed" width="100%" height="52" frameborder="0" scrolling="no" style="background: transparent;"></iframe>
+    {% else %}
+    <div class="nl-fallback">
+      <input type="email" placeholder="you@example.com" disabled>
+      <button disabled>Coming Soon</button>
+    </div>
+    <p class="nl-note">Newsletter launching soon. Check back shortly.</p>
+    {% endif %}
+  </section>
+  {% endif %}
   {% if page.date %}
   {% assign cat = page.categories | first %}
   {% assign related_count = 0 %}

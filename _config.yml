@@ -13,6 +13,15 @@ author:
   name: Michael Lip
   url: https://github.com/theluckystrike
 
+newsletter:
+  enabled: true
+  heading: "Claude Code Weekly"
+  subheading: "Practical tips, new features, and workflows. One email per week."
+  # Set your Beehiiv embed URL after creating your publication:
+  # beehiiv.com → Create publication → Audience → Subscribe forms → Get embed code
+  # Copy the iframe src URL (starts with https://embeds.beehiiv.com/)
+  beehiiv_embed_url: ""
+
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
