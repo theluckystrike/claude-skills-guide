@@ -229,6 +229,7 @@ Claude Code is more than a coding tool, it's a learning companion that can accel
 
 The investment in learning Claude Code pays dividends throughout your career. Start building your skill library today, and you'll have a powerful, personalized development assistant by the time you enter the job market.
 
+{% endraw %}
 
 Related Reading
 

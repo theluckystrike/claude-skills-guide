@@ -233,6 +233,7 @@ Conclusion
 PostHog feature flags combined with React provide a powerful toolkit for progressive delivery and experimentation. Claude Code enhances this workflow by helping you generate configurations, create custom hooks, write tests, and manage your flag lifecycle. Start with simple on/off flags, then gradually adopt multivariate testing and gradual rollouts as your feature flag strategy matures.
 
 The key is to keep your implementation clean, test thoroughly, and remove flags once features are established. With these patterns and Claude Code as your assistant, you'll have a solid feature management system that enables safe, data-driven feature releases.
+{% endraw %}
 
 Related Reading
 
