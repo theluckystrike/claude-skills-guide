@@ -1,10 +1,10 @@
 ---
 
 layout: default
-title: "Claude Code for Image Optimization Workflow Guide"
-description: "Learn how to use Claude Code to automate and optimize your image processing workflows for faster websites and better user experience."
+title: "Automate Image Optimization with Claude Code (Full Guide)"
+description: "Use Claude Code to batch-compress, resize, and convert images to WebP automatically. Cut page weight by 60% and boost Core Web Vitals scores."
 date: 2026-03-15
-last_modified_at: 2026-03-15
+last_modified_at: 2026-04-01
 author: "Claude Skills Guide"
 permalink: /claude-code-for-image-optimization-workflow-guide/
 categories: [guides]

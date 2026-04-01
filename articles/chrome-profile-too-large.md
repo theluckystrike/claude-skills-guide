@@ -1,10 +1,10 @@
 ---
 
 layout: default
-title: "Chrome Profile Too Large: Practical Solutions for Developers"
-description: "Diagnose and fix Chrome profile size issues. Learn what causes Chrome profiles to grow large and practical solutions to reclaim disk space."
+title: "Chrome Profile Too Large? Fix It Fast (Step-by-Step)"
+description: "Chrome eating up gigabytes of disk space? Follow these step-by-step fixes to shrink your profile, reclaim storage, and stop it from growing back."
 date: 2026-03-15
-last_modified_at: 2026-03-15
+last_modified_at: 2026-04-01
 author: theluckystrike
 permalink: /chrome-profile-too-large/
 categories: [guides]
