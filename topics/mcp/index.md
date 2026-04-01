@@ -4,13 +4,9 @@ title: "MCP Integration Guides"
 description: "Connect Claude Code to external tools, databases, and APIs using Model Context Protocol (MCP) servers."
 permalink: /topics/mcp/
 ---
+# MCP Integration Guides
+Connect Claude Code to databases, APIs, cloud services, and developer tools using the Model Context Protocol.
 
-<div class="page-header">
-  <h1>MCP Integration Guides</h1>
-  <p class="page-subtitle">Connect Claude Code to databases, APIs, cloud services, and developer tools using the Model Context Protocol.</p>
-</div>
-
-<div class="topic-listing">
 
 ## All MCP Guides (61 articles)
 
@@ -76,4 +72,3 @@ permalink: /topics/mcp/
 - [Top MCP Servers for Claude Code Developers 2026](/top-mcp-servers-for-claude-code-developers-2026/)
 - [Zoom MCP Server Meeting Summary Automation](/zoom-mcp-server-meeting-summary-automation/)
 
-</div>

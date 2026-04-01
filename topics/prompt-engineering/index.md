@@ -4,13 +4,9 @@ title: "Prompt Engineering for Claude Code"
 description: "Guides for writing better prompts, system prompts, and prompt workflows with Claude Code and Claude API."
 permalink: /topics/prompt-engineering/
 ---
+# Prompt Engineering for Claude Code
+Write better prompts, get better results. Techniques for Claude Code CLI, Claude API system prompts, and advanced prompting patterns.
 
-<div class="page-header">
-  <h1>Prompt Engineering for Claude Code</h1>
-  <p class="page-subtitle">Write better prompts, get better results. Techniques for Claude Code CLI, Claude API system prompts, and advanced prompting patterns.</p>
-</div>
-
-<div class="topic-listing">
 
 ## All Prompt Engineering Guides (19 articles)
 
@@ -34,4 +30,3 @@ permalink: /topics/prompt-engineering/
 - [MCP Prompt Injection Attack Prevention Guide](/mcp-prompt-injection-attack-prevention-guide/)
 - [Speed Up Claude Code Responses with Better Prompt Structure](/speed-up-claude-code-responses-with-better-prompt-structure/)
 
-</div>

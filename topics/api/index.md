@@ -4,13 +4,9 @@ title: "Claude API Guides"
 description: "Tutorials for building with the Claude API: SDKs, streaming, tool use, cost optimization, and production patterns."
 permalink: /topics/api/
 ---
+# Claude API Guides
+Build production applications with the Claude API. SDKs, streaming, tool use, authentication, and cost optimization.
 
-<div class="page-header">
-  <h1>Claude API Guides</h1>
-  <p class="page-subtitle">Build production applications with the Claude API. SDKs, streaming, tool use, authentication, and cost optimization.</p>
-</div>
-
-<div class="topic-listing">
 
 ## All API Guides (99 articles)
 
@@ -114,4 +110,3 @@ permalink: /topics/api/
 - [Why is Claude Code Expensive Large Context Tokens](/why-is-claude-code-expensive-large-context-tokens/)
 - [Writing Claude Md Files That Define Your Projects API Versio](/writing-claude-md-files-that-define-your-projects-api-versio/)
 
-</div>

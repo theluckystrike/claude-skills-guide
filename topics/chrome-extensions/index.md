@@ -4,13 +4,9 @@ title: "Chrome Extension Guides"
 description: "Guides for building Chrome extensions with AI, Claude Code, and modern development tools."
 permalink: /topics/chrome-extensions/
 ---
+# Chrome Extension Guides
+Guides for building, comparing, and using Chrome extensions. From AI-powered extensions to productivity tools and developer utilities.
 
-<div class="page-header">
-  <h1>Chrome Extension Guides</h1>
-  <p class="page-subtitle">Guides for building, comparing, and using Chrome extensions. From AI-powered extensions to productivity tools and developer utilities.</p>
-</div>
-
-<div class="topic-listing">
 
 ## All Chrome Extension Guides (582 articles)
 
@@ -597,4 +593,3 @@ permalink: /topics/chrome-extensions/
 - [Workona Alternative Chrome Extension 2026](/workona-alternative-chrome-extension-2026/)
 - [Zotero Chrome Extension Setup Guide](/zotero-chrome-extension-setup-guide/)
 
-</div>

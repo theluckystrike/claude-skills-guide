@@ -4,13 +4,9 @@ title: "AI Agent Guides"
 description: "Build autonomous agents, multi-agent systems, and orchestration patterns with Claude Code and Claude API."
 permalink: /topics/agents/
 ---
+# AI Agent Guides
+Build autonomous agents, multi-agent orchestration, and production agent systems with Claude.
 
-<div class="page-header">
-  <h1>AI Agent Guides</h1>
-  <p class="page-subtitle">Build autonomous agents, multi-agent orchestration, and production agent systems with Claude.</p>
-</div>
-
-<div class="topic-listing">
 
 ## All Agent Guides (65 articles)
 
@@ -80,4 +76,3 @@ permalink: /topics/agents/
 - [What is Agentic AI and Why It Matters](/what-is-agentic-ai-and-why-it-matters/)
 - [What is an AI Agent Loop Explained Simply](/what-is-an-ai-agent-loop-explained-simply/)
 
-</div>

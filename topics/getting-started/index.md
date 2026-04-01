@@ -4,13 +4,9 @@ title: "Getting Started with Claude Code"
 description: "Beginner guides for Claude Code: installation, first project, setup, and essential workflows."
 permalink: /topics/getting-started/
 ---
+# Getting Started with Claude Code
+Everything you need to go from zero to productive with Claude Code. Installation guides, first project tutorials, and beginner-friendly walkthroughs.
 
-<div class="page-header">
-  <h1>Getting Started with Claude Code</h1>
-  <p class="page-subtitle">Everything you need to go from zero to productive with Claude Code. Installation guides, first project tutorials, and beginner-friendly walkthroughs.</p>
-</div>
-
-<div class="topic-listing">
 
 ## All Getting Started Guides (46 articles)
 
@@ -61,4 +57,3 @@ permalink: /topics/getting-started/
 - [Neovim AI Coding Setup with Claude 2026](/neovim-ai-coding-setup-with-claude-2026/)
 - [Zotero Chrome Extension Setup Guide](/zotero-chrome-extension-setup-guide/)
 
-</div>

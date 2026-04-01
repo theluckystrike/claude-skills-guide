@@ -4,13 +4,9 @@ title: "CLAUDE.md and Workflow Guides"
 description: "Configure Claude Code projects with CLAUDE.md files, Git hooks, and automation workflows."
 permalink: /topics/workflows/
 ---
+# CLAUDE.md and Workflow Guides
+Configure projects, automate workflows, and get the most out of Claude Code's project-level features.
 
-<div class="page-header">
-  <h1>CLAUDE.md and Workflow Guides</h1>
-  <p class="page-subtitle">Configure projects, automate workflows, and get the most out of Claude Code's project-level features.</p>
-</div>
-
-<div class="topic-listing">
 
 ## All Workflow Guides (1023 articles)
 
@@ -1038,4 +1034,3 @@ permalink: /topics/workflows/
 - [Writing Claude Md Files That Define Your Projects API Versio](/writing-claude-md-files-that-define-your-projects-api-versio/)
 - [Zoom MCP Server Meeting Summary Automation](/zoom-mcp-server-meeting-summary-automation/)
 
-</div>
