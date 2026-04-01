@@ -99,6 +99,49 @@
     ]
   }
   </script>
+  {% assign is_faq = false %}
+  {% for cat in page.categories %}
+    {% assign cat_lower = cat | downcase %}
+    {% if cat_lower == "troubleshooting" %}{% assign is_faq = true %}{% endif %}
+  {% endfor %}
+  {% unless is_faq %}
+    {% assign title_lower = page.title | downcase %}
+    {% if title_lower contains "how to" or title_lower contains " fix" or title_lower contains "error" or title_lower contains "troubleshoot" or title_lower contains "why " %}
+      {% assign is_faq = true %}
+    {% endif %}
+  {% endunless %}
+  {% if is_faq %}
+  {% assign faq_parts = content | split: '<h2' %}
+  {% assign faq_json = "" %}
+  {% assign faq_count = 0 %}
+  {% for part in faq_parts %}
+    {% if faq_count >= 3 %}{% break %}{% endif %}
+    {% if forloop.first %}{% continue %}{% endif %}
+    {% assign heading_and_rest = part | split: '</h2>' %}
+    {% assign heading_text = heading_and_rest[0] | split: '>' | last | strip_html | strip %}
+    {% if heading_text == "" or heading_text == "Related Reading" or heading_text == "Summary" or heading_text == "Related Guides" or heading_text == "Conclusion" %}{% continue %}{% endif %}
+    {% assign answer_text = heading_and_rest[1] | strip_html | strip | truncate: 300 %}
+    {% if answer_text == "" %}{% continue %}{% endif %}
+    {% if faq_count > 0 %}{% assign faq_json = faq_json | append: "," %}{% endif %}
+    {% capture faq_item %}{"@type":"Question","name":{{ heading_text | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ answer_text | jsonify }}}}{% endcapture %}
+    {% assign faq_json = faq_json | append: faq_item %}
+    {% assign faq_count = faq_count | plus: 1 %}
+  {% endfor %}
+  {% if faq_count == 0 and page.description %}
+    {% capture faq_item %}{"@type":"Question","name":{{ page.title | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ page.description | jsonify }}}}{% endcapture %}
+    {% assign faq_json = faq_item %}
+    {% assign faq_count = 1 %}
+  {% endif %}
+  {% if faq_count > 0 %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{{ faq_json }}]
+  }
+  </script>
+  {% endif %}
+  {% endif %}
   {% endif %}
   <style>
     * { box-sizing: border-box; }
@@ -120,6 +163,12 @@
     footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #e0e0e0; color: #888; font-size: 0.82rem; line-height: 1.8; }
     footer a { color: #888; }
     .date { color: #888; font-size: 0.85rem; margin-bottom: 1.5rem; display: block; }
+    .related-guides { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #e0e0e0; }
+    .related-guides h2 { font-size: 1.2rem; color: #16213e; border-bottom: none; padding-bottom: 0; margin-top: 0; margin-bottom: 0.8rem; }
+    .related-guides ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.5rem; }
+    .related-guides li { padding: 0.5rem 0.75rem; background: #fff; border: 1px solid #e8e8e8; border-radius: 6px; transition: border-color 0.15s; }
+    .related-guides li:hover { border-color: #1a73e8; }
+    .related-guides a { font-size: 0.92rem; line-height: 1.5; display: block; }
     @media (max-width: 600px) { body { padding: 16px 14px; } h1 { font-size: 1.5rem; } }
   </style>
 </head>
@@ -137,6 +186,40 @@
     {% endif %}
     {{ content }}
   </main>
+  {% if page.date %}
+  {% assign cat = page.categories | first %}
+  {% assign related_count = 0 %}
+  {% assign all_articles = site.pages | where_exp: "item", "item.path contains 'articles/'" | sort: "date" | reverse %}
+  <section class="related-guides">
+    <h2>Related Guides</h2>
+    <ul>
+    {% if cat %}
+      {% for item in all_articles %}
+        {% if related_count >= 5 %}{% break %}{% endif %}
+        {% if item.url != page.url %}
+          {% assign item_cat = item.categories | first %}
+          {% if item_cat == cat %}
+            <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+            {% assign related_count = related_count | plus: 1 %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+    {% if related_count < 5 %}
+      {% for item in all_articles %}
+        {% if related_count >= 5 %}{% break %}{% endif %}
+        {% if item.url != page.url %}
+          {% assign item_cat = item.categories | first %}
+          {% if item_cat != cat or cat == nil %}
+            <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+            {% assign related_count = related_count | plus: 1 %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+    </ul>
+  </section>
+  {% endif %}
   <footer>
     <p><a href="https://chrometipsguide.com">Chrome Tips</a> &middot; <a href="https://bestchromeextensions.com">Extensions</a> &middot; <a href="https://securetoolsguide.com">Security Tools</a> &middot; <a href="https://bestremotetools.com">AI Tools</a> &middot; <a href="https://welikeremotestack.com">Remote Work</a></p>
     <p>&copy; 2026 Claude Code Guides &middot; <a href="/about/">About</a></p>

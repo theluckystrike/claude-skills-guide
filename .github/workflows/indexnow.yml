@@ -1,0 +1,220 @@
+name: IndexNow Submission
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'articles/**'
+      - 'topics/**'
+      - 'sitemap*.xml'
+      - 'all-articles.md'
+      - 'index.md'
+  workflow_dispatch:
+    inputs:
+      submit_all:
+        description: 'Submit all URLs (not just changed ones)'
+        required: false
+        default: false
+        type: boolean
+
+# Only one IndexNow submission at a time
+concurrency:
+  group: indexnow
+  cancel-in-progress: true
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # fetch-depth 2 for diffing against previous commit
+          # fetch-depth 0 for submit_all (need full file list)
+          fetch-depth: ${{ github.event.inputs.submit_all == 'true' && 0 || 2 }}
+
+      - name: Collect changed URLs
+        id: collect
+        run: |
+          SITE="https://claudecodeguides.com"
+          URL_FILE=$(mktemp)
+
+          if [[ "${{ github.event.inputs.submit_all }}" == "true" ]]; then
+            echo "Mode: submitting ALL URLs"
+
+            # Homepage
+            echo "${SITE}/" >> "$URL_FILE"
+
+            # All articles index
+            if [[ -f all-articles.md ]]; then
+              echo "${SITE}/all-articles/" >> "$URL_FILE"
+            fi
+
+            # Every article
+            for f in articles/*.md; do
+              [[ -f "$f" ]] || continue
+              slug=$(basename "$f" .md)
+              echo "${SITE}/${slug}/" >> "$URL_FILE"
+            done
+
+            # Every topic
+            for f in topics/*/index.md; do
+              [[ -f "$f" ]] || continue
+              topic=$(echo "$f" | sed 's|topics/||;s|/index.md||')
+              echo "${SITE}/topics/${topic}/" >> "$URL_FILE"
+            done
+
+            # Sitemaps
+            for f in sitemap*.xml; do
+              [[ -f "$f" ]] || continue
+              echo "${SITE}/${f}" >> "$URL_FILE"
+            done
+
+          else
+            echo "Mode: submitting changed URLs only"
+
+            # Diff against previous commit; fallback for first commit
+            if git rev-parse HEAD~1 >/dev/null 2>&1; then
+              CHANGED=$(git diff --name-only HEAD~1 HEAD)
+            else
+              echo "First commit detected, listing all tracked files"
+              CHANGED=$(git ls-tree -r --name-only HEAD)
+            fi
+
+            echo "Changed files:"
+            echo "$CHANGED"
+
+            while IFS= read -r file; do
+              [[ -z "$file" ]] && continue
+              case "$file" in
+                articles/*.md)
+                  slug=$(basename "$file" .md)
+                  echo "${SITE}/${slug}/" >> "$URL_FILE"
+                  ;;
+                topics/*/index.md)
+                  topic=$(echo "$file" | sed 's|topics/||;s|/index.md||')
+                  echo "${SITE}/topics/${topic}/" >> "$URL_FILE"
+                  ;;
+                index.md)
+                  echo "${SITE}/" >> "$URL_FILE"
+                  ;;
+                all-articles.md)
+                  echo "${SITE}/all-articles/" >> "$URL_FILE"
+                  ;;
+                sitemap*.xml)
+                  echo "${SITE}/${file}" >> "$URL_FILE"
+                  ;;
+              esac
+            done <<< "$CHANGED"
+          fi
+
+          # Deduplicate
+          sort -u "$URL_FILE" -o "$URL_FILE"
+
+          COUNT=$(wc -l < "$URL_FILE" | tr -d ' ')
+          echo "Collected ${COUNT} URLs"
+
+          if [[ "$COUNT" -gt 0 ]]; then
+            echo "URLs to submit:"
+            cat "$URL_FILE"
+          fi
+
+          # Copy to a stable path so next step can access it
+          cp "$URL_FILE" /tmp/indexnow_urls.txt
+
+          echo "url_file=/tmp/indexnow_urls.txt" >> "$GITHUB_OUTPUT"
+          echo "count=${COUNT}" >> "$GITHUB_OUTPUT"
+
+      - name: Submit to IndexNow (batched)
+        if: steps.collect.outputs.count != '0'
+        env:
+          INDEXNOW_KEY: c4ded4558ba249bbbd828bbfd67ebe80
+        run: |
+          URL_FILE="/tmp/indexnow_urls.txt"
+          TOTAL=${{ steps.collect.outputs.count }}
+          BATCH_SIZE=500
+          BATCH_NUM=0
+          SUBMITTED=0
+          FAILURES=0
+
+          # Split into batches of 500 (IndexNow limit is 10,000 per request, but 500 is safer)
+          split -l ${BATCH_SIZE} "$URL_FILE" /tmp/indexnow_batch_
+
+          for batch in /tmp/indexnow_batch_*; do
+            BATCH_NUM=$((BATCH_NUM + 1))
+            BATCH_COUNT=$(wc -l < "$batch" | tr -d ' ')
+
+            echo "--- Batch ${BATCH_NUM}: ${BATCH_COUNT} URLs ---"
+
+            # Build JSON payload with jq
+            PAYLOAD=$(jq -R -s \
+              --arg host "claudecodeguides.com" \
+              --arg key "$INDEXNOW_KEY" \
+              --arg keyloc "https://claudecodeguides.com/${INDEXNOW_KEY}.txt" \
+              '{
+                host: $host,
+                key: $key,
+                keyLocation: $keyloc,
+                urlList: (split("\n") | map(select(length > 0)))
+              }' "$batch")
+
+            # Validate payload before sending
+            URL_COUNT_IN_PAYLOAD=$(echo "$PAYLOAD" | jq '.urlList | length')
+            echo "Payload contains ${URL_COUNT_IN_PAYLOAD} URLs"
+
+            # Submit with retry (once)
+            HTTP_CODE=$(curl -s -o /tmp/indexnow_response.txt -w "%{http_code}" \
+              -X POST "https://api.indexnow.org/indexnow" \
+              -H "Content-Type: application/json; charset=utf-8" \
+              -d "$PAYLOAD" \
+              --max-time 30)
+
+            if [[ "$HTTP_CODE" -ge 200 && "$HTTP_CODE" -lt 300 ]]; then
+              echo "Batch ${BATCH_NUM}: HTTP ${HTTP_CODE} - Success"
+              SUBMITTED=$((SUBMITTED + BATCH_COUNT))
+            elif [[ "$HTTP_CODE" == "202" ]]; then
+              echo "Batch ${BATCH_NUM}: HTTP 202 - Accepted"
+              SUBMITTED=$((SUBMITTED + BATCH_COUNT))
+            else
+              echo "Batch ${BATCH_NUM}: HTTP ${HTTP_CODE} - Failed"
+              echo "Response body:"
+              cat /tmp/indexnow_response.txt 2>/dev/null || true
+              echo ""
+              FAILURES=$((FAILURES + 1))
+
+              # Retry once after 3 seconds
+              sleep 3
+              RETRY_CODE=$(curl -s -o /dev/null -w "%{http_code}" \
+                -X POST "https://api.indexnow.org/indexnow" \
+                -H "Content-Type: application/json; charset=utf-8" \
+                -d "$PAYLOAD" \
+                --max-time 30)
+
+              if [[ "$RETRY_CODE" -ge 200 && "$RETRY_CODE" -lt 300 ]]; then
+                echo "Batch ${BATCH_NUM} retry: HTTP ${RETRY_CODE} - Success"
+                SUBMITTED=$((SUBMITTED + BATCH_COUNT))
+                FAILURES=$((FAILURES - 1))
+              else
+                echo "Batch ${BATCH_NUM} retry: HTTP ${RETRY_CODE} - Failed again"
+              fi
+            fi
+
+            # Brief pause between batches to be respectful to the API
+            sleep 1
+          done
+
+          echo ""
+          echo "=== IndexNow Submission Summary ==="
+          echo "Total URLs collected: ${TOTAL}"
+          echo "Successfully submitted: ${SUBMITTED}"
+          echo "Failed batches: ${FAILURES}"
+
+          if [[ "$FAILURES" -gt 0 ]]; then
+            echo "::warning::${FAILURES} batch(es) failed to submit"
+          fi
+
+      - name: No URLs to submit
+        if: steps.collect.outputs.count == '0'
+        run: |
+          echo "No article, topic, or page URLs changed in this push. Skipping IndexNow submission."
