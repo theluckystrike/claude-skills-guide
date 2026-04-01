@@ -5,6 +5,7 @@ description: "Connect Claude Code to external tools, databases, and APIs using M
 permalink: /topics/mcp/
 ---
 # MCP Integration Guides
+
 Connect Claude Code to databases, APIs, cloud services, and developer tools using the Model Context Protocol.
 
 

@@ -5,6 +5,7 @@ description: "Guides for building Chrome extensions with AI, Claude Code, and mo
 permalink: /topics/chrome-extensions/
 ---
 # Chrome Extension Guides
+
 Guides for building, comparing, and using Chrome extensions. From AI-powered extensions to productivity tools and developer utilities.
 
 

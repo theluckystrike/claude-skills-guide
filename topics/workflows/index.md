@@ -5,6 +5,7 @@ description: "Configure Claude Code projects with CLAUDE.md files, Git hooks, an
 permalink: /topics/workflows/
 ---
 # CLAUDE.md and Workflow Guides
+
 Configure projects, automate workflows, and get the most out of Claude Code's project-level features.
 
 

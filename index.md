@@ -60,6 +60,7 @@ description: "2,500+ practical Claude Code tutorials for developers. Prompt engi
     <a href="/topics/getting-started/" class="browse-link">Browse all &rarr;</a>
   </div>
 
+
   <div class="topic-card">
     <h3>Prompt Engineering</h3>
     <p>Write better prompts, get better results.</p>
@@ -70,6 +71,7 @@ description: "2,500+ practical Claude Code tutorials for developers. Prompt engi
     </ul>
     <a href="/topics/prompt-engineering/" class="browse-link">Browse all &rarr;</a>
   </div>
+
 
   <div class="topic-card">
     <h3>Claude API</h3>
@@ -83,6 +85,7 @@ description: "2,500+ practical Claude Code tutorials for developers. Prompt engi
     <a href="/topics/api/" class="browse-link">Browse all &rarr;</a>
   </div>
 
+
   <div class="topic-card">
     <h3>Agents</h3>
     <p>Build autonomous and multi-agent systems.</p>
@@ -94,6 +97,7 @@ description: "2,500+ practical Claude Code tutorials for developers. Prompt engi
     </ul>
     <a href="/topics/agents/" class="browse-link">Browse all &rarr;</a>
   </div>
+
 
   <div class="topic-card">
     <h3>MCP Integrations</h3>
@@ -107,6 +111,7 @@ description: "2,500+ practical Claude Code tutorials for developers. Prompt engi
     <a href="/topics/mcp/" class="browse-link">Browse all &rarr;</a>
   </div>
 
+
   <div class="topic-card">
     <h3>CLAUDE.md and Workflows</h3>
     <p>Configure projects and automate your workflow.</p>
@@ -119,6 +124,7 @@ description: "2,500+ practical Claude Code tutorials for developers. Prompt engi
     <a href="/topics/workflows/" class="browse-link">Browse all &rarr;</a>
   </div>
 
+
   <div class="topic-card">
     <h3>Chrome Extensions</h3>
     <p>Guides for building, optimizing, and using Chrome extensions.</p>
@@ -129,6 +135,7 @@ description: "2,500+ practical Claude Code tutorials for developers. Prompt engi
     </ul>
     <a href="/topics/chrome-extensions/" class="browse-link">Browse all &rarr;</a>
   </div>
+
 </div>
 
 <div class="about-section">

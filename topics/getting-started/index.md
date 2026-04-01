@@ -5,6 +5,7 @@ description: "Beginner guides for Claude Code: installation, first project, setu
 permalink: /topics/getting-started/
 ---
 # Getting Started with Claude Code
+
 Everything you need to go from zero to productive with Claude Code. Installation guides, first project tutorials, and beginner-friendly walkthroughs.
 
 
