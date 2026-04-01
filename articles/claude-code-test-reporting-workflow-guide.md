@@ -4,7 +4,7 @@ description: "Learn how to set up and optimize test reporting workflows with Cla
 keywords: "claude code test reporting workflow guide"
 date: 2024-01-01
 last_modified_at: 2024-01-01
-layout: article
+layout: default
 permalink: /claude-code-test-reporting-workflow-guide/
 categories: [guides]
 tags: [tools]

@@ -1,2 +1,6 @@
 # Redirect www to non-www (requires www.claudecodeguides.com added as custom domain in CF Pages)
 https://www.claudecodeguides.com/* https://claudecodeguides.com/:splat 301
+
+# Fix truncated filename URLs
+/how-to-use-claude-code-to-understand-unfamiliar-codebase-qui/ /how-to-use-claude-code-to-understand-unfamiliar-codebase-quickly/ 301
+/how-to-use-claude-code-to-write-database-queries-from-scratc/ /how-to-use-claude-code-to-write-database-queries-from-scratch/ 301

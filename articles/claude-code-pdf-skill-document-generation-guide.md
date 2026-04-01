@@ -9,7 +9,7 @@ tags: [claude-code, claude-skills, pdf, document-generation]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
-permalink: /claude-pdf-skill-document-generation-guide/
+permalink: /claude-code-pdf-skill-document-generation-guide/
 ---
 
 # Claude PDF Skill: Document Generation Guide
