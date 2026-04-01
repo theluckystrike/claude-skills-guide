@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .bg { fill: #141413; }
+      .prompt { fill: #d97757; font-family: monospace; font-size: 20px; font-weight: bold; }
+    </style>
+  </defs>
+  <rect class="bg" width="32" height="32" rx="6"/>
+  <text class="prompt" x="4" y="23">&gt;_</text>
+</svg>

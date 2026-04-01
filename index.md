@@ -6,7 +6,7 @@ description: "2,500+ practical Claude Code tutorials for developers. Prompt engi
 
 <div class="hero">
   <h1>Claude Code Guides</h1>
-  <p class="hero-sub">Ship faster with Claude Code. 2,500+ practical tutorials for developers.</p>
+  <p class="hero-sub">Practical tutorials for developers who build with Claude. 2,500+ guides and counting.</p>
   <div class="stats">
     <div class="stat"><span class="number">2,500+</span><span class="label">Guides</span></div>
     <div class="stat"><span class="number">7</span><span class="label">Topics</span></div>
@@ -125,7 +125,7 @@ description: "2,500+ practical Claude Code tutorials for developers. Prompt engi
     <ul>
       <li><a href="/ai-code-assistant-chrome-extension/">AI Code Assistant Chrome Extension</a></li>
       <li><a href="/chrome-extension-service-worker-inspector/">Chrome Extension Service Worker Inspector</a></li>
-      <li><a href="/chrome-extension-performance-optimization/">Chrome Extension Performance Optimization</a></li>
+      <li><a href="/">Chrome Extension Performance Optimization</a></li>
     </ul>
     <a href="/topics/chrome-extensions/" class="browse-link">Browse all &rarr;</a>
   </div>
@@ -133,7 +133,7 @@ description: "2,500+ practical Claude Code tutorials for developers. Prompt engi
 
 <div class="about-section">
   <h2>About</h2>
-  <p>Practical, tested tutorials for developers working with Claude Code, Claude API, and Claude Desktop. Written by developers who ship with Claude daily.</p>
+  <p>Tested, practical tutorials for developers building with Claude Code, Claude API, and Claude Desktop. Updated daily.</p>
   <a href="/about/" class="browse-link">Learn more &rarr;</a>
 </div>
 
