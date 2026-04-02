@@ -148,8 +148,7 @@
   {% endif %}
   {% endif %}
   <style>
-    /* ============================================
-       CLAUDE BRAND DARK THEME
+    /* =====================================       CLAUDE BRAND DARK THEME
        Warm terracotta aesthetic matching Anthropic
        ============================================ */
 
@@ -375,8 +374,7 @@
       margin: 2rem 0;
     }
 
-    /* ============================================
-       LAYOUT COMPONENTS
+    /* =====================================       LAYOUT COMPONENTS
        ============================================ */
 
     /* --- Sticky Header / Nav --- */
@@ -456,8 +454,7 @@
       min-height: 50vh;
     }
 
-    /* ============================================
-       NEWSLETTER CTA
+    /* =====================================       NEWSLETTER CTA
        ============================================ */
     .newsletter-cta {
       margin-top: 3rem;
@@ -544,8 +541,7 @@
       margin-top: 1rem;
     }
 
-    /* ============================================
-       RELATED GUIDES
+    /* =====================================       RELATED GUIDES
        ============================================ */
     .related-guides {
       margin-top: 3rem;
@@ -595,8 +591,7 @@
       color: #e8856a;
     }
 
-    /* ============================================
-       FOOTER
+    /* =====================================       FOOTER
        ============================================ */
     footer {
       margin-top: 3.5rem;
@@ -618,8 +613,7 @@
       margin-bottom: 0.25rem;
     }
 
-    /* ============================================
-       HOMEPAGE COMPONENTS
+    /* =====================================       HOMEPAGE COMPONENTS
        ============================================ */
 
     /* --- Hero Section --- */
@@ -918,8 +912,7 @@
       font-size: 0.95rem;
     }
 
-    /* ============================================
-       RESPONSIVE
+    /* =====================================       RESPONSIVE
        ============================================ */
     @media (max-width: 768px) {
       body {
@@ -1038,8 +1031,7 @@
       display: none;
     }
 
-    /* ============================================
-       ACCESSIBILITY
+    /* =====================================       ACCESSIBILITY
        ============================================ */
 
     /* --- Skip Navigation Link --- */
@@ -1103,8 +1095,7 @@
       border: 0;
     }
 
-    /* ============================================
-       END-OF-GUIDE CTA CARD
+    /* =====================================       END-OF-GUIDE CTA CARD
        ============================================ */
     .author-cta {
       margin-top: 3rem;
@@ -1117,6 +1108,126 @@
     }
     .author-cta::before {
       content: "";
+       NAV: COMMUNITY & ZOVO LINKS
+       ============================================ */
+    .site-nav .nav-external {
+      color: #d97757;
+      font-weight: 500;
+    }
+    .site-nav .nav-external:hover {
+      color: #e8856a;
+    }
+    .site-nav .nav-external .nav-arrow {
+      font-size: 0.7em;
+      vertical-align: super;
+      margin-left: 1px;
+      opacity: 0.7;
+    }
+
+    /* =====================================       AUTHOR BAR
+       ============================================ */
+    .author-bar {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 1.25rem;
+      padding: 10px 0;
+      font-size: 0.82rem;
+      color: #9a9590;
+      line-height: 1.5;
+    }
+    .author-bar-avatar {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #2e2e2a;
+      color: #d97757;
+      font-size: 0.65rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      letter-spacing: 0.03em;
+    }
+    .author-bar-info {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0;
+    }
+    .author-bar-info span {
+      white-space: nowrap;
+    }
+    .author-bar-sep {
+      margin: 0 6px;
+      color: #3a3a35;
+    }
+    .author-bar-name {
+      color: #e8e6dc;
+      font-weight: 600;
+    }
+    .author-bar-links {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0;
+    }
+    .author-bar-links a {
+      color: #9a9590;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: color 0.2s ease;
+    }
+    .author-bar-links a:hover {
+      color: #d97757;
+      text-decoration: none;
+    }
+    .author-bar-links .ab-icon {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+      opacity: 0.7;
+    }
+    .author-bar-links a:hover .ab-icon {
+      opacity: 1;
+    }
+
+    @media (max-width: 480px) {
+      .author-bar {
+        gap: 8px;
+        font-size: 0.78rem;
+      }
+      .author-bar-avatar {
+        width: 24px;
+        height: 24px;
+        font-size: 0.6rem;
+      }
+    }
+
+    /* =====================================       IN-CONTENT CTA BLOCK
+       ============================================ */
+    .incontent-cta {
+      background: #1a1918;
+      border: 1px solid #333;
+      border-radius: 12px;
+      padding: 1.75rem 1.5rem;
+      margin: 2rem 0;
+      position: relative;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+    .incontent-cta.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .incontent-cta::before {
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
@@ -1232,6 +1343,84 @@
       }
       .author-cta-actions {
         min-width: unset;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(217, 119, 87, 0.5), transparent);
+    }
+    .incontent-cta-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #faf9f5;
+      margin: 0 0 0.5rem 0;
+      line-height: 1.4;
+      border: none;
+      padding: 0;
+    }
+    .incontent-cta-title::after {
+      display: none;
+    }
+    .incontent-cta-body {
+      color: #b0aea5;
+      font-size: 0.92rem;
+      line-height: 1.65;
+      margin: 0 0 1.25rem 0;
+    }
+    .incontent-cta-body p {
+      margin: 0 0 0.5rem 0;
+    }
+    .incontent-cta-body p:last-child {
+      margin-bottom: 0;
+    }
+    .incontent-cta-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .incontent-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 9px 18px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      font-family: inherit;
+      border-radius: 7px;
+      text-decoration: none;
+      transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+      white-space: nowrap;
+    }
+    .incontent-cta-btn--primary {
+      background: #d97757;
+      color: #141413;
+      border: 1px solid #d97757;
+    }
+    .incontent-cta-btn--primary:hover {
+      background: #e8856a;
+      border-color: #e8856a;
+      color: #141413;
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+    .incontent-cta-btn--secondary {
+      background: transparent;
+      color: #d97757;
+      border: 1px solid #3a3a35;
+    }
+    .incontent-cta-btn--secondary:hover {
+      border-color: #d97757;
+      background: rgba(217, 119, 87, 0.06);
+      color: #e8856a;
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+    @media (max-width: 480px) {
+      .incontent-cta {
+        padding: 1.25rem 1rem;
+      }
+      .incontent-cta-actions {
+        flex-direction: column;
+      }
+      .incontent-cta-btn {
+        justify-content: center;
       }
     }
   </style>
@@ -1249,6 +1438,8 @@
       <a href="/topics/mcp/"{% if page.url == "/topics/mcp/" %} aria-current="page"{% endif %}>MCP</a>
       <a href="/topics/chrome-extensions/"{% if page.url == "/topics/chrome-extensions/" %} aria-current="page"{% endif %}>Extensions</a>
       <a href="/all-articles/"{% if page.url == "/all-articles/" %} aria-current="page"{% endif %}>All Guides</a>
+      <a href="https://discord.com/invite/QeHxTFbqmC" target="_blank" rel="noopener noreferrer" class="nav-external">Community<span class="nav-arrow">&nearr;</span></a>
+      <a href="https://zovo.one" target="_blank" rel="noopener noreferrer" class="nav-external">Zovo<span class="nav-arrow">&nearr;</span></a>
     </nav>
   </header>
   {% if page.date %}
@@ -1263,6 +1454,23 @@
     {% assign article_content = content | replace_first: h1_tag, '' %}
     <article class="article-body" itemscope itemtype="https://schema.org/Article">
       <h1 class="article-title" itemprop="headline">{{ page.title }}</h1>
+      <div class="author-bar">
+        <span class="author-bar-avatar" aria-hidden="true">ML</span>
+        <span class="author-bar-info">
+          <span class="author-bar-name">Written by Michael Lip</span>
+          <span class="author-bar-sep">&middot;</span>
+          <span>Solo founder of Zovo</span>
+          <span class="author-bar-sep">&middot;</span>
+          <span>$400K+ on Upwork</span>
+          <span class="author-bar-sep">&middot;</span>
+          <span>100% JSS</span>
+        </span>
+        <span class="author-bar-links">
+          <a href="https://discord.com/invite/QeHxTFbqmC" target="_blank" rel="noopener noreferrer"><svg class="ab-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>Join 50+ builders</a>
+          <span class="author-bar-sep">&middot;</span>
+          <a href="https://zovo.one" target="_blank" rel="noopener noreferrer"><svg class="ab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>More at zovo.one</a>
+        </span>
+      </div>
       <span class="date">Last updated: {{ page.last_modified_at | default: page.date | date: "%B %d, %Y" }}</span>
       {{ article_content }}
     </article>
@@ -1342,5 +1550,128 @@
     <p><a href="https://chrometipsguide.com">Chrome Tips</a> &middot; <a href="https://bestchromeextensions.com">Extensions</a> &middot; <a href="https://securetoolsguide.com">Security Tools</a> &middot; <a href="https://bestremotetools.com">AI Tools</a> &middot; <a href="https://welikeremotestack.com">Remote Work</a></p>
     <p>&copy; 2026 Claude Code Guides &middot; <a href="/about/">About</a></p>
   </footer>
+
+  <!-- In-Content CTA: injected at ~50% article depth -->
+  {% if page.date %}
+  <script>
+  (function() {
+    'use strict';
+
+    var CONTAINER_SEL = '.article-body';
+    var MAX_CHILDREN = 500;
+
+    var article = document.querySelector(CONTAINER_SEL);
+    if (!article) return;
+
+    var children = article.children;
+    var len = children.length;
+    if (len < 4) return;
+
+    var candidates = [];
+    var i = 0;
+    while (i < len && i < MAX_CHILDREN) {
+      var el = children[i];
+      var tag = el.tagName;
+      if (tag === 'PRE' || tag === 'CODE' || el.classList.contains('incontent-cta')) {
+        i++;
+        continue;
+      }
+      if (tag === 'P' || tag === 'H2' || tag === 'H3' || tag === 'H4' ||
+          tag === 'UL' || tag === 'OL' || tag === 'BLOCKQUOTE' || tag === 'HR') {
+        candidates.push({ index: i, el: el });
+      }
+      i++;
+    }
+
+    if (candidates.length < 3) return;
+
+    var midpoint = Math.floor(len / 2);
+    var bestCandidate = candidates[0];
+    var bestDist = Math.abs(candidates[0].index - midpoint);
+
+    for (var c = 1; c < candidates.length; c++) {
+      var dist = Math.abs(candidates[c].index - midpoint);
+      if (dist < bestDist) {
+        bestDist = dist;
+        bestCandidate = candidates[c];
+      }
+    }
+
+    var insertIndex = bestCandidate.index;
+    var insertEl = bestCandidate.el;
+    var candidatePos = 0;
+    for (var k = 0; k < candidates.length; k++) {
+      if (candidates[k] === bestCandidate) { candidatePos = k; break; }
+    }
+    if ((insertEl.tagName === 'H2' || insertEl.tagName === 'H3' || insertEl.tagName === 'H4') && candidatePos > 0) {
+      var prev = candidates[candidatePos - 1];
+      insertEl = prev.el;
+      insertIndex = prev.index;
+    }
+
+    var path = window.location.pathname.toLowerCase();
+    var isExtension = (path.indexOf('chrome-extension') !== -1 || path.indexOf('extension') !== -1);
+
+    var html;
+    if (isExtension) {
+      html = '<aside class="incontent-cta" aria-label="Chrome extension resources">' +
+        '<h2 class="incontent-cta-title">\uD83E\uDDE9 Building Chrome Extensions?</h2>' +
+        '<div class="incontent-cta-body">' +
+          '<p>I\u2019ve shipped 20+ extensions to 5,000+ users. Zovo gives you the Extension Engine boilerplate, CWS playbook, distribution across 248K+ indexed pages, and direct access to the developer.</p>' +
+        '</div>' +
+        '<div class="incontent-cta-actions">' +
+          '<a href="https://zovo.one" target="_blank" rel="noopener noreferrer" class="incontent-cta-btn incontent-cta-btn--primary">Browse Extensions \u2192</a>' +
+          '<a href="https://discord.com/invite/QeHxTFbqmC" target="_blank" rel="noopener noreferrer" class="incontent-cta-btn incontent-cta-btn--secondary">Join Builder Discord \u2192</a>' +
+        '</div>' +
+      '</aside>';
+    } else {
+      html = '<aside class="incontent-cta" aria-label="About the author and community">' +
+        '<h2 class="incontent-cta-title">\uD83D\uDC4B These guides are part of a bigger project.</h2>' +
+        '<div class="incontent-cta-body">' +
+          '<p>I\u2019m Michael \u2014 I build AI-powered Chrome extensions and developer tools at Zovo. This tutorial site, the extensions, and the builder community are all connected.</p>' +
+          '<p>If you\u2019re building with Claude and want to connect with other developers:</p>' +
+        '</div>' +
+        '<div class="incontent-cta-actions">' +
+          '<a href="https://discord.com/invite/QeHxTFbqmC" target="_blank" rel="noopener noreferrer" class="incontent-cta-btn incontent-cta-btn--primary">Join the Discord \u2192</a>' +
+          '<a href="https://zovo.one" target="_blank" rel="noopener noreferrer" class="incontent-cta-btn incontent-cta-btn--secondary">See what I\u2019m building \u2192</a>' +
+        '</div>' +
+      '</aside>';
+    }
+
+    var placeholder = document.createElement('div');
+    placeholder.style.cssText = 'margin:2rem 0;min-height:0;';
+
+    var nextSibling = children[insertIndex + 1] || null;
+    article.insertBefore(placeholder, nextSibling);
+
+    if ('IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function(entries) {
+        for (var e = 0; e < entries.length; e++) {
+          if (entries[e].isIntersecting) {
+            observer.disconnect();
+            observer = null;
+            renderCTA();
+          }
+        }
+      }, { rootMargin: '200px 0px' });
+      observer.observe(placeholder);
+    } else {
+      renderCTA();
+    }
+
+    function renderCTA() {
+      placeholder.outerHTML = html;
+      var inserted = article.querySelector('.incontent-cta');
+      if (inserted) {
+        requestAnimationFrame(function() {
+          requestAnimationFrame(function() {
+            inserted.classList.add('is-visible');
+          });
+        });
+      }
+    }
+  })();
+  </script>
+  {% endif %}
 </body>
 </html>
