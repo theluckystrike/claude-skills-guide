@@ -1204,6 +1204,112 @@
         font-size: 0.6rem;
       }
     }
+
+    /* ============================================
+       IN-CONTENT CTA BLOCK
+       ============================================ */
+    .incontent-cta {
+      background: #1a1918;
+      border: 1px solid #333;
+      border-radius: 12px;
+      padding: 1.75rem 1.5rem;
+      margin: 2rem 0;
+      position: relative;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+    .incontent-cta.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .incontent-cta::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(217, 119, 87, 0.5), transparent);
+    }
+    .incontent-cta-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #faf9f5;
+      margin: 0 0 0.5rem 0;
+      line-height: 1.4;
+      border: none;
+      padding: 0;
+    }
+    .incontent-cta-title::after {
+      display: none;
+    }
+    .incontent-cta-body {
+      color: #b0aea5;
+      font-size: 0.92rem;
+      line-height: 1.65;
+      margin: 0 0 1.25rem 0;
+    }
+    .incontent-cta-body p {
+      margin: 0 0 0.5rem 0;
+    }
+    .incontent-cta-body p:last-child {
+      margin-bottom: 0;
+    }
+    .incontent-cta-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .incontent-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 9px 18px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      font-family: inherit;
+      border-radius: 7px;
+      text-decoration: none;
+      transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+      white-space: nowrap;
+    }
+    .incontent-cta-btn--primary {
+      background: #d97757;
+      color: #141413;
+      border: 1px solid #d97757;
+    }
+    .incontent-cta-btn--primary:hover {
+      background: #e8856a;
+      border-color: #e8856a;
+      color: #141413;
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+    .incontent-cta-btn--secondary {
+      background: transparent;
+      color: #d97757;
+      border: 1px solid #3a3a35;
+    }
+    .incontent-cta-btn--secondary:hover {
+      border-color: #d97757;
+      background: rgba(217, 119, 87, 0.06);
+      color: #e8856a;
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+    @media (max-width: 480px) {
+      .incontent-cta {
+        padding: 1.25rem 1rem;
+      }
+      .incontent-cta-actions {
+        flex-direction: column;
+      }
+      .incontent-cta-btn {
+        justify-content: center;
+      }
+    }
   </style>
 </head>
 <body>
@@ -1315,5 +1421,128 @@
     <p><a href="https://chrometipsguide.com">Chrome Tips</a> &middot; <a href="https://bestchromeextensions.com">Extensions</a> &middot; <a href="https://securetoolsguide.com">Security Tools</a> &middot; <a href="https://bestremotetools.com">AI Tools</a> &middot; <a href="https://welikeremotestack.com">Remote Work</a></p>
     <p>&copy; 2026 Claude Code Guides &middot; <a href="/about/">About</a></p>
   </footer>
+
+  <!-- In-Content CTA: injected at ~50% article depth -->
+  {% if page.date %}
+  <script>
+  (function() {
+    'use strict';
+
+    var CONTAINER_SEL = '.article-body';
+    var MAX_CHILDREN = 500;
+
+    var article = document.querySelector(CONTAINER_SEL);
+    if (!article) return;
+
+    var children = article.children;
+    var len = children.length;
+    if (len < 4) return;
+
+    var candidates = [];
+    var i = 0;
+    while (i < len && i < MAX_CHILDREN) {
+      var el = children[i];
+      var tag = el.tagName;
+      if (tag === 'PRE' || tag === 'CODE' || el.classList.contains('incontent-cta')) {
+        i++;
+        continue;
+      }
+      if (tag === 'P' || tag === 'H2' || tag === 'H3' || tag === 'H4' ||
+          tag === 'UL' || tag === 'OL' || tag === 'BLOCKQUOTE' || tag === 'HR') {
+        candidates.push({ index: i, el: el });
+      }
+      i++;
+    }
+
+    if (candidates.length < 3) return;
+
+    var midpoint = Math.floor(len / 2);
+    var bestCandidate = candidates[0];
+    var bestDist = Math.abs(candidates[0].index - midpoint);
+
+    for (var c = 1; c < candidates.length; c++) {
+      var dist = Math.abs(candidates[c].index - midpoint);
+      if (dist < bestDist) {
+        bestDist = dist;
+        bestCandidate = candidates[c];
+      }
+    }
+
+    var insertIndex = bestCandidate.index;
+    var insertEl = bestCandidate.el;
+    var candidatePos = 0;
+    for (var k = 0; k < candidates.length; k++) {
+      if (candidates[k] === bestCandidate) { candidatePos = k; break; }
+    }
+    if ((insertEl.tagName === 'H2' || insertEl.tagName === 'H3' || insertEl.tagName === 'H4') && candidatePos > 0) {
+      var prev = candidates[candidatePos - 1];
+      insertEl = prev.el;
+      insertIndex = prev.index;
+    }
+
+    var path = window.location.pathname.toLowerCase();
+    var isExtension = (path.indexOf('chrome-extension') !== -1 || path.indexOf('extension') !== -1);
+
+    var html;
+    if (isExtension) {
+      html = '<aside class="incontent-cta" aria-label="Chrome extension resources">' +
+        '<h2 class="incontent-cta-title">\uD83E\uDDE9 Building Chrome Extensions?</h2>' +
+        '<div class="incontent-cta-body">' +
+          '<p>I\u2019ve shipped 20+ extensions to 5,000+ users. Zovo gives you the Extension Engine boilerplate, CWS playbook, distribution across 248K+ indexed pages, and direct access to the developer.</p>' +
+        '</div>' +
+        '<div class="incontent-cta-actions">' +
+          '<a href="https://zovo.one" target="_blank" rel="noopener noreferrer" class="incontent-cta-btn incontent-cta-btn--primary">Browse Extensions \u2192</a>' +
+          '<a href="https://discord.com/invite/QeHxTFbqmC" target="_blank" rel="noopener noreferrer" class="incontent-cta-btn incontent-cta-btn--secondary">Join Builder Discord \u2192</a>' +
+        '</div>' +
+      '</aside>';
+    } else {
+      html = '<aside class="incontent-cta" aria-label="About the author and community">' +
+        '<h2 class="incontent-cta-title">\uD83D\uDC4B These guides are part of a bigger project.</h2>' +
+        '<div class="incontent-cta-body">' +
+          '<p>I\u2019m Michael \u2014 I build AI-powered Chrome extensions and developer tools at Zovo. This tutorial site, the extensions, and the builder community are all connected.</p>' +
+          '<p>If you\u2019re building with Claude and want to connect with other developers:</p>' +
+        '</div>' +
+        '<div class="incontent-cta-actions">' +
+          '<a href="https://discord.com/invite/QeHxTFbqmC" target="_blank" rel="noopener noreferrer" class="incontent-cta-btn incontent-cta-btn--primary">Join the Discord \u2192</a>' +
+          '<a href="https://zovo.one" target="_blank" rel="noopener noreferrer" class="incontent-cta-btn incontent-cta-btn--secondary">See what I\u2019m building \u2192</a>' +
+        '</div>' +
+      '</aside>';
+    }
+
+    var placeholder = document.createElement('div');
+    placeholder.style.cssText = 'margin:2rem 0;min-height:0;';
+
+    var nextSibling = children[insertIndex + 1] || null;
+    article.insertBefore(placeholder, nextSibling);
+
+    if ('IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function(entries) {
+        for (var e = 0; e < entries.length; e++) {
+          if (entries[e].isIntersecting) {
+            observer.disconnect();
+            observer = null;
+            renderCTA();
+          }
+        }
+      }, { rootMargin: '200px 0px' });
+      observer.observe(placeholder);
+    } else {
+      renderCTA();
+    }
+
+    function renderCTA() {
+      placeholder.outerHTML = html;
+      var inserted = article.querySelector('.incontent-cta');
+      if (inserted) {
+        requestAnimationFrame(function() {
+          requestAnimationFrame(function() {
+            inserted.classList.add('is-visible');
+          });
+        });
+      }
+    }
+  })();
+  </script>
+  {% endif %}
 </body>
 </html>
