@@ -357,7 +357,7 @@
       margin-bottom: 0.35rem;
     }
     li::marker {
-      color: #908a82;
+      color: #9a9590;
     }
 
     /* --- Images --- */
@@ -416,16 +416,20 @@
       font-weight: 700;
       margin-right: 0.5rem;
     }
+    .site-nav a[aria-current="page"] {
+      color: #d97757;
+      font-weight: 600;
+    }
 
     /* --- Breadcrumbs --- */
     .breadcrumbs {
       font-size: 0.85em;
-      color: #908a82;
+      color: #9a9590;
       margin: 1.25rem 0;
       padding: 0;
     }
     .breadcrumbs a {
-      color: #908a82;
+      color: #9a9590;
       font-weight: 400;
       transition: color 0.2s ease;
     }
@@ -440,7 +444,7 @@
 
     /* --- Date / Meta --- */
     .date {
-      color: #908a82;
+      color: #9a9590;
       font-size: 0.85rem;
       margin-bottom: 1.5rem;
       display: block;
@@ -535,7 +539,7 @@
       transform: translateY(-1px);
     }
     .newsletter-cta .nl-note {
-      color: #908a82;
+      color: #9a9590;
       font-size: 0.78rem;
       margin-top: 1rem;
     }
@@ -598,12 +602,12 @@
       margin-top: 3.5rem;
       padding-top: 1.5rem;
       border-top: 1px solid #2e2e2a;
-      color: #908a82;
+      color: #9a9590;
       font-size: 0.82rem;
       line-height: 2;
     }
     footer a {
-      color: #908a82;
+      color: #9a9590;
       transition: color 0.2s ease;
     }
     footer a:hover {
@@ -760,7 +764,7 @@
     .stat .label {
       display: block;
       font-size: 0.82rem;
-      color: #908a82;
+      color: #9a9590;
       margin-top: 0.25rem;
       text-transform: uppercase;
       letter-spacing: 0.05em;
@@ -929,6 +933,9 @@
       .site-nav {
         gap: 0.9rem;
       }
+      .site-nav a {
+        padding: 12px 8px;
+      }
       h1 {
         font-size: 1.65rem;
       }
@@ -1030,28 +1037,94 @@
     .article-body > h1:not(.article-title) {
       display: none;
     }
+
+    /* ============================================
+       ACCESSIBILITY
+       ============================================ */
+
+    /* --- Skip Navigation Link --- */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 16px;
+      z-index: 1001;
+      padding: 12px 24px;
+      background: #d97757;
+      color: #141413;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border-radius: 0 0 8px 8px;
+      text-decoration: none;
+      transition: top 0.2s ease;
+    }
+    .skip-link:focus {
+      top: 0;
+      outline: none;
+    }
+
+    /* --- Focus Indicators --- */
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible,
+    [tabindex]:focus-visible {
+      outline: 2px solid #d97757;
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+    .site-nav a:focus-visible {
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+    a.card:focus-visible {
+      outline-offset: 2px;
+      border-radius: 10px;
+    }
+    .browse-link:focus-visible {
+      outline-offset: 2px;
+    }
+    .nl-fallback input:focus-visible {
+      outline: 2px solid #d97757;
+      outline-offset: 0;
+      border-color: #d97757;
+    }
+
+    /* --- Visually Hidden (for accessible labels) --- */
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
   </style>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
   <header class="site-header">
-    <nav class="site-nav">
-      <a href="/">Home</a>
-      <a href="/about/">About</a>
-      <a href="/topics/getting-started/">Getting Started</a>
-      <a href="/topics/prompt-engineering/">Prompts</a>
-      <a href="/topics/api/">API</a>
-      <a href="/topics/agents/">Agents</a>
-      <a href="/topics/mcp/">MCP</a>
-      <a href="/topics/chrome-extensions/">Extensions</a>
-      <a href="/all-articles/">All Guides</a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="/"{% if page.url == "/" %} aria-current="page"{% endif %}>Home</a>
+      <a href="/about/"{% if page.url == "/about/" %} aria-current="page"{% endif %}>About</a>
+      <a href="/topics/getting-started/"{% if page.url == "/topics/getting-started/" %} aria-current="page"{% endif %}>Getting Started</a>
+      <a href="/topics/prompt-engineering/"{% if page.url == "/topics/prompt-engineering/" %} aria-current="page"{% endif %}>Prompts</a>
+      <a href="/topics/api/"{% if page.url == "/topics/api/" %} aria-current="page"{% endif %}>API</a>
+      <a href="/topics/agents/"{% if page.url == "/topics/agents/" %} aria-current="page"{% endif %}>Agents</a>
+      <a href="/topics/mcp/"{% if page.url == "/topics/mcp/" %} aria-current="page"{% endif %}>MCP</a>
+      <a href="/topics/chrome-extensions/"{% if page.url == "/topics/chrome-extensions/" %} aria-current="page"{% endif %}>Extensions</a>
+      <a href="/all-articles/"{% if page.url == "/all-articles/" %} aria-current="page"{% endif %}>All Guides</a>
     </nav>
   </header>
   {% if page.date %}
-  <nav class="breadcrumbs" aria-label="breadcrumb">
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
     <a href="/">Home</a><span class="separator">/</span><span>{{ page.title }}</span>
   </nav>
   {% endif %}
-  <main>
+  <main id="main-content">
     {% if page.date %}
     {% capture h1_open %}<h1 id="{{ page.title | slugify }}">{% endcapture %}
     {% capture h1_tag %}{{ h1_open }}{{ page.title }}</h1>{% endcapture %}
@@ -1068,14 +1141,15 @@
     {% endif %}
   </main>
   {% if site.newsletter.enabled %}
-  <section class="newsletter-cta">
+  <section class="newsletter-cta" aria-label="Newsletter signup">
     <h2>{{ site.newsletter.heading | default: "Stay Updated" }}</h2>
     <p>{{ site.newsletter.subheading | default: "Get the latest guides delivered to your inbox." }}</p>
     {% if site.newsletter.beehiiv_embed_url != "" %}
-    <iframe src="{{ site.newsletter.beehiiv_embed_url }}" data-test-id="beehiiv-embed" width="100%" height="52" frameborder="0" scrolling="no" style="background: transparent;"></iframe>
+    <iframe src="{{ site.newsletter.beehiiv_embed_url }}" data-test-id="beehiiv-embed" width="100%" height="52" frameborder="0" scrolling="no" style="background: transparent;" title="Newsletter signup form"></iframe>
     {% else %}
     <div class="nl-fallback">
-      <input type="email" placeholder="you@example.com" disabled>
+      <label for="newsletter-email" class="visually-hidden">Email address</label>
+      <input type="email" id="newsletter-email" placeholder="you@example.com" aria-label="Email address" disabled>
       <button disabled>Coming Soon</button>
     </div>
     <p class="nl-note">Newsletter launching soon. Check back shortly.</p>
@@ -1086,7 +1160,7 @@
   {% assign cat = page.categories | first %}
   {% assign related_count = 0 %}
   {% assign all_articles = site.pages | where_exp: "item", "item.path contains 'articles/'" | sort: "date" | reverse %}
-  <section class="related-guides">
+  <section class="related-guides" aria-label="Related guides">
     <h2>Related Guides</h2>
     <ul>
     {% if cat %}
@@ -1116,7 +1190,7 @@
     </ul>
   </section>
   {% endif %}
-  <footer>
+  <footer aria-label="Footer">
     <p><a href="https://chrometipsguide.com">Chrome Tips</a> &middot; <a href="https://bestchromeextensions.com">Extensions</a> &middot; <a href="https://securetoolsguide.com">Security Tools</a> &middot; <a href="https://bestremotetools.com">AI Tools</a> &middot; <a href="https://welikeremotestack.com">Remote Work</a></p>
     <p>&copy; 2026 Claude Code Guides &middot; <a href="/about/">About</a></p>
   </footer>
