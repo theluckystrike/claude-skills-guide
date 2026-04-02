@@ -1200,6 +1200,15 @@
     }
     .author-cta::before {
       content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(217, 119, 87, 0.5), transparent);
+    }
+
+    /* =====================================
        NAV: COMMUNITY & ZOVO LINKS
        ============================================ */
     .site-nav .nav-external {
@@ -1300,8 +1309,8 @@
       }
     }
 
-    /* =====================================       IN-CONTENT CTA BLOCK
-    /* =====================================       IN-CONTENT CTA BLOCK
+    /* =====================================
+       IN-CONTENT CTA BLOCK
        ============================================ */
     .incontent-cta {
       background: #1a1918;
@@ -1436,9 +1445,9 @@
       }
       .author-cta-actions {
         min-width: unset;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, rgba(217, 119, 87, 0.5), transparent);
+      }
     }
+
     .incontent-cta-title {
       font-size: 1.1rem;
       font-weight: 700;
@@ -1575,11 +1584,9 @@
           <p>These guides are part of the Zovo developer ecosystem. New guides ship daily. Extensions ship weekly.</p>
         </div>
         <div class="author-cta-actions">
-          <a href="https://discord.com/invite/QeHxTFbqmC" target="_blank" rel="noopener noreferrer" class="cta-btn-primary">Join the Community (Free) &rarr;</a>
-          <span class="cta-btn-label">Discord</span>
-          <a href="https://zovo.one" target="_blank" rel="noopener noreferrer" class="cta-btn-secondary">Explore Zovo &rarr;</a>
-          <span class="cta-btn-label">zovo.one</span>
-          <p class="cta-pro-note">Zovo Pro: All 20+ extensions for $4.99/mo &middot; Lifetime: $99 once</p>
+          <a href="https://discord.com/invite/QeHxTFbqmC" target="_blank" rel="noopener noreferrer" class="cta-btn-primary">Join Discord Community (Free) &rarr;</a>
+          <a href="https://zovo.one" target="_blank" rel="noopener noreferrer" class="cta-btn-secondary">Explore Zovo Extensions &rarr;</a>
+          <p class="cta-pro-note">Zovo Pro: All 20+ extensions &mdash; $4.99/mo or $99 lifetime</p>
         </div>
       </div>
     </section>
