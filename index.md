@@ -131,7 +131,7 @@ description: "2,500+ practical Claude Code tutorials for developers. Prompt engi
     <ul>
       <li><a href="/ai-code-assistant-chrome-extension/">AI Code Assistant Chrome Extension</a></li>
       <li><a href="/chrome-extension-service-worker-inspector/">Chrome Extension Service Worker Inspector</a></li>
-      <li><a href="/">Chrome Extension Performance Optimization</a></li>
+      <li><a href="/chrome-extension-performance-monitor/">Chrome Extension Performance Optimization</a></li>
     </ul>
     <a href="/topics/chrome-extensions/" class="browse-link">Browse all &rarr;</a>
   </div>
