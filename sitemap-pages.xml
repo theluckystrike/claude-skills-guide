@@ -12,6 +12,9 @@ sitemap: false
   <!-- About -->
   <url><loc>https://claudecodeguides.com/about/</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
 
+  <!-- Topics Index -->
+  <url><loc>https://claudecodeguides.com/topics/</loc><lastmod>2026-04-02</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+
   <!-- Topic Pages -->
   <url><loc>https://claudecodeguides.com/topics/agents/</loc><lastmod>2026-03-22</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://claudecodeguides.com/topics/api/</loc><lastmod>2026-03-22</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>

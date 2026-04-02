@@ -245,8 +245,8 @@ sitemap: false
   <url><loc>https://claudecodeguides.com/how-to-test-and-debug-multi-agent-workflows/</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://claudecodeguides.com/how-to-use-ai-coding-tools-effectively-2026/</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://claudecodeguides.com/how-to-use-claude-code-to-refactor-legacy-javascript-code/</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://claudecodeguides.com/how-to-use-claude-code-to-understand-unfamiliar-codebase-qui/</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://claudecodeguides.com/how-to-use-claude-code-to-write-database-queries-from-scratc/</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://claudecodeguides.com/how-to-use-claude-code-to-understand-unfamiliar-codebase-quickly/</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://claudecodeguides.com/how-to-use-claude-code-to-write-database-queries-from-scratch/</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://claudecodeguides.com/how-to-use-claude-code-with-existing-github-repo/</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://claudecodeguides.com/how-to-use-claude-skills-with-n8n-automation-workflows/</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://claudecodeguides.com/how-to-write-a-skill-md-file-for-claude-code/</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
